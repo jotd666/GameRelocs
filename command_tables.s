@@ -41,21 +41,21 @@ lb_faca:
 	dc.w	$0000	;0face
 lb_fad0:
 	dc.l	lb_d6f8	;0fad0
-	dc.w	$0005	;0fad4
-	dc.w	$04ec	;0fad6
-	dc.w	$0005	;0fad8
-	dc.w	$04ee	;0fada
-	dc.w	$0005	;0fadc
-	dc.w	$04f0	;0fade
+lb_fad4:
+	dc.l	lb_504ec	;0fad4
+lb_fad8:
+	dc.l	lb_504ee	;0fad8
+lb_fadc:
+	dc.l	lb_504f0	;0fadc
 	dc.w	$0000	;0fae0
 lb_fae2:
 	dc.l	lb_d6f8	;0fae2
-	dc.w	$0004	;0fae6
-	dc.w	$d6bc	;0fae8
-	dc.w	$0004	;0faea
-	dc.w	$d6be	;0faec
-	dc.w	$0004	;0faee
-	dc.w	$d6c0	;0faf0
+lb_fae6:
+	dc.l	lb_4d6bc	;0fae6
+lb_faea:
+	dc.l	lb_4d6be	;0faea
+lb_faee:
+	dc.l	lb_4d6c0	;0faee
 	dc.w	$0002	;0faf2
 lb_faf4:
 	dc.l	lb_d73c	;0faf4
@@ -290,21 +290,21 @@ lb_fcc6:
 	dc.w	$0000	;0fcca
 lb_fccc:
 	dc.l	lb_d6f8	;0fccc
-	dc.w	$0005	;0fcd0
-	dc.w	$04ec	;0fcd2
-	dc.w	$0005	;0fcd4
-	dc.w	$04ee	;0fcd6
-	dc.w	$0005	;0fcd8
-	dc.w	$04f0	;0fcda
+lb_fcd0:
+	dc.l	lb_504ec	;0fcd0
+lb_fcd4:
+	dc.l	lb_504ee	;0fcd4
+lb_fcd8:
+	dc.l	lb_504f0	;0fcd8
 	dc.w	$0000	;0fcdc
 lb_fcde:
 	dc.l	lb_d6f8	;0fcde
-	dc.w	$0004	;0fce2
-	dc.w	$d6bc	;0fce4
-	dc.w	$0004	;0fce6
-	dc.w	$d6be	;0fce8
-	dc.w	$0004	;0fcea
-	dc.w	$d6c0	;0fcec
+lb_fce2:
+	dc.l	lb_4d6bc	;0fce2
+lb_fce6:
+	dc.l	lb_4d6be	;0fce6
+lb_fcea:
+	dc.l	lb_4d6c0	;0fcea
 	dc.w	$0002	;0fcee
 lb_fcf0:
 	dc.l	lb_d73c	;0fcf0

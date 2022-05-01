@@ -1,13 +1,13 @@
 import os,re,struct
-with open("filename_table.bin","rb") as f:
+with open("object_org","rb") as f:
     contents = f.read()
 
-offset = 0
-shift = 0x23a10-0x6C
+
 strings = []
-for i in range(27):
-    data = struct.unpack_from(">I",contents,offset+(i*4))[0] - shift
-    start = data
+for i in range(0x18006,0x18056,4):
+    data = struct.unpack_from(">I",contents,i-0x8000)[0]
+    start = data-0x8000
+
     the_string = []
     while contents[start]:
         the_string.append(contents[start])
