@@ -672,6 +672,12 @@ EXT_028a	EQU	$FFFFFFFF
 
 LAB_SECSTRT_0:
 	move.l	a0,_resload
+	move.l	a0,a2
+	lea	(_tag,pc),a0
+	jsr	(resload_Control,a2)
+;        dc.b    "C1:X:Skip intro screens:1;"
+;        dc.b    "C1:X:Fast intro screens:2;"
+		
 	JMP	object_entrypoint		;0800c: 4ef9000229b4
 lb_800e:
 _flushcache
@@ -680,6 +686,9 @@ _flushcache
 	jsr	resload_FlushCache(a2)
 	move.l	(a7)+,a2
 	rts
+_tag		dc.l	WHDLTAG_CUSTOM1_GET
+options	dc.l	0
+		dc.l	0
 	
 _resload
 	dc.l	0
@@ -4313,11 +4322,11 @@ display_faded_in_image:
 	MOVEM.L	A2-A6,-(A7)		;0a460: 48e7003e
 	CLR.W	EXT_006e.W		;0a464: 42780904
 	JSR	vbl_game_sync		;0a468: 4eb900022fbc
-	LEA	copperlist_palette,A1		;0a46e: 43f900024a5c
+	LEA	palette_clist_1,A1		;0a46e: 43f900024a5c
 	LEA	palette_clist_2,A2		;0a474: 45f900024b1c
-	LEA	LAB_051C,A3		;0a47a: 47f900024b9c
-	LEA	LAB_051E,A4		;0a480: 49f900024c1c
-	LEA	LAB_0528,A5		;0a486: 4bf900024cbc
+	LEA	palette_clist_3,A3		;0a47a: 47f900024b9c
+	LEA	palette_clist_4,A4		;0a480: 49f900024c1c
+	LEA	palette_clist_5,A5		;0a486: 4bf900024cbc
 	MOVE.L	#$0000001e,D7		;0a48c: 2e3c0000001e
 do_zero_palette:
 	CLR.W	(A1)			;0a492: 4251
@@ -4336,24 +4345,25 @@ do_zero_palette:
 LAB_0150:
 	MOVE.L	D7,-(A7)		;0a4b4: 2f07
 	MOVEA.L	A2,A0			;0a4b6: 204a
-	LEA	copperlist_palette,A1		;0a4b8: 43f900024a5c
+	LEA	palette_clist_1,A1		;0a4b8: 43f900024a5c
 	BSR.W	do_fade_in		;0a4be: 61000068
 	MOVEA.L	A3,A0			;0a4c2: 204b
 	LEA	palette_clist_2,A1		;0a4c4: 43f900024b1c
 	BSR.W	do_fade_in		;0a4ca: 6100005c
 	MOVEA.L	A4,A0			;0a4ce: 204c
-	LEA	LAB_051C,A1		;0a4d0: 43f900024b9c
+	LEA	palette_clist_3,A1		;0a4d0: 43f900024b9c
 	BSR.W	do_fade_in		;0a4d6: 61000050
 	MOVEA.L	A5,A0			;0a4da: 204d
-	LEA	LAB_051E,A1		;0a4dc: 43f900024c1c
+	LEA	palette_clist_4,A1		;0a4dc: 43f900024c1c
 	BSR.W	do_fade_in		;0a4e2: 61000044
 	MOVEA.L	A6,A0			;0a4e6: 204e
-	LEA	LAB_0528,A1		;0a4e8: 43f900024cbc
+	LEA	palette_clist_5,A1		;0a4e8: 43f900024cbc
 	BSR.W	do_fade_in		;0a4ee: 61000038
 	MOVEM.L	A4-A6,-(A7)		;0a4f2: 48e7000e
+	; copy copperlist values to hardware palette
 	MOVE.L	#$0000001e,D7		;0a4f6: 2e3c0000001e
 	LEA	COLOR01,A4		;0a4fc: 49f900dff182
-	LEA	copperlist_palette,A5		;0a502: 4bf900024a5c
+	LEA	palette_clist_1,A5		;0a502: 4bf900024a5c
 LAB_0151:
 	MOVE.W	(A5),(A4)+		;0a508: 38d5
 	ADDQ.W	#4,A5			;0a50a: 584d
@@ -4503,11 +4513,11 @@ LAB_0164:
 	RTS				;0a67e: 4e75
 	; table of pointers to chipmem (copper stuff)
 LAB_0165:
-	dc.l	copperlist_palette
+	dc.l	palette_clist_1
 	dc.l	palette_clist_2
-	dc.l	LAB_051C
-	dc.l	LAB_051E
-	dc.l	LAB_0528
+	dc.l	palette_clist_3
+	dc.l	palette_clist_4
+	dc.l	palette_clist_5
 LAB_0166:
 	dc.l   0			;0a694: 00000000
 	dc.l   0			;0a698: 00000000
@@ -4538,15 +4548,15 @@ LAB_016B:
 	CLR.W	COLOR00			;0a6e4: 427900dff180
 	MOVE.L	#$0000001e,D3		;0a6ea: 263c0000001e
 LAB_016C:
-	LEA	copperlist_palette,A0		;0a6f0: 41f900024a5c
+	LEA	palette_clist_1,A0		;0a6f0: 41f900024a5c
 	BSR.W	fade_in		;0a6f6: 61000058
 	LEA	palette_clist_2,A0		;0a6fa: 41f900024b1c
 	BSR.W	fade_in		;0a700: 6100004e
-	LEA	LAB_051C,A0		;0a704: 41f900024b9c
+	LEA	palette_clist_3,A0		;0a704: 41f900024b9c
 	BSR.W	fade_in		;0a70a: 61000044
-	LEA	LAB_051E,A0		;0a70e: 41f900024c1c
+	LEA	palette_clist_4,A0		;0a70e: 41f900024c1c
 	BSR.W	fade_in		;0a714: 6100003a
-	LEA	LAB_0528,A0		;0a718: 41f900024cbc
+	LEA	palette_clist_5,A0		;0a718: 41f900024cbc
 	BSR.W	fade_in		;0a71e: 61000030
 	TST.W	LAB_016E		;0a722: 4a790000a74e
 	BEQ.S	LAB_016D		;0a728: 6718
@@ -4648,9 +4658,9 @@ LAB_0177:
 	MOVE.W	#$2c81,142(A6)		;0a884: 3d7c2c81008e
 	MOVE.W	#$f4c1,144(A6)		;0a88a: 3d7cf4c10090
 	CLR.W	COLOR00			;0a890: 427900dff180
-	LEA	copperlist_palette,A1		;0a896: 43f900024a5c
+	LEA	palette_clist_1,A1		;0a896: 43f900024a5c
 	LEA	palette_clist_2,A2		;0a89c: 45f900024b1c
-	LEA	LAB_0528,A3		;0a8a2: 47f900024cbc
+	LEA	palette_clist_5,A3		;0a8a2: 47f900024cbc
 	LEA	LAB_0F0D,A4		;0a8a8: 49f900050ab6
 	CLR.W	D1			;0a8ae: 4241
 	MOVE.L	#$0000000e,D0		;0a8b0: 203c0000000e
@@ -4663,7 +4673,6 @@ LAB_0178:
 	ADDQ.L	#4,A3			;0a8c0: 588b
 	DBF	D0,LAB_0178		;0a8c2: 51c8fff2
 	LEA	copperlist,A0		;0a8c6: 41f900024a36
-	;blitz
 	MOVE.L	A0,128(A6)		;0a8cc: 2d480080
 	MOVE.W	#$ffff,136(A6)		;0a8d0: 3d7cffff0088
 	MOVE.W	#$8380,150(A6)		;0a8d6: 3d7c83800096
@@ -5454,7 +5463,7 @@ write_credits_text:
 	MOVE.L	A1,-(A7)		;0b1ee: 2f09
 	MOVE.L	A0,-(A7)		;0b1f0: 2f08
 	ASL.W	#4,D1			;0b1f2: e941
-	MOVEA.L	LAB_01C0+2,A1		;0b1f4: 22790000b26e
+	MOVEA.L	fonts_base,A1		;0b1f4: 22790000b26e
 	ADDA.W	D1,A1			;0b1fa: d2c1
 	ADDA.L	EXT_013b.W,A0		;0b1fc: d1f85f1c
 	MOVE.L	LAB_01C2,D4		;0b200: 28390000b272
@@ -5480,7 +5489,7 @@ LAB_01BD:
 	MOVE.W	D0,D1			;0b22e: 3200
 	SUBI.W	#$0020,D1		;0b230: 04410020
 	ASL.W	#4,D1			;0b234: e941
-	MOVEA.L	LAB_01C0+2,A1		;0b236: 22790000b26e
+	MOVEA.L	fonts_base,A1		;0b236: 22790000b26e
 	ADDA.W	D1,A1			;0b23c: d2c1
 	ADDA.L	EXT_013b.W,A0		;0b23e: d1f85f1c
 	MOVE.L	LAB_01C2,D4		;0b242: 28390000b272
@@ -5500,8 +5509,10 @@ LAB_01BF:
 	MOVEA.L	(A7)+,A1		;0b268: 225f
 	RTS				;0b26a: 4e75
 LAB_01C0:
-	ORI.B	#$05,D0			;0b26c: 00000005
-	DC.W	$0e36			;0b270
+	dc.w	0
+fonts_base
+	dc.l	lb_50e36
+
 LAB_01C2:
 	ORI.B	#$07,D0			;0b272: 00000007
     ; this has something to do with drawing some stuff
@@ -11959,7 +11970,7 @@ lb_1186a:
 	MOVE.L	A6,-(A7)
 	MOVE.W	LAB_0D50+2,D0		;1186c: 30390004c23e
 	ANDI.W	#$003c,D0		;11872: 0240003c
-	LEA	LAB_034E(PC),A0		;11876: 41fa0056
+	LEA	another_damn_address_table(PC),A0		;11876: 41fa0056
 	MOVEA.L	0(A0,D0.W),A1		;1187a: 22700000
 	MOVE.W	(A1),D0			;1187e: 3011
 	JSR	LAB_01C3		;11880: 4eb90000b276
@@ -11969,7 +11980,7 @@ lb_1188a:
 	MOVE.L	A6,-(A7)		;1188a: 2f0e
 	MOVE.W	LAB_0D50+2,D0		;1188c: 30390004c23e
 	ANDI.W	#$003c,D0		;11892: 0240003c
-	LEA	LAB_034E(PC),A0		;11896: 41fa0036
+	LEA	another_damn_address_table(PC),A0		;11896: 41fa0036
 	MOVEA.L	0(A0,D0.W),A1		;1189a: 22700000
 	MOVE.W	2(A1),D0		;1189e: 30290002
 	JSR	LAB_01C3		;118a2: 4eb90000b276
@@ -11979,56 +11990,35 @@ lb_118ac:
 	MOVE.L	A6,-(A7)		;118ac: 2f0e
 	MOVE.W	LAB_0D50+2,D0		;118ae: 30390004c23e
 	ANDI.W	#$003c,D0		;118b4: 0240003c
-	LEA	LAB_034E(PC),A0		;118b8: 41fa0014
+	LEA	another_damn_address_table(PC),A0		;118b8: 41fa0014
 	MOVEA.L	0(A0,D0.W),A1		;118bc: 22700000
 	MOVE.W	4(A1),D0		;118c0: 30290004
 	JSR	LAB_01C3		;118c4: 4eb90000b276
 	MOVEA.L	(A7)+,A6		;118ca: 2c5f
 	RTS				;118cc: 4e75
-LAB_034E:
-	DC.W	$0001			;118ce
-	MOVE.B	-(A4),-(A4)		;118d0: 1924
-	DC.W	$0001			;118d2
-	MOVE.B	-(A4),-(A4)		;118d4: 1924
-	DC.W	$0001			;118d6
-	MOVE.B	-(A4),-(A4)		;118d8: 1924
-	DC.W	$0001			;118da
-	MOVE.B	-(A4),-(A4)		;118dc: 1924
-	DC.W	$0001			;118de
-	MOVE.B	-(A4),-(A4)		;118e0: 1924
-	DC.W	$0001			;118e2
-	MOVE.B	(A6)+,-(A4)		;118e4: 191e
-	DC.W	$0001			;118e6
-	MOVE.B	(A6)+,-(A4)		;118e8: 191e
-	DC.W	$0001			;118ea
-	MOVE.B	(A6)+,-(A4)		;118ec: 191e
-	DC.W	$0001			;118ee
-	MOVE.B	(A6)+,-(A4)		;118f0: 191e
-	DC.W	$0001			;118f2
-	MOVE.B	(A0)+,-(A4)		;118f4: 1918
-	DC.W	$0001			;118f6
-	MOVE.B	(A0)+,-(A4)		;118f8: 1918
-	DC.W	$0001			;118fa
-	MOVE.B	(A0)+,-(A4)		;118fc: 1918
-	DC.W	$0001			;118fe
-	MOVE.B	(A0)+,-(A4)		;11900: 1918
-	DC.W	$0001			;11902
-	MOVE.B	(A2),-(A4)		;11904: 1912
-	DC.W	$0001			;11906
-	MOVE.B	(A2),-(A4)		;11908: 1912
-	DC.W	$0001			;1190a
-	MOVE.B	(A2),-(A4)		;1190c: 1912
-	DC.W	$0001			;1190e
-	MOVE.B	(A2),-(A4)		;11910: 1912
-	dc.l   0			;11912: 00000000
-	ORI.B	#$05,D0			;11916: 00000005
-	dc.l   0			;1191a: 00000000
-	ORI.B	#$05,D5			;1191e: 00050005
-	dc.w	0			;11922: 0000
-lb_11924
-	dc.w	0005
-	ORI.B	#$01,D5			;11926: 00050001
+another_damn_address_table:
+	dc.l	lb_11924
+	dc.l	lb_11924
+	dc.l	lb_11924
+	dc.l	lb_11924
+	dc.l	lb_11924
+	dc.l	lb_1191e
+	dc.l	lb_1191e
+	dc.l	lb_1191e
+	dc.l	lb_1191e
+	dc.l	lb_11918
+	dc.l	lb_11918
+	dc.l	lb_11918
+	dc.l	lb_11918
+	dc.l	lb_11912
+	dc.l	lb_11912
+	dc.l	lb_11912
+	dc.l	lb_11912
 
+lb_11924
+	dc.w	$0005
+	dc.l	$00050001
+lb_11fc8
 	MOVE.W	EXT_00e6.W,D0		;11fc8: 30382ad0
 	ADDI.W	#$012c,D0		;11fcc: 0640012c
 	BMI.S	LAB_034F		;11fd0: 6b32
@@ -12224,7 +12214,7 @@ LAB_03B6:
 	MOVEA.L	0(A6,D7.W),A0		;17fc4: 20767000
 	MOVE.L	4(A6,D7.W),-(A7)	;17fc8: 2f367004
 	LEA	chipdata_start,A1		;17fcc: 43f9000520ca
-	JSR	LAB_0F20		;17fd2: 4eb90005148e
+	JSR	load_from_disk		;17fd2: 4eb90005148e
 	TST.L	D0			;17fd8: 4a80
 	BEQ.S	LAB_03B8		;17fda: 670a
 LAB_03B7:
@@ -12234,7 +12224,7 @@ LAB_03B8:
 	MOVEQ	#0,D1			;17fe6: 7200
 	MOVEA.L	(A7)+,A0		;17fe8: 205f
 	LEA	EXT_0151,A1		;17fea: 43f90005400a
-	JSR	LAB_0F20		;17ff0: 4eb90005148e
+	JSR	load_from_disk		;17ff0: 4eb90005148e
 	TST.L	D0			;17ff6: 4a80
 	BNE.S	LAB_03B7		;17ff8: 66e2
 	BSR.W	LAB_03A6		;17ffa: 6100fe5c
@@ -28173,7 +28163,7 @@ display_cpu_type:
 	MOVEQ	#0,D1			;23686: 7200
 	LEA	LAB_045A(PC),A0		;23688: 41fa00b8
 	LEA	chipdata_start,A1		;2368c: 43f9000520ca
-	JSR	LAB_0F20		;23692: 4eb90005148e
+	JSR	load_from_disk		;23692: 4eb90005148e
 	MOVE.L	#$0005a0ca,LAB_04A2	;23698: 23fc0005a0ca00023c12
 	MOVE.L	chipdata_start,D1		;236a2: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;236a8: 23fc000520ce00023c06
@@ -28193,14 +28183,15 @@ LAB_0458:
 	MOVE.L	8188(A2),8188(A1)	;236ea: 236a1ffc1ffc
 	DBF	D7,LAB_0458		;236f0: 51cffff6
 	JSR	LAB_0188		;236f4: 4eb90000aa94
-	LEA	LAB_04A6,A0		;236fa: 41f900023c1e
-	LEA	LAB_04A6,A1		;23700: 43f900023c1e
-	LEA	LAB_04A6,A2		;23706: 45f900023c1e
-	LEA	LAB_04A6,A3		;2370c: 47f900023c1e
-	LEA	LAB_04A6,A4		;23712: 49f900023c1e
-	LEA	LAB_04A6,A5		;23718: 4bf900023c1e
+
+	LEA	color_values,A0		;236fa: 41f900023c1e
+	LEA	color_values,A1		;23700: 43f900023c1e
+	LEA	color_values,A2		;23706: 45f900023c1e
+	LEA	color_values,A3		;2370c: 47f900023c1e
+	LEA	color_values,A4		;23712: 49f900023c1e
+	LEA	color_values,A5		;23718: 4bf900023c1e
 	; display CPU image
-	blitz
+	
 	JSR	display_faded_in_image		;2371e: 4eb90000a460
 	LEA	LAB_0461,A0		;23724: 41f9000237e2
 	MOVE.W	cpu_flags.W,D0		;2372a: 303809b4
@@ -28364,13 +28355,23 @@ LAB_238aa
 	dc.w	$652e
 	DC.W	$0000			;238cc
 LAB_046F:
+	move.l	d7,-(a7)
+	move.l	options,d7
+	btst	#1,d7
+	movem.l	(a7)+,d7
+	bne.b	.skip
+	; D7 contains a filename index
 	JSR	display_intro_screen		;238ce: 4eb9000238e4
     ; D7 <= time to wait?
-	IFD	fast_intro_screen
+	move.l	options,d7
+	btst	#2,d7
+	beq.b	.normal
+.skip
 	moveq.l	#1,d7
-	ELSE
+	bra.b	.cont
+.normal
 	MOVE.L	#$000000c8,D7		;238d4: 2e3c000000c8
-	ENDC
+.cont
 	JSR	LAB_0445		;238da: 4eb90002330c
 	TST.W	D7			;238e0: 4a47
 LAB_0470:
@@ -28380,7 +28381,7 @@ display_intro_screen:
 	MOVE.W	D7,-(A7)		;238e4: 3f07
 	MOVE.W	#$0001,LAB_0484+2	;238e6: 33fc000100023ad2
 	BRA.S	LAB_0473		;238ee: 6008
-LAB_0472:
+load_file_index_d7:
 	CLR.W	LAB_0484+2		;238f0: 427900023ad2
 	MOVE.W	D7,-(A7)		;238f6: 3f07
 LAB_0473:
@@ -28400,7 +28401,7 @@ LAB_0475:
 LAB_0476:
 	LEA	chipdata_start,A1		;23928: 43f9000520ca
 LAB_0477:
-	JSR	LAB_0F20		;2392e: 4eb90005148e
+	JSR	load_from_disk		;2392e: 4eb90005148e
 	TST.L	D0			;23934: 4a80
 	BNE.S	LAB_0475		;23936: 66ea
 LAB_0478:
@@ -28642,7 +28643,7 @@ LAB_04A3:
 	dc.l   0			;23c16: 00000000
 LAB_04A4:
 	dc.l   0			;23c1a: 00000000
-LAB_04A6:
+color_values:
 	dc.l   0			;23c1e: 00000000
 LAB_04A8:
 	dc.l   0			;23c22: 00000000
@@ -28723,7 +28724,7 @@ LAB_04AB:
 	MOVEQ	#0,D1			;23d2c: 7200
 	LEA	LAB_04CC(PC),A0		;23d2e: 41fa0658
 	LEA	chipdata_start,A1		;23d32: 43f9000520ca
-	JSR	LAB_0F20		;23d38: 4eb90005148e
+	JSR	load_from_disk		;23d38: 4eb90005148e
 	MOVE.L	#$000620ca,LAB_04A2	;23d3e: 23fc000620ca00023c12
 	MOVE.L	chipdata_start,D1		;23d48: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;23d4e: 23fc000520ce00023c06
@@ -28732,7 +28733,7 @@ LAB_04AB:
 	BSR.W	LAB_0486		;23d68: 6100fd6a
 LAB_04AC:
 	MOVEQ	#6,D7			;23d6c: 7e06
-	JSR	LAB_0472		;23d6e: 4eb9000238f0
+	JSR	load_file_index_d7		;23d6e: 4eb9000238f0
 	MOVE.L	#$0006c0ca,LAB_04A2	;23d74: 23fc0006c0ca00023c12
 	MOVE.L	chipdata_start,D1		;23d7e: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;23d84: 23fc000520ce00023c06
@@ -29516,7 +29517,7 @@ LAB_04F1
 	JSR vbl_sync_not_game		; 00024900
 	MOVE.L #$0000000f,D7
 LAB_04F2:
-	LEA	other_copperlist_palette,A0		;2490c: 41f900024506
+	LEA	other_palette_clist_1,A0		;2490c: 41f900024506
 	MOVE.L	#$0000001f,D6		;24912: 2c3c0000001f
 LAB_04F3:
 	MOVE.W	(A0),D0			;24918: 3010
@@ -29556,7 +29557,7 @@ LAB_04F7:
 	MOVE.L	#$0000000f,D7		;24972: 2e3c0000000f
 LAB_04F8:
 	MOVEM.L	D7/A0,-(A7)		;24978: 48e70180
-	LEA	other_copperlist_palette,A1		;2497c: 43f900024506
+	LEA	other_palette_clist_1,A1		;2497c: 43f900024506
 	MOVE.L	#$0000001f,D6		;24982: 2c3c0000001f
 LAB_04F9:
 	MOVE.W	(A0),D0			;24988: 3010
@@ -29600,7 +29601,7 @@ LAB_04FC:
 	RTS				;249ec: 4e75
 lb_249ee:
 	JSR	vbl_sync_not_game		;249ee: 4eb900022fac
-	LEA	other_copperlist_palette,A1		;249f4: 43f900024506
+	LEA	other_palette_clist_1,A1		;249f4: 43f900024506
 	LEA	COLOR00,A2		;249fa: 45f900dff180
 	MOVE.L	#$0000001f,D7		;24a00: 2e3c0000001f
 LAB_04FD:
@@ -29611,7 +29612,7 @@ LAB_04FD:
 	RTS				;24a10: 4e75
 LAB_04FE:
 	JSR	vbl_sync_not_game		;24a12: 4eb900022fac
-	LEA	other_copperlist_palette,A1		;24a18: 43f900024506
+	LEA	other_palette_clist_1,A1		;24a18: 43f900024506
 	LEA	COLOR00,A2		;24a1e: 45f900dff180
 	MOVE.L	#$0000001f,D7		;24a24: 2e3c0000001f
 LAB_04FF:
@@ -29730,7 +29731,7 @@ LAB_0552:
 	MOVEQ	#0,D1			;25bca: 7200
 	LEA	LAB_0576(PC),A0		;25bcc: 41fa03e6
 	LEA	chipdata_start,A1		;25bd0: 43f9000520ca
-	JSR	LAB_0F20		;25bd6: 4eb90005148e
+	JSR	load_from_disk		;25bd6: 4eb90005148e
 	MOVE.L	EXT_013c.W,LAB_04A2	;25bdc: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25be4: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25bea: 23fc000520ce00023c06
@@ -29738,8 +29739,8 @@ LAB_0552:
 	ADD.L	D1,LAB_04A0		;25bfe: d3b900023c0a
 	JSR	LAB_0489		;25c04: 4eb900023ade
 	MOVE.W	#$0000,LAB_04A4+2	;25c0a: 33fc000000023c1c
-	MOVE.W	#$0667,LAB_04A6		;25c12: 33fc066700023c1e
-	MOVE.W	#$0556,LAB_04A6+2	;25c1a: 33fc055600023c20
+	MOVE.W	#$0667,color_values		;25c12: 33fc066700023c1e
+	MOVE.W	#$0556,color_values+2	;25c1a: 33fc055600023c20
 	MOVE.W	#$0224,LAB_04A8		;25c22: 33fc022400023c22
 	LEA	LAB_0F0E,A1		;25c2a: 43f900050ad4
 	LEA	LAB_0F11,A2		;25c30: 45f900050b14
@@ -29859,7 +29860,7 @@ LAB_0564:
 	MOVEQ	#0,D1			;25da4: 7200
 	LEA	LAB_0574(PC),A0		;25da6: 41fa01fe
 	LEA	chipdata_start,A1		;25daa: 43f9000520ca
-	JSR	LAB_0F20		;25db0: 4eb90005148e
+	JSR	load_from_disk		;25db0: 4eb90005148e
 	MOVE.L	EXT_013c.W,LAB_04A2	;25db6: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25dbe: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25dc4: 23fc000520ce00023c06
@@ -29911,7 +29912,7 @@ LAB_056A:
 	MOVEQ	#0,D1			;25e66: 7200
 	LEA	LAB_0575(PC),A0		;25e68: 41fa0144
 	LEA	chipdata_start,A1		;25e6c: 43f9000520ca
-	JSR	LAB_0F20		;25e72: 4eb90005148e
+	JSR	load_from_disk		;25e72: 4eb90005148e
 	MOVE.L	EXT_013c.W,LAB_04A2	;25e78: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25e80: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25e86: 23fc000520ce00023c06
@@ -29964,7 +29965,7 @@ LAB_0570:
 	MOVEQ	#0,D1			;25f2c: 7200
 	LEA	LAB_0577(PC),A0		;25f2e: 41fa008c
 	LEA	chipdata_start,A1		;25f32: 43f9000520ca
-	JSR	LAB_0F20		;25f38: 4eb90005148e
+	JSR	load_from_disk		;25f38: 4eb90005148e
 	MOVE.L	EXT_013c.W,LAB_04A2	;25f3e: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25f46: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25f4c: 23fc000520ce00023c06
@@ -29972,7 +29973,7 @@ LAB_0570:
 	ADD.L	D1,LAB_04A0		;25f60: d3b900023c0a
 	JSR	LAB_0489		;25f66: 4eb900023ade
 	MOVEA.L	EXT_013c.W,A0		;25f6c: 20785f20
-	LEA	LAB_0595+2(PC),A1	;25f70: 43fa270a
+	LEA	LAB_0595(PC),A1	;25f70: 43fa270a
 	MOVEQ	#3,D5			;25f74: 7a03
 LAB_0571:
 	MOVEQ	#17,D6			;25f76: 7c11
@@ -32451,7 +32452,7 @@ LAB_0588:
 	BSR.W	LAB_0589		;28590: 61000004
 	MOVEQ	#1,D1			;28594: 7201
 LAB_0589:
-	LEA	LAB_0594(PC),A0		;28596: 41fa00c8
+	LEA	another_fuckin_address_table_0594(PC),A0		;28596: 41fa00c8
 	ASL.W	#4,D1			;2859a: e941
 	ADDA.W	D1,A0			;2859c: d0c1
 	MOVEA.L	(A0)+,A4		;2859e: 2858
@@ -32479,13 +32480,13 @@ LAB_058E:
 	BPL.S	LAB_058F		;285c8: 6a02
 	CLR.W	D0			;285ca: 4240
 LAB_058F:
-	LEA	LAB_0594(PC),A0		;285cc: 41fa0092
+	LEA	another_fuckin_address_table_0594(PC),A0		;285cc: 41fa0092
 	ASL.W	#4,D1			;285d0: e941
 	ADDA.W	D1,A0			;285d2: d0c1
 	MOVEA.L	(A0)+,A4		;285d4: 2858
 	MOVEA.L	(A0)+,A5		;285d6: 2a58
 	MOVEA.L	(A0)+,A6		;285d8: 2c58
-	LEA	LAB_0593(PC),A1		;285da: 43fa0024
+	LEA	another_fuckin_address_table_0593(PC),A1		;285da: 43fa0024
 	ADD.W	D0,D0			;285de: d040
 	ADD.W	D0,D0			;285e0: d040
 	MOVEA.L	0(A1,D0.W),A0		;285e2: 20710000
@@ -32502,3518 +32503,44 @@ LAB_0592:
 	MOVE.L	(A0)+,(A6)+		;285f8: 2cd8
 	DBF	D7,LAB_0592		;285fa: 51cffffc
 	RTS				;285fe: 4e75
-LAB_0593:
-	DC.W	$0002			;28600
-	OR.W	#$0002,D3		;28602: 867c0002
-	OR.L	#$00028afc,D4		;28606: 88bc00028afc
-	DC.W	$0002			;2860c
-	DC.W	$8d3c			;2860e
-	DC.W	$0002			;28610
-	DC.W	$8f7c			;28612
-	DC.W	$0002			;28614
-	DC.W	$91bc			;28616
-	DC.W	$0002			;28618
-	SUBA.L	#$0002963c,A1		;2861a: 93fc0002963c
-	DC.W	$0002			;28620
-	SUB.W	#$0002,D4		;28622: 987c0002
-	SUB.L	#$00029cfc,D5		;28626: 9abc00029cfc
-	DC.W	$0002			;2862c
-	DC.W	$9f3c			;2862e
-	DC.W	$0002			;28630
-	DC.W	$a17c			;28632
-	DC.W	$0002			;28634
-	DC.W	$a3bc			;28636
-	DC.W	$0002			;28638
-	DC.W	$a5fc			;2863a
-	DC.W	$0002			;2863c
-	DC.W	$a83c			;2863e
-	DC.W	$0002			;28640
-	DC.W	$aa7c			;28642
-	DC.W	$0002			;28644
-	DC.W	$acbc			;28646
-	DC.W	$0002			;28648
-	DC.W	$aefc			;2864a
-	DC.W	$0002			;2864c
-	DC.W	$b13c			;2864e
-	DC.W	$0002			;28650
-	DC.W	$b37c			;28652
-	DC.W	$0002			;28654
-	DC.W	$b5bc			;28656
-	DC.W	$0002			;28658
-	CMPA.L	#$0002ba3c,A3		;2865a: b7fc0002ba3c
-LAB_0594:
-	DC.W	$0002			;28660
-	TRAPV				;28662: 4e76
-	DC.W	$0002			;28664
-	ADDQ.B	#8,2(A6,D0.W)		;28666: 50360002
-	SF	0(A6,D0.W)		;2866a: 51f60000
-	DC.W	$ffff			;2866e
-	DC.W	$0002			;28670
-	SUBQ.L	#1,2(A6,D0.W)		;28672: 53b60002
-	SUBQ.W	#2,2(A6,D0.W)		;28676: 55760002
+another_fuckin_address_table_0593:
+	dc.l	lb_2867c
+	dc.l	lb_288bc
+	dc.l	lb_28afc
+	dc.l	lb_28d3c
+	dc.l	lb_28f7c
+	dc.l	lb_291bc
+	dc.l	lb_293fc
+	dc.l	lb_2963c
+	dc.l	lb_2987c
+	dc.l	lb_29abc
+	dc.l	lb_29cfc
+	dc.l	lb_29f3c
+	dc.l	lb_2a17c
+	dc.l	lb_2a3bc
+	dc.l	lb_2a5fc
+	dc.l	lb_2a83c
+	dc.l	lb_2aa7c
+	dc.l	lb_2acbc
+	dc.l	lb_2aefc
+	dc.l	lb_2b13c
+	dc.l	lb_2b37c
+	dc.l	lb_2b5bc
+	dc.l	lb_2b7fc
+	dc.l	lb_2ba3c
+another_fuckin_address_table_0594:
+	dc.l	lb_24e76
+	dc.l	lb_25036
+	dc.l	lb_251f6
+	dc.l	$ffff
+	dc.l	lb_253b6
+	dc.l	lb_25576
+	dc.l	lb_25736
 LAB_0595:
-	SUBQ.B	#3,0(A6,D0.W)		;2867a: 57360000
-	dc.l   0			;2867e: 00000000
-	dc.l   0			;28682: 00000000
-	dc.l   0			;28686: 00000000
-	dc.l   0			;2868a: 00000000
-	dc.l   0			;2868e: 00000000
-	dc.l   0			;28692: 00000000
-	dc.l   0			;28696: 00000000
-	dc.l   0			;2869a: 00000000
-	dc.l   0			;2869e: 00000000
-	dc.l   0			;286a2: 00000000
-	dc.l   0			;286a6: 00000000
-	dc.l   0			;286aa: 00000000
-	dc.l   0			;286ae: 00000000
-	dc.l   0			;286b2: 00000000
-	dc.l   0			;286b6: 00000000
-	dc.l   0			;286ba: 00000000
-	dc.l   0			;286be: 00000000
-	dc.l   0			;286c2: 00000000
-	dc.l   0			;286c6: 00000000
-	dc.l   0			;286ca: 00000000
-	dc.l   0			;286ce: 00000000
-	dc.l   0			;286d2: 00000000
-	dc.l   0			;286d6: 00000000
-	dc.l   0			;286da: 00000000
-	dc.l   0			;286de: 00000000
-	dc.l   0			;286e2: 00000000
-	dc.l   0			;286e6: 00000000
-	dc.l   0			;286ea: 00000000
-	dc.l   0			;286ee: 00000000
-	dc.l   0			;286f2: 00000000
-	dc.l   0			;286f6: 00000000
-	dc.l   0			;286fa: 00000000
-	dc.l   0			;286fe: 00000000
-	dc.l   0			;28702: 00000000
-	dc.l   0			;28706: 00000000
-	dc.l   0			;2870a: 00000000
-	dc.l   0			;2870e: 00000000
-	dc.l   0			;28712: 00000000
-	dc.l   0			;28716: 00000000
-	dc.l   0			;2871a: 00000000
-	dc.l   0			;2871e: 00000000
-	dc.l   0			;28722: 00000000
-	dc.l   0			;28726: 00000000
-	dc.l   0			;2872a: 00000000
-	dc.l   0			;2872e: 00000000
-	dc.l   0			;28732: 00000000
-	dc.l   0			;28736: 00000000
-	dc.l   0			;2873a: 00000000
-	dc.l   0			;2873e: 00000000
-	dc.l   0			;28742: 00000000
-	dc.l   0			;28746: 00000000
-	dc.l   0			;2874a: 00000000
-	dc.l   0			;2874e: 00000000
-	dc.l   0			;28752: 00000000
-	dc.l   0			;28756: 00000000
-	dc.l   0			;2875a: 00000000
-	dc.l   0			;2875e: 00000000
-	dc.l   0			;28762: 00000000
-	dc.l   0			;28766: 00000000
-	dc.l   0			;2876a: 00000000
-	dc.l   0			;2876e: 00000000
-	dc.l   0			;28772: 00000000
-	dc.l   0			;28776: 00000000
-	dc.l   0			;2877a: 00000000
-	dc.l   0			;2877e: 00000000
-	dc.l   0			;28782: 00000000
-	dc.l   0			;28786: 00000000
-	dc.l   0			;2878a: 00000000
-	dc.l   0			;2878e: 00000000
-	dc.l   0			;28792: 00000000
-	dc.l   0			;28796: 00000000
-	dc.l   0			;2879a: 00000000
-	dc.l   0			;2879e: 00000000
-	dc.l   0			;287a2: 00000000
-	dc.l   0			;287a6: 00000000
-	dc.l   0			;287aa: 00000000
-	dc.l   0			;287ae: 00000000
-	dc.l   0			;287b2: 00000000
-	dc.l   0			;287b6: 00000000
-	dc.l   0			;287ba: 00000000
-	dc.l   0			;287be: 00000000
-	dc.l   0			;287c2: 00000000
-	dc.l   0			;287c6: 00000000
-	dc.l   0			;287ca: 00000000
-	dc.l   0			;287ce: 00000000
-	dc.l   0			;287d2: 00000000
-	dc.l   0			;287d6: 00000000
-	dc.l   0			;287da: 00000000
-	dc.l   0			;287de: 00000000
-	dc.l   0			;287e2: 00000000
-	dc.l   0			;287e6: 00000000
-	dc.l   0			;287ea: 00000000
-	dc.l   0			;287ee: 00000000
-	dc.l   0			;287f2: 00000000
-	dc.l   0			;287f6: 00000000
-	dc.l   0			;287fa: 00000000
-	dc.l   0			;287fe: 00000000
-	dc.l   0			;28802: 00000000
-	dc.l   0			;28806: 00000000
-	dc.l   0			;2880a: 00000000
-	dc.l   0			;2880e: 00000000
-	dc.l   0			;28812: 00000000
-	dc.l   0			;28816: 00000000
-	dc.l   0			;2881a: 00000000
-	dc.l   0			;2881e: 00000000
-	dc.l   0			;28822: 00000000
-	dc.l   0			;28826: 00000000
-	dc.l   0			;2882a: 00000000
-	dc.l   0			;2882e: 00000000
-	dc.l   0			;28832: 00000000
-	dc.l   0			;28836: 00000000
-LAB_0596:
-	dc.l   0			;2883a: 00000000
-	dc.l   0			;2883e: 00000000
-	dc.l   0			;28842: 00000000
-	dc.l   0			;28846: 00000000
-	dc.l   0			;2884a: 00000000
-	dc.l   0			;2884e: 00000000
-	dc.l   0			;28852: 00000000
-	dc.l   0			;28856: 00000000
-	dc.l   0			;2885a: 00000000
-	dc.l   0			;2885e: 00000000
-	dc.l   0			;28862: 00000000
-	dc.l   0			;28866: 00000000
-	dc.l   0			;2886a: 00000000
-	dc.l   0			;2886e: 00000000
-	dc.l   0			;28872: 00000000
-	dc.l   0			;28876: 00000000
-	dc.l   0			;2887a: 00000000
-	dc.l   0			;2887e: 00000000
-	dc.l   0			;28882: 00000000
-	dc.l   0			;28886: 00000000
-	dc.l   0			;2888a: 00000000
-	dc.l   0			;2888e: 00000000
-	dc.l   0			;28892: 00000000
-	dc.l   0			;28896: 00000000
-	dc.l   0			;2889a: 00000000
-	dc.l   0			;2889e: 00000000
-	dc.l   0			;288a2: 00000000
-	dc.l   0			;288a6: 00000000
-	dc.l   0			;288aa: 00000000
-	dc.l   0			;288ae: 00000000
-	dc.l   0			;288b2: 00000000
-	dc.l   0			;288b6: 00000000
-	dc.l   0			;288ba: 00000000
-	dc.l   0			;288be: 00000000
-	dc.l   0			;288c2: 00000000
-	dc.l   0			;288c6: 00000000
-	dc.l   0			;288ca: 00000000
-	dc.l   0			;288ce: 00000000
-	dc.l   0			;288d2: 00000000
-	dc.l   0			;288d6: 00000000
-	dc.l   0			;288da: 00000000
-	dc.l   0			;288de: 00000000
-	dc.l   0			;288e2: 00000000
-	dc.l   0			;288e6: 00000000
-	dc.l   0			;288ea: 00000000
-	dc.l   0			;288ee: 00000000
-	dc.l   0			;288f2: 00000000
-	dc.l   0			;288f6: 00000000
-	dc.l   0			;288fa: 00000000
-	dc.l   0			;288fe: 00000000
-	dc.l   0			;28902: 00000000
-	dc.l   0			;28906: 00000000
-	dc.l   0			;2890a: 00000000
-	dc.l   0			;2890e: 00000000
-	dc.l   0			;28912: 00000000
-	dc.l   0			;28916: 00000000
-	dc.l   0			;2891a: 00000000
-	dc.l   0			;2891e: 00000000
-	dc.l   0			;28922: 00000000
-	dc.l   0			;28926: 00000000
-	dc.l   0			;2892a: 00000000
-	dc.l   0			;2892e: 00000000
-	dc.l   0			;28932: 00000000
-	dc.l   0			;28936: 00000000
-	dc.l   0			;2893a: 00000000
-	dc.l   0			;2893e: 00000000
-	dc.l   0			;28942: 00000000
-	dc.l   0			;28946: 00000000
-	dc.l   0			;2894a: 00000000
-	dc.l   0			;2894e: 00000000
-	dc.l   0			;28952: 00000000
-	dc.l   0			;28956: 00000000
-	dc.l   0			;2895a: 00000000
-	dc.l   0			;2895e: 00000000
-	dc.l   0			;28962: 00000000
-	dc.l   0			;28966: 00000000
-	dc.l   0			;2896a: 00000000
-	dc.l   0			;2896e: 00000000
-	dc.l   0			;28972: 00000000
-	dc.l   0			;28976: 00000000
-	dc.l   0			;2897a: 00000000
-	dc.l   0			;2897e: 00000000
-	dc.l   0			;28982: 00000000
-	dc.l   0			;28986: 00000000
-	dc.l   0			;2898a: 00000000
-	dc.l   0			;2898e: 00000000
-	dc.l   0			;28992: 00000000
-	dc.l   0			;28996: 00000000
-	dc.l   0			;2899a: 00000000
-	dc.l   0			;2899e: 00000000
-	dc.l   0			;289a2: 00000000
-	dc.l   0			;289a6: 00000000
-	dc.l   0			;289aa: 00000000
-	dc.l   0			;289ae: 00000000
-LAB_0597:
-	dc.l   0			;289b2: 00000000
-	dc.l   0			;289b6: 00000000
-	dc.l   0			;289ba: 00000000
-	dc.l   0			;289be: 00000000
-	dc.l   0			;289c2: 00000000
-	dc.l   0			;289c6: 00000000
-	dc.l   0			;289ca: 00000000
-	dc.l   0			;289ce: 00000000
-	dc.l   0			;289d2: 00000000
-	dc.l   0			;289d6: 00000000
-	dc.l   0			;289da: 00000000
-	dc.l   0			;289de: 00000000
-	dc.l   0			;289e2: 00000000
-	dc.l   0			;289e6: 00000000
-	dc.l   0			;289ea: 00000000
-	dc.l   0			;289ee: 00000000
-	dc.l   0			;289f2: 00000000
-	dc.l   0			;289f6: 00000000
-	dc.l   0			;289fa: 00000000
-	dc.l   0			;289fe: 00000000
-	dc.l   0			;28a02: 00000000
-	dc.l   0			;28a06: 00000000
-	dc.l   0			;28a0a: 00000000
-	dc.l   0			;28a0e: 00000000
-	dc.l   0			;28a12: 00000000
-	dc.l   0			;28a16: 00000000
-	dc.l   0			;28a1a: 00000000
-	dc.l   0			;28a1e: 00000000
-	dc.l   0			;28a22: 00000000
-	dc.l   0			;28a26: 00000000
-	dc.l   0			;28a2a: 00000000
-	dc.l   0			;28a2e: 00000000
-	dc.l   0			;28a32: 00000000
-	dc.l   0			;28a36: 00000000
-	dc.l   0			;28a3a: 00000000
-	dc.l   0			;28a3e: 00000000
-	dc.l   0			;28a42: 00000000
-	dc.l   0			;28a46: 00000000
-	dc.l   0			;28a4a: 00000000
-	dc.l   0			;28a4e: 00000000
-	dc.l   0			;28a52: 00000000
-	dc.l   0			;28a56: 00000000
-	dc.l   0			;28a5a: 00000000
-	dc.l   0			;28a5e: 00000000
-	dc.l   0			;28a62: 00000000
-	dc.l   0			;28a66: 00000000
-	dc.l   0			;28a6a: 00000000
-	dc.l   0			;28a6e: 00000000
-	dc.l   0			;28a72: 00000000
-	dc.l   0			;28a76: 00000000
-	dc.l   0			;28a7a: 00000000
-	dc.l   0			;28a7e: 00000000
-	dc.l   0			;28a82: 00000000
-	dc.l   0			;28a86: 00000000
-	dc.l   0			;28a8a: 00000000
-	dc.l   0			;28a8e: 00000000
-	dc.l   0			;28a92: 00000000
-	dc.l   0			;28a96: 00000000
-	dc.l   0			;28a9a: 00000000
-	dc.l   0			;28a9e: 00000000
-	dc.l   0			;28aa2: 00000000
-	dc.l   0			;28aa6: 00000000
-	dc.l   0			;28aaa: 00000000
-	dc.l   0			;28aae: 00000000
-	dc.l   0			;28ab2: 00000000
-	dc.l   0			;28ab6: 00000000
-	dc.l   0			;28aba: 00000000
-	dc.l   0			;28abe: 00000000
-	dc.l   0			;28ac2: 00000000
-	dc.l   0			;28ac6: 00000000
-	dc.l   0			;28aca: 00000000
-	dc.l   0			;28ace: 00000000
-	dc.l   0			;28ad2: 00000000
-	dc.l   0			;28ad6: 00000000
-	dc.l   0			;28ada: 00000000
-	dc.l   0			;28ade: 00000000
-	dc.l   0			;28ae2: 00000000
-	dc.l   0			;28ae6: 00000000
-	dc.l   0			;28aea: 00000000
-	dc.l   0			;28aee: 00000000
-	dc.l   0			;28af2: 00000000
-	dc.l   0			;28af6: 00000000
-	dc.l   0			;28afa: 00000000
-	dc.l   0			;28afe: 00000000
-	dc.l   0			;28b02: 00000000
-	dc.l   0			;28b06: 00000000
-	dc.l   0			;28b0a: 00000000
-	dc.l   0			;28b0e: 00000000
-	dc.l   0			;28b12: 00000000
-	dc.l   0			;28b16: 00000000
-	dc.l   0			;28b1a: 00000000
-	dc.l   0			;28b1e: 00000000
-	dc.l   0			;28b22: 00000000
-	dc.l   0			;28b26: 00000000
-	dc.l   0			;28b2a: 00000000
-	dc.l   0			;28b2e: 00000000
-	dc.l   0			;28b32: 00000000
-	dc.l   0			;28b36: 00000000
-	dc.l   0			;28b3a: 00000000
-	dc.l   0			;28b3e: 00000000
-	dc.l   0			;28b42: 00000000
-	dc.l   0			;28b46: 00000000
-	dc.l   0			;28b4a: 00000000
-	dc.l   0			;28b4e: 00000000
-	dc.l   0			;28b52: 00000000
-	dc.l   0			;28b56: 00000000
-	dc.l   0			;28b5a: 00000000
-	dc.l   0			;28b5e: 00000000
-	dc.l   0			;28b62: 00000000
-	dc.l   0			;28b66: 00000000
-	dc.l   0			;28b6a: 00000000
-	dc.l   0			;28b6e: 00000000
-	dc.l   0			;28b72: 00000000
-	dc.l   0			;28b76: 00000000
-	dc.l   0			;28b7a: 00000000
-	dc.l   0			;28b7e: 00000000
-	dc.l   0			;28b82: 00000000
-	dc.l   0			;28b86: 00000000
-	dc.l   0			;28b8a: 00000000
-	dc.l   0			;28b8e: 00000000
-	dc.l   0			;28b92: 00000000
-	dc.l   0			;28b96: 00000000
-	dc.l   0			;28b9a: 00000000
-	dc.l   0			;28b9e: 00000000
-	dc.l   0			;28ba2: 00000000
-	dc.l   0			;28ba6: 00000000
-	dc.l   0			;28baa: 00000000
-	dc.l   0			;28bae: 00000000
-	dc.l   0			;28bb2: 00000000
-	dc.l   0			;28bb6: 00000000
-	dc.l   0			;28bba: 00000000
-	dc.l   0			;28bbe: 00000000
-	dc.l   0			;28bc2: 00000000
-	dc.l   0			;28bc6: 00000000
-	dc.l   0			;28bca: 00000000
-	dc.l   0			;28bce: 00000000
-	dc.l   0			;28bd2: 00000000
-	dc.l   0			;28bd6: 00000000
-	dc.l   0			;28bda: 00000000
-	dc.l   0			;28bde: 00000000
-	dc.l   0			;28be2: 00000000
-	dc.l   0			;28be6: 00000000
-	dc.l   0			;28bea: 00000000
-	dc.l   0			;28bee: 00000000
-	dc.l   0			;28bf2: 00000000
-	dc.l   0			;28bf6: 00000000
-	dc.l   0			;28bfa: 00000000
-	dc.l   0			;28bfe: 00000000
-	dc.l   0			;28c02: 00000000
-	dc.l   0			;28c06: 00000000
-	dc.l   0			;28c0a: 00000000
-	dc.l   0			;28c0e: 00000000
-	dc.l   0			;28c12: 00000000
-	dc.l   0			;28c16: 00000000
-	dc.l   0			;28c1a: 00000000
-	dc.l   0			;28c1e: 00000000
-	dc.l   0			;28c22: 00000000
-	dc.l   0			;28c26: 00000000
-	dc.l   0			;28c2a: 00000000
-	dc.l   0			;28c2e: 00000000
-	dc.l   0			;28c32: 00000000
-	dc.l   0			;28c36: 00000000
-	dc.l   0			;28c3a: 00000000
-	dc.l   0			;28c3e: 00000000
-	dc.l   0			;28c42: 00000000
-	dc.l   0			;28c46: 00000000
-	dc.l   0			;28c4a: 00000000
-	dc.l   0			;28c4e: 00000000
-	dc.l   0			;28c52: 00000000
-	dc.l   0			;28c56: 00000000
-	dc.l   0			;28c5a: 00000000
-	dc.l   0			;28c5e: 00000000
-	dc.l   0			;28c62: 00000000
-	dc.l   0			;28c66: 00000000
-	dc.l   0			;28c6a: 00000000
-	dc.l   0			;28c6e: 00000000
-	dc.l   0			;28c72: 00000000
-	dc.l   0			;28c76: 00000000
-	dc.l   0			;28c7a: 00000000
-	dc.l   0			;28c7e: 00000000
-	dc.l   0			;28c82: 00000000
-	dc.l   0			;28c86: 00000000
-	dc.l   0			;28c8a: 00000000
-	dc.l   0			;28c8e: 00000000
-	dc.l   0			;28c92: 00000000
-	dc.l   0			;28c96: 00000000
-	dc.l   0			;28c9a: 00000000
-	dc.l   0			;28c9e: 00000000
-	dc.l   0			;28ca2: 00000000
-	dc.l   0			;28ca6: 00000000
-	dc.l   0			;28caa: 00000000
-	dc.l   0			;28cae: 00000000
-	dc.l   0			;28cb2: 00000000
-	dc.l   0			;28cb6: 00000000
-	dc.l   0			;28cba: 00000000
-	dc.l   0			;28cbe: 00000000
-	dc.l   0			;28cc2: 00000000
-	dc.l   0			;28cc6: 00000000
-	dc.l   0			;28cca: 00000000
-	dc.l   0			;28cce: 00000000
-	dc.l   0			;28cd2: 00000000
-	dc.l   0			;28cd6: 00000000
-	dc.l   0			;28cda: 00000000
-	dc.l   0			;28cde: 00000000
-	dc.l   0			;28ce2: 00000000
-	dc.l   0			;28ce6: 00000000
-	dc.l   0			;28cea: 00000000
-	dc.l   0			;28cee: 00000000
-	dc.l   0			;28cf2: 00000000
-	dc.l   0			;28cf6: 00000000
-	dc.l   0			;28cfa: 00000000
-	dc.l   0			;28cfe: 00000000
-	dc.l   0			;28d02: 00000000
-	dc.l   0			;28d06: 00000000
-	dc.l   0			;28d0a: 00000000
-	dc.l   0			;28d0e: 00000000
-	dc.l   0			;28d12: 00000000
-	dc.l   0			;28d16: 00000000
-	dc.l   0			;28d1a: 00000000
-	dc.l   0			;28d1e: 00000000
-	dc.l   0			;28d22: 00000000
-	dc.l   0			;28d26: 00000000
-	dc.l   0			;28d2a: 00000000
-	dc.l   0			;28d2e: 00000000
-	dc.l   0			;28d32: 00000000
-	dc.l   0			;28d36: 00000000
-	dc.l   0			;28d3a: 00000000
-	dc.l   0			;28d3e: 00000000
-	dc.l   0			;28d42: 00000000
-	dc.l   0			;28d46: 00000000
-	dc.l   0			;28d4a: 00000000
-	dc.l   0			;28d4e: 00000000
-	dc.l   0			;28d52: 00000000
-	dc.l   0			;28d56: 00000000
-	dc.l   0			;28d5a: 00000000
-	dc.l   0			;28d5e: 00000000
-	dc.l   0			;28d62: 00000000
-	dc.l   0			;28d66: 00000000
-	dc.l   0			;28d6a: 00000000
-	dc.l   0			;28d6e: 00000000
-	dc.l   0			;28d72: 00000000
-	dc.l   0			;28d76: 00000000
-	dc.l   0			;28d7a: 00000000
-	dc.l   0			;28d7e: 00000000
-	dc.l   0			;28d82: 00000000
-	dc.l   0			;28d86: 00000000
-	dc.l   0			;28d8a: 00000000
-	dc.l   0			;28d8e: 00000000
-	dc.l   0			;28d92: 00000000
-	dc.l   0			;28d96: 00000000
-	dc.l   0			;28d9a: 00000000
-	dc.l   0			;28d9e: 00000000
-	dc.l   0			;28da2: 00000000
-	dc.l   0			;28da6: 00000000
-	dc.l   0			;28daa: 00000000
-	dc.l   0			;28dae: 00000000
-	dc.l   0			;28db2: 00000000
-	dc.l   0			;28db6: 00000000
-	dc.l   0			;28dba: 00000000
-	dc.l   0			;28dbe: 00000000
-	dc.l   0			;28dc2: 00000000
-	dc.l   0			;28dc6: 00000000
-	dc.l   0			;28dca: 00000000
-	dc.l   0			;28dce: 00000000
-	dc.l   0			;28dd2: 00000000
-	dc.l   0			;28dd6: 00000000
-	dc.l   0			;28dda: 00000000
-	dc.l   0			;28dde: 00000000
-	dc.l   0			;28de2: 00000000
-	dc.l   0			;28de6: 00000000
-	dc.l   0			;28dea: 00000000
-	dc.l   0			;28dee: 00000000
-	dc.l   0			;28df2: 00000000
-	dc.l   0			;28df6: 00000000
-	dc.l   0			;28dfa: 00000000
-	dc.l   0			;28dfe: 00000000
-	dc.l   0			;28e02: 00000000
-	dc.l   0			;28e06: 00000000
-	dc.l   0			;28e0a: 00000000
-	dc.l   0			;28e0e: 00000000
-	dc.l   0			;28e12: 00000000
-	dc.l   0			;28e16: 00000000
-	dc.l   0			;28e1a: 00000000
-	dc.l   0			;28e1e: 00000000
-	dc.l   0			;28e22: 00000000
-	dc.l   0			;28e26: 00000000
-	dc.l   0			;28e2a: 00000000
-	dc.l   0			;28e2e: 00000000
-	dc.l   0			;28e32: 00000000
-	dc.l   0			;28e36: 00000000
-	dc.l   0			;28e3a: 00000000
-	dc.l   0			;28e3e: 00000000
-	dc.l   0			;28e42: 00000000
-	dc.l   0			;28e46: 00000000
-	dc.l   0			;28e4a: 00000000
-	dc.l   0			;28e4e: 00000000
-	dc.l   0			;28e52: 00000000
-	dc.l   0			;28e56: 00000000
-	dc.l   0			;28e5a: 00000000
-	dc.l   0			;28e5e: 00000000
-	dc.l   0			;28e62: 00000000
-	dc.l   0			;28e66: 00000000
-	dc.l   0			;28e6a: 00000000
-	dc.l   0			;28e6e: 00000000
-	dc.l   0			;28e72: 00000000
-	dc.l   0			;28e76: 00000000
-	dc.l   0			;28e7a: 00000000
-	dc.l   0			;28e7e: 00000000
-	dc.l   0			;28e82: 00000000
-	dc.l   0			;28e86: 00000000
-	dc.l   0			;28e8a: 00000000
-	dc.l   0			;28e8e: 00000000
-	dc.l   0			;28e92: 00000000
-	dc.l   0			;28e96: 00000000
-	dc.l   0			;28e9a: 00000000
-	dc.l   0			;28e9e: 00000000
-	dc.l   0			;28ea2: 00000000
-	dc.l   0			;28ea6: 00000000
-	dc.l   0			;28eaa: 00000000
-	dc.l   0			;28eae: 00000000
-	dc.l   0			;28eb2: 00000000
-	dc.l   0			;28eb6: 00000000
-	dc.l   0			;28eba: 00000000
-	dc.l   0			;28ebe: 00000000
-	dc.l   0			;28ec2: 00000000
-	dc.l   0			;28ec6: 00000000
-	dc.l   0			;28eca: 00000000
-	dc.l   0			;28ece: 00000000
-	dc.l   0			;28ed2: 00000000
-	dc.l   0			;28ed6: 00000000
-	dc.l   0			;28eda: 00000000
-	dc.l   0			;28ede: 00000000
-	dc.l   0			;28ee2: 00000000
-	dc.l   0			;28ee6: 00000000
-	dc.l   0			;28eea: 00000000
-	dc.l   0			;28eee: 00000000
-	dc.l   0			;28ef2: 00000000
-	dc.l   0			;28ef6: 00000000
-	dc.l   0			;28efa: 00000000
-	dc.l   0			;28efe: 00000000
-	dc.l   0			;28f02: 00000000
-	dc.l   0			;28f06: 00000000
-	dc.l   0			;28f0a: 00000000
-	dc.l   0			;28f0e: 00000000
-	dc.l   0			;28f12: 00000000
-	dc.l   0			;28f16: 00000000
-	dc.l   0			;28f1a: 00000000
-	dc.l   0			;28f1e: 00000000
-	dc.l   0			;28f22: 00000000
-	dc.l   0			;28f26: 00000000
-	dc.l   0			;28f2a: 00000000
-	dc.l   0			;28f2e: 00000000
-	dc.l   0			;28f32: 00000000
-	dc.l   0			;28f36: 00000000
-	dc.l   0			;28f3a: 00000000
-	dc.l   0			;28f3e: 00000000
-	dc.l   0			;28f42: 00000000
-	dc.l   0			;28f46: 00000000
-	dc.l   0			;28f4a: 00000000
-	dc.l   0			;28f4e: 00000000
-	dc.l   0			;28f52: 00000000
-	dc.l   0			;28f56: 00000000
-	dc.l   0			;28f5a: 00000000
-	dc.l   0			;28f5e: 00000000
-	dc.l   0			;28f62: 00000000
-	dc.l   0			;28f66: 00000000
-	dc.l   0			;28f6a: 00000000
-	dc.l   0			;28f6e: 00000000
-	dc.l   0			;28f72: 00000000
-	dc.l   0			;28f76: 00000000
-	dc.l   0			;28f7a: 00000000
-	dc.l   0			;28f7e: 00000000
-	dc.l   0			;28f82: 00000000
-	dc.l   0			;28f86: 00000000
-	dc.l   0			;28f8a: 00000000
-	dc.l   0			;28f8e: 00000000
-	dc.l   0			;28f92: 00000000
-	dc.l   0			;28f96: 00000000
-	dc.l   0			;28f9a: 00000000
-	dc.l   0			;28f9e: 00000000
-	dc.l   0			;28fa2: 00000000
-	dc.l   0			;28fa6: 00000000
-	dc.l   0			;28faa: 00000000
-	dc.l   0			;28fae: 00000000
-	dc.l   0			;28fb2: 00000000
-	dc.l   0			;28fb6: 00000000
-	dc.l   0			;28fba: 00000000
-	dc.l   0			;28fbe: 00000000
-	dc.l   0			;28fc2: 00000000
-	dc.l   0			;28fc6: 00000000
-	dc.l   0			;28fca: 00000000
-	dc.l   0			;28fce: 00000000
-	dc.l   0			;28fd2: 00000000
-	dc.l   0			;28fd6: 00000000
-	dc.l   0			;28fda: 00000000
-	dc.l   0			;28fde: 00000000
-	dc.l   0			;28fe2: 00000000
-	dc.l   0			;28fe6: 00000000
-	dc.l   0			;28fea: 00000000
-	dc.l   0			;28fee: 00000000
-	dc.l   0			;28ff2: 00000000
-	dc.l   0			;28ff6: 00000000
-	dc.l   0			;28ffa: 00000000
-	dc.l   0			;28ffe: 00000000
-	dc.l   0			;29002: 00000000
-	dc.l   0			;29006: 00000000
-	dc.l   0			;2900a: 00000000
-	dc.l   0			;2900e: 00000000
-	dc.l   0			;29012: 00000000
-	dc.l   0			;29016: 00000000
-	dc.l   0			;2901a: 00000000
-	dc.l   0			;2901e: 00000000
-	dc.l   0			;29022: 00000000
-	dc.l   0			;29026: 00000000
-	dc.l   0			;2902a: 00000000
-	dc.l   0			;2902e: 00000000
-	dc.l   0			;29032: 00000000
-	dc.l   0			;29036: 00000000
-	dc.l   0			;2903a: 00000000
-	dc.l   0			;2903e: 00000000
-	dc.l   0			;29042: 00000000
-	dc.l   0			;29046: 00000000
-	dc.l   0			;2904a: 00000000
-	dc.l   0			;2904e: 00000000
-	dc.l   0			;29052: 00000000
-	dc.l   0			;29056: 00000000
-	dc.l   0			;2905a: 00000000
-	dc.l   0			;2905e: 00000000
-	dc.l   0			;29062: 00000000
-	dc.l   0			;29066: 00000000
-	dc.l   0			;2906a: 00000000
-	dc.l   0			;2906e: 00000000
-	dc.l   0			;29072: 00000000
-	dc.l   0			;29076: 00000000
-	dc.l   0			;2907a: 00000000
-	dc.l   0			;2907e: 00000000
-	dc.l   0			;29082: 00000000
-	dc.l   0			;29086: 00000000
-	dc.l   0			;2908a: 00000000
-	dc.l   0			;2908e: 00000000
-	dc.l   0			;29092: 00000000
-	dc.l   0			;29096: 00000000
-	dc.l   0			;2909a: 00000000
-	dc.l   0			;2909e: 00000000
-	dc.l   0			;290a2: 00000000
-	dc.l   0			;290a6: 00000000
-	dc.l   0			;290aa: 00000000
-	dc.l   0			;290ae: 00000000
-	dc.l   0			;290b2: 00000000
-	dc.l   0			;290b6: 00000000
-	dc.l   0			;290ba: 00000000
-	dc.l   0			;290be: 00000000
-	dc.l   0			;290c2: 00000000
-	dc.l   0			;290c6: 00000000
-	dc.l   0			;290ca: 00000000
-	dc.l   0			;290ce: 00000000
-	dc.l   0			;290d2: 00000000
-	dc.l   0			;290d6: 00000000
-	dc.l   0			;290da: 00000000
-	dc.l   0			;290de: 00000000
-	dc.l   0			;290e2: 00000000
-	dc.l   0			;290e6: 00000000
-	dc.l   0			;290ea: 00000000
-	dc.l   0			;290ee: 00000000
-	dc.l   0			;290f2: 00000000
-	dc.l   0			;290f6: 00000000
-	dc.l   0			;290fa: 00000000
-	dc.l   0			;290fe: 00000000
-	dc.l   0			;29102: 00000000
-	dc.l   0			;29106: 00000000
-	dc.l   0			;2910a: 00000000
-	dc.l   0			;2910e: 00000000
-	dc.l   0			;29112: 00000000
-	dc.l   0			;29116: 00000000
-	dc.l   0			;2911a: 00000000
-	dc.l   0			;2911e: 00000000
-	dc.l   0			;29122: 00000000
-	dc.l   0			;29126: 00000000
-	dc.l   0			;2912a: 00000000
-	dc.l   0			;2912e: 00000000
-	dc.l   0			;29132: 00000000
-	dc.l   0			;29136: 00000000
-	dc.l   0			;2913a: 00000000
-	dc.l   0			;2913e: 00000000
-	dc.l   0			;29142: 00000000
-	dc.l   0			;29146: 00000000
-	dc.l   0			;2914a: 00000000
-	dc.l   0			;2914e: 00000000
-	dc.l   0			;29152: 00000000
-	dc.l   0			;29156: 00000000
-	dc.l   0			;2915a: 00000000
-	dc.l   0			;2915e: 00000000
-	dc.l   0			;29162: 00000000
-	dc.l   0			;29166: 00000000
-	dc.l   0			;2916a: 00000000
-	dc.l   0			;2916e: 00000000
-	dc.l   0			;29172: 00000000
-	dc.l   0			;29176: 00000000
-	dc.l   0			;2917a: 00000000
-	dc.l   0			;2917e: 00000000
-	dc.l   0			;29182: 00000000
-	dc.l   0			;29186: 00000000
-	dc.l   0			;2918a: 00000000
-	dc.l   0			;2918e: 00000000
-	dc.l   0			;29192: 00000000
-	dc.l   0			;29196: 00000000
-	dc.l   0			;2919a: 00000000
-	dc.l   0			;2919e: 00000000
-	dc.l   0			;291a2: 00000000
-	dc.l   0			;291a6: 00000000
-	dc.l   0			;291aa: 00000000
-	dc.l   0			;291ae: 00000000
-	dc.l   0			;291b2: 00000000
-	dc.l   0			;291b6: 00000000
-	dc.l   0			;291ba: 00000000
-	dc.l   0			;291be: 00000000
-	dc.l   0			;291c2: 00000000
-	dc.l   0			;291c6: 00000000
-	dc.l   0			;291ca: 00000000
-	dc.l   0			;291ce: 00000000
-	dc.l   0			;291d2: 00000000
-	dc.l   0			;291d6: 00000000
-	dc.l   0			;291da: 00000000
-	dc.l   0			;291de: 00000000
-	dc.l   0			;291e2: 00000000
-	dc.l   0			;291e6: 00000000
-	dc.l   0			;291ea: 00000000
-	dc.l   0			;291ee: 00000000
-	dc.l   0			;291f2: 00000000
-	dc.l   0			;291f6: 00000000
-	dc.l   0			;291fa: 00000000
-	dc.l   0			;291fe: 00000000
-	dc.l   0			;29202: 00000000
-	dc.l   0			;29206: 00000000
-	dc.l   0			;2920a: 00000000
-	dc.l   0			;2920e: 00000000
-	dc.l   0			;29212: 00000000
-	dc.l   0			;29216: 00000000
-	dc.l   0			;2921a: 00000000
-	dc.l   0			;2921e: 00000000
-	dc.l   0			;29222: 00000000
-	dc.l   0			;29226: 00000000
-	dc.l   0			;2922a: 00000000
-	dc.l   0			;2922e: 00000000
-	dc.l   0			;29232: 00000000
-	dc.l   0			;29236: 00000000
-	dc.l   0			;2923a: 00000000
-	dc.l   0			;2923e: 00000000
-	dc.l   0			;29242: 00000000
-	dc.l   0			;29246: 00000000
-	dc.l   0			;2924a: 00000000
-	dc.l   0			;2924e: 00000000
-	dc.l   0			;29252: 00000000
-	dc.l   0			;29256: 00000000
-	dc.l   0			;2925a: 00000000
-	dc.l   0			;2925e: 00000000
-	dc.l   0			;29262: 00000000
-	dc.l   0			;29266: 00000000
-	dc.l   0			;2926a: 00000000
-	dc.l   0			;2926e: 00000000
-	dc.l   0			;29272: 00000000
-	dc.l   0			;29276: 00000000
-	dc.l   0			;2927a: 00000000
-	dc.l   0			;2927e: 00000000
-	dc.l   0			;29282: 00000000
-	dc.l   0			;29286: 00000000
-	dc.l   0			;2928a: 00000000
-	dc.l   0			;2928e: 00000000
-	dc.l   0			;29292: 00000000
-	dc.l   0			;29296: 00000000
-	dc.l   0			;2929a: 00000000
-	dc.l   0			;2929e: 00000000
-	dc.l   0			;292a2: 00000000
-	dc.l   0			;292a6: 00000000
-	dc.l   0			;292aa: 00000000
-	dc.l   0			;292ae: 00000000
-	dc.l   0			;292b2: 00000000
-	dc.l   0			;292b6: 00000000
-	dc.l   0			;292ba: 00000000
-	dc.l   0			;292be: 00000000
-	dc.l   0			;292c2: 00000000
-	dc.l   0			;292c6: 00000000
-	dc.l   0			;292ca: 00000000
-	dc.l   0			;292ce: 00000000
-	dc.l   0			;292d2: 00000000
-	dc.l   0			;292d6: 00000000
-	dc.l   0			;292da: 00000000
-	dc.l   0			;292de: 00000000
-	dc.l   0			;292e2: 00000000
-	dc.l   0			;292e6: 00000000
-	dc.l   0			;292ea: 00000000
-	dc.l   0			;292ee: 00000000
-	dc.l   0			;292f2: 00000000
-	dc.l   0			;292f6: 00000000
-	dc.l   0			;292fa: 00000000
-	dc.l   0			;292fe: 00000000
-	dc.l   0			;29302: 00000000
-	dc.l   0			;29306: 00000000
-	dc.l   0			;2930a: 00000000
-	dc.l   0			;2930e: 00000000
-	dc.l   0			;29312: 00000000
-	dc.l   0			;29316: 00000000
-	dc.l   0			;2931a: 00000000
-	dc.l   0			;2931e: 00000000
-	dc.l   0			;29322: 00000000
-	dc.l   0			;29326: 00000000
-	dc.l   0			;2932a: 00000000
-	dc.l   0			;2932e: 00000000
-	dc.l   0			;29332: 00000000
-	dc.l   0			;29336: 00000000
-	dc.l   0			;2933a: 00000000
-	dc.l   0			;2933e: 00000000
-	dc.l   0			;29342: 00000000
-	dc.l   0			;29346: 00000000
-	dc.l   0			;2934a: 00000000
-	dc.l   0			;2934e: 00000000
-	dc.l   0			;29352: 00000000
-	dc.l   0			;29356: 00000000
-	dc.l   0			;2935a: 00000000
-	dc.l   0			;2935e: 00000000
-	dc.l   0			;29362: 00000000
-	dc.l   0			;29366: 00000000
-	dc.l   0			;2936a: 00000000
-	dc.l   0			;2936e: 00000000
-	dc.l   0			;29372: 00000000
-	dc.l   0			;29376: 00000000
-	dc.l   0			;2937a: 00000000
-	dc.l   0			;2937e: 00000000
-	dc.l   0			;29382: 00000000
-	dc.l   0			;29386: 00000000
-	dc.l   0			;2938a: 00000000
-	dc.l   0			;2938e: 00000000
-	dc.l   0			;29392: 00000000
-	dc.l   0			;29396: 00000000
-	dc.l   0			;2939a: 00000000
-	dc.l   0			;2939e: 00000000
-	dc.l   0			;293a2: 00000000
-	dc.l   0			;293a6: 00000000
-	dc.l   0			;293aa: 00000000
-	dc.l   0			;293ae: 00000000
-	dc.l   0			;293b2: 00000000
-	dc.l   0			;293b6: 00000000
-	dc.l   0			;293ba: 00000000
-	dc.l   0			;293be: 00000000
-	dc.l   0			;293c2: 00000000
-	dc.l   0			;293c6: 00000000
-	dc.l   0			;293ca: 00000000
-	dc.l   0			;293ce: 00000000
-	dc.l   0			;293d2: 00000000
-	dc.l   0			;293d6: 00000000
-	dc.l   0			;293da: 00000000
-	dc.l   0			;293de: 00000000
-	dc.l   0			;293e2: 00000000
-	dc.l   0			;293e6: 00000000
-	dc.l   0			;293ea: 00000000
-	dc.l   0			;293ee: 00000000
-	dc.l   0			;293f2: 00000000
-	dc.l   0			;293f6: 00000000
-	dc.l   0			;293fa: 00000000
-	dc.l   0			;293fe: 00000000
-	dc.l   0			;29402: 00000000
-	dc.l   0			;29406: 00000000
-	dc.l   0			;2940a: 00000000
-	dc.l   0			;2940e: 00000000
-	dc.l   0			;29412: 00000000
-	dc.l   0			;29416: 00000000
-	dc.l   0			;2941a: 00000000
-	dc.l   0			;2941e: 00000000
-	dc.l   0			;29422: 00000000
-	dc.l   0			;29426: 00000000
-	dc.l   0			;2942a: 00000000
-	dc.l   0			;2942e: 00000000
-	dc.l   0			;29432: 00000000
-	dc.l   0			;29436: 00000000
-	dc.l   0			;2943a: 00000000
-	dc.l   0			;2943e: 00000000
-	dc.l   0			;29442: 00000000
-	dc.l   0			;29446: 00000000
-	dc.l   0			;2944a: 00000000
-	dc.l   0			;2944e: 00000000
-	dc.l   0			;29452: 00000000
-	dc.l   0			;29456: 00000000
-	dc.l   0			;2945a: 00000000
-	dc.l   0			;2945e: 00000000
-	dc.l   0			;29462: 00000000
-	dc.l   0			;29466: 00000000
-	dc.l   0			;2946a: 00000000
-	dc.l   0			;2946e: 00000000
-	dc.l   0			;29472: 00000000
-	dc.l   0			;29476: 00000000
-	dc.l   0			;2947a: 00000000
-	dc.l   0			;2947e: 00000000
-	dc.l   0			;29482: 00000000
-	dc.l   0			;29486: 00000000
-	dc.l   0			;2948a: 00000000
-	dc.l   0			;2948e: 00000000
-	dc.l   0			;29492: 00000000
-	dc.l   0			;29496: 00000000
-	dc.l   0			;2949a: 00000000
-	dc.l   0			;2949e: 00000000
-	dc.l   0			;294a2: 00000000
-	dc.l   0			;294a6: 00000000
-	dc.l   0			;294aa: 00000000
-	dc.l   0			;294ae: 00000000
-	dc.l   0			;294b2: 00000000
-	dc.l   0			;294b6: 00000000
-	dc.l   0			;294ba: 00000000
-	dc.l   0			;294be: 00000000
-	dc.l   0			;294c2: 00000000
-	dc.l   0			;294c6: 00000000
-	dc.l   0			;294ca: 00000000
-	dc.l   0			;294ce: 00000000
-	dc.l   0			;294d2: 00000000
-	dc.l   0			;294d6: 00000000
-	dc.l   0			;294da: 00000000
-	dc.l   0			;294de: 00000000
-	dc.l   0			;294e2: 00000000
-	dc.l   0			;294e6: 00000000
-	dc.l   0			;294ea: 00000000
-	dc.l   0			;294ee: 00000000
-	dc.l   0			;294f2: 00000000
-	dc.l   0			;294f6: 00000000
-	dc.l   0			;294fa: 00000000
-	dc.l   0			;294fe: 00000000
-	dc.l   0			;29502: 00000000
-	dc.l   0			;29506: 00000000
-	dc.l   0			;2950a: 00000000
-	dc.l   0			;2950e: 00000000
-	dc.l   0			;29512: 00000000
-	dc.l   0			;29516: 00000000
-	dc.l   0			;2951a: 00000000
-	dc.l   0			;2951e: 00000000
-	dc.l   0			;29522: 00000000
-	dc.l   0			;29526: 00000000
-	dc.l   0			;2952a: 00000000
-	dc.l   0			;2952e: 00000000
-	dc.l   0			;29532: 00000000
-	dc.l   0			;29536: 00000000
-	dc.l   0			;2953a: 00000000
-	dc.l   0			;2953e: 00000000
-	dc.l   0			;29542: 00000000
-	dc.l   0			;29546: 00000000
-	dc.l   0			;2954a: 00000000
-	dc.l   0			;2954e: 00000000
-	dc.l   0			;29552: 00000000
-	dc.l   0			;29556: 00000000
-	dc.l   0			;2955a: 00000000
-	dc.l   0			;2955e: 00000000
-	dc.l   0			;29562: 00000000
-	dc.l   0			;29566: 00000000
-	dc.l   0			;2956a: 00000000
-	dc.l   0			;2956e: 00000000
-	dc.l   0			;29572: 00000000
-	dc.l   0			;29576: 00000000
-	dc.l   0			;2957a: 00000000
-	dc.l   0			;2957e: 00000000
-	dc.l   0			;29582: 00000000
-	dc.l   0			;29586: 00000000
-	dc.l   0			;2958a: 00000000
-	dc.l   0			;2958e: 00000000
-	dc.l   0			;29592: 00000000
-	dc.l   0			;29596: 00000000
-	dc.l   0			;2959a: 00000000
-	dc.l   0			;2959e: 00000000
-	dc.l   0			;295a2: 00000000
-	dc.l   0			;295a6: 00000000
-	dc.l   0			;295aa: 00000000
-	dc.l   0			;295ae: 00000000
-	dc.l   0			;295b2: 00000000
-	dc.l   0			;295b6: 00000000
-	dc.l   0			;295ba: 00000000
-	dc.l   0			;295be: 00000000
-	dc.l   0			;295c2: 00000000
-	dc.l   0			;295c6: 00000000
-	dc.l   0			;295ca: 00000000
-	dc.l   0			;295ce: 00000000
-	dc.l   0			;295d2: 00000000
-	dc.l   0			;295d6: 00000000
-	dc.l   0			;295da: 00000000
-	dc.l   0			;295de: 00000000
-	dc.l   0			;295e2: 00000000
-	dc.l   0			;295e6: 00000000
-	dc.l   0			;295ea: 00000000
-	dc.l   0			;295ee: 00000000
-	dc.l   0			;295f2: 00000000
-	dc.l   0			;295f6: 00000000
-	dc.l   0			;295fa: 00000000
-	dc.l   0			;295fe: 00000000
-	dc.l   0			;29602: 00000000
-	dc.l   0			;29606: 00000000
-	dc.l   0			;2960a: 00000000
-	dc.l   0			;2960e: 00000000
-	dc.l   0			;29612: 00000000
-	dc.l   0			;29616: 00000000
-	dc.l   0			;2961a: 00000000
-	dc.l   0			;2961e: 00000000
-	dc.l   0			;29622: 00000000
-	dc.l   0			;29626: 00000000
-	dc.l   0			;2962a: 00000000
-	dc.l   0			;2962e: 00000000
-	dc.l   0			;29632: 00000000
-	dc.l   0			;29636: 00000000
-	dc.l   0			;2963a: 00000000
-	dc.l   0			;2963e: 00000000
-	dc.l   0			;29642: 00000000
-	dc.l   0			;29646: 00000000
-	dc.l   0			;2964a: 00000000
-	dc.l   0			;2964e: 00000000
-	dc.l   0			;29652: 00000000
-	dc.l   0			;29656: 00000000
-	dc.l   0			;2965a: 00000000
-	dc.l   0			;2965e: 00000000
-	dc.l   0			;29662: 00000000
-	dc.l   0			;29666: 00000000
-	dc.l   0			;2966a: 00000000
-	dc.l   0			;2966e: 00000000
-	dc.l   0			;29672: 00000000
-	dc.l   0			;29676: 00000000
-	dc.l   0			;2967a: 00000000
-	dc.l   0			;2967e: 00000000
-	dc.l   0			;29682: 00000000
-	dc.l   0			;29686: 00000000
-	dc.l   0			;2968a: 00000000
-	dc.l   0			;2968e: 00000000
-	dc.l   0			;29692: 00000000
-	dc.l   0			;29696: 00000000
-	dc.l   0			;2969a: 00000000
-	dc.l   0			;2969e: 00000000
-	dc.l   0			;296a2: 00000000
-	dc.l   0			;296a6: 00000000
-	dc.l   0			;296aa: 00000000
-	dc.l   0			;296ae: 00000000
-	dc.l   0			;296b2: 00000000
-	dc.l   0			;296b6: 00000000
-	dc.l   0			;296ba: 00000000
-	dc.l   0			;296be: 00000000
-	dc.l   0			;296c2: 00000000
-	dc.l   0			;296c6: 00000000
-	dc.l   0			;296ca: 00000000
-	dc.l   0			;296ce: 00000000
-	dc.l   0			;296d2: 00000000
-	dc.l   0			;296d6: 00000000
-	dc.l   0			;296da: 00000000
-	dc.l   0			;296de: 00000000
-	dc.l   0			;296e2: 00000000
-	dc.l   0			;296e6: 00000000
-	dc.l   0			;296ea: 00000000
-	dc.l   0			;296ee: 00000000
-	dc.l   0			;296f2: 00000000
-	dc.l   0			;296f6: 00000000
-	dc.l   0			;296fa: 00000000
-	dc.l   0			;296fe: 00000000
-	dc.l   0			;29702: 00000000
-	dc.l   0			;29706: 00000000
-	dc.l   0			;2970a: 00000000
-	dc.l   0			;2970e: 00000000
-	dc.l   0			;29712: 00000000
-	dc.l   0			;29716: 00000000
-	dc.l   0			;2971a: 00000000
-	dc.l   0			;2971e: 00000000
-	dc.l   0			;29722: 00000000
-	dc.l   0			;29726: 00000000
-	dc.l   0			;2972a: 00000000
-	dc.l   0			;2972e: 00000000
-	dc.l   0			;29732: 00000000
-	dc.l   0			;29736: 00000000
-	dc.l   0			;2973a: 00000000
-	dc.l   0			;2973e: 00000000
-	dc.l   0			;29742: 00000000
-	dc.l   0			;29746: 00000000
-	dc.l   0			;2974a: 00000000
-	dc.l   0			;2974e: 00000000
-	dc.l   0			;29752: 00000000
-	dc.l   0			;29756: 00000000
-	dc.l   0			;2975a: 00000000
-	dc.l   0			;2975e: 00000000
-	dc.l   0			;29762: 00000000
-	dc.l   0			;29766: 00000000
-	dc.l   0			;2976a: 00000000
-	dc.l   0			;2976e: 00000000
-	dc.l   0			;29772: 00000000
-	dc.l   0			;29776: 00000000
-	dc.l   0			;2977a: 00000000
-	dc.l   0			;2977e: 00000000
-	dc.l   0			;29782: 00000000
-	dc.l   0			;29786: 00000000
-	dc.l   0			;2978a: 00000000
-	dc.l   0			;2978e: 00000000
-	dc.l   0			;29792: 00000000
-	dc.l   0			;29796: 00000000
-	dc.l   0			;2979a: 00000000
-	dc.l   0			;2979e: 00000000
-	dc.l   0			;297a2: 00000000
-	dc.l   0			;297a6: 00000000
-	dc.l   0			;297aa: 00000000
-	dc.l   0			;297ae: 00000000
-	dc.l   0			;297b2: 00000000
-	dc.l   0			;297b6: 00000000
-	dc.l   0			;297ba: 00000000
-	dc.l   0			;297be: 00000000
-	dc.l   0			;297c2: 00000000
-	dc.l   0			;297c6: 00000000
-	dc.l   0			;297ca: 00000000
-	dc.l   0			;297ce: 00000000
-	dc.l   0			;297d2: 00000000
-	dc.l   0			;297d6: 00000000
-	dc.l   0			;297da: 00000000
-	dc.l   0			;297de: 00000000
-	dc.l   0			;297e2: 00000000
-	dc.l   0			;297e6: 00000000
-	dc.l   0			;297ea: 00000000
-	dc.l   0			;297ee: 00000000
-	dc.l   0			;297f2: 00000000
-	dc.l   0			;297f6: 00000000
-	dc.l   0			;297fa: 00000000
-	dc.l   0			;297fe: 00000000
-	dc.l   0			;29802: 00000000
-	dc.l   0			;29806: 00000000
-	dc.l   0			;2980a: 00000000
-	dc.l   0			;2980e: 00000000
-	dc.l   0			;29812: 00000000
-	dc.l   0			;29816: 00000000
-	dc.l   0			;2981a: 00000000
-	dc.l   0			;2981e: 00000000
-	dc.l   0			;29822: 00000000
-	dc.l   0			;29826: 00000000
-	dc.l   0			;2982a: 00000000
-	dc.l   0			;2982e: 00000000
-	dc.l   0			;29832: 00000000
-	dc.l   0			;29836: 00000000
-	dc.l   0			;2983a: 00000000
-	dc.l   0			;2983e: 00000000
-	dc.l   0			;29842: 00000000
-	dc.l   0			;29846: 00000000
-	dc.l   0			;2984a: 00000000
-	dc.l   0			;2984e: 00000000
-	dc.l   0			;29852: 00000000
-	dc.l   0			;29856: 00000000
-	dc.l   0			;2985a: 00000000
-	dc.l   0			;2985e: 00000000
-	dc.l   0			;29862: 00000000
-	dc.l   0			;29866: 00000000
-	dc.l   0			;2986a: 00000000
-	dc.l   0			;2986e: 00000000
-	dc.l   0			;29872: 00000000
-	dc.l   0			;29876: 00000000
-	dc.l   0			;2987a: 00000000
-	dc.l   0			;2987e: 00000000
-	dc.l   0			;29882: 00000000
-	dc.l   0			;29886: 00000000
-	dc.l   0			;2988a: 00000000
-	dc.l   0			;2988e: 00000000
-	dc.l   0			;29892: 00000000
-	dc.l   0			;29896: 00000000
-	dc.l   0			;2989a: 00000000
-	dc.l   0			;2989e: 00000000
-	dc.l   0			;298a2: 00000000
-	dc.l   0			;298a6: 00000000
-	dc.l   0			;298aa: 00000000
-	dc.l   0			;298ae: 00000000
-	dc.l   0			;298b2: 00000000
-	dc.l   0			;298b6: 00000000
-	dc.l   0			;298ba: 00000000
-	dc.l   0			;298be: 00000000
-	dc.l   0			;298c2: 00000000
-	dc.l   0			;298c6: 00000000
-	dc.l   0			;298ca: 00000000
-	dc.l   0			;298ce: 00000000
-	dc.l   0			;298d2: 00000000
-	dc.l   0			;298d6: 00000000
-	dc.l   0			;298da: 00000000
-	dc.l   0			;298de: 00000000
-	dc.l   0			;298e2: 00000000
-	dc.l   0			;298e6: 00000000
-	dc.l   0			;298ea: 00000000
-	dc.l   0			;298ee: 00000000
-	dc.l   0			;298f2: 00000000
-	dc.l   0			;298f6: 00000000
-	dc.l   0			;298fa: 00000000
-	dc.l   0			;298fe: 00000000
-	dc.l   0			;29902: 00000000
-	dc.l   0			;29906: 00000000
-	dc.l   0			;2990a: 00000000
-	dc.l   0			;2990e: 00000000
-	dc.l   0			;29912: 00000000
-	dc.l   0			;29916: 00000000
-	dc.l   0			;2991a: 00000000
-	dc.l   0			;2991e: 00000000
-	dc.l   0			;29922: 00000000
-	dc.l   0			;29926: 00000000
-	dc.l   0			;2992a: 00000000
-	dc.l   0			;2992e: 00000000
-	dc.l   0			;29932: 00000000
-	dc.l   0			;29936: 00000000
-	dc.l   0			;2993a: 00000000
-	dc.l   0			;2993e: 00000000
-	dc.l   0			;29942: 00000000
-	dc.l   0			;29946: 00000000
-	dc.l   0			;2994a: 00000000
-	dc.l   0			;2994e: 00000000
-	dc.l   0			;29952: 00000000
-	dc.l   0			;29956: 00000000
-	dc.l   0			;2995a: 00000000
-	dc.l   0			;2995e: 00000000
-	dc.l   0			;29962: 00000000
-	dc.l   0			;29966: 00000000
-	dc.l   0			;2996a: 00000000
-	dc.l   0			;2996e: 00000000
-	dc.l   0			;29972: 00000000
-	dc.l   0			;29976: 00000000
-	dc.l   0			;2997a: 00000000
-	dc.l   0			;2997e: 00000000
-	dc.l   0			;29982: 00000000
-	dc.l   0			;29986: 00000000
-	dc.l   0			;2998a: 00000000
-	dc.l   0			;2998e: 00000000
-	dc.l   0			;29992: 00000000
-	dc.l   0			;29996: 00000000
-	dc.l   0			;2999a: 00000000
-	dc.l   0			;2999e: 00000000
-	dc.l   0			;299a2: 00000000
-	dc.l   0			;299a6: 00000000
-	dc.l   0			;299aa: 00000000
-	dc.l   0			;299ae: 00000000
-	dc.l   0			;299b2: 00000000
-	dc.l   0			;299b6: 00000000
-	dc.l   0			;299ba: 00000000
-	dc.l   0			;299be: 00000000
-	dc.l   0			;299c2: 00000000
-	dc.l   0			;299c6: 00000000
-	dc.l   0			;299ca: 00000000
-	dc.l   0			;299ce: 00000000
-	dc.l   0			;299d2: 00000000
-	dc.l   0			;299d6: 00000000
-	dc.l   0			;299da: 00000000
-	dc.l   0			;299de: 00000000
-	dc.l   0			;299e2: 00000000
-	dc.l   0			;299e6: 00000000
-	dc.l   0			;299ea: 00000000
-	dc.l   0			;299ee: 00000000
-	dc.l   0			;299f2: 00000000
-	dc.l   0			;299f6: 00000000
-	dc.l   0			;299fa: 00000000
-	dc.l   0			;299fe: 00000000
-	dc.l   0			;29a02: 00000000
-	dc.l   0			;29a06: 00000000
-	dc.l   0			;29a0a: 00000000
-	dc.l   0			;29a0e: 00000000
-	dc.l   0			;29a12: 00000000
-	dc.l   0			;29a16: 00000000
-	dc.l   0			;29a1a: 00000000
-	dc.l   0			;29a1e: 00000000
-	dc.l   0			;29a22: 00000000
-	dc.l   0			;29a26: 00000000
-	dc.l   0			;29a2a: 00000000
-	dc.l   0			;29a2e: 00000000
-	dc.l   0			;29a32: 00000000
-	dc.l   0			;29a36: 00000000
-	dc.l   0			;29a3a: 00000000
-	dc.l   0			;29a3e: 00000000
-	dc.l   0			;29a42: 00000000
-	dc.l   0			;29a46: 00000000
-	dc.l   0			;29a4a: 00000000
-	dc.l   0			;29a4e: 00000000
-	dc.l   0			;29a52: 00000000
-	dc.l   0			;29a56: 00000000
-	dc.l   0			;29a5a: 00000000
-	dc.l   0			;29a5e: 00000000
-	dc.l   0			;29a62: 00000000
-	dc.l   0			;29a66: 00000000
-	dc.l   0			;29a6a: 00000000
-	dc.l   0			;29a6e: 00000000
-	dc.l   0			;29a72: 00000000
-	dc.l   0			;29a76: 00000000
-	dc.l   0			;29a7a: 00000000
-	dc.l   0			;29a7e: 00000000
-	dc.l   0			;29a82: 00000000
-	dc.l   0			;29a86: 00000000
-	dc.l   0			;29a8a: 00000000
-	dc.l   0			;29a8e: 00000000
-	dc.l   0			;29a92: 00000000
-	dc.l   0			;29a96: 00000000
-	dc.l   0			;29a9a: 00000000
-	dc.l   0			;29a9e: 00000000
-	dc.l   0			;29aa2: 00000000
-	dc.l   0			;29aa6: 00000000
-	dc.l   0			;29aaa: 00000000
-	dc.l   0			;29aae: 00000000
-	dc.l   0			;29ab2: 00000000
-	dc.l   0			;29ab6: 00000000
-	dc.l   0			;29aba: 00000000
-	dc.l   0			;29abe: 00000000
-	dc.l   0			;29ac2: 00000000
-	dc.l   0			;29ac6: 00000000
-	dc.l   0			;29aca: 00000000
-	dc.l   0			;29ace: 00000000
-	dc.l   0			;29ad2: 00000000
-	dc.l   0			;29ad6: 00000000
-	dc.l   0			;29ada: 00000000
-	dc.l   0			;29ade: 00000000
-	dc.l   0			;29ae2: 00000000
-	dc.l   0			;29ae6: 00000000
-	dc.l   0			;29aea: 00000000
-	dc.l   0			;29aee: 00000000
-	dc.l   0			;29af2: 00000000
-	dc.l   0			;29af6: 00000000
-	dc.l   0			;29afa: 00000000
-	dc.l   0			;29afe: 00000000
-	dc.l   0			;29b02: 00000000
-	dc.l   0			;29b06: 00000000
-	dc.l   0			;29b0a: 00000000
-	dc.l   0			;29b0e: 00000000
-	dc.l   0			;29b12: 00000000
-	dc.l   0			;29b16: 00000000
-	dc.l   0			;29b1a: 00000000
-	dc.l   0			;29b1e: 00000000
-	dc.l   0			;29b22: 00000000
-	dc.l   0			;29b26: 00000000
-	dc.l   0			;29b2a: 00000000
-	dc.l   0			;29b2e: 00000000
-	dc.l   0			;29b32: 00000000
-	dc.l   0			;29b36: 00000000
-	dc.l   0			;29b3a: 00000000
-	dc.l   0			;29b3e: 00000000
-	dc.l   0			;29b42: 00000000
-	dc.l   0			;29b46: 00000000
-	dc.l   0			;29b4a: 00000000
-	dc.l   0			;29b4e: 00000000
-	dc.l   0			;29b52: 00000000
-	dc.l   0			;29b56: 00000000
-	dc.l   0			;29b5a: 00000000
-	dc.l   0			;29b5e: 00000000
-	dc.l   0			;29b62: 00000000
-	dc.l   0			;29b66: 00000000
-	dc.l   0			;29b6a: 00000000
-	dc.l   0			;29b6e: 00000000
-	dc.l   0			;29b72: 00000000
-	dc.l   0			;29b76: 00000000
-	dc.l   0			;29b7a: 00000000
-	dc.l   0			;29b7e: 00000000
-	dc.l   0			;29b82: 00000000
-	dc.l   0			;29b86: 00000000
-	dc.l   0			;29b8a: 00000000
-	dc.l   0			;29b8e: 00000000
-	dc.l   0			;29b92: 00000000
-	dc.l   0			;29b96: 00000000
-	dc.l   0			;29b9a: 00000000
-	dc.l   0			;29b9e: 00000000
-	dc.l   0			;29ba2: 00000000
-	dc.l   0			;29ba6: 00000000
-	dc.l   0			;29baa: 00000000
-	dc.l   0			;29bae: 00000000
-	dc.l   0			;29bb2: 00000000
-	dc.l   0			;29bb6: 00000000
-	dc.l   0			;29bba: 00000000
-	dc.l   0			;29bbe: 00000000
-	dc.l   0			;29bc2: 00000000
-	dc.l   0			;29bc6: 00000000
-	dc.l   0			;29bca: 00000000
-	dc.l   0			;29bce: 00000000
-	dc.l   0			;29bd2: 00000000
-	dc.l   0			;29bd6: 00000000
-	dc.l   0			;29bda: 00000000
-	dc.l   0			;29bde: 00000000
-	dc.l   0			;29be2: 00000000
-	dc.l   0			;29be6: 00000000
-	dc.l   0			;29bea: 00000000
-	dc.l   0			;29bee: 00000000
-	dc.l   0			;29bf2: 00000000
-	dc.l   0			;29bf6: 00000000
-	dc.l   0			;29bfa: 00000000
-	dc.l   0			;29bfe: 00000000
-	dc.l   0			;29c02: 00000000
-	dc.l   0			;29c06: 00000000
-	dc.l   0			;29c0a: 00000000
-	dc.l   0			;29c0e: 00000000
-	dc.l   0			;29c12: 00000000
-	dc.l   0			;29c16: 00000000
-	dc.l   0			;29c1a: 00000000
-	dc.l   0			;29c1e: 00000000
-	dc.l   0			;29c22: 00000000
-	dc.l   0			;29c26: 00000000
-	dc.l   0			;29c2a: 00000000
-	dc.l   0			;29c2e: 00000000
-	dc.l   0			;29c32: 00000000
-	dc.l   0			;29c36: 00000000
-	dc.l   0			;29c3a: 00000000
-	dc.l   0			;29c3e: 00000000
-	dc.l   0			;29c42: 00000000
-	dc.l   0			;29c46: 00000000
-	dc.l   0			;29c4a: 00000000
-	dc.l   0			;29c4e: 00000000
-	dc.l   0			;29c52: 00000000
-	dc.l   0			;29c56: 00000000
-	dc.l   0			;29c5a: 00000000
-	dc.l   0			;29c5e: 00000000
-	dc.l   0			;29c62: 00000000
-	dc.l   0			;29c66: 00000000
-	dc.l   0			;29c6a: 00000000
-	dc.l   0			;29c6e: 00000000
-	dc.l   0			;29c72: 00000000
-	dc.l   0			;29c76: 00000000
-	dc.l   0			;29c7a: 00000000
-	dc.l   0			;29c7e: 00000000
-	dc.l   0			;29c82: 00000000
-	dc.l   0			;29c86: 00000000
-	dc.l   0			;29c8a: 00000000
-	dc.l   0			;29c8e: 00000000
-	dc.l   0			;29c92: 00000000
-	dc.l   0			;29c96: 00000000
-	dc.l   0			;29c9a: 00000000
-	dc.l   0			;29c9e: 00000000
-	dc.l   0			;29ca2: 00000000
-	dc.l   0			;29ca6: 00000000
-	dc.l   0			;29caa: 00000000
-	dc.l   0			;29cae: 00000000
-	dc.l   0			;29cb2: 00000000
-	dc.l   0			;29cb6: 00000000
-	dc.l   0			;29cba: 00000000
-	dc.l   0			;29cbe: 00000000
-	dc.l   0			;29cc2: 00000000
-	dc.l   0			;29cc6: 00000000
-	dc.l   0			;29cca: 00000000
-	dc.l   0			;29cce: 00000000
-	dc.l   0			;29cd2: 00000000
-	dc.l   0			;29cd6: 00000000
-	dc.l   0			;29cda: 00000000
-	dc.l   0			;29cde: 00000000
-	dc.l   0			;29ce2: 00000000
-	dc.l   0			;29ce6: 00000000
-	dc.l   0			;29cea: 00000000
-	dc.l   0			;29cee: 00000000
-	dc.l   0			;29cf2: 00000000
-	dc.l   0			;29cf6: 00000000
-	dc.l   0			;29cfa: 00000000
-	dc.l   0			;29cfe: 00000000
-	dc.l   0			;29d02: 00000000
-	dc.l   0			;29d06: 00000000
-	dc.l   0			;29d0a: 00000000
-	dc.l   0			;29d0e: 00000000
-	dc.l   0			;29d12: 00000000
-	dc.l   0			;29d16: 00000000
-	dc.l   0			;29d1a: 00000000
-	dc.l   0			;29d1e: 00000000
-	dc.l   0			;29d22: 00000000
-	dc.l   0			;29d26: 00000000
-	dc.l   0			;29d2a: 00000000
-	dc.l   0			;29d2e: 00000000
-	dc.l   0			;29d32: 00000000
-	dc.l   0			;29d36: 00000000
-	dc.l   0			;29d3a: 00000000
-	dc.l   0			;29d3e: 00000000
-	dc.l   0			;29d42: 00000000
-	dc.l   0			;29d46: 00000000
-	dc.l   0			;29d4a: 00000000
-	dc.l   0			;29d4e: 00000000
-	dc.l   0			;29d52: 00000000
-	dc.l   0			;29d56: 00000000
-	dc.l   0			;29d5a: 00000000
-	dc.l   0			;29d5e: 00000000
-	dc.l   0			;29d62: 00000000
-	dc.l   0			;29d66: 00000000
-	dc.l   0			;29d6a: 00000000
-	dc.l   0			;29d6e: 00000000
-	dc.l   0			;29d72: 00000000
-	dc.l   0			;29d76: 00000000
-	dc.l   0			;29d7a: 00000000
-	dc.l   0			;29d7e: 00000000
-	dc.l   0			;29d82: 00000000
-	dc.l   0			;29d86: 00000000
-	dc.l   0			;29d8a: 00000000
-	dc.l   0			;29d8e: 00000000
-	dc.l   0			;29d92: 00000000
-	dc.l   0			;29d96: 00000000
-	dc.l   0			;29d9a: 00000000
-	dc.l   0			;29d9e: 00000000
-	dc.l   0			;29da2: 00000000
-	dc.l   0			;29da6: 00000000
-	dc.l   0			;29daa: 00000000
-	dc.l   0			;29dae: 00000000
-	dc.l   0			;29db2: 00000000
-	dc.l   0			;29db6: 00000000
-	dc.l   0			;29dba: 00000000
-	dc.l   0			;29dbe: 00000000
-	dc.l   0			;29dc2: 00000000
-	dc.l   0			;29dc6: 00000000
-	dc.l   0			;29dca: 00000000
-	dc.l   0			;29dce: 00000000
-	dc.l   0			;29dd2: 00000000
-	dc.l   0			;29dd6: 00000000
-	dc.l   0			;29dda: 00000000
-	dc.l   0			;29dde: 00000000
-	dc.l   0			;29de2: 00000000
-	dc.l   0			;29de6: 00000000
-	dc.l   0			;29dea: 00000000
-	dc.l   0			;29dee: 00000000
-	dc.l   0			;29df2: 00000000
-	dc.l   0			;29df6: 00000000
-	dc.l   0			;29dfa: 00000000
-	dc.l   0			;29dfe: 00000000
-	dc.l   0			;29e02: 00000000
-	dc.l   0			;29e06: 00000000
-	dc.l   0			;29e0a: 00000000
-	dc.l   0			;29e0e: 00000000
-	dc.l   0			;29e12: 00000000
-	dc.l   0			;29e16: 00000000
-	dc.l   0			;29e1a: 00000000
-	dc.l   0			;29e1e: 00000000
-	dc.l   0			;29e22: 00000000
-	dc.l   0			;29e26: 00000000
-	dc.l   0			;29e2a: 00000000
-	dc.l   0			;29e2e: 00000000
-	dc.l   0			;29e32: 00000000
-	dc.l   0			;29e36: 00000000
-	dc.l   0			;29e3a: 00000000
-	dc.l   0			;29e3e: 00000000
-	dc.l   0			;29e42: 00000000
-	dc.l   0			;29e46: 00000000
-	dc.l   0			;29e4a: 00000000
-	dc.l   0			;29e4e: 00000000
-	dc.l   0			;29e52: 00000000
-	dc.l   0			;29e56: 00000000
-	dc.l   0			;29e5a: 00000000
-	dc.l   0			;29e5e: 00000000
-	dc.l   0			;29e62: 00000000
-	dc.l   0			;29e66: 00000000
-	dc.l   0			;29e6a: 00000000
-	dc.l   0			;29e6e: 00000000
-	dc.l   0			;29e72: 00000000
-	dc.l   0			;29e76: 00000000
-	dc.l   0			;29e7a: 00000000
-	dc.l   0			;29e7e: 00000000
-	dc.l   0			;29e82: 00000000
-	dc.l   0			;29e86: 00000000
-	dc.l   0			;29e8a: 00000000
-	dc.l   0			;29e8e: 00000000
-	dc.l   0			;29e92: 00000000
-	dc.l   0			;29e96: 00000000
-	dc.l   0			;29e9a: 00000000
-	dc.l   0			;29e9e: 00000000
-	dc.l   0			;29ea2: 00000000
-	dc.l   0			;29ea6: 00000000
-	dc.l   0			;29eaa: 00000000
-	dc.l   0			;29eae: 00000000
-	dc.l   0			;29eb2: 00000000
-	dc.l   0			;29eb6: 00000000
-	dc.l   0			;29eba: 00000000
-	dc.l   0			;29ebe: 00000000
-	dc.l   0			;29ec2: 00000000
-	dc.l   0			;29ec6: 00000000
-	dc.l   0			;29eca: 00000000
-	dc.l   0			;29ece: 00000000
-	dc.l   0			;29ed2: 00000000
-	dc.l   0			;29ed6: 00000000
-	dc.l   0			;29eda: 00000000
-	dc.l   0			;29ede: 00000000
-	dc.l   0			;29ee2: 00000000
-	dc.l   0			;29ee6: 00000000
-	dc.l   0			;29eea: 00000000
-	dc.l   0			;29eee: 00000000
-	dc.l   0			;29ef2: 00000000
-	dc.l   0			;29ef6: 00000000
-	dc.l   0			;29efa: 00000000
-	dc.l   0			;29efe: 00000000
-	dc.l   0			;29f02: 00000000
-	dc.l   0			;29f06: 00000000
-	dc.l   0			;29f0a: 00000000
-	dc.l   0			;29f0e: 00000000
-	dc.l   0			;29f12: 00000000
-	dc.l   0			;29f16: 00000000
-	dc.l   0			;29f1a: 00000000
-	dc.l   0			;29f1e: 00000000
-	dc.l   0			;29f22: 00000000
-	dc.l   0			;29f26: 00000000
-	dc.l   0			;29f2a: 00000000
-	dc.l   0			;29f2e: 00000000
-	dc.l   0			;29f32: 00000000
-	dc.l   0			;29f36: 00000000
-	dc.l   0			;29f3a: 00000000
-	dc.l   0			;29f3e: 00000000
-	dc.l   0			;29f42: 00000000
-	dc.l   0			;29f46: 00000000
-	dc.l   0			;29f4a: 00000000
-	dc.l   0			;29f4e: 00000000
-	dc.l   0			;29f52: 00000000
-	dc.l   0			;29f56: 00000000
-	dc.l   0			;29f5a: 00000000
-	dc.l   0			;29f5e: 00000000
-	dc.l   0			;29f62: 00000000
-	dc.l   0			;29f66: 00000000
-	dc.l   0			;29f6a: 00000000
-	dc.l   0			;29f6e: 00000000
-	dc.l   0			;29f72: 00000000
-	dc.l   0			;29f76: 00000000
-	dc.l   0			;29f7a: 00000000
-	dc.l   0			;29f7e: 00000000
-	dc.l   0			;29f82: 00000000
-	dc.l   0			;29f86: 00000000
-	dc.l   0			;29f8a: 00000000
-	dc.l   0			;29f8e: 00000000
-	dc.l   0			;29f92: 00000000
-	dc.l   0			;29f96: 00000000
-	dc.l   0			;29f9a: 00000000
-	dc.l   0			;29f9e: 00000000
-	dc.l   0			;29fa2: 00000000
-	dc.l   0			;29fa6: 00000000
-	dc.l   0			;29faa: 00000000
-	dc.l   0			;29fae: 00000000
-	dc.l   0			;29fb2: 00000000
-	dc.l   0			;29fb6: 00000000
-	dc.l   0			;29fba: 00000000
-	dc.l   0			;29fbe: 00000000
-	dc.l   0			;29fc2: 00000000
-	dc.l   0			;29fc6: 00000000
-	dc.l   0			;29fca: 00000000
-	dc.l   0			;29fce: 00000000
-	dc.l   0			;29fd2: 00000000
-	dc.l   0			;29fd6: 00000000
-	dc.l   0			;29fda: 00000000
-	dc.l   0			;29fde: 00000000
-	dc.l   0			;29fe2: 00000000
-	dc.l   0			;29fe6: 00000000
-	dc.l   0			;29fea: 00000000
-	dc.l   0			;29fee: 00000000
-	dc.l   0			;29ff2: 00000000
-	dc.l   0			;29ff6: 00000000
-	dc.l   0			;29ffa: 00000000
-	dc.l   0			;29ffe: 00000000
-	dc.l   0			;2a002: 00000000
-	dc.l   0			;2a006: 00000000
-	dc.l   0			;2a00a: 00000000
-	dc.l   0			;2a00e: 00000000
-	dc.l   0			;2a012: 00000000
-	dc.l   0			;2a016: 00000000
-	dc.l   0			;2a01a: 00000000
-	dc.l   0			;2a01e: 00000000
-	dc.l   0			;2a022: 00000000
-	dc.l   0			;2a026: 00000000
-	dc.l   0			;2a02a: 00000000
-	dc.l   0			;2a02e: 00000000
-	dc.l   0			;2a032: 00000000
-	dc.l   0			;2a036: 00000000
-	dc.l   0			;2a03a: 00000000
-	dc.l   0			;2a03e: 00000000
-	dc.l   0			;2a042: 00000000
-	dc.l   0			;2a046: 00000000
-	dc.l   0			;2a04a: 00000000
-	dc.l   0			;2a04e: 00000000
-	dc.l   0			;2a052: 00000000
-	dc.l   0			;2a056: 00000000
-	dc.l   0			;2a05a: 00000000
-	dc.l   0			;2a05e: 00000000
-	dc.l   0			;2a062: 00000000
-	dc.l   0			;2a066: 00000000
-	dc.l   0			;2a06a: 00000000
-	dc.l   0			;2a06e: 00000000
-	dc.l   0			;2a072: 00000000
-	dc.l   0			;2a076: 00000000
-	dc.l   0			;2a07a: 00000000
-	dc.l   0			;2a07e: 00000000
-	dc.l   0			;2a082: 00000000
-	dc.l   0			;2a086: 00000000
-	dc.l   0			;2a08a: 00000000
-	dc.l   0			;2a08e: 00000000
-	dc.l   0			;2a092: 00000000
-	dc.l   0			;2a096: 00000000
-	dc.l   0			;2a09a: 00000000
-	dc.l   0			;2a09e: 00000000
-	dc.l   0			;2a0a2: 00000000
-	dc.l   0			;2a0a6: 00000000
-	dc.l   0			;2a0aa: 00000000
-	dc.l   0			;2a0ae: 00000000
-	dc.l   0			;2a0b2: 00000000
-	dc.l   0			;2a0b6: 00000000
-	dc.l   0			;2a0ba: 00000000
-	dc.l   0			;2a0be: 00000000
-	dc.l   0			;2a0c2: 00000000
-	dc.l   0			;2a0c6: 00000000
-	dc.l   0			;2a0ca: 00000000
-	dc.l   0			;2a0ce: 00000000
-	dc.l   0			;2a0d2: 00000000
-	dc.l   0			;2a0d6: 00000000
-	dc.l   0			;2a0da: 00000000
-	dc.l   0			;2a0de: 00000000
-	dc.l   0			;2a0e2: 00000000
-	dc.l   0			;2a0e6: 00000000
-	dc.l   0			;2a0ea: 00000000
-	dc.l   0			;2a0ee: 00000000
-	dc.l   0			;2a0f2: 00000000
-	dc.l   0			;2a0f6: 00000000
-	dc.l   0			;2a0fa: 00000000
-	dc.l   0			;2a0fe: 00000000
-	dc.l   0			;2a102: 00000000
-	dc.l   0			;2a106: 00000000
-	dc.l   0			;2a10a: 00000000
-	dc.l   0			;2a10e: 00000000
-	dc.l   0			;2a112: 00000000
-	dc.l   0			;2a116: 00000000
-	dc.l   0			;2a11a: 00000000
-	dc.l   0			;2a11e: 00000000
-	dc.l   0			;2a122: 00000000
-	dc.l   0			;2a126: 00000000
-	dc.l   0			;2a12a: 00000000
-	dc.l   0			;2a12e: 00000000
-	dc.l   0			;2a132: 00000000
-	dc.l   0			;2a136: 00000000
-	dc.l   0			;2a13a: 00000000
-	dc.l   0			;2a13e: 00000000
-	dc.l   0			;2a142: 00000000
-	dc.l   0			;2a146: 00000000
-	dc.l   0			;2a14a: 00000000
-	dc.l   0			;2a14e: 00000000
-	dc.l   0			;2a152: 00000000
-	dc.l   0			;2a156: 00000000
-	dc.l   0			;2a15a: 00000000
-	dc.l   0			;2a15e: 00000000
-	dc.l   0			;2a162: 00000000
-	dc.l   0			;2a166: 00000000
-	dc.l   0			;2a16a: 00000000
-	dc.l   0			;2a16e: 00000000
-	dc.l   0			;2a172: 00000000
-	dc.l   0			;2a176: 00000000
-	dc.l   0			;2a17a: 00000000
-	dc.l   0			;2a17e: 00000000
-	dc.l   0			;2a182: 00000000
-	dc.l   0			;2a186: 00000000
-	dc.l   0			;2a18a: 00000000
-	dc.l   0			;2a18e: 00000000
-	dc.l   0			;2a192: 00000000
-	dc.l   0			;2a196: 00000000
-	dc.l   0			;2a19a: 00000000
-	dc.l   0			;2a19e: 00000000
-	dc.l   0			;2a1a2: 00000000
-	dc.l   0			;2a1a6: 00000000
-	dc.l   0			;2a1aa: 00000000
-	dc.l   0			;2a1ae: 00000000
-	dc.l   0			;2a1b2: 00000000
-	dc.l   0			;2a1b6: 00000000
-	dc.l   0			;2a1ba: 00000000
-	dc.l   0			;2a1be: 00000000
-	dc.l   0			;2a1c2: 00000000
-	dc.l   0			;2a1c6: 00000000
-	dc.l   0			;2a1ca: 00000000
-	dc.l   0			;2a1ce: 00000000
-	dc.l   0			;2a1d2: 00000000
-	dc.l   0			;2a1d6: 00000000
-	dc.l   0			;2a1da: 00000000
-	dc.l   0			;2a1de: 00000000
-	dc.l   0			;2a1e2: 00000000
-	dc.l   0			;2a1e6: 00000000
-	dc.l   0			;2a1ea: 00000000
-	dc.l   0			;2a1ee: 00000000
-	dc.l   0			;2a1f2: 00000000
-	dc.l   0			;2a1f6: 00000000
-	dc.l   0			;2a1fa: 00000000
-	dc.l   0			;2a1fe: 00000000
-	dc.l   0			;2a202: 00000000
-	dc.l   0			;2a206: 00000000
-	dc.l   0			;2a20a: 00000000
-	dc.l   0			;2a20e: 00000000
-	dc.l   0			;2a212: 00000000
-	dc.l   0			;2a216: 00000000
-	dc.l   0			;2a21a: 00000000
-	dc.l   0			;2a21e: 00000000
-	dc.l   0			;2a222: 00000000
-	dc.l   0			;2a226: 00000000
-	dc.l   0			;2a22a: 00000000
-	dc.l   0			;2a22e: 00000000
-	dc.l   0			;2a232: 00000000
-	dc.l   0			;2a236: 00000000
-	dc.l   0			;2a23a: 00000000
-	dc.l   0			;2a23e: 00000000
-	dc.l   0			;2a242: 00000000
-	dc.l   0			;2a246: 00000000
-	dc.l   0			;2a24a: 00000000
-	dc.l   0			;2a24e: 00000000
-	dc.l   0			;2a252: 00000000
-	dc.l   0			;2a256: 00000000
-	dc.l   0			;2a25a: 00000000
-	dc.l   0			;2a25e: 00000000
-	dc.l   0			;2a262: 00000000
-	dc.l   0			;2a266: 00000000
-	dc.l   0			;2a26a: 00000000
-	dc.l   0			;2a26e: 00000000
-	dc.l   0			;2a272: 00000000
-	dc.l   0			;2a276: 00000000
-	dc.l   0			;2a27a: 00000000
-	dc.l   0			;2a27e: 00000000
-	dc.l   0			;2a282: 00000000
-	dc.l   0			;2a286: 00000000
-	dc.l   0			;2a28a: 00000000
-	dc.l   0			;2a28e: 00000000
-	dc.l   0			;2a292: 00000000
-	dc.l   0			;2a296: 00000000
-	dc.l   0			;2a29a: 00000000
-	dc.l   0			;2a29e: 00000000
-	dc.l   0			;2a2a2: 00000000
-	dc.l   0			;2a2a6: 00000000
-	dc.l   0			;2a2aa: 00000000
-	dc.l   0			;2a2ae: 00000000
-	dc.l   0			;2a2b2: 00000000
-	dc.l   0			;2a2b6: 00000000
-	dc.l   0			;2a2ba: 00000000
-	dc.l   0			;2a2be: 00000000
-	dc.l   0			;2a2c2: 00000000
-	dc.l   0			;2a2c6: 00000000
-	dc.l   0			;2a2ca: 00000000
-	dc.l   0			;2a2ce: 00000000
-	dc.l   0			;2a2d2: 00000000
-	dc.l   0			;2a2d6: 00000000
-	dc.l   0			;2a2da: 00000000
-	dc.l   0			;2a2de: 00000000
-	dc.l   0			;2a2e2: 00000000
-	dc.l   0			;2a2e6: 00000000
-	dc.l   0			;2a2ea: 00000000
-	dc.l   0			;2a2ee: 00000000
-	dc.l   0			;2a2f2: 00000000
-	dc.l   0			;2a2f6: 00000000
-	dc.l   0			;2a2fa: 00000000
-	dc.l   0			;2a2fe: 00000000
-	dc.l   0			;2a302: 00000000
-	dc.l   0			;2a306: 00000000
-	dc.l   0			;2a30a: 00000000
-	dc.l   0			;2a30e: 00000000
-	dc.l   0			;2a312: 00000000
-	dc.l   0			;2a316: 00000000
-LAB_0598:
-	dc.l   0			;2a31a: 00000000
-	dc.l   0			;2a31e: 00000000
-	dc.l   0			;2a322: 00000000
-	dc.l   0			;2a326: 00000000
-	dc.l   0			;2a32a: 00000000
-	dc.l   0			;2a32e: 00000000
-	dc.l   0			;2a332: 00000000
-	dc.l   0			;2a336: 00000000
-	dc.l   0			;2a33a: 00000000
-	dc.l   0			;2a33e: 00000000
-	dc.l   0			;2a342: 00000000
-	dc.l   0			;2a346: 00000000
-	dc.l   0			;2a34a: 00000000
-	dc.l   0			;2a34e: 00000000
-	dc.l   0			;2a352: 00000000
-	dc.l   0			;2a356: 00000000
-	dc.l   0			;2a35a: 00000000
-	dc.l   0			;2a35e: 00000000
-	dc.l   0			;2a362: 00000000
-	dc.l   0			;2a366: 00000000
-	dc.l   0			;2a36a: 00000000
-	dc.l   0			;2a36e: 00000000
-	dc.l   0			;2a372: 00000000
-	dc.l   0			;2a376: 00000000
-	dc.l   0			;2a37a: 00000000
-	dc.l   0			;2a37e: 00000000
-	dc.l   0			;2a382: 00000000
-	dc.l   0			;2a386: 00000000
-	dc.l   0			;2a38a: 00000000
-	dc.l   0			;2a38e: 00000000
-	dc.l   0			;2a392: 00000000
-	dc.l   0			;2a396: 00000000
-	dc.l   0			;2a39a: 00000000
-	dc.l   0			;2a39e: 00000000
-	dc.l   0			;2a3a2: 00000000
-	dc.l   0			;2a3a6: 00000000
-	dc.l   0			;2a3aa: 00000000
-	dc.l   0			;2a3ae: 00000000
-	dc.l   0			;2a3b2: 00000000
-	dc.l   0			;2a3b6: 00000000
-	dc.l   0			;2a3ba: 00000000
-	dc.l   0			;2a3be: 00000000
-	dc.l   0			;2a3c2: 00000000
-	dc.l   0			;2a3c6: 00000000
-	dc.l   0			;2a3ca: 00000000
-	dc.l   0			;2a3ce: 00000000
-	dc.l   0			;2a3d2: 00000000
-	dc.l   0			;2a3d6: 00000000
-	dc.l   0			;2a3da: 00000000
-	dc.l   0			;2a3de: 00000000
-	dc.l   0			;2a3e2: 00000000
-	dc.l   0			;2a3e6: 00000000
-	dc.l   0			;2a3ea: 00000000
-	dc.l   0			;2a3ee: 00000000
-	dc.l   0			;2a3f2: 00000000
-	dc.l   0			;2a3f6: 00000000
-	dc.l   0			;2a3fa: 00000000
-	dc.l   0			;2a3fe: 00000000
-	dc.l   0			;2a402: 00000000
-	dc.l   0			;2a406: 00000000
-	dc.l   0			;2a40a: 00000000
-	dc.l   0			;2a40e: 00000000
-	dc.l   0			;2a412: 00000000
-	dc.l   0			;2a416: 00000000
-	dc.l   0			;2a41a: 00000000
-	dc.l   0			;2a41e: 00000000
-	dc.l   0			;2a422: 00000000
-	dc.l   0			;2a426: 00000000
-	dc.l   0			;2a42a: 00000000
-	dc.l   0			;2a42e: 00000000
-	dc.l   0			;2a432: 00000000
-	dc.l   0			;2a436: 00000000
-	dc.l   0			;2a43a: 00000000
-	dc.l   0			;2a43e: 00000000
-	dc.l   0			;2a442: 00000000
-	dc.l   0			;2a446: 00000000
-	dc.l   0			;2a44a: 00000000
-	dc.l   0			;2a44e: 00000000
-	dc.l   0			;2a452: 00000000
-	dc.l   0			;2a456: 00000000
-	dc.l   0			;2a45a: 00000000
-	dc.l   0			;2a45e: 00000000
-	dc.l   0			;2a462: 00000000
-	dc.l   0			;2a466: 00000000
-	dc.l   0			;2a46a: 00000000
-	dc.l   0			;2a46e: 00000000
-	dc.l   0			;2a472: 00000000
-	dc.l   0			;2a476: 00000000
-	dc.l   0			;2a47a: 00000000
-	dc.l   0			;2a47e: 00000000
-	dc.l   0			;2a482: 00000000
-	dc.l   0			;2a486: 00000000
-	dc.l   0			;2a48a: 00000000
-	dc.l   0			;2a48e: 00000000
-	dc.l   0			;2a492: 00000000
-	dc.l   0			;2a496: 00000000
-	dc.l   0			;2a49a: 00000000
-	dc.l   0			;2a49e: 00000000
-	dc.l   0			;2a4a2: 00000000
-	dc.l   0			;2a4a6: 00000000
-	dc.l   0			;2a4aa: 00000000
-	dc.l   0			;2a4ae: 00000000
-	dc.l   0			;2a4b2: 00000000
-	dc.l   0			;2a4b6: 00000000
-	dc.l   0			;2a4ba: 00000000
-	dc.l   0			;2a4be: 00000000
-	dc.l   0			;2a4c2: 00000000
-	dc.l   0			;2a4c6: 00000000
-	dc.l   0			;2a4ca: 00000000
-	dc.l   0			;2a4ce: 00000000
-	dc.l   0			;2a4d2: 00000000
-	dc.l   0			;2a4d6: 00000000
-	dc.l   0			;2a4da: 00000000
-	dc.l   0			;2a4de: 00000000
-	dc.l   0			;2a4e2: 00000000
-	dc.l   0			;2a4e6: 00000000
-	dc.l   0			;2a4ea: 00000000
-	dc.l   0			;2a4ee: 00000000
-	dc.l   0			;2a4f2: 00000000
-	dc.l   0			;2a4f6: 00000000
-	dc.l   0			;2a4fa: 00000000
-	dc.l   0			;2a4fe: 00000000
-	dc.l   0			;2a502: 00000000
-	dc.l   0			;2a506: 00000000
-	dc.l   0			;2a50a: 00000000
-	dc.l   0			;2a50e: 00000000
-	dc.l   0			;2a512: 00000000
-	dc.l   0			;2a516: 00000000
-	dc.l   0			;2a51a: 00000000
-	dc.l   0			;2a51e: 00000000
-	dc.l   0			;2a522: 00000000
-	dc.l   0			;2a526: 00000000
-	dc.l   0			;2a52a: 00000000
-	dc.l   0			;2a52e: 00000000
-	dc.l   0			;2a532: 00000000
-	dc.l   0			;2a536: 00000000
-	dc.l   0			;2a53a: 00000000
-	dc.l   0			;2a53e: 00000000
-	dc.l   0			;2a542: 00000000
-	dc.l   0			;2a546: 00000000
-	dc.l   0			;2a54a: 00000000
-	dc.l   0			;2a54e: 00000000
-	dc.l   0			;2a552: 00000000
-	dc.l   0			;2a556: 00000000
-	dc.l   0			;2a55a: 00000000
-	dc.l   0			;2a55e: 00000000
-	dc.l   0			;2a562: 00000000
-	dc.l   0			;2a566: 00000000
-	dc.l   0			;2a56a: 00000000
-	dc.l   0			;2a56e: 00000000
-	dc.l   0			;2a572: 00000000
-	dc.l   0			;2a576: 00000000
-	dc.l   0			;2a57a: 00000000
-	dc.l   0			;2a57e: 00000000
-	dc.l   0			;2a582: 00000000
-	dc.l   0			;2a586: 00000000
-	dc.l   0			;2a58a: 00000000
-	dc.l   0			;2a58e: 00000000
-	dc.l   0			;2a592: 00000000
-	dc.l   0			;2a596: 00000000
-	dc.l   0			;2a59a: 00000000
-	dc.l   0			;2a59e: 00000000
-	dc.l   0			;2a5a2: 00000000
-	dc.l   0			;2a5a6: 00000000
-	dc.l   0			;2a5aa: 00000000
-	dc.l   0			;2a5ae: 00000000
-	dc.l   0			;2a5b2: 00000000
-	dc.l   0			;2a5b6: 00000000
-	dc.l   0			;2a5ba: 00000000
-	dc.l   0			;2a5be: 00000000
-	dc.l   0			;2a5c2: 00000000
-	dc.l   0			;2a5c6: 00000000
-	dc.l   0			;2a5ca: 00000000
-	dc.l   0			;2a5ce: 00000000
-	dc.l   0			;2a5d2: 00000000
-	dc.l   0			;2a5d6: 00000000
-	dc.l   0			;2a5da: 00000000
-	dc.l   0			;2a5de: 00000000
-	dc.l   0			;2a5e2: 00000000
-	dc.l   0			;2a5e6: 00000000
-	dc.l   0			;2a5ea: 00000000
-	dc.l   0			;2a5ee: 00000000
-	dc.l   0			;2a5f2: 00000000
-	dc.l   0			;2a5f6: 00000000
-	dc.l   0			;2a5fa: 00000000
-	dc.l   0			;2a5fe: 00000000
-	dc.l   0			;2a602: 00000000
-	dc.l   0			;2a606: 00000000
-	dc.l   0			;2a60a: 00000000
-	dc.l   0			;2a60e: 00000000
-	dc.l   0			;2a612: 00000000
-	dc.l   0			;2a616: 00000000
-	dc.l   0			;2a61a: 00000000
-	dc.l   0			;2a61e: 00000000
-	dc.l   0			;2a622: 00000000
-	dc.l   0			;2a626: 00000000
-	dc.l   0			;2a62a: 00000000
-	dc.l   0			;2a62e: 00000000
-	dc.l   0			;2a632: 00000000
-	dc.l   0			;2a636: 00000000
-	dc.l   0			;2a63a: 00000000
-	dc.l   0			;2a63e: 00000000
-	dc.l   0			;2a642: 00000000
-	dc.l   0			;2a646: 00000000
-	dc.l   0			;2a64a: 00000000
-	dc.l   0			;2a64e: 00000000
-	dc.l   0			;2a652: 00000000
-	dc.l   0			;2a656: 00000000
-	dc.l   0			;2a65a: 00000000
-	dc.l   0			;2a65e: 00000000
-	dc.l   0			;2a662: 00000000
-	dc.l   0			;2a666: 00000000
-	dc.l   0			;2a66a: 00000000
-	dc.l   0			;2a66e: 00000000
-	dc.l   0			;2a672: 00000000
-	dc.l   0			;2a676: 00000000
-	dc.l   0			;2a67a: 00000000
-	dc.l   0			;2a67e: 00000000
-	dc.l   0			;2a682: 00000000
-	dc.l   0			;2a686: 00000000
-	dc.l   0			;2a68a: 00000000
-	dc.l   0			;2a68e: 00000000
-	dc.l   0			;2a692: 00000000
-	dc.l   0			;2a696: 00000000
-	dc.l   0			;2a69a: 00000000
-	dc.l   0			;2a69e: 00000000
-	dc.l   0			;2a6a2: 00000000
-	dc.l   0			;2a6a6: 00000000
-	dc.l   0			;2a6aa: 00000000
-	dc.l   0			;2a6ae: 00000000
-	dc.l   0			;2a6b2: 00000000
-	dc.l   0			;2a6b6: 00000000
-	dc.l   0			;2a6ba: 00000000
-	dc.l   0			;2a6be: 00000000
-	dc.l   0			;2a6c2: 00000000
-	dc.l   0			;2a6c6: 00000000
-	dc.l   0			;2a6ca: 00000000
-	dc.l   0			;2a6ce: 00000000
-	dc.l   0			;2a6d2: 00000000
-	dc.l   0			;2a6d6: 00000000
-	dc.l   0			;2a6da: 00000000
-	dc.l   0			;2a6de: 00000000
-	dc.l   0			;2a6e2: 00000000
-	dc.l   0			;2a6e6: 00000000
-	dc.l   0			;2a6ea: 00000000
-	dc.l   0			;2a6ee: 00000000
-	dc.l   0			;2a6f2: 00000000
-	dc.l   0			;2a6f6: 00000000
-	dc.l   0			;2a6fa: 00000000
-	dc.l   0			;2a6fe: 00000000
-	dc.l   0			;2a702: 00000000
-	dc.l   0			;2a706: 00000000
-	dc.l   0			;2a70a: 00000000
-	dc.l   0			;2a70e: 00000000
-	dc.l   0			;2a712: 00000000
-	dc.l   0			;2a716: 00000000
-	dc.l   0			;2a71a: 00000000
-	dc.l   0			;2a71e: 00000000
-	dc.l   0			;2a722: 00000000
-	dc.l   0			;2a726: 00000000
-	dc.l   0			;2a72a: 00000000
-	dc.l   0			;2a72e: 00000000
-	dc.l   0			;2a732: 00000000
-	dc.l   0			;2a736: 00000000
-	dc.l   0			;2a73a: 00000000
-	dc.l   0			;2a73e: 00000000
-	dc.l   0			;2a742: 00000000
-	dc.l   0			;2a746: 00000000
-	dc.l   0			;2a74a: 00000000
-	dc.l   0			;2a74e: 00000000
-	dc.l   0			;2a752: 00000000
-	dc.l   0			;2a756: 00000000
-	dc.l   0			;2a75a: 00000000
-	dc.l   0			;2a75e: 00000000
-	dc.l   0			;2a762: 00000000
-	dc.l   0			;2a766: 00000000
-	dc.l   0			;2a76a: 00000000
-	dc.l   0			;2a76e: 00000000
-	dc.l   0			;2a772: 00000000
-	dc.l   0			;2a776: 00000000
-	dc.l   0			;2a77a: 00000000
-	dc.l   0			;2a77e: 00000000
-	dc.l   0			;2a782: 00000000
-	dc.l   0			;2a786: 00000000
-	dc.l   0			;2a78a: 00000000
-	dc.l   0			;2a78e: 00000000
-	dc.l   0			;2a792: 00000000
-	dc.l   0			;2a796: 00000000
-	dc.l   0			;2a79a: 00000000
-	dc.l   0			;2a79e: 00000000
-	dc.l   0			;2a7a2: 00000000
-	dc.l   0			;2a7a6: 00000000
-	dc.l   0			;2a7aa: 00000000
-	dc.l   0			;2a7ae: 00000000
-	dc.l   0			;2a7b2: 00000000
-	dc.l   0			;2a7b6: 00000000
-	dc.l   0			;2a7ba: 00000000
-	dc.l   0			;2a7be: 00000000
-	dc.l   0			;2a7c2: 00000000
-	dc.l   0			;2a7c6: 00000000
-	dc.l   0			;2a7ca: 00000000
-	dc.l   0			;2a7ce: 00000000
-	dc.l   0			;2a7d2: 00000000
-	dc.l   0			;2a7d6: 00000000
-	dc.l   0			;2a7da: 00000000
-	dc.l   0			;2a7de: 00000000
-	dc.l   0			;2a7e2: 00000000
-	dc.l   0			;2a7e6: 00000000
-	dc.l   0			;2a7ea: 00000000
-	dc.l   0			;2a7ee: 00000000
-	dc.l   0			;2a7f2: 00000000
-	dc.l   0			;2a7f6: 00000000
-	dc.l   0			;2a7fa: 00000000
-	dc.l   0			;2a7fe: 00000000
-	dc.l   0			;2a802: 00000000
-	dc.l   0			;2a806: 00000000
-	dc.l   0			;2a80a: 00000000
-	dc.l   0			;2a80e: 00000000
-	dc.l   0			;2a812: 00000000
-	dc.l   0			;2a816: 00000000
-	dc.l   0			;2a81a: 00000000
-	dc.l   0			;2a81e: 00000000
-	dc.l   0			;2a822: 00000000
-	dc.l   0			;2a826: 00000000
-	dc.l   0			;2a82a: 00000000
-	dc.l   0			;2a82e: 00000000
-	dc.l   0			;2a832: 00000000
-	dc.l   0			;2a836: 00000000
-	dc.l   0			;2a83a: 00000000
-	dc.l   0			;2a83e: 00000000
-	dc.l   0			;2a842: 00000000
-	dc.l   0			;2a846: 00000000
-	dc.l   0			;2a84a: 00000000
-	dc.l   0			;2a84e: 00000000
-	dc.l   0			;2a852: 00000000
-	dc.l   0			;2a856: 00000000
-	dc.l   0			;2a85a: 00000000
-	dc.l   0			;2a85e: 00000000
-	dc.l   0			;2a862: 00000000
-	dc.l   0			;2a866: 00000000
-	dc.l   0			;2a86a: 00000000
-	dc.l   0			;2a86e: 00000000
-	dc.l   0			;2a872: 00000000
-	dc.l   0			;2a876: 00000000
-	dc.l   0			;2a87a: 00000000
-	dc.l   0			;2a87e: 00000000
-	dc.l   0			;2a882: 00000000
-	dc.l   0			;2a886: 00000000
-	dc.l   0			;2a88a: 00000000
-	dc.l   0			;2a88e: 00000000
-	dc.l   0			;2a892: 00000000
-	dc.l   0			;2a896: 00000000
-	dc.l   0			;2a89a: 00000000
-	dc.l   0			;2a89e: 00000000
-	dc.l   0			;2a8a2: 00000000
-	dc.l   0			;2a8a6: 00000000
-	dc.l   0			;2a8aa: 00000000
-	dc.l   0			;2a8ae: 00000000
-	dc.l   0			;2a8b2: 00000000
-	dc.l   0			;2a8b6: 00000000
-	dc.l   0			;2a8ba: 00000000
-	dc.l   0			;2a8be: 00000000
-	dc.l   0			;2a8c2: 00000000
-	dc.l   0			;2a8c6: 00000000
-	dc.l   0			;2a8ca: 00000000
-	dc.l   0			;2a8ce: 00000000
-	dc.l   0			;2a8d2: 00000000
-	dc.l   0			;2a8d6: 00000000
-	dc.l   0			;2a8da: 00000000
-	dc.l   0			;2a8de: 00000000
-	dc.l   0			;2a8e2: 00000000
-	dc.l   0			;2a8e6: 00000000
-	dc.l   0			;2a8ea: 00000000
-	dc.l   0			;2a8ee: 00000000
-	dc.l   0			;2a8f2: 00000000
-	dc.l   0			;2a8f6: 00000000
-	dc.l   0			;2a8fa: 00000000
-	dc.l   0			;2a8fe: 00000000
-	dc.l   0			;2a902: 00000000
-	dc.l   0			;2a906: 00000000
-	dc.l   0			;2a90a: 00000000
-	dc.l   0			;2a90e: 00000000
-	dc.l   0			;2a912: 00000000
-	dc.l   0			;2a916: 00000000
-	dc.l   0			;2a91a: 00000000
-	dc.l   0			;2a91e: 00000000
-	dc.l   0			;2a922: 00000000
-	dc.l   0			;2a926: 00000000
-	dc.l   0			;2a92a: 00000000
-	dc.l   0			;2a92e: 00000000
-	dc.l   0			;2a932: 00000000
-	dc.l   0			;2a936: 00000000
-	dc.l   0			;2a93a: 00000000
-	dc.l   0			;2a93e: 00000000
-	dc.l   0			;2a942: 00000000
-	dc.l   0			;2a946: 00000000
-	dc.l   0			;2a94a: 00000000
-	dc.l   0			;2a94e: 00000000
-	dc.l   0			;2a952: 00000000
-	dc.l   0			;2a956: 00000000
-	dc.l   0			;2a95a: 00000000
-	dc.l   0			;2a95e: 00000000
-	dc.l   0			;2a962: 00000000
-	dc.l   0			;2a966: 00000000
-	dc.l   0			;2a96a: 00000000
-	dc.l   0			;2a96e: 00000000
-	dc.l   0			;2a972: 00000000
-	dc.l   0			;2a976: 00000000
-	dc.l   0			;2a97a: 00000000
-	dc.l   0			;2a97e: 00000000
-	dc.l   0			;2a982: 00000000
-	dc.l   0			;2a986: 00000000
-	dc.l   0			;2a98a: 00000000
-	dc.l   0			;2a98e: 00000000
-	dc.l   0			;2a992: 00000000
-	dc.l   0			;2a996: 00000000
-	dc.l   0			;2a99a: 00000000
-	dc.l   0			;2a99e: 00000000
-	dc.l   0			;2a9a2: 00000000
-	dc.l   0			;2a9a6: 00000000
-	dc.l   0			;2a9aa: 00000000
-	dc.l   0			;2a9ae: 00000000
-	dc.l   0			;2a9b2: 00000000
-	dc.l   0			;2a9b6: 00000000
-	dc.l   0			;2a9ba: 00000000
-	dc.l   0			;2a9be: 00000000
-	dc.l   0			;2a9c2: 00000000
-	dc.l   0			;2a9c6: 00000000
-	dc.l   0			;2a9ca: 00000000
-	dc.l   0			;2a9ce: 00000000
-	dc.l   0			;2a9d2: 00000000
-	dc.l   0			;2a9d6: 00000000
-	dc.l   0			;2a9da: 00000000
-	dc.l   0			;2a9de: 00000000
-	dc.l   0			;2a9e2: 00000000
-	dc.l   0			;2a9e6: 00000000
-	dc.l   0			;2a9ea: 00000000
-	dc.l   0			;2a9ee: 00000000
-	dc.l   0			;2a9f2: 00000000
-	dc.l   0			;2a9f6: 00000000
-	dc.l   0			;2a9fa: 00000000
-	dc.l   0			;2a9fe: 00000000
-	dc.l   0			;2aa02: 00000000
-	dc.l   0			;2aa06: 00000000
-	dc.l   0			;2aa0a: 00000000
-	dc.l   0			;2aa0e: 00000000
-	dc.l   0			;2aa12: 00000000
-	dc.l   0			;2aa16: 00000000
-	dc.l   0			;2aa1a: 00000000
-	dc.l   0			;2aa1e: 00000000
-	dc.l   0			;2aa22: 00000000
-	dc.l   0			;2aa26: 00000000
-	dc.l   0			;2aa2a: 00000000
-	dc.l   0			;2aa2e: 00000000
-	dc.l   0			;2aa32: 00000000
-	dc.l   0			;2aa36: 00000000
-	dc.l   0			;2aa3a: 00000000
-	dc.l   0			;2aa3e: 00000000
-	dc.l   0			;2aa42: 00000000
-	dc.l   0			;2aa46: 00000000
-	dc.l   0			;2aa4a: 00000000
-	dc.l   0			;2aa4e: 00000000
-	dc.l   0			;2aa52: 00000000
-	dc.l   0			;2aa56: 00000000
-	dc.l   0			;2aa5a: 00000000
-	dc.l   0			;2aa5e: 00000000
-	dc.l   0			;2aa62: 00000000
-	dc.l   0			;2aa66: 00000000
-	dc.l   0			;2aa6a: 00000000
-	dc.l   0			;2aa6e: 00000000
-	dc.l   0			;2aa72: 00000000
-	dc.l   0			;2aa76: 00000000
-	dc.l   0			;2aa7a: 00000000
-	dc.l   0			;2aa7e: 00000000
-	dc.l   0			;2aa82: 00000000
-	dc.l   0			;2aa86: 00000000
-	dc.l   0			;2aa8a: 00000000
-	dc.l   0			;2aa8e: 00000000
-	dc.l   0			;2aa92: 00000000
-	dc.l   0			;2aa96: 00000000
-	dc.l   0			;2aa9a: 00000000
-	dc.l   0			;2aa9e: 00000000
-	dc.l   0			;2aaa2: 00000000
-	dc.l   0			;2aaa6: 00000000
-	dc.l   0			;2aaaa: 00000000
-	dc.l   0			;2aaae: 00000000
-	dc.l   0			;2aab2: 00000000
-	dc.l   0			;2aab6: 00000000
-	dc.l   0			;2aaba: 00000000
-	dc.l   0			;2aabe: 00000000
-	dc.l   0			;2aac2: 00000000
-	dc.l   0			;2aac6: 00000000
-	dc.l   0			;2aaca: 00000000
-	dc.l   0			;2aace: 00000000
-	dc.l   0			;2aad2: 00000000
-	dc.l   0			;2aad6: 00000000
-	dc.l   0			;2aada: 00000000
-	dc.l   0			;2aade: 00000000
-	dc.l   0			;2aae2: 00000000
-	dc.l   0			;2aae6: 00000000
-	dc.l   0			;2aaea: 00000000
-	dc.l   0			;2aaee: 00000000
-	dc.l   0			;2aaf2: 00000000
-	dc.l   0			;2aaf6: 00000000
-	dc.l   0			;2aafa: 00000000
-	dc.l   0			;2aafe: 00000000
-	dc.l   0			;2ab02: 00000000
-	dc.l   0			;2ab06: 00000000
-	dc.l   0			;2ab0a: 00000000
-	dc.l   0			;2ab0e: 00000000
-	dc.l   0			;2ab12: 00000000
-	dc.l   0			;2ab16: 00000000
-	dc.l   0			;2ab1a: 00000000
-	dc.l   0			;2ab1e: 00000000
-	dc.l   0			;2ab22: 00000000
-	dc.l   0			;2ab26: 00000000
-	dc.l   0			;2ab2a: 00000000
-	dc.l   0			;2ab2e: 00000000
-	dc.l   0			;2ab32: 00000000
-	dc.l   0			;2ab36: 00000000
-	dc.l   0			;2ab3a: 00000000
-	dc.l   0			;2ab3e: 00000000
-	dc.l   0			;2ab42: 00000000
-	dc.l   0			;2ab46: 00000000
-	dc.l   0			;2ab4a: 00000000
-	dc.l   0			;2ab4e: 00000000
-	dc.l   0			;2ab52: 00000000
-	dc.l   0			;2ab56: 00000000
-	dc.l   0			;2ab5a: 00000000
-	dc.l   0			;2ab5e: 00000000
-	dc.l   0			;2ab62: 00000000
-	dc.l   0			;2ab66: 00000000
-	dc.l   0			;2ab6a: 00000000
-	dc.l   0			;2ab6e: 00000000
-	dc.l   0			;2ab72: 00000000
-	dc.l   0			;2ab76: 00000000
-	dc.l   0			;2ab7a: 00000000
-	dc.l   0			;2ab7e: 00000000
-	dc.l   0			;2ab82: 00000000
-	dc.l   0			;2ab86: 00000000
-	dc.l   0			;2ab8a: 00000000
-	dc.l   0			;2ab8e: 00000000
-	dc.l   0			;2ab92: 00000000
-	dc.l   0			;2ab96: 00000000
-	dc.l   0			;2ab9a: 00000000
-	dc.l   0			;2ab9e: 00000000
-	dc.l   0			;2aba2: 00000000
-	dc.l   0			;2aba6: 00000000
-	dc.l   0			;2abaa: 00000000
-	dc.l   0			;2abae: 00000000
-	dc.l   0			;2abb2: 00000000
-	dc.l   0			;2abb6: 00000000
-	dc.l   0			;2abba: 00000000
-	dc.l   0			;2abbe: 00000000
-	dc.l   0			;2abc2: 00000000
-	dc.l   0			;2abc6: 00000000
-	dc.l   0			;2abca: 00000000
-	dc.l   0			;2abce: 00000000
-	dc.l   0			;2abd2: 00000000
-	dc.l   0			;2abd6: 00000000
-	dc.l   0			;2abda: 00000000
-	dc.l   0			;2abde: 00000000
-	dc.l   0			;2abe2: 00000000
-	dc.l   0			;2abe6: 00000000
-	dc.l   0			;2abea: 00000000
-	dc.l   0			;2abee: 00000000
-	dc.l   0			;2abf2: 00000000
-	dc.l   0			;2abf6: 00000000
-	dc.l   0			;2abfa: 00000000
-	dc.l   0			;2abfe: 00000000
-	dc.l   0			;2ac02: 00000000
-	dc.l   0			;2ac06: 00000000
-	dc.l   0			;2ac0a: 00000000
-	dc.l   0			;2ac0e: 00000000
-	dc.l   0			;2ac12: 00000000
-	dc.l   0			;2ac16: 00000000
-	dc.l   0			;2ac1a: 00000000
-	dc.l   0			;2ac1e: 00000000
-	dc.l   0			;2ac22: 00000000
-	dc.l   0			;2ac26: 00000000
-	dc.l   0			;2ac2a: 00000000
-	dc.l   0			;2ac2e: 00000000
-	dc.l   0			;2ac32: 00000000
-	dc.l   0			;2ac36: 00000000
-	dc.l   0			;2ac3a: 00000000
-	dc.l   0			;2ac3e: 00000000
-	dc.l   0			;2ac42: 00000000
-	dc.l   0			;2ac46: 00000000
-	dc.l   0			;2ac4a: 00000000
-	dc.l   0			;2ac4e: 00000000
-	dc.l   0			;2ac52: 00000000
-	dc.l   0			;2ac56: 00000000
-	dc.l   0			;2ac5a: 00000000
-	dc.l   0			;2ac5e: 00000000
-	dc.l   0			;2ac62: 00000000
-	dc.l   0			;2ac66: 00000000
-	dc.l   0			;2ac6a: 00000000
-	dc.l   0			;2ac6e: 00000000
-	dc.l   0			;2ac72: 00000000
-	dc.l   0			;2ac76: 00000000
-	dc.l   0			;2ac7a: 00000000
-	dc.l   0			;2ac7e: 00000000
-	dc.l   0			;2ac82: 00000000
-	dc.l   0			;2ac86: 00000000
-	dc.l   0			;2ac8a: 00000000
-	dc.l   0			;2ac8e: 00000000
-	dc.l   0			;2ac92: 00000000
-	dc.l   0			;2ac96: 00000000
-	dc.l   0			;2ac9a: 00000000
-	dc.l   0			;2ac9e: 00000000
-	dc.l   0			;2aca2: 00000000
-	dc.l   0			;2aca6: 00000000
-	dc.l   0			;2acaa: 00000000
-	dc.l   0			;2acae: 00000000
-	dc.l   0			;2acb2: 00000000
-	dc.l   0			;2acb6: 00000000
-	dc.l   0			;2acba: 00000000
-	dc.l   0			;2acbe: 00000000
-	dc.l   0			;2acc2: 00000000
-	dc.l   0			;2acc6: 00000000
-	dc.l   0			;2acca: 00000000
-	dc.l   0			;2acce: 00000000
-	dc.l   0			;2acd2: 00000000
-	dc.l   0			;2acd6: 00000000
-	dc.l   0			;2acda: 00000000
-	dc.l   0			;2acde: 00000000
-	dc.l   0			;2ace2: 00000000
-	dc.l   0			;2ace6: 00000000
-	dc.l   0			;2acea: 00000000
-	dc.l   0			;2acee: 00000000
-	dc.l   0			;2acf2: 00000000
-	dc.l   0			;2acf6: 00000000
-	dc.l   0			;2acfa: 00000000
-	dc.l   0			;2acfe: 00000000
-	dc.l   0			;2ad02: 00000000
-	dc.l   0			;2ad06: 00000000
-	dc.l   0			;2ad0a: 00000000
-	dc.l   0			;2ad0e: 00000000
-	dc.l   0			;2ad12: 00000000
-	dc.l   0			;2ad16: 00000000
-	dc.l   0			;2ad1a: 00000000
-	dc.l   0			;2ad1e: 00000000
-	dc.l   0			;2ad22: 00000000
-	dc.l   0			;2ad26: 00000000
-	dc.l   0			;2ad2a: 00000000
-	dc.l   0			;2ad2e: 00000000
-	dc.l   0			;2ad32: 00000000
-	dc.l   0			;2ad36: 00000000
-	dc.l   0			;2ad3a: 00000000
-	dc.l   0			;2ad3e: 00000000
-	dc.l   0			;2ad42: 00000000
-	dc.l   0			;2ad46: 00000000
-	dc.l   0			;2ad4a: 00000000
-	dc.l   0			;2ad4e: 00000000
-	dc.l   0			;2ad52: 00000000
-	dc.l   0			;2ad56: 00000000
-	dc.l   0			;2ad5a: 00000000
-	dc.l   0			;2ad5e: 00000000
-	dc.l   0			;2ad62: 00000000
-	dc.l   0			;2ad66: 00000000
-	dc.l   0			;2ad6a: 00000000
-	dc.l   0			;2ad6e: 00000000
-	dc.l   0			;2ad72: 00000000
-	dc.l   0			;2ad76: 00000000
-	dc.l   0			;2ad7a: 00000000
-	dc.l   0			;2ad7e: 00000000
-	dc.l   0			;2ad82: 00000000
-	dc.l   0			;2ad86: 00000000
-	dc.l   0			;2ad8a: 00000000
-	dc.l   0			;2ad8e: 00000000
-	dc.l   0			;2ad92: 00000000
-	dc.l   0			;2ad96: 00000000
-	dc.l   0			;2ad9a: 00000000
-	dc.l   0			;2ad9e: 00000000
-	dc.l   0			;2ada2: 00000000
-	dc.l   0			;2ada6: 00000000
-	dc.l   0			;2adaa: 00000000
-	dc.l   0			;2adae: 00000000
-	dc.l   0			;2adb2: 00000000
-	dc.l   0			;2adb6: 00000000
-	dc.l   0			;2adba: 00000000
-	dc.l   0			;2adbe: 00000000
-	dc.l   0			;2adc2: 00000000
-	dc.l   0			;2adc6: 00000000
-	dc.l   0			;2adca: 00000000
-	dc.l   0			;2adce: 00000000
-	dc.l   0			;2add2: 00000000
-	dc.l   0			;2add6: 00000000
-	dc.l   0			;2adda: 00000000
-	dc.l   0			;2adde: 00000000
-	dc.l   0			;2ade2: 00000000
-	dc.l   0			;2ade6: 00000000
-	dc.l   0			;2adea: 00000000
-	dc.l   0			;2adee: 00000000
-	dc.l   0			;2adf2: 00000000
-	dc.l   0			;2adf6: 00000000
-	dc.l   0			;2adfa: 00000000
-	dc.l   0			;2adfe: 00000000
-	dc.l   0			;2ae02: 00000000
-	dc.l   0			;2ae06: 00000000
-	dc.l   0			;2ae0a: 00000000
-	dc.l   0			;2ae0e: 00000000
-	dc.l   0			;2ae12: 00000000
-	dc.l   0			;2ae16: 00000000
-	dc.l   0			;2ae1a: 00000000
-	dc.l   0			;2ae1e: 00000000
-	dc.l   0			;2ae22: 00000000
-	dc.l   0			;2ae26: 00000000
-	dc.l   0			;2ae2a: 00000000
-	dc.l   0			;2ae2e: 00000000
-	dc.l   0			;2ae32: 00000000
-	dc.l   0			;2ae36: 00000000
-	dc.l   0			;2ae3a: 00000000
-	dc.l   0			;2ae3e: 00000000
-	dc.l   0			;2ae42: 00000000
-	dc.l   0			;2ae46: 00000000
-	dc.l   0			;2ae4a: 00000000
-	dc.l   0			;2ae4e: 00000000
-	dc.l   0			;2ae52: 00000000
-	dc.l   0			;2ae56: 00000000
-	dc.l   0			;2ae5a: 00000000
-	dc.l   0			;2ae5e: 00000000
-	dc.l   0			;2ae62: 00000000
-	dc.l   0			;2ae66: 00000000
-	dc.l   0			;2ae6a: 00000000
-	dc.l   0			;2ae6e: 00000000
-	dc.l   0			;2ae72: 00000000
-	dc.l   0			;2ae76: 00000000
-	dc.l   0			;2ae7a: 00000000
-	dc.l   0			;2ae7e: 00000000
-	dc.l   0			;2ae82: 00000000
-	dc.l   0			;2ae86: 00000000
-	dc.l   0			;2ae8a: 00000000
-	dc.l   0			;2ae8e: 00000000
-	dc.l   0			;2ae92: 00000000
-	dc.l   0			;2ae96: 00000000
-	dc.l   0			;2ae9a: 00000000
-	dc.l   0			;2ae9e: 00000000
-	dc.l   0			;2aea2: 00000000
-	dc.l   0			;2aea6: 00000000
-	dc.l   0			;2aeaa: 00000000
-	dc.l   0			;2aeae: 00000000
-	dc.l   0			;2aeb2: 00000000
-	dc.l   0			;2aeb6: 00000000
-	dc.l   0			;2aeba: 00000000
-	dc.l   0			;2aebe: 00000000
-	dc.l   0			;2aec2: 00000000
-	dc.l   0			;2aec6: 00000000
-	dc.l   0			;2aeca: 00000000
-	dc.l   0			;2aece: 00000000
-	dc.l   0			;2aed2: 00000000
-	dc.l   0			;2aed6: 00000000
-	dc.l   0			;2aeda: 00000000
-	dc.l   0			;2aede: 00000000
-	dc.l   0			;2aee2: 00000000
-	dc.l   0			;2aee6: 00000000
-	dc.l   0			;2aeea: 00000000
-	dc.l   0			;2aeee: 00000000
-	dc.l   0			;2aef2: 00000000
-	dc.l   0			;2aef6: 00000000
-	dc.l   0			;2aefa: 00000000
-	dc.l   0			;2aefe: 00000000
-	dc.l   0			;2af02: 00000000
-	dc.l   0			;2af06: 00000000
-	dc.l   0			;2af0a: 00000000
-	dc.l   0			;2af0e: 00000000
-	dc.l   0			;2af12: 00000000
-	dc.l   0			;2af16: 00000000
-	dc.l   0			;2af1a: 00000000
-	dc.l   0			;2af1e: 00000000
-	dc.l   0			;2af22: 00000000
-	dc.l   0			;2af26: 00000000
-	dc.l   0			;2af2a: 00000000
-	dc.l   0			;2af2e: 00000000
-	dc.l   0			;2af32: 00000000
-	dc.l   0			;2af36: 00000000
-	dc.l   0			;2af3a: 00000000
-	dc.l   0			;2af3e: 00000000
-	dc.l   0			;2af42: 00000000
-	dc.l   0			;2af46: 00000000
-	dc.l   0			;2af4a: 00000000
-	dc.l   0			;2af4e: 00000000
-	dc.l   0			;2af52: 00000000
-	dc.l   0			;2af56: 00000000
-	dc.l   0			;2af5a: 00000000
-	dc.l   0			;2af5e: 00000000
-	dc.l   0			;2af62: 00000000
-	dc.l   0			;2af66: 00000000
-	dc.l   0			;2af6a: 00000000
-	dc.l   0			;2af6e: 00000000
-	dc.l   0			;2af72: 00000000
-	dc.l   0			;2af76: 00000000
-	dc.l   0			;2af7a: 00000000
-	dc.l   0			;2af7e: 00000000
-	dc.l   0			;2af82: 00000000
-	dc.l   0			;2af86: 00000000
-	dc.l   0			;2af8a: 00000000
-	dc.l   0			;2af8e: 00000000
-	dc.l   0			;2af92: 00000000
-	dc.l   0			;2af96: 00000000
-	dc.l   0			;2af9a: 00000000
-	dc.l   0			;2af9e: 00000000
-	dc.l   0			;2afa2: 00000000
-	dc.l   0			;2afa6: 00000000
-	dc.l   0			;2afaa: 00000000
-	dc.l   0			;2afae: 00000000
-	dc.l   0			;2afb2: 00000000
-	dc.l   0			;2afb6: 00000000
-	dc.l   0			;2afba: 00000000
-	dc.l   0			;2afbe: 00000000
-	dc.l   0			;2afc2: 00000000
-	dc.l   0			;2afc6: 00000000
-	dc.l   0			;2afca: 00000000
-	dc.l   0			;2afce: 00000000
-	dc.l   0			;2afd2: 00000000
-	dc.l   0			;2afd6: 00000000
-	dc.l   0			;2afda: 00000000
-	dc.l   0			;2afde: 00000000
-	dc.l   0			;2afe2: 00000000
-	dc.l   0			;2afe6: 00000000
-	dc.l   0			;2afea: 00000000
-	dc.l   0			;2afee: 00000000
-	dc.l   0			;2aff2: 00000000
-	dc.l   0			;2aff6: 00000000
-	dc.l   0			;2affa: 00000000
-	dc.l   0			;2affe: 00000000
-	dc.l   0			;2b002: 00000000
-	dc.l   0			;2b006: 00000000
-	dc.l   0			;2b00a: 00000000
-	dc.l   0			;2b00e: 00000000
-	dc.l   0			;2b012: 00000000
-	dc.l   0			;2b016: 00000000
-	dc.l   0			;2b01a: 00000000
-	dc.l   0			;2b01e: 00000000
-	dc.l   0			;2b022: 00000000
-	dc.l   0			;2b026: 00000000
-	dc.l   0			;2b02a: 00000000
-	dc.l   0			;2b02e: 00000000
-	dc.l   0			;2b032: 00000000
-	dc.l   0			;2b036: 00000000
-	dc.l   0			;2b03a: 00000000
-	dc.l   0			;2b03e: 00000000
-	dc.l   0			;2b042: 00000000
-	dc.l   0			;2b046: 00000000
-	dc.l   0			;2b04a: 00000000
-	dc.l   0			;2b04e: 00000000
-	dc.l   0			;2b052: 00000000
-	dc.l   0			;2b056: 00000000
-	dc.l   0			;2b05a: 00000000
-	dc.l   0			;2b05e: 00000000
-	dc.l   0			;2b062: 00000000
-	dc.l   0			;2b066: 00000000
-	dc.l   0			;2b06a: 00000000
-	dc.l   0			;2b06e: 00000000
-	dc.l   0			;2b072: 00000000
-	dc.l   0			;2b076: 00000000
-	dc.l   0			;2b07a: 00000000
-	dc.l   0			;2b07e: 00000000
-	dc.l   0			;2b082: 00000000
-	dc.l   0			;2b086: 00000000
-	dc.l   0			;2b08a: 00000000
-	dc.l   0			;2b08e: 00000000
-	dc.l   0			;2b092: 00000000
-	dc.l   0			;2b096: 00000000
-	dc.l   0			;2b09a: 00000000
-	dc.l   0			;2b09e: 00000000
-	dc.l   0			;2b0a2: 00000000
-	dc.l   0			;2b0a6: 00000000
-	dc.l   0			;2b0aa: 00000000
-	dc.l   0			;2b0ae: 00000000
-	dc.l   0			;2b0b2: 00000000
-	dc.l   0			;2b0b6: 00000000
-	dc.l   0			;2b0ba: 00000000
-	dc.l   0			;2b0be: 00000000
-	dc.l   0			;2b0c2: 00000000
-	dc.l   0			;2b0c6: 00000000
-	dc.l   0			;2b0ca: 00000000
-	dc.l   0			;2b0ce: 00000000
-	dc.l   0			;2b0d2: 00000000
-	dc.l   0			;2b0d6: 00000000
-	dc.l   0			;2b0da: 00000000
-	dc.l   0			;2b0de: 00000000
-	dc.l   0			;2b0e2: 00000000
-	dc.l   0			;2b0e6: 00000000
-	dc.l   0			;2b0ea: 00000000
-	dc.l   0			;2b0ee: 00000000
-	dc.l   0			;2b0f2: 00000000
-	dc.l   0			;2b0f6: 00000000
-	dc.l   0			;2b0fa: 00000000
-	dc.l   0			;2b0fe: 00000000
-	dc.l   0			;2b102: 00000000
-	dc.l   0			;2b106: 00000000
-	dc.l   0			;2b10a: 00000000
-	dc.l   0			;2b10e: 00000000
-	dc.l   0			;2b112: 00000000
-	dc.l   0			;2b116: 00000000
-	dc.l   0			;2b11a: 00000000
-	dc.l   0			;2b11e: 00000000
-	dc.l   0			;2b122: 00000000
-	dc.l   0			;2b126: 00000000
-	dc.l   0			;2b12a: 00000000
-	dc.l   0			;2b12e: 00000000
-	dc.l   0			;2b132: 00000000
-	dc.l   0			;2b136: 00000000
-	dc.l   0			;2b13a: 00000000
-	dc.l   0			;2b13e: 00000000
-	dc.l   0			;2b142: 00000000
-	dc.l   0			;2b146: 00000000
-	dc.l   0			;2b14a: 00000000
-	dc.l   0			;2b14e: 00000000
-	dc.l   0			;2b152: 00000000
-	dc.l   0			;2b156: 00000000
-	dc.l   0			;2b15a: 00000000
-	dc.l   0			;2b15e: 00000000
-	dc.l   0			;2b162: 00000000
-	dc.l   0			;2b166: 00000000
-	dc.l   0			;2b16a: 00000000
-	dc.l   0			;2b16e: 00000000
-	dc.l   0			;2b172: 00000000
-	dc.l   0			;2b176: 00000000
-	dc.l   0			;2b17a: 00000000
-	dc.l   0			;2b17e: 00000000
-	dc.l   0			;2b182: 00000000
-	dc.l   0			;2b186: 00000000
-	dc.l   0			;2b18a: 00000000
-	dc.l   0			;2b18e: 00000000
-	dc.l   0			;2b192: 00000000
-	dc.l   0			;2b196: 00000000
-	dc.l   0			;2b19a: 00000000
-	dc.l   0			;2b19e: 00000000
-	dc.l   0			;2b1a2: 00000000
-	dc.l   0			;2b1a6: 00000000
-	dc.l   0			;2b1aa: 00000000
-	dc.l   0			;2b1ae: 00000000
-	dc.l   0			;2b1b2: 00000000
-	dc.l   0			;2b1b6: 00000000
-	dc.l   0			;2b1ba: 00000000
-	dc.l   0			;2b1be: 00000000
-	dc.l   0			;2b1c2: 00000000
-	dc.l   0			;2b1c6: 00000000
-	dc.l   0			;2b1ca: 00000000
-	dc.l   0			;2b1ce: 00000000
-	dc.l   0			;2b1d2: 00000000
-	dc.l   0			;2b1d6: 00000000
-	dc.l   0			;2b1da: 00000000
-	dc.l   0			;2b1de: 00000000
-	dc.l   0			;2b1e2: 00000000
-	dc.l   0			;2b1e6: 00000000
-	dc.l   0			;2b1ea: 00000000
-	dc.l   0			;2b1ee: 00000000
-	dc.l   0			;2b1f2: 00000000
-	dc.l   0			;2b1f6: 00000000
-	dc.l   0			;2b1fa: 00000000
-	dc.l   0			;2b1fe: 00000000
-	dc.l   0			;2b202: 00000000
-	dc.l   0			;2b206: 00000000
-	dc.l   0			;2b20a: 00000000
-	dc.l   0			;2b20e: 00000000
-	dc.l   0			;2b212: 00000000
-	dc.l   0			;2b216: 00000000
-	dc.l   0			;2b21a: 00000000
-	dc.l   0			;2b21e: 00000000
-	dc.l   0			;2b222: 00000000
-	dc.l   0			;2b226: 00000000
-	dc.l   0			;2b22a: 00000000
-	dc.l   0			;2b22e: 00000000
-	dc.l   0			;2b232: 00000000
-	dc.l   0			;2b236: 00000000
-	dc.l   0			;2b23a: 00000000
-	dc.l   0			;2b23e: 00000000
-	dc.l   0			;2b242: 00000000
-	dc.l   0			;2b246: 00000000
-	dc.l   0			;2b24a: 00000000
-	dc.l   0			;2b24e: 00000000
-	dc.l   0			;2b252: 00000000
-	dc.l   0			;2b256: 00000000
-	dc.l   0			;2b25a: 00000000
-	dc.l   0			;2b25e: 00000000
-	dc.l   0			;2b262: 00000000
-	dc.l   0			;2b266: 00000000
-	dc.l   0			;2b26a: 00000000
-	dc.l   0			;2b26e: 00000000
-	dc.l   0			;2b272: 00000000
-	dc.l   0			;2b276: 00000000
-	dc.l   0			;2b27a: 00000000
-	dc.l   0			;2b27e: 00000000
-	dc.l   0			;2b282: 00000000
-	dc.l   0			;2b286: 00000000
-	dc.l   0			;2b28a: 00000000
-	dc.l   0			;2b28e: 00000000
-	dc.l   0			;2b292: 00000000
-	dc.l   0			;2b296: 00000000
-	dc.l   0			;2b29a: 00000000
-	dc.l   0			;2b29e: 00000000
-	dc.l   0			;2b2a2: 00000000
-	dc.l   0			;2b2a6: 00000000
-	dc.l   0			;2b2aa: 00000000
-	dc.l   0			;2b2ae: 00000000
-	dc.l   0			;2b2b2: 00000000
-	dc.l   0			;2b2b6: 00000000
-	dc.l   0			;2b2ba: 00000000
-	dc.l   0			;2b2be: 00000000
-	dc.l   0			;2b2c2: 00000000
-	dc.l   0			;2b2c6: 00000000
-	dc.l   0			;2b2ca: 00000000
-	dc.l   0			;2b2ce: 00000000
-	dc.l   0			;2b2d2: 00000000
-	dc.l   0			;2b2d6: 00000000
-	dc.l   0			;2b2da: 00000000
-	dc.l   0			;2b2de: 00000000
-	dc.l   0			;2b2e2: 00000000
-	dc.l   0			;2b2e6: 00000000
-	dc.l   0			;2b2ea: 00000000
-	dc.l   0			;2b2ee: 00000000
-	dc.l   0			;2b2f2: 00000000
-	dc.l   0			;2b2f6: 00000000
-	dc.l   0			;2b2fa: 00000000
-	dc.l   0			;2b2fe: 00000000
-	dc.l   0			;2b302: 00000000
-	dc.l   0			;2b306: 00000000
-	dc.l   0			;2b30a: 00000000
-	dc.l   0			;2b30e: 00000000
-	dc.l   0			;2b312: 00000000
-	dc.l   0			;2b316: 00000000
-	dc.l   0			;2b31a: 00000000
-	dc.l   0			;2b31e: 00000000
-	dc.l   0			;2b322: 00000000
-	dc.l   0			;2b326: 00000000
-	dc.l   0			;2b32a: 00000000
-	dc.l   0			;2b32e: 00000000
-	dc.l   0			;2b332: 00000000
-	dc.l   0			;2b336: 00000000
-	dc.l   0			;2b33a: 00000000
-	dc.l   0			;2b33e: 00000000
-	dc.l   0			;2b342: 00000000
-	dc.l   0			;2b346: 00000000
-	dc.l   0			;2b34a: 00000000
-	dc.l   0			;2b34e: 00000000
-	dc.l   0			;2b352: 00000000
-	dc.l   0			;2b356: 00000000
-	dc.l   0			;2b35a: 00000000
-	dc.l   0			;2b35e: 00000000
-	dc.l   0			;2b362: 00000000
-	dc.l   0			;2b366: 00000000
-	dc.l   0			;2b36a: 00000000
-	dc.l   0			;2b36e: 00000000
-	dc.l   0			;2b372: 00000000
-	dc.l   0			;2b376: 00000000
-	dc.l   0			;2b37a: 00000000
-	dc.l   0			;2b37e: 00000000
-	dc.l   0			;2b382: 00000000
-	dc.l   0			;2b386: 00000000
-	dc.l   0			;2b38a: 00000000
-	dc.l   0			;2b38e: 00000000
-	dc.l   0			;2b392: 00000000
-	dc.l   0			;2b396: 00000000
-	dc.l   0			;2b39a: 00000000
-	dc.l   0			;2b39e: 00000000
-	dc.l   0			;2b3a2: 00000000
-	dc.l   0			;2b3a6: 00000000
-	dc.l   0			;2b3aa: 00000000
-	dc.l   0			;2b3ae: 00000000
-	dc.l   0			;2b3b2: 00000000
-	dc.l   0			;2b3b6: 00000000
-	dc.l   0			;2b3ba: 00000000
-	dc.l   0			;2b3be: 00000000
-	dc.l   0			;2b3c2: 00000000
-	dc.l   0			;2b3c6: 00000000
-	dc.l   0			;2b3ca: 00000000
-	dc.l   0			;2b3ce: 00000000
-	dc.l   0			;2b3d2: 00000000
-	dc.l   0			;2b3d6: 00000000
-	dc.l   0			;2b3da: 00000000
-	dc.l   0			;2b3de: 00000000
-	dc.l   0			;2b3e2: 00000000
-	dc.l   0			;2b3e6: 00000000
-	dc.l   0			;2b3ea: 00000000
-	dc.l   0			;2b3ee: 00000000
-	dc.l   0			;2b3f2: 00000000
-	dc.l   0			;2b3f6: 00000000
-	dc.l   0			;2b3fa: 00000000
-	dc.l   0			;2b3fe: 00000000
-	dc.l   0			;2b402: 00000000
-	dc.l   0			;2b406: 00000000
-	dc.l   0			;2b40a: 00000000
-	dc.l   0			;2b40e: 00000000
-	dc.l   0			;2b412: 00000000
-	dc.l   0			;2b416: 00000000
-	dc.l   0			;2b41a: 00000000
-	dc.l   0			;2b41e: 00000000
-	dc.l   0			;2b422: 00000000
-	dc.l   0			;2b426: 00000000
-	dc.l   0			;2b42a: 00000000
-	dc.l   0			;2b42e: 00000000
-	dc.l   0			;2b432: 00000000
-	dc.l   0			;2b436: 00000000
-	dc.l   0			;2b43a: 00000000
-	dc.l   0			;2b43e: 00000000
-	dc.l   0			;2b442: 00000000
-	dc.l   0			;2b446: 00000000
-	dc.l   0			;2b44a: 00000000
-	dc.l   0			;2b44e: 00000000
-	dc.l   0			;2b452: 00000000
-	dc.l   0			;2b456: 00000000
-	dc.l   0			;2b45a: 00000000
-	dc.l   0			;2b45e: 00000000
-	dc.l   0			;2b462: 00000000
-	dc.l   0			;2b466: 00000000
-	dc.l   0			;2b46a: 00000000
-	dc.l   0			;2b46e: 00000000
-	dc.l   0			;2b472: 00000000
-	dc.l   0			;2b476: 00000000
-	dc.l   0			;2b47a: 00000000
-	dc.l   0			;2b47e: 00000000
-	dc.l   0			;2b482: 00000000
-	dc.l   0			;2b486: 00000000
-	dc.l   0			;2b48a: 00000000
-	dc.l   0			;2b48e: 00000000
-	dc.l   0			;2b492: 00000000
-	dc.l   0			;2b496: 00000000
-	dc.l   0			;2b49a: 00000000
-	dc.l   0			;2b49e: 00000000
-	dc.l   0			;2b4a2: 00000000
-	dc.l   0			;2b4a6: 00000000
-	dc.l   0			;2b4aa: 00000000
-	dc.l   0			;2b4ae: 00000000
-	dc.l   0			;2b4b2: 00000000
-	dc.l   0			;2b4b6: 00000000
-	dc.l   0			;2b4ba: 00000000
-	dc.l   0			;2b4be: 00000000
-	dc.l   0			;2b4c2: 00000000
-	dc.l   0			;2b4c6: 00000000
-	dc.l   0			;2b4ca: 00000000
-	dc.l   0			;2b4ce: 00000000
-	dc.l   0			;2b4d2: 00000000
-	dc.l   0			;2b4d6: 00000000
-	dc.l   0			;2b4da: 00000000
-	dc.l   0			;2b4de: 00000000
-	dc.l   0			;2b4e2: 00000000
-	dc.l   0			;2b4e6: 00000000
-	dc.l   0			;2b4ea: 00000000
-	dc.l   0			;2b4ee: 00000000
-	dc.l   0			;2b4f2: 00000000
-	dc.l   0			;2b4f6: 00000000
-	dc.l   0			;2b4fa: 00000000
-	dc.l   0			;2b4fe: 00000000
-	dc.l   0			;2b502: 00000000
-	dc.l   0			;2b506: 00000000
-	dc.l   0			;2b50a: 00000000
-	dc.l   0			;2b50e: 00000000
-	dc.l   0			;2b512: 00000000
-	dc.l   0			;2b516: 00000000
-	dc.l   0			;2b51a: 00000000
-	dc.l   0			;2b51e: 00000000
-	dc.l   0			;2b522: 00000000
-	dc.l   0			;2b526: 00000000
-	dc.l   0			;2b52a: 00000000
-	dc.l   0			;2b52e: 00000000
-	dc.l   0			;2b532: 00000000
-	dc.l   0			;2b536: 00000000
-	dc.l   0			;2b53a: 00000000
-	dc.l   0			;2b53e: 00000000
-	dc.l   0			;2b542: 00000000
-	dc.l   0			;2b546: 00000000
-	dc.l   0			;2b54a: 00000000
-	dc.l   0			;2b54e: 00000000
-	dc.l   0			;2b552: 00000000
-	dc.l   0			;2b556: 00000000
-	dc.l   0			;2b55a: 00000000
-	dc.l   0			;2b55e: 00000000
-	dc.l   0			;2b562: 00000000
-	dc.l   0			;2b566: 00000000
-	dc.l   0			;2b56a: 00000000
-	dc.l   0			;2b56e: 00000000
-	dc.l   0			;2b572: 00000000
-	dc.l   0			;2b576: 00000000
-	dc.l   0			;2b57a: 00000000
-	dc.l   0			;2b57e: 00000000
-	dc.l   0			;2b582: 00000000
-	dc.l   0			;2b586: 00000000
-	dc.l   0			;2b58a: 00000000
-	dc.l   0			;2b58e: 00000000
-	dc.l   0			;2b592: 00000000
-	dc.l   0			;2b596: 00000000
-	dc.l   0			;2b59a: 00000000
-	dc.l   0			;2b59e: 00000000
-	dc.l   0			;2b5a2: 00000000
-	dc.l   0			;2b5a6: 00000000
-	dc.l   0			;2b5aa: 00000000
-	dc.l   0			;2b5ae: 00000000
-	dc.l   0			;2b5b2: 00000000
-	dc.l   0			;2b5b6: 00000000
-	dc.l   0			;2b5ba: 00000000
-	dc.l   0			;2b5be: 00000000
-	dc.l   0			;2b5c2: 00000000
-	dc.l   0			;2b5c6: 00000000
-	dc.l   0			;2b5ca: 00000000
-	dc.l   0			;2b5ce: 00000000
-	dc.l   0			;2b5d2: 00000000
-	dc.l   0			;2b5d6: 00000000
-	dc.l   0			;2b5da: 00000000
-	dc.l   0			;2b5de: 00000000
-	dc.l   0			;2b5e2: 00000000
-	dc.l   0			;2b5e6: 00000000
-	dc.l   0			;2b5ea: 00000000
-	dc.l   0			;2b5ee: 00000000
-	dc.l   0			;2b5f2: 00000000
-	dc.l   0			;2b5f6: 00000000
-	dc.l   0			;2b5fa: 00000000
-	dc.l   0			;2b5fe: 00000000
-	dc.l   0			;2b602: 00000000
-	dc.l   0			;2b606: 00000000
-	dc.l   0			;2b60a: 00000000
-	dc.l   0			;2b60e: 00000000
-	dc.l   0			;2b612: 00000000
-	dc.l   0			;2b616: 00000000
-	dc.l   0			;2b61a: 00000000
-	dc.l   0			;2b61e: 00000000
-	dc.l   0			;2b622: 00000000
-	dc.l   0			;2b626: 00000000
-	dc.l   0			;2b62a: 00000000
-	dc.l   0			;2b62e: 00000000
-	dc.l   0			;2b632: 00000000
-	dc.l   0			;2b636: 00000000
-	dc.l   0			;2b63a: 00000000
-	dc.l   0			;2b63e: 00000000
-	dc.l   0			;2b642: 00000000
-	dc.l   0			;2b646: 00000000
-	dc.l   0			;2b64a: 00000000
-	dc.l   0			;2b64e: 00000000
-	dc.l   0			;2b652: 00000000
-	dc.l   0			;2b656: 00000000
-	dc.l   0			;2b65a: 00000000
-	dc.l   0			;2b65e: 00000000
-	dc.l   0			;2b662: 00000000
-	dc.l   0			;2b666: 00000000
-	dc.l   0			;2b66a: 00000000
-	dc.l   0			;2b66e: 00000000
-	dc.l   0			;2b672: 00000000
-	dc.l   0			;2b676: 00000000
-	dc.l   0			;2b67a: 00000000
-	dc.l   0			;2b67e: 00000000
-	dc.l   0			;2b682: 00000000
-	dc.l   0			;2b686: 00000000
-	dc.l   0			;2b68a: 00000000
-	dc.l   0			;2b68e: 00000000
-	dc.l   0			;2b692: 00000000
-	dc.l   0			;2b696: 00000000
-	dc.l   0			;2b69a: 00000000
-	dc.l   0			;2b69e: 00000000
-	dc.l   0			;2b6a2: 00000000
-	dc.l   0			;2b6a6: 00000000
-	dc.l   0			;2b6aa: 00000000
-	dc.l   0			;2b6ae: 00000000
-	dc.l   0			;2b6b2: 00000000
-	dc.l   0			;2b6b6: 00000000
-	dc.l   0			;2b6ba: 00000000
-	dc.l   0			;2b6be: 00000000
-	dc.l   0			;2b6c2: 00000000
-	dc.l   0			;2b6c6: 00000000
-	dc.l   0			;2b6ca: 00000000
-	dc.l   0			;2b6ce: 00000000
-	dc.l   0			;2b6d2: 00000000
-	dc.l   0			;2b6d6: 00000000
-	dc.l   0			;2b6da: 00000000
-	dc.l   0			;2b6de: 00000000
-	dc.l   0			;2b6e2: 00000000
-	dc.l   0			;2b6e6: 00000000
-	dc.l   0			;2b6ea: 00000000
-	dc.l   0			;2b6ee: 00000000
-	dc.l   0			;2b6f2: 00000000
-	dc.l   0			;2b6f6: 00000000
-	dc.l   0			;2b6fa: 00000000
-	dc.l   0			;2b6fe: 00000000
-	dc.l   0			;2b702: 00000000
-	dc.l   0			;2b706: 00000000
-	dc.l   0			;2b70a: 00000000
-	dc.l   0			;2b70e: 00000000
-	dc.l   0			;2b712: 00000000
-	dc.l   0			;2b716: 00000000
-	dc.l   0			;2b71a: 00000000
-	dc.l   0			;2b71e: 00000000
-	dc.l   0			;2b722: 00000000
-	dc.l   0			;2b726: 00000000
-	dc.l   0			;2b72a: 00000000
-	dc.l   0			;2b72e: 00000000
-	dc.l   0			;2b732: 00000000
-	dc.l   0			;2b736: 00000000
-	dc.l   0			;2b73a: 00000000
-	dc.l   0			;2b73e: 00000000
-	dc.l   0			;2b742: 00000000
-	dc.l   0			;2b746: 00000000
-	dc.l   0			;2b74a: 00000000
-	dc.l   0			;2b74e: 00000000
-	dc.l   0			;2b752: 00000000
-	dc.l   0			;2b756: 00000000
-	dc.l   0			;2b75a: 00000000
-	dc.l   0			;2b75e: 00000000
-	dc.l   0			;2b762: 00000000
-	dc.l   0			;2b766: 00000000
-	dc.l   0			;2b76a: 00000000
-	dc.l   0			;2b76e: 00000000
-	dc.l   0			;2b772: 00000000
-	dc.l   0			;2b776: 00000000
-	dc.l   0			;2b77a: 00000000
-	dc.l   0			;2b77e: 00000000
-	dc.l   0			;2b782: 00000000
-	dc.l   0			;2b786: 00000000
-	dc.l   0			;2b78a: 00000000
-	dc.l   0			;2b78e: 00000000
-	dc.l   0			;2b792: 00000000
-	dc.l   0			;2b796: 00000000
-	dc.l   0			;2b79a: 00000000
-	dc.l   0			;2b79e: 00000000
-	dc.l   0			;2b7a2: 00000000
-	dc.l   0			;2b7a6: 00000000
-	dc.l   0			;2b7aa: 00000000
-	dc.l   0			;2b7ae: 00000000
-	dc.l   0			;2b7b2: 00000000
-	dc.l   0			;2b7b6: 00000000
-	dc.l   0			;2b7ba: 00000000
-	dc.l   0			;2b7be: 00000000
-	dc.l   0			;2b7c2: 00000000
-	dc.l   0			;2b7c6: 00000000
-	dc.l   0			;2b7ca: 00000000
-	dc.l   0			;2b7ce: 00000000
-	dc.l   0			;2b7d2: 00000000
-	dc.l   0			;2b7d6: 00000000
-	dc.l   0			;2b7da: 00000000
-	dc.l   0			;2b7de: 00000000
-	dc.l   0			;2b7e2: 00000000
-	dc.l   0			;2b7e6: 00000000
-	dc.l   0			;2b7ea: 00000000
-	dc.l   0			;2b7ee: 00000000
-	dc.l   0			;2b7f2: 00000000
-	dc.l   0			;2b7f6: 00000000
-	dc.l   0			;2b7fa: 00000000
-	dc.l   0			;2b7fe: 00000000
-	dc.l   0			;2b802: 00000000
-	dc.l   0			;2b806: 00000000
-	dc.l   0			;2b80a: 00000000
-	dc.l   0			;2b80e: 00000000
-	dc.l   0			;2b812: 00000000
-	dc.l   0			;2b816: 00000000
-	dc.l   0			;2b81a: 00000000
-	dc.l   0			;2b81e: 00000000
-	dc.l   0			;2b822: 00000000
-	dc.l   0			;2b826: 00000000
-	dc.l   0			;2b82a: 00000000
-	dc.l   0			;2b82e: 00000000
-	dc.l   0			;2b832: 00000000
-	dc.l   0			;2b836: 00000000
-	dc.l   0			;2b83a: 00000000
-	dc.l   0			;2b83e: 00000000
-	dc.l   0			;2b842: 00000000
-	dc.l   0			;2b846: 00000000
-	dc.l   0			;2b84a: 00000000
-	dc.l   0			;2b84e: 00000000
-	dc.l   0			;2b852: 00000000
-	dc.l   0			;2b856: 00000000
-	dc.l   0			;2b85a: 00000000
-	dc.l   0			;2b85e: 00000000
-	dc.l   0			;2b862: 00000000
-	dc.l   0			;2b866: 00000000
-	dc.l   0			;2b86a: 00000000
-	dc.l   0			;2b86e: 00000000
-	dc.l   0			;2b872: 00000000
-	dc.l   0			;2b876: 00000000
-	dc.l   0			;2b87a: 00000000
-	dc.l   0			;2b87e: 00000000
-	dc.l   0			;2b882: 00000000
-	dc.l   0			;2b886: 00000000
-	dc.l   0			;2b88a: 00000000
-	dc.l   0			;2b88e: 00000000
-	dc.l   0			;2b892: 00000000
-	dc.l   0			;2b896: 00000000
-	dc.l   0			;2b89a: 00000000
-	dc.l   0			;2b89e: 00000000
-	dc.l   0			;2b8a2: 00000000
-	dc.l   0			;2b8a6: 00000000
-	dc.l   0			;2b8aa: 00000000
-	dc.l   0			;2b8ae: 00000000
-	dc.l   0			;2b8b2: 00000000
-	dc.l   0			;2b8b6: 00000000
-	dc.l   0			;2b8ba: 00000000
-	dc.l   0			;2b8be: 00000000
-	dc.l   0			;2b8c2: 00000000
-	dc.l   0			;2b8c6: 00000000
-	dc.l   0			;2b8ca: 00000000
-	dc.l   0			;2b8ce: 00000000
-	dc.l   0			;2b8d2: 00000000
-	dc.l   0			;2b8d6: 00000000
-	dc.l   0			;2b8da: 00000000
-	dc.l   0			;2b8de: 00000000
-	dc.l   0			;2b8e2: 00000000
-	dc.l   0			;2b8e6: 00000000
-	dc.l   0			;2b8ea: 00000000
-	dc.l   0			;2b8ee: 00000000
-	dc.l   0			;2b8f2: 00000000
-	dc.l   0			;2b8f6: 00000000
-	dc.l   0			;2b8fa: 00000000
-	dc.l   0			;2b8fe: 00000000
-	dc.l   0			;2b902: 00000000
-	dc.l   0			;2b906: 00000000
-	dc.l   0			;2b90a: 00000000
-	dc.l   0			;2b90e: 00000000
-	dc.l   0			;2b912: 00000000
-	dc.l   0			;2b916: 00000000
-	dc.l   0			;2b91a: 00000000
-	dc.l   0			;2b91e: 00000000
-	dc.l   0			;2b922: 00000000
-	dc.l   0			;2b926: 00000000
-	dc.l   0			;2b92a: 00000000
-	dc.l   0			;2b92e: 00000000
-	dc.l   0			;2b932: 00000000
-	dc.l   0			;2b936: 00000000
-	dc.l   0			;2b93a: 00000000
-	dc.l   0			;2b93e: 00000000
-	dc.l   0			;2b942: 00000000
-	dc.l   0			;2b946: 00000000
-	dc.l   0			;2b94a: 00000000
-	dc.l   0			;2b94e: 00000000
-	dc.l   0			;2b952: 00000000
-	dc.l   0			;2b956: 00000000
-	dc.l   0			;2b95a: 00000000
-	dc.l   0			;2b95e: 00000000
-	dc.l   0			;2b962: 00000000
-	dc.l   0			;2b966: 00000000
-	dc.l   0			;2b96a: 00000000
-	dc.l   0			;2b96e: 00000000
-	dc.l   0			;2b972: 00000000
-	dc.l   0			;2b976: 00000000
-	dc.l   0			;2b97a: 00000000
-	dc.l   0			;2b97e: 00000000
-	dc.l   0			;2b982: 00000000
-	dc.l   0			;2b986: 00000000
-	dc.l   0			;2b98a: 00000000
-	dc.l   0			;2b98e: 00000000
-	dc.l   0			;2b992: 00000000
-	dc.l   0			;2b996: 00000000
-	dc.l   0			;2b99a: 00000000
-	dc.l   0			;2b99e: 00000000
-	dc.l   0			;2b9a2: 00000000
-LAB_0599:
-	dc.l   0			;2b9a6: 00000000
-	dc.l   0			;2b9aa: 00000000
-	dc.l   0			;2b9ae: 00000000
-	dc.l   0			;2b9b2: 00000000
-	dc.l   0			;2b9b6: 00000000
-	dc.l   0			;2b9ba: 00000000
-	dc.l   0			;2b9be: 00000000
-	dc.l   0			;2b9c2: 00000000
-	dc.l   0			;2b9c6: 00000000
-	dc.l   0			;2b9ca: 00000000
-	dc.l   0			;2b9ce: 00000000
-	dc.l   0			;2b9d2: 00000000
-	dc.l   0			;2b9d6: 00000000
-	dc.l   0			;2b9da: 00000000
-	dc.l   0			;2b9de: 00000000
-	dc.l   0			;2b9e2: 00000000
-	dc.l   0			;2b9e6: 00000000
-	dc.l   0			;2b9ea: 00000000
-LAB_059A:
-	dc.l   0			;2b9ee: 00000000
-	dc.l   0			;2b9f2: 00000000
-	dc.l   0			;2b9f6: 00000000
-	dc.l   0			;2b9fa: 00000000
-	dc.l   0			;2b9fe: 00000000
-	dc.l   0			;2ba02: 00000000
-	dc.l   0			;2ba06: 00000000
-	dc.l   0			;2ba0a: 00000000
-	dc.l   0			;2ba0e: 00000000
-	dc.l   0			;2ba12: 00000000
-	dc.l   0			;2ba16: 00000000
-	dc.l   0			;2ba1a: 00000000
-	dc.l   0			;2ba1e: 00000000
-	dc.l   0			;2ba22: 00000000
-	dc.l   0			;2ba26: 00000000
-	dc.l   0			;2ba2a: 00000000
-	dc.l   0			;2ba2e: 00000000
-	dc.l   0			;2ba32: 00000000
-	dc.l   0			;2ba36: 00000000
-	dc.l   0			;2ba3a: 00000000
-	dc.l   0			;2ba3e: 00000000
-	dc.l   0			;2ba42: 00000000
-	dc.l   0			;2ba46: 00000000
-	dc.l   0			;2ba4a: 00000000
-	dc.l   0			;2ba4e: 00000000
-	dc.l   0			;2ba52: 00000000
-	dc.l   0			;2ba56: 00000000
-	dc.l   0			;2ba5a: 00000000
-	dc.l   0			;2ba5e: 00000000
-	dc.l   0			;2ba62: 00000000
-	dc.l   0			;2ba66: 00000000
-	dc.l   0			;2ba6a: 00000000
-	dc.l   0			;2ba6e: 00000000
-	dc.l   0			;2ba72: 00000000
-	dc.l   0			;2ba76: 00000000
-	dc.l   0			;2ba7a: 00000000
-	dc.l   0			;2ba7e: 00000000
-	dc.l   0			;2ba82: 00000000
-	dc.l   0			;2ba86: 00000000
-	dc.l   0			;2ba8a: 00000000
-	dc.l   0			;2ba8e: 00000000
-	dc.l   0			;2ba92: 00000000
-	dc.l   0			;2ba96: 00000000
-	dc.l   0			;2ba9a: 00000000
-	dc.l   0			;2ba9e: 00000000
-	dc.l   0			;2baa2: 00000000
-	dc.l   0			;2baa6: 00000000
-	dc.l   0			;2baaa: 00000000
-	dc.l   0			;2baae: 00000000
-	dc.l   0			;2bab2: 00000000
-	dc.l   0			;2bab6: 00000000
-	dc.l   0			;2baba: 00000000
-	dc.l   0			;2babe: 00000000
-	dc.l   0			;2bac2: 00000000
-	dc.l   0			;2bac6: 00000000
-	dc.l   0			;2baca: 00000000
-	dc.l   0			;2bace: 00000000
-	dc.l   0			;2bad2: 00000000
-	dc.l   0			;2bad6: 00000000
-	dc.l   0			;2bada: 00000000
-	dc.l   0			;2bade: 00000000
-	dc.l   0			;2bae2: 00000000
-	dc.l   0			;2bae6: 00000000
-	dc.l   0			;2baea: 00000000
-	dc.l   0			;2baee: 00000000
-	dc.l   0			;2baf2: 00000000
-	dc.l   0			;2baf6: 00000000
-	dc.l   0			;2bafa: 00000000
-	dc.l   0			;2bafe: 00000000
-	dc.l   0			;2bb02: 00000000
-	dc.l   0			;2bb06: 00000000
-	dc.l   0			;2bb0a: 00000000
-	dc.l   0			;2bb0e: 00000000
-	dc.l   0			;2bb12: 00000000
-	dc.l   0			;2bb16: 00000000
-	dc.l   0			;2bb1a: 00000000
-	dc.l   0			;2bb1e: 00000000
-	dc.l   0			;2bb22: 00000000
-	dc.l   0			;2bb26: 00000000
-	dc.l   0			;2bb2a: 00000000
-	dc.l   0			;2bb2e: 00000000
-	dc.l   0			;2bb32: 00000000
-	dc.l   0			;2bb36: 00000000
-	dc.l   0			;2bb3a: 00000000
-	dc.l   0			;2bb3e: 00000000
-	dc.l   0			;2bb42: 00000000
-	dc.l   0			;2bb46: 00000000
-	dc.l   0			;2bb4a: 00000000
-	dc.l   0			;2bb4e: 00000000
-	dc.l   0			;2bb52: 00000000
-	dc.l   0			;2bb56: 00000000
-	dc.l   0			;2bb5a: 00000000
-	dc.l   0			;2bb5e: 00000000
-	dc.l   0			;2bb62: 00000000
-	dc.l   0			;2bb66: 00000000
-	dc.l   0			;2bb6a: 00000000
-	dc.l   0			;2bb6e: 00000000
-	dc.l   0			;2bb72: 00000000
-	dc.l   0			;2bb76: 00000000
-	dc.l   0			;2bb7a: 00000000
-	dc.l   0			;2bb7e: 00000000
-	dc.l   0			;2bb82: 00000000
-	dc.l   0			;2bb86: 00000000
-	dc.l   0			;2bb8a: 00000000
-	dc.l   0			;2bb8e: 00000000
-	dc.l   0			;2bb92: 00000000
-	dc.l   0			;2bb96: 00000000
-	dc.l   0			;2bb9a: 00000000
-	dc.l   0			;2bb9e: 00000000
-	dc.l   0			;2bba2: 00000000
-	dc.l   0			;2bba6: 00000000
-	dc.l   0			;2bbaa: 00000000
-	dc.l   0			;2bbae: 00000000
-	dc.l   0			;2bbb2: 00000000
-	dc.l   0			;2bbb6: 00000000
-	dc.l   0			;2bbba: 00000000
-	dc.l   0			;2bbbe: 00000000
-	dc.l   0			;2bbc2: 00000000
-	dc.l   0			;2bbc6: 00000000
-	dc.l   0			;2bbca: 00000000
-	dc.l   0			;2bbce: 00000000
-	dc.l   0			;2bbd2: 00000000
-	dc.l   0			;2bbd6: 00000000
-	dc.l   0			;2bbda: 00000000
-	dc.l   0			;2bbde: 00000000
-	dc.l   0			;2bbe2: 00000000
-	dc.l   0			;2bbe6: 00000000
-	dc.l   0			;2bbea: 00000000
-	dc.l   0			;2bbee: 00000000
-	dc.l   0			;2bbf2: 00000000
-	dc.l   0			;2bbf6: 00000000
-	dc.l   0			;2bbfa: 00000000
-	dc.l   0			;2bbfe: 00000000
-	dc.l   0			;2bc02: 00000000
-	dc.l   0			;2bc06: 00000000
-	dc.l   0			;2bc0a: 00000000
-	dc.l   0			;2bc0e: 00000000
-	dc.l   0			;2bc12: 00000000
-	dc.l   0			;2bc16: 00000000
-	dc.l   0			;2bc1a: 00000000
-	dc.l   0			;2bc1e: 00000000
-	dc.l   0			;2bc22: 00000000
-	dc.l   0			;2bc26: 00000000
-	dc.l   0			;2bc2a: 00000000
-	dc.l   0			;2bc2e: 00000000
-	dc.l   0			;2bc32: 00000000
-	dc.l   0			;2bc36: 00000000
-	dc.l   0			;2bc3a: 00000000
-	dc.l   0			;2bc3e: 00000000
-	dc.l   0			;2bc42: 00000000
-	dc.l   0			;2bc46: 00000000
-	dc.l   0			;2bc4a: 00000000
-	dc.l   0			;2bc4e: 00000000
-	dc.l   0			;2bc52: 00000000
-	dc.l   0			;2bc56: 00000000
-	dc.l   0			;2bc5a: 00000000
-	dc.l   0			;2bc5e: 00000000
-	dc.l   0			;2bc62: 00000000
-	dc.l   0			;2bc66: 00000000
-	dc.l   0			;2bc6a: 00000000
-	dc.l   0			;2bc6e: 00000000
-	dc.l   0			;2bc72: 00000000
-	dc.l   0			;2bc76: 00000000
-	DC.W	$0000			;2bc7a
+	; generated by gen_zero_table.py
+	include	"big_zero_table.s"
+	
+lb_2bc7c:
 	LEA	LAB_0796,A0		;2bc7c: 41f900033574
 	MOVE.W	#$31b9,D0		;2bc82: 303c31b9
 	MOVE.W	#$001e,D1		;2bc86: 323c001e
@@ -38360,7 +34887,7 @@ LAB_0610:
 	DC.W	$e4c7			;2d274
 	ADDA.L	-12507(A1),A4		;2d276: d9e9cf25
 	SUBQ.W	#1,(A5)			;2d27a: 5355
-	MOVE.B	LAB_0596+3(PC),(A3)+	;2d27c: 16fab5bf
+	MOVE.B	lb_2883a+3(PC),(A3)+	;2d27c: 16fab5bf
 	DC.W	$061f			;2d280
 	DC.W	$c4c9			;2d282
 	BTST	D4,-(A5)		;2d284: 0925
@@ -41020,7 +37547,7 @@ LAB_0614:
 	DC.W	$2f34			;2e9f2
 	DC.W	$33ef			;2e9f4
 	DC.W	$ecf3			;2e9f6
-	MOVE.B	LAB_059A+1(PC),(A3)+	;2e9f8: 16facff5
+	MOVE.B	lb_2b9ee+1(PC),(A3)+	;2e9f8: 16facff5
 	DC.W	$073b			;2e9fc
 	DC.W	$25f2			;2e9fe
 	ADD.B	(A4),D4			;2ea00: d814
@@ -62440,7 +58967,7 @@ LAB_07A5:
 	MOVE.W	#$ffff,LAB_091F+2	;39a9c: 33fcffff0003d500
 	JSR	zero_all_sprites		;39aa4: 4eb9000259a8
 	MOVEQ	#7,D7			;39aaa: 7e07
-	JSR	LAB_0472		;39aac: 4eb9000238f0
+	JSR	load_file_index_d7		;39aac: 4eb9000238f0
 	CLR.W	LAB_091F+2		;39ab2: 42790003d500
 	MOVE.W	#$0000,BPLCON2		;39ab8: 33fc000000dff104
 	MOVE.W	#$0020,copper_sprite_control+2	;39ac0: 33fc0020000245ae
@@ -62450,7 +58977,7 @@ LAB_07A5:
 	MOVEQ	#0,D1			;39ada: 7200
 	LEA	LAB_07A6(PC),A0		;39adc: 41fa00ce
 	LEA	chipdata_start,A1		;39ae0: 43f9000520ca
-	JSR	LAB_0F20		;39ae6: 4eb90005148e
+	JSR	load_from_disk		;39ae6: 4eb90005148e
 	MOVE.L	#$000620ca,LAB_04A2	;39aec: 23fc000620ca00023c12
 	MOVE.L	chipdata_start,D1		;39af6: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;39afc: 23fc000520ce00023c06
@@ -62839,7 +59366,7 @@ LAB_07CD:
 	JSR	audio_routine		;3a0d8: 4eb90002c10e
 	CLR.W	LAB_04DA		;3a0de: 42790002444e
 	MOVEQ	#9,D7			;3a0e4: 7e09
-	JSR	LAB_0472		;3a0e6: 4eb9000238f0
+	JSR	load_file_index_d7		;3a0e6: 4eb9000238f0
 	CLR.W	LAB_091F+2		;3a0ec: 42790003d500
 	LEA	LAB_04EF,A0		;3a0f2: 41f9000246a0
 	LEA	LAB_04E6,A1		;3a0f8: 43f9000245d0
@@ -63006,7 +59533,7 @@ LAB_07E8:
 	MOVEQ	#0,D4			;3a326: 7800
 	JSR	audio_routine		;3a328: 4eb90002c10e
 	MOVEQ	#10,D7			;3a32e: 7e0a
-	JSR	LAB_084C		;3a330: 4eb90003afd0
+	JSR	load_file_index_d7_2		;3a330: 4eb90003afd0
 	LEA	LAB_04E9,A0		;3a336: 41f900024618
 	LEA	LAB_04EC,A1		;3a33c: 43f90002465c
 	MOVEQ	#15,D7			;3a342: 7e0f
@@ -63122,7 +59649,7 @@ LAB_07F5:
 	MOVEQ	#0,D4			;3a4c0: 7800
 	JSR	audio_routine		;3a4c2: 4eb90002c10e
 	MOVEQ	#9,D7			;3a4c8: 7e09
-	BSR.W	LAB_084C		;3a4ca: 61000b04
+	BSR.W	load_file_index_d7_2		;3a4ca: 61000b04
 	BRA.W	LAB_07CF		;3a4ce: 6000fc3a
 LAB_07F6:
 	CMPI.W	#$006b,D0		;3a4d2: 0c40006b
@@ -63167,7 +59694,7 @@ LAB_0800:
 	MOVEQ	#0,D4			;3a548: 7800
 	JSR	audio_routine		;3a54a: 4eb90002c10e
 	MOVEQ	#23,D7			;3a550: 7e17
-	JSR	LAB_084C		;3a552: 4eb90003afd0
+	JSR	load_file_index_d7_2		;3a552: 4eb90003afd0
 	LEA	LAB_04E9,A0		;3a558: 41f900024618
 	LEA	LAB_04EC,A1		;3a55e: 43f90002465c
 	MOVEQ	#15,D7			;3a564: 7e0f
@@ -63335,7 +59862,7 @@ LAB_0816:
 	MOVEQ	#0,D4			;3a7a4: 7800
 	JSR	audio_routine		;3a7a6: 4eb90002c10e
 	MOVEQ	#26,D7			;3a7ac: 7e1a
-	BSR.W	LAB_084C		;3a7ae: 61000820
+	BSR.W	load_file_index_d7_2		;3a7ae: 61000820
 	LEA	LAB_0826,A0		;3a7b2: 41f90003a9c6
 	LEA	LAB_0827,A3		;3a7b8: 47f90003aa06
 	LEA	LAB_04E9,A1		;3a7be: 43f900024618
@@ -63434,7 +59961,7 @@ LAB_081F:
 	MOVEQ	#0,D4			;3a912: 7800
 	JSR	audio_routine		;3a914: 4eb90002c10e
 	MOVEQ	#9,D7			;3a91a: 7e09
-	BSR.W	LAB_084C		;3a91c: 610006b2
+	BSR.W	load_file_index_d7_2		;3a91c: 610006b2
 	BRA.W	LAB_07CF		;3a920: 6000f7e8
 LAB_0820:
 	BSR.W	LAB_0828		;3a924: 61000120
@@ -63914,7 +60441,7 @@ LAB_0846:
 	dc.l   0			;3afca: 00000000
 LAB_084A:
 	DC.W	$0000			;3afce
-LAB_084C:
+load_file_index_d7_2:
 	MOVE.W	#$ffff,LAB_091F+2	;3afd0: 33fcffff0003d500
 	MOVE.L	LAB_087E_3b91e(PC),D0		;3afd8: 203a0944
 	CMPI.L	#screen_bitplanes,D0		;3afdc: 0c8000076000
@@ -63931,7 +60458,7 @@ LAB_084E:
 	MOVEQ	#0,D1			;3b002: 7200
 	MOVEA.L	0(A6,D7.W),A0		;3b004: 20767000
 	LEA	chipdata_start,A1		;3b008: 43f9000520ca
-	JSR	LAB_0F20		;3b00e: 4eb90005148e
+	JSR	load_from_disk		;3b00e: 4eb90005148e
 	MOVE.L	LAB_087E_3b91e(PC),LAB_04A2	;3b014: 23fa090800023c12
 	MOVE.L	chipdata_start,D1		;3b01c: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;3b022: 23fc000520ce00023c06
@@ -63986,7 +60513,7 @@ LAB_0851:
 LAB_0852:
 	MOVE.L	#screen_bitplanes,LAB_087E_3b91e	;3b0de: 23fc000760000003b91e
 	MOVEQ	#21,D7			;3b0e8: 7e15
-	JSR	LAB_0472		;3b0ea: 4eb9000238f0
+	JSR	load_file_index_d7		;3b0ea: 4eb9000238f0
 	MOVE.W	#$8020,copper_sprite_control+2	;3b0f0: 33fc8020000245ae
 	LEA	LAB_04A4+2,A0		;3b0f8: 41f900023c1c
 	JSR	LAB_04F7		;3b0fe: 4eb900024962
@@ -64140,7 +60667,7 @@ LAB_0863:
 	MOVEQ	#0,D1			;3b308: 7200
 	MOVEA.L	0(A6,D7.W),A0		;3b30a: 20767000
 	LEA	chipdata_start,A1		;3b30e: 43f9000520ca
-	JSR	LAB_0F20		;3b314: 4eb90005148e
+	JSR	load_from_disk		;3b314: 4eb90005148e
 	MOVE.L	LAB_087E_3b91e(PC),LAB_04A2	;3b31a: 23fa060200023c12
 	MOVE.L	chipdata_start,D1		;3b322: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;3b328: 23fc000520ce00023c06
@@ -64869,7 +61396,7 @@ LAB_08B2:
 	BGE.W	LAB_08BC		;3be40: 6c0001cc
 	MOVEQ	#11,D7			;3be44: 7e0b
 	ADD.W	LAB_0D56,D7		;3be46: de790004c248
-	JSR	LAB_0472		;3be4c: 4eb9000238f0
+	JSR	load_file_index_d7		;3be4c: 4eb9000238f0
 	LEA	LAB_04EF,A0		;3be52: 41f9000246a0
 	LEA	LAB_04E6,A1		;3be58: 43f9000245d0
 	MOVE.L	#$0000000f,D7		;3be5e: 2e3c0000000f
@@ -65003,7 +61530,7 @@ LAB_08BE:
 	ADD.W	D0,D0			;3c038: d040
 	MOVEA.L	0(A0,D0.W),A0		;3c03a: 20700000
 	LEA	chipdata_start,A1		;3c03e: 43f9000520ca
-	JSR	LAB_0F20		;3c044: 4eb90005148e
+	JSR	load_from_disk		;3c044: 4eb90005148e
 	TST.L	D0			;3c04a: 4a80
 	BEQ.S	LAB_08BF		;3c04c: 670a
 	MOVE.W	#$000f,COLOR00		;3c04e: 33fc000f00dff180
@@ -65034,7 +61561,7 @@ trap2:
 	MOVE.L	A0,TRAP_02		;3c0a2: 23c800000084
 	TRAP	#1			;3c0a8: 4e41
 LAB_08C1:
-	LEA	other_copperlist_palette,A0		;3c0aa: 41f900024506
+	LEA	other_palette_clist_1,A0		;3c0aa: 41f900024506
 	MOVEQ	#31,D7			;3c0b0: 7e1f
 LAB_08C2:
 	CLR.W	(A0)			;3c0b2: 4250
@@ -66716,7 +63243,7 @@ LAB_08EF:
 	LEA	LAB_03EE+2,A1		;3cf9e: 43f90001f1b4
 	MOVE.L	#$ffffffff,D0		;3cfa4: 203cffffffff
 	MOVE.L	#$506c6f67,D2		;3cfaa: 243c506c6f67
-	JSR	LAB_0F20		;3cfb0: 4eb90005148e
+	JSR	load_from_disk		;3cfb0: 4eb90005148e
 	TST.L	D0			;3cfb6: 4a80
 	BEQ.S	LAB_08F1		;3cfb8: 671a
 	TST.W	LAB_08E8		;3cfba: 4a790003cec0
@@ -66731,8 +63258,8 @@ LAB_08F1:
 	; fixed chip addresses
 	MOVE.L	#table_000181ce,EXT_0161	;3cfe0: 23fc000181ce0006bffc
 	MOVE.L	#LAB_08CC+2,EXT_0160	;3cfea: 23fc0003c4560006bff8
-	MOVE.L	#LAB_09D0,EXT_015f	;3cff4: 23fc000428b20006bff4
-	MOVE.L	#LAB_0F20,EXT_015e	;3cffe: 23fc0005148e0006bff0
+	MOVE.L	#another_fuckin_address_table,EXT_015f	;3cff4: 23fc000428b20006bff4
+	MOVE.L	#load_from_disk,EXT_015e	;3cffe: 23fc0005148e0006bff0
 	MOVE.L	#chipdata_start,EXT_015d	;3d008: 23fc000520ca0006bfec
 	MOVE.L	#LAB_0F1B-2,EXT_015c	;3d012: 23fc00050c340006bfe8
 	MOVE.L	#LAB_0DAA+2,EXT_015b	;3d01c: 23fc0004c3140006bfe4
@@ -66740,7 +63267,7 @@ LAB_08F1:
 	MOVEQ	#0,D1			;3d030: 7200
 	LEA	LAB_08F8(PC),A0		;3d032: 41fa0108
 	LEA	LAB_08FA+2(PC),A1	;3d036: 43fa010c
-	JSR	LAB_0F20		;3d03a: 4eb90005148e
+	JSR	load_from_disk		;3d03a: 4eb90005148e
 	JSR	LAB_08FA+2		;3d040: 4eb90003d144
 	JSR	LAB_016A		;3d046: 4eb90000a6d4
 	MOVE.W	#$0000,EXT_0134.W	;3d04c: 31fc00005f0a
@@ -66774,7 +63301,7 @@ LAB_08F1:
 	MOVEQ	#0,D1			;3d0e0: 7200
 	LEA	LAB_08F2(PC),A0		;3d0e2: 41fa0010
 	LEA	EXT_016a,A1		;3d0e6: 43f9000c0000
-	JSR	LAB_0F20		;3d0ec: 4eb90005148e
+	JSR	load_from_disk		;3d0ec: 4eb90005148e
 	BRA.S	LAB_08F4		;3d0f2: 6030
 LAB_08F2:
 	ADDQ.W	#8,29811(A1)		;3d0f4: 50697473
@@ -67179,7 +63706,7 @@ autosome_math_tabled5f8:
 	CLR.W	LAB_0923+2		;3d63a: 42790003d508
 	JSR	LAB_05B0		;3d640: 4eb90002c098
 	JSR	LAB_016A		;3d646: 4eb90000a6d4
-	LEA	other_copperlist_palette,A0		;3d64c: 41f900024506
+	LEA	other_palette_clist_1,A0		;3d64c: 41f900024506
 	MOVEQ	#31,D7			;3d652: 7e1f
 LAB_092D:
 	CLR.W	(A0)			;3d654: 4250
@@ -67406,7 +63933,7 @@ autosome_math_tableda5e:
 	JSR	draw_road		;3da78: 4eb90004c624
 	JSR	LAB_025C		;3da7e: 4eb90000cd2c
 	JSR	LAB_0BCB		;3da84: 4eb900046af0
-	JSR	LAB_0D09+4		;3da8a: 4eb90004b720
+	JSR	lb_4b720		;3da8a: 4eb90004b720
 	TST.W	LAB_0955+2		;3da90: 4a7900040ffa
 	BNE.S	LAB_093E		;3da96: 6674
 	MOVE.W	LAB_0D84,D0		;3da98: 30390004c2b0
@@ -71119,7 +67646,7 @@ LAB_0976:
 	JSR	draw_road		;414ec: 4eb90004c624
 	JSR	LAB_025C		;414f2: 4eb90000cd2c
 	BSR.W	LAB_0BBD		;414f8: 61005330
-	JSR	LAB_0D09+4		;414fc: 4eb90004b720
+	JSR	lb_4b720		;414fc: 4eb90004b720
 	JSR	LAB_0CF6		;41502: 4eb90004b36e
 	JSR	move_and_render_demo_motorcycle		;41508: 4eb90000cf4e
 	ADDQ.W	#1,LAB_05A3		;4150e: 52790002bd44
@@ -71366,7 +67893,7 @@ LAB_0992:
 	JSR	draw_road		;418d4: 4eb90004c624
 	JSR	LAB_025C		;418da: 4eb90000cd2c
 	BSR.W	LAB_0BBD		;418e0: 61004f48
-	JSR	LAB_0D09+4		;418e4: 4eb90004b720
+	JSR	lb_4b720		;418e4: 4eb90004b720
 	JSR	LAB_0CF6		;418ea: 4eb90004b36e
 	JSR	move_and_render_demo_motorcycle		;418f0: 4eb90000cf4e
 	CLR.W	LAB_0D6A+2		;418f6: 42790004c27a
@@ -72251,7 +68778,7 @@ LAB_09C7:
 	JSR	LAB_0111		;42720: 4eb90000a0ae
 	MOVEQ	#1,D0			;42726: 7001
 	JSR	LAB_01C3		;42728: 4eb90000b276
-	LEA	LAB_09D0(PC),A0		;4272e: 41fa0182
+	LEA	another_fuckin_address_table(PC),A0		;4272e: 41fa0182
 	MOVE.W	LAB_0D59,D0		;42732: 30390004c250
 	ADD.W	D0,D0			;42738: d040
 	ADD.W	D0,D0			;4273a: d040
@@ -72359,55 +68886,63 @@ LAB_428A6
 	DC.W	$6d6f			;428ac
 	DC.W	$6465			;428ae
 	MOVE.L	D0,-(A0)		;428b0: 2100
-LAB_09D0:
-	DC.W	$0004			;428b2
-	MOVE.L	(A2)+,(A4)+		;428b4: 28da
-	DC.W	$0004			;428b6
-	MOVE.L	-(A0),(A4)+		;428b8: 28e0
-	DC.W	$0004			;428ba
-	MOVE.L	4(A2),(A4)+		;428bc: 28ea0004
-	MOVE.L	4(A4,D0.W),(A4)+	;428c0: 28f40004
-	DC.W	$28fe			;428c4
-	DC.W	$0004			;428c6
-	MOVE.L	A0,-(A4)		;428c8: 2908
-	DC.W	$0004			;428ca
-	MOVE.L	(A2),-(A4)		;428cc: 2912
-	DC.W	$0004			;428ce
-	MOVE.L	(A4)+,-(A4)		;428d0: 291c
-	DC.W	$0004			;428d2
-	MOVE.L	4(A0),-(A4)		;428d4: 29280004
-	MOVE.L	-100(A0,D0.W),-(A4)	;428d8: 2930009c
+another_fuckin_address_table:
+	dc.l	lb_428da
+	dc.l	lb_428e0
+	dc.l	lb_428ea
+	dc.l	lb_428f4
+	dc.l	lb_428fe
+	dc.l	lb_42908
+	dc.l	lb_42912
+	dc.l	lb_4291c
+	dc.l	lb_42928
+	dc.l	lb_42930
+lb_428da
 	SUBQ.W	#2,A3			;428dc: 554b
-	ORI.B	#$92,D0			;428de: 00000092
+	dc.w	0			;428de: 0000
+lb_428e0
+	dc.w	$0092
 	CLR.W	D5			;428e2: 4245
 	DC.W	$4c47			;428e4
 	DC.W	$4955			;428e6
 	DC.W	$4d00			;428e8
+lb_428ea
 	ORI.L	#$4652414e,(A4)		;428ea: 00944652414e
 	DC.W	$4345			;428f0
-	ORI.B	#$94,D0			;428f2: 00000094
+	dc.w	0		;428f2: 0000
+lb_428f4
+	dc.w	$0094
 	CLR.W	(A2)			;428f6: 4252
 	DC.W	$415a			;428f8
 	DC.W	$494c			;428fa
-	ORI.B	#$92,D0			;428fc: 00000092
+	dc.w	0		;428fc: 0000
+lb_428fe
+	dc.w	$0092
 	DC.W	$4745			;42900
 	ADDQ.W	#1,A5			;42902: 524d
 	DC.W	$414e			;42904
 	SUBQ.B	#4,D0			;42906: 5900
+lb_42908
 	ORI.L	#$48554e47,(A2)		;42908: 009248554e47
 	DC.W	$4152			;4290e
 	SUBQ.B	#4,D0			;42910: 5900
+lb_42912
 	ORI.L	#$4d455849,(A4)		;42912: 00944d455849
 	DC.W	$434f			;42918
-	ORI.B	#$90,D0			;4291a: 00000090
+	dc.w	0		;4291a: 0000
+lb_4291c
+	dc.w	$0090
 	ADDQ.W	#8,A7			;4291e: 504f
 	ADDQ.W	#1,(A4)			;42920: 5254
 	SUBQ.W	#2,D7			;42922: 5547
 	DC.W	$414c			;42924
-	ORI.B	#$96,D0			;42926: 00000096
+	dc.w	0			;42926: 0000
+lb_42928
+	dc.w	$0096
 	DC.W	$4954			;4292a
 	DC.W	$414c			;4292c
 	SUBQ.B	#4,D0			;4292e: 5900
+lb_42930
 	ORI.L	#$53504149,(A6)		;42930: 009653504149
 	DC.W	$4e00			;42936
 	dc.l   0			;42938: 00000000
@@ -73028,7 +69563,7 @@ autolab_00042f8e:
 	MOVEQ	#5,D0			;42f98: 7005
 	JSR	LAB_01CB		;42f9a: 4eb90000b6ae
 	CLR.W	LAB_01C0		;42fa0: 42790000b26c
-	lea	LAB_43086,A1		;42fa6: 227c00043086
+	lea	red_zone_title_text,A1		;42fa6: 227c00043086
 	MOVEA.L	#$000000b0,A0		;42fac: 207c000000b0
 	JSR	LAB_01D9		;42fb2: 4eb90000ba92
 	MOVE.L	A1,-(A7)		;42fb8: 2f09
@@ -73071,7 +69606,7 @@ autolab_00042f8e:
     ; update frame
 	JSR	LAB_0188		;4307e: 4eb90000aa94
 	RTS				;43084: 4e75
-LAB_43086
+red_zone_title_text
 	ADDQ.W	#1,D5			;43086: 5245
 	NEG.B	-(A0)			;43088: 4420
 	ADDQ.W	#5,A7			;4308a: 5a4f
@@ -77091,6 +73626,7 @@ LAB_0BB8:
 	dc.l   0			;46816: 00000000
 	dc.l   0			;4681a: 00000000
 LAB_0BB9:
+lb_4681e
 	dc.l   0			;4681e: 00000000
 LAB_0BBB:
 	dc.l   0			;46822: 00000000
@@ -78330,7 +74866,7 @@ LAB_0C2F:
 	MOVEQ	#0,D1			;4787e: 7200
 	LEA	LAB_0C31(PC),A0		;47880: 41fa0040
 	LEA	chipdata_start,A1		;47884: 43f9000520ca
-	JSR	LAB_0F20		;4788a: 4eb90005148e
+	JSR	load_from_disk		;4788a: 4eb90005148e
 	MOVE.L	#$000620ca,LAB_04A2	;47890: 23fc000620ca00023c12
 	MOVE.L	chipdata_start,D1		;4789a: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;478a0: 23fc000520ce00023c06
@@ -81993,7 +78529,7 @@ LAB_0C86:
 	MOVE.W	D0,D1			;4a4d8: 3200
 	SUBI.W	#$0020,D1		;4a4da: 04410020
 	ASL.W	#4,D1			;4a4de: e941
-	MOVEA.L	LAB_01C0+2,A1		;4a4e0: 22790000b26e
+	MOVEA.L	fonts_base,A1		;4a4e0: 22790000b26e
 	ADDA.W	D1,A1			;4a4e6: d2c1
 	MOVE.L	LAB_01C2,D4		;4a4e8: 28390000b272
 LAB_0C87:
@@ -83335,11 +79871,10 @@ LAB_0D07:
 LAB_0D08:
 	ORI.B	#$2c,45(A4)		;4b710: 002c002c002d
 	ORI.B	#$2f,45(A6)		;4b716: 002e002f002d
-LAB_0D09:
-	ORI.B	#$2f,19065(A6)		;4b71c: 002e002f4a79
-	DC.W	$0004			;4b722
-	DC.W	$681e		;4b724: FIX:FBDB: BVC.S	LAB_0D0A+2
-	DC.L	$670001c0		;4b726: FIX:FBDB: BEQ.W	LAB_0D11
+	ORI.B	#$2f,19065(A6)		;4b71c: 002e002f
+lb_4b720
+    tst.w lb_4681e
+	BEQ.W	LAB_0D11		;4b726: 
 	LEA	LAB_0DAA+2(PC),A0	;4b72a: 41fa0be8
 	LEA	LAB_0DAC+2(PC),A1	;4b72e: 43fa0bf0
 	LEA	LAB_0DAD+2(PC),A2	;4b732: 45fa0bf8
@@ -90104,7 +86639,7 @@ LAB_0F1C:
 	BEQ.S	LAB_0F1C		;51448: 67ec
 	MOVEQ	#1,D1			;5144a: 7201
 	LEA	LAB_0F1F(PC),A0		;5144c: 41fa003a
-	LEA	LAB_0F20,A1		;51450: 43f90005148e
+	LEA	load_from_disk,A1		;51450: 43f90005148e
 	MOVE.L	#$00000000,D0		;51456: 203c00000000
 	MOVEQ	#-1,D2			;5145c: 74ff
 	JSR	disk_routine		;5145e: 4eb9000514d2
@@ -90120,10 +86655,9 @@ LAB_0F1E:
 	BEQ.S	LAB_0F1E		;51484: 67ec
 	RTS				;51486: 4e75
 LAB_0F1F:
-	PEA	(A5)			;51488: 4855
-	TRAP	#7			;5148a: 4e47
-	MOVEQ	#0,D0			;5148c: 7000
-LAB_0F20:
+	dc.b	"HUNGp",0
+	even
+load_from_disk:
 	MOVE.L	D1,LAB_0F99		;5148e: 23c1000520c0
 	MOVE.L	A0,LAB_0F9A		;51494: 23c8000520c4
 LAB_0F21:
@@ -91137,7 +87671,7 @@ empty_sprites
 	ENDR
 
 	dc.w	$180			;10024504: 0180
-other_copperlist_palette:
+other_palette_clist_1:
 	DC.W	$0000			;10024506
 	BCLR	D0,D2			;10024508: 0182
 	DC.W	$0000			;1002450a
@@ -91258,9 +87792,9 @@ LAB_0508:
 	ORI.B	#$96,D0			;10024a54: 00000096
 LAB_0509:
 	; sprite dma enabled
-	OR.B	-(A0),D0		;10024a58: 8020
+	dc.w	$8020		;10024a58: 8020
 	dc.w	$182
-copperlist_palette:
+palette_clist_1:
 	REPT	30
 	dc.w	0,REPTN*2+$184
 	ENDR
@@ -91319,109 +87853,22 @@ palette_clist_2:
 	
 	DC.W	$530f			;10024b96
 	DC.W	$fffe			;10024b98
-	BCLR	D0,D2			;10024b9a: 0182
-LAB_051C:
-	DC.W	$0000			;10024b9c
-	BCLR	D0,D4			;10024b9e: 0184
-	DC.W	$0000			;10024ba0
-	BCLR	D0,D6			;10024ba2: 0186
-	DC.W	$0000			;10024ba4
-	MOVEP	D0,0(A0)		;10024ba6: 01880000
-	MOVEP	D0,0(A2)		;10024baa: 018a0000
-	MOVEP	D0,0(A4)		;10024bae: 018c0000
-	MOVEP	D0,0(A6)		;10024bb2: 018e0000
-	BCLR	D0,(A0)			;10024bb6: 0190
-	DC.W	$0000			;10024bb8
-	BCLR	D0,(A2)			;10024bba: 0192
-	DC.W	$0000			;10024bbc
-	BCLR	D0,(A4)			;10024bbe: 0194
-	DC.W	$0000			;10024bc0
-	BCLR	D0,(A6)			;10024bc2: 0196
-	DC.W	$0000			;10024bc4
-	BCLR	D0,(A0)+		;10024bc6: 0198
-	DC.W	$0000			;10024bc8
-	BCLR	D0,(A2)+		;10024bca: 019a
-	DC.W	$0000			;10024bcc
-	BCLR	D0,(A4)+		;10024bce: 019c
-	DC.W	$0000			;10024bd0
-	BCLR	D0,(A6)+		;10024bd2: 019e
-	DC.W	$0000			;10024bd4
-	BCLR	D0,-(A0)		;10024bd6: 01a0
-	DC.W	$0000			;10024bd8
-	BCLR	D0,-(A2)		;10024bda: 01a2
-	DC.W	$0000			;10024bdc
-	BCLR	D0,-(A4)		;10024bde: 01a4
-	DC.W	$0000			;10024be0
-	BCLR	D0,-(A6)		;10024be2: 01a6
-	DC.W	$0000			;10024be4
-	BCLR	D0,0(A0)		;10024be6: 01a80000
-	BCLR	D0,0(A2)		;10024bea: 01aa0000
-	BCLR	D0,0(A4)		;10024bee: 01ac0000
-	BCLR	D0,0(A6)		;10024bf2: 01ae0000
-	BCLR	D0,0(A0,D0.W)		;10024bf6: 01b00000
-	BCLR	D0,0(A2,D0.W)		;10024bfa: 01b20000
-	BCLR	D0,0(A4,D0.W)		;10024bfe: 01b40000
-	BCLR	D0,0(A6,D0.W)		;10024c02: 01b60000
-	BCLR	D0,EXT_0000.W		;10024c06: 01b80000
-	DC.W	$01ba			;10024c0a
-	DC.W	$0000			;10024c0c
-	DC.W	$01bc			;10024c0e
-	DC.W	$0000			;10024c10
-	DC.W	$01be			;10024c12
-	DC.W	$0000			;10024c14
+	dc.w	$182
+palette_clist_3:
+	REPT	30
+	dc.w	0,REPTN*2+$184
+	ENDR
+	dc.w	0
+	
 LAB_051D:
 	DC.W	$a60f			;10024c16
 	DC.W	$fffe			;10024c18
-	BCLR	D0,D2			;10024c1a: 0182
-LAB_051E:
-	DC.W	$0000			;10024c1c
-	BCLR	D0,D4			;10024c1e: 0184
-	DC.W	$0000			;10024c20
-	BCLR	D0,D6			;10024c22: 0186
-	DC.W	$0000			;10024c24
-	MOVEP	D0,0(A0)		;10024c26: 01880000
-	MOVEP	D0,0(A2)		;10024c2a: 018a0000
-	MOVEP	D0,0(A4)		;10024c2e: 018c0000
-	MOVEP	D0,0(A6)		;10024c32: 018e0000
-	BCLR	D0,(A0)			;10024c36: 0190
-	DC.W	$0000			;10024c38
-	BCLR	D0,(A2)			;10024c3a: 0192
-	DC.W	$0000			;10024c3c
-	BCLR	D0,(A4)			;10024c3e: 0194
-	DC.W	$0000			;10024c40
-	BCLR	D0,(A6)			;10024c42: 0196
-	DC.W	$0000			;10024c44
-	BCLR	D0,(A0)+		;10024c46: 0198
-	DC.W	$0000			;10024c48
-	BCLR	D0,(A2)+		;10024c4a: 019a
-	DC.W	$0000			;10024c4c
-	BCLR	D0,(A4)+		;10024c4e: 019c
-	DC.W	$0000			;10024c50
-	BCLR	D0,(A6)+		;10024c52: 019e
-	DC.W	$0000			;10024c54
-	BCLR	D0,-(A0)		;10024c56: 01a0
-	DC.W	$0000			;10024c58
-	BCLR	D0,-(A2)		;10024c5a: 01a2
-	DC.W	$0000			;10024c5c
-	BCLR	D0,-(A4)		;10024c5e: 01a4
-	DC.W	$0000			;10024c60
-	BCLR	D0,-(A6)		;10024c62: 01a6
-	DC.W	$0000			;10024c64
-	BCLR	D0,0(A0)		;10024c66: 01a80000
-	BCLR	D0,0(A2)		;10024c6a: 01aa0000
-	BCLR	D0,0(A4)		;10024c6e: 01ac0000
-	BCLR	D0,0(A6)		;10024c72: 01ae0000
-	BCLR	D0,0(A0,D0.W)		;10024c76: 01b00000
-	BCLR	D0,0(A2,D0.W)		;10024c7a: 01b20000
-	BCLR	D0,0(A4,D0.W)		;10024c7e: 01b40000
-	BCLR	D0,0(A6,D0.W)		;10024c82: 01b60000
-	BCLR	D0,EXT_0000.W		;10024c86: 01b80000
-	DC.W	$01ba			;10024c8a
-	DC.W	$0000			;10024c8c
-	DC.W	$01bc			;10024c8e
-	DC.W	$0000			;10024c90
-	DC.W	$01be			;10024c92
-	DC.W	$0000			;10024c94
+	dc.w	$182
+palette_clist_4:
+	REPT	30
+	dc.w	0,REPTN*2+$184
+	ENDR
+	dc.w	0
 LAB_051F:
 	CMPA.L	EXT_0247,A3		;10024c96: b7f9fffe00e0
 LAB_0520:
@@ -91442,56 +87889,13 @@ LAB_0526:
 	ORI.B	#$ee,D1			;10024cb4: 000100ee
 LAB_0527:
 	CMPA.W	(A4),A1			;10024cb8: b2d4
-	BCLR	D0,D2			;10024cba: 0182
-LAB_0528:
-	DC.W	$0000			;10024cbc
-	BCLR	D0,D4			;10024cbe: 0184
-	DC.W	$0000			;10024cc0
-	BCLR	D0,D6			;10024cc2: 0186
-	DC.W	$0000			;10024cc4
-	MOVEP	D0,0(A0)		;10024cc6: 01880000
-	MOVEP	D0,0(A2)		;10024cca: 018a0000
-	MOVEP	D0,0(A4)		;10024cce: 018c0000
-	MOVEP	D0,0(A6)		;10024cd2: 018e0000
-	BCLR	D0,(A0)			;10024cd6: 0190
-	DC.W	$0000			;10024cd8
-	BCLR	D0,(A2)			;10024cda: 0192
-	DC.W	$0000			;10024cdc
-	BCLR	D0,(A4)			;10024cde: 0194
-	DC.W	$0000			;10024ce0
-	BCLR	D0,(A6)			;10024ce2: 0196
-	DC.W	$0000			;10024ce4
-	BCLR	D0,(A0)+		;10024ce6: 0198
-	DC.W	$0000			;10024ce8
-	BCLR	D0,(A2)+		;10024cea: 019a
-	DC.W	$0000			;10024cec
-	BCLR	D0,(A4)+		;10024cee: 019c
-	DC.W	$0000			;10024cf0
-	BCLR	D0,(A6)+		;10024cf2: 019e
-	DC.W	$0000			;10024cf4
-	BCLR	D0,-(A0)		;10024cf6: 01a0
-	DC.W	$0000			;10024cf8
-	BCLR	D0,-(A2)		;10024cfa: 01a2
-	DC.W	$0000			;10024cfc
-	BCLR	D0,-(A4)		;10024cfe: 01a4
-	DC.W	$0000			;10024d00
-	BCLR	D0,-(A6)		;10024d02: 01a6
-	DC.W	$0000			;10024d04
-	BCLR	D0,0(A0)		;10024d06: 01a80000
-	BCLR	D0,0(A2)		;10024d0a: 01aa0000
-	BCLR	D0,0(A4)		;10024d0e: 01ac0000
-	BCLR	D0,0(A6)		;10024d12: 01ae0000
-	BCLR	D0,0(A0,D0.W)		;10024d16: 01b00000
-	BCLR	D0,0(A2,D0.W)		;10024d1a: 01b20000
-	BCLR	D0,0(A4,D0.W)		;10024d1e: 01b40000
-	BCLR	D0,0(A6,D0.W)		;10024d22: 01b60000
-	BCLR	D0,EXT_0000.W		;10024d26: 01b80000
-	DC.W	$01ba			;10024d2a
-	DC.W	$0000			;10024d2c
-	DC.W	$01bc			;10024d2e
-	DC.W	$0000			;10024d30
-	DC.W	$01be			;10024d32
-	DC.W	$0000			;10024d34
+		dc.w	$182
+palette_clist_5:
+	REPT	30
+	dc.w	0,REPTN*2+$184
+	ENDR
+	dc.w	0
+	
 	CMPA.L	EXT_0246,A5		;10024d36: bbf9fffe0096
 LAB_0529:
 	OR.B	-(A0),D0		;10024d3c: 8020
@@ -91607,6 +88011,7 @@ LAB_0533:
 	dc.l   0			;24e6a: 00000000
 	dc.l   0			;24e6e: 00000000
 	dc.l   0			;24e72: 00000000
+lb_24e76:
 	dc.l   0			;24e76: 00000000
 	dc.l   0			;24e7a: 00000000
 	dc.l   0			;24e7e: 00000000
@@ -91730,6 +88135,7 @@ LAB_0538:
 	dc.l   0			;2502a: 00000000
 	dc.l   0			;2502e: 00000000
 	dc.l   0			;25032: 00000000
+lb_25036
 	dc.l   0			;25036: 00000000
 	dc.l   0			;2503a: 00000000
 	dc.l   0			;2503e: 00000000
@@ -91853,6 +88259,7 @@ LAB_053C:
 	dc.l   0			;251ea: 00000000
 	dc.l   0			;251ee: 00000000
 	dc.l   0			;251f2: 00000000
+lb_251f6
 	dc.l   0			;251f6: 00000000
 	dc.l   0			;251fa: 00000000
 	dc.l   0			;251fe: 00000000
@@ -91977,6 +88384,7 @@ LAB_0540:
 	dc.l   0			;253aa: 00000000
 	dc.l   0			;253ae: 00000000
 	dc.l   0			;253b2: 00000000
+lb_253b6:
 	dc.l   0			;253b6: 00000000
 	dc.l   0			;253ba: 00000000
 	dc.l   0			;253be: 00000000
@@ -92101,6 +88509,7 @@ LAB_0545:
 	dc.l   0			;2556a: 00000000
 	dc.l   0			;2556e: 00000000
 	dc.l   0			;25572: 00000000
+lb_25576:
 	dc.l   0			;25576: 00000000
 	dc.l   0			;2557a: 00000000
 	dc.l   0			;2557e: 00000000
@@ -92224,6 +88633,7 @@ LAB_0549:
 	dc.l   0			;2572a: 00000000
 	dc.l   0			;2572e: 00000000
 	dc.l   0			;25732: 00000000
+lb_25736
 	dc.l   0			;25736: 00000000
 	dc.l   0			;2573a: 00000000
 	dc.l   0			;2573e: 00000000

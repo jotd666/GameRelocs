@@ -215,7 +215,8 @@ lb_fc28:
 lb_fc32:
 	dc.l	lb_d3e0	;0fc32
 	dc.w	$09c4	;0fc36
-	dc.l	$0000fc66	;0fc38
+lb_fc38:
+	dc.l	lb_fc66	;0fc38
 lb_fc3c:
 	dc.l	lb_e160	;0fc3c
 	dc.w	$0000	;0fc40
@@ -464,7 +465,8 @@ lb_fe24:
 lb_fe2e:
 	dc.l	lb_d3e0	;0fe2e
 	dc.w	$09c4	;0fe32
-	dc.l	$0000fe62	;0fe34
+lb_fe34:
+	dc.l	lb_fe62	;0fe34
 lb_fe38:
 	dc.l	lb_e160	;0fe38
 	dc.w	$0000	;0fe3c
