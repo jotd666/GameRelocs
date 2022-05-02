@@ -5,3 +5,4 @@ issues:
 
 - palette is wrong in single race test track (copperlist is wrong colors+wait)
 - crashes in full championship
+- fonts pointer if points to chip zone no watchpoint!!!!
