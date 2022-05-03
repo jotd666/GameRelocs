@@ -3,7 +3,7 @@
 
 HDBASE = K:\jff\AmigaHD
 WHDBASE = $(HDBASE)\PROJETS\HDInstall\DONE
-EXE = $(WHDBASE)\R\RedZoneHDDev/data/object
+EXE = $(WHDBASE)\R\RedZoneHDDev/data/fast_object
 
 all :  $(EXE)
 ASM = vasmm68k_mot -maxerrors=0 -DDATETIME -I$(HDBASE)/amiga39_JFF_OS/include -I$(WHDBASE)\WHDLoad\Include -I$(WHDBASE) -devpac -nosym -Fhunkexe -o 

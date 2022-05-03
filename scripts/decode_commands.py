@@ -5,12 +5,19 @@ import struct,re
 with open("object_org","rb") as f:
     contents = f.read()
 
+# add "S" at start to stub the routine (won't draw)
+# it helps to identify which routine does what
+
+two_w = "w"*2
+four_w = "w"*4
+variable_w = "W"
+
 params = {0xD458:"w",
-0xe5b8:"w"*5,
-0xe1f8:"W",
+0xe5b8:"w"*5,   # draws wheels...
+0xe1f8:variable_w,
 0xdde0:"w"*7,
 0xe496:"aaaw",
-0xe4d0:"wwww",
+0xe4d0:four_w,
 0xd6f8:"aaaw",
 0xd73c:"lwww",
 0xD85E:"www",
@@ -18,38 +25,55 @@ params = {0xD458:"w",
 0xe168:"w",
 0xda4e:"W",
 0xe160:"w",
-0xdf42:"ww",
-0xe8c6:"w"*4,
+0xdf42:two_w,
+0xe8c6:four_w,
 0xd938:"wa",
 0xd3e0:"wa",
 0xd8ae:"ae",
 0xd78c:"lwww",
-0xe4f2:"W",
+0xe4f2:variable_w,
 0xd6b4:"w"*3,
 0xd820:"w"*3,
-0xe3d6:"w"*4,
+0xe3d6:four_w,
 0xd698:"a",  # jump to another command!
 0xd6a8:"",
 0xe576:"aw",
-0xe86e:"w"*4,
+0xe86e:four_w,
 0xda12:"wa",
-0xd980:"W",
+0xd980:variable_w,
 0xd452:"a",
 0xd3f0:"w",
-0xd494:"ww",
-0xe0cc:"ww",
-0xe112:"W",
+0xd494:two_w,  # pilot head (intro)
+0xe0cc:two_w,
+0xe112:variable_w,
 0xd8b2:"awa",
-0xe360:"w"*4,
-0xd952:"W",
+0xe360:four_w,
+0xd952:variable_w,
 0xd8ce:"awa",
 0xd3d0:"wa",
 0xe584:"w"*5,
-0xe392:"w"*4,
+0xe392:four_w,
 0xd8e8:"wwa",
 0xd536:"w"*6,
 0xD452:"ae"
 }
+st = {"w":2,"W":0,"l":4,"a":4,"S":0}
+
+def psize(v):
+    if "W" in v:
+        return -1
+    elif "e" in v:
+        return -2   # not possible/useful to stub
+    return sum(st.get(i,0) for i in v)
+
+params_size = {k:psize(v) for k,v in params.items()}
+# [start,end[
+code_parts = [(0x105fa,0x106a8),
+(0x112d0,0x11312),(0x1186a,0x118ce),(0x15b74,0x15b94),(0x15356,0x1536c),
+(0x167cc,0x167F0)]
+
+def is_code(address):
+    return any((a <= address < b) for a,b in code_parts)
 
 entrypoints_txt = """	dc.l	lb_1434e
 	dc.l	lb_fa7c
@@ -139,7 +163,7 @@ start,end = first_pass_entrypoints[0],first_pass_entrypoints[-1]
 
 out = {pos:None for pos in range(start,end+2,2)}
 
-st = {"w":2,"W":0,"l":4,"a":4}
+stubs = set()
 
 # relocs but outside 8000-52xxx zone (bug?)
 # plus bogus detections of commands that generate labels
@@ -175,7 +199,7 @@ def put_reloc(v,pos):
     if not(is_valid_pointer(v)) or v in derogations:
         put_long(v,pos)
     elif out.get(pos) is None and out.get(pos+2) is None:
-        out[pos] = ("lb_{:x}".format(v),4)
+        out[pos] = (("lb_{:x}_stub" if v in stubs else "lb_{:x}").format(v),4)
         out[pos+2] = True   # just not None
         all_eps.add(pos)
         all_eps.add(v)
@@ -192,15 +216,22 @@ def scan_entrypoints(entrypoints):
         must_loop = True
         while must_loop:
             routine = get_long(pos)
-            put_reloc(routine,pos)
-            pos += 4
             if routine == 0xFFFFFFFF:
+                put_reloc(routine,pos)
+                pos += 4
                 break
             else:
                 rp = params.get(routine)
                 if rp is None:
                     print("0x{:x}: ({:x}) params unknown".format(routine,pos))
                     break
+                if rp.startswith("S"):
+                    # stub
+                    stubs.add(routine)
+
+                put_reloc(routine,pos)
+                pos += 4
+
                 for x in rp:
                     if x == "w":
                         # word, as-is
@@ -262,6 +293,9 @@ if True:
         new_start,new_end = all_addresses[0],all_addresses[-1]
         address = new_start
         while address < new_end:
+            if is_code(address):
+                address += 2
+                continue
             if address in all_eps:
                 f.write("lb_{:x}:\n".format(address))
             # get address from dict
@@ -274,4 +308,14 @@ if True:
             f.write("\tdc.{}\t{}\t;{:05x}\n".format("w" if s==2 else "l","${1:0{0}x}".format(s*2,v) if isinstance(v,int) else v,address))
             address += s
 
-
+        for s in sorted(stubs):
+            f.write("lb_{:x}_stub:\n".format(s))
+            ps = params_size[s]
+            if ps == -1:
+                f.write(""".loop
+\ttst.w\t(a6)+
+\tbpl.b\t.loop
+\trts
+""")
+            else:
+                f.write("\tadd.w\t#{},A6\n\trts\n".format(ps))

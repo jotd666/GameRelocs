@@ -6226,7 +6226,7 @@ LAB_01E3:
 	ADD.W	D3,D1			;0bb20: d243
 LAB_01E4:
 	pea	.next(pc)			;0bb22
-	pea	addr_1(pc)
+	move.l	addr_1(pc),-(a7)
 	rts
 .next
 	MOVEM.L	(A7)+,D0-D1/A1		;0bb28: 4cdf0203
@@ -12011,7 +12011,21 @@ another_damn_address_table:
 	dc.l	lb_11912
 	dc.l	lb_11912
 	dc.l	lb_11912
-
+lb_11912:
+	dc.w	$0000	;11912
+	dc.w	$0000	;11914
+	dc.w	$0000	;11916
+lb_11918:
+	dc.w	$0005	;11918
+	dc.w	$0000	;1191a
+	dc.w	$0000	;1191c
+lb_1191e:
+	dc.w	$0005	;1191e
+	dc.w	$0005	;11920
+	dc.w	$0000	;11922
+	dc.w	$0005	;11924
+	dc.w	$0005	;11926
+	dc.w	$0001	;11928
 lb_11924
 	dc.w	$0005
 	dc.l	$00050001
@@ -19642,6 +19656,11 @@ LAB_0456:
 	RTS				;2364c: 4e75
 lb_2364e:
 display_cpu_type:
+	move.l	options,d7
+	btst	#1,d7
+	beq.b	.disp
+	rts
+.disp
 	JSR	LAB_016A		;2364e: 4eb90000a6d4
 	MOVE.W	#$0000,EXT_0134.W	;23654: 31fc00005f0a
 	MOVE.W	#$0004,EXT_0135.W	;2365a: 31fc00045f0c
@@ -19695,9 +19714,8 @@ LAB_0459:
 	DBF	D7,LAB_0459		;2373c: 51cffffc
 	RTS				;23740: 4e75
 LAB_045A:
-	DC.W	$4368			;23742
-	dc.w	$6970
-	DC.W	$7300			;23746
+	DC.b "Chips",0			;23742
+
 LAB_045B:
 	DC.W	$0000			;23748
 	BCLR	D7,-(A0)		;2374a: 0fa0
