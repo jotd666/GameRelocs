@@ -7,9 +7,12 @@ for line in af.lines:
     if m:
         inst = m.group(1)
         operand = m.group(2)
-        if inst == "MOVEA.L" and operand.startswith('#'):
-            val = int(operand[2:].split(",")[0],16)
-            if val > 0x8000 and val < 0x520ca:
-                print(line.strip())
-                count+=1
+        if inst == "MOVE.L" and operand.startswith('#'):
+            try:
+                val = int(operand[2:].split(",")[0],16)
+                if val > 0x8000 and val < 0x520ca:
+                    print(line.strip())
+                    count+=1
+            except ValueError:
+                pass
 print(count)
