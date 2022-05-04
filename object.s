@@ -2714,6 +2714,7 @@ LAB_00B0:
     ; SMC jump table, highly fishy!
     ; done to avoid/unroll loops (Duff's device)
 	MOVE.W	0(A6,D4.W),LAB_00B1+2	;091e8: 33f6400000009202
+	bsr		_flushcache
 	MOVE.W	EXT_0148.W,D3		;091f0: 36385f50
 	MOVE.W	EXT_0149.W,D4		;091f4: 38385f52
 	MOVEA	EXT_014a.W,A6		;091f8: 3c785f54
@@ -10205,6 +10206,7 @@ LAB_0312:
 	MOVE.W	EXT_00cf.W,D0		;0e5dc: 30382a1e
 	MOVE.W	EXT_00d0.W,D1		;0e5e0: 32382a20
 	MOVE.W	EXT_00d1.W,D2		;0e5e4: 34382a22
+	; used to draw wheels in demo
 	BSR.W	LAB_0323		;0e5e8: 61000d30
 	BRA.S	LAB_0314		;0e5ec: 6010
 LAB_0313:
@@ -10756,7 +10758,7 @@ LAB_031D:
 	ADD.W	D0,D0			;0ed2c: d040
 	ADD.W	D0,D0			;0ed2e: d040
 	LEA	LAB_031F,A0		;0ed30: 41f90000ed44
-	MOVE.L	0(A0,D0.W),LAB_031E+2	;0ed36: 23f000000000ed40
+	MOVE.L	0(A0,D0.W),LAB_031E+2	;0ed36: 23f000000000ed40 SMC
 	jsr	_flushcache
 LAB_031E:
 	JMP	LAB_0320		;0ed3e: 4ef90000ed60
@@ -13428,7 +13430,7 @@ lb_18d2c:
 	ADD.W	D1,D4			;18d2c: d841
 	DC.W	$0014			;18d2e
 LAB_03C5:
-	BTST	D3,LAB_03C5+2(PC)	;18d30: 073a0000
+	dc.l	$073a0000	;18d30: 
 	dc.l   0			;18d34: 00000000
 	ADDX.B	-(A1),-(A4)		;18d38: d909
 	DC.W	$0014			;18d3a
@@ -13599,7 +13601,7 @@ lb_18e74
 lb_18edc
 	dc.l   0			;18edc: 00000000
 	DC.W	$0000			;18ee0
-	BCLR	D5,0(A5)		;18ee2: 0bad0000
+	dc.l	$0bad0000		;18ee2: 
 	dc.l   0			;18ee6: 00000000
 	dc.l   0			;18eea: 00000000
 	dc.l   0			;18eee: 00000000
@@ -52525,7 +52527,7 @@ LAB_087F:
 	LEA	LAB_08AD+2(PC),A0	;3b95c: 41fa03cc
 LAB_0880:
 	CLR.B	(A0)+			;3b960: 4218
-	CMPA.L	#$0003bd37,A0		;3b962: b1fc0003bd37
+	CMPA.L	#lb_3bd38-1,A0		;3b962: b1fc0003bd37
 	BNE.S	LAB_0880		;3b968: 66f6
 LAB_0881:
 	TST.W	LAB_0D56		;3b96a: 4a790004c248
@@ -52837,6 +52839,7 @@ LAB_08AD:
 	dc.l   0			;3bd2c: 00000000
 	dc.l   0			;3bd30: 00000000
 	dc.l   0			;3bd34: 00000000
+lb_3bd38:
 	DC.W	$0000			;3bd38
 autosome_math_tablebd3a:
 	RTS				;3bd3a: 4e75
@@ -54941,7 +54944,7 @@ game_mainloop_900:
 	LEA	LAB_0925,A0		;3d26c: 41f90003d50a
 	ADDA.W	D1,A0			;3d272: d0c1
 	MOVE.L	(A0),LAB_0901+2		;3d274: 23d00003d2b4
-	MOVE.L	(A0),LAB_0906+2		;3d27a: 23d00003d344
+	MOVE.L	(A0),LAB_0906+2		;3d27a: 23d00003d344	SMC
     ; function table! we cannot relocate that one
     ; because SMC fixer already does that
 	LEA	autosome_math_tabled50e,A0		;3d280: 41f90003d50e
@@ -70200,6 +70203,7 @@ LAB_0C99:
 	ADD.W	0(A0,D0.W),D1		;4a74c: d2700000
 	; blitterwait
 LAB_0C9A:
+	blitz
 	DC.W	$0839			;4a750
 	DC.W	$000e			;4a752
 	DC.W	$00df			;4a754

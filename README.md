@@ -6,8 +6,7 @@ issues:
 - crashes in full championship
 - small/big glitches (LAP)...: identify drawing tables/routines
 - fastmem: bigger glitches (bike hollow wheels: filled rectangles don't work).
-  Probably parameter disalign... easier to debug with rotating bike
-  check with full chip find rectfill (works with full chip, not fast!!!)
+  self-modifying code to track!!
 - check labels reference proper offsets if existing (including included .s files)
 - remove smc progressively see if framerate improves
 - move chip zero page (EXT) variables to fast
