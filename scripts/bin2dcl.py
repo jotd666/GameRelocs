@@ -2,7 +2,7 @@ import os,re,struct
 with open("object_org","rb") as f:
     contents = f.read()
 
-for i in range(0x4a4ae,0x4a4be,4):
+for i in range(0x41e36,0x41e5e,4):
     i -= 0x8000
     data = struct.unpack_from(">I",contents,i)[0]
     print("\tdc.l\tlb_{:x}".format(data))

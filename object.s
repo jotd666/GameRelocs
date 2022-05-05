@@ -325,8 +325,8 @@ EXT_0137	EQU	$5F10
 EXT_0138	EQU	$5F14
 EXT_0139	EQU	$5F18
 EXT_013a	EQU	$5F1B
-EXT_013b	EQU	$5F1C
-EXT_013c	EQU	$5F20
+first_bitplane_address_1	EQU	$5F1C
+first_bitplane_address_2	EQU	$5F20
 EXT_013d	EQU	$5F28
 EXT_013e	EQU	$5F2C
 EXT_013f	EQU	$5F2E
@@ -2408,7 +2408,7 @@ LAB_0082:
 LAB_0083:
 	MOVEA.L	LAB_008D(PC),A6		;08f42: 2c7a0092
 	MOVE.L	A1,D0			;08f46: 2009
-	SUB.L	EXT_013b.W,D0		;08f48: 90b85f1c
+	SUB.L	first_bitplane_address_1.W,D0		;08f48: 90b85f1c
 	ADDA.W	D0,A6			;08f4c: dcc0
 	TST.W	LAB_00B7		;08f4e: 4a7900009344
 	BEQ.S	LAB_0088		;08f54: 6740
@@ -2647,7 +2647,7 @@ LAB_00A3:
 	LEA	EXT_010a.W,A3		;0915e: 47f83500
 	MOVE.W	0(A3,D2.W),D3		;09162: 36332000
 	ADD.W	LAB_003D(PC),D3		;09166: d67af8de
-	ADD.L	EXT_013b.W,D3		;0916a: d6b85f1c
+	ADD.L	first_bitplane_address_1.W,D3		;0916a: d6b85f1c
 	MOVE.W	(A7)+,D2		;0916e: 341f
 LAB_00A4:
 	RTS				;09170: 4e75
@@ -3415,7 +3415,7 @@ LAB_00CF:
 	ADD.W	D2,D2			;09b48: d442
 	LEA	EXT_010a.W,A3		;09b4a: 47f83500
 	MOVEA	0(A3,D2.W),A1		;09b4e: 32732000
-	ADDA.L	EXT_013b.W,A1		;09b52: d3f85f1c
+	ADDA.L	first_bitplane_address_1.W,A1		;09b52: d3f85f1c
 	ADDA.W	LAB_003D(PC),A1		;09b56: d2faeeee
 	CMPI.W	#$0003,D6		;09b5a: 0c460003
 	BGT.S	LAB_00D2		;09b5e: 6e48
@@ -3657,7 +3657,7 @@ LAB_00EA:
 	ADD.W	D2,D2			;09d8a: d442
 	LEA	EXT_010a.W,A3		;09d8c: 47f83500
 	MOVEA	0(A3,D2.W),A1		;09d90: 32732000
-	ADDA.L	EXT_013b.W,A1		;09d94: d3f85f1c
+	ADDA.L	first_bitplane_address_1.W,A1		;09d94: d3f85f1c
 	CMPI.W	#$0003,D6		;09d98: 0c460003
 	BGT.S	LAB_00ED		;09d9c: 6e50
 	MOVE.W	D5,D2			;09d9e: 3405
@@ -3856,7 +3856,7 @@ LAB_00F9:
 	SUB.W	EXT_0135.W,D0		;09f7c: 90785f0c
 	MULU	D0,D1			;09f80: c2c0
 	MOVEA.L	D1,A1			;09f82: 2241
-	ADDA.L	EXT_013b.W,A1		;09f84: d3f85f1c
+	ADDA.L	first_bitplane_address_1.W,A1		;09f84: d3f85f1c
 LAB_00FA:
 	MOVEM.W	(A7)+,D0-D1		;09f88: 4c9f0003
 	SUBQ.L	#1,D5			;09f8c: 5385
@@ -4024,7 +4024,7 @@ LAB_0116:
 	MOVEA.L	A0,A1			;0a172: 2248
 	ADDA.L	#$00003700,A0		;0a174: d1fc00003700
 	ADDA.W	(A0),A2			;0a17a: d4d0
-	ADDA.L	EXT_013b.W,A2		;0a17c: d5f85f1c
+	ADDA.L	first_bitplane_address_1.W,A2		;0a17c: d5f85f1c
 	MOVEA.L	A1,A3			;0a180: 2649
 	ADDA.L	#$00003f02,A3		;0a182: d7fc00003f02
 	ADDA.W	A1,A1			;0a188: d2c9
@@ -4189,7 +4189,7 @@ LAB_0139:
 	EXT.L	D7			;0a2fe: 48c7
 	LEA	EXT_010b.W,A0		;0a300: 41f83700
 	LEA	EXT_010a.W,A1		;0a304: 43f83500
-	MOVEA.L	EXT_013b.W,A2		;0a308: 24785f1c
+	MOVEA.L	first_bitplane_address_1.W,A2		;0a308: 24785f1c
 	ADD.W	D0,D0			;0a30c: d040
 	ADD.W	D1,D1			;0a30e: d241
 	ADDA.W	0(A1,D1.W),A2		;0a310: d4f11000
@@ -4606,9 +4606,9 @@ LAB_0176:
 	CLR.W	EXT_0147.W		;0a7a8: 42785f4e
 	CLR.W	EXT_0146.W		;0a7ac: 42785f4c
 	MOVE.L	#$00078000,EXT_013d	;0a7b0: 23fc0007800000005f28
-	MOVE.L	#$00070000,EXT_013c	;0a7ba: 23fc0007000000005f20
-	MOVE.L	EXT_013d,EXT_013b.W	;0a7c4: 21f900005f285f1c
-	MOVE.L	EXT_013c.W,EXT_0144.W	;0a7cc: 21f85f205f44
+	MOVE.L	#$00070000,first_bitplane_address_2	;0a7ba: 23fc0007000000005f20
+	MOVE.L	EXT_013d,first_bitplane_address_1.W	;0a7c4: 21f900005f285f1c
+	MOVE.L	first_bitplane_address_2.W,EXT_0144.W	;0a7cc: 21f85f205f44
 	CLR.W	EXT_0134.W		;0a7d2: 42785f0a
 	CLR.W	EXT_0135.W		;0a7d6: 42785f0c
 	MOVE.W	#$013f,EXT_0136.W	;0a7da: 31fc013f5f0e
@@ -4778,29 +4778,29 @@ LAB_0185:
 	ADDQ.W	#1,EXT_00da.W		;0aa5e: 52782a92
 	CLR.W	LAB_01C0		;0aa62: 42790000b26c
 	ADDQ.W	#1,LAB_018B		;0aa68: 52790000ab1c
-	MOVE.L	EXT_013b.W,D0		;0aa6e: 20385f1c
+	MOVE.L	first_bitplane_address_1.W,D0		;0aa6e: 20385f1c
 	CMP.L	EXT_013d.W,D0		;0aa72: b0b85f28
 	BEQ.S	LAB_0186		;0aa76: 670e
-	MOVE.L	EXT_013d.W,EXT_013b.W	;0aa78: 21f85f285f1c
-	MOVE.L	EXT_013c.W,EXT_0144.W	;0aa7e: 21f85f205f44
+	MOVE.L	EXT_013d.W,first_bitplane_address_1.W	;0aa78: 21f85f285f1c
+	MOVE.L	first_bitplane_address_2.W,EXT_0144.W	;0aa7e: 21f85f205f44
 	BRA.S	LAB_0187		;0aa84: 600c
 LAB_0186:
-	MOVE.L	EXT_013c.W,EXT_013b.W	;0aa86: 21f85f205f1c
+	MOVE.L	first_bitplane_address_2.W,first_bitplane_address_1.W	;0aa86: 21f85f205f1c
 	MOVE.L	EXT_013d.W,EXT_0144.W	;0aa8c: 21f85f285f44
 LAB_0187:
 	BRA.S	set_planes_addresses		;0aa92: 6034
-LAB_0188:
+screen_buffer_switch_in_game:
 	ADDQ.W	#1,EXT_00da.W		;0aa94: 52782a92
 	CLR.W	LAB_01C0		;0aa98: 42790000b26c
 	ADDQ.W	#1,LAB_018B		;0aa9e: 52790000ab1c
-	MOVE.L	EXT_013b.W,D0		;0aaa4: 20385f1c
+	MOVE.L	first_bitplane_address_1.W,D0		;0aaa4: 20385f1c
 	CMP.L	EXT_013d.W,D0		;0aaa8: b0b85f28
 	BEQ.S	LAB_0189		;0aaac: 670e
-	MOVE.L	EXT_013d.W,EXT_013b.W	;0aaae: 21f85f285f1c
-	MOVE.L	EXT_013c.W,EXT_0144.W	;0aab4: 21f85f205f44
+	MOVE.L	EXT_013d.W,first_bitplane_address_1.W	;0aaae: 21f85f285f1c
+	MOVE.L	first_bitplane_address_2.W,EXT_0144.W	;0aab4: 21f85f205f44
 	BRA.S	set_planes_addresses		;0aaba: 600c
 LAB_0189:
-	MOVE.L	EXT_013c.W,EXT_013b.W	;0aabc: 21f85f205f1c
+	MOVE.L	first_bitplane_address_2.W,first_bitplane_address_1.W	;0aabc: 21f85f205f1c
 	MOVE.L	EXT_013d.W,EXT_0144.W	;0aac2: 21f85f285f44
 	; non-interleaved planes
 set_planes_addresses:
@@ -4936,16 +4936,16 @@ LAB_018D:
 	DC.W	$ffff			;0ac4e
 LAB_018E:
 	BSR.W	LAB_018F		;0ac50: 6100000e
-	BSR.W	LAB_01B7		;0ac54: 61000558
+	BSR.W	screen_buffer_switch		;0ac54: 61000558
 	BSR.W	LAB_018F		;0ac58: 61000006
-	BRA.W	LAB_01B7		;0ac5c: 60000550
+	BRA.W	screen_buffer_switch		;0ac5c: 60000550
 LAB_018F:
 	MOVE.W	EXT_0136.W,D0		;0ac60: 30385f0e
 	ADDI.W	#$0001,D0		;0ac64: 06400001
 	MOVE.W	EXT_0135.W,D1		;0ac68: 32385f0c
 	LEA	EXT_010b.W,A0		;0ac6c: 41f83700
 	LEA	EXT_010a.W,A1		;0ac70: 43f83500
-	MOVEA.L	EXT_013b.W,A6		;0ac74: 2c785f1c
+	MOVEA.L	first_bitplane_address_1.W,A6		;0ac74: 2c785f1c
 	ADD.W	D0,D0			;0ac78: d040
 	ADD.W	D1,D1			;0ac7a: d241
 	ADDA.W	0(A1,D1.W),A6		;0ac7c: dcf11000
@@ -5433,16 +5433,16 @@ LAB_01B5:
 	dc.l   0			;0b1a6: 00000000
 LAB_01B6:
 	dc.l   0			;0b1aa: 00000000
-LAB_01B7:
-	MOVE.L	EXT_013c.W,D0		;0b1ae: 20385f20
-	CMP.L	EXT_013b.W,D0		;0b1b2: b0b85f1c
+screen_buffer_switch:
+	MOVE.L	first_bitplane_address_2.W,D0		;0b1ae: 20385f20
+	CMP.L	first_bitplane_address_1.W,D0		;0b1b2: b0b85f1c
 	BEQ.S	LAB_01B8		;0b1b6: 670e
-	MOVE.L	EXT_013c.W,EXT_013b.W	;0b1b8: 21f85f205f1c
+	MOVE.L	first_bitplane_address_2.W,first_bitplane_address_1.W	;0b1b8: 21f85f205f1c
 	MOVE.L	EXT_013d.W,EXT_0144.W	;0b1be: 21f85f285f44
 	RTS				;0b1c4: 4e75
 LAB_01B8:
-	MOVE.L	EXT_013d.W,EXT_013b.W	;0b1c6: 21f85f285f1c
-	MOVE.L	EXT_013c.W,EXT_0144.W	;0b1cc: 21f85f205f44
+	MOVE.L	EXT_013d.W,first_bitplane_address_1.W	;0b1c6: 21f85f285f1c
+	MOVE.L	first_bitplane_address_2.W,EXT_0144.W	;0b1cc: 21f85f205f44
 	RTS				;0b1d2: 4e75
 lb_b1d4:
 	MULU	#$0028,D1		;0b1d4: c2fc0028
@@ -5460,19 +5460,20 @@ write_credits_text:
 	MOVE.L	A0,-(A7)		;0b1f0: 2f08
 	ASL.W	#4,D1			;0b1f2: e941
 	MOVEA.L	fonts_base,A1		;0b1f4: 22790000b26e
-	move.w	#$FF,$100	; TEMP
 	ADDA.W	D1,A1			;0b1fa: d2c1
-	ADDA.L	EXT_013b.W,A0		;0b1fc: d1f85f1c
+	ADDA.L	first_bitplane_address_1.W,A0		;0b1fc: d1f85f1c
 	MOVE.L	LAB_01C2,D4		;0b200: 28390000b272
 LAB_01BA:
 	MOVE.W	(A1)+,D2		;0b206: 3419
 	MOVE.W	D2,D3			;0b208: 3602
 	NOT.W	D3			;0b20a: 4643
+	; smc target
 LAB_01BB:
 	OR.B	D2,(A0)			;0b20c: 8510
 	OR.B	D2,8192(A0)		;0b20e: 85282000
 	OR.B	D2,16384(A0)		;0b212: 85284000
 	OR.B	D2,24576(A0)		;0b216: 85286000
+	
 	ADDA.W	#$0028,A0		;0b21a: d0fc0028
 	DBF	D4,LAB_01BA		;0b21e: 51ccffe6
 	MOVEA.L	(A7)+,A0		;0b222: 205f
@@ -5488,12 +5489,13 @@ LAB_01BD:
 	ASL.W	#4,D1			;0b234: e941
 	MOVEA.L	fonts_base,A1		;0b236: 22790000b26e
 	ADDA.W	D1,A1			;0b23c: d2c1
-	ADDA.L	EXT_013b.W,A0		;0b23e: d1f85f1c
+	ADDA.L	first_bitplane_address_1.W,A0		;0b23e: d1f85f1c
 	MOVE.L	LAB_01C2,D4		;0b242: 28390000b272
 LAB_01BE:
 	MOVE.W	(A1)+,D2		;0b248: 3419
 	MOVE.W	D2,D3			;0b24a: 3602
 	CLR.W	D3			;0b24c: 4243
+	; smc target
 LAB_01BF:
 	MOVE.B	D2,(A0)			;0b24e: 1082
 	MOVE.B	D2,8192(A0)		;0b250: 11422000
@@ -6026,7 +6028,7 @@ lb_b8de
 LAB_B8F6
 	LEA	EXT_010b.W,A0		;0b8f6: 41f83700
 	LEA	EXT_010a.W,A1		;0b8fa: 43f83500
-	MOVEA.L	EXT_013b.W,A2		;0b8fe: 24785f1c
+	MOVEA.L	first_bitplane_address_1.W,A2		;0b8fe: 24785f1c
 	ADD.W	D0,D0			;0b902: d040
 	ADD.W	D1,D1			;0b904: d241
 	ADDA.W	0(A1,D1.W),A2		;0b906: d4f11000
@@ -6057,7 +6059,7 @@ lb_b92c:
 	BGT.S	LAB_01D3		;0b944: 6e40
 	LEA	EXT_010b.W,A0		;0b946: 41f83700
 	LEA	EXT_010a.W,A1		;0b94a: 43f83500
-	MOVEA.L	EXT_013b.W,A2		;0b94e: 24785f1c
+	MOVEA.L	first_bitplane_address_1.W,A2		;0b94e: 24785f1c
 	ADD.W	D0,D0			;0b952: d040
 	ADD.W	D1,D1			;0b954: d241
 	ADDA.W	0(A1,D1.W),A2		;0b956: d4f11000
@@ -6206,10 +6208,10 @@ LAB_01E1:
 	RTS				;0bae0: 4e75
 lb_bae2:
 	; unreachable...
-	MOVE.L	#LAB_B8F6,addr_1	;0bae2: 23fc0000b8f60000bb24
-	RTS				;0baec: 4e75
-	MOVE.L	#LAB_01CD,addr_1	;0baee: 23fc0000b8de0000bb24
-	RTS				;0baf8: 4e75
+;	MOVE.L	#LAB_B8F6,addr_1	;0bae2: 23fc0000b8f60000bb24
+;	RTS				;0baec: 4e75
+;	MOVE.L	#LAB_01CD,addr_1	;0baee: 23fc0000b8de0000bb24
+;	RTS				;0baf8: 4e75
 LAB_01E2:
 	ANDI.W	#$007f,D2		;0bafa: 0242007f
 	SUBI.W	#$0020,D2		;0bafe: 04420020
@@ -6227,14 +6229,10 @@ LAB_01E3:
 	ADD.W	D2,D0			;0bb1e: d042
 	ADD.W	D3,D1			;0bb20: d243
 LAB_01E4:
-	pea	.next(pc)			;0bb22
-	move.l	addr_1(pc),-(a7)
-	rts
-.next
+	jsr	LAB_01CD
 	MOVEM.L	(A7)+,D0-D1/A1		;0bb28: 4cdf0203
 	BRA.S	LAB_01E3		;0bb2c: 60e2
-addr_1:
-	dc.l	LAB_01CD
+
 LAB_01E5:
 	ADDQ.W	#4,D0			;0bb2e: 5840
 	RTS				;0bb30: 4e75
@@ -8472,7 +8470,7 @@ LAB_0286:
 	BEQ.S	LAB_0287		;0d1da: 6714
 	ADDI.W	#$0001,LAB_0289		;0d1dc: 067900010000d200
 	; this is the most intricate table ever!
-	LEA	another_data_table,A0		;0d1e4: 41f90000f77c
+	LEA	object_draw_table,A0		;0d1e4: 41f90000f77c
 	ADD.W	D0,D0			;0d1ea: d040
 	MOVEA.L	0(A0,D0.W),A6		;0d1ec: 2c700000
 	; first entry of the table is a routine
@@ -8492,7 +8490,7 @@ LAB_0289:
 lb_d204:
 	MOVE.W	EXT_00d6.W,D2		;0d204: 34382a70
 	SUBQ.W	#2,D2			;0d208: 5542
-	LEA	another_data_table,A0		;0d20a: 41f90000f77c
+	LEA	object_draw_table,A0		;0d20a: 41f90000f77c
 	LEA	EXT_00b8.W,A1		;0d210: 43f82200
 	LEA	EXT_00bd.W,A2		;0d214: 45f82600
 	LEA	EXT_00be.W,A3		;0d218: 47f82700
@@ -10759,10 +10757,8 @@ LAB_031D:
 	ADD.W	D0,D0			;0ed2c: d040
 	ADD.W	D0,D0			;0ed2e: d040
 	LEA	LAB_031F,A0		;0ed30: 41f90000ed44
-	MOVE.L	0(A0,D0.W),LAB_031E+2	;0ed36: 23f000000000ed40 SMC
-	jsr	_flushcache
-LAB_031E:
-	JMP	LAB_0320		;0ed3e: 4ef90000ed60
+	MOVE.L	0(A0,D0.W),a0	;0ed36: 23f000000000ed40 SMC
+	jmp		(a0)
 LAB_031F:
 	DC.L	LAB_0320
 	dc.l	LAB_0321
@@ -10771,7 +10767,8 @@ LAB_031F:
 	DC.L	some_3d_routine
 	DC.L	some_3d_routine
 	DC.L	some_3d_routine
-
+addr_1
+	dc.l	LAB_0320
 LAB_0320:
 	LEA	some_math_table,A0		;0ed60: 41f900008012
 	LEA	LAB_0016,A1		;0ed66: 43f900008212
@@ -11579,6 +11576,11 @@ LAB_033B:
 	dc.l   0			;0f776: 00000000
 LAB_033D:
 	dc.w	0			;0f77a: 0000
+	
+; 3D object tables
+; fa7c: empty object
+; road is drawn somewhere else (no need for objects)
+
 ; contains addresses of longwords that contain addresses of routines!!
 ;
 ; each address contains variable stuff
@@ -11586,12 +11588,12 @@ LAB_033D:
 ; then we proceed to the next routine+arguments, and it ends
 ; when the data encounters a $FFFFFFFF routine
 
-another_data_table
-	dc.l	lb_1434e
+object_draw_table
+	dc.l	lb_1434e			; pine tree
 	dc.l	lb_fa7c
-	dc.l	lb_14608
+	dc.l	lb_14608		; finish line?
 	dc.l	lb_fa7c
-	dc.l	lb_14868
+	dc.l	lb_14868		; spectators platform, left
 	dc.l	lb_14814
 	dc.l	lb_fa7c
 	dc.l	lb_fa7c
@@ -11664,7 +11666,7 @@ another_data_table
 	dc.l	lb_107e8
 	dc.l	lb_107ce
 	dc.l	lb_107b4
-LAB_0347	
+LAB_0347:
 	dc.w	$00b4		;0f8b0
 	DC.W	$ff4c			;0f8b2
 LAB_0348:
@@ -19692,14 +19694,14 @@ display_cpu_type:
 	; pick proper CPU image
 	MOVEA.L	#$0005a0ca,A2		;236d0: 247c0005a0ca
 	ADDA.L	0(A0,D0.W),A2		;236d6: d5f00000
-	MOVEA.L	EXT_013b.W,A1		;236da: 22785f1c
+	MOVEA.L	first_bitplane_address_1.W,A1		;236da: 22785f1c
 	ADDA.W	#$07d0,A1		;236de: d2fc07d0
 	MOVE.L	#$000003e7,D7		;236e2: 2e3c000003e7
 LAB_0458:
 	MOVE.L	(A2)+,(A1)+		;236e8: 22da
 	MOVE.L	8188(A2),8188(A1)	;236ea: 236a1ffc1ffc
 	DBF	D7,LAB_0458		;236f0: 51cffff6
-	JSR	LAB_0188		;236f4: 4eb90000aa94
+	JSR	screen_buffer_switch_in_game		;236f4: 4eb90000aa94
 
 	LEA	color_values,A0		;236fa: 41f900023c1e
 	LEA	color_values,A1		;23700: 43f900023c1e
@@ -21248,7 +21250,7 @@ LAB_0552:
 	LEA	LAB_0576(PC),A0		;25bcc: 41fa03e6
 	LEA	chipdata_start,A1		;25bd0: 43f9000520ca
 	JSR	load_from_disk		;25bd6: 4eb90005148e
-	MOVE.L	EXT_013c.W,LAB_04A2	;25bdc: 23f85f2000023c12
+	MOVE.L	first_bitplane_address_2.W,LAB_04A2	;25bdc: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25be4: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25bea: 23fc000520ce00023c06
 	MOVE.L	#$000520ce,LAB_04A0	;25bf4: 23fc000520ce00023c0a
@@ -21269,7 +21271,7 @@ LAB_0554:
 	MOVE.W	(A0)+,(A2)+		;25c42: 34d8
 	DBF	D6,LAB_0554		;25c44: 51cefffa
 	DBF	D7,LAB_0553		;25c48: 51cfffee
-	MOVEA.L	EXT_013c.W,A0		;25c4c: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25c4c: 20785f20
 LAB_0555:
 	ADDA.W	#$0280,A0		;25c50: d0fc0280
 	LEA	LAB_057F(PC),A1		;25c54: 43fa1bb8
@@ -21295,7 +21297,7 @@ LAB_0559:
 	MOVE.W	8192(A0),(A1)+		;25c84: 32e82000
 	ADDA.W	#$0028,A0		;25c88: d0fc0028
 	DBF	D7,LAB_0559		;25c8c: 51cffff4
-	MOVEA.L	EXT_013c.W,A0		;25c90: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25c90: 20785f20
 	LEA	LAB_057C(PC),A1		;25c94: 43fa0778
 	MOVE.L	#$00000009,D6		;25c98: 2c3c00000009
 LAB_055A:
@@ -21308,7 +21310,7 @@ LAB_055B:
 	SUBA.W	#$027e,A0		;25cb2: 90fc027e
 	DBF	D6,LAB_055A		;25cb6: 51ceffe6
 	LEA	LAB_057E(PC),A1		;25cba: 43fa0b92
-	MOVEA.L	EXT_013c.W,A0		;25cbe: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25cbe: 20785f20
 	ADDA.W	#$0280,A0		;25cc2: d0fc0280
 	MOVE.L	#$00000013,D6		;25cc6: 2c3c00000013
 LAB_055C:
@@ -21320,7 +21322,7 @@ LAB_055D:
 	DBF	D7,LAB_055D		;25cdc: 51cffff4
 	SUBA.W	#$027e,A0		;25ce0: 90fc027e
 	DBF	D6,LAB_055C		;25ce4: 51ceffe6
-	MOVEA.L	EXT_013c,A0		;25ce8: 207900005f20
+	MOVEA.L	first_bitplane_address_2,A0		;25ce8: 207900005f20
 	ADDA.W	#$0500,A0		;25cee: d0fc0500
 	MOVE.L	#$00000005,D6		;25cf2: 2c3c00000005
 LAB_055E:
@@ -21332,7 +21334,7 @@ LAB_055F:
 	DBF	D7,LAB_055F		;25d08: 51cffff4
 	SUBA.W	#$027e,A0		;25d0c: 90fc027e
 	DBF	D6,LAB_055E		;25d10: 51ceffe6
-	MOVEA.L	EXT_013c.W,A0		;25d14: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25d14: 20785f20
 	ADDA.W	#$0794,A0		;25d18: d0fc0794
 	LEA	LAB_0580(PC),A1		;25d1c: 43fa22b0
 	MOVE.L	#$0000000f,D7		;25d20: 2e3c0000000f
@@ -21341,7 +21343,7 @@ LAB_0560:
 	MOVE.W	8192(A0),(A1)+		;25d28: 32e82000
 	ADDA.W	#$0028,A0		;25d2c: d0fc0028
 	DBF	D7,LAB_0560		;25d30: 51cffff4
-	MOVEA.L	EXT_013c.W,A0		;25d34: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25d34: 20785f20
 	ADDA.W	#$0796,A0		;25d38: d0fc0796
 	LEA	LAB_0581(PC),A1		;25d3c: 43fa22d0
 	MOVE.L	#$0000000f,D7		;25d40: 2e3c0000000f
@@ -21350,7 +21352,7 @@ LAB_0561:
 	MOVE.W	8192(A0),(A1)+		;25d48: 32e82000
 	ADDA.W	#$0028,A0		;25d4c: d0fc0028
 	DBF	D7,LAB_0561		;25d50: 51cffff4
-	MOVEA.L	EXT_013c.W,A0		;25d54: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25d54: 20785f20
 	ADDA.W	#$0798,A0		;25d58: d0fc0798
 	LEA	LAB_0582(PC),A1		;25d5c: 43fa22f0
 	MOVE.L	#$0000000f,D7		;25d60: 2e3c0000000f
@@ -21359,7 +21361,7 @@ LAB_0562:
 	MOVE.W	8192(A0),(A1)+		;25d68: 32e82000
 	ADDA.W	#$0028,A0		;25d6c: d0fc0028
 	DBF	D7,LAB_0562		;25d70: 51cffff4
-	MOVEA.L	EXT_013c.W,A0		;25d74: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25d74: 20785f20
 	ADDA.W	#$001a,A0		;25d78: d0fc001a
 	LEA	LAB_0578(PC),A2		;25d7c: 45fa0260
 	MOVE.L	#$00000003,D6		;25d80: 2c3c00000003
@@ -21377,7 +21379,7 @@ LAB_0564:
 	LEA	LAB_0574(PC),A0		;25da6: 41fa01fe
 	LEA	chipdata_start,A1		;25daa: 43f9000520ca
 	JSR	load_from_disk		;25db0: 4eb90005148e
-	MOVE.L	EXT_013c.W,LAB_04A2	;25db6: 23f85f2000023c12
+	MOVE.L	first_bitplane_address_2.W,LAB_04A2	;25db6: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25dbe: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25dc4: 23fc000520ce00023c06
 	MOVE.L	#$000520ce,LAB_04A0	;25dce: 23fc000520ce00023c0a
@@ -21401,7 +21403,7 @@ LAB_0566:
 	MOVE.W	D0,(A2)+		;25e08: 34c0
 	DBF	D7,LAB_0566		;25e0a: 51cfffe8
 	DBF	D6,LAB_0565		;25e0e: 51ceffde
-	MOVEA.L	EXT_013c.W,A0		;25e12: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25e12: 20785f20
 	LEA	LAB_0583(PC),A1		;25e16: 43fa2276
 	MOVE.L	#$00000003,D6		;25e1a: 2c3c00000003
 LAB_0567:
@@ -21413,7 +21415,7 @@ LAB_0568:
 	DBF	D7,LAB_0568		;25e30: 51cffff4
 	SUBA.W	#$027e,A0		;25e34: 90fc027e
 	DBF	D6,LAB_0567		;25e38: 51ceffe6
-	MOVEA.L	EXT_013c.W,A0		;25e3c: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25e3c: 20785f20
 	ADDA.W	#$0020,A0		;25e40: d0fc0020
 	MOVE.L	#$00000003,D6		;25e44: 2c3c00000003
 LAB_0569:
@@ -21429,7 +21431,7 @@ LAB_056A:
 	LEA	LAB_0575(PC),A0		;25e68: 41fa0144
 	LEA	chipdata_start,A1		;25e6c: 43f9000520ca
 	JSR	load_from_disk		;25e72: 4eb90005148e
-	MOVE.L	EXT_013c.W,LAB_04A2	;25e78: 23f85f2000023c12
+	MOVE.L	first_bitplane_address_2.W,LAB_04A2	;25e78: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25e80: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25e86: 23fc000520ce00023c06
 	MOVE.L	#$000520ce,LAB_04A0	;25e90: 23fc000520ce00023c0a
@@ -21453,7 +21455,7 @@ LAB_056C:
 	MOVE.W	D0,(A2)+		;25eca: 34c0
 	DBF	D7,LAB_056C		;25ecc: 51cfffe8
 	DBF	D6,LAB_056B		;25ed0: 51ceffde
-	MOVEA.L	EXT_013c.W,A0		;25ed4: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25ed4: 20785f20
 	ADDA.W	#$1360,A0		;25ed8: d0fc1360
 	LEA	LAB_0586(PC),A1		;25edc: 43fa2430
 	MOVE.L	#$00000003,D6		;25ee0: 2c3c00000003
@@ -21466,7 +21468,7 @@ LAB_056E:
 	DBF	D7,LAB_056E		;25ef6: 51cffff4
 	SUBA.W	#$027e,A0		;25efa: 90fc027e
 	DBF	D6,LAB_056D		;25efe: 51ceffe6
-	MOVEA.L	EXT_013c.W,A0		;25f02: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25f02: 20785f20
 	ADDA.W	#$1380,A0		;25f06: d0fc1380
 	MOVE.L	#$00000003,D6		;25f0a: 2c3c00000003
 LAB_056F:
@@ -21482,13 +21484,13 @@ LAB_0570:
 	LEA	LAB_0577(PC),A0		;25f2e: 41fa008c
 	LEA	chipdata_start,A1		;25f32: 43f9000520ca
 	JSR	load_from_disk		;25f38: 4eb90005148e
-	MOVE.L	EXT_013c.W,LAB_04A2	;25f3e: 23f85f2000023c12
+	MOVE.L	first_bitplane_address_2.W,LAB_04A2	;25f3e: 23f85f2000023c12
 	MOVE.L	chipdata_start,D1		;25f46: 2239000520ca
 	MOVE.L	#$000520ce,LAB_049F	;25f4c: 23fc000520ce00023c06
 	MOVE.L	#$000520ce,LAB_04A0	;25f56: 23fc000520ce00023c0a
 	ADD.L	D1,LAB_04A0		;25f60: d3b900023c0a
 	JSR	LAB_0489		;25f66: 4eb900023ade
-	MOVEA.L	EXT_013c.W,A0		;25f6c: 20785f20
+	MOVEA.L	first_bitplane_address_2.W,A0		;25f6c: 20785f20
 	LEA	LAB_0595(PC),A1	;25f70: 43fa270a
 	MOVEQ	#3,D5			;25f74: 7a03
 LAB_0571:
@@ -38885,7 +38887,7 @@ LAB_07A2:
 	ADDA.W	0(A1,D1.W),A2		;39a68: d4f11000
 	MOVEA.L	A2,A3			;39a6c: 264a
 	ADDA.L	EXT_0144.W,A2		;39a6e: d5f85f44
-	ADDA.L	EXT_013b.W,A3		;39a72: d7f85f1c
+	ADDA.L	first_bitplane_address_1.W,A3		;39a72: d7f85f1c
 	MOVE.L	#$00000013,D6		;39a76: 2c3c00000013
 LAB_07A3:
 	MOVE.W	(A3),(A2)		;39a7c: 3493
@@ -41296,7 +41298,7 @@ LAB_08AF:
 	MOVE.L	#$000001f4,D7		;3bda2: 2e3c000001f4
 	JSR	LAB_0445		;3bda8: 4eb90002330c
 	LEA	LAB_0D45+1,A0		;3bdae: 41f90004c13b
-	LEA	LAB_09A9,A1		;3bdb4: 43f900041e36
+	LEA	another_table_41e36,A1		;3bdb4: 43f900041e36
 	MOVE.W	LAB_0D56,D0		;3bdba: 30390004c248
 	ADD.W	D0,D0			;3bdc0: d040
 	ADD.W	D0,D0			;3bdc2: d040
@@ -43579,7 +43581,7 @@ LAB_0928
 	dc.l	autolab_0004356c
 	dc.l	autolab_000412ba
 	dc.l	autolab_0004146e
-	dc.l	LAB_0976
+	dc.l	draw_everything_in_game
 	dc.l	LAB_0980
 	dc.l	autosome_math_tableb922
 	dc.l	autosome_math_tablebd3a
@@ -43864,7 +43866,7 @@ LAB_093D:
 autosome_math_tableda5e:
 	MOVE.W	LAB_098D,-(A7)		;3da5e: 3f390004181c
 	MOVE.W	#$0004,LAB_098D		;3da64: 33fc00040004181c
-	JSR	LAB_0CA2		;3da6c: 4eb90004a852
+	JSR	erase_screen		;3da6c: 4eb90004a852
 	MOVE.W	(A7)+,LAB_098D		;3da72: 33df0004181c
 	JSR	draw_road		;3da78: 4eb90004c624
 	JSR	LAB_025C		;3da7e: 4eb90000cd2c
@@ -43931,7 +43933,7 @@ LAB_093F:
 	MOVE.W	#$000b,D1		;3dba0: 323c000b
 	JSR	LAB_01DF		;3dba4: 4eb90000bad0
 	BSR.W	LAB_0969		;3dbaa: 61003644
-	JSR	LAB_0188		;3dbae: 4eb90000aa94
+	JSR	screen_buffer_switch_in_game		;3dbae: 4eb90000aa94
 	JSR	LAB_0BD4		;3dbb4: 4eb900046be6
 	RTS				;3dbba: 4e75
 LAB_3DBBC:
@@ -47460,7 +47462,7 @@ autolab_000412ba:
 	MOVE.W	#$0024,BPLCON2		;412c0: 33fc002400dff104
 	MOVE.W	LAB_0D56,LAB_0D59	;412c8: 33f90004c2480004c250
 	CLR.W	LAB_0BB9+2		;412d2: 427900046820
-	CLR.W	LAB_0A5D		;412d8: 4279000436ea
+	CLR.W	double_buffering_on		;412d8: 4279000436ea
 	MOVE.W	#$ffff,LAB_0D72		;412de: 33fcffff0004c288
 	BSR.W	LAB_0AAE		;412e6: 61003a2e
 	CLR.W	LAB_0A46+2		;412ea: 42790004331a
@@ -47484,7 +47486,7 @@ LAB_096A:
 LAB_096B:
 	BRA.S	LAB_096D		;41342: 6008
 LAB_096C:
-	MOVE.W	#$ffff,LAB_0A5D		;41344: 33fcffff000436ea
+	MOVE.W	#$ffff,double_buffering_on		;41344: 33fcffff000436ea
 LAB_096D:
 	LEA	LAB_052F,A0		;4134c: 41f900024dd2
 	MOVEQ	#15,D7			;41352: 7e0f
@@ -47514,7 +47516,7 @@ LAB_096E:
 	CLR.W	LAB_091F+2		;413d4: 42790003d500
 	BRA.S	LAB_0972		;413da: 603a
 LAB_096F:
-	CLR.W	LAB_0A5D		;413dc: 4279000436ea
+	CLR.W	double_buffering_on		;413dc: 4279000436ea
 	MOVE.W	#$0080,D0		;413e2: 303c0080
 LAB_0970:
 	CLR.W	D1			;413e6: 4241
@@ -47576,8 +47578,12 @@ LAB_0975:
 	JSR	LAB_0CCE		;414d4: 4eb90004ae3c
 	BSR.W	LAB_0960		;414da: 6100fb94
 	RTS				;414de: 4e75
-LAB_0976:
-	JSR	LAB_0CA2		;414e0: 4eb90004a852
+draw_everything_in_game:
+; branching there skips all 3D display
+; (only dashboard & lap / time is displayed)
+; time/lap are sprites
+; dashboard is a second bitplane set address
+	JSR	erase_screen		;414e0: 4eb90004a852
 	JSR	move_and_render_demo_motorcycle		;414e6: 4eb90000cf4e
 	JSR	draw_road		;414ec: 4eb90004c624
 	JSR	LAB_025C		;414f2: 4eb90000cd2c
@@ -47585,6 +47591,8 @@ LAB_0976:
 	JSR	lb_4b720		;414fc: 4eb90004b720
 	JSR	LAB_0CF6		;41502: 4eb90004b36e
 	JSR	move_and_render_demo_motorcycle		;41508: 4eb90000cf4e
+	
+	
 	ADDQ.W	#1,LAB_05A3		;4150e: 52790002bd44
 	JSR	LAB_0C69		;41514: 4eb900049e6c
 	TST.W	LAB_0DC1		;4151a: 4a790004c44e
@@ -47628,12 +47636,12 @@ LAB_097A:
 	BNE.S	LAB_097B		;415ae: 6604
 	BSR.W	LAB_0A83		;415b0: 610026b2
 LAB_097B:
-	TST.W	LAB_0A5D		;415b4: 4a79000436ea
+	TST.W	double_buffering_on		;415b4: 4a79000436ea
 	BEQ.S	LAB_097C		;415ba: 6708
 	JSR	vbl_sync_not_game		;415bc: 4eb900022fac
 	BRA.S	LAB_097D		;415c2: 6006
 LAB_097C:
-	JSR	LAB_0188		;415c4: 4eb90000aa94
+	JSR	screen_buffer_switch_in_game		;415c4: 4eb90000aa94
 LAB_097D:
 	JSR	LAB_0BD4		;415ca: 4eb900046be6
 	TST.W	LAB_0DA6		;415d0: 4a790004c300
@@ -47750,7 +47758,7 @@ LAB_098B:
 	MOVE.W	#$0034,D0		;4178c: 303c0034
 	JSR	LAB_043D		;41790: 4eb900023284
 	BEQ.S	LAB_098C		;41796: 675e
-	JSR	LAB_01B7		;41798: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41798: 4eb90000b1ae
 	CLR.W	LAB_01C0		;4179e: 42790000b26c
 	MOVEQ	#0,D0			;417a4: 7000
 	JSR	LAB_01CB		;417a6: 4eb90000b6ae
@@ -47766,7 +47774,7 @@ LAB_098B:
 	JSR	LAB_01D9		;417de: 4eb90000ba92
 	MOVEA.L	#$00000216,A0		;417e4: 207c00000216
 	JSR	LAB_01D9		;417ea: 4eb90000ba92
-	JSR	LAB_01B7		;417f0: 4eb90000b1ae
+	JSR	screen_buffer_switch		;417f0: 4eb90000b1ae
 LAB_098C:
 	RTS				;417f6: 4e75
 LAB_417F8
@@ -47801,9 +47809,9 @@ LAB_0990:
 	TST.W	LAB_0DC4+2		;41846: 4a790004c478
 	BNE.W	LAB_0999		;4184c: 66000204
 	MOVE.W	#$ffff,EXT_0087.W	;41850: 31fcffff09b8
-	MOVE.L	EXT_013b.W,LAB_099A	;41856: 23f85f1c00041a54
+	MOVE.L	first_bitplane_address_1.W,LAB_099A	;41856: 23f85f1c00041a54
 LAB_0991:
-	MOVE.L	#$0005a0ca,EXT_013b.W	;4185e: 21fc0005a0ca5f1c
+	MOVE.L	#$0005a0ca,first_bitplane_address_1.W	;4185e: 21fc0005a0ca5f1c
 	MOVE.W	EXT_0134.W,-(A7)	;41866: 3f385f0a
 	MOVE.W	EXT_0135.W,-(A7)	;4186a: 3f385f0c
 	MOVE.W	EXT_0136.W,-(A7)	;4186e: 3f385f0e
@@ -47849,7 +47857,7 @@ LAB_0992:
 	MOVE.W	EXT_0134.W,EXT_0132.W	;41946: 31f85f0a5f06
 	MOVE.W	EXT_0135.W,EXT_0133.W	;4194c: 31f85f0c5f08
 	JSR	LAB_0111		;41952: 4eb90000a0ae
-	MOVEA.L	EXT_013b.W,A0		;41958: 20785f1c
+	MOVEA.L	first_bitplane_address_1.W,A0		;41958: 20785f1c
 	MOVEA.L	LAB_099A(PC),A1		;4195c: 227a00f6
 	MOVEA.L	A0,A2			;41960: 2448
 	MOVEA.L	A1,A3			;41962: 2649
@@ -47883,7 +47891,7 @@ LAB_0996:
 	ADDA.W	#$001e,A2		;419c6: d4fc001e
 	ADDA.W	#$001e,A3		;419ca: d6fc001e
 	DBF	D6,LAB_0995		;419ce: 51ceffbc
-	MOVE.L	LAB_099A(PC),EXT_013b.W	;419d2: 21fa00805f1c
+	MOVE.L	LAB_099A(PC),first_bitplane_address_1.W	;419d2: 21fa00805f1c
 	MOVE.W	(A7)+,EXT_00d9.W	;419d8: 31df2a78
 	MOVE.W	(A7)+,EXT_00d8.W	;419dc: 31df2a76
 	MOVE.W	(A7)+,EXT_0137.W	;419e0: 31df5f10
@@ -48068,7 +48076,7 @@ LAB_09A5:
 	DIVU	LAB_0D95,D0		;41d0c: 80f90004c2d8
 	ANDI.L	#$0000ffff,D0		;41d12: 02800000ffff
 	MOVE.W	LAB_0D59,D7		;41d18: 3e390004c250
-	LEA	LAB_09A9(PC),A0		;41d1e: 41fa0116
+	LEA	another_table_41e36(PC),A0		;41d1e: 41fa0116
 	ADD.W	D7,D7			;41d22: de47
 	ADD.W	D7,D7			;41d24: de47
 	MOVEA.L	0(A0,D7.W),A0		;41d26: 20707000
@@ -48108,9 +48116,9 @@ LAB_09A6:
 	MOVE.B	D0,LAB_0A00+1		;41db6: 13c000042bed
 	lea	LAB_42BCA,A0		;41dbc: 207c00042bca
 	JSR	LAB_09D1		;41dc2: 4eb90004294c
-	JSR	LAB_01B7		;41dc8: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41dc8: 4eb90000b1ae
 	JSR	LAB_09C7		;41dce: 4eb90004266a
-	JSR	LAB_01B7		;41dd4: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41dd4: 4eb90000b1ae
 	MOVE.L	#$00000064,D7		;41dda: 2e3c00000064
 	JSR	LAB_0444		;41de0: 4eb9000232fe
 	MOVE.W	#$8000,LAB_090E		;41de6: 33fc80000003d35a
@@ -48124,80 +48132,81 @@ LAB_09A8:
 	DBF	D7,LAB_09A8		;41dfe: 51cffffc
 	lea	LAB_42BF0,A0		;41e02: 207c00042bf0
 	JSR	LAB_09D1		;41e08: 4eb90004294c
-	JSR	LAB_01B7		;41e0e: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41e0e: 4eb90000b1ae
 	JSR	LAB_09C7		;41e14: 4eb90004266a
-	JSR	LAB_01B7		;41e1a: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41e1a: 4eb90000b1ae
 	MOVE.L	#$00000064,D7		;41e20: 2e3c00000064
 	JSR	LAB_0444		;41e26: 4eb9000232fe
 	MOVE.W	#$8007,LAB_090E		;41e2c: 33fc80070003d35a
 	RTS				;41e34: 4e75
-LAB_09A9:
-	DC.W	$0004			;41e36
-	DC.W	$1e5e			;41e38
-	DC.W	$0004			;41e3a
-	DC.W	$1e6a			;41e3c
-	DC.W	$0004			;41e3e
-	DC.W	$1e76			;41e40
-	DC.W	$0004			;41e42
-	MOVE.B	D2,(A7)			;41e44: 1e82
-	DC.W	$0004			;41e46
-	DC.W	$1e8e			;41e48
-	DC.W	$0004			;41e4a
-	MOVE.B	(A2)+,(A7)		;41e4c: 1e9a
-	DC.W	$0004			;41e4e
-	MOVE.B	-(A6),(A7)		;41e50: 1ea6
-	DC.W	$0004			;41e52
-	MOVE.B	4(A2,D0.W),(A7)		;41e54: 1eb20004
-	DC.W	$1ebe			;41e58
-	DC.W	$0004			;41e5a
-	DC.W	$1eca			;41e5c
+another_table_41e36:
+	dc.l	lb_41e5e
+	dc.l	lb_41e6a
+	dc.l	lb_41e76
+	dc.l	lb_41e82
+	dc.l	lb_41e8e
+	dc.l	lb_41e9a
+	dc.l	lb_41ea6
+	dc.l	lb_41eb2
+	dc.l	lb_41ebe
+	dc.l	lb_41eca
 LAB_09AA:
+lb_41e5e
 	BSET	D3,(A0)			;41e5e: 07d0
 	DC.W	$08ca			;41e60
 	BSET	D4,D4			;41e62: 09c4
 	DC.W	$0abe			;41e64
 	DC.W	$0cb2			;41e66
 	BCLR	D7,-(A0)		;41e68: 0fa0
+lb_41e6a
 	BCLR	D5,EXT_008e.W		;41e6a: 0bb80dac
 	BCLR	D7,-(A0)		;41e6e: 0fa0
 	DC.W	$1194			;41e70
 	DC.W	$1388			;41e72
 	DC.W	$157c			;41e74
+lb_41e76
 	DC.W	$08ca			;41e76
 	BSET	D4,D4			;41e78: 09c4
 	DC.W	$0abe			;41e7a
 	DC.W	$0cb2			;41e7c
 	DC.W	$0ea6			;41e7e
 	MOVE.B	(A2)+,(A0)		;41e80: 109a
+lb_41e82
 	DC.W	$0cb2			;41e82
 	BCLR	D6,3750(A4)		;41e84: 0dac0ea6
 	DC.W	$1194			;41e88
 	MOVE.B	D2,(A2)			;41e8a: 1482
 	DC.W	$186a			;41e8c
+lb_41e8e
 	BSET	D4,D4			;41e8e: 09c4
 	DC.W	$0abe			;41e90
 	BCLR	D5,EXT_008e.W		;41e92: 0bb80dac
 	BCLR	D7,-(A0)		;41e96: 0fa0
 	DC.W	$1194			;41e98
+lb_41e9a
 	BCLR	D5,EXT_008c.W		;41e9a: 0bb80cb2
 	BCLR	D6,4000(A4)		;41e9e: 0dac0fa0
 	DC.W	$1194			;41ea2
 	DC.W	$1388			;41ea4
+lb_41ea6
 	BSET	D4,D4			;41ea6: 09c4
 	DC.W	$0abe			;41ea8
 	BCLR	D5,EXT_008e.W		;41eaa: 0bb80dac
 	BCLR	D7,-(A0)		;41eae: 0fa0
 	DC.W	$1194			;41eb0
+lb_41eb2
 	DC.W	$0cb2			;41eb2
 	BCLR	D6,4000(A4)		;41eb4: 0dac0fa0
 	DC.W	$1194			;41eb8
 	DC.W	$1388			;41eba
 	DC.W	$157c			;41ebc
+lb_41ebe
 	BSET	D4,D4			;41ebe: 09c4
 	DC.W	$0abe			;41ec0
 	BCLR	D5,EXT_008e.W		;41ec2: 0bb80dac
 	BCLR	D7,-(A0)		;41ec6: 0fa0
 	DC.W	$1194			;41ec8
+lb_41eca
 	BCLR	D7,-(A0)		;41eca: 0fa0
 	MOVE.B	(A2)+,(A0)		;41ecc: 109a
 	DC.W	$1194			;41ece
@@ -48281,7 +48290,7 @@ LAB_09AE:
 	CLR.W	AUD2VOL			;41faa: 427900dff0c8
 	CLR.W	AUD3VOL			;41fb0: 427900dff0d8
 	CLR.W	LAB_01C0		;41fb6: 42790000b26c
-	JSR	LAB_01B7		;41fbc: 4eb90000b1ae
+	JSR	screen_buffer_switch		;41fbc: 4eb90000b1ae
 	JSR	LAB_0438		;41fc2: 4eb900023246
 	JSR	vbl_game_sync		;41fc8: 4eb900022fbc
 	CLR.W	D0			;41fce: 4240
@@ -48382,7 +48391,7 @@ LAB_09B0:
 	MOVE.W	#$00b6,EXT_0132.W	;421aa: 31fc00b65f06
 	MOVE.W	#$0079,EXT_0133.W	;421b0: 31fc00795f08
 	JSR	LAB_0111		;421b6: 4eb90000a0ae
-	JSR	LAB_01B7		;421bc: 4eb90000b1ae
+	JSR	screen_buffer_switch		;421bc: 4eb90000b1ae
 LAB_09B1:
 	MOVE.W	#$ffff,LAB_091F		;421c2: 33fcffff0003d4fe
 	MOVE.W	LAB_09BE(PC),D0		;421ca: 303a02e6
@@ -48450,7 +48459,7 @@ LAB_09B7:
 	BLT.W	LAB_09BB		;422d8: 6d000190
 	CMPI.W	#$009c,EXT_0070.W	;422dc: 0c78009c0908
 	BGT.W	LAB_09BB		;422e2: 6e000186
-	JSR	LAB_01B7		;422e6: 4eb90000b1ae
+	JSR	screen_buffer_switch		;422e6: 4eb90000b1ae
 	JSR	vbl_sync_not_game		;422ec: 4eb900022fac
 	MOVE.W	#$0008,D0		;422f2: 303c0008
 	MOVE.W	#$fff9,D1		;422f6: 323cfff9
@@ -48503,7 +48512,7 @@ LAB_09B7:
 	MOVE.W	#$00e6,EXT_0132.W	;423f4: 31fc00e65f06
 	MOVE.W	#$0064,EXT_0133.W	;423fa: 31fc00645f08
 	JSR	LAB_0111		;42400: 4eb90000a0ae
-	JSR	LAB_01B7		;42406: 4eb90000b1ae
+	JSR	screen_buffer_switch		;42406: 4eb90000b1ae
 LAB_09B8:
 	MOVE.B	EXT_006f.W,D0		;4240c: 10380906
 	ANDI.W	#$0003,D0		;42410: 02400003
@@ -49320,7 +49329,7 @@ LAB_0A0E:
 LAB_0A0F:
 	LEA	LAB_0C3E,A0		;42cbc: 41f900047f34
 	LEA	LAB_0C3F,A1		;42cc2: 43f900049334
-	MOVEA.L	EXT_013b.W,A2		;42cc8: 24785f1c
+	MOVEA.L	first_bitplane_address_1.W,A2		;42cc8: 24785f1c
 LAB_0A10:
 	ADDA.W	#$0708,A2		;42ccc: d4fc0708
 	MOVE.L	#$0000013f,D7		;42cd0: 2e3c0000013f
@@ -49540,7 +49549,7 @@ autolab_00042f8e:
 	MOVEA.L	#$00001cc1,A0		;43072: 207c00001cc1
 	JSR	LAB_01D9		;43078: 4eb90000ba92
     ; update frame
-	JSR	LAB_0188		;4307e: 4eb90000aa94
+	JSR	screen_buffer_switch_in_game		;4307e: 4eb90000aa94
 	RTS				;43084: 4e75
 red_zone_title_text
 	ADDQ.W	#1,D5			;43086: 5245
@@ -49850,8 +49859,8 @@ LAB_0A46:
 	dc.l   0			;43318: 00000000
 	DC.W	$0000			;4331c
 LAB_0A48:
-	MOVE.L	EXT_013b.W,-(A7)	;4331e: 2f385f1c
-	MOVE.L	#$000620ca,EXT_013b.W	;43322: 21fc000620ca5f1c
+	MOVE.L	first_bitplane_address_1.W,-(A7)	;4331e: 2f385f1c
+	MOVE.L	#$000620ca,first_bitplane_address_1.W	;43322: 21fc000620ca5f1c
 	TST.W	LAB_0A50		;4332a: 4a790004350c
 	BNE.W	LAB_0A4B		;43330: 660000f4
 	ADDQ.W	#1,LAB_0A50		;43334: 52790004350c
@@ -49929,7 +49938,7 @@ LAB_0A4B:
 	JSR	LAB_0111		;43472: 4eb90000a0ae
 	ADDQ.W	#1,LAB_0A50		;43478: 52790004350c
 LAB_0A4C:
-	MOVE.L	(A7)+,EXT_013b.W	;4347e: 21df5f1c
+	MOVE.L	(A7)+,first_bitplane_address_1.W	;4347e: 21df5f1c
 	RTS				;43482: 4e75
 LAB_43484
 	ADDQ.W	#1,D5			;43484: 5245
@@ -49963,7 +49972,7 @@ LAB_0A4D:
     ; background image, rotating motorbike
 copy_planes:
     LEA.L $000620ca,A0      ; 434e2
-	MOVEA.L	EXT_013b.W,A1		;434e8: plane end address
+	MOVEA.L	first_bitplane_address_1.W,A1		;434e8: plane end address
 	MOVE.L	#$000007cf,D7		;434ec: 2e3c000007cf
 interleave_plane_copy_loop:
 	MOVE.L	(A0)+,(A1)+		;434f2: 22d8
@@ -50006,7 +50015,7 @@ autolab_0004356c:
 	RTS				;4356c: 4e75
 autolab_0004356e:
 	MOVE.W	#$ffff,LAB_0D72+2	;4356e: 33fcffff0004c28a
-	MOVE.W	#$ffff,LAB_0A5D		;43576: 33fcffff000436ea
+	MOVE.W	#$ffff,double_buffering_on		;43576: 33fcffff000436ea
 	MOVE.W	#$ffff,LAB_0D72		;4357e: 33fcffff0004c288
 	BSR.W	LAB_0AAE		;43586: 6100178e
 	MOVE.W	#$ffff,LAB_0BB9+2	;4358a: 33fcffff00046820
@@ -50021,7 +50030,7 @@ autolab_0004356e:
 	JSR	vbl_sync_not_game		;435c4: 4eb900022fac
 	JSR	LAB_0908		;435ca: 4eb90003d348
 	JSR	LAB_090A		;435d0: 4eb90003d34e
-	CLR.W	LAB_0A5D		;435d6: 4279000436ea
+	CLR.W	double_buffering_on		;435d6: 4279000436ea
 	MOVE.W	#$0080,D0		;435dc: 303c0080
 LAB_0A55:
 	CLR.W	D1			;435e0: 4241
@@ -50077,9 +50086,9 @@ LAB_0A59:
 autolab_000436b2:
 	TST.W	LAB_0D79+2		;436b2: 4a790004c29a
 	BEQ.S	LAB_0A5A		;436b8: 6708
-	MOVE.W	#$ffff,LAB_0A5D		;436ba: 33fcffff000436ea
+	MOVE.W	#$ffff,double_buffering_on		;436ba: 33fcffff000436ea
 LAB_0A5A:
-	BSR.W	LAB_0976		;436c2: 6100de1c
+	BSR.W	draw_everything_in_game		;436c2: 6100de1c
 	TST.W	LAB_0D79+2		;436c6: 4a790004c29a
 	BEQ.S	LAB_0A5B		;436cc: 670c
 	TST.W	LAB_0DC1		;436ce: 4a790004c44e
@@ -50088,10 +50097,10 @@ LAB_0A5A:
 LAB_0A5B:
 	TST.W	LAB_0D79+2		;436da: 4a790004c29a
 	BEQ.S	LAB_0A5C		;436e0: 6706
-	JSR	LAB_0188		;436e2: 4eb90000aa94
+	JSR	screen_buffer_switch_in_game		;436e2: 4eb90000aa94
 LAB_0A5C:
 	RTS				;436e8: 4e75
-LAB_0A5D:
+double_buffering_on:
 	DC.W	$0000			;436ea
 autolab_000436ec:
 	BSR.W	LAB_0980		;436ec: 6100df40
@@ -50600,9 +50609,9 @@ LAB_0A8F:
 LAB_0A90:
 	dc.l   0			;43dfc: 00000000
 LAB_0A91:
-	MOVE.L	EXT_013b.W,-(A7)	;43e00: 2f385f1c
-	MOVE.L	EXT_013c.W,EXT_013b.W	;43e04: 21f85f205f1c
-	SUBI.L	#$00002000,EXT_013b.W	;43e0a: 04b8000020005f1c
+	MOVE.L	first_bitplane_address_1.W,-(A7)	;43e00: 2f385f1c
+	MOVE.L	first_bitplane_address_2.W,first_bitplane_address_1.W	;43e04: 21f85f205f1c
+	SUBI.L	#$00002000,first_bitplane_address_1.W	;43e0a: 04b8000020005f1c
 	MOVE.W	#$0000,EXT_0134.W	;43e12: 31fc00005f0a
 	MOVE.W	#$0088,EXT_0135.W	;43e18: 31fc00885f0c
 	MOVE.W	#$003f,EXT_0136.W	;43e1e: 31fc003f5f0e
@@ -50751,7 +50760,7 @@ LAB_0A95:
 	MOVE.W	EXT_0136.W,EXT_0132.W	;440a2: 31f85f0e5f06
 	MOVE.W	EXT_0135.W,EXT_0133.W	;440a8: 31f85f0c5f08
 	JSR	LAB_0111		;440ae: 4eb90000a0ae
-	MOVEA.L	EXT_013b.W,A0		;440b4: 20785f1c
+	MOVEA.L	first_bitplane_address_1.W,A0		;440b4: 20785f1c
 	LEA	LAB_0A9B(PC),A1		;440b8: 43fa0042
 	MOVEQ	#71,D7			;440bc: 7e47
 LAB_0A96:
@@ -50765,7 +50774,7 @@ LAB_0A96:
 	MOVE.L	24580(A0),(A1)+		;440d8: 22e86004
 	ADDA.W	#$0028,A0		;440dc: d0fc0028
 	DBF	D7,LAB_0A96		;440e0: 51cfffdc
-	MOVE.L	(A7)+,EXT_013b.W	;440e4: 21df5f1c
+	MOVE.L	(A7)+,first_bitplane_address_1.W	;440e4: 21df5f1c
 	RTS				;440e8: 4e75
 LAB_440EA
 	dc.w	$504f
@@ -51355,7 +51364,7 @@ LAB_0A9B:
 	dc.l   0			;449f4: 00000000
 	dc.l   0			;449f8: 00000000
 LAB_0A9C:
-	MOVEA.L	EXT_013b.W,A0		;449fc: 20785f1c
+	MOVEA.L	first_bitplane_address_1.W,A0		;449fc: 20785f1c
 	ADDA.W	#$0060,A0		;44a00: d0fc0060
 	LEA	LAB_0A9B(PC),A1		;44a04: 43faf6f6
 	MOVEQ	#71,D7			;44a08: 7e47
@@ -53971,7 +53980,7 @@ LAB_0BE4:
 	CLR.W	LAB_0BF7		;46e76: 4279000470b6
 	RTS				;46e7c: 4e75
 LAB_0BE5:
-	JSR	LAB_01B7		;46e7e: 4eb90000b1ae
+	JSR	screen_buffer_switch		;46e7e: 4eb90000b1ae
 	MOVEQ	#0,D0			;46e84: 7000
 	JSR	LAB_01C3		;46e86: 4eb90000b276
 	MOVEQ	#3,D0			;46e8c: 7003
@@ -53988,7 +53997,7 @@ LAB_0BE5:
 	JSR	LAB_01DF		;46eb6: 4eb90000bad0
 	BRA.S	LAB_0BE7		;46ebc: 603e
 LAB_0BE6:
-	JSR	LAB_01B7		;46ebe: 4eb90000b1ae
+	JSR	screen_buffer_switch		;46ebe: 4eb90000b1ae
 	MOVEQ	#0,D0			;46ec4: 7000
 	JSR	LAB_01C3		;46ec6: 4eb90000b276
 	MOVEQ	#3,D0			;46ecc: 7003
@@ -54004,7 +54013,7 @@ LAB_0BE6:
 	lea	LAB_46F57,A1		;46ef0: 227c00046f57
 	JSR	LAB_01DF		;46ef6: 4eb90000bad0
 LAB_0BE7:
-	JSR	LAB_01B7		;46efc: 4eb90000b1ae
+	JSR	screen_buffer_switch		;46efc: 4eb90000b1ae
 	MOVE.W	#$8020,LAB_0509		;46f02: 33fc802000024a58
 	MOVE.W	#$8020,LAB_0529		;46f0a: 33fc802000024d3c
 	LEA	LAB_0579,A0		;46f12: 41f900025fee
@@ -58571,7 +58580,7 @@ LAB_0C95:
 	MOVE.W	EXT_0135.W,D1		;4a6aa: 32385f0c
 	LEA	EXT_010b.W,A0		;4a6ae: 41f83700
 	LEA	EXT_010a.W,A1		;4a6b2: 43f83500
-	MOVEA.L	EXT_013b.W,A6		;4a6b6: 2c785f1c
+	MOVEA.L	first_bitplane_address_1.W,A6		;4a6b6: 2c785f1c
 	ADD.W	D0,D0			;4a6ba: d040
 	ADD.W	D1,D1			;4a6bc: d241
 	ADDA.W	0(A1,D1.W),A6		;4a6be: dcf11000
@@ -58623,7 +58632,7 @@ LAB_0C99:
 	MOVE.W	LAB_0C9F(PC),D0		;4a73e: 303a008a
 	ADD.W	D0,D0			;4a742: d040
 	LEA	LAB_0C9E(PC),A0		;4a744: 41fa007c
-	MOVE.L	EXT_013b.W,D1		;4a748: 22385f1c
+	MOVE.L	first_bitplane_address_1.W,D1		;4a748: 22385f1c
 	ADD.W	0(A0,D0.W),D1		;4a74c: d2700000
 	; blitterwait
 LAB_0C9A:
@@ -58678,7 +58687,7 @@ LAB_0CA1:
 	MOVE.W	#$013f,LAB_0CB1+2	;4a840: 33fc013f0004aa68
 	MOVE.W	#$00c7,LAB_0CB3		;4a848: 33fc00c70004aa6a
 	BRA.S	LAB_0CA4		;4a850: 6030
-LAB_0CA2:
+erase_screen:
 	TST.W	LAB_098D		;4a852: 4a790004181c
 	BEQ.S	LAB_0CA3		;4a858: 6702
 	BRA.S	LAB_0CA1		;4a85a: 60a2
@@ -59084,7 +59093,7 @@ LAB_0CCB:
 LAB_0CCC:
 	MOVE.W	EXT_0135.W,D1		;4adf8: 32385f0c
 	LEA	EXT_010a.W,A1		;4adfc: 43f83500
-	MOVEA.L	EXT_013b.W,A6		;4ae00: 2c785f1c
+	MOVEA.L	first_bitplane_address_1.W,A6		;4ae00: 2c785f1c
 	ADD.W	D0,D0			;4ae04: d040
 	ADD.W	D1,D1			;4ae06: d241
 	ADDA.W	0(A1,D1.W),A6		;4ae08: dcf11000
