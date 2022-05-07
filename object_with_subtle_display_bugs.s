@@ -21030,7 +21030,7 @@ lb_248a0:
 	DC.W	$0800			;248dc
 	BSET	D7,D0			;248de: 0fc0
 LAB_04F0:  ;248e0
-table_000248e0: ;248e0: AKA LAB_04F0
+table_000248e0: ;248e0: AKA LAB_04F0 DONE!
 	dc.l	lb_246e0
 	dc.l	lb_24720
 	dc.l	lb_24760
@@ -21243,7 +21243,7 @@ LAB_0550:
 	MOVE.L	(A0)+,(A1)+		;25b9e: 22d8
 	MOVE.L	(A0)+,(A1)+		;25ba0: 22d8
 	RTS				;25ba2: 4e75
-LAB_0551:  ;25ba4
+LAB_0551:  ;25ba4	table DONE!
 	dc.l	LAB_052B
 	dc.l	LAB_0534
 	dc.l	lb_25152
@@ -21548,19 +21548,19 @@ LAB_0577:
 	DC.W	$0002			;25fda
 	SVC	(A6)+				;25fdc: 58de
 LAB_0578:		;25fde: table
-	DC.L	LAB_000252d2		;25fde
-	DC.L	LAB_00025492		;25fe2
-	DC.L	LAB_00024d4e		;25fe6
+	DC.L	lb_252d2		;25fde
+	DC.L	lb_25492		;25fe2
+	DC.L	lb_24d4e		;25fe6
 LAB_0579
-	DC.L	LAB_00024f52		;25fee
-	DC.L	LAB_00024e16		;25ff2
-	DC.L	LAB_00024fd6
-	DC.L	LAB_00025196
-	DC.L	LAB_00025356
-	DC.L	LAB_00025516
-	DC.L	LAB_000256d6
-	DC.L	LAB_00025896
-	DC.L	LAB_00025962
+	DC.L	lb_24f52		;25fee
+	DC.L	lb_24e16		;25ff2
+	DC.L	lb_24fd6
+	DC.L	lb_25196
+	DC.L	lb_25356
+	DC.L	lb_25516
+	DC.L	lb_256d6
+	DC.L	lb_25896
+	DC.L	lb_25962
 	dc.l   0			;2600e: 00000000
 	dc.l   0			;26012: 00000000
 	dc.l   0			;26016: 00000000
