@@ -43465,7 +43465,7 @@ LAB_0911:
 LAB_0912:
 	RTS				;3d38a: 4e75
 LAB_0913:	;3d38c
-table_0003d38c: ;3d38c: AKA LAB_0913
+table_0003d38c: ;3d38c: AKA LAB_0913 DONE!!
 	dc.l	autosome_math_tabled398
 	dc.l	autosome_math_tabled3c0
 	dc.l	autosome_math_tabled3ea
@@ -43574,7 +43574,7 @@ autosome_math_tabled50e:
 	dc.l	lb_43640
 LAB_0927				
 	dc.l	lb_436b2	;3D512
-LAB_0928
+LAB_0928		; table DONE!
 	dc.l	lb_436ec	;3D516
 	dc.l	lb_23cb2
 	dc.l	lb_23cd6
@@ -48852,7 +48852,7 @@ another_fuckin_address_table:
 	dc.l	lb_42928
 	dc.l	lb_42930
 lb_428da
-	SUBQ.W	#2,A3			;428dc: 554b
+	dc.l	$009C554B			;428da:
 	dc.w	0			;428de: 0000
 lb_428e0
 	dc.w	$0092
@@ -58127,7 +58127,7 @@ LAB_0C75:
 	MOVE.B	#$25,D0			;49fd2: 103c0025
 	JSR	LAB_0C86		;49fd6: 4eb90004a4d4
 LAB_0C76:
-	lea	pic_196b4+($e0c-$6b4),A0		;49f68: 207c00019e80
+	lea	pic_196b4+($e0d-$6b4),A0		;49fdc: 207c00019e0d
 	TST.W	LAB_0DA6+2		;49fe2: 4a790004c302
 	BNE.S	LAB_0C77		;49fe8: 6606
 	MOVE.W	#$0041,D0		;49fea: 303c0041
