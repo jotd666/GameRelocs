@@ -691,7 +691,7 @@ options	dc.l	0
 	
 _resload
 	dc.l	0
-some_math_table:
+some_math_data:
 	ORI.B	#$c9,D0			;08012: 000000c9
 	BCLR	D0,(A2)			;08016: 0192
 	ANDI.W	#$0324,(A3)+		;08018: 025b0324
@@ -4308,6 +4308,7 @@ LAB_014C:
 	ADDQ.W	#4,A2			;0a444: 584a
 	DBF	D7,LAB_014C		;0a446: 51cffffa
 	RTS				;0a44a: 4e75
+	; DONE!!
 palette_table:
 	dc.l	palette_clist_1
 	dc.l	palette_clist_2
@@ -4508,6 +4509,7 @@ LAB_0164:
 	BNE.W	LAB_015A		;0a67a: 6600ff38
 	RTS				;0a67e: 4e75
 	; table of pointers to chipmem (copper stuff)
+	; DONE!
 LAB_0165:
 	dc.l	palette_clist_1
 	dc.l	palette_clist_2
@@ -7562,7 +7564,7 @@ LAB_022F:
 lb_c7a0:
 	ANDI.W	#$03ff,D2		;0c7a0: 024203ff
 	ADD.W	D2,D2			;0c7a4: d442
-	LEA	some_math_table,A0		;0c7a6: 41f900008012
+	LEA	some_math_data,A0		;0c7a6: 41f900008012
 	MOVE.W	0(A0,D2.W),D4		;0c7ac: 38302000
 	MULS	D3,D4			;0c7b0: c9c3
 	ADD.L	D4,D4			;0c7b2: d884
@@ -10773,7 +10775,7 @@ LAB_031F:
 addr_1
 	dc.l	LAB_0320
 LAB_0320:
-	LEA	some_math_table,A0		;0ed60: 41f900008012
+	LEA	some_math_data,A0		;0ed60: 41f900008012
 	LEA	LAB_0016,A1		;0ed66: 43f900008212
 	MOVE.W	EXT_00ca,D0		;0ed6c: 303900002a0e
 	ANDI.W	#$03ff,D0		;0ed72: 024003ff
@@ -10918,7 +10920,7 @@ LAB_0320:
 	MOVE.W	D0,20(A2)		;0ef52: 35400014
 	RTS				;0ef56: 4e75
 LAB_0321:
-	LEA	some_math_table,A0		;0ef58: 41f900008012
+	LEA	some_math_data,A0		;0ef58: 41f900008012
 	LEA	LAB_0016,A1		;0ef5e: 43f900008212
 	MOVE.W	EXT_00cb,D0		;0ef64: 303900002a10
 	ANDI.W	#$03ff,D0		;0ef6a: 024003ff
@@ -11064,7 +11066,7 @@ LAB_0321:
 	MOVE.W	D0,20(A2)		;0f14c: 35400014
 	RTS				;0f150: 4e75
 some_3d_routine:
-	LEA	some_math_table,A0		;0f152: 41f900008012
+	LEA	some_math_data,A0		;0f152: 41f900008012
 	LEA	LAB_0016,A1		;0f158: 43f900008212
 	MOVE.W	EXT_00ca,D0		;0f15e: 303900002a0e
 	ANDI.W	#$03ff,D0		;0f164: 024003ff

@@ -69,20 +69,20 @@ def psize(v):
 params_size = {k:psize(v) for k,v in params.items()}
 # [start,end[
 code_parts = [(0x105fa,0x106a8),
-(0x112d0,0x11312),(0x1186a,0x118ce),(0x15b74,0x15b94),(0x15356,0x1536c),
+(0x112d0,0x11312),(0x1186a,0x118ce),(0x15356,0x1536c),(0x15b74,0x15b94),
 (0x167cc,0x167F0)]
 
 def is_code(address):
     return any((a <= address < b) for a,b in code_parts)
 
 entrypoints_txt = """	dc.l	lb_1434e
-	dc.l	lb_fa7c
+	dc.l	lb_0fa7c
 	dc.l	lb_14608
-	dc.l	lb_fa7c
+	dc.l	lb_0fa7c
 	dc.l	lb_14868
 	dc.l	lb_14814
-	dc.l	lb_fa7c
-	dc.l	lb_fa7c
+	dc.l	lb_0fa7c
+	dc.l	lb_0fa7c
 	dc.l	lb_14b68
 	dc.l	lb_15382
 	dc.l	lb_14332
@@ -95,12 +95,12 @@ entrypoints_txt = """	dc.l	lb_1434e
 	dc.l	lb_1484c
 	dc.l	lb_14830
 	dc.l	lb_102da
-	dc.l	lb_fa7c
+	dc.l	lb_0fa7c
 	dc.l	lb_1687e
 	dc.l	lb_121cc
 	dc.l	lb_1200a
-	dc.l	lb_fa7c
-	dc.l	lb_fa7c
+	dc.l	lb_0fa7c
+	dc.l	lb_0fa7c
 	dc.l	lb_11fb4
 	dc.l	lb_11fb8
 	dc.l	lb_11fbc
@@ -124,11 +124,11 @@ entrypoints_txt = """	dc.l	lb_1434e
 	dc.l	lb_14084
 	dc.l	lb_140d0
 	dc.l	lb_106a8
-	dc.l	lb_fa80
+	dc.l	lb_0fa80
 	dc.l	lb_105ee
-	dc.l	lb_fab8
-	dc.l	lb_fcb4
-	dc.l	lb_feb0
+	dc.l	lb_0fab8
+	dc.l	lb_0fcb4
+	dc.l	lb_0feb0
 	dc.l	lb_101f6
 	dc.l	lb_16c6c
 	dc.l	lb_16d58
@@ -199,7 +199,7 @@ def put_reloc(v,pos):
     if not(is_valid_pointer(v)) or v in derogations:
         put_long(v,pos)
     elif out.get(pos) is None and out.get(pos+2) is None:
-        out[pos] = (("lb_{:x}_stub" if v in stubs else "lb_{:x}").format(v),4)
+        out[pos] = (("lb_{:x}_stub" if v in stubs else "lb_{:05x}").format(v),4)
         out[pos+2] = True   # just not None
         all_eps.add(pos)
         all_eps.add(v)
@@ -297,7 +297,7 @@ if True:
                 address += 2
                 continue
             if address in all_eps:
-                f.write("lb_{:x}:\n".format(address))
+                f.write("lb_{:05x}:\n".format(address))
             # get address from dict
             if out[address] is None:
                 # just pick original value

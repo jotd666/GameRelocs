@@ -19,6 +19,6 @@ for i,line in enumerate(af.lines):
             except ValueError:
                 pass
 print(count)
-
-with open("object.s","w") as f:
-    f.writelines(af.lines)
+if count:
+    with open("object.s","w") as f:
+        f.writelines(af.lines)
