@@ -7677,7 +7677,7 @@ lb_c89a:
 	SUB.W	D0,EXT_00e6.W		;0c8a6: 91782ad0
 	SUB.W	D1,EXT_00e7.W		;0c8aa: 93782ad4
 	SUB.W	D2,EXT_00e8.W		;0c8ae: 95782ad8
-LAB_023C:
+rotate_shit:
 	LEA	EXT_0102.W,A0		;0c8b2: 41f82ee0
 	LEA	EXT_0109.W,A1		;0c8b6: 43f832e0
 LAB_023D:
@@ -8147,14 +8147,14 @@ LAB_0262:
 	RTS				;0cdea: 4e75
 LAB_0263:
 	MOVEM.W	(A7)+,D0-D1		;0cdec: 4c9f0003
-	BSR.W	LAB_0264		;0cdf0: 61000018
+	BSR.W	display_3d_scenery_objects		;0cdf0: 61000018
 	MOVE.W	EXT_00d6.W,D2		;0cdf4: 34382a70
 	SUBQ.W	#2,D2			;0cdf8: 5542
 	LEA	EXT_011a.W,A4		;0cdfa: 49f85300
 	ORI.W	#$8000,0(A4,D2.W)	;0cdfe: 007480002000
 	MOVE.W	#$ffff,D7		;0ce04: 3e3cffff
 	RTS				;0ce08: 4e75
-LAB_0264:
+display_3d_scenery_objects:
 	CMPI.W	#$0100,EXT_00d6.W	;0ce0a: 0c7801002a70
 	BEQ.W	LAB_0272		;0ce10: 6700013a
 	MOVE.W	EXT_00d6.W,D2		;0ce14: 34382a70
@@ -8470,6 +8470,9 @@ LAB_0286:
 	BEQ.S	LAB_0287		;0d1da: 6714
 	ADDI.W	#$0001,LAB_0289		;0d1dc: 067900010000d200
 	; this is the most intricate table ever!
+	; return here (RTS) and no objects are drawn
+	; only road and fences are drawn...
+	
 	LEA	object_draw_table,A0		;0d1e4: 41f90000f77c
 	ADD.W	D0,D0			;0d1ea: d040
 	MOVEA.L	0(A0,D0.W),A6		;0d1ec: 2c700000
@@ -11464,10 +11467,10 @@ LAB_032E:
 	MOVE.W	D0,EXT_00e6.W		;0f60a: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;0f60e: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;0f612: 31c22ad8
-	JSR	LAB_023C		;0f616: 4eb90000c8b2
+	JSR	rotate_shit		;0f616: 4eb90000c8b2
 	MOVE.W	LAB_0330(PC),D0		;0f61c: 303a0010
 	MOVE.W	EXT_00d5.W,D1		;0f620: 32382a6c
-	BSR.W	LAB_0264		;0f624: 6100d7e4
+	BSR.W	display_3d_scenery_objects		;0f624: 6100d7e4
 LAB_032F:
 	MOVEM.L	(A7)+,D0-D7/A0-A6	;0f628: 4cdf7fff
 	RTS				;0f62c: 4e75
@@ -11506,7 +11509,7 @@ LAB_0331:
 	MOVE.W	D2,EXT_00e8.W		;0f68e: 31c22ad8
 	MOVE.W	#$005c,D0		;0f692: 303c005c
 	MOVE.W	EXT_00d5.W,D1		;0f696: 32382a6c
-	BSR.W	LAB_0264		;0f69a: 6100d76e
+	BSR.W	display_3d_scenery_objects		;0f69a: 6100d76e
 	MOVEM.L	(A7)+,D0-D7/A0-A6	;0f69e: 4cdf7fff
 LAB_0332:
 	MOVE.W	LAB_033B(PC),D0		;0f6a2: 303a00d2
@@ -11553,10 +11556,10 @@ LAB_0334:
 	MOVE.W	D0,EXT_00e6.W		;0f728: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;0f72c: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;0f730: 31c22ad8
-	JSR	LAB_023C		;0f734: 4eb90000c8b2
+	JSR	rotate_shit		;0f734: 4eb90000c8b2
 	MOVE.W	#$005c,D0		;0f73a: 303c005c
 	MOVE.W	EXT_00d5.W,D1		;0f73e: 32382a6c
-	BSR.W	LAB_0264		;0f742: 6100d6c6
+	BSR.W	display_3d_scenery_objects		;0f742: 6100d6c6
 	MOVEM.L	(A7)+,D0-D7/A0-A6	;0f746: 4cdf7fff
 LAB_0335:
 	MOVE.W	LAB_033B(PC),D0		;0f74a: 303a002a
@@ -11589,83 +11592,86 @@ LAB_033D:
 ; when the data encounters a $FFFFFFFF routine
 
 object_draw_table
-	dc.l	lb_1434e			; pine tree
-	dc.l	lb_fa7c
-	dc.l	lb_14608		; finish line?
-	dc.l	lb_fa7c
-	dc.l	lb_14868		; spectators platform, left
-	dc.l	lb_14814
-	dc.l	lb_fa7c
-	dc.l	lb_fa7c
-	dc.l	lb_14b68
-	dc.l	lb_15382
-	dc.l	lb_14332
-	dc.l	lb_15734
-	dc.l	lb_13564
-	dc.l	lb_12bce
-	dc.l	lb_1301e
-	dc.l	lb_130e2
-	dc.l	lb_133a0
-	dc.l	lb_1484c
-	dc.l	lb_14830
-	dc.l	lb_102da
-	dc.l	lb_fa7c
-	dc.l	lb_1687e
-	dc.l	lb_121cc
-	dc.l	lb_1200a
-	dc.l	lb_fa7c
-	dc.l	lb_fa7c
-	dc.l	lb_11fb4
-	dc.l	lb_11fb8
-	dc.l	lb_11fbc
-	dc.l	lb_11eea
-	dc.l	lb_11ee6
-	dc.l	lb_1192a
-	dc.l	lb_1157c
-	dc.l	lb_1081c
-	dc.l	lb_109cc
-	dc.l	lb_11312
-	dc.l	lb_1131e
-	dc.l	lb_139ce
-	dc.l	lb_15d62
-	dc.l	lb_167f0
-	dc.l	lb_1680c
-	dc.l	lb_16828
-	dc.l	lb_16844
-	dc.l	lb_16860
-	dc.l	lb_1579c
-	dc.l	lb_14038
-	dc.l	lb_14084
-	dc.l	lb_140d0
-	dc.l	lb_106a8
-	dc.l	lb_fa80
-	dc.l	lb_105ee
-	dc.l	lb_fab8
-	dc.l	lb_fcb4
-	dc.l	lb_feb0
-	dc.l	lb_101f6
-	dc.l	lb_16c6c
-	dc.l	lb_16d58
-	dc.l	lb_16e24
-	dc.l	lb_16f40
-	dc.l	lb_17086
-	dc.l	lb_17178
-	dc.l	lb_17294
-	dc.l	lb_173ca
-	dc.l	lb_17446
-	dc.l	lb_175ec
-	dc.l	lb_17722
-	dc.l	lb_17814
-	dc.l	lb_17900
-	dc.l	lb_179ec
-	dc.l	lb_17ad8
-	dc.l	lb_17b7e
-	dc.l	lb_17ca4
-	dc.l	lb_17d30
-	dc.l	lb_10802
-	dc.l	lb_107e8
-	dc.l	lb_107ce
-	dc.l	lb_107b4
+	dc.l	lb_1434e	;0f77c		; pine tree #1
+	dc.l	lb_fa7c     ;0f780
+	dc.l	lb_14608	;0f784	; finish line?
+	dc.l	lb_fa7c     ;0f788
+	dc.l	lb_14868	;0f78c	; spectators platform, left
+	dc.l	lb_14814    ;0f790	; spectators platform, right
+	dc.l	lb_fa7c     ;0f794
+	dc.l	lb_fa7c     ;0f798
+	dc.l	lb_14b68    ;0f79c
+	dc.l	lb_15382    ;0f7a0
+	dc.l	lb_14332    ;0f7a4
+	dc.l	lb_15734    ;0f7a8
+	dc.l	lb_13564    ;0f7ac	; bridge
+	dc.l	lb_12bce    ;0f7b0
+	dc.l	lb_1301e    ;0f7b4
+	dc.l	lb_130e2    ;0f7b8
+	dc.l	lb_133a0    ;0f7bc
+	dc.l	lb_1484c    ;0f7c0
+	dc.l	lb_14830    ;0f7c4
+	dc.l	lb_102da    ;0f7c8
+	dc.l	lb_fa7c     ;0f7cc
+	dc.l	lb_1687e    ;0f7d0
+	dc.l	lb_121cc    ;0f7d4
+	dc.l	lb_1200a    ;0f7d8
+	dc.l	lb_fa7c     ;0f7dc
+	dc.l	lb_fa7c     ;0f7e0
+	dc.l	lb_11fb4    ;0f7e4
+	dc.l	lb_11fb8    ;0f7e8
+	dc.l	lb_11fbc    ;0f7ec
+	dc.l	lb_11eea    ;0f7f0
+	dc.l	lb_11ee6    ;0f7f4
+	dc.l	lb_1192a    ;0f7f8
+	dc.l	lb_1157c    ;0f7fc
+	dc.l	lb_1081c    ;0f800
+	dc.l	lb_109cc    ;0f804	; "welcome to sunny leeds" sign
+	dc.l	lb_11312    ;0f808
+	dc.l	lb_1131e    ;0f80c
+	dc.l	lb_139ce    ;0f810
+	dc.l	lb_15d62    ;0f814
+	dc.l	lb_167f0    ;0f818
+	dc.l	lb_1680c    ;0f81c
+	dc.l	lb_16828    ;0f820
+	dc.l	lb_16844    ;0f824
+	dc.l	lb_16860    ;0f828
+	dc.l	lb_1579c    ;0f82c
+	dc.l	lb_14038    ;0f830
+	dc.l	lb_14084    ;0f834
+	dc.l	lb_140d0    ;0f838
+	dc.l	lb_106a8    ;0f83c
+	dc.l	lb_fa80     ;0f840
+	dc.l	lb_105ee    ;0f844
+	dc.l	lb_fab8     ;0f848
+	dc.l	lb_fcb4     ;0f84c
+	dc.l	lb_feb0     ;0f850
+	dc.l	lb_101f6    ;0f854
+	dc.l	lb_16c6c    ;0f858
+	dc.l	lb_16d58    ;0f85c
+	dc.l	lb_16e24    ;0f860
+	dc.l	lb_16f40    ;0f864
+	dc.l	lb_17086    ;0f868
+	dc.l	lb_17178    ;0f86c
+	dc.l	lb_17294    ;0f870
+	dc.l	lb_173ca    ;0f874
+	dc.l	lb_17446    ;0f878
+	dc.l	lb_175ec    ;0f87c
+	dc.l	lb_17722    ;0f880
+	dc.l	lb_17814    ;0f884
+	dc.l	lb_17900    ;0f888
+	dc.l	lb_179ec    ;0f88c
+	dc.l	lb_17ad8    ;0f890
+	dc.l	lb_17b7e    ;0f894
+	dc.l	lb_17ca4    ;0f898
+	dc.l	lb_17d30    ;0f89c
+	dc.l	lb_10802    ;0f8a0
+	dc.l	lb_107e8    ;0f8a4
+	dc.l	lb_107ce    ;0f8a8
+	dc.l	lb_107b4    ;0f8ac
+
+	
+	
 LAB_0347:
 	dc.w	$00b4		;0f8b0
 	DC.W	$ff4c			;0f8b2
@@ -43868,7 +43874,7 @@ autosome_math_tableda5e:
 	MOVE.W	#$0004,LAB_098D		;3da64: 33fc00040004181c
 	JSR	erase_screen		;3da6c: 4eb90004a852
 	MOVE.W	(A7)+,LAB_098D		;3da72: 33df0004181c
-	JSR	draw_road		;3da78: 4eb90004c624
+	JSR	draw_road_and_fences		;3da78: 4eb90004c624
 	JSR	LAB_025C		;3da7e: 4eb90000cd2c
 	JSR	LAB_0BCB		;3da84: 4eb900046af0
 	JSR	lb_4b720		;3da8a: 4eb90004b720
@@ -43883,10 +43889,10 @@ autosome_math_tableda5e:
 	MOVE.W	D0,EXT_00e6.W		;3dab4: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;3dab8: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;3dabc: 31c22ad8
-	JSR	LAB_023C		;3dac0: 4eb90000c8b2
+	JSR	rotate_shit		;3dac0: 4eb90000c8b2
 	MOVE.W	#$002b,D0		;3dac6: 303c002b
 	MOVE.W	#$0060,D1		;3daca: 323c0060
-	JSR	LAB_0264		;3dace: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;3dace: 4eb90000ce0a
 	MOVE.W	LAB_0D86+2,EXT_00c9.W	;3dad4: 31f90004c2b62a0c
 	MOVE.W	LAB_0D88+2,EXT_00ca.W	;3dadc: 31f90004c2ba2a0e
 	NEG.W	EXT_00ca.W		;3dae4: 44782a0e
@@ -47585,7 +47591,7 @@ draw_everything_in_game:
 ; dashboard is a second bitplane set address
 	JSR	erase_screen		;414e0: 4eb90004a852
 	JSR	move_and_render_demo_motorcycle		;414e6: 4eb90000cf4e
-	JSR	draw_road		;414ec: 4eb90004c624
+	JSR	draw_road_and_fences		;414ec: 4eb90004c624
 	JSR	LAB_025C		;414f2: 4eb90000cd2c
 	BSR.W	LAB_0BBD		;414f8: 61005330
 	JSR	lb_4b720		;414fc: 4eb90004b720
@@ -47834,7 +47840,7 @@ LAB_0992:
 	JSR	LAB_0CCE		;418c4: 4eb90004ae3c
 	BSR.W	LAB_099B		;418ca: 6100018c
 	JSR	move_and_render_demo_motorcycle		;418ce: 4eb90000cf4e
-	JSR	draw_road		;418d4: 4eb90004c624
+	JSR	draw_road_and_fences		;418d4: 4eb90004c624
 	JSR	LAB_025C		;418da: 4eb90000cd2c
 	BSR.W	LAB_0BBD		;418e0: 61004f48
 	JSR	lb_4b720		;418e4: 4eb90004b720
@@ -49499,7 +49505,7 @@ LAB_0A1E:
 	CLR.W	EXT_00e7.W		;42f74: 42782ad4
 	MOVE.W	#$0026,D0		;42f78: 303c0026
 	CLR.W	D1			;42f7c: 4241
-	JSR	LAB_0264		;42f7e: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;42f7e: 4eb90000ce0a
 	ADDI.W	#$0014,LAB_093D		;42f84: 067900140003da5c
 	RTS				;42f8c: 4e75
 autolab_00042f8e:
@@ -53662,13 +53668,13 @@ LAB_0BBF:
 	MOVE.W	D0,EXT_00e6.W		;46990: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;46994: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;46998: 31c22ad8
-	JSR	LAB_023C		;4699c: 4eb90000c8b2
+	JSR	rotate_shit		;4699c: 4eb90000c8b2
 	MOVEM.L	(A7),D7/A0-A3		;469a2: 4cd70f80
 	MOVE.W	0(A3,D7.W),D0		;469a6: 30337000
 	ASR.W	#1,D0			;469aa: e240
 	ADDI.W	#$0049,D0		;469ac: 06400049
 	CLR.W	D1			;469b0: 4241
-	JSR	LAB_0264		;469b2: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;469b2: 4eb90000ce0a
 	MOVEM.L	(A7)+,D7/A0-A3		;469b8: 4cdf0f80
 LAB_0BC0:
 	LEA	LAB_0BC8+2(PC),A0	;469bc: 41fa0102
@@ -53710,13 +53716,13 @@ LAB_0BC0:
 	MOVE.W	D0,EXT_00e6.W		;46a46: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;46a4a: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;46a4e: 31c22ad8
-	JSR	LAB_023C		;46a52: 4eb90000c8b2
+	JSR	rotate_shit		;46a52: 4eb90000c8b2
 	MOVEM.L	(A7),D7/A0-A3		;46a58: 4cd70f80
 	MOVE.W	0(A3,D7.W),D0		;46a5c: 30337000
 	ASR.W	#1,D0			;46a60: e240
 	ADDI.W	#$0049,D0		;46a62: 06400049
 	CLR.W	D1			;46a66: 4241
-	JSR	LAB_0264		;46a68: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;46a68: 4eb90000ce0a
 	MOVEM.L	(A7)+,D7/A0-A3		;46a6e: 4cdf0f80
 LAB_0BC1:
 	ADDQ.W	#2,D7			;46a72: 5447
@@ -53790,10 +53796,10 @@ LAB_0BCC:
 	MOVE.W	D1,EXT_00e7.W		;46b44: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;46b48: 31c22ad8
 	MOVEM.L	D7/A0-A3,-(A7)		;46b4c: 48e701f0
-	JSR	LAB_023C		;46b50: 4eb90000c8b2
+	JSR	rotate_shit		;46b50: 4eb90000c8b2
 	MOVE.W	#$0032,D0		;46b56: 303c0032
 	CLR.W	D1			;46b5a: 4241
-	JSR	LAB_0264		;46b5c: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;46b5c: 4eb90000ce0a
 	MOVEM.L	(A7)+,D7/A0-A3		;46b62: 4cdf0f80
 LAB_0BCD:
 	ADDQ.W	#2,D7			;46b66: 5447
@@ -54751,6 +54757,7 @@ LAB_0C29:
 	CMPI.W	#$000a,D7		;477ba: 0c47000a
 	BNE.W	LAB_0C28		;477be: 6600ff7c
 	RTS				;477c2: 4e75
+	; dead code
 	LEA	table_03AF,A0		;477c4: 41f900017f14
 	MOVE.W	LAB_0D59(PC),D1		;477ca: 323a4a84
 	ADD.W	D1,D1			;477ce: d241
@@ -58896,7 +58903,7 @@ LAB_0CB8:
 	MOVEA.L	(A7)+,A0		;4ab56: 205f
 	MOVE.W	2(A0),D0		;4ab58: 30280002
 	MOVE.W	D0,EXT_00e7.W		;4ab5c: 31c02ad4
-	JSR	LAB_023C		;4ab60: 4eb90000c8b2
+	JSR	rotate_shit		;4ab60: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4ab66: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4ab6a: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4ab6e: 34382ad8
@@ -59012,7 +59019,7 @@ LAB_0CC7:
 	JSR	LAB_0230		;4acfe: 4eb90000c7ba
 	MOVE.W	D4,EXT_00e6.W		;4ad04: 31c42ad0
 	MOVE.W	D5,EXT_00e8.W		;4ad08: 31c52ad8
-	JSR	LAB_023C		;4ad0c: 4eb90000c8b2
+	JSR	rotate_shit		;4ad0c: 4eb90000c8b2
 	MOVE.W	#$000b,D0		;4ad12: 303c000b
 	MOVE.W	EXT_00f6.W,D1		;4ad16: 32382afc
 	ANDI.W	#$03ff,D1		;4ad1a: 024103ff
@@ -59081,12 +59088,12 @@ LAB_0CCA:
 	MOVE.W	D4,EXT_00e6.W		;4adc6: 31c42ad0
 	MOVE.W	D1,EXT_00e7.W		;4adca: 31c12ad4
 	MOVE.W	D5,EXT_00e8.W		;4adce: 31c52ad8
-	JSR	LAB_023C		;4add2: 4eb90000c8b2
+	JSR	rotate_shit		;4add2: 4eb90000c8b2
 	MOVEQ	#31,D0			;4add8: 701f
 	MOVE.W	LAB_0D6E+2,D1		;4adda: 32390004c282
 	ANDI.W	#$03ff,D1		;4ade0: 024103ff
 	ORI.W	#$8000,D1		;4ade4: 00418000
-	JSR	LAB_0264		;4ade8: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4ade8: 4eb90000ce0a
 LAB_0CCB:
 	ADDI.W	#$0001,LAB_0D6E+2	;4adee: 067900010004c282
 	RTS				;4adf6: 4e75
@@ -59177,13 +59184,13 @@ LAB_0CD0:
 	MOVE.W	D2,EXT_00e8.W		;4af06: 31c22ad8
 	MOVE.W	8(A0),-(A7)		;4af0a: 3f280008
 	MOVE.W	6(A0),-(A7)		;4af0e: 3f280006
-	JSR	LAB_023C		;4af12: 4eb90000c8b2
+	JSR	rotate_shit		;4af12: 4eb90000c8b2
 	MOVE.W	(A7)+,D0		;4af18: 301f
 	MOVE.W	(A7)+,D1		;4af1a: 321f
 	MOVE.W	D1,EXT_00ce.W		;4af1c: 31c12a16
 	ANDI.W	#$03ff,EXT_00ce.W	;4af20: 027803ff2a16
 	MOVE.W	D0,-(A7)		;4af26: 3f00
-	JSR	LAB_0264		;4af28: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4af28: 4eb90000ce0a
 	MOVE.W	(A7)+,D0		;4af2e: 301f
 	ADD.W	D0,D0			;4af30: d040
 	ADD.W	D0,D0			;4af32: d040
@@ -59467,7 +59474,7 @@ LAB_0CEF:
 	MOVE.W	D0,EXT_00e6.W		;4b280: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;4b284: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;4b288: 31c22ad8
-	JSR	LAB_023C		;4b28c: 4eb90000c8b2
+	JSR	rotate_shit		;4b28c: 4eb90000c8b2
 	MOVE.W	#$0030,D0		;4b292: 303c0030
 	CLR.W	EXT_00d5.W		;4b296: 42782a6c
 	JSR	LAB_027A		;4b29a: 4eb90000d06a
@@ -59615,10 +59622,10 @@ LAB_0CFA:
 	MOVE.W	D2,EXT_00e8.W		;4b484: 31c22ad8
 	MOVE.W	0(A3,D6.W),D0		;4b488: 30336000
 	MOVE.W	D0,-(A7)		;4b48c: 3f00
-	JSR	LAB_023C		;4b48e: 4eb90000c8b2
+	JSR	rotate_shit		;4b48e: 4eb90000c8b2
 	MOVE.W	(A7)+,D0		;4b494: 301f
 	MOVE.W	#$0080,D1		;4b496: 323c0080
-	JSR	LAB_0264		;4b49a: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4b49a: 4eb90000ce0a
 	MOVEM.L	(A7)+,D6/A0-A6		;4b4a0: 4cdf7f40
 LAB_0CFB:
 	ADDQ.W	#2,D6			;4b4a4: 5446
@@ -59853,7 +59860,7 @@ LAB_0D0E:
 	MOVE.W	D0,EXT_00e6.W		;4b7da: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;4b7de: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;4b7e2: 31c22ad8
-	JSR	LAB_023C		;4b7e6: 4eb90000c8b2
+	JSR	rotate_shit		;4b7e6: 4eb90000c8b2
 	MOVE.W	#$0400,D0		;4b7ec: 303c0400
 	SUB.W	EXT_00cc.W,D0		;4b7f0: 90782a12
 	MOVE.W	D0,EXT_00c9.W		;4b7f4: 31c02a0c
@@ -59877,7 +59884,7 @@ LAB_0D0E:
 	MOVEM.L	(A7),D7/A0-A5		;4b836: 4cd73f80
 	MOVE.W	#$0026,D0		;4b83a: 303c0026
 	ADD.W	D7,D0			;4b83e: d047
-	JSR	LAB_0264		;4b840: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4b840: 4eb90000ce0a
 	TST.W	LAB_0D15		;4b846: 4a790004b982
 	BEQ.S	LAB_0D0F		;4b84c: 6772
 	MOVEM.L	(A7),D7/A0-A5		;4b84e: 4cd73f80
@@ -59906,10 +59913,10 @@ LAB_0D0E:
 	MOVE.W	0(A0,D7.W),D0		;4b89e: 30307000
 	ADDI.W	#$0038,D0		;4b8a2: 06400038
 	MOVE.W	D0,-(A7)		;4b8a6: 3f00
-	JSR	LAB_023C		;4b8a8: 4eb90000c8b2
+	JSR	rotate_shit		;4b8a8: 4eb90000c8b2
 	MOVE.W	(A7)+,D0		;4b8ae: 301f
 	MOVEQ	#-1,D1			;4b8b0: 72ff
-	JSR	LAB_0264		;4b8b2: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4b8b2: 4eb90000ce0a
 	MOVE.W	#$000e,LAB_03A0		;4b8b8: 33fc000e00017e20
 LAB_0D0F:
 	MOVEM.L	(A7)+,D7/A0-A5		;4b8c0: 4cdf3f80
@@ -59959,10 +59966,10 @@ LAB_0D13:
 	MOVE.W	D0,EXT_00e6.W		;4b960: 31c02ad0
 	MOVE.W	D1,EXT_00e7.W		;4b964: 31c12ad4
 	MOVE.W	D2,EXT_00e8.W		;4b968: 31c22ad8
-	JSR	LAB_023C		;4b96c: 4eb90000c8b2
+	JSR	rotate_shit		;4b96c: 4eb90000c8b2
 	MOVE.W	#$0026,D0		;4b972: 303c0026
 	MOVE.W	#$0020,D1		;4b976: 323c0020
-	JSR	LAB_0264		;4b97a: 4eb90000ce0a
+	JSR	display_3d_scenery_objects		;4b97a: 4eb90000ce0a
 LAB_0D14:
 	RTS				;4b980: 4e75
 LAB_0D15:
@@ -61035,11 +61042,11 @@ LAB_0DF3:
 	DC.W	$ff00			;4c61e
 LAB_0DF4:
 	dc.l   0			;4c620: 00000000
-draw_road:
+draw_road_and_fences:
 	CLR.W	EXT_00e6.W		;4c624: 42782ad0
 	MOVE.W	#$0600,EXT_00e7.W	;4c628: 31fc06002ad4
 	CLR.W	EXT_00e8.W		;4c62e: 42782ad8
-	JSR	LAB_023C		;4c632: 4eb90000c8b2
+	JSR	rotate_shit		;4c632: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4c638: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4c63c: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4c640: 34382ad8
@@ -61122,7 +61129,7 @@ LAB_0DF9:
 	CMPI.W	#$3400,D6		;4c762: 0c463400
 	BGE.W	LAB_0DFC		;4c766: 6c00006c
 LAB_0DFA:
-	JSR	LAB_023C		;4c76a: 4eb90000c8b2
+	JSR	rotate_shit		;4c76a: 4eb90000c8b2
 	TST.W	LAB_0A46+2		;4c770: 4a790004331a
 	BNE.S	LAB_0DFB		;4c776: 660a
 	CMPI.W	#$fa24,EXT_00e8.W	;4c778: 0c78fa242ad8
@@ -61211,7 +61218,7 @@ LAB_0E00:
 	CMPI.W	#$3400,D6		;4c8be: 0c463400
 	BGE.W	LAB_0E03		;4c8c2: 6c00006c
 LAB_0E01:
-	JSR	LAB_023C		;4c8c6: 4eb90000c8b2
+	JSR	rotate_shit		;4c8c6: 4eb90000c8b2
 	TST.W	LAB_0A46+2		;4c8cc: 4a790004331a
 	BNE.S	LAB_0E02		;4c8d2: 660a
 	CMPI.W	#$fa24,EXT_00e8.W	;4c8d4: 0c78fa242ad8
@@ -61272,7 +61279,7 @@ autolab_0004c992:
 	CLR.W	EXT_00e6.W		;4c9a2: 42782ad0
 	MOVE.W	#$0180,EXT_00e7.W	;4c9a6: 31fc01802ad4
 	CLR.W	EXT_00e8.W		;4c9ac: 42782ad8
-	JSR	LAB_023C		;4c9b0: 4eb90000c8b2
+	JSR	rotate_shit		;4c9b0: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,LAB_0E0A	;4c9b6: 33f82ad00004cab0
 	MOVE.W	EXT_00e7.W,LAB_0E0A+2	;4c9be: 33f82ad40004cab2
 	MOVE.W	EXT_00e8.W,LAB_0E0C	;4c9c6: 33f82ad80004cab4
@@ -61286,7 +61293,7 @@ autolab_0004c9e8:
 	CLR.W	EXT_00e6.W		;4c9f8: 42782ad0
 	MOVE.W	#$0280,EXT_00e7.W	;4c9fc: 31fc02802ad4
 	CLR.W	EXT_00e8.W		;4ca02: 42782ad8
-	JSR	LAB_023C		;4ca06: 4eb90000c8b2
+	JSR	rotate_shit		;4ca06: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,LAB_0E0A	;4ca0c: 33f82ad00004cab0
 	MOVE.W	EXT_00e7.W,LAB_0E0A+2	;4ca14: 33f82ad40004cab2
 	MOVE.W	EXT_00e8.W,LAB_0E0C	;4ca1c: 33f82ad80004cab4
@@ -61300,14 +61307,14 @@ autolab_0004ca3e:
 	CLR.W	EXT_00e6.W		;4ca4e: 42782ad0
 	MOVE.W	#$0180,EXT_00e7.W	;4ca52: 31fc01802ad4
 	CLR.W	EXT_00e8.W		;4ca58: 42782ad8
-	JSR	LAB_023C		;4ca5c: 4eb90000c8b2
+	JSR	rotate_shit		;4ca5c: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,LAB_0E0A	;4ca62: 33f82ad00004cab0
 	MOVE.W	EXT_00e7.W,LAB_0E0A+2	;4ca6a: 33f82ad40004cab2
 	MOVE.W	EXT_00e8.W,LAB_0E0C	;4ca72: 33f82ad80004cab4
 	CLR.W	EXT_00e6.W		;4ca7a: 42782ad0
 	MOVE.W	#$0300,EXT_00e7.W	;4ca7e: 31fc03002ad4
 	CLR.W	EXT_00e8.W		;4ca84: 42782ad8
-	JSR	LAB_023C		;4ca88: 4eb90000c8b2
+	JSR	rotate_shit		;4ca88: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,LAB_0E0C+2	;4ca8e: 33f82ad00004cab6
 	MOVE.W	EXT_00e7.W,LAB_0E0E	;4ca96: 33f82ad40004cab8
 	MOVE.W	EXT_00e8.W,LAB_0E0E+2	;4ca9e: 33f82ad80004caba
@@ -62926,7 +62933,7 @@ autolab_0004e27a:
 	CLR.W	EXT_00e6.W		;4e27a: 42782ad0
 	MOVE.W	#$012c,EXT_00e7.W	;4e27e: 31fc012c2ad4
 	CLR.W	EXT_00e8.W		;4e284: 42782ad8
-	JSR	LAB_023C		;4e288: 4eb90000c8b2
+	JSR	rotate_shit		;4e288: 4eb90000c8b2
 	MOVE.W	EXT_00e8.W,-(A7)	;4e28e: 3f382ad8
 	MOVE.W	EXT_00e7.W,-(A7)	;4e292: 3f382ad4
 	MOVE.W	EXT_00e6.W,-(A7)	;4e296: 3f382ad0
@@ -63265,7 +63272,7 @@ LAB_0E92:
 	SUB.W	D5,EXT_00e6.W		;4e6a8: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4e6ac: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4e6b0: 9f782ad8
-	JSR	LAB_023C		;4e6b4: 4eb90000c8b2
+	JSR	rotate_shit		;4e6b4: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4e6ba: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4e6be: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4e6c2: 34382ad8
@@ -63288,7 +63295,7 @@ LAB_0E92:
 	SUB.W	D5,EXT_00e6.W		;4e718: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4e71c: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4e720: 9f782ad8
-	JSR	LAB_023C		;4e724: 4eb90000c8b2
+	JSR	rotate_shit		;4e724: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4e72a: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4e72e: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4e732: 34382ad8
@@ -63311,7 +63318,7 @@ LAB_0E92:
 	SUB.W	D5,EXT_00e6.W		;4e788: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4e78c: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4e790: 9f782ad8
-	JSR	LAB_023C		;4e794: 4eb90000c8b2
+	JSR	rotate_shit		;4e794: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4e79a: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4e79e: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4e7a2: 34382ad8
@@ -63334,7 +63341,7 @@ LAB_0E92:
 	SUB.W	D5,EXT_00e6.W		;4e7fe: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4e802: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4e806: 9f782ad8
-	JSR	LAB_023C		;4e80a: 4eb90000c8b2
+	JSR	rotate_shit		;4e80a: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,D0		;4e810: 30382ad0
 	MOVE.W	EXT_00e7.W,D1		;4e814: 32382ad4
 	MOVE.W	EXT_00e8.W,D2		;4e818: 34382ad8
@@ -64547,7 +64554,7 @@ LAB_0E9F:
 	SUB.W	D5,EXT_00e6.W		;4f9aa: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4f9ae: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4f9b2: 9f782ad8
-	JSR	LAB_023C		;4f9b6: 4eb90000c8b2
+	JSR	rotate_shit		;4f9b6: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,EXT_00a3.W	;4f9bc: 31f82ad01c00
 	MOVE.W	EXT_00e7.W,EXT_00a9.W	;4f9c2: 31f82ad41e00
 	MOVE.W	EXT_00e8.W,EXT_00b3.W	;4f9c8: 31f82ad82000
@@ -64563,7 +64570,7 @@ LAB_0E9F:
 	SUB.W	D5,EXT_00e6.W		;4fa04: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4fa08: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4fa0c: 9f782ad8
-	JSR	LAB_023C		;4fa10: 4eb90000c8b2
+	JSR	rotate_shit		;4fa10: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,EXT_00a4.W	;4fa16: 31f82ad01c02
 	MOVE.W	EXT_00e7.W,EXT_00aa.W	;4fa1c: 31f82ad41e02
 	MOVE.W	EXT_00e8.W,EXT_00b4.W	;4fa22: 31f82ad82002
@@ -64579,7 +64586,7 @@ LAB_0E9F:
 	SUB.W	D5,EXT_00e6.W		;4fa5e: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4fa62: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4fa66: 9f782ad8
-	JSR	LAB_023C		;4fa6a: 4eb90000c8b2
+	JSR	rotate_shit		;4fa6a: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,EXT_00a5.W	;4fa70: 31f82ad01c04
 	MOVE.W	EXT_00e7.W,EXT_00ab.W	;4fa76: 31f82ad41e04
 	MOVE.W	EXT_00e8.W,EXT_00b5.W	;4fa7c: 31f82ad82004
@@ -64595,7 +64602,7 @@ LAB_0E9F:
 	SUB.W	D5,EXT_00e6.W		;4fab8: 9b782ad0
 	SUB.W	D6,EXT_00e7.W		;4fabc: 9d782ad4
 	SUB.W	D7,EXT_00e8.W		;4fac0: 9f782ad8
-	JSR	LAB_023C		;4fac4: 4eb90000c8b2
+	JSR	rotate_shit		;4fac4: 4eb90000c8b2
 	MOVE.W	EXT_00e6.W,EXT_00a6.W	;4faca: 31f82ad01c06
 	MOVE.W	EXT_00e7.W,EXT_00ac.W	;4fad0: 31f82ad41e06
 	MOVE.W	EXT_00e8.W,EXT_00b6.W	;4fad6: 31f82ad82006
