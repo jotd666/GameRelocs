@@ -1,10 +1,6 @@
 # FastRedZone
 Reverse engineered Red Zone (1992 Psygnosis) to relocate it and make it faster
 
-issues:
-
-- full championship: lockup (keyboard not working???)
-
 
 improvements:
 
@@ -36,7 +32,6 @@ plan:
 
 issues:
 
-- small glitches on road
-- find why default options (full detail) aren't default
-- dashboard proper bitplane address
-- whd select detail mode
+- small glitches on road (also in original!!)
+- dashboard show corrupt at start (also in original!!)
+- full championship: crash forgotten chip reloc?

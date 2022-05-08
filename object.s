@@ -13611,7 +13611,7 @@ lb_10872:
 lb_10880:
 	dc.l	lb_0d8b2	;10880
 lb_10884:
-	dc.l	lb_4c48e+2	;10884
+	dc.l	current_settings	;10884
 	dc.w	$0004	;10888
 lb_1088a:
 	dc.l	lb_109c8	;1088a
@@ -17054,7 +17054,7 @@ lb_123a4:
 lb_123b2:
 	dc.l	lb_0d8b2	;123b2
 lb_123b6:
-	dc.l	lb_4c490	;123b6
+	dc.l	current_settings	;123b6
 	dc.w	$0004	;123ba
 lb_123bc:
 	dc.l	lb_12774	;123bc
@@ -17564,7 +17564,7 @@ lb_127a0:
 lb_127ae:
 	dc.l	lb_0d8b2	;127ae
 lb_127b2:
-	dc.l	lb_4c490	;127b2
+	dc.l	current_settings	;127b2
 	dc.w	$0004	;127b6
 lb_127b8:
 	dc.l	lb_12b70	;127b8
@@ -20190,7 +20190,7 @@ lb_13c22:
 lb_13c30:
 	dc.l	lb_0d8b2	;13c30
 lb_13c34:
-	dc.l	lb_4c490	;13c34
+	dc.l	current_settings	;13c34
 	dc.w	$0004	;13c38
 lb_13c3a:
 	dc.l	lb_13f4a	;13c3a
@@ -36268,9 +36268,7 @@ lb_2364e:
 display_cpu_type:
 	move.l	options,d7
 	btst	#1,d7
-	beq.b	.disp
-	rts
-.disp	
+	bne	skip_disp	
 	ENDC
 	
 	JSR	lb_0a6d4		;2364e: 4eb90000a6d4
@@ -36293,8 +36291,16 @@ display_cpu_type:
 	MOVE.L	#$000520ce,lb_23c0a	;236b2: 23fc000520ce00023c0a
 	ADD.L	D1,lb_23c0a		;236bc: d3b900023c0a
 	JSR	lb_23ade		;236c2: 4eb900023ade
+
 	MOVE.W	cpu_type_9B4.W,D0		;236c8: 303809b4
+	IFD	WA
+	cmp.w	#8,d0	; limit to 4
+	bne.b	.no040
+	move.w	#4,d0
+.no040
+	ENDC
 	LEA	lb_23748(PC),A0		;236cc: 41fa007a
+	; pick proper CPU image
 	MOVEA.L	#$0005a0ca,A2		;236d0: 247c0005a0ca
 	ADDA.L	0(A0,D0.W),A2		;236d6: d5f00000
 	MOVEA.L	EXT_013b.W,A1		;236da: 22785f1c
@@ -36312,10 +36318,11 @@ lb_236e8:
 	LEA	lb_23c1e,A4		;23712: 49f900023c1e
 	LEA	lb_23c1e,A5		;23718: 4bf900023c1e
 	JSR	lb_0a460		;2371e: 4eb90000a460
-	LEA	lb_237e2,A0		;23724: 41f9000237e2
+skip_disp	
+	LEA	settings_table,A0		;23724: 41f9000237e2
 	MOVE.W	cpu_type_9B4.W,D0		;2372a: 303809b4
 	MOVEA.L	0(A0,D0.W),A0		;2372e: 20700000
-	LEA	lb_4c48e+2,A1		;23732: 43f90004c490
+	LEA	current_settings,A1		;23732: 43f90004c490
 	MOVEQ	#17,D7			;23738: 7e11
 lb_2373a:
 	MOVE.W	(A0)+,(A1)+		;2373a: 32d8
@@ -36401,38 +36408,44 @@ lb_237dc:
 	DC.W	$756c			;237dc
 	MOVEQ	#115,D2			;237de: 7473
 	MOVE.L	D0,D7			;237e0: 2e00
-lb_237e2:
-	dc.l	lb_237ea
-	dc.l	lb_2380e
-lb_237ea:
+settings_table:
+	dc.l	settings_68000
+	dc.l	settings_68020
+	IFD	WA
+	dc.l	settings_68040	
+	ENDC
+settings_68000:
 	ORI.B	#$04,D0			;237ea: 00000004
-lb_237ee:
 	dc.l  0			;237ee: 00000000
-lb_237f2:
 	dc.l  0			;237f2: 00000000
-lb_237f6:
 	ORI.B	#$00,D4			;237f6: 00040000
-lb_237fa:
 	dc.l  0			;237fa: 00000000
 	dc.l  0			;237fe: 00000000
 	ORI.B	#$04,D4			;23802: 00040004
 	ORI.B	#$04,D4			;23806: 00040004
-lb_2380a:
 	dc.l  0			;2380a: 00000000
-lb_2380e
-	ORI.B	#$04,D4			;2380e: 00040004
-	ORI.B	#$00,D4			;23812: 00040000
-lb_23816:
-	ORI.B	#$04,D4			;23816: 00040004
-lb_2381a:
-	ORI.B	#$04,D4			;2381a: 00040004
-	ORI.B	#$00,D4			;2381e: 00040000
-lb_23822:
-	dc.l  0			;23822: 00000000
-	ORI.B	#$04,D4			;23826: 00040004
-lb_2382a:
-	ORI.B	#$04,D4			;2382a: 00040004
-	dc.l  0			;2382e: 00000000
+settings_68020
+	dc.l	$00040004		;2380e: 
+	dc.l	$00040000		;23812: 
+	dc.l	$00040004		;23816: 
+	dc.l	$00040004		;2381a: 
+	dc.l	$00040000		;2381e: 
+	dc.l	$00000000		;23822: 
+	dc.l	$00040004		;23826: 
+	dc.l	$00040004		;2382a: 
+	dc.l	$00000000		;2382e: 
+		IFD	WA
+settings_68040
+	dc.l	$00040004		;2380e: 
+	dc.l	$00040004		;23812: 
+	dc.l	$00040004		;23816: 
+	dc.l	$00040004		;2381a: 
+	dc.l	$00040004		;2381e: 
+	dc.l	$00000004		;23822: control realism off
+	dc.l	$00040004		;23826: 
+	dc.l	$00040004		;2382a: 
+	dc.l	$00000000		;2382e: 
+	ENDC
 lb_23832:
 	JSR	lb_0a6d4		;23832: 4eb90000a6d4
 	MOVE.W	#$0000,EXT_0134.W	;23838: 31fc00005f0a
@@ -41359,7 +41372,7 @@ lb_3a118:
 	DBF	D7,lb_3a118		;3a11c: 51cffffa
 	MOVE.W	#$8020,lb_245ac+2	;3a120: 33fc8020000245ae
 lb_3a128:
-	LEA	lb_4c48e+2,A5		;3a128: 4bf90004c490
+	LEA	current_settings,A5		;3a128: 4bf90004c490
 	LEA	EXT_0167,A6		;3a12e: 4df900077d04
 	MOVEQ	#6,D7			;3a134: 7e06
 lb_3a136:
@@ -41403,7 +41416,7 @@ lb_3a14c:
 	JSR	lb_2c10e		;3a1c4: 4eb90002c10e
 	CMPI.W	#$0050,EXT_0071.W	;3a1ca: 0c780050090a
 	BLT.S	lb_3a1e4		;3a1d0: 6d12
-	EORI.W	#$0004,lb_4c48e+2	;3a1d2: 0a7900040004c490
+	EORI.W	#$0004,current_settings	;3a1d2: 0a7900040004c490
 	BNE.S	lb_3a24e		;3a1da: 6672
 	CLR.W	lb_4c4a6+2		;3a1dc: 42790004c4a8
 	BRA.S	lb_3a24e		;3a1e2: 606a
@@ -42038,7 +42051,7 @@ lb_3aa06:
 	dc.l  0			;3aa42: 00000000
 lb_3aa46:
 	CLR.L	D7			;3aa46: 4287
-	MOVE.W	lb_4c48e+2,D0		;3aa48: 30390004c490
+	MOVE.W	current_settings,D0		;3aa48: 30390004c490
 	LSR.W	#2,D0			;3aa4e: e448
 	ANDI.W	#$0001,D0		;3aa50: 02400001
 	OR.W	D0,D7			;3aa54: 8e40
@@ -42194,7 +42207,7 @@ lb_3ac28:
 	RTS				;3ac60: 4e75
 lb_3ac62:
 	MOVE.L	lb_3afc2+2,D0		;3ac62: 20390003afc4
-	LEA	lb_4c48e+2,A0		;3ac68: 41f90004c490
+	LEA	current_settings,A0		;3ac68: 41f90004c490
 	MOVEQ	#17,D7			;3ac6e: 7e11
 lb_3ac70:
 	LSR.L	#1,D0			;3ac70: e288
@@ -45210,6 +45223,12 @@ lb_3cf76:
 	CMPA.L	#$00032110,A0		;3cf7a: b1fc00032110
 	BLT.S	lb_3cf76		;3cf80: 6df4
 	MOVE.W	cpu_type_9B4.W,D0		;3cf82: 303809b4
+	IFD	WA
+	cmp.w	#8,d0	; limit to 4
+	bne.b	.no040
+	move.w	#4,d0
+.no040
+	ENDC
 	EORI.W	#$0004,D0		;3cf86: 0a400004
 	MOVE.W	D0,lb_4a7ca+2		;3cf8a: 33c00004a7cc
 	CLR.W	lb_3cec0		;3cf90: 42790003cec0
@@ -55573,7 +55592,7 @@ lb_4682a:
 	BNE.W	lb_46a7c		;4683a: 66000240
 	TST.W	lb_4c476+2		;4683e: 4a790004c478
 	BNE.W	lb_46a7c		;46844: 66000236
-	TST.W	lb_4c48e+2		;46848: 4a790004c490
+	TST.W	current_settings		;46848: 4a790004c490
 	BEQ.W	lb_46a7c		;4684e: 6700022c
 	MOVE.W	lb_4c2bc+2(PC),D2	;46852: 343a5a6a
 	ADDI.W	#$0100,D2		;46856: 06420100
@@ -62913,7 +62932,7 @@ lb_4c48a:
 	dc.l  0			;4c48a: 00000000
 lb_4c48e:
 	dc.w	0			;4c48e: 00000000
-lb_4c490:
+current_settings:
 	dc.w	0
 lb_4c492:
 	ORI.B	#$00,D4			;4c492: 00040000
@@ -63711,7 +63730,7 @@ lb_4d070:
 lb_4d09a:
 	RTS				;4d09a: 4e75
 lb_4d09c:
-	TST.W	lb_4c48e+2		;4d09c: 4a790004c490
+	TST.W	current_settings		;4d09c: 4a790004c490
 	BEQ.W	lb_4d364		;4d0a2: 670002c0
 	MOVE.W	lb_4d648+2,D0		;4d0a6: 30390004d64a
 	MOVE.W	lb_4d654+2,D1		;4d0ac: 32390004d656
@@ -63916,7 +63935,7 @@ lb_4d364:
 	MOVE.W	lb_4d640(PC),EXT_00ac.W	;4d3a0: 31fa029e1e06
 	MOVE.W	lb_4d640+2(PC),EXT_00b6.W ;4d3a6: 31fa029a2006
 	MOVEQ	#14,D0			;4d3ac: 700e
-	TST.W	lb_4c48e+2		;4d3ae: 4a790004c490
+	TST.W	current_settings		;4d3ae: 4a790004c490
 	BNE.S	lb_4d3ca		;4d3b4: 6614
 	MOVE.W	lb_4d630,D1		;4d3b6: 32390004d630
 	EXT.L	D1			;4d3bc: 48c1
@@ -63932,7 +63951,7 @@ lb_4d3ca:
 	BEQ.S	lb_4d3e6		;4d3de: 6706
 	JSR	lb_08a4a		;4d3e0: 4eb900008a4a
 lb_4d3e6:
-	TST.W	lb_4c48e+2		;4d3e6: 4a790004c490
+	TST.W	current_settings		;4d3e6: 4a790004c490
 	BNE.S	lb_4d3f0		;4d3ec: 6602
 	RTS				;4d3ee: 4e75
 lb_4d3f0:
