@@ -8,6 +8,24 @@ chipdata_start = $520ca
 	IFD	WA
 		include	whdload.i
 		include	whdmacros.i
+FLUSHCACHE:MACRO
+	bsr	_flushcache
+	ENDM
+CHIP_SECTION:MACRO
+	SECTION	S_\1,CHIP,DATA
+	ENDM
+FAST_SECTION:MACRO
+	SECTION	S_\1,CODE	
+	ELSE
+blitz:MACRO	; empty macro
+	ENDM
+FLUSHCACHE:MACRO
+	ENDM
+CHIP_SECTION:MACRO
+	ENDM
+FAST_SECTION:MACRO
+	ENDM
+	
 	ENDC
 	
 EXT_0000	EQU	$0
@@ -144,7 +162,7 @@ EXT_0082	EQU	$9A2
 EXT_0083	EQU	$9A4
 EXT_0084	EQU	$9A6
 EXT_0085	EQU	$9B0
-EXT_0086	EQU	$9B4
+cpu_type_9B4	EQU	$9B4
 EXT_0087	EQU	$9B8
 EXT_0088	EQU	$A00
 EXT_0089	EQU	$AC8
@@ -2720,7 +2738,10 @@ lb_091d6:
 	CMPI.W	#$0010,D4		;091dc: 0c440010
 	BEQ.W	lb_0931c		;091e0: 6700013a
 	LEA	lb_09344+2(PC),A6	;091e4: 4dfa0160
+    ; SMC jump table, highly fishy!
+    ; done to avoid/unroll loops (Duff's device)
 	MOVE.W	0(A6,D4.W),lb_09200+2	;091e8: 33f6400000009202
+	FLUSHCACHE
 	MOVE.W	EXT_0148.W,D3		;091f0: 36385f50
 	MOVE.W	EXT_0149.W,D4		;091f4: 38385f52
 	MOVEA.W	EXT_014a.W,A6		;091f8: 3c785f54
@@ -2958,6 +2979,7 @@ lb_094d0:
 	LEA	lb_09536(PC),A6		;094ec: 4dfa0048
 	MOVE.W	0(A6,D4.W),lb_094fa+2	;094f0: 33f64000000094fc
 	MOVEQ	#-1,D3			;094f8: 76ff
+	FLUSHCACHE
 lb_094fa:
 	BRA.W	lb_09526		;094fa: 6000002a
 lb_094fe:
@@ -3154,6 +3176,7 @@ lb_096fe:
 	LEA	lb_0994a(PC),A6		;09758: 4dfa01f0
 	MOVE.W	0(A6,D4.W),lb_09766+2	;0975c: 33f6400000009768
 	MOVEA.L	(A7)+,A6		;09764: 2c5f
+	FLUSHCACHE
 lb_09766:
 	BRA.W	lb_098fa		;09766: 60000192
 lb_0976a:
@@ -4782,6 +4805,7 @@ lb_0a9fa:
 	MOVE.W	#$2c81,142(A6)		;0aa0c: 3d7c2c81008e
 	MOVE.W	#$2cc1,144(A6)		;0aa12: 3d7c2cc10090
 	RTS				;0aa18: 4e75
+	CHIP_SECTION	aa1a
 lb_0aa1a:
 	MOVEA.W	A4,A0			;0aa1a: 304c
 	MOVE.W	D0,-(A7)		;0aa1c: 3f00
@@ -4801,6 +4825,7 @@ lb_0aa1a:
 	dc.l  0			;0aa52: 00000000
 	dc.l  0			;0aa56: 00000000
 	dc.l  0			;0aa5a: 00000000
+	FAST_SECTION	aa5e
 	ADDQ.W	#1,EXT_00da.W		;0aa5e: 52782a92
 	CLR.W	lb_0b26c		;0aa62: 42790000b26c
 	ADDQ.W	#1,lb_0ab1c		;0aa68: 52790000ab1c
@@ -5689,6 +5714,7 @@ lb_0b486:
 	MOVE.L	6(A0),lb_09332		;0b4da: 23e8000600009332
 	MOVE.L	10(A0),lb_09336		;0b4e2: 23e8000a00009336
 	ADD.W	D0,D0			;0b4ea: d040
+	FLUSHCACHE
 	LEA	lb_0b50c,A0		;0b4ec: 41f90000b50c
 	MOVE.L	0(A0,D0.W),EXT_0148.W	;0b4f2: 21f000005f50
 	MOVE.L	2(A0,D0.W),EXT_0149.W	;0b4f8: 21f000025f52
@@ -5864,6 +5890,7 @@ lb_0b6ae:
 	MOVE.L	(A2)+,(A1)+		;0b6d6: 22da
 	MOVE.L	(A2)+,(A1)+		;0b6d8: 22da
 	MOVE.L	(A2)+,(A1)+		;0b6da: 22da
+	FLUSHCACHE
 	RTS				;0b6dc: 4e75
 lb_0b6de:
 	dc.l	lb_0b71e	;0b6de
@@ -30683,6 +30710,8 @@ lb_18edc:
 	dc.l  0			;196ae: 00000000
 	DC.W	$0000			;196b2
 	
+	CHIP_SECTION	196b4
+	
 lb_196b4
 	incbin	pic_196b4.bin
 lb_1bc34
@@ -35309,9 +35338,12 @@ lb_21d9a:
 	dc.l  0			;229aa: 00000000
 	dc.l  0			;229ae: 00000000
 	DC.W	$0000			;229b2
+	
+	FAST_SECTION	229b4
+	
 lb_229b4:
 	IFND	WA
-	CLR.W	EXT_0086.W		;229b4: 427809b4
+	CLR.W	cpu_type_9B4.W		;229b4: 427809b4
 	LEA	lb_229d2(PC),A0		;229b8: 41fa0018
 	MOVE.L	A0,ILLEG_OPC.W		;229bc: 21c80010
 	DC.W	$4e7a			;229c0
@@ -35319,7 +35351,8 @@ lb_229b4:
 	BCLR	#0,D0			;229c4: 08800000
 	DC.W	$4e7b			;229c8
 	DC.W	$0002			;229ca
-	MOVE.W	#$0004,EXT_0086.W	;229cc: 31fc000409b4
+	; 68020+: set flag
+	MOVE.W	#$0004,cpu_type_9B4.W	;229cc: 31fc000409b4
 lb_229d2:
 	MOVEA.L	#$00008000,A7		;229d2: 2e7c00008000
 	ELSE
@@ -35386,10 +35419,13 @@ lb_22a18:
 	MOVE.B	#$c0,CIAB_DDRA		;22a76: 13fc00c000bfd200
 	MOVE.B	#$ff,CIAB_PRB		;22a7e: 13fc00ff00bfd100
 	MOVE.B	#$ff,CIAB_DDRB		;22a86: 13fc00ff00bfd300
+	; skip floppy stuff
+	IFND	WA
 	ORI.B	#$ff,CIAB_PRB		;22a8e: 003900ff00bfd100
 	ANDI.B	#$87,CIAB_PRB		;22a96: 0239008700bfd100
 	ANDI.B	#$87,CIAB_PRB		;22a9e: 0239008700bfd100
 	ORI.B	#$ff,CIAB_PRB		;22aa6: 003900ff00bfd100
+	ENDC
 	LEA	lb_22ba2(PC),A0		;22aae: 41fa00f2
 	LEA	BUS_ERROR,A1		;22ab2: 43f900000008
 lb_22ab8:
@@ -35891,10 +35927,11 @@ lb_2312e:
 	CLR.W	D0			;23142: 4240
 	RTS				;23144: 4e75
 lb_23146:
-	DC.W	$0002			;23146
-	MOVE.W	(A2),2(A0)		;23148: 31520002
-	MOVE.W	A4,EXT_0002.W		;2314c: 31cc0002
-	MOVE.W	(A2),64(A0)		;23150: 31520040
+	dc.l	lb_23152
+	dc.l	lb_231cc
+	dc.l	lb_23152
+lb_23152:	
+	dc.w	$40		;23152: 31520040
 	DC.W	$ffff			;23154
 	DC.W	$ffff			;23156
 	DC.W	$ffff			;23158
@@ -35936,6 +35973,7 @@ lb_23146:
 	ORI.B	#$32,(A1)		;231c0: 00110032
 	ORI.B	#$31,(A5)		;231c4: 00150031
 	ORI.W	#$0041,D0		;231c8: 00400041
+lb_231cc:	
 	ORI.W	#$0000,D0		;231cc: 00400000
 	dc.l  0			;231d0: 00000000
 	dc.l  0			;231d4: 00000000
@@ -36274,7 +36312,7 @@ display_cpu_type:
 	MOVE.L	#$000520ce,lb_23c0a	;236b2: 23fc000520ce00023c0a
 	ADD.L	D1,lb_23c0a		;236bc: d3b900023c0a
 	JSR	lb_23ade		;236c2: 4eb900023ade
-	MOVE.W	EXT_0086.W,D0		;236c8: 303809b4
+	MOVE.W	cpu_type_9B4.W,D0		;236c8: 303809b4
 	LEA	lb_23748(PC),A0		;236cc: 41fa007a
 	MOVEA.L	#$0005a0ca,A2		;236d0: 247c0005a0ca
 	ADDA.L	0(A0,D0.W),A2		;236d6: d5f00000
@@ -36294,7 +36332,7 @@ lb_236e8:
 	LEA	lb_23c1e,A5		;23718: 4bf900023c1e
 	JSR	lb_0a460		;2371e: 4eb90000a460
 	LEA	lb_237e2,A0		;23724: 41f9000237e2
-	MOVE.W	EXT_0086.W,D0		;2372a: 303809b4
+	MOVE.W	cpu_type_9B4.W,D0		;2372a: 303809b4
 	MOVEA.L	0(A0,D0.W),A0		;2372e: 20700000
 	LEA	lb_4c48e+2,A1		;23732: 43f90004c490
 	MOVEQ	#17,D7			;23738: 7e11
@@ -37938,6 +37976,8 @@ lb_24a2a:
 	ADDQ.W	#4,A1			;24a2e: 5849
 	DBF	D7,lb_24a2a		;24a30: 51cffff8
 	RTS				;24a34: 4e75
+	
+	CHIP_SECTION	24a36
 lb_24a36:
 	DC.W	$00e0			;24a36
 lb_24a38:
@@ -42003,6 +42043,8 @@ lb_2854e:
 	dc.l  0			;28582: 00000000
 	dc.l  0			;28586: 00000000
 	dc.l  0			;2858a: 00000000
+	
+	FAST_SECTION	2858e
 	MOVEQ	#0,D1			;2858e: 7200
 	BSR.W	lb_28596		;28590: 61000004
 	MOVEQ	#1,D1			;28594: 7201
@@ -42460,6 +42502,7 @@ lb_2c1e4:
 	dc.l  0			;2c1e4: 00000000
 lb_2c1e8:
 	dc.l  0			;2c1e8: 00000000
+	CHIP_SECTION	2c1ec
 lb_2c1ec:
 	MOVEQ	#94,D5			;2c1ec: 7a5e
 	MOVEQ	#-117,D2		;2c1ee: 748b
@@ -68432,10 +68475,13 @@ lb_398f6:
 	CMP.L	(A4)+,D0		;39906: b09c
 	OR.L	(A4)+,D4		;39908: 889c
 	CMPA.W	D4,A0			;3990a: b0c4
-	ADDA.W	16889(A4),A4		;3990c: d8ec41f9
-	DC.W	$0002			;39910
-	MULU	lb_3c950(PC),D6		;39912: ccfa303c
-	ORI.L	#$323cffff,-(A7)	;39916: 00a7323cffff
+	dc.w	$d8ec		;3990c: d8ec
+	
+	FAST_SECTION	3990e
+
+	lea		lb_2ccfa,a0   ;3990e  seems unreached...
+    move.w #$00a7,d0
+    move.w #$ffff,d1
 	MOVEQ	#32,D2			;3991c: 7420
 	MOVE.W	#$0190,D3		;3991e: 363c0190
 	MOVEQ	#0,D4			;39922: 7800
@@ -72812,7 +72858,7 @@ lb_3cf76:
 	ADDI.B	#$80,(A0)+		;3cf76: 06180080
 	CMPA.L	#$00032110,A0		;3cf7a: b1fc00032110
 	BLT.S	lb_3cf76		;3cf80: 6df4
-	MOVE.W	EXT_0086.W,D0		;3cf82: 303809b4
+	MOVE.W	cpu_type_9B4.W,D0		;3cf82: 303809b4
 	EORI.W	#$0004,D0		;3cf86: 0a400004
 	MOVE.W	D0,lb_4a7ca+2		;3cf8a: 33c00004a7cc
 	CLR.W	lb_3cec0		;3cf90: 42790003cec0
@@ -73017,6 +73063,7 @@ lb_3d244:
 	MOVE.L	(A0),lb_3d354+2		;3d2a4: 23d00003d356
 	MOVE.L	D1,-(A7)		;3d2aa: 2f01
 	CLR.W	lb_3d35c		;3d2ac: 42790003d35c
+	FLUSHCACHE
 lb_3d2b2:
 	JSR	lb_1e23e+2		;3d2b2: 4eb90001e240
 	MOVE.L	(A7)+,D1		;3d2b8: 221f
@@ -73028,6 +73075,7 @@ lb_3d2ba:
 	MOVE.L	(A0),lb_3d2dc+2		;3d2cc: 23d00003d2de
 	MOVE.L	D1,-(A7)		;3d2d2: 2f01
 	MOVE.W	#$0001,lb_3d35c		;3d2d4: 33fc00010003d35c
+	FLUSHCACHE
 lb_3d2dc:
 	JSR	lb_1e23e+2		;3d2dc: 4eb90001e240
 	MOVE.L	(A7)+,D1		;3d2e2: 221f
@@ -73038,6 +73086,7 @@ lb_3d2dc:
 	MOVE.L	(A0),lb_3d306+2		;3d2f6: 23d00003d308
 	MOVE.L	D1,-(A7)		;3d2fc: 2f01
 	MOVE.W	#$0002,lb_3d35c		;3d2fe: 33fc00020003d35c
+	FLUSHCACHE
 lb_3d306:
 	JSR	lb_1e23e+2		;3d306: 4eb90001e240
 	MOVE.L	(A7)+,D1		;3d30c: 221f
@@ -73048,6 +73097,7 @@ lb_3d306:
 	MOVE.L	(A0),lb_3d330+2		;3d320: 23d00003d332
 	MOVE.L	D1,-(A7)		;3d326: 2f01
 	MOVE.W	#$0003,lb_3d35c		;3d328: 33fc00030003d35c
+	FLUSHCACHE
 lb_3d330:
 	JSR	lb_1e23e+2		;3d330: 4eb90001e240
 	MOVE.L	(A7)+,D1		;3d336: 221f
@@ -83438,6 +83488,10 @@ lb_46bfe:
 	ANDI.W	#$03ff,D0		;46c18: 024003ff
 	BNE.W	lb_46d4a		;46c1c: 66000130
 	MOVE.W	#$8020,lb_24a58		;46c20: 33fc802000024a58
+	IFD	WA
+	lea		lb_196b4,a0
+	bsr		set_dash_bitplanes
+	ELSE	
 	MOVE.W	#$0001,lb_24c9c		;46c28: 33fc000100024c9c
 	MOVE.W	#$96b4,lb_24ca0		;46c30: 33fc96b400024ca0
 	MOVE.W	#$0001,lb_24ca4		;46c38: 33fc000100024ca4
@@ -83446,6 +83500,7 @@ lb_46bfe:
 	MOVE.W	#$a974,lb_24cb0		;46c50: 33fca97400024cb0
 	MOVE.W	#$0001,lb_24cb4		;46c58: 33fc000100024cb4
 	MOVE.W	#$b2d4,lb_24cb8		;46c60: 33fcb2d400024cb8
+	ENDC
 	MOVE.W	#$8020,lb_24d3c		;46c68: 33fc802000024d3c
 	LEA	lb_25fee,A0		;46c70: 41f900025fee
 	LEA	lb_2808e,A1		;46c76: 43f90002808e
@@ -83509,6 +83564,32 @@ lb_46d3e:
 lb_46d46:
 	dc.l	lb_50cb6
 	dc.l	lb_50cf6
+	IFD	WA
+
+set_dash_bitplanes:	
+	move.l	a0,d0
+	swap	d0
+	MOVE.W	d0,lb_24c9c		;46c28: 33fc0001000
+	swap	d0
+	MOVE.W	d0,lb_24ca0		;46c30: 33fc96b4000
+	add.w	#2400,d0
+	swap	d0
+	MOVE.W	d0,lb_24ca4		;46c38: 33fc0001000
+	swap	d0
+	MOVE.W	d0,lb_24ca8		;46c40: 33fca014000
+	add.w	#2400,d0
+	swap	d0
+	MOVE.W	d0,lb_24cac		;46c48: 33fc0001000
+	swap	d0
+	MOVE.W	d0,lb_24cb0		;46c50: 33fca974000
+	add.w	#2400,d0
+	swap	d0
+	MOVE.W	d0,lb_24cb4		;46c58: 33fc000100024cb4
+	swap	d0
+	MOVE.W	d0,lb_24cb8		;46c60: 33fcb2d4000
+	rts
+		
+	ENDC
 lb_46d4a:
 	move.w	lb_4c278,d0
 	ANDI.W	#$03ff,D0
@@ -83517,6 +83598,10 @@ lb_46d4a:
 	CMPI.W	#$0300,D0		;46d60: 0c400300
 	BEQ.W	lb_46e7e		;46d64: 67000118
 	MOVE.W	#$8020,lb_24a58		;46d68: 33fc802000024a58
+	IFD	WA
+	lea		lb_1bc34,a0
+	bsr		set_dash_bitplanes
+	ELSE
 	MOVE.W	#$0001,lb_24c9c		;46d70: 33fc000100024c9c
 	MOVE.W	#$bc34,lb_24ca0		;46d78: 33fcbc3400024ca0
 	MOVE.W	#$0001,lb_24ca4		;46d80: 33fc000100024ca4
@@ -83526,6 +83611,7 @@ lb_46d4a:
 	MOVE.W	#$0001,lb_24cb4		;46da0: 33fc000100024cb4
 	MOVE.W	#$d854,lb_24cb8		;46da8: 33fcd85400024cb8
 	MOVE.W	#$0020,lb_24d3c		;46db0: 33fc002000024d3c
+	ENDC
 	LEA	lb_25fee,A0		;46db8: 41f900025fee
 	LEA	lb_2830e,A1		;46dbe: 43f90002830e
 	MOVEQ	#7,D7			;46dc4: 7e07

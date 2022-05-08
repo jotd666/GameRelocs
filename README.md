@@ -3,16 +3,8 @@ Reverse engineered Red Zone (1992 Psygnosis) to relocate it and make it faster
 
 issues:
 
-- 3D glitches, missing arrows, bugs when passing under arches...
-- another_table_41e36 reloc / breakpoint access
-- check SMC, test without caches
-- check labels reference proper offsets if existing (including included .s files)
-- general 2D superimposed bitmaps glitches (sprite bitmaps are corrupt)
 - full championship: lockup (keyboard not working???)
 
-- on real game f77c fill with Fa7c find which address draws which object
-- find the faulty object or sequence that trashes the display!! write protect zone
-  $F77C -> w 0 $F77C $0f8ac-$F77C
 
 improvements:
 
@@ -40,3 +32,11 @@ plan:
 - rework data sections to remove label references
 - use sections with IFD to create exe or binary
 - use IFD for dataload too
+
+
+issues:
+
+- small glitches on road
+- find why default options (full detail) aren't default
+- dashboard proper bitplane address
+- whd select detail mode
