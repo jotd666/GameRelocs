@@ -32,6 +32,6 @@ plan:
 
 issues:
 
-- small glitches on road (also in original!!)
+- small glitches on road (also in original when max level of detail is set!!)
 - dashboard show corrupt at start (also in original!!)
 - full championship: crash forgotten chip reloc?

@@ -35337,6 +35337,11 @@ lb_229b4:
 lb_229d2:
 	MOVEA.L	#$00008000,A7		;229d2: 2e7c00008000
 	ELSE
+
+	lea		lb_196b4,a0
+	jsr		set_dash_bitplanes
+		
+	
 	; init sprite data (empty)
 	lea	empty_sprites,a0
 	lea	lb_0aa1a,a1	; empty
@@ -43005,7 +43010,7 @@ lb_3b93c:
 	LEA	lb_3bd2a(PC),A0	;3b95c: 41fa03cc
 lb_3b960:
 	CLR.B	(A0)+			;3b960: 4218
-	CMPA.L	#$0003bd37,A0		;3b962: b1fc0003bd37
+	CMPA.L	#lb_3bd38-1,A0		;3b962: b1fc0003bd37
 	BNE.S	lb_3b960		;3b968: 66f6
 lb_3b96a:
 	TST.W	lb_4c248		;3b96a: 4a790004c248
@@ -43317,6 +43322,7 @@ lb_3bd2a:
 	dc.l  0			;3bd2c: 00000000
 	dc.l  0			;3bd30: 00000000
 	dc.l  0			;3bd34: 00000000
+lb_3bd38:
 	DC.W	$0000			;3bd38
 lb_3bd3a:
 	RTS				;3bd3a: 4e75
@@ -43979,23 +43985,19 @@ lb_3c3c4:
 	MOVE.L	-(A0),D0		;3c450: 2020
 	MOVE.L	-(A0),D0		;3c452: 2020
 lb_3c454:
-	ORI.B	#$03,D0			;3c454: 00000003
-	DC.W	$c47e			;3c458
-	DC.W	$0003			;3c45a
-	AND.B	D2,(A0)			;3c45c: c510
-	DC.W	$0003			;3c45e
-	AND.L	D2,-(A2)		;3c460: c5a2
-	DC.W	$0003			;3c462
-	AND.B	3(A4,D0.W),D3		;3c464: c6340003
-	MULU	D6,D3			;3c468: c6c6
-	DC.W	$0003			;3c46a
-	AND.W	D3,(A0)+		;3c46c: c758
-	DC.W	$0003			;3c46e
-	MULS	3(A2),D3		;3c470: c7ea0003
-	AND.W	#$0003,D4		;3c474: c87c0003
-	ABCD	-(A6),-(A4)		;3c478: c90e
-	DC.W	$0003			;3c47a
-	AND.L	D4,-(A0)		;3c47c: c9a0
+	dc.w	0
+lb_3c456:
+	dc.l	lb_3c47e
+	dc.l	lb_3c510
+	dc.l	lb_3c5a2
+	dc.l	lb_3c634
+	dc.l	lb_3c6c6
+	dc.l	lb_3c758
+	dc.l	lb_3c7ea
+	dc.l	lb_3c87c
+	dc.l	lb_3c90e
+	dc.l	lb_3c9a0
+lb_3c47e:	
 	ADDQ.W	#1,A7			;3c47e: 524f
 	SUBQ.W	#2,A6			;3c480: 554e
 	NEG.B	-(A0)			;3c482: 4420
@@ -44069,6 +44071,7 @@ lb_3c454:
 	MOVE.L	-(A0),D0		;3c50a: 2020
 	MOVE.L	-(A0),D0		;3c50c: 2020
 	DC.W	$0000			;3c50e
+lb_3c510:
 	ADDQ.W	#1,A7			;3c510: 524f
 	SUBQ.W	#2,A6			;3c512: 554e
 	NEG.B	-(A0)			;3c514: 4420
@@ -44142,6 +44145,7 @@ lb_3c454:
 	MOVE.L	-(A0),D0		;3c59c: 2020
 	MOVE.L	-(A0),D0		;3c59e: 2020
 	DC.W	$0000			;3c5a0
+lb_3c5a2:
 	ADDQ.W	#1,A7			;3c5a2: 524f
 	SUBQ.W	#2,A6			;3c5a4: 554e
 	NEG.B	-(A0)			;3c5a6: 4420
@@ -44215,6 +44219,7 @@ lb_3c454:
 	MOVE.L	-(A0),D0		;3c62e: 2020
 	MOVE.L	-(A0),D0		;3c630: 2020
 	DC.W	$0000			;3c632
+lb_3c634:
 	ADDQ.W	#1,A7			;3c634: 524f
 	SUBQ.W	#2,A6			;3c636: 554e
 	NEG.B	-(A0)			;3c638: 4420
@@ -44288,6 +44293,7 @@ lb_3c454:
 	MOVE.L	-(A0),D0		;3c6c0: 2020
 	MOVE.L	-(A0),D0		;3c6c2: 2020
 	DC.W	$0000			;3c6c4
+lb_3c6c6:
 	ADDQ.W	#1,A7			;3c6c6: 524f
 	SUBQ.W	#2,A6			;3c6c8: 554e
 	NEG.B	-(A0)			;3c6ca: 4420
@@ -44361,6 +44367,7 @@ lb_3c454:
 	MOVE.L	-(A0),D0		;3c752: 2020
 	MOVE.L	-(A0),D0		;3c754: 2020
 	DC.W	$0000			;3c756
+lb_3c758:
 	ADDQ.W	#1,A7			;3c758: 524f
 	SUBQ.W	#2,A6			;3c75a: 554e
 	NEG.B	-(A0)			;3c75c: 4420
@@ -44434,6 +44441,7 @@ lb_3c454:
 	DC.W	$4152			;3c7e4
 	SUBQ.B	#4,-(A0)		;3c7e6: 5920
 	DC.W	$0000			;3c7e8
+lb_3c7ea:
 	ADDQ.W	#1,A7			;3c7ea: 524f
 	SUBQ.W	#2,A6			;3c7ec: 554e
 	NEG.B	-(A0)			;3c7ee: 4420
@@ -44507,6 +44515,7 @@ lb_3c454:
 	DC.W	$434f			;3c876
 	MOVE.L	-(A0),D0		;3c878: 2020
 	DC.W	$0000			;3c87a
+lb_3c87c:
 	ADDQ.W	#1,A7			;3c87c: 524f
 	SUBQ.W	#2,A6			;3c87e: 554e
 	NEG.B	-(A0)			;3c880: 4420
@@ -44580,6 +44589,7 @@ lb_3c454:
 	SUBQ.W	#2,D7			;3c908: 5547
 	DC.W	$414c			;3c90a
 	DC.W	$0000			;3c90c
+lb_3c90e:
 	ADDQ.W	#1,A7			;3c90e: 524f
 	SUBQ.W	#2,A6			;3c910: 554e
 	NEG.B	-(A0)			;3c912: 4420
@@ -44654,6 +44664,7 @@ lb_3c950:
 	SUBQ.B	#4,-(A0)		;3c99a: 5920
 	MOVE.L	-(A0),D0		;3c99c: 2020
 	DC.W	$0000			;3c99e
+lb_3c9a0:
 	ADDQ.W	#1,A7			;3c9a0: 524f
 	SUBQ.W	#2,A6			;3c9a2: 554e
 	NEG.B	-(A0)			;3c9a4: 4420
@@ -45442,37 +45453,61 @@ lb_3d2ba:
 	BMI.W	lb_3d244		;3d2c0: 6b00ff82
 	MOVEA.L	#lb_3d50e,A0		;3d2c4: 207c0003d50e
 	ADDA.W	D1,A0			;3d2ca: d0c1
+	; no need for SMC
+	IFD	WA
+	move.l	(a0),a0
+	MOVE.L	D1,-(A7)		;3d326: 2f01
+	MOVE.W	#$0001,lb_3d35c		;3d2d4: 33fc00010003d35c
+	jsr		(a0)
+	ELSE
 	MOVE.L	(A0),lb_3d2dc+2		;3d2cc: 23d00003d2de
 	MOVE.L	D1,-(A7)		;3d2d2: 2f01
 	MOVE.W	#$0001,lb_3d35c		;3d2d4: 33fc00010003d35c
-	FLUSHCACHE
 lb_3d2dc:
 	JSR	lb_1e23e+2		;3d2dc: 4eb90001e240
+	ENDC
 	MOVE.L	(A7)+,D1		;3d2e2: 221f
 	TST.W	lb_3d35a		;3d2e4: 4a790003d35a
 	BMI.W	lb_3d244		;3d2ea: 6b00ff58
 	MOVEA.L	#lb_3d512,A0		;3d2ee: 207c0003d512
 	ADDA.W	D1,A0			;3d2f4: d0c1
+	; no need for SMC
+	IFD	WA
+	move.l	(a0),a0
+	MOVE.L	D1,-(A7)		;3d326: 2f01
+	MOVE.W	#$0002,lb_3d35c		;3d328: 33fc00030003d35c
+	jsr		(a0)	
+	ELSE
 	MOVE.L	(A0),lb_3d306+2		;3d2f6: 23d00003d308
 	MOVE.L	D1,-(A7)		;3d2fc: 2f01
 	MOVE.W	#$0002,lb_3d35c		;3d2fe: 33fc00020003d35c
-	FLUSHCACHE
 lb_3d306:
 	JSR	lb_1e23e+2		;3d306: 4eb90001e240
+	ENDC
 	MOVE.L	(A7)+,D1		;3d30c: 221f
 	TST.W	lb_3d35a		;3d30e: 4a790003d35a
 	BMI.W	lb_3d244		;3d314: 6b00ff2e
 	MOVEA.L	#lb_3d516,A0		;3d318: 207c0003d516
 	ADDA.W	D1,A0			;3d31e: d0c1
+	
+	; no need for SMC at all
+	IFD	WA
+	move.l	(a0),a0
+	MOVE.L	D1,-(A7)		;3d326: 2f01
+	MOVE.W	#$0003,lb_3d35c		;3d328: 33fc00030003d35c
+	jsr		(a0)
+	ELSE
 	MOVE.L	(A0),lb_3d330+2		;3d320: 23d00003d332
 	MOVE.L	D1,-(A7)		;3d326: 2f01
 	MOVE.W	#$0003,lb_3d35c		;3d328: 33fc00030003d35c
-	FLUSHCACHE
 lb_3d330:
 	JSR	lb_1e23e+2		;3d330: 4eb90001e240
+	ENDC
+	
 	MOVE.L	(A7)+,D1		;3d336: 221f
 	JSR	lb_3d35e		;3d338: 4eb90003d35e
 	BRA.W	lb_3d244		;3d33e: 6000ff04
+	
 lb_3d342:
 	JMP	lb_1e23e+2		;3d342: 4ef90001e240
 lb_3d348:
