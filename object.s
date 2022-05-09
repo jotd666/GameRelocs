@@ -8,25 +8,19 @@ chipdata_start = $520ca
 	IFD	WA
 		include	whdload.i
 		include	whdmacros.i
-FLUSHCACHE:MACRO
-	bsr	_flushcache
-	ENDM
-CHIP_SECTION:MACRO
-	SECTION	S_\1,CHIP,DATA
-	ENDM
-FAST_SECTION:MACRO
-	SECTION	S_\1,CODE	
 	ELSE
+	
 blitz:MACRO	; empty macro
 	ENDM
-FLUSHCACHE:MACRO
-	ENDM
-CHIP_SECTION:MACRO
-	ENDM
-FAST_SECTION:MACRO
-	ENDM
-	
 	ENDC
+	
+FLUSHCACHE:MACRO
+	IFD	WA
+	jsr		_flushcache
+	ENDC
+	ENDM
+
+
 	
 EXT_0000	EQU	$0
 EXT_0001	EQU	$1
@@ -4473,6 +4467,8 @@ lb_0a6f0:
 	BSR.W	lb_0a750		;0a71e: 61000030
 	TST.W	lb_0a74e		;0a722: 4a790000a74e
 	BEQ.S	lb_0a742		;0a728: 6718
+	; strange, this probably has no effect, those registers
+	; are write-only...
 	SUBQ.W	#8,AUD0VOL		;0a72a: 517900dff0a8
 	SUBQ.W	#8,AUD1VOL		;0a730: 517900dff0b8
 	SUBQ.W	#8,AUD2VOL		;0a736: 517900dff0c8
@@ -5459,6 +5455,7 @@ lb_0b276:
 	MOVE.L	2(A0),lb_0a22e		;0b32a: 23e800020000a22e
 	MOVE.L	6(A0),lb_0a232		;0b332: 23e800060000a232
 	MOVE.L	10(A0),lb_0a236		;0b33a: 23e8000a0000a236
+	FLUSHCACHE
 	MOVE.L	#$ffffffff,EXT_0139.W	;0b342: 21fcffffffff5f18
 	MOVE.L	#$ffffffff,EXT_0138.W	;0b34a: 21fcffffffff5f14
 	BRA.W	lb_0b486		;0b352: 60000132
@@ -8391,8 +8388,16 @@ lb_0d1f0:
 	BRA.S	lb_0d1f0		;0d1fc: 60f2
 lb_0d1fe:
 	RTS				;0d1fe: 4e75
+	IFD	WA
+	nop
+	nop
+	nop
+	ENDC
 lb_0d200:
 	dc.l  0			;0d200: 00000000
+	IFND	WA
+	; leave unreachable code for binary integrity
+	; (but it's useless)
 	MOVE.W	EXT_00d6.W,D2		;0d204: 34382a70
 	SUBQ.W	#2,D2			;0d208: 5542
 	LEA	lb_0f77c,A0		;0d20a: 41f90000f77c
@@ -8411,6 +8416,7 @@ lb_0d200:
 	MOVE.L	0(A0,D0.W),D7		;0d242: 2e300000
 	MOVE.L	D7,0(A1,D2.W)		;0d246: 23872000
 	RTS				;0d24a: 4e75
+	ENDC
 lb_0d24c:
 	dc.l  0			;0d24c: 00000000
 	dc.l  0			;0d250: 00000000
@@ -45406,6 +45412,9 @@ lb_3d35a:
 	DC.W	$0000			;3d35a
 lb_3d35c:
 	DC.W	$ffff			;3d35c
+	IFD	WA
+	NOP		; remove smc detector false alarm
+	ENDC
 lb_3d35e:
 	MOVE.W	#$0033,D0		;3d35e: 303c0033
 	JSR	lb_23262		;3d362: 4eb900023262
