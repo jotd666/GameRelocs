@@ -34,4 +34,6 @@ issues:
 
 - small glitches on road (also in original when max level of detail is set!!)
 - dashboard show corrupt at start (also in original!!)
-- full championship: crash forgotten chip reloc?
+- doesn't start with CACHE set + all skip options
+- when starts with CACHE+fast, graphics (inc. bike) are horribly trashed
+- should use only 512k chip remove expansion detection
