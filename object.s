@@ -682,6 +682,7 @@ EXT_028a	EQU	$FFFFFFFF
 	
 lb_08000:
 	IFD	WA
+	move.b	d0,_keyexit
 	move.l	a0,_resload
 	move.l	a0,a2
 	lea	(_tag,pc),a0
@@ -707,8 +708,11 @@ _tag		dc.l	WHDLTAG_CUSTOM1_GET
 options	dc.l	0
 		dc.l	0
 	
-_resload
-	dc.l	0	
+_resload:
+	dc.l	0
+_keyexit
+	dc.b	0
+	even
 	ENDC
 	
 lb_08012:
@@ -5376,6 +5380,12 @@ lb_0b1de:
 	ADDA.W	D1,A1			;0b1fa: d2c1
 	ADDA.L	EXT_013b.W,A0		;0b1fc: d1f85f1c
 	MOVE.L	lb_0b272,D4		;0b200: 28390000b272
+	IFD	WA
+	pea	.next(pc)
+	move.l	lb_0b20c_ptr(pc),-(a7)	; whole loop
+	rts
+.next
+	ELSE
 lb_0b206:
 	MOVE.W	(A1)+,D2		;0b206: 3419
 	MOVE.W	D2,D3			;0b208: 3602
@@ -5387,11 +5397,18 @@ lb_0b20c:
 	OR.B	D2,24576(A0)		;0b216: 85286000
 	ADDA.W	#$0028,A0		;0b21a: d0fc0028
 	DBF	D4,lb_0b206		;0b21e: 51ccffe6
+	ENDC
 	MOVEA.L	(A7)+,A0		;0b222: 205f
 	MOVEA.L	(A7)+,A1		;0b224: 225f
 lb_0b226:
 	ADDQ.W	#1,A0			;0b226: 5248
 	RTS				;0b228: 4e75
+	IFD	WA
+lb_0b20c_ptr:
+	dc.l	0
+lb_0b24e_ptr:
+	dc.l	0
+	ENDC
 lb_0b22a:
 	MOVE.L	A1,-(A7)		;0b22a: 2f09
 	MOVE.L	A0,-(A7)		;0b22c: 2f08
@@ -5402,10 +5419,17 @@ lb_0b22a:
 	ADDA.W	D1,A1			;0b23c: d2c1
 	ADDA.L	EXT_013b.W,A0		;0b23e: d1f85f1c
 	MOVE.L	lb_0b272,D4		;0b242: 28390000b272
+	IFD	WA
+	pea	.next(pc)
+	move.l	lb_0b24e_ptr(pc),-(a7)	; whole loop
+	rts
+.next
+	ELSE
 lb_0b248:
 	MOVE.W	(A1)+,D2		;0b248: 3419
 	MOVE.W	D2,D3			;0b24a: 3602
 	CLR.W	D3			;0b24c: 4243
+	; smc target (4 next instructions)
 lb_0b24e:
 	MOVE.B	D2,(A0)			;0b24e: 1082
 	MOVE.B	D2,8192(A0)		;0b250: 11422000
@@ -5413,6 +5437,8 @@ lb_0b24e:
 	MOVE.B	D2,24576(A0)		;0b258: 11426000
 	ADDA.W	#$0028,A0		;0b25c: d0fc0028
 	DBF	D4,lb_0b248		;0b260: 51ccffe6
+	ENDC
+	
 	MOVEA.L	(A7)+,A0		;0b264: 205f
 	ADDQ.W	#1,A0			;0b266: 5248
 	MOVEA.L	(A7)+,A1		;0b268: 225f
@@ -5745,6 +5771,15 @@ lb_0b6ae:
 	ADD.W	D0,D0			;0b6b8: d040
 	ADD.W	D0,D0			;0b6ba: d040
 	MOVEA.L	0(A2,D0.W),A2		;0b6bc: 24720000
+	IFD	WA
+	; no smc
+	move.l	a2,lb_0b20c_ptr
+	LEA	lb_0b6de_2,A2		;0b6b2: 45f90000b6de
+	MOVEA.L	0(A2,D0.W),A2		;0b6bc: 24720000
+	move.l	a2,lb_0b24e_ptr
+	
+	ELSE
+	; original smc, copies code in 2 separate locations
 	LEA	lb_0b20c,A1		;0b6c0: 43f90000b20c
 	MOVE.W	(A2)+,(A1)+		;0b6c6: 32da
 	MOVE.L	(A2)+,(A1)+		;0b6c8: 22da
@@ -5755,10 +5790,10 @@ lb_0b6ae:
 	MOVE.L	(A2)+,(A1)+		;0b6d6: 22da
 	MOVE.L	(A2)+,(A1)+		;0b6d8: 22da
 	MOVE.L	(A2)+,(A1)+		;0b6da: 22da
-	FLUSHCACHE
+	ENDC
 	RTS				;0b6dc: 4e75
 lb_0b6de:
-	dc.l	lb_0b71e	;0b6de
+	dc.l	lb_0b71e		;0b6de
 	dc.l	lb_0b73a
 	dc.l	lb_0b756
 	dc.l	lb_0b772
@@ -5775,153 +5810,282 @@ lb_0b6de:
 	dc.l	lb_0b8a6
 	dc.l	lb_0b8c2
 	
+	IFD		WA
+	; second table for the second part of the code
+lb_0b6de_2:
+	dc.l	lb_0b71e_2		;0b6de
+	dc.l	lb_0b73a_2
+	dc.l	lb_0b756_2
+	dc.l	lb_0b772_2
+	dc.l	lb_0b78e_2
+	dc.l	lb_0b7aa_2
+	dc.l	lb_0b7c6_2
+	dc.l	lb_0b7e2_2
+	dc.l	lb_0b7fe_2
+	dc.l	lb_0b81a_2
+	dc.l	lb_0b836_2
+	dc.l	lb_0b852_2
+	dc.l	lb_0b86e_2
+	dc.l	lb_0b88a_2
+	dc.l	lb_0b8a6_2
+	dc.l	lb_0b8c2_2
+	ENDC
+	
+	; to emulate SMC, we just add the start & end of the loop
+	; then instead of installing SMC, we just set a function pointer
+	; to this loop code and the overhead is small
+SMC_START_1:MACRO
+	IFD	WA
+.loop:
+	MOVE.W	(A1)+,D2		;0b206: 3419
+	MOVE.W	D2,D3			;0b208: 3602
+	NOT.W	D3			;0b20a: 4643
+	ENDC
+	ENDM
+SMC_END_1:MACRO
+	IFD	WA
+	ADDA.W	#$0028,A0		;0b21a: d0fc0028
+	DBF	D4,.loop		;0b21e: 51ccffe6
+	rts
+	ENDC
+	ENDM
+SMC_START_2:MACRO
+	IFD	WA
+.loop:
+	MOVE.W	(A1)+,D2		;0b206: 3419
+	MOVE.W	D2,D3			;0b208: 3602
+	CLR.W	D3			;0b20a: 4643
+	ENDC
+	ENDM
+	
+
+	
 	; bits of instructions of the same size
 	; copied into another location (smc)
 lb_0b71e:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b71e: c710
 	AND.B	D3,8192(A0)		;0b720: c7282000
 	AND.B	D3,16384(A0)		;0b724: c7284000
 	AND.B	D3,24576(A0)		;0b728: c7286000
+	SMC_END_1
+lb_0b71e_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b72c: 1083
 	MOVE.B	D3,8192(A0)		;0b72e: 11432000
 	MOVE.B	D3,16384(A0)		;0b732: 11434000
 	MOVE.B	D3,24576(A0)		;0b736: 11436000
+	SMC_END_1
 lb_0b73a:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b73a: 8510
 	AND.B	D3,8192(A0)		;0b73c: c7282000
 	AND.B	D3,16384(A0)		;0b740: c7284000
 	AND.B	D3,24576(A0)		;0b744: c7286000
+	SMC_END_1
+lb_0b73a_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b748: 1082
 	MOVE.B	D3,8192(A0)		;0b74a: 11432000
 	MOVE.B	D3,16384(A0)		;0b74e: 11434000
 	MOVE.B	D3,24576(A0)		;0b752: 11436000
+	SMC_END_1
 lb_0b756:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b756: c710
 	OR.B	D2,8192(A0)		;0b758: 85282000
 	AND.B	D3,16384(A0)		;0b75c: c7284000
 	AND.B	D3,24576(A0)		;0b760: c7286000
+	SMC_END_1
+lb_0b756_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b764: 1083
 	MOVE.B	D2,8192(A0)		;0b766: 11422000
 	MOVE.B	D3,16384(A0)		;0b76a: 11434000
 	MOVE.B	D3,24576(A0)		;0b76e: 11436000
+	SMC_END_1
 lb_0b772:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b772: 8510
 	OR.B	D2,8192(A0)		;0b774: 85282000
 	AND.B	D3,16384(A0)		;0b778: c7284000
 	AND.B	D3,24576(A0)		;0b77c: c7286000
+	SMC_END_1
+lb_0b772_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b780: 1082
 	MOVE.B	D2,8192(A0)		;0b782: 11422000
 	MOVE.B	D3,16384(A0)		;0b786: 11434000
 	MOVE.B	D3,24576(A0)		;0b78a: 11436000
+	SMC_END_1
 lb_0b78e:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b78e: c710
 	AND.B	D3,8192(A0)		;0b790: c7282000
 	OR.B	D2,16384(A0)		;0b794: 85284000
 	AND.B	D3,24576(A0)		;0b798: c7286000
+	SMC_END_1
+lb_0b78e_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b79c: 1083
 	MOVE.B	D3,8192(A0)		;0b79e: 11432000
 	MOVE.B	D2,16384(A0)		;0b7a2: 11424000
 	MOVE.B	D3,24576(A0)		;0b7a6: 11436000
+	SMC_END_1
 lb_0b7aa:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b7aa: 8510
 	AND.B	D3,8192(A0)		;0b7ac: c7282000
 	OR.B	D2,16384(A0)		;0b7b0: 85284000
 	AND.B	D3,24576(A0)		;0b7b4: c7286000
+	SMC_END_1
+lb_0b7aa_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b7b8: 1082
 	MOVE.B	D3,8192(A0)		;0b7ba: 11432000
 	MOVE.B	D2,16384(A0)		;0b7be: 11424000
 	MOVE.B	D3,24576(A0)		;0b7c2: 11436000
+	SMC_END_1
 lb_0b7c6:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b7c6: c710
 	OR.B	D2,8192(A0)		;0b7c8: 85282000
 	OR.B	D2,16384(A0)		;0b7cc: 85284000
 	AND.B	D3,24576(A0)		;0b7d0: c7286000
+	SMC_END_1
+lb_0b7c6_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b7d4: 1083
 	MOVE.B	D2,8192(A0)		;0b7d6: 11422000
 	MOVE.B	D2,16384(A0)		;0b7da: 11424000
 	MOVE.B	D3,24576(A0)		;0b7de: 11436000
+	SMC_END_1
 lb_0b7e2:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b7e2: 8510
 	OR.B	D2,8192(A0)		;0b7e4: 85282000
 	OR.B	D2,16384(A0)		;0b7e8: 85284000
 	AND.B	D3,24576(A0)		;0b7ec: c7286000
+	SMC_END_1
+lb_0b7e2_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b7f0: 1082
 	MOVE.B	D2,8192(A0)		;0b7f2: 11422000
 	MOVE.B	D2,16384(A0)		;0b7f6: 11424000
 	MOVE.B	D3,24576(A0)		;0b7fa: 11436000
+	SMC_END_1
 lb_0b7fe:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b7fe: c710
 	AND.B	D3,8192(A0)		;0b800: c7282000
 	AND.B	D3,16384(A0)		;0b804: c7284000
 	OR.B	D2,24576(A0)		;0b808: 85286000
+	SMC_END_1
+lb_0b7fe_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b80c: 1083
 	MOVE.B	D3,8192(A0)		;0b80e: 11432000
 	MOVE.B	D3,16384(A0)		;0b812: 11434000
 	MOVE.B	D2,24576(A0)		;0b816: 11426000
+	SMC_END_1
 lb_0b81a:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b81a: 8510
 	AND.B	D3,8192(A0)		;0b81c: c7282000
 	AND.B	D3,16384(A0)		;0b820: c7284000
 	OR.B	D2,24576(A0)		;0b824: 85286000
+	SMC_END_1
+lb_0b81a_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b828: 1082
 	MOVE.B	D3,8192(A0)		;0b82a: 11432000
 	MOVE.B	D3,16384(A0)		;0b82e: 11434000
 	MOVE.B	D2,24576(A0)		;0b832: 11426000
+	SMC_END_1
 lb_0b836:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b836: c710
 	OR.B	D2,8192(A0)		;0b838: 85282000
 	AND.B	D3,16384(A0)		;0b83c: c7284000
 	OR.B	D2,24576(A0)		;0b840: 85286000
+	SMC_END_1
+lb_0b836_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b844: 1083
 	MOVE.B	D2,8192(A0)		;0b846: 11422000
 	MOVE.B	D3,16384(A0)		;0b84a: 11434000
 	MOVE.B	D2,24576(A0)		;0b84e: 11426000
+	SMC_END_1
 lb_0b852:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b852: 8510
 	OR.B	D2,8192(A0)		;0b854: 85282000
 	AND.B	D3,16384(A0)		;0b858: c7284000
 	OR.B	D2,24576(A0)		;0b85c: 85286000
+	SMC_END_1
+lb_0b852_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b860: 1082
 	MOVE.B	D2,8192(A0)		;0b862: 11422000
 	MOVE.B	D3,16384(A0)		;0b866: 11434000
 	MOVE.B	D2,24576(A0)		;0b86a: 11426000
+	SMC_END_1
 lb_0b86e:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b86e: c710
 	AND.B	D3,8192(A0)		;0b870: c7282000
 	OR.B	D2,16384(A0)		;0b874: 85284000
 	OR.B	D2,24576(A0)		;0b878: 85286000
+	SMC_END_1
+lb_0b86e_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b87c: 1083
 	MOVE.B	D3,8192(A0)		;0b87e: 11432000
 	MOVE.B	D2,16384(A0)		;0b882: 11424000
 	MOVE.B	D2,24576(A0)		;0b886: 11426000
+	SMC_END_1
 lb_0b88a:
+	SMC_START_1
 	OR.B	D2,(A0)			;0b88a: 8510
 	AND.B	D3,8192(A0)		;0b88c: c7282000
 	OR.B	D2,16384(A0)		;0b890: 85284000
 	OR.B	D2,24576(A0)		;0b894: 85286000
+	SMC_END_1
+lb_0b88a_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b898: 1082
 	MOVE.B	D3,8192(A0)		;0b89a: 11432000
 	MOVE.B	D2,16384(A0)		;0b89e: 11424000
 	MOVE.B	D2,24576(A0)		;0b8a2: 11426000
+	SMC_END_1
 lb_0b8a6:
+	SMC_START_1
 	AND.B	D3,(A0)			;0b8a6: c710
 	OR.B	D2,8192(A0)		;0b8a8: 85282000
 	OR.B	D2,16384(A0)		;0b8ac: 85284000
 	OR.B	D2,24576(A0)		;0b8b0: 85286000
+	SMC_END_1
+lb_0b8a6_2
+	SMC_START_2
 	MOVE.B	D3,(A0)			;0b8b4: 1083
 	MOVE.B	D2,8192(A0)		;0b8b6: 11422000
 	MOVE.B	D2,16384(A0)		;0b8ba: 11424000
 	MOVE.B	D2,24576(A0)		;0b8be: 11426000
+	SMC_END_1
 lb_0b8c2:
+	SMC_START_2
 	OR.B	D2,(A0)			;0b8c2: 8510
 	OR.B	D2,8192(A0)		;0b8c4: 85282000
 	OR.B	D2,16384(A0)		;0b8c8: 85284000
 	OR.B	D2,24576(A0)		;0b8cc: 85286000
+	SMC_END_1
+lb_0b8c2_2
+	SMC_START_2
 	MOVE.B	D2,(A0)			;0b8d0: 1082
 	MOVE.B	D2,8192(A0)		;0b8d2: 11422000
 	MOVE.B	D2,16384(A0)		;0b8d6: 11424000
 	MOVE.B	D2,24576(A0)		;0b8da: 11426000
-	
+	SMC_END_1
 	
 	
 lb_0b8de:
@@ -35389,6 +35553,21 @@ lb_22c1e:
 	BCC.S	lb_22c68		;22c2c: 643a
 	MOVE.B	CIAA_SDR,D1		;22c2e: 123900bfec01
 	NOT.B	D1			;22c34: 4601
+
+	IFD	WA
+	move.l	d1,-(a7)
+	ror.b	#1,d1
+	cmp.b	_keyexit,d1
+	bne.b	.sk
+
+	pea	TDREASON_OK
+	move.l	_resload,-(a7)
+	addq.l	#resload_Abort,(a7)
+	rts
+.sk
+	move.l	(a7)+,d1
+	ENDC
+
 	LSR.B	#1,D1			;22c36: e209
 	BCS.S	lb_22c48		;22c38: 650e
 	ANDI.W	#$00ff,D1		;22c3a: 024100ff
@@ -45178,12 +45357,27 @@ lb_3cfd4:
 	MOVE.W	#$00a0,EXT_00d8.W	;3d064: 31fc00a02a76
 	MOVE.W	#$0064,EXT_00d9.W	;3d06a: 31fc00642a78
 	JSR	lb_0ac50		;3d070: 4eb90000ac50
+	; expansion memory detection that doesn't work
+	; I think there's a typo between C0000 and $C00000 maybe...
+	
+	IFD	WA
+	bra.w	lb_3d12a
+	ELSE
+	; get value in c0000
 	MOVE.L	EXT_016a,D0		;3d076: 2039000c0000
 	MOVE.L	D0,D1			;3d07c: 2200
+	; add something
 	ADDI.L	#$000004d2,D1		;3d07e: 0681000004d2
+	; put it in 80000
 	MOVE.L	D1,EXT_0169		;3d084: 23c100080000
 	CMP.L	EXT_016a,D1		;3d08a: b2b9000c0000
+	; different: 1MB chip / the zone is writable
 	BNE.W	lb_3d12a		;3d090: 66000098
+	ENDC
+	; as a result this is never called, and it appears that
+	; it would try to load files that aren't even present on the disk
+	; ("Pits" isn't on the disk)
+	
 	MOVEQ	#4,D0			;3d094: 7004
 	JSR	lb_0b6ae		;3d096: 4eb90000b6ae
 	MOVEA.L	#$00000e60,A0		;3d09c: 207c00000e60
@@ -45204,28 +45398,10 @@ lb_3cfd4:
 	JSR	lb_5148e		;3d0ec: 4eb90005148e
 	BRA.S	lb_3d124		;3d0f2: 6030
 lb_3d0f4:
-	ADDQ.W	#8,29811(A1)		;3d0f4: 50697473
+	dc.b	"Pits"		;3d0f4: 50697473
 	DC.W	$0000			;3d0f8
 lb_3d0fa:
-	DC.W	$4c6f			;3d0fa
-	dc.w	$6164		;3d0fc
-	dc.w	$696e		;3d0fe
-	dc.w	$6720		;3d100
-	DC.W	$6461			;3d102
-	MOVEQ	#97,D2			;3d104: 7461
-	MOVEA.L	28276(A1),A0		;3d106: 20696e74
-	dc.w	$6f20		;3d10a
-	dc.w	$6578		;3d10c
-	MOVEQ	#114,D2			;3d10e: 7472
-	dc.w	$6120		;3d110
-	ADDQ.W	#1,D1			;3d112: 5241
-	DC.W	$4d2c			;3d114
-	DC.W	$2070			;3d116
-	DC.W	$6c65			;3d118
-	DC.W	$6173			;3d11a
-	dc.w	$6520		;3d11c
-	DC.W	$7761			;3d11e
-	dc.w	$6974		;3d120
+	DC.b	"Loading data into extra RAM, please wait"
 lb_3d122:
 	DC.W	$0000			;3d122
 lb_3d124:
@@ -65916,6 +66092,14 @@ lb_4efbe:
 	dc.l	lb_4effe
 	dc.l	lb_4effe
 	dc.l	lb_4effe
+	; safety, in case the game overruns the jump table
+	; (happens in Portugal training after a few turns)
+	IFD		WA
+	REPT	8
+	dc.l	lb_4effe
+	ENDR
+	ENDC
+		
 lb_4effe:
 	RTS				;4effe: 4e75
 lb_4f000:
@@ -66559,6 +66743,9 @@ lb_4f98c:
 	MOVE.W	lb_4d6c0+2(PC),D0	;4fb02: 303adbbe
 	ADD.W	D0,D0			;4fb06: d040
 	ADD.W	D0,D0			;4fb08: d040
+	; a bug can happen here (portugal training for instance)
+	; D0 = $40 and the code jumps in $4E753079 which is the
+	; code right after the table which contains $10 entries...
 	LEA	lb_4efbe(PC),A0		;4fb0a: 41faf4b2
 	MOVEA.L	0(A0,D0.W),A0		;4fb0e: 20700000
 	JSR	(A0)			;4fb12: 4e90

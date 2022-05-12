@@ -4,36 +4,45 @@ Reverse engineered Red Zone (1992 Psygnosis) to relocate it and make it faster
 
 improvements:
 
-- remove smc progressively see if framerate improves
+- fixed self-modifying code with rewrite (no more SMC) whenever possible
+  so code can benefit from cache
+- in some cases, just insert cache flushes, as fixing SMC is really too
+  time consuming and complex.
 - move chip zero page (EXT) variables to fast
 
 plan:
 
 - restart from original disassembly
-- get 100% same binary with labels inserted (assembled in $8000) using
-  information of found tables, special objects table, filenames (x2)
-  special objects table must contain the embedded code sections (enhance script to generate
-  those tables)
-  auto labels after rts & bra
-  move # label insertions too
-  with constant check to ensure that reference binary doesn't change
+- get 100% same binary with labels inserted (assembled in $8000)
 - make a label match table to perform search/replace
-- try label masks (absolute no reloc) for copperlists
+- use various scripts to insert labels
 - re-inject comments (beyond compare)
-- re-inject dashboard bitmaps
-
-- run without caches else original code is changed
 - assemble somewhere else (in chip, no exe) and run it with memory protection to
-  make sure that all tables are properly relocated
+  make sure that all tables are properly relocated, discover address tables
+  as long as the game is crashing
 - rework data sections to remove label references
-- use sections with IFD to create exe or binary
-- use IFD for dataload too
+- use sections with IFD WA (aka "wide address" or "wild address")
+  to create exe or binary. When WA is not set, it creates the same exact
+  binary as the original, which makes sure that nothing is changed
+  without noticing (which happened in the first iteration and I had to
+  restart from scratch as it ended up with unfixable 3D glitches)
 
 
 issues:
 
-- small glitches on road (also in original when max level of detail is set!!)
 - dashboard show corrupt at start (also in original!!)
-- doesn't start with CACHE set + all skip options
-- when starts with CACHE+fast, graphics (inc. bike) are horribly trashed
-- should use only 512k chip remove expansion detection
+- check sound with fastmem!
+- 512k chip: access fault writing too high on chip $800xx (end of france cicruit practice)
+
+investigate random crash?
+Exception "Illegal Instruction" ($10) at $FE7013C (ExpMem $813C) occurred.
+
+$0fe7013a ori.b        #$e,d6
+$0fe7013e ori.b        #??$e6,a6
+$0fe70142 add.b        d4,d4
+
+
+exception stackframe:
+$0FEE8F40
+$0FE7013C
+0010
