@@ -5381,10 +5381,25 @@ lb_0b1de:
 	ADDA.L	EXT_013b.W,A0		;0b1fc: d1f85f1c
 	MOVE.L	lb_0b272,D4		;0b200: 28390000b272
 	IFD	WA
+	; predict when game writes out of bounds
+	move.l	a2,-(a7)
+	move.l	a0,a2	
+	move.w	d4,d2
+	mulu	#$28,d2
+	add.l	d2,a2
+	cmp.l	#$7FFC0,a2
+	bcs.b	.ok
+	; return immediately, don't increase a0
+	move.l	(a7)+,a2
+	MOVEA.L	(A7)+,A0		;0b222: 205f
+	MOVEA.L	(A7)+,A1		;0b224: 225f
+	rts
+.ok	
 	pea	.next(pc)
 	move.l	lb_0b20c_ptr(pc),-(a7)	; whole loop
 	rts
 .next
+	move.l	(a7)+,a2
 	ELSE
 lb_0b206:
 	MOVE.W	(A1)+,D2		;0b206: 3419
@@ -5398,6 +5413,7 @@ lb_0b20c:
 	ADDA.W	#$0028,A0		;0b21a: d0fc0028
 	DBF	D4,lb_0b206		;0b21e: 51ccffe6
 	ENDC
+
 	MOVEA.L	(A7)+,A0		;0b222: 205f
 	MOVEA.L	(A7)+,A1		;0b224: 225f
 lb_0b226:
@@ -5420,10 +5436,25 @@ lb_0b22a:
 	ADDA.L	EXT_013b.W,A0		;0b23e: d1f85f1c
 	MOVE.L	lb_0b272,D4		;0b242: 28390000b272
 	IFD	WA
+	move.l	a2,-(a7)
+	; predict when game writes out of bounds
+	move.w	d4,d2
+	move.l	a0,a2
+	mulu	#$28,d2
+	add.l	d2,a2
+	cmp.l	#$7FFC0,a2
+	bcs.b	.ok
+	; return immediately, don't increase a0
+	move.l	(a7)+,a2
+	MOVEA.L	(A7)+,A0		;0b222: 205f
+	MOVEA.L	(A7)+,A1		;0b224: 225f
+	rts
+.ok
 	pea	.next(pc)
 	move.l	lb_0b24e_ptr(pc),-(a7)	; whole loop
 	rts
 .next
+	move.l	(a7)+,a2
 	ELSE
 lb_0b248:
 	MOVE.W	(A1)+,D2		;0b248: 3419
@@ -5844,7 +5875,13 @@ SMC_START_1:MACRO
 	ENDM
 SMC_END_1:MACRO
 	IFD	WA
-	ADDA.W	#$0028,A0		;0b21a: d0fc0028
+	; addq.l #x,an can be faster than lea because it is memory cycle +
+	; 2xidle cycle combination (lea is 2xmemory cycle),
+	; DMA can use second cycle without slowing down the CPU. 
+	; but not in that case
+	; (http://eab.abime.net/showpost.php?p=1106955&postcount=10)
+	;
+	lea	($0028,a0),A0		;0b21a: lea is faster than addq.w
 	DBF	D4,.loop		;0b21e: 51ccffe6
 	rts
 	ENDC
@@ -56227,6 +56264,10 @@ lb_46f98:
 	MOVE.W	lb_4c278,D0		;46f98: 30390004c278
 	ANDI.W	#$03ff,D0		;46f9e: 024003ff
 	BNE.W	lb_4702e		;46fa2: 6600008a
+	IFD	WA
+	lea		lb_196b4,a0
+	bsr		set_dash_bitplanes
+	ELSE		
 	MOVE.W	#$0001,lb_24c9c		;46fa6: 33fc000100024c9c
 	MOVE.W	#$96b4,lb_24ca0		;46fae: 33fc96b400024ca0
 	MOVE.W	#$0001,lb_24ca4		;46fb6: 33fc000100024ca4
@@ -56235,6 +56276,7 @@ lb_46f98:
 	MOVE.W	#$a974,lb_24cb0		;46fce: 33fca97400024cb0
 	MOVE.W	#$0001,lb_24cb4		;46fd6: 33fc000100024cb4
 	MOVE.W	#$b2d4,lb_24cb8		;46fde: 33fcb2d400024cb8
+	ENDC
 	LEA	lb_25fee,A0		;46fe6: 41f900025fee
 	LEA	lb_2808e,A1		;46fec: 43f90002808e
 	MOVEQ	#7,D7			;46ff2: 7e07
@@ -63204,6 +63246,7 @@ lb_4c624:
 	MOVEA.L	0(A0,D0.W),A0		;4c67c: 20700000
 	MOVEA.L	8(A0),A1		;4c680: 22680008
 	MOVE.L	12(A0),lb_4cac0		;4c684: 23e8000c0004cac0
+	; access fault after replay
 	MOVEA.L	lb_4c258+2(PC),A2	;4c68c: 247afbcc
 	MOVE.W	8(A2),D0		;4c690: 302a0008
 	ADDQ.W	#2,D0			;4c694: 5440
