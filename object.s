@@ -704,8 +704,10 @@ _flushcache
 	jsr	resload_FlushCache(a2)
 	move.l	(a7)+,a2
 	rts	
-_tag		dc.l	WHDLTAG_CUSTOM1_GET
+_tag		dc.l	WHDLTAG_CUSTOM4_GET
 options	dc.l	0
+	dc.l	WHDLTAG_CUSTOM1_GET
+trainer	dc.l	0
 		dc.l	0
 	
 _resload:
@@ -37232,15 +37234,15 @@ lb_24052:
 lb_2408c:
 	CMPI.W	#$0002,lb_4c300		;2408c: 0c7900020004c300
 	BNE.S	lb_240b0		;24094: 661a
-	CMPI.W	#$0003,lb_4c2fc+2	;24096: 0c7900030004c2fe
+	CMPI.W	#$0003,damage_percentage+2	;24096: 0c7900030004c2fe
 	BGE.S	lb_240b0		;2409e: 6c10
-	MOVE.W	#$0003,lb_4c2fc+2	;240a0: 33fc00030004c2fe
+	MOVE.W	#$0003,damage_percentage+2	;240a0: 33fc00030004c2fe
 	MOVE.W	#$0002,lb_243c2		;240a8: 33fc0002000243c2
 lb_240b0:
 	LEA	lb_243c2+2(PC),A0	;240b0: 41fa0312
 	MOVE.W	lb_243c2(PC),D0		;240b4: 303a030c
 	ADD.W	D0,D0			;240b8: d040
-	MOVE.W	0(A0,D0.W),lb_4c2fc+2	;240ba: 33f000000004c2fe
+	MOVE.W	0(A0,D0.W),damage_percentage+2	;240ba: 33f000000004c2fe
 	CMPI.W	#$0040,EXT_0070.W	;240c2: 0c7800400908
 	BGE.S	lb_240d0		;240c8: 6c06
 	MOVE.W	#$0040,EXT_0070.W	;240ca: 31fc00400908
@@ -49778,7 +49780,7 @@ lb_414e0:
 	LEA	lb_4c21c,A4		;4154a: 49f90004c21c
 	LEA	lb_4c366+2,A5		;41550: 4bf90004c368
 	LEA	lb_4c35a+2,A6		;41556: 4df90004c35c
-	MOVE.W	lb_4c2fc+2,D5		;4155c: 3a390004c2fe
+	MOVE.W	damage_percentage+2,D5		;4155c: 3a390004c2fe
 	CLR.W	D7			;41562: 4247
 lb_41564:
 	CMP.W	0(A2,D7.W),D5		;41564: ba727000
@@ -49861,12 +49863,16 @@ lb_41678:
 	MOVE.W	#$0013,D0		;41678: 303c0013
 	JSR	lb_23262		;4167c: 4eb900023262
 	BEQ.S	lb_4168a		;41682: 6706
-	CLR.W	lb_4c2fc		;41684: 42790004c2fc
+	CLR.W	damage_percentage		;41684: 42790004c2fc
 lb_4168a:
 	MOVE.W	#$0016,D0		;4168a: 303c0016
 	JSR	lb_23262		;4168e: 4eb900023262
 	BEQ.S	lb_4169e		;41694: 6708
-	ADDI.W	#$000a,lb_4c2fc		;41696: 0679000a0004c2fc
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_4169e
+	ENDC
+	ADDI.W	#$000a,damage_percentage		;41696: 0679000a0004c2fc
 lb_4169e:
 	MOVE.W	#$0026,D0		;4169e: 303c0026
 	JSR	lb_23262		;416a2: 4eb900023262
@@ -51892,59 +51898,17 @@ lb_431b4:
 lb_431c0:
 	ADDQ.W	#1,25705(A1)		;431c0: 52696469
 	DC.W	$6e67			;431c4
-	ORI.W	#$7065,(A3)		;431c6: 00537065
-	DC.W	$6369			;431ca
-	dc.w	$616c		;431cc
-lb_431ce:
-	MOVEA.L	97(A4,D6.L),A0		;431ce: 20746861
-	DC.W	$6e6b			;431d2
-	DC.W	$7320			;431d4
-	MOVE.W	-(A0),D5		;431d6: 3a20
-	CLR.W	27756(A1)		;431d8: 42696c6c
-	MOVEA.L	D5,A6			;431dc: 2c45
-	dc.w	$642c		;431de
-lb_431e0:
-	ADDQ.W	#2,-(A1)		;431e0: 5461
-	BNE.S	lb_4324a		;431e2: 6666
-	MOVE.L	D0,D6			;431e4: 2c00
-lb_431e6:
-	MOVE.L	-(A0),D0		;431e6: 2020
-	MOVE.L	-(A0),D0		;431e8: 2020
-	MOVE.L	-(A0),D0		;431ea: 2020
-	MOVE.L	-(A0),D0		;431ec: 2020
-	MOVE.L	-(A0),D0		;431ee: 2020
-	MOVE.L	-(A0),D0		;431f0: 2020
-	MOVE.L	-(A0),D0		;431f2: 2020
-	MOVE.L	lb_4523e(PC),D0		;431f4: 203a2048
-lb_431f8:
-	DC.W	$6f77			;431f8
-	dc.w	$6172		;431fa
-	dc.w	$642c		;431fc
-	DC.W	$4d61			;431fe
-	dc.w	$6420		;43200
-	MOVE.L	USP,A1			;43202: 4e69
-	dc.w	$6b2c		;43204
-	DC.W	$0020			;43206
-	MOVE.L	-(A0),D0		;43208: 2020
-	MOVE.L	-(A0),D0		;4320a: 2020
-lb_4320c:
-	MOVE.L	-(A0),D0		;4320c: 2020
-lb_4320e:
-	MOVE.L	-(A0),D0		;4320e: 2020
-	MOVE.L	-(A0),D0		;43210: 2020
-	MOVE.L	-(A0),D0		;43212: 2020
-	MOVE.L	-(A0),D0		;43214: 2020
-	MOVE.W	-(A0),D5		;43216: 3a20
-	DC.W	$4772			;43218
-	DC.W	$6567			;4321a
-	dc.w	$6720		;4321c
-	dc.w	$616e		;4321e
-	dc.w	$6420		;43220
-lb_43222:
-	DC.W	$4d69			;43222
-	dc.w	$6368		;43224
-	DC.W	$6165			;43226
-	DC.W	$6c00			;43228
+	dc.b	0
+	dc.b	"Special thanks : Bill,Ed,Taff,"
+	dc.b	0
+	dc.b	"               : Howard,Mad Nik"
+	IFD		WA
+	dc.b	" ",0
+	dc.b	"Reloc and fix  : JOTD             ",0
+	ELSE
+	dc.b	",",0
+	dc.b	"               : Gregg and Michael",0
+	ENDC
 lb_4322a:
 	MOVEA.L	-(A3),A4		;4322a: 2863
 	DC.W	$2931			;4322c
@@ -52227,14 +52191,14 @@ lb_435e2:
 	JMP	lb_42d1c		;4363a: 4ef900042d1c
 lb_43640:
 	MOVE.W	EXT_0085.W,lb_436f2	;43640: 33f809b0000436f2
-	MOVE.W	lb_4c2fc+2,D0		;43648: 30390004c2fe
+	MOVE.W	damage_percentage+2,D0		;43648: 30390004c2fe
 	SUBQ.W	#1,D0			;4364e: 5340
 	CMP.W	lb_4c2d8,D0		;43650: b0790004c2d8
 	BGT.S	lb_4367e		;43656: 6e26
 	TST.W	lb_4c2f4+2		;43658: 4a790004c2f6
 	BNE.S	lb_4367e		;4365e: 661e
 	MOVE.W	#$ffff,lb_4c2f4+2	;43660: 33fcffff0004c2f6
-	CMPI.W	#$0001,lb_4c2fc+2	;43668: 0c7900010004c2fe
+	CMPI.W	#$0001,damage_percentage+2	;43668: 0c7900010004c2fe
 	BEQ.S	lb_4367e		;43670: 670c
 	MOVEA.L	#lb_42bb6,A0		;43672: 207c00042bb6
 	JSR	lb_4294c		;43678: 4eb90004294c
@@ -52510,7 +52474,7 @@ lb_43a8c:
 	LEA	lb_4c21c,A4		;43b38: 49f90004c21c
 	LEA	lb_4c366+2,A5		;43b3e: 4bf90004c368
 	LEA	lb_4c35a+2,A6		;43b44: 4df90004c35c
-	MOVE.W	lb_4c2fc+2,D5		;43b4a: 3a390004c2fe
+	MOVE.W	damage_percentage+2,D5		;43b4a: 3a390004c2fe
 	CLR.W	D7			;43b50: 4247
 lb_43b52:
 	CMP.W	0(A2,D7.W),D5		;43b52: ba727000
@@ -53967,7 +53931,12 @@ lb_4501c:
 	MOVE.W	(A7)+,D7		;4502c: 3e1f
 	MULU	#$0005,D0		;4502e: c0fc0005
 	LSR.L	#6,D0			;45032: ec88
-	ADD.W	D0,lb_4c2fc		;45034: d1790004c2fc
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_4503a
+	ENDC
+	ADD.W	D0,damage_percentage		;45034: d1790004c2fc
+lb_4503a:
 	BRA.S	lb_450a0		;4503a: 6064
 lb_4503c:
 	ADD.W	D0,D2			;4503c: d440
@@ -53992,7 +53961,11 @@ lb_4508a:
 	MOVE.W	lb_4c2c8+2,D0		;4508e: 30390004c2ca
 	MULU	#$0005,D0		;45094: c0fc0005
 	LSR.L	#7,D0			;45098: ee88
-	ADD.W	D0,lb_4c2fc		;4509a: d1790004c2fc
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_450a0
+	ENDC
+	ADD.W	D0,damage_percentage		;4509a: d1790004c2fc
 lb_450a0:
 	MOVE.W	lb_4c2b0(PC),D0		;450a0: 303a720e
 	MOVE.W	lb_4c2b0+2(PC),D1	;450a4: 323a720c
@@ -54132,8 +54105,13 @@ lb_45286:
 	MOVE.W	lb_4c2c8,-(A7)		;45298: 3f390004c2c8
 	MOVE.W	lb_4c2c8+2,-(A7)	;4529e: 3f390004c2ca
 	MOVE.W	lb_4c2cc,-(A7)		;452a4: 3f390004c2cc
-	BSR.W	lb_4534a		;452aa: 6100009e
-	ADDI.W	#$0003,lb_4c2fc		;452ae: 067900030004c2fc
+	BSR.W	lb_4534a		;452aa: 
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_452b6
+	ENDC
+	ADDI.W	#$0003,damage_percentage		;452ae: 067900030004c2fc
+lb_452b6:
 	TST.W	lb_4c298+2		;452b6: 4a790004c29a
 	BNE.S	lb_452c4		;452bc: 6606
 	ADDQ.W	#1,lb_4c44a+2		;452be: 52790004c44c
@@ -54659,7 +54637,7 @@ lb_45a90:
 	CLR.W	D0			;45a90: 4240
 	TST.W	lb_45e02+2		;45a92: 4a7900045e04
 	BEQ.W	lb_45bba		;45a98: 67000120
-	CMPI.W	#$005a,lb_4c2fc		;45a9c: 0c79005a0004c2fc
+	CMPI.W	#$005a,damage_percentage		;45a9c: 0c79005a0004c2fc
 	BGE.W	lb_45bba		;45aa4: 6c000114
 	TST.W	lb_4c2c8+2		;45aa8: 4a790004c2ca
 	BEQ.W	lb_45b34		;45aae: 67000084
@@ -54688,7 +54666,11 @@ lb_45b34:
 	BNE.S	lb_45b54		;45b42: 6610
 	CMPI.W	#$003c,lb_4c2c8+2	;45b44: 0c79003c0004c2ca
 	BLE.S	lb_45b54		;45b4c: 6f06
-	ADDQ.W	#1,lb_4c2fc		;45b4e: 52790004c2fc
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_45b54
+	ENDC
+	ADDQ.W	#1,damage_percentage		;45b4e: 52790004c2fc
 lb_45b54:
 	MOVE.W	EXT_006d.W,D7		;45b54: 3e380902
 	ANDI.W	#$0003,D7		;45b58: 02470003
@@ -59955,9 +59937,13 @@ lb_49a84:
 	MOVE.W	EXT_00da.W,D0		;49a96: 30382a92
 	ANDI.W	#$0001,D0		;49a9a: 02400001
 	BNE.S	lb_49aa6		;49a9e: 6606
-	ADDQ.W	#1,lb_4c2fc		;49aa0: 52790004c2fc
+	IFD		WA
+	btst	#0,trainer+3
+	bne.b	lb_49aa6
+	ENDC
+	ADDQ.W	#1,damage_percentage		;49aa0: 52790004c2fc
 lb_49aa6:
-	CMPI.W	#$004b,lb_4c2fc		;49aa6: 0c79004b0004c2fc
+	CMPI.W	#$004b,damage_percentage		;49aa6: 0c79004b0004c2fc
 	BLT.S	lb_49ae6		;49aae: 6d36
 	JSR	lb_0c844		;49ab0: 4eb90000c844
 	ANDI.W	#$001f,D0		;49ab6: 0240001f
@@ -59972,7 +59958,7 @@ lb_49ad8:
 	BPL.S	lb_49ae6		;49ade: 6a06
 	CLR.W	lb_4c2c8		;49ae0: 42790004c2c8
 lb_49ae6:
-	CMPI.W	#$005a,lb_4c2fc		;49ae6: 0c79005a0004c2fc
+	CMPI.W	#$005a,damage_percentage		;49ae6: 0c79005a0004c2fc
 	BLT.S	lb_49b20		;49aee: 6d30
 	TST.W	lb_4c2c8+2		;49af0: 4a790004c2ca
 	BEQ.S	lb_49b20		;49af6: 6728
@@ -59985,7 +59971,7 @@ lb_49ae6:
 	SUBI.L	#$00100000,D0		;49b14: 048000100000
 	ADD.L	D0,lb_4c2c0		;49b1a: d1b90004c2c0
 lb_49b20:
-	CMPI.W	#$0064,lb_4c2fc		;49b20: 0c7900640004c2fc
+	CMPI.W	#$0064,damage_percentage		;49b20: 0c7900640004c2fc
 	BLT.S	lb_49b4a		;49b28: 6d20
 	TST.W	lb_4c44e		;49b2a: 4a790004c44e
 	BNE.S	lb_49b4a		;49b30: 6618
@@ -60077,7 +60063,7 @@ lb_49c6e:
 	MOVE.W	lb_4c234,D1		;49c7e: 32390004c234
 	CMP.W	lb_4c234+2,D1		;49c84: b2790004c236
 	BLE.S	lb_49cee		;49c8a: 6f62
-	CMP.W	lb_4c2fc+2,D0		;49c8c: b0790004c2fe
+	CMP.W	damage_percentage+2,D0		;49c8c: b0790004c2fe
 	BLT.S	lb_49cee		;49c92: 6d5a
 	CMPI.W	#$0014,0(A2,D7.W)	;49c94: 0c7200147000
 	BEQ.S	lb_49cee		;49c9a: 6752
@@ -60114,7 +60100,7 @@ lb_49cf8:
 	CMP.W	lb_3d35a,D0		;49d10: b0790003d35a
 	BEQ.S	lb_49d68		;49d16: 6750
 	MOVE.W	lb_4c2d8+2,D0		;49d18: 30390004c2da
-	CMP.W	lb_4c2fc+2,D0		;49d1e: b0790004c2fe
+	CMP.W	damage_percentage+2,D0		;49d1e: b0790004c2fe
 	BLT.S	lb_49d68		;49d24: 6d42
 	LEA	lb_42c14+2(PC),A1	;49d26: 43fa8eee
 	MOVE.W	lb_4c240(PC),D0		;49d2a: 303a2514
@@ -60193,11 +60179,11 @@ lb_49dc6:
 	BGE.S	lb_49e6a		;49e30: 6c38
 	MOVE.W	#$ffff,lb_4c268+2	;49e32: 33fcffff0004c26a
 	MOVEA.L	#lb_429b6,A0		;49e3a: 207c000429b6
-	TST.W	lb_4c2fc		;49e40: 4a790004c2fc
+	TST.W	damage_percentage		;49e40: 4a790004c2fc
 	BEQ.S	lb_49e56		;49e46: 670e
-	SUBQ.W	#2,lb_4c2fc		;49e48: 55790004c2fc
+	SUBQ.W	#2,damage_percentage		;49e48: 55790004c2fc
 	BPL.S	lb_49e5c		;49e4e: 6a0c
-	CLR.W	lb_4c2fc		;49e50: 42790004c2fc
+	CLR.W	damage_percentage		;49e50: 42790004c2fc
 lb_49e56:
 	MOVEA.L	#lb_429de,A0		;49e56: 207c000429de
 lb_49e5c:
@@ -60278,7 +60264,7 @@ lb_49f34:
 	MOVE.L	(A0)+,(A1)+		;49f66: 22d8
 lb_49f68:
 	MOVEA.L	#lb_196b4+($e80-$6b4),A0		;49f68: 207c00019e80
-	MOVE.W	lb_4c2fc(PC),D0		;49f6e: 303a238c
+	MOVE.W	damage_percentage(PC),D0		;49f6e: 303a238c
 	CMPI.W	#$0064,D0		;49f72: 0c400064
 	BLT.S	lb_49f7c		;49f76: 6d04
 	MOVE.W	#$0063,D0		;49f78: 303c0063
@@ -60287,7 +60273,7 @@ lb_49f7c:
 	DIVU	#$000a,D0		;49f7e: 80fc000a
 	MOVE.L	D0,-(A7)		;49f82: 2f00
 	ADDI.W	#$0030,D0		;49f84: 06400030
-	CMPI.W	#$0050,lb_4c2fc		;49f88: 0c7900500004c2fc
+	CMPI.W	#$0050,damage_percentage		;49f88: 0c7900500004c2fc
 	BLT.S	lb_49fbe		;49f90: 6d2c
 	MOVE.W	EXT_00da.W,D7		;49f92: 3e382a92
 	ANDI.W	#$0002,D7		;49f96: 02470002
@@ -60556,7 +60542,7 @@ lb_4a2be:
 	SUBI.W	#$0016,D1		;4a3ea: 04410016
 	MOVE.W	D1,EXT_0131.W		;4a3ee: 31c15f04
 	MOVE.W	D1,EXT_0133.W		;4a3f2: 31c15f08
-	MOVE.W	lb_4c2fc,D2		;4a3f6: 34390004c2fc
+	MOVE.W	damage_percentage,D2		;4a3f6: 34390004c2fc
 	CMPI.W	#$0099,D2		;4a3fc: 0c420099
 	BLE.S	lb_4a406		;4a400: 6f04
 	MOVE.W	#$0099,D2		;4a402: 343c0099
@@ -60566,7 +60552,7 @@ lb_4a406:
 	DIVU	#$002a,D2		;4a40a: 84fc002a
 	ADDI.W	#$010d,D2		;4a40e: 0642010d
 	MOVE.W	D2,EXT_0132.W		;4a412: 31c25f06
-	CMPI.W	#$004b,lb_4c2fc		;4a416: 0c79004b0004c2fc
+	CMPI.W	#$004b,damage_percentage		;4a416: 0c79004b0004c2fc
 	BLT.S	lb_4a428		;4a41e: 6d08
 	MOVEQ	#5,D0			;4a420: 7005
 	JSR	lb_0b276		;4a422: 4eb90000b276
@@ -62186,7 +62172,7 @@ lb_4b9ba:
 	CLR.W	lb_4c2a4+2		;4b9da: 42790004c2a6
 	CLR.W	lb_4c2a8		;4b9e0: 42790004c2a8
 lb_4b9e6:
-	MOVE.W	lb_4c2fc+2,D0		;4b9e6: 30390004c2fe
+	MOVE.W	damage_percentage+2,D0		;4b9e6: 30390004c2fe
 	LSR.W	#1,D0			;4b9ec: e248
 	CMPI.W	#$0001,D0		;4b9ee: 0c400001
 	BGE.S	lb_4b9f6		;4b9f2: 6c02
@@ -62321,7 +62307,7 @@ lb_4bbdc:
 	CLR.W	EXT_0083.W		;4bc26: 427809a4
 	CLR.W	EXT_0084.W		;4bc2a: 427809a6
 	CLR.W	lb_4c27c+2		;4bc2e: 42790004c27e
-	CLR.W	lb_4c2fc		;4bc34: 42790004c2fc
+	CLR.W	damage_percentage		;4bc34: 42790004c2fc
 	MOVE.W	#$ffff,lb_4c274+2	;4bc3a: 33fcffff0004c276
 	CLR.W	lb_4c270		;4bc42: 42790004c270
 	CLR.W	lb_4c48e		;4bc48: 42790004c48e
@@ -62947,7 +62933,7 @@ lb_4c2f4:
 	dc.l  0			;4c2f4: 00000000
 lb_4c2f8:
 	dc.l  0			;4c2f8: 00000000
-lb_4c2fc:
+damage_percentage:
 	ORI.B	#$05,D0			;4c2fc: 00000005
 lb_4c300:
 	dc.l  0			;4c300: 00000000
