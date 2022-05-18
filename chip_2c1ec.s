@@ -1309,7 +1309,9 @@ lb_2cc8e:
 	DC.W	$a173			;2cc90
 	NEG.W	(A5)			;2cc92: 4455
 lb_2cc94:
-	OR.W	D7,EXT_0000.W		;2cc94: 8f780000
+	dc.w	$8F78
+lb_2cc96:
+	dc.w	$0000
 	DC.W	$0002			;2cc98
 	BTST	D6,(A0)+		;2cc9a: 0d18
 	MOVE.L	62(A0,D3.L),-(A2)	;2cc9c: 2530383e
@@ -1511,6 +1513,7 @@ lb_2cdda:
 	MOVEQ	#74,D2			;2ce40: 744a
 	MOVE.W	(A3)+,-(A1)		;2ce42: 331b
 	ADDI.B	#$00,D0			;2ce44: 06000000
+lb_2ce48:
 	DC.W	$0000			;2ce48
 	DC.W	$464f			;2ce4a
 lb_2ce4c:
@@ -11574,6 +11577,7 @@ lb_320ee:
 	dc.l  0			;32104: 00000000
 	dc.l  0			;32108: 00000000
 	dc.l  0			;3210c: 00000000
+lb_32110:
 	DC.W	$464f			;32110
 	ADDQ.W	#1,A5			;32112: 524d
 	DC.W	$0000			;32114

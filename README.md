@@ -11,12 +11,11 @@ improvements:
 - added cheat keys
   * S: skip qualification
   * K: instant death
-  * C: instant repair
+  * E: instant repair
   
 issues:
 
 - sound with fastmem sounds strange
-- crash when showing replay
 
 maybe later:
 
@@ -29,11 +28,12 @@ how it was done:
 
 - restart from original disassembly
 - getting 100% same binary with labels inserted (assembled in $8000)
-- use various pytjhon scripts to insert labels when needed (feeding from
-  unreferenced symbols when linking executable)
+- use various python scripts to insert labels when needed (feeding from
+  unreferenced symbols when linking executable), this is non-trivial
 - assemble somewhere else (in chip, no exe) and run it with memory protection to
   make sure that all tables are properly relocated, discover address tables
-  as long as the game is crashing
+  as long as the game is crashing. This can take a long time and needs to
+  test all game parts.
 - rework data sections to remove label references
 - use sections with IFD WA (aka "wide address" or "wild address")
   to create exe or binary. When WA is not set, it creates the same exact

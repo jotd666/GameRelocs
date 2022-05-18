@@ -35589,6 +35589,10 @@ lb_22c1e:
 	; new cheat keys
 	move.l	d1,-(a7)
 	ror.b	#1,d1
+	move.l	d0,-(a7)
+	btst	#1,trainer+3
+	beq.b	.no_clear
+
 	cmp.b	#$21,d1		; S: skip qualification
 	bne.b	.no_skip
 	MOVE.W	nb_laps_to_do_to_qualify,nb_laps_done
@@ -35597,7 +35601,7 @@ lb_22c1e:
 	bne.b	.no_kill
 	MOVE.W	#100,damage_percentage
 .no_kill
-	cmp.b	#$33,d1		; C: heal player
+	cmp.b	#$12,d1		; E: erase player damage
 	bne.b	.no_clear
 	clr.W	damage_percentage
 .no_clear
@@ -35609,6 +35613,7 @@ lb_22c1e:
 	addq.l	#resload_Abort,(a7)
 	rts
 .sk
+	move.l	(a7)+,d0
 	move.l	(a7)+,d1
 	ELSE
 	BPL.S	lb_22c68		;22c28: 6a3e
@@ -45346,17 +45351,17 @@ lb_3cf46:
 	LEA	lb_2c1ec,A0		;3cf4c: 41f90002c1ec
 lb_3cf52:
 	ADDI.B	#$80,(A0)+		;3cf52: 06180080
-	CMPA.L	#$0002cc96,A0		;3cf56: b1fc0002cc96
+	CMPA.L	#lb_2cc96,A0		;3cf56: b1fc0002cc96
 	BLT.S	lb_3cf52		;3cf5c: 6df4
 	LEA	lb_2cc94+2,A0		;3cf5e: 41f90002cc96
 lb_3cf64:
 	ADDI.B	#$80,(A0)+		;3cf64: 06180080
-	CMPA.L	#$0002ce49,A0		;3cf68: b1fc0002ce49
+	CMPA.L	#lb_2ce48+1,A0		;3cf68: b1fc0002ce49
 	BLT.S	lb_3cf64		;3cf6e: 6df4
 	LEA	lb_3029e+2,A0		;3cf70: 41f9000302a0
 lb_3cf76:
 	ADDI.B	#$80,(A0)+		;3cf76: 06180080
-	CMPA.L	#$00032110,A0		;3cf7a: b1fc00032110
+	CMPA.L	#lb_32110,A0		;3cf7a: b1fc00032110
 	BLT.S	lb_3cf76		;3cf80: 6df4
 	MOVE.W	cpu_type_9B4.W,D0		;3cf82: 303809b4
 	IFD	WA
@@ -45640,7 +45645,7 @@ lb_3d35a:
 lb_3d35c:
 	DC.W	$ffff			;3d35c
 	IFD	WA
-	NOP		; remove smc detector false alarm
+	NOP		; remove WinUAE smc detector false alarm
 	ENDC
 lb_3d35e:
 	MOVE.W	#$0033,D0		;3d35e: 303c0033
@@ -46218,7 +46223,7 @@ lb_3dd00:
 	LEA	lb_3dd14(PC),A0		;3dd02: 41fa0010
 lb_3dd06:
 	MOVE.W	#$ffff,(A0)+		;3dd06: 30fcffff
-	CMPA.L	#$00040ff4,A0		;3dd0a: b1fc00040ff4
+	CMPA.L	#lb_40ff4,A0		;3dd0a: b1fc00040ff4
 	BNE.S	lb_3dd06		;3dd10: 66f4
 	RTS				;3dd12: 4e75
 lb_3dd14:
@@ -49520,7 +49525,7 @@ lb_41044:
 	MOVE.W	#$0bad,(A0)		;41044: 30bc0bad
 	MOVE.W	#$0bad,2(A0)		;41048: 317c0bad0002
 	ADDA.W	#$004a,A0		;4104e: d0fc004a
-	CMPA.L	#$00040ff4,A0		;41052: b1fc00040ff4
+	CMPA.L	#lb_40ff4,A0		;41052: b1fc00040ff4
 	BLT.S	lb_41044		;41058: 6dea
 	RTS				;4105a: 4e75
 lb_4105c:
@@ -63308,21 +63313,12 @@ lb_4c782:
 	MOVEM.L	(A7),A1-A2		;4c782: 4cd70600
 	MOVE.W	2(A2),D0		;4c786: 302a0002
 	ASL.W	#3,D0			;4c78a: e740
-	IFD	WA
-	bmi.b	lb_4c7d4
-	ENDC
-	; here it's reading before the 520CA base... bogus because sometimes
-	; it can read way into the program (at $506AA for instance...
-	; which is part of some code...)
-	; so don't let it read as negative
 	MOVE.W	0(A1,D0.W),lb_504f6+2	;4c78c: 33f10000000504f8
 	MOVE.W	2(A1,D0.W),lb_504fa	;4c794: 33f10002000504fa
 	MOVE.W	4(A1,D0.W),lb_504fa+2	;4c79c: 33f10004000504fc
 	MOVE.W	6(A2),D0		;4c7a4: 302a0006
 	ASL.W	#3,D0			;4c7a8: e740
-	IFD	WA
-	bmi.b	lb_4c7d4
-	ENDC
+
 	MOVE.W	0(A1,D0.W),lb_50502+2	;4c7aa: 33f1000000050504
 	MOVE.W	2(A1,D0.W),lb_50506	;4c7b2: 33f1000200050506
 	MOVE.W	4(A1,D0.W),lb_50506+2	;4c7ba: 33f1000400050508
