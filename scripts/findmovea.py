@@ -7,7 +7,7 @@ for i,line in enumerate(af.lines):
     if m:
         inst = m.group(1)
         operand = m.group(2)
-        if inst in ("MOVE.L","MOVEA.L") and operand.startswith('#'):
+        if inst in ("MOVE.L","MOVEA.L","CMP.L","CMPA.L") and operand.startswith('#'):
             try:
                 val = int(operand[2:].split(",")[0],16)
                 if val > 0x8000 and val < 0x520ca:

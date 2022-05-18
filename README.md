@@ -8,7 +8,11 @@ improvements:
   so code can benefit from cache
 - in some cases, just inserted cache flushes, as fixing SMC is really too
   time consuming and complex.
-
+- added cheat keys
+  * S: skip qualification
+  * K: instant death
+  * C: instant repair
+  
 issues:
 
 - sound with fastmem sounds strange
