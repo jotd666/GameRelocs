@@ -747,6 +747,8 @@ adr_0531e = $0531e
 adr_05324 = $05324
 adr_05326 = $05326
 
+keyboard_state_table = $00049d3e
+
 	IFND	REAL_EXE
 	ORG	$1000
 	ENDC
@@ -13267,13 +13269,8 @@ lb_07648:
 	MOVE.L	-(A0),D0		;07656: 2020
 	DC.W	$5631			;07658
 	MOVE.L	65(A0,D0.W),D7		;0765a: 2e300041
-lb_0765e:
-	DC.W	$4741			;0765e
-	DC.W	$4d45			;07660
-	MOVEA.L	(A0),A0			;07662: 2050
-	DC.W	$4155			;07664
-	SUBQ.W	#1,D5			;07666: 5345
-	NEG.B	D0			;07668: 4400
+game_paused_string:
+	dc.b	"GAME PAUSED",0
 lb_0766a:
 	ADDQ.W	#8,D1			;0766a: 5041
 	DC.W	$4745			;0766c
@@ -38038,13 +38035,13 @@ lb_18df4:
 	MOVE.L	D4,D0			;18e16: 2004
 	BRA.W	lb_18e8a		;18e18: 60000070
 lb_18e1c:
-	TST.L	lb_470d8+2		;18e1c: 4ab9000470da
+	TST.L	game_paused_flag		;18e1c: 4ab9000470da
 	BEQ.S	lb_18e76		;18e22: 6752
 	CLR.B	D0			;18e24: 4200
 	MOVEQ	#-3,D2			;18e26: 74fd
 	MOVEQ	#-1,D3			;18e28: 76ff
-	CLR.L	lb_470d8+2		;18e2a: 42b9000470da
-	PEA	lb_0765e		;18e30: 48790000765e
+	CLR.L	game_paused_flag		;18e2a: 42b9000470da
+	PEA	game_paused_string		;18e30: 48790000765e
 	JSR	lb_1250c		;18e36: 4eb90001250c
 	JSR	lb_1a292		;18e3c: 4eb90001a292
 	JSR	lb_080e2		;18e42: 4eb9000080e2
@@ -38099,7 +38096,7 @@ lb_18e94:
 lb_18eb4:
 	JSR	lb_18ecc(PC)		;18eb4: 4eba0016
 	NOP				;18eb8: 4e71
-	CLR.L	lb_470d8+2		;18eba: 42b9000470da
+	CLR.L	game_paused_flag		;18eba: 42b9000470da
 	MOVE.B	D2,(A2)			;18ec0: 1482
 	MOVEM.L	-8(A6),D2/A2		;18ec2: 4cee0404fff8
 	UNLK	A6			;18ec8: 4e5e
@@ -38201,7 +38198,7 @@ lb_18fca:
 	BNE.W	lb_190f0		;18fce: 66000120
 	BRA.W	lb_19096		;18fd2: 600000c2
 	MOVEQ	#1,D0			;18fd6: 7001
-	MOVE.L	D0,lb_470d8+2		;18fd8: 23c0000470da
+	MOVE.L	D0,game_paused_flag		;18fd8: 23c0000470da
 	BRA.W	lb_190f0		;18fde: 60000110
 	MOVEQ	#1,D0			;18fe2: 7001
 	MOVE.L	D0,EXT_0097		;18fe4: 23c000047ac8
@@ -38583,7 +38580,7 @@ lb_194b4:
 	RTS				;194bc: 4e75
 lb_194be:
 	LINK.W	A6,#0			;194be: 4e560000
-	MOVEA.L	#$00049d3e,A0		;194c2: 207c00049d3e
+	MOVEA.L	#keyboard_state_table,A0		;194c2: 207c00049d3e
 	CLR.B	D0			;194c8: 4200
 	MOVE.B	D0,EXT_0135		;194ca: 13c000049cdc
 	MOVE.B	D0,EXT_0134		;194d0: 13c000049cda
@@ -39625,12 +39622,12 @@ lb_1a2a6:
 	CLR.L	EXT_0141		;1a2ca: 42b900049d36
 	CLR.L	EXT_0142		;1a2d0: 42b900049d3a
 	PEA	128.W			;1a2d6: 48780080
-	MOVE.L	#$00049d3e,-(A7)	;1a2da: 2f3c00049d3e
+	MOVE.L	#keyboard_state_table,-(A7)	;1a2da: 2f3c00049d3e
 	JSR	lb_1ece8		;1a2e0: 4eb90001ece8
 	MOVEA.L	#lb_07abe,A2		;1a2e6: 247c00007abe
 	ADDQ.L	#8,A7			;1a2ec: 508f
 	MOVEQ	#9,D3			;1a2ee: 7609
-	MOVEA.L	#$00049d3e,A1		;1a2f0: 227c00049d3e
+	MOVEA.L	#keyboard_state_table,A1		;1a2f0: 227c00049d3e
 	BRA.S	lb_1a308		;1a2f6: 6010
 lb_1a2f8:
 	MOVEA.L	A2,A0			;1a2f8: 204a
@@ -39657,27 +39654,28 @@ lb_1a31a:
 	MOVE.B	D2,D0			;1a32e: 1002
 	LSL.L	#7,D0			;1a330: ef88
 	MOVE.B	D0,D3			;1a332: 1600
-	ANDI.B	#$80,D3			;1a334: 02030080
+	ANDI.B	#$80,D3			;1a334: 02030080	; key up D3 != 0
 	MOVE.B	D2,D4			;1a338: 1802
 	LSR.B	#1,D4			;1a33a: e20c
 	MOVE.B	D3,D2			;1a33c: 1403
 	OR.B	D4,D2			;1a33e: 8404
 	ORI.B	#$40,CIAA_CRA		;1a340: 0039004000bfee01
 	PEA	75.W			;1a348: 4878004b
-	JSR	lb_1a3d2		;1a34c: 4eb90001a3d2
+	; keyboard handshake
+	JSR	wait_x_milliseconds		;1a34c: 4eb90001a3d2
 	ANDI.B	#$bf,CIAA_CRA		;1a352: 023900bf00bfee01
 	MOVEQ	#0,D0			;1a35a: 7000
 	MOVE.B	D4,D0			;1a35c: 1004
-	MOVEA.L	#$00049d3e,A0		;1a35e: 207c00049d3e
+	MOVEA.L	#keyboard_state_table,A0		;1a35e: 207c00049d3e
 	MOVE.B	0(A0,D0.W),D1		;1a364: 12300000
 	ANDI.B	#$fe,D1			;1a368: 020100fe
 	TST.B	D3			;1a36c: 4a03
-	BNE.S	lb_1a374		;1a36e: 6604
+	BNE.S	key_up		;1a36e: 6604
 	ORI.B	#$01,D1			;1a370: 00010001
-lb_1a374:
+key_up:
 	MOVEQ	#0,D0			;1a374: 7000
 	MOVE.B	D4,D0			;1a376: 1004
-	MOVEA.L	#$00049d3e,A0		;1a378: 207c00049d3e
+	MOVEA.L	#keyboard_state_table,A0		;1a378: 207c00049d3e
 	MOVE.B	D1,0(A0,D0.W)		;1a37e: 11810000
 	BTST	#7,D1			;1a382: 08010007
 	BEQ.S	lb_1a38a		;1a386: 6702
@@ -39707,7 +39705,7 @@ lb_1a3be:
 	JSR	EXT_01a7		;1a3c8: 4eb90007e936
 	UNLK	A6			;1a3ce: 4e5e
 	RTS				;1a3d0: 4e75
-lb_1a3d2:
+wait_x_milliseconds:
 	LINK.W	A6,#0			;1a3d2: 4e560000
 	MOVE.L	8(A6),D0		;1a3d6: 202e0008
 	MOVE.L	D0,-(A7)		;1a3da: 2f00
@@ -40404,7 +40402,7 @@ lb_1ad4c:
 	MOVE.L	(A0),D1			;1ad86: 2210
 	JSR	lb_1efce		;1ad88: 4eb90001efce
 	MOVE.L	D0,-(A7)		;1ad8e: 2f00
-	JSR	lb_1a3d2		;1ad90: 4eb90001a3d2
+	JSR	wait_x_milliseconds		;1ad90: 4eb90001a3d2
 lb_1ad96:
 	MOVEM.L	-32(A6),D2/A2		;1ad96: 4cee0404ffe0
 	UNLK	A6			;1ad9c: 4e5e
@@ -40424,10 +40422,10 @@ lb_1ada0:
 	JMP	lb_1adca(PC,D0.W)	;1adc6: 4efb0002
 lb_1adca:
 	DC.W	$000c			;1adca
-	ORI.B	#$54,120(A0,D0.W)	;1adcc: 003000540078
-	ORI.L	#$00c84eb9,(A6)+	;1add2: 009e00c84eb9
-	DC.W	$0000			;1add8
-	ADDQ.B	#2,(A0)			;1adda: 5410
+	dc.l	$00300054	;1adcc: 
+	dc.w	$0078
+	dc.l	$009e00c8	;1add2: 009e00c8
+	JSR	lb_05410		;1add6: 4eb900005410
 	CLR.W	AUD0VOL			;1addc: 427900dff0a8
 	MOVE.W	#$0001,DMACON		;1ade2: 33fc000100dff096
 	MOVE.W	#$0080,INTENA		;1adea: 33fc008000dff09a
@@ -47142,7 +47140,8 @@ lb_1f65c:
 	MOVE.L	A0,EXT_019e		;1f68e: 23c800067614
 	MOVE.L	#$0007e7f0,EXT_019f	;1f694: 23fc0007e7f000067618
 	MOVEA.L	#$00000000,A6		;1f69e: 2c7c00000000
-	MOVEA.L	#$00046e46,A0		;1f6a4: 207c00046e46
+	; clears game variables
+	MOVEA.L	#lb_46e46,A0		;1f6a4: 207c00046e46
 	MOVE.L	#$000207ce,D0		;1f6aa: 203c000207ce
 	ADDQ.L	#1,D0			;1f6b0: 5280
 	LSR.L	#1,D0			;1f6b2: e288
@@ -127941,6 +127940,7 @@ lb_1f7ae:
 	dc.w	$4540	;0046e42
 lb_46e44:
 	dc.w	$0000	;0046e44
+lb_46e46:
 	dc.w	$0000	;0046e46
 	dc.w	$0ace	;0046e48
 lb_46e4a:
@@ -128296,6 +128296,7 @@ lb_470d6:
 	dc.w	$3414	;00470d6
 lb_470d8:
 	dc.w	$1434	;00470d8
+game_paused_flag:
 	dc.w	$0000	;00470da
 	dc.w	$3414	;00470dc
 	dc.w	$3321	;00470de

@@ -1,11 +1,19 @@
 import struct,collections,itertools
 import defines
+import shutil
 
 hunk_dict = {0x3F3:"header",0x3E9:"code",0x3EA:"data",0x3F2:"end",0x3EC:"reloc32",0x3EB:"bss",0x3F1:"debug"}
+
+def get_long(binary_buf,offset):
+    return struct.unpack_from(">I",binary_buf,offset)[0]
+
 def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
 def decode(input_file,binary_file):
+    with open(binary_file,"rb") as f:
+        binary_contents = f.read()
+
     with open(input_file,"rb") as f:
 
         header = read_long(f)
@@ -45,22 +53,25 @@ def decode(input_file,binary_file):
             else:
                 data = f.read(hunk_size)
 
-        # filter, useless
-        #reloc_offsets = [r for r in reloc_offsets if (defines.start_address <= r+defines.start_org)]
+        # filter: don't relocate addresses outside program
+        reloc_offsets = [r for r in reloc_offsets if (defines.start_address <= get_long(binary_contents,r) < defines.end_address)]
 
         if True:
-            rtb_data=[]
+            reloc_data = []
             reloc_offsets= sorted(reloc_offsets)
             for offset in reloc_offsets:
-                rtb_data.extend(struct.pack(">I",offset))
-            rtb_data.extend([0]*4)
+                reloc_data.extend(struct.pack(">I",offset))
+            reloc_data.extend([0]*4)
 
-            print("saving .reloc file, {} bytes".format(len(rtb_data)))
+            print("saving .reloc file, {} bytes".format(len(reloc_data)))
             with open(binary_file+".reloc","wb") as f:
-                f.write(bytearray(rtb_data))
+                f.write(bytearray(reloc_data))
+
+            #shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\GAMES\P\PrinceOfPersia!UK1a")  # TEMP
             print("saving .RTB.TXT file")
             with open(binary_file+".reloc.TXT","w") as f:
                 for s in reloc_offsets:
                     f.write("\tdc.l\t${:x}\n".format(s))
 
 decode(r"../{}_hunk".format(defines.project),r"../{}".format(defines.project))
+
