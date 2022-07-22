@@ -24,7 +24,29 @@ if p.returncode:
             lineno = af.address_lines.get(u-2)
 
         if lineno is None or offset:
-            print("not done {} {} {} look for ;{:05x}".format(lineno,hex(u),offset,u-2))
+            if lineno is not None:
+                line_to_split = af.lines[lineno]
+                can_split = False
+                m = ira_asm_tools.general_instruction_re.match(line_to_split)
+                if m:
+                    offset,data = m.group(3),m.group(4)
+                    if len(data)==8:
+                        offset = int(offset,16)
+                        data = int(data,16)
+                        can_split = True
+                else:
+                    m = ira_asm_tools.dc_instruction_re.match(line_to_split)
+                    if m:
+                        print(m.groups())
+                        kfdlkf
+                if can_split:
+                    # can split
+                    repl = ("\tdc.w\t${:04x}  ;{:05x}\n"*2).format(data>>16,offset,data&0xFFFF,offset+2)
+                    print(repl)
+                    af.lines[lineno] = repl
+
+            else:
+                print("not done {} {} {} look for ;{:05x}".format(lineno,hex(u),offset,u-2))
         else:
             print(lineno,hex(u),offset)
             af.lines[lineno] = "lb_{:05x}:\n{}".format(u,af.lines[lineno])

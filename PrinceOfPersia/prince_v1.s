@@ -737,6 +737,7 @@ EXT_02db	EQU	$FFFFFFFE
 
 adr_010ce = $010ce
 adr_01a22 = $01a22
+blitter_done_flag = $01a24
 adr_051b8 = $051b8
 adr_052b8 = $052b8
 adr_052d8 = $052d8
@@ -9406,16 +9407,16 @@ lb_0534a:
 	MOVEM.L	(A7)+,D2/A2-A3		;0539a: 4cdf0c04
 	UNLK	A6			;0539e: 4e5e
 	RTS				;053a0: 4e75
-lb_053a2:
+blit_and_wait_2:
 	LINK.W	A6,#0			;053a2: 4e560000
 	MOVE.L	8(A6),D0		;053a6: 202e0008
 	MOVE	SR,D1			;053aa: 40c1
 	MOVE	#$2700,SR		;053ac: 46fc2700
-	MOVE.L	#$00000001,adr_01a22+2.W	;053b0: 21fc000000011a24
+	MOVE.L	#$00000001,blitter_done_flag.W	;053b0: 21fc000000011a24
 	MOVE.W	D0,BLTSIZE		;053b8: 33c000dff058
 	STOP	#$2000			;053be: 4e722000
 lb_053c2:
-	TST.L	adr_01a22+2.W		;053c2: 4ab81a24
+	TST.L	blitter_done_flag.W		;053c2: 4ab81a24
 	BEQ.S	lb_053ce		;053c6: 6706
 	STOP	#$2000			;053c8: 4e722000
 	BRA.S	lb_053c2		;053cc: 60f4
@@ -9423,21 +9424,21 @@ lb_053ce:
 	MOVE	D1,SR			;053ce: 46c1
 	UNLK	A6			;053d0: 4e5e
 	RTS				;053d2: 4e75
-lb_053d4:
+saved_sr:
 	DC.W	$0000			;053d4
 blit_and_wait:
-	MOVE	SR,lb_053d4		;053d6: 40f9000053d4
+	MOVE	SR,saved_sr		;053d6: 40f9000053d4
 	MOVE	#$2700,SR		;053dc: 46fc2700
-	MOVE.L	#$00000001,adr_01a22+2.W	;053e0: 21fc000000011a24
+	MOVE.L	#$00000001,blitter_done_flag.W	;053e0: 21fc000000011a24
 	MOVE.W	D0,BLTSIZE		;053e8: 33c000dff058
 	STOP	#$2000			;053ee: 4e722000
 lb_053f2:
-	TST.L	adr_01a22+2.W		;053f2: 4ab81a24
+	TST.L	blitter_done_flag.W		;053f2: 4ab81a24
 	BEQ.S	lb_053fe		;053f6: 6706
 	STOP	#$2000			;053f8: 4e722000
 	BRA.S	lb_053f2		;053fc: 60f4
 lb_053fe:
-	MOVE	lb_053d4(PC),SR		;053fe: 46faffd4
+	MOVE	saved_sr(PC),SR		;053fe: 46faffd4
 	RTS				;05402: 4e75
 lb_05404:
 	LINK.W	A6,#0			;05404: 4e560000
@@ -38761,7 +38762,7 @@ lb_197b4:
 	CMPI.L	#$00001000,D2		;197b4: 0c8200001000
 	BLT.S	lb_197d0		;197ba: 6d14
 	PEA	4096.W			;197bc: 48781000
-	JSR	lb_053a2		;197c0: 4eb9000053a2
+	JSR	blit_and_wait_2		;197c0: 4eb9000053a2
 	SUBI.L	#$00001000,D2		;197c6: 048200001000
 lb_197cc:
 	ADDQ.L	#4,A7			;197cc: 588f
@@ -38771,13 +38772,13 @@ lb_197d0:
 	ANDI.L	#$0000ffc0,D0		;197d2: 02800000ffc0
 	BEQ.S	lb_197e6		;197d8: 670c
 	MOVE.L	D0,-(A7)		;197da: 2f00
-	JSR	lb_053a2		;197dc: 4eb9000053a2
+	JSR	blit_and_wait_2		;197dc: 4eb9000053a2
 	AND.L	D3,D2			;197e2: c483
 	BRA.S	lb_197cc		;197e4: 60e6
 lb_197e6:
 	OR.L	D4,D2			;197e6: 8484
 	MOVE.L	D2,-(A7)		;197e8: 2f02
-	JSR	lb_053a2		;197ea: 4eb9000053a2
+	JSR	blit_and_wait_2		;197ea: 4eb9000053a2
 	ADDQ.L	#4,A7			;197f0: 588f
 	MOVEQ	#0,D2			;197f2: 7400
 lb_197f4:
@@ -38810,7 +38811,7 @@ lb_19846:
 	CMPI.L	#$00001000,D2		;19846: 0c8200001000
 	BLT.S	lb_19862		;1984c: 6d14
 	PEA	4096.W			;1984e: 48781000
-	JSR	lb_053a2		;19852: 4eb9000053a2
+	JSR	blit_and_wait_2		;19852: 4eb9000053a2
 	SUBI.L	#$00001000,D2		;19858: 048200001000
 lb_1985e:
 	ADDQ.L	#4,A7			;1985e: 588f
@@ -38820,13 +38821,13 @@ lb_19862:
 	ANDI.L	#$0000ffc0,D0		;19864: 02800000ffc0
 	BEQ.S	lb_19878		;1986a: 670c
 	MOVE.L	D0,-(A7)		;1986c: 2f00
-	JSR	lb_053a2		;1986e: 4eb9000053a2
+	JSR	blit_and_wait_2		;1986e: 4eb9000053a2
 	AND.L	D3,D2			;19874: c483
 	BRA.S	lb_1985e		;19876: 60e6
 lb_19878:
 	OR.L	D4,D2			;19878: 8484
 	MOVE.L	D2,-(A7)		;1987a: 2f02
-	JSR	lb_053a2		;1987c: 4eb9000053a2
+	JSR	blit_and_wait_2		;1987c: 4eb9000053a2
 	ADDQ.L	#4,A7			;19882: 588f
 	MOVEQ	#0,D2			;19884: 7400
 lb_19886:
@@ -38939,7 +38940,7 @@ lb_19910:
 	MOVEQ	#0,D0			;199a4: 7000
 	MOVE.W	D3,D0			;199a6: 3003
 	MOVE.L	D0,-(A7)		;199a8: 2f00
-	JSR	lb_053a2		;199aa: 4eb9000053a2
+	JSR	blit_and_wait_2		;199aa: 4eb9000053a2
 	MOVE.L	D4,BLTAPTH		;199b0: 23c400dff050
 	MOVE.L	D2,BLTBPTH		;199b6: 23c200dff04c
 	MOVE.L	D2,BLTDPTH		;199bc: 23c200dff054
@@ -38947,7 +38948,7 @@ lb_19910:
 	MOVEQ	#0,D0			;199ca: 7000
 	MOVE.W	D3,D0			;199cc: 3003
 	MOVE.L	D0,-(A7)		;199ce: 2f00
-	JSR	lb_053a2		;199d0: 4eb9000053a2
+	JSR	blit_and_wait_2		;199d0: 4eb9000053a2
 	MOVEM.L	-28(A6),D2-D7		;199d6: 4cee00fcffe4
 	UNLK	A6			;199dc: 4e5e
 	RTS				;199de: 4e75
@@ -39061,7 +39062,7 @@ lb_19ae0:
 	MOVEQ	#0,D0			;19b1c: 7000
 	MOVE.W	D3,D0			;19b1e: 3003
 	MOVE.L	D0,-(A7)		;19b20: 2f00
-	JSR	lb_053a2		;19b22: 4eb9000053a2
+	JSR	blit_and_wait_2		;19b22: 4eb9000053a2
 	MOVE.L	D2,BLTAPTH		;19b28: 23c200dff050
 	MOVE.L	D2,BLTBPTH		;19b2e: 23c200dff04c
 	MOVE.L	D2,BLTDPTH		;19b34: 23c200dff054
@@ -39071,7 +39072,7 @@ lb_19b42:
 	MOVEQ	#0,D0			;19b48: 7000
 	MOVE.W	D3,D0			;19b4a: 3003
 	MOVE.L	D0,-(A7)		;19b4c: 2f00
-	JSR	lb_053a2		;19b4e: 4eb9000053a2
+	JSR	blit_and_wait_2		;19b4e: 4eb9000053a2
 	MOVEM.L	-28(A6),D2-D7		;19b54: 4cee00fcffe4
 	UNLK	A6			;19b5a: 4e5e
 	RTS				;19b5c: 4e75
@@ -39366,7 +39367,7 @@ lb_19fba:
 	BTST	#6,EXT_01ca		;19fba: 0839000600dff01f
 	BEQ.S	lb_19fd2		;19fc2: 670e
 	MOVE.W	#$0040,INTREQ		;19fc4: 33fc004000dff09c
-	CLR.L	adr_01a22+2		;19fcc: 42b900001a24
+	CLR.L	blitter_done_flag		;19fcc: 42b900001a24
 lb_19fd2:
 	BTST	#4,EXT_01ca		;19fd2: 0839000400dff01f
 	BEQ.S	lb_19ff0		;19fda: 6714
