@@ -40177,10 +40177,12 @@ lb_1ad9c:
 	JMP	lb_1adc6(PC,D0.W)	;1adc2: 4efb0002
 lb_1adc6:
 	DC.W	$000c			;1adc6
-	ORI.B	#$54,120(A0,D0.W)	;1adc8: 003000540078
-	ORI.L	#$00c84eb9,(A6)+	;1adce: 009e00c84eb9
-	DC.W	$0000			;1add4
-	ADDQ.B	#2,(A0)			;1add6: 5410
+	dc.l	$00300054
+	dc.w	$0078
+	dc.l	$009e00c8
+	; this code (and jump) is hidden by the above relative jump table
+	; must be restored manually
+	jsr		lb_05410		;0001add2
 	CLR.W	AUD0VOL			;1add8: 427900dff0a8
 	MOVE.W	#$0001,DMACON		;1adde: 33fc000100dff096
 	MOVE.W	#$0080,INTENA		;1ade6: 33fc008000dff09a

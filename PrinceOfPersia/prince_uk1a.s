@@ -11986,7 +11986,7 @@ lb_06bd2:
 	BCLR	D1,D0			;06be2: 0380
 	dc.w	$0000		;06be4
 	dc.w	$0000		;06be6
-	SUBI.L	#lb_08000,D0		;06be8: 048000008000
+	SUBI.L	#$8000,D0		;06be8: 048000008000
 	BCLR	D2,D0			;06bee: 0580
 	dc.w	$0000		;06bf0
 	dc.w	$0000		;06bf2
@@ -12076,7 +12076,7 @@ lb_06bd2:
 	BCLR	D5,D0			;06cc6: 0b80
 	DC.W	$0000			;06cc8
 	OR.B	D0,D0			;06cca: 8000
-	CMPI.L	#lb_08000,D0		;06ccc: 0c8000008000
+	CMPI.L	#$8000,D0		;06ccc: 0c8000008000
 	BCLR	D6,D0			;06cd2: 0d80
 	dc.w	$0000		;06cd4
 	dc.w	$0000		;06cd6
@@ -14730,7 +14730,6 @@ lb_07ffa:
 	DC.W	$6c6f			;07ffc
 lb_07ffe:
 	MOVEQ	#109,D1			;07ffe: 726d
-lb_08000:
 	BSR.S	lb_08072		;08000: 6170
 	MOVEA.L	-(A7),A0		;08002: 2067
 lb_08004:
