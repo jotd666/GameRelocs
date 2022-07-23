@@ -1,4 +1,4 @@
-import struct,collections,itertools
+import struct,collections,itertools,os
 import defines
 import shutil
 
@@ -14,6 +14,7 @@ def decode(input_file,binary_file):
     with open(binary_file,"rb") as f:
         binary_contents = f.read()
 
+    input_file_size = os.path.getsize(input_file)
     with open(input_file,"rb") as f:
 
         header = read_long(f)
@@ -34,7 +35,9 @@ def decode(input_file,binary_file):
         i = 1
         while(True):
             # now the hunks (no need to remind the memory constraints)
-            print(f.tell())
+            if f.tell() == input_file_size:
+                print("end of file at offset {:08x}".format(input_file_size))
+                break
             hunk_type = (read_long(f) & 0x3FFFFFFF)
             print("Hunk type: {:04x}".format(hunk_type))
             if hunk_type == 0x3F2:
