@@ -13,6 +13,7 @@ set VER=prince_vx
 copy %VER% %VER%_ref
 ira -a -offset=$1000 %VER%
 offsetize_labels.py %VER%.asm --outfile %VER%.s
+git add %VER%.s %VER%_ref
 
 - surround ORG directive with
  	IFND	REAL_EXE

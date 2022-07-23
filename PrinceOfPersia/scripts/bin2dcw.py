@@ -16,4 +16,4 @@ with open("data_end.s","w") as f:
         addr = i
         i -= defines.start_org
         data = struct.unpack_from(">H",contents,i)[0]
-        f.write("\tdc.w\t${:04x}\t;{:07x}\n".format(data,addr))
+        f.write("\t  dc.w\t${:04x}\t;{:07x}\n".format(data,addr))
