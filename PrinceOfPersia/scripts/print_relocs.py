@@ -1,4 +1,4 @@
-import struct,collections,itertools,os
+import struct,collections,itertools,os,subprocess
 import defines
 import shutil
 
@@ -10,7 +10,7 @@ def get_long(binary_buf,offset):
 def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
-def decode(input_file,binary_file):
+def decode(input_file,binary_file,start_address,end_address,pack=False):
     with open(binary_file,"rb") as f:
         binary_contents = f.read()
 
@@ -57,7 +57,7 @@ def decode(input_file,binary_file):
                 data = f.read(hunk_size)
 
         # filter: don't relocate addresses outside program
-        reloc_offsets = [r for r in reloc_offsets if (defines.start_address <= get_long(binary_contents,r) < defines.end_address)]
+        reloc_offsets = [r for r in reloc_offsets if (start_address <= get_long(binary_contents,r) < end_address)]
 
         if True:
             reloc_data = []
@@ -69,12 +69,17 @@ def decode(input_file,binary_file):
             print("saving {} file, {} bytes".format(outbin,len(reloc_data)))
             with open(outbin,"wb") as f:
                 f.write(bytearray(reloc_data))
-
+            if pack:
+                print("packing file")
+                subprocess.check_call(["propack","p",outbin,outbin])
             #shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\GAMES\P\PrinceOfPersia!UK1a")  # TEMP
             print("saving .RTB.TXT file")
             with open(binary_file+".reloc.TXT","w") as f:
                 for s in reloc_offsets:
                     f.write("\tdc.l\t${:x}\n".format(s))
 
-decode(r"../{}_hunk".format(defines.project),r"../{}".format(defines.project))
+# print all relocs
+for project in defines.projects:
+    decode(r"../{}_hunk".format(project),r"../{}".format(project),
+            defines.start_address,defines.end_address_dict[project],pack=True)
 
