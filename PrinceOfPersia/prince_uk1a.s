@@ -10337,7 +10337,6 @@ lb_05d92:
 	dc.w	$0000		;05e78
 	dc.w	$0000		;05e7a
 	dc.w	$0000		;05e7c
-lb_05e7e:
 	dc.w	$0000		;05e7e
 	dc.w	$0000		;05e80
 	ORI.B	#$02,D0			;05e82: 00000002
@@ -10712,36 +10711,25 @@ lb_061e4:
 lb_061ec:
 	ORI.B	#$3c,278(A2)		;061ec: 002a003c0116
 	dc.w	$007c		;061f2
+	; a rare pointer table, used for music
 lb_061f4:
-	dc.w	$0000		;061f4
-	dc.w	$0000		;061f6
-	dc.w	$0000		;061f8
-	dc.w	$0000		;061fa
-	dc.w	$0000		;061fc
-	CMP.L	0(A4),D2		;061fe: b4ac0000
-	dc.w	$0000		;06202
-	dc.w	$0000		;06204
-	EOR.B	D2,(A4)			;06206: b514
-	dc.w	$0000		;06208
-	dc.w	$0000		;0620a
-	DC.W	$0000			;0620c
-	CMP.L	0(A4),D2		;0620e: b4ac0000
-	dc.w	$0000		;06212
-	dc.w	$0000		;06214
-	DC.W	$b57c			;06216
+	dc.l	0	;061f4
+	dc.l	0	;061f8
+	dc.l	lb_0b4ac	;061fc
+	dc.l	0	;06200
+	dc.l	lb_0b514	;06204
+	dc.l	0	;06208
+	dc.l	lb_0b4ac	;0620c
+	dc.l	0	;06210
+	dc.l	lb_0b57c	;06214
 lb_06218:
-	DC.W	$0000			;06218
-	CMP.B	#$00,D3			;0621a: b63c0000
-	dc.w	$0000		;0621e
-	dc.w	$0000		;06220
-	dc.w	$0000		;06222
-	dc.w	$0000		;06224
-	CMPA.W	0(A6,D0.W),A3		;06226: b6f60000
-	dc.w	$0000		;0622a
-	dc.w	$0000		;0622c
-	dc.w	$0000		;0622e
-	dc.w	$0000		;06230
-	DC.W	$0000			;06232
+	dc.l	lb_0b63c	;06218
+	dc.l	0	;0621c
+	dc.l	0	;06220
+	dc.l	lb_0b6f6	;06224
+	dc.l	0	;06228
+	dc.l	0	;0622c
+	dc.l	0	;06230
 lb_06234:
 	DC.W	$7368			;06234
 lb_06236:
@@ -10918,7 +10906,7 @@ lb_06370:
 lb_06374:
 	dc.w	$0000		;06374
 	dc.w	$0000		;06376
-lb_06378:
+protection_status:
 	ORI.B	#$02,D0			;06378: 00000002
 lb_0637c:
 	BTST	D1,D3			;0637c: 0303
@@ -11081,8 +11069,7 @@ lb_0648a:
 	MOVEQ	#32,D1			;0648a: 7220
 	MOVE.L	-(A4),0(A2)		;0648c: 25640000
 lb_06490:
-	DC.W	$0001			;06490
-	dc.w	$0c9a		;06492
+	dc.l	lb_10c9a		;06490; a rare pointer I had forgotten
 lb_06494:
 	dc.w	$2097		;06494
 	dc.w	$9796	;06496:
@@ -18051,7 +18038,7 @@ lb_0a656:
 	JSR	lb_0a96c(PC)		;0a678: 4eba02f2
 	NOP				;0a67c: 4e71
 	LEA	12(A7),A7		;0a67e: 4fef000c
-	CMP.L	lb_06378,D2		;0a682: b4b900006378
+	CMP.L	protection_status,D2		;0a682: b4b900006378
 	BNE.S	lb_0a68c		;0a688: 6602
 	MOVEQ	#15,D2			;0a68a: 740f
 lb_0a68c:
@@ -18260,7 +18247,7 @@ lb_0a920:
 lb_0a938:
 	BRA.W	lb_0a800		;0a938: 6000fec6
 lb_0a93c:
-	CMP.L	lb_06378,D2		;0a93c: b4b900006378
+	CMP.L	protection_status,D2		;0a93c: b4b900006378
 	BNE.S	lb_0a948		;0a942: 6604
 	MOVEQ	#15,D2			;0a944: 740f
 	BRA.S	lb_0a95c		;0a946: 6014
@@ -18268,10 +18255,10 @@ lb_0a948:
 	MOVEQ	#16,D0			;0a948: 7010
 	CMP.L	D2,D0			;0a94a: b082
 	BNE.S	lb_0a95c		;0a94c: 660e
-	MOVE.L	lb_06378,D2		;0a94e: 243900006378
+	MOVE.L	protection_status,D2		;0a94e: 243900006378
 	MOVEQ	#-1,D0			;0a954: 70ff
 lb_0a956:
-	MOVE.L	D0,lb_06378		;0a956: 23c000006378
+	MOVE.L	D0,protection_status		;0a956: 23c000006378
 lb_0a95c:
 	BRA.W	lb_0a6a8		;0a95c: 6000fd4a
 lb_0a960:
@@ -19277,6 +19264,7 @@ lb_0b508:
 	MOVEM.L	-4(A6),D2		;0b50a: 4cee0004fffc
 	UNLK	A6			;0b510: 4e5e
 	RTS				;0b512: 4e75
+lb_0b514:
 	LINK.W	A6,#0			;0b514: 4e560000
 	MOVEM.L	D2,-(A7)		;0b518: 48e72000
 	PEA	27.W			;0b51c: 4878001b
@@ -19313,6 +19301,7 @@ lb_0b570:
 	MOVEM.L	-4(A6),D2		;0b572: 4cee0004fffc
 	UNLK	A6			;0b578: 4e5e
 	RTS				;0b57a: 4e75
+lb_0b57c:
 	LINK.W	A6,#0			;0b57c: 4e560000
 	MOVEM.L	D2,-(A7)		;0b580: 48e72000
 	PEA	35.W			;0b584: 48780023
@@ -19378,6 +19367,7 @@ lb_0b630:
 	MOVEM.L	-4(A6),D2		;0b632: 4cee0004fffc
 	UNLK	A6			;0b638: 4e5e
 	RTS				;0b63a: 4e75
+lb_0b63c:
 	LINK.W	A6,#0			;0b63c: 4e560000
 	MOVEM.L	D2,-(A7)		;0b640: 48e72000
 	PEA	35.W			;0b644: 48780023
@@ -19442,6 +19432,7 @@ lb_0b6ea:
 	MOVEM.L	-4(A6),D2		;0b6ec: 4cee0004fffc
 	UNLK	A6			;0b6f2: 4e5e
 	RTS				;0b6f4: 4e75
+lb_0b6f6:
 	LINK.W	A6,#0			;0b6f6: 4e560000
 	MOVEM.L	D2,-(A7)		;0b6fa: 48e72000
 	JSR	lb_1717a		;0b6fe: 4eb90001717a
@@ -20931,9 +20922,9 @@ lb_0c878:
 	MOVE.L	-12(A6),EXT_00a9	;0c880: 23eefff400047b10
 	MOVE.L	-8(A6),EXT_00a6		;0c888: 23eefff800047b04
 	MOVE.L	-4(A6),EXT_00a7		;0c890: 23eefffc00047b08
-	TST.L	lb_06378		;0c898: 4ab900006378
+	TST.L	protection_status		;0c898: 4ab900006378
 	BLE.S	lb_0c8aa		;0c89e: 6f0a
-	MOVE.L	EXT_00a8,lb_06378	;0c8a0: 23f900047b0c00006378
+	MOVE.L	EXT_00a8,protection_status	;0c8a0: 23f900047b0c00006378
 lb_0c8aa:
 	MOVEQ	#1,D0			;0c8aa: 7001
 	MOVE.L	D0,lb_470d6		;0c8ac: 23c0000470d6
@@ -38223,10 +38214,10 @@ lb_19026:
 	BRA.W	lb_190f0		;19026: 600000c8
 	CLR.L	EXT_00a8		;1902a: 42b900047b0c
 	MOVEQ	#-1,D0			;19030: 70ff
-	CMP.L	lb_06378,D0		;19032: b0b900006378
+	CMP.L	protection_status,D0		;19032: b0b900006378
 	BEQ.S	lb_19042		;19038: 6708
 	MOVEQ	#2,D0			;1903a: 7002
-	MOVE.L	D0,lb_06378		;1903c: 23c000006378
+	MOVE.L	D0,protection_status		;1903c: 23c000006378
 lb_19042:
 	MOVEQ	#0,D0			;19042: 7000
 	BRA.W	lb_19298		;19044: 60000252
@@ -38293,7 +38284,7 @@ lb_190f0:
 lb_1910c:
 	MOVE.L	D0,lb_06374		;1910c: 23c000006374
 	MOVEQ	#-1,D0			;19112: 70ff
-	MOVE.L	D0,lb_06378		;19114: 23c000006378
+	MOVE.L	D0,protection_status		;19114: 23c000006378
 	PEA	lb_074b2		;1911a: 4879000074b2
 	PEA	-80(A6)			;19120: 486effb0
 	JSR	lb_1ea86		;19124: 4eb90001ea86
@@ -39327,6 +39318,7 @@ lb_19f20:
 	MOVEM.L	-16(A6),D0-D1/A0-A1	;19f3c: 4cee0303fff0
 	UNLK	A6			;19f42: 4e5e
 	RTE				;19f44: 4e73
+	; game keyboard interrupt
 lb_19f46:
 	LINK.W	A6,#0			;19f46: 4e560000
 	MOVEM.L	D0-D2/A0-A1,-(A7)	;19f4a: 48e7e0c0

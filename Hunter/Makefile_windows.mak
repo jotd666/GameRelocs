@@ -1,9 +1,7 @@
 #added by python script
 
 KICKNAME = prince_de3
-#KICKNAME = prince_uk1a
-KICKNAME = prince_us2
-KICKNAME = prince_fr4
+KICKNAME = hunter_en
 HDBASE = K:\jff\AmigaHD
 WHDBASE = $(HDBASE)\PROJETS\HDInstall\DONE
 EXE = $(KICKNAME)

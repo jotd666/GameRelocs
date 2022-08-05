@@ -309,7 +309,7 @@ EXT_0130	EQU	$49CCE
 EXT_0131	EQU	$49CD0
 EXT_0132	EQU	$49CD2
 EXT_0133	EQU	$49CD8
-EXT_0134	EQU	$49CDA
+put_sword_away_message	EQU	$49CDA
 EXT_0135	EQU	$49CDC
 EXT_0136	EQU	$49CDE
 EXT_0137	EQU	$49CE0
@@ -734,7 +734,7 @@ EXT_02d9	EQU	$FFFFFF00
 EXT_02da	EQU	$FFFFFFC0
 EXT_02db	EQU	$FFFFFFFE
 
-
+keyboard_table = $00049d3e
 
 	IFND	REAL_EXE
 	ORG	$1000
@@ -10946,8 +10946,7 @@ lb_0648a:
 	MOVEQ	#32,D1			;0648a: 7220
 	MOVE.L	-(A4),0(A2)		;0648c: 25640000
 lb_06490:
-	DC.W	$0001			;06490
-	dc.w	$0c9a  ;06492
+	dc.l	lb_10c9a		;06490: a rare pointer I had forgotten
 lb_06494:
 	dc.w	$2097  ;06494
 	dc.w	$9796  ;06496
@@ -33994,7 +33993,7 @@ lb_15fa6:
 	BEQ.S	lb_15fbc		;15fb8: 6702
 	BRA.S	lb_15fe8		;15fba: 602c
 lb_15fbc:
-	CMPI.B	#$01,EXT_0134		;15fbc: 0c39000100049cda
+	CMPI.B	#$01,put_sword_away_message		;15fbc: 0c39000100049cda
 	BEQ.S	lb_15fd0		;15fc4: 670a
 	PEA	49.W			;15fc6: 48780031
 	JSR	lb_15b90(PC)		;15fca: 4ebafbc4
@@ -34270,7 +34269,7 @@ lb_162f4:
 	BLT.S	lb_16318		;162fe: 6d18
 	TST.B	EXT_0133		;16300: 4a3900049cd8
 	BGE.S	lb_16318		;16306: 6c10
-	TST.B	EXT_0134		;16308: 4a3900049cda
+	TST.B	put_sword_away_message		;16308: 4a3900049cda
 	BLT.S	lb_16318		;1630e: 6d08
 	PEA	43.W			;16310: 4878002b
 	JSR	lb_15b90(PC)		;16314: 4ebaf87a
@@ -34357,7 +34356,7 @@ lb_16402:
 	PEA	6.W			;16416: 48780006
 	BRA.S	lb_16448		;1641a: 602c
 lb_1641c:
-	TST.B	EXT_0134		;1641c: 4a3900049cda
+	TST.B	put_sword_away_message		;1641c: 4a3900049cda
 	BGE.S	lb_16434		;16422: 6c10
 	TST.B	EXT_0138		;16424: 4a3900049ce2
 	BGE.S	lb_16432		;1642a: 6c06
@@ -34529,7 +34528,7 @@ lb_16616:
 	RTS				;1661e: 4e75
 lb_16620:
 	LINK.W	A6,#0			;16620: 4e560000
-	TST.B	EXT_0134		;16624: 4a3900049cda
+	TST.B	put_sword_away_message		;16624: 4a3900049cda
 	BGE.S	lb_1663a		;1662a: 6c0e
 	TST.B	EXT_0133		;1662c: 4a3900049cd8
 	BGE.S	lb_1663a		;16632: 6c06
@@ -34713,7 +34712,7 @@ lb_16846:
 lb_16850:
 	TST.L	EXT_009f		;16850: 4ab900047ae8
 	BNE.S	lb_1686a		;16856: 6612
-	TST.B	EXT_0134		;16858: 4a3900049cda
+	TST.B	put_sword_away_message		;16858: 4a3900049cda
 	BGE.S	lb_1686a		;1685e: 6c0a
 	JSR	lb_168e6(PC)		;16860: 4eba0084
 	NOP				;16864: 4e71
@@ -35106,6 +35105,8 @@ lb_16cd0:
 	MOVEM.L	-4(A6),A2		;16cd0: 4cee0400fffc
 	UNLK	A6			;16cd6: 4e5e
 	RTS				;16cd8: 4e75
+	; enters here when a guard in on screen
+	; and on-level with player
 lb_16cda:
 	LINK.W	A6,#0			;16cda: 4e560000
 	MOVEM.L	D2-D3/A2,-(A7)		;16cde: 48e73020
@@ -35137,6 +35138,7 @@ lb_16d24:
 	BNE.S	lb_16d34		;16d2e: 6604
 	BRA.W	lb_16dbe		;16d30: 6000008c
 lb_16d34:
+	; only tested during fight
 	TST.B	EXT_0139		;16d34: 4a3900049ce4
 	BGE.S	lb_16d94		;16d3a: 6c58
 	CMPI.L	#$0000009e,D3		;16d3c: 0c830000009e
@@ -35594,7 +35596,7 @@ lb_172d8:
 	MOVE.W	D1,D0			;172da: 3001
 	MOVE.L	D0,-(A7)		;172dc: 2f00
 	CLR.L	-(A7)			;172de: 42a7
-	JSR	lb_1b490		;172e0: 4eb90001b490
+	JSR	screen_yellow_flash		;172e0: 4eb90001b490
 lb_172e6:
 	UNLK	A6			;172e6: 4e5e
 	RTS				;172e8: 4e75
@@ -35602,7 +35604,7 @@ lb_172ea:
 	LINK.W	A6,#0			;172ea: 4e560000
 	CLR.L	-(A7)			;172ee: 42a7
 	CLR.L	-(A7)			;172f0: 42a7
-	JSR	lb_1b490		;172f2: 4eb90001b490
+	JSR	screen_yellow_flash		;172f2: 4eb90001b490
 	UNLK	A6			;172f8: 4e5e
 	RTS				;172fa: 4e75
 lb_172fc:
@@ -36443,7 +36445,7 @@ lb_17d42:
 	LINK.W	A6,#0			;17d42: 4e560000
 	CLR.B	D0			;17d46: 4200
 	MOVE.B	D0,EXT_0135		;17d48: 13c000049cdc
-	MOVE.B	D0,EXT_0134		;17d4e: 13c000049cda
+	MOVE.B	D0,put_sword_away_message		;17d4e: 13c000049cda
 	MOVE.B	D0,EXT_0133		;17d54: 13c000049cd8
 	MOVE.B	D0,EXT_013a		;17d5a: 13c000049ce6
 	MOVE.B	D0,EXT_0139		;17d60: 13c000049ce4
@@ -36468,14 +36470,14 @@ lb_17d92:
 lb_17daa:
 	LINK.W	A6,#0			;17daa: 4e560000
 	MOVEQ	#-1,D0			;17dae: 70ff
-	MOVE.B	D0,EXT_0134		;17db0: 13c000049cda
+	MOVE.B	D0,put_sword_away_message		;17db0: 13c000049cda
 	MOVE.B	D0,EXT_0138		;17db6: 13c000049ce2
 	UNLK	A6			;17dbc: 4e5e
 	RTS				;17dbe: 4e75
 lb_17dc0:
 	LINK.W	A6,#0			;17dc0: 4e560000
 	MOVE.B	#$ff,EXT_0139		;17dc4: 13fc00ff00049ce4
-	MOVE.B	#$01,EXT_0134		;17dcc: 13fc000100049cda
+	MOVE.B	#$01,put_sword_away_message		;17dcc: 13fc000100049cda
 	UNLK	A6			;17dd4: 4e5e
 	RTS				;17dd6: 4e75
 	LINK.W	A6,#0			;17dd8: 4e560000
@@ -37719,7 +37721,7 @@ lb_18c34:
 lb_18c3a:
 	TST.B	EXT_0138		;18c3a: 4a3900049ce2
 	BLT.S	lb_18c62		;18c40: 6d20
-	TST.B	EXT_0134		;18c42: 4a3900049cda
+	TST.B	put_sword_away_message		;18c42: 4a3900049cda
 	BGE.S	lb_18c5c		;18c48: 6c12
 	TST.B	EXT_0138		;18c4a: 4a3900049ce2
 	BNE.S	lb_18c5a		;18c50: 6608
@@ -37731,7 +37733,7 @@ lb_18c5c:
 lb_18c62:
 	TST.B	EXT_0139		;18c62: 4a3900049ce4
 	BLT.S	lb_18c8c		;18c68: 6d22
-	CMPI.B	#$01,EXT_0134		;18c6a: 0c39000100049cda
+	CMPI.B	#$01,put_sword_away_message		;18c6a: 0c39000100049cda
 	BNE.S	lb_18c86		;18c72: 6612
 	TST.B	EXT_0139		;18c74: 4a3900049ce4
 	BNE.S	lb_18c84		;18c7a: 6608
@@ -37828,6 +37830,7 @@ lb_18df4:
 	MOVE.L	D4,D0			;18e16: 2004
 	BRA.W	lb_18e8a		;18e18: 60000070
 lb_18e1c:
+	; game paused flag
 	TST.L	$470d8+2		;18e1c: 4ab9000470da
 	BEQ.S	lb_18e76		;18e22: 6752
 	CLR.B	D0			;18e24: 4200
@@ -38345,7 +38348,7 @@ lb_1944c:
 	MOVEA.L	#$00049cd8,A2		;19454: 247c00049cd8
 	CLR.B	D0			;1945a: 4200
 	MOVE.B	D0,EXT_0135		;1945c: 13c000049cdc
-	MOVE.B	D0,EXT_0134		;19462: 13c000049cda
+	MOVE.B	D0,put_sword_away_message		;19462: 13c000049cda
 	MOVE.B	D0,(A2)			;19468: 1480
 	JSR	lb_1b8bc		;1946a: 4eb90001b8bc
 	BTST	#2,D0			;19470: 08000002
@@ -38358,11 +38361,11 @@ lb_1947a:
 lb_19484:
 	BTST	#0,D0			;19484: 08000000
 	BEQ.S	lb_19492		;19488: 6708
-	MOVE.B	#$ff,EXT_0134		;1948a: 13fc00ff00049cda
+	MOVE.B	#$ff,put_sword_away_message		;1948a: 13fc00ff00049cda
 lb_19492:
 	BTST	#1,D0			;19492: 08000001
 	BEQ.S	lb_194a0		;19496: 6708
-	MOVE.B	#$01,EXT_0134		;19498: 13fc000100049cda
+	MOVE.B	#$01,put_sword_away_message		;19498: 13fc000100049cda
 lb_194a0:
 	BTST	#4,D0			;194a0: 08000004
 	BEQ.S	lb_194b4		;194a4: 670e
@@ -38374,11 +38377,12 @@ lb_194b4:
 	RTS				;194bc: 4e75
 lb_194be:
 	LINK.W	A6,#0			;194be: 4e560000
-	MOVEA.L	#$00049d3e,A0		;194c2: 207c00049d3e
+	MOVEA.L	#keyboard_table,A0		;194c2: 207c00049d3e
 	CLR.B	D0			;194c8: 4200
 	MOVE.B	D0,EXT_0135		;194ca: 13c000049cdc
-	MOVE.B	D0,EXT_0134		;194d0: 13c000049cda
+	MOVE.B	D0,put_sword_away_message		;194d0: 13c000049cda
 	MOVE.B	D0,EXT_0133		;194d6: 13c000049cd8
+	; numeric keypad
 	BTST	#0,61(A0)		;194dc: 08280000003d
 	BNE.S	lb_194f4		;194e2: 6610
 	BTST	#0,62(A0)		;194e4: 08280000003e
@@ -38386,19 +38390,20 @@ lb_194be:
 	BTST	#0,63(A0)		;194ec: 08280000003f
 	BEQ.S	lb_194fc		;194f2: 6708
 lb_194f4:
-	MOVE.B	#$ff,EXT_0134		;194f4: 13fc00ff00049cda
+	MOVE.B	#$ff,put_sword_away_message		;194f4: 13fc00ff00049cda
 lb_194fc:
 	BTST	#0,46(A0)		;194fc: 08280000002e
 	BNE.S	lb_1950c		;19502: 6608
 	BTST	#0,30(A0)		;19504: 08280000001e
 	BEQ.S	lb_19526		;1950a: 671a
 lb_1950c:
-	CMPI.B	#$ff,EXT_0134		;1950c: 0c3900ff00049cda
+	; put sword away (5 numkey)
+	CMPI.B	#$ff,put_sword_away_message		;1950c: 0c3900ff00049cda
 	BNE.S	lb_1951e		;19514: 6608
-	CLR.B	EXT_0134		;19516: 423900049cda
+	CLR.B	put_sword_away_message		;19516: 423900049cda
 	BRA.S	lb_19526		;1951c: 6008
 lb_1951e:
-	MOVE.B	#$01,EXT_0134		;1951e: 13fc000100049cda
+	MOVE.B	#$01,put_sword_away_message		;1951e: 13fc000100049cda
 lb_19526:
 	BTST	#0,45(A0)		;19526: 08280000002d
 	BNE.S	lb_19536		;1952c: 6608
@@ -39082,7 +39087,7 @@ lb_19e68:
 	MOVE.L	A0,AUTO_INT1.W		;19e72: 21c80064
 	MOVEA.L	#lb_19f46,A0		;19e76: 207c00019f46
 	MOVE.L	A0,AUTO_INT2.W		;19e7c: 21c80068
-	MOVEA.L	#lb_19f9a,A0		;19e80: 207c00019f9a
+	MOVEA.L	#level_3_interrupt,A0		;19e80: 207c00019f9a
 	MOVE.L	A0,AUTO_INT3.W		;19e86: 21c8006c
 	MOVEA.L	#lb_19ffa,A0		;19e8a: 207c00019ffa
 	MOVE.L	A0,AUTO_INT4.W		;19e90: 21c80070
@@ -39148,7 +39153,7 @@ lb_19f90:
 	MOVEM.L	-20(A6),D0-D2/A0-A1	;19f90: 4cee0307ffec
 	UNLK	A6			;19f96: 4e5e
 	RTE				;19f98: 4e73
-lb_19f9a:
+level_3_interrupt:
 	LINK.W	A6,#0			;19f9a: 4e560000
 	MOVEM.L	D0-D1/A0-A1,-(A7)	;19f9e: 48e7c0c0
 	BTST	#5,EXT_01ca		;19fa2: 0839000500dff01f
@@ -39416,12 +39421,12 @@ lb_1a2a6:
 	CLR.L	EXT_0141		;1a2ca: 42b900049d36
 	CLR.L	EXT_0142		;1a2d0: 42b900049d3a
 	PEA	128.W			;1a2d6: 48780080
-	MOVE.L	#$00049d3e,-(A7)	;1a2da: 2f3c00049d3e
+	MOVE.L	#keyboard_table,-(A7)	;1a2da: 2f3c00049d3e
 	JSR	lb_1ece8		;1a2e0: 4eb90001ece8
 	MOVEA.L	#lb_07abe,A2		;1a2e6: 247c00007abe
 	ADDQ.L	#8,A7			;1a2ec: 508f
 	MOVEQ	#9,D3			;1a2ee: 7609
-	MOVEA.L	#$00049d3e,A1		;1a2f0: 227c00049d3e
+	MOVEA.L	#keyboard_table,A1		;1a2f0: 227c00049d3e
 	BRA.S	lb_1a308		;1a2f6: 6010
 lb_1a2f8:
 	MOVEA.L	A2,A0			;1a2f8: 204a
@@ -39459,7 +39464,7 @@ lb_1a31a:
 	ANDI.B	#$bf,CIAA_CRA		;1a352: 023900bf00bfee01
 	MOVEQ	#0,D0			;1a35a: 7000
 	MOVE.B	D4,D0			;1a35c: 1004
-	MOVEA.L	#$00049d3e,A0		;1a35e: 207c00049d3e
+	MOVEA.L	#keyboard_table,A0		;1a35e: 207c00049d3e
 	MOVE.B	0(A0,D0.W),D1		;1a364: 12300000
 	ANDI.B	#$fe,D1			;1a368: 020100fe
 	TST.B	D3			;1a36c: 4a03
@@ -39468,7 +39473,7 @@ lb_1a31a:
 lb_1a374:
 	MOVEQ	#0,D0			;1a374: 7000
 	MOVE.B	D4,D0			;1a376: 1004
-	MOVEA.L	#$00049d3e,A0		;1a378: 207c00049d3e
+	MOVEA.L	#keyboard_table,A0		;1a378: 207c00049d3e
 	MOVE.B	D1,0(A0,D0.W)		;1a37e: 11810000
 	BTST	#7,D1			;1a382: 08010007
 	BEQ.S	lb_1a38a		;1a386: 6702
@@ -40637,7 +40642,7 @@ lb_1b474:
 	MOVE.W	D1,D0			;1b48a: 3001
 	UNLK	A6			;1b48c: 4e5e
 	RTS				;1b48e: 4e75
-lb_1b490:
+screen_yellow_flash:
 	LINK.W	A6,#0			;1b490: 4e560000
 	MOVEM.L	D2-D4,-(A7)		;1b494: 48e73800
 	MOVE.L	8(A6),D1		;1b498: 222e0008
@@ -41201,12 +41206,12 @@ lb_1bae8:
 	MOVE.W	D3,D0			;1bb20: 3003
 	MOVE.L	D0,-(A7)		;1bb22: 2f00
 	CLR.L	-(A7)			;1bb24: 42a7
-	JSR	lb_1b490		;1bb26: 4eb90001b490
+	JSR	screen_yellow_flash		;1bb26: 4eb90001b490
 	MOVEQ	#0,D0			;1bb2c: 7000
 	MOVE.W	D4,D0			;1bb2e: 3004
 	MOVE.L	D0,-(A7)		;1bb30: 2f00
 	PEA	1.W			;1bb32: 48780001
-	JSR	lb_1b490		;1bb36: 4eb90001b490
+	JSR	screen_yellow_flash		;1bb36: 4eb90001b490
 	MOVE.W	#$5200,BPLCON0		;1bb3c: 33fc520000dff100
 	MOVE.W	#$4581,DIWSTRT		;1bb44: 33fc458100dff08e
 	MOVE.W	#$0dc1,DIWSTOP		;1bb4c: 33fc0dc100dff090

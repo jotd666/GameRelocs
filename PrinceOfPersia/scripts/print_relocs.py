@@ -65,9 +65,9 @@ def decode(input_file,binary_file):
             for offset in reloc_offsets:
                 reloc_data.extend(struct.pack(">I",offset))
             reloc_data.extend([0]*4)
-
-            print("saving .reloc file, {} bytes".format(len(reloc_data)))
-            with open(binary_file+".reloc","wb") as f:
+            outbin = binary_file+".reloc"
+            print("saving {} file, {} bytes".format(outbin,len(reloc_data)))
+            with open(outbin,"wb") as f:
                 f.write(bytearray(reloc_data))
 
             #shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\GAMES\P\PrinceOfPersia!UK1a")  # TEMP
