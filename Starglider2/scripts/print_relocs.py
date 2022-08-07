@@ -68,20 +68,20 @@ def decode(input_file,binary_file):
 
             derogs = {0x6072}
             reloc_offsets = [r for r in reloc_offsets if r+defines.start_org not in derogs]
-##            print("saving .reloc file, {} bytes".format(len(reloc_data)))
-##            with open(binary_file+".reloc","wb") as f:
-##                f.write(bytearray(reloc_data))
+            print("saving .reloc file, {} bytes".format(len(reloc_data)))
+            with open(binary_file+".reloc","wb") as f:
+                f.write(bytearray(reloc_data))
 
-            #shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\GAMES\P\PrinceOfPersia!UK1a")  # TEMP
-##            print("saving .RTB.TXT file")
-##            with open(binary_file+".reloc.TXT","w") as f:
-##                for s in reloc_offsets:
-##                    f.write("\tdc.l\t${:x}\n".format(s))
-            print("saving reloc .s file")
-            asmreloc = binary_file+"_reloc.s"
-            with open(asmreloc,"w") as f:
-                for s in reloc_offsets+[0]:
+            shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\S\Starglider2!V1\data")  # TEMP
+            print("saving .RTB.TXT file")
+            with open(binary_file+".reloc.TXT","w") as f:
+                for s in reloc_offsets:
                     f.write("\tdc.l\t${:x}\n".format(s))
-            shutil.copy(asmreloc,r"K:\jff\AmigaHD\PROJETS\HDInstall\DONE\H\HunterHDDev")
+##            print("saving reloc .s file")
+##            asmreloc = binary_file+"_reloc.s"
+##            with open(asmreloc,"w") as f:
+##                for s in reloc_offsets+[0]:
+##                    f.write("\tdc.l\t${:x}\n".format(s))
+
 decode(r"../{}_hunk".format(defines.project),r"../{}".format(defines.project))
 
