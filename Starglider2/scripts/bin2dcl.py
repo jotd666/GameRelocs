@@ -9,7 +9,8 @@ with open("../{}_ref".format(defines.project),"rb") as f:
 #for i in range(0x2f790,0x02f7e0,4):
 #for i in range(0x0392e,0x3946,4):
 #for i in range(0x07f14,0x07f30,4):
-for i in range(0x2f860,0x2f87c,4):
+#for i in range(0x2f860,0x2f87c,4):
+for i in range(0x197aa,0x199fa,4):
 
     data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
 
