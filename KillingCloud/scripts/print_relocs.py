@@ -66,15 +66,15 @@ def decode(input_file,binary_file):
                 reloc_data.extend(struct.pack(">I",offset))
             reloc_data.extend([0]*4)
 
-            derogs = {0x6072}
+            derogs = {}
             reloc_offsets = [r for r in reloc_offsets if r+defines.start_org not in derogs]
             print("saving .reloc file, {} bytes".format(len(reloc_data)))
             with open(binary_file+".reloc","wb") as f:
                 f.write(bytearray(reloc_data))
 
-            #shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\S\Starglider2!V1\data")  # TEMP
-            print("saving .RTB.TXT file")
-            with open(binary_file+".reloc.TXT","w") as f:
+            shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\K\KillingCloud\data")  # TEMP
+            print("saving .RTB asm file")
+            with open(binary_file+".reloc.s","w") as f:
                 for s in reloc_offsets:
                     f.write("\tdc.l\t${:x}\n".format(s))
 ##            print("saving reloc .s file")
