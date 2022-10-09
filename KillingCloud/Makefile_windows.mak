@@ -16,7 +16,7 @@ $(EXE) : $(KICKNAME).s
 	$(ASMBIN) -o $(EXE) $(KICKNAME).s
 	fc $(EXE) $(KICKNAME)_ref
 	$(ASMEXE) -DREAL_EXE -o $(KICKNAME)_hunk $(KICKNAME).s
-
+	cmd /c scripts\print_relocs.py
 #copy $(KICKNAME)_hunk K:\jff\AmigaHD\GAMES\S\Starglider2!V1\data\Starglider2.exe
 
 
