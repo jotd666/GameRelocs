@@ -9,7 +9,7 @@ for i,line in enumerate(af.lines):
     if m:
         inst = m.group(1)
         operand = m.group(2)
-        if inst in ("MOVE.L","MOVEA.L","CMP.L","CMPA.L","CMPI.L") and operand.startswith('#') or inst in ("PEA",):
+        if inst in ("MOVE.L","MOVEA.L","CMP.L","CMPA.L","CMPI.L","ADDI.L") and operand.startswith('#') or inst in ("PEA",):
             try:
                 if "," in operand:
                     dest = operand.split(",")[1]

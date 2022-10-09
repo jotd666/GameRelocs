@@ -8,7 +8,8 @@ with open("../{}_ref".format(defines.project),"rb") as f:
 #for i in range(0x186de,0x186fe,4):
 #for i in range(0x1a692,0x1a6ba,4):
 #for i in range(0x1aeae,0x1aeda,4):
-for i in range(0x00102c,0x010ac,4):
+#for i in range(0x00102c,0x010ac,4):
+for i in range(0x01e5da,0x01e61e,4):
 
     data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
 

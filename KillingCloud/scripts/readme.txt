@@ -36,6 +36,14 @@ error 3007: undefined symbol <lb_0781e>
 error 3007: undefined symbol <lb_061a0>
 
 - manually search for jump tables (regex: lsl.*#2,d that shifts data register)
+- don't forget to correct addresses that use PC-relative addressing on addresses
+  < start of code externally. For v1:
+        lea     $6C12.W,A6              ;0a364: 4df86c12 patch this into exe
+        lea     $6C12.W,A6              ;0a3d8: 4df86c12 patch this into exe
+        lea     $6be6.W,A2              ;0a4a4: 45f86be6 patch this into exe
+        lea     $6C12.W,A0              ;0a548: 41f86c12 patch this into exe
+        lea     $6C12.W,A0              ;0a578: 41f86c12 patch this into exe
+		
 - use print_reloc.py to generate the binary & text reloc tables
 
 
