@@ -21505,6 +21505,7 @@ lb_0fd3c:
 	MOVEM.L	D1/A0-A1,-(A7)		;0fd3c: 48e740c0
 	LEA	lb_0f70a+2(PC),A0	;0fd40: 41faf9ca
 	MOVE.W	(A3)+,D0		;0fd44: 301b
+	; relative jump table
 	MOVE.W	0(A0,D0.W),D0		;0fd46: 30300000
 	JSR	0(A0,D0.W)		;0fd4a: 4eb00000
 	MOVEM.L	(A7)+,D1/A0-A1		;0fd4e: 4cdf0302
@@ -46808,38 +46809,18 @@ lb_1ffde:
 lb_1fff6:
 	ORI.B	#$00,D0			;1fff6: 00000000
 	ORI.B	#$00,D0			;1fffa: 00000000
-	ORI.B	#$02,D0			;1fffe: 00000002
-lb_20002:
-	DC.W	$0004			;20002
+	dc.w	0
+	dc.l	lb_20004			;20000: 00000002
 lb_20004:
-	dc.w	$bbf8  ;20004
-lb_20006:
-	dc.w	$6676  ;20006
-lb_20008:
-	BNE.S	lb_20012		;20008: 6608
-lb_2000a:
-	dc.w	$42b8  ;2000a
-lb_2000c:
-	dc.w	$6676  ;2000c
-lb_2000e:
-	dc.w	$51f8  ;2000e
-lb_20010:
-	dc.w	$667a  ;20010
+	cmpa.l	$6676.W,a5		;20004: bbf86676
+	bne.b	lb_20012        ;20008: 6608
+	clr.l	$6676.W         ;2000a: 42b86676
+	sf		$667a.W         ;2000e: 51f8667a
 lb_20012:
 	RTS				;20012: 4e75
 lb_20014:
-	dc.w	$21f9  ;20014
-	dc.w	$0000  ;20016
-lb_20018:
-	dc.w	$6884  ;20018
-lb_2001a:
-	dc.w	$666c  ;2001a
-lb_2001c:
-	dc.w	$4a39  ;2001c
-lb_2001e:
-	dc.w	$0000  ;2001e
-	dc.w	$693b  ;20020
-lb_20022:
+	move.l $6884,$666c.W	;20014: 21f900006884666c
+	tst.b $0000693b			;2001c: 4a390000693b
 	BEQ.S	lb_20028		;20022: 6704
 	BSR.W	lb_20086		;20024: 61000060
 lb_20028:
@@ -46848,12 +46829,9 @@ lb_20028:
 	CMPI.W	#$0001,D0		;20030: 0c400001
 	BNE.S	lb_2003c		;20034: 6606
 	BSR.W	lb_201b4		;20036: 6100017c
-lb_2003a:
 	BRA.S	lb_20046		;2003a: 600a
 lb_2003c:
-	dc.w	$0c40  ;2003c
-lb_2003e:
-	dc.w	$0002  ;2003e
+	CMPI.W	#$0002,D0		;2003c: 0c400002
 	BNE.S	lb_20046		;20040: 6604
 	BSR.W	lb_2022a		;20042: 610001e6
 lb_20046:
@@ -47700,10 +47678,7 @@ lb_20a9e:
 	MOVE.L	76(A5),D0		;20ac0: 202d004c
 	MOVE.L	82(A5),D1		;20ac4: 222d0052
 	MOVE.L	88(A5),D2		;20ac8: 242d0058
-	dc.w	$48f8  ;20acc
-	dc.w	$0007  ;20ace
-lb_20ad0:
-	dc.w	$6866  ;20ad0
+	MOVEM.L	D0-D2,$6866.W	;20acc: 48f800076866
 	SUBA.L	A1,A1			;20ad2: 93c9
 	MOVE.W	48(A6),D6		;20ad4: 3c2e0030
 	BRA.W	lb_20b8a		;20ad8: 600000b0
@@ -61920,7 +61895,7 @@ lb_2a1c0:
 	dc.w	$0002	;2a344
 	dc.w	$001c	;2a346
 	dc.w	$0024	;2a348
-	dc.l	lb_20ad0	;2a34a
+	dc.l	$20ad0	;2a34a	; not a reloc
 	dc.w	$0000	;2a34e
 	dc.w	$0000	;2a350
 	dc.l	lb_2a386	;2a352
@@ -61953,7 +61928,7 @@ lb_2a386:
 	dc.w	$0000	;2a38c
 	dc.w	$0000	;2a38e
 	dc.w	$0024	;2a390
-	dc.l	lb_20ad0	;2a392
+	dc.l	$20ad0	;2a392	; not a reloc
 	dc.w	$0000	;2a396
 	dc.w	$0000	;2a398
 	dc.l	lb_2a3a8	;2a39a
