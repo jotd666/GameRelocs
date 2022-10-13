@@ -24,13 +24,21 @@ start_address=0x0591a
 end_address=0x05a48
 start_address=0x1d242
 end_address=0x1d262
-
+start_address=0x06a18
+end_address=0x06b16
+start_address=0x1b308
+end_address=0x1c330
+start_address=0x2c01c
+end_address=0x2c458
 allowed = {0x23d00}
 forbidden = {0x20ad0,0x2a10c,0x264fc}
 while start_address < end_address:
     data = struct.unpack_from(">I",contents,start_address-defines.start_org)[0]
     if data in allowed or (data not in forbidden and 0x15000<data<0x2c600 and data & 0xFF and (data & 0xFFF00) != 0x20000):
-        print("\tdc.l\tlb_{:05x}\t;{:05x}".format(data,start_address))
+        if data % 2:
+            print("\tdc.l\tlb_{:05x}+1\t;{:05x}".format(data-1,start_address))
+        else:
+            print("\tdc.l\tlb_{:05x}\t;{:05x}".format(data,start_address))
         start_address += 4
     else:
         data = struct.unpack_from(">H",contents,start_address-defines.start_org)[0]

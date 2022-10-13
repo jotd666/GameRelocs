@@ -5,13 +5,13 @@ import collections
 # TODO: show where the dc.l is declared, if too far from reference, then maybe suspicious
 # M: machine gun (or cannon), => crash when firing
 
-labels = collections.Counter()
+labels = collections.defaultdict(list)
 
 infile = "../{}.s".format(defines.project)
 af = ira_asm_tools.AsmFile(infile)
 count=0
 for i,line in enumerate(af.lines):
-    m = re.search("lb_(.....)",line)
+    m = re.search("lb_(.....)\s+;(\w+)",line)
     if m and "dc.l" in line:
         h = m.group(1)
         hv = int(h,16)
@@ -25,7 +25,7 @@ for i,line in enumerate(af.lines):
         # on the contrary, if there's a doubt, it's better not to / cancel the reloc
         # and the memory watch will be triggered if this was after all a reloc
         if True: #(h.count("0")>=2 and hv > 0x10000) or (h.count("0")==3 and hv < 0x10000):
-            labels[hv] += 1
+            labels[hv].append(int(m.group(2),16))
 
 
 # we have the dictionary of the labels we need to inspect
@@ -35,7 +35,7 @@ for i,line in enumerate(af.lines):
 # if points to dc.l => OK
 # else inspect manually / print 3 lines after
 
-nb_suspicious = 0
+suspicious = []
 for label,occs in sorted(labels.items()):
     ln = "lb_{:05x}".format(label)
     line = af.address_lines.get(label)
@@ -50,15 +50,17 @@ for label,occs in sorted(labels.items()):
                 if any(x in next_line for x in ["dc.l","movem.","move.","movea","lea","rts","jsr","jmp","cmpi","bsr.w"]):
                     # valid, references another dc.l
                     pass
+                elif "ff" in next_line and "0000" in previous_line:
+                    # valid dc.w combo
+                    pass
                 else:
                     # others
-                    if occs==1:
-                        nb_suspicious += 1
+                        suspicious.append("{:05x}".format(label))
                         print("*"*40)
                         for i in range(line-2,line+3):
                             print(af.lines[i].rstrip(),end="")
                             if i==line-1:
-                                print(" <======= {} occurrence(s)".format(occs))
+                                print(" <======= {} occurrence(s)".format(len(occs)))
                             else:
                                 print()
 
@@ -66,5 +68,5 @@ for label,occs in sorted(labels.items()):
     else:
         print(label,"not found")
 
-print("nb_suspicious = {}".format(nb_suspicious))
+print("nb_suspicious = {}".format(len(suspicious)))
 
