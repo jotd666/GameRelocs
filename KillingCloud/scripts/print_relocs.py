@@ -74,7 +74,7 @@ def decode(input_file,binary_file):
             with open(binary_file+".reloc","wb") as f:
                 f.write(bytearray(reloc_data))
 
-            shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\K\KillingCloud\data")  # TEMP
+            shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\K\KillingCloud!V1\data")  # TEMP
             print("saving .RTB asm file")
             with open(binary_file+".reloc.s","w") as f:
                 for s in reloc_offsets:
