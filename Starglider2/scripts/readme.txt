@@ -27,19 +27,5 @@ git add %VER%.s %VER%_ref
 - run findmovea.py. This generates a lot of labels that don't exist.
 - run add_undefined_labels.py: this builds, parses link output for undefined labels and tries to insert them (run that twice). Works in-place on the original (no risk)
 - build manually to create the missing labels manually (not a lot), only 6 or 7
-
-error 3007: undefined symbol <lb_07fd8>
-error 3007: undefined symbol <lb_07f76>
-error 3007: undefined symbol <lb_070d8>
-error 3007: undefined symbol <lb_070fc>
-error 3007: undefined symbol <lb_0707a>
-error 3007: undefined symbol <lb_06494>
-error 3007: undefined symbol <lb_0781e>
-error 3007: undefined symbol <lb_061a0>
-
-- There's at least one reloc that is missed because of code starting after data. MMU/WinUAE finds it at run-time but it can also be found manually
-  just look for 4EB9 at the end of a line (around address $1adce). With MMU/memwatch it triggers
-  at the first seconds of the intro music (easy to spot)
-- use print_reloc.py to generate the binary & text reloc tables
-
+- run with watchpoints in the chipmem code zone $1000-$67000 to find remaining accesses/tables
 
