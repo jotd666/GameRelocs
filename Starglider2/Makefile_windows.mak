@@ -12,11 +12,12 @@ ASMBIN = vasmm68k_mot -no-opt -nosym -maxerrors=0 -I$(HDBASE)/amiga39_JFF_OS/inc
 # so we create a 100% identical object
 # we test it against original object file
 # now if all is OK build the actual executable
-$(EXE) : $(KICKNAME).s protection_152F2.s
+$(EXE) : $(KICKNAME).s
 	$(ASMBIN) -o $(EXE) $(KICKNAME).s
 	fc $(EXE) $(KICKNAME)_ref
 	$(ASMEXE) -DREAL_EXE -o $(KICKNAME)_hunk $(KICKNAME).s
-	copy $(KICKNAME)_hunk K:\jff\AmigaHD\GAMES\S\Starglider2!V1\data\Starglider2.exe
+	cmd /c scripts\print_relocs.py
+
 
 
 

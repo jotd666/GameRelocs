@@ -4,6 +4,7 @@ import shutil
 
 hunk_dict = {0x3F3:"header",0x3E9:"code",0x3EA:"data",0x3F2:"end",0x3EC:"reloc32",0x3EB:"bss",0x3F1:"debug"}
 
+this_dir = os.path.dirname(os.path.abspath(__file__))
 def get_long(binary_buf,offset):
     return struct.unpack_from(">I",binary_buf,offset)[0]
 
@@ -66,15 +67,16 @@ def decode(input_file,binary_file):
                 reloc_data.extend(struct.pack(">I",offset))
             reloc_data.extend([0]*4)
 
-            derogs = {0x6072}
+            derogs = {}
             reloc_offsets = [r for r in reloc_offsets if r+defines.start_org not in derogs]
+            reloc_offsets.append(0)
             print("saving .reloc file, {} bytes".format(len(reloc_data)))
             with open(binary_file+".reloc","wb") as f:
                 f.write(bytearray(reloc_data))
 
             shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\S\Starglider2!V1\data")  # TEMP
-            print("saving .RTB.TXT file")
-            with open(binary_file+".reloc.TXT","w") as f:
+            print("saving .RTB asm file")
+            with open(binary_file+".reloc.s","w") as f:
                 for s in reloc_offsets:
                     f.write("\tdc.l\t${:x}\n".format(s))
 ##            print("saving reloc .s file")
@@ -83,5 +85,5 @@ def decode(input_file,binary_file):
 ##                for s in reloc_offsets+[0]:
 ##                    f.write("\tdc.l\t${:x}\n".format(s))
 
-decode(r"../{}_hunk".format(defines.project),r"../{}".format(defines.project))
+decode(os.path.join(this_dir,os.pardir,"{}_hunk".format(defines.project)),os.path.join(this_dir,os.pardir,defines.project))
 
