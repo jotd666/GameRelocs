@@ -9,12 +9,12 @@ for i,line in enumerate(af.lines):
     if m:
         inst = m.group(1)
         operand = m.group(2)
-        if inst in ("MOVE.L","MOVEA.L","CMP.L","CMPA.L","CMPI.L") and operand.startswith('#') or inst in ("PEA",):
+        if inst in ("MOVE.L","MOVEA.L","ADDA.L","SUBA.L","CMP.L","CMPA.L","CMPI.L") and operand.startswith('#') or inst in ("PEA",):
             try:
                 if "," in operand:
                     dest = operand.split(",")[1]
-                    if dest.startswith("D"):
-                        continue  # move to register: ignore
+##                    if dest.startswith("D"):
+##                        continue  # move to register: ignore
                 val = int(operand[2:].split(",")[0],16)
                 if val > defines.start_org and val < defines.end_address and val not in [0xFFFF,0x7FFF,0x8000,0xFFC0]:
                     count+=1
