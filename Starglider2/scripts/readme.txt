@@ -29,3 +29,6 @@ git add %VER%.s %VER%_ref
 - build manually to create the missing labels manually (not a lot), only 6 or 7
 - run with watchpoints in the chipmem code zone $1000-$67000 to find remaining accesses/tables
 
+lb_1a3d4: remove all labels and run... a lot of suspicious stuff
+
+

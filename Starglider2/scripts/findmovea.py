@@ -9,19 +9,34 @@ for i,line in enumerate(af.lines):
     if m:
         inst = m.group(1)
         operand = m.group(2)
+        if "ok" in line.split():
+            continue
+
         if inst in ("MOVE.L","MOVEA.L","ADDA.L","SUBA.L","CMP.L","CMPA.L","CMPI.L") and operand.startswith('#') or inst in ("PEA",):
             try:
                 if "," in operand:
                     dest = operand.split(",")[1]
-##                    if dest.startswith("D"):
-##                        continue  # move to register: ignore
-                val = int(operand[2:].split(",")[0],16)
-                if val > defines.start_org and val < defines.end_address and val not in [0xFFFF,0x7FFF,0x8000,0xFFC0]:
-                    count+=1
-                    s = "${:08x}".format(val)
-                    r = "lb_{:05x}".format(val)
-                    af.lines[i] = line.replace(s,r)
-                    print(line.strip())
+                    if dest.startswith("D"):
+                        continue  # move to register: ignore
+                src = operand.split(",")[0]
+                if src.startswith("#lb_"):
+                    # check if operand is not a value. Either it's suspiciously decimal
+                    # or bits
+                    as_hex = src[4:].lstrip("0")
+                    if as_hex.count("f")>2 or as_hex.count("0")>2:
+                        print("suspicious lb: {}: {}".format(line.strip(),as_hex))
+                    else:
+                        as_int = int(as_hex,16)
+                        if as_int % 100 == 0:
+                            print("suspicious lb: {} (integer value: {})".format(line.strip(),as_int))
+                elif src.startswith("#$"):
+                    val = int(operand[2:].split(",")[0],16)
+                    if val > defines.start_org and val < defines.end_address and val not in [0xFFFF,0x7FFF,0x8000,0xFFC0]:
+                        count+=1
+                        s = "${:08x}".format(val)
+                        r = "lb_{:05x}".format(val)
+                        af.lines[i] = line.replace(s,r)
+                        print(line.strip(),val)
             except ValueError:
                 pass
 print(count)

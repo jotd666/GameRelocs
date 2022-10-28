@@ -1,5 +1,5 @@
 import ira_asm_tools
-import defines,os,re
+import defines,os,re,codecs
 import collections
 
 # TODO: show where the dc.l is declared, if too far from reference, then maybe suspicious
@@ -35,6 +35,13 @@ for i,line in enumerate(af.lines):
 # if points to dc.l => OK
 # else inspect manually / print 3 lines after
 
+def ascii_dc(line):
+    operand = re.search("\$([A-F0-9]+)",line)
+    if operand:
+        h = operand.group(1)
+        return len(h) % 2 == 0 and codecs.decode(h.encode(),"hex").decode().isprintable()
+    else:
+        return False
 suspicious = []
 for label,occs in sorted(labels.items()):
     ln = "lb_{:05x}".format(label)
@@ -50,7 +57,7 @@ for label,occs in sorted(labels.items()):
                 if any(x in next_line for x in ["dc.l","movem.","move.","movea","lea","rts","jsr","jmp","cmpi","bsr.w"]):
                     # valid, references another dc.l
                     pass
-                elif "ff" in next_line and "0000" in previous_line:
+                elif "00\t" in previous_line and ascii_dc(next_line):
                     # valid dc.w combo
                     pass
                 else:
