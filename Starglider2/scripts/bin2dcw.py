@@ -13,7 +13,10 @@ end_address = 0x4ea9e
 start_address=0x1a3d4
 end_address=0x1ae30
 
-forbidden = {0x10002,0x20002,0x30002,0x10010,0x10004,0x40002,0x50002}
+# all 0x10001, ... 0x40003...
+forbidden = {(i<<16)+j for i in range(1,6) for j in range(1,6)}
+forbidden.add(0x10010)
+
 with open("dcw.s",'w') as f:
     address = start_address
     while address < end_address:
