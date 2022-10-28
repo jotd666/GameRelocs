@@ -38,6 +38,7 @@ allowed = {0x23d00,0x29100}
 start_address=0x2bb1a
 end_address=0x2bfdc
 
+
 forbidden = {0x20ad0,0x2a10c,0x264fc}
 while start_address < end_address:
     data = struct.unpack_from(">I",contents,start_address-defines.start_org)[0]
