@@ -1519,24 +1519,14 @@ lb_01e9e:
 	MOVE.L	A0,TRAP_01.W		;01eb4: 21c80080
 	TRAP	#0			;01eb8: 4e40
 lb_01eba:
-	IFD	REAL_EXE
-	nop		; not correct, just 2 nops to get same offsets
-	nop
-	ELSE
-	; we can't relocate short addresses
-	LEA	lb_00800.W,A7		;01eba: 4ff80800
-	ENDC
-	
+	LEA	$800.W,A7		;01eba: 4ff80800
 	MOVE	#$0000,SR		;01ebe: 46fc0000
 	LEA	EXT_0011,A7		;01ec2: 4ff900080000
 	MOVEM.L	D0-D7,-(A7)		;01ec8: 48e7ff00
+	; check if program is installed in $800, which is the case
+	; unless program is relocated!
 	LEA	lb_00800(PC),A0	;01ecc: 41fae932
-	IFD	REAL_EXE
-	nop		; not correct, just 2 nops to get same offsets
-	nop
-	ELSE
-	LEA	lb_00800.W,A1		;01ed0: 43f80800
-	ENDC
+	LEA	$00800.W,A1		;01ed0: 43f80800
 	MOVE.L	A0,D0			;01ed4: 2008
 	SUB.L	A1,D0			;01ed6: 9089
 	; this needs to be changed to BRA if code is relocated

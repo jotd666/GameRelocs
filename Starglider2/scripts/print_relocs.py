@@ -11,6 +11,20 @@ def get_long(binary_buf,offset):
 def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
+def dump_reloc_file(reloc_offsets,binary_file,extension):
+    reloc_data = []
+    for offset in reloc_offsets:
+        reloc_data.extend(struct.pack(">I",offset))
+    print("saving {} file, {} bytes".format(extension,len(reloc_data)))
+    with open(binary_file+extension,"wb") as f:
+        f.write(bytearray(reloc_data))
+
+    shutil.copy(binary_file+extension,r"K:\jff\AmigaHD\Games\S\Starglider2!V1\data")  # TEMP
+    print("saving .RTB asm file")
+    with open(binary_file+extension+".s","w") as f:
+        for s in reloc_offsets:
+            f.write("\tdc.l\t${:x}\n".format(s))
+
 def decode(input_file,binary_file):
     with open(binary_file,"rb") as f:
         binary_contents = f.read()
@@ -57,33 +71,30 @@ def decode(input_file,binary_file):
             else:
                 data = f.read(hunk_size)
 
-        # filter: don't relocate addresses outside program
-        #reloc_offsets = [r for r in reloc_offsets if (defines.start_address <= get_long(binary_contents,r) < defines.end_address)]
+        reloc_offsets = sorted(reloc_offsets)
+        reloc_offsets.append(0)  # end with 0
 
-        if True:
-            reloc_data = []
-            reloc_offsets= sorted(reloc_offsets)
-            for offset in reloc_offsets:
-                reloc_data.extend(struct.pack(">I",offset))
-            reloc_data.extend([0]*4)
+        dump_reloc_file(reloc_offsets,binary_file,".reloc")
 
-            derogs = {}
-            reloc_offsets = [r for r in reloc_offsets if r+defines.start_org not in derogs]
-            reloc_offsets.append(0)
-            print("saving .reloc file, {} bytes".format(len(reloc_data)))
-            with open(binary_file+".reloc","wb") as f:
-                f.write(bytearray(reloc_data))
+        # unreloc file, cancel relocation of labels that should be in chipmem
+        # it's much better to compute offsets from labels not to relocate
+        derog_labels = {
+            0xD644,  # sprite data
+            0x431F4, # a sound buffer
+            0xcef8,  # copperlist offsets
+            0x0cf20,
+            0x0cf58,
+            0x0cfd4,
+            0x0cffc,
+            0x0d034,
+            0x0d0b0,
+            0x0d0d8,
+            0x0d0f0,
+            }
+        unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
+        unreloc_offsets.append(0)  # end with 0
 
-            shutil.copy(binary_file+".reloc",r"K:\jff\AmigaHD\Games\S\Starglider2!V1\data")  # TEMP
-            print("saving .RTB asm file")
-            with open(binary_file+".reloc.s","w") as f:
-                for s in reloc_offsets:
-                    f.write("\tdc.l\t${:x}\n".format(s))
-##            print("saving reloc .s file")
-##            asmreloc = binary_file+"_reloc.s"
-##            with open(asmreloc,"w") as f:
-##                for s in reloc_offsets+[0]:
-##                    f.write("\tdc.l\t${:x}\n".format(s))
+        dump_reloc_file(unreloc_offsets,binary_file,".unreloc")
 
 decode(os.path.join(this_dir,os.pardir,"{}_hunk".format(defines.project)),os.path.join(this_dir,os.pardir,defines.project))
 
