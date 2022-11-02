@@ -18,14 +18,19 @@ git add %VER%.s %VER%_ref
 - adapt makefile
 - edit "defines.py" for start & end of binary / program (inside binary) according to version
 - build & check that ref is identical, if not, find out why
+- one more difficulty in that case is that there are a lot of
+  occurrences of short labels (.W) that can't be relocated in hunks
+  fortunately most occurrences are short JSRs that can be patched by
+  traps on the whdload side. The rest is patched manually.
 - run findmovea.py. This generates a lot of labels that don't exist. review manually compare output in scripts / merge
 - run add_undefined_labels.py: this builds, parses link output for undefined labels and tries to insert them (run that twice). Works in-place on the original (no risk)
 - run find_possible_tables.py to find (a lot) or possible table zones
 - build manually to create the missing labels manually
 - run with watchpoints in the chipmem code zone to find remaining accesses/tables
 
-JSR xxx.w => refacto JSRSHORT
-TST xxx.w => refacto TSTSHORT
-add_undefined_labels: if undefined appears only in Bxx branch, convert to data
+still to do: no (c) 1990 text at startup
+crash when launching game
+compute "unrelocs"
+
 
 
