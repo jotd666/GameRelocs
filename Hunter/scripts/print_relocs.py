@@ -19,7 +19,7 @@ def dump_reloc_file(reloc_offsets,binary_file,extension):
     with open(binary_file+extension,"wb") as f:
         f.write(bytearray(reloc_data))
 
-    shutil.copy(binary_file+extension,r"K:\jff\AmigaHD\GAMES\H\Hunter!EN\data")  # TEMP
+    shutil.copy(binary_file+extension,r"K:\jff\AmigaHD\GAMES\H\Hunter!FR\data")  # TEMP
     print("saving .RTB asm file")
     with open(binary_file+extension+".s","w") as f:
         for s in reloc_offsets:

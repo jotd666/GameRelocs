@@ -21,6 +21,9 @@ x="""05538 05558
 0a872 0a87e
 """
 
+x = """055fe 0561e
+"""
+
 for line in x.splitlines():
     if line:
         start,end = [int(x,16) for x in line.split()]

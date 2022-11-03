@@ -7,9 +7,14 @@ ranges_en = """02460 024b0
 0a5fa 0a6ca
 0a6ce 0a6dc
 """
+ranges_fr = """024f2 02542
+09c02 09c62
+0a730 0a800
+0a804 0a814
+"""
 
 
-ranges = [[int(x,16) for x in line.split()] for line in ranges_en.splitlines()]
+ranges = [[int(x,16) for x in line.split()] for line in ranges_fr.splitlines()]
 
 f = sys.stdout
 

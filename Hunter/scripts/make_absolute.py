@@ -11,7 +11,7 @@ def abs_address_re(m):
 infile = "../{}.s".format(defines.project)
 af = ira_asm_tools.AsmFile(infile)
 for i,line in enumerate(af.lines):
-    line = re.sub("lb_(\S+\.W)",r"$\1",line)
+    line = re.sub("lb_([\w]+\+?\d?\.W)",r"$\1",line)
     af.lines[i] = line
 
 with open(infile,"w") as f:
