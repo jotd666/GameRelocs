@@ -24,6 +24,9 @@ x="""05538 05558
 x = """055fe 0561e
 """
 
+x = """055f4 05614
+"""
+
 for line in x.splitlines():
     if line:
         start,end = [int(x,16) for x in line.split()]

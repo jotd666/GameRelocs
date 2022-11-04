@@ -3,16 +3,18 @@ import defines
 
 asmname = "../{}.s".format(defines.project)
 ud = re.compile("undefined symbol <lb_(\w+)>")
-build = "vasmm68k_mot -I.. -no-opt -nosym -maxerrors=0 -nosym -Fbin -o wtf".split()+[asmname]
-build = "cmd /c make -f Makefile_windows.mak".split()
+build = ['cmd', '/c', 'wmake.py', '-n', 'SUFFIX='+defines.suffix]
 p = subprocess.run(build,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,cwd="..")
+
+
 if p.returncode:
     undefs = set()
-    for line in p.stderr.splitlines():
-        m = ud.search(line.decode())
+    for line in p.stderr.decode().splitlines():
+        m = ud.search(line)
         if m:
             undefs.add(int(m.group(1),16))
 
+    print(undefs)
     af = ira_asm_tools.AsmFile(asmname)
 
     # check if the undefined labels is not a fake Bcc (ascii data)
