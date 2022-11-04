@@ -2,6 +2,7 @@
 
 KICKNAME = hunter_en
 KICKNAME = hunter_fr
+KICKNAME = hunter_de
 HDBASE = K:\jff\AmigaHD
 WHDBASE = $(HDBASE)\PROJETS\HDInstall\DONE
 EXE = $(KICKNAME)

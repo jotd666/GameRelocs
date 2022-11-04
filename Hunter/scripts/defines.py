@@ -1,7 +1,5 @@
-suffix = "fr"
+suffix = "de"
 project = "hunter_"+suffix
 start_org = 0x800
-end_address = 0X11800  #en
-end_address = 0X1191a  #fr
-
-copper_struct_start = 0x05f50
+end_address = {"en":0X11800,"fr":0X1191a,"de":0x1195a}[suffix]
+#program_end = {"en":0x1135c,"fr":0x11914}[suffix]

@@ -19,7 +19,7 @@ def dump_reloc_file(reloc_offsets,binary_file,extension):
     with open(binary_file+extension,"wb") as f:
         f.write(bytearray(reloc_data))
 
-    shutil.copy(binary_file+extension,r"K:\jff\AmigaHD\GAMES\H\Hunter!FR\data")  # TEMP
+    shutil.copy(binary_file+extension,r"K:\jff\AmigaHD\GAMES\H\Hunter!{}\data".format(defines.suffix))  # TEMP
     print("saving .RTB asm file")
     with open(binary_file+extension+".s","w") as f:
         for s in reloc_offsets:
@@ -78,13 +78,15 @@ def decode(input_file,binary_file):
 
         # unreloc file, cancel relocation of labels that should be in chipmem
         # it's much better to compute offsets from labels not to relocate
-        derog_labels = {
-0x1135c  # end of program
-            }
-        unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
-        unreloc_offsets.append(0)  # end with 0
-
-        dump_reloc_file(unreloc_offsets,binary_file,".unreloc")
+        # not needed in Hunter
+##        derog_labels = {
+##        defines.end_address  # end of program (en)
+##            }
+##
+##        unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
+##        unreloc_offsets.append(0)  # end with 0
+##
+##        dump_reloc_file(unreloc_offsets,binary_file,".unreloc")
 
 decode(os.path.join(this_dir,os.pardir,"{}_hunk".format(defines.project)),os.path.join(this_dir,os.pardir,defines.project))
 

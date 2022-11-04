@@ -13685,8 +13685,7 @@ lb_08312:
 lb_0831a:
 	dc.w	$0000	;0831a
 	dc.w	$0000	;0831c
-	DC.W	$0001			;0831e
-	DC.W	$1b7e			;08320
+	DC.l	$11B7E			;0831e	; chipmem where code is copied !!!
 lb_08322:
 	dc.w	$0000	;08322
 	dc.w	$0000	;08324
@@ -13833,7 +13832,8 @@ lb_0840e:
 lb_08410:
 	BSR.W	lb_01e8c		;08410: 61009a7a
 	LEA	lb_08312(PC),A0		;08414: 41fafefc
-	LEA	lb_1135a_program_end+2,A1		;08418: 43f90001135c
+	; not a label, end of program = chipmem area	
+	LEA	$1135c,A1		;08418: 43f90001135c
 	MOVEA.L	A1,A2			;0841e: 2449
 	BSR.S	lb_083f2		;08420: 61d0
 	MOVE.L	A1,D7			;08422: 2e09

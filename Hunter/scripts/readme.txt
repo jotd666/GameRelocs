@@ -33,5 +33,6 @@ git add %VER%.s %VER%_ref
 - build manually to create the missing labels manually (not a lot), only 6 or 7
 - each time a label is found in a data/fake code block, comment with "pointer" so it
   can be found later when adapting other versions
+- look for JSR	0(A5,A0.L), unreloc the label above
 
 - use print_reloc.py to generate the binary & text reloc tables
