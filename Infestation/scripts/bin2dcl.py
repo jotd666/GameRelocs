@@ -17,7 +17,7 @@ def print_it(start,stop):
         else:
             print("\tdc.l\t{}\t;{:05x}".format(data,i))
 
-x="""1716a 17176
+x_shifted="""1716a 17176
 1756e 1757a
 176fc 17708
 1775e 17766
@@ -53,9 +53,43 @@ x="""1716a 17176
 1bab0 1babc
 1c1d8 1c1e6
 1c238 1c244
+"""  #+(0xE00-0xB00)
+
+x="""0db7c 0db90
+33520 3353c
+3309e 330be
+1f16a 1f17a
+0bfae 0bfee
+0c1e2 0c222
+17bd2 17bde
+17f0e 17f1a
+17f50 17f5c
+17f9c 17fa8
+18028 18034
+180de 180ea
+1812c 18138
+183dc 183e8
+18458 18464
+18722 1872e
+18b26 18b32
+1a0c8 1a0d4
+1a12c 1a138
+1a190 1a19c
+1a1f4 1a200
+1a258 1a264
+1a2bc 1a2c8
+1a320 1a32c
+1a384 1a390
+17326 17332
+1736c 17378
+173ba 173c6
+1752c 17538
+1756e 1757a
+5935c 59370
+31b64 31ba4
 """
 
 for line in x.splitlines():
     if line:
-        start,end = [int(x,16)+(0xE00-0xB00) for x in line.split()]
+        start,end = [int(x,16) for x in line.split()]
         print_it(start,end)
