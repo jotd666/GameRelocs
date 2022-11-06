@@ -79,8 +79,10 @@ def decode(input_file,binary_file):
         # unreloc file, cancel relocation of labels that should be in chipmem
         # it's much better to compute offsets from labels not to relocate
         derog_labels = {
-            # TODO
-
+        # pointers to copperlist
+            0x0e76e,
+0x0e7c4,
+0x0e80a
             }
         unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
         unreloc_offsets.append(0)  # end with 0
