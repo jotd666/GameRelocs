@@ -89,6 +89,46 @@ x="""0db7c 0db90
 31b64 31ba4
 """
 
+x = """175b0 175c4
+176a2 176ae
+17788 17794
+177c8 177d4
+1799e 179aa
+17b16 17b22
+17b74 17b80
+1a038 1a044
+1a3e8 1a3f4
+1a44c 1a458
+1a4b0 1a4bc
+1a514 1a520
+1a578 1a584
+1a70a 1a996
+1a9ea 1a9f6
+1f518 1f534
+
+"""
+
+x = """1a5dc 1a5e8
+1a640 1a652
+1a9c4 1a9d0
+1aa06 1aa12
+1aa36 1aa42
+1aa6a 1aa76
+1aaa2 1aaae
+1b672 1b67e
+"""
+
+x = """1a6aa 1a6b6
+1aada 1aae6
+1ab10 1ab1c
+1ab44 1ab50
+1ab7c 1ab88
+1abac 1abb8
+1abea 1abf6
+1b36e 1b37a
+1ce76 1ce7e
+1b4ae 1b4ba
+"""
 for line in x.splitlines():
     if line:
         start,end = [int(x,16) for x in line.split()]
