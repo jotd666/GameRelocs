@@ -128,6 +128,7 @@ x = """1a6aa 1a6b6
 1b36e 1b37a
 1ce76 1ce7e
 1b4ae 1b4ba
+1b5e2 1b5ee
 """
 for line in x.splitlines():
     if line:
