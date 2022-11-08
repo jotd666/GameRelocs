@@ -28,9 +28,11 @@ git add %VER%.s %VER%_ref
 - build manually to create the missing labels manually
 - run with watchpoints in the chipmem code zone to find remaining accesses/tables
 
-still to do: no (c) 1990 text at startup
-crash when launching game
-compute "unrelocs"
+still to do: 
+compute "unrelocs" for real fastmem
+inventory of objects: crashes
+play more / use trainer to reach further levels
+start text too fast
 
 
 

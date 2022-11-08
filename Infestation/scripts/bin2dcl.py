@@ -129,6 +129,23 @@ x = """1a6aa 1a6b6
 1ce76 1ce7e
 1b4ae 1b4ba
 1b5e2 1b5ee
+18f6a 18f76
+19464 19470
+19520 1952c
+1989c 198a8
+19e1c 19e28
+1b16a 1b176
+1b2a6 1b2b2
+1b726 1b732
+"""
+
+x = """1b89e 1b8aa
+1bcb4 1bcc0
+1c588 1c596
+1c5d4 1c5e0
+1c6e0 1c6fa
+1c72c 1c73c
+1c766 1c774
 """
 for line in x.splitlines():
     if line:
