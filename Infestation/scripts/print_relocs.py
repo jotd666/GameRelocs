@@ -82,8 +82,15 @@ def decode(input_file,binary_file):
         # pointers to copperlist
             0x0e76e,
 0x0e7c4,
-0x0e80a
+0x0e80a,
+0x1f690, # audio
             }
+        # generate all possible relocs
+        # inside main copperlist
+        # there are a lot of them and it's much simpler to create a derogation
+        # for the whole range
+        derog_labels.update(range(0xb570,0x0b732,2))
+
         unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
         unreloc_offsets.append(0)  # end with 0
 

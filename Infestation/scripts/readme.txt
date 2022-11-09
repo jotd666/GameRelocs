@@ -29,10 +29,9 @@ git add %VER%.s %VER%_ref
 - run with watchpoints in the chipmem code zone to find remaining accesses/tables
 
 still to do: 
-compute "unrelocs" for real fastmem
-inventory of objects: crashes
+compute "unrelocs" for audio / find audio data code around +1faec
 play more / use trainer to reach further levels
 start text too fast
-
+freeze menu in fastmem
 
 
