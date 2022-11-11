@@ -13832,7 +13832,9 @@ lb_0840e:
 lb_08410:
 	BSR.W	lb_01e8c		;08410: 61009a7a
 	LEA	lb_08312(PC),A0		;08414: 41fafefc
-	; not a label, end of program = chipmem area	
+	; not a label, end of program = chipmem area
+    ; (some code may be copied into that zone but it doesn't matter)
+	
 	LEA	$1135c,A1		;08418: 43f90001135c
 	MOVEA.L	A1,A2			;0841e: 2449
 	BSR.S	lb_083f2		;08420: 61d0
@@ -27718,7 +27720,7 @@ lb_101f0:
 	BCLR	#4,155(A5)		;10206: 08ad0004009b
 	BSR.W	lb_1046c		;1020c: 6100025e
 	BNE.S	lb_101b2		;10210: 66a0
-	MOVE.L	#$000023be,D0		;10212: 203c000023be
+	MOVE.L	#lb_023be,D0		;10212: 203c000023be  reloc => datareg
 	RTS				;10218: 4e75
 lb_1021a:
 	TST.W	520(A5)			;1021a: 4a6d0208
@@ -27753,7 +27755,7 @@ lb_10230:
 	BSR.W	lb_1046c		;10280: 610001ea
 	BNE.W	lb_101b2		;10284: 6600ff2c
 	BSR.W	lb_101b6		;10288: 6100ff2c
-	MOVE.L	#$000023d2,D0		;1028c: 203c000023d2
+	MOVE.L	#lb_023d2,D0		;1028c: 203c000023d2    reloc => datareg
 	RTS				;10292: 4e75
 lb_10294:
 	MOVEA.L	A6,A0			;10294: 204e

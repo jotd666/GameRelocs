@@ -83,7 +83,15 @@ def decode(input_file,binary_file):
             0x0e76e,
 0x0e7c4,
 0x0e80a,
-0x1f690, # audio
+ # audio
+0x1f690,
+0x6b764,
+0x70164,
+0x70180,
+0x6fa42,
+0x3bf64,
+0xA014,
+0x4cfe6,
             }
         # generate all possible relocs
         # inside main copperlist

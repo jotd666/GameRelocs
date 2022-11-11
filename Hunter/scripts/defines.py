@@ -1,4 +1,5 @@
-suffix = "de"
+import os
+suffix = os.getenv("SUFFIX")
 prefix = "hunter"
 project = prefix+"_"+suffix
 start_org = 0x800

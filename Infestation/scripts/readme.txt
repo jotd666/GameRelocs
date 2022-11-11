@@ -33,6 +33,6 @@ still to do:
 compute "unrelocs" for audio / find audio data code around +1faec
 play more / use trainer to reach further levels
 start text too fast
-freeze menu in fastmem? loop removed, smc fixed, doesn't happen anymore
-
+music trashed/game locks up on menu with caches on
+go straight ahead for entrance? more relocs here
 

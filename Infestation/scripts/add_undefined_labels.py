@@ -34,7 +34,7 @@ if p.returncode:
     for undef_label in ["lb_{:05x}".format(x) for x in undefs]:
         for i,operand,offset,hexval in branch_list:
             if undef_label in operand:
-                s = codecs.decode(hexval.encode(),"hex").decode()
+                s = codecs.decode(hexval.encode(),"hex").decode(errors="ignore")
                 if s.isprintable():
                     line = '\tdc.b\t"{}"\t;{}\n'.format(s,offset)
                 else:
