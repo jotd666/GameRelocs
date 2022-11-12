@@ -1557,7 +1557,7 @@ lb_06312:
 lb_06324:
 	ROL.L	#1,D0			;06324: e398
 	DBF	D1,lb_06312		;06326: 51c9ffea
-	MOVE.L	D0,lb_06336		;0632a: 23c000006336
+	MOVE.L	D0,lb_06336		;0632a: 23c000006336  <not_smc>
 	SWAP	D0			;06330: 4840
 	MOVE.L	(A7)+,D1		;06332: 221f
 	RTS				;06334: 4e75
@@ -6670,9 +6670,9 @@ lb_09be8:
 lb_09bf6:
 	MOVE.W	D0,-(A7)		;09bf6: 3f00
 	MOVE.W	EXT_00b1.W,D0		;09bf8: 30380900
-lb_09bfc:
+lb_09bfc_sync:
 	CMP.W	EXT_00b1.W,D0		;09bfc: b0780900
-	BEQ.S	lb_09bfc		;09c00: 67fa
+	BEQ.S	lb_09bfc_sync		;09c00: 67fa
 	MOVE.W	(A7)+,D0		;09c02: 301f
 	RTS				;09c04: 4e75
 	MOVE.W	D0,-(A7)		;09c06: 3f00
@@ -6684,7 +6684,7 @@ lb_09c0c:
 	RTS				;09c14: 4e75
 lb_09c16:
 	; set copperlist
-	LEA	lb_0b570,A0		;09c16: 41f90000b570
+	LEA	lb_0b570_copperlist,A0		;09c16: 41f90000b570
 	MOVE.L	A0,COP1LCH		;09c1c: 23c800dff080
 	MOVE.W	#$ffff,COPJMP1		;09c22: 33fcffff00dff088
 	RTS				;09c2a: 4e75
@@ -8956,7 +8956,7 @@ lb_0b458:
 	ADDQ.L	#4,A2			;0b460: 588a
 	ADDQ.L	#4,A3			;0b462: 588b
 	DBF	D0,lb_0b458		;0b464: 51c8fff2
-	LEA	lb_0b570(PC),A0		;0b468: 41fa0106
+	LEA	lb_0b570_copperlist(PC),A0		;0b468: 41fa0106
 	MOVE.L	A0,128(A6)		;0b46c: 2d480080
 	MOVE.W	#$ffff,136(A6)		;0b470: 3d7cffff0088
 	MOVE.W	#$8380,150(A6)		;0b476: 3d7c83800096
@@ -9050,7 +9050,7 @@ lb_0b55e:
 lb_0b56c:
 	dc.w	$0000	;0b56c
 	dc.w	$0000	;0b56e
-lb_0b570:
+lb_0b570_copperlist:
 	DC.W	$00e0			;0b570
 lb_0b572:
 	ORI.B	#$e2,D0			;0b572: 000000e2
@@ -26509,6 +26509,7 @@ lb_1ce88:
 	JSR	lb_09e7e_test_key_pressed		;1ce96: 4eb900009e7e
 	BEQ.S	lb_1ceb2		;1ce9c: 6714
 lb_1ce9e:
+	; start game
 	JSR	lb_54c60		;1ce9e: 4eb900054c60
 	MOVE.W	#$8000,lb_1cc60		;1cea4: 33fc80000001cc60
 	JSR	lb_1f5ce		;1ceac: 4eb90001f5ce
@@ -26641,7 +26642,9 @@ lb_1d0fa:
 	CLR.W	lb_3205c		;1d0fa: 42790003205c
 	MOVE.L	lb_551d6+2,EXT_00c5.W	;1d100: 21f9000551d80996
 	MOVE.L	#lb_08184,lb_0bec4	;1d108: 23fc000081840000bec4
+	; fade out
 	JSR	lb_0b1bc		;1d112: 4eb90000b1bc
+	; start game
 	IFD		REAL_EXE
 	nop		; manual_patch MOVE.W	#$4000,lb_0619a.W MOVE.W	#$4000,lb_0619c.W
 	nop
@@ -27031,6 +27034,7 @@ lb_1d77c:
 lb_1d77e:
 	JSR	lb_1f686		;1d77e: 4eb90001f686
 	JSR	lb_0b1bc		;1d784: 4eb90000b1bc
+	; game over
 	MOVE.L	#lb_69fa8,lb_0e700+2	;1d78a: 23fc00069fa80000e702
 	MOVE.L	#lb_6b744,lb_0e704+2	;1d794: 23fc0006b7440000e706
 	MOVE.L	EXT_009a.W,lb_0e70c+2	;1d79e: 23f8081c0000e70e
@@ -29218,7 +29222,10 @@ lb_1f66c:
 lb_1f686:
 	MOVE.W	#$0008,DMACON		;1f686: 33fc000800dff096
 	RTS				;1f68e: 4e75
-	; audio data (unrelocate)
+	; audio data & code
+	; should run with caches off, self-modifying
+	; code is horrible here. All writes to xx(a5)
+	; is SMC...
 lb_1f690_audio_data:
 	DC.W	$0fff			;1f690_audio_data
 	BSET	D7,-(A2)		;1f692: 0fe2
@@ -29421,7 +29428,7 @@ lb_1f8ec:
 	SUBA.W	D0,A0			;1f8ee: 90c0
 	BRA.S	lb_1f8fc		;1f8f0: 600a
 lb_1f8f2:
-	LEA	lb_1f9dc(PC),A4		;1f8f2: 49fa00e8
+	LEA	lb_1f9dc(PC),A4		;1f8f2: 49fa00e8	; music routine entrypoint
 	LEA	lb_4bca6,A0		;1f8f6: 41f90004bca6
 lb_1f8fc:
 	MOVE.B	(A0)+,D0		;1f8fc: 1018
@@ -29482,6 +29489,7 @@ lb_1f97a:
 	LEA	lb_209aa(PC),A0		;1f984: 41fa1024
 	MOVEA.W	0(A0,D0.W),A0		;1f988: 30700000
 	ADDA.L	A5,A0			;1f98c: d1cd
+	; smc target (offset)
 	MOVE.L	A0,2208(A5)		;1f98e: 2b4808a0
 	JMP	(A4)			;1f992: 4ed4
 lb_1f994:
@@ -30150,9 +30158,11 @@ lb_200a8:
 	BPL.S	lb_200b0		;200ac: 6a02
 	MOVEQ	#0,D1			;200ae: 7200
 lb_200b0:
+	; note: A5 = start+$1F690
 	AND.B	D3,D1			;200b0: c203
 	MOVE.B	D1,2733(A5)		;200b2: 1b410aad
-	MOVE.L	A0,2574(A5)		;200b6: 2b480a0e
+	MOVE.L	A0,2574(A5)		;200b6: 2b480a0e	; smc target AND source!!
+	; operand changes (smc)
 	MOVEQ	#-1,D1			;200ba: 72ff
 	BMI.S	lb_20080		;200bc: 6bc2
 	LEA	EXT_01c9,A0		;200be: 41f900073f24
@@ -65929,7 +65939,8 @@ lb_319d8:
 	MOVE.W	lb_31b62(PC),D0		;319de: 303a0182
 	ANDI.W	#$0003,D0		;319e2: 02400003
 	BNE.S	lb_31a20		;319e6: 6638
-	LEA	lb_31b62+2(PC),A0	;319e8: 41fa017a
+	; set sprites
+	LEA	lb_31b64(PC),A0	;319e8: 41fa017a
 	MOVE.W	lb_31b62,D5		;319ec: 3a3900031b62
 	MOVE.L	0(A0,D5.W),D0		;319f2: 20305000
 	MOVE.W	D0,lb_0b596		;319f6: 33c00000b596
@@ -66052,6 +66063,7 @@ lb_31a92:
 	AND.B	D0,D0			;31b60: c000
 lb_31b62:
 	dc.w	$4	;31b62
+lb_31b64:
 	dc.l	lb_31d80	;31b64
 	dc.l	lb_31d3c	;31b68
 	dc.l	lb_31cf8	;31b6c
@@ -80077,7 +80089,7 @@ lb_399ca:
 	BSR.W	lb_399da		;399d4: 61000004
 	RTS				;399d8: 4e75
 lb_399da:
-	MOVE.L	A0,lb_39bda+2		;399da: 23c800039bdc
+	MOVE.L	A0,lb_39bda+2		;399da: 23c800039bdc	; <not_smc>
 	LEA	HARDBASE,A6		;399e0: 4df900dff000
 	BSR.W	lb_399fe		;399e6: 61000016
 	BSR.W	lb_39a40		;399ea: 61000054
@@ -163772,7 +163784,7 @@ lb_69f0a:
 	MOVE.W	D0,4(A0)		;69f16: 31400004
 	ADDQ.W	#8,A0			;69f1a: 5048
 	DBF	D7,lb_69f0a		;69f1c: 51cfffec
-	MOVE.L	lb_31b62+2,D0		;69f20: 203900031b64
+	MOVE.L	lb_31b64,D0		;69f20: 203900031b64
 	MOVE.W	D0,lb_0b596		;69f26: 33c00000b596
 	SWAP	D0			;69f2c: 4840
 	MOVE.W	D0,lb_0b592		;69f2e: 33c00000b592
