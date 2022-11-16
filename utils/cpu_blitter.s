@@ -1,21 +1,6 @@
-    STRUCTURE   BlitterState,0
-    UWORD con0
-    UWORD con1
-    UWORD afwm
-    UWORD alwm
-    APTR cpt
-    APTR bpt
-    APTR apt
-    APTR dpt
-    UWORD size_	; not to access directly
-    UWORD cmod 
-    UWORD bmod 
-    UWORD amod 
-    UWORD dmod
-    UWORD cdat
-    UWORD bdat
-    UWORD adat
-    LABEL   BlitterState_SIZEOF
+	include		hardware/custom.i
+
+BlitterState_SIZEOF = $78
 
 
 BC0F_ABC = $80
@@ -69,7 +54,7 @@ blt_reset:
 ; > D0
 
 blt_shiftval
-	btst	#BC1B_BLITREVERSE,con1+1(a0)
+	btst	#BC1B_BLITREVERSE,bltcon1+1(a0)
 	beq.b	.inc
 	move.w	d2,-(a7)
 	move.w	d0,d2
@@ -94,7 +79,7 @@ blt_shiftval
 ; < D0: value
 
 blt_addptr
-	btst	#BC1B_BLITREVERSE,con1+1(a0)
+	btst	#BC1B_BLITREVERSE,bltcon1+1(a0)
 	beq.b	.inc
 .dec
 	sub.w	d0,a1
@@ -121,16 +106,16 @@ APPLY_MINTERMS:MACRO
 	ENDM
 	
 ; < A0: state
-; < D0: size
-blt_size
-	movem.l	d0-d7/A0-a6,-(a7)
-	move.w	d0,size_(a0)
+
+blt_wait
+	movem.l	d0-d7/A1-a2,-(a7)
 	lea		.areg(pc),a1
 	clr.l	(a1)	; areg+breg
 	moveq.l	#0,d6
-	move.w	con0(a0),d7	; copy of bplcon0
+	moveq.l	#0,d7
+	move.w	bltcon0(a0),d7	; copy of bltcon0
 	
-	move.b	con1(a0),d6	; bshift
+	move.b	bltcon1(a0),d6	; bshift
 	lsr.w	#4,d6
 	move.w	d6,(4,a1)	; bshift
 	
@@ -138,7 +123,7 @@ blt_size
 	lsr.w	#8,d6	; ashift
 	lsr.w	#4,d6	; ashift
 .loop
-	move.w	size_(a0),d5	; nx
+	move.w	bltsize(a0),d5	; nx
 	and.w	#$3F,d5
 	bne.b	.noz
 	move.w	#$40,d5	
@@ -147,52 +132,52 @@ blt_size
 .forloop
 	btst	#BC0B_SRCA,d7
 	beq.b	.nosrca
-	move.l	apt(a0),a1
-	lea		adat(a0),a2
+	move.l	bltapt(a0),a1
+	lea		bltadat(a0),a2
 	bsr.b	blt_dodmas	
-	move.l	a1,apt(a0)
+	move.l	a1,bltapt(a0)
 .nosrca
 	btst	#BC0B_SRCB,d7
 	beq.b	.nosrcb
-	move.l	bpt(a0),a1
-	lea		bdat(a0),a2
+	move.l	bltbpt(a0),a1
+	lea		bltbdat(a0),a2
 	bsr.b	blt_dodmas	
-	move.l	a1,bpt(a0)
+	move.l	a1,bltbpt(a0)
 .nosrcb
 	btst	#BC0B_SRCC,d7
 	beq.b	.nosrcc
-	move.l	cpt(a0),a1
-	lea		cdat(a0),a2
+	move.l	bltcpt(a0),a1
+	lea		bltcdat(a0),a2
 	bsr.b	blt_dodmas
-	move.l	a1,cpt(a0)
+	move.l	a1,bltcpt(a0)
 .nosrcc
 	move.w	d4,-(a7)	; save d4, we need one more register!
 	move.w	#$FFFF,d3	; amask
 	tst.w	d4
 	bne.b	.nofirst
-	and.w	afwm(a0),d3
+	and.w	bltafwm(a0),d3
 	bra.b	.nolast
 .nofirst
 	subq.w	#1,d4	; trash d4, doesn't matter
 	cmp.w	d4,d5	; is that last iteration ?
 	bne.b	.nolast
-	and.w	alwm(a0),d3	; mask
+	and.w	bltalwm(a0),d3	; mask
 .nolast
 	; compute a,b,c
-	and.w	adat(a0),d3	; masked adat
+	and.w	bltadat(a0),d3	; masked adat
 	lea		.areg(pc),a1
 	move.w	d6,d1
 	move.w	d3,d0
-	bsr.b		blt_shiftval
+	bsr.b	blt_shiftval
 	move.w	d0,d2	; d2: a
 	
 	move.w	.bshift(pc),d1
-	move.w	bdat(a0),d0
+	move.w	bltbdat(a0),d0
 	addq.l	#2,a1	; breg
-	bsr.b		blt_shiftval
+	bsr.b	blt_shiftval
 	move.w	d0,d3	; d3: b
 	
-	move.w	cdat(a0),d1	; d1: c
+	move.w	bltcdat(a0),d1	; d1: c
 	
 	moveq	#0,d0	; result
 	; minterm check
@@ -255,11 +240,11 @@ blt_size
 	btst	#BC0B_DEST,d7
 	beq.b	.nodest
 
-	move.l	dpt(a0),a1
+	move.l	bltdpt(a0),a1
 	move.w	d0,(a1)
 	moveq	#2,d0
 	bsr.b	blt_addptr
-	move.l	a1,dpt(a0)
+	move.l	a1,bltdpt(a0)
 .nodest
 	move.w	(a7)+,d4
 	addq.w	#1,d4
@@ -269,39 +254,39 @@ blt_size
 	; add pointers to sources
 	btst	#BC0B_SRCA,d7
 	beq.b	.noa
-	move.l	apt(a0),a1
-	move.w	amod(a0),d0
+	move.l	bltapt(a0),a1
+	move.w	bltamod(a0),d0
 	bsr.b	blt_addptr
-	move.l	a1,apt(a0)
+	move.l	a1,bltapt(a0)
 .noa
 	btst	#BC0B_SRCB,d7
 	beq.b	.nob
-	move.l	bpt(a0),a1
-	move.w	bmod(a0),d0
+	move.l	bltbpt(a0),a1
+	move.w	bltbmod(a0),d0
 	bsr.b	blt_addptr
-	move.l	a1,bpt(a0)
+	move.l	a1,bltbpt(a0)
 .nob
 	btst	#BC0B_SRCC,d7
 	beq.b	.noc
-	move.l	cpt(a0),a1
-	move.w	cmod(a0),d0
+	move.l	bltcpt(a0),a1
+	move.w	bltcmod(a0),d0
 	bsr.b	blt_addptr
-	move.l	a1,cpt(a0)
+	move.l	a1,bltcpt(a0)
 .noc
 	btst	#BC0B_DEST,d7
 	beq.b	.nod
-	move.l	dpt(a0),a1
-	move.w	dmod(a0),d0
+	move.l	bltdpt(a0),a1
+	move.w	bltdmod(a0),d0
 	bsr.b	blt_addptr
-	move.l	a1,dpt(a0)
+	move.l	a1,bltdpt(a0)
 .nod
-	move.w	size_(a0),d0
+	move.w	bltsize(a0),d0
 	sub.w	#$40,d0
-	move.w	d0,size_(a0)
+	move.w	d0,bltsize(a0)
 	and.w	#$FFC0,d0
 	bne.b	.loop
 	
-	movem.l	(a7)+,d0-d7/a0-a6
+	movem.l	(a7)+,d0-d7/a1-a2
 	rts
 .areg
 	dc.w	0,0
