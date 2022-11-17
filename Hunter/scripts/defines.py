@@ -1,5 +1,5 @@
 import os
-suffix = os.getenv("SUFFIX")
+suffix = os.getenv("SUFFIX","en")
 prefix = "hunter"
 project = prefix+"_"+suffix
 start_org = 0x800

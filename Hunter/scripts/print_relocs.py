@@ -4,6 +4,7 @@ import shutil
 
 hunk_dict = {0x3F3:"header",0x3E9:"code",0x3EA:"data",0x3F2:"end",0x3EC:"reloc32",0x3EB:"bss",0x3F1:"debug"}
 
+print("context: {}".format(defines.project))
 this_dir = os.path.dirname(os.path.abspath(__file__))
 def get_long(binary_buf,offset):
     return struct.unpack_from(">I",binary_buf,offset)[0]
