@@ -100,6 +100,16 @@ APPLY_MINTERMS:MACRO
 
 blt_wait
 	movem.l	d0-d7/A1-a2,-(a7)
+	; force even pointers
+	bclr	#0,bltapt+3(a0)
+	bclr	#0,bltbpt+3(a0)
+	bclr	#0,bltcpt+3(a0)
+	bclr	#0,bltdpt+3(a0)
+	bclr.b  #0,bltamod+1(a0)
+	bclr.b  #0,bltbmod+1(a0)
+	bclr.b  #0,bltcmod+1(a0)
+	bclr.b  #0,bltdmod+1(a0)
+	
 	lea		blt_areg(pc),a1
 	clr.l	(a1)	; areg+breg
 	moveq.l	#0,d6
@@ -131,14 +141,14 @@ blt_wait
 	beq.b	.nosrca
 	move.l	bltapt(a0),a1
 	lea		bltadat(a0),a2
-	bsr.b	blt_dodmas	
+	bsr	blt_dodmas	
 	move.l	a1,bltapt(a0)
 .nosrca
 	btst	#BC0B_SRCB,d7
 	beq.b	.nosrcb
 	move.l	bltbpt(a0),a1
 	lea		bltbdat(a0),a2
-	bsr.b	blt_dodmas	
+	bsr	blt_dodmas	
 	move.l	a1,bltbpt(a0)
 .nosrcb
 	btst	#BC0B_SRCC,d7
@@ -289,7 +299,6 @@ blt_wait
 
 ; A->D descending (optimized without B & C)
 blt_ad_descending_loop
-
 .loop
 	move.w	bltsize(a0),d5	; nx
 	and.w	#$3F,d5
@@ -334,13 +343,11 @@ blt_ad_descending_loop
 	
 	; add pointers to sources
 	move.l	bltapt(a0),a1
-	move.w	bltamod(a0),d0
-	add.w	d0,a1
+	add.w	bltamod(a0),a1
 	move.l	a1,bltapt(a0)
 
 	move.l	bltdpt(a0),a1
-	move.w	bltdmod(a0),d0
-	add.w	d0,a1
+	add.w	bltdmod(a0),a1
 	move.l	a1,bltdpt(a0)
 
 	move.w	bltsize(a0),d0
@@ -367,7 +374,6 @@ blt_cookie_cut_loop
 	lea		bltadat(a0),a2
 	bsr	blt_dodmas	
 	move.l	a1,bltapt(a0)
-
 
 	move.l	bltbpt(a0),a1
 	lea		bltbdat(a0),a2
@@ -409,64 +415,29 @@ blt_cookie_cut_loop
 	
 	move.w	bltcdat(a0),d1	; d1: c
 	
-	moveq	#0,d0	; result
-	; minterm check
-	btst	#BC0B_ABC,d7
-	beq.b	.no1
+	; minterm check already resolved
+	
+	; BC0B_ABC
 	move.w	d2,d0	; first minterm, move
 	and.w	d3,d0
 	and.w	d1,d0	; a & b & c
-.no1
-	btst	#BC0B_ABNC,d7
-	beq.b	.no2
+	; BC0B_ABNC
 	not.w	d1
 	APPLY_MINTERMS
 	not.w	d1	; restore d1
-.no2
-	btst	#BC0B_ANBC,d7
-	beq.b	.no3
+
+	; BC0B_NABC,d7
+	not.w	d2
+	APPLY_MINTERMS
+
+	; BC0B_NANBC,d7
+
 	not.w	d3
 	APPLY_MINTERMS
-	not.w	d3	; restore d3
-.no3
-	btst	#BC0B_ANBNC,d7
-	beq.b	.no4
-	not.w	d3
-	not.w	d1
-	APPLY_MINTERMS
-	not.w	d3	; restore d3
-	not.w	d1	; restore d3
-.no4
-	btst	#BC0B_NABC,d7
-	beq.b	.no5
-	not.w	d2
-	APPLY_MINTERMS
-	not.w	d2
-.no5
-	btst	#BC0B_NABNC,d7
-	beq.b	.no6
-	not.w	d2
-	not.w	d1
-	APPLY_MINTERMS
-	not.w	d2
-	not.w	d1
-.no6
-	btst	#BC0B_NANBC,d7
-	beq.b	.no7
-	not.w	d2
-	not.w	d3
-	APPLY_MINTERMS
-	not.w	d2
-	not.w	d3
-.no7
-	btst	#BC0B_NANBNC,d7
-	beq.b	.no8
-	not.w	d2
-	not.w	d1
-	not.w	d3
-	APPLY_MINTERMS
+
+
 	; no need to restore, last minterm
-.no8
+
 	move.l	bltdpt(a0),a1
 	move.w	d0,(a1)
 	moveq	#2,d0
@@ -478,8 +449,6 @@ blt_cookie_cut_loop
 	cmp.w	d5,d4
 	bne	.forloop
 	
-	; add pointers to sources
-
 	move.l	bltapt(a0),a1
 	move.w	bltamod(a0),d0
 	bsr	blt_addptr
@@ -499,7 +468,8 @@ blt_cookie_cut_loop
 	move.w	bltdmod(a0),d0
 	bsr	blt_addptr
 	move.l	a1,bltdpt(a0)
-
+	
+	
 	move.w	bltsize(a0),d0
 	sub.w	#$40,d0
 	move.w	d0,bltsize(a0)
