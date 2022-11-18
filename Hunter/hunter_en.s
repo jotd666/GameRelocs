@@ -5878,8 +5878,8 @@ lb_03cea:
 	MOVE.L	-(A0),D0		;03cee: 2020
 	dc.w	$0000	;03cf0
 	dc.w	$0000	;03cf2
-	DC.W	$0000			;03cf4
-	MOVE.W	-(A4),-1(A6)		;03cf6: 3d64ffff
+	DC.l	lb_03d64			;03cf4
+	dc.w	$FFFF		;03cf8: ffff
 lb_03cfa:
 	BSR.W	lb_02e08		;03cfa: 6100f10c
 	BCLR	#0,162(A5)		;03cfe: 08ad000000a2
@@ -5917,6 +5917,7 @@ lb_03d4e:
 	BSR.W	lb_06084		;03d58: 6100232a
 	BSR.W	lb_060ce		;03d5c: 61002370
 	BRA.W	lb_0252a		;03d60: 6000e7c8
+lb_03d64:
 	MOVEQ	#-1,D0			;03d64: 70ff
 	RTS				;03d66: 4e75
 lb_03d68:
@@ -22718,6 +22719,7 @@ lb_0d1f4:
 	dc.w	$0000	;0d208
 	dc.w	$0000	;0d20a
 	DC.l	lb_0d16e			;0d20c
+	DC.W	$013C			;0d210
 	DC.W	$4164			;0d212
 	BCC.S	lb_0d236		;0d214: 6420
 	DC.W	$4974			;0d216
@@ -22728,8 +22730,8 @@ lb_0d1f4:
 	MOVE.L	-(A0),D0		;0d220: 2020
 	dc.w	$0000	;0d222
 	dc.w	$0000	;0d224
-	DC.W	$0000			;0d226
-	ADD.W	EXT_000c.W,D1		;0d228: d278013c
+	DC.l	lb_0d278			;0d226
+	dc.w	$013C				;0d22a: 013c
 lb_0d22c:
 	ADDQ.W	#1,-(A5)		;0d22c: 5265
 	DC.W	$7375			;0d22e
@@ -22771,8 +22773,9 @@ lb_0d270:
 	MOVEA.L	(A1)+,A5		;0d270: 2a59
 	DC.W	$2d70			;0d272
 	DC.W	$6f73			;0d274
-	MOVE.L	24832(A2),D5		;0d276: 2a2a6100
-	DC.W	$fea0			;0d27a
+	dc.w	$2a2a  ;0d276
+lb_0d278:
+	bsr.w		lb_0d11a  ;0d278
 	BMI.S	lb_0d25c		;0d27c: 6bde
 	MOVEQ	#1,D0			;0d27e: 7001
 	MOVE.W	#$0082,D1		;0d280: 323c0082

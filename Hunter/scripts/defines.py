@@ -2,7 +2,7 @@ import os
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 
-suffix = os.getenv("SUFFIX","fr")
+suffix = os.getenv("SUFFIX","de")
 prefix = "hunter"
 project = prefix+"_"+suffix
 binary_file = os.path.join(this_dir,"../{}_ref".format(project))
