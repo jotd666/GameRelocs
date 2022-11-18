@@ -17234,7 +17234,7 @@ lb_0d204:
 	; - LF7 LF6 on, LF5, LF4 off
 	; - LF3 LF1 on, FCI & LINE off
 	; 9CA: classic cookie cut
-	; here cookie cut without A source
+	; here cookie cut without A source (A is all 1s)
 	MOVE.W	#$07ca,bltcon0(A5)		;0d20c: 3b7c07ca0040
 	MOVE.W	#$0000,bltcon1(A5)		;0d212: 3b7c00000042
 	MOVE.W	#$ffff,bltadat(A5)		;0d218: 3b7cffff0074

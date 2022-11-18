@@ -1,3 +1,25 @@
+; blitting data using cpu only
+;
+; written by JOTD in 2022
+;
+; converted from paraj c++ code
+;
+; credits:
+;
+; paraj: original c++ code
+;        fixes to the converted asm code
+;        asm tester
+;        killer suggestions (like presets for most used modes)
+;
+; JOTD: conversion to asm
+;        API simplification (using original hardware blitter offsets)
+;
+; presets for less tests & better speed:
+;
+; - direct A->D copy (descending): $9F0
+; - "cookie cut"                 : $FCA
+;
+
 	include		hardware/custom.i
 	include		hardware/blit.i
 
@@ -66,28 +88,24 @@ blt_shiftval
 	rts
 	
 ; < A0: state
-; <> A1: ptr
 ; < D0: value
 
-blt_addptr
+BLT_ADDPTR:MACRO
 	btst	#BC1B_BLITREVERSE,bltcon1+1(a0)
-	beq.b	.inc
-.dec
-	sub.w	d0,a1
+	beq.b	.inc\@
+	sub.w	d0,\1
 	rts
-.inc
-	add.w	d0,a1
-	rts
-
+.inc\@
+	add.w	d0,\1
+	ENDM
 
 ; < A0: state
-; <> A1: ptr
 ; < A2: dat	ptr
-blt_dodmas
-	move.w	(a1),(a2)
+BLT_DODMAS:MACRO
+	move.w	(\1),(a2)
 	moveq	#2,d0
-	bsr		blt_addptr
-	rts
+	BLT_ADDPTR	\1
+	ENDM
 	
 APPLY_MINTERMS:MACRO
 	move.w	d2,d4
@@ -99,7 +117,7 @@ APPLY_MINTERMS:MACRO
 ; < A0: state
 
 blt_wait
-	movem.l	d0-d7/A1-a2,-(a7)
+	movem.l	d0-d7/A1-a6,-(a7)
 	; force even pointers
 	bclr	#0,bltapt+3(a0)
 	bclr	#0,bltbpt+3(a0)
@@ -124,10 +142,12 @@ blt_wait
 	lsr.w	#8,d6	; ashift
 	lsr.w	#4,d6	; ashift
 	and.w	#$FFF,d7	; removes shifting for latest quick tests
-	cmp.w	#$9F0,d7	; A->D descending preset
+	cmp.w	#$09F0,d7	; A->D descending preset
 	beq	blt_ad_descending_loop
-	cmp.w	#$FCA,d7	; A->D descending preset
+	cmp.w	#$0FCA,d7	; cookie cut
 	beq	blt_cookie_cut_loop
+	cmp.w	#$07CA,d7	; cookie cut with fixed A data
+	beq	blt_7ca_loop
 
 .loop
 	move.w	bltsize(a0),d5	; nx
@@ -141,21 +161,21 @@ blt_wait
 	beq.b	.nosrca
 	move.l	bltapt(a0),a1
 	lea		bltadat(a0),a2
-	bsr	blt_dodmas	
+	BLT_DODMAS	a1
 	move.l	a1,bltapt(a0)
 .nosrca
 	btst	#BC0B_SRCB,d7
 	beq.b	.nosrcb
 	move.l	bltbpt(a0),a1
 	lea		bltbdat(a0),a2
-	bsr	blt_dodmas	
+	BLT_DODMAS		a1
 	move.l	a1,bltbpt(a0)
 .nosrcb
 	btst	#BC0B_SRCC,d7
 	beq.b	.nosrcc
 	move.l	bltcpt(a0),a1
 	lea		bltcdat(a0),a2
-	bsr	blt_dodmas
+	BLT_DODMAS	a1
 	move.l	a1,bltcpt(a0)
 .nosrcc
 	move.w	d4,-(a7)	; save d4, we need one more register!
@@ -251,7 +271,7 @@ blt_wait
 	move.l	bltdpt(a0),a1
 	move.w	d0,(a1)
 	moveq	#2,d0
-	bsr	blt_addptr
+	BLT_ADDPTR	a1
 	move.l	a1,bltdpt(a0)
 .nodest
 	move.w	(a7)+,d4
@@ -264,28 +284,28 @@ blt_wait
 	beq.b	.noa
 	move.l	bltapt(a0),a1
 	move.w	bltamod(a0),d0
-	bsr	blt_addptr
+	BLT_ADDPTR	a1
 	move.l	a1,bltapt(a0)
 .noa
 	btst	#BC0B_SRCB,d7
 	beq.b	.nob
 	move.l	bltbpt(a0),a1
 	move.w	bltbmod(a0),d0
-	bsr	blt_addptr
+	BLT_ADDPTR	a1
 	move.l	a1,bltbpt(a0)
 .nob
 	btst	#BC0B_SRCC,d7
 	beq.b	.noc
 	move.l	bltcpt(a0),a1
 	move.w	bltcmod(a0),d0
-	bsr	blt_addptr
+	BLT_ADDPTR	a1
 	move.l	a1,bltcpt(a0)
 .noc
 	btst	#BC0B_DEST,d7
 	beq.b	.nod
 	move.l	bltdpt(a0),a1
 	move.w	bltdmod(a0),d0
-	bsr	blt_addptr
+	BLT_ADDPTR	a1
 	move.l	a1,bltdpt(a0)
 .nod
 	move.w	bltsize(a0),d0
@@ -294,11 +314,14 @@ blt_wait
 	and.w	#$FFC0,d0
 	bne	.loop
 	
-	movem.l	(a7)+,d0-d7/a1-a2
+	movem.l	(a7)+,d0-d7/a1-a6
 	rts
 
 ; A->D descending (optimized without B & C)
 blt_ad_descending_loop
+	move.l	bltapt(a0),a3
+	move.l	bltdpt(a0),a6
+	move.w	bltafwm(a0),d3
 .loop
 	move.w	bltsize(a0),d5	; nx
 	and.w	#$3F,d5
@@ -307,24 +330,11 @@ blt_ad_descending_loop
 .noz
 	moveq  	#0,d4	; inner loop counter
 .forloop
-	move.l	bltapt(a0),a1
 	lea		bltadat(a0),a2
-	move.w	(a1)+,(a2)
-	move.l	a1,bltapt(a0)
-
+	move.w	(a3)+,(a2)
 
 	move.w	d4,-(a7)	; save d4, we need one more register!
-	move.w	#$FFFF,d3	; amask
-	tst.w	d4
-	bne.b	.nofirst
-	and.w	bltafwm(a0),d3
-	bra.b	.nolast
-.nofirst
-	addq.w	#1,d4	; trash d4, doesn't matter
-	cmp.w	d4,d5	; is that last iteration ?
-	bne.b	.nolast
-	and.w	bltalwm(a0),d3	; mask
-.nolast
+
 	; compute a
 	and.w	bltadat(a0),d3	; masked adat
 	lea		blt_areg(pc),a1
@@ -332,9 +342,14 @@ blt_ad_descending_loop
 	move.w	d3,d0
 	BLT_SHIFTVAL_DESCENDING
 
-	move.l	bltdpt(a0),a1
-	move.w	d0,(a1)+
-	move.l	a1,bltdpt(a0)
+	move.w	d0,(a6)+
+
+	move.w	#$FFFF,d3	; amask
+	addq.w	#2,d4	; trash d4, doesn't matter
+	cmp.w	d4,d5	; is that last iteration ?
+	bne.b	.nolast
+	and.w	bltalwm(a0),d3	; mask
+.nolast
 
 	move.w	(a7)+,d4
 	addq.w	#1,d4
@@ -342,26 +357,26 @@ blt_ad_descending_loop
 	bne	.forloop
 	
 	; add pointers to sources
-	move.l	bltapt(a0),a1
-	add.w	bltamod(a0),a1
-	move.l	a1,bltapt(a0)
+	add.w	bltamod(a0),a3
+	add.w	bltdmod(a0),a6
 
-	move.l	bltdpt(a0),a1
-	add.w	bltdmod(a0),a1
-	move.l	a1,bltdpt(a0)
 
 	move.w	bltsize(a0),d0
 	sub.w	#$40,d0
 	move.w	d0,bltsize(a0)
 	and.w	#$FFC0,d0
 	bne	.loop
-	movem.l	(a7)+,d0-d7/a1-a2
+	movem.l	(a7)+,d0-d7/a1-a6
 	rts
 	
 ; cookie cut preset
 
 blt_cookie_cut_loop
-	; not optimized yet
+	; pre-load blitter pointers for better speed
+	move.l	bltapt(a0),a3
+	move.l	bltbpt(a0),a4
+	move.l	bltcpt(a0),a5
+	move.l	bltdpt(a0),a6
 .loop
 	move.w	bltsize(a0),d5	; nx
 	and.w	#$3F,d5
@@ -369,34 +384,22 @@ blt_cookie_cut_loop
 	move.w	#$40,d5	
 .noz
 	moveq  	#0,d4	; inner loop counter
+	move.w	bltafwm(a0),d3	; first iteration uses fwm
 .forloop
-	move.l	bltapt(a0),a1
+	; source A
 	lea		bltadat(a0),a2
-	bsr	blt_dodmas	
-	move.l	a1,bltapt(a0)
+	move.w	(a3)+,(a2)
 
-	move.l	bltbpt(a0),a1
+	; source B
 	lea		bltbdat(a0),a2
-	bsr	blt_dodmas	
-	move.l	a1,bltbpt(a0)
+	move.w	(a4)+,(a2)
 
-	move.l	bltcpt(a0),a1
+	; source C
 	lea		bltcdat(a0),a2
-	bsr	blt_dodmas
-	move.l	a1,bltcpt(a0)
+	move.w	(a5)+,(a2)
 
 	move.w	d4,-(a7)	; save d4, we need one more register!
-	move.w	#$FFFF,d3	; amask
-	tst.w	d4
-	bne.b	.nofirst
-	and.w	bltafwm(a0),d3
-	bra.b	.nolast
-.nofirst
-	addq.w	#1,d4	; trash d4, doesn't matter
-	cmp.w	d4,d5	; is that last iteration ?
-	bne.b	.nolast
-	and.w	bltalwm(a0),d3	; mask
-.nolast
+
 	; compute a,b,c
 	and.w	bltadat(a0),d3	; masked adat
 	lea		blt_areg(pc),a1
@@ -435,40 +438,26 @@ blt_cookie_cut_loop
 	not.w	d3
 	APPLY_MINTERMS
 
-
 	; no need to restore, last minterm
 
-	move.l	bltdpt(a0),a1
-	move.w	d0,(a1)
-	moveq	#2,d0
-	bsr	blt_addptr
-	move.l	a1,bltdpt(a0)
+	move.w	d0,(a6)+
 .nodest
+	move.w	#$FFFF,d3	; amask
+	addq.w	#2,d4	; trash d4, doesn't matter
+	cmp.w	d4,d5	; is next iteration last iteration ?
+	bne.b	.nolast
+	move.w	bltalwm(a0),d3	; mask
+.nolast
 	move.w	(a7)+,d4
+	
 	addq.w	#1,d4
 	cmp.w	d5,d4
 	bne	.forloop
 	
-	move.l	bltapt(a0),a1
-	move.w	bltamod(a0),d0
-	bsr	blt_addptr
-	move.l	a1,bltapt(a0)
-
-	move.l	bltbpt(a0),a1
-	move.w	bltbmod(a0),d0
-	bsr	blt_addptr
-	move.l	a1,bltbpt(a0)
-
-	move.l	bltcpt(a0),a1
-	move.w	bltcmod(a0),d0
-	bsr	blt_addptr
-	move.l	a1,bltcpt(a0)
-
-	move.l	bltdpt(a0),a1
-	move.w	bltdmod(a0),d0
-	bsr	blt_addptr
-	move.l	a1,bltdpt(a0)
-	
+	add.w	bltamod(a0),a3
+	add.w	bltbmod(a0),a4
+	add.w	bltcmod(a0),a5
+	add.w	bltdmod(a0),a6
 	
 	move.w	bltsize(a0),d0
 	sub.w	#$40,d0
@@ -476,7 +465,98 @@ blt_cookie_cut_loop
 	and.w	#$FFC0,d0
 	bne	.loop
 	
-	movem.l	(a7)+,d0-d7/a1-a2
+	movem.l	(a7)+,d0-d7/a1-a6
+	rts
+; "KillingCloud" preset
+
+blt_7ca_loop
+	; pre-load blitter pointers for better speed
+	move.l	bltbpt(a0),a4
+	move.l	bltcpt(a0),a5
+	move.l	bltdpt(a0),a6
+.loop
+	move.w	bltsize(a0),d5	; nx
+	and.w	#$3F,d5
+	bne.b	.noz
+	move.w	#$40,d5	
+.noz
+	moveq  	#0,d4	; inner loop counter
+	move.w	bltafwm(a0),d3	; first iteration uses fwm
+.forloop
+	; source B
+	lea		bltbdat(a0),a2
+	move.w	(a4)+,(a2)
+
+	; source C
+	lea		bltcdat(a0),a2
+	move.w	(a5)+,(a2)
+
+	move.w	d4,-(a7)	; save d4, we need one more register!
+
+	; compute a,b,c
+	and.w	bltadat(a0),d3	; masked adat
+	lea		blt_areg(pc),a1
+	move.w	d6,d1
+	move.w	d3,d0
+	bsr	blt_shiftval
+
+	move.w	d0,d2	; d2: a
+	
+	move.w	blt_bshift(pc),d1
+	move.w	bltbdat(a0),d0
+	addq.l	#2,a1	; breg
+	bsr	blt_shiftval
+	move.w	d0,d3	; d3: b
+	
+	move.w	bltcdat(a0),d1	; d1: c
+	
+	; minterm check already resolved
+	
+	; BC0B_ABC
+	move.w	d2,d0	; first minterm, move
+	and.w	d3,d0
+	and.w	d1,d0	; a & b & c
+	; BC0B_ABNC
+	not.w	d1
+	APPLY_MINTERMS
+	not.w	d1	; restore d1
+
+	; BC0B_NABC,d7
+	not.w	d2
+	APPLY_MINTERMS
+
+	; BC0B_NANBC,d7
+
+	not.w	d3
+	APPLY_MINTERMS
+
+	; no need to restore, last minterm
+
+	move.w	d0,(a6)+
+.nodest
+	move.w	#$FFFF,d3	; amask
+	addq.w	#2,d4	; trash d4, doesn't matter
+	cmp.w	d4,d5	; is next iteration last iteration ?
+	bne.b	.nolast
+	move.w	bltalwm(a0),d3	; mask
+.nolast
+	move.w	(a7)+,d4
+	
+	addq.w	#1,d4
+	cmp.w	d5,d4
+	bne	.forloop
+	
+	add.w	bltbmod(a0),a4
+	add.w	bltcmod(a0),a5
+	add.w	bltdmod(a0),a6
+	
+	move.w	bltsize(a0),d0
+	sub.w	#$40,d0
+	move.w	d0,bltsize(a0)
+	and.w	#$FFC0,d0
+	bne	.loop
+	
+	movem.l	(a7)+,d0-d7/a1-a6
 	rts
 	
 blt_areg
