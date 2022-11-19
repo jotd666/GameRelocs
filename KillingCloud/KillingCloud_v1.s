@@ -134,7 +134,7 @@ EXT_007f	EQU	$FFFFFBA0
 EXT_0080	EQU	$FFFFFFFE
 EXT_0081	EQU	$FFFFFFFF
 
-
+bob_masks_table_18e8 = $18e8
 
 	IFND	REAL_EXE
 	ORG	$1000
@@ -16338,7 +16338,7 @@ lb_0c962:
 	BSR.W	lb_0ca2e		;0c962: 610000ca
 	BRA.W	lb_0ca28		;0c966: 600000c0
 lb_0c96a:
-	LEA	$018e8.W,A4		;0c96a: 49f818e8
+	LEA	bob_masks_table_18e8.W,A4		;0c96a: 49f818e8
 	ADD.W	D4,D4			;0c96e: d844
 	ADDA.W	0(A4,D4.W),A4		;0c970: d8f44000
 	LEA	HARDBASE,A5		;0c974: 4bf900dff000
@@ -17220,7 +17220,7 @@ lb_0d1c8:
 	MOVEA.L	(A2),A1			;0d1e6: 2252
 	ADD.W	D1,D1			;0d1e8: d241
 	ADDA.W	0(A3,D1.W),A1		;0d1ea: d2f31000
-	LEA	$018e8.W,A4		;0d1ee: 49f818e8
+	LEA	bob_masks_table_18e8.W,A4		;0d1ee: 49f818e8
 	ADD.W	D0,D0			;0d1f2: d040
 	ADDA.W	0(A4,D0.W),A4		;0d1f4: d8f40000
 	LEA	HARDBASE,A5		;0d1f8: 4bf900dff000
