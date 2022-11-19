@@ -14,6 +14,7 @@
         opt o+
 
 EMU=1 ; << Change this to 0 to use blitter
+USEOPT=15       ; << Bitmask for using the opimized blitter functions
 
 ;==========================
 
@@ -42,6 +43,14 @@ waitblit macro
 .\@:
 	btst.b	#DMAB_BLTDONE-8,dmaconr(a6)
 	bne.s	.\@
+	endm
+readtodh macro
+        moveq   #0,\1
+        move.b  ciab+ciatodhi,\1
+        swap    \1
+        move.b  ciab+ciatodmid,\1
+        lsl.w   #8,\1
+        move.b  ciab+ciatodlow,\1
 	endm
 
         SECTION code,code	
@@ -224,33 +233,150 @@ main:
         ;move.w  #INTF_SETCLR!INTF_INTEN!INTF_VERTB,intena(a6)
 
         moveq   #15,d7
-        move.w  #DEST!SRCA!$F0,d6
+        moveq   #0,d6
         move.l  #screen,a0
         ifne EMU
-        lea     blitstate(pc),a5
+        lea     blitstate,a5
         else
         move.l  a6,a5
         endc
+        readtodh d0
+        move.l  d0,-(sp)
 .loop:
         move.w  #-2,bltamod(a5)
+        move.w  #-2,bltbmod(a5)
+        move.w  #bplrowbytes-4,bltcmod(a5)
         move.w  #bplrowbytes-4,bltdmod(a5)
         move.l  #$ffff0000,bltafwm(a5)
-        move.w  d6,bltcon0(a5)
-        move.w  #0,bltcon1(a5)
+        move.w  #DEST!SRCA!SRCB!SRCC!$CA,d0
+        or.w    d6,d0
+        move.w  d0,bltcon0(a5)
+        move.w  d6,bltcon1(a5)
+        move.l  a0,bltcpt(a5)
         move.l  a0,bltdpt(a5)
-        move.l  #stuff,bltapt(a5)
+        move.l  #mask,bltapt(a5)
+        move.l  #gfx,bltbpt(a5)
         move.w  #16*64+2,bltsize(a5)
         lea     16*bplrowbytes(a0),a0
         add.w   #$1000,d6
         ifne EMU
         move.l  a0,a2
         move.l  a5,a0
+        ifne (USEOPT&1)
+        bsr blt_wait_fca
+        else
         bsr     blt_wait
+        endc
         move.l  a2,a0
         else
         waitblit
         endc
         dbf     d7,.loop
+
+
+        moveq   #15,d7
+        moveq   #0,d6
+        move.l  #screen+(32+32)/8+16*bplrowbytes-2,a0
+.loop2:
+        move.w  #-2,bltamod(a5)
+        move.w  #-2,bltbmod(a5)
+        move.w  #bplrowbytes-4,bltcmod(a5)
+        move.w  #bplrowbytes-4,bltdmod(a5)
+        move.l  #$ffff0000,bltafwm(a5)
+        move.w  #DEST!SRCA!SRCB!SRCC!$CA,d0
+        or.w    d6,d0
+        move.w  d0,bltcon0(a5)
+        moveq   #BLITREVERSE,d0
+        or.w    d6,d0
+        move.w  d0,bltcon1(a5)
+        move.l  a0,bltcpt(a5)
+        move.l  a0,bltdpt(a5)
+        move.l  #mask+16*2-2,bltapt(a5)
+        move.l  #gfx+16*2-2,bltbpt(a5)
+        move.w  #16*64+2,bltsize(a5)
+        lea     16*bplrowbytes(a0),a0
+        add.w   #$1000,d6
+        ifne EMU
+        move.l  a0,a2
+        move.l  a5,a0
+        ifne (USEOPT&2)
+        bsr blt_wait_fca_rev
+        else
+        bsr     blt_wait
+        endc
+        move.l  a2,a0
+        else
+        waitblit
+        endc
+        dbf     d7,.loop2
+
+        moveq   #15,d7
+        moveq   #0,d6
+        move.l  #screen+64/8+1,a0
+.loop3:
+        move.w  #-2,bltamod(a5)
+        move.w  #bplrowbytes-4,bltdmod(a5)
+        move.l  #$ffff0000,bltafwm(a5)
+        move.w  #DEST!SRCA!$F0,d0
+        or.w    d6,d0
+        move.w  d0,bltcon0(a5)
+        move.w  #0,bltcon1(a5)
+        move.l  a0,bltdpt(a5)
+        move.l  #gfx,bltapt(a5)
+        move.w  #16*64+2,bltsize(a5)
+        lea     16*bplrowbytes(a0),a0
+        add.w   #$1000,d6
+        ifne EMU
+        move.l  a0,a2
+        move.l  a5,a0
+        ifne (USEOPT&4)
+        bsr     blt_wait_9f0
+        else
+        bsr     blt_wait
+        endc
+        move.l  a2,a0
+        else
+        waitblit
+        endc
+        dbf     d7,.loop3
+
+        moveq   #15,d7
+        moveq   #0,d6
+        move.l  #screen+96/8+1,a0
+.loop4:
+        move.w  #-2,bltamod(a5)
+        move.w  #bplrowbytes-4,bltdmod(a5)
+        move.l  #$ffff0000,bltafwm(a5)
+        move.w  #$7CA,d0
+        or.w    d6,d0
+        move.w  d0,bltcon0(a5)
+        move.w  d6,bltcon1(a5)
+        move.l  a0,bltcpt(a5)
+        move.l  a0,bltdpt(a5)
+        move.w  #$aaaa,bltadat(a5)
+        move.l  #gfx,bltbpt(a5)
+        move.w  #16*64+2,bltsize(a5)
+        lea     16*bplrowbytes(a0),a0
+        add.w   #$1000,d6
+        ifne EMU
+        move.l  a0,a2
+        move.l  a5,a0
+        ifne (USEOPT&8)
+        bsr     blt_wait_7ca
+        else
+        bsr     blt_wait
+        endc
+        move.l  a2,a0
+        else
+        waitblit
+        endc
+        dbf     d7,.loop4
+
+
+        readtodh d0
+        sub.l   (sp)+,d0
+        lea     screen+bplrowbytes-5,a0
+        bsr     putnum16
 
 .mainloop:
         btst.b  #6,ciaa+ciapra
@@ -269,11 +395,45 @@ main:
         move.l  oldlev3,lev3vec(a0)
         rts
 
-blitstate:
-        ds.w $78/2
 
-	include	cpu_blitter.s
+putchar:
+        move.l  d0,-(sp)
+        and.w   #$ff,d0
+        lea     -$20(a4,d0.w),a2
+.y set 0
+        rept    8
+        move.b  (a2),bplrowbytes*.y(a0)
+        lea     192(a2),a2
+.y set .y+1
+        endr
+        move.l  (sp)+,d0
+        addq.l  #1,a0
+        rts
 
+dodigit macro
+        divu    #\1,d0
+        add.b   #'0',d0
+        bsr     putchar
+        clr.w   d0
+        swap    d0
+        endm
+
+putnum16:
+        movem.l a2/a4,-(sp)
+        move.l  topazdata,a4
+        swap    d0
+        clr.w   d0
+        swap    d0
+        dodigit 10000
+        dodigit 1000
+        dodigit 100
+        dodigit 10
+        add.b   #'0',d0
+        bsr     putchar
+        movem.l (sp)+,a2/a4
+        rts
+
+        include cpu_blitter.s
 
 	SECTION bss,bss
 gfxbase:
@@ -294,6 +454,8 @@ topazdata:
         ds.l 1
 oldlev3:
         ds.l 1
+blitstate:
+        ds.w BlitterState_SIZEOF/2
 
         SECTION data_c,data_c
 
@@ -303,10 +465,47 @@ copbpls:
         dc.w bplpt+$02,$0000
         dc.l -2
 
-stuff:
-        dc.w $03C0, $0FF0, $1C78, $3DFC, $7DFE, $7FF8, $FFE0, $FF00
-        dc.w $FF00, $FFE0, $7FF8, $7FFE, $3FFC, $1FF8, $0FF0, $03C0
+        ifne EMU
+        SECTION data,data
+        endc
+
+gfx:
+        dc.w %0000001111000000
+        dc.w %0000111111110000
+        dc.w %0001110001111000
+        dc.w %0011110111111100
+        dc.w %0111110111111110
+        dc.w %0111111111111000
+        dc.w %1111111111100000
+        dc.w %1111111100000000
+        dc.w %1111111100000000
+        dc.w %1111111111100000
+        dc.w %0111111111111000
+        dc.w %0111111111111110
+        dc.w %0011111111111100
+        dc.w %0001111111111000
+        dc.w %0000111111110000
+        dc.w %0000001111000000
+
+mask:
+        dc.w %0000001111000000
+        dc.w %0000111111110000
+        dc.w %0001111111111000
+        dc.w %0011111111111100
+        dc.w %0111111111111110
+        dc.w %0111111111111000
+        dc.w %1111111111100000
+        dc.w %1111111100000000
+        dc.w %1111111100000000
+        dc.w %1111111111100000
+        dc.w %0111111111111000
+        dc.w %0111111111111110
+        dc.w %0011111111111100
+        dc.w %0001111111111000
+        dc.w %0000111111110000
+        dc.w %0000001111000000
 
         SECTION bss_c,bss_c
 
 screen: ds.w bplwords*nbpl
+

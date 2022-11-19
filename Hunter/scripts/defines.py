@@ -5,7 +5,7 @@ this_dir = os.path.dirname(os.path.abspath(__file__))
 suffix = os.getenv("SUFFIX","de")
 prefix = "hunter"
 project = prefix+"_"+suffix
-binary_file = os.path.join(this_dir,"../{}_ref".format(project))
+binary_file = os.path.join(this_dir,"../{}".format(project))
 asm_file = os.path.join(this_dir,"../{}.s".format(project))
 hunk_file = os.path.join(this_dir,os.pardir,"{}_hunk".format(project))
 
