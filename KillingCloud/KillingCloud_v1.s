@@ -14491,7 +14491,8 @@ lb_0c202:
 	LEA	0(A3,D2.W),A4		;0c230: 49f32000
 	ADD.W	12(A6),D0		;0c234: d06e000c
 	ADD.W	14(A6),D1		;0c238: d26e000e
-	LEA	ytable_015b8,A0	        ;0c23c: 41f9000015b8
+	; ytable_015b8
+	LEA		$015b8,A0	        ;0c23c: 41f9000015b8
 	MOVEA.L	(A2),A1			;0c242: 2252
 	ADD.W	D1,D1			;0c244: d241
 	ADDA.W	0(A0,D1.W),A1		;0c246: d2f01000
@@ -14975,7 +14976,8 @@ lb_0c6ea:
 	CMP.W	4(A6),D0		;0c6ee: b06e0004
 	BGT.S	lb_0c6e8		;0c6f2: 6ef4
 lb_0c6f4:
-	LEA	ytable_015b8.W,A1	;0c6f4: 43f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A1	;0c6f4: 43f815b8
 	MOVEA.L	(A2),A0			;0c6f8: 2052
 	ADD.W	D1,D1			;0c6fa: d241
 	ADDA.W	0(A1,D1.W),A0		;0c6fc: d0f11000
@@ -15202,7 +15204,8 @@ lb_0c90a:
 	ADD.W	14(A6),D1		;0c920: d26e000e
 	ADD.W	D1,D3			;0c924: d641
 	MOVEA.L	(A2),A0			;0c926: 2052
-	LEA	ytable_015b8.W,A1	;0c928: 43f815b8
+	;ytable_015b8
+	LEA	$015b8.W,A1	;0c928: 43f815b8
 	CMP.W	D2,D0			;0c92c: b042
 	BLE.S	lb_0c934		;0c92e: 6f04
 	EXG	D0,D2			;0c930: c142
@@ -15229,7 +15232,8 @@ lb_0c962:
 	BSR.W	lb_0ca2e		;0c962: 610000ca
 	BRA.W	lb_0ca28		;0c966: 600000c0
 lb_0c96a:
-	LEA	colored_row_offsets_18e8.W,A4		;0c96a: 49f818e8
+	; colored_row_offsets_18e8
+	LEA	$18e8.W,A4		;0c96a: 49f818e8
 	ADD.W	D4,D4			;0c96e: d844
 	ADDA.W	0(A4,D4.W),A4		;0c970: d8f44000
 	LEA	HARDBASE,A5		;0c974: 4bf900dff000
@@ -15255,7 +15259,8 @@ lb_0c9a8:
 	BLE.S	lb_0c9ae		;0c9aa: 6f02
 	MOVE.W	D7,D2			;0c9ac: 3407
 lb_0c9ae:
-	LEA	lmasks_01748.W,A2	;0c9ae: 45f81748
+	; lmasks_01748
+	LEA	$01748.W,A2	;0c9ae: 45f81748
 	ADD.W	D1,D1			;0c9b2: d241
 	ADDA.W	0(A1,D1.W),A0		;0c9b4: d0f11000
 	MOVEQ	#-16,D7			;0c9b8: 7ef0
@@ -16114,15 +16119,18 @@ draw_rect_shape_0d1c8:
 	MOVEM.L	D2-D7/A0/A2-A6,-(A7)	;0d1c8: 48e73fbe
 	TST.B	shape_nodrawflag(A0)	;0d1cc: 4a280011
 	BNE.W	lb_0d304		;0d1d0: 66000132
-	LEA	lmasks_01748.W,A6	;0d1d4: 4df81748
+	; lmasks_01748
+	LEA	$01748.W,A6	;0d1d4: 4df81748
 	MOVE.W	shape_y0(A0),D1		;0d1d8: 32280002
 	MOVE.W	shape_y1(A0),D5		;0d1dc: 3a280006
 	SUB.W	D1,D5			;0d1e0: 9a41
-	LEA	ytable_015b8.W,A3	;0d1e2: 47f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A3	;0d1e2: 47f815b8
 	MOVEA.L	(A2),A1			;0d1e6: 2252
 	ADD.W	D1,D1			;0d1e8: d241
 	ADDA.W	0(A3,D1.W),A1		;0d1ea: d2f31000
-	LEA	colored_row_offsets_18e8.W,A4		;0d1ee: 49f818e8
+	; colored_row_offsets_18e8
+	LEA	$18e8.W,A4		;0d1ee: 49f818e8
 	ADD.W	D0,D0			;0d1f2: d040
 	ADDA.W	0(A4,D0.W),A4		;0d1f4: d8f40000
 	LEA	HARDBASE,A5		;0d1f8: 4bf900dff000
@@ -16231,11 +16239,13 @@ lb_0d30a:
 	TST.B	17(A0)			;0d30e: 4a280011
 	BNE.W	lb_0d446		;0d312: 66000132
 	LEA	lb_0d44c,A5		;0d316: 4bf90000d44c
-	LEA	lmasks_01748.W,A6	;0d31c: 4df81748
+	; lmasks_01748
+	LEA	$01748.W,A6	;0d31c: 4df81748
 	MOVE.W	2(A0),D1		;0d320: 32280002
 	MOVE.W	6(A0),D7		;0d324: 3e280006
 	SUB.W	D1,D7			;0d328: 9e41
-	LEA	ytable_015b8.W,A3	;0d32a: 47f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A3	;0d32a: 47f815b8
 	ADD.W	D1,D1			;0d32e: d241
 	MOVEA.W	0(A3,D1.W),A4		;0d330: 38731000
 	ADDA.L	(A2),A4			;0d334: d9d2
@@ -16742,7 +16752,8 @@ lb_0d78e:
 	MOVE.W	2(A0),D1		;0d7a2: 32280002
 	MOVE.W	6(A0),D7		;0d7a6: 3e280006
 	SUB.W	D1,D7			;0d7aa: 9e41
-	LEA	ytable_015b8.W,A1	;0d7ac: 43f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A1	;0d7ac: 43f815b8
 	ADD.W	D1,D1			;0d7b0: d241
 	MOVEA.W	0(A1,D1.W),A1		;0d7b2: 32711000
 	ADDA.L	(A2),A1			;0d7b6: d3d2
@@ -17292,7 +17303,8 @@ lb_0dc5a:
 	BLE.W	lb_0dda0		;0dc70: 6f00012e
 lb_0dc74:
 	SWAP	D7			;0dc74: 4847
-	LEA	ytable_015b8.W,A0	;0dc76: 41f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A0	;0dc76: 41f815b8
 	ADD.W	D1,D1			;0dc7a: d241
 	MOVEA.W	0(A0,D1.W),A0		;0dc7c: 30701000
 	ADDA.L	(A2),A0			;0dc80: d1d2
@@ -17357,7 +17369,8 @@ lb_0dd00:
 lb_0dd08:
 	ORI.W	#$07ca,D7		;0dd08: 004707ca
 	MOVE.W	D7,bltcon0(A5)		;0dd0c: 3b470040
-	LEA	lmasks_01748.W,A2	;0dd10: 45f81748
+	; lmasks_01748
+	LEA	$01748.W,A2	;0dd10: 45f81748
 	ANDI.W	#$000f,D2		;0dd14: 0242000f
 	ANDI.W	#$000f,D6		;0dd18: 0246000f
 	ADD.W	D2,D2			;0dd1c: d442
@@ -17523,7 +17536,8 @@ lb_0def2:
 	BLE.W	lb_0e02e		;0df08: 6f000124
 lb_0df0c:
 	SWAP	D7			;0df0c: 4847
-	LEA	ytable_015b8.W,A0	;0df0e: 41f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A0	;0df0e: 41f815b8
 	ADD.W	D1,D1			;0df12: d241
 	MOVEA.W	0(A0,D1.W),A0		;0df14: 30701000
 	ADDA.L	(A2),A0			;0df18: d1d2
@@ -17587,7 +17601,8 @@ lb_0df92:
 lb_0df9a:
 	ORI.W	#$072a,D7		;0df9a: 0047072a
 	MOVE.W	D7,bltcon0(A5)		;0df9e: 3b470040
-	LEA	lmasks_01748.W,A2	;0dfa2: 45f81748
+	; lmasks_01748
+	LEA	$01748.W,A2	;0dfa2: 45f81748
 	ANDI.W	#$000f,D2		;0dfa6: 0242000f
 	ANDI.W	#$000f,D6		;0dfaa: 0246000f
 	ADD.W	D2,D2			;0dfae: d442
@@ -17664,7 +17679,8 @@ lb_0e034:
 	LEA	16(A0),A0		;0e08e: 41e80010
 	MOVE.W	D0,D4			;0e092: 3800
 	MOVE.W	D2,D5			;0e094: 3a02
-	LEA	ytable_015b8.W,A3	;0e096: 47f815b8
+	; ytable_015b8
+	LEA	$015b8.W,A3	;0e096: 47f815b8
 	ADD.W	D1,D1			;0e09a: d241
 	MOVEA.W	0(A3,D1.W),A3		;0e09c: 36731000
 	ADDA.L	(A2),A3			;0e0a0: d7d2
@@ -57380,7 +57396,7 @@ lb_2797a:
 	MOVEM.L	D0-D3/D5/A0-A1,-(A7)	;2797a: 48e7f4c0
 	MOVEA.L	$011c0+2.W,A0		;2797e: 207811c2
 	MOVEA.L	(A0),A0			;27982: 2050
-	LEA	ytable_015b8.W,A1	;27984: 43f815b8
+	LEA	$015b8.W,A1	;27984: 43f815b8
 	ADD.W	D1,D1			;27988: d241
 	ADDA.W	0(A1,D1.W),A0		;2798a: d0f11000
 	MOVEQ	#15,D1			;2798e: 720f
