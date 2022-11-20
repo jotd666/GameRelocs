@@ -278,5 +278,5 @@ for i,line in enumerate(af.lines):
     line = re.sub("lb_([\w]+\+?\d?)\.W",rep_short,line)
     af.lines[i] = line
 
-with open("foo.s","w") as f:
+with open(defines.asm_file,"w") as f:
     f.writelines(af.lines)

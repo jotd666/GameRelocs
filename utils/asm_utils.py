@@ -86,10 +86,19 @@ def extract_relocs(defines,derog_labels=set()):
 
 
 
-def find_entrypoints(defines):
+def find_entrypoints(defines,forbidden=set()):
     """ defines: the module/structure defining the main project
         specifics (name, start address...)
+
+        this nice code detects probable entrypoints
+        (no labels after RTS/RTE/JMP/BRA) and correlates the offsets
+        with binary longwords in code to detect pointers & tables on code
+
+        it has a very little false alarm rate as those instructions are pretty
+        easily identifiable (4E75, 4EF9...)!
     """
+
+    ep = 0
 
     with open(defines.binary_file,"rb") as f:
         contents = f.read()
@@ -115,18 +124,20 @@ def find_entrypoints(defines):
                 m = ira_asm_tools.general_instruction_re.match(line)
                 if m:
                     address = int(m.group(3),16)
-                    if address in possible_addresses:
+                    if address in possible_addresses and address not in forbidden:
                         inst = m.group(1)
                         operand = m.group(2)
                         print("{}: {:x} {} {} ({})".format(i,address,inst,operand,[";{:05x}".format(x) for x in possible_addresses[address]]))
+                        ep += 1
 
         else:
             m = ira_asm_tools.general_instruction_re.match(line)
             if m:
                 inst = m.group(1)
                 operand = m.group(2)
-                if inst in ("RTS","RTE","BRA.W","BRA.S"):
+                if inst in ("RTS","RTE","JMP","BRA.W","BRA.S"):
                     label_search_mode = True
+    return ep
 
 def find_movea(defines,with_data_register=False):
     af = ira_asm_tools.AsmFile(defines.asm_file)

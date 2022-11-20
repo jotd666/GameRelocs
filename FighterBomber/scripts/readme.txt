@@ -44,6 +44,10 @@ git add %VER%.s %VER%_ref
   * we're going to generate the unreloc table for those ones, and convert the
     short labels to plain .W addresses (no labels). Watchpoints will be more
 	complex because now some chipmem addresses are legit, but that will do
+  * use "unreloc_short_labels.py" (where link errors are pasted) to create
+    unreloc table and change labels to raw addresses.
+	The parsing of link errors wasn't necessary after all, extracting the short
+	labels would have been enough (link errors are used just for check)
 
 - use the superb "find_entrypoints.py" script which correlates probable entries
   (following RTE/RTS/BRA/JMP) without label with possible dc.l label found in binary.
