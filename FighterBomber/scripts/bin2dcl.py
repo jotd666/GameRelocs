@@ -1,21 +1,8 @@
-import os,re,struct,defines
-with open("../{}_ref".format(defines.project),"rb") as f:
+import os,re,struct,defines,asm_utils,ira_asm_tools
+
+with open(defines.binary_file,"rb") as f:
     contents = f.read()
 
-
-def print_it(start,stop):
-    print(";---------------------------")
-    for i in range(start ,stop,4):
-        data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
-
-        if data:
-            if data%2:
-                data = "{:05x}+1".format(data-1)
-            else:
-                data = "{:05x}".format(data)
-            print("\tdc.l\tlb_{}\t;{:05x}".format(data,i))
-        else:
-            print("\tdc.l\t{}\t;{:05x}".format(data,i))
 
 
 x = """0f790 0f808
@@ -35,7 +22,17 @@ x = """2ed70 2ed98
 1daee 1db06
 """
 
-for line in x.splitlines():
-    if line:
-        start,end = [int(x,16) for x in line.split()]
-        print_it(start,end)
+x = """2ed70 2ed98
+"""
+
+af = ira_asm_tools.AsmFile(defines.asm_file)
+
+for i,line in enumerate(af.lines):
+    if "%%DCL" in line:
+        start_offset = ira_asm_tools.get_offset(af.lines[i-1])
+        end_offset = ira_asm_tools.get_offset(af.lines[i+1])
+        block = asm_utils.get_dcls(contents,start_offset,end_offset,defines.start_org)
+        af.lines[i] = block
+
+with open(os.path.basename(defines.asm_file),"w") as f:
+    f.writelines(af.lines)

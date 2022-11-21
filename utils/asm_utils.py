@@ -10,6 +10,24 @@ def get_long(binary_buf,offset):
 def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
+
+
+def get_dcls(contents,start,stop,start_org):
+    z = []
+    for i in range(start ,stop,4):
+        data = struct.unpack_from(">I",contents,i-start_org)[0]
+
+        if data:
+            if data%2:
+                data = "{:05x}+1".format(data-1)
+            else:
+                data = "{:05x}".format(data)
+            z.append("\tdc.l\tlb_{}\t;{:05x}\n".format(data,i))
+        else:
+            z.append("\tdc.l\t{}\t;{:05x}\n".format(data,i))
+    return "".join(z)
+
+
 def dump_reloc_file(reloc_offsets,binary_file,extension):
     reloc_data = []
     for offset in reloc_offsets:
