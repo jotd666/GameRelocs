@@ -10,6 +10,7 @@ derog_labels = {
 0x01a52,0x01a66,0x01a68,0x01a6a,0x01a6c,0x01a70,0x01a76,0x01a7a,0x01a7e
 }
 
-asm_utils.extract_relocs(defines)
+asm_utils.extract_relocs(defines,derog_labels)
 
-shutil.copy(defines.binary_file+".reloc",r"K:\jff\AmigaHD\GAMES\F\FighterBomber\data")  # TEMP
+for s in [".reloc",".unreloc"]:
+    shutil.copy(defines.binary_file+s,r"K:\jff\AmigaHD\GAMES\F\FighterBomber\data")  # TEMP

@@ -24816,7 +24816,7 @@ lb_0c6be:
 	ADDA.W	D0,A1			;0c6d6: d2c0
 	MOVE.W	lb_0c888+2,D0		;0c6d8: 30390000c88a
 	ADDA.W	D0,A1			;0c6de: d2c0
-	CMPI.L	#$0000cca2,lb_0c87e	;0c6e0: 0cb90000cca20000c87e
+	CMPI.L	#lb_0cca2,lb_0c87e	;0c6e0: 0cb90000cca20000c87e
 	BEQ.S	lb_0c6f2		;0c6ea: 6706
 	BTST	#0,D0			;0c6ec: 08000000
 	BEQ.S	lb_0c6f8		;0c6f0: 6706
@@ -25489,6 +25489,7 @@ lb_0c88c:
 	dc.w	$4080	;0cc9c
 	dc.w	$0000	;0cc9e
 	dc.w	$0500	;0cca0
+lb_0cca2:
 	dc.w	$0a00	;0cca2
 	dc.w	$0110	;0cca4
 	dc.w	$0882	;0cca6
@@ -30721,7 +30722,7 @@ lb_0f8ac:
 	ADDA.W	D0,A1			;0f8c4: d2c0
 	MOVE.W	lb_0c888+2,D0		;0f8c6: 30390000c88a
 	ADDA.W	D0,A1			;0f8cc: d2c0
-	CMPI.L	#$0000cca2,lb_0c87e	;0f8ce: 0cb90000cca20000c87e  ; not done
+	CMPI.L	#lb_0cca2,lb_0c87e	;0f8ce: 0cb90000cca20000c87e  ; not done
 	BEQ.S	lb_0f8e0		;0f8d8: 6706
 	BTST	#0,D0			;0f8da: 08000000
 	BEQ.S	lb_0f8e6		;0f8de: 6706
@@ -76973,8 +76974,7 @@ lb_2eae0:
 	RTS				;2eb16: 4e75
 lb_2eb18:
 	OR.B	D0,D0			;2eb18: 8000
-	DC.W	$0000			;2eb1a
-	AND.L	-(A2),D6		;2eb1c: cca2
+	DC.l	lb_0cca2			;2eb1a
 	ADD.L	A0,D0			;2eb1e: d088
 	DC.W	$0030			;2eb20
 lb_2eb22:

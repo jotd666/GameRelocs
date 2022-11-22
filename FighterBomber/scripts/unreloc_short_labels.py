@@ -250,9 +250,6 @@ error 3005: reloc type 1, size 16, mask 0xffffffff (symbol lb_01a7e + 0x157e) no
 error 3005: reloc type 1, size 16, mask 0xffffffff (symbol lb_0124a + 0xd4a) not supported
 """
 
-# w 0 $1000 $24A
-# w 1 $124C $9D4-$24C
-# w 2 $1A80 $xxxxx
 
 shortrels = set()
 for line in errors.splitlines():
