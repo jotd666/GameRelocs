@@ -24,16 +24,19 @@ def break_it(start_address,end_address):
             # or allow them if known as okay (outside that range)
             # there's nothing worse than a spurious reloc, much harder to detect that a forgotten one!
             if enable_relocs and (data in allowed or (start_address-0x500 < data < end_address+0x500 and
-                                data % 2 == 0 and data not in forbidden and data % 0x10000)):
-                f.write("\tdc.l\tlb_{:05x}\t;{:05x}\n".format(data,address))
+                                 data not in forbidden and data % 0x10000)):
+                suffix = "+1" if data % 2 else ""
+                data = (data//2)*2
+
+                f.write("\tdc.l\tlb_{:05x}{}\t;{:05x}\n".format(data,suffix,address))
                 address+=4
             else:
                 data = struct.unpack_from(">H",contents,address-defines.start_org)[0]
                 f.write("\tdc.w\t${:04x}\t;{:05x}\n".format(data,address))
                 address += 2
 
-x = """175d4 176ca
-
+x = """
+2fd9e 2fe0c
 """
 
 for line in x.splitlines():

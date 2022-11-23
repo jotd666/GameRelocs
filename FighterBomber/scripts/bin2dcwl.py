@@ -31,7 +31,7 @@ def break_it(start_address,end_address):
 
 x = """30c04 30caa
 """
-x = """26914 269d4
+x = """
 """
 
 for line in x.splitlines():

@@ -27,6 +27,13 @@ def get_dcls(contents,start,stop,start_org):
             z.append("\tdc.l\t{}\t;{:05x}\n".format(data,i))
     return "".join(z)
 
+def get_dcws(contents,start,stop,start_org):
+    z = []
+    for i in range(start ,stop,2):
+        data = struct.unpack_from(">H",contents,i-start_org)[0]
+        z.append("\tdc.w\t${:04x}\t;{:05x}\n".format(data,i))
+    return "".join(z)
+
 
 def dump_reloc_file(reloc_offsets,binary_file,extension):
     reloc_data = []
@@ -191,6 +198,32 @@ def find_movea(defines,with_data_register=False):
         with open(os.path.basename(defines.asm_file),"w") as f:
             f.writelines(af.lines)
 
+def find_possible_tables(defines):
+    infile = "../{}.s".format(defines.project)
+    af = ira_asm_tools.AsmFile(infile)
+    current_operand = 0
+    last_offset = 0
+    for i,line in enumerate(af.lines):
+        m = ira_asm_tools.dc_instruction_re.match(line)
+        if m:
+            dcop = m.group(1)
+            operand = m.group(2)
+            offset = m.group(3)
+            offset = int(offset,16)
+            if dcop.lower().endswith(".w"):
+                try:
+                    operand = int(operand.strip("$"),16)
+                    if 0 < operand < 6:
+                        if not current_operand:
+                            current_operand = operand
+                            last_offset = offset
+                        else:
+                            if offset-last_offset == 4 and current_operand == operand:
+                                print("possible table at offset {:05x} {}xxxx".format(offset,operand))
+                            else:
+                                current_operand = 0
+                except ValueError:
+                    pass
 
 def add_undefined_labels(defines,extra_make_options=[]):
     ud = re.compile("undefined symbol <lb_(\w+)>")
