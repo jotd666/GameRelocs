@@ -1,7 +1,7 @@
 #added by python script
 
 KICKNAME = fighterbomber
-+HDBASE = K:\jff\AmigaHD
+HDBASE = K:\jff\AmigaHD
 WHDBASE = $(HDBASE)\PROJETS\HDInstall\DONE
 EXE = $(KICKNAME)
 

@@ -5,7 +5,7 @@ with open("../{}_ref".format(defines.project),"rb") as f:
 
 # all 0x10001, ... 0x40003...
 forbidden = {}
-allowed = {}
+allowed = {0x15A44}
 
 enable_relocs = True
 
@@ -36,7 +36,7 @@ def break_it(start_address,end_address):
                 address += 2
 
 x = """
-2fd9e 2fe0c
+1e32e 1e70c
 """
 
 for line in x.splitlines():
