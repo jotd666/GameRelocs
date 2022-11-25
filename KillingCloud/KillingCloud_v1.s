@@ -50089,28 +50089,24 @@ lb_2242a:
 lb_22432:
 	dc.w	$0000  ;22432
 lb_22434:
-	dc.w	$0002  ;22434
-	MOVEA.L	-(A0),A2		;22436: 2460
-	ORI.B	#$00,D0			;22438: 00000000
-	DC.W	$0002			;2243c
-	MOVEA.L	D4,A2			;2243e: 2444
-	ORI.B	#$00,D0			;22440: 00000000
-	DC.W	$0002			;22444
-	MOVEA.L	-(A6),A2		;22446: 2466
-	DC.W	$0002			;22448
-	MOVE.B	-(A4),-(A2)		;2244a: 1524
-	DC.W	$0002			;2244c
-	MOVE.L	D6,(A2)+		;2244e: 24c6
-	DC.W	$0002			;22450
-	MOVE.L	2(A2),9720(A2)		;22452: 256a000225f8
-	DC.W	$0002			;22458
-lb_2245a:
-	MOVEA.L	lb_2245a+2(PC),A3	;2245a: 267a0000
-	ORI.B	#$0a,D0			;2245e: 0000000a
-	DC.W	$0002			;22462
-	BSET	D5,(A6)+		;22464: 0bde
-	DC.W	$0002			;22466
-	DC.W	$3ddc			;22468
+	dc.l	lb_22460	;22434
+	dc.l	0	;22438
+	dc.l	lb_22444	;2243c
+	dc.l	0	;22440
+lb_22444:
+	dc.l	lb_22466	;22444
+	dc.l	lb_21524	;22448
+	dc.l	lb_224c6	;2244c
+	dc.l	lb_2256a	;22450
+	dc.l	lb_225f8	;22454
+	dc.l	lb_2267a	;22458
+	dc.w	$0000  ;2245c
+	dc.w	$0000  ;2245e
+lb_22460:
+	dc.w	$000a  ;22460
+	dc.l	lb_20bde	;22462
+lb_22466:
+	dc.l	lb_23ddc	;22466
 	DC.W	$000a			;2246a
 	ORI.B	#$00,D0			;2246c: 00000000
 	ORI.B	#$00,D0			;22470: 00000000
@@ -50138,15 +50134,13 @@ lb_2245a:
 	ORI.B	#$00,D0			;224ac: 00000000
 	DC.W	$f1a0			;224b0
 	MOVE.L	D0,D0			;224b2: 2000
-	DC.W	$0002			;224b4
-	DC.W	$3d88			;224b6
+	dc.l	lb_23d88	;224b4
 	DC.W	$0fff			;224b8
-	DC.W	$0002			;224ba
-	MOVE.B	D2,-(A2)		;224bc: 1502
+	dc.l	lb_21502	;224ba
 	SUBI.B	#$00,D0			;224be: 04000000
 	ORI.B	#$00,D0			;224c2: 00000000
-	DC.W	$0002			;224c6
-	BGT.S	lb_224d8		;224c8: 6e0e
+lb_224c6:
+	dc.l	lb_26e0e	;224c6
 	SUBI.L	#$00000000,-(A0)	;224ca: 04a000000000
 lb_224d0:
 	ORI.B	#$00,D0			;224d0: 00000000
@@ -50205,6 +50199,7 @@ lb_224d8:
 	ORI.B	#$01,(A0)		;22562: 00100001
 	DIVU	-(A4),D6		;22566: 8ce4
 	RTS				;22568: 4e75
+lb_2256a:
 	DC.W	$0002			;2256a
 	BGT.S	lb_2257c		;2256c: 6e0e
 	BTST	D0,-(A0)		;2256e: 0120
@@ -50259,6 +50254,7 @@ lb_2257c:
 	BSET	D1,2(A0)		;225f0: 03e80002
 	DC.W	$0002			;225f4
 	DC.W	$25ec			;225f6
+lb_225f8:
 	DC.W	$0002			;225f8
 	BSR.S	lb_22662		;225fa: 6166
 	ORI.W	#$0000,-(A0)		;225fc: 00600000
@@ -50311,6 +50307,7 @@ lb_22662:
 	DC.W	$61a5			;22672
 	ORI.B	#$02,D2			;22674: 00020002
 	MOVEA.L	(A0)+,A3		;22678: 2658
+lb_2267a:
 	DC.W	$0002			;2267a
 	BSR.S	lb_226e4		;2267c: 6166
 	ORI.W	#$0000,-(A0)		;2267e: 00600000
@@ -63125,7 +63122,8 @@ lb_2ab08:
 	dc.w	$0000	;2abdc
 	dc.w	$0000	;2abde
 	dc.w	$ffff	;2abe0
-	dc.l	lb_0fb20	;2abe2
+	dc.w	$0000	;2abe2
+	dc.w	$fb20	;2abe4
 	dc.w	$0000	;2abe6
 	dc.w	$ffff	;2abe8
 	dc.w	$0000	;2abea
@@ -63361,7 +63359,8 @@ lb_2acfa:
 	dc.w	$0000	;2adca
 	dc.w	$0000	;2adcc
 	dc.w	$ffff	;2adce
-	dc.l	lb_0f8c0	;2add0
+	dc.w	$0000	;2add0
+	dc.w	$f8c0	;2add2
 	dc.w	$0000	;2add4
 	dc.w	$ffff	;2add6
 	dc.w	$0000	;2add8
@@ -63398,7 +63397,8 @@ lb_2acfa:
 	dc.w	$0000	;2ae1c
 	dc.w	$0000	;2ae1e
 	dc.w	$ffff	;2ae20
-	dc.l	lb_0fb20	;2ae22
+	dc.w	$0000	;2ae22
+	dc.w	$fb20	;2ae24
 	dc.w	$0000	;2ae26
 	dc.w	$ffff	;2ae28
 	dc.w	$0000	;2ae2a
