@@ -160,14 +160,14 @@ def find_entrypoints(defines,forbidden=set()):
                         operand = m.group(2)
                         print("{}: {:x} {} {} ({})".format(i,address,inst,operand,[";{:05x}".format(x) for x in possible_addresses[address]]))
                         ep += 1
+                    label_search_mode = False
 
         else:
             m = ira_asm_tools.general_instruction_re.match(line)
             if m:
                 inst = m.group(1)
                 operand = m.group(2)
-                if inst in ("RTS","RTE","JMP","BRA.W","BRA.S"):
-                    label_search_mode = True
+                label_search_mode = inst in ("RTS","RTE","JMP","BRA.W","BRA.S")
     return ep
 
 def find_movea(defines,with_data_register=False):

@@ -1,26 +1,23 @@
-import os,re,struct,defines
-with open("../{}_ref".format(defines.project),"rb") as f:
+import os,re,struct,defines,asm_utils,ira_asm_tools
+
+# just mark with %%DCL the tables located with "find_entrypoints.py", then run this script to insert actual tables
+
+with open(defines.binary_file+"_ref","rb") as f:
     contents = f.read()
 
 
-#for i in range(0x0a3fc,0x0a408,4):
-#for i in range(0x18cea,0x18d46,4):
-#for i in range(0x186de,0x186fe,4):
-#for i in range(0x1a692,0x1a6ba,4):
-#for i in range(0x1aeae,0x1aeda,4):
-#for i in range(0x00102c,0x010ac,4):
-#for i in range(0x01e5da,0x01e61e,4):
-#for i in range(0x06988,0x0069ac,4):
-#for i in range(0x01d7c6,0x1d806,4):
-for i in range(0x2b7ae,0x2b7de,4):
+af = ira_asm_tools.AsmFile(defines.asm_file)
 
-    data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
+for i,line in enumerate(af.lines):
+    if "%%DC" in line:
+        start_offset,size = ira_asm_tools.get_offset(af.lines[i-1])
+        end_offset,_ = ira_asm_tools.get_offset(af.lines[i+1])
+    if "%DCL" in line:
+        block = asm_utils.get_dcls(contents,start_offset+size,end_offset,defines.start_org)
+        af.lines[i] = block
+    if "%%DCW" in line:
+        block = asm_utils.get_dcws(contents,start_offset+size,end_offset,defines.start_org)
+        af.lines[i] = block
 
-    if data:
-        if data%2:
-            data = "{:05x}+1".format(data-1)
-        else:
-            data = "{:05x}".format(data)
-        print("\tdc.l\tlb_{}\t;{:05x}".format(data,i))
-    else:
-        print("\tdc.l\t{}\t;{:05x}".format(data,i))
+with open(defines.asm_file,"w") as f:
+    f.writelines(af.lines)

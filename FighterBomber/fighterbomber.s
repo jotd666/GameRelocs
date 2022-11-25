@@ -76354,6 +76354,7 @@ lb_2e3ec:
 	EORI.W	#$8000,D0		;2e3fa: 0a408000
 	MOVE.W	D0,lb_01a7c		;2e3fe: 33c000001a7c
 	MOVEQ	#40,D0			;2e404: 7028
+	; bitplanes for upper part of plane select screen
 	LEA	lb_2e5f6,A0		;2e406: 41f90002e5f6
 	MOVE.W	D1,6(A0)		;2e40c: 31410006
 	ADD.W	D0,D1			;2e410: d240
@@ -76366,7 +76367,9 @@ lb_2e3ec:
 	MOVE.W	D1,38(A0)		;2e424: 31410026
 	MOVE.L	lb_01a7e,D1		;2e428: 223900001a7e
 	ADD.L	lb_2e3ce,D1		;2e42e: d2b90002e3ce
-	; bitplanes
+	; bitplanes for lower part of plane select screen
+	; 3 bitplanes, but no BPL higher nibble is set
+	; (still at $0007xxxx)
 	LEA	lb_2e6f6,A0		;2e434: 41f90002e6f6
 	MOVE.W	D1,2(A0)		;2e43a: 31410002
 	ADD.W	D0,D1			;2e43e: d240
