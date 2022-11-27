@@ -11,28 +11,106 @@ def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
 
+def insert_tables(defines):
+    """ resolve manually inserted %%DCL, %%DCW and %%DCA
 
-def get_dcls(contents,start,stop,start_org):
+    remove the data zone and replace it by:
+
+    %%DCL: inserts labels for encountered longwords
+    %%DCW: inserts words
+    %%DCA: inserts ASCII when possible, else bytes
+
+    in case of a big fuckup, just remove zone and mark with %%DCW again
+    """
+    with open(defines.binary_file+"_ref","rb") as f:
+        contents = f.read()
+
+
+    af = ira_asm_tools.AsmFile(defines.asm_file)
+
+    for i,line in enumerate(af.lines):
+        if "%%DC" in line:
+            start_offset,size = ira_asm_tools.get_offset(af.lines[i-1])
+            end_offset,_ = ira_asm_tools.get_offset(af.lines[i+1])
+            if "%%DCL" in line:
+                block = get_dcls(contents,start_offset+size,end_offset,defines)
+            elif "%%DCW" in line:
+                block = get_dcws(contents,start_offset+size,end_offset,defines)
+            elif "%%DCA" in line:
+                block = get_ascii(contents,start_offset+size,end_offset,defines)
+            af.lines[i] = block
+    with open(defines.asm_file,"w") as f:
+        f.writelines(af.lines)
+
+def get_dcls(contents,start,stop,defines):
     z = []
     for i in range(start ,stop,4):
-        data = struct.unpack_from(">I",contents,i-start_org)[0]
+        data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
 
-        if data:
+        if data and defines.start_org < data < defines.end_address:
             if data%2:
                 data = "{:05x}+1".format(data-1)
             else:
                 data = "{:05x}".format(data)
             z.append("\tdc.l\tlb_{}\t;{:05x}\n".format(data,i))
         else:
-            z.append("\tdc.l\t{}\t;{:05x}\n".format(data,i))
+            z.append("\tdc.l\t${:05x}\t;{:05x}\n".format(data,i))
     return "".join(z)
 
-def get_dcws(contents,start,stop,start_org):
+def get_dcws(contents,start,stop,defines):
     z = []
     for i in range(start ,stop,2):
-        data = struct.unpack_from(">H",contents,i-start_org)[0]
+        data = struct.unpack_from(">H",contents,i-defines.start_org)[0]
         z.append("\tdc.w\t${:04x}\t;{:05x}\n".format(data,i))
     return "".join(z)
+
+
+def get_ascii(contents,start,stop,defines):
+    z = []
+    string = []
+    def appstr():
+        z.append('\tdc.b\t"{}"\t;{:05x}\n'.format("".join(string),i-len(string)))
+
+    for i in range(start ,stop):
+        c = contents[i-defines.start_org]
+        if 32 <= c <= ord("z"):
+            string.append(chr(c))
+        else:
+            if string:
+                appstr()
+                string = []
+            z.append('\tdc.b\t${:02x}\t;{:05x}\n'.format(c,i))
+    if string:
+        appstr()
+    return "".join(z)
+
+
+
+def find_hidden_relocs(defines,threshold=0x20):
+    with open(defines.binary_file+"_ref","rb") as f:
+        contents = f.read()
+
+
+    af = ira_asm_tools.AsmFile(defines.asm_file)
+
+    for offset in range(0,len(contents)-2,2):
+        longword = get_long(contents,offset)
+        real_offset = offset + defines.start_org
+        if abs(real_offset-longword) < threshold:
+            # is the label actually declared in the asm file
+            for shift in [0,-2,-4,-6,2,4]:
+                line = af.address_lines.get(real_offset+shift)
+                if line:
+                    line = af.lines[line]
+                    break
+            if line:
+                if "lb_" in line:
+                    # okay!
+                    continue
+            else:
+                line = "????"
+
+            print(";{:05x}  {}".format(real_offset,line.strip()))
 
 
 def dump_reloc_file(reloc_offsets,binary_file,extension):
