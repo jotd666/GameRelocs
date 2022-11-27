@@ -17,11 +17,14 @@ chip_derog_labels.update(range(0x019d4,0x01a82))
 derog_labels = {
 0XC070,0xc074,0xC075,0xC076,0xC077,       # sprite data
 0xc2b2,0X0c3fe,
+0x35508,0x3550c,
+0x354D8,0x354DC,
 }
 
 derog_labels.update(range(0xC23E,0Xc26e,2))  # copper pointers
 derog_labels.update(range(0x2e51e,0X2e75e,2))  # copper pointers
 derog_labels.update(range(0x2f38e,0X2f3c2,2))  # copper pointers
+derog_labels.update(range(0x355fe,0x35776))    # copperlist
 derog_labels.update(chip_derog_labels)
 
 asm_utils.extract_relocs(defines,derog_labels,chip_derog_labels)
