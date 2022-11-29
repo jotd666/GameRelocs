@@ -15056,7 +15056,6 @@ lb_0c71a:
 	NOP				;0c7b8: 4e71
 	OR.W	D0,(A0)			;0c7ba: 8150
 	OR.W	D0,80(A0)		;0c7bc: 81680050
-lb_0c7c0:
 	NOT.W	D0			;0c7c0: 4640
 	AND.W	D0,40(A0)		;0c7c2: c1680028
 	AND.W	D0,120(A0)		;0c7c6: c1680078
@@ -51090,8 +51089,7 @@ lb_22cb6:
 	dc.w	$0003	;22ce4
 	dc.w	$dcb0	;22ce6
 	dc.w	$fffe	;22ce8
-	dc.w	$0002	;22cea
-	dc.w	$2d04	;22cec
+	dc.l	lb_22d04	;22cea
 	dc.w	$ffa0	;22cee
 	dc.w	$2000	;22cf0
 	dc.l	lb_26dba	;22cf2
@@ -51102,6 +51100,7 @@ lb_22cb6:
 	dc.w	$0000	;22cfe
 	dc.w	$0000	;22d00
 	dc.w	$0000	;22d02
+lb_22d04:
 	dc.w	$0000	;22d04
 	dc.l	lb_23138	;22d06
 	dc.w	$0006	;22d0a
@@ -65144,7 +65143,7 @@ lb_2bc62:
 	dc.w	$0000	;2bc64
 	dc.w	$4180	;2bc66
 	dc.w	$0040	;2bc68
-	dc.l	lb_0c7c0	;2bc6a
+	dc.l	$0c7c0	;2bc6a  fake!! crashes "city info"
 	dc.w	$0014	;2bc6e
 	dc.w	$0012	;2bc70
 	dc.l	lb_2b92a	;2bc72
@@ -65255,7 +65254,7 @@ lb_2bc62:
 	dc.l	lb_2bd64	;2bd46
 	dc.w	$0004	;2bd4a
 	dc.w	$0000	;2bd4c
-	dc.l	lb_0c7c0	;2bd4e
+	dc.l	$0c7c0	;2bd4e    fake!! crashes "city info"
 	dc.w	$0000	;2bd52
 	dc.w	$0000	;2bd54
 	dc.w	$0000	;2bd56
