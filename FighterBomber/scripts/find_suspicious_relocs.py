@@ -18,7 +18,7 @@ verified = set()
 
 for i,line in enumerate(af.lines):
     m = re.search("lb_(.....)\s+;(\w+)",line)
-    if m and "dc.l" in line:
+    if m and "dc.l" in line.lower():
         h = m.group(1)
         hv = int(h,16)
         if "verified" in line:
@@ -28,6 +28,8 @@ for i,line in enumerate(af.lines):
             continue
 
         if hv < defines.start_org:
+            continue
+        if 0x2178 <= hv <= 0x21BE:
             continue
         # those labels were computed heuristically by "bin2dcl_struct.py",
         # so it's possible that this is not a real address

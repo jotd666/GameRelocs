@@ -25023,7 +25023,7 @@ lb_0c87a:
 	dc.w	$0000	;0c87a
 	dc.w	$0000	;0c87c
 lb_0c87e:
-	dc.l	lb_0c890	;0c87e
+	dc.l	lb_0c890	;0c87e verified
 lb_0c882:
 	dc.w	$0008	;0c882
 lb_0c884:
@@ -39321,6 +39321,7 @@ lb_153c2:
 	MOVEA.W	D3,A3			;153c8: 3643
 	MOVE.W	#$8000,D3		;153ca: 363c8000
 	RTS				;153ce: 4e75
+	; not reached!
 	MOVEM.W	D0/D6,-(A7)		;153d0: 48a78200
 	TST.W	lb_021d2+2		;153d4: 4a79000021d4
 	BEQ.W	lb_153e4		;153da: 67000008
@@ -65140,7 +65141,7 @@ lb_276fe:
 lb_27708:
 	dc.b	" aircraft."	;27707
 	dc.w	$0df0	;27712
-	dc.l	lb_02176	;27714
+	dc.l	lb_02176	;27714 verified
 	dc.w	$0000	;27718
 	dc.l	lb_2773e	;2771a
 	dc.b	"All targets were"	;2771d
@@ -76648,7 +76649,7 @@ lb_2eae0:
 	RTS				;2eb16: 4e75
 lb_2eb18:
 	OR.B	D0,D0			;2eb18: 8000
-	DC.l	lb_0cca2			;2eb1a
+	dc.l	lb_0cca2			;2eb1a
 	ADD.L	A0,D0			;2eb1e: d088
 	DC.W	$0030			;2eb20
 lb_2eb22:

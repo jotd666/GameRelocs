@@ -1,6 +1,7 @@
 import os
 
 project = "KillingCloud_v1"
+suffix="v1"
 
 this_dir = os.path.dirname(os.path.abspath(__file__))
 

@@ -204,9 +204,9 @@ lb_01028:
 	dc.l	lb_085aa	;01084
 	dc.l	lb_085aa	;01088
 	dc.l	lb_085aa	;0108c
-	dc.l	lb_08566	;01090
-	dc.l	lb_08500	;01094
-	dc.l	lb_084bc	;01098
+	dc.l	lb_08566	;01090 int1
+	dc.l	lb_08500_keyboard_interrupt	;01094 int2
+	dc.l	lb_084bc	;01098 int3
 	dc.l	lb_0846a	;0109c
 	dc.l	lb_08430	;010a0
 	dc.l	lb_083ca	;010a4
@@ -8543,7 +8543,7 @@ lb_084f8:
 	MOVEA.L	$01066+2.W,A0		;084f8: 20781068
 	JSR	(A0)			;084fc: 4e90
 	BRA.S	lb_084e2		;084fe: 60e2
-lb_08500:
+lb_08500_keyboard_interrupt:
 	MOVEM.L	D0/A0,-(A7)		;08500: 48e78080
 	MOVE.B	CIAA_ICR,D0		;08504: 103900bfed01
 	MOVE.W	#$0008,INTREQ		;0850a: 33fc000800dff09c
@@ -9590,37 +9590,26 @@ lb_0900e:
 	MOVEQ	#123,D5			;09088: 7a7b
 	MOVEQ	#125,D6			;0908a: 7c7d
 	MOVEQ	#127,D7			;0908c: 7e7f
-lb_0908e:
-	DC.W	$6031			;0908e
-	DC.W	$3233			;09090
-	DC.W	$3435			;09092
-	MOVE.W	57(A7,D3.L),D3		;09094: 36373839
-	MOVE.W	15708(A5),D0		;09098: 302d3d5c
-	DC.W	$0030			;0909c
-	DC.W	$7177			;0909e
-	BCS.S	lb_09114		;090a0: 6572
-	MOVEQ	#121,D2			;090a2: 7479
-	DC.W	$7569			;090a4
-	BLE.S	lb_09116+2		;090a6: 6f70
-	SUBQ.W	#5,(A5)+		;090a8: 5b5d
-	DC.W	$0031			;090aa
-	DC.W	$3233			;090ac
-	DC.W	$6173			;090ae
-	BCC.S	lb_09116+2		;090b0: 6466
-	BEQ.S	lb_0911c		;090b2: 6768
-	DC.W	$6a6b			;090b4
-	DC.W	$6c3b			;090b6
-	MOVE.L	D0,-(A3)		;090b8: 2700
-	DC.W	$0034			;090ba
-	MOVE.W	122(A6,D0.W),-(A2)	;090bc: 3536007a
-	MOVEQ	#99,D4			;090c0: 7863
-	MOVEQ	#98,D3			;090c2: 7662
-	DC.W	$6e6d			;090c4
-	MOVE.L	12032(A6),D6		;090c6: 2c2e2f00
-	MOVE.L	57(A7,D3.L),D7		;090ca: 2e373839
-	MOVE.L	A0,D0			;090ce: 2008
-	MOVEP.W	3355(A5),D4		;090d0: 090d0d1b
-	DC.W	$7f00			;090d4
+lb_0908e_raw_to_ascii_table:
+	dc.b	"`1234567890-=\"	;0908e
+	dc.b	$00	;0909c
+	dc.b	"0qwertyuiop[]"	;0909d
+	dc.b	$00	;090aa
+	dc.b	"123asdfghjkl;'"	;090ab
+	dc.b	$00	;090b9
+	dc.b	$00	;090ba
+	dc.b	"456"	;090bb
+	dc.b	$00	;090be
+	dc.b	"zxcvbnm,./"	;090bf
+	dc.b	$00	;090c9
+	dc.b	".789 "	;090ca
+	dc.b	$08	;090cf
+	dc.b	$09	;090d0
+	dc.b	$0d	;090d1
+	dc.b	$0d	;090d2
+	dc.b	$1b	;090d3
+	dc.b	$7f	;090d4
+	dc.b	$00	;090d5
 	DC.W	$0000			;090d6
 	MOVE.L	D0,-(A6)		;090d8: 2d00
 	ORI.B	#$00,D0			;090da: 00000000
@@ -9771,6 +9760,7 @@ lb_09298:
 	BNE.S	lb_092fc		;0929e: 665c
 	CMPI.B	#$05,D1			;092a0: 0c010005
 	BLS.S	lb_092aa		;092a4: 6304
+	; modifiers shift/ctrl/alt...
 	MOVE.W	#$0003,D1		;092a6: 323c0003
 lb_092aa:
 	TST.B	(A1)			;092aa: 4a11
@@ -9962,7 +9952,7 @@ lb_0947c:
 	DC.W	$ffff			;094b6
 	ORI.B	#$00,D0			;094b8: 00000000
 lb_094bc:
-	LEA	lb_0908e(PC),A0		;094bc: 41fafbd0
+	LEA	lb_0908e_raw_to_ascii_table(PC),A0		;094bc: 41fafbd0
 	MOVE.W	D0,D1			;094c0: 3200
 	ANDI.W	#$1300,D1		;094c2: 02411300
 	BEQ.S	lb_094e0		;094c6: 6718
@@ -9972,7 +9962,7 @@ lb_094bc:
 	LEA	lb_0918e(PC),A0		;094d2: 41fafcba
 	ANDI.W	#$0300,D1		;094d6: 02410300
 	BEQ.S	lb_094e0		;094da: 6704
-	LEA	lb_0908e(PC),A0		;094dc: 41fafbb0
+	LEA	lb_0908e_raw_to_ascii_table(PC),A0		;094dc: 41fafbb0
 lb_094e0:
 	CLR.W	D1			;094e0: 4241
 	MOVE.B	D0,D1			;094e2: 1200
@@ -40919,95 +40909,45 @@ lb_1c244:
 	dc.w	$2020	;1c260
 	dc.w	$2020	;1c262
 lb_1c264:
-	dc.w	$0053	;1c264
-	dc.w	$5553	;1c266
-	dc.w	$5045	;1c268
-	dc.w	$4354	;1c26a
+	dc.b	$00	;1c264
+	dc.b	"SUSPECT"	;1c264
 lb_1c26c:
-	dc.w	$0020	;1c26c
-	dc.w	$4152	;1c26e
-	dc.w	$5245	;1c270
-	dc.w	$5354	;1c272
-	dc.w	$4544	;1c274
+	dc.b	$00	;1c26c
+	dc.b	" ARRESTED"	;1c26c
 lb_1c276:
-	dc.w	$0020	;1c276
-	dc.w	$5049	;1c278
-	dc.w	$434b	;1c27a
-	dc.w	$4544	;1c27c
-	dc.w	$2055	;1c27e
-	dc.w	$5000	;1c280
+	dc.b	$00	;1c276
+	dc.b	" PICKED UP"	;1c277
+	dc.b	$00	;1c281
 lb_1c282:
-	dc.w	$2052	;1c282
-	dc.w	$454c	;1c284
-	dc.w	$4541	;1c286
-	dc.w	$5345	;1c288
-	dc.w	$4400	;1c28a
+	dc.b	" RELEASED"	;1c282
+	dc.b	$00	;1c28b
 lb_1c28c:
-	dc.w	$2049	;1c28c
-	dc.w	$4e20	;1c28e
-	dc.w	$4355	;1c290
-	dc.w	$5354	;1c292
-	dc.w	$4f44	;1c294
-	dc.w	$5900	;1c296
+	dc.b	" IN CUSTODY"	;1c28c
+	dc.b	$00	;1c297
 lb_1c298:
-	dc.w	$204c	;1c298
-	dc.w	$4f53	;1c29a
-	dc.w	$5400	;1c29c
+	dc.b	" LOST"	;1c298
+	dc.b	$00	;1c29d
 lb_1c29e:
-	dc.w	$4c4f	;1c29e
-	dc.w	$5720	;1c2a0
-	dc.w	$5649	;1c2a2
-	dc.w	$4557	;1c2a4
-	dc.w	$2044	;1c2a6
-	dc.w	$4554	;1c2a8
-	dc.w	$4149	;1c2aa
-	dc.w	$4c00	;1c2ac
+	dc.b	"LOW VIEW DETAIL"	;1c29e
+	dc.b	$00	;1c2ad
 lb_1c2ae:
-	dc.w	$4d45	;1c2ae
-	dc.w	$4449	;1c2b0
-	dc.w	$554d	;1c2b2
-	dc.w	$2056	;1c2b4
-	dc.w	$4945	;1c2b6
-	dc.w	$5720	;1c2b8
-	dc.w	$4445	;1c2ba
-	dc.w	$5441	;1c2bc
-	dc.w	$494c	;1c2be
+	dc.b	"MEDIUM VIEW DETAIL"	;1c2ad
 lb_1c2c0:
-	dc.w	$0048	;1c2c0
-	dc.w	$4947	;1c2c2
-	dc.w	$4820	;1c2c4
-	dc.w	$5649	;1c2c6
-	dc.w	$4557	;1c2c8
-	dc.w	$2044	;1c2ca
-	dc.w	$4554	;1c2cc
-	dc.w	$4149	;1c2ce
-	dc.w	$4c00	;1c2d0
+	dc.b	$00	;1c2c0
+	dc.b	"HIGH VIEW DETAIL"	;1c2c1
+	dc.b	$00	;1c2d1
 lb_1c2d2:
-	dc.w	$434f	;1c2d2
-	dc.w	$4e54	;1c2d4
-	dc.w	$4f55	;1c2d6
-	dc.w	$5253	;1c2d8
-	dc.w	$204f	;1c2da
-	dc.w	$4e00	;1c2dc
+	dc.b	"CONTOURS ON"	;1c2d2
+	dc.b	$00	;1c2dd
 lb_1c2de:
-	dc.w	$434f	;1c2de
-	dc.w	$4e54	;1c2e0
-	dc.w	$4f55	;1c2e2
-	dc.w	$5253	;1c2e4
-	dc.w	$204f	;1c2e6
-	dc.w	$4646	;1c2e8
+	dc.b	"CONTOURS OFF"	;1c2dd
 lb_1c2ea:
-	dc.w	$0043	;1c2ea
-	dc.w	$4c4f	;1c2ec
-	dc.w	$5544	;1c2ee
-	dc.w	$204f	;1c2f0
-	dc.w	$4e00	;1c2f2
+	dc.b	$00	;1c2ea
+	dc.b	"CLOUD ON"	;1c2eb
+	dc.b	$00	;1c2f3
 lb_1c2f4:
-	dc.w	$434c	;1c2f4
-	dc.w	$4f55	;1c2f6
-	dc.w	$4420	;1c2f8
-	dc.w	$4f46	;1c2fa
-	dc.w	$4600	;1c2fc
+	dc.b	"CLOUD OFF"	;1c2f4
+	dc.b	$00	;1c2fd
 lb_1c2fe:
 	dc.w	$ff02	;1c2fe
 	dc.w	$fe03	;1c300
@@ -41573,6 +41513,7 @@ lb_1c986:
 	MOVE.W	#$0043,D2		;1c996: 343c0043
 	MOVE.W	#$ffe3,D3		;1c99a: 363cffe3
 	MOVE.W	#$0000,D4		;1c99e: 383c0000
+	; display message
 	JSR	lb_0f158		;1c9a2: 4eb90000f158
 	LEA	lb_1bd1a(PC),A0		;1c9a8: 41faf370
 	MOVE.L	8(A2),(A0)		;1c9ac: 20aa0008
@@ -66256,7 +66197,7 @@ lb_2c57e:
 lb_2c58e:
 	RTS				;2c58e: 4e75
 lb_2c590:
-	LEA	lb_0908e,A0		;2c590: 41f90000908e
+	LEA	lb_0908e_raw_to_ascii_table,A0		;2c590: 41f90000908e
 	MOVE.B	#$7a,21(A0)		;2c596: 117c007a0015
 	MOVE.B	#$79,49(A0)		;2c59c: 117c00790031
 	LEA	lb_0910e,A0		;2c5a2: 41f90000910e
@@ -66264,7 +66205,7 @@ lb_2c590:
 	MOVE.B	#$59,49(A0)		;2c5ae: 117c00590031
 	RTS				;2c5b4: 4e75
 lb_2c5b6:
-	LEA	lb_0908e,A0		;2c5b6: 41f90000908e
+	LEA	lb_0908e_raw_to_ascii_table,A0		;2c5b6: 41f90000908e
 	MOVE.B	#$71,32(A0)		;2c5bc: 117c00710020
 	MOVE.B	#$61,16(A0)		;2c5c2: 117c00610010
 	MOVE.B	#$7a,17(A0)		;2c5c8: 117c007a0011
