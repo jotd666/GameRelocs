@@ -32,6 +32,8 @@ derog_labels.update(range(0x2f38e,0X2f3c2,2))  # copper pointers
 derog_labels.update(range(0x355fe,0x35776))    # copperlist
 derog_labels.update(chip_derog_labels)
 
+binlen = defines.end_address-defines.start_org
+
 asm_utils.extract_relocs(defines,derog_labels,chip_derog_labels)
 
 for s in glob.glob(defines.binary_file+".*reloc*"):

@@ -4299,8 +4299,9 @@ lb_0222e:
 	dc.w	$0000	;02230
 lb_02232:
 	dc.w	$0000	;02232
+lb_02234_plane_crashed_flag:
 	dc.w	$0000	;02234
-lb_02236:
+lb_02236_time_to_rotate_around_crashed_plane:
 	dc.w	$0000	;02236
 	dc.w	$0000	;02238
 lb_0223a:
@@ -20170,6 +20171,8 @@ lb_09d56:
 	DC.W	$000f			;09d56
 lb_09d58:
 	dc.w	$0000	;09d58
+	; controls jump in game mainloop. Bit 15 set means quit
+lb_09d5a_routine_index:
 	dc.w	$0000	;09d5a
 lb_09d5c:
 	dc.w	$0000	;09d5c
@@ -22591,9 +22594,9 @@ lb_0b0e4:
 lb_0b0f2:
 	JSR	lb_0b1c4		;0b0f2: 4eb90000b1c4
 	BSR.W	lb_0b148		;0b0f8: 6100004e
-	ADDI.W	#$07ae,lb_02236+2	;0b0fc: 067907ae00002238
+	ADDI.W	#$07ae,lb_02236_time_to_rotate_around_crashed_plane+2	;0b0fc: 067907ae00002238
 	BPL.W	lb_0b110		;0b104: 6a00000a
-	MOVE.W	#$7fff,lb_02236+2	;0b108: 33fc7fff00002238
+	MOVE.W	#$7fff,lb_02236_time_to_rotate_around_crashed_plane+2	;0b108: 33fc7fff00002238
 lb_0b110:
 	SUBQ.W	#1,lb_0b146		;0b110: 53790000b146
 	BNE.S	lb_0b12c		;0b116: 6614
@@ -22805,7 +22808,7 @@ lb_0b3d0:
 lb_0b3d4:
 	JSR	lb_01ad4		;0b3d4: 4eb900001ad4
 	JSR	lb_2012e		;0b3da: 4eb90002012e
-	MOVE.W	#$0000,lb_09d58+2	;0b3e0: 33fc000000009d5a
+	MOVE.W	#$0000,lb_09d5a_routine_index	;0b3e0: 33fc000000009d5a
 	MOVEQ	#0,D0			;0b3e8: 7000
 	MOVE.W	lb_38a54,D0		;0b3ea: 303900038a54
 	ADDI.L	#lb_38854,D0		;0b3f0: 068000038854
@@ -22821,13 +22824,13 @@ lb_0b40e:
 	MOVE.L	#lb_2e51e,COP1LCH	;0b416: 23fc0002e51e00dff080
 lb_0b420:
 	LEA	lb_0af2a(PC),A0		;0b420: 41fafb08
-	MOVE.W	lb_09d58+2,D0		;0b424: 303900009d5a
+	MOVE.W	lb_09d5a_routine_index,D0		;0b424: 303900009d5a
 	MOVEA.L	0(A0,D0.W),A1		;0b42a: 22700000
 	JSR	(A1)			;0b42e: 4e91
-lb_0b430:
-	CLR.W	lb_02236+2		;0b430: 427900002238
-	MOVE.W	lb_09d58+2,D0		;0b436: 303900009d5a
-	BMI.S	lb_0b46c		;0b43c: 6b2e
+lb_0b430_mainloop:
+	CLR.W	lb_02236_time_to_rotate_around_crashed_plane+2		;0b430: 427900002238
+	MOVE.W	lb_09d5a_routine_index,D0		;0b436: 303900009d5a
+	BMI.S	lb_0b46c		;0b43c: 6b2e  out if negative
 	MOVE.W	D0,lb_09d5c		;0b43e: 33c000009d5c
 	LEA	lb_0af22,A0		;0b444: 41f90000af22
 	MOVEA.L	0(A0,D0.W),A1		;0b44a: 22700000
@@ -22838,9 +22841,10 @@ lb_0b452:
 	MOVE.W	(A7)+,D0		;0b458: 301f
 	MOVEA.L	4(A0,D0.W),A1		;0b45a: 22700004
 	JSR	(A1)			;0b45e: 4e91
-	MOVE.W	lb_02236+2,lb_0223a	;0b460: 33f9000022380000223a
-	BRA.S	lb_0b430		;0b46a: 60c4
+	MOVE.W	lb_02236_time_to_rotate_around_crashed_plane+2,lb_0223a	;0b460: 33f9000022380000223a
+	BRA.S	lb_0b430_mainloop		;0b46a: 60c4
 lb_0b46c:
+	; esc pressed: goes here
 	MOVE.W	lb_09d5c,D0		;0b46c: 303900009d5c
 	LEA	lb_0af22,A0		;0b472: 41f90000af22
 	MOVEA.L	12(A0,D0.W),A1		;0b478: 2270000c
@@ -22850,9 +22854,9 @@ lb_0b46c:
 lb_0b488:
 	MOVE.W	#$ff02,(A0)+		;0b488: 30fcff02
 	DBF	D1,lb_0b488		;0b48c: 51c9fffa
-	MOVE.W	lb_09d58+2,D0		;0b490: 303900009d5a
+	MOVE.W	lb_09d5a_routine_index,D0		;0b490: 303900009d5a
 	ANDI.W	#$00ff,D0		;0b496: 024000ff
-	MOVE.W	D0,lb_09d58+2		;0b49a: 33c000009d5a
+	MOVE.W	D0,lb_09d5a_routine_index		;0b49a: 33c000009d5a
 	MOVE.W	D0,lb_09d5c		;0b4a0: 33c000009d5c
 	BRA.W	lb_0b420		;0b4a6: 6000ff78
 	BSET	#0,lb_0a8b0+3		;0b4aa: 08f900000000a8b3
@@ -33383,14 +33387,14 @@ lb_116f6:
 	dc.l	lb_1170c	;116fa
 	dc.l	lb_11702	;116fe
 lb_11702:
-	MOVE.W	#$80d0,lb_09d58+2	;11702: 33fc80d000009d5a
+	MOVE.W	#$80d0,lb_09d5a_routine_index	;11702: 33fc80d000009d5a
 	RTS				;1170a: 4e75
 lb_1170c:
-	MOVE.W	#$8050,lb_09d58+2	;1170c: 33fc805000009d5a
+	MOVE.W	#$8050,lb_09d5a_routine_index	;1170c: 33fc805000009d5a
 	SF	lb_362c0		;11714: 51f9000362c0
 	RTS				;1171a: 4e75
 lb_1171c:
-	MOVE.W	#$8000,lb_09d58+2	;1171c: 33fc800000009d5a
+	MOVE.W	#$8000,lb_09d5a_routine_index	;1171c: 33fc800000009d5a
 	SF	lb_362c0		;11724: 51f9000362c0
 	RTS				;1172a: 4e75
 lb_1172c:
@@ -37957,7 +37961,8 @@ lb_143c6:
 lb_143f8:
 	NOP				;143f8: 4e71
 	DBF	D0,lb_143f8		;143fa: 51c8fffc
-	MOVE.L	#$000144ae,0(A6,D3.W)	;143fe: 2dbc000144ae3000	; not done
+	; probably sound channels, should be unrelocated
+	MOVE.L	#lb_144ae,0(A6,D3.W)	;143fe: 2dbc000144ae3000	; not done
 	MOVE.W	#$0001,4(A6,D3.W)	;14406: 3dbc00013004
 lb_1440c:
 	MOVEM.L	(A7)+,D0-D3/A0/A6	;1440c: 4cdf410f
@@ -38028,8 +38033,7 @@ lb_14412:
 	dc.w	$03f8	;14490
 	dc.w	$0028	;14492
 	dc.w	$0000	;14494
-	dc.w	$0005	;14496
-	dc.w	$98be	;14498
+	dc.l	$000598be	;14496
 	dc.w	$0e7b	;1449a
 	dc.w	$0238	;1449c
 	dc.w	$000e	;1449e
@@ -46232,7 +46236,7 @@ lb_1ad34:
 	BNE.S	lb_1ad92		;1ad64: 662c
 	TST.B	lb_01ace		;1ad66: 4a3900001ace
 	BPL.W	lb_1ad7a		;1ad6c: 6a00000c
-	MOVE.W	#$8050,lb_09d58+2	;1ad70: 33fc805000009d5a
+	MOVE.W	#$8050,lb_09d5a_routine_index	;1ad70: 33fc805000009d5a
 	BRA.S	lb_1ad92		;1ad78: 6018
 lb_1ad7a:
 	TST.B	lb_0a8ec+2		;1ad7a: 4a390000a8ee
@@ -46240,7 +46244,7 @@ lb_1ad7a:
 	TST.B	lb_0a8f0		;1ad82: 4a390000a8f0
 	BNE.S	lb_1ad92		;1ad88: 6608
 lb_1ad8a:
-	MOVE.W	#$80e0,lb_09d58+2	;1ad8a: 33fc80e000009d5a
+	MOVE.W	#$80e0,lb_09d5a_routine_index	;1ad8a: 33fc80e000009d5a
 lb_1ad92:
 	NOP				;1ad92: 4e71
 	SUBQ.B	#1,lb_021c6+2		;1ad94: 5339000021c8
@@ -46280,7 +46284,7 @@ lb_1ae1c:
 	BNE.W	lb_1ae58		;1ae44: 66000012
 	CMPI.W	#$0064,8(A0)		;1ae48: 0c6800640008
 	BLE.W	lb_1ae58		;1ae4e: 6f000008
-	JSR	lb_28082		;1ae52: 4eb900028082
+	JSR	lb_28082_crash_plane		;1ae52: 4eb900028082
 lb_1ae58:
 	JSR	lb_1ec64		;1ae58: 4eb90001ec64
 	JSR	lb_1e8a0		;1ae5e: 4eb90001e8a0
@@ -46352,7 +46356,7 @@ lb_1afaa:
 	dc.w	$0000	;1afb0
 	dc.w	$0000	;1afb2
 lb_1afb4:
-	TST.B	lb_02232+2		;1afb4: 4a3900002234
+	TST.B	lb_02234_plane_crashed_flag		;1afb4: 4a3900002234
 	BEQ.W	lb_1b086		;1afba: 670000ca
 	TST.W	lb_0226a+2		;1afbe: 4a790000226c
 	BNE.W	lb_1b060		;1afc4: 6600009a
@@ -46389,20 +46393,23 @@ lb_1b028:
 	JSR	lb_1b69a		;1b038: 4eb90001b69a
 	LEA	lb_01864,A0		;1b03e: 41f900001864
 	JSR	lb_1b7fe		;1b044: 4eb90001b7fe
-	SUBQ.W	#1,lb_02236		;1b04a: 537900002236
+	SUBQ.W	#1,lb_02236_time_to_rotate_around_crashed_plane		;1b04a: 537900002236
 	BNE.S	lb_1b086		;1b050: 6634
-	CLR.W	lb_02232+2		;1b052: 427900002234
-	MOVE.W	#$001e,lb_02236		;1b058: 33fc001e00002236
+	CLR.W	lb_02234_plane_crashed_flag		;1b052: 427900002234
+	; reload for next time
+	MOVE.W	#$001e,lb_02236_time_to_rotate_around_crashed_plane		;1b058: 33fc001e00002236
 lb_1b060:
+	; timeout after showing crash
 	CMPI.B	#$7f,lb_01ace		;1b060: 0c39007f00001ace
 	BEQ.S	lb_1b074		;1b068: 670a
 	TST.W	lb_01ace		;1b06a: 4a7900001ace
 	BNE.W	lb_1b07e		;1b070: 6600000c
 lb_1b074:
-	MOVE.W	#$80e0,lb_09d58+2	;1b074: 33fc80e000009d5a
+	; quit current game
+	MOVE.W	#$80e0,lb_09d5a_routine_index	;1b074: 33fc80e000009d5a
 	RTS				;1b07c: 4e75
 lb_1b07e:
-	MOVE.W	#$80d0,lb_09d58+2	;1b07e: 33fc80d000009d5a
+	MOVE.W	#$80d0,lb_09d5a_routine_index	;1b07e: 33fc80d000009d5a
 lb_1b086:
 	RTS				;1b086: 4e75
 	ORI.B	#$08,D0			;1b088: 00000008
@@ -46711,7 +46718,7 @@ lb_1b52c:
 	JSR	lb_46a1a		;1b568: 4eb900046a1a
 	RTS				;1b56e: 4e75
 lb_1b570:
-	MOVE.W	#$80e0,lb_09d58+2	;1b570: 33fc80e000009d5a
+	MOVE.W	#$80e0,lb_09d5a_routine_index	;1b570: 33fc80e000009d5a
 lb_1b578:
 	RTS				;1b578: 4e75
 lb_1b57a:
@@ -49460,7 +49467,7 @@ lb_1ce54:
 	TST.W	D0			;1ce6a: 4a40
 	BEQ.W	lb_1ce7c		;1ce6c: 6700000e
 lb_1ce70:
-	JSR	lb_28082		;1ce70: 4eb900028082
+	JSR	lb_28082_crash_plane		;1ce70: 4eb900028082
 	MOVEM.L	(A7)+,A0-A2		;1ce76: 4cdf0700
 	RTS				;1ce7a: 4e75
 lb_1ce7c:
@@ -49577,7 +49584,7 @@ lb_1cfda:
 	BNE.W	lb_1d028		;1d016: 66000010
 	CMPI.W	#$c200,D0		;1d01a: 0c40c200
 	BGT.W	lb_1d028		;1d01e: 6e000008
-	JSR	lb_28082		;1d022: 4eb900028082
+	JSR	lb_28082_crash_plane		;1d022: 4eb900028082
 lb_1d028:
 	RTS				;1d028: 4e75
 lb_1d02a:
@@ -51449,7 +51456,7 @@ lb_1e5e0:
 	dc.w	$0000	;1e622
 	dc.l	lb_15a44	;1e624
 	dc.w	$0004	;1e628
-	dc.l	lb_1e640	;1e62a
+	dc.l	lb_1e640	;1e62a verified
 	dc.w	$4000	;1e62e
 	dc.w	$0000	;1e630
 	dc.w	$0000	;1e632
@@ -51464,7 +51471,7 @@ lb_1e640:
 	dc.w	$08ca	;1e642
 	dc.w	$0028	;1e644
 	dc.w	$002c	;1e646
-	dc.l	lb_1e640	;1e648 verified
+	dc.l	lb_1e640	;1e648 
 	dc.w	$0001	;1e64c
 	dc.w	$ffff	;1e64e
 	dc.w	$0000	;1e650
@@ -52747,6 +52754,9 @@ lb_1f5ba:
 lb_1f5c4:
 	CLR.W	lb_021c6		;1f5c4: 4279000021c6
 	RTS				;1f5ca: 4e75
+	; addresses in binary stream, not aligned, not relocated => D0
+	; followed by a label comparison, but we unrelocate the
+	; range 19D4 => 1A82 so thiere's nothing to do
 lb_1f5cc:
 	MOVEQ	#0,D0			;1f5cc: 7000
 	MOVE.B	(A0)+,D0		;1f5ce: 1018
@@ -53591,6 +53601,7 @@ lb_1ff00:
 	ASL.W	#8,D0			;1ff20: e140
 	MOVE.B	(A0)+,D0		;1ff22: 1018
 	MOVE.W	D0,lb_01a58		;1ff24: 33c000001a58
+	; addresses in binary streams, but not aligned => d1	
 	MOVEQ	#0,D1			;1ff2a: 7200
 	MOVE.B	(A0)+,D1		;1ff2c: 1218
 	LSL.L	#8,D1			;1ff2e: e189
@@ -55639,6 +55650,7 @@ lb_2195c:
 	MOVE.L	D5,lb_20c80		;219a8: 23c500020c80
 	BSR.W	lb_21c10		;219ae: 61000260
 	BEQ.W	lb_21a2c		;219b2: 67000078
+	; fetches address from stream, needs manual reloc!
 	MOVEQ	#0,D0			;219b6: 7000
 	MOVE.B	10(A2),D0		;219b8: 102a000a
 	ASL.W	#8,D0			;219bc: e140
@@ -55695,7 +55707,7 @@ lb_21a4e:
 	SUBA.L	#$00000012,A2		;21a58: 95fc00000012
 	MOVE.L	A0,-(A7)		;21a5e: 2f08
 	CMPA.L	lb_019d4,A0		;21a60: b1f9000019d4
-	BEQ.W	lb_21c04		;21a66: 6700019c
+	BEQ.W	lb_21c04		;21a66: 6700019c crash plane
 	CLR.W	0(A0)			;21a6a: 42680000
 	MOVEM.L	A0-A1,-(A7)		;21a6e: 48e700c0
 	LEA	42(A0),A0		;21a72: 41e8002a
@@ -55806,7 +55818,7 @@ lb_21c00:
 	MOVEA.L	(A7)+,A0		;21c00: 205f
 	RTS				;21c02: 4e75
 lb_21c04:
-	JSR	lb_28082		;21c04: 4eb900028082
+	JSR	lb_28082_crash_plane		;21c04: 4eb900028082
 	MOVEA.L	(A7)+,A0		;21c0a: 205f
 	RTS				;21c0c: 4e75
 lb_21c0e:
@@ -56134,7 +56146,7 @@ lb_22044:
 	RTS				;22054: 4e75
 lb_22056:
 	MOVEA.L	A2,A0			;22056: 204a
-	JSR	lb_28082		;22058: 4eb900028082
+	JSR	lb_28082_crash_plane		;22058: 4eb900028082
 	MOVE.W	#$0001,lb_2208e		;2205e: 33fc00010002208e
 	RTS				;22066: 4e75
 lb_22068:
@@ -56578,7 +56590,7 @@ lb_22630:
 	ADD.L	D0,lb_22900		;22662: d1b900022900
 	CMPI.L	#$000effe2,lb_22900	;22668: 0cb9000effe200022900
 	BLE.W	lb_22630		;22672: 6f00ffbc
-	MOVE.W	#$8070,lb_09d58+2	;22676: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;22676: 33fc807000009d5a
 	MOVE.W	#$016c,D0		;2267e: 303c016c
 	MOVE.W	#$0098,D1		;22682: 323c0098
 	JSR	lb_15516+2		;22686: 4eb900015518
@@ -56605,7 +56617,7 @@ lb_226b0:
 lb_226e2:
 	BTST	#6,CIAA_PRA		;226e2: 0839000600bfe001
 	BNE.S	lb_226f4		;226ea: 6608
-	MOVE.W	#$8070,lb_09d58+2	;226ec: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;226ec: 33fc807000009d5a
 lb_226f4:
 	RTS				;226f4: 4e75
 lb_226f6:
@@ -56650,7 +56662,7 @@ lb_22784:
 	dc.w	$003c		;22798: 
 	dc.l	lb_2279e	;2279a
 lb_2279e:
-	MOVE.W	#$8070,lb_09d58+2	;2279e: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;2279e: 33fc807000009d5a
 	RTS				;227a6: 4e75
 lb_227a8:
 	dc.w	$3C		;227a8:
@@ -56683,7 +56695,7 @@ lb_227b8:
 	RTS				;22810: 4e75
 lb_22812:
 	MOVE.W	#$8001,lb_01874+2	;22812: 33fc800100001876
-	MOVE.W	#$8070,lb_09d58+2	;2281a: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;2281a: 33fc807000009d5a
 	RTS				;22822: 4e75
 lb_22824:
 	CLR.W	D4			;22824: 4244
@@ -56781,7 +56793,7 @@ lb_22946:
 lb_229d0:
 	BTST	#6,CIAA_PRA		;229d0: 0839000600bfe001
 	BNE.S	lb_229e2		;229d8: 6608
-	MOVE.W	#$8070,lb_09d58+2	;229da: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;229da: 33fc807000009d5a
 lb_229e2:
 	RTS				;229e2: 4e75
 lb_229e4:
@@ -56950,37 +56962,37 @@ lb_22ba2:
 	dc.w	$3a3e	;22bf4
 	dc.w	$0000	;22bf6
 	dc.w	$0020	;22bf8
-	dc.l	lb_252ba	;22bfa
-	dc.l	$00000	;22bfe
-	dc.l	lb_252bc	;22c02
-	dc.l	$00030	;22c06
-	dc.l	lb_252ec	;22c0a
-	dc.l	$00030	;22c0e
-	dc.l	lb_25302	;22c12
-	dc.l	$00030	;22c16
-	dc.l	lb_25318	;22c1a
-	dc.l	$00030	;22c1e
-	dc.l	lb_23a4c	;22c22
-	dc.l	$00020	;22c26
-	dc.l	lb_23ad0	;22c2a
-	dc.l	$00020	;22c2e
-	dc.l	lb_23ade	;22c32
-	dc.l	$00020	;22c36
-	dc.l	lb_23b82	;22c3a
-	dc.l	$00020	;22c3e
-	dc.l	lb_23bd6	;22c42
-	dc.l	$00020	;22c46
-	dc.l	lb_23c60	;22c4a
-	dc.l	$00020	;22c4e
-	dc.l	lb_23ce6	;22c52
+	dc.l	lb_252ba	;22bfa verified
+	dc.l	$00000	;22bfe     verified
+	dc.l	lb_252bc	;22c02 verified
+	dc.l	$00030	;22c06     verified
+	dc.l	lb_252ec	;22c0a verified
+	dc.l	$00030	;22c0e     verified
+	dc.l	lb_25302	;22c12 verified
+	dc.l	$00030	;22c16     verified
+	dc.l	lb_25318	;22c1a verified
+	dc.l	$00030	;22c1e     verified
+	dc.l	lb_23a4c	;22c22 verified
+	dc.l	$00020	;22c26     verified
+	dc.l	lb_23ad0	;22c2a verified
+	dc.l	$00020	;22c2e     verified
+	dc.l	lb_23ade	;22c32 verified
+	dc.l	$00020	;22c36     verified
+	dc.l	lb_23b82	;22c3a verified
+	dc.l	$00020	;22c3e     verified
+	dc.l	lb_23bd6	;22c42 verified
+	dc.l	$00020	;22c46     verified
+	dc.l	lb_23c60	;22c4a verified
+	dc.l	$00020	;22c4e     verified
+	dc.l	lb_23ce6	;22c52 verified
 	dc.l	$00020	;22c56
-	dc.l	lb_23da0	;22c5a
+	dc.l	lb_23da0	;22c5a verified
 	dc.l	$00020	;22c5e
-	dc.l	lb_2532e	;22c62
+	dc.l	lb_2532e	;22c62 verified
 	dc.l	$00020	;22c66
-	dc.l	lb_2331c	;22c6a
+	dc.l	lb_2331c	;22c6a verified
 	dc.l	$00020	;22c6e
-	dc.l	lb_252d2	;22c72
+	dc.l	lb_252d2	;22c72 verified
 	dc.l	$00020	;22c76
 	dc.l	$5b400	;22c7a
 	dc.l	$00000	;22c7e
@@ -63140,10 +63152,10 @@ lb_2606a:
 	JSR	lb_0c180		;26088: 4eb90000c180
 	RTS				;2608e: 4e75
 lb_26090:
-	MOVE.W	#$8080,lb_09d58+2	;26090: 33fc808000009d5a
+	MOVE.W	#$8080,lb_09d5a_routine_index	;26090: 33fc808000009d5a
 	RTS				;26098: 4e75
 lb_2609a:
-	MOVE.W	#$80a0,lb_09d58+2	;2609a: 33fc80a000009d5a
+	MOVE.W	#$80a0,lb_09d5a_routine_index	;2609a: 33fc80a000009d5a
 	RTS				;260a2: 4e75
 lb_260a4:
 	LEA	lb_220f4+2,A6		;260a4: 4df9000220f6
@@ -63261,7 +63273,7 @@ lb_26272:
 	JSR	lb_266ea		;26272: 4eb9000266ea
 	JSR	lb_25a26		;26278: 4eb900025a26
 	JSR	lb_0c180		;2627e: 4eb90000c180
-	MOVE.W	#$80b0,lb_09d58+2	;26284: 33fc80b000009d5a
+	MOVE.W	#$80b0,lb_09d5a_routine_index	;26284: 33fc80b000009d5a
 	RTS				;2628c: 4e75
 lb_2628e:
 	JSR	lb_288fe		;2628e: 4eb9000288fe
@@ -63285,7 +63297,7 @@ lb_262ca:
 lb_262e6:
 	MOVE.W	lb_0b2c2,lb_02252+2	;262e6: 33f90000b2c200002254
 	MOVE.W	lb_0b2c2+2,lb_02256	;262f0: 33f90000b2c400002256
-	MOVE.W	#$80c0,lb_09d58+2	;262fa: 33fc80c000009d5a
+	MOVE.W	#$80c0,lb_09d5a_routine_index	;262fa: 33fc80c000009d5a
 	RTS				;26302: 4e75
 lb_26304:
 	JSR	lb_288fe		;26304: 4eb9000288fe
@@ -63485,7 +63497,7 @@ lb_26626:
 	JSR	lb_2876a		;26644: 4eb90002876a
 	RTS				;2664a: 4e75
 lb_2664c:
-	MOVE.W	#$0070,lb_09d58+2	;2664c: 33fc007000009d5a
+	MOVE.W	#$0070,lb_09d5a_routine_index	;2664c: 33fc007000009d5a
 	JSR	lb_35c9c		;26654: 4eb900035c9c
 	JSR	lb_27428		;2665a: 4eb900027428
 	RTS				;26660: 4e75
@@ -63547,7 +63559,7 @@ lb_266ea:
 	RTS				;26776: 4e75
 lb_26778:
 	MOVE.B	#$7f,lb_01ace		;26778: 13fc007f00001ace
-	MOVE.W	#$8090,lb_09d58+2	;26780: 33fc809000009d5a
+	MOVE.W	#$8090,lb_09d5a_routine_index	;26780: 33fc809000009d5a
 	JSR	lb_221be		;26788: 4eb9000221be
 	JSR	lb_27428		;2678e: 4eb900027428
 	MOVE.W	EXT_005b,D0		;26794: 303900054012
@@ -63677,7 +63689,7 @@ lb_268f6:
 	JMP	lb_2fbfc		;268fe: 4ef90002fbfc
 lb_26904:
 	JSR	lb_27428		;26904: 4eb900027428
-	MOVE.W	#$8060,lb_09d58+2	;2690a: 33fc806000009d5a
+	MOVE.W	#$8060,lb_09d5a_routine_index	;2690a: 33fc806000009d5a
 	RTS				;26912: 4e75
 lb_26914:
 	dc.w	$0000	;26914
@@ -65167,7 +65179,7 @@ lb_277ae:
 	DC.W	$f000			;277ae
 	dc.l	lb_0217c	;277b0
 	dc.w	$0000	;277b4
-	dc.l	lb_277d8	;277b6
+	dc.l	lb_277d8	;277b6 verified
 	dc.b	"You failed to return to base."	;277ba
 	dc.b	$0d	;277d7
 lb_277d8:
@@ -65457,12 +65469,12 @@ lb_27d20:
 	MOVE.L	lb_01a7e_bitplanes_2,lb_36164+2	;27d3c: 23f900001a7e00036166
 	JSR	lb_36580		;27d46: 4eb900036580
 	MOVE.B	#$00,lb_02262+2		;27d4c: 13fc000000002264
-	MOVE.W	#$8070,lb_09d58+2	;27d54: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;27d54: 33fc807000009d5a
 	RTS				;27d5c: 4e75
 lb_27d5e:
 	JSR	lb_27e86		;27d5e: 4eb900027e86
 	JSR	lb_27ef8		;27d64: 4eb900027ef8
-	MOVE.W	#$80f0,lb_09d58+2	;27d6a: 33fc80f000009d5a
+	MOVE.W	#$80f0,lb_09d5a_routine_index	;27d6a: 33fc80f000009d5a
 	RTS				;27d72: 4e75
 lb_27d74:
 	JSR	lb_0c180		;27d74: 4eb90000c180
@@ -65682,13 +65694,14 @@ lb_2806c:
 lb_2807e:
 	dc.w	$0000	;2807e
 	dc.w	$0000	;28080
-lb_28082:
+lb_28082_crash_plane:
 	MOVE.L	(A7),lb_2807e		;28082: 23d70002807e
 	TST.B	lb_0223a+2		;28088: 4a390000223c
 	BNE.W	lb_281f4		;2808e: 66000164
 	ST	lb_0223a+2		;28092: 50f90000223c
-	ST	lb_02232+2		;28098: 50f900002234
-	MOVE.W	#$001e,lb_02236		;2809e: 33fc001e00002236
+	; activate crash flag
+	ST	lb_02234_plane_crashed_flag		;28098: 50f900002234
+	MOVE.W	#$001e,lb_02236_time_to_rotate_around_crashed_plane		;2809e: 33fc001e00002236
 	MOVEA.L	lb_019d8,A2		;280a6: 2479000019d8
 	MOVE.W	#$f448,lb_01874+2	;280ac: 33fcf44800001876
 	LEA	lb_2806c,A0		;280b4: 41f90002806c
@@ -66084,7 +66097,7 @@ lb_287f2:
 	BSET	#0,lb_0a8b8+1		;287f2: 08f900000000a8b9
 	BSET	#1,lb_0a8b8+1		;287fa: 08f900010000a8b9
 	BNE.W	lb_2880e		;28802: 6600000a
-	MOVE.W	#$8060,lb_09d58+2	;28806: 33fc806000009d5a
+	MOVE.W	#$8060,lb_09d5a_routine_index	;28806: 33fc806000009d5a
 lb_2880e:
 	RTS				;2880e: 4e75
 lb_28810:
@@ -68909,7 +68922,7 @@ lb_2a184:
 	RTS				;2a196: 4e75
 lb_2a198:
 	dc.w	$8000	;2a198
-	dc.l	lb_0cca2	;2a19a
+	dc.l	lb_0cca2	;2a19a verified
 	dc.w	$b800	;2a19e
 	dc.w	$000a	;2a1a0
 	dc.w	$0136	;2a1a2
@@ -69284,7 +69297,7 @@ lb_2a532:
 	dc.l	$00000	;2a54a
 	dc.l	$67770	;2a54e
 	dc.l	$67880	;2a552
-	dc.l	lb_2b9ee	;2a556
+	dc.l	lb_2b9ee	;2a556 verified
 	dc.l	$67828	;2a55a
 	dc.l	$00000	;2a55e
 	dc.l	lb_2b9ee	;2a562
@@ -71461,7 +71474,7 @@ lb_2b826:
 	dc.w	$00d3	;2b82e
 	dc.w	$0041	;2b830
 	dc.w	$a000	;2b832
-	dc.l	lb_34ea2	;2b834
+	dc.l	lb_34ea2	;2b834 verified
 	dc.w	$0005	;2b838
 	dc.w	$0001	;2b83a
 	dc.w	$8800	;2b83c
@@ -71968,7 +71981,7 @@ lb_2bcce:
 lb_2bcd4:
 	RTS				;2bcd4: 4e75
 lb_2bcd6:
-	CMPI.W	#$8040,lb_09d58+2	;2bcd6: 0c79804000009d5a
+	CMPI.W	#$8040,lb_09d5a_routine_index	;2bcd6: 0c79804000009d5a
 	BNE.S	lb_2bd0e		;2bcde: 662e
 lb_2bce0:
 	TST.B	VHPOSR			;2bce0: 4a3900dff006
@@ -71979,7 +71992,7 @@ lb_2bce0:
 	JSR	lb_2eeaa		;2bd00: 4eb90002eeaa
 	MOVE.W	#$8010,lb_09d58		;2bd06: 33fc801000009d58
 lb_2bd0e:
-	CMPI.W	#$8030,lb_09d58+2	;2bd0e: 0c79803000009d5a
+	CMPI.W	#$8030,lb_09d5a_routine_index	;2bd0e: 0c79803000009d5a
 	BEQ.S	lb_2bd22		;2bd16: 670a
 	LEA	lb_2e628,A1		;2bd18: 43f90002e628
 	BSR.W	lb_2c33c		;2bd1e: 6100061c
@@ -72006,7 +72019,7 @@ lb_2bd6e:
 	RTS				;2bd76: 4e75
 lb_2bd78:
 	MOVE.L	#$01800000,lb_2e6ea	;2bd78: 23fc018000000002e6ea
-	MOVE.W	#$3000,lb_02236+2	;2bd82: 33fc300000002238
+	MOVE.W	#$3000,lb_02236_time_to_rotate_around_crashed_plane+2	;2bd82: 33fc300000002238
 	MOVE.W	#$3000,lb_0223a		;2bd8a: 33fc30000000223a
 	MOVE.W	#$0000,D0		;2bd92: 303c0000
 	JSR	lb_176ca		;2bd96: 4eb9000176ca
@@ -72119,7 +72132,7 @@ lb_2bf7a:
 lb_2bfbe:
 	RTS				;2bfbe: 4e75
 lb_2bfc0:
-	CMPI.W	#$8040,lb_09d58+2	;2bfc0: 0c79804000009d5a
+	CMPI.W	#$8040,lb_09d5a_routine_index	;2bfc0: 0c79804000009d5a
 	BNE.S	lb_2bff8		;2bfc8: 662e
 lb_2bfca:
 	TST.B	VHPOSR			;2bfca: 4a3900dff006
@@ -72130,7 +72143,7 @@ lb_2bfca:
 	JSR	lb_2eeaa		;2bfea: 4eb90002eeaa
 	MOVE.W	#$8010,lb_09d58		;2bff0: 33fc801000009d58
 lb_2bff8:
-	CMPI.W	#$8030,lb_09d58+2	;2bff8: 0c79803000009d5a
+	CMPI.W	#$8030,lb_09d5a_routine_index	;2bff8: 0c79803000009d5a
 	BEQ.S	lb_2c00c		;2c000: 670a
 	LEA	lb_2e628,A1		;2c002: 43f90002e628
 	BSR.W	lb_2c33c		;2c008: 61000332
@@ -72503,7 +72516,7 @@ lb_2c4a2:
 	MOVE.W	#$0046,D0		;2c4a2: 303c0046
 	JSR	lb_1552e		;2c4a6: 4eb90001552e
 	ST	lb_2c382		;2c4ac: 50f90002c382
-	CMPI.W	#$8010,lb_09d58+2	;2c4b2: 0c79801000009d5a
+	CMPI.W	#$8010,lb_09d5a_routine_index	;2c4b2: 0c79801000009d5a
 	BEQ.S	lb_2c4c2		;2c4ba: 6706
 	JSR	lb_2e3ec		;2c4bc: 4eb90002e3ec
 lb_2c4c2:
@@ -72567,19 +72580,19 @@ lb_2c5a0:
 	JSR	lb_2c226		;2c5b8: 4eb90002c226
 	RTS				;2c5be: 4e75
 lb_2c5c0:
-	MOVE.W	#$8020,lb_09d58+2	;2c5c0: 33fc802000009d5a
+	MOVE.W	#$8020,lb_09d5a_routine_index	;2c5c0: 33fc802000009d5a
 	RTS				;2c5c8: 4e75
 lb_2c5ca:
-	MOVE.W	#$8030,lb_09d58+2	;2c5ca: 33fc803000009d5a
+	MOVE.W	#$8030,lb_09d5a_routine_index	;2c5ca: 33fc803000009d5a
 	RTS				;2c5d2: 4e75
 lb_2c5d4:
-	MOVE.W	#$8010,lb_09d58+2	;2c5d4: 33fc801000009d5a
+	MOVE.W	#$8010,lb_09d5a_routine_index	;2c5d4: 33fc801000009d5a
 	RTS				;2c5dc: 4e75
 lb_2c5de:
-	MOVE.W	#$8040,lb_09d58+2	;2c5de: 33fc804000009d5a
+	MOVE.W	#$8040,lb_09d5a_routine_index	;2c5de: 33fc804000009d5a
 	RTS				;2c5e6: 4e75
 lb_2c5e8:
-	MOVE.W	lb_2c188,lb_09d58+2	;2c5e8: 33f90002c18800009d5a
+	MOVE.W	lb_2c188,lb_09d5a_routine_index	;2c5e8: 33f90002c18800009d5a
 	RTS				;2c5f2: 4e75
 	dc.w	$0100	;2c5f4
 	dc.w	$4200	;2c5f6
@@ -72848,7 +72861,7 @@ lb_2c8e0:
 	dc.l	lb_2c8e8		;2c8e2:
 	dc.w	$0010		;2c8e6
 lb_2c8e8:	
-	MOVE.W	#$8050,lb_09d58+2	;2c8e8: 33fc805000009d5a
+	MOVE.W	#$8050,lb_09d5a_routine_index	;2c8e8: 33fc805000009d5a
 	RTS				;2c8f0: 4e75
 lb_2c8f2:
 	dc.l	lb_2c90e	;2c8f2
@@ -75606,7 +75619,7 @@ lb_2de86:
 	dc.w	$0000	;2de88
 	dc.w	$0000	;2de8a
 	OR.B	D0,D0			;2de8c: 8000
-	DC.l	lb_0eb22			;2de8e
+	DC.l	lb_0eb22			;2de8e verified
 	CMP.B	D0,D4			;2de92: b800
 	ORI.B	#$e0,(A6)		;2de94: 001600e0
 lb_2de98:
@@ -75936,7 +75949,7 @@ lb_2e2d2:
 	CMP.W	lb_2e072,D0		;2e2ee: b0790002e072
 	BEQ.W	lb_2e3cc		;2e2f4: 670000d6
 lb_2e2f8:
-	MOVE.W	lb_02236+2,-(A7)	;2e2f8: 3f3900002238
+	MOVE.W	lb_02236_time_to_rotate_around_crashed_plane+2,-(A7)	;2e2f8: 3f3900002238
 	MOVE.W	D0,lb_2e072		;2e2fe: 33c00002e072
 	MOVE.W	D0,lb_2f304+2		;2e304: 33c00002f306
 	JSR	lb_2e03a		;2e30a: 4eb90002e03a
@@ -75987,7 +76000,7 @@ lb_2e3b4:
 	AND.L	D2,(A0)+		;2e3bc: c598
 	ADDA.W	#$0064,A0		;2e3be: d0fc0064
 	DBF	D0,lb_2e3b4		;2e3c2: 51c8fff0
-	MOVE.W	(A7)+,lb_02236+2	;2e3c6: 33df00002238
+	MOVE.W	(A7)+,lb_02236_time_to_rotate_around_crashed_plane+2	;2e3c6: 33df00002238
 lb_2e3cc:
 	RTS				;2e3cc: 4e75
 lb_2e3ce:
@@ -76560,11 +76573,11 @@ lb_2e988:
 	MOVE.L	#lb_2e51e,COP1LCH	;2e990: 23fc0002e51e00dff080
 	TST.W	lb_2f304		;2e99a: 4a790002f304
 	BMI.S	lb_2e9ac		;2e9a0: 6b0a
-	MOVE.W	#$8040,lb_09d58+2	;2e9a2: 33fc804000009d5a
+	MOVE.W	#$8040,lb_09d5a_routine_index	;2e9a2: 33fc804000009d5a
 	RTS				;2e9aa: 4e75
 lb_2e9ac:
 	CLR.W	lb_2f304		;2e9ac: 42790002f304
-	MOVE.W	#$8010,lb_09d58+2	;2e9b2: 33fc801000009d5a
+	MOVE.W	#$8010,lb_09d5a_routine_index	;2e9b2: 33fc801000009d5a
 lb_2e9ba:
 	RTS				;2e9ba: 4e75
 lb_2e9bc:
@@ -77679,11 +77692,11 @@ lb_2f578:
 	BTST	#6,CIAA_PRA		;2f592: 0839000600bfe001
 	BNE.S	lb_2f5a4		;2f59a: 6608
 lb_2f59c:
-	MOVE.W	#$8060,lb_09d58+2	;2f59c: 33fc806000009d5a
+	MOVE.W	#$8060,lb_09d5a_routine_index	;2f59c: 33fc806000009d5a
 lb_2f5a4:
 	RTS				;2f5a4: 4e75
 lb_2f5a6:
-	MOVE.W	#$8000,lb_09d58+2	;2f5a6: 33fc800000009d5a
+	MOVE.W	#$8000,lb_09d5a_routine_index	;2f5a6: 33fc800000009d5a
 	RTS				;2f5ae: 4e75
 lb_2f5b0:
 	RTS				;2f5b0: 4e75
@@ -77944,7 +77957,7 @@ lb_2f896:
 	BNE.S	lb_2f8fa		;2f8e4: 6614
 	CMPI.L	#lb_30298,lb_2fc06	;2f8e6: 0cb9000302980002fc06
 	BNE.S	lb_2f8fc		;2f8f0: 660a
-	MOVE.W	#$8050,lb_09d58+2	;2f8f2: 33fc805000009d5a
+	MOVE.W	#$8050,lb_09d5a_routine_index	;2f8f2: 33fc805000009d5a
 lb_2f8fa:
 	RTS				;2f8fa: 4e75
 lb_2f8fc:
@@ -78090,11 +78103,11 @@ lb_2fb00:
 	RTS				;2fb22: 4e75
 lb_2fb24:
 	SF	lb_0224e+2		;2fb24: 51f900002250
-	MOVE.W	#$8070,lb_09d58+2	;2fb2a: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;2fb2a: 33fc807000009d5a
 	RTS				;2fb32: 4e75
 lb_2fb34:
 	ST	lb_0224e+2		;2fb34: 50f900002250
-	MOVE.W	#$8080,lb_09d58+2	;2fb3a: 33fc808000009d5a
+	MOVE.W	#$8080,lb_09d5a_routine_index	;2fb3a: 33fc808000009d5a
 	RTS				;2fb42: 4e75
 lb_2fb44:
 	MOVEQ	#0,D0			;2fb44: 7000
@@ -78119,11 +78132,11 @@ lb_2fb5c:
 lb_2fb5e:
 	ST	lb_01ace		;2fb5e: 50f900001ace
 	MOVE.W	D0,lb_01ace+2		;2fb64: 33c000001ad0
-	MOVE.W	#$80d0,lb_09d58+2	;2fb6a: 33fc80d000009d5a
+	MOVE.W	#$80d0,lb_09d5a_routine_index	;2fb6a: 33fc80d000009d5a
 	RTS				;2fb72: 4e75
 lb_2fb74:
 	JSR	lb_38688		;2fb74: 4eb900038688
-	MOVE.W	#$8060,lb_09d58+2	;2fb7a: 33fc806000009d5a
+	MOVE.W	#$8060,lb_09d5a_routine_index	;2fb7a: 33fc806000009d5a
 	RTS				;2fb82: 4e75
 lb_2fb84:
 	MOVEQ	#0,D1			;2fb84: 7200
@@ -78182,10 +78195,10 @@ lb_2fbce:
 	JSR	lb_3031e		;2fbe0: 4eb90003031e
 	ST	lb_0224e+2		;2fbe6: 50f900002250
 	SF	lb_01ace		;2fbec: 51f900001ace
-	MOVE.W	#$8070,lb_09d58+2	;2fbf2: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;2fbf2: 33fc807000009d5a
 	RTS				;2fbfa: 4e75
 lb_2fbfc:
-	MOVE.W	#$8090,lb_09d58+2	;2fbfc: 33fc809000009d5a
+	MOVE.W	#$8090,lb_09d5a_routine_index	;2fbfc: 33fc809000009d5a
 	RTS				;2fc04: 4e75
 lb_2fc06:
 	dc.w	$0000	;2fc06
@@ -80018,7 +80031,7 @@ lb_30caa:
 	BNE.W	lb_312d6		;30cdc: 660005f8
 	TST.B	lb_0224e+2		;30ce0: 4a3900002250
 	BEQ.S	lb_30cf2		;30ce6: 670a
-	MOVE.W	#$8070,lb_09d58+2	;30ce8: 33fc807000009d5a
+	MOVE.W	#$8070,lb_09d5a_routine_index	;30ce8: 33fc807000009d5a
 	RTS				;30cf0: 4e75
 lb_30cf2:
 	JSR	lb_2704c		;30cf2: 4eb90002704c
@@ -80350,7 +80363,7 @@ lb_311e2:
 lb_311ee:
 	TST.B	lb_0224e+2		;311ee: 4a3900002250
 	BNE.S	lb_31224		;311f4: 662e
-	MOVE.W	#$0070,lb_09d58+2	;311f6: 33fc007000009d5a
+	MOVE.W	#$0070,lb_09d5a_routine_index	;311f6: 33fc007000009d5a
 	JSR	lb_288fe		;311fe: 4eb9000288fe
 	JSR	lb_288d8		;31204: 4eb9000288d8
 	JSR	lb_25bc4		;3120a: 4eb900025bc4
@@ -80359,7 +80372,7 @@ lb_311ee:
 	JSR	lb_2876a		;3121c: 4eb90002876a
 	RTS				;31222: 4e75
 lb_31224:
-	MOVE.W	#$8060,lb_09d58+2	;31224: 33fc806000009d5a
+	MOVE.W	#$8060,lb_09d5a_routine_index	;31224: 33fc806000009d5a
 	RTS				;3122c: 4e75
 lb_3122e:
 	LEA	EXT_006e,A0		;3122e: 41f90005d8a0
@@ -87073,7 +87086,7 @@ lb_34ea4:
 	DC.l	lb_34eac			;34ea6
 	dc.w	$0010		;34eaa
 lb_34eac:
-	MOVE.W	#$80d0,lb_09d58+2	;34eac: 33fc80d000009d5a
+	MOVE.W	#$80d0,lb_09d5a_routine_index	;34eac: 33fc80d000009d5a
 	RTS				;34eb4: 4e75
 lb_34eb6:
 	dc.w	$0000			;34eb6:
@@ -88395,7 +88408,7 @@ lb_35c9c:
 	JSR	lb_25bc4		;35cc2: 4eb900025bc4
 	JSR	lb_25a26		;35cc8: 4eb900025a26
 	JSR	lb_0c180		;35cce: 4eb90000c180
-	MOVE.W	#$0070,lb_09d58+2	;35cd4: 33fc007000009d5a
+	MOVE.W	#$0070,lb_09d5a_routine_index	;35cd4: 33fc007000009d5a
 	JSR	lb_2876a		;35cdc: 4eb90002876a
 	RTS				;35ce2: 4e75
 lb_35ce4:
@@ -90088,70 +90101,37 @@ lb_36f58:
 lb_36f60:
 	OR.B	D0,D0			;36f60: 8000
 	dc.l  lb_0c890  ;36f62
-	CMP.B	D1,D0			;36f66: b001
-	CMP.B	D0,D4			;36f68: b800
-	DC.W	$0000			;36f6a
-	DC.W	$013f			;36f6c
-	OR.B	D0,D4			;36f6e: 8800
-	ORI.B	#$96,D0			;36f70: 00000096
-	ADDA.W	D0,A0			;36f74: d0c0
-	DC.W	$4649			;36f76
-	DC.W	$4748			;36f78
-	ADDQ.W	#2,D5			;36f7a: 5445
-	ADDQ.B	#1,-(A0)		;36f7c: 5220
-	DC.W	$424f			;36f7e
-	DC.W	$4d42			;36f80
-	DC.W	$4552			;36f82
-	MOVEP.W	3520(A5),D6		;36f84: 0d0d0dc0
-	DC.W	$4c65			;36f88
-	BSR.S	lb_37002		;36f8a: 6176
-	BCS.S	lb_36fae		;36f8c: 6520
-	NEG.W	29547(A1)		;36f8e: 4469736b
-	MOVE.L	119(A2,D2.W),D0		;36f92: 20322077
-	MOVEQ	#105,D1			;36f96: 7269
-	MOVEQ	#101,D2			;36f98: 7465
-	MOVEA.L	-(A5),A0		;36f9a: 2065
-	DC.W	$6e61			;36f9c
-	BHI.S	lb_3700c		;36f9e: 626c
-	BCS.S	lb_37006		;36fa0: 6564
-	DC.W	$2074			;36fa2
-	BLE.S	lb_36fc6		;36fa4: 6f20
-	DC.W	$7361			;36fa6
-	MOVEQ	#101,D3			;36fa8: 7665
-	BSET	D6,D0			;36faa: 0dc0
-	MOVEQ	#105,D0			;36fac: 7069
-lb_36fae:
-	DC.W	$6c6f			;36fae
-	MOVEQ	#32,D2			;36fb0: 7420
-	DC.W	$6465			;36fb2
-	MOVEQ	#97,D2			;36fb4: 7461
-	BVS.S	lb_37024		;36fb6: 696c
-	DC.W	$7320			;36fb8
-	DC.W	$6475			;36fba
-	MOVEQ	#105,D1			;36fbc: 7269
-	DC.W	$6e67			;36fbe
-	MOVEA.L	101(A4,D6.L),A0		;36fc0: 20746865
-	MOVEA.L	-(A7),A0		;36fc4: 2067
-lb_36fc6:
-	DC.W	$616d			;36fc6
-	DC.W	$650d			;36fc8
-	BSET	D6,D0			;36fca: 0dc0
-	DC.W	$496e			;36fcc
-	DC.W	$7365			;36fce
-	MOVEQ	#116,D1			;36fd0: 7274
-	MOVEA.L	D4,A0			;36fd2: 2044
-	DC.W	$6973			;36fd4
-	BMI.S	lb_36ff8		;36fd6: 6b20
-	MOVE.W	-(A0),D1		;36fd8: 3220
-	BSR.S	lb_3704a		;36fda: 616e
-	BCC.S	lb_36ffc+2		;36fdc: 6420
-	MOVEQ	#114,D0			;36fde: 7072
-	DC.W	$6573			;36fe0
-	DC.W	$7320			;36fe2
-	DC.W	$7370			;36fe4
-	DC.W	$6163			;36fe6
-	BCS.S	lb_37018		;36fe8: 652e
-	DC.W	$0000			;36fea
+	dc.b	$b0	;36f66
+	dc.b	$01	;36f67
+	dc.b	$b8	;36f68
+	dc.b	$00	;36f69
+	dc.b	$00	;36f6a
+	dc.b	$00	;36f6b
+	dc.b	$01	;36f6c
+	dc.b	"?"	;36f6d
+	dc.b	$88	;36f6e
+	dc.b	$00	;36f6f
+	dc.b	$00	;36f70
+	dc.b	$00	;36f71
+	dc.b	$00	;36f72
+	dc.b	$96	;36f73
+	dc.b	$d0	;36f74
+	dc.b	$c0	;36f75
+	dc.b	"FIGHTER BOMBER"	;36f76
+	dc.b	$0d	;36f84
+	dc.b	$0d	;36f85
+	dc.b	$0d	;36f86
+	dc.b	$c0	;36f87
+	dc.b	"Leave Disk 2 write enabled to save"	;36f88
+	dc.b	$0d	;36faa
+	dc.b	$c0	;36fab
+	dc.b	"pilot details during the game"	;36fac
+	dc.b	$0d	;36fc9
+	dc.b	$0d	;36fca
+	dc.b	$c0	;36fcb
+	dc.b	"Insert Disk 2 and press space."	;36fcc
+	dc.b	$00	;36fea
+	dc.b	$00	;36feb
 lb_36fec:
 	OR.B	D0,D0			;36fec: 8000
 	dc.l  lb_0c890  ;36fee
@@ -92292,7 +92272,7 @@ lb_37f86:
 	dc.w	$0000	;384d4
 	dc.w	$0000	;384d6
 	dc.w	$8000	;384d8
-	dc.l	lb_0eb22	;384da
+	dc.l	lb_0eb22	;384da verified
 	dc.w	$d0b8	;384de
 	dc.w	$0008	;384e0
 	dc.w	$0138	;384e2
@@ -92353,12 +92333,12 @@ lb_38514:
 	dc.w	$0d00	;3854e
 lb_38550:
 	dc.w	$0000	;38550
-	dc.l	lb_38684	;38552
+	dc.l	lb_38684	;38552 verified
 	dc.w	$0000	;38556
 	dc.w	$0000	;38558
 	dc.w	$0000	;3855a
 	dc.w	$0000	;3855c
-	dc.l	lb_38686	;3855e
+	dc.l	lb_38686	;3855e verified
 	dc.w	$0000	;38562
 	dc.w	$0000	;38564
 	dc.w	$0000	;38566
@@ -97322,6 +97302,8 @@ lb_38a54:
 	dc.w	$0000	;3ad1a
 	dc.w	$2030	;3ad1c
 	dc.w	$0024	;3ad1e
+	; there's actually some relocs hidden in
+	; those streams!!! ex below: $680 (unaligned...)
 	dc.w	$c300	;3ad20
 	dc.w	$0006	;3ad22
 	dc.w	$8000	;3ad24
@@ -121595,7 +121577,7 @@ lb_46b84:
 	JSR	lb_0b1ac		;46b9a: 4eb90000b1ac
 	RTS				;46ba0: 4e75
 lb_46ba2:
-	MOVE.W	#$80e0,lb_09d58+2	;46ba2: 33fc80e000009d5a
+	MOVE.W	#$80e0,lb_09d5a_routine_index	;46ba2: 33fc80e000009d5a
 	RTS				;46baa: 4e75
 lb_46bac:
 	MOVEQ	#1,D7			;46bac: 7e01
@@ -121707,7 +121689,7 @@ lb_46d48:
 	RTS				;46d68: 4e75
 lb_46d6a:
 	MOVE.L	#$00000400,46(A0)	;46d6a: 217c00000400002e
-	MOVE.W	#$ffff,lb_02232+2	;46d72: 33fcffff00002234
+	MOVE.W	#$ffff,lb_02234_plane_crashed_flag	;46d72: 33fcffff00002234
 	RTS				;46d7a: 4e75
 lb_46d7c:
 	BSET	#0,lb_0a858+3		;46d7c: 08f900000000a85b
