@@ -194,7 +194,7 @@ def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=
             unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in chip_derog_labels])
             unreloc_offsets.append(0)  # end with 0
 
-            dump_reloc_file(unreloc_offsets,defines.binary_file,".unreloc_chip",pack_file=pack_file)
+            dump_reloc_file(unreloc_offsets,defines.binary_file,".chip_unreloc",pack_file=pack_file)
 
 
 

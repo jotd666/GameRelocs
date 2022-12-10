@@ -24457,7 +24457,7 @@ lb_0c260:
 	dc.w	$0000	;0c260
 	dc.w	$0122	;0c262
 lb_0c264:
-	dc.w	$c2b2	;0c264
+	dc.w	$c2b2	;0c264		; sprite address
 	dc.w	$0124	;0c266
 lb_0c268:
 	dc.w	$0000	;0c268
@@ -32385,6 +32385,7 @@ lb_10b4c:
 	MOVEA.L	lb_01a7a_bitplanes_1,A2		;10b5c: 247900001a7a
 lb_10b62:
 	ADDA.W	30(A1),A2		;10b62: d4e9001e
+	; could be optimized by unrolling the loop?
 lb_10b66:
 	MOVEM.L	D2/A2,-(A7)		;10b66: 48e72020
 	MOVE.W	#$0077,D2		;10b6a: 343c0077
@@ -32404,6 +32405,7 @@ lb_10b8e:
 	OR.B	D2,40(A2)		;10b90: 852a0028
 	OR.B	D2,80(A2)		;10b94: 852a0050
 	OR.B	D2,120(A2)		;10b98: 852a0078
+	; could be optimized by LEA?
 	SUBA.W	#$00a0,A2		;10b9c: 94fc00a0
 	DBF	D0,lb_10b8e		;10ba0: 51c8ffec
 	BRA.S	lb_10bc0		;10ba4: 601a
@@ -32414,6 +32416,7 @@ lb_10ba8:
 	OR.B	D2,40(A2)		;10bac: 852a0028
 	OR.B	D2,80(A2)		;10bb0: 852a0050
 	OR.B	D2,120(A2)		;10bb4: 852a0078
+	; could be optimized by LEA?
 	SUBA.W	#$00a0,A2		;10bb8: 94fc00a0
 	DBF	D0,lb_10ba8		;10bbc: 51c8ffea
 lb_10bc0:
@@ -32427,6 +32430,7 @@ lb_10bc0:
 	AND.B	D2,40(A2)		;10bd6: c52a0028
 	AND.B	D2,80(A2)		;10bda: c52a0050
 	AND.B	D2,120(A2)		;10bde: c52a0078
+	; could be optimized by LEA?
 	SUBA.W	#$00a0,A2		;10be2: 94fc00a0
 	AND.B	D2,(A2)			;10be6: c512
 	AND.B	D2,40(A2)		;10be8: c52a0028
@@ -32440,6 +32444,7 @@ lb_10bf6:
 	MOVEA.L	lb_01a7a_bitplanes_1,A2		;10c06: 247900001a7a
 	ADDA.W	30(A1),A2		;10c0c: d4e9001e
 lb_10c10:
+	; could be optimized by LEA?
 	SUBA.W	#$0140,A2		;10c10: 94fc0140
 	MOVEQ	#6,D0			;10c14: 7006
 lb_10c16:
@@ -32449,6 +32454,7 @@ lb_10c16:
 	AND.B	D1,40(A2)		;10c1e: c32a0028
 	AND.B	D1,80(A2)		;10c22: c32a0050
 	AND.B	D1,120(A2)		;10c26: c32a0078
+	; could be optimized by LEA?
 	SUBA.W	#$0280,A2		;10c2a: 94fc0280
 	DBF	D0,lb_10c16		;10c2e: 51c8ffe6
 	RTS				;10c32: 4e75
@@ -32466,6 +32472,7 @@ lb_10c58:
 	MOVE.L	(A1)+,40(A2)		;10c5a: 25590028
 	MOVE.L	(A1)+,80(A2)		;10c5e: 25590050
 	MOVE.L	(A1)+,120(A2)		;10c62: 25590078
+	; could be optimized by LEA?
 	ADDA.W	#$00a0,A2		;10c66: d4fc00a0
 	DBF	D7,lb_10c58		;10c6a: 51cfffec
 	RTS				;10c6e: 4e75
@@ -32477,6 +32484,7 @@ lb_10c74:
 	AND.L	D0,40(A2)		;10c76: c1aa0028
 	AND.L	D0,80(A2)		;10c7a: c1aa0050
 	AND.L	D0,120(A2)		;10c7e: c1aa0078
+	; could be optimized by LEA?
 	ADDA.W	#$00a0,A2		;10c82: d4fc00a0
 	DBF	D7,lb_10c74		;10c86: 51cfffec
 	RTS				;10c8a: 4e75
@@ -32494,6 +32502,7 @@ lb_10cb0:
 	MOVE.L	(A1)+,40(A2)		;10cb2: 25590028
 	MOVE.L	(A1)+,80(A2)		;10cb6: 25590050
 	MOVE.L	(A1)+,120(A2)		;10cba: 25590078
+	; could be optimized by LEA?
 	ADDA.W	#$00a0,A2		;10cbe: d4fc00a0
 	DBF	D7,lb_10cb0		;10cc2: 51cfffec
 	RTS				;10cc6: 4e75
@@ -32505,6 +32514,7 @@ lb_10ccc:
 	MOVE.L	D0,40(A2)		;10cce: 25400028
 	MOVE.L	D0,80(A2)		;10cd2: 25400050
 	MOVE.L	D0,120(A2)		;10cd6: 25400078
+	; could be optimized by LEA?
 	ADDA.W	#$00a0,A2		;10cda: d4fc00a0
 	DBF	D7,lb_10ccc		;10cde: 51cfffec
 	RTS				;10ce2: 4e75
@@ -37947,6 +37957,7 @@ lb_143c6:
 	MULU	#$000c,D0		;143cc: c0fc000c
 	LEA	lb_14412(PC),A0		;143d0: 41fa0040
 	ADDA.W	D0,A0			;143d4: d0c0
+	; setting audio channel data
 	MOVE.L	(A0)+,0(A6,D3.W)	;143d6: 2d983000
 	MOVE.W	(A0)+,4(A6,D3.W)	;143da: 3d983004
 	MOVE.W	(A0)+,6(A6,D3.W)	;143de: 3d983006
@@ -37961,32 +37972,29 @@ lb_143c6:
 lb_143f8:
 	NOP				;143f8: 4e71
 	DBF	D0,lb_143f8		;143fa: 51c8fffc
-	; probably sound channels, should be unrelocated
+	; sound channel probably no/mute sound, should be unrelocated
 	MOVE.L	#lb_144ae,0(A6,D3.W)	;143fe: 2dbc000144ae3000	; not done
 	MOVE.W	#$0001,4(A6,D3.W)	;14406: 3dbc00013004
 lb_1440c:
 	MOVEM.L	(A7)+,D0-D3/A0/A6	;1440c: 4cdf410f
 	RTS				;14410: 4e75
 lb_14412:
-	dc.l	lb_144ae	;14412
+	dc.l	lb_144ae	;14412	; unrelocated
 	dc.w	$0000	;14416
 	dc.w	$0190	;14418
 	dc.w	$0000	;1441a
 	dc.w	$ffff	;1441c
-	dc.w	$0004	;1441e
-	dc.w	$fd00	;14420
+	dc.l	$0004fd00	;1441e
 	dc.w	$1b8e	;14422
 	dc.w	$03e8	;14424
 	dc.w	$003c	;14426
 	dc.w	$ffff	;14428
-	dc.w	$0005	;1442a
-	dc.w	$587c	;1442c
+	dc.l	$0005587c	;1442a
 	dc.w	$0a80	;1442e
 	dc.w	$06b0	;14430
 	dc.w	$003c	;14432
 	dc.w	$0000	;14434
-	dc.w	$0005	;14436
-	dc.w	$587c	;14438
+	dc.l	$0005587c	;14436
 	dc.w	$0a80	;1443a
 	dc.w	$076e	;1443c
 	dc.w	$003c	;1443e
@@ -38027,8 +38035,7 @@ lb_14412:
 	dc.w	$03f8	;14484
 	dc.w	$0028	;14486
 	dc.w	$0000	;14488
-	dc.w	$0005	;1448a
-	dc.w	$7dee	;1448c
+	dc.l	$00057dee	;1448a
 	dc.w	$06b4	;1448e
 	dc.w	$03f8	;14490
 	dc.w	$0028	;14492
@@ -38038,8 +38045,7 @@ lb_14412:
 	dc.w	$0238	;1449c
 	dc.w	$000e	;1449e
 	dc.w	$0000	;144a0
-	dc.w	$0004	;144a2
-	dc.w	$fd00	;144a4
+	dc.l	$4fd00	;144a2
 	dc.w	$1b8e	;144a6
 	dc.w	$008c	;144a8
 	dc.w	$0032	;144aa
@@ -38675,6 +38681,7 @@ lb_14c0a:
 	BLT.W	lb_14c46		;14c2a: 6d00001a
 	CMP.W	lb_01a68+2,D7		;14c2e: be7900001a6a
 	BGT.W	lb_14c46		;14c34: 6e000010
+	; smc
 	MOVE.L	#lb_15000,lb_14ee4+2	;14c38: 23fc0001500000014ee6
 	BRA.W	lb_14c50		;14c42: 6000000c
 lb_14c46:
@@ -38933,11 +38940,11 @@ lb_14f4a:
 	ADD.W	D1,D1			;14f7e: d241
 	MOVE.W	0(A3,D1.W),D2		;14f80: 34331000
 lb_14f84:
-	BTST	#6,2(A4)		;14f84: 082c00060002
+	BTST	#6,sd_ctl(A4)		;14f84: 082c00060002
 	BNE.W	lb_14f84		;14f8a: 6600fff8
-	MOVE.L	D2,68(A4)		;14f8e: 29420044
-	MOVE.L	A1,84(A4)		;14f92: 29490054
-	MOVE.L	A1,72(A4)		;14f96: 29490048
+	MOVE.L	D2,bltafwm(A4)		;14f8e: 29420044
+	MOVE.L	A1,bltdpt(A4)		;14f92: 29490054
+	MOVE.L	A1,bltcpt(A4)		;14f96: 29490048
 	LEA	lb_0b58a,A1		;14f9a: 43f90000b58a
 	MOVE.W	lb_09d56,D2		;14fa0: 343900009d56
 	CMPI.W	#$000f,D2		;14fa6: 0c42000f
@@ -38946,19 +38953,19 @@ lb_14f84:
 lb_14fb6:
 	ADD.W	D2,D2			;14fb6: d442
 	ADDA.W	0(A0,D2.W),A1		;14fb8: d2f02000
-	MOVE.W	#$ffff,116(A4)		;14fbc: 397cffff0074
-	MOVE.L	A1,76(A4)		;14fc2: 2949004c
+	MOVE.W	#$ffff,bltadat(A4)		;14fbc: 397cffff0074
+	MOVE.L	A1,bltbpt(A4)		;14fc2: 2949004c
 	MOVE.W	D3,D5			;14fc6: 3a03
 	ADD.W	D5,D5			;14fc8: da45
 	NEG.W	D5			;14fca: 4445
 	ADDI.W	#$0028,D5		;14fcc: 06450028
-	MOVE.W	D5,98(A4)		;14fd0: 39450062
-	MOVE.W	D5,96(A4)		;14fd4: 39450060
-	MOVE.W	D5,102(A4)		;14fd8: 39450066
+	MOVE.W	D5,bltbmod(A4)		;14fd0: 39450062
+	MOVE.W	D5,bltcmod(A4)		;14fd4: 39450060
+	MOVE.W	D5,bltdmod(A4)		;14fd8: 39450066
 lb_14fdc:
-	MOVE.L	#$07ca0000,64(A4)	;14fdc: 297c07ca00000040
+	MOVE.L	#$07ca0000,bltcon0(A4)	;14fdc: 297c07ca00000040
 	ORI.W	#$0100,D3		;14fe4: 00430100
-	MOVE.W	D3,88(A4)		;14fe8: 39430058
+	MOVE.W	D3,bltsize(A4)		;14fe8: 39430058
 	MOVE.W	A5,D2			;14fec: 340d
 	ADDQ.W	#1,D2			;14fee: 5242
 	DBF	D4,lb_14ef4		;14ff0: 51ccff02
@@ -39001,6 +39008,8 @@ lb_15022:
 	ADDA.W	D2,A1			;15046: d2c2
 	NOT.W	D5			;15048: 4645
 	AND.W	D5,D0			;1504a: c045
+	; could be optimized for 020+ but just before
+	; a blitter wait so probably not the bottleneck...
 	ADD.W	D0,D0			;1504c: d040
 	MOVE.W	0(A2,D0.W),D2		;1504e: 34320000
 	SWAP	D2			;15052: 4842
@@ -39008,32 +39017,35 @@ lb_15022:
 	ADD.W	D1,D1			;15056: d241
 	MOVE.W	0(A3,D1.W),D2		;15058: 34331000
 lb_1505c:
-	BTST	#6,2(A4)		;1505c: 082c00060002
+	BTST	#6,sd_ctl(A4)		;1505c: 082c00060002
 	BNE.W	lb_1505c		;15062: 6600fff8
-	MOVE.L	D2,68(A4)		;15066: 29420044
-	MOVE.L	A1,84(A4)		;1506a: 29490054
-	MOVE.L	A1,72(A4)		;1506e: 29490048
+	; blitter is available
+	MOVE.L	D2,bltafwm(A4)		;15066: 29420044
+	MOVE.L	A1,bltdpt(A4)		;1506a: 29490054
+	MOVE.L	A1,bltcpt(A4)		;1506e: 29490048
 	LEA	lb_0b58a,A1		;15072: 43f90000b58a
 	MOVE.W	lb_09d56,D2		;15078: 343900009d56
 	CMPI.W	#$000f,D2		;1507e: 0c42000f
 	BLE.W	lb_1508e		;15082: 6f00000a
-	BCHG	#4,lb_150b4+4		;15086: 08790004000150b8
+	; smc to change BLTCON value
+	BCHG	#4,lb_150b4+4		;15086: 08790004000150b8 smc
 lb_1508e:
+	; this is interesting to optimize on 020 with a ADDA.W	0(A0,D2.W*2),A1
 	ADD.W	D2,D2			;1508e: d442
 	ADDA.W	0(A0,D2.W),A1		;15090: d2f02000
-	MOVE.W	#$ffff,116(A4)		;15094: 397cffff0074
-	MOVE.L	A1,76(A4)		;1509a: 2949004c
+	MOVE.W	#$ffff,bltadat(A4)		;15094: 397cffff0074
+	MOVE.L	A1,bltbpt(A4)		;1509a: 2949004c
 	MOVE.W	D3,D5			;1509e: 3a03
 	ADD.W	D5,D5			;150a0: da45
 	NEG.W	D5			;150a2: 4445
 	ADDI.W	#$0028,D5		;150a4: 06450028
-	MOVE.W	D5,98(A4)		;150a8: 39450062
-	MOVE.W	D5,96(A4)		;150ac: 39450060
-	MOVE.W	D5,102(A4)		;150b0: 39450066
+	MOVE.W	D5,bltbmod(A4)		;150a8: 39450062
+	MOVE.W	D5,bltcmod(A4)		;150ac: 39450060
+	MOVE.W	D5,bltdmod(A4)		;150b0: 39450066
 lb_150b4:
-	MOVE.L	#$07ca0000,64(A4)	;150b4: 297c07ca00000040
+	MOVE.L	#$07ca0000,bltcon0(A4)	;150b4: 297c07ca00000040
 	ORI.W	#$0100,D3		;150bc: 00430100
-	MOVE.W	D3,88(A4)		;150c0: 39430058
+	MOVE.W	D3,bltsize(A4)		;150c0: 39430058
 	MOVE.W	A5,D2			;150c4: 340d
 	ADDQ.W	#1,D2			;150c6: 5242
 	DBF	D4,lb_15000		;150c8: 51ccff36
@@ -54696,8 +54708,7 @@ lb_20d88:
 	ORI.B	#$04,D0			;20d88: 00000004
 lb_20d8c:
 	dc.w	$0000	;20d8c
-	dc.w	$0000	;20d8e
-	SUB.W	D6,-(A4)		;20d90: 9d64
+	dc.l	lb_09d64	;20d8e
 lb_20d92:
 	dc.l	lb_0a164	;20d92
 lb_20d96:
@@ -55270,6 +55281,7 @@ lb_214aa:
 	MOVE.W	D7,lb_216f8		;214aa: 33c7000216f8
 lb_214b0:
 	MOVEA.L	lb_019d4,A0		;214b0: 2079000019d4
+	; smc
 	MOVE.L	42(A0),lb_215d2+2	;214b6: 23e8002a000215d4
 	MOVE.L	50(A0),lb_215d8+2	;214be: 23e80032000215da
 	LEA	lb_4a988,A0		;214c6: 41f90004a988

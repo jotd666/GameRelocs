@@ -18,12 +18,14 @@ derog_labels = {
 0XC070,0xc074,0xC075,0xC076,0xC077,       # sprite data
 0xc2b2,0X0c3fe,
 0xc2b3,0X0c3ff,
+0xc2b4,0X0c400,
 0x35508,0x35509,0x3550A,0x3550b,0x3550c,
 0x354D8,0x354D9,0x354DA,0x354DB,0x354DC,
 0xb58a,   # bitplane data (source B)
 0x306c4,0x30340,  # source A
 0x13a08,0x13aa8,
 0x35168,  # mounted weapons
+0x4F000,0x4f200  # sound...
 }
 
 derog_labels.update(range(0xC23E,0Xc26e,2))  # copper pointers
@@ -36,5 +38,5 @@ binlen = defines.end_address-defines.start_org
 
 asm_utils.extract_relocs(defines,derog_labels,chip_derog_labels)
 
-for s in glob.glob(defines.binary_file+".*reloc*"):
-    shutil.copy(s,r"K:\jff\AmigaHD\GAMES\F\FighterBomber\data")  # TEMP
+for s in glob.glob(defines.binary_file+".*reloc"):
+    shutil.copy(s,r"K:\jff\AmigaHD\GAMES\F\FighterBomber")  # TEMP
