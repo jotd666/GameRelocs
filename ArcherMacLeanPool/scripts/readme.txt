@@ -31,19 +31,14 @@ git add %VER%.s %VER%_ref
 
 - run findmovea.py. This generates a lot of labels that don't exist. REVIEW CAREFULLY!!!
   (a wrong reloc can crash the code, an omitted reloc will be detected by running the code
-   with memory watches)
+   with memory watches): the result doesn't overwrite the source file, but dumped in "scripts" dir
+   so you can compare & merge both.
 
 - run add_undefined_labels.py: this builds, parses link output for undefined labels and tries to insert them (run that twice). Works in-place on the original (no risk)
 
 - remove fake code zones when they contain parasite short relocs
 
 - handle short relocs (tricky as those are sometimes short sometimes not)
-  * let the linker complain about those relocs, remove if not legit (see previous)
-  * group them: there are 2 groups. 1 sole reloc at 124A (could be patched manually
-    and a group of relocs $19D4 -> $1A7E
-  * we're going to generate the unreloc table for those ones, and convert the
-    short labels to plain .W addresses (no labels). Watchpoints will be more
-	complex because now some chipmem addresses are legit, but that will do
   * use "unreloc_short_labels.py" (where link errors are pasted) to create
     unreloc table and change labels to raw addresses.
 	The parsing of link errors wasn't necessary after all, extracting the short
@@ -52,7 +47,8 @@ git add %VER%.s %VER%_ref
 - use the superb "find_entrypoints.py" script which correlates probable entries
   (following RTE/RTS/BRA/JMP) without label with possible dc.l label found in binary.
   Deduce hidden tables & pointers from that report and use bin2dcl on those parts.
-  In the end the report should be empty.
+  In the end the report should be empty. This phase saves a lot of debugging/memory watching
+  since the heuristics are generally strong, so it's all static analysis.
 
 - run add_undefined_labels.py until all is solved
   

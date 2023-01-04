@@ -314,7 +314,7 @@ def find_possible_tables(defines):
 
 def add_undefined_labels(defines,extra_make_options=[]):
     ud = re.compile("undefined symbol <lb_(\w+)>")
-    build = ['cmd', '/c', 'wmake.py','-n']+extra_make_options
+    build = ['cmd', '/c', 'wmake.py','-m',"../makefile",'-n']+extra_make_options
     p = subprocess.run(build,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,cwd="..")
 
     asmname = defines.asm_file
@@ -322,11 +322,11 @@ def add_undefined_labels(defines,extra_make_options=[]):
     if p.returncode:
         undefs = set()
         for line in p.stderr.decode().splitlines():
+            print(line.strip())
             m = ud.search(line)
             if m:
                 undefs.add(int(m.group(1),16))
 
-        print(undefs)
         af = ira_asm_tools.AsmFile(asmname)
 
         # check if the undefined labels is not a fake Bcc (ascii data)
