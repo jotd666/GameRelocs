@@ -1,4 +1,4 @@
-import os,struct,collections,re,codecs,subprocess
+import os,sys,struct,collections,re,codecs,subprocess
 import ira_asm_tools
 
 
@@ -85,6 +85,34 @@ def get_ascii(contents,start,stop,defines):
     return "".join(z)
 
 
+def find_binary_desync_and_exit(defines):
+    offset,address = find_binary_desync(defines)
+    if offset==-1:
+        print("No desync, binary files identical")
+        rc = 0
+    else:
+        print("Desync from {} at file offset: ${:x}, address: ${:x}".format(defines.binary_file+"_ref",offset,address))
+        rc = 1
+    sys.exit(rc)
+
+def find_binary_desync(defines):
+    """ helps to find the offset/address of a diff/offset shift
+    introduced by mistake when relocating the file """
+
+    with open(defines.binary_file+"_ref","rb") as f:
+        ref_contents = f.read()
+    with open(defines.binary_file,"rb") as f:
+        contents = f.read()
+
+    counter = 0
+    for offset,(a,b) in enumerate(zip(ref_contents,contents)):
+        if a == b:
+            counter = 0
+        else:
+            counter += 1
+            if counter > 2:
+                return offset,((offset+defines.start_org)//2)*2 # even
+    return -1,-1
 
 def find_hidden_relocs(defines,threshold=0x20):
     with open(defines.binary_file+"_ref","rb") as f:

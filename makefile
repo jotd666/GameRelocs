@@ -13,7 +13,7 @@ ASMBIN = vasmm68k_mot -no-opt -nosym -maxerrors=0 -I$(HDBASE)/amiga39_JFF_OS/inc
 # now if all is OK build the actual executable
 $(EXE) : $(KICKNAME).s
 	$(ASMBIN) -o $(EXE) $(KICKNAME).s
-	fc $(EXE) $(KICKNAME)_ref
+	cmd /c scripts\find_binary_desync.py
 	$(ASMEXE) -DREAL_EXE -o $(KICKNAME)_hunk $(KICKNAME).s
 	cmd /c scripts\print_relocs.py
 
