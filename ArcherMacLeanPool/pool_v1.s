@@ -4845,7 +4845,7 @@ lb_08e60:
 	CMP.W	4(A0),D2		;08e60: b4680004
 	BLE.W	lb_08e6e		;08e64: 6f000008
 	MOVE.W	4(A0),D2		;08e68: 34280004
-	LEA	(A0),A2			;08e6c: 45d0
+	LEA	(A0),A2			;08e6c: 45d0  ; false alarm: lb_445d0 is an entrypoint
 lb_08e6e:
 	LEA	14(A0),A0		;08e6e: 41e8000e
 	SUBQ.W	#1,D7			;08e72: 5347
@@ -6961,8 +6961,10 @@ lb_0ab00:
 	MOVE.W	D0,EXT_0104.W		;0ab56: 31c04a6a
 	MOVE.W	#$0001,lb_4227e		;0ab5a: 33fc00010004227e
 	RTS				;0ab62: 4e75
+lb_0ab64:
 	LEA	EXT_00cf.W,A0		;0ab64: 41f840a0
 	BRA.W	lb_0ac0e		;0ab68: 600000a4
+lb_0ab6c:
 	MOVE.W	EXT_01e9.W,D0		;0ab6c: 3038558e
 	MULS	#$003c,D0		;0ab70: c1fc003c
 	ADDI.L	#$00004064,D0		;0ab74: 068000004064
@@ -8725,224 +8727,131 @@ lb_0c278:
 	dc.w	$0000	;0c2ec
 	dc.w	$0000	;0c2ee
 lb_0c2f0:
-	DC.W	$0000			;0c2f0
-	ADDX.W	-(A2),-(A3)		;0c2f2: d74a
-	DC.W	$0000			;0c2f4
-	ADD.L	0(A6,D0.W),D4		;0c2f6: d8b60000
-	ADD.L	0(A6,D0.W),D4		;0c2fa: d8b60000
-	ADD.L	0(A6,D0.W),D4		;0c2fe: d8b60000
-	dc.w	$0000	;0c302
-	dc.w	$0000	;0c304
-	ORI.B	#$05,D1			;0c306: 00010005
-	MOVEA.L	D0,A5			;0c30a: 2a40
-	DC.W	$0005			;0c30c
-	MOVEA.L	D0,A5			;0c30e: 2a40
-	dc.w	$0000	;0c310
-	dc.w	$0000	;0c312
-	DC.W	$0005			;0c314
-	MOVEA.W	0(A0),A6		;0c316: 3c680000
-	dc.w	$0000	;0c31a
-	dc.w	$0000	;0c31c
-	dc.w	$0000	;0c31e
-	dc.w	$0000	;0c320
-	ADDX.W	-(A2),-(A3)		;0c322: d74a
-	DC.W	$0000			;0c324
-	AND.W	D6,-(A4)		;0c326: cd64
-	DC.W	$0000			;0c328
-	AND.W	D6,-(A4)		;0c32a: cd64
-	DC.W	$0000			;0c32c
-	AND.W	D6,-(A4)		;0c32e: cd64
-	ORI.B	#$01,D0			;0c330: 00000001
-	dc.w	$0000	;0c334
-	dc.w	$0000	;0c336
-	DC.W	$0005			;0c338
-	DC.W	$4700			;0c33a
-	DC.W	$0005			;0c33c
-	DC.W	$4714			;0c33e
-	ORI.B	#$54,D0			;0c340: 00000054
-	DC.W	$0005			;0c344
-	OR.L	D1,0(A0)		;0c346: 83a80000
-	BSET	#0,D0			;0c34a: 08c00000
-	MOVE.B	D0,0(A7)		;0c34e: 1f400000
-	ADDX.W	-(A2),-(A3)		;0c352: d74a
-	DC.W	$0000			;0c354
-lb_0c356:
-	ADDA.W	lb_0c356+2(PC),A0	;0c356: d0fa0000
-	ADD.L	A0,D1			;0c35a: d288
-	DC.W	$0000			;0c35c
-	ADDX.W	-(A2),-(A3)		;0c35e: d74a
-	dc.w	$0000	;0c360
-	dc.w	$0000	;0c362
-	dc.w	$0000	;0c364
-	dc.w	$0000	;0c366
-	DC.W	$0005			;0c368
-	CHK.W	-(A6),D3		;0c36a: 47a6
-	DC.W	$0005			;0c36c
-	CHK.W	0(A2,D0.W),D3		;0c36e: 47b20000
-	DC.W	$000c			;0c372
-	DC.W	$0005			;0c374
-	CHK.W	0(A0),D3		;0c376: 47a80000
-	BCLR	D4,D0			;0c37a: 0980
-	DC.W	$0000			;0c37c
-	DC.W	$1fe6			;0c37e
-	DC.W	$0000			;0c380
-	ADDX.W	-(A2),-(A3)		;0c382: d74a
-	DC.W	$0000			;0c384
-	ADD.W	D1,(A0)+		;0c386: d358
-	DC.W	$0000			;0c388
-	ADD.W	D1,(A0)+		;0c38a: d358
-	DC.W	$0000			;0c38c
-	ADD.W	D1,(A0)+		;0c38e: d358
-	dc.w	$0000	;0c390
-	dc.w	$0000	;0c392
-	dc.w	$0000	;0c394
-	dc.w	$0000	;0c396
-	DC.W	$0005			;0c398
-	ADDQ.W	#8,-(A4)		;0c39a: 5064
-	DC.W	$0005			;0c39c
-	ADDQ.W	#8,0(A0,D0.W)		;0c39e: 50700000
-	DC.W	$000c			;0c3a2
-	DC.W	$0005			;0c3a4
-	DC.W	$4b68			;0c3a6
-	DC.W	$0000			;0c3a8
-	BCHG	D4,-(A4)		;0c3aa: 0964
-	DC.W	$0000			;0c3ac
-	MOVE.L	-(A4),(A4)		;0c3ae: 28a4
-	DC.W	$0000			;0c3b0
-	ADDX.W	-(A2),-(A3)		;0c3b2: d74a
-	DC.W	$0000			;0c3b4
-	ADD.B	-(A4),D1		;0c3b6: d224
-	DC.W	$0000			;0c3b8
-	ADD.L	D0,D1			;0c3ba: d280
-	DC.W	$0000			;0c3bc
-	ADD.L	D0,D1			;0c3be: d280
-	dc.w	$0000	;0c3c0
-	dc.w	$0000	;0c3c2
-	dc.w	$0000	;0c3c4
-	dc.w	$0000	;0c3c6
-	DC.W	$0005			;0c3c8
-	ADDQ.W	#8,-(A6)		;0c3ca: 5066
-	DC.W	$0005			;0c3cc
-	ADDQ.W	#8,0(A2,D0.W)		;0c3ce: 50720000
-	DC.W	$000c			;0c3d2
-	DC.W	$0005			;0c3d4
-	DC.W	$4f28			;0c3d6
-	DC.W	$0000			;0c3d8
-	DC.W	$097e			;0c3da
-	DC.W	$0000			;0c3dc
-	MOVE.L	-(A6),(A4)		;0c3de: 28a6
-	DC.W	$0000			;0c3e0
-	ADDX.W	-(A2),-(A3)		;0c3e2: d74a
-	DC.W	$0000			;0c3e4
-	ADDX.W	-(A6),-(A1)		;0c3e6: d34e
-	DC.W	$0000			;0c3e8
-	ADDX.W	-(A6),-(A1)		;0c3ea: d34e
-	DC.W	$0000			;0c3ec
-	ADDX.W	-(A6),-(A1)		;0c3ee: d34e
-	dc.w	$0000	;0c3f0
-	dc.w	$0000	;0c3f2
-	dc.w	$0000	;0c3f4
-	dc.w	$0000	;0c3f6
-	DC.W	$0005			;0c3f8
-	SUBQ.B	#4,-(A2)		;0c3fa: 5922
-	DC.W	$0005			;0c3fc
-	SUBQ.B	#4,0(A6)		;0c3fe: 592e0000
-	DC.W	$000c			;0c402
-	DC.W	$0005			;0c404
-	SHI	0(A0)			;0c406: 52e80000
-	BCHG	D4,-(A6)		;0c40a: 0966
-	DC.W	$0000			;0c40c
-	MOVE.W	-(A2),0(A0)		;0c40e: 31620000
-	ADDX.W	-(A2),-(A3)		;0c412: d74a
-	DC.W	$0000			;0c414
-	LSL	(A6)			;0c416: e3d6
-	DC.W	$0000			;0c418
-	LSL	(A6)			;0c41a: e3d6
-	DC.W	$0000			;0c41c
-	LSL	(A6)			;0c41e: e3d6
-	dc.w	$0000	;0c420
-	dc.w	$0000	;0c422
-	ORI.B	#$01,D0			;0c424: 00000001
-	DC.W	$0005			;0c428
-	SUBQ.B	#4,-(A4)		;0c42a: 5924
-	DC.W	$0005			;0c42c
-	SUBQ.B	#4,0(A0,D0.W)		;0c42e: 59300000
-	DC.W	$000c			;0c432
-	DC.W	$0005			;0c434
-	DC.W	$7fe8			;0c436
-	DC.W	$0000			;0c438
-	BCHG	D4,0(A0)		;0c43a: 09680000
-	MOVE.W	-(A4),0(A0)		;0c43e: 31640000
-	ADDX.W	-(A2),-(A3)		;0c442: d74a
-	DC.W	$0000			;0c444
-	ADDX.W	D4,D1			;0c446: d344
-	DC.W	$0000			;0c448
-	ADDX.W	D4,D1			;0c44a: d344
-	DC.W	$0000			;0c44c
-	ADDX.W	D4,D1			;0c44e: d344
-	dc.w	$0000	;0c450
-	dc.w	$0000	;0c452
-	ORI.B	#$01,D0			;0c454: 00000001
-	DC.W	$0005			;0c458
-	SUBQ.B	#4,-(A6)		;0c45a: 5926
-	DC.W	$0005			;0c45c
-	SUBQ.B	#4,0(A2,D0.W)		;0c45e: 59320000
-	DC.W	$000c			;0c462
-	DC.W	$0005			;0c464
-	ADDQ.W	#5,0(A0)		;0c466: 5a680000
-	BCHG	D4,0(A2)		;0c46a: 096a0000
-lb_0c46e:
-	MOVE.W	-(A6),0(A0)		;0c46e: 31660000
-	ADDX.W	-(A2),-(A3)		;0c472: d74a
-	DC.W	$0000			;0c474
-	ADD.L	D0,0(A0,D0.W)		;0c476: d1b00000
-	ADD.L	D0,0(A0,D0.W)		;0c47a: d1b00000
-lb_0c47e:
-	ADD.L	D0,0(A0,D0.W)		;0c47e: d1b00000
-	ORI.B	#$00,D1			;0c482: 00010000
-	ORI.B	#$05,D1			;0c486: 00010005
-	BSR.S	lb_0c46e		;0c48a: 61e2
-	DC.W	$0005			;0c48c
-	BSR.S	lb_0c47e		;0c48e: 61ee
-	ORI.B	#$0c,D0			;0c490: 0000000c
-	DC.W	$0005			;0c494
-	ADDQ.B	#7,0(A0)		;0c496: 5e280000
-	BCHG	D4,0(A6,D0.W)		;0c49a: 09760000
-	MOVE.W	-(A2),D5		;0c49e: 3a22
-lb_0c4a0:
-	DC.W	$0000			;0c4a0
-	ADDX.W	-(A2),-(A3)		;0c4a2: d74a
-	DC.W	$0000			;0c4a4
-	ADD.W	D1,-(A2)		;0c4a6: d362
-	DC.W	$0000			;0c4a8
-	ADD.W	D1,-(A2)		;0c4aa: d362
-	DC.W	$0000			;0c4ac
-	ADD.W	D1,-(A2)		;0c4ae: d362
-lb_0c4b0:
-	dc.w	$0000	;0c4b0
-	dc.w	$0000	;0c4b2
-	ORI.B	#$01,D0			;0c4b4: 00000001
-	DC.W	$0005			;0c4b8
-	BSR.S	lb_0c4a0		;0c4ba: 61e4
-	DC.W	$0005			;0c4bc
-lb_0c4be:
-	BSR.S	lb_0c4b0		;0c4be: 61f0
-lb_0c4c0:
-	ORI.B	#$0c,D0			;0c4c0: 0000000c
-	DC.W	$0005			;0c4c4
-	BSR.S	lb_0c4b0		;0c4c6: 61e8
-	DC.W	$0000			;0c4c8
-	BCHG	D4,0(A4)		;0c4ca: 096c0000
-	MOVE.W	-(A4),D5		;0c4ce: 3a24
-	DC.W	$0000			;0c4d0
-lb_0c4d2:
-	ADDX.W	-(A2),-(A3)		;0c4d2: d74a
-	DC.W	$0000			;0c4d4
-	ADD.W	0(A4,D0.W),D0		;0c4d6: d0740000
-	MULS	0(A0,D0.W),D7		;0c4da: cff00000
-	MULS	0(A0,D0.W),D7		;0c4de: cff00000
-lb_0c4e2:
-	dc.w	$0000	;0c4e2
+	dc.l	lb_0d74a	;0c2f0
+	dc.l	lb_0d8b6	;0c2f4
+	dc.l	lb_0d8b6	;0c2f8
+	dc.l	lb_0d8b6	;0c2fc
+	dc.l	$00000	;0c300
+	dc.l	$00001	;0c304
+	dc.l	lb_52a40	;0c308
+	dc.l	lb_52a40	;0c30c
+	dc.l	$00000	;0c310
+	dc.l	lb_53c68	;0c314
+	dc.l	$00000	;0c318
+	dc.l	$00000	;0c31c
+	dc.l	lb_0d74a	;0c320
+	dc.l	lb_0cd64	;0c324
+	dc.l	lb_0cd64	;0c328
+	dc.l	lb_0cd64	;0c32c
+	dc.l	$00001	;0c330
+	dc.l	$00000	;0c334
+	dc.l	lb_54700	;0c338
+	dc.l	lb_54714	;0c33c
+	dc.l	$00054	;0c340
+	dc.l	lb_583a8	;0c344
+	dc.l	$008c0	;0c348
+	dc.l	$01f40	;0c34c
+	dc.l	lb_0d74a	;0c350
+	dc.l	lb_0d0fa	;0c354
+	dc.l	lb_0d288	;0c358
+	dc.l	lb_0d74a	;0c35c
+	dc.l	$00000	;0c360
+	dc.l	$00000	;0c364
+	dc.l	lb_547a6	;0c368
+	dc.l	lb_547b2	;0c36c
+	dc.l	$0000c	;0c370
+	dc.l	lb_547a8	;0c374
+	dc.l	$00980	;0c378
+	dc.l	$01fe6	;0c37c
+	dc.l	lb_0d74a	;0c380
+	dc.l	lb_0d358	;0c384
+	dc.l	lb_0d358	;0c388
+	dc.l	lb_0d358	;0c38c
+	dc.l	$00000	;0c390
+	dc.l	$00000	;0c394
+	dc.l	lb_55064	;0c398
+	dc.l	lb_55070	;0c39c
+	dc.l	$0000c	;0c3a0
+	dc.l	lb_54b68	;0c3a4
+	dc.l	$00964	;0c3a8
+	dc.l	$028a4	;0c3ac
+	dc.l	lb_0d74a	;0c3b0
+	dc.l	lb_0d224	;0c3b4
+	dc.l	lb_0d280	;0c3b8
+	dc.l	lb_0d280	;0c3bc
+	dc.l	$00000	;0c3c0
+	dc.l	$00000	;0c3c4
+	dc.l	lb_55066	;0c3c8
+	dc.l	lb_55072	;0c3cc
+	dc.l	$0000c	;0c3d0
+	dc.l	lb_54f28	;0c3d4
+	dc.l	$0097e	;0c3d8
+	dc.l	$028a6	;0c3dc
+	dc.l	lb_0d74a	;0c3e0
+	dc.l	lb_0d34e	;0c3e4
+	dc.l	lb_0d34e	;0c3e8
+	dc.l	lb_0d34e	;0c3ec
+	dc.l	$00000	;0c3f0
+	dc.l	$00000	;0c3f4
+	dc.l	lb_55922	;0c3f8
+	dc.l	lb_5592e	;0c3fc
+	dc.l	$0000c	;0c400
+	dc.l	lb_552e8	;0c404
+	dc.l	$00966	;0c408
+	dc.l	$03162	;0c40c
+	dc.l	lb_0d74a	;0c410
+	dc.l	lb_0e3d6	;0c414
+	dc.l	lb_0e3d6	;0c418
+	dc.l	lb_0e3d6	;0c41c
+	dc.l	$00000	;0c420
+	dc.l	$00001	;0c424
+	dc.l	lb_55924	;0c428
+	dc.l	lb_55930	;0c42c
+	dc.l	$0000c	;0c430
+	dc.l	lb_57fe8	;0c434
+	dc.l	$00968	;0c438
+	dc.l	$03164	;0c43c
+	dc.l	lb_0d74a	;0c440
+	dc.l	lb_0d344	;0c444
+	dc.l	lb_0d344	;0c448
+	dc.l	lb_0d344	;0c44c
+	dc.l	$00000	;0c450
+	dc.l	$00001	;0c454
+	dc.l	lb_55926	;0c458
+	dc.l	lb_55932	;0c45c
+	dc.l	$0000c	;0c460
+	dc.l	lb_55a68	;0c464
+	dc.l	$0096a	;0c468
+	dc.l	$03166	;0c46c
+	dc.l	lb_0d74a	;0c470
+	dc.l	lb_0d1b0	;0c474
+	dc.l	lb_0d1b0	;0c478
+	dc.l	lb_0d1b0	;0c47c
+	dc.l	$00001	;0c480
+	dc.l	$00001	;0c484
+	dc.l	lb_561e2	;0c488
+	dc.l	lb_561ee	;0c48c
+	dc.l	$0000c	;0c490
+	dc.l	lb_55e28	;0c494
+	dc.l	$00976	;0c498
+	dc.l	$03a22	;0c49c
+	dc.l	lb_0d74a	;0c4a0
+	dc.l	lb_0d362	;0c4a4
+	dc.l	lb_0d362	;0c4a8
+	dc.l	lb_0d362	;0c4ac
+	dc.l	$00000	;0c4b0
+	dc.l	$00001	;0c4b4
+	dc.l	lb_561e4	;0c4b8
+	dc.l	lb_561f0	;0c4bc
+	dc.l	$0000c	;0c4c0
+	dc.l	lb_561e8	;0c4c4
+	dc.l	$0096c	;0c4c8
+	dc.l	$03a24	;0c4cc
+	dc.l	lb_0d74a	;0c4d0
+	dc.l	lb_0d074	;0c4d4
+	dc.l	lb_0cff0	;0c4d8
+	dc.l	lb_0cff0	;0c4dc
+	dc.l	$00000	;0c4e0
 	dc.w	$0000	;0c4e4
 	dc.w	$0001			;0c4e6: 0001
 	dc.l	lb_561e6	;0c4e8
@@ -9089,138 +8998,85 @@ lb_0c650:
 	dc.l	lb_0cb50	;0c718
 	dc.l	lb_0cb50	;0c71c
 	ORI.B	#$01,D0			;0c720: 00000001
-	dc.w	$0000	;0c724
-	dc.w	$0000	;0c726
-	dc.w	$0000	;0c728
-	dc.w	$0000	;0c72a
-	dc.w	$0000	;0c72c
-	dc.w	$0000	;0c72e
-	dc.w	$0000	;0c730
-	dc.w	$0000	;0c732
-	DC.W	$0005			;0c734
-	DC.W	$b4be			;0c736
-	dc.w	$0000	;0c738
-	dc.w	$0000	;0c73a
-	dc.w	$0000	;0c73c
-	dc.w	$0000	;0c73e
-	DC.W	$0000			;0c740
-	ADDX.W	-(A2),-(A3)		;0c742: d74a
-	DC.W	$0000			;0c744
-	AND.W	D5,(A2)			;0c746: cb52
-	DC.W	$0000			;0c748
-	AND.W	D5,(A2)			;0c74a: cb52
-	DC.W	$0000			;0c74c
-	AND.W	D5,(A2)			;0c74e: cb52
-	ORI.B	#$01,D0			;0c750: 00000001
-	dc.w	$0000	;0c754
-	dc.w	$0000	;0c756
-	dc.w	$0000	;0c758
-	dc.w	$0000	;0c75a
-	dc.w	$0000	;0c75c
-	dc.w	$0000	;0c75e
-	dc.w	$0000	;0c760
-	dc.w	$0000	;0c762
-	DC.W	$0005			;0c764
-	DC.W	$b4be			;0c766
-	dc.w	$0000	;0c768
-	dc.w	$0000	;0c76a
-	dc.w	$0000	;0c76c
-	dc.w	$0000	;0c76e
-	DC.W	$0000			;0c770
-	ADDX.W	-(A2),-(A3)		;0c772: d74a
-	DC.W	$0000			;0c774
-	AND.W	D5,0(A0,D0.W)		;0c776: cb700000
-	AND.W	D5,0(A0,D0.W)		;0c77a: cb700000
-	AND.W	D5,0(A0,D0.W)		;0c77e: cb700000
-	ORI.B	#$00,D1			;0c782: 00010000
-	dc.w	$0000	;0c786
-	dc.w	$0000	;0c788
-	dc.w	$0000	;0c78a
-	dc.w	$0000	;0c78c
-	dc.w	$0000	;0c78e
-	dc.w	$0000	;0c790
-	ORI.B	#$05,D0			;0c792: 00000005
-	DC.W	$b4be			;0c796
-	dc.w	$0000	;0c798
-	dc.w	$0000	;0c79a
-	dc.w	$0000	;0c79c
-	dc.w	$0000	;0c79e
-	DC.W	$0000			;0c7a0
-	ADDX.W	-(A2),-(A3)		;0c7a2: d74a
-	DC.W	$0000			;0c7a4
-	AND.W	D5,0(A2,D0.W)		;0c7a6: cb720000
-	AND.W	D5,0(A2,D0.W)		;0c7aa: cb720000
-	AND.W	D5,0(A2,D0.W)		;0c7ae: cb720000
-	ORI.B	#$00,D1			;0c7b2: 00010000
-	dc.w	$0000	;0c7b6
-	dc.w	$0000	;0c7b8
-	dc.w	$0000	;0c7ba
-	dc.w	$0000	;0c7bc
-	dc.w	$0000	;0c7be
-	dc.w	$0000	;0c7c0
-	ORI.B	#$05,D0			;0c7c2: 00000005
-	DC.W	$b4be			;0c7c6
-	dc.w	$0000	;0c7c8
-	dc.w	$0000	;0c7ca
-	dc.w	$0000	;0c7cc
-	dc.w	$0000	;0c7ce
-	DC.W	$0000			;0c7d0
-	ADDX.W	-(A2),-(A3)		;0c7d2: d74a
-	DC.W	$0000			;0c7d4
-	AND.W	D5,0(A4,D0.W)		;0c7d6: cb740000
-	AND.W	D5,0(A4,D0.W)		;0c7da: cb740000
-	AND.W	D5,0(A4,D0.W)		;0c7de: cb740000
-	ORI.B	#$00,D1			;0c7e2: 00010000
-	dc.w	$0000	;0c7e6
-	dc.w	$0000	;0c7e8
-	dc.w	$0000	;0c7ea
-	dc.w	$0000	;0c7ec
-	dc.w	$0000	;0c7ee
-	dc.w	$0000	;0c7f0
-	ORI.B	#$05,D0			;0c7f2: 00000005
-	DC.W	$b4be			;0c7f6
-	dc.w	$0000	;0c7f8
-	dc.w	$0000	;0c7fa
-	dc.w	$0000	;0c7fc
-	dc.w	$0000	;0c7fe
-	DC.W	$0000			;0c800
-	ADDX.W	-(A2),-(A3)		;0c802: d74a
-	DC.W	$0000			;0c804
-	AND.W	D5,0(A6,D0.W)		;0c806: cb760000
-	AND.W	D5,0(A6,D0.W)		;0c80a: cb760000
-	AND.W	D5,0(A6,D0.W)		;0c80e: cb760000
-	ORI.B	#$00,D1			;0c812: 00010000
-	dc.w	$0000	;0c816
-	dc.w	$0000	;0c818
-	dc.w	$0000	;0c81a
-	dc.w	$0000	;0c81c
-	dc.w	$0000	;0c81e
-	dc.w	$0000	;0c820
-	ORI.B	#$05,D0			;0c822: 00000005
-	DC.W	$b4be			;0c826
-	dc.w	$0000	;0c828
-	dc.w	$0000	;0c82a
-	dc.w	$0000	;0c82c
-	dc.w	$0000	;0c82e
-	DC.W	$0000			;0c830
-	ADDX.W	-(A2),-(A3)		;0c832: d74a
-	DC.W	$0000			;0c834
-	AND.W	D5,EXT_0000.W		;0c836: cb780000
-	AND.W	D5,EXT_0000.W		;0c83a: cb780000
-	AND.W	D5,EXT_0000.W		;0c83e: cb780000
-	ORI.B	#$00,D1			;0c842: 00010000
-	dc.w	$0000	;0c846
-	dc.w	$0000	;0c848
-	dc.w	$0000	;0c84a
-	dc.w	$0000	;0c84c
-	dc.w	$0000	;0c84e
-	dc.w	$0000	;0c850
-	ORI.B	#$05,D0			;0c852: 00000005
-	DC.W	$b0fe			;0c856
-	dc.w	$0000	;0c858
-	dc.w	$0000	;0c85a
-	dc.w	$0000	;0c85c
-	dc.w	$0000	;0c85e
+	dc.l	$00000	;0c724
+	dc.l	$00000	;0c728
+	dc.l	$00000	;0c72c
+	dc.l	$00000	;0c730
+	dc.l	lb_5b4be	;0c734
+	dc.l	$00000	;0c738
+	dc.l	$00000	;0c73c
+	dc.l	lb_0d74a	;0c740
+	dc.l	lb_0cb52	;0c744
+	dc.l	lb_0cb52	;0c748
+	dc.l	lb_0cb52	;0c74c
+	dc.l	$00001	;0c750
+	dc.l	$00000	;0c754
+	dc.l	$00000	;0c758
+	dc.l	$00000	;0c75c
+	dc.l	$00000	;0c760
+	dc.l	lb_5b4be	;0c764
+	dc.l	$00000	;0c768
+	dc.l	$00000	;0c76c
+	dc.l	lb_0d74a	;0c770
+	dc.l	lb_0cb70	;0c774
+	dc.l	lb_0cb70	;0c778
+	dc.l	lb_0cb70	;0c77c
+	dc.l	$00001	;0c780
+	dc.l	$00000	;0c784
+	dc.l	$00000	;0c788
+	dc.l	$00000	;0c78c
+	dc.l	$00000	;0c790
+	dc.l	lb_5b4be	;0c794
+	dc.l	$00000	;0c798
+	dc.l	$00000	;0c79c
+	dc.l	lb_0d74a	;0c7a0
+	dc.l	lb_0cb72	;0c7a4
+	dc.l	lb_0cb72	;0c7a8
+	dc.l	lb_0cb72	;0c7ac
+	dc.l	$00001	;0c7b0
+	dc.l	$00000	;0c7b4
+	dc.l	$00000	;0c7b8
+	dc.l	$00000	;0c7bc
+	dc.l	$00000	;0c7c0
+	dc.l	lb_5b4be	;0c7c4
+	dc.l	$00000	;0c7c8
+	dc.l	$00000	;0c7cc
+	dc.l	lb_0d74a	;0c7d0
+	dc.l	lb_0cb74	;0c7d4
+	dc.l	lb_0cb74	;0c7d8
+	dc.l	lb_0cb74	;0c7dc
+	dc.l	$00001	;0c7e0
+	dc.l	$00000	;0c7e4
+	dc.l	$00000	;0c7e8
+	dc.l	$00000	;0c7ec
+	dc.l	$00000	;0c7f0
+	dc.l	lb_5b4be	;0c7f4
+	dc.l	$00000	;0c7f8
+	dc.l	$00000	;0c7fc
+	dc.l	lb_0d74a	;0c800
+	dc.l	lb_0cb76	;0c804
+	dc.l	lb_0cb76	;0c808
+	dc.l	lb_0cb76	;0c80c
+	dc.l	$00001	;0c810
+	dc.l	$00000	;0c814
+	dc.l	$00000	;0c818
+	dc.l	$00000	;0c81c
+	dc.l	$00000	;0c820
+	dc.l	lb_5b4be	;0c824
+	dc.l	$00000	;0c828
+	dc.l	$00000	;0c82c
+	dc.l	lb_0d74a	;0c830
+	dc.l	lb_0cb78	;0c834
+	dc.l	lb_0cb78	;0c838
+	dc.l	lb_0cb78	;0c83c
+	dc.l	$00001	;0c840
+	dc.l	$00000	;0c844
+	dc.l	$00000	;0c848
+	dc.l	$00000	;0c84c
+	dc.l	$00000	;0c850
+	dc.l	lb_5b0fe	;0c854
+	dc.l	$00000	;0c858
+	dc.l	$00000	;0c85c
 lb_0c860:
 	MOVEM.L	D0-D7/A0-A6,-(A7)	;0c860: 48e7fffe
 	MOVE.W	EXT_0179.W,D0		;0c864: 303853e2
@@ -9455,16 +9311,22 @@ lb_0cb4e:
 	RTS				;0cb4e: 4e75
 lb_0cb50:
 	RTS				;0cb50: 4e75
+lb_0cb52:
 	MOVE.W	#$0002,EXT_023e.W	;0cb52: 31fc0002567e
 	CLR.W	EXT_0236.W		;0cb58: 4278566e
 	CLR.W	EXT_0237.W		;0cb5c: 42785670
 	MOVE.W	#$0001,EXT_0270.W	;0cb60: 31fc00015a8e
 	MOVE.W	#$0001,lb_4227e		;0cb66: 33fc00010004227e
 	RTS				;0cb6e: 4e75
+lb_0cb70:
 	RTS				;0cb70: 4e75
+lb_0cb72:
 	RTS				;0cb72: 4e75
+lb_0cb74:
 	RTS				;0cb74: 4e75
+lb_0cb76:
 	RTS				;0cb76: 4e75
+lb_0cb78:
 	MOVE.W	#$0001,EXT_023e.W	;0cb78: 31fc0001567e
 	CLR.W	EXT_0238.W		;0cb7e: 42785672
 	CLR.W	EXT_0236.W		;0cb82: 4278566e
@@ -9618,6 +9480,7 @@ lb_0cd60:
 	DC.W	$15e3			;0cd60
 lb_0cd62:
 	DC.W	$0002			;0cd62
+lb_0cd64:
 	MOVE.W	EXT_018d.W,D0		;0cd64: 30385412
 	ADDI.W	#$0036,D0		;0cd68: 06400036
 	MOVE.W	D0,EXT_02b6.W		;0cd6c: 31c05b92
@@ -9889,6 +9752,7 @@ lb_0d0ec:
 	CLR.W	lb_0cf9a+2		;0d0ec: 42790000cf9c
 	CLR.W	lb_0cf9e		;0d0f2: 42790000cf9e
 	RTS				;0d0f8: 4e75
+lb_0d0fa:
 	JSR	lb_412b8		;0d0fa: 4eb9000412b8
 lb_0d100:
 	MOVE.W	EXT_02b7.W,D0		;0d100: 30385b94
@@ -11338,22 +11202,15 @@ lb_0e4f0:
 lb_0e4fa:
 	RTS				;0e4fa: 4e75
 lb_0e4fc:
-	DC.W	$0000			;0e4fc
-	ADDX.W	-(A2),-(A3)		;0e4fe: d74a
-	DC.W	$0000			;0e500
-	ADD.W	(A4)+,D4		;0e502: d85c
-	DC.W	$0000			;0e504
-	ADD.B	0(A4),D4		;0e506: d82c0000
-	ADDX.W	-(A2),-(A3)		;0e50a: d74a
+	dc.l	lb_0d74a	;0e4fc
+	dc.l	lb_0d85c	;0e500
+	dc.l	lb_0d82c	;0e504
+	dc.l	lb_0d74a	;0e508
 lb_0e50c:
-	DC.W	$0000			;0e50c
-	DC.W	$a85e			;0e50e
-	DC.W	$0000			;0e510
-	DC.W	$ab64			;0e512
-	DC.W	$0000			;0e514
-	DC.W	$a890			;0e516
-	DC.W	$0000			;0e518
-	DC.W	$ab6c			;0e51a
+	dc.l	lb_0a85e	;0e50c
+	dc.l	lb_0ab64	;0e510
+	dc.l	lb_0a890	;0e514
+	dc.l	lb_0ab6c	;0e518
 lb_0e51c:
 	ORI.B	#$04,D0			;0e51c: 00000004
 	DC.W	$0008			;0e520
@@ -12541,20 +12398,13 @@ lb_0f706:
 	MOVE.W	#$0000,D7		;0f70a: 3e3c0000
 	JMP	lb_0f738		;0f70e: 4ef90000f738
 lb_0f714:
-	DC.W	$0000			;0f714
-	DC.W	$f760			;0f716
-	DC.W	$0000			;0f718
-	DC.W	$f884			;0f71a
-	DC.W	$0000			;0f71c
-	DC.W	$f924			;0f71e
-	DC.W	$0000			;0f720
-	DC.W	$f88e			;0f722
-	DC.W	$0000			;0f724
-	DC.W	$f898			;0f726
-	DC.W	$0000			;0f728
-	DC.W	$f92e			;0f72a
-	DC.W	$0000			;0f72c
-	DC.W	$f8a2			;0f72e
+	dc.l	lb_0f760	;0f714
+	dc.l	lb_0f884	;0f718
+	dc.l	lb_0f924	;0f71c
+	dc.l	lb_0f88e	;0f720
+	dc.l	lb_0f898	;0f724
+	dc.l	lb_0f92e	;0f728
+	dc.l	lb_0f8a2	;0f72c
 lb_0f730:
 	LEA	EXT_012b.W,A0		;0f730: 41f84f68
 	MOVE.W	#$000f,D7		;0f734: 3e3c000f
@@ -12671,12 +12521,16 @@ lb_0f86e:
 	TST.L	D0			;0f880: 4a80
 lb_0f882:
 	RTS				;0f882: 4e75
+lb_0f884:
 	LEA	lb_0f8ac,A2		;0f884: 45f90000f8ac
 	BRA.W	lb_0f934		;0f88a: 600000a8
+lb_0f88e:
 	LEA	lb_0f8c0,A2		;0f88e: 45f90000f8c0
 	BRA.W	lb_0f934		;0f894: 6000009e
+lb_0f898:
 	LEA	lb_0f8d4,A2		;0f898: 45f90000f8d4
 	BRA.W	lb_0f934		;0f89e: 60000094
+lb_0f8a2:
 	LEA	lb_0f8e6+2,A2		;0f8a2: 45f90000f8e8
 	BRA.W	lb_0f934		;0f8a8: 6000008a
 lb_0f8ac:
@@ -12741,8 +12595,10 @@ lb_0f90e:
 	CHK.W	D4,D2			;0f91e: 4584
 	dc.w	$0000	;0f920
 	dc.w	$0000	;0f922
+lb_0f924:
 	LEA	lb_0f8fc,A2		;0f924: 45f90000f8fc
 	BRA.W	lb_0f934		;0f92a: 60000008
+lb_0f92e:
 	LEA	lb_0f90e+2,A2		;0f92e: 45f90000f910
 lb_0f934:
 	MOVE.L	(A2)+,D0		;0f934: 201a
@@ -12941,9 +12797,11 @@ lb_0fb96:
 	SWAP	D0			;0fbc0: 4840
 	MOVE.W	D0,6(A0)		;0fbc2: 31400006
 	RTS				;0fbc6: 4e75
+lb_0fbc8:
 	CLR.W	16(A0)			;0fbc8: 42680010
 	MOVE.L	(A0),20(A0)		;0fbcc: 21500014
 	RTS				;0fbd0: 4e75
+lb_0fbd2:
 	MOVE.W	#$ffff,14(A0)		;0fbd2: 317cffff000e
 	ADDQ.W	#1,EXT_01f8.W		;0fbd8: 527855b4
 	MOVE.W	#$0025,D1		;0fbdc: 323c0025
@@ -13272,7 +13130,9 @@ lb_0ffec:
 	SWAP	D0			;0fffc: 4840
 lb_0fffe:
 	CMPI.W	#$0100,D0		;0fffe: 0c400100
+lb_10002:
 	BCS.W	lb_1000a		;10002: 65000006
+lb_10006:
 	LSR.W	#8,D0			;10006: e048
 	ADDQ.W	#8,D3			;10008: 5043
 lb_1000a:
@@ -15597,1372 +15457,837 @@ lb_122e4:
 	JSR	lb_2dada		;12304: 4eb90002dada
 	BRA.W	lb_11ad8		;1230a: 6000f7cc
 lb_1230e:
-	DC.W	$0001			;1230e
-	MOVE.L	(A6),(A2)		;12310: 2496
-	DC.W	$0001			;12312
-	MOVEA.L	A6,A3			;12314: 264e
-	DC.W	$0001			;12316
-	MOVE.L	-(A6),1(A4,D0.W)	;12318: 29a60001
-	DC.W	$2cfe			;1231c
-	DC.W	$0001			;1231e
-	MOVE.L	(A2)+,D7		;12320: 2e1a
-	DC.W	$0001			;12322
-	MOVE.L	1(A6,D0.W),-(A7)	;12324: 2f360001
-	MOVE.W	1(A6),(A0)+		;12328: 30ee0001
-	MOVE.W	-(A6),(A1)		;1232c: 32a6
-	DC.W	$0001			;1232e
-	MOVEA.W	(A6)+,A2		;12330: 345e
-	DC.W	$0001			;12332
-	MOVEA.W	A6,A4			;12334: 384e
-	DC.W	$0001			;12336
-	MOVE.W	1(A2),14826(A4)		;12338: 396a000139ea
-	DC.W	$0001			;1233e
-lb_12340:
-	MOVE.W	-(A2),1(A5,D0.W)	;12340: 3ba20001
-	MOVE.W	A2,(A6)			;12344: 3c8a
-	DC.W	$0001			;12346
-	DC.W	$3dda			;12348
-	DC.W	$0001			;1234a
-	MOVE.W	A6,(A7)			;1234c: 3e8e
-	DC.W	$0001			;1234e
-	MOVE.W	A6,(A7)			;12350: 3e8e
-	DC.W	$0001			;12352
-	MOVE.W	A6,(A7)			;12354: 3e8e
-	DC.W	$0001			;12356
-	MOVE.W	A6,(A7)			;12358: 3e8e
-	DC.W	$0001			;1235a
-	MOVE.W	A6,(A7)			;1235c: 3e8e
-	DC.W	$0001			;1235e
-	MOVE.W	A6,(A7)			;12360: 3e8e
-	DC.W	$0001			;12362
-	MOVE	1(A2,D0.W),CCR		;12364: 44f20001
-	DC.W	$4712			;12368
-	DC.W	$0001			;1236a
-	DC.W	$47c6			;1236c
-	DC.W	$0001			;1236e
-lb_12370:
-	PEA	lb_12370+3(PC)		;12370: 487a0001
-	TST.B	1(A2,D0.W)		;12374: 4a320001
-	CHK.W	D2,D5			;12378: 4b82
-	DC.W	$0001			;1237a
-	DC.W	$4d06			;1237c
-	DC.W	$0001			;1237e
-	DC.W	$51ca			;12380
-	DC.W	$0001			;12382
-	SUBQ.B	#1,(A2)+		;12384: 531a
-	DC.W	$0001			;12386
-	SUBQ.B	#1,1(A2,D0.W)		;12388: 53320001
-	ADDQ.L	#2,D2			;1238c: 5482
-	DC.W	$0001			;1238e
-	SUBQ.L	#2,(A6)+		;12390: 559e
-	DC.W	$0001			;12392
-	SEQ	1(A2,D0.W)		;12394: 57f20001
-lb_12398:
-	SVC	(A2)+			;12398: 58da
-	DC.W	$0001			;1239a
-	SVS	1(A6,D0.W)		;1239c: 59f60001
-	SUBQ.W	#5,D6			;123a0: 5b46
-	DC.W	$0001			;123a2
-	DC.W	$5cca			;123a4
-	DC.W	$0001			;123a6
-	ADDQ.L	#7,D2			;123a8: 5e82
-	DC.W	$0001			;123aa
-	BRA.S	lb_1241c		;123ac: 606e
-	DC.W	$0001			;123ae
-	BHI.S	lb_12340		;123b0: 628e
-	DC.W	$0001			;123b2
-	BCC.S	lb_12398		;123b4: 64e2
-	DC.W	$0001			;123b6
-	BCS.S	lb_123e8		;123b8: 652e
-	DC.W	$0001			;123ba
-	BVC.S	lb_12410		;123bc: 6852
-	DC.W	$0000			;123be
-	OR.B	D2,D0			;123c0: 8002
+	dc.l	lb_12496	;1230e
+	dc.l	lb_1264e	;12312
+	dc.l	lb_129a6	;12316
+	dc.l	lb_12cfe	;1231a
+	dc.l	lb_12e1a	;1231e
+	dc.l	lb_12f36	;12322
+	dc.l	lb_130ee	;12326
+	dc.l	lb_132a6	;1232a
+	dc.l	lb_1345e	;1232e
+	dc.l	lb_1384e	;12332
+	dc.l	lb_1396a	;12336
+	dc.l	lb_139ea	;1233a
+	dc.l	lb_13ba2	;1233e
+	dc.l	lb_13c8a	;12342
+	dc.l	lb_13dda	;12346
+	dc.l	lb_13e8e	;1234a
+	dc.l	lb_13e8e	;1234e
+	dc.l	lb_13e8e	;12352
+	dc.l	lb_13e8e	;12356
+	dc.l	lb_13e8e	;1235a
+	dc.l	lb_13e8e	;1235e
+	dc.l	lb_144f2	;12362
+	dc.l	lb_14712	;12366
+	dc.l	lb_147c6	;1236a
+	dc.l	lb_1487a	;1236e
+	dc.l	lb_14a32	;12372
+	dc.l	lb_14b82	;12376
+	dc.l	lb_14d06	;1237a
+	dc.l	lb_151ca	;1237e
+	dc.l	lb_1531a	;12382
+	dc.l	lb_15332	;12386
+	dc.l	lb_15482	;1238a
+	dc.l	lb_1559e	;1238e
+	dc.l	lb_157f2	;12392
+	dc.l	lb_158da	;12396
+	dc.l	lb_159f6	;1239a
+	dc.l	lb_15b46	;1239e
+	dc.l	lb_15cca	;123a2
+	dc.l	lb_15e82	;123a6
+	dc.l	lb_1606e	;123aa
+	dc.l	lb_1628e	;123ae
+	dc.l	lb_164e2	;123b2
+	dc.l	lb_1652e	;123b6
+	dc.l	lb_16852	;123ba
+	dc.l	$8002	;123be
 lb_123c2:
-	dc.w	$0000	;123c2
-	dc.w	$0000	;123c4
-	DC.W	$0002			;123c6
-	ANDI.W	#$0002,(A7)		;123c8: 02570002
-	ANDI.W	#$0002,1109(A6)		;123cc: 026e00020455
-	DC.W	$0002			;123d2
-	SUBI.W	#$0002,-(A7)		;123d4: 04670002
-	DC.W	$047f			;123d8
-	DC.W	$0002			;123da
-	SUBI.L	#$000204ac,(A1)+	;123dc: 0499000204ac
-	DC.W	$0002			;123e2
-	BTST	D2,2(A4,D0.W)		;123e4: 05340002
-lb_123e8:
-	BTST	D2,2(A4,D0.W)		;123e8: 05340002
-	BCHG	D2,D2			;123ec: 0542
-	DC.W	$0002			;123ee
-	DC.W	$04f1			;123f0
-	DC.W	$0002			;123f2
-	BTST	D2,2(A4,D0.W)		;123f4: 05340002
-	SUBI.L	#$000204e2,2(A6,D0.W)	;123f8: 04b6000204e20002
-	DC.W	$02d1			;12400
-	DC.W	$0002			;12402
-	DC.W	$02e8			;12404
-	DC.W	$0002			;12406
-	MOVEP.W	2(A0),D1		;12408: 03080002
-	BTST	D1,(A5)+		;1240c: 031d
-	DC.W	$0002			;1240e
-lb_12410:
-	BTST	D1,2(A2,D0.W)		;12410: 03320002
-	BTST	D1,2(A2,D0.W)		;12414: 03320002
-	DC.W	$027a			;12418
-	DC.W	$0002			;1241a
-lb_1241c:
-	BSET	D3,(A1)			;1241c: 07d1
-	DC.W	$0002			;1241e
-	BSET	D3,(A1)			;12420: 07d1
-	DC.W	$0002			;12422
-	BSET	D3,1(A1,D0.W)		;12424: 07f10001
-	DC.W	$fae8			;12428
-	DC.W	$0001			;1242a
-	DC.W	$fb50			;1242c
-	DC.W	$0001			;1242e
-	DC.W	$fb69			;12430
-	DC.W	$0001			;12432
-	DC.W	$fb82			;12434
-	DC.W	$0001			;12436
-	DC.W	$fba1			;12438
-	DC.W	$0001			;1243a
-	DC.W	$fbb4			;1243c
-	DC.W	$0001			;1243e
-	DC.W	$fbce			;12440
-	DC.W	$0001			;12442
-	DC.W	$fba1			;12444
-	DC.W	$0001			;12446
-	DC.W	$fbe8			;12448
-	DC.W	$0001			;1244a
-	DC.W	$fbe8			;1244c
-	DC.W	$0001			;1244e
-	DC.W	$fbe8			;12450
-	DC.W	$0001			;12452
-	DC.W	$fbe8			;12454
-	DC.W	$0001			;12456
-	DC.W	$fbe8			;12458
-	DC.W	$0001			;1245a
-	DC.W	$fbe8			;1245c
-	DC.W	$0001			;1245e
-	DC.W	$fbe8			;12460
-	DC.W	$0001			;12462
-	DC.W	$fbe8			;12464
-	dc.w	$0000	;12466
-	dc.w	$0000	;12468
-	DC.W	$0002			;1246a
-	BCHG	D0,(A2)+		;1246c: 015a
-	DC.W	$0002			;1246e
-	DC.W	$04cb			;12470
-	dc.w	$0000	;12472
-	dc.w	$0000	;12474
-	dc.w	$0000	;12476
-	dc.w	$0000	;12478
-	dc.w	$0000	;1247a
-	dc.w	$0000	;1247c
-	dc.w	$0000	;1247e
-	dc.w	$0000	;12480
-	ORI.B	#$14,108(A0,D0.W)	;12482: 00300014006c
-	DC.W	$00e0			;12488
-	ORI.B	#$01,D3			;1248a: 00030001
-	DC.W	$0008			;1248e
-	ORI.B	#$01,D1			;12490: 00010001
-	DC.W	$ffff			;12494
+	dc.l	$00000	;123c2
+	dc.l	lb_20256+1	;123c6
+	dc.l	lb_2026e	;123ca
+	dc.l	lb_20454+1	;123ce
+	dc.l	lb_20466+1	;123d2
+	dc.l	lb_2047e+1	;123d6
+	dc.l	lb_20498+1	;123da
+	dc.l	lb_204ac	;123de
+	dc.l	lb_20534	;123e2
+	dc.l	lb_20534	;123e6
+	dc.l	lb_20542	;123ea
+	dc.l	lb_204f0+1	;123ee
+	dc.l	lb_20534	;123f2
+	dc.l	lb_204b6	;123f6
+	dc.l	lb_204e2	;123fa
+	dc.l	lb_202d0+1	;123fe
+	dc.l	lb_202e8	;12402
+	dc.l	lb_20308	;12406
+	dc.l	lb_2031c+1	;1240a
+	dc.l	lb_20332	;1240e
+	dc.l	lb_20332	;12412
+	dc.l	lb_2027a	;12416
+	dc.l	lb_207d0+1	;1241a
+	dc.l	lb_207d0+1	;1241e
+	dc.l	lb_207f0+1	;12422
+	dc.l	lb_1fae8	;12426
+	dc.l	lb_1fb50	;1242a
+	dc.l	lb_1fb68+1	;1242e
+	dc.l	lb_1fb82	;12432
+	dc.l	lb_1fba0+1	;12436
+	dc.l	lb_1fbb4	;1243a
+	dc.l	lb_1fbce	;1243e
+	dc.l	lb_1fba0+1	;12442
+	dc.l	lb_1fbe8	;12446
+	dc.l	lb_1fbe8	;1244a
+	dc.l	lb_1fbe8	;1244e
+	dc.l	lb_1fbe8	;12452
+	dc.l	lb_1fbe8	;12456
+	dc.l	lb_1fbe8	;1245a
+	dc.l	lb_1fbe8	;1245e
+	dc.l	lb_1fbe8	;12462
+	dc.l	$00000	;12466
+	dc.l	lb_2015a	;1246a
+	dc.l	lb_204ca+1	;1246e
+	dc.l	$00000	;12472
+	dc.l	$00000	;12476
+	dc.l	$00000	;1247a
+	dc.l	$00000	;1247e
+	dc.l	$300014	;12482
+	dc.l	$6c00e0	;12486
+	dc.l	$30001	;1248a
+	dc.l	$80001	;1248e
+	dc.l	$1fffe+1	;12492
 lb_12496:
-	ORI.B	#$cd,D2			;12496: 000200cd
-	ORI.B	#$0a,D0			;1249a: 0000000a
-	dc.w	$0000	;1249e
-	dc.w	$0000	;124a0
-	DC.W	$0000			;124a2
-	DC.W	$013f			;124a4
-	dc.w	$0000	;124a6
-	dc.w	$0000	;124a8
-	dc.w	$0000	;124aa
-	dc.w	$0000	;124ac
-	DC.W	$0001			;124ae
-	MOVE.L	A2,(A2)+		;124b0: 24ca
-	DC.W	$0001			;124b2
-	MOVE.L	D2,D3			;124b4: 2602
-	dc.w	$0000	;124b6
-	dc.w	$0000	;124b8
-	dc.w	$0000	;124ba
-	dc.w	$0000	;124bc
-	DC.W	$0001			;124be
-	DC.W	$997a			;124c0
-	DC.W	$0001			;124c2
-	MOVEQ	#-64,D1			;124c4: 72c0
-	dc.w	$0000	;124c6
-	dc.w	$0000	;124c8
-	ORI.B	#$e3,D2			;124ca: 000200e3
-	ORI.B	#$15,D0			;124ce: 00000015
-	dc.w	$0000	;124d2
-	dc.w	$0000	;124d4
-	DC.W	$0000			;124d6
-	DC.W	$013f			;124d8
-	dc.w	$0000	;124da
-	dc.w	$0000	;124dc
-	dc.w	$0000	;124de
-	dc.w	$0000	;124e0
-	DC.W	$0001			;124e2
-	DC.W	$24fe			;124e4
-	DC.W	$0001			;124e6
-	MOVE.L	(A6),(A2)		;124e8: 2496
-	dc.w	$0000	;124ea
-	dc.w	$0000	;124ec
-	dc.w	$0000	;124ee
-	dc.w	$0000	;124f0
-	DC.W	$0001			;124f2
-	SUBX.L	-(A6),-(A4)		;124f4: 998e
-	DC.W	$0001			;124f6
-	MOVEQ	#-64,D1			;124f8: 72c0
-	dc.w	$0000	;124fa
-	dc.w	$0000	;124fc
-	ORI.B	#$f9,D2			;124fe: 000200f9
-	ORI.B	#$20,D0			;12502: 00000020
-	dc.w	$0000	;12506
-	dc.w	$0000	;12508
-	DC.W	$0000			;1250a
-	DC.W	$013f			;1250c
-	dc.w	$0000	;1250e
-	dc.w	$0000	;12510
-	dc.w	$0000	;12512
-	dc.w	$0000	;12514
-	DC.W	$0001			;12516
-	MOVE.L	1(A2,D0.W),-(A2)	;12518: 25320001
-	MOVE.L	A2,(A2)+		;1251c: 24ca
-	dc.w	$0000	;1251e
-	dc.w	$0000	;12520
-	dc.w	$0000	;12522
-	dc.w	$0000	;12524
-	DC.W	$0001			;12526
-	DC.W	$88fa			;12528
-	DC.W	$0001			;1252a
-	MOVEQ	#-64,D1			;1252c: 72c0
-	dc.w	$0000	;1252e
-	dc.w	$0000	;12530
-	DC.W	$0002			;12532
-	MOVEP.W	0(A6),D0		;12534: 010e0000
-	ORI.B	#$00,0(A3)		;12538: 002b00000000
-	DC.W	$0000			;1253e
-	DC.W	$013f			;12540
-	dc.w	$0000	;12542
-	dc.w	$0000	;12544
-	dc.w	$0000	;12546
-	dc.w	$0000	;12548
-	DC.W	$0001			;1254a
-	MOVE.L	-(A6),1(A2)		;1254c: 25660001
-	DC.W	$24fe			;12550
-	dc.w	$0000	;12552
-	dc.w	$0000	;12554
-	dc.w	$0000	;12556
-	dc.w	$0000	;12558
-	DC.W	$0001			;1255a
-	DIVU	#$0001,D3		;1255c: 86fc0001
-	MOVEQ	#-64,D1			;12560: 72c0
-	dc.w	$0000	;12562
-	dc.w	$0000	;12564
-	DC.W	$0002			;12566
-	BTST	D0,-(A3)		;12568: 0123
-	ORI.B	#$36,D0			;1256a: 00000036
-	dc.w	$0000	;1256e
-	dc.w	$0000	;12570
-	DC.W	$0000			;12572
-	DC.W	$013f			;12574
-	dc.w	$0000	;12576
-	dc.w	$0000	;12578
-	dc.w	$0000	;1257a
-	dc.w	$0000	;1257c
-	DC.W	$0001			;1257e
-	MOVE.L	(A2)+,1(A2,D0.W)	;12580: 259a0001
-	MOVE.L	0(A2,D0.W),-(A2)	;12584: 25320000
-	dc.w	$0000	;12588
-	dc.w	$0000	;1258a
-	ORI.B	#$01,D0			;1258c: 00000001
-	SBCD	D6,D3			;12590: 8706
-	DC.W	$0001			;12592
-	MOVEQ	#-64,D1			;12594: 72c0
-	dc.w	$0000	;12596
-	dc.w	$0000	;12598
-	DC.W	$0002			;1259a
-	BTST	D0,0(A7,D0.W)		;1259c: 01370000
-	ORI.W	#$0000,D1		;125a0: 00410000
-	dc.w	$0000	;125a4
-	dc.w	$0000	;125a6
-	DC.W	$013f			;125a8
-	dc.w	$0000	;125aa
-	dc.w	$0000	;125ac
-	dc.w	$0000	;125ae
-	dc.w	$0000	;125b0
-	DC.W	$0001			;125b2
-	DC.W	$25ce			;125b4
-	DC.W	$0001			;125b6
-	MOVE.L	-(A6),0(A2)		;125b8: 25660000
-	dc.w	$0000	;125bc
-	dc.w	$0000	;125be
-	ORI.B	#$01,D0			;125c0: 00000001
-	DIVU	-(A6),D4		;125c4: 88e6
-	DC.W	$0001			;125c6
-	MOVEQ	#-64,D1			;125c8: 72c0
-	dc.w	$0000	;125ca
-	dc.w	$0000	;125cc
-	DC.W	$0002			;125ce
-	MOVEP.L	0(A2),D0		;125d0: 014a0000
-	DC.W	$004c			;125d4
-	dc.w	$0000	;125d6
-	dc.w	$0000	;125d8
-	DC.W	$0000			;125da
-	DC.W	$013f			;125dc
-	dc.w	$0000	;125de
-	dc.w	$0000	;125e0
-	dc.w	$0000	;125e2
-	dc.w	$0000	;125e4
-	DC.W	$0001			;125e6
-	MOVE.L	D2,D3			;125e8: 2602
-	DC.W	$0001			;125ea
-	MOVE.L	(A2)+,0(A2,D0.W)	;125ec: 259a0000
-	dc.w	$0000	;125f0
-	dc.w	$0000	;125f2
-	ORI.B	#$01,D0			;125f4: 00000001
-	DIVU	1(A0,D0.W),D4		;125f8: 88f00001
-	MOVEQ	#-64,D1			;125fc: 72c0
-	dc.w	$0000	;125fe
-	dc.w	$0000	;12600
-	DC.W	$0002			;12602
-	ANDI.W	#$0000,D6		;12604: 02460000
-	ORI.W	#$0000,-(A1)		;12608: 00610000
-	dc.w	$0000	;1260c
-	dc.w	$0000	;1260e
-	DC.W	$013f			;12610
-	dc.w	$0000	;12612
-	dc.w	$0000	;12614
-	dc.w	$0000	;12616
-	dc.w	$0000	;12618
-	DC.W	$0001			;1261a
-	MOVE.L	(A6),(A2)		;1261c: 2496
-	DC.W	$0001			;1261e
-	DC.W	$25ce			;12620
-	dc.w	$0000	;12622
-	dc.w	$0000	;12624
-	dc.w	$0000	;12626
-	dc.w	$0000	;12628
-	DC.W	$0001			;1262a
-	MOVEQ	#-104,D1		;1262c: 7298
-	DC.W	$0001			;1262e
-	MOVEQ	#-64,D1			;12630: 72c0
-	dc.w	$0000	;12632
-	dc.w	$0000	;12634
-	DC.W	$0000			;12636
-	OR.B	D2,D0			;12638: 8002
-	ORI.B	#$06,(A0)		;1263a: 00100006
-	ORI.L	#$011f0002,D0		;1263e: 0080011f0002
-	ORI.B	#$08,D1			;12644: 00010008
-	ORI.B	#$01,D0			;12648: 00000001
-	DC.W	$ffff			;1264c
+	dc.l	lb_200cc+1	;12496
+	dc.l	$0000a	;1249a
+	dc.l	$00000	;1249e
+	dc.l	$0013f	;124a2
+	dc.l	$00000	;124a6
+	dc.l	$00000	;124aa
+	dc.l	lb_124ca	;124ae
+	dc.l	lb_12602	;124b2
+	dc.l	$00000	;124b6
+	dc.l	$00000	;124ba
+	dc.l	lb_1997a	;124be
+	dc.l	lb_172c0	;124c2
+	dc.l	$00000	;124c6
+lb_124ca:
+	dc.l	lb_200e2+1	;124ca
+	dc.l	$00015	;124ce
+	dc.l	$00000	;124d2
+	dc.l	$0013f	;124d6
+	dc.l	$00000	;124da
+	dc.l	$00000	;124de
+	dc.l	lb_124fe	;124e2
+	dc.l	lb_12496	;124e6
+	dc.l	$00000	;124ea
+	dc.l	$00000	;124ee
+	dc.l	lb_1998e	;124f2
+	dc.l	lb_172c0	;124f6
+	dc.l	$00000	;124fa
+lb_124fe:
+	dc.l	lb_200f8+1	;124fe
+	dc.l	$00020	;12502
+	dc.l	$00000	;12506
+	dc.l	$0013f	;1250a
+	dc.l	$00000	;1250e
+	dc.l	$00000	;12512
+	dc.l	lb_12532	;12516
+	dc.l	lb_124ca	;1251a
+	dc.l	$00000	;1251e
+	dc.l	$00000	;12522
+	dc.l	lb_188fa	;12526
+	dc.l	lb_172c0	;1252a
+	dc.l	$00000	;1252e
+lb_12532:
+	dc.l	lb_2010e	;12532
+	dc.l	$0002b	;12536
+	dc.l	$00000	;1253a
+	dc.l	$0013f	;1253e
+	dc.l	$00000	;12542
+	dc.l	$00000	;12546
+	dc.l	lb_12566	;1254a
+	dc.l	lb_124fe	;1254e
+	dc.l	$00000	;12552
+	dc.l	$00000	;12556
+	dc.l	lb_186fc	;1255a
+	dc.l	lb_172c0	;1255e
+	dc.l	$00000	;12562
+lb_12566:
+	dc.l	lb_20122+1	;12566
+	dc.l	$00036	;1256a
+	dc.l	$00000	;1256e
+	dc.l	$0013f	;12572
+	dc.l	$00000	;12576
+	dc.l	$00000	;1257a
+	dc.l	lb_1259a	;1257e
+	dc.l	lb_12532	;12582
+	dc.l	$00000	;12586
+	dc.l	$00000	;1258a
+	dc.l	lb_18706	;1258e
+	dc.l	lb_172c0	;12592
+	dc.l	$00000	;12596
+lb_1259a:
+	dc.l	lb_20136+1	;1259a
+	dc.l	$00041	;1259e
+	dc.l	$00000	;125a2
+	dc.l	$0013f	;125a6
+	dc.l	$00000	;125aa
+	dc.l	$00000	;125ae
+	dc.l	lb_125ce	;125b2
+	dc.l	lb_12566	;125b6
+	dc.l	$00000	;125ba
+	dc.l	$00000	;125be
+	dc.l	lb_188e6	;125c2
+	dc.l	lb_172c0	;125c6
+	dc.l	$00000	;125ca
+lb_125ce:
+	dc.l	lb_2014a	;125ce
+	dc.l	$0004c	;125d2
+	dc.l	$00000	;125d6
+	dc.l	$0013f	;125da
+	dc.l	$00000	;125de
+	dc.l	$00000	;125e2
+	dc.l	lb_12602	;125e6
+	dc.l	lb_1259a	;125ea
+	dc.l	$00000	;125ee
+	dc.l	$00000	;125f2
+	dc.l	lb_188f0	;125f6
+	dc.l	lb_172c0	;125fa
+	dc.l	$00000	;125fe
+lb_12602:
+	dc.l	lb_20246	;12602
+	dc.l	$00061	;12606
+	dc.l	$00000	;1260a
+	dc.l	$0013f	;1260e
+	dc.l	$00000	;12612
+	dc.l	$00000	;12616
+	dc.l	lb_12496	;1261a
+	dc.l	lb_125ce	;1261e
+	dc.l	$00000	;12622
+	dc.l	$00000	;12626
+	dc.l	lb_17298	;1262a
+	dc.l	lb_172c0	;1262e
+	dc.l	$00000	;12632
+	dc.l	$8002	;12636
+	dc.l	$100006	;1263a
+	dc.l	$80011f	;1263e
+	dc.l	$20001	;12642
+	dc.l	$80000	;12646
+	dc.l	$1fffe+1	;1264a
 lb_1264e:
-	DC.W	$0006			;1264e
-	DC.W	$a1fe			;12650
-	ORI.B	#$0e,D0			;12652: 0000000e
-	dc.w	$0000	;12656
-	dc.w	$0000	;12658
-	DC.W	$0000			;1265a
-	DC.W	$013f			;1265c
-	dc.w	$0000	;1265e
-	dc.w	$0000	;12660
-	dc.w	$0000	;12662
-	dc.w	$0000	;12664
-	DC.W	$0001			;12666
-	MOVE.L	D2,(A3)			;12668: 2682
-	DC.W	$0001			;1266a
-	MOVE.L	(A2)+,0(A4)		;1266c: 295a0000
-	dc.w	$0000	;12670
-	dc.w	$0000	;12672
-	ORI.B	#$01,D0			;12674: 00000001
-	DC.W	$8b8e			;12678
-	DC.W	$0001			;1267a
-	MOVEQ	#-56,D1			;1267c: 72c8
-	dc.w	$0000	;1267e
-	dc.w	$0000	;12680
-	DC.W	$0006			;12682
-	DC.W	$a422			;12684
-	ORI.B	#$15,D0			;12686: 00000015
-	dc.w	$0000	;1268a
-	dc.w	$0000	;1268c
-	DC.W	$0000			;1268e
-	DC.W	$013f			;12690
-	dc.w	$0000	;12692
-	dc.w	$0000	;12694
-	dc.w	$0000	;12696
-	dc.w	$0000	;12698
-	DC.W	$0001			;1269a
-	MOVE.L	1(A6,D0.W),(A3)		;1269c: 26b60001
-	MOVEA.L	A6,A3			;126a0: 264e
-	dc.w	$0000	;126a2
-	dc.w	$0000	;126a4
-	dc.w	$0000	;126a6
-	dc.w	$0000	;126a8
-	DC.W	$0001			;126aa
-	DC.W	$8b8e			;126ac
-	DC.W	$0001			;126ae
-	MOVEQ	#-56,D1			;126b0: 72c8
-	dc.w	$0000	;126b2
-	dc.w	$0000	;126b4
-	DC.W	$0006			;126b6
-	DC.W	$a646			;126b8
-	ORI.B	#$1c,D0			;126ba: 0000001c
-	dc.w	$0000	;126be
-	dc.w	$0000	;126c0
-	DC.W	$0000			;126c2
-	DC.W	$013f			;126c4
-	dc.w	$0000	;126c6
-	dc.w	$0000	;126c8
-	dc.w	$0000	;126ca
-	dc.w	$0000	;126cc
-	DC.W	$0001			;126ce
-	MOVE.L	1(A2),(A3)+		;126d0: 26ea0001
-	MOVE.L	D2,(A3)			;126d4: 2682
-	dc.w	$0000	;126d6
-	dc.w	$0000	;126d8
-	dc.w	$0000	;126da
-	dc.w	$0000	;126dc
-	DC.W	$0001			;126de
-	DC.W	$8b8e			;126e0
-	DC.W	$0001			;126e2
-	MOVEQ	#-56,D1			;126e4: 72c8
-	dc.w	$0000	;126e6
-	dc.w	$0000	;126e8
-	DC.W	$0006			;126ea
-	DC.W	$a86a			;126ec
-	ORI.B	#$23,D0			;126ee: 00000023
-	dc.w	$0000	;126f2
-	dc.w	$0000	;126f4
-	DC.W	$0000			;126f6
-	DC.W	$013f			;126f8
-	dc.w	$0000	;126fa
-	dc.w	$0000	;126fc
-	dc.w	$0000	;126fe
-	dc.w	$0000	;12700
-	DC.W	$0001			;12702
-	MOVE.L	(A6)+,-(A3)		;12704: 271e
-	DC.W	$0001			;12706
-	MOVE.L	0(A6,D0.W),(A3)		;12708: 26b60000
-	dc.w	$0000	;1270c
-	dc.w	$0000	;1270e
-	ORI.B	#$01,D0			;12710: 00000001
-	DC.W	$8b8e			;12714
-	DC.W	$0001			;12716
-	MOVEQ	#-56,D1			;12718: 72c8
-	dc.w	$0000	;1271a
-	dc.w	$0000	;1271c
-	DC.W	$0006			;1271e
-	DC.W	$aa8e			;12720
-	ORI.B	#$2a,D0			;12722: 0000002a
-	dc.w	$0000	;12726
-	dc.w	$0000	;12728
-	DC.W	$0000			;1272a
-	DC.W	$013f			;1272c
-	dc.w	$0000	;1272e
-	dc.w	$0000	;12730
-	dc.w	$0000	;12732
-	dc.w	$0000	;12734
-	DC.W	$0001			;12736
-	MOVE.L	(A2),1(A3)		;12738: 27520001
-	MOVE.L	0(A2),(A3)+		;1273c: 26ea0000
-	dc.w	$0000	;12740
-	dc.w	$0000	;12742
-	ORI.B	#$01,D0			;12744: 00000001
-	DC.W	$8b8e			;12748
-	DC.W	$0001			;1274a
-	MOVEQ	#-56,D1			;1274c: 72c8
-	dc.w	$0000	;1274e
-	dc.w	$0000	;12750
-	DC.W	$0006			;12752
-	DC.W	$acb2			;12754
-	ORI.B	#$31,D0			;12756: 00000031
-	dc.w	$0000	;1275a
-	dc.w	$0000	;1275c
-	DC.W	$0000			;1275e
-	DC.W	$013f			;12760
-	dc.w	$0000	;12762
-	dc.w	$0000	;12764
-	dc.w	$0000	;12766
-	dc.w	$0000	;12768
-	DC.W	$0001			;1276a
-	MOVE.L	D6,1(A3,D0.W)		;1276c: 27860001
-	MOVE.L	(A6)+,-(A3)		;12770: 271e
-	dc.w	$0000	;12772
-	dc.w	$0000	;12774
-	dc.w	$0000	;12776
-	dc.w	$0000	;12778
-	DC.W	$0001			;1277a
-	DC.W	$8b8e			;1277c
-	DC.W	$0001			;1277e
-	MOVEQ	#-56,D1			;12780: 72c8
-	dc.w	$0000	;12782
-	dc.w	$0000	;12784
-	DC.W	$0006			;12786
-	DC.W	$aed6			;12788
-	ORI.B	#$38,D0			;1278a: 00000038
-	dc.w	$0000	;1278e
-	dc.w	$0000	;12790
-	DC.W	$0000			;12792
-	DC.W	$013f			;12794
-	dc.w	$0000	;12796
-	dc.w	$0000	;12798
-	dc.w	$0000	;1279a
-	dc.w	$0000	;1279c
-	DC.W	$0001			;1279e
-	DC.W	$27ba			;127a0
-	DC.W	$0001			;127a2
-	MOVE.L	(A2),0(A3)		;127a4: 27520000
-	dc.w	$0000	;127a8
-	dc.w	$0000	;127aa
-	ORI.B	#$01,D0			;127ac: 00000001
-	DC.W	$8b8e			;127b0
-	DC.W	$0001			;127b2
-	MOVEQ	#-56,D1			;127b4: 72c8
-	dc.w	$0000	;127b6
-	dc.w	$0000	;127b8
-	DC.W	$0006			;127ba
-lb_127bc:
-	CMPA.W	lb_127bc+2(PC),A0	;127bc: b0fa0000
-	DC.W	$003f			;127c0
-	dc.w	$0000	;127c2
-	dc.w	$0000	;127c4
-	DC.W	$0000			;127c6
-	DC.W	$013f			;127c8
-	dc.w	$0000	;127ca
-	dc.w	$0000	;127cc
-	dc.w	$0000	;127ce
-	dc.w	$0000	;127d0
-	DC.W	$0001			;127d2
-	DC.W	$27ee			;127d4
-	DC.W	$0001			;127d6
-	MOVE.L	D6,0(A3,D0.W)		;127d8: 27860000
-	dc.w	$0000	;127dc
-	dc.w	$0000	;127de
-	ORI.B	#$01,D0			;127e0: 00000001
-	DC.W	$8b8e			;127e4
-	DC.W	$0001			;127e6
-	MOVEQ	#-56,D1			;127e8: 72c8
-	dc.w	$0000	;127ea
-	dc.w	$0000	;127ec
-	DC.W	$0006			;127ee
-	EOR.B	D1,(A6)+		;127f0: b31e
-	ORI.B	#$46,D0			;127f2: 00000046
-	dc.w	$0000	;127f6
-	dc.w	$0000	;127f8
-	DC.W	$0000			;127fa
-	DC.W	$013f			;127fc
-	dc.w	$0000	;127fe
-	dc.w	$0000	;12800
-	dc.w	$0000	;12802
-	dc.w	$0000	;12804
-	DC.W	$0001			;12806
-	MOVE.L	-(A2),D4		;12808: 2822
-	DC.W	$0001			;1280a
-lb_1280c:
-	MOVE.L	lb_1280c+2(PC),0(A3,D0.W) ;1280c: 27ba00000000
-	dc.w	$0000	;12812
-	dc.w	$0000	;12814
-	DC.W	$0001			;12816
-	DC.W	$8b8e			;12818
-	DC.W	$0001			;1281a
-	MOVEQ	#-56,D1			;1281c: 72c8
-	dc.w	$0000	;1281e
-	dc.w	$0000	;12820
-	DC.W	$0006			;12822
-	EOR.W	D2,D2			;12824: b542
-	ORI.B	#$4d,D0			;12826: 0000004d
-	dc.w	$0000	;1282a
-	dc.w	$0000	;1282c
-	DC.W	$0000			;1282e
-	DC.W	$013f			;12830
-	dc.w	$0000	;12832
-	dc.w	$0000	;12834
-	dc.w	$0000	;12836
-	dc.w	$0000	;12838
-	DC.W	$0001			;1283a
-	MOVEA.L	(A6),A4			;1283c: 2856
-	DC.W	$0001			;1283e
-	DC.W	$27ee			;12840
-	dc.w	$0000	;12842
-	dc.w	$0000	;12844
-	dc.w	$0000	;12846
-	dc.w	$0000	;12848
-	DC.W	$0001			;1284a
-	DC.W	$8b8e			;1284c
-	DC.W	$0001			;1284e
-	MOVEQ	#-56,D1			;12850: 72c8
-	dc.w	$0000	;12852
-	dc.w	$0000	;12854
-	DC.W	$0006			;12856
-	EOR.W	D3,-(A6)		;12858: b766
-	ORI.B	#$54,D0			;1285a: 00000054
-	dc.w	$0000	;1285e
-	dc.w	$0000	;12860
-	DC.W	$0000			;12862
-	DC.W	$013f			;12864
-	dc.w	$0000	;12866
-	dc.w	$0000	;12868
-	dc.w	$0000	;1286a
-	dc.w	$0000	;1286c
-	DC.W	$0001			;1286e
-	MOVE.L	A2,(A4)			;12870: 288a
-	DC.W	$0001			;12872
-	MOVE.L	-(A2),D4		;12874: 2822
-	dc.w	$0000	;12876
-	dc.w	$0000	;12878
-	dc.w	$0000	;1287a
-	dc.w	$0000	;1287c
-	DC.W	$0001			;1287e
-	DC.W	$8b8e			;12880
-	DC.W	$0001			;12882
-	MOVEQ	#-56,D1			;12884: 72c8
-	dc.w	$0000	;12886
-	dc.w	$0000	;12888
-	DC.W	$0006			;1288a
-	CMPM.L	(A2)+,(A4)+		;1288c: b98a
-	ORI.B	#$5b,D0			;1288e: 0000005b
-	dc.w	$0000	;12892
-	dc.w	$0000	;12894
-	DC.W	$0000			;12896
-	DC.W	$013f			;12898
-	dc.w	$0000	;1289a
-	dc.w	$0000	;1289c
-	dc.w	$0000	;1289e
-	dc.w	$0000	;128a0
-	DC.W	$0001			;128a2
-	DC.W	$28be			;128a4
-	DC.W	$0001			;128a6
-	MOVEA.L	(A6),A4			;128a8: 2856
-	dc.w	$0000	;128aa
-	dc.w	$0000	;128ac
-	dc.w	$0000	;128ae
-	dc.w	$0000	;128b0
-	DC.W	$0001			;128b2
-	DC.W	$8b8e			;128b4
-	DC.W	$0001			;128b6
-	MOVEQ	#-56,D1			;128b8: 72c8
-	dc.w	$0000	;128ba
-	dc.w	$0000	;128bc
-	DC.W	$0006			;128be
-	EOR.L	D5,0(A6)		;128c0: bbae0000
-	ORI.W	#$0000,-(A2)		;128c4: 00620000
-	dc.w	$0000	;128c8
-	dc.w	$0000	;128ca
-	DC.W	$013f			;128cc
-	dc.w	$0000	;128ce
-	dc.w	$0000	;128d0
-	dc.w	$0000	;128d2
-	dc.w	$0000	;128d4
-	DC.W	$0001			;128d6
-	MOVE.L	1(A2,D0.W),(A4)+	;128d8: 28f20001
-	MOVE.L	A2,(A4)			;128dc: 288a
-	dc.w	$0000	;128de
-	dc.w	$0000	;128e0
-	dc.w	$0000	;128e2
-	dc.w	$0000	;128e4
-	DC.W	$0001			;128e6
-	DC.W	$8b8e			;128e8
-	DC.W	$0001			;128ea
-	MOVEQ	#-56,D1			;128ec: 72c8
-	dc.w	$0000	;128ee
-	dc.w	$0000	;128f0
-	DC.W	$0006			;128f2
-	CMPA.L	(A2),A6			;128f4: bdd2
-	ORI.B	#$69,D0			;128f6: 00000069
-	dc.w	$0000	;128fa
-	dc.w	$0000	;128fc
-	DC.W	$0000			;128fe
-	DC.W	$013f			;12900
-	dc.w	$0000	;12902
-	dc.w	$0000	;12904
-	dc.w	$0000	;12906
-	dc.w	$0000	;12908
-	DC.W	$0001			;1290a
-	MOVE.L	-(A6),-(A4)		;1290c: 2926
-	DC.W	$0001			;1290e
-	DC.W	$28be			;12910
-	dc.w	$0000	;12912
-	dc.w	$0000	;12914
-	dc.w	$0000	;12916
-	dc.w	$0000	;12918
-	DC.W	$0001			;1291a
-	DC.W	$8b8e			;1291c
-	DC.W	$0001			;1291e
-	MOVEQ	#-56,D1			;12920: 72c8
-	dc.w	$0000	;12922
-	dc.w	$0000	;12924
-	DC.W	$0006			;12926
-	CMPA.L	0(A6,D0.W),A7		;12928: bff60000
-	ORI.W	#$0000,0(A0,D0.W)	;1292c: 007000000000
-	DC.W	$0000			;12932
-	DC.W	$013f			;12934
-	dc.w	$0000	;12936
-	dc.w	$0000	;12938
-	dc.w	$0000	;1293a
-	dc.w	$0000	;1293c
-	DC.W	$0001			;1293e
-	MOVE.L	(A2)+,1(A4)		;12940: 295a0001
-	MOVE.L	0(A2,D0.W),(A4)+	;12944: 28f20000
-	dc.w	$0000	;12948
-	dc.w	$0000	;1294a
-	ORI.B	#$01,D0			;1294c: 00000001
-	DC.W	$8b8e			;12950
-	DC.W	$0001			;12952
-	MOVEQ	#-56,D1			;12954: 72c8
-	dc.w	$0000	;12956
-	dc.w	$0000	;12958
-	DC.W	$0002			;1295a
-	BCHG	#0,121(A5)		;1295c: 086d00000079
-	dc.w	$0000	;12962
-	dc.w	$0000	;12964
-	DC.W	$0000			;12966
-	DC.W	$013f			;12968
-	dc.w	$0000	;1296a
-	dc.w	$0000	;1296c
-	dc.w	$0000	;1296e
-	dc.w	$0000	;12970
-	DC.W	$0001			;12972
-	MOVEA.L	A6,A3			;12974: 264e
-	DC.W	$0001			;12976
-	MOVE.L	-(A6),-(A4)		;12978: 2926
-	dc.w	$0000	;1297a
-	dc.w	$0000	;1297c
-	dc.w	$0000	;1297e
-	dc.w	$0000	;12980
-	DC.W	$0001			;12982
-	MOVEQ	#-56,D1			;12984: 72c8
-	DC.W	$0001			;12986
-	MOVEQ	#-56,D1			;12988: 72c8
-	dc.w	$0000	;1298a
-	dc.w	$0000	;1298c
-	DC.W	$0000			;1298e
-	OR.B	D2,D0			;12990: 8002
-	ORI.B	#$06,(A0)		;12992: 00100006
-	ORI.L	#$011f0002,D0		;12996: 0080011f0002
-	ORI.B	#$08,D1			;1299c: 00010008
-	ORI.B	#$01,D0			;129a0: 00000001
-	DC.W	$ffff			;129a4
+	dc.l	$6a1fe	;1264e
+	dc.l	$0000e	;12652
+	dc.l	$00000	;12656
+	dc.l	$0013f	;1265a
+	dc.l	$00000	;1265e
+	dc.l	$00000	;12662
+	dc.l	lb_12682	;12666
+	dc.l	lb_1295a	;1266a
+	dc.l	$00000	;1266e
+	dc.l	$00000	;12672
+	dc.l	lb_18b8e	;12676
+	dc.l	lb_172c8	;1267a
+	dc.l	$00000	;1267e
+lb_12682:
+	dc.l	$6a422	;12682
+	dc.l	$00015	;12686
+	dc.l	$00000	;1268a
+	dc.l	$0013f	;1268e
+	dc.l	$00000	;12692
+	dc.l	$00000	;12696
+	dc.l	lb_126b6	;1269a
+	dc.l	lb_1264e	;1269e
+	dc.l	$00000	;126a2
+	dc.l	$00000	;126a6
+	dc.l	lb_18b8e	;126aa
+	dc.l	lb_172c8	;126ae
+	dc.l	$00000	;126b2
+lb_126b6:
+	dc.l	$6a646	;126b6
+	dc.l	$0001c	;126ba
+	dc.l	$00000	;126be
+	dc.l	$0013f	;126c2
+	dc.l	$00000	;126c6
+	dc.l	$00000	;126ca
+	dc.l	lb_126ea	;126ce
+	dc.l	lb_12682	;126d2
+	dc.l	$00000	;126d6
+	dc.l	$00000	;126da
+	dc.l	lb_18b8e	;126de
+	dc.l	lb_172c8	;126e2
+	dc.l	$00000	;126e6
+lb_126ea:
+	dc.l	$6a86a	;126ea
+	dc.l	$00023	;126ee
+	dc.l	$00000	;126f2
+	dc.l	$0013f	;126f6
+	dc.l	$00000	;126fa
+	dc.l	$00000	;126fe
+	dc.l	lb_1271e	;12702
+	dc.l	lb_126b6	;12706
+	dc.l	$00000	;1270a
+	dc.l	$00000	;1270e
+	dc.l	lb_18b8e	;12712
+	dc.l	lb_172c8	;12716
+	dc.l	$00000	;1271a
+lb_1271e:
+	dc.l	$6aa8e	;1271e
+	dc.l	$0002a	;12722
+	dc.l	$00000	;12726
+	dc.l	$0013f	;1272a
+	dc.l	$00000	;1272e
+	dc.l	$00000	;12732
+	dc.l	lb_12752	;12736
+	dc.l	lb_126ea	;1273a
+	dc.l	$00000	;1273e
+	dc.l	$00000	;12742
+	dc.l	lb_18b8e	;12746
+	dc.l	lb_172c8	;1274a
+	dc.l	$00000	;1274e
+lb_12752:
+	dc.l	$6acb2	;12752
+	dc.l	$00031	;12756
+	dc.l	$00000	;1275a
+	dc.l	$0013f	;1275e
+	dc.l	$00000	;12762
+	dc.l	$00000	;12766
+	dc.l	lb_12786	;1276a
+	dc.l	lb_1271e	;1276e
+	dc.l	$00000	;12772
+	dc.l	$00000	;12776
+	dc.l	lb_18b8e	;1277a
+	dc.l	lb_172c8	;1277e
+	dc.l	$00000	;12782
+lb_12786:
+	dc.l	$6aed6	;12786
+	dc.l	$00038	;1278a
+	dc.l	$00000	;1278e
+	dc.l	$0013f	;12792
+	dc.l	$00000	;12796
+	dc.l	$00000	;1279a
+	dc.l	lb_127ba	;1279e
+	dc.l	lb_12752	;127a2
+	dc.l	$00000	;127a6
+	dc.l	$00000	;127aa
+	dc.l	lb_18b8e	;127ae
+	dc.l	lb_172c8	;127b2
+	dc.l	$00000	;127b6
+lb_127ba:
+	dc.l	$6b0fa	;127ba
+	dc.l	$0003f	;127be
+	dc.l	$00000	;127c2
+	dc.l	$0013f	;127c6
+	dc.l	$00000	;127ca
+	dc.l	$00000	;127ce
+	dc.l	lb_127ee	;127d2
+	dc.l	lb_12786	;127d6
+	dc.l	$00000	;127da
+	dc.l	$00000	;127de
+	dc.l	lb_18b8e	;127e2
+	dc.l	lb_172c8	;127e6
+	dc.l	$00000	;127ea
+lb_127ee:
+	dc.l	$6b31e	;127ee
+	dc.l	$00046	;127f2
+	dc.l	$00000	;127f6
+	dc.l	$0013f	;127fa
+	dc.l	$00000	;127fe
+	dc.l	$00000	;12802
+	dc.l	lb_12822	;12806
+	dc.l	lb_127ba	;1280a
+	dc.l	$00000	;1280e
+	dc.l	$00000	;12812
+	dc.l	lb_18b8e	;12816
+	dc.l	lb_172c8	;1281a
+	dc.l	$00000	;1281e
+lb_12822:
+	dc.l	$6b542	;12822
+	dc.l	$0004d	;12826
+	dc.l	$00000	;1282a
+	dc.l	$0013f	;1282e
+	dc.l	$00000	;12832
+	dc.l	$00000	;12836
+	dc.l	lb_12856	;1283a
+	dc.l	lb_127ee	;1283e
+	dc.l	$00000	;12842
+	dc.l	$00000	;12846
+	dc.l	lb_18b8e	;1284a
+	dc.l	lb_172c8	;1284e
+	dc.l	$00000	;12852
+lb_12856:
+	dc.l	$6b766	;12856
+	dc.l	$00054	;1285a
+	dc.l	$00000	;1285e
+	dc.l	$0013f	;12862
+	dc.l	$00000	;12866
+	dc.l	$00000	;1286a
+	dc.l	lb_1288a	;1286e
+	dc.l	lb_12822	;12872
+	dc.l	$00000	;12876
+	dc.l	$00000	;1287a
+	dc.l	lb_18b8e	;1287e
+	dc.l	lb_172c8	;12882
+	dc.l	$00000	;12886
+lb_1288a:
+	dc.l	$6b98a	;1288a
+	dc.l	$0005b	;1288e
+	dc.l	$00000	;12892
+	dc.l	$0013f	;12896
+	dc.l	$00000	;1289a
+	dc.l	$00000	;1289e
+	dc.l	lb_128be	;128a2
+	dc.l	lb_12856	;128a6
+	dc.l	$00000	;128aa
+	dc.l	$00000	;128ae
+	dc.l	lb_18b8e	;128b2
+	dc.l	lb_172c8	;128b6
+	dc.l	$00000	;128ba
+lb_128be:
+	dc.l	$6bbae	;128be
+	dc.l	$00062	;128c2
+	dc.l	$00000	;128c6
+	dc.l	$0013f	;128ca
+	dc.l	$00000	;128ce
+	dc.l	$00000	;128d2
+	dc.l	lb_128f2	;128d6
+	dc.l	lb_1288a	;128da
+	dc.l	$00000	;128de
+	dc.l	$00000	;128e2
+	dc.l	lb_18b8e	;128e6
+	dc.l	lb_172c8	;128ea
+	dc.l	$00000	;128ee
+lb_128f2:
+	dc.l	$6bdd2	;128f2
+	dc.l	$00069	;128f6
+	dc.l	$00000	;128fa
+	dc.l	$0013f	;128fe
+	dc.l	$00000	;12902
+	dc.l	$00000	;12906
+	dc.l	lb_12926	;1290a
+	dc.l	lb_128be	;1290e
+	dc.l	$00000	;12912
+	dc.l	$00000	;12916
+	dc.l	lb_18b8e	;1291a
+	dc.l	lb_172c8	;1291e
+	dc.l	$00000	;12922
+lb_12926:
+	dc.l	$6bff6	;12926
+	dc.l	$00070	;1292a
+	dc.l	$00000	;1292e
+	dc.l	$0013f	;12932
+	dc.l	$00000	;12936
+	dc.l	$00000	;1293a
+	dc.l	lb_1295a	;1293e
+	dc.l	lb_128f2	;12942
+	dc.l	$00000	;12946
+	dc.l	$00000	;1294a
+	dc.l	lb_18b8e	;1294e
+	dc.l	lb_172c8	;12952
+	dc.l	$00000	;12956
+lb_1295a:
+	dc.l	lb_2086c+1	;1295a
+	dc.l	$00079	;1295e
+	dc.l	$00000	;12962
+	dc.l	$0013f	;12966
+	dc.l	$00000	;1296a
+	dc.l	$00000	;1296e
+	dc.l	lb_1264e	;12972
+	dc.l	lb_12926	;12976
+	dc.l	$00000	;1297a
+	dc.l	$00000	;1297e
+	dc.l	lb_172c8	;12982
+	dc.l	lb_172c8	;12986
+	dc.l	$00000	;1298a
+	dc.l	$8002	;1298e
+	dc.l	$100006	;12992
+	dc.l	$80011f	;12996
+	dc.l	$20001	;1299a
+	dc.l	$80000	;1299e
+	dc.l	$1fffe+1	;129a2
 lb_129a6:
-	DC.W	$0006			;129a6
-	DC.W	$a1fe			;129a8
-	ORI.B	#$0e,D0			;129aa: 0000000e
-	dc.w	$0000	;129ae
-	dc.w	$0000	;129b0
-	DC.W	$0000			;129b2
-	DC.W	$013f			;129b4
-	dc.w	$0000	;129b6
-	dc.w	$0000	;129b8
-	dc.w	$0000	;129ba
-	dc.w	$0000	;129bc
-	DC.W	$0001			;129be
-	DC.W	$29da			;129c0
-	DC.W	$0001			;129c2
-	MOVE.L	0(A2,D0.W),(A6)		;129c4: 2cb20000
-	dc.w	$0000	;129c8
-	dc.w	$0000	;129ca
-	ORI.B	#$01,D0			;129cc: 00000001
-	DC.W	$8f78			;129d0
-	DC.W	$0001			;129d2
-	MOVEQ	#-56,D1			;129d4: 72c8
-	DC.W	$0001			;129d6
-	OR.W	EXT_0004.W,D7		;129d8: 8e780006
-	DC.W	$a422			;129dc
-	ORI.B	#$15,D0			;129de: 00000015
-	dc.w	$0000	;129e2
-	dc.w	$0000	;129e4
-	DC.W	$0000			;129e6
-	DC.W	$013f			;129e8
-	dc.w	$0000	;129ea
-	dc.w	$0000	;129ec
-	dc.w	$0000	;129ee
-	dc.w	$0000	;129f0
-	DC.W	$0001			;129f2
-	MOVE.L	A6,D5			;129f4: 2a0e
-	DC.W	$0001			;129f6
-	MOVE.L	-(A6),0(A4,D0.W)	;129f8: 29a60000
-	dc.w	$0000	;129fc
-	dc.w	$0000	;129fe
-	ORI.B	#$01,D0			;12a00: 00000001
-	DC.W	$8f78			;12a04
-	DC.W	$0001			;12a06
-	MOVEQ	#-56,D1			;12a08: 72c8
-	DC.W	$0001			;12a0a
-	OR.W	EXT_0004.W,D7		;12a0c: 8e780006
-	DC.W	$a646			;12a10
-	ORI.B	#$1c,D0			;12a12: 0000001c
-	dc.w	$0000	;12a16
-	dc.w	$0000	;12a18
-	DC.W	$0000			;12a1a
-	DC.W	$013f			;12a1c
-	dc.w	$0000	;12a1e
-	dc.w	$0000	;12a20
-	dc.w	$0000	;12a22
-	dc.w	$0000	;12a24
-	DC.W	$0001			;12a26
-	MOVEA.L	D2,A5			;12a28: 2a42
-	DC.W	$0001			;12a2a
-	DC.W	$29da			;12a2c
-	dc.w	$0000	;12a2e
-	dc.w	$0000	;12a30
-	dc.w	$0000	;12a32
-	dc.w	$0000	;12a34
-	DC.W	$0001			;12a36
-	DC.W	$8f78			;12a38
-	DC.W	$0001			;12a3a
-	MOVEQ	#-56,D1			;12a3c: 72c8
-	DC.W	$0001			;12a3e
-	OR.W	EXT_0004.W,D7		;12a40: 8e780006
-	DC.W	$a86a			;12a44
-	ORI.B	#$23,D0			;12a46: 00000023
-	dc.w	$0000	;12a4a
-	dc.w	$0000	;12a4c
-	DC.W	$0000			;12a4e
-	DC.W	$013f			;12a50
-	dc.w	$0000	;12a52
-	dc.w	$0000	;12a54
-	dc.w	$0000	;12a56
-	dc.w	$0000	;12a58
-	DC.W	$0001			;12a5a
-	MOVEA.L	1(A6,D0.W),A5		;12a5c: 2a760001
-	MOVE.L	A6,D5			;12a60: 2a0e
-	dc.w	$0000	;12a62
-	dc.w	$0000	;12a64
-	dc.w	$0000	;12a66
-	dc.w	$0000	;12a68
-	DC.W	$0001			;12a6a
-	DC.W	$8f78			;12a6c
-	DC.W	$0001			;12a6e
-	MOVEQ	#-56,D1			;12a70: 72c8
-	DC.W	$0001			;12a72
-	OR.W	EXT_0004.W,D7		;12a74: 8e780006
-	DC.W	$aa8e			;12a78
-	ORI.B	#$2a,D0			;12a7a: 0000002a
-	dc.w	$0000	;12a7e
-	dc.w	$0000	;12a80
-	DC.W	$0000			;12a82
-	DC.W	$013f			;12a84
-	dc.w	$0000	;12a86
-	dc.w	$0000	;12a88
-	dc.w	$0000	;12a8a
-	dc.w	$0000	;12a8c
-	DC.W	$0001			;12a8e
-	MOVE.L	1(A2),(A5)		;12a90: 2aaa0001
-	MOVEA.L	D2,A5			;12a94: 2a42
-	dc.w	$0000	;12a96
-	dc.w	$0000	;12a98
-	dc.w	$0000	;12a9a
-	dc.w	$0000	;12a9c
-	DC.W	$0001			;12a9e
-	DC.W	$8f78			;12aa0
-	DC.W	$0001			;12aa2
-	MOVEQ	#-56,D1			;12aa4: 72c8
-	DC.W	$0001			;12aa6
-	OR.W	EXT_0004.W,D7		;12aa8: 8e780006
-	DC.W	$acb2			;12aac
-	ORI.B	#$31,D0			;12aae: 00000031
-	dc.w	$0000	;12ab2
-	dc.w	$0000	;12ab4
-	DC.W	$0000			;12ab6
-	DC.W	$013f			;12ab8
-	dc.w	$0000	;12aba
-	dc.w	$0000	;12abc
-	dc.w	$0000	;12abe
-	dc.w	$0000	;12ac0
-	DC.W	$0001			;12ac2
-	MOVE.L	(A6)+,(A5)+		;12ac4: 2ade
-	DC.W	$0001			;12ac6
-	MOVEA.L	0(A6,D0.W),A5		;12ac8: 2a760000
-	dc.w	$0000	;12acc
-	dc.w	$0000	;12ace
-	ORI.B	#$01,D0			;12ad0: 00000001
-	DC.W	$8f78			;12ad4
-	DC.W	$0001			;12ad6
-	MOVEQ	#-56,D1			;12ad8: 72c8
-	DC.W	$0001			;12ada
-	OR.W	EXT_0004.W,D7		;12adc: 8e780006
-	DC.W	$aed6			;12ae0
-	ORI.B	#$38,D0			;12ae2: 00000038
-	dc.w	$0000	;12ae6
-	dc.w	$0000	;12ae8
-	DC.W	$0000			;12aea
-	DC.W	$013f			;12aec
-	dc.w	$0000	;12aee
-	dc.w	$0000	;12af0
-	dc.w	$0000	;12af2
-	dc.w	$0000	;12af4
-	DC.W	$0001			;12af6
-	MOVE.L	(A2),-(A5)		;12af8: 2b12
-	DC.W	$0001			;12afa
-	MOVE.L	0(A2),(A5)		;12afc: 2aaa0000
-	dc.w	$0000	;12b00
-	dc.w	$0000	;12b02
-	ORI.B	#$01,D0			;12b04: 00000001
-	DC.W	$8f78			;12b08
-	DC.W	$0001			;12b0a
-	MOVEQ	#-56,D1			;12b0c: 72c8
-	DC.W	$0001			;12b0e
-	OR.W	EXT_0004.W,D7		;12b10: 8e780006
-lb_12b14:
-	CMPA.W	lb_12b14+2(PC),A0	;12b14: b0fa0000
-	DC.W	$003f			;12b18
-	dc.w	$0000	;12b1a
-	dc.w	$0000	;12b1c
-	DC.W	$0000			;12b1e
-	DC.W	$013f			;12b20
-	dc.w	$0000	;12b22
-	dc.w	$0000	;12b24
-	dc.w	$0000	;12b26
-	dc.w	$0000	;12b28
-	DC.W	$0001			;12b2a
-	MOVE.L	D6,1(A5)		;12b2c: 2b460001
-	MOVE.L	(A6)+,(A5)+		;12b30: 2ade
-	dc.w	$0000	;12b32
-	dc.w	$0000	;12b34
-	dc.w	$0000	;12b36
-	dc.w	$0000	;12b38
-	DC.W	$0001			;12b3a
-	DC.W	$8f78			;12b3c
-	DC.W	$0001			;12b3e
-	MOVEQ	#-56,D1			;12b40: 72c8
-	DC.W	$0001			;12b42
-	OR.W	EXT_0004.W,D7		;12b44: 8e780006
-	EOR.B	D1,(A6)+		;12b48: b31e
-	ORI.B	#$46,D0			;12b4a: 00000046
-	dc.w	$0000	;12b4e
-	dc.w	$0000	;12b50
-	DC.W	$0000			;12b52
-	DC.W	$013f			;12b54
-	dc.w	$0000	;12b56
-	dc.w	$0000	;12b58
-	dc.w	$0000	;12b5a
-	dc.w	$0000	;12b5c
-	DC.W	$0001			;12b5e
-	DC.W	$2b7a			;12b60
-	DC.W	$0001			;12b62
-	MOVE.L	(A2),-(A5)		;12b64: 2b12
-	dc.w	$0000	;12b66
-	dc.w	$0000	;12b68
-	dc.w	$0000	;12b6a
-	dc.w	$0000	;12b6c
-	DC.W	$0001			;12b6e
-	DC.W	$8f78			;12b70
-	DC.W	$0001			;12b72
-	MOVEQ	#-56,D1			;12b74: 72c8
-	DC.W	$0001			;12b76
-	OR.W	EXT_0004.W,D7		;12b78: 8e780006
-	EOR.W	D2,D2			;12b7c: b542
-	ORI.B	#$4d,D0			;12b7e: 0000004d
-	dc.w	$0000	;12b82
-	dc.w	$0000	;12b84
-	DC.W	$0000			;12b86
-	DC.W	$013f			;12b88
-	dc.w	$0000	;12b8a
-	dc.w	$0000	;12b8c
-	dc.w	$0000	;12b8e
-	dc.w	$0000	;12b90
-	DC.W	$0001			;12b92
-	DC.W	$2bae			;12b94
-	DC.W	$0001			;12b96
-	MOVE.L	D6,0(A5)		;12b98: 2b460000
-	dc.w	$0000	;12b9c
-	dc.w	$0000	;12b9e
-	ORI.B	#$01,D0			;12ba0: 00000001
-	DC.W	$8f78			;12ba4
-	DC.W	$0001			;12ba6
-	MOVEQ	#-56,D1			;12ba8: 72c8
-	DC.W	$0001			;12baa
-	OR.W	EXT_0004.W,D7		;12bac: 8e780006
-	EOR.W	D3,-(A6)		;12bb0: b766
-	ORI.B	#$54,D0			;12bb2: 00000054
-	dc.w	$0000	;12bb6
-	dc.w	$0000	;12bb8
-	DC.W	$0000			;12bba
-	DC.W	$013f			;12bbc
-	dc.w	$0000	;12bbe
-	dc.w	$0000	;12bc0
-	dc.w	$0000	;12bc2
-	dc.w	$0000	;12bc4
-	DC.W	$0001			;12bc6
-	DC.W	$2be2			;12bc8
-	DC.W	$0001			;12bca
-lb_12bcc:
-	MOVE.L	lb_12bcc+2(PC),0(A5)	;12bcc: 2b7a00000000
-	dc.w	$0000	;12bd2
-	dc.w	$0000	;12bd4
-	DC.W	$0001			;12bd6
-	DC.W	$8f78			;12bd8
-	DC.W	$0001			;12bda
-	MOVEQ	#-56,D1			;12bdc: 72c8
-	DC.W	$0001			;12bde
-	OR.W	EXT_0004.W,D7		;12be0: 8e780006
-	CMPM.L	(A2)+,(A4)+		;12be4: b98a
-	ORI.B	#$5b,D0			;12be6: 0000005b
-	dc.w	$0000	;12bea
-	dc.w	$0000	;12bec
-	DC.W	$0000			;12bee
-	DC.W	$013f			;12bf0
-	dc.w	$0000	;12bf2
-	dc.w	$0000	;12bf4
-	dc.w	$0000	;12bf6
-	dc.w	$0000	;12bf8
-	DC.W	$0001			;12bfa
-	MOVE.L	(A6),D6			;12bfc: 2c16
-	DC.W	$0001			;12bfe
-	MOVE.L	0(A6),0(A5,D0.W)	;12c00: 2bae00000000
-	dc.w	$0000	;12c06
-	dc.w	$0000	;12c08
-	DC.W	$0001			;12c0a
-	DC.W	$8f78			;12c0c
-	DC.W	$0001			;12c0e
-	MOVEQ	#-56,D1			;12c10: 72c8
-	DC.W	$0001			;12c12
-	OR.W	EXT_0004.W,D7		;12c14: 8e780006
-	EOR.L	D5,0(A6)		;12c18: bbae0000
-	ORI.W	#$0000,-(A2)		;12c1c: 00620000
-	dc.w	$0000	;12c20
-	dc.w	$0000	;12c22
-	DC.W	$013f			;12c24
-	dc.w	$0000	;12c26
-	dc.w	$0000	;12c28
-	dc.w	$0000	;12c2a
-	dc.w	$0000	;12c2c
-	DC.W	$0001			;12c2e
-	MOVEA.L	A2,A6			;12c30: 2c4a
-	DC.W	$0001			;12c32
-	DC.W	$2be2			;12c34
-	dc.w	$0000	;12c36
-	dc.w	$0000	;12c38
-	dc.w	$0000	;12c3a
-	dc.w	$0000	;12c3c
-	DC.W	$0001			;12c3e
-	DC.W	$8f78			;12c40
-	DC.W	$0001			;12c42
-	MOVEQ	#-56,D1			;12c44: 72c8
-	DC.W	$0001			;12c46
-	OR.W	EXT_0004.W,D7		;12c48: 8e780006
-	CMPA.L	(A2),A6			;12c4c: bdd2
-	ORI.B	#$69,D0			;12c4e: 00000069
-	dc.w	$0000	;12c52
-	dc.w	$0000	;12c54
-	DC.W	$0000			;12c56
-	DC.W	$013f			;12c58
-	dc.w	$0000	;12c5a
-	dc.w	$0000	;12c5c
-	dc.w	$0000	;12c5e
-	dc.w	$0000	;12c60
-	DC.W	$0001			;12c62
-	DC.W	$2c7e			;12c64
-	DC.W	$0001			;12c66
-	MOVE.L	(A6),D6			;12c68: 2c16
-	dc.w	$0000	;12c6a
-	dc.w	$0000	;12c6c
-	dc.w	$0000	;12c6e
-	dc.w	$0000	;12c70
-	DC.W	$0001			;12c72
-	DC.W	$8f78			;12c74
-	DC.W	$0001			;12c76
-	MOVEQ	#-56,D1			;12c78: 72c8
-	DC.W	$0001			;12c7a
-	OR.W	EXT_0004.W,D7		;12c7c: 8e780006
-	CMPA.L	0(A6,D0.W),A7		;12c80: bff60000
-	ORI.W	#$0000,0(A0,D0.W)	;12c84: 007000000000
-	DC.W	$0000			;12c8a
-	DC.W	$013f			;12c8c
-	dc.w	$0000	;12c8e
-	dc.w	$0000	;12c90
-	dc.w	$0000	;12c92
-	dc.w	$0000	;12c94
-	DC.W	$0001			;12c96
-	MOVE.L	1(A2,D0.W),(A6)		;12c98: 2cb20001
-	MOVEA.L	A2,A6			;12c9c: 2c4a
-	dc.w	$0000	;12c9e
-	dc.w	$0000	;12ca0
-	dc.w	$0000	;12ca2
-	dc.w	$0000	;12ca4
-	DC.W	$0001			;12ca6
-	DC.W	$8f78			;12ca8
-	DC.W	$0001			;12caa
-	MOVEQ	#-56,D1			;12cac: 72c8
-	DC.W	$0001			;12cae
-	OR.W	EXT_0002.W,D7		;12cb0: 8e780002
-	BCHG	#0,121(A5)		;12cb4: 086d00000079
-	dc.w	$0000	;12cba
-	dc.w	$0000	;12cbc
-	DC.W	$0000			;12cbe
-	DC.W	$013f			;12cc0
-	dc.w	$0000	;12cc2
-	dc.w	$0000	;12cc4
-	dc.w	$0000	;12cc6
-	dc.w	$0000	;12cc8
-	DC.W	$0001			;12cca
-	MOVE.L	-(A6),1(A4,D0.W)	;12ccc: 29a60001
-	DC.W	$2c7e			;12cd0
-	dc.w	$0000	;12cd2
-	dc.w	$0000	;12cd4
-	dc.w	$0000	;12cd6
-	dc.w	$0000	;12cd8
-	DC.W	$0001			;12cda
-	MOVEQ	#-56,D1			;12cdc: 72c8
-	DC.W	$0001			;12cde
-	MOVEQ	#-56,D1			;12ce0: 72c8
-	dc.w	$0000	;12ce2
-	dc.w	$0000	;12ce4
-	DC.W	$0000			;12ce6
-	OR.B	D2,D0			;12ce8: 8002
-	ORI.B	#$1a,(A0)		;12cea: 0010001a
-	ORI.W	#$0120,-(A4)		;12cee: 00640120
-	ORI.B	#$01,D2			;12cf2: 00020001
-	DC.W	$0008			;12cf6
-	ORI.B	#$01,D1			;12cf8: 00010001
-lb_12cfc:
-	ORI.B	#$02,D2			;12cfc: 00020002
-	BTST	D1,EXT_0000.W		;12d00: 03380000
-	DC.W	$000f			;12d04
-	dc.w	$0000	;12d06
-	dc.w	$0000	;12d08
-	DC.W	$0000			;12d0a
-	DC.W	$013f			;12d0c
-	dc.w	$0000	;12d0e
-	dc.w	$0000	;12d10
-	dc.w	$0000	;12d12
-	dc.w	$0000	;12d14
-	dc.w	$0000	;12d16
-	dc.w	$0000	;12d18
-	dc.w	$0000	;12d1a
-	dc.w	$0000	;12d1c
-	dc.w	$0000	;12d1e
-	dc.w	$0000	;12d20
-	dc.w	$0000	;12d22
-	dc.w	$0000	;12d24
-	dc.w	$0000	;12d26
-	dc.w	$0000	;12d28
-	dc.w	$0000	;12d2a
-	dc.w	$0000	;12d2c
-	dc.w	$0000	;12d2e
-	dc.w	$0000	;12d30
-	DC.W	$0001			;12d32
-	DC.W	$fe83			;12d34
-	ORI.B	#$19,D0			;12d36: 00000019
-	dc.w	$0000	;12d3a
-	dc.w	$0000	;12d3c
-	DC.W	$0000			;12d3e
-	DC.W	$013f			;12d40
-	dc.w	$0000	;12d42
-	dc.w	$0000	;12d44
-	dc.w	$0000	;12d46
-	dc.w	$0000	;12d48
-	dc.w	$0000	;12d4a
-	dc.w	$0000	;12d4c
-	dc.w	$0000	;12d4e
-	dc.w	$0000	;12d50
-	dc.w	$0000	;12d52
-	dc.w	$0000	;12d54
-	dc.w	$0000	;12d56
-	dc.w	$0000	;12d58
-	dc.w	$0000	;12d5a
-	dc.w	$0000	;12d5c
-	dc.w	$0000	;12d5e
-	dc.w	$0000	;12d60
-	dc.w	$0000	;12d62
-	dc.w	$0000	;12d64
-	DC.W	$0002			;12d66
-	DC.W	$0808			;12d68
-	ORI.B	#$32,D0			;12d6a: 00000032
-	dc.w	$0000	;12d6e
-	dc.w	$0000	;12d70
-	DC.W	$0000			;12d72
-	DC.W	$013f			;12d74
-	DC.W	$0000			;12d76
-	SNE	(A0)+			;12d78: 56d8
-	ORI.B	#$08,D0			;12d7a: 00000008
-	DC.W	$0001			;12d7e
-	MOVE.L	(A2)+,1(A6,D0.W)	;12d80: 2d9a0001
-	DC.W	$2dce			;12d84
-	dc.w	$0000	;12d86
-	dc.w	$0000	;12d88
-	dc.w	$0000	;12d8a
-	dc.w	$0000	;12d8c
-	DC.W	$0001			;12d8e
-	MOVEQ	#-2,D1			;12d90: 72fe
-	DC.W	$0001			;12d92
-	MOVEQ	#-56,D1			;12d94: 72c8
-	DC.W	$0001			;12d96
-	MOVEQ	#-2,D1			;12d98: 72fe
-	DC.W	$0001			;12d9a
-	DC.W	$fdda			;12d9c
-	ORI.B	#$41,D0			;12d9e: 00000041
-	dc.w	$0000	;12da2
-	dc.w	$0000	;12da4
-	DC.W	$0000			;12da6
-	DC.W	$013f			;12da8
-	dc.w	$0000	;12daa
-	dc.w	$0000	;12dac
-	dc.w	$0000	;12dae
-	dc.w	$0000	;12db0
-	DC.W	$0001			;12db2
-	DC.W	$2dce			;12db4
-	DC.W	$0001			;12db6
-	MOVE.L	-(A6),0(A6)		;12db8: 2d660000
-	dc.w	$0000	;12dbc
-	dc.w	$0000	;12dbe
-	ORI.B	#$01,D0			;12dc0: 00000001
-	DC.W	$75f2			;12dc4
-	DC.W	$0001			;12dc6
-	MOVEQ	#-56,D1			;12dc8: 72c8
-	dc.w	$0000	;12dca
-	dc.w	$0000	;12dcc
-	DC.W	$0002			;12dce
-	BCHG	#0,90(A5)		;12dd0: 086d0000005a
-	dc.w	$0000	;12dd6
-	dc.w	$0000	;12dd8
-	DC.W	$0000			;12dda
-	DC.W	$013f			;12ddc
-	dc.w	$0000	;12dde
-	dc.w	$0000	;12de0
-	dc.w	$0000	;12de2
-	dc.w	$0000	;12de4
-	DC.W	$0001			;12de6
-	MOVE.L	-(A6),1(A6)		;12de8: 2d660001
-	MOVE.L	(A2)+,0(A6,D0.W)	;12dec: 2d9a0000
-	dc.w	$0000	;12df0
-	dc.w	$0000	;12df2
-	ORI.B	#$01,D0			;12df4: 00000001
-	MOVEQ	#-56,D1			;12df8: 72c8
-	DC.W	$0001			;12dfa
-	MOVEQ	#-56,D1			;12dfc: 72c8
-	dc.w	$0000	;12dfe
-	dc.w	$0000	;12e00
-	DC.W	$0000			;12e02
-	OR.B	D2,D0			;12e04: 8002
-	ORI.B	#$19,(A0)		;12e06: 00100019
-	ORI.W	#$0120,(A2)+		;12e0a: 005a0120
-	ORI.B	#$01,D2			;12e0e: 00020001
-	DC.W	$0008			;12e12
-	ORI.B	#$01,D1			;12e14: 00010001
-lb_12e18:
-	ORI.B	#$02,D1			;12e18: 00010002
-	BTST	D1,EXT_0000.W		;12e1c: 03380000
-	DC.W	$000f			;12e20
-	dc.w	$0000	;12e22
-	dc.w	$0000	;12e24
-	DC.W	$0000			;12e26
-	DC.W	$013f			;12e28
-	dc.w	$0000	;12e2a
-	dc.w	$0000	;12e2c
-	dc.w	$0000	;12e2e
-	dc.w	$0000	;12e30
-	dc.w	$0000	;12e32
-	dc.w	$0000	;12e34
-	dc.w	$0000	;12e36
-	dc.w	$0000	;12e38
-	dc.w	$0000	;12e3a
-	dc.w	$0000	;12e3c
-	dc.w	$0000	;12e3e
-	dc.w	$0000	;12e40
-	dc.w	$0000	;12e42
-	dc.w	$0000	;12e44
-	dc.w	$0000	;12e46
-	dc.w	$0000	;12e48
-	dc.w	$0000	;12e4a
-	dc.w	$0000	;12e4c
-	DC.W	$0002			;12e4e
-	DC.W	$0808			;12e50
-	ORI.B	#$23,D0			;12e52: 00000023
-	dc.w	$0000	;12e56
-	dc.w	$0000	;12e58
-	DC.W	$0000			;12e5a
-	DC.W	$013f			;12e5c
-	DC.W	$0000			;12e5e
-	SNE	(A0)+			;12e60: 56d8
-	ORI.B	#$08,D0			;12e62: 00000008
-	DC.W	$0001			;12e66
-	MOVE.L	D2,(A7)			;12e68: 2e82
-	DC.W	$0001			;12e6a
-	MOVE.L	0(A2),(A7)+		;12e6c: 2eea0000
-	dc.w	$0000	;12e70
-	dc.w	$0000	;12e72
-	ORI.B	#$01,D0			;12e74: 00000001
-	MOVEQ	#-2,D1			;12e78: 72fe
-	DC.W	$0001			;12e7a
-	MOVEQ	#-56,D1			;12e7c: 72c8
-	DC.W	$0001			;12e7e
-	MOVEQ	#-2,D1			;12e80: 72fe
-	DC.W	$0002			;12e82
-	BTST	#0,(A1)+		;12e84: 08190000
-	ORI.B	#$00,0(A5)		;12e88: 002d00000000
-	DC.W	$0000			;12e8e
-	DC.W	$013f			;12e90
-	DC.W	$0000			;12e92
-	SNE	-(A4)			;12e94: 56e4
-	ORI.B	#$08,D0			;12e96: 00000008
-	DC.W	$0001			;12e9a
-	MOVE.L	1(A6,D0.W),(A7)		;12e9c: 2eb60001
-	MOVEA.L	A6,A7			;12ea0: 2e4e
-	dc.w	$0000	;12ea2
-	dc.w	$0000	;12ea4
-	dc.w	$0000	;12ea6
-	dc.w	$0000	;12ea8
-	DC.W	$0001			;12eaa
-	MOVEQ	#-2,D1			;12eac: 72fe
-	DC.W	$0001			;12eae
-	MOVEQ	#-56,D1			;12eb0: 72c8
-	DC.W	$0001			;12eb2
-	MOVEQ	#-2,D1			;12eb4: 72fe
-	DC.W	$0002			;12eb6
-	BTST	#0,63(A2)		;12eb8: 082a0000003f
-	dc.w	$0000	;12ebe
-	dc.w	$0000	;12ec0
-	DC.W	$0000			;12ec2
-	DC.W	$013f			;12ec4
-	dc.w	$0000	;12ec6
-	dc.w	$0000	;12ec8
-	dc.w	$0000	;12eca
-	dc.w	$0000	;12ecc
-	DC.W	$0001			;12ece
-	MOVE.L	1(A2),(A7)+		;12ed0: 2eea0001
-	MOVE.L	D2,(A7)			;12ed4: 2e82
-	dc.w	$0000	;12ed6
-	dc.w	$0000	;12ed8
-	dc.w	$0000	;12eda
-	dc.w	$0000	;12edc
-	DC.W	$0001			;12ede
-	MOVEQ	#40,D3			;12ee0: 7628
-	DC.W	$0001			;12ee2
-	MOVEQ	#-56,D1			;12ee4: 72c8
-	dc.w	$0000	;12ee6
-	dc.w	$0000	;12ee8
-	DC.W	$0002			;12eea
-	BCHG	#0,80(A5)		;12eec: 086d00000050
-	dc.w	$0000	;12ef2
-	dc.w	$0000	;12ef4
-	DC.W	$0000			;12ef6
-	DC.W	$013f			;12ef8
-	dc.w	$0000	;12efa
-	dc.w	$0000	;12efc
-	dc.w	$0000	;12efe
-	dc.w	$0000	;12f00
-	DC.W	$0001			;12f02
-	MOVEA.L	A6,A7			;12f04: 2e4e
-	DC.W	$0001			;12f06
-	MOVE.L	0(A6,D0.W),(A7)		;12f08: 2eb60000
-	dc.w	$0000	;12f0c
-	dc.w	$0000	;12f0e
-	ORI.B	#$01,D0			;12f10: 00000001
-	MOVEQ	#-56,D1			;12f14: 72c8
-	DC.W	$0001			;12f16
-	MOVEQ	#-56,D1			;12f18: 72c8
-	dc.w	$0000	;12f1a
-	dc.w	$0000	;12f1c
-	DC.W	$0000			;12f1e
-	OR.B	D2,D0			;12f20: 8002
+	dc.l	$6a1fe	;129a6
+	dc.l	$0000e	;129aa
+	dc.l	$00000	;129ae
+	dc.l	$0013f	;129b2
+	dc.l	$00000	;129b6
+	dc.l	$00000	;129ba
+	dc.l	lb_129da	;129be
+	dc.l	lb_12cb2	;129c2
+	dc.l	$00000	;129c6
+	dc.l	$00000	;129ca
+	dc.l	lb_18f78	;129ce
+	dc.l	lb_172c8	;129d2
+	dc.l	lb_18e78	;129d6
+lb_129da:
+	dc.l	$6a422	;129da
+	dc.l	$00015	;129de
+	dc.l	$00000	;129e2
+	dc.l	$0013f	;129e6
+	dc.l	$00000	;129ea
+	dc.l	$00000	;129ee
+	dc.l	lb_12a0e	;129f2
+	dc.l	lb_129a6	;129f6
+	dc.l	$00000	;129fa
+	dc.l	$00000	;129fe
+	dc.l	lb_18f78	;12a02
+	dc.l	lb_172c8	;12a06
+	dc.l	lb_18e78	;12a0a
+lb_12a0e:
+	dc.l	$6a646	;12a0e
+	dc.l	$0001c	;12a12
+	dc.l	$00000	;12a16
+	dc.l	$0013f	;12a1a
+	dc.l	$00000	;12a1e
+	dc.l	$00000	;12a22
+	dc.l	lb_12a42	;12a26
+	dc.l	lb_129da	;12a2a
+	dc.l	$00000	;12a2e
+	dc.l	$00000	;12a32
+	dc.l	lb_18f78	;12a36
+	dc.l	lb_172c8	;12a3a
+	dc.l	lb_18e78	;12a3e
+lb_12a42:
+	dc.l	$6a86a	;12a42
+	dc.l	$00023	;12a46
+	dc.l	$00000	;12a4a
+	dc.l	$0013f	;12a4e
+	dc.l	$00000	;12a52
+	dc.l	$00000	;12a56
+	dc.l	lb_12a76	;12a5a
+	dc.l	lb_12a0e	;12a5e
+	dc.l	$00000	;12a62
+	dc.l	$00000	;12a66
+	dc.l	lb_18f78	;12a6a
+	dc.l	lb_172c8	;12a6e
+	dc.l	lb_18e78	;12a72
+lb_12a76:
+	dc.l	$6aa8e	;12a76
+	dc.l	$0002a	;12a7a
+	dc.l	$00000	;12a7e
+	dc.l	$0013f	;12a82
+	dc.l	$00000	;12a86
+	dc.l	$00000	;12a8a
+	dc.l	lb_12aaa	;12a8e
+	dc.l	lb_12a42	;12a92
+	dc.l	$00000	;12a96
+	dc.l	$00000	;12a9a
+	dc.l	lb_18f78	;12a9e
+	dc.l	lb_172c8	;12aa2
+	dc.l	lb_18e78	;12aa6
+lb_12aaa:
+	dc.l	$6acb2	;12aaa
+	dc.l	$00031	;12aae
+	dc.l	$00000	;12ab2
+	dc.l	$0013f	;12ab6
+	dc.l	$00000	;12aba
+	dc.l	$00000	;12abe
+	dc.l	lb_12ade	;12ac2
+	dc.l	lb_12a76	;12ac6
+	dc.l	$00000	;12aca
+	dc.l	$00000	;12ace
+	dc.l	lb_18f78	;12ad2
+	dc.l	lb_172c8	;12ad6
+	dc.l	lb_18e78	;12ada
+lb_12ade:
+	dc.l	$6aed6	;12ade
+	dc.l	$00038	;12ae2
+	dc.l	$00000	;12ae6
+	dc.l	$0013f	;12aea
+	dc.l	$00000	;12aee
+	dc.l	$00000	;12af2
+	dc.l	lb_12b12	;12af6
+	dc.l	lb_12aaa	;12afa
+	dc.l	$00000	;12afe
+	dc.l	$00000	;12b02
+	dc.l	lb_18f78	;12b06
+	dc.l	lb_172c8	;12b0a
+	dc.l	lb_18e78	;12b0e
+lb_12b12:
+	dc.l	$6b0fa	;12b12
+	dc.l	$0003f	;12b16
+	dc.l	$00000	;12b1a
+	dc.l	$0013f	;12b1e
+	dc.l	$00000	;12b22
+	dc.l	$00000	;12b26
+	dc.l	lb_12b46	;12b2a
+	dc.l	lb_12ade	;12b2e
+	dc.l	$00000	;12b32
+	dc.l	$00000	;12b36
+	dc.l	lb_18f78	;12b3a
+	dc.l	lb_172c8	;12b3e
+	dc.l	lb_18e78	;12b42
+lb_12b46:
+	dc.l	$6b31e	;12b46
+	dc.l	$00046	;12b4a
+	dc.l	$00000	;12b4e
+	dc.l	$0013f	;12b52
+	dc.l	$00000	;12b56
+	dc.l	$00000	;12b5a
+	dc.l	lb_12b7a	;12b5e
+	dc.l	lb_12b12	;12b62
+	dc.l	$00000	;12b66
+	dc.l	$00000	;12b6a
+	dc.l	lb_18f78	;12b6e
+	dc.l	lb_172c8	;12b72
+	dc.l	lb_18e78	;12b76
+lb_12b7a:
+	dc.l	$6b542	;12b7a
+	dc.l	$0004d	;12b7e
+	dc.l	$00000	;12b82
+	dc.l	$0013f	;12b86
+	dc.l	$00000	;12b8a
+	dc.l	$00000	;12b8e
+	dc.l	lb_12bae	;12b92
+	dc.l	lb_12b46	;12b96
+	dc.l	$00000	;12b9a
+	dc.l	$00000	;12b9e
+	dc.l	lb_18f78	;12ba2
+	dc.l	lb_172c8	;12ba6
+	dc.l	lb_18e78	;12baa
+lb_12bae:
+	dc.l	$6b766	;12bae
+	dc.l	$00054	;12bb2
+	dc.l	$00000	;12bb6
+	dc.l	$0013f	;12bba
+	dc.l	$00000	;12bbe
+	dc.l	$00000	;12bc2
+	dc.l	lb_12be2	;12bc6
+	dc.l	lb_12b7a	;12bca
+	dc.l	$00000	;12bce
+	dc.l	$00000	;12bd2
+	dc.l	lb_18f78	;12bd6
+	dc.l	lb_172c8	;12bda
+	dc.l	lb_18e78	;12bde
+lb_12be2:
+	dc.l	$6b98a	;12be2
+	dc.l	$0005b	;12be6
+	dc.l	$00000	;12bea
+	dc.l	$0013f	;12bee
+	dc.l	$00000	;12bf2
+	dc.l	$00000	;12bf6
+	dc.l	lb_12c16	;12bfa
+	dc.l	lb_12bae	;12bfe
+	dc.l	$00000	;12c02
+	dc.l	$00000	;12c06
+	dc.l	lb_18f78	;12c0a
+	dc.l	lb_172c8	;12c0e
+	dc.l	lb_18e78	;12c12
+lb_12c16:
+	dc.l	$6bbae	;12c16
+	dc.l	$00062	;12c1a
+	dc.l	$00000	;12c1e
+	dc.l	$0013f	;12c22
+	dc.l	$00000	;12c26
+	dc.l	$00000	;12c2a
+	dc.l	lb_12c4a	;12c2e
+	dc.l	lb_12be2	;12c32
+	dc.l	$00000	;12c36
+	dc.l	$00000	;12c3a
+	dc.l	lb_18f78	;12c3e
+	dc.l	lb_172c8	;12c42
+	dc.l	lb_18e78	;12c46
+lb_12c4a:
+	dc.l	$6bdd2	;12c4a
+	dc.l	$00069	;12c4e
+	dc.l	$00000	;12c52
+	dc.l	$0013f	;12c56
+	dc.l	$00000	;12c5a
+	dc.l	$00000	;12c5e
+	dc.l	lb_12c7e	;12c62
+	dc.l	lb_12c16	;12c66
+	dc.l	$00000	;12c6a
+	dc.l	$00000	;12c6e
+	dc.l	lb_18f78	;12c72
+	dc.l	lb_172c8	;12c76
+	dc.l	lb_18e78	;12c7a
+lb_12c7e:
+	dc.l	$6bff6	;12c7e
+	dc.l	$00070	;12c82
+	dc.l	$00000	;12c86
+	dc.l	$0013f	;12c8a
+	dc.l	$00000	;12c8e
+	dc.l	$00000	;12c92
+	dc.l	lb_12cb2	;12c96
+	dc.l	lb_12c4a	;12c9a
+	dc.l	$00000	;12c9e
+	dc.l	$00000	;12ca2
+	dc.l	lb_18f78	;12ca6
+	dc.l	lb_172c8	;12caa
+	dc.l	lb_18e78	;12cae
+lb_12cb2:
+	dc.l	lb_2086c+1	;12cb2
+	dc.l	$00079	;12cb6
+	dc.l	$00000	;12cba
+	dc.l	$0013f	;12cbe
+	dc.l	$00000	;12cc2
+	dc.l	$00000	;12cc6
+	dc.l	lb_129a6	;12cca
+	dc.l	lb_12c7e	;12cce
+	dc.l	$00000	;12cd2
+	dc.l	$00000	;12cd6
+	dc.l	lb_172c8	;12cda
+	dc.l	lb_172c8	;12cde
+	dc.l	$00000	;12ce2
+	dc.l	$8002	;12ce6
+	dc.l	$10001a	;12cea
+	dc.l	$640120	;12cee
+	dc.l	$20001	;12cf2
+	dc.l	$80001	;12cf6
+	dc.l	lb_10002	;12cfa
+lb_12cfe:
+	dc.l	lb_20338	;12cfe
+	dc.l	$0000f	;12d02
+	dc.l	$00000	;12d06
+	dc.l	$0013f	;12d0a
+	dc.l	$00000	;12d0e
+	dc.l	$00000	;12d12
+	dc.l	$00000	;12d16
+	dc.l	$00000	;12d1a
+	dc.l	$00000	;12d1e
+	dc.l	$00000	;12d22
+	dc.l	$00000	;12d26
+	dc.l	$00000	;12d2a
+	dc.l	$00000	;12d2e
+	dc.l	lb_1fe82+1	;12d32
+	dc.l	$00019	;12d36
+	dc.l	$00000	;12d3a
+	dc.l	$0013f	;12d3e
+	dc.l	$00000	;12d42
+	dc.l	$00000	;12d46
+	dc.l	$00000	;12d4a
+	dc.l	$00000	;12d4e
+	dc.l	$00000	;12d52
+	dc.l	$00000	;12d56
+	dc.l	$00000	;12d5a
+	dc.l	$00000	;12d5e
+	dc.l	$00000	;12d62
+lb_12d66:
+	dc.l	lb_20808	;12d66
+	dc.l	$00032	;12d6a
+	dc.l	$00000	;12d6e
+	dc.l	$0013f	;12d72
+	dc.l	$056d8	;12d76
+	dc.l	$00008	;12d7a
+	dc.l	lb_12d9a	;12d7e
+	dc.l	lb_12dce	;12d82
+	dc.l	$00000	;12d86
+	dc.l	$00000	;12d8a
+	dc.l	lb_172fe	;12d8e
+	dc.l	lb_172c8	;12d92
+	dc.l	lb_172fe	;12d96
+lb_12d9a:
+	dc.l	lb_1fdda	;12d9a
+	dc.l	$00041	;12d9e
+	dc.l	$00000	;12da2
+	dc.l	$0013f	;12da6
+	dc.l	$00000	;12daa
+	dc.l	$00000	;12dae
+	dc.l	lb_12dce	;12db2
+	dc.l	lb_12d66	;12db6
+	dc.l	$00000	;12dba
+	dc.l	$00000	;12dbe
+	dc.l	lb_175f2	;12dc2
+	dc.l	lb_172c8	;12dc6
+	dc.l	$00000	;12dca
+lb_12dce:
+	dc.l	lb_2086c+1	;12dce
+	dc.l	$0005a	;12dd2
+	dc.l	$00000	;12dd6
+	dc.l	$0013f	;12dda
+	dc.l	$00000	;12dde
+	dc.l	$00000	;12de2
+	dc.l	lb_12d66	;12de6
+	dc.l	lb_12d9a	;12dea
+	dc.l	$00000	;12dee
+	dc.l	$00000	;12df2
+	dc.l	lb_172c8	;12df6
+	dc.l	lb_172c8	;12dfa
+	dc.l	$00000	;12dfe
+	dc.l	$8002	;12e02
+	dc.l	$100019	;12e06
+	dc.l	$5a0120	;12e0a
+	dc.l	$20000+1	;12e0e
+	dc.l	$80001	;12e12
+	dc.l	$10000+1	;12e16
+lb_12e1a:
+	dc.l	lb_20338	;12e1a
+	dc.l	$0000f	;12e1e
+	dc.l	$00000	;12e22
+	dc.l	$0013f	;12e26
+	dc.l	$00000	;12e2a
+	dc.l	$00000	;12e2e
+	dc.l	$00000	;12e32
+	dc.l	$00000	;12e36
+	dc.l	$00000	;12e3a
+	dc.l	$00000	;12e3e
+	dc.l	$00000	;12e42
+	dc.l	$00000	;12e46
+	dc.l	$00000	;12e4a
+lb_12e4e:
+	dc.l	lb_20808	;12e4e
+	dc.l	$00023	;12e52
+	dc.l	$00000	;12e56
+	dc.l	$0013f	;12e5a
+	dc.l	$056d8	;12e5e
+	dc.l	$00008	;12e62
+	dc.l	lb_12e82	;12e66
+	dc.l	lb_12eea	;12e6a
+	dc.l	$00000	;12e6e
+	dc.l	$00000	;12e72
+	dc.l	lb_172fe	;12e76
+	dc.l	lb_172c8	;12e7a
+	dc.l	lb_172fe	;12e7e
+lb_12e82:
+	dc.l	lb_20818+1	;12e82
+	dc.l	$0002d	;12e86
+	dc.l	$00000	;12e8a
+	dc.l	$0013f	;12e8e
+	dc.l	$056e4	;12e92
+	dc.l	$00008	;12e96
+	dc.l	lb_12eb6	;12e9a
+	dc.l	lb_12e4e	;12e9e
+	dc.l	$00000	;12ea2
+	dc.l	$00000	;12ea6
+	dc.l	lb_172fe	;12eaa
+	dc.l	lb_172c8	;12eae
+	dc.l	lb_172fe	;12eb2
+lb_12eb6:
+	dc.l	lb_2082a	;12eb6
+	dc.l	$0003f	;12eba
+	dc.l	$00000	;12ebe
+	dc.l	$0013f	;12ec2
+	dc.l	$00000	;12ec6
+	dc.l	$00000	;12eca
+	dc.l	lb_12eea	;12ece
+	dc.l	lb_12e82	;12ed2
+	dc.l	$00000	;12ed6
+	dc.l	$00000	;12eda
+	dc.l	lb_17628	;12ede
+	dc.l	lb_172c8	;12ee2
+	dc.l	$00000	;12ee6
+lb_12eea:
+	dc.l	lb_2086c+1	;12eea
+	dc.l	$00050	;12eee
+	dc.l	$00000	;12ef2
+	dc.l	$0013f	;12ef6
+	dc.l	$00000	;12efa
+	dc.l	$00000	;12efe
+	dc.l	lb_12e4e	;12f02
+	dc.l	lb_12eb6	;12f06
+	dc.l	$00000	;12f0a
+	dc.l	$00000	;12f0e
+	dc.l	lb_172c8	;12f12
+	dc.l	lb_172c8	;12f16
+	dc.l	$00000	;12f1a
+	dc.l	$8002	;12f1e
 	ORI.B	#$11,(A0)		;12f22: 00100011
 	ORI.W	#$0120,2(A1,D0.W)	;12f26: 007101200002
 	ORI.B	#$08,D1			;12f2c: 00010008
 	ORI.B	#$01,D1			;12f30: 00010001
 lb_12f34:
-	ORI.B	#$02,D4			;12f34: 00040002
+	dc.w	$0004  ;12f34
+lb_12f36:
+	dc.w	$0002  ;12f36
 	BCHG	D1,(A5)			;12f38: 0355
 	ORI.B	#$0f,D0			;12f3a: 0000000f
 	dc.w	$0000	;12f3e
@@ -16987,2574 +16312,1584 @@ lb_12f34:
 	dc.w	$0000	;12f64
 	dc.w	$0000	;12f66
 	dc.w	$0000	;12f68
-	DC.W	$0001			;12f6a
-	DC.W	$feb4			;12f6c
-	ORI.B	#$18,D0			;12f6e: 00000018
-	dc.w	$0000	;12f72
-	dc.w	$0000	;12f74
-	DC.W	$0000			;12f76
-	DC.W	$013f			;12f78
-	dc.w	$0000	;12f7a
-	dc.w	$0000	;12f7c
-	dc.w	$0000	;12f7e
-	dc.w	$0000	;12f80
-	dc.w	$0000	;12f82
-	dc.w	$0000	;12f84
-	dc.w	$0000	;12f86
-	dc.w	$0000	;12f88
-	dc.w	$0000	;12f8a
-	dc.w	$0000	;12f8c
-	dc.w	$0000	;12f8e
-	dc.w	$0000	;12f90
-	dc.w	$0000	;12f92
-	dc.w	$0000	;12f94
-	dc.w	$0000	;12f96
-	dc.w	$0000	;12f98
-	dc.w	$0000	;12f9a
-	dc.w	$0000	;12f9c
-	DC.W	$0001			;12f9e
-	DC.W	$fed5			;12fa0
-	ORI.B	#$1f,D0			;12fa2: 0000001f
-	dc.w	$0000	;12fa6
-	dc.w	$0000	;12fa8
-	DC.W	$0000			;12faa
-	DC.W	$013f			;12fac
-	dc.w	$0000	;12fae
-	dc.w	$0000	;12fb0
-	dc.w	$0000	;12fb2
-	dc.w	$0000	;12fb4
-	dc.w	$0000	;12fb6
-	dc.w	$0000	;12fb8
-	dc.w	$0000	;12fba
-	dc.w	$0000	;12fbc
-	dc.w	$0000	;12fbe
-	dc.w	$0000	;12fc0
-	dc.w	$0000	;12fc2
-	dc.w	$0000	;12fc4
-	dc.w	$0000	;12fc6
-	dc.w	$0000	;12fc8
-	dc.w	$0000	;12fca
-	dc.w	$0000	;12fcc
-	dc.w	$0000	;12fce
-	dc.w	$0000	;12fd0
-	DC.W	$0001			;12fd2
-	DC.W	$fef7			;12fd4
-	ORI.B	#$26,D0			;12fd6: 00000026
-	dc.w	$0000	;12fda
-	dc.w	$0000	;12fdc
-	DC.W	$0000			;12fde
-	DC.W	$013f			;12fe0
-	dc.w	$0000	;12fe2
-	dc.w	$0000	;12fe4
-	dc.w	$0000	;12fe6
-	dc.w	$0000	;12fe8
-	dc.w	$0000	;12fea
-	dc.w	$0000	;12fec
-	dc.w	$0000	;12fee
-	dc.w	$0000	;12ff0
-	dc.w	$0000	;12ff2
-	dc.w	$0000	;12ff4
-	dc.w	$0000	;12ff6
-	dc.w	$0000	;12ff8
-	dc.w	$0000	;12ffa
-	dc.w	$0000	;12ffc
-	dc.w	$0000	;12ffe
-	dc.w	$0000	;13000
-	dc.w	$0000	;13002
-	dc.w	$0000	;13004
-	DC.W	$0002			;13006
-	DC.W	$0808			;13008
-	ORI.B	#$3a,D0			;1300a: 0000003a
-	dc.w	$0000	;1300e
-	dc.w	$0000	;13010
-	DC.W	$0000			;13012
-	DC.W	$013f			;13014
-	DC.W	$0000			;13016
-	SNE	(A0)+			;13018: 56d8
-	ORI.B	#$08,D0			;1301a: 00000008
-	DC.W	$0001			;1301e
-	DC.W	$303a			;13020
-	DC.W	$0001			;13022
-	MOVE.W	-(A2),(A0)		;13024: 30a2
-	dc.w	$0000	;13026
-	dc.w	$0000	;13028
-	dc.w	$0000	;1302a
-	dc.w	$0000	;1302c
-	DC.W	$0001			;1302e
-	MOVEQ	#-2,D1			;13030: 72fe
-	DC.W	$0001			;13032
-	MOVEQ	#-56,D1			;13034: 72c8
-	DC.W	$0001			;13036
-	MOVEQ	#-2,D1			;13038: 72fe
-	DC.W	$0002			;1303a
-	BTST	#0,(A1)+		;1303c: 08190000
-	ORI.W	#$0000,D4		;13040: 00440000
-	dc.w	$0000	;13044
-	dc.w	$0000	;13046
-	DC.W	$013f			;13048
-	DC.W	$0000			;1304a
-	SNE	-(A4)			;1304c: 56e4
-	ORI.B	#$08,D0			;1304e: 00000008
-	DC.W	$0001			;13052
-	MOVEA.W	1(A6),A0		;13054: 306e0001
-	MOVE.W	D6,D0			;13058: 3006
-	dc.w	$0000	;1305a
-	dc.w	$0000	;1305c
-	dc.w	$0000	;1305e
-	dc.w	$0000	;13060
-	DC.W	$0001			;13062
-	MOVEQ	#-2,D1			;13064: 72fe
-	DC.W	$0001			;13066
-	MOVEQ	#-56,D1			;13068: 72c8
-	DC.W	$0001			;1306a
-	MOVEQ	#-2,D1			;1306c: 72fe
-	DC.W	$0002			;1306e
-	BTST	#0,83(A7,D0.W)		;13070: 083700000053
-	dc.w	$0000	;13076
-	dc.w	$0000	;13078
-	DC.W	$0000			;1307a
-	DC.W	$013f			;1307c
-	dc.w	$0000	;1307e
-	dc.w	$0000	;13080
-	dc.w	$0000	;13082
-	dc.w	$0000	;13084
-	DC.W	$0001			;13086
-	MOVE.W	-(A2),(A0)		;13088: 30a2
-	DC.W	$0001			;1308a
-lb_1308c:
-	MOVE.W	lb_1308c+2(PC),D0	;1308c: 303a0000
-	dc.w	$0000	;13090
-	dc.w	$0000	;13092
-	ORI.B	#$01,D0			;13094: 00000001
-	DC.W	$75de			;13098
-	DC.W	$0001			;1309a
-	MOVEQ	#-56,D1			;1309c: 72c8
-	dc.w	$0000	;1309e
-	dc.w	$0000	;130a0
-	DC.W	$0002			;130a2
-	BCHG	#0,103(A5)		;130a4: 086d00000067
-	dc.w	$0000	;130aa
-	dc.w	$0000	;130ac
-	DC.W	$0000			;130ae
-	DC.W	$013f			;130b0
-	dc.w	$0000	;130b2
-	dc.w	$0000	;130b4
-	dc.w	$0000	;130b6
-	dc.w	$0000	;130b8
-	DC.W	$0001			;130ba
-	MOVE.W	D6,D0			;130bc: 3006
-	DC.W	$0001			;130be
-	MOVEA.W	0(A6),A0		;130c0: 306e0000
-	dc.w	$0000	;130c4
-	dc.w	$0000	;130c6
-	ORI.B	#$01,D0			;130c8: 00000001
-	MOVEQ	#-56,D1			;130cc: 72c8
-	DC.W	$0001			;130ce
-	MOVEQ	#-56,D1			;130d0: 72c8
-	dc.w	$0000	;130d2
-	dc.w	$0000	;130d4
-	DC.W	$0000			;130d6
-	OR.B	D2,D0			;130d8: 8002
-	ORI.B	#$19,(A0)		;130da: 00100019
-	ORI.W	#$0120,2(A1)		;130de: 006901200002
-	ORI.B	#$08,D1			;130e4: 00010008
-	ORI.B	#$01,D0			;130e8: 00000001
-lb_130ec:
-	ORI.B	#$02,D6			;130ec: 00060002
-	BCHG	D1,EXT_0000.W		;130f0: 03780000
-	DC.W	$000f			;130f4
-	dc.w	$0000	;130f6
-	dc.w	$0000	;130f8
-	DC.W	$0000			;130fa
-	DC.W	$013f			;130fc
-	dc.w	$0000	;130fe
-	dc.w	$0000	;13100
-	dc.w	$0000	;13102
-	dc.w	$0000	;13104
-	dc.w	$0000	;13106
-	dc.w	$0000	;13108
-	dc.w	$0000	;1310a
-	dc.w	$0000	;1310c
-	dc.w	$0000	;1310e
-	dc.w	$0000	;13110
-	dc.w	$0000	;13112
-	dc.w	$0000	;13114
-	dc.w	$0000	;13116
-	dc.w	$0000	;13118
-	dc.w	$0000	;1311a
-	dc.w	$0000	;1311c
-	dc.w	$0000	;1311e
-	dc.w	$0000	;13120
-	DC.W	$0002			;13122
-	BCLR	D1,(A5)+		;13124: 039d
-	ORI.B	#$16,D0			;13126: 00000016
-	dc.w	$0000	;1312a
-	dc.w	$0000	;1312c
-	DC.W	$0000			;1312e
-	DC.W	$013f			;13130
-	dc.w	$0000	;13132
-	dc.w	$0000	;13134
-	dc.w	$0000	;13136
-	dc.w	$0000	;13138
-	dc.w	$0000	;1313a
-	dc.w	$0000	;1313c
-	dc.w	$0000	;1313e
-	dc.w	$0000	;13140
-	dc.w	$0000	;13142
-	dc.w	$0000	;13144
-	dc.w	$0000	;13146
-	dc.w	$0000	;13148
-	dc.w	$0000	;1314a
-	dc.w	$0000	;1314c
-	dc.w	$0000	;1314e
-	dc.w	$0000	;13150
-	dc.w	$0000	;13152
-	dc.w	$0000	;13154
-	DC.W	$0002			;13156
-	BSET	D1,D1			;13158: 03c1
-	ORI.B	#$20,D0			;1315a: 00000020
-	dc.w	$0000	;1315e
-	dc.w	$0000	;13160
-	DC.W	$0000			;13162
-	DC.W	$013f			;13164
-	dc.w	$0000	;13166
-	dc.w	$0000	;13168
-	dc.w	$0000	;1316a
-	dc.w	$0000	;1316c
-	dc.w	$0000	;1316e
-	dc.w	$0000	;13170
-	dc.w	$0000	;13172
-	dc.w	$0000	;13174
-	dc.w	$0000	;13176
-	dc.w	$0000	;13178
-	dc.w	$0000	;1317a
-	dc.w	$0000	;1317c
-	dc.w	$0000	;1317e
-	dc.w	$0000	;13180
-	dc.w	$0000	;13182
-	dc.w	$0000	;13184
-	dc.w	$0000	;13186
-	dc.w	$0000	;13188
-	DC.W	$0002			;1318a
-	BSET	D1,0(A0)		;1318c: 03e80000
-	ORI.B	#$00,-(A7)		;13190: 00270000
-	dc.w	$0000	;13194
-	dc.w	$0000	;13196
-	DC.W	$013f			;13198
-	dc.w	$0000	;1319a
-	dc.w	$0000	;1319c
-	dc.w	$0000	;1319e
-	dc.w	$0000	;131a0
-	dc.w	$0000	;131a2
-	dc.w	$0000	;131a4
-	dc.w	$0000	;131a6
-	dc.w	$0000	;131a8
-	dc.w	$0000	;131aa
-	dc.w	$0000	;131ac
-	dc.w	$0000	;131ae
-	dc.w	$0000	;131b0
-	dc.w	$0000	;131b2
-	dc.w	$0000	;131b4
-	dc.w	$0000	;131b6
-	dc.w	$0000	;131b8
-	dc.w	$0000	;131ba
-	dc.w	$0000	;131bc
-	DC.W	$0002			;131be
-	DC.W	$040d			;131c0
-	ORI.B	#$31,D0			;131c2: 00000031
-	dc.w	$0000	;131c6
-	dc.w	$0000	;131c8
-	DC.W	$0000			;131ca
-	DC.W	$013f			;131cc
-	dc.w	$0000	;131ce
-	dc.w	$0000	;131d0
-	dc.w	$0000	;131d2
-	dc.w	$0000	;131d4
-	dc.w	$0000	;131d6
-	dc.w	$0000	;131d8
-	dc.w	$0000	;131da
-	dc.w	$0000	;131dc
-	dc.w	$0000	;131de
-	dc.w	$0000	;131e0
-	dc.w	$0000	;131e2
-	dc.w	$0000	;131e4
-	dc.w	$0000	;131e6
-	dc.w	$0000	;131e8
-	dc.w	$0000	;131ea
-	dc.w	$0000	;131ec
-	dc.w	$0000	;131ee
-	dc.w	$0000	;131f0
-	DC.W	$0002			;131f2
-	SUBI.B	#$00,56(A0,D0.W)	;131f4: 043000000038
-	dc.w	$0000	;131fa
-	dc.w	$0000	;131fc
-	DC.W	$0000			;131fe
-	DC.W	$013f			;13200
-	dc.w	$0000	;13202
-	dc.w	$0000	;13204
-	dc.w	$0000	;13206
-	dc.w	$0000	;13208
-	dc.w	$0000	;1320a
-	dc.w	$0000	;1320c
-	dc.w	$0000	;1320e
-	dc.w	$0000	;13210
-	dc.w	$0000	;13212
-	dc.w	$0000	;13214
-	dc.w	$0000	;13216
-	dc.w	$0000	;13218
-	dc.w	$0000	;1321a
-	dc.w	$0000	;1321c
-	dc.w	$0000	;1321e
-	dc.w	$0000	;13220
-	dc.w	$0000	;13222
-	dc.w	$0000	;13224
-	DC.W	$0002			;13226
-	DC.W	$084c			;13228
-	ORI.B	#$50,D0			;1322a: 00000050
-	dc.w	$0000	;1322e
-	dc.w	$0000	;13230
-	DC.W	$0000			;13232
-	DC.W	$013f			;13234
-	dc.w	$0000	;13236
-	dc.w	$0000	;13238
-	dc.w	$0000	;1323a
-	dc.w	$0000	;1323c
-	DC.W	$0001			;1323e
-	MOVEA.W	(A2)+,A1		;13240: 325a
-	DC.W	$0001			;13242
-	MOVEA.W	(A2)+,A1		;13244: 325a
-	dc.w	$0000	;13246
-	dc.w	$0000	;13248
-	dc.w	$0000	;1324a
-	dc.w	$0000	;1324c
-	DC.W	$0001			;1324e
-	OR.W	#$0001,D4		;13250: 887c0001
-	MOVEQ	#-56,D1			;13254: 72c8
-	dc.w	$0000	;13256
-	dc.w	$0000	;13258
-	DC.W	$0002			;1325a
-	BCHG	#0,95(A5)		;1325c: 086d0000005f
-	dc.w	$0000	;13262
-	dc.w	$0000	;13264
-	DC.W	$0000			;13266
-	DC.W	$013f			;13268
-	dc.w	$0000	;1326a
-	dc.w	$0000	;1326c
-	dc.w	$0000	;1326e
-	dc.w	$0000	;13270
-	DC.W	$0001			;13272
-	MOVE.W	-(A6),D1		;13274: 3226
-	DC.W	$0001			;13276
-	MOVE.W	-(A6),D1		;13278: 3226
-	dc.w	$0000	;1327a
-	dc.w	$0000	;1327c
-	dc.w	$0000	;1327e
-	dc.w	$0000	;13280
-	DC.W	$0001			;13282
-	MOVEQ	#-56,D1			;13284: 72c8
-	DC.W	$0001			;13286
-	MOVEQ	#-56,D1			;13288: 72c8
-	dc.w	$0000	;1328a
-	dc.w	$0000	;1328c
-	DC.W	$0000			;1328e
-	OR.B	D2,D0			;13290: 8002
-	ORI.B	#$14,(A0)		;13292: 00100014
-	ORI.W	#$0120,2(A0,D0.W)	;13296: 007001200002
-	ORI.B	#$08,D1			;1329c: 00010008
-	ORI.B	#$01,D0			;132a0: 00000001
-	DC.W	$ffff			;132a4
+	dc.l	lb_1feb4	;12f6a
+	dc.l	$00018	;12f6e
+	dc.l	$00000	;12f72
+	dc.l	$0013f	;12f76
+	dc.l	$00000	;12f7a
+	dc.l	$00000	;12f7e
+	dc.l	$00000	;12f82
+	dc.l	$00000	;12f86
+	dc.l	$00000	;12f8a
+	dc.l	$00000	;12f8e
+	dc.l	$00000	;12f92
+	dc.l	$00000	;12f96
+	dc.l	$00000	;12f9a
+	dc.l	lb_1fed4+1	;12f9e
+	dc.l	$0001f	;12fa2
+	dc.l	$00000	;12fa6
+	dc.l	$0013f	;12faa
+	dc.l	$00000	;12fae
+	dc.l	$00000	;12fb2
+	dc.l	$00000	;12fb6
+	dc.l	$00000	;12fba
+	dc.l	$00000	;12fbe
+	dc.l	$00000	;12fc2
+	dc.l	$00000	;12fc6
+	dc.l	$00000	;12fca
+	dc.l	$00000	;12fce
+	dc.l	lb_1fef6+1	;12fd2
+	dc.l	$00026	;12fd6
+	dc.l	$00000	;12fda
+	dc.l	$0013f	;12fde
+	dc.l	$00000	;12fe2
+	dc.l	$00000	;12fe6
+	dc.l	$00000	;12fea
+	dc.l	$00000	;12fee
+	dc.l	$00000	;12ff2
+	dc.l	$00000	;12ff6
+	dc.l	$00000	;12ffa
+	dc.l	$00000	;12ffe
+	dc.l	$00000	;13002
+lb_13006:
+	dc.l	lb_20808	;13006
+	dc.l	$0003a	;1300a
+	dc.l	$00000	;1300e
+	dc.l	$0013f	;13012
+	dc.l	$056d8	;13016
+	dc.l	$00008	;1301a
+	dc.l	lb_1303a	;1301e
+	dc.l	lb_130a2	;13022
+	dc.l	$00000	;13026
+	dc.l	$00000	;1302a
+	dc.l	lb_172fe	;1302e
+	dc.l	lb_172c8	;13032
+	dc.l	lb_172fe	;13036
+lb_1303a:
+	dc.l	lb_20818+1	;1303a
+	dc.l	$00044	;1303e
+	dc.l	$00000	;13042
+	dc.l	$0013f	;13046
+	dc.l	$056e4	;1304a
+	dc.l	$00008	;1304e
+	dc.l	lb_1306e	;13052
+	dc.l	lb_13006	;13056
+	dc.l	$00000	;1305a
+	dc.l	$00000	;1305e
+	dc.l	lb_172fe	;13062
+	dc.l	lb_172c8	;13066
+	dc.l	lb_172fe	;1306a
+lb_1306e:
+	dc.l	lb_20836+1	;1306e
+	dc.l	$00053	;13072
+	dc.l	$00000	;13076
+	dc.l	$0013f	;1307a
+	dc.l	$00000	;1307e
+	dc.l	$00000	;13082
+	dc.l	lb_130a2	;13086
+	dc.l	lb_1303a	;1308a
+	dc.l	$00000	;1308e
+	dc.l	$00000	;13092
+	dc.l	lb_175de	;13096
+	dc.l	lb_172c8	;1309a
+	dc.l	$00000	;1309e
+lb_130a2:
+	dc.l	lb_2086c+1	;130a2
+	dc.l	$00067	;130a6
+	dc.l	$00000	;130aa
+	dc.l	$0013f	;130ae
+	dc.l	$00000	;130b2
+	dc.l	$00000	;130b6
+	dc.l	lb_13006	;130ba
+	dc.l	lb_1306e	;130be
+	dc.l	$00000	;130c2
+	dc.l	$00000	;130c6
+	dc.l	lb_172c8	;130ca
+	dc.l	lb_172c8	;130ce
+	dc.l	$00000	;130d2
+	dc.l	$08002	;130d6
+	dc.l	$100019	;130da
+	dc.l	$690120	;130de
+	dc.l	$20000+1	;130e2
+	dc.l	$80000	;130e6
+	dc.l	lb_10006	;130ea
+lb_130ee:
+	dc.l	lb_20378	;130ee
+	dc.l	$0000f	;130f2
+	dc.l	$00000	;130f6
+	dc.l	$0013f	;130fa
+	dc.l	$00000	;130fe
+	dc.l	$00000	;13102
+	dc.l	$00000	;13106
+	dc.l	$00000	;1310a
+	dc.l	$00000	;1310e
+	dc.l	$00000	;13112
+	dc.l	$00000	;13116
+	dc.l	$00000	;1311a
+	dc.l	$00000	;1311e
+	dc.l	lb_2039c+1	;13122
+	dc.l	$00016	;13126
+	dc.l	$00000	;1312a
+	dc.l	$0013f	;1312e
+	dc.l	$00000	;13132
+	dc.l	$00000	;13136
+	dc.l	$00000	;1313a
+	dc.l	$00000	;1313e
+	dc.l	$00000	;13142
+	dc.l	$00000	;13146
+	dc.l	$00000	;1314a
+	dc.l	$00000	;1314e
+	dc.l	$00000	;13152
+	dc.l	lb_203c0+1	;13156
+	dc.l	$00020	;1315a
+	dc.l	$00000	;1315e
+	dc.l	$0013f	;13162
+	dc.l	$00000	;13166
+	dc.l	$00000	;1316a
+	dc.l	$00000	;1316e
+	dc.l	$00000	;13172
+	dc.l	$00000	;13176
+	dc.l	$00000	;1317a
+	dc.l	$00000	;1317e
+	dc.l	$00000	;13182
+	dc.l	$00000	;13186
+	dc.l	lb_203e8	;1318a
+	dc.l	$00027	;1318e
+	dc.l	$00000	;13192
+	dc.l	$0013f	;13196
+	dc.l	$00000	;1319a
+	dc.l	$00000	;1319e
+	dc.l	$00000	;131a2
+	dc.l	$00000	;131a6
+	dc.l	$00000	;131aa
+	dc.l	$00000	;131ae
+	dc.l	$00000	;131b2
+	dc.l	$00000	;131b6
+	dc.l	$00000	;131ba
+	dc.l	lb_2040c+1	;131be
+	dc.l	$00031	;131c2
+	dc.l	$00000	;131c6
+	dc.l	$0013f	;131ca
+	dc.l	$00000	;131ce
+	dc.l	$00000	;131d2
+	dc.l	$00000	;131d6
+	dc.l	$00000	;131da
+	dc.l	$00000	;131de
+	dc.l	$00000	;131e2
+	dc.l	$00000	;131e6
+	dc.l	$00000	;131ea
+	dc.l	$00000	;131ee
+	dc.l	lb_20430	;131f2
+	dc.l	$00038	;131f6
+	dc.l	$00000	;131fa
+	dc.l	$0013f	;131fe
+	dc.l	$00000	;13202
+	dc.l	$00000	;13206
+	dc.l	$00000	;1320a
+	dc.l	$00000	;1320e
+	dc.l	$00000	;13212
+	dc.l	$00000	;13216
+	dc.l	$00000	;1321a
+	dc.l	$00000	;1321e
+	dc.l	$00000	;13222
+lb_13226:
+	dc.l	lb_2084c	;13226
+	dc.l	$00050	;1322a
+	dc.l	$00000	;1322e
+	dc.l	$0013f	;13232
+	dc.l	$00000	;13236
+	dc.l	$00000	;1323a
+	dc.l	lb_1325a	;1323e
+	dc.l	lb_1325a	;13242
+	dc.l	$00000	;13246
+	dc.l	$00000	;1324a
+	dc.l	lb_1887c	;1324e
+	dc.l	lb_172c8	;13252
+	dc.l	$00000	;13256
+lb_1325a:
+	dc.l	lb_2086c+1	;1325a
+	dc.l	$0005f	;1325e
+	dc.l	$00000	;13262
+	dc.l	$0013f	;13266
+	dc.l	$00000	;1326a
+	dc.l	$00000	;1326e
+	dc.l	lb_13226	;13272
+	dc.l	lb_13226	;13276
+	dc.l	$00000	;1327a
+	dc.l	$00000	;1327e
+	dc.l	lb_172c8	;13282
+	dc.l	lb_172c8	;13286
+	dc.l	$00000	;1328a
+	dc.l	$08002	;1328e
+	dc.l	$100014	;13292
+	dc.l	$700120	;13296
+	dc.l	$20000+1	;1329a
+	dc.l	$80000	;1329e
+	dc.l	$1fffe+1	;132a2
 lb_132a6:
-	DC.W	$0002			;132a6
-	DC.W	$028f			;132a8
-	ORI.B	#$0e,D0			;132aa: 0000000e
-	dc.w	$0000	;132ae
-	dc.w	$0000	;132b0
-	DC.W	$0000			;132b2
-	DC.W	$013f			;132b4
-	dc.w	$0000	;132b6
-	dc.w	$0000	;132b8
-	dc.w	$0000	;132ba
-	dc.w	$0000	;132bc
-	dc.w	$0000	;132be
-	dc.w	$0000	;132c0
-	dc.w	$0000	;132c2
-	dc.w	$0000	;132c4
-	dc.w	$0000	;132c6
-	dc.w	$0000	;132c8
-	dc.w	$0000	;132ca
-	dc.w	$0000	;132cc
-	dc.w	$0000	;132ce
-	dc.w	$0000	;132d0
-	dc.w	$0000	;132d2
-	dc.w	$0000	;132d4
-	dc.w	$0000	;132d6
-	dc.w	$0000	;132d8
-	DC.W	$0002			;132da
-	ANDI.L	#$00000014,0(A1,D0.W)	;132dc: 02b1000000140000
-	dc.w	$0000	;132e4
-	dc.w	$0000	;132e6
-	DC.W	$013f			;132e8
-	dc.w	$0000	;132ea
-	dc.w	$0000	;132ec
-	dc.w	$0000	;132ee
-	dc.w	$0000	;132f0
-	dc.w	$0000	;132f2
-	dc.w	$0000	;132f4
-	dc.w	$0000	;132f6
-	dc.w	$0000	;132f8
-	dc.w	$0000	;132fa
-	dc.w	$0000	;132fc
-	dc.w	$0000	;132fe
-	dc.w	$0000	;13300
-	dc.w	$0000	;13302
-	dc.w	$0000	;13304
-	dc.w	$0000	;13306
-	dc.w	$0000	;13308
-	dc.w	$0000	;1330a
-	dc.w	$0000	;1330c
-	DC.W	$0002			;1330e
-	BSET	D4,0(A4)		;13310: 09ec0000
-	ORI.B	#$00,-(A4)		;13314: 00240000
-	dc.w	$0000	;13318
-	dc.w	$0000	;1331a
-	DC.W	$013f			;1331c
-	dc.w	$0000	;1331e
-	dc.w	$0000	;13320
-	dc.w	$0000	;13322
-	dc.w	$0000	;13324
-	DC.W	$0001			;13326
-	MOVE.W	D2,1(A1)		;13328: 33420001
-	MOVE.W	(A2),D2			;1332c: 3412
-	dc.w	$0000	;1332e
-	dc.w	$0000	;13330
-	dc.w	$0000	;13332
-	dc.w	$0000	;13334
-	DC.W	$0001			;13336
-	SUB.W	D4,-(A6)		;13338: 9966
-	DC.W	$0001			;1333a
-	MOVEQ	#-56,D1			;1333c: 72c8
-	dc.w	$0000	;1333e
-	dc.w	$0000	;13340
+	dc.l	lb_2028e+1	;132a6
+	dc.l	$0000e	;132aa
+	dc.l	$00000	;132ae
+	dc.l	$0013f	;132b2
+	dc.l	$00000	;132b6
+	dc.l	$00000	;132ba
+	dc.l	$00000	;132be
+	dc.l	$00000	;132c2
+	dc.l	$00000	;132c6
+	dc.l	$00000	;132ca
+	dc.l	$00000	;132ce
+	dc.l	$00000	;132d2
+	dc.l	$00000	;132d6
+	dc.l	lb_202b0+1	;132da
+	dc.l	$00014	;132de
+	dc.l	$00000	;132e2
+	dc.l	$0013f	;132e6
+	dc.l	$00000	;132ea
+	dc.l	$00000	;132ee
+	dc.l	$00000	;132f2
+	dc.l	$00000	;132f6
+	dc.l	$00000	;132fa
+	dc.l	$00000	;132fe
+	dc.l	$00000	;13302
+	dc.l	$00000	;13306
+	dc.l	$00000	;1330a
+lb_1330e:
+	dc.l	lb_209ec	;1330e
+	dc.l	$00024	;13312
+	dc.l	$00000	;13316
+	dc.l	$0013f	;1331a
+	dc.l	$00000	;1331e
+	dc.l	$00000	;13322
+	dc.l	lb_13342	;13326
+	dc.l	lb_13412	;1332a
+	dc.l	$00000	;1332e
+	dc.l	$00000	;13332
+	dc.l	lb_19966	;13336
+	dc.l	lb_172c8	;1333a
+	dc.l	$00000	;1333e
 lb_13342:
-	DC.W	$0002			;13342
-	DC.W	$0a0b			;13344
-	ORI.B	#$2d,D0			;13346: 0000002d
-	dc.w	$0000	;1334a
-	dc.w	$0000	;1334c
-	DC.W	$0000			;1334e
-	DC.W	$013f			;13350
-	dc.w	$0000	;13352
-	dc.w	$0000	;13354
-	dc.w	$0000	;13356
-	dc.w	$0000	;13358
-	DC.W	$0001			;1335a
-	MOVE.W	1(A6,D0.W),13070(A1)	;1335c: 33760001330e
-	dc.w	$0000	;13362
-	dc.w	$0000	;13364
-	dc.w	$0000	;13366
-	dc.w	$0000	;13368
-	DC.W	$0001			;1336a
-	SUB.W	D4,1(A0,D0.W)		;1336c: 99700001
-	MOVEQ	#-56,D1			;13370: 72c8
-	dc.w	$0000	;13372
-	dc.w	$0000	;13374
-	DC.W	$0002			;13376
-	EORI.B	#$00,62(A1)		;13378: 0a290000003e
-	dc.w	$0000	;1337e
-	dc.w	$0000	;13380
-	DC.W	$0000			;13382
-	DC.W	$013f			;13384
-	dc.w	$0000	;13386
-	dc.w	$0000	;13388
-	dc.w	$0000	;1338a
-	dc.w	$0000	;1338c
-	DC.W	$0001			;1338e
-	DC.W	$33aa			;13390
-	DC.W	$0001			;13392
-	MOVE.W	D2,0(A1)		;13394: 33420000
-	dc.w	$0000	;13398
-	dc.w	$0000	;1339a
-	ORI.B	#$01,D0			;1339c: 00000001
-	MOVEQ	#-32,D5			;133a0: 7ae0
-	DC.W	$0001			;133a2
-	MOVEQ	#-56,D1			;133a4: 72c8
-	dc.w	$0000	;133a6
-	dc.w	$0000	;133a8
-	DC.W	$0002			;133aa
-	DC.W	$0a48			;133ac
-	ORI.B	#$47,D0			;133ae: 00000047
-	dc.w	$0000	;133b2
-	dc.w	$0000	;133b4
-	DC.W	$0000			;133b6
-	DC.W	$013f			;133b8
-	dc.w	$0000	;133ba
-	dc.w	$0000	;133bc
-	dc.w	$0000	;133be
-	dc.w	$0000	;133c0
-	DC.W	$0001			;133c2
-	MOVE.W	(A6)+,lb_13342		;133c4: 33de00013342
-	dc.w	$0000	;133ca
-	dc.w	$0000	;133cc
-	dc.w	$0000	;133ce
-	dc.w	$0000	;133d0
-	DC.W	$0001			;133d2
-	MOVEQ	#118,D5			;133d4: 7a76
-	DC.W	$0001			;133d6
-	MOVEQ	#-56,D1			;133d8: 72c8
-	dc.w	$0000	;133da
-	dc.w	$0000	;133dc
-	DC.W	$0002			;133de
-	EORI.W	#$0000,-(A7)		;133e0: 0a670000
-	ORI.W	#$0000,(A7)		;133e4: 00570000
-	dc.w	$0000	;133e8
-	dc.w	$0000	;133ea
-	DC.W	$013f			;133ec
-	dc.w	$0000	;133ee
-	dc.w	$0000	;133f0
-	dc.w	$0000	;133f2
-	dc.w	$0000	;133f4
-	DC.W	$0001			;133f6
-	MOVE.W	(A2),D2			;133f8: 3412
-	DC.W	$0001			;133fa
-	MOVE.W	0(A2),0(A1,D0.W)	;133fc: 33aa00000000
-	dc.w	$0000	;13402
-	dc.w	$0000	;13404
-	DC.W	$0001			;13406
-	OR.W	1(A0),D4		;13408: 88680001
-	MOVEQ	#-56,D1			;1340c: 72c8
-	dc.w	$0000	;1340e
-	dc.w	$0000	;13410
-	DC.W	$0002			;13412
-	BCHG	#0,103(A5)		;13414: 086d00000067
-	dc.w	$0000	;1341a
-	dc.w	$0000	;1341c
-	DC.W	$0000			;1341e
-	DC.W	$013f			;13420
-	dc.w	$0000	;13422
-	dc.w	$0000	;13424
-	dc.w	$0000	;13426
-	dc.w	$0000	;13428
-	DC.W	$0001			;1342a
-	MOVE.W	A6,-(A1)		;1342c: 330e
-	DC.W	$0001			;1342e
-	MOVE.W	(A6)+,EXT_0000		;13430: 33de00000000
-	dc.w	$0000	;13436
-	dc.w	$0000	;13438
-	DC.W	$0001			;1343a
-	MOVEQ	#-56,D1			;1343c: 72c8
-	DC.W	$0001			;1343e
-	MOVEQ	#-56,D1			;13440: 72c8
-	dc.w	$0000	;13442
-	dc.w	$0000	;13444
-	DC.W	$0000			;13446
-	OR.B	D2,D0			;13448: 8002
-	ORI.B	#$1e,-(A0)		;1344a: 0020001e
-	ORI.W	#$00ff,-(A4)		;1344e: 006400ff
-	ORI.B	#$03,D2			;13452: 00020003
-	DC.W	$0008			;13456
-	ORI.B	#$01,D0			;13458: 00000001
-	DC.W	$ffff			;1345c
+	dc.l	lb_20a0a+1	;13342
+	dc.l	$0002d	;13346
+	dc.l	$00000	;1334a
+	dc.l	$0013f	;1334e
+	dc.l	$00000	;13352
+	dc.l	$00000	;13356
+	dc.l	lb_13376	;1335a
+	dc.l	lb_1330e	;1335e
+	dc.l	$00000	;13362
+	dc.l	$00000	;13366
+	dc.l	lb_19970	;1336a
+	dc.l	lb_172c8	;1336e
+	dc.l	$00000	;13372
+lb_13376:
+	dc.l	lb_20a28+1	;13376
+	dc.l	$0003e	;1337a
+	dc.l	$00000	;1337e
+	dc.l	$0013f	;13382
+	dc.l	$00000	;13386
+	dc.l	$00000	;1338a
+	dc.l	lb_133aa	;1338e
+	dc.l	lb_13342	;13392
+	dc.l	$00000	;13396
+	dc.l	$00000	;1339a
+	dc.l	lb_17ae0	;1339e
+	dc.l	lb_172c8	;133a2
+	dc.l	$00000	;133a6
+lb_133aa:
+	dc.l	lb_20a48	;133aa
+	dc.l	$00047	;133ae
+	dc.l	$00000	;133b2
+	dc.l	$0013f	;133b6
+	dc.l	$00000	;133ba
+	dc.l	$00000	;133be
+	dc.l	lb_133de	;133c2
+	dc.l	lb_13342	;133c6
+	dc.l	$00000	;133ca
+	dc.l	$00000	;133ce
+	dc.l	lb_17a76	;133d2
+	dc.l	lb_172c8	;133d6
+	dc.l	$00000	;133da
+lb_133de:
+	dc.l	lb_20a66+1	;133de
+	dc.l	$00057	;133e2
+	dc.l	$00000	;133e6
+	dc.l	$0013f	;133ea
+	dc.l	$00000	;133ee
+	dc.l	$00000	;133f2
+	dc.l	lb_13412	;133f6
+	dc.l	lb_133aa	;133fa
+	dc.l	$00000	;133fe
+	dc.l	$00000	;13402
+	dc.l	lb_18868	;13406
+	dc.l	lb_172c8	;1340a
+	dc.l	$00000	;1340e
+lb_13412:
+	dc.l	lb_2086c+1	;13412
+	dc.l	$00067	;13416
+	dc.l	$00000	;1341a
+	dc.l	$0013f	;1341e
+	dc.l	$00000	;13422
+	dc.l	$00000	;13426
+	dc.l	lb_1330e	;1342a
+	dc.l	lb_133de	;1342e
+	dc.l	$00000	;13432
+	dc.l	$00000	;13436
+	dc.l	lb_172c8	;1343a
+	dc.l	lb_172c8	;1343e
+	dc.l	$00000	;13442
+	dc.l	$8002	;13446
+	dc.l	$20001e	;1344a
+	dc.l	$6400ff	;1344e
+	dc.l	$20002+1	;13452
+	dc.l	$80000	;13456
+	dc.l	$1fffe+1	;1345a
 lb_1345e:
-	DC.W	$0002			;1345e
-	MOVEP.L	0(A2),D2		;13460: 054a0000
-	ORI.B	#$00,(A6)		;13464: 00160000
-	dc.w	$0000	;13468
-	dc.w	$0000	;1346a
-	DC.W	$013f			;1346c
-	dc.w	$0000	;1346e
-	dc.w	$0000	;13470
-	dc.w	$0000	;13472
-	dc.w	$0000	;13474
-	dc.w	$0000	;13476
-	dc.w	$0000	;13478
-	dc.w	$0000	;1347a
-	dc.w	$0000	;1347c
-	dc.w	$0000	;1347e
-	dc.w	$0000	;13480
-	dc.w	$0000	;13482
-	dc.w	$0000	;13484
-	dc.w	$0000	;13486
-	dc.w	$0000	;13488
-	dc.w	$0000	;1348a
-	dc.w	$0000	;1348c
-	dc.w	$0000	;1348e
-	dc.w	$0000	;13490
-	DC.W	$0002			;13492
-	BCHG	D2,-(A3)		;13494: 0563
-	ORI.B	#$20,D0			;13496: 00000020
-	dc.w	$0000	;1349a
-	dc.w	$0000	;1349c
-	DC.W	$0000			;1349e
-	DC.W	$013f			;134a0
-	dc.w	$0000	;134a2
-	dc.w	$0000	;134a4
-	dc.w	$0000	;134a6
-	dc.w	$0000	;134a8
-	dc.w	$0000	;134aa
-	dc.w	$0000	;134ac
-	dc.w	$0000	;134ae
-	dc.w	$0000	;134b0
-	dc.w	$0000	;134b2
-	dc.w	$0000	;134b4
-	dc.w	$0000	;134b6
-	dc.w	$0000	;134b8
-	dc.w	$0000	;134ba
-	dc.w	$0000	;134bc
-	dc.w	$0000	;134be
-	dc.w	$0000	;134c0
-	dc.w	$0000	;134c2
-	dc.w	$0000	;134c4
-	DC.W	$0002			;134c6
-	DC.W	$057a			;134c8
-	ORI.B	#$2f,D0			;134ca: 0000002f
-	dc.w	$0000	;134ce
-	dc.w	$0000	;134d0
-	DC.W	$0000			;134d2
-	DC.W	$013f			;134d4
-	dc.w	$0000	;134d6
-	dc.w	$0000	;134d8
-	dc.w	$0000	;134da
-	dc.w	$0000	;134dc
-	dc.w	$0000	;134de
-	dc.w	$0000	;134e0
-	dc.w	$0000	;134e2
-	dc.w	$0000	;134e4
-	dc.w	$0000	;134e6
-	dc.w	$0000	;134e8
-	dc.w	$0000	;134ea
-	dc.w	$0000	;134ec
-	dc.w	$0000	;134ee
-	dc.w	$0000	;134f0
-	dc.w	$0000	;134f2
-	dc.w	$0000	;134f4
-	dc.w	$0000	;134f6
-	dc.w	$0000	;134f8
-	DC.W	$0002			;134fa
-	BCLR	D2,(A0)+		;134fc: 0598
-	ORI.B	#$39,D0			;134fe: 00000039
-	dc.w	$0000	;13502
-	dc.w	$0000	;13504
-	DC.W	$0000			;13506
-	DC.W	$013f			;13508
-	dc.w	$0000	;1350a
-	dc.w	$0000	;1350c
-	dc.w	$0000	;1350e
-	dc.w	$0000	;13510
-	dc.w	$0000	;13512
-	dc.w	$0000	;13514
-	dc.w	$0000	;13516
-	dc.w	$0000	;13518
-	dc.w	$0000	;1351a
-	dc.w	$0000	;1351c
-	dc.w	$0000	;1351e
-	dc.w	$0000	;13520
-	dc.w	$0000	;13522
-	dc.w	$0000	;13524
-	dc.w	$0000	;13526
-	dc.w	$0000	;13528
-	dc.w	$0000	;1352a
-	dc.w	$0000	;1352c
-	DC.W	$0002			;1352e
-	BCLR	D2,0(A3,D0.W)		;13530: 05b30000
-	ORI.W	#$0000,D3		;13534: 00430000
-	dc.w	$0000	;13538
-	dc.w	$0000	;1353a
-	DC.W	$013f			;1353c
-	dc.w	$0000	;1353e
-	dc.w	$0000	;13540
-	dc.w	$0000	;13542
-	dc.w	$0000	;13544
-	dc.w	$0000	;13546
-	dc.w	$0000	;13548
-	dc.w	$0000	;1354a
-	dc.w	$0000	;1354c
-	dc.w	$0000	;1354e
-	dc.w	$0000	;13550
-	dc.w	$0000	;13552
-	dc.w	$0000	;13554
-	dc.w	$0000	;13556
-	dc.w	$0000	;13558
-	dc.w	$0000	;1355a
-	dc.w	$0000	;1355c
-	dc.w	$0000	;1355e
-	dc.w	$0000	;13560
-	DC.W	$0002			;13562
-	BCHG	#0,-(A5)		;13564: 08650000
-	ORI.W	#$0000,(A7)		;13568: 00570000
-	dc.w	$0000	;1356c
-	dc.w	$0000	;1356e
-	DC.W	$013f			;13570
-	dc.w	$0000	;13572
-	dc.w	$0000	;13574
-	dc.w	$0000	;13576
-	dc.w	$0000	;13578
-	DC.W	$0001			;1357a
-	MOVE.W	-(A2),1(A2)		;1357c: 35620001
-	MOVE.W	-(A2),0(A2)		;13580: 35620000
-	dc.w	$0000	;13584
-	dc.w	$0000	;13586
-	ORI.B	#$01,D0			;13588: 00000001
-	MOVEQ	#-56,D1			;1358c: 72c8
-	DC.W	$0001			;1358e
-	MOVEQ	#-56,D1			;13590: 72c8
-	dc.w	$0000	;13592
-	dc.w	$0000	;13594
-	DC.W	$0000			;13596
-	OR.B	D2,D0			;13598: 8002
-	DC.W	$491d			;1359a
-	DC.W	$2539			;1359c
-	DC.W	$615b			;1359e
-	ADDQ.L	#7,(A7)			;135a0: 5e97
-	BCC.S	lb_135c4		;135a2: 6420
-	DC.W	$1d32			;135a4
-	ADDQ.W	#7,28302(A4)		;135a6: 5e6c6e8e
-	MOVEQ	#30,D3			;135aa: 761e
-	MOVE.B	27487(A7),D6		;135ac: 1c2f6b5f
-	ADDQ.L	#6,-(A0)		;135b0: 5ca0
-	MOVE.W	(A6)+,D2		;135b2: 341e
-	MOVE.B	-(A1),-(A5)		;135b4: 1b21
-	DC.W	$6c5f			;135b6
-	BLS.S	lb_13634		;135b8: 637a
-	MOVEQ	#33,D1			;135ba: 7221
-	MOVE.B	(A3)+,-(A5)		;135bc: 1b1b
-	DC.W	$655f			;135be
-	DC.W	$6e6d			;135c0
-	DC.W	$7d24			;135c2
-lb_135c4:
-	MOVE.L	-(A2),D3		;135c4: 2622
-	BEQ.S	lb_13626		;135c6: 675e
-	MOVEQ	#110,D1			;135c8: 726e
-	MOVE.W	-(A5),-(A3)		;135ca: 3725
-	MOVE.L	-(A2),D0		;135cc: 2022
-	BGE.S	lb_1363e		;135ce: 6c6e
-	BRA.S	lb_13644		;135d0: 6072
-	MOVE.L	-(A4),-(A1)		;135d2: 2324
-	MOVE.L	(A5)+,D4		;135d4: 281d
-	DC.W	$6d5b			;135d6
-	BEQ.S	lb_1363e		;135d8: 6764
-	MOVE.L	(A4)+,D4		;135da: 281c
-	MOVE.L	(A5)+,D1		;135dc: 221d
-	BEQ.S	lb_1364e		;135de: 676e
+	dc.l	lb_2054a	;1345e
+	dc.l	$00016	;13462
+	dc.l	$00000	;13466
+	dc.l	$0013f	;1346a
+	dc.l	$00000	;1346e
+	dc.l	$00000	;13472
+	dc.l	$00000	;13476
+	dc.l	$00000	;1347a
+	dc.l	$00000	;1347e
+	dc.l	$00000	;13482
+	dc.l	$00000	;13486
+	dc.l	$00000	;1348a
+	dc.l	$00000	;1348e
+	dc.l	lb_20562+1	;13492
+	dc.l	$00020	;13496
+	dc.l	$00000	;1349a
+	dc.l	$0013f	;1349e
+	dc.l	$00000	;134a2
+	dc.l	$00000	;134a6
+	dc.l	$00000	;134aa
+	dc.l	$00000	;134ae
+	dc.l	$00000	;134b2
+	dc.l	$00000	;134b6
+	dc.l	$00000	;134ba
+	dc.l	$00000	;134be
+	dc.l	$00000	;134c2
+	dc.l	lb_2057a	;134c6
+	dc.l	$0002f	;134ca
+	dc.l	$00000	;134ce
+	dc.l	$0013f	;134d2
+	dc.l	$00000	;134d6
+	dc.l	$00000	;134da
+	dc.l	$00000	;134de
+	dc.l	$00000	;134e2
+	dc.l	$00000	;134e6
+	dc.l	$00000	;134ea
+	dc.l	$00000	;134ee
+	dc.l	$00000	;134f2
+	dc.l	$00000	;134f6
+	dc.l	lb_20598	;134fa
+	dc.l	$00039	;134fe
+	dc.l	$00000	;13502
+	dc.l	$0013f	;13506
+	dc.l	$00000	;1350a
+	dc.l	$00000	;1350e
+	dc.l	$00000	;13512
+	dc.l	$00000	;13516
+	dc.l	$00000	;1351a
+	dc.l	$00000	;1351e
+	dc.l	$00000	;13522
+	dc.l	$00000	;13526
+	dc.l	$00000	;1352a
+	dc.l	lb_205b2+1	;1352e
+	dc.l	$00043	;13532
+	dc.l	$00000	;13536
+	dc.l	$0013f	;1353a
+	dc.l	$00000	;1353e
+	dc.l	$00000	;13542
+	dc.l	$00000	;13546
+	dc.l	$00000	;1354a
+	dc.l	$00000	;1354e
+	dc.l	$00000	;13552
+	dc.l	$00000	;13556
+	dc.l	$00000	;1355a
+	dc.l	$00000	;1355e
+lb_13562:
+	dc.l	lb_20864+1	;13562
+	dc.l	$00057	;13566
+	dc.l	$00000	;1356a
+	dc.l	$0013f	;1356e
+	dc.l	$00000	;13572
+	dc.l	$00000	;13576
+	dc.l	lb_13562	;1357a
+	dc.l	lb_13562	;1357e
+	dc.l	$00000	;13582
+	dc.l	$00000	;13586
+	dc.l	lb_172c8	;1358a
+	dc.l	lb_172c8	;1358e
+	dc.l	$00000	;13592
+	dc.l	$8002	;13596
+	dc.w	$491d	;1359a
+	dc.w	$2539	;1359c
+	dc.w	$615b	;1359e
+	dc.w	$5e97	;135a0
+	dc.w	$6420	;135a2
+	dc.w	$1d32	;135a4
+	dc.w	$5e6c	;135a6
+	dc.w	$6e8e	;135a8
+	dc.w	$761e	;135aa
+	dc.w	$1c2f	;135ac
+	dc.w	$6b5f	;135ae
+	dc.w	$5ca0	;135b0
+	dc.w	$341e	;135b2
+	dc.w	$1b21	;135b4
+	dc.w	$6c5f	;135b6
+	dc.w	$637a	;135b8
+	dc.w	$7221	;135ba
+	dc.w	$1b1b	;135bc
+	dc.w	$655f	;135be
+	dc.w	$6e6d	;135c0
+	dc.w	$7d24	;135c2
+	dc.w	$2622	;135c4
+	dc.w	$675e	;135c6
+	dc.w	$726e	;135c8
+	dc.w	$3725	;135ca
+	dc.w	$2022	;135cc
+	dc.w	$6c6e	;135ce
+	dc.w	$6072	;135d0
+	dc.w	$2324	;135d2
+	dc.w	$281d	;135d4
+	dc.w	$6d5b	;135d6
+	dc.w	$6764	;135d8
+	dc.w	$281c	;135da
+	dc.w	$221d	;135dc
+	dc.w	$676e	;135de
 lb_135e0:
-	MOVE.W	D0,7452(A5)		;135e0: 3b401d1c
-	MOVE.B	(A5)+,-(A5)		;135e4: 1b1d
-	DC.W	$6f63			;135e6
-	DC.W	$6d63			;135e8
-	MOVE.B	(A5)+,-(A7)		;135ea: 1f1d
-	MOVE.B	(A6)+,-(A6)		;135ec: 1d1e
-	ADDQ.W	#5,24165(A4)		;135ee: 5a6c5e65
-	MOVE.L	-(A0),D0		;135f2: 2020
-	MOVE.B	(A3)+,D6		;135f4: 1c1b
-	SUBQ.W	#6,27246(A4)		;135f6: 5d6c6a6e
-	MOVE.L	(A5)+,D1		;135fa: 221d
-	MOVE.L	(A5)+,D1		;135fc: 221d
-	BGE.S	lb_13662		;135fe: 6c62
-	BPL.S	lb_13676		;13600: 6a74
-	MOVE.L	-(A0),-(A1)		;13602: 2320
-	MOVE.B	(A5)+,-(A7)		;13604: 1f1d
-	ADDQ.W	#6,24673(A4)		;13606: 5c6c6061
-	MOVE.L	(A5)+,-(A2)		;1360a: 251d
-	MOVE.L	(A5)+,D0		;1360c: 201d
-	DC.W	$6969			;1360e
-	DC.W	$6a6d			;13610
-	MOVE.L	(A4)+,D4		;13612: 281c
-	MOVE.B	(A5)+,-(A6)		;13614: 1d1d
-	BVC.S	lb_13682		;13616: 686a
-	DC.W	$6f6b			;13618
-	MOVE.L	(A5)+,D5		;1361a: 2a1d
-	MOVE.B	(A5)+,D6		;1361c: 1c1d
-	MOVEQ	#99,D0			;1361e: 7063
-	DC.W	$6967			;13620
-	MOVE.L	(A4)+,D6		;13622: 2c1c
-	MOVE.L	(A7)+,D0		;13624: 201f
-lb_13626:
-	DC.W	$6b5f			;13626
-	DC.W	$6873			;13628
-	MOVE.L	(A6)+,-(A6)		;1362a: 2d1e
-	MOVE.B	(A2)+,-(A5)		;1362c: 1b1a
-	DC.W	$675b			;1362e
-	BVC.S	lb_1369c		;13630: 686a
-	MOVE.L	(A6)+,D7		;13632: 2e1e
-lb_13634:
-	MOVE.B	(A6)+,-(A7)		;13634: 1f1e
-	DC.W	$6b5f			;13636
-	DC.W	$6f7b			;13638
-	MOVE.L	-(A1),-(A7)		;1363a: 2f21
-	MOVE.B	(A3)+,-(A5)		;1363c: 1b1b
-lb_1363e:
-	DC.W	$6769			;1363e
-	BLE.S	lb_136ae		;13640: 6f6c
-	MOVE.W	(A4)+,-(A0)		;13642: 311c
-lb_13644:
-	MOVE.B	(A1)+,-(A5)		;13644: 1b19
-	DC.W	$6c5f			;13646
-	DC.W	$6f7d			;13648
-	MOVE.W	(A5)+,D1		;1364a: 321d
-	MOVE.L	(A2)+,D1		;1364c: 221a
-lb_1364e:
-	ADDQ.W	#5,-(A1)		;1364e: 5a61
-	DC.W	$5c72			;13650
-	MOVE.W	-(A0),-(A1)		;13652: 3320
-	MOVE.L	-(A1),-(A1)		;13654: 2321
-	DC.W	$665b			;13656
-	DC.W	$6f6d			;13658
-	MOVE.W	-(A1),-(A2)		;1365a: 3521
-	MOVE.B	-(A1),D6		;1365c: 1c21
-	DC.W	$6b6f			;1365e
-	BEQ.S	lb_136d2		;13660: 6770
-lb_13662:
-	MOVE.W	(A5)+,-(A3)		;13662: 371d
-	MOVE.B	(A3)+,-(A5)		;13664: 1b1b
-	BVS.S	lb_136d4		;13666: 696c
-	DC.W	$607f			;13668
-lb_1366a:
-	MOVE.W	(A4)+,-(A4)		;1366a: 391c
-	MOVE.B	-(A2),D6		;1366c: 1c22
-	SUBQ.W	#5,(A3)+		;1366e: 5b5b
-	DC.W	$6779			;13670
-	MOVE.W	-(A2),D5		;13672: 3a22
-	MOVE.B	-(A2),D7		;13674: 1e22
-lb_13676:
-	DC.W	$6969			;13676
-	BCC.S	lb_136f6		;13678: 647c
-	MOVE.W	(A5)+,D6		;1367a: 3c1d
-	MOVE.B	(A3)+,-(A5)		;1367c: 1b1b
-	MOVEQ	#91,D0			;1367e: 705b
-	BLE.S	lb_136f4		;13680: 6f72
-lb_13682:
-	MOVE.W	(A4)+,D7		;13682: 3e1c
-	MOVE.B	-(A0),-(A7)		;13684: 1f20
-	DC.W	$655f			;13686
-	DC.W	$6977			;13688
-	NEGX.B	(A4)+			;1368a: 401c
-	MOVE.B	(A2)+,-(A6)		;1368c: 1d1a
-	DC.W	$6c5f			;1368e
-	ADDQ.L	#7,D0			;13690: 5e80
-	CLR.B	(A5)+			;13692: 421d
-	MOVE.B	(A2)+,-(A6)		;13694: 1d1a
-	DC.W	$605b			;13696
-	DC.W	$6877			;13698
-	NEG.B	(A7)+			;1369a: 441f
-lb_1369c:
-	MOVE.B	(A3)+,-(A7)		;1369c: 1f1b
-	BLT.S	lb_13702		;1369e: 6d62
-	DC.W	$6485			;136a0
-	NOT.B	-(A4)			;136a2: 4624
-	MOVE.B	(A2)+,D7		;136a4: 1e1a
-lb_136a6:
-	DC.W	$6b69			;136a6
-	DC.W	$6f75			;136a8
-	DC.W	$4920			;136aa
-	MOVE.B	(A2)+,-(A5)		;136ac: 1b1a
-lb_136ae:
-	SUBQ.W	#5,28553(A7)		;136ae: 5b6f6f89
-	DC.W	$4b1e			;136b2
-	MOVE.B	(A4)+,D7		;136b4: 1e1c
-	BGT.S	lb_13720		;136b6: 6e68
-	SUBQ.L	#7,D5			;136b8: 5f85
-	DC.W	$4c1f			;136ba
-	MOVE.B	(A4)+,-(A5)		;136bc: 1b1c
-	DC.W	$605b			;136be
-	BVC.S	lb_1373e		;136c0: 687c
-	DC.W	$4e1d			;136c2
-	MOVE.L	(A2)+,-(A0)		;136c4: 211a
-	ADDQ.W	#6,(A3)+		;136c6: 5c5b
-	DC.W	$687d			;136c8
-	DC.W	$4f1e			;136ca
-	MOVE.B	(A2)+,-(A5)		;136cc: 1b1a
-	DC.W	$6d5b			;136ce
-	SUBQ.L	#6,D5			;136d0: 5d85
-lb_136d2:
-	SUBQ.B	#8,(A4)+		;136d2: 511c
-lb_136d4:
-	MOVE.L	(A4)+,D1		;136d4: 221c
-	DC.W	$6b69			;136d6
-	DC.W	$6f7b			;136d8
-	ADDQ.B	#1,(A5)+		;136da: 521d
-	MOVE.B	(A2)+,D6		;136dc: 1c1a
-lb_136de:
-	BGE.S	lb_1374a		;136de: 6c6a
-lb_136e0:
-	BRA.S	lb_13662		;136e0: 6080
-	ADDQ.B	#2,(A7)+		;136e2: 541f
-	MOVE.B	(A2)+,D6		;136e4: 1c1a
-	MOVEQ	#99,D0			;136e6: 7063
-	BVS.S	lb_1366a		;136e8: 6980
-	ADDQ.B	#3,(A5)+		;136ea: 561d
-	MOVE.B	(A3)+,D6		;136ec: 1c1b
-	SUBQ.W	#6,(A7)+		;136ee: 5d5f
-	BLE.S	lb_13770		;136f0: 6f7e
-lb_136f2:
-	ADDQ.B	#4,(A4)+		;136f2: 581c
-lb_136f4:
-	MOVE.B	(A2)+,-(A5)		;136f4: 1b1a
-lb_136f6:
-	ADDQ.W	#6,26766(A1)		;136f6: 5c69688e
-	ADDQ.B	#5,(A4)+		;136fa: 5a1c
-	MOVE.B	-(A2),-(A7)		;136fc: 1f22
-	DC.W	$6267			;136fe
-	BMI.S	lb_13682		;13700: 6b80
-lb_13702:
-	ADDQ.B	#6,(A4)+		;13702: 5c1c
-lb_13704:
-	MOVE.B	(A4)+,-(A5)		;13704: 1b1c
-	SUBQ.W	#7,26508(A1)		;13706: 5f69678c
-	SUBQ.B	#6,(A7)+		;1370a: 5d1f
-	MOVE.L	(A3)+,D0		;1370c: 201b
-	BLT.S	lb_13772		;1370e: 6d62
-	BPL.S	lb_136a6		;13710: 6a94
-	DC.W	$601d			;13712
-	MOVE.B	(A5)+,-(A5)		;13714: 1b1d
-	SUBQ.W	#6,(A7)+		;13716: 5d5f
-	DC.W	$6b87			;13718
-	BHI.S	lb_1373a		;1371a: 621e
-	MOVE.B	(A6)+,D7		;1371c: 1e1e
-	DC.W	$6c63			;1371e
-lb_13720:
-	DC.W	$6893			;13720
-	DC.W	$651d			;13722
-	MOVE.L	(A3)+,-(A0)		;13724: 211b
-	BVS.S	lb_1378e		;13726: 6966
-	ADDQ.L	#6,(A5)+		;13728: 5c9d
-	BNE.S	lb_1374a		;1372a: 661e
-lb_1372c:
-	MOVE.B	(A6)+,D6		;1372c: 1c1e
-	BVS.S	lb_13796		;1372e: 6966
-	ADDQ.L	#6,(A6)+		;13730: 5c9e
-	BVC.S	lb_13752		;13732: 681e
-	MOVE.B	(A5)+,-(A6)		;13734: 1d1d
-	DC.W	$6b6f			;13736
-lb_13738:
-	DC.W	$678b			;13738
-lb_1373a:
-	BPL.S	lb_1375c		;1373a: 6a20
-	MOVE.B	(A7)+,-(A6)		;1373c: 1d1f
-lb_1373e:
-	BRA.S	lb_137ac		;1373e: 606c
-	BPL.S	lb_136de		;13740: 6a9c
-	DC.W	$6c1d			;13742
-	MOVE.B	-(A0),D6		;13744: 1c20
-	BGT.S	lb_137b0		;13746: 6e68
-	DC.W	$6f91			;13748
-lb_1374a:
-	DC.W	$6e1d			;1374a
-	MOVE.B	-(A2),-(A6)		;1374c: 1d22
-	DC.W	$6569			;1374e
-	BGT.S	lb_136e0		;13750: 6e8e
-lb_13752:
-	MOVEQ	#34,D0			;13752: 7022
-	MOVE.B	(A3)+,-(A6)		;13754: 1d1b
-	DC.W	$6969			;13756
-	ADDQ.L	#7,(A5)			;13758: 5e95
-	MOVEQ	#28,D1			;1375a: 721c
-lb_1375c:
-	MOVE.B	(A5)+,-(A7)		;1375c: 1f1d
-	DC.W	$6769			;1375e
-	BLE.S	lb_136f2		;13760: 6f90
-	DC.W	$731f			;13762
-	MOVE.B	(A3)+,-(A5)		;13764: 1b1b
-	SUBQ.W	#5,(A7)+		;13766: 5b5f
-	DC.W	$619b			;13768
-	DC.W	$751d			;1376a
-	MOVE.B	(A6)+,-(A6)		;1376c: 1d1e
-	BVC.S	lb_137cc		;1376e: 685c
-lb_13770:
-	BCS.S	lb_13704		;13770: 6592
-lb_13772:
-	DC.W	$7724			;13772
-	MOVE.B	(A3)+,-(A5)		;13774: 1b1b
-	ADDQ.W	#6,28060(A1)		;13776: 5c696d9c
-	DC.W	$791d			;1377a
-	MOVE.B	(A5)+,-(A5)		;1377c: 1b1d
-	BVS.S	lb_137e6		;1377e: 6966
-	ADDQ.L	#6,31517(A0)		;13780: 5ca87b1d
-	MOVE.B	(A3)+,D7		;13784: 1e1b
-lb_13786:
-	DC.W	$6c71			;13786
-	BRA.S	lb_1372c		;13788: 60a2
-	DC.W	$7d1c			;1378a
-	MOVE.B	(A6)+,D6		;1378c: 1c1e
-lb_1378e:
-	MOVEQ	#98,D0			;1378e: 7062
-	ADDQ.L	#6,-(A5)		;13790: 5ca5
-	DC.W	$7f1f			;13792
-	MOVE.L	(A2)+,-(A1)		;13794: 231a
-lb_13796:
-	SUBQ.W	#7,28063(A1)		;13796: 5f696d9f
-	OR.B	D0,(A7)+		;1379a: 811f
-	MOVE.L	(A6)+,-(A0)		;1379c: 211e
-	BLT.S	lb_1380c		;1379e: 6d6c
-	BCC.S	lb_13738		;137a0: 6496
-	OR.B	D1,-(A0)		;137a2: 8320
-	MOVE.B	(A3)+,-(A7)		;137a4: 1f1b
-	SUBQ.W	#6,(A7)+		;137a6: 5d5f
-	DC.W	$6e9d			;137a8
-	OR.B	D3,(A6)+		;137aa: 871e
-lb_137ac:
-	MOVE.B	(A6)+,-(A5)		;137ac: 1b1e
-	DC.W	$665b			;137ae
-lb_137b0:
-	BVS.S	lb_1375c		;137b0: 69aa
-	OR.B	(A7)+,D5		;137b2: 8a1f
-	MOVE.B	(A7)+,-(A5)		;137b4: 1b1f
-	ADDQ.W	#6,26779(A1)		;137b6: 5c69689b
-	OR.B	(A5)+,D7		;137ba: 8e1d
-	MOVE.B	(A1)+,-(A5)		;137bc: 1b19
-	DC.W	$695b			;137be
-	DC.W	$6dab			;137c0
-	SUB.B	D0,(A4)+		;137c2: 911c
-	MOVE.B	(A3)+,-(A5)		;137c4: 1b1b
-	DC.W	$6267			;137c6
-	DC.W	$6ba7			;137c8
-	SUB.B	(A6)+,D2		;137ca: 941e
-lb_137cc:
-	MOVE.B	(A2)+,-(A5)		;137cc: 1b1a
-	DC.W	$6d5b			;137ce
-	DC.W	$71a8			;137d0
-	SUB.B	(A6)+,D3		;137d2: 961e
-	MOVE.B	(A3)+,D6		;137d4: 1c1b
-	ADDQ.W	#6,(A7)+		;137d6: 5c5f
-	DC.W	$6d9d			;137d8
-	SUB.B	D4,(A5)+		;137da: 991d
-	MOVE.B	(A5)+,D7		;137dc: 1e1d
-	DC.W	$6769			;137de
-	BVC.S	lb_13786		;137e0: 68a4
-	MOVE.W	-(A1),-(A2)		;137e2: 3521
-	MOVE.B	(A3)+,-(A5)		;137e4: 1b1b
-lb_137e6:
-	ADDQ.W	#5,-(A6)		;137e6: 5a66
-	BEQ.S	lb_13836		;137e8: 674c
-	DC.W	$491d			;137ea
-	DC.W	$2539			;137ec
-	DC.W	$615b			;137ee
-	ADDQ.L	#7,(A7)			;137f0: 5e97
-	BCC.S	lb_13814		;137f2: 6420
-	DC.W	$1d32			;137f4
-	ADDQ.W	#7,28302(A4)		;137f6: 5e6c6e8e
-	MOVEQ	#30,D3			;137fa: 761e
-	MOVE.B	27487(A7),D6		;137fc: 1c2f6b5f
-	ADDQ.L	#6,-(A0)		;13800: 5ca0
-	MOVE.W	(A6)+,D2		;13802: 341e
-	MOVE.B	-(A1),-(A5)		;13804: 1b21
-	DC.W	$6c5f			;13806
-	BLS.S	lb_13884		;13808: 637a
-	MOVEQ	#33,D1			;1380a: 7221
-lb_1380c:
-	MOVE.B	(A3)+,-(A5)		;1380c: 1b1b
-	DC.W	$655f			;1380e
-	DC.W	$6e6d			;13810
-	DC.W	$7d24			;13812
-lb_13814:
-	MOVE.L	-(A2),D3		;13814: 2622
-	BEQ.S	lb_13876		;13816: 675e
-	MOVEQ	#110,D1			;13818: 726e
-	MOVE.W	-(A5),-(A3)		;1381a: 3725
-	MOVE.L	-(A2),D0		;1381c: 2022
-	BGE.S	lb_1388e		;1381e: 6c6e
-	BRA.S	lb_13892+2		;13820: 6072
-	MOVE.L	-(A4),-(A1)		;13822: 2324
-	MOVE.L	(A5)+,D4		;13824: 281d
-	DC.W	$6d5b			;13826
-	BEQ.S	lb_1388e		;13828: 6764
-	MOVE.L	(A4)+,D4		;1382a: 281c
-	MOVE.L	(A5)+,D1		;1382c: 221d
-	BEQ.S	lb_1386a		;1382e: 673a
-	MOVE.W	D0,31005(A5)		;13830: 3b40791d
-	MOVE.B	(A5)+,-(A6)		;13834: 1d1d
-lb_13836:
-	DC.W	$615b			;13836
-	DC.W	$637b			;13838
-	ORI.B	#$23,-(A0)		;1383a: 00200023
-	ORI.W	#$00ff,(A2)+		;1383e: 005a00ff
-	ORI.B	#$03,D2			;13842: 00020003
-	DC.W	$0008			;13846
-	ORI.B	#$01,D0			;13848: 00000001
+	dc.w	$3b40	;135e0
+	dc.w	$1d1c	;135e2
+	dc.w	$1b1d	;135e4
+	dc.w	$6f63	;135e6
+	dc.w	$6d63	;135e8
+	dc.w	$1f1d	;135ea
+	dc.w	$1d1e	;135ec
+	dc.w	$5a6c	;135ee
+	dc.w	$5e65	;135f0
+	dc.w	$2020	;135f2
+	dc.w	$1c1b	;135f4
+	dc.w	$5d6c	;135f6
+	dc.w	$6a6e	;135f8
+	dc.w	$221d	;135fa
+	dc.w	$221d	;135fc
+	dc.w	$6c62	;135fe
+	dc.w	$6a74	;13600
+	dc.w	$2320	;13602
+	dc.w	$1f1d	;13604
+	dc.w	$5c6c	;13606
+	dc.w	$6061	;13608
+	dc.w	$251d	;1360a
+	dc.w	$201d	;1360c
+	dc.w	$6969	;1360e
+	dc.w	$6a6d	;13610
+	dc.w	$281c	;13612
+	dc.w	$1d1d	;13614
+	dc.w	$686a	;13616
+	dc.w	$6f6b	;13618
+	dc.w	$2a1d	;1361a
+	dc.w	$1c1d	;1361c
+	dc.w	$7063	;1361e
+	dc.w	$6967	;13620
+	dc.w	$2c1c	;13622
+	dc.w	$201f	;13624
+	dc.w	$6b5f	;13626
+	dc.w	$6873	;13628
+	dc.w	$2d1e	;1362a
+	dc.w	$1b1a	;1362c
+	dc.w	$675b	;1362e
+	dc.w	$686a	;13630
+	dc.w	$2e1e	;13632
+	dc.w	$1f1e	;13634
+	dc.w	$6b5f	;13636
+	dc.w	$6f7b	;13638
+	dc.w	$2f21	;1363a
+	dc.w	$1b1b	;1363c
+	dc.w	$6769	;1363e
+	dc.w	$6f6c	;13640
+	dc.w	$311c	;13642
+	dc.w	$1b19	;13644
+	dc.w	$6c5f	;13646
+	dc.w	$6f7d	;13648
+	dc.w	$321d	;1364a
+	dc.w	$221a	;1364c
+	dc.w	$5a61	;1364e
+	dc.w	$5c72	;13650
+	dc.w	$3320	;13652
+	dc.w	$2321	;13654
+	dc.w	$665b	;13656
+	dc.w	$6f6d	;13658
+	dc.w	$3521	;1365a
+	dc.w	$1c21	;1365c
+	dc.w	$6b6f	;1365e
+	dc.w	$6770	;13660
+	dc.w	$371d	;13662
+	dc.w	$1b1b	;13664
+	dc.w	$696c	;13666
+	dc.w	$607f	;13668
+	dc.w	$391c	;1366a
+	dc.w	$1c22	;1366c
+	dc.w	$5b5b	;1366e
+	dc.w	$6779	;13670
+	dc.w	$3a22	;13672
+	dc.w	$1e22	;13674
+	dc.w	$6969	;13676
+	dc.w	$647c	;13678
+	dc.w	$3c1d	;1367a
+	dc.w	$1b1b	;1367c
+	dc.w	$705b	;1367e
+	dc.w	$6f72	;13680
+	dc.w	$3e1c	;13682
+	dc.w	$1f20	;13684
+	dc.w	$655f	;13686
+	dc.w	$6977	;13688
+	dc.w	$401c	;1368a
+	dc.w	$1d1a	;1368c
+	dc.w	$6c5f	;1368e
+	dc.w	$5e80	;13690
+	dc.w	$421d	;13692
+	dc.w	$1d1a	;13694
+	dc.w	$605b	;13696
+	dc.w	$6877	;13698
+	dc.w	$441f	;1369a
+	dc.w	$1f1b	;1369c
+	dc.w	$6d62	;1369e
+	dc.w	$6485	;136a0
+	dc.w	$4624	;136a2
+	dc.w	$1e1a	;136a4
+	dc.w	$6b69	;136a6
+	dc.w	$6f75	;136a8
+	dc.w	$4920	;136aa
+	dc.w	$1b1a	;136ac
+	dc.w	$5b6f	;136ae
+	dc.w	$6f89	;136b0
+	dc.w	$4b1e	;136b2
+	dc.w	$1e1c	;136b4
+	dc.w	$6e68	;136b6
+	dc.w	$5f85	;136b8
+	dc.w	$4c1f	;136ba
+	dc.w	$1b1c	;136bc
+	dc.w	$605b	;136be
+	dc.w	$687c	;136c0
+	dc.w	$4e1d	;136c2
+	dc.w	$211a	;136c4
+	dc.w	$5c5b	;136c6
+	dc.w	$687d	;136c8
+	dc.w	$4f1e	;136ca
+	dc.w	$1b1a	;136cc
+	dc.w	$6d5b	;136ce
+	dc.w	$5d85	;136d0
+	dc.w	$511c	;136d2
+	dc.w	$221c	;136d4
+	dc.w	$6b69	;136d6
+	dc.w	$6f7b	;136d8
+	dc.w	$521d	;136da
+	dc.w	$1c1a	;136dc
+	dc.w	$6c6a	;136de
+	dc.w	$6080	;136e0
+	dc.w	$541f	;136e2
+	dc.w	$1c1a	;136e4
+	dc.w	$7063	;136e6
+	dc.w	$6980	;136e8
+	dc.w	$561d	;136ea
+	dc.w	$1c1b	;136ec
+	dc.w	$5d5f	;136ee
+	dc.w	$6f7e	;136f0
+	dc.w	$581c	;136f2
+	dc.w	$1b1a	;136f4
+	dc.w	$5c69	;136f6
+	dc.w	$688e	;136f8
+	dc.w	$5a1c	;136fa
+	dc.w	$1f22	;136fc
+	dc.w	$6267	;136fe
+	dc.w	$6b80	;13700
+	dc.w	$5c1c	;13702
+	dc.w	$1b1c	;13704
+	dc.w	$5f69	;13706
+	dc.w	$678c	;13708
+	dc.w	$5d1f	;1370a
+	dc.w	$201b	;1370c
+	dc.w	$6d62	;1370e
+	dc.w	$6a94	;13710
+	dc.w	$601d	;13712
+	dc.w	$1b1d	;13714
+	dc.w	$5d5f	;13716
+	dc.w	$6b87	;13718
+	dc.w	$621e	;1371a
+	dc.w	$1e1e	;1371c
+	dc.w	$6c63	;1371e
+	dc.w	$6893	;13720
+	dc.w	$651d	;13722
+	dc.w	$211b	;13724
+	dc.w	$6966	;13726
+	dc.w	$5c9d	;13728
+	dc.w	$661e	;1372a
+	dc.w	$1c1e	;1372c
+	dc.w	$6966	;1372e
+	dc.w	$5c9e	;13730
+	dc.w	$681e	;13732
+	dc.w	$1d1d	;13734
+	dc.w	$6b6f	;13736
+	dc.w	$678b	;13738
+	dc.w	$6a20	;1373a
+	dc.w	$1d1f	;1373c
+	dc.w	$606c	;1373e
+	dc.w	$6a9c	;13740
+	dc.w	$6c1d	;13742
+	dc.w	$1c20	;13744
+	dc.w	$6e68	;13746
+	dc.w	$6f91	;13748
+	dc.w	$6e1d	;1374a
+	dc.w	$1d22	;1374c
+	dc.w	$6569	;1374e
+	dc.w	$6e8e	;13750
+	dc.w	$7022	;13752
+	dc.w	$1d1b	;13754
+	dc.w	$6969	;13756
+	dc.w	$5e95	;13758
+	dc.w	$721c	;1375a
+	dc.w	$1f1d	;1375c
+	dc.w	$6769	;1375e
+	dc.w	$6f90	;13760
+	dc.w	$731f	;13762
+	dc.w	$1b1b	;13764
+	dc.w	$5b5f	;13766
+	dc.w	$619b	;13768
+	dc.w	$751d	;1376a
+	dc.w	$1d1e	;1376c
+	dc.w	$685c	;1376e
+	dc.w	$6592	;13770
+	dc.w	$7724	;13772
+	dc.w	$1b1b	;13774
+	dc.w	$5c69	;13776
+	dc.w	$6d9c	;13778
+	dc.w	$791d	;1377a
+	dc.w	$1b1d	;1377c
+	dc.w	$6966	;1377e
+	dc.w	$5ca8	;13780
+	dc.w	$7b1d	;13782
+	dc.w	$1e1b	;13784
+	dc.w	$6c71	;13786
+	dc.w	$60a2	;13788
+	dc.w	$7d1c	;1378a
+	dc.w	$1c1e	;1378c
+	dc.w	$7062	;1378e
+	dc.w	$5ca5	;13790
+	dc.w	$7f1f	;13792
+	dc.w	$231a	;13794
+	dc.w	$5f69	;13796
+	dc.w	$6d9f	;13798
+	dc.w	$811f	;1379a
+	dc.w	$211e	;1379c
+	dc.w	$6d6c	;1379e
+	dc.w	$6496	;137a0
+	dc.w	$8320	;137a2
+	dc.w	$1f1b	;137a4
+	dc.w	$5d5f	;137a6
+	dc.w	$6e9d	;137a8
+	dc.w	$871e	;137aa
+	dc.w	$1b1e	;137ac
+	dc.w	$665b	;137ae
+	dc.w	$69aa	;137b0
+	dc.w	$8a1f	;137b2
+	dc.w	$1b1f	;137b4
+	dc.w	$5c69	;137b6
+	dc.w	$689b	;137b8
+	dc.w	$8e1d	;137ba
+	dc.w	$1b19	;137bc
+	dc.w	$695b	;137be
+	dc.w	$6dab	;137c0
+	dc.w	$911c	;137c2
+	dc.w	$1b1b	;137c4
+	dc.w	$6267	;137c6
+	dc.w	$6ba7	;137c8
+	dc.w	$941e	;137ca
+	dc.w	$1b1a	;137cc
+	dc.w	$6d5b	;137ce
+	dc.w	$71a8	;137d0
+	dc.w	$961e	;137d2
+	dc.w	$1c1b	;137d4
+	dc.w	$5c5f	;137d6
+	dc.w	$6d9d	;137d8
+	dc.w	$991d	;137da
+	dc.w	$1e1d	;137dc
+	dc.w	$6769	;137de
+	dc.w	$68a4	;137e0
+	dc.w	$3521	;137e2
+	dc.w	$1b1b	;137e4
+	dc.w	$5a66	;137e6
+	dc.w	$674c	;137e8
+	dc.w	$491d	;137ea
+	dc.w	$2539	;137ec
+	dc.w	$615b	;137ee
+	dc.w	$5e97	;137f0
+	dc.w	$6420	;137f2
+	dc.w	$1d32	;137f4
+	dc.w	$5e6c	;137f6
+	dc.w	$6e8e	;137f8
+	dc.w	$761e	;137fa
+	dc.w	$1c2f	;137fc
+	dc.w	$6b5f	;137fe
+	dc.w	$5ca0	;13800
+	dc.w	$341e	;13802
+	dc.w	$1b21	;13804
+	dc.w	$6c5f	;13806
+	dc.w	$637a	;13808
+	dc.w	$7221	;1380a
+	dc.w	$1b1b	;1380c
+	dc.w	$655f	;1380e
+	dc.w	$6e6d	;13810
+	dc.w	$7d24	;13812
+	dc.w	$2622	;13814
+	dc.w	$675e	;13816
+	dc.w	$726e	;13818
+	dc.w	$3725	;1381a
+	dc.w	$2022	;1381c
+	dc.w	$6c6e	;1381e
+	dc.w	$6072	;13820
+	dc.w	$2324	;13822
+	dc.w	$281d	;13824
+	dc.w	$6d5b	;13826
+	dc.w	$6764	;13828
+	dc.w	$281c	;1382a
+	dc.w	$221d	;1382c
+	dc.w	$673a	;1382e
+	dc.w	$3b40	;13830
+	dc.w	$791d	;13832
+	dc.w	$1d1d	;13834
+	dc.w	$615b	;13836
+	dc.w	$637b	;13838
+	dc.w	$0020	;1383a
+	dc.w	$0023	;1383c
+	dc.w	$005a	;1383e
+	dc.w	$00ff	;13840
+	dc.w	$0002	;13842
+	dc.w	$0003	;13844
+	dc.w	$0008	;13846
+	dc.w	$0000	;13848
+	dc.w	$0001	;1384a
 	DC.W	$ffff			;1384c
 lb_1384e:
-	DC.W	$0002			;1384e
-	MOVEP.L	D2,0(A4)		;13850: 05cc0000
-	ORI.B	#$00,(A1)+		;13854: 00190000
-	dc.w	$0000	;13858
-	dc.w	$0000	;1385a
-	DC.W	$013f			;1385c
-	dc.w	$0000	;1385e
-	dc.w	$0000	;13860
-	dc.w	$0000	;13862
-	dc.w	$0000	;13864
-	dc.w	$0000	;13866
-	dc.w	$0000	;13868
-lb_1386a:
-	dc.w	$0000	;1386a
-	dc.w	$0000	;1386c
-	dc.w	$0000	;1386e
-	dc.w	$0000	;13870
-	dc.w	$0000	;13872
-	dc.w	$0000	;13874
-lb_13876:
-	dc.w	$0000	;13876
-	dc.w	$0000	;13878
-	dc.w	$0000	;1387a
-	dc.w	$0000	;1387c
-	dc.w	$0000	;1387e
-	dc.w	$0000	;13880
-	DC.W	$0002			;13882
-lb_13884:
-	BSET	D2,-(A5)		;13884: 05e5
-	ORI.B	#$23,D0			;13886: 00000023
-	dc.w	$0000	;1388a
-	dc.w	$0000	;1388c
-lb_1388e:
-	DC.W	$0000			;1388e
-	DC.W	$013f			;13890
-lb_13892:
-	dc.w	$0000	;13892
-	dc.w	$0000	;13894
-	dc.w	$0000	;13896
-	dc.w	$0000	;13898
-	dc.w	$0000	;1389a
-	dc.w	$0000	;1389c
-	dc.w	$0000	;1389e
-	dc.w	$0000	;138a0
-	dc.w	$0000	;138a2
-	dc.w	$0000	;138a4
-	dc.w	$0000	;138a6
-	dc.w	$0000	;138a8
-	dc.w	$0000	;138aa
-	dc.w	$0000	;138ac
-	dc.w	$0000	;138ae
-	dc.w	$0000	;138b0
-	dc.w	$0000	;138b2
-	dc.w	$0000	;138b4
-	DC.W	$0002			;138b6
-	DC.W	$05fe			;138b8
-	ORI.B	#$2d,D0			;138ba: 0000002d
-	dc.w	$0000	;138be
-	dc.w	$0000	;138c0
-	DC.W	$0000			;138c2
-	DC.W	$013f			;138c4
-	dc.w	$0000	;138c6
-	dc.w	$0000	;138c8
-	dc.w	$0000	;138ca
-	dc.w	$0000	;138cc
-	dc.w	$0000	;138ce
-	dc.w	$0000	;138d0
-	dc.w	$0000	;138d2
-	dc.w	$0000	;138d4
-	dc.w	$0000	;138d6
-	dc.w	$0000	;138d8
-	dc.w	$0000	;138da
-	dc.w	$0000	;138dc
-	dc.w	$0000	;138de
-	dc.w	$0000	;138e0
-	dc.w	$0000	;138e2
-	dc.w	$0000	;138e4
-	dc.w	$0000	;138e6
-	dc.w	$0000	;138e8
-	DC.W	$0002			;138ea
-	ADDI.B	#$00,(A3)+		;138ec: 061b0000
-	ORI.B	#$00,0(A7,D0.W)		;138f0: 003700000000
-	DC.W	$0000			;138f6
-	DC.W	$013f			;138f8
-	dc.w	$0000	;138fa
-	dc.w	$0000	;138fc
-	dc.w	$0000	;138fe
-	dc.w	$0000	;13900
-	dc.w	$0000	;13902
-	dc.w	$0000	;13904
-	dc.w	$0000	;13906
-	dc.w	$0000	;13908
-	dc.w	$0000	;1390a
-	dc.w	$0000	;1390c
-	dc.w	$0000	;1390e
-	dc.w	$0000	;13910
-	dc.w	$0000	;13912
-	dc.w	$0000	;13914
-	dc.w	$0000	;13916
-	dc.w	$0000	;13918
-	dc.w	$0000	;1391a
-	dc.w	$0000	;1391c
-	DC.W	$0002			;1391e
-	BCHG	#0,-(A5)		;13920: 08650000
-	ORI.W	#$0000,(A0)		;13924: 00500000
-	dc.w	$0000	;13928
-	dc.w	$0000	;1392a
-	DC.W	$013f			;1392c
-	dc.w	$0000	;1392e
-	dc.w	$0000	;13930
-	dc.w	$0000	;13932
-	dc.w	$0000	;13934
-	DC.W	$0001			;13936
-	MOVE.W	(A6)+,-(A4)		;13938: 391e
-	DC.W	$0001			;1393a
-	MOVE.W	(A6)+,-(A4)		;1393c: 391e
-	dc.w	$0000	;1393e
-	dc.w	$0000	;13940
-	dc.w	$0000	;13942
-	dc.w	$0000	;13944
-	DC.W	$0001			;13946
-	MOVEQ	#-56,D1			;13948: 72c8
-	DC.W	$0001			;1394a
-	MOVEQ	#-56,D1			;1394c: 72c8
-	dc.w	$0000	;1394e
-	dc.w	$0000	;13950
-	DC.W	$0000			;13952
-	OR.B	D2,D0			;13954: 8002
-	ORI.B	#$32,-(A0)		;13956: 00200032
-	ORI.B	#$ff,2(A0)		;1395a: 002800ff0002
-	ORI.B	#$08,D3			;13960: 00030008
-	ORI.B	#$01,D0			;13964: 00000001
-	DC.W	$ffff			;13968
+	dc.l	lb_205cc	;1384e
+	dc.l	$00019	;13852
+	dc.l	$00000	;13856
+	dc.l	$0013f	;1385a
+	dc.l	$00000	;1385e
+	dc.l	$00000	;13862
+	dc.l	$00000	;13866
+	dc.l	$00000	;1386a
+	dc.l	$00000	;1386e
+	dc.l	$00000	;13872
+	dc.l	$00000	;13876
+	dc.l	$00000	;1387a
+	dc.l	$00000	;1387e
+	dc.l	lb_205e4+1	;13882
+	dc.l	$00023	;13886
+	dc.l	$00000	;1388a
+	dc.l	$0013f	;1388e
+	dc.l	$00000	;13892
+	dc.l	$00000	;13896
+	dc.l	$00000	;1389a
+	dc.l	$00000	;1389e
+	dc.l	$00000	;138a2
+	dc.l	$00000	;138a6
+	dc.l	$00000	;138aa
+	dc.l	$00000	;138ae
+	dc.l	$00000	;138b2
+	dc.l	lb_205fe	;138b6
+	dc.l	$0002d	;138ba
+	dc.l	$00000	;138be
+	dc.l	$0013f	;138c2
+	dc.l	$00000	;138c6
+	dc.l	$00000	;138ca
+	dc.l	$00000	;138ce
+	dc.l	$00000	;138d2
+	dc.l	$00000	;138d6
+	dc.l	$00000	;138da
+	dc.l	$00000	;138de
+	dc.l	$00000	;138e2
+	dc.l	$00000	;138e6
+	dc.l	lb_2061a+1	;138ea
+	dc.l	$00037	;138ee
+	dc.l	$00000	;138f2
+	dc.l	$0013f	;138f6
+	dc.l	$00000	;138fa
+	dc.l	$00000	;138fe
+	dc.l	$00000	;13902
+	dc.l	$00000	;13906
+	dc.l	$00000	;1390a
+	dc.l	$00000	;1390e
+	dc.l	$00000	;13912
+	dc.l	$00000	;13916
+	dc.l	$00000	;1391a
+lb_1391e:
+	dc.l	lb_20864+1	;1391e
+	dc.l	$00050	;13922
+	dc.l	$00000	;13926
+	dc.l	$0013f	;1392a
+	dc.l	$00000	;1392e
+	dc.l	$00000	;13932
+	dc.l	lb_1391e	;13936
+	dc.l	lb_1391e	;1393a
+	dc.l	$00000	;1393e
+	dc.l	$00000	;13942
+	dc.l	lb_172c8	;13946
+	dc.l	lb_172c8	;1394a
+	dc.l	$00000	;1394e
+	dc.l	$8002	;13952
+	dc.l	$200032	;13956
+	dc.l	$2800ff	;1395a
+	dc.l	$20002+1	;1395e
+	dc.l	$80000	;13962
+	dc.l	$1fffe+1	;13966
 lb_1396a:
-	DC.W	$0002			;1396a
-	MOVEP.W	0(A2),D3		;1396c: 070a0000
-	ORI.B	#$00,(A1)		;13970: 00110000
-	dc.w	$0000	;13974
-	dc.w	$0000	;13976
-	DC.W	$013f			;13978
-	dc.w	$0000	;1397a
-	dc.w	$0000	;1397c
-	dc.w	$0000	;1397e
-	dc.w	$0000	;13980
-	dc.w	$0000	;13982
-	dc.w	$0000	;13984
-	dc.w	$0000	;13986
-	dc.w	$0000	;13988
-	dc.w	$0000	;1398a
-	dc.w	$0000	;1398c
-	dc.w	$0000	;1398e
-	dc.w	$0000	;13990
-	dc.w	$0000	;13992
-	dc.w	$0000	;13994
-	dc.w	$0000	;13996
-	dc.w	$0000	;13998
-	dc.w	$0000	;1399a
-	dc.w	$0000	;1399c
-	DC.W	$0002			;1399e
-	BCHG	#0,-(A5)		;139a0: 08650000
-	ORI.B	#$00,-(A0)		;139a4: 00200000
-	dc.w	$0000	;139a8
-	dc.w	$0000	;139aa
-	DC.W	$013f			;139ac
-	dc.w	$0000	;139ae
-	dc.w	$0000	;139b0
-	dc.w	$0000	;139b2
-	dc.w	$0000	;139b4
-	DC.W	$0001			;139b6
-	MOVE.W	(A6)+,1(A4,D0.W)	;139b8: 399e0001
-	MOVE.W	(A6)+,0(A4,D0.W)	;139bc: 399e0000
-	dc.w	$0000	;139c0
-	dc.w	$0000	;139c2
-	ORI.B	#$01,D0			;139c4: 00000001
-	MOVEQ	#-56,D1			;139c8: 72c8
-	DC.W	$0001			;139ca
-	MOVEQ	#-56,D1			;139cc: 72c8
-	dc.w	$0000	;139ce
-	dc.w	$0000	;139d0
-	DC.W	$0000			;139d2
-	OR.B	D2,D0			;139d4: 8002
-	ORI.B	#$0f,-(A0)		;139d6: 0020000f
-	ORI.W	#$00ff,3(A3,D0.W)	;139da: 007300ff0003
-	ORI.B	#$08,D1			;139e0: 00010008
-	ORI.B	#$01,D1			;139e4: 00010001
-lb_139e8:
-	dc.w	$0006  ;139e8
+	dc.l	lb_2070a	;1396a
+	dc.l	$00011	;1396e
+	dc.l	$00000	;13972
+	dc.l	$0013f	;13976
+	dc.l	$00000	;1397a
+	dc.l	$00000	;1397e
+	dc.l	$00000	;13982
+	dc.l	$00000	;13986
+	dc.l	$00000	;1398a
+	dc.l	$00000	;1398e
+	dc.l	$00000	;13992
+	dc.l	$00000	;13996
+	dc.l	$00000	;1399a
+lb_1399e:
+	dc.l	lb_20864+1	;1399e
+	dc.l	$00020	;139a2
+	dc.l	$00000	;139a6
+	dc.l	$0013f	;139aa
+	dc.l	$00000	;139ae
+	dc.l	$00000	;139b2
+	dc.l	lb_1399e	;139b6
+	dc.l	lb_1399e	;139ba
+	dc.l	$00000	;139be
+	dc.l	$00000	;139c2
+	dc.l	lb_172c8	;139c6
+	dc.l	lb_172c8	;139ca
+	dc.l	$00000	;139ce
+	dc.l	$8002	;139d2
+	dc.l	$20000f	;139d6
+	dc.l	$7300ff	;139da
+	dc.l	lb_30000+1	;139de
+	dc.l	$80001	;139e2
+	dc.l	lb_10006	;139e6
 lb_139ea:
-	dc.w	$0006  ;139ea
-	ROR.B	#7,D6			;139ec: ee1e
-	ORI.B	#$14,D0			;139ee: 00000014
-	dc.w	$0000	;139f2
-	dc.w	$0000	;139f4
-	DC.W	$0000			;139f6
-	DC.W	$013f			;139f8
-	dc.w	$0000	;139fa
-	dc.w	$0000	;139fc
-	dc.w	$0000	;139fe
-	dc.w	$0000	;13a00
-	dc.w	$0000	;13a02
-	dc.w	$0000	;13a04
-	dc.w	$0000	;13a06
-	dc.w	$0000	;13a08
-	dc.w	$0000	;13a0a
-	dc.w	$0000	;13a0c
-	dc.w	$0000	;13a0e
-	dc.w	$0000	;13a10
-	dc.w	$0000	;13a12
-	dc.w	$0000	;13a14
-	dc.w	$0000	;13a16
-	dc.w	$0000	;13a18
-	dc.w	$0000	;13a1a
-	dc.w	$0000	;13a1c
-	DC.W	$0006			;13a1e
-	ROXR.W	#7,D2			;13a20: ee52
-	ORI.B	#$23,D0			;13a22: 00000023
-	dc.w	$0000	;13a26
-	dc.w	$0000	;13a28
-	DC.W	$0000			;13a2a
-	DC.W	$013f			;13a2c
-	dc.w	$0000	;13a2e
-	dc.w	$0000	;13a30
-	dc.w	$0000	;13a32
-	dc.w	$0000	;13a34
-	dc.w	$0000	;13a36
-	dc.w	$0000	;13a38
-	dc.w	$0000	;13a3a
-	dc.w	$0000	;13a3c
-	dc.w	$0000	;13a3e
-	dc.w	$0000	;13a40
-	dc.w	$0000	;13a42
-	dc.w	$0000	;13a44
-	dc.w	$0000	;13a46
-	dc.w	$0000	;13a48
-	dc.w	$0000	;13a4a
-	dc.w	$0000	;13a4c
-	dc.w	$0000	;13a4e
-	dc.w	$0000	;13a50
-	DC.W	$0006			;13a52
-	ASR.L	#7,D6			;13a54: ee86
-	ORI.B	#$2a,D0			;13a56: 0000002a
-	dc.w	$0000	;13a5a
-	dc.w	$0000	;13a5c
-	DC.W	$0000			;13a5e
-	DC.W	$013f			;13a60
-	dc.w	$0000	;13a62
-	dc.w	$0000	;13a64
-	dc.w	$0000	;13a66
-	dc.w	$0000	;13a68
-	dc.w	$0000	;13a6a
-	dc.w	$0000	;13a6c
-	dc.w	$0000	;13a6e
-	dc.w	$0000	;13a70
-	dc.w	$0000	;13a72
-	dc.w	$0000	;13a74
-	dc.w	$0000	;13a76
-	dc.w	$0000	;13a78
-	dc.w	$0000	;13a7a
-	dc.w	$0000	;13a7c
-	dc.w	$0000	;13a7e
-	dc.w	$0000	;13a80
-	dc.w	$0000	;13a82
-	dc.w	$0000	;13a84
-	DC.W	$0006			;13a86
-	ROR.L	D7,D2			;13a88: eeba
-	ORI.B	#$31,D0			;13a8a: 00000031
-	dc.w	$0000	;13a8e
-	dc.w	$0000	;13a90
-	DC.W	$0000			;13a92
-	DC.W	$013f			;13a94
-	dc.w	$0000	;13a96
-	dc.w	$0000	;13a98
-	dc.w	$0000	;13a9a
-	dc.w	$0000	;13a9c
-	dc.w	$0000	;13a9e
-	dc.w	$0000	;13aa0
-	dc.w	$0000	;13aa2
-	dc.w	$0000	;13aa4
-	dc.w	$0000	;13aa6
-	dc.w	$0000	;13aa8
-	dc.w	$0000	;13aaa
-	dc.w	$0000	;13aac
-	dc.w	$0000	;13aae
-	dc.w	$0000	;13ab0
-	dc.w	$0000	;13ab2
-	dc.w	$0000	;13ab4
-	dc.w	$0000	;13ab6
-	dc.w	$0000	;13ab8
-	DC.W	$0006			;13aba
-	DC.W	$eeee			;13abc
-	ORI.B	#$3f,D0			;13abe: 0000003f
-	dc.w	$0000	;13ac2
-	dc.w	$0000	;13ac4
-	DC.W	$0000			;13ac6
-	DC.W	$013f			;13ac8
-	dc.w	$0000	;13aca
-	dc.w	$0000	;13acc
-	dc.w	$0000	;13ace
-	dc.w	$0000	;13ad0
-	dc.w	$0000	;13ad2
-	dc.w	$0000	;13ad4
-	dc.w	$0000	;13ad6
-	dc.w	$0000	;13ad8
-	dc.w	$0000	;13ada
-	dc.w	$0000	;13adc
-	dc.w	$0000	;13ade
-	dc.w	$0000	;13ae0
-	dc.w	$0000	;13ae2
-	dc.w	$0000	;13ae4
-	dc.w	$0000	;13ae6
-	dc.w	$0000	;13ae8
-	dc.w	$0000	;13aea
-	dc.w	$0000	;13aec
-	DC.W	$0006			;13aee
-	ASL.B	D7,D2			;13af0: ef22
-	ORI.B	#$46,D0			;13af2: 00000046
-	dc.w	$0000	;13af6
-	dc.w	$0000	;13af8
-	DC.W	$0000			;13afa
-	DC.W	$013f			;13afc
-	dc.w	$0000	;13afe
-	dc.w	$0000	;13b00
-	dc.w	$0000	;13b02
-	dc.w	$0000	;13b04
-	dc.w	$0000	;13b06
-	dc.w	$0000	;13b08
-	dc.w	$0000	;13b0a
-	dc.w	$0000	;13b0c
-	dc.w	$0000	;13b0e
-	dc.w	$0000	;13b10
-	dc.w	$0000	;13b12
-	dc.w	$0000	;13b14
-	dc.w	$0000	;13b16
-	dc.w	$0000	;13b18
-	dc.w	$0000	;13b1a
-	dc.w	$0000	;13b1c
-	dc.w	$0000	;13b1e
-	dc.w	$0000	;13b20
-	DC.W	$0002			;13b22
-	DC.W	$087d			;13b24
-	ORI.B	#$5a,D0			;13b26: 0000005a
-	dc.w	$0000	;13b2a
-	dc.w	$0000	;13b2c
-	DC.W	$0000			;13b2e
-	DC.W	$013f			;13b30
-	dc.w	$0000	;13b32
-	dc.w	$0000	;13b34
-	dc.w	$0000	;13b36
-	dc.w	$0000	;13b38
-	DC.W	$0001			;13b3a
-	MOVE.W	(A6),1(A5)		;13b3c: 3b560001
-	MOVE.W	(A6),0(A5)		;13b40: 3b560000
-	dc.w	$0000	;13b44
-	dc.w	$0000	;13b46
-	ORI.B	#$01,D0			;13b48: 00000001
-	MOVEQ	#-64,D1			;13b4c: 72c0
-	DC.W	$0001			;13b4e
-	MOVEQ	#-56,D1			;13b50: 72c8
-	dc.w	$0000	;13b52
-	dc.w	$0000	;13b54
-	DC.W	$0002			;13b56
-	BCHG	#0,-(A5)		;13b58: 08650000
-	ORI.W	#$0000,0(A1)		;13b5c: 006900000000
-	DC.W	$0000			;13b62
-	DC.W	$013f			;13b64
-	dc.w	$0000	;13b66
-	dc.w	$0000	;13b68
-	dc.w	$0000	;13b6a
-	dc.w	$0000	;13b6c
-	DC.W	$0001			;13b6e
-	MOVE.W	-(A2),-(A5)		;13b70: 3b22
-	DC.W	$0001			;13b72
-	MOVE.W	-(A2),-(A5)		;13b74: 3b22
-	dc.w	$0000	;13b76
-	dc.w	$0000	;13b78
-	dc.w	$0000	;13b7a
-	dc.w	$0000	;13b7c
-	DC.W	$0001			;13b7e
-	MOVEQ	#-56,D1			;13b80: 72c8
-	DC.W	$0001			;13b82
-	MOVEQ	#-56,D1			;13b84: 72c8
-	dc.w	$0000	;13b86
-	dc.w	$0000	;13b88
-	DC.W	$0000			;13b8a
-	OR.B	D2,D0			;13b8c: 8002
-	ORI.B	#$28,-(A0)		;13b8e: 00200028
-	ORI.W	#$00ff,(A2)+		;13b92: 005a00ff
-	ORI.B	#$03,D2			;13b96: 00020003
-	DC.W	$0008			;13b9a
-	ORI.B	#$01,D0			;13b9c: 00000001
-	DC.W	$ffff			;13ba0
+	dc.l	$6ee1e	;139ea
+	dc.l	$00014	;139ee
+	dc.l	$00000	;139f2
+	dc.l	$0013f	;139f6
+	dc.l	$00000	;139fa
+	dc.l	$00000	;139fe
+	dc.l	$00000	;13a02
+	dc.l	$00000	;13a06
+	dc.l	$00000	;13a0a
+	dc.l	$00000	;13a0e
+	dc.l	$00000	;13a12
+	dc.l	$00000	;13a16
+	dc.l	$00000	;13a1a
+	dc.l	$6ee52	;13a1e
+	dc.l	$00023	;13a22
+	dc.l	$00000	;13a26
+	dc.l	$0013f	;13a2a
+	dc.l	$00000	;13a2e
+	dc.l	$00000	;13a32
+	dc.l	$00000	;13a36
+	dc.l	$00000	;13a3a
+	dc.l	$00000	;13a3e
+	dc.l	$00000	;13a42
+	dc.l	$00000	;13a46
+	dc.l	$00000	;13a4a
+	dc.l	$00000	;13a4e
+	dc.l	$6ee86	;13a52
+	dc.l	$0002a	;13a56
+	dc.l	$00000	;13a5a
+	dc.l	$0013f	;13a5e
+	dc.l	$00000	;13a62
+	dc.l	$00000	;13a66
+	dc.l	$00000	;13a6a
+	dc.l	$00000	;13a6e
+	dc.l	$00000	;13a72
+	dc.l	$00000	;13a76
+	dc.l	$00000	;13a7a
+	dc.l	$00000	;13a7e
+	dc.l	$00000	;13a82
+	dc.l	$6eeba	;13a86
+	dc.l	$00031	;13a8a
+	dc.l	$00000	;13a8e
+	dc.l	$0013f	;13a92
+	dc.l	$00000	;13a96
+	dc.l	$00000	;13a9a
+	dc.l	$00000	;13a9e
+	dc.l	$00000	;13aa2
+	dc.l	$00000	;13aa6
+	dc.l	$00000	;13aaa
+	dc.l	$00000	;13aae
+	dc.l	$00000	;13ab2
+	dc.l	$00000	;13ab6
+	dc.l	$6eeee	;13aba
+	dc.l	$0003f	;13abe
+	dc.l	$00000	;13ac2
+	dc.l	$0013f	;13ac6
+	dc.l	$00000	;13aca
+	dc.l	$00000	;13ace
+	dc.l	$00000	;13ad2
+	dc.l	$00000	;13ad6
+	dc.l	$00000	;13ada
+	dc.l	$00000	;13ade
+	dc.l	$00000	;13ae2
+	dc.l	$00000	;13ae6
+	dc.l	$00000	;13aea
+	dc.l	$6ef22	;13aee
+	dc.l	$00046	;13af2
+	dc.l	$00000	;13af6
+	dc.l	$0013f	;13afa
+	dc.l	$00000	;13afe
+	dc.l	$00000	;13b02
+	dc.l	$00000	;13b06
+	dc.l	$00000	;13b0a
+	dc.l	$00000	;13b0e
+	dc.l	$00000	;13b12
+	dc.l	$00000	;13b16
+	dc.l	$00000	;13b1a
+	dc.l	$00000	;13b1e
+lb_13b22:
+	dc.l	lb_2087c+1	;13b22
+	dc.l	$0005a	;13b26
+	dc.l	$00000	;13b2a
+	dc.l	$0013f	;13b2e
+	dc.l	$00000	;13b32
+	dc.l	$00000	;13b36
+	dc.l	lb_13b56	;13b3a
+	dc.l	lb_13b56	;13b3e
+	dc.l	$00000	;13b42
+	dc.l	$00000	;13b46
+	dc.l	lb_172c0	;13b4a
+	dc.l	lb_172c8	;13b4e
+	dc.l	$00000	;13b52
+lb_13b56:
+	dc.l	lb_20864+1	;13b56
+	dc.l	$00069	;13b5a
+	dc.l	$00000	;13b5e
+	dc.l	$0013f	;13b62
+	dc.l	$00000	;13b66
+	dc.l	$00000	;13b6a
+	dc.l	lb_13b22	;13b6e
+	dc.l	lb_13b22	;13b72
+	dc.l	$00000	;13b76
+	dc.l	$00000	;13b7a
+	dc.l	lb_172c8	;13b7e
+	dc.l	lb_172c8	;13b82
+	dc.l	$00000	;13b86
+	dc.l	$8002	;13b8a
+	dc.l	$200028	;13b8e
+	dc.l	$5a00ff	;13b92
+	dc.l	$20002+1	;13b96
+	dc.l	$80000	;13b9a
+	dc.l	$1fffe+1	;13b9e
 lb_13ba2:
-	DC.W	$0002			;13ba2
-	BTST	D3,0(A2)		;13ba4: 072a0000
-	ORI.B	#$00,(A6)+		;13ba8: 001e0000
-	dc.w	$0000	;13bac
-	dc.w	$0000	;13bae
-	DC.W	$013f			;13bb0
-	dc.w	$0000	;13bb2
-	dc.w	$0000	;13bb4
-	dc.w	$0000	;13bb6
-	dc.w	$0000	;13bb8
-	dc.w	$0000	;13bba
-	dc.w	$0000	;13bbc
-	dc.w	$0000	;13bbe
-	dc.w	$0000	;13bc0
-	dc.w	$0000	;13bc2
-	dc.w	$0000	;13bc4
-	dc.w	$0000	;13bc6
-	dc.w	$0000	;13bc8
-	dc.w	$0000	;13bca
-	dc.w	$0000	;13bcc
-	dc.w	$0000	;13bce
-	dc.w	$0000	;13bd0
-	dc.w	$0000	;13bd2
-	dc.w	$0000	;13bd4
-	DC.W	$0002			;13bd6
-	BCHG	D3,D7			;13bd8: 0747
-	ORI.B	#$28,D0			;13bda: 00000028
-	dc.w	$0000	;13bde
-	dc.w	$0000	;13be0
-	DC.W	$0000			;13be2
-	DC.W	$013f			;13be4
-	dc.w	$0000	;13be6
-	dc.w	$0000	;13be8
-	dc.w	$0000	;13bea
-	dc.w	$0000	;13bec
-	dc.w	$0000	;13bee
-	dc.w	$0000	;13bf0
-	dc.w	$0000	;13bf2
-	dc.w	$0000	;13bf4
-	dc.w	$0000	;13bf6
-	dc.w	$0000	;13bf8
-	dc.w	$0000	;13bfa
-	dc.w	$0000	;13bfc
-	dc.w	$0000	;13bfe
-	dc.w	$0000	;13c00
-	dc.w	$0000	;13c02
-	dc.w	$0000	;13c04
-	dc.w	$0000	;13c06
-	dc.w	$0000	;13c08
-	DC.W	$0002			;13c0a
-	BCHG	D3,-(A5)		;13c0c: 0765
-	ORI.B	#$32,D0			;13c0e: 00000032
-	dc.w	$0000	;13c12
-	dc.w	$0000	;13c14
-	DC.W	$0000			;13c16
-	DC.W	$013f			;13c18
-	dc.w	$0000	;13c1a
-	dc.w	$0000	;13c1c
-	dc.w	$0000	;13c1e
-	dc.w	$0000	;13c20
-	dc.w	$0000	;13c22
-	dc.w	$0000	;13c24
-	dc.w	$0000	;13c26
-	dc.w	$0000	;13c28
-	dc.w	$0000	;13c2a
-	dc.w	$0000	;13c2c
-	dc.w	$0000	;13c2e
-	dc.w	$0000	;13c30
-	dc.w	$0000	;13c32
-	dc.w	$0000	;13c34
-	dc.w	$0000	;13c36
-	dc.w	$0000	;13c38
-	dc.w	$0000	;13c3a
-	dc.w	$0000	;13c3c
-	DC.W	$0002			;13c3e
-	BCHG	#0,-(A5)		;13c40: 08650000
-	ORI.W	#$0000,(A0)		;13c44: 00500000
-	dc.w	$0000	;13c48
-	dc.w	$0000	;13c4a
-	DC.W	$013f			;13c4c
-	dc.w	$0000	;13c4e
-	dc.w	$0000	;13c50
-	dc.w	$0000	;13c52
-	dc.w	$0000	;13c54
-	DC.W	$0001			;13c56
-	MOVE.W	(A6)+,-(A4)		;13c58: 391e
-	DC.W	$0001			;13c5a
-	MOVE.W	(A6)+,-(A4)		;13c5c: 391e
-	dc.w	$0000	;13c5e
-	dc.w	$0000	;13c60
-	dc.w	$0000	;13c62
-	dc.w	$0000	;13c64
-	DC.W	$0001			;13c66
-	MOVEQ	#-56,D1			;13c68: 72c8
-	DC.W	$0001			;13c6a
-	MOVEQ	#-56,D1			;13c6c: 72c8
-	dc.w	$0000	;13c6e
-	dc.w	$0000	;13c70
-	DC.W	$0000			;13c72
-	OR.B	D2,D0			;13c74: 8002
-	ORI.B	#$16,(A0)		;13c76: 00100016
-	ORI.W	#$011f,2(A2)		;13c7a: 006a011f0002
-	ORI.B	#$08,D1			;13c80: 00010008
-	ORI.B	#$01,D0			;13c84: 00000001
-	DC.W	$ffff			;13c88
+	dc.l	lb_2072a	;13ba2
+	dc.l	$0001e	;13ba6
+	dc.l	$00000	;13baa
+	dc.l	$0013f	;13bae
+	dc.l	$00000	;13bb2
+	dc.l	$00000	;13bb6
+	dc.l	$00000	;13bba
+	dc.l	$00000	;13bbe
+	dc.l	$00000	;13bc2
+	dc.l	$00000	;13bc6
+	dc.l	$00000	;13bca
+	dc.l	$00000	;13bce
+	dc.l	$00000	;13bd2
+	dc.l	lb_20746+1	;13bd6
+	dc.l	$00028	;13bda
+	dc.l	$00000	;13bde
+	dc.l	$0013f	;13be2
+	dc.l	$00000	;13be6
+	dc.l	$00000	;13bea
+	dc.l	$00000	;13bee
+	dc.l	$00000	;13bf2
+	dc.l	$00000	;13bf6
+	dc.l	$00000	;13bfa
+	dc.l	$00000	;13bfe
+	dc.l	$00000	;13c02
+	dc.l	$00000	;13c06
+	dc.l	lb_20764+1	;13c0a
+	dc.l	$00032	;13c0e
+	dc.l	$00000	;13c12
+	dc.l	$0013f	;13c16
+	dc.l	$00000	;13c1a
+	dc.l	$00000	;13c1e
+	dc.l	$00000	;13c22
+	dc.l	$00000	;13c26
+	dc.l	$00000	;13c2a
+	dc.l	$00000	;13c2e
+	dc.l	$00000	;13c32
+	dc.l	$00000	;13c36
+	dc.l	$00000	;13c3a
+	dc.l	lb_20864+1	;13c3e
+	dc.l	$00050	;13c42
+	dc.l	$00000	;13c46
+	dc.l	$0013f	;13c4a
+	dc.l	$00000	;13c4e
+	dc.l	$00000	;13c52
+	dc.l	lb_1391e	;13c56
+	dc.l	lb_1391e	;13c5a
+	dc.l	$00000	;13c5e
+	dc.l	$00000	;13c62
+	dc.l	lb_172c8	;13c66
+	dc.l	lb_172c8	;13c6a
+	dc.l	$00000	;13c6e
+	dc.l	$8002	;13c72
+	dc.l	$100016	;13c76
+	dc.l	$6a011f	;13c7a
+	dc.l	$20000+1	;13c7e
+	dc.l	$80000	;13c82
+	dc.l	$1fffe+1	;13c86
 lb_13c8a:
-	DC.W	$0002			;13c8a
-	BCLR	#0,(A5)+		;13c8c: 089d0000
-	ORI.B	#$00,(A1)		;13c90: 00110000
-	dc.w	$0000	;13c94
-	dc.w	$0000	;13c96
-	DC.W	$013f			;13c98
-	dc.w	$0000	;13c9a
-	dc.w	$0000	;13c9c
-	dc.w	$0000	;13c9e
-	dc.w	$0000	;13ca0
-	dc.w	$0000	;13ca2
-	dc.w	$0000	;13ca4
-	dc.w	$0000	;13ca6
-	dc.w	$0000	;13ca8
-	dc.w	$0000	;13caa
-	dc.w	$0000	;13cac
-	dc.w	$0000	;13cae
-	dc.w	$0000	;13cb0
-	dc.w	$0000	;13cb2
-	dc.w	$0000	;13cb4
-	dc.w	$0000	;13cb6
-	dc.w	$0000	;13cb8
-	dc.w	$0000	;13cba
-	dc.w	$0000	;13cbc
-	DC.W	$0002			;13cbe
-	BSET	#0,D3			;13cc0: 08c30000
-	ORI.B	#$00,(A0)+		;13cc4: 00180000
-	dc.w	$0000	;13cc8
-	dc.w	$0000	;13cca
-	DC.W	$013f			;13ccc
-	dc.w	$0000	;13cce
-	dc.w	$0000	;13cd0
-	dc.w	$0000	;13cd2
-	dc.w	$0000	;13cd4
-	dc.w	$0000	;13cd6
-	dc.w	$0000	;13cd8
-	dc.w	$0000	;13cda
-	dc.w	$0000	;13cdc
-	dc.w	$0000	;13cde
-	dc.w	$0000	;13ce0
-	dc.w	$0000	;13ce2
-	dc.w	$0000	;13ce4
-	dc.w	$0000	;13ce6
-	dc.w	$0000	;13ce8
-	dc.w	$0000	;13cea
-	dc.w	$0000	;13cec
-	dc.w	$0000	;13cee
-	dc.w	$0000	;13cf0
-	DC.W	$0002			;13cf2
-	BSET	#0,-(A6)		;13cf4: 08e60000
-	ORI.B	#$00,-(A3)		;13cf8: 00230000
-	dc.w	$0000	;13cfc
-	dc.w	$0000	;13cfe
-	DC.W	$013f			;13d00
-	dc.w	$0000	;13d02
-	dc.w	$0000	;13d04
-	dc.w	$0000	;13d06
-	dc.w	$0000	;13d08
-	dc.w	$0000	;13d0a
-	dc.w	$0000	;13d0c
-	dc.w	$0000	;13d0e
-	dc.w	$0000	;13d10
-	dc.w	$0000	;13d12
-	dc.w	$0000	;13d14
-	dc.w	$0000	;13d16
-	dc.w	$0000	;13d18
-	dc.w	$0000	;13d1a
-	dc.w	$0000	;13d1c
-	dc.w	$0000	;13d1e
-	dc.w	$0000	;13d20
-	dc.w	$0000	;13d22
-	dc.w	$0000	;13d24
-	DC.W	$0002			;13d26
-	MOVEP.W	0(A6),D4		;13d28: 090e0000
-	ORI.B	#$00,CCR		;13d2c: 003c0000
-	dc.w	$0000	;13d30
-	dc.w	$0000	;13d32
-	DC.W	$013f			;13d34
-	dc.w	$0000	;13d36
-	dc.w	$0000	;13d38
-	dc.w	$0000	;13d3a
-	dc.w	$0000	;13d3c
-	DC.W	$0001			;13d3e
-	MOVE.W	(A2)+,1(A6)		;13d40: 3d5a0001
-	MOVE.W	A6,0(A6,D0.W)		;13d44: 3d8e0000
-	dc.w	$0000	;13d48
-	dc.w	$0000	;13d4a
-	ORI.B	#$01,D0			;13d4c: 00000001
-	OR.L	D3,1(A4,D0.W)		;13d50: 87b40001
-	MOVEQ	#-56,D1			;13d54: 72c8
-	dc.w	$0000	;13d56
-	dc.w	$0000	;13d58
-	DC.W	$0002			;13d5a
-	BTST	D4,0(A6)		;13d5c: 092e0000
-	ORI.W	#$0000,D6		;13d60: 00460000
-	dc.w	$0000	;13d64
-	dc.w	$0000	;13d66
-	DC.W	$013f			;13d68
-	dc.w	$0000	;13d6a
-	dc.w	$0000	;13d6c
-	dc.w	$0000	;13d6e
-	dc.w	$0000	;13d70
-	DC.W	$0001			;13d72
-	MOVE.W	A6,1(A6,D0.W)		;13d74: 3d8e0001
-	MOVE.W	-(A6),-(A6)		;13d78: 3d26
-	dc.w	$0000	;13d7a
-	dc.w	$0000	;13d7c
-	dc.w	$0000	;13d7e
-	dc.w	$0000	;13d80
-	DC.W	$0001			;13d82
-	OR.B	D3,-(A4)		;13d84: 8724
-	DC.W	$0001			;13d86
-	MOVEQ	#-56,D1			;13d88: 72c8
-	dc.w	$0000	;13d8a
-	dc.w	$0000	;13d8c
-	DC.W	$0002			;13d8e
-	BCHG	#0,96(A5)		;13d90: 086d00000060
-	dc.w	$0000	;13d96
-	dc.w	$0000	;13d98
-	DC.W	$0000			;13d9a
-	DC.W	$013f			;13d9c
-	dc.w	$0000	;13d9e
-	dc.w	$0000	;13da0
-	dc.w	$0000	;13da2
-	dc.w	$0000	;13da4
-	DC.W	$0001			;13da6
-	MOVE.W	-(A6),-(A6)		;13da8: 3d26
-	DC.W	$0001			;13daa
-	MOVE.W	(A2)+,0(A6)		;13dac: 3d5a0000
-	dc.w	$0000	;13db0
-	dc.w	$0000	;13db2
-	ORI.B	#$01,D0			;13db4: 00000001
-	MOVEQ	#-56,D1			;13db8: 72c8
-	DC.W	$0001			;13dba
-	MOVEQ	#-56,D1			;13dbc: 72c8
-	dc.w	$0000	;13dbe
-	dc.w	$0000	;13dc0
-	DC.W	$0000			;13dc2
-	OR.B	D2,D0			;13dc4: 8002
-	ORI.B	#$28,-(A0)		;13dc6: 00200028
-	ORI.W	#$00ff,(A2)+		;13dca: 005a00ff
-	ORI.B	#$03,D2			;13dce: 00020003
-	DC.W	$0008			;13dd2
-	ORI.B	#$01,D0			;13dd4: 00000001
-	DC.W	$ffff			;13dd8
+	dc.l	lb_2089c+1	;13c8a
+	dc.l	$00011	;13c8e
+	dc.l	$00000	;13c92
+	dc.l	$0013f	;13c96
+	dc.l	$00000	;13c9a
+	dc.l	$00000	;13c9e
+	dc.l	$00000	;13ca2
+	dc.l	$00000	;13ca6
+	dc.l	$00000	;13caa
+	dc.l	$00000	;13cae
+	dc.l	$00000	;13cb2
+	dc.l	$00000	;13cb6
+	dc.l	$00000	;13cba
+	dc.l	lb_208c2+1	;13cbe
+	dc.l	$00018	;13cc2
+	dc.l	$00000	;13cc6
+	dc.l	$0013f	;13cca
+	dc.l	$00000	;13cce
+	dc.l	$00000	;13cd2
+	dc.l	$00000	;13cd6
+	dc.l	$00000	;13cda
+	dc.l	$00000	;13cde
+	dc.l	$00000	;13ce2
+	dc.l	$00000	;13ce6
+	dc.l	$00000	;13cea
+	dc.l	$00000	;13cee
+	dc.l	lb_208e6	;13cf2
+	dc.l	$00023	;13cf6
+	dc.l	$00000	;13cfa
+	dc.l	$0013f	;13cfe
+	dc.l	$00000	;13d02
+	dc.l	$00000	;13d06
+	dc.l	$00000	;13d0a
+	dc.l	$00000	;13d0e
+	dc.l	$00000	;13d12
+	dc.l	$00000	;13d16
+	dc.l	$00000	;13d1a
+	dc.l	$00000	;13d1e
+	dc.l	$00000	;13d22
+lb_13d26:
+	dc.l	lb_2090e	;13d26
+	dc.l	$0003c	;13d2a
+	dc.l	$00000	;13d2e
+	dc.l	$0013f	;13d32
+	dc.l	$00000	;13d36
+	dc.l	$00000	;13d3a
+	dc.l	lb_13d5a	;13d3e
+	dc.l	lb_13d8e	;13d42
+	dc.l	$00000	;13d46
+	dc.l	$00000	;13d4a
+	dc.l	lb_187b4	;13d4e
+	dc.l	lb_172c8	;13d52
+	dc.l	$00000	;13d56
+lb_13d5a:
+	dc.l	lb_2092e	;13d5a
+	dc.l	$00046	;13d5e
+	dc.l	$00000	;13d62
+	dc.l	$0013f	;13d66
+	dc.l	$00000	;13d6a
+	dc.l	$00000	;13d6e
+	dc.l	lb_13d8e	;13d72
+	dc.l	lb_13d26	;13d76
+	dc.l	$00000	;13d7a
+	dc.l	$00000	;13d7e
+	dc.l	lb_18724	;13d82
+	dc.l	lb_172c8	;13d86
+	dc.l	$00000	;13d8a
+lb_13d8e:
+	dc.l	lb_2086c+1	;13d8e
+	dc.l	$00060	;13d92
+	dc.l	$00000	;13d96
+	dc.l	$0013f	;13d9a
+	dc.l	$00000	;13d9e
+	dc.l	$00000	;13da2
+	dc.l	lb_13d26	;13da6
+	dc.l	lb_13d5a	;13daa
+	dc.l	$00000	;13dae
+	dc.l	$00000	;13db2
+	dc.l	lb_172c8	;13db6
+	dc.l	lb_172c8	;13dba
+	dc.l	$00000	;13dbe
+	dc.l	$8002	;13dc2
+	dc.l	$200028	;13dc6
+	dc.l	$5a00ff	;13dca
+	dc.l	$20002+1	;13dce
+	dc.l	$80000	;13dd2
+	dc.l	$1ffff	;13dd6
 lb_13dda:
-	DC.W	$0002			;13dda
-	BCLR	D3,D2			;13ddc: 0782
-	ORI.B	#$19,D0			;13dde: 00000019
-	dc.w	$0000	;13de2
-	dc.w	$0000	;13de4
-	DC.W	$0000			;13de6
-	DC.W	$013f			;13de8
-	dc.w	$0000	;13dea
-	dc.w	$0000	;13dec
-	dc.w	$0000	;13dee
-	dc.w	$0000	;13df0
-	dc.w	$0000	;13df2
-	dc.w	$0000	;13df4
-	dc.w	$0000	;13df6
-	dc.w	$0000	;13df8
-	dc.w	$0000	;13dfa
-	dc.w	$0000	;13dfc
-	dc.w	$0000	;13dfe
-	dc.w	$0000	;13e00
-	dc.w	$0000	;13e02
-	dc.w	$0000	;13e04
-	dc.w	$0000	;13e06
-	dc.w	$0000	;13e08
-	dc.w	$0000	;13e0a
-	dc.w	$0000	;13e0c
-	DC.W	$0002			;13e0e
-	BCLR	D3,-(A0)		;13e10: 07a0
-	ORI.B	#$23,D0			;13e12: 00000023
-	dc.w	$0000	;13e16
-	dc.w	$0000	;13e18
-	DC.W	$0000			;13e1a
-	DC.W	$013f			;13e1c
-	dc.w	$0000	;13e1e
-	dc.w	$0000	;13e20
-	dc.w	$0000	;13e22
-	dc.w	$0000	;13e24
-	dc.w	$0000	;13e26
-	dc.w	$0000	;13e28
-	dc.w	$0000	;13e2a
-	dc.w	$0000	;13e2c
-	dc.w	$0000	;13e2e
-	dc.w	$0000	;13e30
-	dc.w	$0000	;13e32
-	dc.w	$0000	;13e34
-	dc.w	$0000	;13e36
-	dc.w	$0000	;13e38
-	dc.w	$0000	;13e3a
-	dc.w	$0000	;13e3c
-	dc.w	$0000	;13e3e
-	dc.w	$0000	;13e40
-	DC.W	$0002			;13e42
-	BCLR	#0,(A5)			;13e44: 08950000
-	ORI.W	#$0000,(A0)		;13e48: 00500000
-	dc.w	$0000	;13e4c
-	dc.w	$0000	;13e4e
-	DC.W	$013f			;13e50
-	dc.w	$0000	;13e52
-	dc.w	$0000	;13e54
-	dc.w	$0000	;13e56
-	dc.w	$0000	;13e58
-	DC.W	$0001			;13e5a
-	MOVE.W	(A6)+,-(A4)		;13e5c: 391e
-	DC.W	$0001			;13e5e
-	MOVE.W	(A6)+,-(A4)		;13e60: 391e
-	dc.w	$0000	;13e62
-	dc.w	$0000	;13e64
-	dc.w	$0000	;13e66
-	dc.w	$0000	;13e68
-	DC.W	$0001			;13e6a
-	MOVEQ	#-64,D1			;13e6c: 72c0
-	DC.W	$0001			;13e6e
-	MOVEQ	#-56,D1			;13e70: 72c8
-	dc.w	$0000	;13e72
-	dc.w	$0000	;13e74
-	DC.W	$0000			;13e76
-	OR.B	D2,D0			;13e78: 8002
-	ORI.B	#$05,(A0)		;13e7a: 00100005
-	ORI.L	#$011f0002,D0		;13e7e: 0080011f0002
-	ORI.B	#$08,D1			;13e84: 00010008
-	ORI.B	#$01,D0			;13e88: 00000001
-	DC.W	$ffff			;13e8c
+	dc.l	lb_20782	;13dda
+	dc.l	$00019	;13dde
+	dc.l	$00000	;13de2
+	dc.l	$0013f	;13de6
+	dc.l	$00000	;13dea
+	dc.l	$00000	;13dee
+	dc.l	$00000	;13df2
+	dc.l	$00000	;13df6
+	dc.l	$00000	;13dfa
+	dc.l	$00000	;13dfe
+	dc.l	$00000	;13e02
+	dc.l	$00000	;13e06
+	dc.l	$00000	;13e0a
+	dc.l	lb_207a0	;13e0e
+	dc.l	$00023	;13e12
+	dc.l	$00000	;13e16
+	dc.l	$0013f	;13e1a
+	dc.l	$00000	;13e1e
+	dc.l	$00000	;13e22
+	dc.l	$00000	;13e26
+	dc.l	$00000	;13e2a
+	dc.l	$00000	;13e2e
+	dc.l	$00000	;13e32
+	dc.l	$00000	;13e36
+	dc.l	$00000	;13e3a
+	dc.l	$00000	;13e3e
+	dc.l	lb_20894+1	;13e42
+	dc.l	$00050	;13e46
+	dc.l	$00000	;13e4a
+	dc.l	$0013f	;13e4e
+	dc.l	$00000	;13e52
+	dc.l	$00000	;13e56
+	dc.l	lb_1391e	;13e5a
+	dc.l	lb_1391e	;13e5e
+	dc.l	$00000	;13e62
+	dc.l	$00000	;13e66
+	dc.l	lb_172c0	;13e6a
+	dc.l	lb_172c8	;13e6e
+	dc.l	$00000	;13e72
+	dc.l	$8002	;13e76
+	dc.l	$100005	;13e7a
+	dc.l	$80011f	;13e7e
+	dc.l	$20000+1	;13e82
+	dc.l	$80000	;13e86
+	dc.l	$1ffff	;13e8a
 lb_13e8e:
-	DC.W	$0002			;13e8e
-	EORI.L	#$0000000e,D6		;13e90: 0a860000000e
-	dc.w	$0000	;13e96
-	dc.w	$0000	;13e98
-	DC.W	$0000			;13e9a
-	DC.W	$013f			;13e9c
-	dc.w	$0000	;13e9e
-	dc.w	$0000	;13ea0
-	dc.w	$0000	;13ea2
-	dc.w	$0000	;13ea4
-	dc.w	$0000	;13ea6
-	dc.w	$0000	;13ea8
-	dc.w	$0000	;13eaa
-	dc.w	$0000	;13eac
-	dc.w	$0000	;13eae
-	dc.w	$0000	;13eb0
-	dc.w	$0000	;13eb2
-	dc.w	$0000	;13eb4
-	dc.w	$0000	;13eb6
-	dc.w	$0000	;13eb8
-	dc.w	$0000	;13eba
-	dc.w	$0000	;13ebc
-	dc.w	$0000	;13ebe
-	dc.w	$0000	;13ec0
-	DC.W	$0002			;13ec2
-	DC.W	$0a8b			;13ec4
-	ORI.B	#$15,D0			;13ec6: 00000015
-	dc.w	$0000	;13eca
-	dc.w	$0000	;13ecc
-	DC.W	$0000			;13ece
-	DC.W	$013f			;13ed0
-	dc.w	$0000	;13ed2
-	dc.w	$0000	;13ed4
-	dc.w	$0000	;13ed6
-	dc.w	$0000	;13ed8
-	dc.w	$0000	;13eda
-	dc.w	$0000	;13edc
-	dc.w	$0000	;13ede
-	dc.w	$0000	;13ee0
-	dc.w	$0000	;13ee2
-	dc.w	$0000	;13ee4
-	dc.w	$0000	;13ee6
-	dc.w	$0000	;13ee8
-	dc.w	$0000	;13eea
-	dc.w	$0000	;13eec
-	dc.w	$0000	;13eee
-	dc.w	$0000	;13ef0
-	dc.w	$0000	;13ef2
-	dc.w	$0000	;13ef4
-	DC.W	$0002			;13ef6
-	EORI.L	#$0000001c,(A0)		;13ef8: 0a900000001c
-	dc.w	$0000	;13efe
-	dc.w	$0000	;13f00
-	DC.W	$0000			;13f02
-	DC.W	$013f			;13f04
-	dc.w	$0000	;13f06
-	dc.w	$0000	;13f08
-	dc.w	$0000	;13f0a
-	dc.w	$0000	;13f0c
-	dc.w	$0000	;13f0e
-	dc.w	$0000	;13f10
-	dc.w	$0000	;13f12
-	dc.w	$0000	;13f14
-	dc.w	$0000	;13f16
-	dc.w	$0000	;13f18
-	dc.w	$0000	;13f1a
-	dc.w	$0000	;13f1c
-	dc.w	$0000	;13f1e
-	dc.w	$0000	;13f20
-	dc.w	$0000	;13f22
-	dc.w	$0000	;13f24
-	dc.w	$0000	;13f26
-	dc.w	$0000	;13f28
-	DC.W	$0002			;13f2a
-	EORI.L	#$00000023,(A5)		;13f2c: 0a9500000023
-	dc.w	$0000	;13f32
-	dc.w	$0000	;13f34
-	DC.W	$0000			;13f36
-	DC.W	$013f			;13f38
-	dc.w	$0000	;13f3a
-	dc.w	$0000	;13f3c
-	dc.w	$0000	;13f3e
-	dc.w	$0000	;13f40
-	dc.w	$0000	;13f42
-	dc.w	$0000	;13f44
-	dc.w	$0000	;13f46
-	dc.w	$0000	;13f48
-	dc.w	$0000	;13f4a
-	dc.w	$0000	;13f4c
-	dc.w	$0000	;13f4e
-	dc.w	$0000	;13f50
-	dc.w	$0000	;13f52
-	dc.w	$0000	;13f54
-	dc.w	$0000	;13f56
-	dc.w	$0000	;13f58
-	dc.w	$0000	;13f5a
-	dc.w	$0000	;13f5c
-	DC.W	$0002			;13f5e
-	EORI.L	#$0000002a,(A2)+	;13f60: 0a9a0000002a
-	dc.w	$0000	;13f66
-	dc.w	$0000	;13f68
-	DC.W	$0000			;13f6a
-	DC.W	$013f			;13f6c
-	dc.w	$0000	;13f6e
-	dc.w	$0000	;13f70
-	dc.w	$0000	;13f72
-	dc.w	$0000	;13f74
-	dc.w	$0000	;13f76
-	dc.w	$0000	;13f78
-	dc.w	$0000	;13f7a
-	dc.w	$0000	;13f7c
-	dc.w	$0000	;13f7e
-	dc.w	$0000	;13f80
-	dc.w	$0000	;13f82
-	dc.w	$0000	;13f84
-	dc.w	$0000	;13f86
-	dc.w	$0000	;13f88
-	dc.w	$0000	;13f8a
-	dc.w	$0000	;13f8c
-	dc.w	$0000	;13f8e
-	dc.w	$0000	;13f90
-	DC.W	$0002			;13f92
-	EORI.L	#$00000031,(A7)+	;13f94: 0a9f00000031
-	dc.w	$0000	;13f9a
-	dc.w	$0000	;13f9c
-	DC.W	$0000			;13f9e
-	DC.W	$013f			;13fa0
-	dc.w	$0000	;13fa2
-	dc.w	$0000	;13fa4
-	dc.w	$0000	;13fa6
-	dc.w	$0000	;13fa8
-	dc.w	$0000	;13faa
-	dc.w	$0000	;13fac
-	dc.w	$0000	;13fae
-	dc.w	$0000	;13fb0
-	dc.w	$0000	;13fb2
-	dc.w	$0000	;13fb4
-	dc.w	$0000	;13fb6
-	dc.w	$0000	;13fb8
-	dc.w	$0000	;13fba
-	dc.w	$0000	;13fbc
-	dc.w	$0000	;13fbe
-	dc.w	$0000	;13fc0
-	dc.w	$0000	;13fc2
-	dc.w	$0000	;13fc4
-	DC.W	$0002			;13fc6
-	EORI.L	#$00000038,-(A4)	;13fc8: 0aa400000038
-	dc.w	$0000	;13fce
-	dc.w	$0000	;13fd0
-	DC.W	$0000			;13fd2
-	DC.W	$013f			;13fd4
-	dc.w	$0000	;13fd6
-	dc.w	$0000	;13fd8
-	dc.w	$0000	;13fda
-	dc.w	$0000	;13fdc
-	dc.w	$0000	;13fde
-	dc.w	$0000	;13fe0
-	dc.w	$0000	;13fe2
-	dc.w	$0000	;13fe4
-	dc.w	$0000	;13fe6
-	dc.w	$0000	;13fe8
-	dc.w	$0000	;13fea
-	dc.w	$0000	;13fec
-	dc.w	$0000	;13fee
-	dc.w	$0000	;13ff0
-	dc.w	$0000	;13ff2
-	dc.w	$0000	;13ff4
+	dc.l	lb_20a86	;13e8e
+	dc.l	$0000e	;13e92
+	dc.l	$00000	;13e96
+	dc.l	$0013f	;13e9a
+	dc.l	$00000	;13e9e
+	dc.l	$00000	;13ea2
+	dc.l	$00000	;13ea6
+	dc.l	$00000	;13eaa
+	dc.l	$00000	;13eae
+	dc.l	$00000	;13eb2
+	dc.l	$00000	;13eb6
+	dc.l	$00000	;13eba
+	dc.l	$00000	;13ebe
+	dc.l	lb_20a8a+1	;13ec2
+	dc.l	$00015	;13ec6
+	dc.l	$00000	;13eca
+	dc.l	$0013f	;13ece
+	dc.l	$00000	;13ed2
+	dc.l	$00000	;13ed6
+	dc.l	$00000	;13eda
+	dc.l	$00000	;13ede
+	dc.l	$00000	;13ee2
+	dc.l	$00000	;13ee6
+	dc.l	$00000	;13eea
+	dc.l	$00000	;13eee
+	dc.l	$00000	;13ef2
+	dc.l	lb_20a90	;13ef6
+	dc.l	$0001c	;13efa
+	dc.l	$00000	;13efe
+	dc.l	$0013f	;13f02
+	dc.l	$00000	;13f06
+	dc.l	$00000	;13f0a
+	dc.l	$00000	;13f0e
+	dc.l	$00000	;13f12
+	dc.l	$00000	;13f16
+	dc.l	$00000	;13f1a
+	dc.l	$00000	;13f1e
+	dc.l	$00000	;13f22
+	dc.l	$00000	;13f26
+	dc.l	lb_20a94+1	;13f2a
+	dc.l	$00023	;13f2e
+	dc.l	$00000	;13f32
+	dc.l	$0013f	;13f36
+	dc.l	$00000	;13f3a
+	dc.l	$00000	;13f3e
+	dc.l	$00000	;13f42
+	dc.l	$00000	;13f46
+	dc.l	$00000	;13f4a
+	dc.l	$00000	;13f4e
+	dc.l	$00000	;13f52
+	dc.l	$00000	;13f56
+	dc.l	$00000	;13f5a
+	dc.l	lb_20a9a	;13f5e
+	dc.l	$0002a	;13f62
+	dc.l	$00000	;13f66
+	dc.l	$0013f	;13f6a
+	dc.l	$00000	;13f6e
+	dc.l	$00000	;13f72
+	dc.l	$00000	;13f76
+	dc.l	$00000	;13f7a
+	dc.l	$00000	;13f7e
+	dc.l	$00000	;13f82
+	dc.l	$00000	;13f86
+	dc.l	$00000	;13f8a
+	dc.l	$00000	;13f8e
+	dc.l	lb_20a9e+1	;13f92
+	dc.l	$00031	;13f96
+	dc.l	$00000	;13f9a
+	dc.l	$0013f	;13f9e
+	dc.l	$00000	;13fa2
+	dc.l	$00000	;13fa6
+	dc.l	$00000	;13faa
+	dc.l	$00000	;13fae
+	dc.l	$00000	;13fb2
+	dc.l	$00000	;13fb6
+	dc.l	$00000	;13fba
+	dc.l	$00000	;13fbe
+	dc.l	$00000	;13fc2
+	dc.l	lb_20aa4	;13fc6
+	dc.l	$00038	;13fca
+	dc.l	$00000	;13fce
+	dc.l	$0013f	;13fd2
+	dc.l	$00000	;13fd6
+	dc.l	$00000	;13fda
+	dc.l	$00000	;13fde
+	dc.l	$00000	;13fe2
+	dc.l	$00000	;13fe6
+	dc.l	$00000	;13fea
+	dc.l	$00000	;13fee
+	dc.l	$00000	;13ff2
 lb_13ff6:
-	dc.w	$0000	;13ff6
-	dc.w	$0000	;13ff8
-	DC.W	$0002			;13ffa
-	EORI.L	#$0000003f,0(A1)	;13ffc: 0aa90000003f0000
-	dc.w	$0000	;14004
-	dc.w	$0000	;14006
-	DC.W	$013f			;14008
-	dc.w	$0000	;1400a
-	dc.w	$0000	;1400c
-	dc.w	$0000	;1400e
-	dc.w	$0000	;14010
-	dc.w	$0000	;14012
-	dc.w	$0000	;14014
-	dc.w	$0000	;14016
-	dc.w	$0000	;14018
-	dc.w	$0000	;1401a
-	dc.w	$0000	;1401c
-	dc.w	$0000	;1401e
-	dc.w	$0000	;14020
-	dc.w	$0000	;14022
-	dc.w	$0000	;14024
-	dc.w	$0000	;14026
-	dc.w	$0000	;14028
-	dc.w	$0000	;1402a
-	dc.w	$0000	;1402c
-	DC.W	$0002			;1402e
-	EORI.L	#$00000046,0(A6)	;14030: 0aae000000460000
-	dc.w	$0000	;14038
-	dc.w	$0000	;1403a
-	DC.W	$013f			;1403c
-	dc.w	$0000	;1403e
-	dc.w	$0000	;14040
-	dc.w	$0000	;14042
-	dc.w	$0000	;14044
-	dc.w	$0000	;14046
-	dc.w	$0000	;14048
-	dc.w	$0000	;1404a
-	dc.w	$0000	;1404c
-	dc.w	$0000	;1404e
-	dc.w	$0000	;14050
-	dc.w	$0000	;14052
-	dc.w	$0000	;14054
-	dc.w	$0000	;14056
-	dc.w	$0000	;14058
-	dc.w	$0000	;1405a
-	dc.w	$0000	;1405c
-	dc.w	$0000	;1405e
-	dc.w	$0000	;14060
-	DC.W	$0002			;14062
-	EORI.L	#$0000004d,0(A3,D0.W)	;14064: 0ab30000004d0000
-	dc.w	$0000	;1406c
-	dc.w	$0000	;1406e
-	DC.W	$013f			;14070
-	dc.w	$0000	;14072
-	dc.w	$0000	;14074
-	dc.w	$0000	;14076
-	dc.w	$0000	;14078
-	dc.w	$0000	;1407a
-	dc.w	$0000	;1407c
-	dc.w	$0000	;1407e
-	dc.w	$0000	;14080
-	dc.w	$0000	;14082
-	dc.w	$0000	;14084
-	dc.w	$0000	;14086
-	dc.w	$0000	;14088
-	dc.w	$0000	;1408a
-	dc.w	$0000	;1408c
-	dc.w	$0000	;1408e
-	dc.w	$0000	;14090
-	dc.w	$0000	;14092
-	dc.w	$0000	;14094
-	DC.W	$0002			;14096
-	EORI.L	#$00000054,EXT_0000.W	;14098: 0ab8000000540000
-	dc.w	$0000	;140a0
-	dc.w	$0000	;140a2
-	DC.W	$013f			;140a4
-	dc.w	$0000	;140a6
-	dc.w	$0000	;140a8
-	dc.w	$0000	;140aa
-	dc.w	$0000	;140ac
-	dc.w	$0000	;140ae
-	dc.w	$0000	;140b0
-	dc.w	$0000	;140b2
-	dc.w	$0000	;140b4
-	dc.w	$0000	;140b6
-	dc.w	$0000	;140b8
-	dc.w	$0000	;140ba
-	dc.w	$0000	;140bc
-	dc.w	$0000	;140be
-	dc.w	$0000	;140c0
-	dc.w	$0000	;140c2
-	dc.w	$0000	;140c4
-	dc.w	$0000	;140c6
-	dc.w	$0000	;140c8
-	DC.W	$0002			;140ca
-	DC.W	$0abd			;140cc
-	ORI.B	#$5b,D0			;140ce: 0000005b
-	dc.w	$0000	;140d2
-	dc.w	$0000	;140d4
-	DC.W	$0000			;140d6
-	DC.W	$013f			;140d8
-	dc.w	$0000	;140da
-	dc.w	$0000	;140dc
-	dc.w	$0000	;140de
-	dc.w	$0000	;140e0
-	dc.w	$0000	;140e2
-	dc.w	$0000	;140e4
-	dc.w	$0000	;140e6
-	dc.w	$0000	;140e8
-	dc.w	$0000	;140ea
-	dc.w	$0000	;140ec
-	dc.w	$0000	;140ee
-	dc.w	$0000	;140f0
-	dc.w	$0000	;140f2
-	dc.w	$0000	;140f4
-	dc.w	$0000	;140f6
-	dc.w	$0000	;140f8
-	dc.w	$0000	;140fa
-	dc.w	$0000	;140fc
-	DC.W	$0002			;140fe
-	DC.W	$0ac2			;14100
-	ORI.B	#$62,D0			;14102: 00000062
-	dc.w	$0000	;14106
-	dc.w	$0000	;14108
-	DC.W	$0000			;1410a
-	DC.W	$013f			;1410c
-	dc.w	$0000	;1410e
-	dc.w	$0000	;14110
-	dc.w	$0000	;14112
-	dc.w	$0000	;14114
-	dc.w	$0000	;14116
-	dc.w	$0000	;14118
-	dc.w	$0000	;1411a
-	dc.w	$0000	;1411c
-	dc.w	$0000	;1411e
-	dc.w	$0000	;14120
-	dc.w	$0000	;14122
-	dc.w	$0000	;14124
-	dc.w	$0000	;14126
-	dc.w	$0000	;14128
-	dc.w	$0000	;1412a
-	dc.w	$0000	;1412c
-	dc.w	$0000	;1412e
-	dc.w	$0000	;14130
-	DC.W	$0002			;14132
-	DC.W	$0ac7			;14134
-	ORI.B	#$69,D0			;14136: 00000069
-	dc.w	$0000	;1413a
-	dc.w	$0000	;1413c
-	DC.W	$0000			;1413e
-	DC.W	$013f			;14140
-	dc.w	$0000	;14142
-	dc.w	$0000	;14144
-	dc.w	$0000	;14146
-	dc.w	$0000	;14148
-	dc.w	$0000	;1414a
-	dc.w	$0000	;1414c
-	dc.w	$0000	;1414e
-	dc.w	$0000	;14150
-	dc.w	$0000	;14152
-	dc.w	$0000	;14154
-	dc.w	$0000	;14156
-	dc.w	$0000	;14158
-	dc.w	$0000	;1415a
-	dc.w	$0000	;1415c
-	dc.w	$0000	;1415e
-	dc.w	$0000	;14160
-	dc.w	$0000	;14162
-	dc.w	$0000	;14164
-	DC.W	$0002			;14166
-	DC.W	$0acc			;14168
-	ORI.B	#$70,D0			;1416a: 00000070
-	dc.w	$0000	;1416e
-	dc.w	$0000	;14170
-	DC.W	$0000			;14172
-	DC.W	$013f			;14174
-	dc.w	$0000	;14176
-	dc.w	$0000	;14178
-	dc.w	$0000	;1417a
-	dc.w	$0000	;1417c
-	dc.w	$0000	;1417e
-	dc.w	$0000	;14180
-	dc.w	$0000	;14182
-	dc.w	$0000	;14184
-	dc.w	$0000	;14186
-	dc.w	$0000	;14188
-	dc.w	$0000	;1418a
-	dc.w	$0000	;1418c
-	dc.w	$0000	;1418e
-	dc.w	$0000	;14190
-	dc.w	$0000	;14192
-	dc.w	$0000	;14194
-	dc.w	$0000	;14196
-	dc.w	$0000	;14198
-	DC.W	$0006			;1419a
-	DC.W	$a006			;1419c
-	ORI.B	#$0e,D0			;1419e: 0000000e
-	dc.w	$0000	;141a2
-	dc.w	$0000	;141a4
-	DC.W	$0000			;141a6
-	DC.W	$013f			;141a8
-	dc.w	$0000	;141aa
-	dc.w	$0000	;141ac
-	dc.w	$0000	;141ae
-	dc.w	$0000	;141b0
-	dc.w	$0000	;141b2
-	dc.w	$0000	;141b4
-	dc.w	$0000	;141b6
-	dc.w	$0000	;141b8
-	dc.w	$0000	;141ba
-	dc.w	$0000	;141bc
-	dc.w	$0000	;141be
-	dc.w	$0000	;141c0
-	dc.w	$0000	;141c2
-	dc.w	$0000	;141c4
-	dc.w	$0000	;141c6
-	dc.w	$0000	;141c8
-	dc.w	$0000	;141ca
-	dc.w	$0000	;141cc
-	DC.W	$0006			;141ce
-	DC.W	$a032			;141d0
-	ORI.B	#$15,D0			;141d2: 00000015
-	dc.w	$0000	;141d6
-	dc.w	$0000	;141d8
-	DC.W	$0000			;141da
-	DC.W	$013f			;141dc
-	dc.w	$0000	;141de
-	dc.w	$0000	;141e0
-	dc.w	$0000	;141e2
-	dc.w	$0000	;141e4
-	dc.w	$0000	;141e6
-	dc.w	$0000	;141e8
-	dc.w	$0000	;141ea
-	dc.w	$0000	;141ec
-	dc.w	$0000	;141ee
-	dc.w	$0000	;141f0
-	dc.w	$0000	;141f2
-	dc.w	$0000	;141f4
-	dc.w	$0000	;141f6
-	dc.w	$0000	;141f8
-	dc.w	$0000	;141fa
-	dc.w	$0000	;141fc
-	dc.w	$0000	;141fe
-	dc.w	$0000	;14200
-	DC.W	$0006			;14202
-	DC.W	$a05e			;14204
-	ORI.B	#$1c,D0			;14206: 0000001c
-	dc.w	$0000	;1420a
-	dc.w	$0000	;1420c
-	DC.W	$0000			;1420e
-	DC.W	$013f			;14210
-	dc.w	$0000	;14212
-	dc.w	$0000	;14214
-	dc.w	$0000	;14216
-	dc.w	$0000	;14218
-	dc.w	$0000	;1421a
-	dc.w	$0000	;1421c
-	dc.w	$0000	;1421e
-	dc.w	$0000	;14220
-	dc.w	$0000	;14222
-	dc.w	$0000	;14224
-	dc.w	$0000	;14226
-	dc.w	$0000	;14228
-	dc.w	$0000	;1422a
-	dc.w	$0000	;1422c
-	dc.w	$0000	;1422e
-	dc.w	$0000	;14230
-	dc.w	$0000	;14232
-	dc.w	$0000	;14234
-	DC.W	$0006			;14236
-	DC.W	$a08a			;14238
-	ORI.B	#$23,D0			;1423a: 00000023
-	dc.w	$0000	;1423e
-	dc.w	$0000	;14240
-	DC.W	$0000			;14242
-	DC.W	$013f			;14244
-	dc.w	$0000	;14246
-	dc.w	$0000	;14248
-	dc.w	$0000	;1424a
-	dc.w	$0000	;1424c
-	dc.w	$0000	;1424e
-	dc.w	$0000	;14250
-	dc.w	$0000	;14252
-	dc.w	$0000	;14254
-	dc.w	$0000	;14256
-	dc.w	$0000	;14258
-	dc.w	$0000	;1425a
-	dc.w	$0000	;1425c
-	dc.w	$0000	;1425e
-	dc.w	$0000	;14260
-	dc.w	$0000	;14262
-	dc.w	$0000	;14264
-	dc.w	$0000	;14266
-	dc.w	$0000	;14268
-	DC.W	$0006			;1426a
-	DC.W	$a0b6			;1426c
-	ORI.B	#$2a,D0			;1426e: 0000002a
-	dc.w	$0000	;14272
-	dc.w	$0000	;14274
-	DC.W	$0000			;14276
-	DC.W	$013f			;14278
-	dc.w	$0000	;1427a
-	dc.w	$0000	;1427c
-	dc.w	$0000	;1427e
-	dc.w	$0000	;14280
-	dc.w	$0000	;14282
-	dc.w	$0000	;14284
-	dc.w	$0000	;14286
-	dc.w	$0000	;14288
-	dc.w	$0000	;1428a
-	dc.w	$0000	;1428c
-	dc.w	$0000	;1428e
-	dc.w	$0000	;14290
-	dc.w	$0000	;14292
-	dc.w	$0000	;14294
-	dc.w	$0000	;14296
-	dc.w	$0000	;14298
-	dc.w	$0000	;1429a
-	dc.w	$0000	;1429c
-	DC.W	$0006			;1429e
-	DC.W	$a0e2			;142a0
-	ORI.B	#$31,D0			;142a2: 00000031
-	dc.w	$0000	;142a6
-	dc.w	$0000	;142a8
-	DC.W	$0000			;142aa
-	DC.W	$013f			;142ac
-	dc.w	$0000	;142ae
-	dc.w	$0000	;142b0
-	dc.w	$0000	;142b2
-	dc.w	$0000	;142b4
-	dc.w	$0000	;142b6
-	dc.w	$0000	;142b8
-	dc.w	$0000	;142ba
-	dc.w	$0000	;142bc
-	dc.w	$0000	;142be
-	dc.w	$0000	;142c0
-	dc.w	$0000	;142c2
-	dc.w	$0000	;142c4
-	dc.w	$0000	;142c6
-	dc.w	$0000	;142c8
-	dc.w	$0000	;142ca
-	dc.w	$0000	;142cc
-	dc.w	$0000	;142ce
-	dc.w	$0000	;142d0
-	DC.W	$0006			;142d2
-	DC.W	$a10e			;142d4
-	ORI.B	#$38,D0			;142d6: 00000038
-	dc.w	$0000	;142da
-	dc.w	$0000	;142dc
-	DC.W	$0000			;142de
-	DC.W	$013f			;142e0
-	dc.w	$0000	;142e2
-	dc.w	$0000	;142e4
-	dc.w	$0000	;142e6
-	dc.w	$0000	;142e8
-	dc.w	$0000	;142ea
-	dc.w	$0000	;142ec
-	dc.w	$0000	;142ee
-	dc.w	$0000	;142f0
-	dc.w	$0000	;142f2
-	dc.w	$0000	;142f4
-	dc.w	$0000	;142f6
-	dc.w	$0000	;142f8
-	dc.w	$0000	;142fa
-	dc.w	$0000	;142fc
-	dc.w	$0000	;142fe
-	dc.w	$0000	;14300
-	dc.w	$0000	;14302
-	dc.w	$0000	;14304
-	DC.W	$0006			;14306
-	DC.W	$a13a			;14308
-	ORI.B	#$3f,D0			;1430a: 0000003f
-	dc.w	$0000	;1430e
-	dc.w	$0000	;14310
-	DC.W	$0000			;14312
-	DC.W	$013f			;14314
-	dc.w	$0000	;14316
-	dc.w	$0000	;14318
-	dc.w	$0000	;1431a
-	dc.w	$0000	;1431c
-	dc.w	$0000	;1431e
-	dc.w	$0000	;14320
-	dc.w	$0000	;14322
-	dc.w	$0000	;14324
-	dc.w	$0000	;14326
-	dc.w	$0000	;14328
-	dc.w	$0000	;1432a
-	dc.w	$0000	;1432c
-	dc.w	$0000	;1432e
-	dc.w	$0000	;14330
-	dc.w	$0000	;14332
-	dc.w	$0000	;14334
-	dc.w	$0000	;14336
-	dc.w	$0000	;14338
-	DC.W	$0006			;1433a
-	DC.W	$a166			;1433c
-	ORI.B	#$46,D0			;1433e: 00000046
-	dc.w	$0000	;14342
-	dc.w	$0000	;14344
-	DC.W	$0000			;14346
-	DC.W	$013f			;14348
-	dc.w	$0000	;1434a
-	dc.w	$0000	;1434c
-	dc.w	$0000	;1434e
-	dc.w	$0000	;14350
-	dc.w	$0000	;14352
-	dc.w	$0000	;14354
-	dc.w	$0000	;14356
-	dc.w	$0000	;14358
-	dc.w	$0000	;1435a
-	dc.w	$0000	;1435c
-	dc.w	$0000	;1435e
-	dc.w	$0000	;14360
-	dc.w	$0000	;14362
-	dc.w	$0000	;14364
-	dc.w	$0000	;14366
-	dc.w	$0000	;14368
-	dc.w	$0000	;1436a
-	dc.w	$0000	;1436c
-	DC.W	$0006			;1436e
-	DC.W	$a192			;14370
-	ORI.B	#$4d,D0			;14372: 0000004d
-	dc.w	$0000	;14376
-	dc.w	$0000	;14378
-	DC.W	$0000			;1437a
-	DC.W	$013f			;1437c
-	dc.w	$0000	;1437e
-	dc.w	$0000	;14380
-	dc.w	$0000	;14382
-	dc.w	$0000	;14384
-	dc.w	$0000	;14386
-	dc.w	$0000	;14388
-	dc.w	$0000	;1438a
-	dc.w	$0000	;1438c
-	dc.w	$0000	;1438e
-	dc.w	$0000	;14390
-	dc.w	$0000	;14392
-	dc.w	$0000	;14394
-	dc.w	$0000	;14396
-	dc.w	$0000	;14398
-	dc.w	$0000	;1439a
-	dc.w	$0000	;1439c
-	dc.w	$0000	;1439e
-	dc.w	$0000	;143a0
-	DC.W	$0006			;143a2
-	DC.W	$a1be			;143a4
-	ORI.B	#$54,D0			;143a6: 00000054
-	dc.w	$0000	;143aa
-	dc.w	$0000	;143ac
-	DC.W	$0000			;143ae
-	DC.W	$013f			;143b0
-	dc.w	$0000	;143b2
-	dc.w	$0000	;143b4
-	dc.w	$0000	;143b6
-	dc.w	$0000	;143b8
-	dc.w	$0000	;143ba
-	dc.w	$0000	;143bc
-	dc.w	$0000	;143be
-	dc.w	$0000	;143c0
-	dc.w	$0000	;143c2
-	dc.w	$0000	;143c4
-	dc.w	$0000	;143c6
-	dc.w	$0000	;143c8
-	dc.w	$0000	;143ca
-	dc.w	$0000	;143cc
-	dc.w	$0000	;143ce
-	dc.w	$0000	;143d0
+	dc.l	$00000	;13ff6
+	dc.l	lb_20aa8+1	;13ffa
+	dc.l	$0003f	;13ffe
+	dc.l	$00000	;14002
+	dc.l	$0013f	;14006
+	dc.l	$00000	;1400a
+	dc.l	$00000	;1400e
+	dc.l	$00000	;14012
+	dc.l	$00000	;14016
+	dc.l	$00000	;1401a
+	dc.l	$00000	;1401e
+	dc.l	$00000	;14022
+	dc.l	$00000	;14026
+	dc.l	$00000	;1402a
+	dc.l	lb_20aae	;1402e
+	dc.l	$00046	;14032
+	dc.l	$00000	;14036
+	dc.l	$0013f	;1403a
+	dc.l	$00000	;1403e
+	dc.l	$00000	;14042
+	dc.l	$00000	;14046
+	dc.l	$00000	;1404a
+	dc.l	$00000	;1404e
+	dc.l	$00000	;14052
+	dc.l	$00000	;14056
+	dc.l	$00000	;1405a
+	dc.l	$00000	;1405e
+	dc.l	lb_20ab2+1	;14062
+	dc.l	$0004d	;14066
+	dc.l	$00000	;1406a
+	dc.l	$0013f	;1406e
+	dc.l	$00000	;14072
+	dc.l	$00000	;14076
+	dc.l	$00000	;1407a
+	dc.l	$00000	;1407e
+	dc.l	$00000	;14082
+	dc.l	$00000	;14086
+	dc.l	$00000	;1408a
+	dc.l	$00000	;1408e
+	dc.l	$00000	;14092
+	dc.l	lb_20ab8	;14096
+	dc.l	$00054	;1409a
+	dc.l	$00000	;1409e
+	dc.l	$0013f	;140a2
+	dc.l	$00000	;140a6
+	dc.l	$00000	;140aa
+	dc.l	$00000	;140ae
+	dc.l	$00000	;140b2
+	dc.l	$00000	;140b6
+	dc.l	$00000	;140ba
+	dc.l	$00000	;140be
+	dc.l	$00000	;140c2
+	dc.l	$00000	;140c6
+	dc.l	lb_20abc+1	;140ca
+	dc.l	$0005b	;140ce
+	dc.l	$00000	;140d2
+	dc.l	$0013f	;140d6
+	dc.l	$00000	;140da
+	dc.l	$00000	;140de
+	dc.l	$00000	;140e2
+	dc.l	$00000	;140e6
+	dc.l	$00000	;140ea
+	dc.l	$00000	;140ee
+	dc.l	$00000	;140f2
+	dc.l	$00000	;140f6
+	dc.l	$00000	;140fa
+	dc.l	lb_20ac2	;140fe
+	dc.l	$00062	;14102
+	dc.l	$00000	;14106
+	dc.l	$0013f	;1410a
+	dc.l	$00000	;1410e
+	dc.l	$00000	;14112
+	dc.l	$00000	;14116
+	dc.l	$00000	;1411a
+	dc.l	$00000	;1411e
+	dc.l	$00000	;14122
+	dc.l	$00000	;14126
+	dc.l	$00000	;1412a
+	dc.l	$00000	;1412e
+	dc.l	lb_20ac6+1	;14132
+	dc.l	$00069	;14136
+	dc.l	$00000	;1413a
+	dc.l	$0013f	;1413e
+	dc.l	$00000	;14142
+	dc.l	$00000	;14146
+	dc.l	$00000	;1414a
+	dc.l	$00000	;1414e
+	dc.l	$00000	;14152
+	dc.l	$00000	;14156
+	dc.l	$00000	;1415a
+	dc.l	$00000	;1415e
+	dc.l	$00000	;14162
+	dc.l	lb_20acc	;14166
+	dc.l	$00070	;1416a
+	dc.l	$00000	;1416e
+	dc.l	$0013f	;14172
+	dc.l	$00000	;14176
+	dc.l	$00000	;1417a
+	dc.l	$00000	;1417e
+	dc.l	$00000	;14182
+	dc.l	$00000	;14186
+	dc.l	$00000	;1418a
+	dc.l	$00000	;1418e
+	dc.l	$00000	;14192
+	dc.l	$00000	;14196
+	dc.l	$6a006	;1419a
+	dc.l	$0000e	;1419e
+	dc.l	$00000	;141a2
+	dc.l	$0013f	;141a6
+	dc.l	$00000	;141aa
+	dc.l	$00000	;141ae
+	dc.l	$00000	;141b2
+	dc.l	$00000	;141b6
+	dc.l	$00000	;141ba
+	dc.l	$00000	;141be
+	dc.l	$00000	;141c2
+	dc.l	$00000	;141c6
+	dc.l	$00000	;141ca
+	dc.l	$6a032	;141ce
+	dc.l	$00015	;141d2
+	dc.l	$00000	;141d6
+	dc.l	$0013f	;141da
+	dc.l	$00000	;141de
+	dc.l	$00000	;141e2
+	dc.l	$00000	;141e6
+	dc.l	$00000	;141ea
+	dc.l	$00000	;141ee
+	dc.l	$00000	;141f2
+	dc.l	$00000	;141f6
+	dc.l	$00000	;141fa
+	dc.l	$00000	;141fe
+	dc.l	$6a05e	;14202
+	dc.l	$0001c	;14206
+	dc.l	$00000	;1420a
+	dc.l	$0013f	;1420e
+	dc.l	$00000	;14212
+	dc.l	$00000	;14216
+	dc.l	$00000	;1421a
+	dc.l	$00000	;1421e
+	dc.l	$00000	;14222
+	dc.l	$00000	;14226
+	dc.l	$00000	;1422a
+	dc.l	$00000	;1422e
+	dc.l	$00000	;14232
+	dc.l	$6a08a	;14236
+	dc.l	$00023	;1423a
+	dc.l	$00000	;1423e
+	dc.l	$0013f	;14242
+	dc.l	$00000	;14246
+	dc.l	$00000	;1424a
+	dc.l	$00000	;1424e
+	dc.l	$00000	;14252
+	dc.l	$00000	;14256
+	dc.l	$00000	;1425a
+	dc.l	$00000	;1425e
+	dc.l	$00000	;14262
+	dc.l	$00000	;14266
+	dc.l	$6a0b6	;1426a
+	dc.l	$0002a	;1426e
+	dc.l	$00000	;14272
+	dc.l	$0013f	;14276
+	dc.l	$00000	;1427a
+	dc.l	$00000	;1427e
+	dc.l	$00000	;14282
+	dc.l	$00000	;14286
+	dc.l	$00000	;1428a
+	dc.l	$00000	;1428e
+	dc.l	$00000	;14292
+	dc.l	$00000	;14296
+	dc.l	$00000	;1429a
+	dc.l	$6a0e2	;1429e
+	dc.l	$00031	;142a2
+	dc.l	$00000	;142a6
+	dc.l	$0013f	;142aa
+	dc.l	$00000	;142ae
+	dc.l	$00000	;142b2
+	dc.l	$00000	;142b6
+	dc.l	$00000	;142ba
+	dc.l	$00000	;142be
+	dc.l	$00000	;142c2
+	dc.l	$00000	;142c6
+	dc.l	$00000	;142ca
+	dc.l	$00000	;142ce
+	dc.l	$6a10e	;142d2
+	dc.l	$00038	;142d6
+	dc.l	$00000	;142da
+	dc.l	$0013f	;142de
+	dc.l	$00000	;142e2
+	dc.l	$00000	;142e6
+	dc.l	$00000	;142ea
+	dc.l	$00000	;142ee
+	dc.l	$00000	;142f2
+	dc.l	$00000	;142f6
+	dc.l	$00000	;142fa
+	dc.l	$00000	;142fe
+	dc.l	$00000	;14302
+	dc.l	$6a13a	;14306
+	dc.l	$0003f	;1430a
+	dc.l	$00000	;1430e
+	dc.l	$0013f	;14312
+	dc.l	$00000	;14316
+	dc.l	$00000	;1431a
+	dc.l	$00000	;1431e
+	dc.l	$00000	;14322
+	dc.l	$00000	;14326
+	dc.l	$00000	;1432a
+	dc.l	$00000	;1432e
+	dc.l	$00000	;14332
+	dc.l	$00000	;14336
+	dc.l	$6a166	;1433a
+	dc.l	$00046	;1433e
+	dc.l	$00000	;14342
+	dc.l	$0013f	;14346
+	dc.l	$00000	;1434a
+	dc.l	$00000	;1434e
+	dc.l	$00000	;14352
+	dc.l	$00000	;14356
+	dc.l	$00000	;1435a
+	dc.l	$00000	;1435e
+	dc.l	$00000	;14362
+	dc.l	$00000	;14366
+	dc.l	$00000	;1436a
+	dc.l	$6a192	;1436e
+	dc.l	$0004d	;14372
+	dc.l	$00000	;14376
+	dc.l	$0013f	;1437a
+	dc.l	$00000	;1437e
+	dc.l	$00000	;14382
+	dc.l	$00000	;14386
+	dc.l	$00000	;1438a
+	dc.l	$00000	;1438e
+	dc.l	$00000	;14392
+	dc.l	$00000	;14396
+	dc.l	$00000	;1439a
+	dc.l	$00000	;1439e
+	dc.l	$6a1be	;143a2
+	dc.l	$00054	;143a6
+	dc.l	$00000	;143aa
+	dc.l	$0013f	;143ae
+	dc.l	$00000	;143b2
+	dc.l	$00000	;143b6
+	dc.l	$00000	;143ba
+	dc.l	$00000	;143be
+	dc.l	$00000	;143c2
+	dc.l	$00000	;143c6
+	dc.l	$00000	;143ca
+	dc.l	$00000	;143ce
 lb_143d2:
-	dc.w	$0000	;143d2
-	dc.w	$0000	;143d4
-	DC.W	$0006			;143d6
-	DC.W	$a1ea			;143d8
-	ORI.B	#$5b,D0			;143da: 0000005b
-	dc.w	$0000	;143de
-	dc.w	$0000	;143e0
-	DC.W	$0000			;143e2
-	DC.W	$013f			;143e4
-	dc.w	$0000	;143e6
-	dc.w	$0000	;143e8
-	dc.w	$0000	;143ea
-	dc.w	$0000	;143ec
-	dc.w	$0000	;143ee
-	dc.w	$0000	;143f0
-	dc.w	$0000	;143f2
-	dc.w	$0000	;143f4
-	dc.w	$0000	;143f6
-	dc.w	$0000	;143f8
-	dc.w	$0000	;143fa
-	dc.w	$0000	;143fc
-	dc.w	$0000	;143fe
-	dc.w	$0000	;14400
-	dc.w	$0000	;14402
-	dc.w	$0000	;14404
-	dc.w	$0000	;14406
-	dc.w	$0000	;14408
-	DC.W	$0006			;1440a
-	DC.W	$a216			;1440c
-	ORI.B	#$62,D0			;1440e: 00000062
-	dc.w	$0000	;14412
-	dc.w	$0000	;14414
-	DC.W	$0000			;14416
-	DC.W	$013f			;14418
-	dc.w	$0000	;1441a
-	dc.w	$0000	;1441c
-	dc.w	$0000	;1441e
-	dc.w	$0000	;14420
-	dc.w	$0000	;14422
-	dc.w	$0000	;14424
-	dc.w	$0000	;14426
-	dc.w	$0000	;14428
-	dc.w	$0000	;1442a
-	dc.w	$0000	;1442c
-	dc.w	$0000	;1442e
-	dc.w	$0000	;14430
-	dc.w	$0000	;14432
-	dc.w	$0000	;14434
-	dc.w	$0000	;14436
-	dc.w	$0000	;14438
-	dc.w	$0000	;1443a
-	dc.w	$0000	;1443c
-	DC.W	$0006			;1443e
-	DC.W	$a242			;14440
-	ORI.B	#$69,D0			;14442: 00000069
-	dc.w	$0000	;14446
-	dc.w	$0000	;14448
-	DC.W	$0000			;1444a
-	DC.W	$013f			;1444c
-	dc.w	$0000	;1444e
-	dc.w	$0000	;14450
-	dc.w	$0000	;14452
-	dc.w	$0000	;14454
-	dc.w	$0000	;14456
-	dc.w	$0000	;14458
-	dc.w	$0000	;1445a
-	dc.w	$0000	;1445c
-	dc.w	$0000	;1445e
-	dc.w	$0000	;14460
-	dc.w	$0000	;14462
-	dc.w	$0000	;14464
-	dc.w	$0000	;14466
-	dc.w	$0000	;14468
-	dc.w	$0000	;1446a
-	dc.w	$0000	;1446c
-	dc.w	$0000	;1446e
-	dc.w	$0000	;14470
-	DC.W	$0006			;14472
-	DC.W	$a26e			;14474
-	ORI.B	#$70,D0			;14476: 00000070
-	dc.w	$0000	;1447a
-	dc.w	$0000	;1447c
-	DC.W	$0000			;1447e
-	DC.W	$013f			;14480
-	dc.w	$0000	;14482
-	dc.w	$0000	;14484
-	dc.w	$0000	;14486
-	dc.w	$0000	;14488
-	dc.w	$0000	;1448a
-	dc.w	$0000	;1448c
-	dc.w	$0000	;1448e
-	dc.w	$0000	;14490
-	dc.w	$0000	;14492
-	dc.w	$0000	;14494
-	dc.w	$0000	;14496
-	dc.w	$0000	;14498
-	dc.w	$0000	;1449a
-	dc.w	$0000	;1449c
-	dc.w	$0000	;1449e
-	dc.w	$0000	;144a0
-	dc.w	$0000	;144a2
-	dc.w	$0000	;144a4
-	DC.W	$0002			;144a6
-	BCLR	#0,(A1)+		;144a8: 08990000
-	ORI.W	#$0000,EXT_0000		;144ac: 0079000000000000
-	DC.W	$013f			;144b4
-	dc.w	$0000	;144b6
-	dc.w	$0000	;144b8
-	dc.w	$0000	;144ba
-	dc.w	$0000	;144bc
-	DC.W	$0001			;144be
-	NEG.L	-(A6)			;144c0: 44a6
-	DC.W	$0001			;144c2
-	NEG.L	-(A6)			;144c4: 44a6
-	dc.w	$0000	;144c6
-	dc.w	$0000	;144c8
-	dc.w	$0000	;144ca
-	dc.w	$0000	;144cc
-	DC.W	$0001			;144ce
-	MOVEQ	#-56,D1			;144d0: 72c8
-	DC.W	$0001			;144d2
-	MOVEQ	#-56,D1			;144d4: 72c8
+	dc.l	$00000	;143d2
+	dc.l	$6a1ea	;143d6
+	dc.l	$0005b	;143da
+	dc.l	$00000	;143de
+	dc.l	$0013f	;143e2
+	dc.l	$00000	;143e6
+	dc.l	$00000	;143ea
+	dc.l	$00000	;143ee
+	dc.l	$00000	;143f2
+	dc.l	$00000	;143f6
+	dc.l	$00000	;143fa
+	dc.l	$00000	;143fe
+	dc.l	$00000	;14402
+	dc.l	$00000	;14406
+	dc.l	$6a216	;1440a
+	dc.l	$00062	;1440e
+	dc.l	$00000	;14412
+	dc.l	$0013f	;14416
+	dc.l	$00000	;1441a
+	dc.l	$00000	;1441e
+	dc.l	$00000	;14422
+	dc.l	$00000	;14426
+	dc.l	$00000	;1442a
+	dc.l	$00000	;1442e
+	dc.l	$00000	;14432
+	dc.l	$00000	;14436
+	dc.l	$00000	;1443a
+	dc.l	$6a242	;1443e
+	dc.l	$00069	;14442
+	dc.l	$00000	;14446
+	dc.l	$0013f	;1444a
+	dc.l	$00000	;1444e
+	dc.l	$00000	;14452
+	dc.l	$00000	;14456
+	dc.l	$00000	;1445a
+	dc.l	$00000	;1445e
+	dc.l	$00000	;14462
+	dc.l	$00000	;14466
+	dc.l	$00000	;1446a
+	dc.l	$00000	;1446e
+	dc.l	$6a26e	;14472
+	dc.l	$00070	;14476
+	dc.l	$00000	;1447a
+	dc.l	$0013f	;1447e
+	dc.l	$00000	;14482
+	dc.l	$00000	;14486
+	dc.l	$00000	;1448a
+	dc.l	$00000	;1448e
+	dc.l	$00000	;14492
+	dc.l	$00000	;14496
+	dc.l	$00000	;1449a
+	dc.l	$00000	;1449e
+	dc.l	$00000	;144a2
+lb_144a6:
+	dc.l	lb_20898+1	;144a6
+	dc.l	$00079	;144aa
+	dc.l	$00000	;144ae
+	dc.l	$0013f	;144b2
+	dc.l	$00000	;144b6
+	dc.l	$00000	;144ba
+	dc.l	lb_144a6	;144be
+	dc.l	lb_144a6	;144c2
+	dc.l	$00000	;144c6
+	dc.l	$00000	;144ca
+	dc.l	lb_172c8	;144ce
+	dc.l	lb_172c8	;144d2
 	dc.w	$0000	;144d6
 	dc.w	$0000	;144d8
 	DC.W	$0000			;144da
@@ -19565,8 +17900,7 @@ lb_143d2:
 	ORI.B	#$01,D0			;144ec: 00000001
 	DC.W	$ffff			;144f0
 lb_144f2:
-	DC.W	$0001			;144f2
-	DC.W	$ffab			;144f4
+	dc.l	lb_1ffaa+1	;144f2
 	ORI.B	#$12,D0			;144f6: 00000012
 	dc.w	$0000	;144fa
 	dc.w	$0000	;144fc
@@ -19576,22 +17910,17 @@ lb_144f2:
 	dc.w	$0000	;14504
 	dc.w	$0000	;14506
 	dc.w	$0000	;14508
-	DC.W	$0001			;1450a
-	DC.W	$4526			;1450c
-	DC.W	$0001			;1450e
-	MOVE	D6,SR			;14510: 46c6
+	dc.l	lb_14526	;1450a
+	dc.l	lb_146c6	;1450e
 	dc.w	$0000	;14512
 	dc.w	$0000	;14514
 	dc.w	$0000	;14516
 	dc.w	$0000	;14518
-	DC.W	$0001			;1451a
-	OR.B	D6,D7			;1451c: 8e06
-	DC.W	$0001			;1451e
-	MOVEQ	#-64,D1			;14520: 72c0
-	dc.w	$0000	;14522
-	dc.w	$0000	;14524
-	DC.W	$0001			;14526
-	DC.W	$ffbe			;14528
+	dc.l	lb_18e06	;1451a
+	dc.l	lb_172c0	;1451e
+	dc.l	$00000	;14522
+lb_14526:
+	dc.l	lb_1ffbe	;14526
 	ORI.B	#$20,D0			;1452a: 00000020
 	dc.w	$0000	;1452e
 	dc.w	$0000	;14530
@@ -19601,45 +17930,32 @@ lb_144f2:
 	dc.w	$0000	;14538
 	dc.w	$0000	;1453a
 	dc.w	$0000	;1453c
-	DC.W	$0001			;1453e
-	DC.W	$455a			;14540
-	DC.W	$0001			;14542
-	MOVE	0(A2,D0.W),CCR		;14544: 44f20000
-	dc.w	$0000	;14548
-	dc.w	$0000	;1454a
-	ORI.B	#$01,D0			;1454c: 00000001
-	SBCD	-(A6),-(A4)		;14550: 890e
-	DC.W	$0001			;14552
-	MOVEQ	#-64,D1			;14554: 72c0
-	dc.w	$0000	;14556
-	dc.w	$0000	;14558
-	DC.W	$0001			;1455a
-	DC.W	$ffd1			;1455c
-	ORI.B	#$28,D0			;1455e: 00000028
-	dc.w	$0000	;14562
-	dc.w	$0000	;14564
+	dc.l	lb_1455a	;1453e
+	dc.l	lb_144f2	;14542
+	dc.l	$00000	;14546
+	dc.l	$00000	;1454a
+	dc.l	lb_1890e	;1454e
+	dc.l	lb_172c0	;14552
+	dc.l	$00000	;14556
+lb_1455a:
+	dc.l	lb_1ffd0+1	;1455a
+	dc.l	$00028	;1455e
+	dc.l	$00000	;14562
 	DC.W	$0000			;14566
 	DC.W	$013f			;14568
 	dc.w	$0000	;1456a
 	dc.w	$0000	;1456c
 	dc.w	$0000	;1456e
 	dc.w	$0000	;14570
-	DC.W	$0001			;14572
-	DC.W	$458e			;14574
-	DC.W	$0001			;14576
-	DC.W	$4526			;14578
-	dc.w	$0000	;1457a
-	dc.w	$0000	;1457c
-	dc.w	$0000	;1457e
-	dc.w	$0000	;14580
-	DC.W	$0001			;14582
-	OR.B	D4,(A0)+		;14584: 8918
-	DC.W	$0001			;14586
-	MOVEQ	#-56,D1			;14588: 72c8
-	dc.w	$0000	;1458a
-	dc.w	$0000	;1458c
-	DC.W	$0001			;1458e
-	DC.W	$ffe5			;14590
+	dc.l	lb_1458e	;14572
+	dc.l	lb_14526	;14576
+	dc.l	$00000	;1457a
+	dc.l	$00000	;1457e
+	dc.l	lb_18918	;14582
+	dc.l	lb_172c8	;14586
+	dc.l	$00000	;1458a
+lb_1458e:
+	dc.l	lb_1ffe4+1	;1458e
 	ORI.B	#$30,D0			;14592: 00000030
 	dc.w	$0000	;14596
 	dc.w	$0000	;14598
@@ -19649,22 +17965,18 @@ lb_144f2:
 	dc.w	$0000	;145a0
 	dc.w	$0000	;145a2
 	dc.w	$0000	;145a4
-	DC.W	$0001			;145a6
-	DC.W	$45c2			;145a8
-	DC.W	$0001			;145aa
-	DC.W	$455a			;145ac
+	dc.l	lb_145c2	;145a6
+	dc.l	lb_1455a	;145aa
 	dc.w	$0000	;145ae
 	dc.w	$0000	;145b0
 	dc.w	$0000	;145b2
 	dc.w	$0000	;145b4
-	DC.W	$0001			;145b6
-	OR.B	D4,-(A2)		;145b8: 8922
-	DC.W	$0001			;145ba
-	MOVEQ	#-56,D1			;145bc: 72c8
+	dc.l	lb_18922	;145b6
+	dc.l	lb_172c8	;145ba
 	dc.w	$0000	;145be
 	dc.w	$0000	;145c0
-	DC.W	$0001			;145c2
-	DC.W	$fff8			;145c4
+lb_145c2:
+	dc.l	lb_1fff8	;145c2
 	ORI.B	#$38,D0			;145c6: 00000038
 	dc.w	$0000	;145ca
 	dc.w	$0000	;145cc
@@ -19674,18 +17986,15 @@ lb_144f2:
 	dc.w	$0000	;145d4
 	dc.w	$0000	;145d6
 	dc.w	$0000	;145d8
-	DC.W	$0001			;145da
-	LEA	1(A6,D0.W),A2		;145dc: 45f60001
-	DC.W	$458e			;145e0
-	dc.w	$0000	;145e2
-	dc.w	$0000	;145e4
-	dc.w	$0000	;145e6
-	dc.w	$0000	;145e8
-	DC.W	$0001			;145ea
-	OR.B	D4,1(A4)		;145ec: 892c0001
-	MOVEQ	#-56,D1			;145f0: 72c8
+	dc.l	lb_145f6	;145da
+	dc.l	lb_1458e	;145de
+	dc.l	$00000	;145e2
+	dc.l	$00000	;145e6
+	dc.l	lb_1892c	;145ea
+	dc.l	lb_172c8	;145ee
 	dc.w	$0000	;145f2
 	dc.w	$0000	;145f4
+lb_145f6:
 	ORI.B	#$0b,D2			;145f6: 0002000b
 	ORI.B	#$48,D0			;145fa: 00000048
 	dc.w	$0000	;145fe
@@ -19696,19 +18005,15 @@ lb_144f2:
 	dc.w	$0000	;14608
 	dc.w	$0000	;1460a
 	dc.w	$0000	;1460c
-	DC.W	$0001			;1460e
-	NOT.B	1(A2)			;14610: 462a0001
-	DC.W	$45c2			;14614
-	dc.w	$0000	;14616
-	dc.w	$0000	;14618
-	dc.w	$0000	;1461a
-	dc.w	$0000	;1461c
-	DC.W	$0001			;1461e
-	DC.W	$907e			;14620
-	DC.W	$0001			;14622
-	MOVEQ	#-56,D1			;14624: 72c8
+	dc.l	lb_1462a	;1460e
+	dc.l	lb_145c2	;14612
+	dc.l	$00000	;14616
+	dc.l	$00000	;1461a
+	dc.l	lb_1907e	;1461e
+	dc.l	lb_172c8	;14622
 	dc.w	$0000	;14626
 	dc.w	$0000	;14628
+lb_1462a:
 	ORI.B	#$25,D2			;1462a: 00020025
 	ORI.B	#$50,D0			;1462e: 00000050
 	dc.w	$0000	;14632
@@ -19719,18 +18024,15 @@ lb_144f2:
 	dc.w	$0000	;1463c
 	dc.w	$0000	;1463e
 	dc.w	$0000	;14640
-	DC.W	$0001			;14642
-	NOT.W	(A6)+			;14644: 465e
-	DC.W	$0001			;14646
-	LEA	0(A6,D0.W),A2		;14648: 45f60000
-	dc.w	$0000	;1464c
-	dc.w	$0000	;1464e
-	ORI.B	#$01,D0			;14650: 00000001
-	SUB.L	(A0)+,D0		;14654: 9098
-	DC.W	$0001			;14656
-	MOVEQ	#-56,D1			;14658: 72c8
+	dc.l	lb_1465e	;14642
+	dc.l	lb_145f6	;14646
+	dc.l	$00000	;1464a
+	dc.l	$00000	;1464e
+	dc.l	lb_19098	;14652
+	dc.l	lb_172c8	;14656
 	dc.w	$0000	;1465a
 	dc.w	$0000	;1465c
+lb_1465e:
 	ORI.B	#$3d,D2			;1465e: 0002003d
 	ORI.B	#$58,D0			;14662: 00000058
 	dc.w	$0000	;14666
@@ -19741,19 +18043,15 @@ lb_144f2:
 	dc.w	$0000	;14670
 	dc.w	$0000	;14672
 	dc.w	$0000	;14674
-	DC.W	$0001			;14676
-	NOT.L	(A2)			;14678: 4692
-	DC.W	$0001			;1467a
-	NOT.B	0(A2)			;1467c: 462a0000
-	dc.w	$0000	;14680
-	dc.w	$0000	;14682
-	ORI.B	#$01,D0			;14684: 00000001
-	DC.W	$90ba			;14688
-	DC.W	$0001			;1468a
-	MOVEQ	#-56,D1			;1468c: 72c8
-	dc.w	$0000	;1468e
-	dc.w	$0000	;14690
-	ORI.B	#$56,D2			;14692: 00020056
+	dc.l	lb_14692	;14676
+	dc.l	lb_1462a	;1467a
+	dc.l	$00000	;1467e
+	dc.l	$00000	;14682
+	dc.l	lb_190ba	;14686
+	dc.l	lb_172c8	;1468a
+	dc.l	$00000	;1468e
+lb_14692:
+	dc.l	lb_20056	;14692
 	ORI.B	#$60,D0			;14696: 00000060
 	dc.w	$0000	;1469a
 	dc.w	$0000	;1469c
@@ -19763,22 +18061,16 @@ lb_144f2:
 	dc.w	$0000	;146a4
 	dc.w	$0000	;146a6
 	dc.w	$0000	;146a8
-	DC.W	$0001			;146aa
-	MOVE	D6,SR			;146ac: 46c6
-	DC.W	$0001			;146ae
-	NOT.W	(A6)+			;146b0: 465e
-	dc.w	$0000	;146b2
-	dc.w	$0000	;146b4
-	dc.w	$0000	;146b6
-	dc.w	$0000	;146b8
-	DC.W	$0001			;146ba
-	SUBA.W	(A4)+,A0		;146bc: 90dc
-	DC.W	$0001			;146be
-	MOVEQ	#-56,D1			;146c0: 72c8
-	dc.w	$0000	;146c2
-	dc.w	$0000	;146c4
-	DC.W	$0002			;146c6
-	BCHG	#0,110(A5)		;146c8: 086d0000006e
+	dc.l	lb_146c6	;146aa
+	dc.l	lb_1465e	;146ae
+	dc.l	$00000	;146b2
+	dc.l	$00000	;146b6
+	dc.l	lb_190dc	;146ba
+	dc.l	lb_172c8	;146be
+	dc.l	$00000	;146c2
+lb_146c6:
+	dc.l	lb_2086c+1	;146c6
+	dc.l	$0006e	;146ca
 	dc.w	$0000	;146ce
 	dc.w	$0000	;146d0
 	DC.W	$0000			;146d2
@@ -19787,17 +18079,14 @@ lb_144f2:
 	dc.w	$0000	;146d8
 	dc.w	$0000	;146da
 	dc.w	$0000	;146dc
-	DC.W	$0001			;146de
-	MOVE	1(A2,D0.W),CCR		;146e0: 44f20001
-	NOT.L	(A2)			;146e4: 4692
+	dc.l	lb_144f2	;146de
+	dc.l	lb_14692	;146e2
 	dc.w	$0000	;146e6
 	dc.w	$0000	;146e8
 	dc.w	$0000	;146ea
 	dc.w	$0000	;146ec
-	DC.W	$0001			;146ee
-	MOVEQ	#-56,D1			;146f0: 72c8
-	DC.W	$0001			;146f2
-	MOVEQ	#-56,D1			;146f4: 72c8
+	dc.l	lb_172c8	;146ee
+	dc.l	lb_172c8	;146f2
 	dc.w	$0000	;146f6
 	dc.w	$0000	;146f8
 	DC.W	$0000			;146fa
@@ -19809,8 +18098,7 @@ lb_144f2:
 	ORI.B	#$01,D0			;1470c: 00000001
 	DC.W	$ffff			;14710
 lb_14712:
-	DC.W	$0002			;14712
-	DC.W	$07ba			;14714
+	dc.l	lb_207ba	;14712
 	ORI.B	#$14,D0			;14716: 00000014
 	dc.w	$0000	;1471a
 	dc.w	$0000	;1471c
@@ -19835,9 +18123,9 @@ lb_14712:
 	dc.w	$0000	;14742
 	dc.w	$0000	;14744
 lb_14746:
-	DC.W	$0002			;14746
-	MOVEP.L	D3,0(A4)		;14748: 07cc0000
-	ORI.B	#$00,0(A2,D0.W)		;1474c: 003200000000
+	dc.l	lb_207cc	;14746
+	dc.l	$00032	;1474a
+	dc.l	$00000	;1474e
 	DC.W	$0000			;14752
 	DC.W	$013f			;14754
 	dc.w	$0000	;14756
@@ -19898,9 +18186,9 @@ lb_147c6:
 	dc.w	$0000	;147f6
 	dc.w	$0000	;147f8
 lb_147fa:
-	DC.W	$0002			;147fa
-	MOVEP.L	D3,0(A4)		;147fc: 07cc0000
-	ORI.B	#$00,0(A2,D0.W)		;14800: 003200000000
+	dc.l	lb_207cc	;147fa
+	dc.l	$00032	;147fe
+	dc.l	$00000	;14802
 	DC.W	$0000			;14806
 	DC.W	$013f			;14808
 	dc.l	$00000	;1480a
@@ -19935,11 +18223,10 @@ lb_1482e:
 	ORI.B	#$01,D0			;14874: 00000001
 	DC.W	$ffff			;14878
 lb_1487a:
-	DC.W	$0002			;1487a
-	ADDI.B	#$00,EXT_0317		;1487c: 0639000000120000
-	dc.w	$0000	;14884
-	dc.w	$0000	;14886
-	DC.W	$013f			;14888
+	dc.l	lb_20638+1	;1487a
+	dc.l	$00012	;1487e
+	dc.l	$00000	;14882
+	dc.l	$0013f	;14886
 	dc.w	$0000	;1488a
 	dc.w	$0000	;1488c
 	dc.w	$0000	;1488e
@@ -19958,10 +18245,9 @@ lb_1487a:
 	dc.w	$0000	;148a8
 	dc.w	$0000	;148aa
 	dc.w	$0000	;148ac
-	DC.W	$0002			;148ae
-	ADDI.W	#$0000,(A7)		;148b0: 06570000
-	ORI.B	#$00,(A2)+		;148b4: 001a0000
-	dc.w	$0000	;148b8
+	dc.l	lb_20656+1	;148ae
+	dc.l	$0001a	;148b2
+	dc.l	$00000	;148b6
 	dc.w	$0000	;148ba
 	DC.W	$013f			;148bc
 	dc.w	$0000	;148be
@@ -19982,8 +18268,8 @@ lb_1487a:
 	dc.w	$0000	;148dc
 	dc.w	$0000	;148de
 	dc.w	$0000	;148e0
-	DC.W	$0002			;148e2
-	ADDI.W	#$0000,34(A4,D0.W)	;148e4: 067400000022
+	dc.l	lb_20674	;148e2
+	dc.l	$00022	;148e6
 	dc.w	$0000	;148ea
 	dc.w	$0000	;148ec
 	DC.W	$0000			;148ee
@@ -20006,8 +18292,7 @@ lb_1487a:
 	dc.w	$0000	;14910
 	dc.w	$0000	;14912
 	dc.w	$0000	;14914
-	DC.W	$0002			;14916
-	DC.W	$068f			;14918
+	dc.l	lb_2068e+1	;14916
 	ORI.B	#$2a,D0			;1491a: 0000002a
 	dc.w	$0000	;1491e
 	dc.w	$0000	;14920
@@ -20031,9 +18316,9 @@ lb_1487a:
 	dc.w	$0000	;14944
 	dc.w	$0000	;14946
 	dc.w	$0000	;14948
-	DC.W	$0002			;1494a
-	ADDI.L	#$00000032,0(A1,D0.W)	;1494c: 06b1000000320000
-	dc.w	$0000	;14954
+	dc.l	lb_206b0+1	;1494a
+	dc.l	$00032	;1494e
+	dc.l	$00000	;14952
 	dc.w	$0000	;14956
 	DC.W	$013f			;14958
 	dc.w	$0000	;1495a
@@ -20054,8 +18339,7 @@ lb_1487a:
 	dc.w	$0000	;14978
 	dc.w	$0000	;1497a
 	dc.w	$0000	;1497c
-	DC.W	$0002			;1497e
-	DC.W	$06cd			;14980
+	dc.l	lb_206cc+1	;1497e
 	ORI.B	#$43,D0			;14982: 00000043
 	dc.w	$0000	;14986
 	dc.w	$0000	;14988
@@ -20080,8 +18364,7 @@ lb_1487a:
 	dc.w	$0000	;149ae
 	dc.w	$0000	;149b0
 lb_149b2:
-	DC.W	$0002			;149b2
-	DC.W	$06f7			;149b4
+	dc.l	lb_206f6+1	;149b2
 	ORI.B	#$63,D0			;149b6: 00000063
 	dc.w	$0000	;149ba
 	dc.w	$0000	;149bc
@@ -20105,30 +18388,25 @@ lb_149b2:
 	dc.w	$0000	;149e0
 	dc.w	$0000	;149e2
 	dc.w	$0000	;149e4
-	DC.W	$0002			;149e6
-	DC.W	$06ea			;149e8
+lb_149e6:
+	dc.l	lb_206ea	;149e6
 	ORI.B	#$58,D0			;149ea: 00000058
 	dc.w	$0000	;149ee
 	dc.w	$0000	;149f0
 	DC.W	$0000			;149f2
 	DC.W	$013f			;149f4
-	DC.W	$0001			;149f6
-	DC.W	$6a00			;149f8
-	ORI.B	#$08,D0			;149fa: 00000008
-	DC.W	$0001			;149fe
-	DC.W	$49e6			;14a00
-	DC.W	$0001			;14a02
-	DC.W	$49e6			;14a04
+	dc.l	lb_16a00	;149f6
+	dc.l	$00008	;149fa
+	dc.l	lb_149e6	;149fe
+	dc.l	lb_149e6	;14a02
 	dc.w	$0000	;14a06
 	dc.w	$0000	;14a08
 	dc.w	$0000	;14a0a
 	dc.w	$0000	;14a0c
-	DC.W	$0001			;14a0e
-	MOVEQ	#-2,D1			;14a10: 72fe
+	dc.l	lb_172fe	;14a0e
 	dc.w	$0000	;14a12
 	dc.w	$0000	;14a14
-	DC.W	$0001			;14a16
-	MOVEQ	#-2,D1			;14a18: 72fe
+	dc.l	lb_172fe	;14a16
 	DC.W	$0000			;14a1a
 	OR.B	D2,D0			;14a1c: 8002
 	ORI.B	#$14,(A0)		;14a1e: 00100014
@@ -20187,8 +18465,7 @@ lb_14a32:
 	dc.w	$0000	;14a96
 	dc.w	$0000	;14a98
 lb_14a9a:
-	DC.W	$0001			;14a9a
-	DC.W	$faf8			;14a9c
+	dc.l	lb_1faf8	;14a9a
 	ORI.B	#$28,D0			;14a9e: 00000028
 	dc.w	$0000	;14aa2
 	dc.w	$0000	;14aa4
@@ -20198,22 +18475,16 @@ lb_14a9a:
 	dc.w	$0000	;14aac
 	dc.w	$0000	;14aae
 	dc.w	$0000	;14ab0
-	DC.W	$0001			;14ab2
-	DC.W	$4ace			;14ab4
-	DC.W	$0001			;14ab6
-	DC.W	$4b36			;14ab8
-	dc.w	$0000	;14aba
-	dc.w	$0000	;14abc
-	dc.w	$0000	;14abe
-	dc.w	$0000	;14ac0
-	DC.W	$0001			;14ac2
-	SUB.B	1(A6),D5		;14ac4: 9a2e0001
-	MOVEQ	#-56,D1			;14ac8: 72c8
+	dc.l	lb_14ace	;14ab2
+	dc.l	lb_14b36	;14ab6
+	dc.l	$00000	;14aba
+	dc.l	$00000	;14abe
+	dc.l	lb_19a2e	;14ac2
+	dc.l	lb_172c8	;14ac6
 	dc.w	$0000	;14aca
 	dc.w	$0000	;14acc
 lb_14ace:
-	DC.W	$0001			;14ace
-	DC.W	$fb17			;14ad0
+	dc.l	lb_1fb16+1	;14ace
 	ORI.B	#$3c,D0			;14ad2: 0000003c
 	dc.w	$0000	;14ad6
 	dc.w	$0000	;14ad8
@@ -20280,8 +18551,7 @@ lb_14b36:
 	ORI.B	#$01,D0			;14b7c: 00000001
 	DC.W	$ffff			;14b80
 lb_14b82:
-	DC.W	$0001			;14b82
-	DC.W	$ff19			;14b84
+	dc.l	lb_1ff18+1	;14b82
 	ORI.B	#$14,D0			;14b86: 00000014
 	dc.w	$0000	;14b8a
 	dc.w	$0000	;14b8c
@@ -20946,6 +19216,7 @@ lb_152ce:
 	ORI.B	#$08,D1			;15310: 00010008
 	ORI.B	#$01,D1			;15314: 00010001
 	DC.W	$ffff			;15318
+lb_1531a:
 	DC.W	$0000			;1531a
 	OR.B	D2,D0			;1531c: 8002
 	ORI.B	#$19,(A0)		;1531e: 00100019
@@ -20954,7 +19225,9 @@ lb_152ce:
 	DC.W	$0008			;1532a
 	ORI.B	#$01,D1			;1532c: 00010001
 lb_15330:
-	ORI.B	#$02,D2			;15330: 00020002
+	dc.w	$0002  ;15330
+lb_15332:
+	dc.w	$0002  ;15332
 	BTST	D1,EXT_0000.W		;15334: 03380000
 	DC.W	$000f			;15338
 	dc.w	$0000	;1533a
@@ -21088,7 +19361,9 @@ lb_15436:
 	DC.W	$0008			;1547a
 	ORI.B	#$01,D1			;1547c: 00010001
 lb_15480:
-	ORI.B	#$02,D2			;15480: 00020002
+	dc.w	$0002  ;15480
+lb_15482:
+	dc.w	$0002  ;15482
 	BTST	D1,EXT_0000.W		;15484: 03380000
 	DC.W	$000f			;15488
 	dc.w	$0000	;1548a
@@ -21206,7 +19481,9 @@ lb_15552:
 	ORI.B	#$08,D1			;15594: 00010008
 	ORI.B	#$01,D1			;15598: 00010001
 lb_1559c:
-	ORI.B	#$01,D2			;1559c: 00020001
+	dc.w	$0002  ;1559c
+lb_1559e:
+	dc.w	$0001  ;1559e
 	DC.W	$fc20			;155a0
 	ORI.B	#$0f,D0			;155a2: 0000000f
 	dc.w	$0000	;155a6
@@ -21303,23 +19580,15 @@ lb_1566e:
 	dc.w	$0000	;15680
 	dc.w	$0000	;15682
 	dc.w	$0000	;15684
-	DC.W	$0001			;15686
-	ADDQ.L	#3,-(A2)		;15688: 56a2
-	DC.W	$0001			;1568a
-	DC.W	$563a			;1568c
-	dc.w	$0000	;1568e
-	dc.w	$0000	;15690
-	dc.w	$0000	;15692
-	dc.w	$0000	;15694
-	DC.W	$0001			;15696
-	MOVEQ	#88,D4			;15698: 7858
-	DC.W	$0001			;1569a
-	MOVEQ	#-56,D1			;1569c: 72c8
-	dc.w	$0000	;1569e
-	dc.w	$0000	;156a0
+	dc.l	lb_156a2	;15686
+	dc.l	lb_1563a	;1568a
+	dc.l	$00000	;1568e
+	dc.l	$00000	;15692
+	dc.l	lb_17858	;15696
+	dc.l	lb_172c8	;1569a
+	dc.l	$00000	;1569e
 lb_156a2:
-	DC.W	$0001			;156a2
-	DC.W	$fccc			;156a4
+	dc.l	lb_1fccc	;156a2
 	ORI.B	#$3b,D0			;156a6: 0000003b
 	dc.w	$0000	;156aa
 	dc.w	$0000	;156ac
@@ -21329,20 +19598,15 @@ lb_156a2:
 	dc.w	$0000	;156b4
 	dc.w	$0000	;156b6
 	dc.w	$0000	;156b8
-	DC.W	$0001			;156ba
-	SNE	(A6)			;156bc: 56d6
-	DC.W	$0001			;156be
-	ADDQ.W	#3,0(A6)		;156c0: 566e0000
-	dc.w	$0000	;156c4
-	dc.w	$0000	;156c6
-	ORI.B	#$01,D0			;156c8: 00000001
-	MOVEQ	#110,D4			;156cc: 786e
-	DC.W	$0001			;156ce
-	MOVEQ	#-56,D1			;156d0: 72c8
-	dc.w	$0000	;156d2
-	dc.w	$0000	;156d4
-	DC.W	$0001			;156d6
-	DC.W	$fcf0			;156d8
+	dc.l	lb_156d6	;156ba
+	dc.l	lb_1566e	;156be
+	dc.l	$00000	;156c2
+	dc.l	$00000	;156c6
+	dc.l	lb_1786e	;156ca
+	dc.l	lb_172c8	;156ce
+	dc.l	$00000	;156d2
+lb_156d6:
+	dc.l	lb_1fcf0	;156d6
 	ORI.B	#$43,D0			;156da: 00000043
 	dc.w	$0000	;156de
 	dc.w	$0000	;156e0
@@ -21370,22 +19634,15 @@ lb_1570a:
 	dc.w	$0000	;1571c
 	dc.w	$0000	;1571e
 	dc.w	$0000	;15720
-	DC.W	$0001			;15722
-	DC.W	$573e			;15724
-	DC.W	$0001			;15726
-	SNE	(A6)			;15728: 56d6
-	dc.w	$0000	;1572a
-	dc.w	$0000	;1572c
-	dc.w	$0000	;1572e
-	dc.w	$0000	;15730
-	DC.W	$0001			;15732
-	MOVEQ	#-102,D4		;15734: 789a
-	DC.W	$0001			;15736
-	MOVEQ	#-56,D1			;15738: 72c8
-	dc.w	$0000	;1573a
-	dc.w	$0000	;1573c
-	DC.W	$0001			;1573e
-	DC.W	$fd38			;15740
+	dc.l	lb_1573e	;15722
+	dc.l	lb_156d6	;15726
+	dc.l	$00000	;1572a
+	dc.l	$00000	;1572e
+	dc.l	lb_1789a	;15732
+	dc.l	lb_172c8	;15736
+	dc.l	$00000	;1573a
+lb_1573e:
+	dc.l	lb_1fd38	;1573e
 	ORI.B	#$53,D0			;15742: 00000053
 	dc.w	$0000	;15746
 	dc.w	$0000	;15748
@@ -21395,21 +19652,15 @@ lb_1570a:
 	dc.w	$0000	;15750
 	dc.w	$0000	;15752
 	dc.w	$0000	;15754
-	DC.W	$0001			;15756
-	SUBQ.W	#3,1(A2,D0.W)		;15758: 57720001
-	DC.W	$570a			;1575c
-	dc.w	$0000	;1575e
-	dc.w	$0000	;15760
-	dc.w	$0000	;15762
-	dc.w	$0000	;15764
-	DC.W	$0001			;15766
-	MOVEQ	#-80,D4			;15768: 78b0
-	DC.W	$0001			;1576a
-	MOVEQ	#-56,D1			;1576c: 72c8
-	dc.w	$0000	;1576e
-	dc.w	$0000	;15770
-	DC.W	$0001			;15772
-	DC.W	$fd5b			;15774
+	dc.l	lb_15772	;15756
+	dc.l	lb_1570a	;1575a
+	dc.l	$00000	;1575e
+	dc.l	$00000	;15762
+	dc.l	lb_178b0	;15766
+	dc.l	lb_172c8	;1576a
+	dc.l	$00000	;1576e
+lb_15772:
+	dc.l	lb_1fd5a+1	;15772
 	ORI.B	#$5e,D0			;15776: 0000005e
 	dc.w	$0000	;1577a
 	dc.w	$0000	;1577c
@@ -21419,23 +19670,17 @@ lb_1570a:
 	dc.w	$0000	;15784
 	dc.w	$0000	;15786
 	dc.w	$0000	;15788
-	DC.W	$0001			;1578a
-	SUBQ.L	#3,-(A6)		;1578c: 57a6
-	DC.W	$0001			;1578e
-	DC.W	$573e			;15790
-	dc.w	$0000	;15792
-	dc.w	$0000	;15794
-	dc.w	$0000	;15796
-	dc.w	$0000	;15798
-	DC.W	$0001			;1579a
-	MOVEQ	#-58,D4			;1579c: 78c6
-	DC.W	$0001			;1579e
-	MOVEQ	#-56,D1			;157a0: 72c8
+	dc.l	lb_157a6	;1578a
+	dc.l	lb_1573e	;1578e
+	dc.l	$00000	;15792
+	dc.l	$00000	;15796
+	dc.l	lb_178c6	;1579a
+	dc.l	lb_172c8	;1579e
 	dc.w	$0000	;157a2
 	dc.w	$0000	;157a4
 lb_157a6:
-	DC.W	$0002			;157a6
-	BCHG	#0,106(A5)		;157a8: 086d0000006a
+	dc.l	lb_2086c+1	;157a6
+	dc.l	$0006a	;157aa
 	dc.w	$0000	;157ae
 	dc.w	$0000	;157b0
 	DC.W	$0000			;157b2
@@ -21444,16 +19689,12 @@ lb_157a6:
 	dc.w	$0000	;157b8
 	dc.w	$0000	;157ba
 	dc.w	$0000	;157bc
-	DC.W	$0001			;157be
-	ADDQ.B	#3,D6			;157c0: 5606
-	DC.W	$0001			;157c2
-	SUBQ.W	#3,0(A2,D0.W)		;157c4: 57720000
-	dc.w	$0000	;157c8
-	dc.w	$0000	;157ca
-	ORI.B	#$01,D0			;157cc: 00000001
-	MOVEQ	#-56,D1			;157d0: 72c8
-	DC.W	$0001			;157d2
-	MOVEQ	#-56,D1			;157d4: 72c8
+	dc.l	lb_15606	;157be
+	dc.l	lb_15772	;157c2
+	dc.l	$00000	;157c6
+	dc.l	$00000	;157ca
+	dc.l	lb_172c8	;157ce
+	dc.l	lb_172c8	;157d2
 	dc.w	$0000	;157d6
 	dc.w	$0000	;157d8
 	DC.W	$0000			;157da
@@ -21463,7 +19704,9 @@ lb_157a6:
 	ORI.B	#$08,D1			;157e8: 00010008
 	ORI.B	#$01,D1			;157ec: 00010001
 lb_157f0:
-	ORI.B	#$01,D1			;157f0: 00010001
+	dc.w	$0001  ;157f0
+lb_157f2:
+	dc.w	$0001  ;157f2
 	DC.W	$fd7f			;157f4
 	ORI.B	#$0f,D0			;157f6: 0000000f
 	dc.w	$0000	;157fa
@@ -21488,8 +19731,8 @@ lb_157f0:
 	dc.w	$0000	;15820
 	dc.w	$0000	;15822
 	dc.w	$0000	;15824
-	DC.W	$0001			;15826
-	DC.W	$fdb2			;15828
+lb_15826:
+	dc.l	lb_1fdb2	;15826
 	ORI.B	#$28,D0			;1582a: 00000028
 	dc.w	$0000	;1582e
 	dc.w	$0000	;15830
@@ -21498,22 +19741,15 @@ lb_157f0:
 	DC.W	$0000			;15836
 	SNE	(A0)+			;15838: 56d8
 	ORI.B	#$08,D0			;1583a: 00000008
-	DC.W	$0001			;1583e
-	ADDQ.W	#4,(A2)+		;15840: 585a
-	DC.W	$0001			;15842
-	ADDQ.L	#4,A6			;15844: 588e
-	dc.w	$0000	;15846
-	dc.w	$0000	;15848
-	dc.w	$0000	;1584a
-	dc.w	$0000	;1584c
-	DC.W	$0001			;1584e
-	MOVEQ	#-2,D1			;15850: 72fe
-	DC.W	$0001			;15852
-	MOVEQ	#-56,D1			;15854: 72c8
-	DC.W	$0001			;15856
-	MOVEQ	#-2,D1			;15858: 72fe
-	DC.W	$0001			;1585a
-	DC.W	$fdc2			;1585c
+	dc.l	lb_1585a	;1583e
+	dc.l	lb_1588e	;15842
+	dc.l	$00000	;15846
+	dc.l	$00000	;1584a
+	dc.l	lb_172fe	;1584e
+	dc.l	lb_172c8	;15852
+	dc.l	lb_172fe	;15856
+lb_1585a:
+	dc.l	lb_1fdc2	;1585a
 	ORI.B	#$3c,D0			;1585e: 0000003c
 	dc.w	$0000	;15862
 	dc.w	$0000	;15864
@@ -21523,22 +19759,16 @@ lb_157f0:
 	dc.w	$0000	;1586c
 	dc.w	$0000	;1586e
 	dc.w	$0000	;15870
-	DC.W	$0001			;15872
-	ADDQ.L	#4,A6			;15874: 588e
-	DC.W	$0001			;15876
-	ADDQ.B	#4,-(A6)		;15878: 5826
-	dc.w	$0000	;1587a
-	dc.w	$0000	;1587c
-	dc.w	$0000	;1587e
-	dc.w	$0000	;15880
-	DC.W	$0001			;15882
-	MOVEQ	#-18,D3			;15884: 76ee
-	DC.W	$0001			;15886
-	MOVEQ	#-56,D1			;15888: 72c8
-	dc.w	$0000	;1588a
-	dc.w	$0000	;1588c
-	DC.W	$0002			;1588e
-	BCHG	#0,106(A5)		;15890: 086d0000006a
+	dc.l	lb_1588e	;15872
+	dc.l	lb_15826	;15876
+	dc.l	$00000	;1587a
+	dc.l	$00000	;1587e
+	dc.l	lb_176ee	;15882
+	dc.l	lb_172c8	;15886
+	dc.l	$00000	;1588a
+lb_1588e:
+	dc.l	lb_2086c+1	;1588e
+	dc.l	$0006a	;15892
 	dc.w	$0000	;15896
 	dc.w	$0000	;15898
 	DC.W	$0000			;1589a
@@ -21547,18 +19777,14 @@ lb_157f0:
 	dc.w	$0000	;158a0
 	dc.w	$0000	;158a2
 	dc.w	$0000	;158a4
-	DC.W	$0001			;158a6
-	ADDQ.B	#4,-(A6)		;158a8: 5826
-	DC.W	$0001			;158aa
-	ADDQ.W	#4,(A2)+		;158ac: 585a
+	dc.l	lb_15826	;158a6
+	dc.l	lb_1585a	;158aa
 	dc.w	$0000	;158ae
 	dc.w	$0000	;158b0
 	dc.w	$0000	;158b2
 	dc.w	$0000	;158b4
-	DC.W	$0001			;158b6
-	MOVEQ	#-56,D1			;158b8: 72c8
-	DC.W	$0001			;158ba
-	MOVEQ	#-56,D1			;158bc: 72c8
+	dc.l	lb_172c8	;158b6
+	dc.l	lb_172c8	;158ba
 	dc.w	$0000	;158be
 	dc.w	$0000	;158c0
 	DC.W	$0000			;158c2
@@ -21568,7 +19794,9 @@ lb_157f0:
 	ORI.B	#$08,D1			;158d0: 00010008
 	ORI.B	#$01,D1			;158d4: 00010001
 lb_158d8:
-	ORI.B	#$01,D1			;158d8: 00010001
+	dc.w	$0001  ;158d8
+lb_158da:
+	dc.w	$0001  ;158da
 	DC.W	$fd91			;158dc
 	ORI.B	#$0f,D0			;158de: 0000000f
 	dc.w	$0000	;158e2
@@ -21593,8 +19821,8 @@ lb_158d8:
 	dc.w	$0000	;15908
 	dc.w	$0000	;1590a
 	dc.w	$0000	;1590c
-	DC.W	$0001			;1590e
-	DC.W	$fdb2			;15910
+lb_1590e:
+	dc.l	lb_1fdb2	;1590e
 	ORI.B	#$28,D0			;15912: 00000028
 	dc.w	$0000	;15916
 	dc.w	$0000	;15918
@@ -21603,20 +19831,15 @@ lb_158d8:
 	DC.W	$0000			;1591e
 	SNE	(A0)+			;15920: 56d8
 	ORI.B	#$08,D0			;15922: 00000008
-	DC.W	$0001			;15926
-	SUBQ.W	#4,D2			;15928: 5942
-	DC.W	$0001			;1592a
-	SUBQ.L	#4,0(A2)		;1592c: 59aa0000
-	dc.w	$0000	;15930
-	dc.w	$0000	;15932
-	ORI.B	#$01,D0			;15934: 00000001
-	MOVEQ	#-2,D1			;15938: 72fe
-	DC.W	$0001			;1593a
-	MOVEQ	#-56,D1			;1593c: 72c8
-	DC.W	$0001			;1593e
-	MOVEQ	#-2,D1			;15940: 72fe
-	DC.W	$0001			;15942
-	DC.W	$fdb2			;15944
+	dc.l	lb_15942	;15926
+	dc.l	lb_159aa	;1592a
+	dc.l	$00000	;1592e
+	dc.l	$00000	;15932
+	dc.l	lb_172fe	;15936
+	dc.l	lb_172c8	;1593a
+	dc.l	lb_172fe	;1593e
+lb_15942:
+	dc.l	lb_1fdb2	;15942
 	ORI.B	#$32,D0			;15946: 00000032
 	dc.w	$0000	;1594a
 	dc.w	$0000	;1594c
@@ -21625,21 +19848,17 @@ lb_158d8:
 	DC.W	$0000			;15952
 	SNE	-(A4)			;15954: 56e4
 	ORI.B	#$08,D0			;15956: 00000008
-	DC.W	$0001			;1595a
-	SUBQ.W	#4,1(A6,D0.W)		;1595c: 59760001
-	DC.W	$590e			;15960
+	dc.l	lb_15976	;1595a
+	dc.l	lb_1590e	;1595e
 	dc.w	$0000	;15962
 	dc.w	$0000	;15964
 	dc.w	$0000	;15966
 	dc.w	$0000	;15968
-	DC.W	$0001			;1596a
-	MOVEQ	#-2,D1			;1596c: 72fe
-	DC.W	$0001			;1596e
-	MOVEQ	#-56,D1			;15970: 72c8
-	DC.W	$0001			;15972
-	MOVEQ	#-2,D1			;15974: 72fe
-	DC.W	$0001			;15976
-	DC.W	$fdc2			;15978
+	dc.l	lb_172fe	;1596a
+	dc.l	lb_172c8	;1596e
+	dc.l	lb_172fe	;15972
+lb_15976:
+	dc.l	lb_1fdc2	;15976
 	ORI.B	#$46,D0			;1597a: 00000046
 	dc.w	$0000	;1597e
 	dc.w	$0000	;15980
@@ -21649,21 +19868,19 @@ lb_158d8:
 	dc.w	$0000	;15988
 	dc.w	$0000	;1598a
 	dc.w	$0000	;1598c
-	DC.W	$0001			;1598e
-	SUBQ.L	#4,1(A2)		;15990: 59aa0001
-	SUBQ.W	#4,D2			;15994: 5942
+	dc.l	lb_159aa	;1598e
+	dc.l	lb_15942	;15992
 	dc.w	$0000	;15996
 	dc.w	$0000	;15998
 	dc.w	$0000	;1599a
 	dc.w	$0000	;1599c
-	DC.W	$0001			;1599e
-	MOVEQ	#-18,D3			;159a0: 76ee
-	DC.W	$0001			;159a2
-	MOVEQ	#-56,D1			;159a4: 72c8
+	dc.l	lb_176ee	;1599e
+	dc.l	lb_172c8	;159a2
 	dc.w	$0000	;159a6
 	dc.w	$0000	;159a8
-	DC.W	$0002			;159aa
-	BCHG	#0,106(A5)		;159ac: 086d0000006a
+lb_159aa:
+	dc.l	lb_2086c+1	;159aa
+	dc.l	$0006a	;159ae
 	dc.w	$0000	;159b2
 	dc.w	$0000	;159b4
 	DC.W	$0000			;159b6
@@ -21672,16 +19889,12 @@ lb_158d8:
 	dc.w	$0000	;159bc
 	dc.w	$0000	;159be
 	dc.w	$0000	;159c0
-	DC.W	$0001			;159c2
-	DC.W	$590e			;159c4
-	DC.W	$0001			;159c6
-	SUBQ.W	#4,0(A6,D0.W)		;159c8: 59760000
-	dc.w	$0000	;159cc
-	dc.w	$0000	;159ce
-	ORI.B	#$01,D0			;159d0: 00000001
-	MOVEQ	#-56,D1			;159d4: 72c8
-	DC.W	$0001			;159d6
-	MOVEQ	#-56,D1			;159d8: 72c8
+	dc.l	lb_1590e	;159c2
+	dc.l	lb_15976	;159c6
+	dc.l	$00000	;159ca
+	dc.l	$00000	;159ce
+	dc.l	lb_172c8	;159d2
+	dc.l	lb_172c8	;159d6
 	dc.w	$0000	;159da
 	dc.w	$0000	;159dc
 	DC.W	$0000			;159de
@@ -21691,7 +19904,9 @@ lb_158d8:
 	ORI.B	#$08,D1			;159ec: 00010008
 	ORI.B	#$01,D1			;159f0: 00010001
 lb_159f4:
-	ORI.B	#$01,D1			;159f4: 00010001
+	dc.w	$0001  ;159f4
+lb_159f6:
+	dc.w	$0001  ;159f6
 	DC.W	$fd91			;159f8
 	ORI.B	#$0f,D0			;159fa: 0000000f
 	dc.w	$0000	;159fe
@@ -21716,8 +19931,8 @@ lb_159f4:
 	dc.w	$0000	;15a24
 	dc.w	$0000	;15a26
 	dc.w	$0000	;15a28
-	DC.W	$0001			;15a2a
-	DC.W	$fdb2			;15a2c
+lb_15a2a:
+	dc.l	lb_1fdb2	;15a2a
 	ORI.B	#$28,D0			;15a2e: 00000028
 	dc.w	$0000	;15a32
 	dc.w	$0000	;15a34
@@ -21726,22 +19941,17 @@ lb_159f4:
 	DC.W	$0000			;15a3a
 	SNE	(A0)+			;15a3c: 56d8
 	ORI.B	#$08,D0			;15a3e: 00000008
-	DC.W	$0001			;15a42
-	ADDQ.W	#5,(A6)+		;15a44: 5a5e
-	DC.W	$0001			;15a46
-	DC.W	$5afa			;15a48
+	dc.l	lb_15a5e	;15a42
+	dc.l	lb_15afa	;15a46
 	dc.w	$0000	;15a4a
 	dc.w	$0000	;15a4c
 	dc.w	$0000	;15a4e
 	dc.w	$0000	;15a50
-	DC.W	$0001			;15a52
-	MOVEQ	#-2,D1			;15a54: 72fe
-	DC.W	$0001			;15a56
-	MOVEQ	#-56,D1			;15a58: 72c8
-	DC.W	$0001			;15a5a
-	MOVEQ	#-2,D1			;15a5c: 72fe
-	DC.W	$0001			;15a5e
-	DC.W	$fdb2			;15a60
+	dc.l	lb_172fe	;15a52
+	dc.l	lb_172c8	;15a56
+	dc.l	lb_172fe	;15a5a
+lb_15a5e:
+	dc.l	lb_1fdb2	;15a5e
 	ORI.B	#$32,D0			;15a62: 00000032
 	dc.w	$0000	;15a66
 	dc.w	$0000	;15a68
@@ -21750,20 +19960,15 @@ lb_159f4:
 	DC.W	$0000			;15a6e
 	SNE	-(A4)			;15a70: 56e4
 	ORI.B	#$08,D0			;15a72: 00000008
-	DC.W	$0001			;15a76
-	ADDQ.L	#5,(A2)			;15a78: 5a92
-	DC.W	$0001			;15a7a
-	ADDQ.B	#5,0(A2)		;15a7c: 5a2a0000
-	dc.w	$0000	;15a80
-	dc.w	$0000	;15a82
-	ORI.B	#$01,D0			;15a84: 00000001
-	MOVEQ	#-2,D1			;15a88: 72fe
-	DC.W	$0001			;15a8a
-	MOVEQ	#-56,D1			;15a8c: 72c8
-	DC.W	$0001			;15a8e
-	MOVEQ	#-2,D1			;15a90: 72fe
-	DC.W	$0001			;15a92
-	DC.W	$fdb2			;15a94
+	dc.l	lb_15a92	;15a76
+	dc.l	lb_15a2a	;15a7a
+	dc.l	$00000	;15a7e
+	dc.l	$00000	;15a82
+	dc.l	lb_172fe	;15a86
+	dc.l	lb_172c8	;15a8a
+	dc.l	lb_172fe	;15a8e
+lb_15a92:
+	dc.l	lb_1fdb2	;15a92
 	ORI.B	#$3c,D0			;15a96: 0000003c
 	dc.w	$0000	;15a9a
 	dc.w	$0000	;15a9c
@@ -21772,22 +19977,17 @@ lb_159f4:
 	DC.W	$0000			;15aa2
 	SNE	0(A0,D0.W)		;15aa4: 56f00000
 	DC.W	$0008			;15aa8
-	DC.W	$0001			;15aaa
-	SPL	D6			;15aac: 5ac6
-	DC.W	$0001			;15aae
-	ADDQ.W	#5,(A6)+		;15ab0: 5a5e
+	dc.l	lb_15ac6	;15aaa
+	dc.l	lb_15a5e	;15aae
 	dc.w	$0000	;15ab2
 	dc.w	$0000	;15ab4
 	dc.w	$0000	;15ab6
 	dc.w	$0000	;15ab8
-	DC.W	$0001			;15aba
-	MOVEQ	#-2,D1			;15abc: 72fe
-	DC.W	$0001			;15abe
-	MOVEQ	#-56,D1			;15ac0: 72c8
-	DC.W	$0001			;15ac2
-	MOVEQ	#-2,D1			;15ac4: 72fe
-	DC.W	$0001			;15ac6
-	DC.W	$fdc2			;15ac8
+	dc.l	lb_172fe	;15aba
+	dc.l	lb_172c8	;15abe
+	dc.l	lb_172fe	;15ac2
+lb_15ac6:
+	dc.l	lb_1fdc2	;15ac6
 	ORI.B	#$50,D0			;15aca: 00000050
 	dc.w	$0000	;15ace
 	dc.w	$0000	;15ad0
@@ -21797,22 +19997,19 @@ lb_159f4:
 	dc.w	$0000	;15ad8
 	dc.w	$0000	;15ada
 	dc.w	$0000	;15adc
-	DC.W	$0001			;15ade
-	DC.W	$5afa			;15ae0
-	DC.W	$0001			;15ae2
-	ADDQ.L	#5,(A2)			;15ae4: 5a92
+	dc.l	lb_15afa	;15ade
+	dc.l	lb_15a92	;15ae2
 	dc.w	$0000	;15ae6
 	dc.w	$0000	;15ae8
 	dc.w	$0000	;15aea
 	dc.w	$0000	;15aec
-	DC.W	$0001			;15aee
-	MOVEQ	#-18,D3			;15af0: 76ee
-	DC.W	$0001			;15af2
-	MOVEQ	#-56,D1			;15af4: 72c8
+	dc.l	lb_176ee	;15aee
+	dc.l	lb_172c8	;15af2
 	dc.w	$0000	;15af6
 	dc.w	$0000	;15af8
-	DC.W	$0002			;15afa
-	BCHG	#0,106(A5)		;15afc: 086d0000006a
+lb_15afa:
+	dc.l	lb_2086c+1	;15afa
+	dc.l	$0006a	;15afe
 	dc.w	$0000	;15b02
 	dc.w	$0000	;15b04
 	DC.W	$0000			;15b06
@@ -21821,17 +20018,14 @@ lb_159f4:
 	dc.w	$0000	;15b0c
 	dc.w	$0000	;15b0e
 	dc.w	$0000	;15b10
-	DC.W	$0001			;15b12
-	ADDQ.B	#5,1(A2)		;15b14: 5a2a0001
-	SPL	D6			;15b18: 5ac6
+	dc.l	lb_15a2a	;15b12
+	dc.l	lb_15ac6	;15b16
 	dc.w	$0000	;15b1a
 	dc.w	$0000	;15b1c
 	dc.w	$0000	;15b1e
 	dc.w	$0000	;15b20
-	DC.W	$0001			;15b22
-	MOVEQ	#-56,D1			;15b24: 72c8
-	DC.W	$0001			;15b26
-	MOVEQ	#-56,D1			;15b28: 72c8
+	dc.l	lb_172c8	;15b22
+	dc.l	lb_172c8	;15b26
 	dc.w	$0000	;15b2a
 	dc.w	$0000	;15b2c
 	DC.W	$0000			;15b2e
@@ -21841,7 +20035,9 @@ lb_159f4:
 	ORI.B	#$08,D1			;15b3c: 00010008
 	ORI.B	#$01,D1			;15b40: 00010001
 lb_15b44:
-	ORI.B	#$01,D1			;15b44: 00010001
+	dc.w	$0001  ;15b44
+lb_15b46:
+	dc.w	$0001  ;15b46
 	DC.W	$fd91			;15b48
 	ORI.B	#$0f,D0			;15b4a: 0000000f
 	dc.w	$0000	;15b4e
@@ -21866,8 +20062,8 @@ lb_15b44:
 	dc.w	$0000	;15b74
 	dc.w	$0000	;15b76
 	dc.w	$0000	;15b78
-	DC.W	$0001			;15b7a
-	DC.W	$fdb2			;15b7c
+lb_15b7a:
+	dc.l	lb_1fdb2	;15b7a
 	ORI.B	#$28,D0			;15b7e: 00000028
 	dc.w	$0000	;15b82
 	dc.w	$0000	;15b84
@@ -21876,21 +20072,17 @@ lb_15b44:
 	DC.W	$0000			;15b8a
 	SNE	(A0)+			;15b8c: 56d8
 	ORI.B	#$08,D0			;15b8e: 00000008
-	DC.W	$0001			;15b92
-	SUBQ.L	#5,1(A6)		;15b94: 5bae0001
-	DC.W	$5c7e			;15b98
+	dc.l	lb_15bae	;15b92
+	dc.l	lb_15c7e	;15b96
 	dc.w	$0000	;15b9a
 	dc.w	$0000	;15b9c
 	dc.w	$0000	;15b9e
 	dc.w	$0000	;15ba0
-	DC.W	$0001			;15ba2
-	MOVEQ	#-2,D1			;15ba4: 72fe
-	DC.W	$0001			;15ba6
-	MOVEQ	#-56,D1			;15ba8: 72c8
-	DC.W	$0001			;15baa
-	MOVEQ	#-2,D1			;15bac: 72fe
-	DC.W	$0001			;15bae
-	DC.W	$fdb2			;15bb0
+	dc.l	lb_172fe	;15ba2
+	dc.l	lb_172c8	;15ba6
+	dc.l	lb_172fe	;15baa
+lb_15bae:
+	dc.l	lb_1fdb2	;15bae
 	ORI.B	#$32,D0			;15bb2: 00000032
 	dc.w	$0000	;15bb6
 	dc.w	$0000	;15bb8
@@ -21899,22 +20091,17 @@ lb_15b44:
 	DC.W	$0000			;15bbe
 	SNE	-(A4)			;15bc0: 56e4
 	ORI.B	#$08,D0			;15bc2: 00000008
-	DC.W	$0001			;15bc6
-	SMI	-(A2)			;15bc8: 5be2
-	DC.W	$0001			;15bca
-	DC.W	$5b7a			;15bcc
+	dc.l	lb_15be2	;15bc6
+	dc.l	lb_15b7a	;15bca
 	dc.w	$0000	;15bce
 	dc.w	$0000	;15bd0
 	dc.w	$0000	;15bd2
 	dc.w	$0000	;15bd4
-	DC.W	$0001			;15bd6
-	MOVEQ	#-2,D1			;15bd8: 72fe
-	DC.W	$0001			;15bda
-	MOVEQ	#-56,D1			;15bdc: 72c8
-	DC.W	$0001			;15bde
-	MOVEQ	#-2,D1			;15be0: 72fe
-	DC.W	$0001			;15be2
-	DC.W	$fdb2			;15be4
+	dc.l	lb_172fe	;15bd6
+	dc.l	lb_172c8	;15bda
+	dc.l	lb_172fe	;15bde
+lb_15be2:
+	dc.l	lb_1fdb2	;15be2
 	ORI.B	#$3c,D0			;15be6: 0000003c
 	dc.w	$0000	;15bea
 	dc.w	$0000	;15bec
@@ -21923,20 +20110,15 @@ lb_15b44:
 	DC.W	$0000			;15bf2
 	SNE	0(A0,D0.W)		;15bf4: 56f00000
 	DC.W	$0008			;15bf8
-	DC.W	$0001			;15bfa
-	ADDQ.B	#6,(A6)			;15bfc: 5c16
-	DC.W	$0001			;15bfe
-	SUBQ.L	#5,0(A6)		;15c00: 5bae0000
-	dc.w	$0000	;15c04
-	dc.w	$0000	;15c06
-	ORI.B	#$01,D0			;15c08: 00000001
-	MOVEQ	#-2,D1			;15c0c: 72fe
-	DC.W	$0001			;15c0e
-	MOVEQ	#-56,D1			;15c10: 72c8
-	DC.W	$0001			;15c12
-	MOVEQ	#-2,D1			;15c14: 72fe
-	DC.W	$0001			;15c16
-	DC.W	$fdb2			;15c18
+	dc.l	lb_15c16	;15bfa
+	dc.l	lb_15bae	;15bfe
+	dc.l	$00000	;15c02
+	dc.l	$00000	;15c06
+	dc.l	lb_172fe	;15c0a
+	dc.l	lb_172c8	;15c0e
+	dc.l	lb_172fe	;15c12
+lb_15c16:
+	dc.l	lb_1fdb2	;15c16
 	ORI.B	#$46,D0			;15c1a: 00000046
 	dc.w	$0000	;15c1e
 	dc.w	$0000	;15c20
@@ -21945,22 +20127,17 @@ lb_15b44:
 	DC.W	$0000			;15c26
 	DC.W	$56fc			;15c28
 	ORI.B	#$08,D0			;15c2a: 00000008
-	DC.W	$0001			;15c2e
-	ADDQ.W	#6,A2			;15c30: 5c4a
-	DC.W	$0001			;15c32
-	SMI	-(A2)			;15c34: 5be2
+	dc.l	lb_15c4a	;15c2e
+	dc.l	lb_15be2	;15c32
 	dc.w	$0000	;15c36
 	dc.w	$0000	;15c38
 	dc.w	$0000	;15c3a
 	dc.w	$0000	;15c3c
-	DC.W	$0001			;15c3e
-	MOVEQ	#-2,D1			;15c40: 72fe
-	DC.W	$0001			;15c42
-	MOVEQ	#-56,D1			;15c44: 72c8
-	DC.W	$0001			;15c46
-	MOVEQ	#-2,D1			;15c48: 72fe
-	DC.W	$0001			;15c4a
-	DC.W	$fdc2			;15c4c
+	dc.l	lb_172fe	;15c3e
+	dc.l	lb_172c8	;15c42
+	dc.l	lb_172fe	;15c46
+lb_15c4a:
+	dc.l	lb_1fdc2	;15c4a
 	ORI.B	#$5a,D0			;15c4e: 0000005a
 	dc.w	$0000	;15c52
 	dc.w	$0000	;15c54
@@ -21970,22 +20147,18 @@ lb_15b44:
 	dc.w	$0000	;15c5c
 	dc.w	$0000	;15c5e
 	dc.w	$0000	;15c60
-	DC.W	$0001			;15c62
-	DC.W	$5c7e			;15c64
-	DC.W	$0001			;15c66
-	ADDQ.B	#6,(A6)			;15c68: 5c16
+	dc.l	lb_15c7e	;15c62
+	dc.l	lb_15c16	;15c66
 	dc.w	$0000	;15c6a
 	dc.w	$0000	;15c6c
 	dc.w	$0000	;15c6e
 	dc.w	$0000	;15c70
-	DC.W	$0001			;15c72
-	MOVEQ	#-18,D3			;15c74: 76ee
-	DC.W	$0001			;15c76
-	MOVEQ	#-56,D1			;15c78: 72c8
-	dc.w	$0000	;15c7a
-	dc.w	$0000	;15c7c
-	DC.W	$0002			;15c7e
-	BCHG	#0,106(A5)		;15c80: 086d0000006a
+	dc.l	lb_176ee	;15c72
+	dc.l	lb_172c8	;15c76
+	dc.l	$00000	;15c7a
+lb_15c7e:
+	dc.l	lb_2086c+1	;15c7e
+	dc.l	$0006a	;15c82
 	dc.w	$0000	;15c86
 	dc.w	$0000	;15c88
 	DC.W	$0000			;15c8a
@@ -21994,18 +20167,12 @@ lb_15b44:
 	dc.w	$0000	;15c90
 	dc.w	$0000	;15c92
 	dc.w	$0000	;15c94
-	DC.W	$0001			;15c96
-	DC.W	$5b7a			;15c98
-	DC.W	$0001			;15c9a
-	ADDQ.W	#6,A2			;15c9c: 5c4a
-	dc.w	$0000	;15c9e
-	dc.w	$0000	;15ca0
-	dc.w	$0000	;15ca2
-	dc.w	$0000	;15ca4
-	DC.W	$0001			;15ca6
-	MOVEQ	#-56,D1			;15ca8: 72c8
-	DC.W	$0001			;15caa
-	MOVEQ	#-56,D1			;15cac: 72c8
+	dc.l	lb_15b7a	;15c96
+	dc.l	lb_15c4a	;15c9a
+	dc.l	$00000	;15c9e
+	dc.l	$00000	;15ca2
+	dc.l	lb_172c8	;15ca6
+	dc.l	lb_172c8	;15caa
 	dc.w	$0000	;15cae
 	dc.w	$0000	;15cb0
 	DC.W	$0000			;15cb2
@@ -22015,7 +20182,9 @@ lb_15b44:
 	ORI.B	#$08,D1			;15cc0: 00010008
 	ORI.B	#$01,D1			;15cc4: 00010001
 lb_15cc8:
-	ORI.B	#$01,D1			;15cc8: 00010001
+	dc.w	$0001  ;15cc8
+lb_15cca:
+	dc.w	$0001  ;15cca
 	DC.W	$fd91			;15ccc
 	ORI.B	#$0f,D0			;15cce: 0000000f
 	dc.w	$0000	;15cd2
@@ -22040,8 +20209,8 @@ lb_15cc8:
 	dc.w	$0000	;15cf8
 	dc.w	$0000	;15cfa
 	dc.w	$0000	;15cfc
-	DC.W	$0001			;15cfe
-	DC.W	$fdb2			;15d00
+lb_15cfe:
+	dc.l	lb_1fdb2	;15cfe
 	ORI.B	#$1e,D0			;15d02: 0000001e
 	dc.w	$0000	;15d06
 	dc.w	$0000	;15d08
@@ -22050,19 +20219,15 @@ lb_15cc8:
 	DC.W	$0000			;15d0e
 	SNE	(A0)+			;15d10: 56d8
 	ORI.B	#$08,D0			;15d12: 00000008
-	DC.W	$0001			;15d16
-	SUBQ.B	#6,1(A2,D0.W)		;15d18: 5d320001
-	ADDQ.B	#7,0(A6,D0.W)		;15d1c: 5e360000
-	dc.w	$0000	;15d20
-	dc.w	$0000	;15d22
-	ORI.B	#$01,D0			;15d24: 00000001
-	MOVEQ	#-2,D1			;15d28: 72fe
-	DC.W	$0001			;15d2a
-	MOVEQ	#-56,D1			;15d2c: 72c8
-	DC.W	$0001			;15d2e
-	MOVEQ	#-2,D1			;15d30: 72fe
-	DC.W	$0001			;15d32
-	DC.W	$fdb2			;15d34
+	dc.l	lb_15d32	;15d16
+	dc.l	lb_15e36	;15d1a
+	dc.l	$00000	;15d1e
+	dc.l	$00000	;15d22
+	dc.l	lb_172fe	;15d26
+	dc.l	lb_172c8	;15d2a
+	dc.l	lb_172fe	;15d2e
+lb_15d32:
+	dc.l	lb_1fdb2	;15d32
 	ORI.B	#$28,D0			;15d36: 00000028
 	dc.w	$0000	;15d3a
 	dc.w	$0000	;15d3c
@@ -22079,14 +20244,11 @@ lb_15cc8:
 	dc.w	$0000	;15d54
 	dc.w	$0000	;15d56
 	dc.w	$0000	;15d58
-	DC.W	$0001			;15d5a
-	MOVEQ	#-2,D1			;15d5c: 72fe
-	DC.W	$0001			;15d5e
-	MOVEQ	#-56,D1			;15d60: 72c8
-	DC.W	$0001			;15d62
-	MOVEQ	#-2,D1			;15d64: 72fe
-	DC.W	$0001			;15d66
-	DC.W	$fdb2			;15d68
+	dc.l	lb_172fe	;15d5a
+	dc.l	lb_172c8	;15d5e
+	dc.l	lb_172fe	;15d62
+lb_15d66:
+	dc.l	lb_1fdb2	;15d66
 	ORI.B	#$32,D0			;15d6a: 00000032
 	dc.w	$0000	;15d6e
 	dc.w	$0000	;15d70
@@ -22095,20 +20257,15 @@ lb_15cc8:
 	DC.W	$0000			;15d76
 	SNE	0(A0,D0.W)		;15d78: 56f00000
 	DC.W	$0008			;15d7c
-	DC.W	$0001			;15d7e
-	SUBQ.L	#6,(A2)+		;15d80: 5d9a
-	DC.W	$0001			;15d82
-	SUBQ.B	#6,0(A2,D0.W)		;15d84: 5d320000
-	dc.w	$0000	;15d88
-	dc.w	$0000	;15d8a
-	ORI.B	#$01,D0			;15d8c: 00000001
-	MOVEQ	#-2,D1			;15d90: 72fe
-	DC.W	$0001			;15d92
-	MOVEQ	#-56,D1			;15d94: 72c8
-	DC.W	$0001			;15d96
-	MOVEQ	#-2,D1			;15d98: 72fe
-	DC.W	$0001			;15d9a
-	DC.W	$fdb2			;15d9c
+	dc.l	lb_15d9a	;15d7e
+	dc.l	lb_15d32	;15d82
+	dc.l	$00000	;15d86
+	dc.l	$00000	;15d8a
+	dc.l	lb_172fe	;15d8e
+	dc.l	lb_172c8	;15d92
+	dc.l	lb_172fe	;15d96
+lb_15d9a:
+	dc.l	lb_1fdb2	;15d9a
 	ORI.B	#$3c,D0			;15d9e: 0000003c
 	dc.w	$0000	;15da2
 	dc.w	$0000	;15da4
@@ -22117,22 +20274,15 @@ lb_15cc8:
 	DC.W	$0000			;15daa
 	DC.W	$56fc			;15dac
 	ORI.B	#$08,D0			;15dae: 00000008
-	DC.W	$0001			;15db2
-	DC.W	$5dce			;15db4
-	DC.W	$0001			;15db6
-	SUBQ.W	#6,-(A6)		;15db8: 5d66
-	dc.w	$0000	;15dba
-	dc.w	$0000	;15dbc
-	dc.w	$0000	;15dbe
-	dc.w	$0000	;15dc0
-	DC.W	$0001			;15dc2
-	MOVEQ	#-2,D1			;15dc4: 72fe
-	DC.W	$0001			;15dc6
-	MOVEQ	#-56,D1			;15dc8: 72c8
-	DC.W	$0001			;15dca
-	MOVEQ	#-2,D1			;15dcc: 72fe
-	DC.W	$0001			;15dce
-	DC.W	$fdb2			;15dd0
+	dc.l	lb_15dce	;15db2
+	dc.l	lb_15d66	;15db6
+	dc.l	$00000	;15dba
+	dc.l	$00000	;15dbe
+	dc.l	lb_172fe	;15dc2
+	dc.l	lb_172c8	;15dc6
+	dc.l	lb_172fe	;15dca
+lb_15dce:
+	dc.l	lb_1fdb2	;15dce
 	ORI.B	#$46,D0			;15dd2: 00000046
 	dc.w	$0000	;15dd6
 	dc.w	$0000	;15dd8
@@ -22141,22 +20291,15 @@ lb_15cc8:
 	DC.W	$0000			;15dde
 	DC.W	$5708			;15de0
 	ORI.B	#$08,D0			;15de2: 00000008
-	DC.W	$0001			;15de6
-	ADDQ.B	#7,D2			;15de8: 5e02
-	DC.W	$0001			;15dea
-	SUBQ.L	#6,(A2)+		;15dec: 5d9a
-	dc.w	$0000	;15dee
-	dc.w	$0000	;15df0
-	dc.w	$0000	;15df2
-	dc.w	$0000	;15df4
-	DC.W	$0001			;15df6
-	MOVEQ	#-2,D1			;15df8: 72fe
-	DC.W	$0001			;15dfa
-	MOVEQ	#-56,D1			;15dfc: 72c8
-	DC.W	$0001			;15dfe
-	MOVEQ	#-2,D1			;15e00: 72fe
-	DC.W	$0001			;15e02
-	DC.W	$fdc2			;15e04
+	dc.l	lb_15e02	;15de6
+	dc.l	lb_15d9a	;15dea
+	dc.l	$00000	;15dee
+	dc.l	$00000	;15df2
+	dc.l	lb_172fe	;15df6
+	dc.l	lb_172c8	;15dfa
+	dc.l	lb_172fe	;15dfe
+lb_15e02:
+	dc.l	lb_1fdc2	;15e02
 	ORI.B	#$5a,D0			;15e06: 0000005a
 	dc.w	$0000	;15e0a
 	dc.w	$0000	;15e0c
@@ -22166,19 +20309,15 @@ lb_15cc8:
 	dc.w	$0000	;15e14
 	dc.w	$0000	;15e16
 	dc.w	$0000	;15e18
-	DC.W	$0001			;15e1a
-	ADDQ.B	#7,1(A6,D0.W)		;15e1c: 5e360001
-	DC.W	$5dce			;15e20
-	dc.w	$0000	;15e22
-	dc.w	$0000	;15e24
-	dc.w	$0000	;15e26
-	dc.w	$0000	;15e28
-	DC.W	$0001			;15e2a
-	MOVEQ	#-18,D3			;15e2c: 76ee
-	DC.W	$0001			;15e2e
-	MOVEQ	#-56,D1			;15e30: 72c8
+	dc.l	lb_15e36	;15e1a
+	dc.l	lb_15dce	;15e1e
+	dc.l	$00000	;15e22
+	dc.l	$00000	;15e26
+	dc.l	lb_176ee	;15e2a
+	dc.l	lb_172c8	;15e2e
 	dc.w	$0000	;15e32
 	dc.w	$0000	;15e34
+lb_15e36:
 	DC.W	$0002			;15e36
 	BCHG	#0,106(A5)		;15e38: 086d0000006a
 	dc.w	$0000	;15e3e
@@ -22189,18 +20328,12 @@ lb_15cc8:
 	dc.w	$0000	;15e48
 	dc.w	$0000	;15e4a
 	dc.w	$0000	;15e4c
-	DC.W	$0001			;15e4e
-	DC.W	$5cfe			;15e50
-	DC.W	$0001			;15e52
-	ADDQ.B	#7,D2			;15e54: 5e02
-	dc.w	$0000	;15e56
-	dc.w	$0000	;15e58
-	dc.w	$0000	;15e5a
-	dc.w	$0000	;15e5c
-	DC.W	$0001			;15e5e
-	MOVEQ	#-56,D1			;15e60: 72c8
-	DC.W	$0001			;15e62
-	MOVEQ	#-56,D1			;15e64: 72c8
+	dc.l	lb_15cfe	;15e4e
+	dc.l	lb_15e02	;15e52
+	dc.l	$00000	;15e56
+	dc.l	$00000	;15e5a
+	dc.l	lb_172c8	;15e5e
+	dc.l	lb_172c8	;15e62
 	dc.w	$0000	;15e66
 	dc.w	$0000	;15e68
 	DC.W	$0000			;15e6a
@@ -22210,7 +20343,9 @@ lb_15cc8:
 	ORI.B	#$08,D1			;15e78: 00010008
 	ORI.B	#$01,D1			;15e7c: 00010001
 lb_15e80:
-	ORI.B	#$01,D1			;15e80: 00010001
+	dc.w	$0001  ;15e80
+lb_15e82:
+	dc.w	$0001  ;15e82
 	DC.W	$fd91			;15e84
 	ORI.B	#$0f,D0			;15e86: 0000000f
 	dc.w	$0000	;15e8a
@@ -22235,8 +20370,8 @@ lb_15e80:
 	dc.w	$0000	;15eb0
 	dc.w	$0000	;15eb2
 	dc.w	$0000	;15eb4
-	DC.W	$0001			;15eb6
-	DC.W	$fdb2			;15eb8
+lb_15eb6:
+	dc.l	lb_1fdb2	;15eb6
 	ORI.B	#$19,D0			;15eba: 00000019
 	dc.w	$0000	;15ebe
 	dc.w	$0000	;15ec0
@@ -22245,21 +20380,15 @@ lb_15e80:
 	DC.W	$0000			;15ec6
 	SNE	(A0)+			;15ec8: 56d8
 	ORI.B	#$08,D0			;15eca: 00000008
-	DC.W	$0001			;15ece
-	SGT	1(A2)			;15ed0: 5eea0001
-	BRA.S	lb_15ef8		;15ed4: 6022
-	dc.w	$0000	;15ed6
-	dc.w	$0000	;15ed8
-	dc.w	$0000	;15eda
-	dc.w	$0000	;15edc
-	DC.W	$0001			;15ede
-	MOVEQ	#-2,D1			;15ee0: 72fe
-	DC.W	$0001			;15ee2
-	MOVEQ	#-56,D1			;15ee4: 72c8
-	DC.W	$0001			;15ee6
-	MOVEQ	#-2,D1			;15ee8: 72fe
-	DC.W	$0001			;15eea
-	DC.W	$fdb2			;15eec
+	dc.l	lb_15eea	;15ece
+	dc.l	lb_16022	;15ed2
+	dc.l	$00000	;15ed6
+	dc.l	$00000	;15eda
+	dc.l	lb_172fe	;15ede
+	dc.l	lb_172c8	;15ee2
+	dc.l	lb_172fe	;15ee6
+lb_15eea:
+	dc.l	lb_1fdb2	;15eea
 	ORI.B	#$23,D0			;15eee: 00000023
 	dc.w	$0000	;15ef2
 	dc.w	$0000	;15ef4
@@ -22269,20 +20398,15 @@ lb_15ef8:
 	DC.W	$0000			;15efa
 	SNE	-(A4)			;15efc: 56e4
 	ORI.B	#$08,D0			;15efe: 00000008
-	DC.W	$0001			;15f02
-	SUBQ.B	#7,(A6)+		;15f04: 5f1e
-	DC.W	$0001			;15f06
-	ADDQ.L	#7,0(A6,D0.W)		;15f08: 5eb60000
-	dc.w	$0000	;15f0c
-	dc.w	$0000	;15f0e
-	ORI.B	#$01,D0			;15f10: 00000001
-	MOVEQ	#-2,D1			;15f14: 72fe
-	DC.W	$0001			;15f16
-	MOVEQ	#-56,D1			;15f18: 72c8
-	DC.W	$0001			;15f1a
-	MOVEQ	#-2,D1			;15f1c: 72fe
-	DC.W	$0001			;15f1e
-	DC.W	$fdb2			;15f20
+	dc.l	lb_15f1e	;15f02
+	dc.l	lb_15eb6	;15f06
+	dc.l	$00000	;15f0a
+	dc.l	$00000	;15f0e
+	dc.l	lb_172fe	;15f12
+	dc.l	lb_172c8	;15f16
+	dc.l	lb_172fe	;15f1a
+lb_15f1e:
+	dc.l	lb_1fdb2	;15f1e
 	ORI.B	#$2d,D0			;15f22: 0000002d
 	dc.w	$0000	;15f26
 	dc.w	$0000	;15f28
@@ -22291,20 +20415,15 @@ lb_15ef8:
 	DC.W	$0000			;15f2e
 	SNE	0(A0,D0.W)		;15f30: 56f00000
 	DC.W	$0008			;15f34
-	DC.W	$0001			;15f36
-	SUBQ.W	#7,(A2)			;15f38: 5f52
-	DC.W	$0001			;15f3a
-	SGT	0(A2)			;15f3c: 5eea0000
-	dc.w	$0000	;15f40
-	dc.w	$0000	;15f42
-	ORI.B	#$01,D0			;15f44: 00000001
-	MOVEQ	#-2,D1			;15f48: 72fe
-	DC.W	$0001			;15f4a
-	MOVEQ	#-56,D1			;15f4c: 72c8
-	DC.W	$0001			;15f4e
-	MOVEQ	#-2,D1			;15f50: 72fe
-	DC.W	$0001			;15f52
-	DC.W	$fdb2			;15f54
+	dc.l	lb_15f52	;15f36
+	dc.l	lb_15eea	;15f3a
+	dc.l	$00000	;15f3e
+	dc.l	$00000	;15f42
+	dc.l	lb_172fe	;15f46
+	dc.l	lb_172c8	;15f4a
+	dc.l	lb_172fe	;15f4e
+lb_15f52:
+	dc.l	lb_1fdb2	;15f52
 	ORI.B	#$37,D0			;15f56: 00000037
 	dc.w	$0000	;15f5a
 	dc.w	$0000	;15f5c
@@ -22313,22 +20432,15 @@ lb_15ef8:
 	DC.W	$0000			;15f62
 	DC.W	$56fc			;15f64
 	ORI.B	#$08,D0			;15f66: 00000008
-	DC.W	$0001			;15f6a
-	SUBQ.L	#7,D6			;15f6c: 5f86
-	DC.W	$0001			;15f6e
-	SUBQ.B	#7,(A6)+		;15f70: 5f1e
-	dc.w	$0000	;15f72
-	dc.w	$0000	;15f74
-	dc.w	$0000	;15f76
-	dc.w	$0000	;15f78
-	DC.W	$0001			;15f7a
-	MOVEQ	#-2,D1			;15f7c: 72fe
-	DC.W	$0001			;15f7e
-	MOVEQ	#-56,D1			;15f80: 72c8
-	DC.W	$0001			;15f82
-	MOVEQ	#-2,D1			;15f84: 72fe
-	DC.W	$0001			;15f86
-	DC.W	$fdb2			;15f88
+	dc.l	lb_15f86	;15f6a
+	dc.l	lb_15f1e	;15f6e
+	dc.l	$00000	;15f72
+	dc.l	$00000	;15f76
+	dc.l	lb_172fe	;15f7a
+	dc.l	lb_172c8	;15f7e
+	dc.l	lb_172fe	;15f82
+lb_15f86:
+	dc.l	lb_1fdb2	;15f86
 	ORI.B	#$41,D0			;15f8a: 00000041
 	dc.w	$0000	;15f8e
 	dc.w	$0000	;15f90
@@ -22337,22 +20449,15 @@ lb_15ef8:
 	DC.W	$0000			;15f96
 	DC.W	$5708			;15f98
 	ORI.B	#$08,D0			;15f9a: 00000008
-	DC.W	$0001			;15f9e
-	DC.W	$5fba			;15fa0
-	DC.W	$0001			;15fa2
-	SUBQ.W	#7,(A2)			;15fa4: 5f52
-	dc.w	$0000	;15fa6
-	dc.w	$0000	;15fa8
-	dc.w	$0000	;15faa
-	dc.w	$0000	;15fac
-	DC.W	$0001			;15fae
-	MOVEQ	#-2,D1			;15fb0: 72fe
-	DC.W	$0001			;15fb2
-	MOVEQ	#-56,D1			;15fb4: 72c8
-	DC.W	$0001			;15fb6
-	MOVEQ	#-2,D1			;15fb8: 72fe
-	DC.W	$0001			;15fba
-	DC.W	$fdb2			;15fbc
+	dc.l	lb_15fba	;15f9e
+	dc.l	lb_15f52	;15fa2
+	dc.l	$00000	;15fa6
+	dc.l	$00000	;15faa
+	dc.l	lb_172fe	;15fae
+	dc.l	lb_172c8	;15fb2
+	dc.l	lb_172fe	;15fb6
+lb_15fba:
+	dc.l	lb_1fdb2	;15fba
 	ORI.B	#$4b,D0			;15fbe: 0000004b
 	dc.w	$0000	;15fc2
 	dc.w	$0000	;15fc4
@@ -22368,14 +20473,11 @@ lb_15ef8:
 	dc.w	$0000	;15fdc
 	dc.w	$0000	;15fde
 	dc.w	$0000	;15fe0
-	DC.W	$0001			;15fe2
-	MOVEQ	#-2,D1			;15fe4: 72fe
-	DC.W	$0001			;15fe6
-	MOVEQ	#-56,D1			;15fe8: 72c8
-	DC.W	$0001			;15fea
-	MOVEQ	#-2,D1			;15fec: 72fe
-	DC.W	$0001			;15fee
-	DC.W	$fdc2			;15ff0
+	dc.l	lb_172fe	;15fe2
+	dc.l	lb_172c8	;15fe6
+	dc.l	lb_172fe	;15fea
+lb_15fee:
+	dc.l	lb_1fdc2	;15fee
 	ORI.B	#$5a,D0			;15ff2: 0000005a
 	dc.w	$0000	;15ff6
 	dc.w	$0000	;15ff8
@@ -22385,22 +20487,16 @@ lb_15ef8:
 	dc.w	$0000	;16000
 	dc.w	$0000	;16002
 	dc.w	$0000	;16004
-	DC.W	$0001			;16006
-	BRA.S	lb_1602a+2		;16008: 6022
-	DC.W	$0001			;1600a
-	DC.W	$5fba			;1600c
-	dc.w	$0000	;1600e
-	dc.w	$0000	;16010
-	dc.w	$0000	;16012
-	dc.w	$0000	;16014
-	DC.W	$0001			;16016
-	MOVEQ	#-18,D3			;16018: 76ee
-	DC.W	$0001			;1601a
-	MOVEQ	#-56,D1			;1601c: 72c8
-	dc.w	$0000	;1601e
-	dc.w	$0000	;16020
-	DC.W	$0002			;16022
-	BCHG	#0,106(A5)		;16024: 086d0000006a
+	dc.l	lb_16022	;16006
+	dc.l	lb_15fba	;1600a
+	dc.l	$00000	;1600e
+	dc.l	$00000	;16012
+	dc.l	lb_176ee	;16016
+	dc.l	lb_172c8	;1601a
+	dc.l	$00000	;1601e
+lb_16022:
+	dc.l	lb_2086c+1	;16022
+	dc.l	$0006a	;16026
 lb_1602a:
 	dc.w	$0000	;1602a
 	dc.w	$0000	;1602c
@@ -22410,15 +20506,12 @@ lb_1602a:
 	dc.w	$0000	;16034
 	dc.w	$0000	;16036
 	dc.w	$0000	;16038
-	DC.W	$0001			;1603a
-	ADDQ.L	#7,1(A6,D0.W)		;1603c: 5eb60001
-	SLE	0(A6)			;16040: 5fee0000
-	dc.w	$0000	;16044
-	dc.w	$0000	;16046
-	ORI.B	#$01,D0			;16048: 00000001
-	MOVEQ	#-56,D1			;1604c: 72c8
-	DC.W	$0001			;1604e
-	MOVEQ	#-56,D1			;16050: 72c8
+	dc.l	lb_15eb6	;1603a
+	dc.l	lb_15fee	;1603e
+	dc.l	$00000	;16042
+	dc.l	$00000	;16046
+	dc.l	lb_172c8	;1604a
+	dc.l	lb_172c8	;1604e
 	dc.w	$0000	;16052
 	dc.w	$0000	;16054
 	DC.W	$0000			;16056
@@ -22428,7 +20521,9 @@ lb_1602a:
 	ORI.B	#$08,D1			;16064: 00010008
 	ORI.B	#$01,D1			;16068: 00010001
 lb_1606c:
-	ORI.B	#$01,D1			;1606c: 00010001
+	dc.w	$0001  ;1606c
+lb_1606e:
+	dc.w	$0001  ;1606e
 	DC.W	$fd91			;16070
 	ORI.B	#$0f,D0			;16072: 0000000f
 	dc.w	$0000	;16076
@@ -22455,8 +20550,8 @@ lb_16096:
 	dc.w	$0000	;1609c
 	dc.w	$0000	;1609e
 	dc.w	$0000	;160a0
-	DC.W	$0001			;160a2
-	DC.W	$fdb2			;160a4
+lb_160a2:
+	dc.l	lb_1fdb2	;160a2
 	ORI.B	#$19,D0			;160a6: 00000019
 	dc.w	$0000	;160aa
 	dc.w	$0000	;160ac
@@ -22465,22 +20560,15 @@ lb_16096:
 	DC.W	$0000			;160b2
 	SNE	(A0)+			;160b4: 56d8
 	ORI.B	#$08,D0			;160b6: 00000008
-	DC.W	$0001			;160ba
-	BRA.S	lb_16092+2		;160bc: 60d6
-	DC.W	$0001			;160be
-	BHI.S	lb_16104		;160c0: 6242
-	dc.w	$0000	;160c2
-	dc.w	$0000	;160c4
-	dc.w	$0000	;160c6
-	dc.w	$0000	;160c8
-	DC.W	$0001			;160ca
-	MOVEQ	#-2,D1			;160cc: 72fe
-	DC.W	$0001			;160ce
-	MOVEQ	#-56,D1			;160d0: 72c8
-	DC.W	$0001			;160d2
-	MOVEQ	#-2,D1			;160d4: 72fe
-	DC.W	$0001			;160d6
-	DC.W	$fdb2			;160d8
+	dc.l	lb_160d6	;160ba
+	dc.l	lb_16242	;160be
+	dc.l	$00000	;160c2
+	dc.l	$00000	;160c6
+	dc.l	lb_172fe	;160ca
+	dc.l	lb_172c8	;160ce
+	dc.l	lb_172fe	;160d2
+lb_160d6:
+	dc.l	lb_1fdb2	;160d6
 	ORI.B	#$22,D0			;160da: 00000022
 	dc.w	$0000	;160de
 	dc.w	$0000	;160e0
@@ -22489,26 +20577,16 @@ lb_16096:
 	DC.W	$0000			;160e6
 	SNE	-(A4)			;160e8: 56e4
 	ORI.B	#$08,D0			;160ea: 00000008
-	DC.W	$0001			;160ee
-	BSR.S	lb_160fa+2		;160f0: 610a
-	DC.W	$0001			;160f2
-	BRA.S	lb_16096+2		;160f4: 60a2
-	dc.w	$0000	;160f6
-	dc.w	$0000	;160f8
-lb_160fa:
-	dc.w	$0000	;160fa
-	dc.w	$0000	;160fc
-	DC.W	$0001			;160fe
-lb_16100:
-	MOVEQ	#-2,D1			;16100: 72fe
-	DC.W	$0001			;16102
-lb_16104:
-	MOVEQ	#-56,D1			;16104: 72c8
-	DC.W	$0001			;16106
-	MOVEQ	#-2,D1			;16108: 72fe
-	DC.W	$0001			;1610a
-	DC.W	$fdb2			;1610c
-	ORI.B	#$2b,D0			;1610e: 0000002b
+	dc.l	lb_1610a	;160ee
+	dc.l	lb_160a2	;160f2
+	dc.l	$00000	;160f6
+	dc.l	$00000	;160fa
+	dc.l	lb_172fe	;160fe
+	dc.l	lb_172c8	;16102
+	dc.l	lb_172fe	;16106
+lb_1610a:
+	dc.l	lb_1fdb2	;1610a
+	dc.l	$0002b	;1610e
 	dc.w	$0000	;16112
 	dc.w	$0000	;16114
 	DC.W	$0000			;16116
@@ -22516,24 +20594,16 @@ lb_16104:
 	DC.W	$0000			;1611a
 	SNE	0(A0,D0.W)		;1611c: 56f00000
 	DC.W	$0008			;16120
-	DC.W	$0001			;16122
-	BSR.S	lb_16162+2		;16124: 613e
-	DC.W	$0001			;16126
-	BRA.S	lb_16100		;16128: 60d6
-	dc.w	$0000	;1612a
-	dc.w	$0000	;1612c
-	dc.w	$0000	;1612e
-	dc.w	$0000	;16130
-	DC.W	$0001			;16132
-lb_16134:
-	MOVEQ	#-2,D1			;16134: 72fe
-	DC.W	$0001			;16136
-	MOVEQ	#-56,D1			;16138: 72c8
-	DC.W	$0001			;1613a
-	MOVEQ	#-2,D1			;1613c: 72fe
-	DC.W	$0001			;1613e
-	DC.W	$fdb2			;16140
-	ORI.B	#$34,D0			;16142: 00000034
+	dc.l	lb_1613e	;16122
+	dc.l	lb_160d6	;16126
+	dc.l	$00000	;1612a
+	dc.l	$00000	;1612e
+	dc.l	lb_172fe	;16132
+	dc.l	lb_172c8	;16136
+	dc.l	lb_172fe	;1613a
+lb_1613e:
+	dc.l	lb_1fdb2	;1613e
+	dc.l	$00034	;16142
 	dc.w	$0000	;16146
 	dc.w	$0000	;16148
 	DC.W	$0000			;1614a
@@ -22541,24 +20611,15 @@ lb_16134:
 	DC.W	$0000			;1614e
 	DC.W	$56fc			;16150
 	ORI.B	#$08,D0			;16152: 00000008
-	DC.W	$0001			;16156
-	BSR.S	lb_161ca+2		;16158: 6172
-	DC.W	$0001			;1615a
-	BSR.S	lb_16168		;1615c: 610a
-	dc.w	$0000	;1615e
-	dc.w	$0000	;16160
-lb_16162:
-	dc.w	$0000	;16162
-	dc.w	$0000	;16164
-	DC.W	$0001			;16166
-lb_16168:
-	MOVEQ	#-2,D1			;16168: 72fe
-	DC.W	$0001			;1616a
-	MOVEQ	#-56,D1			;1616c: 72c8
-	DC.W	$0001			;1616e
-	MOVEQ	#-2,D1			;16170: 72fe
-	DC.W	$0001			;16172
-	DC.W	$fdb2			;16174
+	dc.l	lb_16172	;16156
+	dc.l	lb_1610a	;1615a
+	dc.l	$00000	;1615e
+	dc.l	$00000	;16162
+	dc.l	lb_172fe	;16166
+	dc.l	lb_172c8	;1616a
+	dc.l	lb_172fe	;1616e
+lb_16172:
+	dc.l	lb_1fdb2	;16172
 	ORI.B	#$3d,D0			;16176: 0000003d
 	dc.w	$0000	;1617a
 	dc.w	$0000	;1617c
@@ -22567,24 +20628,15 @@ lb_16168:
 	DC.W	$0000			;16182
 	DC.W	$5708			;16184
 	ORI.B	#$08,D0			;16186: 00000008
-	DC.W	$0001			;1618a
-	BSR.S	lb_16134		;1618c: 61a6
-	DC.W	$0001			;1618e
-	BSR.S	lb_161d0		;16190: 613e
-	dc.w	$0000	;16192
-	dc.w	$0000	;16194
-	dc.w	$0000	;16196
-	dc.w	$0000	;16198
-	DC.W	$0001			;1619a
-lb_1619c:
-	MOVEQ	#-2,D1			;1619c: 72fe
-	DC.W	$0001			;1619e
-lb_161a0:
-	MOVEQ	#-56,D1			;161a0: 72c8
-	DC.W	$0001			;161a2
-	MOVEQ	#-2,D1			;161a4: 72fe
-	DC.W	$0001			;161a6
-	DC.W	$fdb2			;161a8
+	dc.l	lb_161a6	;1618a
+	dc.l	lb_1613e	;1618e
+	dc.l	$00000	;16192
+	dc.l	$00000	;16196
+	dc.l	lb_172fe	;1619a
+	dc.l	lb_172c8	;1619e
+	dc.l	lb_172fe	;161a2
+lb_161a6:
+	dc.l	lb_1fdb2	;161a6
 	ORI.B	#$46,D0			;161aa: 00000046
 	dc.w	$0000	;161ae
 	dc.w	$0000	;161b0
@@ -22593,24 +20645,15 @@ lb_161a0:
 	DC.W	$0000			;161b6
 	SUBQ.B	#3,(A4)			;161b8: 5714
 	ORI.B	#$08,D0			;161ba: 00000008
-	DC.W	$0001			;161be
-	BSR.S	lb_1619c		;161c0: 61da
-	DC.W	$0001			;161c2
-	BSR.S	lb_16238		;161c4: 6172
-	dc.w	$0000	;161c6
-	dc.w	$0000	;161c8
-lb_161ca:
-	dc.w	$0000	;161ca
-	dc.w	$0000	;161cc
-	DC.W	$0001			;161ce
-lb_161d0:
-	MOVEQ	#-2,D1			;161d0: 72fe
-	DC.W	$0001			;161d2
-	MOVEQ	#-56,D1			;161d4: 72c8
-	DC.W	$0001			;161d6
-	MOVEQ	#-2,D1			;161d8: 72fe
-	DC.W	$0001			;161da
-	DC.W	$fdb2			;161dc
+	dc.l	lb_161da	;161be
+	dc.l	lb_16172	;161c2
+	dc.l	$00000	;161c6
+	dc.l	$00000	;161ca
+	dc.l	lb_172fe	;161ce
+	dc.l	lb_172c8	;161d2
+	dc.l	lb_172fe	;161d6
+lb_161da:
+	dc.l	lb_1fdb2	;161da
 	ORI.B	#$4f,D0			;161de: 0000004f
 	dc.w	$0000	;161e2
 	dc.w	$0000	;161e4
@@ -22619,25 +20662,15 @@ lb_161d0:
 	DC.W	$0000			;161ea
 	SUBQ.B	#3,-(A0)		;161ec: 5720
 	ORI.B	#$08,D0			;161ee: 00000008
-	DC.W	$0001			;161f2
-	BHI.S	lb_16204		;161f4: 620e
-	DC.W	$0001			;161f6
-	BSR.S	lb_161a0		;161f8: 61a6
-	dc.w	$0000	;161fa
-	dc.w	$0000	;161fc
-lb_161fe:
-	dc.w	$0000	;161fe
-	dc.w	$0000	;16200
-	DC.W	$0001			;16202
-lb_16204:
-	MOVEQ	#-2,D1			;16204: 72fe
-	DC.W	$0001			;16206
-lb_16208:
-	MOVEQ	#-56,D1			;16208: 72c8
-	DC.W	$0001			;1620a
-	MOVEQ	#-2,D1			;1620c: 72fe
-	DC.W	$0001			;1620e
-	DC.W	$fdc2			;16210
+	dc.l	lb_1620e	;161f2
+	dc.l	lb_161a6	;161f6
+	dc.l	$00000	;161fa
+	dc.l	$00000	;161fe
+	dc.l	lb_172fe	;16202
+	dc.l	lb_172c8	;16206
+	dc.l	lb_172fe	;1620a
+lb_1620e:
+	dc.l	lb_1fdc2	;1620e
 	ORI.B	#$5c,D0			;16212: 0000005c
 	dc.w	$0000	;16216
 	dc.w	$0000	;16218
@@ -22647,21 +20680,15 @@ lb_16208:
 	dc.w	$0000	;16220
 	dc.w	$0000	;16222
 	dc.w	$0000	;16224
-	DC.W	$0001			;16226
-	BHI.S	lb_1626c		;16228: 6242
-	DC.W	$0001			;1622a
-	BSR.S	lb_16208		;1622c: 61da
-	dc.w	$0000	;1622e
-	dc.w	$0000	;16230
-	dc.w	$0000	;16232
-	dc.w	$0000	;16234
-	DC.W	$0001			;16236
-lb_16238:
-	MOVEQ	#-18,D3			;16238: 76ee
-	DC.W	$0001			;1623a
-	MOVEQ	#-56,D1			;1623c: 72c8
+	dc.l	lb_16242	;16226
+	dc.l	lb_161da	;1622a
+	dc.l	$00000	;1622e
+	dc.l	$00000	;16232
+	dc.l	lb_176ee	;16236
+	dc.l	lb_172c8	;1623a
 	dc.w	$0000	;1623e
 	dc.w	$0000	;16240
+lb_16242:
 	DC.W	$0002			;16242
 	BCHG	#0,106(A5)		;16244: 086d0000006a
 	dc.w	$0000	;1624a
@@ -22672,20 +20699,12 @@ lb_16238:
 	dc.w	$0000	;16254
 	dc.w	$0000	;16256
 	dc.w	$0000	;16258
-	DC.W	$0001			;1625a
-	BRA.S	lb_161fe+2		;1625c: 60a2
-	DC.W	$0001			;1625e
-	BHI.S	lb_16270		;16260: 620e
-	dc.w	$0000	;16262
-	dc.w	$0000	;16264
-	dc.w	$0000	;16266
-	dc.w	$0000	;16268
-	DC.W	$0001			;1626a
-lb_1626c:
-	MOVEQ	#-56,D1			;1626c: 72c8
-	DC.W	$0001			;1626e
-lb_16270:
-	MOVEQ	#-56,D1			;16270: 72c8
+	dc.l	lb_160a2	;1625a
+	dc.l	lb_1620e	;1625e
+	dc.l	$00000	;16262
+	dc.l	$00000	;16266
+	dc.l	lb_172c8	;1626a
+	dc.l	lb_172c8	;1626e
 	dc.w	$0000	;16272
 	dc.w	$0000	;16274
 	DC.W	$0000			;16276
@@ -22696,7 +20715,9 @@ lb_16278:
 	ORI.B	#$08,D1			;16284: 00010008
 	ORI.B	#$01,D1			;16288: 00010001
 lb_1628c:
-	ORI.B	#$01,D1			;1628c: 00010001
+	dc.w	$0001  ;1628c
+lb_1628e:
+	dc.w	$0001  ;1628e
 	DC.W	$fd91			;16290
 	ORI.B	#$0f,D0			;16292: 0000000f
 	dc.w	$0000	;16296
@@ -22721,8 +20742,8 @@ lb_1628c:
 	dc.w	$0000	;162bc
 	dc.w	$0000	;162be
 	dc.w	$0000	;162c0
-	DC.W	$0001			;162c2
-	DC.W	$fdb2			;162c4
+lb_162c2:
+	dc.l	lb_1fdb2	;162c2
 	ORI.B	#$19,D0			;162c6: 00000019
 	dc.w	$0000	;162ca
 	dc.w	$0000	;162cc
@@ -22733,22 +20754,15 @@ lb_162d4:
 	SNE	(A0)+			;162d4: 56d8
 lb_162d6:
 	ORI.B	#$08,D0			;162d6: 00000008
-	DC.W	$0001			;162da
-	BHI.S	lb_162d4		;162dc: 62f6
-	DC.W	$0001			;162de
-	BCC.S	lb_16278		;162e0: 6496
-	dc.w	$0000	;162e2
-	dc.w	$0000	;162e4
-	dc.w	$0000	;162e6
-	dc.w	$0000	;162e8
-	DC.W	$0001			;162ea
-	MOVEQ	#-2,D1			;162ec: 72fe
-	DC.W	$0001			;162ee
-	MOVEQ	#-56,D1			;162f0: 72c8
-	DC.W	$0001			;162f2
-	MOVEQ	#-2,D1			;162f4: 72fe
-	DC.W	$0001			;162f6
-	DC.W	$fdb2			;162f8
+	dc.l	lb_162f6	;162da
+	dc.l	lb_16496	;162de
+	dc.l	$00000	;162e2
+	dc.l	$00000	;162e6
+	dc.l	lb_172fe	;162ea
+	dc.l	lb_172c8	;162ee
+	dc.l	lb_172fe	;162f2
+lb_162f6:
+	dc.l	lb_1fdb2	;162f6
 	ORI.B	#$21,D0			;162fa: 00000021
 	dc.w	$0000	;162fe
 	dc.w	$0000	;16300
@@ -22758,22 +20772,15 @@ lb_162d6:
 	SNE	-(A4)			;16308: 56e4
 lb_1630a:
 	ORI.B	#$08,D0			;1630a: 00000008
-	DC.W	$0001			;1630e
-	BLS.S	lb_1633c		;16310: 632a
-	DC.W	$0001			;16312
-	BHI.S	lb_162d6+2		;16314: 62c2
-	dc.w	$0000	;16316
-	dc.w	$0000	;16318
-	dc.w	$0000	;1631a
-	dc.w	$0000	;1631c
-	DC.W	$0001			;1631e
-	MOVEQ	#-2,D1			;16320: 72fe
-	DC.W	$0001			;16322
-	MOVEQ	#-56,D1			;16324: 72c8
-	DC.W	$0001			;16326
-	MOVEQ	#-2,D1			;16328: 72fe
-	DC.W	$0001			;1632a
-	DC.W	$fdb2			;1632c
+	dc.l	lb_1632a	;1630e
+	dc.l	lb_162c2	;16312
+	dc.l	$00000	;16316
+	dc.l	$00000	;1631a
+	dc.l	lb_172fe	;1631e
+	dc.l	lb_172c8	;16322
+	dc.l	lb_172fe	;16326
+lb_1632a:
+	dc.l	lb_1fdb2	;1632a
 	ORI.B	#$29,D0			;1632e: 00000029
 	dc.w	$0000	;16332
 	dc.w	$0000	;16334
@@ -22784,22 +20791,15 @@ lb_1633c:
 	SNE	0(A0,D0.W)		;1633c: 56f00000
 lb_16340:
 	DC.W	$0008			;16340
-	DC.W	$0001			;16342
-	BLS.S	lb_163a4		;16344: 635e
-	DC.W	$0001			;16346
-	BHI.S	lb_16340		;16348: 62f6
-	dc.w	$0000	;1634a
-	dc.w	$0000	;1634c
-	dc.w	$0000	;1634e
-	dc.w	$0000	;16350
-	DC.W	$0001			;16352
-	MOVEQ	#-2,D1			;16354: 72fe
-	DC.W	$0001			;16356
-	MOVEQ	#-56,D1			;16358: 72c8
-	DC.W	$0001			;1635a
-	MOVEQ	#-2,D1			;1635c: 72fe
-	DC.W	$0001			;1635e
-	DC.W	$fdb2			;16360
+	dc.l	lb_1635e	;16342
+	dc.l	lb_162f6	;16346
+	dc.l	$00000	;1634a
+	dc.l	$00000	;1634e
+	dc.l	lb_172fe	;16352
+	dc.l	lb_172c8	;16356
+	dc.l	lb_172fe	;1635a
+lb_1635e:
+	dc.l	lb_1fdb2	;1635e
 	ORI.B	#$31,D0			;16362: 00000031
 	dc.w	$0000	;16366
 	dc.w	$0000	;16368
@@ -22809,23 +20809,15 @@ lb_16340:
 	DC.W	$56fc			;16370
 lb_16372:
 	ORI.B	#$08,D0			;16372: 00000008
-	DC.W	$0001			;16376
-lb_16378:
-	BLS.S	lb_1630a+2		;16378: 6392
-	DC.W	$0001			;1637a
-	BLS.S	lb_163a6+2		;1637c: 632a
-	dc.w	$0000	;1637e
-	dc.w	$0000	;16380
-	dc.w	$0000	;16382
-	dc.w	$0000	;16384
-	DC.W	$0001			;16386
-	MOVEQ	#-2,D1			;16388: 72fe
-	DC.W	$0001			;1638a
-	MOVEQ	#-56,D1			;1638c: 72c8
-	DC.W	$0001			;1638e
-	MOVEQ	#-2,D1			;16390: 72fe
-	DC.W	$0001			;16392
-	DC.W	$fdb2			;16394
+	dc.l	lb_16392	;16376
+	dc.l	lb_1632a	;1637a
+	dc.l	$00000	;1637e
+	dc.l	$00000	;16382
+	dc.l	lb_172fe	;16386
+	dc.l	lb_172c8	;1638a
+	dc.l	lb_172fe	;1638e
+lb_16392:
+	dc.l	lb_1fdb2	;16392
 	ORI.B	#$39,D0			;16396: 00000039
 	dc.w	$0000	;1639a
 	dc.w	$0000	;1639c
@@ -22836,22 +20828,15 @@ lb_163a4:
 	DC.W	$5708			;163a4
 lb_163a6:
 	ORI.B	#$08,D0			;163a6: 00000008
-	DC.W	$0001			;163aa
-	BLS.S	lb_16372+2		;163ac: 63c6
-	DC.W	$0001			;163ae
-	BLS.S	lb_1640e+2		;163b0: 635e
-	dc.w	$0000	;163b2
-	dc.w	$0000	;163b4
-	dc.w	$0000	;163b6
-	dc.w	$0000	;163b8
-	DC.W	$0001			;163ba
-	MOVEQ	#-2,D1			;163bc: 72fe
-	DC.W	$0001			;163be
-	MOVEQ	#-56,D1			;163c0: 72c8
-	DC.W	$0001			;163c2
-	MOVEQ	#-2,D1			;163c4: 72fe
-	DC.W	$0001			;163c6
-	DC.W	$fdb2			;163c8
+	dc.l	lb_163c6	;163aa
+	dc.l	lb_1635e	;163ae
+	dc.l	$00000	;163b2
+	dc.l	$00000	;163b6
+	dc.l	lb_172fe	;163ba
+	dc.l	lb_172c8	;163be
+	dc.l	lb_172fe	;163c2
+lb_163c6:
+	dc.l	lb_1fdb2	;163c6
 	ORI.B	#$41,D0			;163ca: 00000041
 	dc.w	$0000	;163ce
 	dc.w	$0000	;163d0
@@ -22861,23 +20846,15 @@ lb_163a6:
 	SUBQ.B	#3,(A4)			;163d8: 5714
 lb_163da:
 	ORI.B	#$08,D0			;163da: 00000008
-	DC.W	$0001			;163de
-lb_163e0:
-	BLS.S	lb_163da+2		;163e0: 63fa
-	DC.W	$0001			;163e2
-	BLS.S	lb_16378		;163e4: 6392
-	dc.w	$0000	;163e6
-	dc.w	$0000	;163e8
-	dc.w	$0000	;163ea
-	dc.w	$0000	;163ec
-	DC.W	$0001			;163ee
-	MOVEQ	#-2,D1			;163f0: 72fe
-	DC.W	$0001			;163f2
-	MOVEQ	#-56,D1			;163f4: 72c8
-	DC.W	$0001			;163f6
-	MOVEQ	#-2,D1			;163f8: 72fe
-	DC.W	$0001			;163fa
-	DC.W	$fdb2			;163fc
+	dc.l	lb_163fa	;163de
+	dc.l	lb_16392	;163e2
+	dc.l	$00000	;163e6
+	dc.l	$00000	;163ea
+	dc.l	lb_172fe	;163ee
+	dc.l	lb_172c8	;163f2
+	dc.l	lb_172fe	;163f6
+lb_163fa:
+	dc.l	lb_1fdb2	;163fa
 	ORI.B	#$49,D0			;163fe: 00000049
 	dc.w	$0000	;16402
 	dc.w	$0000	;16404
@@ -22887,23 +20864,15 @@ lb_163e0:
 	SUBQ.B	#3,-(A0)		;1640c: 5720
 lb_1640e:
 	ORI.B	#$08,D0			;1640e: 00000008
-	DC.W	$0001			;16412
-lb_16414:
-	BCC.S	lb_16444		;16414: 642e
-	DC.W	$0001			;16416
-	BLS.S	lb_163e0		;16418: 63c6
-	dc.w	$0000	;1641a
-	dc.w	$0000	;1641c
-	dc.w	$0000	;1641e
-	dc.w	$0000	;16420
-	DC.W	$0001			;16422
-	MOVEQ	#-2,D1			;16424: 72fe
-	DC.W	$0001			;16426
-	MOVEQ	#-56,D1			;16428: 72c8
-	DC.W	$0001			;1642a
-	MOVEQ	#-2,D1			;1642c: 72fe
-	DC.W	$0001			;1642e
-	DC.W	$fdb2			;16430
+	dc.l	lb_1642e	;16412
+	dc.l	lb_163c6	;16416
+	dc.l	$00000	;1641a
+	dc.l	$00000	;1641e
+	dc.l	lb_172fe	;16422
+	dc.l	lb_172c8	;16426
+	dc.l	lb_172fe	;1642a
+lb_1642e:
+	dc.l	lb_1fdb2	;1642e
 	ORI.B	#$51,D0			;16432: 00000051
 	dc.w	$0000	;16436
 	dc.w	$0000	;16438
@@ -22913,23 +20882,15 @@ lb_16414:
 	SUBQ.B	#3,0(A4)		;16440: 572c0000
 lb_16444:
 	DC.W	$0008			;16444
-	DC.W	$0001			;16446
-lb_16448:
-	BCC.S	lb_164aa+2		;16448: 6462
-	DC.W	$0001			;1644a
-	BLS.S	lb_16448		;1644c: 63fa
-	dc.w	$0000	;1644e
-	dc.w	$0000	;16450
-	dc.w	$0000	;16452
-	dc.w	$0000	;16454
-	DC.W	$0001			;16456
-	MOVEQ	#-2,D1			;16458: 72fe
-	DC.W	$0001			;1645a
-	MOVEQ	#-56,D1			;1645c: 72c8
-	DC.W	$0001			;1645e
-	MOVEQ	#-2,D1			;16460: 72fe
-	DC.W	$0001			;16462
-	DC.W	$fdc2			;16464
+	dc.l	lb_16462	;16446
+	dc.l	lb_163fa	;1644a
+	dc.l	$00000	;1644e
+	dc.l	$00000	;16452
+	dc.l	lb_172fe	;16456
+	dc.l	lb_172c8	;1645a
+	dc.l	lb_172fe	;1645e
+lb_16462:
+	dc.l	lb_1fdc2	;16462
 	ORI.B	#$5e,D0			;16466: 0000005e
 	dc.w	$0000	;1646a
 	dc.w	$0000	;1646c
@@ -22940,22 +20901,16 @@ lb_16472:
 	dc.w	$0000	;16474
 	dc.w	$0000	;16476
 	dc.w	$0000	;16478
-	DC.W	$0001			;1647a
-	BCC.S	lb_16414		;1647c: 6496
-	DC.W	$0001			;1647e
-	BCC.S	lb_164b0		;16480: 642e
-	dc.w	$0000	;16482
-	dc.w	$0000	;16484
-	dc.w	$0000	;16486
-	dc.w	$0000	;16488
-	DC.W	$0001			;1648a
-	MOVEQ	#-18,D3			;1648c: 76ee
-	DC.W	$0001			;1648e
-	MOVEQ	#-56,D1			;16490: 72c8
-	dc.w	$0000	;16492
-	dc.w	$0000	;16494
-	DC.W	$0002			;16496
-	BCHG	#0,107(A5)		;16498: 086d0000006b
+	dc.l	lb_16496	;1647a
+	dc.l	lb_1642e	;1647e
+	dc.l	$00000	;16482
+	dc.l	$00000	;16486
+	dc.l	lb_176ee	;1648a
+	dc.l	lb_172c8	;1648e
+	dc.l	$00000	;16492
+lb_16496:
+	dc.l	lb_2086c+1	;16496
+	dc.l	$0006b	;1649a
 	dc.w	$0000	;1649e
 	dc.w	$0000	;164a0
 	DC.W	$0000			;164a2
@@ -22965,19 +20920,12 @@ lb_16472:
 lb_164aa:
 	dc.w	$0000	;164aa
 	dc.w	$0000	;164ac
-	DC.W	$0001			;164ae
-lb_164b0:
-	BHI.S	lb_16472+2		;164b0: 62c2
-	DC.W	$0001			;164b2
-	BCC.S	lb_16518		;164b4: 6462
-	dc.w	$0000	;164b6
-	dc.w	$0000	;164b8
-	dc.w	$0000	;164ba
-	dc.w	$0000	;164bc
-	DC.W	$0001			;164be
-	MOVEQ	#-56,D1			;164c0: 72c8
-	DC.W	$0001			;164c2
-	MOVEQ	#-56,D1			;164c4: 72c8
+	dc.l	lb_162c2	;164ae
+	dc.l	lb_16462	;164b2
+	dc.l	$00000	;164b6
+	dc.l	$00000	;164ba
+	dc.l	lb_172c8	;164be
+	dc.l	lb_172c8	;164c2
 	dc.w	$0000	;164c6
 	dc.w	$0000	;164c8
 	DC.W	$0000			;164ca
@@ -23005,615 +20953,346 @@ lb_164e2:
 	dc.w	$0000	;16504
 	dc.w	$0000	;16506
 	dc.w	$0000	;16508
-	DC.W	$0001			;1650a
-	MOVEQ	#-2,D4			;1650c: 78fe
-	DC.W	$0001			;1650e
-	MOVEQ	#-56,D1			;16510: 72c8
+	dc.l	lb_178fe	;1650a
+	dc.l	lb_172c8	;1650e
 	dc.w	$0000	;16512
 	dc.w	$0000	;16514
 	DC.W	$0000			;16516
 lb_16518:
 	OR.B	D2,D0			;16518: 8002
-	ORI.B	#$02,D2			;1651a: 00020002
-	ORI.L	#$013c0002,D0		;1651e: 0080013c0002
-	ORI.B	#$08,D1			;16524: 00010008
-	ORI.B	#$01,D0			;16528: 00000001
-	DC.W	$ffff			;1652c
+	dc.l	$20002	;1651a
+	dc.l	$80013c	;1651e
+	dc.l	$20000+1	;16522
+	dc.l	$80000	;16526
+	dc.l	$1fffe+1	;1652a
 lb_1652e:
-	DC.W	$0002			;1652e
-	BCHG	D0,0(A7)		;16530: 016f0000
-	ORI.B	#$00,(A0)		;16534: 00100000
-	dc.w	$0000	;16538
-	dc.w	$0000	;1653a
-	DC.W	$013f			;1653c
-	dc.w	$0000	;1653e
-	dc.w	$0000	;16540
-	dc.w	$0000	;16542
-	dc.w	$0000	;16544
-	dc.w	$0000	;16546
-	dc.w	$0000	;16548
-	dc.w	$0000	;1654a
-	dc.w	$0000	;1654c
-	dc.w	$0000	;1654e
-	dc.w	$0000	;16550
-	dc.w	$0000	;16552
-	dc.w	$0000	;16554
-	dc.w	$0000	;16556
-	dc.w	$0000	;16558
-	dc.w	$0000	;1655a
-	dc.w	$0000	;1655c
-	dc.w	$0000	;1655e
-	dc.w	$0000	;16560
-	DC.W	$0002			;16562
-	BCLR	D0,(A6)			;16564: 0196
-	ORI.B	#$17,D0			;16566: 00000017
-	dc.w	$0000	;1656a
-	dc.w	$0000	;1656c
-	DC.W	$0000			;1656e
-	DC.W	$013f			;16570
-	dc.w	$0000	;16572
-	dc.w	$0000	;16574
-	dc.w	$0000	;16576
-	dc.w	$0000	;16578
-	dc.w	$0000	;1657a
-	dc.w	$0000	;1657c
-	dc.w	$0000	;1657e
-	dc.w	$0000	;16580
-	dc.w	$0000	;16582
-	dc.w	$0000	;16584
-	dc.w	$0000	;16586
-	dc.w	$0000	;16588
-	dc.w	$0000	;1658a
-	dc.w	$0000	;1658c
-	dc.w	$0000	;1658e
-	dc.w	$0000	;16590
-	dc.w	$0000	;16592
-	dc.w	$0000	;16594
-	DC.W	$0002			;16596
-	DC.W	$01bf			;16598
-	ORI.B	#$2f,D0			;1659a: 0000002f
-	dc.w	$0000	;1659e
-	dc.w	$0000	;165a0
-	DC.W	$0000			;165a2
-	DC.W	$013f			;165a4
-	dc.w	$0000	;165a6
-	dc.w	$0000	;165a8
-	dc.w	$0000	;165aa
-	dc.w	$0000	;165ac
-	dc.w	$0000	;165ae
-	dc.w	$0000	;165b0
-	dc.w	$0000	;165b2
-	dc.w	$0000	;165b4
-	dc.w	$0000	;165b6
-	dc.w	$0000	;165b8
-	dc.w	$0000	;165ba
-	dc.w	$0000	;165bc
-	dc.w	$0000	;165be
-	dc.w	$0000	;165c0
-	dc.w	$0000	;165c2
-	dc.w	$0000	;165c4
-	dc.w	$0000	;165c6
-	dc.w	$0000	;165c8
-	DC.W	$0002			;165ca
-	BSET	D0,(A2)+		;165cc: 01da
-	ORI.B	#$43,D0			;165ce: 00000043
-	dc.w	$0000	;165d2
-	dc.w	$0000	;165d4
-	DC.W	$0000			;165d6
-	DC.W	$013f			;165d8
-	dc.w	$0000	;165da
-	dc.w	$0000	;165dc
-	dc.w	$0000	;165de
-	dc.w	$0000	;165e0
-	dc.w	$0000	;165e2
-	dc.w	$0000	;165e4
-	dc.w	$0000	;165e6
-	dc.w	$0000	;165e8
-	dc.w	$0000	;165ea
-	dc.w	$0000	;165ec
-	dc.w	$0000	;165ee
-	dc.w	$0000	;165f0
-	dc.w	$0000	;165f2
-	dc.w	$0000	;165f4
-	dc.w	$0000	;165f6
-	dc.w	$0000	;165f8
-	dc.w	$0000	;165fa
-	dc.w	$0000	;165fc
-	DC.W	$0002			;165fe
-	BSET	D0,0(A5,D0.W)		;16600: 01f50000
-	ORI.W	#$0000,(A7)		;16604: 00570000
-	dc.w	$0000	;16608
-	dc.w	$0000	;1660a
-	DC.W	$013f			;1660c
-	dc.w	$0000	;1660e
-	dc.w	$0000	;16610
-	dc.w	$0000	;16612
-	dc.w	$0000	;16614
-	dc.w	$0000	;16616
-	dc.w	$0000	;16618
-	dc.w	$0000	;1661a
-	dc.w	$0000	;1661c
-	dc.w	$0000	;1661e
-	dc.w	$0000	;16620
-lb_16622:
-	dc.w	$0000	;16622
-	dc.w	$0000	;16624
-lb_16626:
-	dc.w	$0000	;16626
-	dc.w	$0000	;16628
-	dc.w	$0000	;1662a
-	dc.w	$0000	;1662c
-	dc.w	$0000	;1662e
-	dc.w	$0000	;16630
-	DC.W	$0002			;16632
-	DC.W	$020e			;16634
-	ORI.B	#$5e,D0			;16636: 0000005e
-	dc.w	$0000	;1663a
-	dc.w	$0000	;1663c
-	DC.W	$0000			;1663e
-	DC.W	$013f			;16640
-	dc.w	$0000	;16642
-	dc.w	$0000	;16644
-	dc.w	$0000	;16646
-	dc.w	$0000	;16648
-	dc.w	$0000	;1664a
-	dc.w	$0000	;1664c
-lb_1664e:
-	dc.w	$0000	;1664e
-	dc.w	$0000	;16650
-	dc.w	$0000	;16652
-	dc.w	$0000	;16654
-	dc.w	$0000	;16656
-	dc.w	$0000	;16658
-	dc.w	$0000	;1665a
-	dc.w	$0000	;1665c
-	dc.w	$0000	;1665e
-	dc.w	$0000	;16660
-	dc.w	$0000	;16662
-	dc.w	$0000	;16664
-	DC.W	$0002			;16666
-	ANDI.B	#$00,47(A1)		;16668: 02290000002f
-	ORI.B	#$d4,D0			;1666e: 000000d4
-	ORI.B	#$f4,D0			;16672: 000000f4
-	dc.w	$0000	;16676
-	dc.w	$0000	;16678
-	dc.w	$0000	;1667a
-	dc.w	$0000	;1667c
-	DC.W	$0001			;1667e
-	BNE.S	lb_1664e+2		;16680: 66ce
-	DC.W	$0001			;16682
-	BVC.S	lb_1668c		;16684: 6806
-	DC.W	$0001			;16686
-	BNE.S	lb_16622+2		;16688: 669a
-	DC.W	$0001			;1668a
-lb_1668c:
-	BNE.S	lb_16626+2		;1668c: 669a
-	DC.W	$0001			;1668e
-	DC.W	$8a4c			;16690
-	dc.w	$0000	;16692
-	dc.w	$0000	;16694
-	dc.w	$0000	;16696
-	dc.w	$0000	;16698
-	DC.W	$0002			;1669a
-	ANDI.B	#$00,47(A5)		;1669c: 022d0000002f
-	DC.W	$0000			;166a2
-	BTST	D0,(A4)+		;166a4: 011c
-	DC.W	$0000			;166a6
-	BTST	D0,#$00			;166a8: 013c0000
-	dc.w	$0000	;166ac
-	dc.w	$0000	;166ae
-	ORI.B	#$01,D0			;166b0: 00000001
-	BEQ.S	lb_166b8		;166b4: 6702
-	DC.W	$0001			;166b6
-lb_166b8:
-	BVC.S	lb_166c0		;166b8: 6806
-	DC.W	$0001			;166ba
-lb_166bc:
-	BNE.S	lb_16724		;166bc: 6666
-	DC.W	$0001			;166be
-lb_166c0:
-	BNE.S	lb_16728		;166c0: 6666
-	DC.W	$0001			;166c2
-	OR.W	-(A0),D5		;166c4: 8a60
-	dc.w	$0000	;166c6
-	dc.w	$0000	;166c8
-	dc.w	$0000	;166ca
-	dc.w	$0000	;166cc
-	DC.W	$0002			;166ce
-	ANDI.B	#$00,67(A1,D0.W)	;166d0: 023100000043
-	ORI.B	#$d4,D0			;166d6: 000000d4
-	ORI.B	#$f4,D0			;166da: 000000f4
-	dc.w	$0000	;166de
-	dc.w	$0000	;166e0
-	dc.w	$0000	;166e2
-	dc.w	$0000	;166e4
-	DC.W	$0001			;166e6
-	BEQ.S	lb_16720		;166e8: 6736
-	DC.W	$0001			;166ea
-	BNE.S	lb_16754		;166ec: 6666
-	DC.W	$0001			;166ee
-lb_166f0:
-	BEQ.S	lb_166f4		;166f0: 6702
-	DC.W	$0001			;166f2
-lb_166f4:
-	BEQ.S	lb_166f8		;166f4: 6702
-	DC.W	$0001			;166f6
-lb_166f8:
-	OR.W	0(A4,D0.W),D5		;166f8: 8a740000
-	dc.w	$0000	;166fc
-	dc.w	$0000	;166fe
-	ORI.B	#$02,D0			;16700: 00000002
-	ANDI.B	#$00,67(A6,D0.W)	;16704: 023600000043
-	DC.W	$0000			;1670a
-	BTST	D0,(A4)+		;1670c: 011c
-	DC.W	$0000			;1670e
-	BTST	D0,#$00			;16710: 013c0000
-	dc.w	$0000	;16714
-	dc.w	$0000	;16716
-	ORI.B	#$01,D0			;16718: 00000001
-	BEQ.S	lb_166f0		;1671c: 67d2
-	DC.W	$0001			;1671e
-lb_16720:
-	BNE.S	lb_166bc		;16720: 669a
-	DC.W	$0001			;16722
-lb_16724:
-	BNE.S	lb_166f4		;16724: 66ce
-	DC.W	$0001			;16726
-lb_16728:
-	BNE.S	lb_166f8		;16728: 66ce
-	DC.W	$0001			;1672a
-lb_1672c:
-	DC.W	$8a8e			;1672c
-lb_1672e:
-	dc.w	$0000	;1672e
-	dc.w	$0000	;16730
-	dc.w	$0000	;16732
-	dc.w	$0000	;16734
-	DC.W	$0002			;16736
-	DC.W	$023a			;16738
-	ORI.B	#$5e,D0			;1673a: 0000005e
-	ORI.B	#$d6,D0			;1673e: 000000d6
-	ORI.B	#$ee,D0			;16742: 000000ee
-	dc.w	$0000	;16746
-	dc.w	$0000	;16748
-	dc.w	$0000	;1674a
-	dc.w	$0000	;1674c
-	DC.W	$0001			;1674e
-	BVC.S	lb_16758		;16750: 6806
-	DC.W	$0001			;16752
-lb_16754:
-	BNE.S	lb_16724		;16754: 66ce
-	DC.W	$0001			;16756
-lb_16758:
-	BEQ.S	lb_1672c		;16758: 67d2
-	DC.W	$0001			;1675a
-	BEQ.S	lb_167c8		;1675c: 676a
-	DC.W	$0001			;1675e
-	OR.L	0(A2),D5		;16760: 8aaa0000
-	dc.w	$0000	;16764
-	dc.w	$0000	;16766
-	ORI.B	#$02,D0			;16768: 00000002
-	DC.W	$023d			;1676c
-	ORI.B	#$5e,D0			;1676e: 0000005e
-	ORI.B	#$ee,D0			;16772: 000000ee
-	DC.W	$0000			;16776
-	BTST	D0,D6			;16778: 0106
-	dc.w	$0000	;1677a
-	dc.w	$0000	;1677c
-	dc.w	$0000	;1677e
-	dc.w	$0000	;16780
-	DC.W	$0001			;16782
-	BVC.S	lb_1678c		;16784: 6806
-	DC.W	$0001			;16786
-	BNE.S	lb_16758		;16788: 66ce
-	DC.W	$0001			;1678a
-lb_1678c:
-	BEQ.S	lb_167c4		;1678c: 6736
-	DC.W	$0001			;1678e
-	BEQ.S	lb_1672e+2		;16790: 679e
-	DC.W	$0001			;16792
-lb_16794:
-	DC.W	$8abe			;16794
-lb_16796:
-	dc.w	$0000	;16796
-	dc.w	$0000	;16798
-	dc.w	$0000	;1679a
-	dc.w	$0000	;1679c
-	DC.W	$0002			;1679e
-	ANDI.W	#$0000,D0		;167a0: 02400000
-	ORI.W	#$0000,(A6)+		;167a4: 005e0000
-	BTST	D0,D6			;167a8: 0106
-	DC.W	$0000			;167aa
-	BTST	D0,(A6)+		;167ac: 011e
-	dc.w	$0000	;167ae
-	dc.w	$0000	;167b0
-	dc.w	$0000	;167b2
-	dc.w	$0000	;167b4
-	DC.W	$0001			;167b6
-	BVC.S	lb_167c0		;167b8: 6806
-	DC.W	$0001			;167ba
-	BEQ.S	lb_167c0		;167bc: 6702
-	DC.W	$0001			;167be
-lb_167c0:
-	BEQ.S	lb_1682a+2		;167c0: 676a
-	DC.W	$0001			;167c2
-lb_167c4:
-	BEQ.S	lb_16796+2		;167c4: 67d2
-	DC.W	$0001			;167c6
-lb_167c8:
-	DIVU	(A2),D5			;167c8: 8ad2
-	dc.w	$0000	;167ca
-	dc.w	$0000	;167cc
-	dc.w	$0000	;167ce
-	dc.w	$0000	;167d0
-	DC.W	$0002			;167d2
-	ANDI.W	#$0000,D3		;167d4: 02430000
-	ORI.W	#$0000,(A6)+		;167d8: 005e0000
-	BTST	D0,(A6)+		;167dc: 011e
-	DC.W	$0000			;167de
-	BTST	D0,0(A6,D0.W)		;167e0: 01360000
-	dc.w	$0000	;167e4
-	dc.w	$0000	;167e6
-	ORI.B	#$01,D0			;167e8: 00000001
-	BVC.S	lb_167f4		;167ec: 6806
-	DC.W	$0001			;167ee
-	BEQ.S	lb_167f4		;167f0: 6702
-	DC.W	$0001			;167f2
-lb_167f4:
-	BEQ.S	lb_16794		;167f4: 679e
-	DC.W	$0001			;167f6
-	BEQ.S	lb_16830		;167f8: 6736
-	DC.W	$0001			;167fa
-	DIVU	-(A6),D5		;167fc: 8ae6
-	dc.w	$0000	;167fe
-	dc.w	$0000	;16800
-	dc.w	$0000	;16802
-	dc.w	$0000	;16804
-	DC.W	$0002			;16806
-	BCLR	#0,(A1)			;16808: 08910000
-	ORI.W	#$0000,0(A6,D0.W)	;1680c: 007600000000
-	DC.W	$0000			;16812
-	DC.W	$013f			;16814
-	dc.w	$0000	;16816
-	dc.w	$0000	;16818
-	dc.w	$0000	;1681a
-	dc.w	$0000	;1681c
-	DC.W	$0001			;1681e
-	BNE.S	lb_16888		;16820: 6666
-	DC.W	$0001			;16822
-	BEQ.S	lb_1685a+2		;16824: 6736
-	dc.w	$0000	;16826
-	dc.w	$0000	;16828
-lb_1682a:
-	dc.w	$0000	;1682a
-	dc.w	$0000	;1682c
-	DC.W	$0001			;1682e
-lb_16830:
-	OR.W	D5,1(A4)		;16830: 8b6c0001
-	MOVEQ	#-56,D1			;16834: 72c8
-	dc.w	$0000	;16836
-	dc.w	$0000	;16838
-	DC.W	$0000			;1683a
-	OR.B	D2,D0			;1683c: 8002
-	ORI.B	#$10,(A0)		;1683e: 00100010
-	ORI.W	#$011f,2(A4,D0.W)	;16842: 0074011f0002
-	ORI.B	#$08,D1			;16848: 00010008
-	ORI.B	#$01,D0			;1684c: 00000001
-	DC.W	$ffff			;16850
+	dc.l	lb_2016e+1	;1652e
+	dc.l	$00010	;16532
+	dc.l	$00000	;16536
+	dc.l	$0013f	;1653a
+	dc.l	$00000	;1653e
+	dc.l	$00000	;16542
+	dc.l	$00000	;16546
+	dc.l	$00000	;1654a
+	dc.l	$00000	;1654e
+	dc.l	$00000	;16552
+	dc.l	$00000	;16556
+	dc.l	$00000	;1655a
+	dc.l	$00000	;1655e
+	dc.l	lb_20196	;16562
+	dc.l	$00017	;16566
+	dc.l	$00000	;1656a
+	dc.l	$0013f	;1656e
+	dc.l	$00000	;16572
+	dc.l	$00000	;16576
+	dc.l	$00000	;1657a
+	dc.l	$00000	;1657e
+	dc.l	$00000	;16582
+	dc.l	$00000	;16586
+	dc.l	$00000	;1658a
+	dc.l	$00000	;1658e
+	dc.l	$00000	;16592
+	dc.l	lb_201be+1	;16596
+	dc.l	$0002f	;1659a
+	dc.l	$00000	;1659e
+	dc.l	$0013f	;165a2
+	dc.l	$00000	;165a6
+	dc.l	$00000	;165aa
+	dc.l	$00000	;165ae
+	dc.l	$00000	;165b2
+	dc.l	$00000	;165b6
+	dc.l	$00000	;165ba
+	dc.l	$00000	;165be
+	dc.l	$00000	;165c2
+	dc.l	$00000	;165c6
+	dc.l	lb_201da	;165ca
+	dc.l	$00043	;165ce
+	dc.l	$00000	;165d2
+	dc.l	$0013f	;165d6
+	dc.l	$00000	;165da
+	dc.l	$00000	;165de
+	dc.l	$00000	;165e2
+	dc.l	$00000	;165e6
+	dc.l	$00000	;165ea
+	dc.l	$00000	;165ee
+	dc.l	$00000	;165f2
+	dc.l	$00000	;165f6
+	dc.l	$00000	;165fa
+	dc.l	lb_201f4+1	;165fe
+	dc.l	$00057	;16602
+	dc.l	$00000	;16606
+	dc.l	$0013f	;1660a
+	dc.l	$00000	;1660e
+	dc.l	$00000	;16612
+	dc.l	$00000	;16616
+	dc.l	$00000	;1661a
+	dc.l	$00000	;1661e
+	dc.l	$00000	;16622
+	dc.l	$00000	;16626
+	dc.l	$00000	;1662a
+	dc.l	$00000	;1662e
+	dc.l	lb_2020e	;16632
+	dc.l	$0005e	;16636
+	dc.l	$00000	;1663a
+	dc.l	$0013f	;1663e
+	dc.l	$00000	;16642
+	dc.l	$00000	;16646
+	dc.l	$00000	;1664a
+	dc.l	$00000	;1664e
+	dc.l	$00000	;16652
+	dc.l	$00000	;16656
+	dc.l	$00000	;1665a
+	dc.l	$00000	;1665e
+	dc.l	$00000	;16662
+lb_16666:
+	dc.l	lb_20228+1	;16666
+	dc.l	$0002f	;1666a
+	dc.l	$000d4	;1666e
+	dc.l	$000f4	;16672
+	dc.l	$00000	;16676
+	dc.l	$00000	;1667a
+	dc.l	lb_166ce	;1667e
+	dc.l	lb_16806	;16682
+	dc.l	lb_1669a	;16686
+	dc.l	lb_1669a	;1668a
+	dc.l	lb_18a4c	;1668e
+	dc.l	$00000	;16692
+	dc.l	$00000	;16696
+lb_1669a:
+	dc.l	lb_2022c+1	;1669a
+	dc.l	$0002f	;1669e
+	dc.l	$0011c	;166a2
+	dc.l	$0013c	;166a6
+	dc.l	$00000	;166aa
+	dc.l	$00000	;166ae
+	dc.l	lb_16702	;166b2
+	dc.l	lb_16806	;166b6
+	dc.l	lb_16666	;166ba
+	dc.l	lb_16666	;166be
+	dc.l	lb_18a60	;166c2
+	dc.l	$00000	;166c6
+	dc.l	$00000	;166ca
+lb_166ce:
+	dc.l	lb_20230+1	;166ce
+	dc.l	$00043	;166d2
+	dc.l	$000d4	;166d6
+	dc.l	$000f4	;166da
+	dc.l	$00000	;166de
+	dc.l	$00000	;166e2
+	dc.l	lb_16736	;166e6
+	dc.l	lb_16666	;166ea
+	dc.l	lb_16702	;166ee
+	dc.l	lb_16702	;166f2
+	dc.l	lb_18a74	;166f6
+	dc.l	$00000	;166fa
+	dc.l	$00000	;166fe
+lb_16702:
+	dc.l	lb_20236	;16702
+	dc.l	$00043	;16706
+	dc.l	$0011c	;1670a
+	dc.l	$0013c	;1670e
+	dc.l	$00000	;16712
+	dc.l	$00000	;16716
+	dc.l	lb_167d2	;1671a
+	dc.l	lb_1669a	;1671e
+	dc.l	lb_166ce	;16722
+	dc.l	lb_166ce	;16726
+	dc.l	lb_18a8e	;1672a
+	dc.l	$00000	;1672e
+	dc.l	$00000	;16732
+lb_16736:
+	dc.l	lb_2023a	;16736
+	dc.l	$0005e	;1673a
+	dc.l	$000d6	;1673e
+	dc.l	$000ee	;16742
+	dc.l	$00000	;16746
+	dc.l	$00000	;1674a
+	dc.l	lb_16806	;1674e
+	dc.l	lb_166ce	;16752
+	dc.l	lb_167d2	;16756
+	dc.l	lb_1676a	;1675a
+	dc.l	lb_18aaa	;1675e
+	dc.l	$00000	;16762
+	dc.l	$00000	;16766
+lb_1676a:
+	dc.l	lb_2023c+1	;1676a
+	dc.l	$0005e	;1676e
+	dc.l	$000ee	;16772
+	dc.l	$00106	;16776
+	dc.l	$00000	;1677a
+	dc.l	$00000	;1677e
+	dc.l	lb_16806	;16782
+	dc.l	lb_166ce	;16786
+	dc.l	lb_16736	;1678a
+	dc.l	lb_1679e	;1678e
+	dc.l	lb_18abe	;16792
+	dc.l	$00000	;16796
+	dc.l	$00000	;1679a
+lb_1679e:
+	dc.l	lb_20240	;1679e
+	dc.l	$0005e	;167a2
+	dc.l	$00106	;167a6
+	dc.l	$0011e	;167aa
+	dc.l	$00000	;167ae
+	dc.l	$00000	;167b2
+	dc.l	lb_16806	;167b6
+	dc.l	lb_16702	;167ba
+	dc.l	lb_1676a	;167be
+	dc.l	lb_167d2	;167c2
+	dc.l	lb_18ad2	;167c6
+	dc.l	$00000	;167ca
+	dc.l	$00000	;167ce
+lb_167d2:
+	dc.l	lb_20242+1	;167d2
+	dc.l	$0005e	;167d6
+	dc.l	$0011e	;167da
+	dc.l	$00136	;167de
+	dc.l	$00000	;167e2
+	dc.l	$00000	;167e6
+	dc.l	lb_16806	;167ea
+	dc.l	lb_16702	;167ee
+	dc.l	lb_1679e	;167f2
+	dc.l	lb_16736	;167f6
+	dc.l	lb_18ae6	;167fa
+	dc.l	$00000	;167fe
+	dc.l	$00000	;16802
+lb_16806:
+	dc.l	lb_20890+1	;16806
+	dc.l	$00076	;1680a
+	dc.l	$00000	;1680e
+	dc.l	$0013f	;16812
+	dc.l	$00000	;16816
+	dc.l	$00000	;1681a
+	dc.l	lb_16666	;1681e
+	dc.l	lb_16736	;16822
+	dc.l	$00000	;16826
+	dc.l	$00000	;1682a
+	dc.l	lb_18b6c	;1682e
+	dc.l	lb_172c8	;16832
+	dc.l	$00000	;16836
+	dc.l	$08002	;1683a
+	dc.l	$100010	;1683e
+	dc.l	$74011f	;16842
+	dc.l	$20000+1	;16846
+	dc.l	$80000	;1684a
+	dc.l	$1fffe+1	;1684e
 lb_16852:
-	DC.W	$0002			;16852
-	BCHG	D4,-(A4)		;16854: 0964
-	ORI.B	#$0f,D0			;16856: 0000000f
-lb_1685a:
-	dc.w	$0000	;1685a
-	dc.w	$0000	;1685c
-	DC.W	$0000			;1685e
-	DC.W	$013f			;16860
-	dc.w	$0000	;16862
-	dc.w	$0000	;16864
-	dc.w	$0000	;16866
-	dc.w	$0000	;16868
-	dc.w	$0000	;1686a
-	dc.w	$0000	;1686c
-	dc.w	$0000	;1686e
-	dc.w	$0000	;16870
-	dc.w	$0000	;16872
-	dc.w	$0000	;16874
-	dc.w	$0000	;16876
-	dc.w	$0000	;16878
-	dc.w	$0000	;1687a
-	dc.w	$0000	;1687c
-	dc.w	$0000	;1687e
-	dc.w	$0000	;16880
-	dc.w	$0000	;16882
-	dc.w	$0000	;16884
-	DC.W	$0002			;16886
-lb_16888:
-	MOVEP	D4,0(A2)		;16888: 098a0000
-	ORI.B	#$00,(A6)		;1688c: 00160000
-	dc.w	$0000	;16890
-	dc.w	$0000	;16892
-	DC.W	$013f			;16894
-	dc.w	$0000	;16896
-	dc.w	$0000	;16898
-	dc.w	$0000	;1689a
-	dc.w	$0000	;1689c
-	dc.w	$0000	;1689e
-	dc.w	$0000	;168a0
-	dc.w	$0000	;168a2
-	dc.w	$0000	;168a4
-	dc.w	$0000	;168a6
-	dc.w	$0000	;168a8
-	dc.w	$0000	;168aa
-	dc.w	$0000	;168ac
-	dc.w	$0000	;168ae
-	dc.w	$0000	;168b0
-	dc.w	$0000	;168b2
-	dc.w	$0000	;168b4
-	dc.w	$0000	;168b6
-	dc.w	$0000	;168b8
-	DC.W	$0002			;168ba
-	BCLR	D4,0(A1,D0.W)		;168bc: 09b10000
-	ORI.B	#$00,(A5)+		;168c0: 001d0000
-	dc.w	$0000	;168c4
-	dc.w	$0000	;168c6
-	DC.W	$013f			;168c8
-	dc.w	$0000	;168ca
-	dc.w	$0000	;168cc
-	dc.w	$0000	;168ce
-	dc.w	$0000	;168d0
-	dc.w	$0000	;168d2
-	dc.w	$0000	;168d4
-	dc.w	$0000	;168d6
-	dc.w	$0000	;168d8
-	dc.w	$0000	;168da
-	dc.w	$0000	;168dc
-	dc.w	$0000	;168de
-	dc.w	$0000	;168e0
-	dc.w	$0000	;168e2
-	dc.w	$0000	;168e4
-	dc.w	$0000	;168e6
-	dc.w	$0000	;168e8
-	dc.w	$0000	;168ea
-	dc.w	$0000	;168ec
-	DC.W	$0002			;168ee
-	BSET	D4,(A0)+		;168f0: 09d8
-	ORI.B	#$2b,D0			;168f2: 0000002b
-	dc.w	$0000	;168f6
-	dc.w	$0000	;168f8
-	DC.W	$0000			;168fa
-lb_168fc:
-	DC.W	$013f			;168fc
-	DC.W	$0000			;168fe
-lb_16900:
-	SUBQ.L	#3,A4			;16900: 578c
-	dc.w	$0000	;16902
-	dc.w	$0000	;16904
-	dc.w	$0000	;16906
-	dc.w	$0000	;16908
-	dc.w	$0000	;1690a
-	dc.w	$0000	;1690c
-	dc.w	$0000	;1690e
-	dc.w	$0000	;16910
-	dc.w	$0000	;16912
-	dc.w	$0000	;16914
-	dc.w	$0000	;16916
-	dc.w	$0000	;16918
-	dc.w	$0000	;1691a
-	dc.w	$0000	;1691c
-	dc.w	$0000	;1691e
-	dc.w	$0000	;16920
-	DC.W	$0002			;16922
-	MOVEP.W	0(A6),D4		;16924: 090e0000
-	ORI.W	#$0000,D1		;16928: 00410000
-	dc.w	$0000	;1692c
-	dc.w	$0000	;1692e
-	DC.W	$013f			;16930
-	dc.w	$0000	;16932
-	dc.w	$0000	;16934
-	dc.w	$0000	;16936
-	dc.w	$0000	;16938
-	DC.W	$0001			;1693a
-	BVS.S	lb_16994		;1693c: 6956
-	DC.W	$0001			;1693e
-	BVS.S	lb_16900		;16940: 69be
-	dc.w	$0000	;16942
-	dc.w	$0000	;16944
-	dc.w	$0000	;16946
-	dc.w	$0000	;16948
-	DC.W	$0001			;1694a
-	OR.L	D3,1(A4,D0.W)		;1694c: 87b40001
-	MOVEQ	#-56,D1			;16950: 72c8
-	dc.w	$0000	;16952
-	dc.w	$0000	;16954
-	DC.W	$0002			;16956
-	BTST	D4,0(A6)		;16958: 092e0000
-	DC.W	$004b			;1695c
-	dc.w	$0000	;1695e
-	dc.w	$0000	;16960
-	DC.W	$0000			;16962
-lb_16964:
-	DC.W	$013f			;16964
-lb_16966:
-	dc.w	$0000	;16966
-	dc.w	$0000	;16968
-	dc.w	$0000	;1696a
-	dc.w	$0000	;1696c
-	DC.W	$0001			;1696e
-	BVS.S	lb_168fc		;16970: 698a
-	DC.W	$0001			;16972
-	BVS.S	lb_16998		;16974: 6922
-	dc.w	$0000	;16976
-	dc.w	$0000	;16978
-	dc.w	$0000	;1697a
-	dc.w	$0000	;1697c
-	DC.W	$0001			;1697e
-	OR.B	D3,-(A4)		;16980: 8724
-	DC.W	$0001			;16982
-	MOVEQ	#-56,D1			;16984: 72c8
-	dc.w	$0000	;16986
-	dc.w	$0000	;16988
-	DC.W	$0002			;1698a
-	MOVEP.L	0(A6),D4		;1698c: 094e0000
-	ORI.W	#$0000,(A2)+		;16990: 005a0000
-lb_16994:
-	dc.w	$0000	;16994
-	dc.w	$0000	;16996
-lb_16998:
-	DC.W	$013f			;16998
-	dc.w	$0000	;1699a
-	dc.w	$0000	;1699c
+	dc.l	lb_20964	;16852
+	dc.l	$0000f	;16856
+	dc.l	$00000	;1685a
+	dc.l	$0013f	;1685e
+	dc.l	$00000	;16862
+	dc.l	$00000	;16866
+	dc.l	$00000	;1686a
+	dc.l	$00000	;1686e
+	dc.l	$00000	;16872
+	dc.l	$00000	;16876
+	dc.l	$00000	;1687a
+	dc.l	$00000	;1687e
+	dc.l	$00000	;16882
+	dc.l	lb_2098a	;16886
+	dc.l	$00016	;1688a
+	dc.l	$00000	;1688e
+	dc.l	$0013f	;16892
+	dc.l	$00000	;16896
+	dc.l	$00000	;1689a
+	dc.l	$00000	;1689e
+	dc.l	$00000	;168a2
+	dc.l	$00000	;168a6
+	dc.l	$00000	;168aa
+	dc.l	$00000	;168ae
+	dc.l	$00000	;168b2
+	dc.l	$00000	;168b6
+	dc.l	lb_209b0+1	;168ba
+	dc.l	$0001d	;168be
+	dc.l	$00000	;168c2
+	dc.l	$0013f	;168c6
+	dc.l	$00000	;168ca
+	dc.l	$00000	;168ce
+	dc.l	$00000	;168d2
+	dc.l	$00000	;168d6
+	dc.l	$00000	;168da
+	dc.l	$00000	;168de
+	dc.l	$00000	;168e2
+	dc.l	$00000	;168e6
+	dc.l	$00000	;168ea
+	dc.l	lb_209d8	;168ee
+	dc.l	$0002b	;168f2
+	dc.l	$00000	;168f6
+	dc.l	$0013f	;168fa
+	dc.l	$0578c	;168fe
+	dc.l	$00000	;16902
+	dc.l	$00000	;16906
+	dc.l	$00000	;1690a
+	dc.l	$00000	;1690e
+	dc.l	$00000	;16912
+	dc.l	$00000	;16916
+	dc.l	$00000	;1691a
+	dc.l	$00000	;1691e
+lb_16922:
+	dc.l	lb_2090e	;16922
+	dc.l	$00041	;16926
+	dc.l	$00000	;1692a
+	dc.l	$0013f	;1692e
+	dc.l	$00000	;16932
+	dc.l	$00000	;16936
+	dc.l	lb_16956	;1693a
+	dc.l	lb_169be	;1693e
+	dc.l	$00000	;16942
+	dc.l	$00000	;16946
+	dc.l	lb_187b4	;1694a
+	dc.l	lb_172c8	;1694e
+	dc.l	$00000	;16952
+lb_16956:
+	dc.l	lb_2092e	;16956
+	dc.l	$0004b	;1695a
+	dc.l	$00000	;1695e
+	dc.l	$0013f	;16962
+	dc.l	$00000	;16966
+	dc.l	$00000	;1696a
+	dc.l	lb_1698a	;1696e
+	dc.l	lb_16922	;16972
+	dc.l	$00000	;16976
+	dc.l	$00000	;1697a
+	dc.l	lb_18724	;1697e
+	dc.l	lb_172c8	;16982
+	dc.l	$00000	;16986
+lb_1698a:
+	dc.l	lb_2094e	;1698a
+	dc.l	$0005a	;1698e
+	dc.l	$00000	;16992
+	dc.l	$0013f	;16996
+	dc.l	$00000	;1699a
 lb_1699e:
-	dc.w	$0000	;1699e
-	dc.w	$0000	;169a0
-	DC.W	$0001			;169a2
-	BVS.S	lb_16964		;169a4: 69be
-	DC.W	$0001			;169a6
-	BVS.S	lb_169fe+2		;169a8: 6956
-	dc.w	$0000	;169aa
-	dc.w	$0000	;169ac
-	dc.w	$0000	;169ae
-	dc.w	$0000	;169b0
-	DC.W	$0001			;169b2
-	OR.W	D4,D4			;169b4: 8844
-	DC.W	$0001			;169b6
-	MOVEQ	#-56,D1			;169b8: 72c8
-	dc.w	$0000	;169ba
-	dc.w	$0000	;169bc
-	DC.W	$0002			;169be
-	BCHG	#0,106(A5)		;169c0: 086d0000006a
-	dc.w	$0000	;169c6
-	dc.w	$0000	;169c8
-	DC.W	$0000			;169ca
-	DC.W	$013f			;169cc
-	dc.w	$0000	;169ce
-	dc.w	$0000	;169d0
-	dc.w	$0000	;169d2
-	dc.w	$0000	;169d4
-	DC.W	$0001			;169d6
-	BVS.S	lb_169fc		;169d8: 6922
-	DC.W	$0001			;169da
-	BVS.S	lb_16966+2		;169dc: 698a
-	dc.w	$0000	;169de
-	dc.w	$0000	;169e0
-	dc.w	$0000	;169e2
-	dc.w	$0000	;169e4
-	DC.W	$0001			;169e6
-	MOVEQ	#-56,D1			;169e8: 72c8
-	DC.W	$0001			;169ea
-	MOVEQ	#-56,D1			;169ec: 72c8
-	dc.w	$0000	;169ee
-	dc.w	$0000	;169f0
-	DC.W	$0000			;169f2
-	OR.B	D2,D0			;169f4: 8002
+	dc.l	$00000	;1699e
+	dc.l	lb_169be	;169a2
+	dc.l	lb_16956	;169a6
+	dc.l	$00000	;169aa
+	dc.l	$00000	;169ae
+	dc.l	lb_18844	;169b2
+	dc.l	lb_172c8	;169b6
+	dc.l	$00000	;169ba
+lb_169be:
+	dc.l	lb_2086c+1	;169be
+	dc.l	$0006a	;169c2
+	dc.l	$00000	;169c6
+	dc.l	$0013f	;169ca
+	dc.l	$00000	;169ce
+	dc.l	$00000	;169d2
+	dc.l	lb_16922	;169d6
+	dc.l	lb_1698a	;169da
+	dc.l	$00000	;169de
+	dc.l	$00000	;169e2
+	dc.l	lb_172c8	;169e6
+	dc.l	lb_172c8	;169ea
+	dc.l	$00000	;169ee
+	dc.l	$08002	;169f2
 lb_169f6:
-	dc.w	$0000	;169f6
-	dc.w	$0000	;169f8
-	DC.W	$001c			;169fa
-lb_169fc:
-	DC.W	$013f			;169fc
-lb_169fe:
-	ORI.B	#$00,(A0)		;169fe: 00100000
+	dc.l	$00000	;169f6
+	dc.l	$1c013f	;169fa
+	dc.w	$0010	;169fe
+lb_16a00:
+	dc.w	$0000	;16a00
 	dc.w	$0000	;16a02
 	dc.w	$0000	;16a04
 	dc.w	$0000	;16a06
@@ -23622,8 +21301,8 @@ lb_169fe:
 	dc.w	$0000	;16a0c
 	dc.w	$0000	;16a0e
 	dc.w	$0000	;16a10
-	DC.W	$0000			;16a12
-	DC.W	$ffff			;16a14
+	dc.w	$0000	;16a12
+	dc.w	$ffff	;16a14
 lb_16a16:
 	ORI.B	#$04,D1			;16a16: 00010004
 lb_16a1a:
@@ -23906,7 +21585,7 @@ lb_16dfc:
 	TST.W	lb_16a16		;16e06: 4a7900016a16
 	RTS				;16e0c: 4e75
 lb_16e0e:
-	LEA	lb_169fe+2,A0		;16e0e: 41f900016a00
+	LEA	lb_16a00,A0		;16e0e: 41f900016a00
 	MOVE.B	#$00,8(A0)		;16e14: 117c00000008
 	MOVE.B	#$ff,9(A0)		;16e1a: 117c00ff0009
 	MOVE.W	#$0007,D7		;16e20: 3e3c0007
@@ -24200,6 +21879,7 @@ lb_1727e:
 	SUBI.L	#$0001230e,D1		;1728e: 04810001230e
 	LSL.W	#2,D0			;17294: e548
 	BRA.S	lb_1725c		;17296: 60c4
+lb_17298:
 	CMPI.W	#$0005,EXT_01f6.W	;17298: 0c78000555b0
 	BNE.W	lb_172bc		;1729e: 6600001c
 	TST.W	EXT_02e4.W		;172a2: 4a785d3e
@@ -24423,10 +22103,12 @@ lb_175ba:
 	CLR.L	EXT_02ab.W		;175d2: 42b85b50
 	JSR	lb_16e7c		;175d6: 4eb900016e7c
 	RTS				;175dc: 4e75
+lb_175de:
 	JSR	lb_0a378		;175de: 4eb90000a378
 	CLR.W	EXT_0249.W		;175e4: 42785694
 	MOVE.W	#$0001,EXT_01f5.W	;175e8: 31fc000155ae
 	BRA.W	lb_17636		;175ee: 60000046
+lb_175f2:
 	JSR	lb_0a378		;175f2: 4eb90000a378
 	CLR.W	EXT_01f5.W		;175f8: 427855ae
 	CLR.W	EXT_0249.W		;175fc: 42785694
@@ -24438,6 +22120,7 @@ lb_175ba:
 	MOVE.L	#lb_139ea,EXT_0255.W	;17616: 21fc000139ea56ac
 	LEA	lb_14d04+2,A0		;1761e: 41f900014d06
 	BRA.W	lb_1722c		;17624: 6000fc06
+lb_17628:
 	JSR	lb_0a378		;17628: 4eb90000a378
 	CLR.W	EXT_01f5.W		;1762e: 427855ae
 	CLR.W	EXT_0249.W		;17632: 42785694
@@ -24449,7 +22132,7 @@ lb_17636:
 	MOVE.W	#$ffff,EXT_025f.W	;1764a: 31fcffff56ee
 	JSR	lb_17e74		;17650: 4eb900017e74
 	JSR	lb_2fc9a		;17656: 4eb90002fc9a
-	LEA	lb_139e8+2,A0		;1765c: 41f9000139ea
+	LEA	lb_139ea,A0		;1765c: 41f9000139ea
 	BRA.W	lb_1722c		;17662: 6000fbc8
 lb_17666:
 	JSR	lb_0a378		;17666: 4eb90000a378
@@ -24479,6 +22162,7 @@ lb_176a4:
 	MOVE.L	#lb_139ea,EXT_0255.W	;176dc: 21fc000139ea56ac
 	LEA	lb_151c8+2,A0		;176e4: 41f9000151ca
 	BRA.W	lb_1722c		;176ea: 6000fb40
+lb_176ee:
 	MOVE.W	EXT_024a.W,D0		;176ee: 30385696
 	JSR	lb_17582		;176f2: 4eb900017582
 	BEQ.W	lb_175ba		;176f8: 6700fec0
@@ -24501,11 +22185,11 @@ lb_17744:
 	BRA.W	lb_1722c		;17750: 6000fada
 lb_17754:
 	JSR	lb_177b4		;17754: 4eb9000177b4
-	LEA	lb_12cfc+2,A0		;1775a: 41f900012cfe
+	LEA	lb_12cfe,A0		;1775a: 41f900012cfe
 	BRA.W	lb_1722c		;17760: 6000faca
 lb_17764:
 	JSR	lb_177b4		;17764: 4eb9000177b4
-	LEA	lb_12e18+2,A0		;1776a: 41f900012e1a
+	LEA	lb_12e1a,A0		;1776a: 41f900012e1a
 	BRA.W	lb_1722c		;17770: 6000faba
 lb_17774:
 	JSR	lb_177b4		;17774: 4eb9000177b4
@@ -24573,11 +22257,13 @@ lb_17842:
 	MOVE.W	#$3200,D2		;1784c: 343c3200
 	MOVE.W	#$3600,D3		;17850: 363c3600
 	BRA.W	lb_178d8		;17854: 60000082
+lb_17858:
 	LEA	lb_159f4+2,A0		;17858: 41f9000159f6
 	MOVE.W	#$0003,D1		;1785e: 323c0003
 	MOVE.W	#$3300,D2		;17862: 343c3300
 	MOVE.W	#$3500,D3		;17866: 363c3500
 	BRA.W	lb_178d8		;1786a: 6000006c
+lb_1786e:
 	LEA	lb_15b44+2,A0		;1786e: 41f900015b46
 	MOVE.W	#$0004,D1		;17874: 323c0004
 	MOVE.W	#$3400,D2		;17878: 343c3400
@@ -24589,16 +22275,19 @@ lb_17884:
 	MOVE.W	#$3500,D2		;1788e: 343c3500
 	MOVE.W	#$3300,D3		;17892: 363c3300
 	BRA.W	lb_178d8		;17896: 60000040
+lb_1789a:
 	LEA	lb_15e80+2,A0		;1789a: 41f900015e82
 	MOVE.W	#$0006,D1		;178a0: 323c0006
 	MOVE.W	#$3600,D2		;178a4: 343c3600
 	MOVE.W	#$3200,D3		;178a8: 363c3200
 	BRA.W	lb_178d8		;178ac: 6000002a
+lb_178b0:
 	LEA	lb_1606c+2,A0		;178b0: 41f90001606e
 	MOVE.W	#$0007,D1		;178b6: 323c0007
 	MOVE.W	#$3700,D2		;178ba: 343c3700
 	MOVE.W	#$3100,D3		;178be: 363c3100
 	BRA.W	lb_178d8		;178c2: 60000014
+lb_178c6:
 	LEA	lb_1628c+2,A0		;178c6: 41f90001628e
 	MOVE.W	#$0008,D1		;178cc: 323c0008
 	MOVE.W	#$3800,D2		;178d0: 343c3800
@@ -24613,8 +22302,9 @@ lb_178d8:
 	MOVE.W	D0,EXT_024b.W		;178f0: 31c05698
 	MOVE.W	#$0000,EXT_024c.W	;178f4: 31fc0000569a
 	BRA.W	lb_1722c		;178fa: 6000f930
+lb_178fe:
 	JSR	lb_2fc9a		;178fe: 4eb90002fc9a
-	LEA	lb_139e8+2,A0		;17904: 41f9000139ea
+	LEA	lb_139ea,A0		;17904: 41f9000139ea
 	BRA.W	lb_1722c		;1790a: 6000f920
 lb_1790e:
 	DC.W	$0000			;1790e
@@ -24686,6 +22376,7 @@ lb_17a2c:
 	MOVEM.W	EXT_02b9.W,D0-D1	;17a68: 4cb800035b98
 	MOVEM.W	D0-D1,EXT_02b5.W	;17a6e: 48b800035b90
 	RTS				;17a74: 4e75
+lb_17a76:
 	JSR	lb_17b54		;17a76: 4eb900017b54
 	MOVE.W	EXT_017a.W,-(A7)	;17a7c: 3f3853e4
 	MOVE.W	EXT_017b.W,-(A7)	;17a80: 3f3853e6
@@ -24706,6 +22397,7 @@ lb_17a2c:
 	MOVE.W	(A7)+,EXT_017b.W	;17ad4: 31df53e6
 	MOVE.W	(A7)+,EXT_017a.W	;17ad8: 31df53e4
 	BRA.W	lb_17b22		;17adc: 60000044
+lb_17ae0:
 	JSR	lb_17b54		;17ae0: 4eb900017b54
 	JSR	lb_43684		;17ae6: 4eb900043684
 	JSR	lb_425d4		;17aec: 4eb9000425d4
@@ -25575,7 +23267,7 @@ lb_18560:
 	JSR	lb_18582		;18566: 4eb900018582
 	JSR	lb_17e74		;1856c: 4eb900017e74
 	JSR	lb_2fc9a		;18572: 4eb90002fc9a
-	LEA	lb_139e8+2,A0		;18578: 41f9000139ea
+	LEA	lb_139ea,A0		;18578: 41f9000139ea
 	BRA.W	lb_1722c		;1857e: 6000ecac
 lb_18582:
 	CMPI.W	#$0013,D1		;18582: 0c410013
@@ -25674,7 +23366,7 @@ lb_186b6:
 	JSR	lb_186e0		;186c2: 4eb9000186e0
 	BRA.S	lb_186b6		;186c8: 60ec
 lb_186ca:
-	LEA	lb_169fe+2,A5		;186ca: 4bf900016a00
+	LEA	lb_16a00,A5		;186ca: 4bf900016a00
 	MOVE.W	#$0007,D7		;186d0: 3e3c0007
 lb_186d4:
 	MOVE.B	#$5b,0(A5,D7.W)		;186d4: 1bbc005b7000
@@ -25688,8 +23380,10 @@ lb_186e4:
 	MOVE.W	#$0000,8(A0)		;186ee: 317c00000008
 	MOVE.W	#$ffff,10(A0)		;186f4: 317cffff000a
 	RTS				;186fa: 4e75
-	LEA	lb_130ec+2,A0		;186fc: 41f9000130ee
+lb_186fc:
+	LEA	lb_130ee,A0		;186fc: 41f9000130ee
 	BRA.W	lb_1722c		;18702: 6000eb28
+lb_18706:
 	LEA	lb_13c8a,A0		;18706: 41f900013c8a
 	TST.W	EXT_0201.W		;1870c: 4a7855c8
 	BEQ.W	lb_18720		;18710: 6700000e
@@ -25697,6 +23391,7 @@ lb_186e4:
 	LEA	lb_16852,A0		;1871a: 41f900016852
 lb_18720:
 	BRA.W	lb_1722c		;18720: 6000eb0a
+lb_18724:
 	CMPI.W	#$0004,EXT_01f6.W	;18724: 0c78000455b0
 	BNE.W	lb_1877c		;1872a: 66000050
 	MOVE.W	EXT_0179.W,-(A7)	;1872e: 3f3853e2
@@ -25774,6 +23469,7 @@ lb_1883a:
 	MOVE.B	#$00,(A3)+		;1883a: 16fc0000
 	MOVE.B	#$00,(A3)+		;1883e: 16fc0000
 	RTS				;18842: 4e75
+lb_18844:
 	JSR	lb_187b4		;18844: 4eb9000187b4
 	TST.W	EXT_0201.W		;1884a: 4a7855c8
 	BEQ.W	lb_18866		;1884e: 67000016
@@ -25783,6 +23479,7 @@ lb_1883a:
 	BRA.W	lb_1722c		;18862: 6000e9c8
 lb_18866:
 	RTS				;18866: 4e75
+lb_18868:
 	JSR	lb_43684		;18868: 4eb900043684
 	MOVE.W	#$0001,EXT_0151.W	;1886e: 31fc0001535e
 	MOVE.W	#$0001,EXT_02ac.W	;18874: 31fc00015b54
@@ -25812,20 +23509,27 @@ lb_1889a:
 	MOVE.W	#$0001,EXT_017b.W	;188d8: 31fc000153e6
 	MOVE.W	#$0001,EXT_02ac.W	;188de: 31fc00015b54
 	RTS				;188e4: 4e75
+lb_188e6:
 	LEA	lb_144f2,A0		;188e6: 41f9000144f2
 	BRA.W	lb_1722c		;188ec: 6000e93e
+lb_188f0:
 	LEA	lb_132a6,A0		;188f0: 41f9000132a6
 	BRA.W	lb_1722c		;188f6: 6000e934
+lb_188fa:
 	LEA	lb_1652e,A0		;188fa: 41f90001652e
 	JSR	lb_1722c		;18900: 4eb90001722c
 	JSR	lb_18afa		;18906: 4eb900018afa
 	RTS				;1890c: 4e75
+lb_1890e:
 	JSR	lb_52348		;1890e: 4eb900052348
 	BRA.W	lb_18932		;18914: 6000001c
+lb_18918:
 	JSR	lb_52354		;18918: 4eb900052354
 	BRA.W	lb_18932		;1891e: 60000012
+lb_18922:
 	JSR	lb_52362		;18922: 4eb900052362
 	BRA.W	lb_18932		;18928: 60000008
+lb_1892c:
 	JSR	lb_52372		;1892c: 4eb900052372
 lb_18932:
 	TST.W	lb_519ac		;18932: 4a79000519ac
@@ -25936,37 +23640,45 @@ lb_18a40:
 	MOVEM.W	(A1),D0-D4		;18a40: 4c91001f
 	JSR	lb_1b514		;18a44: 4eb90001b514
 	RTS				;18a4a: 4e75
+lb_18a4c:
 	LEA	lb_1899c,A0		;18a4c: 41f90001899c
 	JSR	lb_18a1c		;18a52: 4eb900018a1c
 	MOVE.W	#$0000,EXT_023b.W	;18a58: 31fc00005678
 	RTS				;18a5e: 4e75
+lb_18a60:
 	LEA	lb_189a8,A0		;18a60: 41f9000189a8
 	JSR	lb_18a1c		;18a66: 4eb900018a1c
 	MOVE.W	#$0001,EXT_023b.W	;18a6c: 31fc00015678
 	RTS				;18a72: 4e75
+lb_18a74:
 	LEA	lb_189b4,A0		;18a74: 41f9000189b4
 	JSR	lb_18a1c		;18a7a: 4eb900018a1c
 	MOVE.W	#$0001,EXT_023c.W	;18a80: 31fc0001567a
 	JSR	lb_108fc		;18a86: 4eb9000108fc
 	RTS				;18a8c: 4e75
+lb_18a8e:
 	LEA	lb_189c0,A0		;18a8e: 41f9000189c0
 	JSR	lb_18a1c		;18a94: 4eb900018a1c
 	MOVE.W	#$0000,EXT_023c.W	;18a9a: 31fc0000567a
 	CLR.W	EXT_0236.W		;18aa0: 4278566e
 	CLR.W	EXT_0237.W		;18aa4: 42785670
 	RTS				;18aa8: 4e75
+lb_18aaa:
 	LEA	lb_189cc,A0		;18aaa: 41f9000189cc
 	JSR	lb_18a1c		;18ab0: 4eb900018a1c
 	MOVE.W	#$0001,EXT_023d.W	;18ab6: 31fc0001567c
 	RTS				;18abc: 4e75
+lb_18abe:
 	LEA	lb_189e0,A0		;18abe: 41f9000189e0
 	JSR	lb_18a1c		;18ac4: 4eb900018a1c
 	MOVE.W	#$0002,EXT_023d.W	;18aca: 31fc0002567c
 	RTS				;18ad0: 4e75
+lb_18ad2:
 	LEA	lb_189f4,A0		;18ad2: 41f9000189f4
 	JSR	lb_18a1c		;18ad8: 4eb900018a1c
 	MOVE.W	#$0003,EXT_023d.W	;18ade: 31fc0003567c
 	RTS				;18ae4: 4e75
+lb_18ae6:
 	LEA	lb_18a08,A0		;18ae6: 41f900018a08
 	JSR	lb_18a1c		;18aec: 4eb900018a1c
 	MOVE.W	#$0004,EXT_023d.W	;18af2: 31fc0004567c
@@ -25997,6 +23709,7 @@ lb_18b28:
 lb_18b64:
 	JSR	lb_18a1c		;18b64: 4eb900018a1c
 	RTS				;18b6a: 4e75
+lb_18b6c:
 	JSR	lb_0f092		;18b6c: 4eb90000f092
 	JSR	lb_172c8		;18b72: 4eb9000172c8
 	RTS				;18b78: 4e75
@@ -26005,6 +23718,7 @@ lb_18b7a:
 	JSR	lb_40946		;18b7e: 4eb900040946
 	LEA	lb_1345e,A0		;18b84: 41f90001345e
 	BRA.W	lb_1722c		;18b8a: 6000e6a0
+lb_18b8e:
 	CLR.W	EXT_0170.W		;18b8e: 427853ba
 	MOVE.L	EXT_02a9.W,D0		;18b92: 20385b48
 	SUBI.L	#$0001264e,D0		;18b96: 04800001264e
@@ -26180,6 +23894,7 @@ lb_18da4:
 lb_18e00:
 	MOVEM.L	(A7)+,D7/A0-A3		;18e00: 4cdf0f80
 	RTS				;18e04: 4e75
+lb_18e06:
 	CMPI.W	#$0005,EXT_01f6.W	;18e06: 0c78000555b0
 	BNE.W	lb_18e2c		;18e0c: 6600001e
 	TST.W	EXT_0249.W		;18e10: 4a785694
@@ -26205,6 +23920,7 @@ lb_18e52:
 	LEA	lb_13ba2,A0		;18e6e: 41f900013ba2
 lb_18e74:
 	BRA.W	lb_1722c		;18e74: 6000e3b6
+lb_18e78:
 	MOVE.W	EXT_02b0.W,EXT_0176.W	;18e78: 31f85b5e53d2
 	JSR	lb_0f25c		;18e7e: 4eb90000f25c
 	JSR	lb_19802		;18e84: 4eb900019802
@@ -26265,6 +23981,7 @@ lb_18f3c:
 	JSR	lb_172c8		;18f70: 4eb9000172c8
 lb_18f76:
 	RTS				;18f76: 4e75
+lb_18f78:
 	MOVE.W	EXT_02b0.W,EXT_0176.W	;18f78: 31f85b5e53d2
 	JSR	lb_0f25c		;18f7e: 4eb90000f25c
 	JSR	lb_19802		;18f84: 4eb900019802
@@ -26320,11 +24037,13 @@ lb_19056:
 	BNE.W	lb_18e52		;19070: 6600fde0
 	LEA	lb_12496,A0		;19074: 41f900012496
 	BRA.W	lb_1722c		;1907a: 6000e1b0
+lb_1907e:
 	JSR	lb_19126		;1907e: 4eb900019126
 	TST.W	lb_519ac		;19084: 4a79000519ac
 	BNE.W	lb_190fe		;1908a: 66000072
 	LEA	lb_13e8e,A0		;1908e: 41f900013e8e
 	BRA.W	lb_1722c		;19094: 6000e196
+lb_19098:
 	JSR	lb_19126		;19098: 4eb900019126
 	TST.W	lb_519ac		;1909e: 4a79000519ac
 	BNE.W	lb_190fe		;190a4: 66000058
@@ -26332,6 +24051,7 @@ lb_19056:
 	JSR	lb_19100		;190ac: 4eb900019100
 	MOVE.W	#$0010,D0		;190b2: 303c0010
 	BRA.W	lb_1727e		;190b6: 6000e1c6
+lb_190ba:
 	JSR	lb_19126		;190ba: 4eb900019126
 	TST.W	lb_519ac		;190c0: 4a79000519ac
 	BNE.W	lb_190fe		;190c6: 66000036
@@ -26339,6 +24059,7 @@ lb_19056:
 	JSR	lb_19100		;190ce: 4eb900019100
 	MOVE.W	#$0011,D0		;190d4: 303c0011
 	BRA.W	lb_1727e		;190d8: 6000e1a4
+lb_190dc:
 	JSR	lb_19126		;190dc: 4eb900019126
 	TST.W	lb_519ac		;190e2: 4a79000519ac
 	BNE.W	lb_190fe		;190e8: 66000014
@@ -26936,14 +24657,18 @@ lb_1994c:
 lb_19960:
 	MOVEM.L	(A7)+,D0-D7/A0-A6	;19960: 4cdf7fff
 	RTS				;19964: 4e75
+lb_19966:
 	LEA	lb_14712,A0		;19966: 41f900014712
 	BRA.W	lb_1722c		;1996c: 6000d8be
+lb_19970:
 	LEA	lb_147c6,A0		;19970: 41f9000147c6
 	BRA.W	lb_1722c		;19976: 6000d8b4
+lb_1997a:
 	LEA	lb_14a32,A0		;1997a: 41f900014a32
 	JSR	lb_1722c		;19980: 4eb90001722c
 	JSR	lb_199b6		;19986: 4eb9000199b6
 	RTS				;1998c: 4e75
+lb_1998e:
 	JSR	lb_197fc		;1998e: 4eb9000197fc
 	LEA	lb_14b82,A0		;19994: 41f900014b82
 	BRA.W	lb_1722c		;1999a: 6000d890
@@ -26994,6 +24719,7 @@ lb_19a10:
 	MOVE.W	#$00c5,D1		;19a22: 323c00c5
 	JSR	lb_199e2		;19a26: 4eb9000199e2
 	RTS				;19a2c: 4e75
+lb_19a2e:
 	JSR	lb_19b26		;19a2e: 4eb900019b26
 	BRA.W	lb_19a48		;19a34: 60000012
 lb_19a38:
@@ -28615,6 +26341,7 @@ lb_1aaea:
 	MOVE.L	D0,-8(A1)		;1ab02: 2340fff8
 lb_1ab06:
 	RTS				;1ab06: 4e75
+	; possible smc
 lb_1ab08:
 	DC.W	$47b8			;1ab08
 lb_1ab0a:
@@ -34933,3005 +32660,1274 @@ lb_1ef86:
 	JSR	lb_1ab70		;1ef9c: 4eb90001ab70
 	RTS				;1efa2: 4e75
 lb_1efa4:
-	NEG.W	D5			;1efa4: 4445
-	DC.W	$4d4f			;1efa6
-	ADDQ.W	#8,A4			;1efa8: 504c
-	DC.W	$4159			;1efaa
+	dc.b	"DEMOPLAY"	;1efa4
 lb_1efac:
-	ORI.W	#$4f4d,D3		;1efac: 00434f4d
-	ADDQ.W	#8,(A5)			;1efb0: 5055
-	ADDQ.W	#2,D5			;1efb2: 5445
-	ADDQ.B	#1,D0			;1efb4: 5200
+	dc.b	$00	;1efac
+	dc.b	"COMPUTER"	;1efad
+	dc.b	$00	;1efb5
 lb_1efb6:
-	ADDQ.W	#2,A1			;1efb6: 5449
-	ADDQ.W	#2,A4			;1efb8: 544c
-	DC.W	$4500			;1efba
+	dc.b	"TITLE"	;1efb6
+	dc.b	$00	;1efbb
 lb_1efbc:
-	SUBQ.W	#1,D5			;1efbc: 5345
-	SUBQ.W	#8,(A5)			;1efbe: 5155
-	DC.W	$454e			;1efc0
-	DC.W	$4345			;1efc2
-	DC.W	$0000			;1efc4
+	dc.b	"SEQUENCE"	;1efbc
+	dc.b	$00	;1efc4
+	dc.b	$00	;1efc5
 lb_1efc6:
-	DC.W	$fe42			;1efc6
-	DC.W	$4f52			;1efc8
-	DC.W	$494e			;1efca
-	DC.W	$4720			;1efcc
-	DC.W	$424f			;1efce
-	CLR.B	D0			;1efd0: 4200
+	dc.b	$fe	;1efc6
+	dc.b	"BORING BOB"	;1efc7
+	dc.b	$00	;1efd1
 lb_1efd2:
-	DC.W	$424f			;1efd2
-	CLR.B	D0			;1efd4: 4200
+	dc.b	"BOB"	;1efd2
+	dc.b	$00	;1efd5
 lb_1efd6:
-	DC.W	$fe43			;1efd6
-	SWAP	D1			;1efd8: 4841
-	DC.W	$4c4b			;1efda
-	SUBQ.B	#4,-(A0)		;1efdc: 5920
-	SUBQ.W	#3,A0			;1efde: 5748
-	DC.W	$4954			;1efe0
-	DC.W	$4500			;1efe2
+	dc.b	$fe	;1efd6
+	dc.b	"CHALKY WHITE"	;1efd7
+	dc.b	$00	;1efe3
 lb_1efe4:
-	DC.W	$4348			;1efe4
-	DC.W	$414c			;1efe6
-	DC.W	$4b59			;1efe8
+	dc.b	"CHALKY"	;1efe4
 lb_1efea:
-	DC.W	$00fe			;1efea
+	dc.b	$00	;1efea
+	dc.b	$fe	;1efeb
 lb_1efec:
-	SUBQ.W	#1,A1			;1efec: 5349
-	NEG.W	D5			;1efee: 4445
-	MOVEA.L	(A3),A0			;1eff0: 2053
-	ADDQ.W	#8,A1			;1eff2: 5049
-	DC.W	$4e20			;1eff4
-	DC.W	$4b49			;1eff6
-	DC.W	$4d00			;1eff8
+	dc.b	"SIDE SPIN KIM"	;1efec
+	dc.b	$00	;1eff9
 lb_1effa:
-	DC.W	$4b49			;1effa
-	DC.W	$4d00			;1effc
+	dc.b	"KIM"	;1effa
+	dc.b	$00	;1effd
 lb_1effe:
-	DC.W	$fe4a			;1effe
-	DC.W	$414d			;1f000
-	DC.W	$4553			;1f002
-	MOVEA.L	D5,A0			;1f004: 2045
-	TRAP	#7			;1f006: 4e47
-	DC.W	$4c49			;1f008
-	SUBQ.W	#1,A0			;1f00a: 5348
+	dc.b	$fe	;1effe
+	dc.b	"JAMES ENGLISH"	;1efff
 lb_1f00c:
-	DC.W	$004a			;1f00c
-	DC.W	$414d			;1f00e
-	DC.W	$4553			;1f010
+	dc.b	$00	;1f00c
+	dc.b	"JAMES"	;1f00d
 lb_1f012:
-	DC.W	$00fe			;1f012
+	dc.b	$00	;1f012
+	dc.b	$fe	;1f013
 lb_1f014:
-	DC.W	$4f4e			;1f014
-	DC.W	$4520			;1f016
-	DC.W	$4559			;1f018
-	DC.W	$4544			;1f01a
-	MOVEA.L	A2,A0			;1f01c: 204a
-	DC.W	$4143			;1f01e
-	DC.W	$4b00			;1f020
+	dc.b	"ONE EYED JACK"	;1f014
+	dc.b	$00	;1f021
 lb_1f022:
-	TST.W	D1			;1f022: 4a41
-	DC.W	$434b			;1f024
+	dc.b	"JACK"	;1f022
 lb_1f026:
-	DC.W	$00fe			;1f026
+	dc.b	$00	;1f026
+	dc.b	$fe	;1f027
 lb_1f028:
-	DC.W	$4449			;1f028
-	SUBQ.W	#1,D1			;1f02a: 5341
-	SUBQ.W	#1,(A4)			;1f02c: 5354
-	DC.W	$4552			;1f02e
-	MOVEA.L	D4,A0			;1f030: 2044
-	DC.W	$4156			;1f032
-	DC.W	$4500			;1f034
+	dc.b	"DISASTER DAVE"	;1f028
+	dc.b	$00	;1f035
 lb_1f036:
-	NEG.W	D1			;1f036: 4441
-	ADDQ.W	#3,D5			;1f038: 5645
+	dc.b	"DAVE"	;1f036
 lb_1f03a:
-	DC.W	$00fe			;1f03a
+	dc.b	$00	;1f03a
+	dc.b	$fe	;1f03b
 lb_1f03c:
-	CLR.W	D1			;1f03c: 4241
-	DC.W	$434b			;1f03e
-	SUBQ.W	#1,(A0)			;1f040: 5350
-	DC.W	$494e			;1f042
-	MOVEA.L	A2,A0			;1f044: 204a
-	DC.W	$494d			;1f046
+	dc.b	"BACKSPIN JIM"	;1f03c
 lb_1f048:
-	DC.W	$004a			;1f048
-	DC.W	$494d			;1f04a
+	dc.b	$00	;1f048
+	dc.b	"JIM"	;1f049
 lb_1f04c:
-	DC.W	$00fe			;1f04c
+	dc.b	$00	;1f04c
+	dc.b	$fe	;1f04d
 lb_1f04e:
-	NEG.W	D1			;1f04e: 4441
-	NOT.W	(A4)			;1f050: 4654
-	MOVEA.L	D4,A0			;1f052: 2044
-	DC.W	$4542			;1f054
-	DC.W	$4249			;1f056
-	DC.W	$4500			;1f058
+	dc.b	"DAFT DEBBIE"	;1f04e
+	dc.b	$00	;1f059
 lb_1f05a:
-	NEG.W	D5			;1f05a: 4445
-	CLR.W	D2			;1f05c: 4242
-	DC.W	$4945			;1f05e
+	dc.b	"DEBBIE"	;1f05a
 lb_1f060:
-	DC.W	$00fe			;1f060
+	dc.b	$00	;1f060
+	dc.b	$fe	;1f061
 lb_1f062:
-	DC.W	$4d49			;1f062
-	SUBQ.W	#1,D3			;1f064: 5343
-	SUBQ.W	#2,D5			;1f066: 5545
-	MOVEA.L	A5,A0			;1f068: 204d
-	DC.W	$494b			;1f06a
-	DC.W	$4500			;1f06c
+	dc.b	"MISCUE MIKE"	;1f062
+	dc.b	$00	;1f06d
 lb_1f06e:
-	DC.W	$4d49			;1f06e
-	DC.W	$4b45			;1f070
+	dc.b	"MIKE"	;1f06e
 lb_1f072:
-	DC.W	$00fe			;1f072
+	dc.b	$00	;1f072
+	dc.b	$fe	;1f073
 lb_1f074:
-	SUBQ.W	#1,D1			;1f074: 5341
-	DC.W	$4d20			;1f076
-	SUBQ.W	#1,A4			;1f078: 534c
-	DC.W	$4943			;1f07a
-	DC.W	$4b00			;1f07c
+	dc.b	"SAM SLICK"	;1f074
+	dc.b	$00	;1f07d
 lb_1f07e:
-	SUBQ.W	#1,D1			;1f07e: 5341
-	DC.W	$4d00			;1f080
+	dc.b	"SAM"	;1f07e
+	dc.b	$00	;1f081
 lb_1f082:
-	ROXL.W	#6,D3			;1f082: ed53
-	ADDQ.W	#2,D5			;1f084: 5445
-	ADDQ.W	#3,D5			;1f086: 5645
-	MOVEA.L	(A3),A0			;1f088: 2053
-	DC.W	$4146			;1f08a
-	DC.W	$4500			;1f08c
+	dc.b	$ed	;1f082
+	dc.b	"STEVE SAFE"	;1f083
+	dc.b	$00	;1f08d
 lb_1f08e:
-	SUBQ.W	#1,(A4)			;1f08e: 5354
-	DC.W	$4556			;1f090
-	DC.W	$4500			;1f092
+	dc.b	"STEVE"	;1f08e
+	dc.b	$00	;1f093
 lb_1f094:
-	ASL.W	#6,D6			;1f094: ed46
-	DC.W	$4c41			;1f096
-	SUBQ.W	#1,A0			;1f098: 5348
-	MOVEA.L	A0,A0			;1f09a: 2048
-	DC.W	$4152			;1f09c
-	ADDQ.W	#1,(A1)+		;1f09e: 5259
+	dc.b	$ed	;1f094
+	dc.b	"FLASH HARRY"	;1f095
 lb_1f0a0:
-	DC.W	$0048			;1f0a0
-	DC.W	$4152			;1f0a2
-	ADDQ.W	#1,(A1)+		;1f0a4: 5259
+	dc.b	$00	;1f0a0
+	dc.b	"HARRY"	;1f0a1
 lb_1f0a6:
-	DC.W	$00ed			;1f0a6
+	dc.b	$00	;1f0a6
+	dc.b	$ed	;1f0a7
 lb_1f0a8:
-	SUBQ.W	#1,A5			;1f0a8: 534d
-	DC.W	$4153			;1f0aa
-	DC.W	$4849			;1f0ac
-	TRAP	#7			;1f0ae: 4e47
-	MOVEA.L	(A3),A0			;1f0b0: 2053
-	DC.W	$414c			;1f0b2
-	DC.W	$4c59			;1f0b4
+	dc.b	"SMASHING SALLY"	;1f0a8
 lb_1f0b6:
-	ORI.W	#$414c,(A3)		;1f0b6: 0053414c
-	DC.W	$4c59			;1f0ba
-	DC.W	$00ed			;1f0bc
+	dc.b	$00	;1f0b6
+	dc.b	"SALLY"	;1f0b7
+	dc.b	$00	;1f0bc
+	dc.b	$ed	;1f0bd
 lb_1f0be:
-	DC.W	$464f			;1f0be
-	ADDQ.W	#1,D7			;1f0c0: 5247
-	DC.W	$4554			;1f0c2
-	NOT.W	(A5)			;1f0c4: 4655
-	DC.W	$4c4c			;1f0c6
-	MOVEA.L	D6,A0			;1f0c8: 2046
-	ADDQ.W	#1,D5			;1f0ca: 5245
-	NEG.B	D0			;1f0cc: 4400
+	dc.b	"FORGETFULL FRED"	;1f0be
+	dc.b	$00	;1f0cd
 lb_1f0ce:
-	NOT.W	(A2)			;1f0ce: 4652
-	DC.W	$4544			;1f0d0
+	dc.b	"FRED"	;1f0ce
 lb_1f0d2:
-	DC.W	$00ed			;1f0d2
+	dc.b	$00	;1f0d2
+	dc.b	$ed	;1f0d3
 lb_1f0d4:
-	DC.W	$4352			;1f0d4
-	DC.W	$4f53			;1f0d6
-	SUBQ.B	#1,-(A0)		;1f0d8: 5320
-	DC.W	$4559			;1f0da
-	DC.W	$4544			;1f0dc
-	MOVEA.L	D3,A0			;1f0de: 2043
-	PEA	(A2)			;1f0e0: 4852
-	DC.W	$4953			;1f0e2
+	dc.b	"CROSS EYED CHRIS"	;1f0d4
 lb_1f0e4:
-	ORI.W	#$4852,D3		;1f0e4: 00434852
-	DC.W	$4953			;1f0e8
+	dc.b	$00	;1f0e4
+	dc.b	"CHRIS"	;1f0e5
 lb_1f0ea:
-	DC.W	$00ed			;1f0ea
+	dc.b	$00	;1f0ea
+	dc.b	$ed	;1f0eb
 lb_1f0ec:
-	DC.W	$414c			;1f0ec
-	DC.W	$4558			;1f0ee
-	MOVEA.L	(A3),A0			;1f0f0: 2053
-	DC.W	$4d41			;1f0f2
-	ADDQ.W	#1,(A4)			;1f0f4: 5254
-	DC.W	$4152			;1f0f6
-	SUBQ.W	#1,D5			;1f0f8: 5345
+	dc.b	"ALEX SMARTARSE"	;1f0ec
 lb_1f0fa:
-	ORI.W	#$4c45,D1		;1f0fa: 00414c45
-	ADDQ.B	#4,D0			;1f0fe: 5800
+	dc.b	$00	;1f0fa
+	dc.b	"ALEX"	;1f0fb
+	dc.b	$00	;1f0ff
 lb_1f100:
-	ROXL.W	#6,D0			;1f100: ed50
-	DC.W	$4554			;1f102
-	DC.W	$4520			;1f104
-	ADDQ.W	#8,D5			;1f106: 5045
-	ADDQ.W	#1,D6			;1f108: 5246
-	DC.W	$4543			;1f10a
-	ADDQ.B	#2,D0			;1f10c: 5400
+	dc.b	$ed	;1f100
+	dc.b	"PETE PERFECT"	;1f101
+	dc.b	$00	;1f10d
 lb_1f10e:
-	ADDQ.W	#8,D5			;1f10e: 5045
-	ADDQ.W	#2,D5			;1f110: 5445
+	dc.b	"PETE"	;1f10e
 lb_1f112:
-	DC.W	$00ed			;1f112
+	dc.b	$00	;1f112
+	dc.b	$ed	;1f113
 lb_1f114:
-	DC.W	$4a49			;1f114
-	DC.W	$4d4d			;1f116
-	SUBQ.B	#4,-(A0)		;1f118: 5920
-	CLR.W	(A2)			;1f11a: 4252
-	DC.W	$494c			;1f11c
-	DC.W	$4c00			;1f11e
+	dc.b	"JIMMY BRILL"	;1f114
+	dc.b	$00	;1f11f
 lb_1f120:
-	DC.W	$4a49			;1f120
-	DC.W	$4d4d			;1f122
-	SUBQ.B	#4,D0			;1f124: 5900
+	dc.b	"JIMMY"	;1f120
+	dc.b	$00	;1f125
 lb_1f126:
-	ROXL.W	#6,D3			;1f126: ed53
-	DC.W	$494c			;1f128
-	DC.W	$4c59			;1f12a
-	MOVEA.L	(A7),A0			;1f12c: 2057
-	DC.W	$494c			;1f12e
-	DC.W	$4c59			;1f130
+	dc.b	$ed	;1f126
+	dc.b	"SILLY WILLY"	;1f127
 lb_1f132:
-	ORI.W	#$494c,(A7)		;1f132: 0057494c
-	DC.W	$4c59			;1f136
+	dc.b	$00	;1f132
+	dc.b	"WILLY"	;1f133
 lb_1f138:
-	DC.W	$00ed			;1f138
+	dc.b	$00	;1f138
+	dc.b	$ed	;1f139
 lb_1f13a:
-	DC.W	$444f			;1f13a
-	SUBQ.W	#1,D5			;1f13c: 5345
-	SUBQ.B	#4,-(A0)		;1f13e: 5920
-	ADDQ.W	#1,A7			;1f140: 524f
-	SUBQ.W	#1,D5			;1f142: 5345
+	dc.b	"DOSEY ROSE"	;1f13a
 lb_1f144:
-	ORI.W	#$4f53,(A2)		;1f144: 00524f53
-	DC.W	$4500			;1f148
+	dc.b	$00	;1f144
+	dc.b	"ROSE"	;1f145
+	dc.b	$00	;1f149
 lb_1f14a:
-	DC.W	$0a00			;1f14a
+	dc.b	$0a	;1f14a
+	dc.b	$00	;1f14b
 lb_1f14c:
-	BTST	D2,D0			;1f14c: 0500
+	dc.b	$05	;1f14c
+	dc.b	$00	;1f14d
 lb_1f14e:
-	DC.W	$0a00			;1f14e
+	dc.b	$0a	;1f14e
+	dc.b	$00	;1f14f
 lb_1f150:
-	DC.W	$0220			;1f150
-	MOVEA.L	(A6),A0			;1f152: 2056
-	MOVE.L	-(A0),D0		;1f154: 2020
+	dc.b	$02	;1f150
+	dc.b	"  V  "	;1f151
 lb_1f156:
-	ORI.W	#$000f,(A6)		;1f156: 0056000f
-	SUBQ.W	#4,A7			;1f15a: 594f
-	SUBQ.B	#2,-(A0)		;1f15c: 5520
-	DC.W	$4152			;1f15e
-	DC.W	$4520			;1f160
-	DC.W	$4142			;1f162
-	DC.W	$4f55			;1f164
-	ADDQ.B	#2,-(A0)		;1f166: 5420
-	ADDQ.W	#2,A7			;1f168: 544f
-	MOVEA.L	(A3),A0			;1f16a: 2053
-	ADDQ.W	#2,D1			;1f16c: 5441
-	ADDQ.W	#1,(A4)			;1f16e: 5254
-	MOVEA.L	D1,A0			;1f170: 2041
+	dc.b	$00	;1f156
+	dc.b	"V"	;1f157
+	dc.b	$00	;1f158
+	dc.b	$0f	;1f159
+	dc.b	"YOU ARE ABOUT TO START A"	;1f15a
 lb_1f172:
-	DC.W	$000a			;1f172
-	DC.W	$4f4e			;1f174
-	DC.W	$4520			;1f176
+	dc.b	$00	;1f172
+	dc.b	$0a	;1f173
+	dc.b	"ONE "	;1f174
 lb_1f178:
-	DC.W	$000a			;1f178
-	ADDQ.W	#2,(A7)			;1f17a: 5457
-	DC.W	$4f20			;1f17c
+	dc.b	$00	;1f178
+	dc.b	$0a	;1f179
+	dc.b	"TWO "	;1f17a
 lb_1f17e:
-	DC.W	$000f			;1f17e
-	ADDQ.W	#8,A4			;1f180: 504c
-	DC.W	$4159			;1f182
-	DC.W	$4552			;1f184
-	MOVE.L	D0,D0			;1f186: 2000
+	dc.b	$00	;1f17e
+	dc.b	$0f	;1f17f
+	dc.b	"PLAYER "	;1f180
+	dc.b	$00	;1f187
 lb_1f188:
-	BCHG	D7,(A3)			;1f188: 0f53
-	DC.W	$494e			;1f18a
-	DC.W	$474c			;1f18c
-	DC.W	$4520			;1f18e
-	DC.W	$4741			;1f190
-	DC.W	$4d45			;1f192
+	dc.b	$0f	;1f188
+	dc.b	"SINGLE GAME"	;1f189
 lb_1f194:
-	ORI.W	#$5241,(A0)		;1f194: 00505241
-	DC.W	$4354			;1f198
-	DC.W	$4943			;1f19a
-	DC.W	$4520			;1f19c
-	DC.W	$4741			;1f19e
-	DC.W	$4d45			;1f1a0
+	dc.b	$00	;1f194
+	dc.b	"PRACTICE GAME"	;1f195
 lb_1f1a2:
-	DC.W	$000a			;1f1a2
-	CLR.W	D5			;1f1a4: 4245
-	SUBQ.W	#1,(A4)			;1f1a6: 5354
-	ADDQ.W	#6,A7			;1f1a8: 5c4f
-	NOT.W	(A4)+			;1f1aa: 465c
+	dc.b	$00	;1f1a2
+	dc.b	$0a	;1f1a3
+	dc.b	"BEST\OF\"	;1f1a4
 lb_1f1ac:
-	DC.W	$000f			;1f1ac
-	MOVEA.L	A5,A0			;1f1ae: 204d
-	DC.W	$4154			;1f1b0
-	DC.W	$4348			;1f1b2
-	SUBQ.B	#5,D0			;1f1b4: 5b00
+	dc.b	$00	;1f1ac
+	dc.b	$0f	;1f1ad
+	dc.b	" MATCH["	;1f1ae
+	dc.b	$00	;1f1b5
 lb_1f1b6:
-	BCHG	D7,D6			;1f1b6: 0f46
-	DC.W	$4952			;1f1b8
-	SUBQ.W	#1,(A4)			;1f1ba: 5354
-	MOVEA.L	(A4),A0			;1f1bc: 2054
-	DC.W	$4f20			;1f1be
-	DC.W	$0a00			;1f1c0
+	dc.b	$0f	;1f1b6
+	dc.b	"FIRST TO "	;1f1b7
+	dc.b	$0a	;1f1c0
+	dc.b	$00	;1f1c1
 lb_1f1c2:
-	BTST	D7,-(A0)		;1f1c2: 0f20
-	DC.W	$4741			;1f1c4
-	DC.W	$4d45			;1f1c6
-	SUBQ.B	#1,-(A0)		;1f1c8: 5320
-	SUBQ.W	#3,A1			;1f1ca: 5749
-	DC.W	$4e53			;1f1cc
-	MOVEA.L	A5,A0			;1f1ce: 204d
-	DC.W	$4154			;1f1d0
-	DC.W	$4348			;1f1d2
+	dc.b	$0f	;1f1c2
+	dc.b	" GAMES WINS MATCH"	;1f1c3
 lb_1f1d4:
-	DC.W	$000f			;1f1d4
-	ADDQ.W	#2,A7			;1f1d6: 544f
-	SUBQ.W	#2,(A2)			;1f1d8: 5552
-	TRAP	#1			;1f1da: 4e41
-	DC.W	$4d45			;1f1dc
-	DC.W	$4e54			;1f1de
-	MOVEA.L	(A7),A0			;1f1e0: 2057
-	DC.W	$4954			;1f1e2
-	NBCD	-(A0)			;1f1e4: 4820
-	DC.W	$0a00			;1f1e6
+	dc.b	$00	;1f1d4
+	dc.b	$0f	;1f1d5
+	dc.b	"TOURNAMENT WITH "	;1f1d6
+	dc.b	$0a	;1f1e6
+	dc.b	$00	;1f1e7
 lb_1f1e8:
-	BTST	D7,-(A0)		;1f1e8: 0f20
-	ADDQ.W	#8,A4			;1f1ea: 504c
-	DC.W	$4159			;1f1ec
-	DC.W	$4552			;1f1ee
-	SUBQ.B	#1,D0			;1f1f0: 5300
+	dc.b	$0f	;1f1e8
+	dc.b	" PLAYERS"	;1f1e9
+	dc.b	$00	;1f1f1
 lb_1f1f2:
-	BTST	D7,-(A0)		;1f1f2: 0f20
-	ADDQ.W	#8,A4			;1f1f4: 504c
-	DC.W	$4159			;1f1f6
-	DC.W	$4552			;1f1f8
+	dc.b	$0f	;1f1f2
+	dc.b	" PLAYER"	;1f1f3
 lb_1f1fa:
-	DC.W	$000f			;1f1fa
-	DC.W	$4147			;1f1fc
-	DC.W	$4149			;1f1fe
-	LINK.W	A3,#21536		;1f200: 4e535420
-	DC.W	$0a00			;1f204
+	dc.b	$00	;1f1fa
+	dc.b	$0f	;1f1fb
+	dc.b	"AGAINST "	;1f1fc
+	dc.b	$0a	;1f204
+	dc.b	$00	;1f205
 lb_1f206:
-	BTST	D7,-(A0)		;1f206: 0f20
-	DC.W	$434f			;1f208
-	DC.W	$4d50			;1f20a
-	SUBQ.W	#2,(A4)			;1f20c: 5554
-	DC.W	$4552			;1f20e
-	MOVEA.L	A7,A0			;1f210: 204f
-	ADDQ.W	#8,(A0)			;1f212: 5050
-	DC.W	$4f4e			;1f214
-	DC.W	$454e			;1f216
-	ADDQ.W	#2,(A3)			;1f218: 5453
+	dc.b	$0f	;1f206
+	dc.b	" COMPUTER OPPONENTS"	;1f207
 lb_1f21a:
-	DC.W	$000a			;1f21a
-	MOVE.W	A7,-(A0)		;1f21c: 310f
-	MOVEA.L	D3,A0			;1f21e: 2043
-	DC.W	$4f4d			;1f220
-	ADDQ.W	#8,(A5)			;1f222: 5055
-	ADDQ.W	#2,D5			;1f224: 5445
-	ADDQ.B	#1,-(A0)		;1f226: 5220
-	DC.W	$4f50			;1f228
-	ADDQ.W	#8,A7			;1f22a: 504f
-	TRAP	#5			;1f22c: 4e45
-	DC.W	$4e54			;1f22e
+	dc.b	$00	;1f21a
+	dc.b	$0a	;1f21b
+	dc.b	"1"	;1f21c
+	dc.b	$0f	;1f21d
+	dc.b	" COMPUTER OPPONENT"	;1f21e
 lb_1f230:
-	DC.W	$000f			;1f230
-	SUBQ.W	#3,A1			;1f232: 5749
-	ADDQ.W	#2,A0			;1f234: 5448
-	DC.W	$4f55			;1f236
-	ADDQ.B	#2,-(A0)		;1f238: 5420
-	DC.W	$414e			;1f23a
-	SUBQ.B	#4,-(A0)		;1f23c: 5920
-	DC.W	$434f			;1f23e
-	DC.W	$4d50			;1f240
-	SUBQ.W	#2,(A4)			;1f242: 5554
-	DC.W	$4552			;1f244
-	MOVEA.L	A7,A0			;1f246: 204f
-	ADDQ.W	#8,(A0)			;1f248: 5050
-	DC.W	$4f4e			;1f24a
-	DC.W	$454e			;1f24c
-	ADDQ.W	#2,(A3)			;1f24e: 5453
+	dc.b	$00	;1f230
+	dc.b	$0f	;1f231
+	dc.b	"WITHOUT ANY COMPUTER OPPONENTS"	;1f232
 lb_1f250:
-	DC.W	$000f			;1f250
-	ADDQ.W	#2,A7			;1f252: 544f
-	SUBQ.W	#1,(A3)			;1f254: 5353
-	DC.W	$494e			;1f256
-	DC.W	$4720			;1f258
-	DC.W	$4120			;1f25a
-	DC.W	$434f			;1f25c
-	DC.W	$494e			;1f25e
-	MOVEA.L	(A2),A0			;1f260: 2052
-	DC.W	$4553			;1f262
-	SUBQ.W	#2,A4			;1f264: 554c
-	ADDQ.W	#2,(A3)			;1f266: 5453
-	MOVEA.L	A1,A0			;1f268: 2049
-	DC.W	$4e00			;1f26a
+	dc.b	$00	;1f250
+	dc.b	$0f	;1f251
+	dc.b	"TOSSING A COIN RESULTS IN"	;1f252
+	dc.b	$00	;1f26b
 lb_1f26c:
-	BTST	D7,-(A0)		;1f26c: 0f20
-	CLR.W	(A2)			;1f26e: 4252
-	DC.W	$4541			;1f270
-	DC.W	$4b49			;1f272
-	TRAP	#7			;1f274: 4e47
-	MOVEA.L	A7,A0			;1f276: 204f
-	NOT.W	D6			;1f278: 4646
-	MOVEA.L	D6,A0			;1f27a: 2046
-	DC.W	$4952			;1f27c
-	SUBQ.W	#1,(A4)			;1f27e: 5354
-	SUBQ.B	#5,D0			;1f280: 5b00
+	dc.b	$0f	;1f26c
+	dc.b	" BREAKING OFF FIRST["	;1f26d
+	dc.b	$00	;1f281
 lb_1f282:
-	BTST	D7,-(A0)		;1f282: 0f20
-	ADDQ.W	#2,A7			;1f284: 544f
-	MOVEA.L	D2,A0			;1f286: 2042
-	ADDQ.W	#1,D5			;1f288: 5245
-	DC.W	$414b			;1f28a
-	MOVEA.L	A7,A0			;1f28c: 204f
-	NOT.W	D6			;1f28e: 4646
-	SUBQ.B	#5,D0			;1f290: 5b00
-	MOVE.L	D0,D0			;1f292: 2000
-	MOVE.W	(A3),21536(A0)		;1f294: 31535420
-	DC.W	$0032			;1f298
-	TRAP	#4			;1f29a: 4e44
-	MOVE.L	D0,D0			;1f29c: 2000
-	MOVE.W	(A2),17440(A1)		;1f29e: 33524420
-	DC.W	$0034			;1f2a2
-	ADDQ.W	#2,A0			;1f2a4: 5448
-	MOVE.L	D0,D0			;1f2a6: 2000
-	MOVE.W	(A4),18464(A2)		;1f2a8: 35544820
-	DC.W	$0036			;1f2ac
-	ADDQ.W	#2,A0			;1f2ae: 5448
-	MOVE.L	D0,D0			;1f2b0: 2000
-	MOVE.W	(A4),18464(A3)		;1f2b2: 37544820
-	DC.W	$0038			;1f2b6
-	ADDQ.W	#2,A0			;1f2b8: 5448
-	MOVE.L	D0,D0			;1f2ba: 2000
-	MOVE.W	(A4),18464(A4)		;1f2bc: 39544820
+	dc.b	$0f	;1f282
+	dc.b	" TO BREAK OFF["	;1f283
+	dc.b	$00	;1f291
+	dc.b	" "	;1f292
+	dc.b	$00	;1f293
+	dc.b	"1ST "	;1f294
+	dc.b	$00	;1f298
+	dc.b	"2ND "	;1f299
+	dc.b	$00	;1f29d
+	dc.b	"3RD "	;1f29e
+	dc.b	$00	;1f2a2
+	dc.b	"4TH "	;1f2a3
+	dc.b	$00	;1f2a7
+	dc.b	"5TH "	;1f2a8
+	dc.b	$00	;1f2ac
+	dc.b	"6TH "	;1f2ad
+	dc.b	$00	;1f2b1
+	dc.b	"7TH "	;1f2b2
+	dc.b	$00	;1f2b6
+	dc.b	"8TH "	;1f2b7
+	dc.b	$00	;1f2bb
+	dc.b	"9TH "	;1f2bc
 lb_1f2c0:
-	ORI.B	#$47,16717(A7)		;1f2c0: 002f0047414d
-	DC.W	$4520			;1f2c6
-	DC.W	$4f56			;1f2c8
-	DC.W	$4552			;1f2ca
+	dc.b	$00	;1f2c0
+	dc.b	"/"	;1f2c1
+	dc.b	$00	;1f2c2
+	dc.b	"GAME OVER"	;1f2c3
 lb_1f2cc:
-	DC.W	$0008			;1f2cc
-	SUBQ.W	#3,A1			;1f2ce: 5749
-	LINK.W	A3,#8276		;1f2d0: 4e532054
-	SWAP	D5			;1f2d4: 4845
-	MOVE.L	D0,D0			;1f2d6: 2000
+	dc.b	$00	;1f2cc
+	dc.b	$08	;1f2cd
+	dc.b	"WINS THE "	;1f2ce
+	dc.b	$00	;1f2d7
 lb_1f2d8:
-	DC.W	$4741			;1f2d8
-	DC.W	$4d45			;1f2da
+	dc.b	"GAME"	;1f2d8
 lb_1f2dc:
-	DC.W	$0008			;1f2dc
-	DC.W	$4d41			;1f2de
-	ADDQ.W	#2,D3			;1f2e0: 5443
-	NBCD	-(A0)			;1f2e2: 4820
-	SUBQ.W	#1,D3			;1f2e4: 5343
-	DC.W	$4f52			;1f2e6
-	DC.W	$4520			;1f2e8
-	DC.W	$4953			;1f2ea
-	MOVEA.L	A6,A0			;1f2ec: 204e
-	DC.W	$4f57			;1f2ee
-	MOVE.L	D0,D0			;1f2f0: 2000
+	dc.b	$00	;1f2dc
+	dc.b	$08	;1f2dd
+	dc.b	"MATCH SCORE IS NOW "	;1f2de
+	dc.b	$00	;1f2f1
 lb_1f2f2:
-	MOVEA.L	D1,A0			;1f2f2: 2041
-	DC.W	$4c4c			;1f2f4
+	dc.b	" ALL"	;1f2f2
 lb_1f2f6:
-	DC.W	$0020			;1f2f6
-	ADDQ.W	#2,A7			;1f2f8: 544f
-	MOVE.L	D0,D0			;1f2fa: 2000
+	dc.b	$00	;1f2f6
+	dc.b	" TO "	;1f2f7
+	dc.b	$00	;1f2fb
 lb_1f2fc:
-	ADDQ.B	#6,D0			;1f2fc: 5c00
+	dc.b	"\"	;1f2fc
+	dc.b	$00	;1f2fd
 lb_1f2fe:
-	MOVE.W	(A3),21536(A0)		;1f2fe: 31535420
-	ADDQ.W	#2,A7			;1f302: 544f
-	MOVE.L	D0,D0			;1f304: 2000
+	dc.b	"1ST TO "	;1f2fe
+	dc.b	$00	;1f305
 lb_1f306:
-	MOVEA.L	D7,A0			;1f306: 2047
-	DC.W	$414d			;1f308
-	DC.W	$4553			;1f30a
-	MOVEA.L	(A7),A0			;1f30c: 2057
-	DC.W	$494e			;1f30e
-	SUBQ.B	#1,-(A0)		;1f310: 5320
-	DC.W	$4d41			;1f312
-	ADDQ.W	#2,D3			;1f314: 5443
-	NBCD	D0			;1f316: 4800
+	dc.b	" GAMES WINS MATCH"	;1f306
+	dc.b	$00	;1f317
 lb_1f318:
-	ANDI.W	#$5545,D4		;1f318: 02445545
-	MOVEA.L	(A4),A0			;1f31c: 2054
-	DC.W	$4f20			;1f31e
-	DC.W	$4120			;1f320
-	DC.W	$464f			;1f322
-	SUBQ.W	#2,A4			;1f324: 554c
-	MOVEA.L	D2,A0			;1f326: 2042
-	SUBQ.B	#4,-(A0)		;1f328: 5920
+	dc.b	$02	;1f318
+	dc.b	"DUE TO A FOUL BY "	;1f319
 lb_1f32a:
-	DC.W	$002d			;1f32a
-	DC.W	$05fc			;1f32c
-	DC.W	$434f			;1f32e
-	LINK.W	A4,#18766		;1f330: 4e54494e
-	SUBQ.W	#2,D5			;1f334: 5545
-	MOVEA.L	A7,A0			;1f336: 204f
-	LINK.W	A4,#20256		;1f338: 4e544f20
-	TRAP	#5			;1f33c: 4e45
-	ADDQ.W	#4,(A4)			;1f33e: 5854
-	MOVEA.L	D7,A0			;1f340: 2047
-	DC.W	$414d			;1f342
-	DC.W	$4500			;1f344
-	DC.W	$05fa			;1f346
-	ADDQ.W	#1,D5			;1f348: 5245
-	ADDQ.W	#2,(A5)			;1f34a: 5455
-	ADDQ.W	#1,A6			;1f34c: 524e
-	MOVEA.L	(A4),A0			;1f34e: 2054
-	DC.W	$4f20			;1f350
-	DC.W	$4741			;1f352
-	DC.W	$4d45			;1f354
-	MOVEA.L	D3,A0			;1f356: 2043
-	DC.W	$4f4e			;1f358
-	ADDQ.W	#2,(A2)			;1f35a: 5452
-	DC.W	$4f4c			;1f35c
+	dc.b	$00	;1f32a
+	dc.b	"-"	;1f32b
+	dc.b	$05	;1f32c
+	dc.b	$fc	;1f32d
+	dc.b	"CONTINUE ONTO NEXT GAME"	;1f32e
+	dc.b	$00	;1f345
+	dc.b	$05	;1f346
+	dc.b	$fa	;1f347
+	dc.b	"RETURN TO GAME CONTROL"	;1f348
 lb_1f35e:
-	DC.W	$002d			;1f35e
-	DC.W	$05fc			;1f360
-	SUBQ.W	#3,A1			;1f362: 5749
-	ADDQ.W	#2,A0			;1f364: 5448
-	MOVE.L	A2,D0			;1f366: 200a
+	dc.b	$00	;1f35e
+	dc.b	"-"	;1f35f
+	dc.b	$05	;1f360
+	dc.b	$fc	;1f361
+	dc.b	"WITH "	;1f362
+	dc.b	$0a	;1f367
 lb_1f368:
-	DC.W	$0005			;1f368
-	MOVEA.L	(A4),A0			;1f36a: 2054
-	DC.W	$4f20			;1f36c
-	CLR.W	(A2)			;1f36e: 4252
-	DC.W	$4541			;1f370
-	DC.W	$4b00			;1f372
+	dc.b	$00	;1f368
+	dc.b	$05	;1f369
+	dc.b	" TO BREAK"	;1f36a
+	dc.b	$00	;1f373
 lb_1f374:
-	DC.W	$0200			;1f374
+	dc.b	$02	;1f374
+	dc.b	$00	;1f375
 lb_1f376:
-	DC.W	$0859			;1f376
-	DC.W	$4f55			;1f378
-	MOVEA.L	(A4),A0			;1f37a: 2054
-	DC.W	$4f4f			;1f37c
-	DC.W	$4b20			;1f37e
+	dc.b	$08	;1f376
+	dc.b	"YOU TOOK "	;1f377
 lb_1f380:
-	DC.W	$0008			;1f380
-	MOVEA.L	(A3),A0			;1f382: 2053
-	DC.W	$484f			;1f384
-	ADDQ.W	#2,(A3)			;1f386: 5453
-	MOVE.L	D0,D0			;1f388: 2000
+	dc.b	$00	;1f380
+	dc.b	$08	;1f381
+	dc.b	" SHOTS "	;1f382
+	dc.b	$00	;1f389
 lb_1f38a:
-	DC.W	$0820			;1f38a
-	SUBQ.W	#1,A0			;1f38c: 5348
-	DC.W	$4f54			;1f38e
-	MOVE.L	D0,D0			;1f390: 2000
+	dc.b	$08	;1f38a
+	dc.b	" SHOT "	;1f38b
+	dc.b	$00	;1f391
 lb_1f392:
-	DC.W	$0841			;1f392
-	TRAP	#4			;1f394: 4e44
-	MOVEA.L	A0,A0			;1f396: 2048
-	DC.W	$4144			;1f398
-	MOVE.L	D0,D0			;1f39a: 2000
+	dc.b	$08	;1f392
+	dc.b	"AND HAD "	;1f393
+	dc.b	$00	;1f39b
 lb_1f39c:
-	DC.W	$0820			;1f39c
-	DC.W	$464f			;1f39e
-	SUBQ.W	#2,A4			;1f3a0: 554c
+	dc.b	$08	;1f39c
+	dc.b	" FOUL"	;1f39d
 lb_1f3a2:
-	DC.W	$0008			;1f3a2
-	MOVEA.L	D6,A0			;1f3a4: 2046
-	DC.W	$4f55			;1f3a6
-	DC.W	$4c53			;1f3a8
+	dc.b	$00	;1f3a2
+	dc.b	$08	;1f3a3
+	dc.b	" FOULS"	;1f3a4
 lb_1f3aa:
-	DC.W	$0008			;1f3aa
-	TRAP	#15			;1f3ac: 4e4f
-	MOVEA.L	D6,A0			;1f3ae: 2046
-	DC.W	$4f55			;1f3b0
-	DC.W	$4c53			;1f3b2
+	dc.b	$00	;1f3aa
+	dc.b	$08	;1f3ab
+	dc.b	"NO FOULS"	;1f3ac
 lb_1f3b4:
-	DC.W	$0008			;1f3b4
-	DC.W	$4156			;1f3b6
-	DC.W	$4552			;1f3b8
-	DC.W	$4147			;1f3ba
-	DC.W	$4520			;1f3bc
-	ADDQ.W	#8,A7			;1f3be: 504f
-	ADDQ.W	#2,(A4)			;1f3c0: 5454
-	DC.W	$494d			;1f3c2
-	DC.W	$4520			;1f3c4
-	SUBQ.W	#3,D1			;1f3c6: 5741
-	SUBQ.B	#1,-(A0)		;1f3c8: 5320
+	dc.b	$00	;1f3b4
+	dc.b	$08	;1f3b5
+	dc.b	"AVERAGE POTTIME WAS "	;1f3b6
 lb_1f3ca:
-	DC.W	$0008			;1f3ca
-	DC.W	$4156			;1f3cc
-	DC.W	$4552			;1f3ce
-	DC.W	$4147			;1f3d0
-	DC.W	$4520			;1f3d2
-	ADDQ.W	#8,A7			;1f3d4: 504f
-	ADDQ.B	#2,-(A0)		;1f3d6: 5420
-	ADDQ.W	#2,A1			;1f3d8: 5449
-	DC.W	$4d45			;1f3da
-	MOVEA.L	(A7),A0			;1f3dc: 2057
-	DC.W	$4153			;1f3de
-	MOVE.L	D0,D0			;1f3e0: 2000
+	dc.b	$00	;1f3ca
+	dc.b	$08	;1f3cb
+	dc.b	"AVERAGE POT TIME WAS "	;1f3cc
+	dc.b	$00	;1f3e1
 lb_1f3e2:
-	MOVE.L	A2,-(A7)		;1f3e2: 2f0a
-	DC.W	$4741			;1f3e4
-	DC.W	$4d45			;1f3e6
-	MOVEA.L	D1,A0			;1f3e8: 2041
-	CLR.W	D1			;1f3ea: 4241
-	TRAP	#4			;1f3ec: 4e44
-	DC.W	$4f4e			;1f3ee
-	DC.W	$4544			;1f3f0
+	dc.b	"/"	;1f3e2
+	dc.b	$0a	;1f3e3
+	dc.b	"GAME ABANDONED"	;1f3e4
 lb_1f3f2:
-	DC.W	$002f			;1f3f2
-	ANDI.W	#$5441,(A3)		;1f3f4: 02535441
-	DC.W	$4c45			;1f3f8
-	DC.W	$4d41			;1f3fa
-	ADDQ.W	#2,D5			;1f3fc: 5445
+	dc.b	$00	;1f3f2
+	dc.b	"/"	;1f3f3
+	dc.b	$02	;1f3f4
+	dc.b	"STALEMATE"	;1f3f5
 lb_1f3fe:
-	DC.W	$002e			;1f3fe
-	BCHG	D7,D4			;1f400: 0f44
-	SUBQ.W	#2,D5			;1f402: 5545
-	MOVEA.L	(A4),A0			;1f404: 2054
-	DC.W	$4f20			;1f406
-	SUBQ.W	#1,(A4)			;1f408: 5354
-	DC.W	$414c			;1f40a
-	DC.W	$454d			;1f40c
-	DC.W	$4154			;1f40e
-	DC.W	$4520			;1f410
-	ADDQ.W	#2,A0			;1f412: 5448
-	DC.W	$4953			;1f414
-	MOVEA.L	D7,A0			;1f416: 2047
-	DC.W	$414d			;1f418
-	DC.W	$4500			;1f41a
+	dc.b	$00	;1f3fe
+	dc.b	"."	;1f3ff
+	dc.b	$0f	;1f400
+	dc.b	"DUE TO STALEMATE THIS GAME"	;1f401
+	dc.b	$00	;1f41b
 lb_1f41c:
-	MOVEP.L	21280(A1),D7		;1f41c: 0f495320
-	TRAP	#15			;1f420: 4e4f
-	SUBQ.B	#3,-(A0)		;1f422: 5720
-	CLR.W	D5			;1f424: 4245
-	DC.W	$494e			;1f426
-	DC.W	$4720			;1f428
-	DC.W	$4142			;1f42a
-	DC.W	$414e			;1f42c
-	DC.W	$444f			;1f42e
-	TRAP	#5			;1f430: 4e45
-	NEG.B	-(A0)			;1f432: 4420
-	DC.W	$414e			;1f434
-	NEG.B	D0			;1f436: 4400
+	dc.b	$0f	;1f41c
+	dc.b	"IS NOW BEING ABANDONED AND"	;1f41d
+	dc.b	$00	;1f437
 lb_1f438:
-	BCHG	D7,(A2)			;1f438: 0f52
-	DC.W	$4553			;1f43a
-	ADDQ.W	#2,D1			;1f43c: 5441
-	ADDQ.W	#1,(A4)			;1f43e: 5254
-	DC.W	$4544			;1f440
-	MOVEA.L	D6,A0			;1f442: 2046
-	ADDQ.W	#1,A7			;1f444: 524f
-	DC.W	$4d20			;1f446
-	CLR.W	D5			;1f448: 4245
-	DC.W	$4749			;1f44a
-	TRAP	#9			;1f44c: 4e49
-	TRAP	#7			;1f44e: 4e47
-	SUBQ.B	#5,D0			;1f450: 5b00
+	dc.b	$0f	;1f438
+	dc.b	"RESTARTED FROM BEGINING["	;1f439
+	dc.b	$00	;1f451
 lb_1f452:
-	BCHG	D2,(A3)			;1f452: 0553
-	ADDQ.W	#2,D1			;1f454: 5441
-	ADDQ.W	#1,(A4)			;1f456: 5254
-	MOVEA.L	(A4),A0			;1f458: 2054
-	SWAP	D5			;1f45a: 4845
-	MOVEA.L	D7,A0			;1f45c: 2047
-	DC.W	$414d			;1f45e
-	DC.W	$4520			;1f460
-	DC.W	$4147			;1f462
-	DC.W	$4149			;1f464
-	DC.W	$4e00			;1f466
-	MOVEP.L	16723(A0),D7		;1f468: 0f484153
-	MOVEA.L	D2,A0			;1f46c: 2042
-	DC.W	$4545			;1f46e
-	DC.W	$4e20			;1f470
-	DC.W	$4142			;1f472
-	DC.W	$414e			;1f474
-	DC.W	$444f			;1f476
-	TRAP	#5			;1f478: 4e45
-	NEG.B	D0			;1f47a: 4400
+	dc.b	$05	;1f452
+	dc.b	"START THE GAME AGAIN"	;1f453
+	dc.b	$00	;1f467
+	dc.b	$0f	;1f468
+	dc.b	"HAS BEEN ABANDONED"	;1f469
+	dc.b	$00	;1f47b
 lb_1f47c:
-	MOVE.L	D5,-(A7)		;1f47c: 2f05
-	DC.W	$4d41			;1f47e
-	ADDQ.W	#2,D3			;1f480: 5443
-	NBCD	-(A0)			;1f482: 4820
-	DC.W	$4f56			;1f484
-	DC.W	$4552			;1f486
+	dc.b	"/"	;1f47c
+	dc.b	$05	;1f47d
+	dc.b	"MATCH OVER"	;1f47e
 lb_1f488:
-	DC.W	$002f			;1f488
-	DC.W	$0a00			;1f48a
+	dc.b	$00	;1f488
+	dc.b	"/"	;1f489
+	dc.b	$0a	;1f48a
+	dc.b	$00	;1f48b
 lb_1f48c:
-	MOVE.L	D5,-(A7)		;1f48c: 2f05
+	dc.b	"/"	;1f48c
+	dc.b	$05	;1f48d
 lb_1f48e:
-	DC.W	$002f			;1f48e
-	DC.W	$0200			;1f490
-	MOVE.L	A0,D7			;1f492: 2e08
-	DC.W	$002e			;1f494
-	DC.W	$0a00			;1f496
+	dc.b	$00	;1f48e
+	dc.b	"/"	;1f48f
+	dc.b	$02	;1f490
+	dc.b	$00	;1f491
+	dc.b	"."	;1f492
+	dc.b	$08	;1f493
+	dc.b	$00	;1f494
+	dc.b	"."	;1f495
+	dc.b	$0a	;1f496
+	dc.b	$00	;1f497
 lb_1f498:
-	MOVE.L	A7,D7			;1f498: 2e0f
+	dc.b	"."	;1f498
+	dc.b	$0f	;1f499
 lb_1f49a:
-	DC.W	$0002			;1f49a
-	SUBQ.W	#3,A1			;1f49c: 5749
-	LINK.W	A3,#8276		;1f49e: 4e532054
-	SWAP	D5			;1f4a2: 4845
-	MOVEA.L	A5,A0			;1f4a4: 204d
-	DC.W	$4154			;1f4a6
-	DC.W	$4348			;1f4a8
-	MOVEA.L	D2,A0			;1f4aa: 2042
-	SUBQ.B	#4,-(A0)		;1f4ac: 5920
+	dc.b	$00	;1f49a
+	dc.b	$02	;1f49b
+	dc.b	"WINS THE MATCH BY "	;1f49c
 lb_1f4ae:
-	DC.W	$0008			;1f4ae
-	DC.W	$4c41			;1f4b0
-	SUBQ.W	#1,(A4)			;1f4b2: 5354
-	MOVEA.L	D7,A0			;1f4b4: 2047
-	DC.W	$414d			;1f4b6
-	DC.W	$4520			;1f4b8
-	SUBQ.W	#3,A7			;1f4ba: 574f
-	DC.W	$4e20			;1f4bc
-	CLR.W	(A1)+			;1f4be: 4259
-	MOVE.L	D0,D0			;1f4c0: 2000
-	DC.W	$2031			;1f4c2
-	SUBQ.W	#1,(A4)			;1f4c4: 5354
-	MOVEA.L	(A2),A0			;1f4c6: 2052
-	DC.W	$4f55			;1f4c8
-	TRAP	#4			;1f4ca: 4e44
-	MOVEA.L	D7,A0			;1f4cc: 2047
-	DC.W	$414d			;1f4ce
-	DC.W	$4520			;1f4d0
-	MOVE.W	D0,-(A0)		;1f4d2: 3100
-	DC.W	$2031			;1f4d4
-	SUBQ.W	#1,(A4)			;1f4d6: 5354
-	MOVEA.L	(A2),A0			;1f4d8: 2052
-	DC.W	$4f55			;1f4da
-	TRAP	#4			;1f4dc: 4e44
-	MOVEA.L	D7,A0			;1f4de: 2047
-	DC.W	$414d			;1f4e0
-	DC.W	$4520			;1f4e2
-	MOVE.W	D0,D1			;1f4e4: 3200
-	DC.W	$2031			;1f4e6
-	SUBQ.W	#1,(A4)			;1f4e8: 5354
-	MOVEA.L	(A2),A0			;1f4ea: 2052
-	DC.W	$4f55			;1f4ec
-	TRAP	#4			;1f4ee: 4e44
-	MOVEA.L	D7,A0			;1f4f0: 2047
-	DC.W	$414d			;1f4f2
-	DC.W	$4520			;1f4f4
-	MOVE.W	D0,-(A1)		;1f4f6: 3300
-	DC.W	$2031			;1f4f8
-	SUBQ.W	#1,(A4)			;1f4fa: 5354
-	MOVEA.L	(A2),A0			;1f4fc: 2052
-	DC.W	$4f55			;1f4fe
-	TRAP	#4			;1f500: 4e44
-	MOVEA.L	D7,A0			;1f502: 2047
-	DC.W	$414d			;1f504
-	DC.W	$4520			;1f506
-	MOVE.W	D0,D2			;1f508: 3400
-	MOVE.W	(A3),21536(A0)		;1f50a: 31535420
-	SUBQ.W	#1,D5			;1f50e: 5345
-	DC.W	$4d49			;1f510
-	MOVEA.L	D6,A0			;1f512: 2046
-	DC.W	$494e			;1f514
-	DC.W	$414c			;1f516
-	DC.W	$0032			;1f518
-	TRAP	#4			;1f51a: 4e44
-	MOVEA.L	(A3),A0			;1f51c: 2053
-	DC.W	$454d			;1f51e
-	DC.W	$4920			;1f520
-	DC.W	$4649			;1f522
-	TRAP	#1			;1f524: 4e41
-	DC.W	$4c00			;1f526
-	ADDQ.W	#2,A0			;1f528: 5448
-	DC.W	$4520			;1f52a
-	DC.W	$4649			;1f52c
-	TRAP	#1			;1f52e: 4e41
-	DC.W	$4c00			;1f530
+	dc.b	$00	;1f4ae
+	dc.b	$08	;1f4af
+	dc.b	"LAST GAME WON BY "	;1f4b0
+	dc.b	$00	;1f4c1
+	dc.b	" 1ST ROUND GAME 1"	;1f4c2
+	dc.b	$00	;1f4d3
+	dc.b	" 1ST ROUND GAME 2"	;1f4d4
+	dc.b	$00	;1f4e5
+	dc.b	" 1ST ROUND GAME 3"	;1f4e6
+	dc.b	$00	;1f4f7
+	dc.b	" 1ST ROUND GAME 4"	;1f4f8
+	dc.b	$00	;1f509
+	dc.b	"1ST SEMI FINAL"	;1f50a
+	dc.b	$00	;1f518
+	dc.b	"2ND SEMI FINAL"	;1f519
+	dc.b	$00	;1f527
+	dc.b	"THE FINAL"	;1f528
+	dc.b	$00	;1f531
 lb_1f532:
-	MOVEA.L	A7,A0			;1f532: 204f
-	ADDQ.W	#3,D5			;1f534: 5645
-	ADDQ.B	#1,D0			;1f536: 5200
+	dc.b	" OVER"	;1f532
+	dc.b	$00	;1f537
 lb_1f538:
-	DC.W	$0857			;1f538
-	DC.W	$494e			;1f53a
-	SUBQ.B	#1,-(A0)		;1f53c: 5320
-	ADDQ.W	#2,A0			;1f53e: 5448
-	DC.W	$4520			;1f540
-	DC.W	$4741			;1f542
-	DC.W	$4d45			;1f544
-	DC.W	$0008			;1f546
-	DC.W	$414e			;1f548
-	NEG.B	-(A0)			;1f54a: 4420
-	DC.W	$454e			;1f54c
-	ADDQ.W	#2,D5			;1f54e: 5445
-	ADDQ.W	#1,(A3)			;1f550: 5253
-	DC.W	$2031			;1f552
-	SUBQ.W	#1,(A4)			;1f554: 5354
-	MOVEA.L	(A3),A0			;1f556: 2053
-	DC.W	$454d			;1f558
-	DC.W	$4946			;1f55a
-	DC.W	$494e			;1f55c
-	DC.W	$414c			;1f55e
-	SUBQ.B	#5,D0			;1f560: 5b00
-	DC.W	$0841			;1f562
-	TRAP	#4			;1f564: 4e44
-	MOVEA.L	D5,A0			;1f566: 2045
-	LINK.W	A4,#17746		;1f568: 4e544552
-	SUBQ.B	#1,-(A0)		;1f56c: 5320
-	MOVEA.W	A6,A1			;1f56e: 324e
-	NEG.B	-(A0)			;1f570: 4420
-	SUBQ.W	#1,D5			;1f572: 5345
-	DC.W	$4d49			;1f574
-	DC.W	$4649			;1f576
-	TRAP	#1			;1f578: 4e41
-	DC.W	$4c5b			;1f57a
-	DC.W	$0008			;1f57c
-	DC.W	$414e			;1f57e
-	NEG.B	-(A0)			;1f580: 4420
-	DC.W	$454e			;1f582
-	ADDQ.W	#2,D5			;1f584: 5445
-	ADDQ.W	#1,(A3)			;1f586: 5253
-	MOVE.L	D6,D0			;1f588: 2006
-	ADDQ.W	#2,A0			;1f58a: 5448
-	DC.W	$4520			;1f58c
-	DC.W	$4649			;1f58e
-	TRAP	#1			;1f590: 4e41
-	DC.W	$4c5b			;1f592
+	dc.b	$08	;1f538
+	dc.b	"WINS THE GAME"	;1f539
+	dc.b	$00	;1f546
+	dc.b	$08	;1f547
+	dc.b	"AND ENTERS 1ST SEMIFINAL["	;1f548
+	dc.b	$00	;1f561
+	dc.b	$08	;1f562
+	dc.b	"AND ENTERS 2ND SEMIFINAL["	;1f563
+	dc.b	$00	;1f57c
+	dc.b	$08	;1f57d
+	dc.b	"AND ENTERS "	;1f57e
+	dc.b	$06	;1f589
+	dc.b	"THE FINAL["	;1f58a
 lb_1f594:
-	DC.W	$002d			;1f594
-	DC.W	$05fc			;1f596
-	DC.W	$434f			;1f598
-	LINK.W	A4,#18766		;1f59a: 4e54494e
-	SUBQ.W	#2,D5			;1f59e: 5545
-	MOVEA.L	(A4),A0			;1f5a0: 2054
-	SWAP	D5			;1f5a2: 4845
-	MOVEA.L	(A4),A0			;1f5a4: 2054
-	DC.W	$4f55			;1f5a6
-	ADDQ.W	#1,A6			;1f5a8: 524e
-	DC.W	$414d			;1f5aa
-	DC.W	$454e			;1f5ac
-	ADDQ.B	#2,D0			;1f5ae: 5400
+	dc.b	$00	;1f594
+	dc.b	"-"	;1f595
+	dc.b	$05	;1f596
+	dc.b	$fc	;1f597
+	dc.b	"CONTINUE THE TOURNAMENT"	;1f598
+	dc.b	$00	;1f5af
 lb_1f5b0:
-	MOVE.L	D5,-(A7)		;1f5b0: 2f05
-	MOVE.L	-(A0),D0		;1f5b2: 2020
-	TRAP	#5			;1f5b4: 4e45
-	ADDQ.W	#4,(A4)			;1f5b6: 5854
-	MOVEA.L	D7,A0			;1f5b8: 2047
-	DC.W	$414d			;1f5ba
-	DC.W	$4520			;1f5bc
-	DC.W	$4953			;1f5be
-	MOVEA.L	(A4)+,A0		;1f5c0: 205c
-	MOVE.L	-(A0),D0		;1f5c2: 2020
+	dc.b	"/"	;1f5b0
+	dc.b	$05	;1f5b1
+	dc.b	"  NEXT GAME IS \  "	;1f5b2
 lb_1f5c4:
-	DC.W	$002d			;1f5c4
-	DC.W	$05fc			;1f5c6
-	SUBQ.W	#1,(A4)			;1f5c8: 5354
-	DC.W	$4152			;1f5ca
-	ADDQ.B	#2,-(A0)		;1f5cc: 5420
-	ADDQ.W	#8,A4			;1f5ce: 504c
-	DC.W	$4159			;1f5d0
-	DC.W	$494e			;1f5d2
-	DC.W	$4720			;1f5d4
-	ADDQ.W	#2,A0			;1f5d6: 5448
-	DC.W	$4520			;1f5d8
-	DC.W	$4741			;1f5da
-	DC.W	$4d45			;1f5dc
+	dc.b	$00	;1f5c4
+	dc.b	"-"	;1f5c5
+	dc.b	$05	;1f5c6
+	dc.b	$fc	;1f5c7
+	dc.b	"START PLAYING THE GAME"	;1f5c8
 lb_1f5de:
-	DC.W	$0002			;1f5de
-	DC.W	$424f			;1f5e0
-	ADDQ.W	#2,A0			;1f5e2: 5448
-	MOVEA.L	D1,A0			;1f5e4: 2041
-	ADDQ.W	#1,D5			;1f5e6: 5245
-	MOVEA.L	D3,A0			;1f5e8: 2043
-	DC.W	$4f4d			;1f5ea
-	ADDQ.W	#8,(A5)			;1f5ec: 5055
-	ADDQ.W	#2,D5			;1f5ee: 5445
-	ADDQ.B	#1,-(A0)		;1f5f0: 5220
-	ADDQ.W	#8,A4			;1f5f2: 504c
-	DC.W	$4159			;1f5f4
-	DC.W	$4552			;1f5f6
-	SUBQ.B	#1,D0			;1f5f8: 5300
+	dc.b	$00	;1f5de
+	dc.b	$02	;1f5df
+	dc.b	"BOTH ARE COMPUTER PLAYERS"	;1f5e0
+	dc.b	$00	;1f5f9
 lb_1f5fa:
-	ANDI.W	#$4f20,(A3)		;1f5fa: 02534f20
-	DC.W	$4348			;1f5fe
-	DC.W	$4f4f			;1f600
-	SUBQ.W	#1,D5			;1f602: 5345
-	MOVEA.L	D5,A0			;1f604: 2045
-	DC.W	$4954			;1f606
-	SWAP	D5			;1f608: 4845
-	ADDQ.B	#1,-(A0)		;1f60a: 5220
-	MOVEA.L	D1,A0			;1f60c: 2041
-	MOVEA.L	A7,A0			;1f60e: 204f
-	ADDQ.B	#1,-(A0)		;1f610: 5220
-	CLR.B	D0			;1f612: 4200
+	dc.b	$02	;1f5fa
+	dc.b	"SO CHOOSE EITHER  A OR B"	;1f5fb
+	dc.b	$00	;1f613
 lb_1f614:
-	MOVE.L	D5,-(A6)		;1f614: 2d05
-	DC.W	$fc57			;1f616
-	DC.W	$4154			;1f618
-	DC.W	$4348			;1f61a
-	MOVEA.L	(A4),A0			;1f61c: 2054
-	SWAP	D5			;1f61e: 4845
-	DC.W	$4d20			;1f620
-	ADDQ.W	#8,A4			;1f622: 504c
-	DC.W	$4159			;1f624
-	MOVEA.L	A1,A0			;1f626: 2049
-	ADDQ.B	#2,-(A0)		;1f628: 5420
-	DC.W	$4f55			;1f62a
-	ADDQ.B	#2,D0			;1f62c: 5400
+	dc.b	"-"	;1f614
+	dc.b	$05	;1f615
+	dc.b	$fc	;1f616
+	dc.b	"WATCH THEM PLAY IT OUT"	;1f617
+	dc.b	$00	;1f62d
 lb_1f62e:
-	MOVE.L	D5,-(A6)		;1f62e: 2d05
-	DC.W	$fc43			;1f630
-	DC.W	$414c			;1f632
-	DC.W	$4355			;1f634
-	DC.W	$4c41			;1f636
-	ADDQ.W	#2,D5			;1f638: 5445
-	MOVEA.L	(A4),A0			;1f63a: 2054
-	ADDQ.W	#1,(A5)			;1f63c: 5255
-	DC.W	$4520			;1f63e
-	ADDQ.W	#1,D5			;1f640: 5245
-	SUBQ.W	#1,(A5)			;1f642: 5355
-	DC.W	$4c54			;1f644
+	dc.b	"-"	;1f62e
+	dc.b	$05	;1f62f
+	dc.b	$fc	;1f630
+	dc.b	"CALCULATE TRUE RESULT"	;1f631
 lb_1f646:
-	DC.W	$002d			;1f646
-	DC.W	$05fc			;1f648
-	DC.W	$414e			;1f64a
-	NEG.B	-(A0)			;1f64c: 4420
-	DC.W	$474f			;1f64e
-	MOVEA.L	A1,A0			;1f650: 2049
-	LINK.W	A4,#20256		;1f652: 4e544f20
-	TRAP	#5			;1f656: 4e45
-	ADDQ.W	#4,(A4)			;1f658: 5854
-	MOVEA.L	D7,A0			;1f65a: 2047
-	DC.W	$414d			;1f65c
-	DC.W	$4500			;1f65e
+	dc.b	$00	;1f646
+	dc.b	"-"	;1f647
+	dc.b	$05	;1f648
+	dc.b	$fc	;1f649
+	dc.b	"AND GO INTO NEXT GAME"	;1f64a
+	dc.b	$00	;1f65f
 lb_1f660:
-	MOVE.L	D5,-(A7)		;1f660: 2f05
-	ADDQ.W	#2,A7			;1f662: 544f
-	SUBQ.W	#2,(A2)			;1f664: 5552
-	TRAP	#1			;1f666: 4e41
-	DC.W	$4d45			;1f668
-	DC.W	$4e54			;1f66a
-	MOVEA.L	A7,A0			;1f66c: 204f
-	ADDQ.W	#3,D5			;1f66e: 5645
-	ADDQ.B	#1,D0			;1f670: 5200
+	dc.b	"/"	;1f660
+	dc.b	$05	;1f661
+	dc.b	"TOURNAMENT OVER"	;1f662
+	dc.b	$00	;1f671
 lb_1f672:
-	DC.W	$0249			;1f672
-	SUBQ.B	#1,-(A0)		;1f674: 5320
-	ADDQ.W	#2,A0			;1f676: 5448
-	DC.W	$4520			;1f678
-	TRAP	#5			;1f67a: 4e45
-	SUBQ.B	#3,-(A0)		;1f67c: 5720
-	DC.W	$4348			;1f67e
-	DC.W	$414d			;1f680
-	ADDQ.W	#8,A1			;1f682: 5049
-	DC.W	$4f4e			;1f684
+	dc.b	$02	;1f672
+	dc.b	"IS THE NEW CHAMPION"	;1f673
 lb_1f686:
-	DC.W	$0008			;1f686
-	MOVEA.L	(A1)+,A0		;1f688: 2059
-	DC.W	$4f55			;1f68a
-	ADDQ.B	#1,-(A0)		;1f68c: 5220
-	DC.W	$4649			;1f68e
-	TRAP	#1			;1f690: 4e41
-	DC.W	$4c20			;1f692
-	ADDQ.W	#1,D1			;1f694: 5241
-	TRAP	#11			;1f696: 4e4b
-	DC.W	$4f4d			;1f698
-	DC.W	$4554			;1f69a
-	DC.W	$4552			;1f69c
-	MOVEA.L	A1,A0			;1f69e: 2049
-	SUBQ.B	#1,D0			;1f6a0: 5300
-	ANDI.W	#$4849,(A7)		;1f6a2: 02574849
-	DC.W	$4348			;1f6a6
-	MOVEA.L	A1,A0			;1f6a8: 2049
-	SUBQ.B	#1,-(A0)		;1f6aa: 5320
-	ADDQ.W	#2,A7			;1f6ac: 544f
-	ADDQ.W	#2,D1			;1f6ae: 5441
-	DC.W	$4c4c			;1f6b0
-	SUBQ.B	#4,-(A0)		;1f6b2: 5920
-	CLR.W	(A2)			;1f6b4: 4252
-	DC.W	$494c			;1f6b6
-	DC.W	$4c49			;1f6b8
-	DC.W	$414e			;1f6ba
-	ADDQ.B	#2,D0			;1f6bc: 5400
-	ADDI.W	#$4849,(A7)		;1f6be: 06574849
-	DC.W	$4348			;1f6c2
-	MOVEA.L	A1,A0			;1f6c4: 2049
-	SUBQ.B	#1,-(A0)		;1f6c6: 5320
-	SUBQ.W	#1,(A5)			;1f6c8: 5355
-	SUBQ.W	#1,(A0)			;1f6ca: 5350
-	DC.W	$4943			;1f6cc
-	DC.W	$494f			;1f6ce
-	SUBQ.W	#2,(A3)			;1f6d0: 5553
-	DC.W	$4c59			;1f6d2
-	MOVEA.L	D7,A0			;1f6d4: 2047
-	DC.W	$4f4f			;1f6d6
-	NEG.B	D0			;1f6d8: 4400
-	EORI.W	#$4849,(A7)		;1f6da: 0a574849
-	DC.W	$4348			;1f6de
-	MOVEA.L	A1,A0			;1f6e0: 2049
-	SUBQ.B	#1,-(A0)		;1f6e2: 5320
-	ADDQ.W	#1,D5			;1f6e4: 5245
-	DC.W	$414c			;1f6e6
-	DC.W	$4c59			;1f6e8
-	MOVEA.L	D1,A0			;1f6ea: 2041
-	SUBQ.W	#3,D5			;1f6ec: 5745
-	SUBQ.W	#1,A7			;1f6ee: 534f
-	DC.W	$4d45			;1f6f0
-	DC.W	$0006			;1f6f2
-	DC.W	$414e			;1f6f4
-	NEG.B	-(A0)			;1f6f6: 4420
-	ADDQ.W	#2,A0			;1f6f8: 5448
-	DC.W	$4154			;1f6fa
-	SUBQ.B	#1,-(A0)		;1f6fc: 5320
-	ADDQ.W	#2,A7			;1f6fe: 544f
-	ADDQ.W	#2,D1			;1f700: 5441
-	DC.W	$4c4c			;1f702
-	SUBQ.B	#4,-(A0)		;1f704: 5920
-	DC.W	$414d			;1f706
-	DC.W	$415a			;1f708
-	DC.W	$494e			;1f70a
-	DC.W	$4700			;1f70c
-	ADDI.W	#$4e44,D1		;1f70e: 06414e44
-	MOVEA.L	(A4),A0			;1f712: 2054
-	SWAP	D1			;1f714: 4841
-	ADDQ.W	#2,(A3)			;1f716: 5453
-	MOVEA.L	(A7),A0			;1f718: 2057
-	DC.W	$454c			;1f71a
-	DC.W	$4c20			;1f71c
-	SUBQ.W	#3,A1			;1f71e: 5749
-	DC.W	$434b			;1f720
-	DC.W	$4544			;1f722
-	DC.W	$0005			;1f724
-	CLR.W	D5			;1f726: 4245
-	DC.W	$454e			;1f728
-	MOVEA.L	(A0),A0			;1f72a: 2050
-	ADDQ.W	#1,D1			;1f72c: 5241
-	DC.W	$4354			;1f72e
-	DC.W	$4943			;1f730
-	DC.W	$494e			;1f732
-	DC.W	$4720			;1f734
-	DC.W	$4548			;1f736
-	NBCD	-(A0)			;1f738: 4820
-	SUBQ.W	#5,(A3)+		;1f73a: 5b5b
-	SUBQ.W	#5,(A3)+		;1f73c: 5b5b
-	SUBQ.B	#5,D0			;1f73e: 5b00
-	ADDI.W	#$4849,(A7)		;1f740: 06574849
-	DC.W	$4348			;1f744
-	MOVEA.L	A1,A0			;1f746: 2049
-	SUBQ.B	#1,-(A0)		;1f748: 5320
-	DC.W	$4120			;1f74a
-	DC.W	$4352			;1f74c
-	DC.W	$4143			;1f74e
-	DC.W	$4b49			;1f750
-	TRAP	#7			;1f752: 4e47
-	MOVEA.L	(A3),A0			;1f754: 2053
-	DC.W	$434f			;1f756
-	ADDQ.W	#1,D5			;1f758: 5245
-	DC.W	$0006			;1f75a
-	TRAP	#15			;1f75c: 4e4f
-	ADDQ.B	#2,-(A0)		;1f75e: 5420
-	CLR.W	D1			;1f760: 4241
-	NEG.B	-(A0)			;1f762: 4420
-	DC.W	$464f			;1f764
-	ADDQ.B	#1,-(A0)		;1f766: 5220
-	DC.W	$4120			;1f768
-	DC.W	$4249			;1f76a
-	ADDQ.W	#2,(A4)+		;1f76c: 545c
-	CLR.W	(A2)			;1f76e: 4252
-	DC.W	$4149			;1f770
-	DC.W	$4e00			;1f772
-	ADDI.W	#$4f20,(A3)		;1f774: 06534f20
-	SUBQ.W	#3,A0			;1f778: 5748
-	SUBQ.B	#4,-(A0)		;1f77a: 5920
-	TRAP	#15			;1f77c: 4e4f
-	ADDQ.B	#2,-(A0)		;1f77e: 5420
-	ADDQ.W	#2,(A2)			;1f780: 5452
-	SUBQ.B	#4,-(A0)		;1f782: 5920
-	SUBQ.W	#1,A6			;1f784: 534e
-	DC.W	$4f4f			;1f786
-	DC.W	$4b45			;1f788
-	ADDQ.B	#1,D0			;1f78a: 5200
-	ANDI.W	#$4f55,(A1)+		;1f78c: 02594f55
-	MOVEA.L	(A3),A0			;1f790: 2053
-	DC.W	$484f			;1f792
-	SUBQ.W	#2,A4			;1f794: 554c
-	NEG.B	-(A0)			;1f796: 4420
-	ADDQ.W	#2,(A2)			;1f798: 5452
-	SUBQ.B	#4,-(A0)		;1f79a: 5920
-	SUBQ.W	#1,A6			;1f79c: 534e
-	DC.W	$4f4f			;1f79e
-	DC.W	$4b45			;1f7a0
-	ADDQ.B	#1,-(A0)		;1f7a2: 5220
-	TRAP	#15			;1f7a4: 4e4f
-	SUBQ.B	#3,D0			;1f7a6: 5700
-	ANDI.W	#$4f20,D7		;1f7a8: 02474f20
-	DC.W	$4f4e			;1f7ac
-	SUBQ.B	#5,-(A0)		;1f7ae: 5b20
-	CLR.W	(A5)			;1f7b0: 4255
-	SUBQ.B	#4,-(A0)		;1f7b2: 5920
-	SUBQ.W	#1,A6			;1f7b4: 534e
-	DC.W	$4f4f			;1f7b6
-	DC.W	$4b45			;1f7b8
-	ADDQ.B	#1,-(A0)		;1f7ba: 5220
-	DC.W	$4153			;1f7bc
-	MOVEA.L	(A7),A0			;1f7be: 2057
-	DC.W	$454c			;1f7c0
-	DC.W	$4c00			;1f7c2
-	BCHG	D6,(A1)+		;1f7c4: 0d59
-	DC.W	$4f55			;1f7c6
-	MOVEA.L	D4,A0			;1f7c8: 2044
-	DC.W	$4f4e			;1f7ca
-	ADDQ.B	#2,-(A0)		;1f7cc: 5420
-	TRAP	#5			;1f7ce: 4e45
-	DC.W	$4544			;1f7d0
-	MOVEA.L	(A4),A0			;1f7d2: 2054
-	DC.W	$4950			;1f7d4
-	SUBQ.B	#1,-(A0)		;1f7d6: 5320
-	DC.W	$444f			;1f7d8
-	MOVEA.L	(A1)+,A0		;1f7da: 2059
-	DC.W	$4f55			;1f7dc
-	DC.W	$0006			;1f7de
-	SUBQ.W	#3,A7			;1f7e0: 574f
-	SUBQ.B	#3,-(A0)		;1f7e2: 5720
-	ADDQ.B	#6,-(A0)		;1f7e4: 5c20
-	ADDQ.W	#8,A7			;1f7e6: 504f
-	DC.W	$4f4c			;1f7e8
-	MOVEA.L	(A4),A0			;1f7ea: 2054
-	SWAP	D5			;1f7ec: 4845
-	MOVEA.L	A7,A0			;1f7ee: 204f
-	ADDQ.W	#2,A0			;1f7f0: 5448
-	DC.W	$4552			;1f7f2
-	MOVEA.L	A7,A0			;1f7f4: 204f
-	TRAP	#5			;1f7f6: 4e45
-	DC.W	$0006			;1f7f8
-	ADDQ.W	#2,A0			;1f7fa: 5448
-	DC.W	$4154			;1f7fc
-	MOVEA.L	A5,A0			;1f7fe: 204d
-	SUBQ.W	#2,(A3)			;1f800: 5553
-	ADDQ.B	#2,-(A0)		;1f802: 5420
-	CLR.W	D5			;1f804: 4245
-	MOVEA.L	D1,A0			;1f806: 2041
-	MOVEA.L	A5,A0			;1f808: 204d
-	DC.W	$4953			;1f80a
-	ADDQ.W	#2,D1			;1f80c: 5441
-	DC.W	$4b45			;1f80e
-	MOVEA.L	(A3)+,A0		;1f810: 205b
-	SUBQ.W	#5,(A3)+		;1f812: 5b5b
-	DC.W	$0002			;1f814
-	DC.W	$4d59			;1f816
-	MOVEA.L	D3,A0			;1f818: 2043
-	DC.W	$4152			;1f81a
-	ADDQ.W	#1,(A1)+		;1f81c: 5259
-	MOVEA.L	D6,A0			;1f81e: 2046
-	DC.W	$4c41			;1f820
-	DC.W	$4720			;1f822
-	DC.W	$4d55			;1f824
-	SUBQ.W	#1,(A4)			;1f826: 5354
-	MOVEA.L	D2,A0			;1f828: 2042
-	DC.W	$4520			;1f82a
-	NEG.W	(A5)			;1f82c: 4455
-	NOT.W	D6			;1f82e: 4646
-	DC.W	$0002			;1f830
-	DC.W	$4d59			;1f832
-	MOVEA.L	D1,A0			;1f834: 2041
-	SUBQ.W	#5,A4			;1f836: 5b4c
-	SUBQ.W	#5,(A5)			;1f838: 5b55
-	SUBQ.B	#5,-(A0)		;1f83a: 5b20
-	DC.W	$4341			;1f83c
-	TRAP	#14			;1f83e: 4e4e
-	DC.W	$4f54			;1f840
-	MOVEA.L	(A4),A0			;1f842: 2054
-	DC.W	$414b			;1f844
-	DC.W	$4520			;1f846
-	ADDQ.W	#2,A0			;1f848: 5448
-	DC.W	$4953			;1f84a
-	DC.W	$000f			;1f84c
-	DC.W	$414e			;1f84e
-	NEG.B	-(A0)			;1f850: 4420
-	ADDQ.W	#2,A0			;1f852: 5448
-	DC.W	$4552			;1f854
-	DC.W	$4520			;1f856
-	DC.W	$4953			;1f858
-	MOVEA.L	A6,A0			;1f85a: 204e
-	DC.W	$4f20			;1f85c
-	DC.W	$4d4f			;1f85e
-	ADDQ.W	#1,D5			;1f860: 5245
-	MOVEA.L	D3,A0			;1f862: 2043
-	SWAP	D1			;1f864: 4841
-	DC.W	$4c4b			;1f866
-	DC.W	$0006			;1f868
-	SUBQ.W	#3,A0			;1f86a: 5748
-	DC.W	$4943			;1f86c
-	NBCD	-(A0)			;1f86e: 4820
-	DC.W	$4953			;1f870
-	MOVEA.L	D5,A0			;1f872: 2045
-	ADDQ.W	#4,D3			;1f874: 5843
-	DC.W	$454c			;1f876
-	DC.W	$4c45			;1f878
-	LINK.W	A4,#6			;1f87a: 4e540006
-	SUBQ.W	#3,A0			;1f87e: 5748
-	DC.W	$4943			;1f880
-	NBCD	-(A0)			;1f882: 4820
-	DC.W	$4953			;1f884
-	MOVEA.L	A6,A0			;1f886: 204e
-	DC.W	$4541			;1f888
-	ADDQ.W	#1,A4			;1f88a: 524c
-	SUBQ.B	#4,-(A0)		;1f88c: 5920
-	CLR.W	(A2)			;1f88e: 4252
-	DC.W	$494c			;1f890
-	DC.W	$4c49			;1f892
-	DC.W	$414e			;1f894
-	ADDQ.B	#2,D0			;1f896: 5400
-	ADDI.W	#$4849,(A7)		;1f898: 06574849
-	DC.W	$4348			;1f89c
-	MOVEA.L	A1,A0			;1f89e: 2049
-	SUBQ.B	#1,-(A0)		;1f8a0: 5320
-	ADDQ.W	#8,(A2)			;1f8a2: 5052
-	DC.W	$4554			;1f8a4
-	ADDQ.W	#2,(A1)+		;1f8a6: 5459
-	MOVEA.L	D1,A0			;1f8a8: 2041
-	DC.W	$4d41			;1f8aa
-	ADDQ.W	#5,A1			;1f8ac: 5a49
-	TRAP	#7			;1f8ae: 4e47
-	DC.W	$0006			;1f8b0
-	SUBQ.W	#3,A0			;1f8b2: 5748
-	DC.W	$4943			;1f8b4
-	NBCD	-(A0)			;1f8b6: 4820
-	DC.W	$4953			;1f8b8
-	MOVEA.L	(A6),A0			;1f8ba: 2056
-	DC.W	$4552			;1f8bc
-	SUBQ.B	#4,-(A0)		;1f8be: 5920
-	DC.W	$474f			;1f8c0
-	DC.W	$4f44			;1f8c2
-	DC.W	$0006			;1f8c4
-	SUBQ.W	#3,A0			;1f8c6: 5748
-	DC.W	$4943			;1f8c8
-	NBCD	-(A0)			;1f8ca: 4820
-	DC.W	$4953			;1f8cc
-	MOVEA.L	(A1),A0			;1f8ce: 2051
-	SUBQ.W	#2,A1			;1f8d0: 5549
-	ADDQ.W	#2,D5			;1f8d2: 5445
-	MOVEA.L	D7,A0			;1f8d4: 2047
-	DC.W	$4f4f			;1f8d6
-	NEG.B	D0			;1f8d8: 4400
-	ADDI.W	#$4849,(A7)		;1f8da: 06574849
-	DC.W	$4348			;1f8de
-	MOVEA.L	A1,A0			;1f8e0: 2049
-	SUBQ.B	#1,-(A0)		;1f8e2: 5320
-	TRAP	#15			;1f8e4: 4e4f
-	ADDQ.B	#2,-(A0)		;1f8e6: 5420
-	CLR.W	D1			;1f8e8: 4241
-	NEG.B	-(A0)			;1f8ea: 4420
-	DC.W	$4154			;1f8ec
-	MOVEA.L	D1,A0			;1f8ee: 2041
-	DC.W	$4c4c			;1f8f0
-	DC.W	$0006			;1f8f2
-	SUBQ.W	#3,A0			;1f8f4: 5748
-	DC.W	$4943			;1f8f6
-	NBCD	-(A0)			;1f8f8: 4820
-	DC.W	$4953			;1f8fa
-	MOVEA.L	A6,A0			;1f8fc: 204e
-	DC.W	$4541			;1f8fe
-	ADDQ.W	#1,A4			;1f900: 524c
-	SUBQ.B	#4,-(A0)		;1f902: 5920
-	DC.W	$4156			;1f904
-	DC.W	$4552			;1f906
-	DC.W	$4147			;1f908
-	DC.W	$4500			;1f90a
-	DC.W	$0857			;1f90c
-	DC.W	$4849			;1f90e
-	DC.W	$4348			;1f910
-	MOVEA.L	A1,A0			;1f912: 2049
-	SUBQ.B	#1,-(A0)		;1f914: 5320
-	DC.W	$4f4e			;1f916
-	DC.W	$4c59			;1f918
-	MOVEA.L	D1,A0			;1f91a: 2041
-	ADDQ.W	#3,D5			;1f91c: 5645
-	ADDQ.W	#1,D1			;1f91e: 5241
-	DC.W	$4745			;1f920
-	DC.W	$0008			;1f922
-	SUBQ.W	#3,A0			;1f924: 5748
-	DC.W	$4943			;1f926
-	NBCD	-(A0)			;1f928: 4820
-	DC.W	$4953			;1f92a
-	MOVEA.L	A6,A0			;1f92c: 204e
-	DC.W	$4f20			;1f92e
-	DC.W	$4752			;1f930
-	DC.W	$4541			;1f932
-	ADDQ.B	#2,-(A0)		;1f934: 5420
-	SUBQ.W	#1,A0			;1f936: 5348
-	DC.W	$414b			;1f938
-	DC.W	$4553			;1f93a
-	DC.W	$0008			;1f93c
-	DC.W	$474f			;1f93e
-	DC.W	$4f44			;1f940
-	MOVEA.L	(A4)+,A0		;1f942: 205c
-	MOVEA.L	D2,A0			;1f944: 2042
-	SUBQ.W	#2,(A4)			;1f946: 5554
-	MOVEA.L	D3,A0			;1f948: 2043
-	DC.W	$4f55			;1f94a
-	DC.W	$4c44			;1f94c
-	MOVEA.L	D2,A0			;1f94e: 2042
-	DC.W	$4520			;1f950
-	CLR.W	D5			;1f952: 4245
-	ADDQ.W	#2,(A4)			;1f954: 5454
-	DC.W	$4552			;1f956
-	DC.W	$0008			;1f958
-	TRAP	#15			;1f95a: 4e4f
-	ADDQ.W	#2,A0			;1f95c: 5448
-	DC.W	$494e			;1f95e
-	DC.W	$4720			;1f960
-	ADDQ.W	#2,A7			;1f962: 544f
-	MOVEA.L	D6,A0			;1f964: 2046
-	DC.W	$4158			;1f966
-	MOVEA.L	A0,A0			;1f968: 2048
-	DC.W	$4f4d			;1f96a
-	DC.W	$4520			;1f96c
-	DC.W	$4142			;1f96e
-	DC.W	$4f55			;1f970
-	ADDQ.B	#2,D0			;1f972: 5400
-	DC.W	$0857			;1f974
-	DC.W	$4849			;1f976
-	DC.W	$4348			;1f978
-	MOVEA.L	A1,A0			;1f97a: 2049
-	SUBQ.B	#1,-(A0)		;1f97c: 5320
-	TRAP	#15			;1f97e: 4e4f
-	ADDQ.B	#2,-(A0)		;1f980: 5420
-	CLR.W	D1			;1f982: 4241
-	NEG.B	-(A0)			;1f984: 4420
-	DC.W	$4920			;1f986
-	SUBQ.W	#1,(A5)			;1f988: 5355
-	ADDQ.W	#8,(A0)			;1f98a: 5050
-	DC.W	$4f53			;1f98c
-	DC.W	$4500			;1f98e
-	DC.W	$0854			;1f990
-	SWAP	D1			;1f992: 4841
-	ADDQ.W	#2,(A3)			;1f994: 5453
-	MOVEA.L	(A2),A0			;1f996: 2052
-	DC.W	$4154			;1f998
-	SWAP	D5			;1f99a: 4845
-	ADDQ.B	#1,-(A0)		;1f99c: 5220
-	ADDQ.W	#8,A7			;1f99e: 504f
-	DC.W	$4f52			;1f9a0
-	MOVEA.L	D6,A0			;1f9a2: 2046
-	ADDQ.W	#1,D1			;1f9a4: 5241
-	TRAP	#11			;1f9a6: 4e4b
-	DC.W	$4c59			;1f9a8
-	DC.W	$0008			;1f9aa
-	DC.W	$4920			;1f9ac
-	DC.W	$414d			;1f9ae
-	MOVEA.L	(A3),A0			;1f9b0: 2053
-	SUBQ.W	#2,(A2)			;1f9b2: 5552
-	DC.W	$4520			;1f9b4
-	SUBQ.W	#4,A7			;1f9b6: 594f
-	SUBQ.B	#2,-(A0)		;1f9b8: 5520
-	DC.W	$4341			;1f9ba
-	DC.W	$4e20			;1f9bc
-	DC.W	$494d			;1f9be
-	ADDQ.W	#8,(A2)			;1f9c0: 5052
-	DC.W	$4f56			;1f9c2
-	DC.W	$4500			;1f9c4
-	DC.W	$0857			;1f9c6
-	DC.W	$4f52			;1f9c8
-	SUBQ.W	#1,D5			;1f9ca: 5345
-	MOVEA.L	(A4),A0			;1f9cc: 2054
-	DC.W	$4849			;1f9ce
-	TRAP	#7			;1f9d0: 4e47
-	SUBQ.B	#1,-(A0)		;1f9d2: 5320
-	SWAP	D1			;1f9d4: 4841
-	ADDQ.W	#8,(A0)			;1f9d6: 5050
-	DC.W	$454e			;1f9d8
-	MOVEA.L	D1,A0			;1f9da: 2041
-	ADDQ.B	#2,-(A0)		;1f9dc: 5420
-	SUBQ.W	#1,D5			;1f9de: 5345
-	DC.W	$4100			;1f9e0
-	DC.W	$0843			;1f9e2
-	DC.W	$4f4d			;1f9e4
-	DC.W	$4520			;1f9e6
-	DC.W	$4f4e			;1f9e8
-	MOVEA.L	(A3),A0			;1f9ea: 2053
-	ADDQ.W	#2,A7			;1f9ec: 544f
-	ADDQ.B	#8,-(A0)		;1f9ee: 5020
-	DC.W	$4d55			;1f9f0
-	DC.W	$434b			;1f9f2
-	DC.W	$494e			;1f9f4
-	DC.W	$4720			;1f9f6
-	DC.W	$4142			;1f9f8
-	DC.W	$4f55			;1f9fa
-	ADDQ.B	#2,D0			;1f9fc: 5400
-	DC.W	$0854			;1f9fe
-	SWAP	D1			;1fa00: 4841
-	ADDQ.B	#2,-(A0)		;1fa02: 5420
-	ADDQ.W	#1,D5			;1fa04: 5245
-	DC.W	$414c			;1fa06
-	DC.W	$4c59			;1fa08
-	MOVEA.L	(A7),A0			;1fa0a: 2057
-	DC.W	$4f4e			;1fa0c
-	ADDQ.B	#2,-(A0)		;1fa0e: 5420
-	DC.W	$444f			;1fa10
-	MOVEA.L	D1,A0			;1fa12: 2041
-	ADDQ.B	#2,-(A0)		;1fa14: 5420
-	DC.W	$414c			;1fa16
-	DC.W	$4c00			;1fa18
-	DC.W	$0854			;1fa1a
-	SWAP	D1			;1fa1c: 4841
-	ADDQ.W	#2,(A3)			;1fa1e: 5453
-	MOVEA.L	(A4),A0			;1fa20: 2054
-	DC.W	$4f4f			;1fa22
-	MOVEA.L	D7,A0			;1fa24: 2047
-	ADDQ.W	#1,A1			;1fa26: 5249
-	DC.W	$4d20			;1fa28
-	DC.W	$464f			;1fa2a
-	ADDQ.B	#1,-(A0)		;1fa2c: 5220
-	SUBQ.W	#3,A7			;1fa2e: 574f
-	ADDQ.W	#1,D4			;1fa30: 5244
-	SUBQ.B	#1,D0			;1fa32: 5300
-	DC.W	$084e			;1fa34
-	DC.W	$4f54			;1fa36
-	MOVEA.L	(A7),A0			;1fa38: 2057
-	DC.W	$4f52			;1fa3a
-	ADDQ.W	#2,A0			;1fa3c: 5448
-	MOVEA.L	D1,A0			;1fa3e: 2041
-	MOVEA.L	D3,A0			;1fa40: 2043
-	DC.W	$4f4d			;1fa42
-	DC.W	$4d45			;1fa44
-	DC.W	$4e54			;1fa46
-	MOVEA.L	(A3)+,A0		;1fa48: 205b
-	SUBQ.W	#5,(A3)+		;1fa4a: 5b5b
-	SUBQ.B	#5,D0			;1fa4c: 5b00
-	DC.W	$084e			;1fa4e
-	DC.W	$4f54			;1fa50
-	MOVEA.L	(A1)+,A0		;1fa52: 2059
-	DC.W	$4f55			;1fa54
-	ADDQ.B	#1,-(A0)		;1fa56: 5220
-	DC.W	$4c55			;1fa58
-	DC.W	$434b			;1fa5a
-	SUBQ.B	#4,-(A0)		;1fa5c: 5920
-	NEG.W	D1			;1fa5e: 4441
-	SUBQ.B	#4,-(A0)		;1fa60: 5920
-	DC.W	$4953			;1fa62
-	MOVEA.L	A1,A0			;1fa64: 2049
-	ADDQ.W	#2,(A3)+		;1fa66: 545b
-	SUBQ.B	#5,D0			;1fa68: 5b00
-	DC.W	$084e			;1fa6a
-	DC.W	$4f57			;1fa6c
-	MOVEA.L	D4,A0			;1fa6e: 2044
-	DC.W	$4f20			;1fa70
-	DC.W	$4954			;1fa72
-	MOVEA.L	(A0),A0			;1fa74: 2050
-	ADDQ.W	#1,A7			;1fa76: 524f
-	ADDQ.W	#8,D5			;1fa78: 5045
-	ADDQ.W	#1,A4			;1fa7a: 524c
-	SUBQ.B	#4,-(A0)		;1fa7c: 5920
-	SUBQ.W	#5,(A3)+		;1fa7e: 5b5b
-	SUBQ.B	#5,D0			;1fa80: 5b00
-	DC.W	$0857			;1fa82
-	SWAP	D1			;1fa84: 4841
-	ADDQ.B	#2,-(A0)		;1fa86: 5420
-	DC.W	$4120			;1fa88
-	SUBQ.W	#3,D1			;1fa8a: 5741
-	SUBQ.W	#1,(A4)			;1fa8c: 5354
-	DC.W	$4520			;1fa8e
-	DC.W	$4f46			;1fa90
-	MOVEA.L	D3,A0			;1fa92: 2043
-	ADDQ.W	#8,(A5)			;1fa94: 5055
-	MOVEA.L	(A4),A0			;1fa96: 2054
-	DC.W	$494d			;1fa98
-	DC.W	$4500			;1fa9a
-	BCHG	D7,(A7)			;1fa9c: 0f57
-	DC.W	$4849			;1fa9e
-	DC.W	$4348			;1faa0
-	MOVEA.L	A1,A0			;1faa2: 2049
-	SUBQ.B	#1,-(A0)		;1faa4: 5320
-	ADDQ.W	#1,A1			;1faa6: 5249
-	DC.W	$4449			;1faa8
-	DC.W	$4355			;1faaa
-	DC.W	$4c4f			;1faac
-	SUBQ.W	#2,(A3)			;1faae: 5553
-	DC.W	$4c59			;1fab0
-	MOVEA.L	D2,A0			;1fab2: 2042
-	DC.W	$4144			;1fab4
-	DC.W	$0000			;1fab6
+	dc.b	$00	;1f686
+	dc.b	$08	;1f687
+	dc.b	" YOUR FINAL RANKOMETER IS"	;1f688
+	dc.b	$00	;1f6a1
+	dc.b	$02	;1f6a2
+	dc.b	"WHICH IS TOTALLY BRILLIANT"	;1f6a3
+	dc.b	$00	;1f6bd
+	dc.b	$06	;1f6be
+	dc.b	"WHICH IS SUSPICIOUSLY GOOD"	;1f6bf
+	dc.b	$00	;1f6d9
+	dc.b	$0a	;1f6da
+	dc.b	"WHICH IS REALLY AWESOME"	;1f6db
+	dc.b	$00	;1f6f2
+	dc.b	$06	;1f6f3
+	dc.b	"AND THATS TOTALLY AMAZING"	;1f6f4
+	dc.b	$00	;1f70d
+	dc.b	$06	;1f70e
+	dc.b	"AND THATS WELL WICKED"	;1f70f
+	dc.b	$00	;1f724
+	dc.b	$05	;1f725
+	dc.b	"BEEN PRACTICING EHH [[[[["	;1f726
+	dc.b	$00	;1f73f
+	dc.b	$06	;1f740
+	dc.b	"WHICH IS A CRACKING SCORE"	;1f741
+	dc.b	$00	;1f75a
+	dc.b	$06	;1f75b
+	dc.b	"NOT BAD FOR A BIT\BRAIN"	;1f75c
+	dc.b	$00	;1f773
+	dc.b	$06	;1f774
+	dc.b	"SO WHY NOT TRY SNOOKER"	;1f775
+	dc.b	$00	;1f78b
+	dc.b	$02	;1f78c
+	dc.b	"YOU SHOULD TRY SNOOKER NOW"	;1f78d
+	dc.b	$00	;1f7a7
+	dc.b	$02	;1f7a8
+	dc.b	"GO ON[ BUY SNOOKER AS WELL"	;1f7a9
+	dc.b	$00	;1f7c3
+	dc.b	$0d	;1f7c4
+	dc.b	"YOU DONT NEED TIPS DO YOU"	;1f7c5
+	dc.b	$00	;1f7de
+	dc.b	$06	;1f7df
+	dc.b	"WOW \ POOL THE OTHER ONE"	;1f7e0
+	dc.b	$00	;1f7f8
+	dc.b	$06	;1f7f9
+	dc.b	"THAT MUST BE A MISTAKE [[["	;1f7fa
+	dc.b	$00	;1f814
+	dc.b	$02	;1f815
+	dc.b	"MY CARRY FLAG MUST BE DUFF"	;1f816
+	dc.b	$00	;1f830
+	dc.b	$02	;1f831
+	dc.b	"MY A[L[U[ CANNOT TAKE THIS"	;1f832
+	dc.b	$00	;1f84c
+	dc.b	$0f	;1f84d
+	dc.b	"AND THERE IS NO MORE CHALK"	;1f84e
+	dc.b	$00	;1f868
+	dc.b	$06	;1f869
+	dc.b	"WHICH IS EXCELLENT"	;1f86a
+	dc.b	$00	;1f87c
+	dc.b	$06	;1f87d
+	dc.b	"WHICH IS NEARLY BRILLIANT"	;1f87e
+	dc.b	$00	;1f897
+	dc.b	$06	;1f898
+	dc.b	"WHICH IS PRETTY AMAZING"	;1f899
+	dc.b	$00	;1f8b0
+	dc.b	$06	;1f8b1
+	dc.b	"WHICH IS VERY GOOD"	;1f8b2
+	dc.b	$00	;1f8c4
+	dc.b	$06	;1f8c5
+	dc.b	"WHICH IS QUITE GOOD"	;1f8c6
+	dc.b	$00	;1f8d9
+	dc.b	$06	;1f8da
+	dc.b	"WHICH IS NOT BAD AT ALL"	;1f8db
+	dc.b	$00	;1f8f2
+	dc.b	$06	;1f8f3
+	dc.b	"WHICH IS NEARLY AVERAGE"	;1f8f4
+	dc.b	$00	;1f90b
+	dc.b	$08	;1f90c
+	dc.b	"WHICH IS ONLY AVERAGE"	;1f90d
+	dc.b	$00	;1f922
+	dc.b	$08	;1f923
+	dc.b	"WHICH IS NO GREAT SHAKES"	;1f924
+	dc.b	$00	;1f93c
+	dc.b	$08	;1f93d
+	dc.b	"GOOD \ BUT COULD BE BETTER"	;1f93e
+	dc.b	$00	;1f958
+	dc.b	$08	;1f959
+	dc.b	"NOTHING TO FAX HOME ABOUT"	;1f95a
+	dc.b	$00	;1f973
+	dc.b	$08	;1f974
+	dc.b	"WHICH IS NOT BAD I SUPPOSE"	;1f975
+	dc.b	$00	;1f98f
+	dc.b	$08	;1f990
+	dc.b	"THATS RATHER POOR FRANKLY"	;1f991
+	dc.b	$00	;1f9aa
+	dc.b	$08	;1f9ab
+	dc.b	"I AM SURE YOU CAN IMPROVE"	;1f9ac
+	dc.b	$00	;1f9c5
+	dc.b	$08	;1f9c6
+	dc.b	"WORSE THINGS HAPPEN AT SEA"	;1f9c7
+	dc.b	$00	;1f9e1
+	dc.b	$08	;1f9e2
+	dc.b	"COME ON STOP MUCKING ABOUT"	;1f9e3
+	dc.b	$00	;1f9fd
+	dc.b	$08	;1f9fe
+	dc.b	"THAT REALLY WONT DO AT ALL"	;1f9ff
+	dc.b	$00	;1fa19
+	dc.b	$08	;1fa1a
+	dc.b	"THATS TOO GRIM FOR WORDS"	;1fa1b
+	dc.b	$00	;1fa33
+	dc.b	$08	;1fa34
+	dc.b	"NOT WORTH A COMMENT [[[["	;1fa35
+	dc.b	$00	;1fa4d
+	dc.b	$08	;1fa4e
+	dc.b	"NOT YOUR LUCKY DAY IS IT[["	;1fa4f
+	dc.b	$00	;1fa69
+	dc.b	$08	;1fa6a
+	dc.b	"NOW DO IT PROPERLY [[["	;1fa6b
+	dc.b	$00	;1fa81
+	dc.b	$08	;1fa82
+	dc.b	"WHAT A WASTE OF CPU TIME"	;1fa83
+	dc.b	$00	;1fa9b
+	dc.b	$0f	;1fa9c
+	dc.b	"WHICH IS RIDICULOUSLY BAD"	;1fa9d
+	dc.b	$00	;1fab6
+	dc.b	$00	;1fab7
 lb_1fab8:
-	ASR.B	#6,D3			;1fab8: ec03
-	ADDQ.W	#8,(A2)			;1faba: 5052
-	DC.W	$4f00			;1fabc
+	dc.b	$ec	;1fab8
+	dc.b	$03	;1fab9
+	dc.b	"PRO"	;1faba
+	dc.b	$00	;1fabd
 lb_1fabe:
-	ASR.B	#6,D3			;1fabe: ec03
-	CLR.W	D1			;1fac0: 4241
-	ADDQ.B	#1,D0			;1fac2: 5200
+	dc.b	$ec	;1fabe
+	dc.b	$03	;1fabf
+	dc.b	"BAR"	;1fac0
+	dc.b	$00	;1fac3
 lb_1fac4:
-	ASR.B	#6,D3			;1fac4: ec03
-	ADDQ.W	#8,(A5)			;1fac6: 5055
-	CLR.B	D0			;1fac8: 4200
+	dc.b	$ec	;1fac4
+	dc.b	$03	;1fac5
+	dc.b	"PUB"	;1fac6
+	dc.b	$00	;1fac9
 lb_1faca:
-	DC.W	$f705			;1faca
-	MOVE.W	-(A0),D4		;1facc: 3820
-	CLR.W	D1			;1face: 4241
-	DC.W	$4c4c			;1fad0
+	dc.b	$f7	;1faca
+	dc.b	$05	;1facb
+	dc.b	"8 BALL"	;1facc
 lb_1fad2:
-	DC.W	$00f7			;1fad2
-	DC.W	$0a39			;1fad4
-	MOVEA.L	D2,A0			;1fad6: 2042
-	DC.W	$414c			;1fad8
-	DC.W	$4c00			;1fada
+	dc.b	$00	;1fad2
+	dc.b	$f7	;1fad3
+	dc.b	$0a	;1fad4
+	dc.b	"9 BALL"	;1fad5
+	dc.b	$00	;1fadb
 lb_1fadc:
-	DC.W	$ff03			;1fadc
-	MOVEA.L	(A5),A0			;1fade: 2055
-	DC.W	$4b00			;1fae0
+	dc.b	$ff	;1fadc
+	dc.b	$03	;1fadd
+	dc.b	" UK"	;1fade
+	dc.b	$00	;1fae1
 lb_1fae2:
-	DC.W	$ff03			;1fae2
-	SUBQ.W	#2,(A3)			;1fae4: 5553
-	DC.W	$4100			;1fae6
-	DC.W	$f40f			;1fae8
-	SUBQ.W	#1,D5			;1faea: 5345
-	ADDQ.B	#2,-(A0)		;1faec: 5420
-	ADDQ.W	#8,A7			;1faee: 504f
-	DC.W	$4f4c			;1faf0
-	MOVEA.L	(A4),A0			;1faf2: 2054
-	SUBQ.W	#4,(A0)			;1faf4: 5950
-	DC.W	$4500			;1faf6
-	DC.W	$fc38			;1faf8
-	MOVEA.L	D2,A0			;1fafa: 2042
-	DC.W	$414c			;1fafc
-	DC.W	$4c20			;1fafe
-	SUBQ.W	#2,A3			;1fb00: 554b
-	MOVEA.L	D3,A0			;1fb02: 2043
-	DC.W	$4f49			;1fb04
-	DC.W	$4e20			;1fb06
-	DC.W	$4f50			;1fb08
-	MOVEA.L	(A4),A0			;1fb0a: 2054
-	DC.W	$4142			;1fb0c
-	DC.W	$4c45			;1fb0e
-	MOVEA.L	(A2),A0			;1fb10: 2052
-	SUBQ.W	#2,A4			;1fb12: 554c
-	DC.W	$4553			;1fb14
-	DC.W	$00fc			;1fb16
-	MOVE.W	-(A0),D4		;1fb18: 3820
-	CLR.W	D1			;1fb1a: 4241
-	DC.W	$4c4c			;1fb1c
-	MOVEA.L	(A5),A0			;1fb1e: 2055
-	SUBQ.W	#1,D1			;1fb20: 5341
-	MOVEA.L	D2,A0			;1fb22: 2042
-	DC.W	$4152			;1fb24
-	MOVEA.L	(A4),A0			;1fb26: 2054
-	DC.W	$4142			;1fb28
-	DC.W	$4c45			;1fb2a
-	MOVEA.L	(A2),A0			;1fb2c: 2052
-	SUBQ.W	#2,A4			;1fb2e: 554c
-	DC.W	$4553			;1fb30
+	dc.b	$ff	;1fae2
+	dc.b	$03	;1fae3
+	dc.b	"USA"	;1fae4
+	dc.b	$00	;1fae7
+lb_1fae8:
+	dc.b	$f4	;1fae8
+	dc.b	$0f	;1fae9
+	dc.b	"SET POOL TYPE"	;1faea
+	dc.b	$00	;1faf7
+lb_1faf8:
+	dc.b	$fc	;1faf8
+	dc.b	"8 BALL UK COIN OP TABLE RULES"	;1faf9
+lb_1fb16:
+	dc.b	$00	;1fb16
+	dc.b	$fc	;1fb17
+	dc.b	"8 BALL USA BAR TABLE RULES"	;1fb18
 lb_1fb32:
-	DC.W	$00fc			;1fb32
-	MOVE.W	-(A0),-(A4)		;1fb34: 3920
-	CLR.W	D1			;1fb36: 4241
-	DC.W	$4c4c			;1fb38
-	MOVEA.L	(A5),A0			;1fb3a: 2055
-	SUBQ.W	#1,D1			;1fb3c: 5341
-	MOVEA.L	(A4),A0			;1fb3e: 2054
-	DC.W	$4f55			;1fb40
-	ADDQ.W	#1,A6			;1fb42: 524e
-	DC.W	$414d			;1fb44
-	DC.W	$454e			;1fb46
-	ADDQ.B	#2,-(A0)		;1fb48: 5420
-	ADDQ.W	#1,(A5)			;1fb4a: 5255
-	DC.W	$4c45			;1fb4c
-	SUBQ.B	#1,D0			;1fb4e: 5300
-	DC.W	$f90f			;1fb50
-	SUBQ.W	#3,A0			;1fb52: 5748
-	DC.W	$4154			;1fb54
-	MOVEA.L	D4,A0			;1fb56: 2044
-	DC.W	$4f20			;1fb58
-	SUBQ.W	#4,A7			;1fb5a: 594f
-	SUBQ.B	#2,-(A0)		;1fb5c: 5520
-	SUBQ.W	#3,D1			;1fb5e: 5741
-	LINK.W	A4,#8276		;1fb60: 4e542054
-	DC.W	$4f20			;1fb64
-	DC.W	$444f			;1fb66
-	DC.W	$00f9			;1fb68
-	EORI.W	#$454c,(A3)		;1fb6a: 0a53454c
-	DC.W	$4543			;1fb6e
-	ADDQ.B	#2,-(A0)		;1fb70: 5420
-	DC.W	$434f			;1fb72
-	DC.W	$4d50			;1fb74
-	SUBQ.W	#2,(A4)			;1fb76: 5554
-	DC.W	$4552			;1fb78
-	MOVEA.L	(A0),A0			;1fb7a: 2050
-	DC.W	$4c41			;1fb7c
-	SUBQ.W	#4,D5			;1fb7e: 5945
-	ADDQ.B	#1,D0			;1fb80: 5200
-	DC.W	$fc02			;1fb82
-	SUBQ.W	#1,D5			;1fb84: 5345
-	ADDQ.B	#2,-(A0)		;1fb86: 5420
-	LINK.W	A5,#19778		;1fb88: 4e554d42
-	DC.W	$4552			;1fb8c
-	MOVEA.L	A7,A0			;1fb8e: 204f
-	NOT.B	-(A0)			;1fb90: 4620
-	DC.W	$4741			;1fb92
-	DC.W	$4d45			;1fb94
-	SUBQ.B	#1,-(A0)		;1fb96: 5320
-	DC.W	$494e			;1fb98
-	MOVEA.L	A5,A0			;1fb9a: 204d
-	DC.W	$4154			;1fb9c
-	DC.W	$4348			;1fb9e
-	DC.W	$00f6			;1fba0
-	EORI.W	#$4554,(A3)		;1fba2: 0a534554
-	SUBQ.W	#2,(A0)			;1fba6: 5550
-	MOVEA.L	(A4),A0			;1fba8: 2054
-	DC.W	$4f55			;1fbaa
-	ADDQ.W	#1,A6			;1fbac: 524e
-	DC.W	$414d			;1fbae
-	DC.W	$454e			;1fbb0
-	ADDQ.B	#2,D0			;1fbb2: 5400
-	DC.W	$fa02			;1fbb4
-	SUBQ.W	#1,D5			;1fbb6: 5345
-	ADDQ.B	#2,-(A0)		;1fbb8: 5420
-	SUBQ.W	#2,(A0)			;1fbba: 5550
-	MOVEA.L	(A4),A0			;1fbbc: 2054
-	SUBQ.W	#3,A7			;1fbbe: 574f
-	MOVEA.L	(A0),A0			;1fbc0: 2050
-	DC.W	$4c41			;1fbc2
-	SUBQ.W	#4,D5			;1fbc4: 5945
-	ADDQ.B	#1,-(A0)		;1fbc6: 5220
-	DC.W	$4d41			;1fbc8
-	ADDQ.W	#2,D3			;1fbca: 5443
-	NBCD	D0			;1fbcc: 4800
-	DC.W	$fa02			;1fbce
-	SUBQ.W	#1,D5			;1fbd0: 5345
-	ADDQ.B	#2,-(A0)		;1fbd2: 5420
-	SUBQ.W	#2,(A0)			;1fbd4: 5550
-	MOVEA.L	A7,A0			;1fbd6: 204f
-	TRAP	#5			;1fbd8: 4e45
-	MOVEA.L	(A0),A0			;1fbda: 2050
-	DC.W	$4c41			;1fbdc
-	SUBQ.W	#4,D5			;1fbde: 5945
-	ADDQ.B	#1,-(A0)		;1fbe0: 5220
-	DC.W	$4d41			;1fbe2
-	ADDQ.W	#2,D3			;1fbe4: 5443
-	NBCD	D0			;1fbe6: 4800
-	DC.W	$fa0a			;1fbe8
-	TRAP	#1			;1fbea: 4e41
-	DC.W	$4d45			;1fbec
-	MOVEA.L	(A4),A0			;1fbee: 2054
-	DC.W	$4f55			;1fbf0
-	ADDQ.W	#1,A6			;1fbf2: 524e
-	DC.W	$414d			;1fbf4
-	DC.W	$454e			;1fbf6
-	ADDQ.B	#2,-(A0)		;1fbf8: 5420
-	ADDQ.W	#8,A4			;1fbfa: 504c
-	DC.W	$4159			;1fbfc
-	DC.W	$4552			;1fbfe
-	SUBQ.B	#1,D0			;1fc00: 5300
-	DC.W	$fb0a			;1fc02
-	DC.W	$4649			;1fc04
-	TRAP	#1			;1fc06: 4e41
-	DC.W	$4c49			;1fc08
-	SUBQ.W	#1,D5			;1fc0a: 5345
-	NEG.B	-(A0)			;1fc0c: 4420
-	ADDQ.W	#2,A7			;1fc0e: 544f
-	SUBQ.W	#2,(A2)			;1fc10: 5552
-	TRAP	#1			;1fc12: 4e41
-	DC.W	$4d45			;1fc14
-	LINK.W	A4,#8268		;1fc16: 4e54204c
-	DC.W	$4144			;1fc1a
-	NEG.W	D5			;1fc1c: 4445
-	ADDQ.B	#1,D0			;1fc1e: 5200
-	DC.W	$ff0e			;1fc20
-	DC.W	$4348			;1fc22
-	DC.W	$4f4f			;1fc24
-	SUBQ.W	#1,D5			;1fc26: 5345
-	MOVEA.L	A0,A0			;1fc28: 2048
-	DC.W	$4f57			;1fc2a
-	MOVEA.L	A5,A0			;1fc2c: 204d
-	DC.W	$414e			;1fc2e
-	SUBQ.B	#4,-(A0)		;1fc30: 5920
-	ADDQ.W	#8,D5			;1fc32: 5045
-	DC.W	$4f50			;1fc34
-	DC.W	$4c45			;1fc36
-	MOVEA.L	(A1)+,A0		;1fc38: 2059
-	DC.W	$4f55			;1fc3a
-	MOVEA.L	(A7),A0			;1fc3c: 2057
-	DC.W	$414e			;1fc3e
-	ADDQ.B	#2,-(A0)		;1fc40: 5420
-	ADDQ.W	#2,A7			;1fc42: 544f
-	DC.W	$00fa			;1fc44
-	DC.W	$0e45			;1fc46
-	LINK.W	A4,#17746		;1fc48: 4e544552
-	MOVEA.L	D6,A0			;1fc4c: 2046
-	DC.W	$4f52			;1fc4e
-	MOVEA.L	(A4),A0			;1fc50: 2054
-	SWAP	D5			;1fc52: 4845
-	MOVEA.L	(A4),A0			;1fc54: 2054
-	DC.W	$4f55			;1fc56
-	ADDQ.W	#1,A6			;1fc58: 524e
-	DC.W	$414d			;1fc5a
-	DC.W	$454e			;1fc5c
-	ADDQ.B	#2,D0			;1fc5e: 5400
+	dc.b	$00	;1fb32
+	dc.b	$fc	;1fb33
+	dc.b	"9 BALL USA TOURNAMENT RULES"	;1fb34
+	dc.b	$00	;1fb4f
+lb_1fb50:
+	dc.b	$f9	;1fb50
+	dc.b	$0f	;1fb51
+	dc.b	"WHAT DO YOU WANT TO DO"	;1fb52
+lb_1fb68:
+	dc.b	$00	;1fb68
+	dc.b	$f9	;1fb69
+	dc.b	$0a	;1fb6a
+	dc.b	"SELECT COMPUTER PLAYER"	;1fb6b
+	dc.b	$00	;1fb81
+lb_1fb82:
+	dc.b	$fc	;1fb82
+	dc.b	$02	;1fb83
+	dc.b	"SET NUMBER OF GAMES IN MATCH"	;1fb84
+lb_1fba0:
+	dc.b	$00	;1fba0
+	dc.b	$f6	;1fba1
+	dc.b	$0a	;1fba2
+	dc.b	"SETUP TOURNAMENT"	;1fba3
+	dc.b	$00	;1fbb3
+lb_1fbb4:
+	dc.b	$fa	;1fbb4
+	dc.b	$02	;1fbb5
+	dc.b	"SET UP TWO PLAYER MATCH"	;1fbb6
+	dc.b	$00	;1fbcd
+lb_1fbce:
+	dc.b	$fa	;1fbce
+	dc.b	$02	;1fbcf
+	dc.b	"SET UP ONE PLAYER MATCH"	;1fbd0
+	dc.b	$00	;1fbe7
+lb_1fbe8:
+	dc.b	$fa	;1fbe8
+	dc.b	$0a	;1fbe9
+	dc.b	"NAME TOURNAMENT PLAYERS"	;1fbea
+	dc.b	$00	;1fc01
+	dc.b	$fb	;1fc02
+	dc.b	$0a	;1fc03
+	dc.b	"FINALISED TOURNAMENT LADDER"	;1fc04
+	dc.b	$00	;1fc1f
+	dc.b	$ff	;1fc20
+	dc.b	$0e	;1fc21
+	dc.b	"CHOOSE HOW MANY PEOPLE YOU WANT TO"	;1fc22
+	dc.b	$00	;1fc44
+	dc.b	$fa	;1fc45
+	dc.b	$0e	;1fc46
+	dc.b	"ENTER FOR THE TOURNAMENT"	;1fc47
+	dc.b	$00	;1fc5f
 lb_1fc60:
-	DC.W	$ff31			;1fc60
-	MOVEA.L	(A0),A0			;1fc62: 2050
-	DC.W	$4c41			;1fc64
-	SUBQ.W	#4,D5			;1fc66: 5945
-	ADDQ.B	#1,-(A0)		;1fc68: 5220
-	MOVE.L	-(A0),D0		;1fc6a: 2020
-	ADDQ.B	#3,-(A0)		;1fc6c: 5620
-	MOVE.L	67(A7,D2.W),D0		;1fc6e: 20372043
-	DC.W	$4f4d			;1fc72
-	ADDQ.W	#8,(A5)			;1fc74: 5055
-	ADDQ.W	#2,D5			;1fc76: 5445
-	ADDQ.B	#1,-(A0)		;1fc78: 5220
-	DC.W	$4f50			;1fc7a
-	ADDQ.W	#8,A7			;1fc7c: 504f
-	TRAP	#5			;1fc7e: 4e45
-	LINK.W	A4,#21248		;1fc80: 4e545300
+	dc.b	$ff	;1fc60
+	dc.b	"1 PLAYER   V  7 COMPUTER OPPONENTS"	;1fc61
+	dc.b	$00	;1fc83
 lb_1fc84:
-	DC.W	$ff32			;1fc84
-	MOVEA.L	(A0),A0			;1fc86: 2050
-	DC.W	$4c41			;1fc88
-	SUBQ.W	#4,D5			;1fc8a: 5945
-	ADDQ.W	#1,(A3)			;1fc8c: 5253
-	MOVE.L	-(A0),D0		;1fc8e: 2020
-	ADDQ.B	#3,-(A0)		;1fc90: 5620
-	MOVE.L	67(A6,D2.W),D0		;1fc92: 20362043
-	DC.W	$4f4d			;1fc96
-	ADDQ.W	#8,(A5)			;1fc98: 5055
-	ADDQ.W	#2,D5			;1fc9a: 5445
-	ADDQ.B	#1,-(A0)		;1fc9c: 5220
-	DC.W	$4f50			;1fc9e
-	ADDQ.W	#8,A7			;1fca0: 504f
-	TRAP	#5			;1fca2: 4e45
-	LINK.W	A4,#21248		;1fca4: 4e545300
+	dc.b	$ff	;1fc84
+	dc.b	"2 PLAYERS  V  6 COMPUTER OPPONENTS"	;1fc85
+	dc.b	$00	;1fca7
 lb_1fca8:
-	DC.W	$ff33			;1fca8
-	MOVEA.L	(A0),A0			;1fcaa: 2050
-	DC.W	$4c41			;1fcac
-	SUBQ.W	#4,D5			;1fcae: 5945
-	ADDQ.W	#1,(A3)			;1fcb0: 5253
-	MOVE.L	-(A0),D0		;1fcb2: 2020
-	ADDQ.B	#3,-(A0)		;1fcb4: 5620
-	MOVE.L	67(A5,D2.W),D0		;1fcb6: 20352043
-	DC.W	$4f4d			;1fcba
-	ADDQ.W	#8,(A5)			;1fcbc: 5055
-	ADDQ.W	#2,D5			;1fcbe: 5445
-	ADDQ.B	#1,-(A0)		;1fcc0: 5220
-	DC.W	$4f50			;1fcc2
-	ADDQ.W	#8,A7			;1fcc4: 504f
-	TRAP	#5			;1fcc6: 4e45
-	LINK.W	A4,#21248		;1fcc8: 4e545300
-	DC.W	$ff34			;1fccc
-	MOVEA.L	(A0),A0			;1fcce: 2050
-	DC.W	$4c41			;1fcd0
-	SUBQ.W	#4,D5			;1fcd2: 5945
-	ADDQ.W	#1,(A3)			;1fcd4: 5253
-	MOVE.L	-(A0),D0		;1fcd6: 2020
-	ADDQ.B	#3,-(A0)		;1fcd8: 5620
-	MOVE.L	67(A4,D2.W),D0		;1fcda: 20342043
-	DC.W	$4f4d			;1fcde
-	ADDQ.W	#8,(A5)			;1fce0: 5055
-	ADDQ.W	#2,D5			;1fce2: 5445
-	ADDQ.B	#1,-(A0)		;1fce4: 5220
-	DC.W	$4f50			;1fce6
-	ADDQ.W	#8,A7			;1fce8: 504f
-	TRAP	#5			;1fcea: 4e45
-	LINK.W	A4,#21248		;1fcec: 4e545300
-	DC.W	$ff35			;1fcf0
-	MOVEA.L	(A0),A0			;1fcf2: 2050
-	DC.W	$4c41			;1fcf4
-	SUBQ.W	#4,D5			;1fcf6: 5945
-	ADDQ.W	#1,(A3)			;1fcf8: 5253
-	MOVE.L	-(A0),D0		;1fcfa: 2020
-	ADDQ.B	#3,-(A0)		;1fcfc: 5620
-	MOVE.L	67(A3,D2.W),D0		;1fcfe: 20332043
-	DC.W	$4f4d			;1fd02
-	ADDQ.W	#8,(A5)			;1fd04: 5055
-	ADDQ.W	#2,D5			;1fd06: 5445
-	ADDQ.B	#1,-(A0)		;1fd08: 5220
-	DC.W	$4f50			;1fd0a
-	ADDQ.W	#8,A7			;1fd0c: 504f
-	TRAP	#5			;1fd0e: 4e45
-	LINK.W	A4,#21248		;1fd10: 4e545300
+	dc.b	$ff	;1fca8
+	dc.b	"3 PLAYERS  V  5 COMPUTER OPPONENTS"	;1fca9
+	dc.b	$00	;1fccb
+lb_1fccc:
+	dc.b	$ff	;1fccc
+	dc.b	"4 PLAYERS  V  4 COMPUTER OPPONENTS"	;1fccd
+	dc.b	$00	;1fcef
+lb_1fcf0:
+	dc.b	$ff	;1fcf0
+	dc.b	"5 PLAYERS  V  3 COMPUTER OPPONENTS"	;1fcf1
+	dc.b	$00	;1fd13
 lb_1fd14:
-	DC.W	$ff36			;1fd14
-	MOVEA.L	(A0),A0			;1fd16: 2050
-	DC.W	$4c41			;1fd18
-	SUBQ.W	#4,D5			;1fd1a: 5945
-	ADDQ.W	#1,(A3)			;1fd1c: 5253
-	MOVE.L	-(A0),D0		;1fd1e: 2020
-	ADDQ.B	#3,-(A0)		;1fd20: 5620
-	MOVE.L	67(A2,D2.W),D0		;1fd22: 20322043
-	DC.W	$4f4d			;1fd26
-	ADDQ.W	#8,(A5)			;1fd28: 5055
-	ADDQ.W	#2,D5			;1fd2a: 5445
-	ADDQ.B	#1,-(A0)		;1fd2c: 5220
-	DC.W	$4f50			;1fd2e
-	ADDQ.W	#8,A7			;1fd30: 504f
-	TRAP	#5			;1fd32: 4e45
-	LINK.W	A4,#21248		;1fd34: 4e545300
-	DC.W	$ff37			;1fd38
-	MOVEA.L	(A0),A0			;1fd3a: 2050
-	DC.W	$4c41			;1fd3c
-	SUBQ.W	#4,D5			;1fd3e: 5945
-	ADDQ.W	#1,(A3)			;1fd40: 5253
-	MOVE.L	-(A0),D0		;1fd42: 2020
-	ADDQ.B	#3,-(A0)		;1fd44: 5620
-	MOVE.L	67(A1,D2.W),D0		;1fd46: 20312043
-	DC.W	$4f4d			;1fd4a
-	ADDQ.W	#8,(A5)			;1fd4c: 5055
-	ADDQ.W	#2,D5			;1fd4e: 5445
-	ADDQ.B	#1,-(A0)		;1fd50: 5220
-	DC.W	$4f50			;1fd52
-	ADDQ.W	#8,A7			;1fd54: 504f
-	TRAP	#5			;1fd56: 4e45
-	DC.W	$4e54			;1fd58
-	DC.W	$00ff			;1fd5a
-	MOVE.W	-(A0),D4		;1fd5c: 3820
-	ADDQ.W	#8,A4			;1fd5e: 504c
-	DC.W	$4159			;1fd60
-	DC.W	$4552			;1fd62
-	SUBQ.B	#1,-(A0)		;1fd64: 5320
-	MOVE.L	-(A0),D0		;1fd66: 2020
-	MOVEA.L	A6,A0			;1fd68: 204e
-	DC.W	$4f20			;1fd6a
-	DC.W	$434f			;1fd6c
-	DC.W	$4d50			;1fd6e
-	SUBQ.W	#2,(A4)			;1fd70: 5554
-	DC.W	$4552			;1fd72
-	MOVEA.L	A7,A0			;1fd74: 204f
-	ADDQ.W	#8,(A0)			;1fd76: 5050
-	DC.W	$4f4e			;1fd78
-	DC.W	$454e			;1fd7a
-	ADDQ.W	#2,(A3)			;1fd7c: 5453
-	DC.W	$00f8			;1fd7e
-	DC.W	$0e45			;1fd80
-	LINK.W	A4,#17746		;1fd82: 4e544552
-	MOVEA.L	(A1)+,A0		;1fd86: 2059
-	DC.W	$4f55			;1fd88
-	ADDQ.B	#1,-(A0)		;1fd8a: 5220
-	TRAP	#1			;1fd8c: 4e41
-	DC.W	$4d45			;1fd8e
-	DC.W	$00fd			;1fd90
-	DC.W	$0e45			;1fd92
-	LINK.W	A4,#17746		;1fd94: 4e544552
-	MOVEA.L	(A4),A0			;1fd98: 2054
-	SWAP	D5			;1fd9a: 4845
-	MOVEA.L	A6,A0			;1fd9c: 204e
-	DC.W	$414d			;1fd9e
-	DC.W	$4553			;1fda0
-	MOVEA.L	A7,A0			;1fda2: 204f
-	NOT.B	-(A0)			;1fda4: 4620
-	DC.W	$414c			;1fda6
-	DC.W	$4c20			;1fda8
-	ADDQ.W	#8,A4			;1fdaa: 504c
-	DC.W	$4159			;1fdac
-	DC.W	$4552			;1fdae
-	SUBQ.B	#1,D0			;1fdb0: 5300
-	DC.W	$f945			;1fdb2
-	LINK.W	A4,#17746		;1fdb4: 4e544552
-	MOVEA.L	A6,A0			;1fdb8: 204e
-	DC.W	$414d			;1fdba
-	DC.W	$4520			;1fdbc
-	ADDQ.B	#6,-(A0)		;1fdbe: 5c20
-	MOVE.L	D0,D0			;1fdc0: 2000
-	DC.W	$f956			;1fdc2
-	DC.W	$4945			;1fdc4
-	SUBQ.B	#3,-(A0)		;1fdc6: 5720
-	ADDQ.W	#2,A7			;1fdc8: 544f
-	SUBQ.W	#2,(A2)			;1fdca: 5552
-	TRAP	#1			;1fdcc: 4e41
-	DC.W	$4d45			;1fdce
-	LINK.W	A4,#8268		;1fdd0: 4e54204c
-	DC.W	$4144			;1fdd4
-	NEG.W	D5			;1fdd6: 4445
-	ADDQ.B	#1,D0			;1fdd8: 5200
-	DC.W	$f853			;1fdda
-	DC.W	$454c			;1fddc
-	DC.W	$4543			;1fdde
-	ADDQ.B	#2,-(A0)		;1fde0: 5420
-	SUBQ.W	#4,A7			;1fde2: 594f
-	SUBQ.W	#2,(A2)			;1fde4: 5552
-	MOVEA.L	A7,A0			;1fde6: 204f
-	ADDQ.W	#8,(A0)			;1fde8: 5050
-	DC.W	$4f4e			;1fdea
-	DC.W	$454e			;1fdec
-	ADDQ.B	#2,D0			;1fdee: 5400
+	dc.b	$ff	;1fd14
+	dc.b	"6 PLAYERS  V  2 COMPUTER OPPONENTS"	;1fd15
+	dc.b	$00	;1fd37
+lb_1fd38:
+	dc.b	$ff	;1fd38
+	dc.b	"7 PLAYERS  V  1 COMPUTER OPPONENT"	;1fd39
+lb_1fd5a:
+	dc.b	$00	;1fd5a
+	dc.b	$ff	;1fd5b
+	dc.b	"8 PLAYERS    NO COMPUTER OPPONENTS"	;1fd5c
+	dc.b	$00	;1fd7e
+	dc.b	$f8	;1fd7f
+	dc.b	$0e	;1fd80
+	dc.b	"ENTER YOUR NAME"	;1fd81
+	dc.b	$00	;1fd90
+	dc.b	$fd	;1fd91
+	dc.b	$0e	;1fd92
+	dc.b	"ENTER THE NAMES OF ALL PLAYERS"	;1fd93
+	dc.b	$00	;1fdb1
+lb_1fdb2:
+	dc.b	$f9	;1fdb2
+	dc.b	"ENTER NAME \  "	;1fdb3
+	dc.b	$00	;1fdc1
+lb_1fdc2:
+	dc.b	$f9	;1fdc2
+	dc.b	"VIEW TOURNAMENT LADDER"	;1fdc3
+	dc.b	$00	;1fdd9
+lb_1fdda:
+	dc.b	$f8	;1fdda
+	dc.b	"SELECT YOUR OPPONENT"	;1fddb
+	dc.b	$00	;1fdef
 lb_1fdf0:
-	DC.W	$fa0f			;1fdf0
-	TRAP	#15			;1fdf2: 4e4f
-	SUBQ.B	#3,-(A0)		;1fdf4: 5720
-	ADDQ.W	#8,A1			;1fdf6: 5049
-	DC.W	$434b			;1fdf8
-	MOVEA.L	D3,A0			;1fdfa: 2043
-	DC.W	$4f4d			;1fdfc
-	ADDQ.W	#8,(A5)			;1fdfe: 5055
-	ADDQ.W	#2,D5			;1fe00: 5445
-	ADDQ.B	#1,-(A0)		;1fe02: 5220
-	ADDQ.W	#8,A4			;1fe04: 504c
-	DC.W	$4159			;1fe06
-	DC.W	$4552			;1fe08
+	dc.b	$fa	;1fdf0
+	dc.b	$0f	;1fdf1
+	dc.b	"NOW PICK COMPUTER PLAYER"	;1fdf2
 lb_1fe0a:
-	DC.W	$00f7			;1fe0a
-	SUBQ.W	#1,D5			;1fe0c: 5345
-	ADDQ.B	#2,-(A0)		;1fe0e: 5420
-	DC.W	$4741			;1fe10
-	DC.W	$4d45			;1fe12
-	SUBQ.B	#1,-(A0)		;1fe14: 5320
-	DC.W	$494e			;1fe16
-	MOVEA.L	A5,A0			;1fe18: 204d
-	DC.W	$4154			;1fe1a
-	DC.W	$4348			;1fe1c
+	dc.b	$00	;1fe0a
+	dc.b	$f7	;1fe0b
+	dc.b	"SET GAMES IN MATCH"	;1fe0c
 lb_1fe1e:
-	DC.W	$00fc			;1fe1e
-	BCHG	D7,(A3)			;1fe20: 0f53
-	DC.W	$454c			;1fe22
-	DC.W	$4543			;1fe24
-	ADDQ.B	#2,-(A0)		;1fe26: 5420
-	DC.W	$4f4e			;1fe28
-	DC.W	$4520			;1fe2a
-	DC.W	$4f46			;1fe2c
-	MOVEA.L	(A4),A0			;1fe2e: 2054
-	SWAP	D5			;1fe30: 4845
-	MOVEA.L	D6,A0			;1fe32: 2046
-	DC.W	$4f4c			;1fe34
-	DC.W	$4c4f			;1fe36
-	SUBQ.W	#3,A1			;1fe38: 5749
-	TRAP	#7			;1fe3a: 4e47
-	MOVEA.L	(A4)+,A0		;1fe3c: 205c
+	dc.b	$00	;1fe1e
+	dc.b	$fc	;1fe1f
+	dc.b	$0f	;1fe20
+	dc.b	"SELECT ONE OF THE FOLLOWING \"	;1fe21
 lb_1fe3e:
-	DC.W	$00f6			;1fe3e
-	CLR.W	D5			;1fe40: 4245
-	SUBQ.W	#1,(A4)			;1fe42: 5354
-	MOVEA.L	A7,A0			;1fe44: 204f
-	NOT.B	-(A0)			;1fe46: 4620
-	MOVE.W	-(A0),-(A1)		;1fe48: 3320
-	DC.W	$4741			;1fe4a
-	DC.W	$4d45			;1fe4c
-	SUBQ.B	#1,D0			;1fe4e: 5300
+	dc.b	$00	;1fe3e
+	dc.b	$f6	;1fe3f
+	dc.b	"BEST OF 3 GAMES"	;1fe40
+	dc.b	$00	;1fe4f
 lb_1fe50:
-	DC.W	$f642			;1fe50
-	DC.W	$4553			;1fe52
-	ADDQ.B	#2,-(A0)		;1fe54: 5420
-	DC.W	$4f46			;1fe56
-	MOVE.L	71(A5,D2.W),D0		;1fe58: 20352047
-	DC.W	$414d			;1fe5c
-	DC.W	$4553			;1fe5e
+	dc.b	$f6	;1fe50
+	dc.b	"BEST OF 5 GAMES"	;1fe51
 lb_1fe60:
-	DC.W	$00f6			;1fe60
-	CLR.W	D5			;1fe62: 4245
-	SUBQ.W	#1,(A4)			;1fe64: 5354
-	MOVEA.L	A7,A0			;1fe66: 204f
-	NOT.B	-(A0)			;1fe68: 4620
-	MOVE.W	-(A0),-(A3)		;1fe6a: 3720
-	DC.W	$4741			;1fe6c
-	DC.W	$4d45			;1fe6e
-	SUBQ.B	#1,D0			;1fe70: 5300
+	dc.b	$00	;1fe60
+	dc.b	$f6	;1fe61
+	dc.b	"BEST OF 7 GAMES"	;1fe62
+	dc.b	$00	;1fe71
 lb_1fe72:
-	DC.W	$f642			;1fe72
-	DC.W	$4553			;1fe74
-	ADDQ.B	#2,-(A0)		;1fe76: 5420
-	DC.W	$4f46			;1fe78
-	DC.W	$2039			;1fe7a
-	MOVEA.L	D7,A0			;1fe7c: 2047
-	DC.W	$414d			;1fe7e
-	DC.W	$4553			;1fe80
+	dc.b	$f6	;1fe72
+	dc.b	"BEST OF 9 GAMES"	;1fe73
 lb_1fe82:
-	DC.W	$00f9			;1fe82
-	DC.W	$0e45			;1fe84
-	LINK.W	A4,#17746		;1fe86: 4e544552
-	MOVEA.L	(A1)+,A0		;1fe8a: 2059
-	DC.W	$4f55			;1fe8c
-	ADDQ.B	#1,-(A0)		;1fe8e: 5220
-	TRAP	#1			;1fe90: 4e41
-	DC.W	$4d45			;1fe92
-	MOVEA.L	D6,A0			;1fe94: 2046
-	DC.W	$4952			;1fe96
-	SUBQ.W	#1,(A4)			;1fe98: 5354
-	DC.W	$00f9			;1fe9a
-	DC.W	$0e45			;1fe9c
-	LINK.W	A4,#17746		;1fe9e: 4e544552
-	MOVEA.L	D2,A0			;1fea2: 2042
-	DC.W	$4f54			;1fea4
-	NBCD	-(A0)			;1fea6: 4820
-	TRAP	#1			;1fea8: 4e41
-	DC.W	$4d45			;1feaa
-	SUBQ.B	#1,-(A0)		;1feac: 5320
-	DC.W	$4649			;1feae
-	ADDQ.W	#1,(A3)			;1feb0: 5253
-	ADDQ.B	#2,D0			;1feb2: 5400
-	DC.W	$fd0e			;1feb4
-	MOVEA.L	(A4),A0			;1feb6: 2054
-	DC.W	$4f20			;1feb8
-	DC.W	$4149			;1feba
-	DC.W	$4d20			;1febc
-	DC.W	$414e			;1febe
-	SUBQ.B	#4,-(A0)		;1fec0: 5920
-	CLR.W	D1			;1fec2: 4241
-	DC.W	$4c4c			;1fec4
-	MOVEA.L	A1,A0			;1fec6: 2049
-	LINK.W	A4,#20256		;1fec8: 4e544f20
-	DC.W	$4120			;1fecc
-	ADDQ.W	#8,A7			;1fece: 504f
-	DC.W	$434b			;1fed0
-	DC.W	$4554			;1fed2
-	DC.W	$00fd			;1fed4
-	DC.W	$0e20			;1fed6
-	ADDQ.W	#2,(A5)			;1fed8: 5455
-	ADDQ.W	#1,A6			;1feda: 524e
-	MOVEA.L	(A6),A0			;1fedc: 2056
-	DC.W	$4945			;1fede
-	SUBQ.W	#3,A4			;1fee0: 574c
-	DC.W	$494e			;1fee2
-	DC.W	$4520			;1fee4
-	DC.W	$4f4e			;1fee6
-	MOVEA.L	D1,A0			;1fee8: 2041
-	TRAP	#4			;1feea: 4e44
-	MOVEA.L	D3,A0			;1feec: 2043
-	DC.W	$4c49			;1feee
-	DC.W	$434b			;1fef0
-	MOVEA.L	(A4),A0			;1fef2: 2054
-	SWAP	D5			;1fef4: 4845
-	DC.W	$00fd			;1fef6
-	DC.W	$0e20			;1fef8
-	ADDQ.W	#1,A1			;1fefa: 5249
-	DC.W	$4748			;1fefc
-	ADDQ.B	#2,-(A0)		;1fefe: 5420
-	DC.W	$4d4f			;1ff00
-	SUBQ.W	#2,(A3)			;1ff02: 5553
-	DC.W	$4520			;1ff04
-	CLR.W	(A5)			;1ff06: 4255
-	ADDQ.W	#2,(A4)			;1ff08: 5454
-	DC.W	$4f4e			;1ff0a
-	MOVEA.L	A7,A0			;1ff0c: 204f
-	DC.W	$4e20			;1ff0e
-	ADDQ.W	#2,A0			;1ff10: 5448
-	DC.W	$4520			;1ff12
-	CLR.W	D1			;1ff14: 4241
-	DC.W	$4c4c			;1ff16
-	DC.W	$00f8			;1ff18
-	ADDQ.W	#2,(A7)			;1ff1a: 5457
-	DC.W	$4f20			;1ff1c
-	ADDQ.W	#8,A4			;1ff1e: 504c
-	DC.W	$4159			;1ff20
-	DC.W	$4552			;1ff22
-	MOVEA.L	(A0),A0			;1ff24: 2050
-	ADDQ.W	#1,D1			;1ff26: 5241
-	DC.W	$4354			;1ff28
-	DC.W	$4943			;1ff2a
-	DC.W	$4500			;1ff2c
+	dc.b	$00	;1fe82
+	dc.b	$f9	;1fe83
+	dc.b	$0e	;1fe84
+	dc.b	"ENTER YOUR NAME FIRST"	;1fe85
+	dc.b	$00	;1fe9a
+	dc.b	$f9	;1fe9b
+	dc.b	$0e	;1fe9c
+	dc.b	"ENTER BOTH NAMES FIRST"	;1fe9d
+	dc.b	$00	;1feb3
+lb_1feb4:
+	dc.b	$fd	;1feb4
+	dc.b	$0e	;1feb5
+	dc.b	" TO AIM ANY BALL INTO A POCKET"	;1feb6
+lb_1fed4:
+	dc.b	$00	;1fed4
+	dc.b	$fd	;1fed5
+	dc.b	$0e	;1fed6
+	dc.b	" TURN VIEWLINE ON AND CLICK THE"	;1fed7
+lb_1fef6:
+	dc.b	$00	;1fef6
+	dc.b	$fd	;1fef7
+	dc.b	$0e	;1fef8
+	dc.b	" RIGHT MOUSE BUTTON ON THE BALL"	;1fef9
+lb_1ff18:
+	dc.b	$00	;1ff18
+	dc.b	$f8	;1ff19
+	dc.b	"TWO PLAYER PRACTICE"	;1ff1a
+	dc.b	$00	;1ff2d
 lb_1ff2e:
-	DC.W	$f953			;1ff2e
-	ADDQ.W	#2,D1			;1ff30: 5441
-	ADDQ.W	#1,(A4)			;1ff32: 5254
-	MOVEA.L	A7,A0			;1ff34: 204f
-	TRAP	#5			;1ff36: 4e45
-	MOVEA.L	(A0),A0			;1ff38: 2050
-	DC.W	$4c41			;1ff3a
-	SUBQ.W	#4,D5			;1ff3c: 5945
-	ADDQ.B	#1,-(A0)		;1ff3e: 5220
-	DC.W	$4741			;1ff40
-	DC.W	$4d45			;1ff42
+	dc.b	$f9	;1ff2e
+	dc.b	"START ONE PLAYER GAME"	;1ff2f
 lb_1ff44:
-	DC.W	$00f9			;1ff44
-	SUBQ.W	#1,(A4)			;1ff46: 5354
-	DC.W	$4152			;1ff48
-	ADDQ.B	#2,-(A0)		;1ff4a: 5420
-	ADDQ.W	#2,(A7)			;1ff4c: 5457
-	DC.W	$4f20			;1ff4e
-	ADDQ.W	#8,A4			;1ff50: 504c
-	DC.W	$4159			;1ff52
-	DC.W	$4552			;1ff54
-	MOVEA.L	D7,A0			;1ff56: 2047
-	DC.W	$414d			;1ff58
-	DC.W	$4500			;1ff5a
+	dc.b	$00	;1ff44
+	dc.b	$f9	;1ff45
+	dc.b	"START TWO PLAYER GAME"	;1ff46
+	dc.b	$00	;1ff5b
 lb_1ff5c:
-	DC.W	$f953			;1ff5c
-	DC.W	$4554			;1ff5e
-	SUBQ.W	#2,(A0)			;1ff60: 5550
-	MOVEA.L	A7,A0			;1ff62: 204f
-	TRAP	#5			;1ff64: 4e45
-	MOVEA.L	(A0),A0			;1ff66: 2050
-	DC.W	$4c41			;1ff68
-	SUBQ.W	#4,D5			;1ff6a: 5945
-	ADDQ.B	#1,-(A0)		;1ff6c: 5220
-	DC.W	$4d41			;1ff6e
-	ADDQ.W	#2,D3			;1ff70: 5443
-	NBCD	D0			;1ff72: 4800
+	dc.b	$f9	;1ff5c
+	dc.b	"SETUP ONE PLAYER MATCH"	;1ff5d
+	dc.b	$00	;1ff73
 lb_1ff74:
-	DC.W	$f953			;1ff74
-	DC.W	$4554			;1ff76
-	SUBQ.W	#2,(A0)			;1ff78: 5550
-	MOVEA.L	(A4),A0			;1ff7a: 2054
-	SUBQ.W	#3,A7			;1ff7c: 574f
-	MOVEA.L	(A0),A0			;1ff7e: 2050
-	DC.W	$4c41			;1ff80
-	SUBQ.W	#4,D5			;1ff82: 5945
-	ADDQ.B	#1,-(A0)		;1ff84: 5220
-	DC.W	$4d41			;1ff86
-	ADDQ.W	#2,D3			;1ff88: 5443
-	NBCD	D0			;1ff8a: 4800
+	dc.b	$f9	;1ff74
+	dc.b	"SETUP TWO PLAYER MATCH"	;1ff75
+	dc.b	$00	;1ff8b
 lb_1ff8c:
-	DC.W	$fc53			;1ff8c
-	DC.W	$4554			;1ff8e
-	SUBQ.W	#2,(A0)			;1ff90: 5550
-	MOVEA.L	A5,A0			;1ff92: 204d
-	SUBQ.W	#2,A4			;1ff94: 554c
-	ADDQ.W	#2,A1			;1ff96: 5449
-	ADDQ.W	#8,A4			;1ff98: 504c
-	DC.W	$4159			;1ff9a
-	DC.W	$4552			;1ff9c
-	MOVEA.L	(A4),A0			;1ff9e: 2054
-	DC.W	$4f55			;1ffa0
-	ADDQ.W	#1,A6			;1ffa2: 524e
-	DC.W	$414d			;1ffa4
-	DC.W	$454e			;1ffa6
-	ADDQ.B	#2,-(A0)		;1ffa8: 5420
-	DC.W	$00f6			;1ffaa
-	SUBQ.W	#1,D1			;1ffac: 5341
-	ADDQ.W	#3,D5			;1ffae: 5645
-	MOVEA.L	D3,A0			;1ffb0: 2043
-	SUBQ.W	#2,(A2)			;1ffb2: 5552
-	ADDQ.W	#1,D5			;1ffb4: 5245
-	DC.W	$4e54			;1ffb6
-	MOVEA.L	D7,A0			;1ffb8: 2047
-	DC.W	$414d			;1ffba
-	DC.W	$4500			;1ffbc
-	DC.W	$f64c			;1ffbe
-	DC.W	$4f41			;1ffc0
-	NEG.B	-(A0)			;1ffc2: 4420
-	DC.W	$4120			;1ffc4
-	ADDQ.W	#2,(A2)			;1ffc6: 5452
-	DC.W	$4943			;1ffc8
-	DC.W	$4b20			;1ffca
-	SUBQ.W	#1,A0			;1ffcc: 5348
-	DC.W	$4f54			;1ffce
-	DC.W	$00f6			;1ffd0
-	DC.W	$4c4f			;1ffd2
-	DC.W	$4144			;1ffd4
-	MOVEA.L	D1,A0			;1ffd6: 2041
-	MOVEA.L	(A3),A0			;1ffd8: 2053
-	DC.W	$494e			;1ffda
-	DC.W	$474c			;1ffdc
-	DC.W	$4520			;1ffde
-	DC.W	$4741			;1ffe0
-	DC.W	$4d45			;1ffe2
-	DC.W	$00f6			;1ffe4
-	DC.W	$4c4f			;1ffe6
-	DC.W	$4144			;1ffe8
-	MOVEA.L	D1,A0			;1ffea: 2041
-	MOVEA.L	A5,A0			;1ffec: 204d
-	DC.W	$4154			;1ffee
-lb_1fff0:
-	DC.W	$4348			;1fff0
-	MOVEA.L	D7,A0			;1fff2: 2047
-	DC.W	$414d			;1fff4
-	DC.W	$4500			;1fff6
-	DC.W	$f64c			;1fff8
-	DC.W	$4f41			;1fffa
-	NEG.B	-(A0)			;1fffc: 4420
-	DC.W	$4120			;1fffe
-	ADDQ.W	#2,A7			;20000: 544f
-	SUBQ.W	#2,(A2)			;20002: 5552
-	TRAP	#1			;20004: 4e41
-	DC.W	$4d45			;20006
-	LINK.W	A4,#250			;20008: 4e5400fa
-	ADDQ.W	#3,A1			;2000c: 5649
-	DC.W	$4557			;2000e
-	MOVEA.L	D2,A0			;20010: 2042
-	DC.W	$4553			;20012
-	ADDQ.B	#2,-(A0)		;20014: 5420
-	MOVE.W	-(A0),D4		;20016: 3820
-	CLR.W	D1			;20018: 4241
-	DC.W	$4c4c			;2001a
-	MOVEA.L	(A2),A0			;2001c: 2052
-	DC.W	$414e			;2001e
-	DC.W	$4b49			;20020
-	TRAP	#7			;20022: 4e47
-	DC.W	$00fa			;20024
-	ADDQ.W	#3,A1			;20026: 5649
-	DC.W	$4557			;20028
-	MOVEA.L	D2,A0			;2002a: 2042
-	DC.W	$4553			;2002c
-	ADDQ.B	#2,-(A0)		;2002e: 5420
-	MOVE.W	-(A0),-(A4)		;20030: 3920
-	CLR.W	D1			;20032: 4241
-	DC.W	$4c4c			;20034
-	MOVEA.L	(A4),A0			;20036: 2054
-	DC.W	$494d			;20038
-	DC.W	$4553			;2003a
-	DC.W	$00fa			;2003c
-	ADDQ.W	#3,A1			;2003e: 5649
-	DC.W	$4557			;20040
-	MOVEA.L	D2,A0			;20042: 2042
-	DC.W	$4553			;20044
-	ADDQ.B	#2,-(A0)		;20046: 5420
-	DC.W	$4d41			;20048
-	ADDQ.W	#2,D3			;2004a: 5443
-	NBCD	-(A0)			;2004c: 4820
-	ADDQ.W	#1,D5			;2004e: 5245
-	SUBQ.W	#1,(A5)			;20050: 5355
-	DC.W	$4c54			;20052
-	SUBQ.B	#1,D0			;20054: 5300
-	DC.W	$fa56			;20056
-	DC.W	$4945			;20058
-	SUBQ.B	#3,-(A0)		;2005a: 5720
-	ADDQ.W	#2,A7			;2005c: 544f
-	SUBQ.W	#2,(A2)			;2005e: 5552
-	TRAP	#1			;20060: 4e41
-	DC.W	$4d45			;20062
-	DC.W	$4e54			;20064
-	MOVEA.L	D3,A0			;20066: 2043
-	SWAP	D1			;20068: 4841
-	DC.W	$4d50			;2006a
-	DC.W	$494f			;2006c
-	DC.W	$4e53			;2006e
-	DC.W	$0005			;20070
-	ADDQ.W	#2,A7			;20072: 544f
-	SUBQ.W	#2,(A2)			;20074: 5552
-	TRAP	#1			;20076: 4e41
-	DC.W	$4d45			;20078
-	LINK.W	A4,#8268		;2007a: 4e54204c
-	DC.W	$4144			;2007e
-	NEG.W	D5			;20080: 4445
-	ADDQ.B	#1,D0			;20082: 5200
-	EORI.W	#$4841,D3		;20084: 0a434841
-	DC.W	$4d50			;20088
-	DC.W	$494f			;2008a
-	DC.W	$4e00			;2008c
-	DC.W	$fd0a			;2008e
-	MOVEA.L	(A7),A0			;20090: 2057
-	DC.W	$4152			;20092
-	TRAP	#9			;20094: 4e49
-	TRAP	#7			;20096: 4e47
-	MOVE.L	D2,D0			;20098: 2002
-	ADDQ.B	#6,-(A0)		;2009a: 5c20
-	DC.W	$4348			;2009c
-	DC.W	$414e			;2009e
-	DC.W	$4749			;200a0
-	TRAP	#7			;200a2: 4e47
-	MOVEA.L	D7,A0			;200a4: 2047
-	DC.W	$414d			;200a6
-	DC.W	$4520			;200a8
-	ADDQ.W	#2,(A1)+		;200aa: 5459
-	ADDQ.W	#8,D5			;200ac: 5045
-	DC.W	$00fd			;200ae
-	DC.W	$0220			;200b0
-	MOVE.L	-(A0),D0		;200b2: 2020
-	SUBQ.W	#3,A1			;200b4: 5749
-	DC.W	$4c4c			;200b6
-	MOVEA.L	D5,A0			;200b8: 2045
-	ADDQ.W	#1,D1			;200ba: 5241
-	SUBQ.W	#1,D5			;200bc: 5345
-	MOVEA.L	D3,A0			;200be: 2043
-	SUBQ.W	#2,(A2)			;200c0: 5552
-	ADDQ.W	#1,D5			;200c2: 5245
-	DC.W	$4e54			;200c4
-	MOVEA.L	(A3),A0			;200c6: 2053
-	DC.W	$4554			;200c8
-	SUBQ.W	#2,(A0)			;200ca: 5550
-	DC.W	$00fc			;200cc
-	MOVEA.L	(A3),A0			;200ce: 2053
-	DC.W	$454c			;200d0
-	DC.W	$4543			;200d2
-	ADDQ.B	#2,-(A0)		;200d4: 5420
-	ADDQ.W	#2,(A1)+		;200d6: 5459
-	ADDQ.W	#8,D5			;200d8: 5045
-	MOVEA.L	A7,A0			;200da: 204f
-	NOT.B	-(A0)			;200dc: 4620
-	ADDQ.W	#8,A7			;200de: 504f
-	DC.W	$4f4c			;200e0
-	DC.W	$00fc			;200e2
-	MOVEA.L	D3,A0			;200e4: 2043
-	DC.W	$484f			;200e6
-	DC.W	$4f53			;200e8
-	DC.W	$4520			;200ea
-	ADDQ.W	#2,(A1)+		;200ec: 5459
-	ADDQ.W	#8,D5			;200ee: 5045
-	MOVEA.L	A7,A0			;200f0: 204f
-	NOT.B	-(A0)			;200f2: 4620
-	DC.W	$4741			;200f4
-	DC.W	$4d45			;200f6
-	DC.W	$00fc			;200f8
-	MOVE.L	-(A0),D0		;200fa: 2020
-	DC.W	$4544			;200fc
-	DC.W	$4954			;200fe
-	MOVE.L	EXT_009b.W,D0		;20100: 20382042
-	DC.W	$414c			;20104
-	DC.W	$4c20			;20106
-	ADDQ.W	#1,(A5)			;20108: 5255
-	DC.W	$4c45			;2010a
-	SUBQ.B	#1,D0			;2010c: 5300
-	DC.W	$fc20			;2010e
-	MOVEA.L	(A3),A0			;20110: 2053
-	DC.W	$4554			;20112
-	MOVEA.L	(A5),A0			;20114: 2055
-	ADDQ.B	#8,-(A0)		;20116: 5020
-	ADDQ.W	#2,(A2)			;20118: 5452
-	DC.W	$4943			;2011a
-	DC.W	$4b20			;2011c
-	SUBQ.W	#1,A0			;2011e: 5348
-	DC.W	$4f54			;20120
-	DC.W	$00fc			;20122
-	MOVE.L	-(A0),D0		;20124: 2020
-	MOVEA.L	D5,A0			;20126: 2045
-	LINK.W	A4,#17746		;20128: 4e544552
-	MOVEA.L	D4,A0			;2012c: 2044
-	DC.W	$454d			;2012e
-	DC.W	$4f20			;20130
-	DC.W	$4d4f			;20132
-	NEG.W	D5			;20134: 4445
-	DC.W	$00fc			;20136
-	MOVE.L	-(A0),D0		;20138: 2020
-	MOVE.L	-(A0),D0		;2013a: 2020
-	DC.W	$4449			;2013c
-	SUBQ.W	#1,A3			;2013e: 534b
-	MOVEA.L	D6,A0			;20140: 2046
-	DC.W	$4541			;20142
-	ADDQ.W	#2,(A5)			;20144: 5455
-	ADDQ.W	#1,D5			;20146: 5245
-	SUBQ.B	#1,D0			;20148: 5300
-	DC.W	$fc20			;2014a
-	MOVE.L	-(A0),D0		;2014c: 2020
-	MOVE.L	-(A0),D0		;2014e: 2020
-	MOVE.L	-(A0),D0		;20150: 2020
-	DC.W	$4f50			;20152
-	ADDQ.W	#2,A1			;20154: 5449
-	DC.W	$4f4e			;20156
-	SUBQ.B	#1,D0			;20158: 5300
-	DC.W	$f505			;2015a
-	MOVE.W	-(A0),D4		;2015c: 3820
-	CLR.W	D1			;2015e: 4241
-	DC.W	$4c4c			;20160
-	MOVEA.L	(A2),A0			;20162: 2052
-	SUBQ.W	#2,A4			;20164: 554c
-	DC.W	$4520			;20166
-	DC.W	$4544			;20168
-	DC.W	$4954			;2016a
-	DC.W	$4f52			;2016c
-	DC.W	$00fe			;2016e
-	BCHG	D7,(A4)			;20170: 0f54
-	DC.W	$4849			;20172
-	SUBQ.B	#1,-(A0)		;20174: 5320
-	DC.W	$4d45			;20176
-	DC.W	$4e55			;20178
-	MOVEA.L	D1,A0			;2017a: 2041
-	DC.W	$4c4c			;2017c
-	DC.W	$4f57			;2017e
-	SUBQ.B	#1,-(A0)		;20180: 5320
-	SUBQ.W	#4,A7			;20182: 594f
-	SUBQ.B	#2,-(A0)		;20184: 5520
-	ADDQ.W	#2,A7			;20186: 544f
-	MOVEA.L	D3,A0			;20188: 2043
-	SWAP	D1			;2018a: 4841
-	TRAP	#7			;2018c: 4e47
-	DC.W	$4520			;2018e
-	ADDQ.W	#2,A0			;20190: 5448
-	ADDQ.W	#1,D5			;20192: 5245
-	DC.W	$4500			;20194
-	DC.W	$fe0f			;20196
-	DC.W	$4f46			;20198
-	MOVEA.L	(A4),A0			;2019a: 2054
-	SWAP	D5			;2019c: 4845
-	MOVEA.L	D2,A0			;2019e: 2042
-	DC.W	$4153			;201a0
-	DC.W	$4943			;201a2
-	MOVEA.L	(A2),A0			;201a4: 2052
-	SUBQ.W	#2,A4			;201a6: 554c
-	DC.W	$4553			;201a8
-	MOVEA.L	(A5),A0			;201aa: 2055
-	SUBQ.W	#1,D5			;201ac: 5345
-	NEG.B	-(A0)			;201ae: 4420
-	NEG.W	(A5)			;201b0: 4455
-	ADDQ.W	#1,A1			;201b2: 5249
-	TRAP	#7			;201b4: 4e47
-	MOVE.L	EXT_009b.W,D0		;201b6: 20382042
-	DC.W	$414c			;201ba
-	DC.W	$4c20			;201bc
-	DC.W	$00fe			;201be
-	MOVEP.L	17729(A0),D6		;201c0: 0d484541
-	NEG.W	(A3)			;201c4: 4453
-	ADDQ.W	#2,(A2)			;201c6: 5452
-	DC.W	$494e			;201c8
-	DC.W	$4720			;201ca
-	DC.W	$4f52			;201cc
-	MOVEA.L	D4,A0			;201ce: 2044
-	ADDQ.W	#6,A4			;201d0: 5c4c
-	DC.W	$494e			;201d2
-	DC.W	$4520			;201d4
-	MOVE.L	-(A0),D0		;201d6: 2020
-	ADDQ.B	#6,D0			;201d8: 5c00
-	DC.W	$fe0d			;201da
-	TRAP	#15			;201dc: 4e4f
-	DC.W	$4d49			;201de
-	TRAP	#1			;201e0: 4e41
-	ADDQ.W	#2,D5			;201e2: 5445
-	MOVE.L	EXT_009b.W,D0		;201e4: 20382042
-	DC.W	$414c			;201e8
-	DC.W	$4c20			;201ea
-	ADDQ.W	#8,A7			;201ec: 504f
-	DC.W	$434b			;201ee
-	DC.W	$4554			;201f0
-	MOVEA.L	(A4)+,A0		;201f2: 205c
-	DC.W	$00fe			;201f4
-	MOVEP.L	21837(A6),D6		;201f6: 0d4e554d
-	CLR.W	D5			;201fa: 4245
-	ADDQ.B	#1,-(A0)		;201fc: 5220
-	DC.W	$4f46			;201fe
-	MOVEA.L	D2,A0			;20200: 2042
-	DC.W	$414c			;20202
-	DC.W	$4c53			;20204
-	MOVEA.L	(A4),A0			;20206: 2054
-	DC.W	$4f20			;20208
-	DC.W	$4849			;2020a
-	ADDQ.B	#2,D0			;2020c: 5400
-	DC.W	$fe0d			;2020e
-	DC.W	$4355			;20210
-	SUBQ.W	#1,A0			;20212: 5348
-	DC.W	$494f			;20214
-	DC.W	$4e53			;20216
-	MOVEA.L	A7,A0			;20218: 204f
-	DC.W	$4e20			;2021a
-	CLR.W	(A2)			;2021c: 4252
-	DC.W	$4541			;2021e
-	DC.W	$4b20			;20220
-	DC.W	$4f46			;20222
-	NOT.B	-(A0)			;20224: 4620
-	MOVEA.L	(A4)+,A0		;20226: 205c
-	DC.W	$00e5			;20228
-	PEA	(A3)			;2022a: 4853
-	DC.W	$00dc			;2022c
-	DC.W	$444c			;2022e
-	DC.W	$00e5			;20230
-	SUBQ.W	#4,D5			;20232: 5945
-	SUBQ.B	#1,D0			;20234: 5300
-	ADD.W	A6,D6			;20236: dc4e
-	DC.W	$4f00			;20238
-	ROXL.B	D2,D1			;2023a: e531
-	DC.W	$00e2			;2023c
-	MOVE.W	D0,D1			;2023e: 3200
-	ADD.B	D7,-36(A3,D0.W)		;20240: df3300dc
-	MOVE.W	D0,D2			;20244: 3400
-	DC.W	$f952			;20246
-	DC.W	$4554			;20248
-	SUBQ.W	#2,(A2)			;2024a: 5552
-	DC.W	$4e20			;2024c
-	ADDQ.W	#2,A7			;2024e: 544f
-	MOVEA.L	(A4),A0			;20250: 2054
-	DC.W	$4142			;20252
-	DC.W	$4c45			;20254
-	DC.W	$000a			;20256
-	DC.W	$f54c			;20258
-	DC.W	$4f41			;2025a
-	NEG.B	-(A0)			;2025c: 4420
-	NOT.W	(A2)			;2025e: 4652
-	DC.W	$4f4d			;20260
-	MOVEA.L	D4,A0			;20262: 2044
-	DC.W	$4953			;20264
-	LEA	lb_202bc(PC,D0.L),A5	;20266: 4bfb0854
-	SUBQ.W	#4,(A0)			;2026a: 5950
-	DC.W	$4500			;2026c
-	DC.W	$0af2			;2026e
-	SUBQ.W	#1,D1			;20270: 5341
-	ADDQ.W	#3,D5			;20272: 5645
-	MOVEA.L	D7,A0			;20274: 2047
-	DC.W	$414d			;20276
-	DC.W	$4500			;20278
-	DC.W	$0af7			;2027a
-	DC.W	$4449			;2027c
-	SUBQ.W	#1,A3			;2027e: 534b
-	MOVEA.L	A4,A0			;20280: 204c
-	DC.W	$4f41			;20282
-	NEG.B	-(A0)			;20284: 4420
-	DC.W	$414e			;20286
-	NEG.B	-(A0)			;20288: 4420
-	SUBQ.W	#1,D1			;2028a: 5341
-	ADDQ.W	#3,D5			;2028c: 5645
-	DC.W	$000a			;2028e
-	DC.W	$fd57			;20290
-	DC.W	$4152			;20292
-	TRAP	#9			;20294: 4e49
-	TRAP	#7			;20296: 4e47
-	MOVE.L	D2,D0			;20298: 2002
-	ADDQ.B	#6,-(A0)		;2029a: 5c20
-	SUBQ.W	#1,A7			;2029c: 534f
-	DC.W	$4d45			;2029e
-	MOVEA.L	D6,A0			;202a0: 2046
-	SUBQ.W	#2,A6			;202a2: 554e
-	DC.W	$4354			;202a4
-	DC.W	$494f			;202a6
-	DC.W	$4e53			;202a8
-	MOVEA.L	D5,A0			;202aa: 2045
-	ADDQ.W	#1,D1			;202ac: 5241
-	SUBQ.W	#1,D5			;202ae: 5345
-	DC.W	$0002			;202b0
-	DC.W	$fd50			;202b2
-	ADDQ.W	#1,D5			;202b4: 5245
-	ADDQ.W	#3,A1			;202b6: 5649
-	DC.W	$4f55			;202b8
-	SUBQ.W	#1,A4			;202ba: 534c
-lb_202bc:
-	SUBQ.B	#4,-(A0)		;202bc: 5920
-	SUBQ.W	#1,D1			;202be: 5341
-	ADDQ.W	#3,D5			;202c0: 5645
-	NEG.B	-(A0)			;202c2: 4420
-	NEG.W	D1			;202c4: 4441
-	ADDQ.W	#2,D1			;202c6: 5441
-	MOVEA.L	A7,A0			;202c8: 204f
-	DC.W	$4e20			;202ca
-	DC.W	$4449			;202cc
-	SUBQ.W	#1,A3			;202ce: 534b
-	DC.W	$000a			;202d0
-	DC.W	$f842			;202d2
-	DC.W	$4553			;202d4
-	ADDQ.B	#2,-(A0)		;202d6: 5420
-	MOVE.W	-(A0),D4		;202d8: 3820
-	CLR.W	D1			;202da: 4241
-	DC.W	$4c4c			;202dc
-	MOVEA.L	(A2),A0			;202de: 2052
-	DC.W	$414e			;202e0
-	DC.W	$4b49			;202e2
-	TRAP	#7			;202e4: 4e47
-	SUBQ.B	#1,D0			;202e6: 5300
-	DC.W	$0afc			;202e8
-	CLR.W	D5			;202ea: 4245
-	SUBQ.W	#1,(A4)			;202ec: 5354
-	MOVEA.L	D1,A0			;202ee: 2041
-	ADDQ.W	#3,D5			;202f0: 5645
-	ADDQ.W	#1,D1			;202f2: 5241
-	DC.W	$4745			;202f4
-	MOVE.L	EXT_03b5,D0		;202f6: 20392042414c
-	DC.W	$4c20			;202fc
-	ADDQ.W	#8,A7			;202fe: 504f
-	ADDQ.B	#2,-(A0)		;20300: 5420
-	ADDQ.W	#2,A1			;20302: 5449
-	DC.W	$4d45			;20304
-	SUBQ.B	#1,D0			;20306: 5300
-	DC.W	$0af7			;20308
-	CLR.W	D5			;2030a: 4245
-	SUBQ.W	#1,(A4)			;2030c: 5354
-	MOVEA.L	A5,A0			;2030e: 204d
-	DC.W	$4154			;20310
-	DC.W	$4348			;20312
-	MOVEA.L	(A2),A0			;20314: 2052
-	DC.W	$4553			;20316
-	SUBQ.W	#2,A4			;20318: 554c
-	ADDQ.W	#2,(A3)			;2031a: 5453
-	DC.W	$000a			;2031c
-	DC.W	$f754			;2031e
-	DC.W	$4f55			;20320
-	ADDQ.W	#1,A6			;20322: 524e
-	DC.W	$414d			;20324
-	DC.W	$454e			;20326
-	ADDQ.B	#2,-(A0)		;20328: 5420
-	SUBQ.W	#3,A1			;2032a: 5749
-	TRAP	#14			;2032c: 4e4e
-	DC.W	$4552			;2032e
-	SUBQ.B	#1,D0			;20330: 5300
-	BSET	D2,EXT_03e8		;20332: 05f944554400
-	DC.W	$0efa			;20338
-	SUBQ.W	#2,A6			;2033a: 554e
-	DC.W	$444f			;2033c
-	MOVEA.L	D6,A0			;2033e: 2046
-	DC.W	$4541			;20340
-	ADDQ.W	#2,(A5)			;20342: 5455
-	ADDQ.W	#1,D5			;20344: 5245
-	DC.W	$0a20			;20346
-	TRAP	#15			;20348: 4e4f
-	DC.W	$540e			;2034a
-	MOVEA.L	D1,A0			;2034c: 2041
-	DC.W	$4c4c			;2034e
-	DC.W	$4f57			;20350
-	DC.W	$4544			;20352
-	DC.W	$000e			;20354
-	DC.W	$fc59			;20356
-	DC.W	$4f55			;20358
-	MOVE.L	A2,D0			;2035a: 200a
-	DC.W	$4341			;2035c
-	DC.W	$4e20			;2035e
-	SUBQ.W	#2,A6			;20360: 554e
-	DC.W	$444f			;20362
-	MOVE.L	A6,D0			;20364: 200e
-	DC.W	$4c41			;20366
-	SUBQ.W	#1,(A4)			;20368: 5354
-	MOVEA.L	(A3),A0			;2036a: 2053
-	DC.W	$484f			;2036c
-	ADDQ.B	#2,-(A0)		;2036e: 5420
-	ADDQ.W	#8,A4			;20370: 504c
-	DC.W	$4159			;20372
-	DC.W	$4544			;20374
-	SUBQ.B	#5,D0			;20376: 5b00
-	DC.W	$0aff			;20378
-	DC.W	$4d4f			;2037a
-	ADDQ.W	#3,D5			;2037c: 5645
-	DC.W	$0e20			;2037e
-	CLR.W	D1			;20380: 4241
-	DC.W	$4c4c			;20382
-	SUBQ.B	#1,-(A0)		;20384: 5320
-	DC.W	$4152			;20386
-	DC.W	$4f55			;20388
-	TRAP	#4			;2038a: 4e44
-	MOVEA.L	D2,A0			;2038c: 2042
-	SUBQ.B	#4,-(A0)		;2038e: 5920
-	DC.W	$484f			;20390
-	DC.W	$4c44			;20392
-	DC.W	$494e			;20394
-	DC.W	$4720			;20396
-	DC.W	$4f4e			;20398
-	ADDQ.W	#2,A7			;2039a: 544f
-	DC.W	$000e			;2039c
-	DC.W	$ff20			;2039e
-	MOVE.L	-(A0),D0		;203a0: 2020
-	MOVE.L	-(A0),D0		;203a2: 2020
-	ADDQ.W	#2,A0			;203a4: 5448
-	DC.W	$454d			;203a6
-	MOVEA.L	(A7),A0			;203a8: 2057
-	DC.W	$4954			;203aa
-	NBCD	-(A0)			;203ac: 4820
-	DC.W	$4c45			;203ae
-	NOT.W	(A4)			;203b0: 4654
-	MOVEA.L	A5,A0			;203b2: 204d
-	DC.W	$4f55			;203b4
-	SUBQ.W	#1,D5			;203b6: 5345
-	MOVEA.L	D2,A0			;203b8: 2042
-	SUBQ.W	#2,(A4)			;203ba: 5554
-	ADDQ.W	#2,A7			;203bc: 544f
-	UNLK	A3			;203be: 4e5b
-	DC.W	$000a			;203c0
-	DC.W	$ff52			;203c2
-	DC.W	$454d			;203c4
-	DC.W	$4f56			;203c6
-	DC.W	$450e			;203c8
-	MOVEA.L	D2,A0			;203ca: 2042
-	DC.W	$414c			;203cc
-	DC.W	$4c53			;203ce
-	MOVEA.L	D2,A0			;203d0: 2042
-	SUBQ.B	#4,-(A0)		;203d2: 5920
-	SUBQ.W	#2,(A3)			;203d4: 5553
-	DC.W	$494e			;203d6
-	DC.W	$4720			;203d8
-	EORI.W	#$454c,D4		;203da: 0a44454c
-	MOVE.L	A6,D0			;203de: 200e
-	DC.W	$4b45			;203e0
-	SUBQ.B	#4,-(A0)		;203e2: 5920
-	DC.W	$414e			;203e4
-	NEG.B	D0			;203e6: 4400
-	DC.W	$0eff			;203e8
-	MOVE.L	-(A0),D0		;203ea: 2020
-	MOVE.L	-(A0),D0		;203ec: 2020
-	MOVE.L	-(A0),D0		;203ee: 2020
-	MOVEA.L	A4,A0			;203f0: 204c
-	DC.W	$4546			;203f2
-	ADDQ.B	#2,-(A0)		;203f4: 5420
-	DC.W	$4d4f			;203f6
-	SUBQ.W	#2,(A3)			;203f8: 5553
-	DC.W	$4520			;203fa
-	CLR.W	(A5)			;203fc: 4255
-	ADDQ.W	#2,(A4)			;203fe: 5454
-	DC.W	$4f4e			;20400
-	MOVEA.L	(A4),A0			;20402: 2054
-	DC.W	$4f47			;20404
-	DC.W	$4554			;20406
-	SWAP	D5			;20408: 4845
-	ADDQ.W	#1,(A3)+		;2040a: 525b
-	DC.W	$000a			;2040c
-	DC.W	$ff52			;2040e
-	DC.W	$4550			;20410
-	DC.W	$4c41			;20412
-	DC.W	$4345			;20414
-	DC.W	$0e20			;20416
-	CLR.W	D1			;20418: 4241
-	DC.W	$4c4c			;2041a
-	SUBQ.B	#1,-(A0)		;2041c: 5320
-	CLR.W	(A1)+			;2041e: 4259
-	MOVEA.L	(A5),A0			;20420: 2055
-	SUBQ.W	#1,A1			;20422: 5349
-	TRAP	#7			;20424: 4e47
-	MOVEA.L	(A2),A0			;20426: 2052
-	DC.W	$4947			;20428
-	PEA	(A4)			;2042a: 4854
-	MOVEA.L	A7,A0			;2042c: 204f
-	ADDQ.B	#1,D0			;2042e: 5200
-	DC.W	$0eff			;20430
-	MOVE.L	-(A0),D0		;20432: 2020
-	MOVE.L	-(A0),D0		;20434: 2020
-	MOVE.L	-(A0),D0		;20436: 2020
-	MOVE.L	-(A0),D0		;20438: 2020
-	DC.W	$4c45			;2043a
-	NOT.W	(A4)			;2043c: 4654
-	MOVEA.L	D2,A0			;2043e: 2042
-	SUBQ.W	#2,(A4)			;20440: 5554
-	ADDQ.W	#2,A7			;20442: 544f
-	DC.W	$4e20			;20444
-	DC.W	$4f4e			;20446
-	MOVEA.L	D2,A0			;20448: 2042
-	DC.W	$414c			;2044a
-	DC.W	$4c20			;2044c
-	DC.W	$4943			;2044e
-	DC.W	$4f4e			;20450
-	SUBQ.W	#1,(A3)+		;20452: 535b
-	DC.W	$0002			;20454
-	DC.W	$f54f			;20456
-	TRAP	#5			;20458: 4e45
-	MOVEA.L	(A0),A0			;2045a: 2050
-	DC.W	$4c41			;2045c
-	SUBQ.W	#4,D5			;2045e: 5945
-	ADDQ.B	#1,-(A0)		;20460: 5220
-	DC.W	$4741			;20462
-	DC.W	$4d45			;20464
-	DC.W	$0002			;20466
-	DC.W	$f853			;20468
-	ADDQ.W	#2,D1			;2046a: 5441
-	ADDQ.W	#1,(A4)			;2046c: 5254
-	MOVEA.L	(A4),A0			;2046e: 2054
-	SUBQ.W	#3,A7			;20470: 574f
-	MOVEA.L	(A0),A0			;20472: 2050
-	DC.W	$4c41			;20474
-	SUBQ.W	#4,D5			;20476: 5945
-	ADDQ.B	#1,-(A0)		;20478: 5220
-	DC.W	$4741			;2047a
-	DC.W	$4d45			;2047c
-	DC.W	$0002			;2047e
-	DC.W	$fa53			;20480
-	ADDQ.W	#2,D1			;20482: 5441
-	ADDQ.W	#1,(A4)			;20484: 5254
-	MOVE.L	80(A2,D2.W),D0		;20486: 20322050
-	DC.W	$4c41			;2048a
-	SUBQ.W	#4,D5			;2048c: 5945
-	ADDQ.B	#1,-(A0)		;2048e: 5220
-	ADDQ.W	#8,(A2)			;20490: 5052
-	DC.W	$4143			;20492
-	ADDQ.W	#2,A1			;20494: 5449
-	DC.W	$4345			;20496
-	DC.W	$0002			;20498
-	DC.W	$f545			;2049a
-	DC.W	$4449			;2049c
-	ADDQ.B	#2,-(A0)		;2049e: 5420
-	ADDQ.W	#2,(A2)			;204a0: 5452
-	DC.W	$4943			;204a2
-	DC.W	$4b20			;204a4
-	SUBQ.W	#1,A0			;204a6: 5348
-	DC.W	$4f54			;204a8
-	SUBQ.B	#1,D0			;204aa: 5300
-	DC.W	$0ff1			;204ac
-	DC.W	$4f50			;204ae
-	ADDQ.W	#2,A1			;204b0: 5449
-	DC.W	$4f4e			;204b2
-	SUBQ.B	#1,D0			;204b4: 5300
-	DC.W	$0af7			;204b6
-	NEG.W	D5			;204b8: 4445
-	DC.W	$4d4f			;204ba
-	LINK.W	A3,#21586		;204bc: 4e535452
-	DC.W	$4154			;204c0
-	DC.W	$494f			;204c2
-	DC.W	$4e20			;204c4
-	DC.W	$4741			;204c6
-	DC.W	$4d45			;204c8
-	DC.W	$0002			;204ca
-	DC.W	$f843			;204cc
-	SWAP	D5			;204ce: 4845
-	DC.W	$4154			;204d0
-	MOVEA.L	A5,A0			;204d2: 204d
-	DC.W	$4f44			;204d4
-	DC.W	$4520			;204d6
-	NEG.W	D5			;204d8: 4445
-	DC.W	$4d4f			;204da
-	MOVEA.L	A5,A0			;204dc: 204d
-	DC.W	$454e			;204de
-	SUBQ.B	#2,D0			;204e0: 5500
-	DC.W	$0af7			;204e2
-	MOVE.L	-(A0),D0		;204e4: 2020
-	SUBQ.W	#1,D1			;204e6: 5341
-	ADDQ.W	#3,D5			;204e8: 5645
-	MOVEA.L	D5,A0			;204ea: 2045
-	ADDQ.W	#1,(A2)			;204ec: 5252
-	DC.W	$4f52			;204ee
-	DC.W	$000e			;204f0
-	DC.W	$f748			;204f2
-	DC.W	$4541			;204f4
-	NEG.W	(A3)			;204f6: 4453
-	MOVEA.L	A7,A0			;204f8: 204f
-	ADDQ.B	#1,-(A0)		;204fa: 5220
-	ADDQ.W	#2,D1			;204fc: 5441
-	DC.W	$494c			;204fe
-	SUBQ.B	#1,D0			;20500: 5300
-	DC.W	$fc54			;20502
-	DC.W	$4f53			;20504
-	SUBQ.W	#1,A1			;20506: 5349
-	TRAP	#7			;20508: 4e47
-	MOVEA.L	D1,A0			;2050a: 2041
-	MOVEA.L	D3,A0			;2050c: 2043
-	DC.W	$4f49			;2050e
-	DC.W	$4e20			;20510
-	SUBQ.W	#1,A0			;20512: 5348
-	DC.W	$4f57			;20514
-	SUBQ.B	#1,-(A0)		;20516: 5320
-	ADDQ.W	#2,A0			;20518: 5448
-	DC.W	$4154			;2051a
-	DC.W	$00fa			;2051c
-	DC.W	$4953			;2051e
-	MOVEA.L	(A4),A0			;20520: 2054
-	DC.W	$4f20			;20522
-	CLR.W	(A2)			;20524: 4252
-	DC.W	$4541			;20526
-	DC.W	$4b20			;20528
-	DC.W	$4f46			;2052a
-	NOT.B	-(A0)			;2052c: 4620
-	DC.W	$4649			;2052e
-	ADDQ.W	#1,(A3)			;20530: 5253
-	ADDQ.B	#2,D0			;20532: 5400
-	DC.W	$0af5			;20534
-	DC.W	$4449			;20536
-	SUBQ.W	#1,A3			;20538: 534b
-	MOVE.L	-(A0),D0		;2053a: 2020
-	DC.W	$4552			;2053c
-	ADDQ.W	#1,A7			;2053e: 524f
-	ADDQ.B	#1,D0			;20540: 5200
-	DC.W	$0af2			;20542
-	DC.W	$4552			;20544
-	ADDQ.W	#1,A7			;20546: 524f
-	ADDQ.B	#1,D0			;20548: 5200
-	DC.W	$0ffb			;2054a
-	DC.W	$4552			;2054c
-	ADDQ.W	#1,A7			;2054e: 524f
-	ADDQ.B	#1,-(A0)		;20550: 5220
-	NEG.W	(A5)			;20552: 4455
-	ADDQ.W	#1,A1			;20554: 5249
-	TRAP	#7			;20556: 4e47
-	MOVEA.L	D4,A0			;20558: 2044
-	DC.W	$4953			;2055a
-	DC.W	$4b20			;2055c
-	ADDQ.W	#1,D5			;2055e: 5245
-	DC.W	$4144			;20560
-	DC.W	$000f			;20562
-	DC.W	$fa43			;20564
-	SWAP	D5			;20566: 4845
-	DC.W	$434b			;20568
-	MOVEA.L	D4,A0			;2056a: 2044
-	DC.W	$4953			;2056c
-	DC.W	$4b20			;2056e
-	DC.W	$414e			;20570
-	NEG.B	-(A0)			;20572: 4420
-	NEG.W	(A2)			;20574: 4452
-	DC.W	$4956			;20576
-	DC.W	$4500			;20578
-	DC.W	$0ffe			;2057a
-	DC.W	$4f52			;2057c
-	MOVEA.L	(A4),A0			;2057e: 2054
-	ADDQ.W	#1,(A1)+		;20580: 5259
-	MOVEA.L	D5,A0			;20582: 2045
-	ADDQ.W	#1,D1			;20584: 5241
-	SUBQ.W	#1,A1			;20586: 5349
-	TRAP	#7			;20588: 4e47
-	MOVEA.L	(A4)+,A0		;2058a: 205c
-	MOVEA.L	D6,A0			;2058c: 2046
-	DC.W	$4f52			;2058e
-	DC.W	$4d41			;20590
-	ADDQ.W	#2,(A4)			;20592: 5454
-	DC.W	$494e			;20594
-	DC.W	$4700			;20596
-	DC.W	$0ffc			;20598
-	ADDQ.W	#2,A0			;2059a: 5448
-	DC.W	$4520			;2059c
-	NEG.W	D1			;2059e: 4441
-	ADDQ.W	#2,D1			;205a0: 5441
-	MOVEA.L	D1,A0			;205a2: 2041
-	ADDQ.W	#1,D5			;205a4: 5245
-	DC.W	$4120			;205a6
-	DC.W	$4f4e			;205a8
-	MOVEA.L	D4,A0			;205aa: 2044
-	DC.W	$4953			;205ac
-	DC.W	$4b20			;205ae
-	CLR.W	(A1)+			;205b0: 4259
-	DC.W	$000f			;205b2
-	DC.W	$fb55			;205b4
-	SUBQ.W	#1,A1			;205b6: 5349
-	TRAP	#7			;205b8: 4e47
-	MOVEA.L	(A4),A0			;205ba: 2054
-	SWAP	D5			;205bc: 4845
-	MOVEA.L	A7,A0			;205be: 204f
-	ADDQ.W	#8,(A4)			;205c0: 5054
-	DC.W	$494f			;205c2
-	DC.W	$4e53			;205c4
-	MOVEA.L	A5,A0			;205c6: 204d
-	DC.W	$454e			;205c8
-	SUBQ.B	#2,D0			;205ca: 5500
-	DC.W	$06fb			;205cc
-	DC.W	$4552			;205ce
-	ADDQ.W	#1,A7			;205d0: 524f
-	ADDQ.B	#1,-(A0)		;205d2: 5220
-	NEG.W	(A5)			;205d4: 4455
-	ADDQ.W	#1,A1			;205d6: 5249
-	TRAP	#7			;205d8: 4e47
-	MOVEA.L	D4,A0			;205da: 2044
-	DC.W	$4953			;205dc
-	DC.W	$4b20			;205de
-	SUBQ.W	#1,D1			;205e0: 5341
-	ADDQ.W	#3,D5			;205e2: 5645
-	DC.W	$0006			;205e4
-	DC.W	$fb44			;205e6
-	DC.W	$4953			;205e8
-	DC.W	$4b20			;205ea
-	DC.W	$4d41			;205ec
-	SUBQ.W	#4,D2			;205ee: 5942
-	DC.W	$4520			;205f0
-	SUBQ.W	#2,A6			;205f2: 554e
-	DC.W	$464f			;205f4
-	ADDQ.W	#1,A5			;205f6: 524d
-	DC.W	$4154			;205f8
-	ADDQ.W	#2,D5			;205fa: 5445
-	NEG.B	D0			;205fc: 4400
-	DC.W	$06fe			;205fe
-	DC.W	$4f52			;20600
-	MOVEA.L	A6,A0			;20602: 204e
-	DC.W	$4f54			;20604
-	MOVEA.L	D3,A0			;20606: 2043
-	DC.W	$4f4e			;20608
-	ADDQ.W	#2,D1			;2060a: 5441
-	DC.W	$494e			;2060c
-	MOVE.L	-(A0),D0		;2060e: 2020
-	ADDQ.W	#8,A7			;20610: 504f
-	DC.W	$4f4c			;20612
-	MOVE.L	-(A0),D0		;20614: 2020
-	NEG.W	D1			;20616: 4441
-	ADDQ.W	#2,D1			;20618: 5441
-	DC.W	$0006			;2061a
-	DC.W	$fd4f			;2061c
-	ADDQ.B	#1,-(A0)		;2061e: 5220
-	DC.W	$4953			;20620
-	MOVEA.L	A6,A0			;20622: 204e
-	DC.W	$4f54			;20624
-	MOVEA.L	A1,A0			;20626: 2049
-	DC.W	$4e20			;20628
-	NEG.W	(A2)			;2062a: 4452
-	DC.W	$4956			;2062c
-	DC.W	$4520			;2062e
-	ADDQ.W	#8,(A2)			;20630: 5052
-	DC.W	$4f50			;20632
-	DC.W	$4552			;20634
-	DC.W	$4c59			;20636
-	DC.W	$000a			;20638
-	DC.W	$fd55			;2063a
-	SUBQ.W	#1,A1			;2063c: 5349
-	TRAP	#7			;2063e: 4e47
-	MOVEA.L	(A4),A0			;20640: 2054
-	SWAP	D5			;20642: 4845
-	MOVE.L	D5,D0			;20644: 2005
-	DC.W	$454e			;20646
-	DC.W	$474c			;20648
-	DC.W	$4953			;2064a
-	NBCD	-(A0)			;2064c: 4820
-	EORI.W	#$4552,(A6)		;2064e: 0a564552
-	SUBQ.W	#1,A1			;20652: 5349
-	DC.W	$4f4e			;20654
-	DC.W	$000a			;20656
-	DC.W	$fd4f			;20658
-	NOT.B	-(A0)			;2065a: 4620
-	ADDQ.W	#2,A0			;2065c: 5448
-	DC.W	$4520			;2065e
-	MOVEP.L	20051(A1),D2		;20660: 05494e53
-	ADDQ.W	#2,(A2)			;20664: 5452
-	SUBQ.W	#2,D3			;20666: 5543
-	ADDQ.W	#2,A1			;20668: 5449
-	DC.W	$4f4e			;2066a
-	MOVEA.L	A5,A0			;2066c: 204d
-	DC.W	$414e			;2066e
-	SUBQ.W	#2,D1			;20670: 5541
-	DC.W	$4c00			;20672
-	DC.W	$0afd			;20674
-	ADDQ.W	#8,A4			;20676: 504c
-	DC.W	$4541			;20678
-	SUBQ.W	#1,D5			;2067a: 5345
-	MOVEA.L	D5,A0			;2067c: 2045
-	LINK.W	A4,#17746		;2067e: 4e544552
-	MOVEA.L	(A4),A0			;20682: 2054
-	SWAP	D5			;20684: 4845
-	MOVEA.L	(A7),A0			;20686: 2057
-	DC.W	$4f52			;20688
-	NEG.B	-(A0)			;2068a: 4420
-	DC.W	$4f4e			;2068c
+	dc.b	$fc	;1ff8c
+	dc.b	"SETUP MULTIPLAYER TOURNAMENT "	;1ff8d
+lb_1ffaa:
+	dc.b	$00	;1ffaa
+	dc.b	$f6	;1ffab
+	dc.b	"SAVE CURRENT GAME"	;1ffac
+	dc.b	$00	;1ffbd
+lb_1ffbe:
+	dc.b	$f6	;1ffbe
+	dc.b	"LOAD A TRICK SHOT"	;1ffbf
+lb_1ffd0:
+	dc.b	$00	;1ffd0
+	dc.b	$f6	;1ffd1
+	dc.b	"LOAD A SINGLE GAME"	;1ffd2
+lb_1ffe4:
+	dc.b	$00	;1ffe4
+	dc.b	$f6	;1ffe5
+	dc.b	"LOAD A MATCH GAME"	;1ffe6
+	dc.b	$00	;1fff7
+lb_1fff8:
+	dc.b	$f6	;1fff8
+	dc.b	"LOAD A TOURNAMENT"	;1fff9
+	dc.b	$00	;2000a
+	dc.b	$fa	;2000b
+	dc.b	"VIEW BEST 8 BALL RANKING"	;2000c
+	dc.b	$00	;20024
+	dc.b	$fa	;20025
+	dc.b	"VIEW BEST 9 BALL TIMES"	;20026
+	dc.b	$00	;2003c
+	dc.b	$fa	;2003d
+	dc.b	"VIEW BEST MATCH RESULTS"	;2003e
+	dc.b	$00	;20055
+lb_20056:
+	dc.b	$fa	;20056
+	dc.b	"VIEW TOURNAMENT CHAMPIONS"	;20057
+	dc.b	$00	;20070
+	dc.b	$05	;20071
+	dc.b	"TOURNAMENT LADDER"	;20072
+	dc.b	$00	;20083
+	dc.b	$0a	;20084
+	dc.b	"CHAMPION"	;20085
+	dc.b	$00	;2008d
+	dc.b	$fd	;2008e
+	dc.b	$0a	;2008f
+	dc.b	" WARNING "	;20090
+	dc.b	$02	;20099
+	dc.b	"\ CHANGING GAME TYPE"	;2009a
+	dc.b	$00	;200ae
+	dc.b	$fd	;200af
+	dc.b	$02	;200b0
+	dc.b	"   WILL ERASE CURRENT SETUP"	;200b1
+lb_200cc:
+	dc.b	$00	;200cc
+	dc.b	$fc	;200cd
+	dc.b	" SELECT TYPE OF POOL"	;200ce
+lb_200e2:
+	dc.b	$00	;200e2
+	dc.b	$fc	;200e3
+	dc.b	" CHOOSE TYPE OF GAME"	;200e4
+lb_200f8:
+	dc.b	$00	;200f8
+	dc.b	$fc	;200f9
+	dc.b	"  EDIT 8 BALL RULES"	;200fa
+	dc.b	$00	;2010d
+lb_2010e:
+	dc.b	$fc	;2010e
+	dc.b	"  SET UP TRICK SHOT"	;2010f
+lb_20122:
+	dc.b	$00	;20122
+	dc.b	$fc	;20123
+	dc.b	"   ENTER DEMO MODE"	;20124
+lb_20136:
+	dc.b	$00	;20136
+	dc.b	$fc	;20137
+	dc.b	"    DISK FEATURES"	;20138
+	dc.b	$00	;20149
+lb_2014a:
+	dc.b	$fc	;2014a
+	dc.b	"       OPTIONS"	;2014b
+	dc.b	$00	;20159
+lb_2015a:
+	dc.b	$f5	;2015a
+	dc.b	$05	;2015b
+	dc.b	"8 BALL RULE EDITOR"	;2015c
+lb_2016e:
+	dc.b	$00	;2016e
+	dc.b	$fe	;2016f
+	dc.b	$0f	;20170
+	dc.b	"THIS MENU ALLOWS YOU TO CHANGE THREE"	;20171
+	dc.b	$00	;20195
+lb_20196:
+	dc.b	$fe	;20196
+	dc.b	$0f	;20197
+	dc.b	"OF THE BASIC RULES USED DURING 8 BALL "	;20198
+lb_201be:
+	dc.b	$00	;201be
+	dc.b	$fe	;201bf
+	dc.b	$0d	;201c0
+	dc.b	"HEADSTRING OR D\LINE   \"	;201c1
+	dc.b	$00	;201d9
+lb_201da:
+	dc.b	$fe	;201da
+	dc.b	$0d	;201db
+	dc.b	"NOMINATE 8 BALL POCKET \"	;201dc
+lb_201f4:
+	dc.b	$00	;201f4
+	dc.b	$fe	;201f5
+	dc.b	$0d	;201f6
+	dc.b	"NUMBER OF BALLS TO HIT"	;201f7
+	dc.b	$00	;2020d
+lb_2020e:
+	dc.b	$fe	;2020e
+	dc.b	$0d	;2020f
+	dc.b	"CUSHIONS ON BREAK OFF  \"	;20210
+lb_20228:
+	dc.b	$00	;20228
+	dc.b	$e5	;20229
+	dc.b	"HS"	;2022a
+lb_2022c:
+	dc.b	$00	;2022c
+	dc.b	$dc	;2022d
+	dc.b	"DL"	;2022e
+lb_20230:
+	dc.b	$00	;20230
+	dc.b	$e5	;20231
+	dc.b	"YES"	;20232
+	dc.b	$00	;20235
+lb_20236:
+	dc.b	$dc	;20236
+	dc.b	"NO"	;20237
+	dc.b	$00	;20239
+lb_2023a:
+	dc.b	$e5	;2023a
+	dc.b	"1"	;2023b
+lb_2023c:
+	dc.b	$00	;2023c
+	dc.b	$e2	;2023d
+	dc.b	"2"	;2023e
+	dc.b	$00	;2023f
+lb_20240:
+	dc.b	$df	;20240
+	dc.b	"3"	;20241
+lb_20242:
+	dc.b	$00	;20242
+	dc.b	$dc	;20243
+	dc.b	"4"	;20244
+	dc.b	$00	;20245
+lb_20246:
+	dc.b	$f9	;20246
+	dc.b	"RETURN TO TABLE"	;20247
+lb_20256:
+	dc.b	$00	;20256
+	dc.b	$0a	;20257
+	dc.b	$f5	;20258
+	dc.b	"LOAD FROM DISK"	;20259
+	dc.b	$fb	;20267
+	dc.b	$08	;20268
+	dc.b	"TYPE"	;20269
+	dc.b	$00	;2026d
+lb_2026e:
+	dc.b	$0a	;2026e
+	dc.b	$f2	;2026f
+	dc.b	"SAVE GAME"	;20270
+	dc.b	$00	;20279
+lb_2027a:
+	dc.b	$0a	;2027a
+	dc.b	$f7	;2027b
+	dc.b	"DISK LOAD AND SAVE"	;2027c
+lb_2028e:
+	dc.b	$00	;2028e
+	dc.b	$0a	;2028f
+	dc.b	$fd	;20290
+	dc.b	"WARNING "	;20291
+	dc.b	$02	;20299
+	dc.b	"\ SOME FUNCTIONS ERASE"	;2029a
+lb_202b0:
+	dc.b	$00	;202b0
+	dc.b	$02	;202b1
+	dc.b	$fd	;202b2
+	dc.b	"PREVIOUSLY SAVED DATA ON DISK"	;202b3
+lb_202d0:
+	dc.b	$00	;202d0
+	dc.b	$0a	;202d1
+	dc.b	$f8	;202d2
+	dc.b	"BEST 8 BALL RANKINGS"	;202d3
+	dc.b	$00	;202e7
+lb_202e8:
+	dc.b	$0a	;202e8
+	dc.b	$fc	;202e9
+	dc.b	"BEST AVERAGE 9 BALL POT TIMES"	;202ea
+	dc.b	$00	;20307
+lb_20308:
+	dc.b	$0a	;20308
+	dc.b	$f7	;20309
+	dc.b	"BEST MATCH RESULTS"	;2030a
+lb_2031c:
+	dc.b	$00	;2031c
+	dc.b	$0a	;2031d
+	dc.b	$f7	;2031e
+	dc.b	"TOURNAMENT WINNERS"	;2031f
+	dc.b	$00	;20331
+lb_20332:
+	dc.b	$05	;20332
+	dc.b	$f9	;20333
+	dc.b	"DUD"	;20334
+	dc.b	$00	;20337
+lb_20338:
+	dc.b	$0e	;20338
+	dc.b	$fa	;20339
+	dc.b	"UNDO FEATURE"	;2033a
+	dc.b	$0a	;20346
+	dc.b	" NOT"	;20347
+	dc.b	$0e	;2034b
+	dc.b	" ALLOWED"	;2034c
+	dc.b	$00	;20354
+	dc.b	$0e	;20355
+	dc.b	$fc	;20356
+	dc.b	"YOU "	;20357
+	dc.b	$0a	;2035b
+	dc.b	"CAN UNDO "	;2035c
+	dc.b	$0e	;20365
+	dc.b	"LAST SHOT PLAYED["	;20366
+	dc.b	$00	;20377
+lb_20378:
+	dc.b	$0a	;20378
+	dc.b	$ff	;20379
+	dc.b	"MOVE"	;2037a
+	dc.b	$0e	;2037e
+	dc.b	" BALLS AROUND BY HOLDING ONTO"	;2037f
+lb_2039c:
+	dc.b	$00	;2039c
+	dc.b	$0e	;2039d
+	dc.b	$ff	;2039e
+	dc.b	"     THEM WITH LEFT MOUSE BUTTON["	;2039f
+lb_203c0:
+	dc.b	$00	;203c0
+	dc.b	$0a	;203c1
+	dc.b	$ff	;203c2
+	dc.b	"REMOVE"	;203c3
+	dc.b	$0e	;203c9
+	dc.b	" BALLS BY USING "	;203ca
+	dc.b	$0a	;203da
+	dc.b	"DEL "	;203db
+	dc.b	$0e	;203df
+	dc.b	"KEY AND"	;203e0
+	dc.b	$00	;203e7
+lb_203e8:
+	dc.b	$0e	;203e8
+	dc.b	$ff	;203e9
+	dc.b	"       LEFT MOUSE BUTTON TOGETHER["	;203ea
+lb_2040c:
+	dc.b	$00	;2040c
+	dc.b	$0a	;2040d
+	dc.b	$ff	;2040e
+	dc.b	"REPLACE"	;2040f
+	dc.b	$0e	;20416
+	dc.b	" BALLS BY USING RIGHT OR"	;20417
+	dc.b	$00	;2042f
+lb_20430:
+	dc.b	$0e	;20430
+	dc.b	$ff	;20431
+	dc.b	"        LEFT BUTTON ON BALL ICONS["	;20432
+lb_20454:
+	dc.b	$00	;20454
+	dc.b	$02	;20455
+	dc.b	$f5	;20456
+	dc.b	"ONE PLAYER GAME"	;20457
+lb_20466:
+	dc.b	$00	;20466
+	dc.b	$02	;20467
+	dc.b	$f8	;20468
+	dc.b	"START TWO PLAYER GAME"	;20469
+lb_2047e:
+	dc.b	$00	;2047e
+	dc.b	$02	;2047f
+	dc.b	$fa	;20480
+	dc.b	"START 2 PLAYER PRACTICE"	;20481
+lb_20498:
+	dc.b	$00	;20498
+	dc.b	$02	;20499
+	dc.b	$f5	;2049a
+	dc.b	"EDIT TRICK SHOTS"	;2049b
+	dc.b	$00	;204ab
+lb_204ac:
+	dc.b	$0f	;204ac
+	dc.b	$f1	;204ad
+	dc.b	"OPTIONS"	;204ae
+	dc.b	$00	;204b5
+lb_204b6:
+	dc.b	$0a	;204b6
+	dc.b	$f7	;204b7
+	dc.b	"DEMONSTRATION GAME"	;204b8
+lb_204ca:
+	dc.b	$00	;204ca
+	dc.b	$02	;204cb
+	dc.b	$f8	;204cc
+	dc.b	"CHEAT MODE DEMO MENU"	;204cd
+	dc.b	$00	;204e1
+lb_204e2:
+	dc.b	$0a	;204e2
+	dc.b	$f7	;204e3
+	dc.b	"  SAVE ERROR"	;204e4
+lb_204f0:
+	dc.b	$00	;204f0
+	dc.b	$0e	;204f1
+	dc.b	$f7	;204f2
+	dc.b	"HEADS OR TAILS"	;204f3
+	dc.b	$00	;20501
+	dc.b	$fc	;20502
+	dc.b	"TOSSING A COIN SHOWS THAT"	;20503
+	dc.b	$00	;2051c
+	dc.b	$fa	;2051d
+	dc.b	"IS TO BREAK OFF FIRST"	;2051e
+	dc.b	$00	;20533
+lb_20534:
+	dc.b	$0a	;20534
+	dc.b	$f5	;20535
+	dc.b	"DISK  ERROR"	;20536
+	dc.b	$00	;20541
+lb_20542:
+	dc.b	$0a	;20542
+	dc.b	$f2	;20543
+	dc.b	"ERROR"	;20544
+	dc.b	$00	;20549
+lb_2054a:
+	dc.b	$0f	;2054a
+	dc.b	$fb	;2054b
+	dc.b	"ERROR DURING DISK READ"	;2054c
+lb_20562:
+	dc.b	$00	;20562
+	dc.b	$0f	;20563
+	dc.b	$fa	;20564
+	dc.b	"CHECK DISK AND DRIVE"	;20565
+	dc.b	$00	;20579
+lb_2057a:
+	dc.b	$0f	;2057a
+	dc.b	$fe	;2057b
+	dc.b	"OR TRY ERASING \ FORMATTING"	;2057c
+	dc.b	$00	;20597
+lb_20598:
+	dc.b	$0f	;20598
+	dc.b	$fc	;20599
+	dc.b	"THE DATA AREA ON DISK BY"	;2059a
+lb_205b2:
+	dc.b	$00	;205b2
+	dc.b	$0f	;205b3
+	dc.b	$fb	;205b4
+	dc.b	"USING THE OPTIONS MENU"	;205b5
+	dc.b	$00	;205cb
+lb_205cc:
+	dc.b	$06	;205cc
+	dc.b	$fb	;205cd
+	dc.b	"ERROR DURING DISK SAVE"	;205ce
+lb_205e4:
+	dc.b	$00	;205e4
+	dc.b	$06	;205e5
+	dc.b	$fb	;205e6
+	dc.b	"DISK MAYBE UNFORMATTED"	;205e7
+	dc.b	$00	;205fd
+lb_205fe:
+	dc.b	$06	;205fe
+	dc.b	$fe	;205ff
+	dc.b	"OR NOT CONTAIN  POOL  DATA"	;20600
+lb_2061a:
+	dc.b	$00	;2061a
+	dc.b	$06	;2061b
+	dc.b	$fd	;2061c
+	dc.b	"OR IS NOT IN DRIVE PROPERLY"	;2061d
+lb_20638:
+	dc.b	$00	;20638
+	dc.b	$0a	;20639
+	dc.b	$fd	;2063a
+	dc.b	"USING THE "	;2063b
+	dc.b	$05	;20645
+	dc.b	"ENGLISH "	;20646
+	dc.b	$0a	;2064e
+	dc.b	"VERSION"	;2064f
+lb_20656:
+	dc.b	$00	;20656
+	dc.b	$0a	;20657
+	dc.b	$fd	;20658
+	dc.b	"OF THE "	;20659
+	dc.b	$05	;20660
+	dc.b	"INSTRUCTION MANUAL"	;20661
+	dc.b	$00	;20673
+lb_20674:
+	dc.b	$0a	;20674
+	dc.b	$fd	;20675
+	dc.b	"PLEASE ENTER THE WORD ON"	;20675
+lb_2068e:
 	DC.W	$000a			;2068e
 	DC.W	$fd50			;20690
 	DC.W	$4147			;20692
@@ -37950,17 +33946,21 @@ lb_206ac:
 	dc.b	$05	;206ac
 	dc.b	"00"	;206ad
 	dc.b	$00	;206af
+lb_206b0:
 	dc.b	$00	;206b0
 	dc.b	$0a	;206b1
 	dc.b	$fd	;206b2
 	dc.b	"THEN TYPE RETURN TO ENTER"	;206b3
+lb_206cc:
 	dc.b	$00	;206cc
 	dc.b	$0a	;206cd
 	dc.b	$fd	;206ce
 	dc.b	"HEADINGS COUNT AS ONE LINE"	;206cf
 	dc.b	$00	;206e9
+lb_206ea:
 	dc.b	$f9	;206ea
 	dc.b	"WORD IS \  "	;206eb
+lb_206f6:
 	dc.b	$00	;206f6
 	dc.b	$fd	;206f7
 	dc.b	$0a	;206f8
@@ -37971,26 +33971,32 @@ lb_206fa:
 	dc.b	$02	;206fc
 	dc.b	"LAST ATTEMPT"	;206fd
 	dc.b	$00	;20709
+lb_2070a:
 	dc.b	$0f	;2070a
 	dc.b	$ff	;2070b
 	dc.b	"YOU CANNOT LOAD AN EMPTY FILE"	;2070c
 	dc.b	$00	;20729
+lb_2072a:
 	dc.b	$0f	;2072a
 	dc.b	$fd	;2072b
 	dc.b	"DISK CANNOT BE WRITTEN TOO"	;2072c
+lb_20746:
 	dc.b	$00	;20746
 	dc.b	$0f	;20747
 	dc.b	$fd	;20748
 	dc.b	"CHECK THAT DISK IS IN DRIVE"	;20749
+lb_20764:
 	dc.b	$00	;20764
 	dc.b	$0f	;20765
 	dc.b	$fd	;20766
 	dc.b	"AND IS NOT WRITE PROTECTED"	;20767
 	dc.b	$00	;20781
+lb_20782:
 	dc.b	$0f	;20782
 	dc.b	$fd	;20783
 	dc.b	"YOU ARE NOT ALLOWED TO SAVE"	;20784
 	dc.b	$00	;2079f
+lb_207a0:
 	dc.b	$0f	;207a0
 	dc.b	$fd	;207a1
 	dc.b	"    A DEMO GAME TO DISK"	;207a2
@@ -38000,29 +34006,37 @@ lb_207ba:
 	dc.b	$f6	;207bb
 	dc.b	"ARE YOU SURE[[["	;207bc
 	dc.b	$00	;207cb
+lb_207cc:
 	dc.b	$f2	;207cc
 	dc.b	"YES"	;207cd
+lb_207d0:
 	dc.b	$00	;207d0
 	dc.b	$0a	;207d1
 	dc.b	$fe	;207d2
 	dc.b	"WARNING \ ABOUT TO ERASE DATA"	;207d3
+lb_207f0:
 	dc.b	$00	;207f0
 	dc.b	$05	;207f1
 	dc.b	$fa	;207f2
 	dc.b	"GAME PASS CODE ENTRY"	;207f3
 	dc.b	$00	;20807
+lb_20808:
 	dc.b	$f9	;20808
 	dc.b	"ENTER NAME 1\  "	;20809
+lb_20818:
 	dc.b	$00	;20818
 	dc.b	$f9	;20819
 	dc.b	"ENTER NAME 2\  "	;2081a
 	dc.b	$00	;20829
+lb_2082a:
 	dc.b	$f4	;2082a
 	dc.b	" START GAME"	;2082b
+lb_20836:
 	dc.b	$00	;20836
 	dc.b	$f7	;20837
 	dc.b	"START PRACTICE GAME"	;20838
 	dc.b	$00	;2084b
+lb_2084c:
 	dc.b	$f9	;2084c
 	dc.b	"START TRICK SHOT EDITOR"	;2084d
 lb_20864:
@@ -38036,27 +34050,34 @@ lb_2086c:
 	dc.b	$00	;20874
 	dc.b	$fc	;20875
 	dc.b	"CANCEL"	;20876
+lb_2087c:
 	dc.b	$00	;2087c
 	dc.b	$f9	;2087d
 	dc.b	"OK \ START PLAYING"	;2087e
+lb_20890:
 	dc.b	$00	;20890
 	dc.b	$ed	;20891
 	dc.b	"OK"	;20892
+lb_20894:
 	dc.b	$00	;20894
 	dc.b	$f1	;20895
 	dc.b	"OK"	;20896
+lb_20898:
 	dc.b	$00	;20898
 	dc.b	$ef	;20899
 	dc.b	"OK"	;2089a
+lb_2089c:
 	dc.b	$00	;2089c
 	dc.b	$ff	;2089d
 	dc.b	$0f	;2089e
 	dc.b	" GO INTO A CONTINOUS DEMONSTRATION "	;2089f
+lb_208c2:
 	dc.b	$00	;208c2
 	dc.b	$ff	;208c3
 	dc.b	$0f	;208c4
 	dc.b	"    OF TWO TOP COMPUTER PLAYERS "	;208c5
 	dc.b	$00	;208e5
+lb_208e6:
 	dc.b	$ff	;208e6
 	dc.b	$0f	;208e7
 	dc.b	"  PRESS"	;208e8
@@ -38069,19 +34090,24 @@ lb_2086c:
 	dc.b	$0f	;20903
 	dc.b	" TO EXIT "	;20904
 	dc.b	$00	;2090d
+lb_2090e:
 	dc.b	$fd	;2090e
 	dc.b	"BEGIN DEMO GAME FROM THE START"	;2090f
 	dc.b	$00	;2092d
+lb_2092e:
 	dc.b	$fd	;2092e
 	dc.b	"START DEMO FROM CURRENT LAYOUT"	;2092f
 	dc.b	$00	;2094d
+lb_2094e:
 	dc.b	$f8	;2094e
 	dc.b	" SET PLAYER FOR DEMO"	;2094f
 	dc.b	$00	;20963
+lb_20964:
 	dc.b	$ff	;20964
 	dc.b	$0f	;20965
 	dc.b	" GO INTO A CONTINOUS DEMONSTRATION "	;20966
 	dc.b	$00	;20989
+lb_2098a:
 	dc.b	$ff	;2098a
 	dc.b	$0f	;2098b
 	dc.b	" USING "	;2098c
@@ -38089,6 +34115,7 @@ lb_2086c:
 	dc.b	"ANY"	;20994
 	dc.b	$0f	;20997
 	dc.b	" OF THE COMPUTER PLAYERS"	;20998
+lb_209b0:
 	dc.b	$00	;209b0
 	dc.b	$ff	;209b1
 	dc.b	$0f	;209b2
@@ -38098,69 +34125,90 @@ lb_2086c:
 	dc.b	$0f	;209c9
 	dc.b	" TO THE DISK["	;209ca
 	dc.b	$00	;209d7
+lb_209d8:
 	dc.b	$ff	;209d8
 	dc.b	$0a	;209d9
 	dc.b	" DEMO PLAYER IS "	;209da
 	dc.b	$02	;209ea
 	dc.b	$00	;209eb
+lb_209ec:
 	dc.b	$fd	;209ec
 	dc.b	"ERASE ALL SAVED GAMES ON DISK"	;209ed
+lb_20a0a:
 	dc.b	$00	;20a0a
 	dc.b	$fd	;20a0b
 	dc.b	"ERASE ALL SCORE DATA ON DISK"	;20a0c
+lb_20a28:
 	dc.b	$00	;20a28
 	dc.b	$fd	;20a29
 	dc.b	"SHOW THE HINTS AND TIPS PANEL"	;20a2a
 	dc.b	$00	;20a47
+lb_20a48:
 	dc.b	$fd	;20a48
 	dc.b	"PRINT UP THE ICON HELP SCREEN"	;20a49
+lb_20a66:
 	dc.b	$00	;20a66
 	dc.b	$fd	;20a67
 	dc.b	"QUIT TO TITLE SCREEN SEQUENCE"	;20a68
 	dc.b	$00	;20a85
+lb_20a86:
 	dc.b	$0a	;20a86
 	dc.b	" 1 "	;20a87
+lb_20a8a:
 	dc.b	$00	;20a8a
 	dc.b	$0a	;20a8b
 	dc.b	" 2 "	;20a8c
 	dc.b	$00	;20a8f
+lb_20a90:
 	dc.b	$0a	;20a90
 	dc.b	" 3 "	;20a91
+lb_20a94:
 	dc.b	$00	;20a94
 	dc.b	$0a	;20a95
 	dc.b	" 4 "	;20a96
 	dc.b	$00	;20a99
+lb_20a9a:
 	dc.b	$0a	;20a9a
 	dc.b	" 5 "	;20a9b
+lb_20a9e:
 	dc.b	$00	;20a9e
 	dc.b	$0a	;20a9f
 	dc.b	" 6 "	;20aa0
 	dc.b	$00	;20aa3
+lb_20aa4:
 	dc.b	$0a	;20aa4
 	dc.b	" 7 "	;20aa5
+lb_20aa8:
 	dc.b	$00	;20aa8
 	dc.b	$0a	;20aa9
 	dc.b	" 8 "	;20aaa
 	dc.b	$00	;20aad
+lb_20aae:
 	dc.b	$0a	;20aae
 	dc.b	" 9 "	;20aaf
+lb_20ab2:
 	dc.b	$00	;20ab2
 	dc.b	$0a	;20ab3
 	dc.b	" 10"	;20ab4
 	dc.b	$00	;20ab7
+lb_20ab8:
 	dc.b	$0a	;20ab8
 	dc.b	" 11"	;20ab9
+lb_20abc:
 	dc.b	$00	;20abc
 	dc.b	$0a	;20abd
 	dc.b	" 12"	;20abe
 	dc.b	$00	;20ac1
+lb_20ac2:
 	dc.b	$0a	;20ac2
 	dc.b	" 13"	;20ac3
+lb_20ac6:
 	dc.b	$00	;20ac6
 	dc.b	$0a	;20ac7
 	dc.b	" 14"	;20ac8
 	dc.b	$00	;20acb
 	dc.b	$0a	;20acc
+lb_20acc:
 	dc.b	" "	;20acc
 lb_20ace:
 	dc.b	"15"	;20ace
@@ -39308,6 +35356,7 @@ lb_21e64:
 	dc.b	$f4	;224e6
 	dc.b	"OK OK;  I HAVE LOOKED AND MY EYES HAVE GONE FUNNY"	;224e6
 	DC.W	$0000			;22518
+lb_2251a:
 	OR.B	D1,D0			;2251a: 8001
 	DC.W	$0026			;2251c
 	MOVEP.L	D0,0(A4)		;2251e: 01cc0000
@@ -39383,6 +35432,7 @@ lb_21e64:
 	DC.W	$0000			;225d4
 	DC.W	$fd6c			;225d6
 	OR.B	D2,D0			;225d8: 8002
+lb_225da:
 	ORI.B	#$09,D1			;225da: 00010009
 	DC.W	$000a			;225de
 	ORI.B	#$03,D2			;225e0: 00020003
@@ -39605,120 +35655,94 @@ lb_21e64:
 	DC.W	$fff5			;2288c
 	DC.W	$0011			;2288e
 	OR.B	D2,D0			;22890: 8002
-	ORI.B	#$34,D0			;22892: 00000034
-	ORI.B	#$31,D0			;22896: 00000031
-	DC.W	$0000			;2289a
-	DC.W	$fb00			;2289c
-	ORI.B	#$3a,D0			;2289e: 0000003a
-	ORI.B	#$36,D0			;228a2: 00000036
-	DC.W	$0000			;228a6
-	DC.W	$fa5c			;228a8
-	ORI.B	#$32,D0			;228aa: 00000032
-	ORI.B	#$33,D0			;228ae: 00000033
-	DC.W	$0000			;228b2
-	DC.W	$fb00			;228b4
-	ORI.B	#$3c,D0			;228b6: 0000003c
-	ORI.B	#$38,D0			;228ba: 00000038
-	DC.W	$0000			;228be
-	DC.W	$fa5c			;228c0
-	ORI.B	#$31,D0			;228c2: 00000031
-	ORI.B	#$05,D0			;228c6: 00000005
-	DC.W	$0000			;228ca
-	DC.W	$fc36			;228cc
-	ORI.B	#$05,D0			;228ce: 00000005
-	ORI.B	#$0d,D0			;228d2: 0000000d
-	DC.W	$0000			;228d6
-	DC.W	$fbd2			;228d8
-	ORI.B	#$0d,D0			;228da: 0000000d
-	ORI.B	#$35,D0			;228de: 00000035
-	DC.W	$0000			;228e2
-	DC.W	$fc36			;228e4
-	ORI.B	#$39,D0			;228e6: 00000039
-	ORI.B	#$25,D0			;228ea: 00000025
-	DC.W	$0000			;228ee
-	DC.W	$fc36			;228f0
-	ORI.B	#$25,D0			;228f2: 00000025
-	ORI.B	#$26,D0			;228f6: 00000026
-	DC.W	$0000			;228fa
-	DC.W	$fbd2			;228fc
-	ORI.B	#$26,D0			;228fe: 00000026
-	ORI.B	#$3a,D0			;22902: 0000003a
-	DC.W	$0000			;22906
-	DC.W	$fc36			;22908
-	ORI.B	#$36,D0			;2290a: 00000036
-	ORI.B	#$0e,D0			;2290e: 0000000e
-	DC.W	$0000			;22912
-	DC.W	$fc36			;22914
-	ORI.B	#$0e,D0			;22916: 0000000e
-	ORI.B	#$06,D0			;2291a: 00000006
-	DC.W	$0000			;2291e
-	DC.W	$fbd2			;22920
-	ORI.B	#$06,D0			;22922: 00000006
-	ORI.B	#$32,D0			;22926: 00000032
-	DC.W	$0000			;2292a
-	DC.W	$fc36			;2292c
-	ORI.B	#$33,D0			;2292e: 00000033
-	ORI.B	#$07,D0			;22932: 00000007
-	DC.W	$0000			;22936
-	DC.W	$fc36			;22938
-	ORI.B	#$07,D0			;2293a: 00000007
-	ORI.B	#$0f,D0			;2293e: 0000000f
-	DC.W	$0000			;22942
-	DC.W	$fbd2			;22944
-	ORI.B	#$0f,D0			;22946: 0000000f
-	ORI.B	#$37,D0			;2294a: 00000037
-	DC.W	$0000			;2294e
-	DC.W	$fc36			;22950
-	ORI.B	#$3b,D0			;22952: 0000003b
-	ORI.B	#$27,D0			;22956: 00000027
-	DC.W	$0000			;2295a
-	DC.W	$fc36			;2295c
-	ORI.B	#$27,D0			;2295e: 00000027
-	ORI.B	#$28,D0			;22962: 00000028
-	DC.W	$0000			;22966
-	DC.W	$fbd2			;22968
-	ORI.B	#$28,D0			;2296a: 00000028
-	ORI.B	#$3c,D0			;2296e: 0000003c
-	DC.W	$0000			;22972
-	DC.W	$fc36			;22974
-	ORI.B	#$38,D0			;22976: 00000038
-	ORI.B	#$10,D0			;2297a: 00000010
-	DC.W	$0000			;2297e
-	DC.W	$fc36			;22980
-	ORI.B	#$10,D0			;22982: 00000010
-	ORI.B	#$08,D0			;22986: 00000008
-	DC.W	$0000			;2298a
-	DC.W	$fbd2			;2298c
-	ORI.B	#$08,D0			;2298e: 00000008
-	ORI.B	#$34,D0			;22992: 00000034
-	DC.W	$0000			;22996
-	DC.W	$fc36			;22998
-	ORI.B	#$31,D0			;2299a: 00000031
-	ORI.B	#$35,D0			;2299e: 00000035
-	DC.W	$0000			;229a2
-	DC.W	$fbc8			;229a4
-	ORI.B	#$39,D0			;229a6: 00000039
-	ORI.B	#$3a,D0			;229aa: 0000003a
-	DC.W	$0000			;229ae
-	DC.W	$fbc8			;229b0
-	ORI.B	#$36,D0			;229b2: 00000036
-	ORI.B	#$32,D0			;229b6: 00000032
-	DC.W	$0000			;229ba
-	DC.W	$fbc8			;229bc
-	ORI.B	#$33,D0			;229be: 00000033
-	ORI.B	#$37,D0			;229c2: 00000037
-	DC.W	$0000			;229c6
-	DC.W	$fbc8			;229c8
-	ORI.B	#$3b,D0			;229ca: 0000003b
-	ORI.B	#$3c,D0			;229ce: 0000003c
-	DC.W	$0000			;229d2
-	DC.W	$fbc8			;229d4
-	ORI.B	#$38,D0			;229d6: 00000038
-	ORI.B	#$34,D0			;229da: 00000034
-	DC.W	$0000			;229de
-	DC.W	$fbc8			;229e0
+lb_22892:
+	dc.l	$00034	;22892
+	dc.l	$00031	;22896
+	dc.l	lb_0fb00	;2289a
+	dc.l	$0003a	;2289e
+	dc.l	$00036	;228a2
+	dc.l	lb_0fa5c	;228a6
+	dc.l	$00032	;228aa
+	dc.l	$00033	;228ae
+	dc.l	lb_0fb00	;228b2
+	dc.l	$0003c	;228b6
+	dc.l	$00038	;228ba
+	dc.l	lb_0fa5c	;228be
+	dc.l	$00031	;228c2
+	dc.l	$00005	;228c6
+	dc.l	lb_0fc36	;228ca
+	dc.l	$00005	;228ce
+	dc.l	$0000d	;228d2
+	dc.l	lb_0fbd2	;228d6
+	dc.l	$0000d	;228da
+	dc.l	$00035	;228de
+	dc.l	lb_0fc36	;228e2
+	dc.l	$00039	;228e6
+	dc.l	$00025	;228ea
+	dc.l	lb_0fc36	;228ee
+	dc.l	$00025	;228f2
+	dc.l	$00026	;228f6
+	dc.l	lb_0fbd2	;228fa
+	dc.l	$00026	;228fe
+	dc.l	$0003a	;22902
+	dc.l	lb_0fc36	;22906
+	dc.l	$00036	;2290a
+	dc.l	$0000e	;2290e
+	dc.l	lb_0fc36	;22912
+	dc.l	$0000e	;22916
+	dc.l	$00006	;2291a
+	dc.l	lb_0fbd2	;2291e
+	dc.l	$00006	;22922
+	dc.l	$00032	;22926
+	dc.l	lb_0fc36	;2292a
+	dc.l	$00033	;2292e
+	dc.l	$00007	;22932
+	dc.l	lb_0fc36	;22936
+	dc.l	$00007	;2293a
+	dc.l	$0000f	;2293e
+	dc.l	lb_0fbd2	;22942
+	dc.l	$0000f	;22946
+	dc.l	$00037	;2294a
+	dc.l	lb_0fc36	;2294e
+	dc.l	$0003b	;22952
+	dc.l	$00027	;22956
+	dc.l	lb_0fc36	;2295a
+	dc.l	$00027	;2295e
+	dc.l	$00028	;22962
+	dc.l	lb_0fbd2	;22966
+	dc.l	$00028	;2296a
+	dc.l	$0003c	;2296e
+	dc.l	lb_0fc36	;22972
+	dc.l	$00038	;22976
+	dc.l	$00010	;2297a
+	dc.l	lb_0fc36	;2297e
+	dc.l	$00010	;22982
+	dc.l	$00008	;22986
+	dc.l	lb_0fbd2	;2298a
+	dc.l	$00008	;2298e
+	dc.l	$00034	;22992
+	dc.l	lb_0fc36	;22996
+	dc.l	$00031	;2299a
+	dc.l	$00035	;2299e
+	dc.l	lb_0fbc8	;229a2
+	dc.l	$00039	;229a6
+	dc.l	$0003a	;229aa
+	dc.l	lb_0fbc8	;229ae
+	dc.l	$00036	;229b2
+	dc.l	$00032	;229b6
+	dc.l	lb_0fbc8	;229ba
+	dc.l	$00033	;229be
+	dc.l	$00037	;229c2
+	dc.l	lb_0fbc8	;229c6
+	dc.l	$0003b	;229ca
+	dc.l	$0003c	;229ce
+	dc.l	lb_0fbc8	;229d2
+	dc.l	$00038	;229d6
+	dc.l	$00034	;229da
+	dc.l	lb_0fbc8	;229de
 	DC.W	$0000			;229e2
 	OR.B	D2,D0			;229e4: 8002
+lb_229e6:
 	DC.W	$003d			;229e6
 	DC.W	$003e			;229e8
 	ORI.W	#$0040,D0		;229ea: 00400040
@@ -39731,17 +35755,14 @@ lb_21e64:
 	DC.W	$fffc			;22a06
 	OR.B	D2,D0			;22a08: 8002
 lb_22a0a:
-	ORI.B	#$02,D0			;22a0a: 00000002
-	MOVE.L	(A2)+,-(A2)		;22a0e: 251a
+	dc.w	0			;22a0a: 0000
+	dc.l	lb_2251a	;22a0c
 lb_22a10:
-	DC.W	$0002			;22a10
-	DC.W	$25da			;22a12
+	dc.l	lb_225da	;22a10
 lb_22a14:
-	DC.W	$0002			;22a14
-	DC.W	$29e6			;22a16
+	dc.l	lb_229e6	;22a14
 lb_22a18:
-	DC.W	$0002			;22a18
-	MOVE.L	(A2),(A4)		;22a1a: 2892
+	dc.l	lb_22892	;22a18
 	OR.B	D2,D0			;22a1c: 8002
 	DC.W	$0000			;22a1e
 	OR.B	D2,D0			;22a20: 8002
@@ -57204,40 +53225,24 @@ lb_2ccfe:
 	ORI.B	#$03,D2			;2cd1a: 00020003
 lb_2cd1e:
 	ORI.B	#$02,D5			;2cd1e: 00050002
-	DC.W	$000a			;2cd22
-lb_2cd24:
-	ORI.B	#$00,D1			;2cd24: 00010000
-	ADDX.W	-(A2),-(A3)		;2cd28: d74a
-	DC.W	$0002			;2cd2a
-	ADD.W	(A0)+,D7		;2cd2c: de58
-	DC.W	$0002			;2cd2e
-	ADD.W	(A0)+,D7		;2cd30: de58
-	DC.W	$0002			;2cd32
-	ADD.W	(A0)+,D7		;2cd34: de58
-	DC.W	$0000			;2cd36
-	ADDX.W	-(A2),-(A3)		;2cd38: d74a
-	DC.W	$0000			;2cd3a
-	ADDX.W	-(A2),-(A3)		;2cd3c: d74a
-	DC.W	$0000			;2cd3e
-	ADDX.W	-(A2),-(A3)		;2cd40: d74a
-	DC.W	$0000			;2cd42
-	ADDX.W	-(A2),-(A3)		;2cd44: d74a
-	DC.W	$0000			;2cd46
-	ADDX.W	-(A2),-(A3)		;2cd48: d74a
-	DC.W	$0000			;2cd4a
-	ADDX.W	-(A2),-(A3)		;2cd4c: d74a
-	DC.W	$0000			;2cd4e
-	ADDX.W	-(A2),-(A3)		;2cd50: d74a
-	DC.W	$0000			;2cd52
-	ADDX.W	-(A2),-(A3)		;2cd54: d74a
-	DC.W	$0000			;2cd56
-	ADDX.W	-(A2),-(A3)		;2cd58: d74a
-	DC.W	$0000			;2cd5a
-	ADDX.W	-(A2),-(A3)		;2cd5c: d74a
-	DC.W	$0000			;2cd5e
-	ADDX.W	-(A2),-(A3)		;2cd60: d74a
-	DC.W	$0000			;2cd62
-	ADDX.W	-(A2),-(A3)		;2cd64: d74a
+	dc.l	$a0001	;2cd22
+lb_2cd26:
+	dc.l	lb_0d74a	;2cd26
+	dc.l	lb_2de58	;2cd2a
+	dc.l	lb_2de58	;2cd2e
+	dc.l	lb_2de58	;2cd32
+	dc.l	lb_0d74a	;2cd36
+	dc.l	lb_0d74a	;2cd3a
+	dc.l	lb_0d74a	;2cd3e
+	dc.l	lb_0d74a	;2cd42
+	dc.l	lb_0d74a	;2cd46
+	dc.l	lb_0d74a	;2cd4a
+	dc.l	lb_0d74a	;2cd4e
+	dc.l	lb_0d74a	;2cd52
+	dc.l	lb_0d74a	;2cd56
+	dc.l	lb_0d74a	;2cd5a
+	dc.l	lb_0d74a	;2cd5e
+	dc.l	lb_0d74a	;2cd62
 lb_2cd66:
 	ORI.B	#$01,D0			;2cd66: 00000001
 	ORI.B	#$03,D2			;2cd6a: 00020003
@@ -57262,38 +53267,22 @@ lb_2cd8a:
 	ORI.B	#$01,D6			;2cd98: 00060001
 	DC.W	$000a			;2cd9c
 lb_2cd9e:
-	DC.W	$0002			;2cd9e
-	ADD.L	lb_2cda4(PC),D7		;2cda0: deba0002
-lb_2cda4:
-	DC.W	$df3c			;2cda4
-	DC.W	$0002			;2cda6
-	ADD.L	D7,(A4)			;2cda8: df94
-	DC.W	$0002			;2cdaa
-	ADD.L	D7,(A4)			;2cdac: df94
-	DC.W	$0002			;2cdae
-	ADD.L	D7,(A4)			;2cdb0: df94
-	DC.W	$0002			;2cdb2
-	ADD.L	D7,(A4)			;2cdb4: df94
-	DC.W	$0002			;2cdb6
-	ADD.L	D7,(A4)			;2cdb8: df94
-	DC.W	$0002			;2cdba
-	ADD.L	D7,(A4)			;2cdbc: df94
-	DC.W	$0002			;2cdbe
-	ADD.L	D7,(A4)			;2cdc0: df94
-	DC.W	$0002			;2cdc2
-	ADDA.W	(A0),A7			;2cdc4: ded0
-	DC.W	$0000			;2cdc6
-	ADDX.W	-(A2),-(A3)		;2cdc8: d74a
-	DC.W	$0000			;2cdca
-	ADDX.W	-(A2),-(A3)		;2cdcc: d74a
-	DC.W	$0000			;2cdce
-	ADDX.W	-(A2),-(A3)		;2cdd0: d74a
-	DC.W	$0000			;2cdd2
-	ADDX.W	-(A2),-(A3)		;2cdd4: d74a
-	DC.W	$0000			;2cdd6
-	ADDX.W	-(A2),-(A3)		;2cdd8: d74a
-	DC.W	$0000			;2cdda
-	ADDX.W	-(A2),-(A3)		;2cddc: d74a
+	dc.l	lb_2deba	;2cd9e
+	dc.l	lb_2df3c	;2cda2
+	dc.l	lb_2df94	;2cda6
+	dc.l	lb_2df94	;2cdaa
+	dc.l	lb_2df94	;2cdae
+	dc.l	lb_2df94	;2cdb2
+	dc.l	lb_2df94	;2cdb6
+	dc.l	lb_2df94	;2cdba
+	dc.l	lb_2df94	;2cdbe
+	dc.l	lb_2ded0	;2cdc2
+	dc.l	lb_0d74a	;2cdc6
+	dc.l	lb_0d74a	;2cdca
+	dc.l	lb_0d74a	;2cdce
+	dc.l	lb_0d74a	;2cdd2
+	dc.l	lb_0d74a	;2cdd6
+	dc.l	lb_0d74a	;2cdda
 lb_2cdde:
 	MOVE.W	#$000f,D7		;2cdde: 3e3c000f
 	CLR.W	D6			;2cde2: 4246
@@ -57331,7 +53320,7 @@ lb_2ce68:
 	DBF	D7,lb_2ce00		;2ce6e: 51cfff90
 lb_2ce72:
 	LEA	lb_2cd1e,A2		;2ce72: 45f90002cd1e
-	LEA	lb_2cd24+2,A3		;2ce78: 47f90002cd26
+	LEA	lb_2cd26,A3		;2ce78: 47f90002cd26
 	MOVE.W	#$000f,D7		;2ce7e: 3e3c000f
 	MOVE.W	EXT_023a.W,D0		;2ce82: 30385676
 	ANDI.W	#$0004,D0		;2ce86: 02400004
@@ -57391,7 +53380,7 @@ lb_2cf54:
 	MOVE.W	EXT_023a.W,D0		;2cf5a: 30385676
 	ANDI.W	#$0004,D0		;2cf5e: 02400004
 	BNE.W	lb_2d4c8+2		;2cf62: 66000566
-	BRA.W	lb_2d5cc+2		;2cf66: 60000666
+	BRA.W	lb_2d5d0		;2cf66: 60000666
 	dc.w	$0000	;2cf6a
 	dc.w	$0000	;2cf6c
 	ORI.B	#$aa,D0			;2cf6e: 000000aa
@@ -57900,6 +53889,7 @@ lb_2d53c:
 	MOVE.W	#$0000,26(A0,D1.W)	;2d54a: 31bc0000101a
 	DBF	D7,lb_2d4e2		;2d550: 51cfff90
 	RTS				;2d554: 4e75
+lb_2d556:
 	ORI.B	#$3c,D0			;2d556: 0000003c
 	dc.w	$0000	;2d55a
 	dc.w	$0000	;2d55c
@@ -57954,7 +53944,9 @@ lb_2d53c:
 	dc.w	$0000	;2d5c8
 	DC.W	$0000			;2d5ca
 lb_2d5cc:
-	ANDI.L	#$43f90002,-10922(A6)	;2d5cc: 02ae43f90002d556
+	dc.w	$02ae	;2d5cc
+lb_2d5d0:
+	lea		lb_2d556,a1	;2d5ce
 	MOVE.W	#$0009,D7		;2d5d4: 3e3c0009
 	LEA	EXT_00ce.W,A0		;2d5d8: 41f84064
 lb_2d5dc:
@@ -58697,6 +54689,7 @@ lb_2ddfe:
 	MOVEA.W	lb_1ba4e,A2		;2de4c: 34790001ba4e
 	MOVEA.L	56(A2),A2		;2de52: 246a0038
 	JMP	(A2)			;2de56: 4ed2
+lb_2de58:
 	CMPI.W	#$ec78,EXT_0103.W	;2de58: 0c78ec784a68
 	BLT.W	lb_2deba		;2de5e: 6d00005a
 	MOVE.W	lb_1ba4e+2,D0		;2de62: 30390001ba50
@@ -58734,6 +54727,7 @@ lb_2deba:
 	JSR	lb_1dc18		;2dec8: 4eb90001dc18
 lb_2dece:
 	RTS				;2dece: 4e75
+lb_2ded0:
 	MOVEA.W	lb_1ba4e,A1		;2ded0: 32790001ba4e
 	MOVE.W	18(A1),D0		;2ded6: 30290012
 	LSL.W	#3,D0			;2deda: e748
@@ -58793,6 +54787,7 @@ lb_2df84:
 lb_2df90:
 	MOVEA.L	(A7)+,A0		;2df90: 205f
 	RTS				;2df92: 4e75
+lb_2df94:
 	MOVE.L	A0,-(A7)		;2df94: 2f08
 	MOVEA.W	lb_1ba4e,A1		;2df96: 32790001ba4e
 	CMPA.W	EXT_02c4.W,A1		;2df9c: b2f85cf6
@@ -61008,7 +57003,7 @@ lb_2fc98:
 lb_2fc9a:
 	JSR	lb_2feb2		;2fc9a: 4eb90002feb2
 	MOVE.W	EXT_0257.W,EXT_0179.W	;2fca0: 31f856b253e2
-	LEA	lb_139e8+2,A0		;2fca6: 41f9000139ea
+	LEA	lb_139ea,A0		;2fca6: 41f9000139ea
 	MOVE.W	-14(A0),D0		;2fcac: 3028fff2
 	LSR.W	#3,D0			;2fcb0: e648
 	ADDQ.W	#1,D0			;2fcb2: 5240
@@ -61244,7 +57239,9 @@ lb_2fff6:
 	ORI.B	#$03,D0			;2fff6: 00000003
 	DC.W	$0006			;2fffa
 	ROR.B	#7,D6			;2fffc: ee1e
-	ORI.B	#$14,D0			;2fffe: 00000014
+	dc.w	$0000  ;2fffe
+lb_30000:
+	dc.w	$0014  ;30000
 	DC.W	$0006			;30002
 	ROXR.W	#7,D2			;30004: ee52
 lb_30006:
@@ -86339,35 +82336,39 @@ lb_3e8f2:
 	DC.W	$34bf			;3e944
 	AND.B	(A1)+,D0		;3e946: c019
 lb_3e948:
-	ADDA.W	32568(A1),A0		;3e948: d0e97f38
-	DC.W	$053d			;3e94c
-	DC.W	$fca4			;3e94e
-	CMPA.L	-(A0),A7		;3e950: bfe0
-	SUB.B	D2,(A5)+		;3e952: 951d
-	BRA.S	lb_3e8f2		;3e954: 609c
-	DC.W	$157f			;3e956
-	MOVE.W	D1,(A0)			;3e958: 3081
-	AND.L	D6,-129(A1)		;3e95a: cda9ff7f
-	ORI.L	#$df00a00f,D1		;3e95e: 0081df00a00f
-	BGE.S	lb_3e98a		;3e964: 6c24
-	DC.W	$4714			;3e966
-	DIVS	(A5)+,D0		;3e968: 81dd
-	DC.W	$7f54			;3e96a
-	DC.W	$f16c			;3e96c
-	ADDA.W	(A7),A2			;3e96e: d4d7
-	DC.W	$41c8			;3e970
-	DC.W	$81ff			;3e972
-	MOVEQ	#16,D0			;3e974: 7010
-	DC.W	$15e0			;3e976
-	DC.W	$81bf			;3e978
-	DC.W	$7f20			;3e97a
-	BCHG	D7,-(A4)		;3e97c: 0f64
-	SUB.L	D5,D4			;3e97e: 9885
-	DC.W	$4b20			;3e980
-	DC.W	$dd7f			;3e982
-	DC.W	$60a5			;3e984
-	DC.W	$ecd4			;3e986
-	DIVS	-(A4),D0		;3e988: 81e4
+	dc.w	$d0e9	;3e948
+	dc.w	$7f38	;3e94a
+	dc.w	$053d	;3e94c
+	dc.w	$fca4	;3e94e
+	dc.w	$bfe0	;3e950
+	dc.w	$951d	;3e952
+	dc.w	$609c	;3e954
+	dc.w	$157f	;3e956
+	dc.w	$3081	;3e958
+	dc.w	$cda9	;3e95a
+	dc.w	$ff7f	;3e95c
+	dc.w	$0081	;3e95e
+	dc.w	$df00	;3e960
+	dc.w	$a00f	;3e962
+	dc.w	$6c24	;3e964
+	dc.w	$4714	;3e966
+	dc.w	$81dd	;3e968
+	dc.w	$7f54	;3e96a
+	dc.w	$f16c	;3e96c
+	dc.w	$d4d7	;3e96e
+	dc.w	$41c8	;3e970
+	dc.w	$81ff	;3e972
+	dc.w	$7010	;3e974
+	dc.w	$15e0	;3e976
+	dc.w	$81bf	;3e978
+	dc.w	$7f20	;3e97a
+	dc.w	$0f64	;3e97c
+	dc.w	$9885	;3e97e
+	dc.w	$4b20	;3e980
+	dc.w	$dd7f	;3e982
+	dc.w	$60a5	;3e984
+	dc.w	$ecd4	;3e986
+	dc.w	$81e4	;3e988
 lb_3e98a:
 	DC.W	$00fc			;3e98a
 	MULS	#$e5c9,D3		;3e98c: c7fce5c9
@@ -90054,24 +86055,15 @@ lb_40c88:
 	ADDQ.W	#1,EXT_0141.W		;40ca0: 52785336
 	RTE				;40ca4: 4e73
 lb_40ca6:
-	DC.W	$0000			;40ca6
-	ADDX.W	-(A2),-(A3)		;40ca8: d74a
-	DC.W	$0000			;40caa
-	ADDX.W	-(A2),-(A3)		;40cac: d74a
-	DC.W	$0000			;40cae
-	ADDX.W	-(A2),-(A3)		;40cb0: d74a
-	DC.W	$0000			;40cb2
-	ADDX.W	-(A2),-(A3)		;40cb4: d74a
-	DC.W	$0000			;40cb6
-	ADDX.W	-(A2),-(A3)		;40cb8: d74a
-	DC.W	$0000			;40cba
-	ADDX.W	-(A2),-(A3)		;40cbc: d74a
-	DC.W	$0000			;40cbe
-	ADDX.W	-(A2),-(A3)		;40cc0: d74a
-	DC.W	$0000			;40cc2
-	ADDX.W	-(A2),-(A3)		;40cc4: d74a
-	DC.W	$0000			;40cc6
-	ADDX.W	-(A2),-(A3)		;40cc8: d74a
+	dc.l	lb_0d74a	;40ca6
+	dc.l	lb_0d74a	;40caa
+	dc.l	lb_0d74a	;40cae
+	dc.l	lb_0d74a	;40cb2
+	dc.l	lb_0d74a	;40cb6
+	dc.l	lb_0d74a	;40cba
+	dc.l	lb_0d74a	;40cbe
+	dc.l	lb_0d74a	;40cc2
+	dc.l	lb_0d74a	;40cc6
 lb_40cca:
 	CMPI.W	#$0001,EXT_0151.W	;40cca: 0c780001535e
 	BNE.W	lb_40ce4		;40cd0: 66000012
@@ -94984,6 +90976,8 @@ lb_445a6:
 	DBF	D7,lb_444d0		;445ca: 51cfff04
 lb_445ce:
 	RTS				;445ce: 4e75
+	; this looks unreached
+lb_445d0:
 	MOVE.W	#$0078,D4		;445d0: 383c0078
 	BRA.W	lb_445ec		;445d4: 60000016
 	MOVE.W	#$0050,D4		;445d8: 383c0050
@@ -120329,7 +116323,9 @@ lb_54052:
 	DC.W	$0000			;54180
 	DC.W	$ffff			;54182
 	DC.W	$0000			;54184
-	MOVE.W	(A1)+,lb_1fff0		;54186: 33d90001fff0
+	dc.w	$33d9	;54186
+	dc.w	$0001	;54188
+	dc.w	$fff0	;5418a
 	DC.W	$0001			;5418c
 	DC.W	$eac0			;5418e
 	DC.W	$1988			;54190
@@ -121009,6 +117005,7 @@ lb_54700:
 	DC.W	$ffff			;5470c
 	DC.W	$ffff			;5470e
 	ORI.B	#$01,D1			;54710: 00010001
+lb_54714:
 	DC.W	$ffff			;54714
 	DC.W	$ffff			;54716
 	ORI.B	#$01,D1			;54718: 00010001
@@ -121078,7 +117075,9 @@ lb_547a2:
 	dc.w	$0000	;547a2
 lb_547a4:
 	OR.B	D1,D0			;547a4: 8001
+lb_547a6:
 	OR.B	D1,D0			;547a6: 8001
+lb_547a8:
 	dc.w	$0000	;547a8
 	dc.w	$0000	;547aa
 	dc.w	$0001  ;547ac
@@ -121086,6 +117085,7 @@ lb_547ae:
 	dc.w	$0001  ;547ae
 lb_547b0:
 	BTST	D0,D0			;547b0: 0100
+lb_547b2:
 	DC.W	$0000			;547b2
 	BTST	D0,D1			;547b4: 0101
 	ORI.B	#$00,D1			;547b6: 00010000
@@ -121530,6 +117530,7 @@ lb_54af0:
 	dc.w	$0000	;54b62
 	OR.B	D1,D0			;54b64: 8001
 	OR.B	D1,D0			;54b66: 8001
+lb_54b68:
 	BSET	D0,0(A0,D0.W)		;54b68: 01f00000
 	BSET	D7,1(A1,D0.W)		;54b6c: 0ff10001
 	BTST	D0,D0			;54b70: 0100
@@ -121976,6 +117977,7 @@ lb_54e0c:
 	dc.w	$0000	;54f22
 	OR.B	D1,D0			;54f24: 8001
 	OR.B	D1,D0			;54f26: 8001
+lb_54f28:
 	dc.w	$0000	;54f28
 	dc.w	$0000	;54f2a
 	ORI.B	#$01,D1			;54f2c: 00010001
@@ -122118,14 +118120,18 @@ lb_54e0c:
 	dc.w	$0000	;55060
 lb_55062:
 	dc.w	$0000	;55062
+lb_55064:
 	OR.B	D1,D0			;55064: 8001
+lb_55066:
 	OR.B	D1,D0			;55066: 8001
 	dc.w	$0000	;55068
 	dc.w	$0000	;5506a
 	dc.w	$0001  ;5506c
 lb_5506e:
 	dc.w	$0001  ;5506e
+lb_55070:
 	dc.w	$0000	;55070
+lb_55072:
 	dc.w	$0000	;55072
 	ORI.B	#$01,D1			;55074: 00010001
 	dc.w	$0000	;55078
@@ -122415,6 +118421,7 @@ lb_5506e:
 	dc.w	$0000	;552e2
 	OR.B	D1,D0			;552e4: 8001
 	OR.B	D1,D0			;552e6: 8001
+lb_552e8:
 	BSET	D7,-(A0)		;552e8: 0fe0
 	ORI.B	#$01,D0			;552ea: 00000001
 	DC.W	$7ffd			;552ee
@@ -123156,13 +119163,20 @@ lb_556a8:
 	dc.w	$0000	;5591c
 	dc.w	$0000	;5591e
 	dc.w	$0000	;55920
+lb_55922:
 	dc.w	$0000	;55922
+lb_55924:
 	OR.B	D1,D0			;55924: 8001
+lb_55926:
 	OR.B	D1,D0			;55926: 8001
 	dc.w	$0000	;55928
 	dc.w	$0000	;5592a
-	ORI.B	#$01,D1			;5592c: 00010001
+	dc.w	$0001  ;5592c
+lb_5592e:
+	dc.w	$0001  ;5592e
+lb_55930:
 	dc.w	$0000	;55930
+lb_55932:
 	dc.w	$0000	;55932
 	ORI.B	#$01,D1			;55934: 00010001
 	dc.w	$0000	;55938
@@ -123306,6 +119320,7 @@ lb_556a8:
 	dc.w	$0000	;55a62
 	OR.B	D1,D0			;55a64: 8001
 	OR.B	D1,D0			;55a66: 8001
+lb_55a68:
 	dc.w	$0000	;55a68
 	dc.w	$0000	;55a6a
 	ORI.B	#$01,D1			;55a6c: 00010001
@@ -123756,6 +119771,7 @@ lb_55da4:
 	dc.w	$0000	;55e22
 	OR.B	D1,D0			;55e24: 8001
 	OR.B	D1,D0			;55e26: 8001
+lb_55e28:
 	DC.W	$0000			;55e28
 	MOVE.W	D0,D0			;55e2a: 3000
 	BSET	D0,lb_11fee+2		;55e2c: 01f900011ff0
@@ -124200,14 +120216,19 @@ lb_55da4:
 	dc.w	$0000	;561dc
 	dc.w	$0000	;561de
 	dc.w	$0000	;561e0
+lb_561e2:
 	dc.w	$0000	;561e2
+lb_561e4:
 	OR.B	D1,D0			;561e4: 8001
 lb_561e6:
 	OR.B	D1,D0			;561e6: 8001
+lb_561e8:
 	DC.W	$01fe			;561e8
 	DC.W	$fe00			;561ea
 	DC.W	$0001			;561ec
+lb_561ee:
 	DC.W	$01ff			;561ee
+lb_561f0:
 	dc.w	$0000	;561f0
 lb_561f2:
 	dc.w	$0000	;561f2
@@ -127828,6 +123849,7 @@ lb_57ed0:
 	dc.w	$0000	;57fe2
 	OR.B	D1,D0			;57fe4: 8001
 	OR.B	D1,D0			;57fe6: 8001
+lb_57fe8:
 	DC.W	$0000			;57fe8
 	DC.W	$fc7e			;57fea
 	ORI.B	#$01,D1			;57fec: 00010001
@@ -128275,6 +124297,7 @@ lb_581de:
 	dc.w	$0000	;583a2
 	OR.B	D1,D0			;583a4: 8001
 	OR.B	D1,D0			;583a6: 8001
+lb_583a8:
 	DC.W	$0000			;583a8
 	BTST	D0,D0			;583aa: 0100
 	ORI.B	#$01,D1			;583ac: 00010001
@@ -134070,6 +130093,7 @@ lb_5b0e4:
 	dc.w	$0000	;5b0f8
 	dc.w	$0000	;5b0fa
 	dc.w	$0000	;5b0fc
+lb_5b0fe:
 	dc.w	$0000	;5b0fe
 	dc.w	$0000	;5b100
 	dc.w	$0000	;5b102
@@ -134494,6 +130518,7 @@ lb_5b3d6:
 	BSET	D7,EXT_0000.W		;5b4b0: 0ff80000
 	SUBI.L	#$00003fe0,EXT_0000.W	;5b4b4: 04b800003fe00000
 	MOVEA.W	D0,A5			;5b4bc: 3a40
+lb_5b4be:
 	DC.W	$0000			;5b4be
 	BSET	D7,EXT_0000.W		;5b4c0: 0ff80000
 	MOVE.W	EXT_0000.W,(A7)+	;5b4c4: 3ef80000

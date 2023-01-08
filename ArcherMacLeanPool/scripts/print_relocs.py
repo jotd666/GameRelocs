@@ -39,4 +39,4 @@ binlen = defines.end_address-defines.start_org
 asm_utils.extract_relocs(defines,derog_labels,chip_derog_labels)
 
 for s in glob.glob(defines.binary_file+".*reloc"):
-    shutil.copy(s,r"K:\jff\AmigaHD\GAMES\F\FighterBomber")  # TEMP
+    shutil.copy(s,r"K:\jff\AmigaHD\GAMES\A\ArcherMacLeanPool!V1\data")  # TEMP
