@@ -342,7 +342,7 @@ def find_possible_tables(defines):
 
 def add_undefined_labels(defines,extra_make_options=[]):
     ud = re.compile("undefined symbol <lb_(\w+)>")
-    build = ['cmd', '/c', 'wmake.py','-m',"../makefile",'-n']+extra_make_options
+    build = ['cmd', '/c', 'wmake.py','-m',"makefile",'-n']+extra_make_options
     p = subprocess.run(build,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,cwd="..")
 
     asmname = defines.asm_file
