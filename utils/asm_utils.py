@@ -11,7 +11,7 @@ def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
 
-def insert_tables(defines):
+def insert_tables(defines,min_address_value=None,max_address_value=None):
     """ resolve manually inserted %%DCL, %%DCW and %%DCA
 
     remove the data zone and replace it by:
@@ -33,7 +33,8 @@ def insert_tables(defines):
             start_offset,size = ira_asm_tools.get_offset(af.lines[i-1])
             end_offset,_ = ira_asm_tools.get_offset(af.lines[i+1])
             if "%%DCL" in line:
-                block = get_dcls(contents,start_offset+size,end_offset,defines)
+                block = get_dcls(contents,start_offset+size,end_offset,defines,
+                min_address_value,max_address_value)
             elif "%%DCW" in line:
                 block = get_dcws(contents,start_offset+size,end_offset,defines)
             elif "%%DCA" in line:
@@ -42,19 +43,30 @@ def insert_tables(defines):
     with open(defines.asm_file,"w") as f:
         f.writelines(af.lines)
 
-def get_dcls(contents,start,stop,defines):
+def get_dcls(contents,start,stop,defines,
+            min_address_value=None,max_address_value=None):
     z = []
+
+    if min_address_value is None:
+        min_address_value = defines.start_org
+    if max_address_value is None:
+        max_address_value = defines.end_address
     for i in range(start ,stop,4):
         data = struct.unpack_from(">I",contents,i-defines.start_org)[0]
 
-        if data and defines.start_org < data < defines.end_address:
+        if data and min_address_value < data < max_address_value:
             if data%2:
                 data = "{:05x}+1".format(data-1)
             else:
                 data = "{:05x}".format(data)
             z.append("\tdc.l\tlb_{}\t;{:05x}\n".format(data,i))
         else:
-            z.append("\tdc.l\t${:05x}\t;{:05x}\n".format(data,i))
+            if data == 0:
+                # splitting to help resyncing
+                z.append("\tdc.w\t$0000\t;{:05x}\n".format(i))
+                z.append("\tdc.w\t$0000\t;{:05x}\n".format(i+2))
+            else:
+                z.append("\tdc.l\t${:05x}\t;{:05x}\n".format(data,i))
     return "".join(z)
 
 def get_dcws(contents,start,stop,defines):
