@@ -22438,7 +22438,7 @@ lb_0faa6:
 	BSR.W	lb_1147c		;0fb08: 61001972
 lb_0fb0c:
 	MOVE.L	A1,D0			;0fb0c: 2009
-	SUBI.L	#$0000e4fa,D0		;0fb0e: 04800000e4fa
+	SUBI.L	#lb_0e4fa,D0		;0fb0e: 04800000e4fa
 	CMP.W	#$000c,D0		;0fb14: b07c000c
 	BCS.W	lb_0fb30		;0fb18: 65000016
 	LSR.W	#2,D0			;0fb1c: e448
@@ -29955,8 +29955,7 @@ lb_140b6:
 	dc.w	$0000	;14244
 lb_14246:
 	ORI.L	#$006447f9,-(A0)	;14246: 00a0006447f9
-	DC.W	$0001			;1424c
-	DC.W	$7398			;1424e
+	dc.l	lb_17398	;1424c
 	MOVE.W	D3,(A3)+		;14250: 36c3
 	LSR.W	#2,D6			;14252: e44e
 	SUBQ.W	#2,D6			;14254: 5546

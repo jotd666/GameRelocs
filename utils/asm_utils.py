@@ -318,7 +318,7 @@ def find_movea(defines,with_data_register=False):
         if m:
             inst = m.group(1)
             operand = m.group(2)
-            if (inst in ("MOVE.L","MOVEA.L","ADDA.L","SUBA.L","CMP.L","CMPA.L","CMPI.L")
+            if (inst in ("MOVE.L","MOVEA.L","ADDA.L","SUBA.L","ADDI.L","SUBI.L","CMP.L","CMPA.L","CMPI.L")
             and operand.startswith('#') or inst in ("PEA",)):
                 try:
                     if "," in operand:
