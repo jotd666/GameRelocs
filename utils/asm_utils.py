@@ -10,6 +10,25 @@ def get_long(binary_buf,offset):
 def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
+def find_wrong_offsets(defines):
+    infile = "../{}.s".format(defines.project)
+    af = ira_asm_tools.AsmFile(infile)
+    current_address = None
+    size = 0
+    for i,line in enumerate(af.lines,1):
+        try:
+            prev_size = size
+            offset,size = ira_asm_tools.get_offset(line)
+            if current_address is None:
+                current_address = offset
+            else:
+                if offset != current_address + prev_size:
+                    print("desync line {}: {}, ${:x} != ${:x}".format(i,line.strip(),offset,current_address + prev_size))
+                    break
+                current_address = offset
+        except ira_asm_tools.AsmException:
+            continue
+
 
 def insert_tables(defines,min_address_value=None,max_address_value=None):
     """ resolve manually inserted %%DCL, %%DCW and %%DCA
