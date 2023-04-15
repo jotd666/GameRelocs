@@ -13,7 +13,14 @@ chip_derog_labels = {
 
 # relocs that put addresses back in chip memory (sprites, copper, bitplanes, sound...)
 derog_labels = {
-0x49fe,  # copperlist
+0x49fe,  # copperlist entries
+0x04a20,
+ 0x04a22,
+0x04a26,
+0x04a2a,
+0x04a2c,
+0x04a2e,
+0x04a32,
 }
 
 
