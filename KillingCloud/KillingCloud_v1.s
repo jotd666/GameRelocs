@@ -46855,6 +46855,8 @@ lb_20898:
 	MOVEA.L	A0,A5			;208aa: 2a48
 	MOVE.W	74(A4),D0		;208ac: 302c004a
 	JSR	lb_14896		;208b0: 4eb900014896
+	; level 5: reads some nasty memory check to verify
+	; that the copy protection is okay
 	MOVEM.L	56(A4),D0-D2		;208b6: 4cec00070038
 	BSR.W	lb_208d6		;208bc: 61000018
 	JSR	lb_15282		;208c0: 4eb900015282
@@ -49999,8 +50001,8 @@ lb_2235a:
 	dc.w	$0000	;2238c
 	dc.w	$0000	;2238e
 lb_22390:
-	ORI.B	#$07,D1			;22390: 00010007
-	ADDX.L	D0,D6			;22394: dd80
+	dc.w	$0001			;22390
+	dc.l	$7dd80			;22392
 	ORI.B	#$00,D0			;22396: 00000000
 	DC.W	$0002			;2239a
 	SBCD	D0,D4			;2239c: 8900
@@ -50008,8 +50010,7 @@ lb_22390:
 	ORI.B	#$00,D0			;223a0: 00000000
 	DC.W	$fee0			;223a4
 	MOVE.L	D0,D0			;223a6: 2000
-	DC.W	$0002			;223a8
-	DC.W	$7352			;223aa
+	DC.l	lb_27352			;223a8
 	DC.W	$0fff			;223ac
 	ORI.B	#$00,D0			;223ae: 00000000
 	ORI.B	#$00,D0			;223b2: 00000000
@@ -60448,9 +60449,11 @@ lb_29100:
 	JSR	lb_17f0e		;29104: 4eb900017f0e
 	RTS				;2910a: 4e75
 lb_2910c:
+	; Manual check passed?
 	LEA	lb_28146+2(PC),A0	;2910c: 41faf03a
 	CMPI.W	#$0013,8(A0)		;29110: 0c6800130008
 	BNE.S	lb_29122		;29116: 660a
+	; Yes, add #$400 to the some variable
 	ADDI.L	#$00000400,lb_22390+2	;29118: 06b90000040000022392
 lb_29122:
 	RTS				;29122: 4e75

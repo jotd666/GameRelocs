@@ -1560,12 +1560,14 @@ lb_0139c:
 lb_013fa:
 	LEA	lb_39f88+2,A0		;013fa: 41f900039f8a
 	MOVEQ	#0,D2			;01400: 7400
+	; number of laps
 	MOVE.W	66(A0),D0		;01402: 30280042
 	ADDQ.W	#1,D0			;01406: 5240
 	BSR.W	lb_026aa		;01408: 610012a0
 	MOVE.L	D0,lb_015b4		;0140c: 23c0000015b4
 	MOVE.B	#$01,lb_015b8		;01412: 13fc0001000015b8
 	MOVEA.L	lb_07788+2,A4		;0141a: 28790000778a
+	; write number of laps
 	LEA	lb_015b4(PC),A0		;01420: 41fa0192
 	MOVE.L	#$00000110,D0		;01424: 203c00000110
 	MOVE.L	#$0000001f,D1		;0142a: 223c0000001f
@@ -1577,6 +1579,7 @@ lb_013fa:
 	MOVEQ	#13,D2			;01446: 740d
 	BSR.W	lb_0531a		;01448: 61003ed0
 	LEA	lb_39f88+2,A0		;0144c: 41f900039f8a
+	; get lap time, convert to displayable string
 	MOVEQ	#0,D0			;01452: 7000
 	MOVE.W	68(A0),D0		;01454: 30280044
 	MULU	lb_3a9a8+2,D0		;01458: c0f90003a9aa
@@ -1586,14 +1589,15 @@ lb_013fa:
 	LSR.W	#8,D0			;0146c: e048
 	MOVE.B	D0,lb_015b0		;0146e: 13c0000015b0
 	SWAP	D0			;01474: 4840
-	MOVE.W	D0,lb_015ae		;01476: 33c0000015ae
+	MOVE.W	D0,lb_015ae_text_buffer		;01476: 33c0000015ae
 	MOVEA.L	lb_07788+2,A4		;0147c: 28790000778a
-	LEA	lb_015ae(PC),A0		;01482: 41fa012a
+	LEA	lb_015ae_text_buffer(PC),A0		;01482: 41fa012a
 	MOVE.L	#$00000110,D0		;01486: 203c00000110
 	MOVE.L	#$00000029,D1		;0148c: 223c00000029
 	MOVEQ	#0,D2			;01492: 7400
+	; write lap time in seconds
 	BSR.W	lb_0531a		;01494: 61003e84
-	LEA	lb_015ae(PC),A0		;01498: 41fa0114
+	LEA	lb_015ae_text_buffer(PC),A0		;01498: 41fa0114
 	MOVE.L	#$00000110,D0		;0149c: 203c00000110
 	MOVE.L	#$00000028,D1		;014a2: 223c00000028
 	MOVEQ	#13,D2			;014a8: 740d
@@ -1602,7 +1606,7 @@ lb_013fa:
 	MOVE.W	lb_3a990,D0		;014b0: 30390003a990
 	CMP.W	#$0f98,D0		;014b6: b07c0f98
 	BNE.S	lb_014d0		;014ba: 6614
-	MOVE.L	#$2d2d2d2e,lb_015ae	;014bc: 23fc2d2d2d2e000015ae
+	MOVE.L	#$2d2d2d2e,lb_015ae_text_buffer	;014bc: 23fc2d2d2d2e000015ae
 	MOVE.B	#$2d,lb_015b0+2		;014c6: 13fc002d000015b2
 	BRA.S	lb_014f4		;014ce: 6024
 lb_014d0:
@@ -1614,15 +1618,15 @@ lb_014d0:
 	MOVE.B	D0,lb_015b0		;014e6: 13c0000015b0
 	SWAP	D0			;014ec: 4840
 lb_014ee:
-	MOVE.W	D0,lb_015ae		;014ee: 33c0000015ae
+	MOVE.W	D0,lb_015ae_text_buffer		;014ee: 33c0000015ae
 lb_014f4:
 	MOVEA.L	lb_07788+2,A4		;014f4: 28790000778a
-	LEA	lb_015ae(PC),A0		;014fa: 41fa00b2
+	LEA	lb_015ae_text_buffer(PC),A0		;014fa: 41fa00b2
 	MOVE.L	#$00000110,D0		;014fe: 203c00000110
 	MOVE.L	#$00000033,D1		;01504: 223c00000033
 	MOVEQ	#0,D2			;0150a: 7400
 	BSR.W	lb_0531a		;0150c: 61003e0c
-	LEA	lb_015ae(PC),A0		;01510: 41fa009c
+	LEA	lb_015ae_text_buffer(PC),A0		;01510: 41fa009c
 lb_01514:
 	MOVE.L	#$00000110,D0		;01514: 203c00000110
 	MOVE.L	#$00000032,D1		;0151a: 223c00000032
@@ -1634,7 +1638,7 @@ lb_01514:
 	MOVE.W	lb_3a990+2,D0		;01534: 30390003a992
 	CMP.W	#$0f98,D0		;0153a: b07c0f98
 	BNE.S	lb_01554		;0153e: 6614
-	MOVE.L	#$2d2d2d2e,lb_015ae	;01540: 23fc2d2d2d2e000015ae
+	MOVE.L	#$2d2d2d2e,lb_015ae_text_buffer	;01540: 23fc2d2d2d2e000015ae
 	MOVE.B	#$2d,lb_015b0+2		;0154a: 13fc002d000015b2
 	BRA.S	lb_01578		;01552: 6024
 lb_01554:
@@ -1645,21 +1649,21 @@ lb_01554:
 	LSR.W	#8,D0			;01568: e048
 	MOVE.B	D0,lb_015b0		;0156a: 13c0000015b0
 	SWAP	D0			;01570: 4840
-	MOVE.W	D0,lb_015ae		;01572: 33c0000015ae
+	MOVE.W	D0,lb_015ae_text_buffer		;01572: 33c0000015ae
 lb_01578:
 	MOVEA.L	lb_07788+2,A4		;01578: 28790000778a
-	LEA	lb_015ae(PC),A0		;0157e: 41fa002e
+	LEA	lb_015ae_text_buffer(PC),A0		;0157e: 41fa002e
 	MOVE.L	#$00000110,D0		;01582: 203c00000110
 	MOVE.L	#$0000003d,D1		;01588: 223c0000003d
 	MOVEQ	#0,D2			;0158e: 7400
 	BSR.W	lb_0531a		;01590: 61003d88
-	LEA	lb_015ae(PC),A0		;01594: 41fa0018
+	LEA	lb_015ae_text_buffer(PC),A0		;01594: 41fa0018
 	MOVE.L	#$00000110,D0		;01598: 203c00000110
 	MOVE.L	#$0000003c,D1		;0159e: 223c0000003c
 	MOVEQ	#13,D2			;015a4: 740d
 	BSR.W	lb_0531a		;015a6: 61003d72
 	BRA.W	lb_015ba		;015aa: 6000000e
-lb_015ae:
+lb_015ae_text_buffer:
 	MOVE.L	-(A0),D0		;015ae: 2020
 lb_015b0:
 	MOVE.L	8192(A6),D0		;015b0: 202e2000
@@ -4994,6 +4998,7 @@ lb_0400c:
 	BEQ.S	lb_04022		;04014: 670c
 	TST.B	lb_3a9a4+2		;04016: 4a390003a9a6
 	BNE.S	lb_04022		;0401c: 6604
+	; increase time
 	ADDQ.W	#1,68(A0)		;0401e: 52680044
 lb_04022:
 	LEA	lb_39f5c,A1		;04022: 43f900039f5c
@@ -5028,6 +5033,7 @@ lb_04082:
 	BSR.W	lb_02b2e		;0408c: 6100eaa0
 	MOVE.W	D6,lb_3ca30		;04090: 33c60003ca30
 	MOVE.W	#$001c,lb_3ca2c+2	;04096: 33fc001c0003ca2e
+	; 5 laps max in qualification phase
 	CMPI.W	#$0005,66(A0)		;0409e: 0c6800050042
 	BNE.S	lb_040ba		;040a4: 6614
 	MOVEQ	#-1,D0			;040a6: 70ff
@@ -6066,6 +6072,7 @@ lb_04c3a:
 lb_04c4a:
 	dc.w	$0000	;04c4a
 	dc.w	$0000	;04c4c
+	; vbl interrupt
 lb_04c4e:
 	MOVEM.L	D0-D7/A0-A6,-(A7)	;04c4e: 48e7fffe
 	ADDQ.W	#1,lb_3b99e+2		;04c52: 52790003b9a0
@@ -6645,7 +6652,7 @@ lb_0531a:
 	ADDA.L	D3,A1			;05332: d3c3
 	LSR.L	#3,D0			;05334: e688
 	ADDA.L	D0,A1			;05336: d3c0
-	BRA.W	lb_0539a		;05338: 60000060
+	BRA.W	lb_0539a_write_text		;05338: 60000060
 	TST.W	D0			;0533c: 4a40
 	BPL.S	lb_05356		;0533e: 6a16
 	MOVEQ	#0,D0			;05340: 7000
@@ -6686,7 +6693,7 @@ lb_05378:
 	LSR.L	#3,D0			;05392: e688
 	ADDA.L	D0,A1			;05394: d3c0
 	BRA.W	lb_0572a		;05396: 60000392
-lb_0539a:
+lb_0539a_write_text:
 	LEA	lb_060b0(PC),A2		;0539a: 45fa0d14
 lb_0539e:
 	MOVEQ	#0,D0			;0539e: 7000
@@ -15057,7 +15064,8 @@ lb_0b2aa:
 	CMPA.L	#$00046aac,A1		;0b2aa: b3fc00046aac
 	BGE.S	lb_0b2be		;0b2b0: 6c0c
 	LEA	EXT_0033,A1		;0b2b2: 43f900046aac
-	clr.l $00000001			;0b2b8	; 42b900000001 bogus instruction!
+	; bogus instruction to debug code if error
+	clr.l $00000001			;0b2b8	; 42b900000001 
 lb_0b2be:
 	MOVEM.L	(A1)+,D0-D3		;0b2be: 4cd9000f
 	MOVEM.L	D0-D3,(A0)		;0b2c2: 48d0000f
@@ -18639,7 +18647,10 @@ lb_0d902:
 	ADDI.W	#$0052,D0		;0d908: 06400052
 	CMP.W	#$0052,D0		;0d90c: b07c0052
 	BLS.S	lb_0d918		;0d910: 6306
-	clr.l $00000077			;0d912: 42b900000077  bogus code
+	; bogus code intended to crash the 68000
+	; because it should not happen
+	clr.l $00000077			;0d912: 42b900000077 
+	; duff's device using smc
 lb_0d918:
 	MOVE.W	D0,lb_0d91e+2		;0d918: 33c00000d920
 lb_0d91e:
@@ -19744,13 +19755,13 @@ lb_0e362:
 	MOVE.W	#$07d0,D1		;0e382: 323c07d0
 lb_0e386:
 	NOP				;0e386: 4e71
-	DBF	D1,lb_0e386		;0e388: 51c9fffc
+	DBF	D1,lb_0e386		;0e388: 51c9fffc	floppy cpu dependent
 	BRA.S	lb_0e344		;0e38c: 60b6
 lb_0e38e:
 	MOVE.W	#$1f40,D1		;0e38e: 323c1f40
 lb_0e392:
 	NOP				;0e392: 4e71
-	DBF	D1,lb_0e392		;0e394: 51c9fffc
+	DBF	D1,lb_0e392		;0e394: 51c9fffc	floppy cpu dependent
 lb_0e398:
 	MOVE.W	D6,lb_0e4d6+2		;0e398: 33c60000e4d8
 	RTS				;0e39e: 4e75
@@ -19801,7 +19812,7 @@ lb_0e41c:
 	MOVE.W	#$07d0,D0		;0e43a: 303c07d0
 lb_0e43e:
 	NOP				;0e43e: 4e71
-	DBF	D0,lb_0e43e		;0e440: 51c8fffc
+	DBF	D0,lb_0e43e		;0e440: 51c8fffc	floppy
 	SUBI.W	#$0001,D7		;0e444: 04470001
 	BEQ.W	lb_0e44e		;0e448: 67000004
 	BRA.S	lb_0e41c		;0e44c: 60ce
@@ -20624,7 +20635,7 @@ lb_0ea92:
 	MOVEA.L	(A7)+,A0		;0eaa4: 205f
 	RTS				;0eaa6: 4e75
 lb_0eaa8:
-	MOVE.W	D1,lb_0ebfc+2		;0eaa8: 33c10000ebfe
+	MOVE.W	D1,lb_0ebfc+2		;0eaa8: 33c10000ebfe  smc
 	MOVEA.L	A1,A5			;0eaae: 2a49
 lb_0eab0:
 	MOVEA.L	A1,A4			;0eab0: 2849
@@ -20699,6 +20710,7 @@ lb_0eb92:
 	AND.L	D0,(A3)			;0eb96: c193
 	AND.L	D3,D1			;0eb98: c283
 	OR.L	D1,(A3)+		;0eb9a: 839b
+	; duff device using SMC
 lb_0eb9c:
 	BRA.W	lb_0eb9c		;0eb9c: 6000fffe
 	MOVE.L	D2,(A3)+		;0eba0: 26c2
@@ -20814,6 +20826,7 @@ lb_0ec86:
 	SWAP	D0			;0eca8: 4840
 	ADD.W	D5,D0			;0ecaa: d045
 	SWAP	D0			;0ecac: 4840
+	; smc fest
 lb_0ecae:
 	ASL.W	#3,D0			;0ecae: e740
 	MOVE.W	D0,lb_0ecda+2		;0ecb0: 33c00000ecdc
@@ -20824,17 +20837,17 @@ lb_0ecc0:
 	ADDQ.W	#1,D6			;0ecc0: 5246
 	LEA	160(A2),A2		;0ecc2: 45ea00a0
 lb_0ecc6:
-	LEA	10(A0),A0		;0ecc6: 41e8000a
+	LEA	10(A0),A0		;0ecc6: 41e8000a		smc target
 lb_0ecca:
-	SUBI.W	#$001e,D4		;0ecca: 0444001e
+	SUBI.W	#$001e,D4		;0ecca: 0444001e		smc target
 	BCC.W	lb_0ecda		;0ecce: 6400000a
 lb_0ecd2:
-	ADDI.W	#$0064,D4		;0ecd2: 06440064
+	ADDI.W	#$0064,D4		;0ecd2: 06440064	smc target
 	LEA	8(A0),A0		;0ecd6: 41e80008
 lb_0ecda:
-	LEA	10(A1),A1		;0ecda: 43e9000a
+	LEA	10(A1),A1		;0ecda: 43e9000a	smc target
 lb_0ecde:
-	SUBI.W	#$0028,D5		;0ecde: 04450028
+	SUBI.W	#$0028,D5		;0ecde: 04450028	smc target
 	BCC.W	lb_0ecee		;0ece2: 6400000a
 lb_0ece6:
 	ADDI.W	#$0064,D5		;0ece6: 06450064
@@ -22337,7 +22350,7 @@ lb_0f8fc:
 	AND.L	(A6)+,D1		;0f90e: c29e
 	OR.L	D1,(A3)+		;0f910: 839b
 lb_0f912:
-	CMP.W	#$0078,D6		;0f912: bc7c0078
+	CMP.W	#$0078,D6		;0f912: bc7c0078  smc
 	BNE.W	lb_0f91e		;0f916: 66000006
 	MOVEA.L	(A7)+,A0		;0f91a: 205f
 	RTS				;0f91c: 4e75
@@ -22372,9 +22385,9 @@ lb_0f940:
 	SWAP	D0			;0f96a: 4840
 lb_0f96c:
 	ASL.W	#3,D0			;0f96c: e740
-	MOVE.W	D0,lb_0f9dc+2		;0f96e: 33c00000f9de
+	MOVE.W	D0,lb_0f9dc+2		;0f96e: 33c00000f9de	SMC
 	SWAP	D0			;0f974: 4840
-	MOVE.W	D0,lb_0f9e0+2		;0f976: 33c00000f9e2
+	MOVE.W	D0,lb_0f9e0+2		;0f976: 33c00000f9e2	SMC
 	LSR.W	#1,D4			;0f97c: e24c
 lb_0f97e:
 	CMP.W	2(A5),D6		;0f97e: bc6d0002
@@ -22401,11 +22414,12 @@ lb_0f99c:
 	SWAP	D0			;0f9be: 4840
 	ADD.W	D5,D0			;0f9c0: d045
 	SWAP	D0			;0f9c2: 4840
+	; this is smc fest
 lb_0f9c4:
 	ASL.W	#3,D0			;0f9c4: e740
-	MOVE.W	D0,lb_0f9f0+2		;0f9c6: 33c00000f9f2
+	MOVE.W	D0,lb_0f9f0+2		;0f9c6: 33c00000f9f2 smc
 	SWAP	D0			;0f9cc: 4840
-	MOVE.W	D0,lb_0f9f4+2		;0f9ce: 33c00000f9f6
+	MOVE.W	D0,lb_0f9f4+2		;0f9ce: 33c00000f9f6 smc
 	LSR.W	#1,D5			;0f9d4: e24d
 lb_0f9d6:
 	ADDQ.W	#1,D6			;0f9d6: 5246
@@ -22416,12 +22430,12 @@ lb_0f9e0:
 	SUBI.W	#$001e,D4		;0f9e0: 0444001e
 	BCC.W	lb_0f9f0		;0f9e4: 6400000a
 lb_0f9e8:
-	ADDI.W	#$0064,D4		;0f9e8: 06440064
+	ADDI.W	#$0064,D4		;0f9e8: 06440064  smc
 	LEA	8(A0),A0		;0f9ec: 41e80008
 lb_0f9f0:
 	LEA	10(A1),A1		;0f9f0: 43e9000a
 lb_0f9f4:
-	SUBI.W	#$0028,D5		;0f9f4: 04450028
+	SUBI.W	#$0028,D5		;0f9f4: 04450028  smc
 	BCC.W	lb_0fa04		;0f9f8: 6400000a
 lb_0f9fc:
 	ADDI.W	#$0064,D5		;0f9fc: 06450064
@@ -38949,6 +38963,7 @@ lb_18d90:
 	dc.w	$0000	;18d96
 lb_18d98:
 	dc.w	$0000	;18d98
+	; sound buffers
 lb_18d9a:
 	dc.w	$0600	;18d9a
 	dc.w	$0000	;18d9c
@@ -39213,14 +39228,7 @@ lb_18f94:
 	dc.w	$0000	;18f94
 	dc.w	$0000	;18f96
 	dc.w	$0000	;18f98
-	dc.w	$456e	;18f9a
-	dc.w	$6420	;18f9c
-	dc.w	$4f66	;18f9e
-	dc.w	$2041	;18fa0
-	dc.w	$6c6c	;18fa2
-	dc.w	$2056	;18fa4
-	dc.w	$6172	;18fa6
-	dc.w	$7321	;18fa8
+	dc.b	"End Of All Vars!"	;18f9a
 lb_18faa:
 	LEA	lb_18d22(PC),A3		;18faa: 47fafd76
 	BSR.W	lb_18d3e		;18fae: 6100fd8e
@@ -41062,7 +41070,7 @@ lb_199c2:
 lb_19fec:
 	TST.B	117(A3)			;19fec: 4a2b0075
 	BNE.W	lb_1a032		;19ff0: 66000040
-	LEA	lb_1a8d2(PC),A0		;19ff4: 41fa08dc
+	LEA	lb_1a8d2_sound_data(PC),A0		;19ff4: 41fa08dc
 	LEA	lb_18f02+2(PC),A5	;19ff8: 4bfaef0a
 	MOVEQ	#11,D1			;19ffc: 720b
 lb_19ffe:
@@ -41153,7 +41161,7 @@ lb_1a0ce:
 lb_1a10a:
 	MOVE.W	#$0200,D0		;1a10a: 303c0200
 lb_1a10e:
-	DBF	D0,lb_1a10e		;1a10e: 51c8fffe
+	DBF	D0,lb_1a10e		;1a10e: 51c8fffe	cpu-dependent sound dma
 	RTS				;1a112: 4e75
 lb_1a114:
 	LEA	lb_18d9a+2(PC),A1	;1a114: 43faec86
@@ -42102,7 +42110,7 @@ lb_1a78e:
 	dc.w	$0200	;1a8cc
 	dc.w	$8000	;1a8ce
 	dc.w	$4e71	;1a8d0
-lb_1a8d2:
+lb_1a8d2_sound_data:
 	dc.w	$0000	;1a8d2
 	dc.w	$0ece	;1a8d4
 	dc.w	$2710	;1a8d6
@@ -110211,27 +110219,16 @@ lb_3c6a2:
 	dc.w	$2054	;3c6ae
 	dc.w	$4f00	;3c6b0
 lb_3c6b2:
-	dc.w	$2020	;3c6b2
-	dc.w	$2020	;3c6b4
-	dc.w	$204c	;3c6b6
-	dc.w	$4150	;3c6b8
-	dc.w	$2000	;3c6ba
-	dc.w	$4c41	;3c6bc
-	dc.w	$5020	;3c6be
-	dc.w	$5449	;3c6c0
-	dc.w	$4d45	;3c6c2
-	dc.w	$2000	;3c6c4
-	dc.w	$4245	;3c6c6
-	dc.w	$5354	;3c6c8
-	dc.w	$204c	;3c6ca
-	dc.w	$4150	;3c6cc
-	dc.w	$2000	;3c6ce
-	dc.w	$4849	;3c6d0
-	dc.w	$5320	;3c6d2
-	dc.w	$4245	;3c6d4
-	dc.w	$5354	;3c6d6
-	dc.w	$2000	;3c6d8
-	dc.w	$0100	;3c6da
+	dc.b	"     LAP "	;3c6b2
+	dc.b	$00	;3c6bb
+	dc.b	"LAP TIME "	;3c6bc
+	dc.b	$00	;3c6c5
+	dc.b	"BEST LAP "	;3c6c6
+	dc.b	$00	;3c6cf
+	dc.b	"HIS BEST "	;3c6d0
+	dc.b	$00	;3c6d9
+	dc.b	$01	;3c6da
+	dc.b	$00	;3c6db
 lb_3c6dc:
 	dc.w	$0000	;3c6dc
 	dc.w	$0000	;3c6de
@@ -110685,37 +110682,10 @@ lb_3ca2c:
 lb_3ca30:
 	dc.w	$0000	;3ca30
 lb_3ca32:
-	dc.w	$2020	;3ca32
-	dc.w	$2059	;3ca34
-	dc.w	$4f55	;3ca36
-	dc.w	$2048	;3ca38
-	dc.w	$4156	;3ca3a
-	dc.w	$4520	;3ca3c
-	dc.w	$4e4f	;3ca3e
-	dc.w	$5420	;3ca40
-	dc.w	$5945	;3ca42
-	dc.w	$5420	;3ca44
-	dc.w	$5155	;3ca46
-	dc.w	$414c	;3ca48
-	dc.w	$4946	;3ca4a
-	dc.w	$4945	;3ca4c
-	dc.w	$4400	;3ca4e
+	dc.b	"   YOU HAVE NOT YET QUALIFIED"	;3ca32
+	dc.b	$00	;3ca4f
 lb_3ca50:
-	dc.w	$4355	;3ca50
-	dc.w	$5252	;3ca52
-	dc.w	$454e	;3ca54
-	dc.w	$5420	;3ca56
-	dc.w	$5155	;3ca58
-	dc.w	$414c	;3ca5a
-	dc.w	$4946	;3ca5c
-	dc.w	$5949	;3ca5e
-	dc.w	$4e47	;3ca60
-	dc.w	$2050	;3ca62
-	dc.w	$4f53	;3ca64
-	dc.w	$4954	;3ca66
-	dc.w	$494f	;3ca68
-	dc.w	$4e20	;3ca6a
-	dc.w	$2d20	;3ca6c
+	dc.b	"CURRENT QUALIFYING POSITION - "	;3ca4f
 lb_3ca6e:
 	dc.w	$5858	;3ca6e
 lb_3ca70:
