@@ -34371,7 +34371,9 @@ lb_18282:
 	BEQ.S	lb_182b0		;18290: 671e
 lb_18292:
 	MOVE.W	#$0001,lb_181aa		;18292: 33fc0001000181aa
+	; number of nets
 	MOVE.W	#$000a,lb_28474		;1829a: 33fc000a00028474
+	; number of pups
 	MOVE.W	#$000a,lb_28476		;182a2: 33fc000a00028476
 	BSR.W	lb_19a74		;182aa: 610017c8
 	BRA.S	lb_182f6		;182ae: 6046
@@ -37255,6 +37257,7 @@ lb_19db4:
 	LEA	$05714+2,A0		;19db4: 41f900005716
 	TST.B	(A0)+			;19dba: 4a18
 	BEQ.S	lb_19dc6		;19dbc: 6708
+	; MG rounds
 	MOVE.W	#$0064,$05820		;19dbe: 33fc006400005820
 lb_19dc6:
 	TST.B	(A0)+			;19dc6: 4a18
@@ -37271,6 +37274,7 @@ lb_19dde:
 lb_19dea:
 	TST.B	(A0)+			;19dea: 4a18
 	BEQ.S	lb_19df6		;19dec: 6708
+	; cannon rounds
 	MOVE.W	#$0032,$0581c+2	;19dee: 33fc00320000581e
 lb_19df6:
 	TST.B	(A0)+			;19df6: 4a18
@@ -37284,11 +37288,13 @@ lb_19e0e:
 	CLR.W	$05820+2		;19e0e: 427900005822
 	TST.B	(A0)+			;19e14: 4a18
 	BEQ.S	lb_19e20		;19e16: 6708
+	; life support flag
 	MOVE.W	#$ffff,$05820+2	;19e18: 33fcffff00005822
 lb_19e20:
 	CLR.W	$05824		;19e20: 427900005824
 	TST.B	(A0)+			;19e26: 4a18
 	BEQ.S	lb_19e32		;19e28: 6708
+	; reserve fuel tank flag
 	MOVE.W	#$ffff,$05824		;19e2a: 33fcffff00005824
 lb_19e32:
 	RTS				;19e32: 4e75
