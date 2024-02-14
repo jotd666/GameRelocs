@@ -24,16 +24,7 @@ git add %VER%.s %VER%_ref
 - build & check that ref is identical, if not, find out why
 - run findmovea.py. This generates a lot of labels that don't exist.
 - run add_undefined_labels.py: this builds, parses link output for undefined labels and tries to insert them (run that twice). Works in-place on the original (no risk)
-- build manually to create the missing labels manually (not a lot), only 6 or 7
 
-error 3007: undefined symbol <lb_07fd8>
-error 3007: undefined symbol <lb_07f76>
-error 3007: undefined symbol <lb_070d8>
-error 3007: undefined symbol <lb_070fc>
-error 3007: undefined symbol <lb_0707a>
-error 3007: undefined symbol <lb_06494>
-error 3007: undefined symbol <lb_0781e>
-error 3007: undefined symbol <lb_061a0>
 
 - manually search for jump tables (regex: lsl.*#2,d that shifts data register)
 - don't forget to correct addresses that use PC-relative addressing on addresses
