@@ -4,6 +4,62 @@ import ira_asm_tools
 
 hunk_dict = {0x3F3:"header",0x3E9:"code",0x3EA:"data",0x3F2:"end",0x3EC:"reloc32",0x3EB:"bss",0x3F1:"debug"}
 
+def get_org_header(org_address):
+    template = rf"""
+     IFD    REAL_EXE
+LEAW:MACRO
+    lea        \1,\2
+    ENDM
+JMPW:MACRO
+    jmp        \1
+    ENDM
+JSRW:MACRO
+    jsr        \1
+    ENDM
+    ELSE
+    ORG    ${org_address:x}
+LEAW:MACRO
+    lea        \1.W,\2
+    ENDM
+JMPW:MACRO
+    jmp        \1.W
+    ENDM
+JSRW:MACRO
+    jsr        \1.W
+    ENDM
+    ENDC
+"""
+
+def macroify_line(line,lineno="?"):
+    """ replace instructions where short address is used by a macro
+    format must respect IRA: code ;offset: hexval
+    """
+    supported_insts = {"lea","jmp","jsr"}
+
+    m = ira_asm_tools.general_instruction_re.match(line)
+    if m:
+        if len(m.groups())>1:
+            # second group is the params
+            instruction = m.group(1)
+            params = m.group(2)
+            toks = ira_asm_tools.split_params(params)
+            for i,t in enumerate(toks):
+                if t.lower().endswith(".w") and t[0].isalpha():
+                    if instruction.lower() in supported_insts:
+                        toks[i] = t[:-2]  # remove .w
+                        instruction = instruction.upper()+"W"
+                        # rebuild line
+                        line = "\t{}\t{}\t\t;{}: {}\n".format(instruction,",".join(toks),
+                        m.group(3),m.group(4))
+                        break
+                    else:
+                        print(f"Unsupported W instruction: {lineno}: {line.rstrip()}")
+    return line
+
+def macroify_lines(lines):
+    for i,line in enumerate(lines):
+        lines[i] = macroify_line(line,i+1)
+
 def get_long(binary_buf,offset):
     return struct.unpack_from(">I",binary_buf,offset)[0]
 
