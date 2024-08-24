@@ -10216,8 +10216,8 @@ lb_0825e:
 	LEA	tile_layer_1_24A000,A1		;0827c: 43f90024a000
 	BSR.W	lb_0837c		;08282: 610000f8
 	LEA	lb_08b0a,A0		;08286: 41f900008b0a
-	BSR.W	lb_08388		;0828c: 610000fa
-	BSR.W	lb_08330		;08290: 6100009e
+	BSR.W	display_layer_1_tiles_08388		;0828c: 610000fa
+	BSR.W	display_rampant_ninja_message_08330		;08290: 6100009e
 	MOVE.W	#$0078,D0		;08294: 303c0078
 lb_08298:
 	JSR	lb_003f0.W		;08298: 4eb803f0
@@ -10227,7 +10227,7 @@ lb_08298:
 lb_082ac:
 	DBF	D0,lb_08298		;082ac: 51c8ffea
 	LEA	lb_08be0,A0		;082b0: 41f900008be0
-	BSR.W	lb_08388		;082b6: 610000d0
+	BSR.W	display_layer_1_tiles_08388		;082b6: 610000d0
 	MOVE.W	#$003e,D0		;082ba: 303c003e
 lb_082be:
 	JSR	lb_003f0.W		;082be: 4eb803f0
@@ -10237,7 +10237,7 @@ lb_082be:
 lb_082d2:
 	DBF	D0,lb_082be		;082d2: 51c8ffea
 	LEA	lb_08a38,A0		;082d6: 41f900008a38
-	BSR.W	lb_08388		;082dc: 610000aa
+	BSR.W	display_layer_1_tiles_08388		;082dc: 610000aa
 	MOVE.W	#$001e,D0		;082e0: 303c001e
 	JSR	lb_01f78.W		;082e4: 4eb81f78
 	MOVE.W	#$007c,D0		;082e8: 303c007c
@@ -10260,8 +10260,8 @@ lb_08322:
 lb_08326:
 	MOVE.W	#$0000,EXT_005a		;08326: 33fc00000030c010
 	RTS				;0832e: 4e75
-lb_08330:
-	LEA	lb_08dd6,A0		;08330: 41f900008dd6
+display_rampant_ninja_message_08330:
+	LEA	rampant_ninja_message_08dd6,A0		;08330: 41f900008dd6
 	LEA	EXT_000b,A1		;08336: 43f900244082
 lb_0833c:
 	MOVE.W	#$001d,D1		;0833c: 323c001d
@@ -10290,11 +10290,13 @@ lb_08380:
 	MOVE.L	(A0)+,(A1)+		;08380: 22d8
 	DBF	D0,lb_08380		;08382: 51c8fffc
 	RTS				;08386: 4e75
-lb_08388:
+; display tiles on screen first layer
+; < A0: tiles (ends on FFFF)
+display_layer_1_tiles_08388:
 	CMPI.W	#$ffff,(A0)		;08388: 0c50ffff
 	BEQ.W	lb_083cc		;0838c: 6700003e
-	MOVE.W	(A0)+,D0		;08390: 3018
-	MOVE.W	(A0)+,D1		;08392: 3218
+	MOVE.W	(A0)+,D0		;08390: 3018 offset
+	MOVE.W	(A0)+,D1		;08392: 3218 color+tile
 	MOVE.W	D1,D2			;08394: 3401
 	ANDI.W	#$f000,D2		;08396: 0242f000
 	ANDI.W	#$0fff,D1		;0839a: 02410fff
@@ -10309,17 +10311,17 @@ lb_08388:
 	MOVE.W	D1,-2(A1)		;083ba: 3341fffe
 	ADDI.W	#$0001,D1		;083be: 06410001
 	MOVE.W	D1,62(A1)		;083c2: 3341003e
-	JMP	lb_08388		;083c6: 4ef900008388
+	JMP	display_layer_1_tiles_08388		;083c6: 4ef900008388
 lb_083cc:
 	RTS				;083cc: 4e75
 lb_083ce:
-	LEA	EXT_000d,A0		;083ce: 41f900244100
+	LEA	tile_layer_0_244000+$100,A0		;083ce: 41f900244100
 lb_083d4:
 	MOVE.W	(A0),D0			;083d4: 3010
 	ANDI.W	#$0fff,D0		;083d6: 02400fff
 	ORI.W	#$3000,D0		;083da: 00403000
 	MOVE.W	D0,(A0)+		;083de: 30c0
-	CMPA.L	#$00244300,A0		;083e0: b1fc00244300
+	CMPA.L	#tile_layer_0_244000+$300,A0		;083e0: b1fc00244300
 	BNE.S	lb_083d4		;083e6: 66ec
 	MOVE.W	#$0002,D0		;083e8: 303c0002
 lb_083ec:
@@ -10330,7 +10332,7 @@ lb_083ec:
 lb_08400:
 	DBF	D0,lb_083ec		;08400: 51c8ffea
 	LEA	lb_08a38,A0		;08404: 41f900008a38
-	BSR.W	lb_08388		;0840a: 6100ff7c
+	BSR.W	display_layer_1_tiles_08388		;0840a: 6100ff7c
 	RTS				;0840e: 4e75
 lb_08410:
 	CLR.B	EXT_01b5		;08410: 423900ffa9af
@@ -10341,9 +10343,9 @@ lb_08410:
 	LEA	tile_layer_1_24A000,A1		;0842e: 43f90024a000
 	BSR.W	lb_0837c		;08434: 6100ff46
 	LEA	lb_08be0,A0		;08438: 41f900008be0
-	BSR.W	lb_08388		;0843e: 6100ff48
+	BSR.W	display_layer_1_tiles_08388		;0843e: 6100ff48
 	LEA	lb_08a38,A0		;08442: 41f900008a38
-	BSR.W	lb_08388		;08448: 6100ff3e
+	BSR.W	display_layer_1_tiles_08388		;08448: 6100ff3e
 	MOVE.W	#$001e,D0		;0844c: 303c001e
 	JSR	lb_01f78.W		;08450: 4eb81f78
 	JMP	lb_099e4		;08454: 4ef9000099e4
@@ -11281,7 +11283,7 @@ lb_08be0:
 	dc.w	$07aa	;08dd0
 	dc.w	$6130	;08dd2
 	dc.w	$ffff	;08dd4
-lb_08dd6:
+rampant_ninja_message_08dd6:
 	dc.b	" RAMPANT NINJA RELATED CRIMES THESE DAYS.. WHITEHOUSE IS NOTTHE EXCEPTION...              "	;08dd5
 	dc.w	$ffff	;08e30
 lb_08e32:
