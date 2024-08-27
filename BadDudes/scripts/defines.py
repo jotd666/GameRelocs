@@ -12,4 +12,4 @@ hunk_file = os.path.join(this_dir,os.pardir,"{}_hunk".format(project))
 
 start_org = 0x0
 code_start = 0x100
-end_address = 0x40000
+end_address = 0x60000
