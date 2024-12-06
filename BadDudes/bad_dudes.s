@@ -96,32 +96,32 @@
 ;	ROM_LOAD( "mb7122e.17e", 0x200, 0x400, CRC(a5cda23e) SHA1(d6c8534ae3c95b47a0701047fef67f15dd71f3fe) ) /* Also known to be labeled as A-2 */
 ;ROM_END
 ;	map(0x000000, 0x05ffff).rom();
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x240000, 0x240007).w(m_tilegen[0], FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer */
+;	map(0x240010, 0x240017).w(m_tilegen[0], FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], FUNC(deco_bac06_device::pf_colscroll_r), FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], FUNC(deco_bac06_device::pf_rowscroll_r), FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], FUNC(deco_bac06_device::pf_data_r), FUNC(deco_bac06_device::pf_data_w));
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], FUNC(deco_bac06_device::pf_colscroll_r), FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], FUNC(deco_bac06_device::pf_rowscroll_r), FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], FUNC(deco_bac06_device::pf_data_r), FUNC(deco_bac06_device::pf_data_w));
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], FUNC(deco_bac06_device::pf_colscroll_r), FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], FUNC(deco_bac06_device::pf_rowscroll_r), FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], FUNC(deco_bac06_device::pf_data_r), FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x318000, 0x31bfff).ram().share("ram");         // Bandit uses 318000/31c000 which are mirrors but exact mirror patten is unclear
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
@@ -3727,7 +3727,7 @@ lb_027c6:
 	BNE.W	lb_027f0		;027de: 66000010
 	BTST	#1,(A0)			;027e2: 08100001
 	BNE.W	lb_027f0		;027e6: 66000008
-	JSR	lb_028c6.W		;027ea: 4eb828c6
+	JSR	display_multi_tile_object_028c6.W		;027ea: 4eb828c6
 	NOP				;027ee: 4e71
 lb_027f0:
 	DBF	D6,lb_02788		;027f0: 51ceff96
@@ -3790,32 +3790,34 @@ lb_028a0:
 	BCLR	#7,(A0)			;028c0: 08900007
 lb_028c4:
 	RTS				;028c4: 4e75
-lb_028c6:
+	
+; < A0: instance structure of object to display
+display_multi_tile_object_028c6:
 	MOVEQ	#0,D4			;028c6: 7800
-	MOVE.W	6(A0),D4		;028c8: 38280006
+	MOVE.W	6(A0),D4		;028c8: 38280006: composite sprite type * 4
 	LEA	sprite_data_base_5219c,A3		;028cc: 47f90005219c   sprite data table
-	ADDA.L	D4,A3			;028d2: d7c4    fetch proper sprite structure
-	MOVEA.L	(A3),A3			;028d4: 2653
-	MOVE.W	(A3)+,D2		;028d6: 341b
+	ADDA.L	D4,A3			;028d2: d7c4    offset to structure pointer
+	MOVEA.L	(A3),A3			;028d4: 2653    fetch proper sprite structure
+	MOVE.W	(A3)+,D2		;028d6: 341b    byte 1: number of blocks (byte 0 is ignored)
 	ANDI.W	#$00ff,D2		;028d8: 024200ff
-	SUBQ.W	#1,D2			;028dc: 5342
-	MOVE.W	(A0),D4			;028de: 3810
+	SUBQ.W	#1,D2			;028dc: 5342    adjust to DBF
+	MOVE.W	(A0),D4			;028de: 3810    flags
 	BTST	#13,D4			;028e0: 0804000d
 	BNE.W	lb_02930		;028e4: 6600004a
 lb_028e8:
-	MOVE.W	(A3)+,D3		;028e8: 361b
+	MOVE.W	(A3)+,D3		;028e8: 361b    Y offset?
 	ANDI.W	#$fe00,D3		;028ea: 0243fe00
 	MOVE.B	-1(A3),D4		;028ee: 182bffff
 	EXT.W	D4			;028f2: 4884
 	ADD.W	24(A0),D4		;028f4: d8680018
 	ANDI.W	#$01ff,D4		;028f8: 024401ff
 	ADD.W	D4,D3			;028fc: d644
-	MOVE.W	D3,(A1)+		;028fe: 32c3	sprite position
+	MOVE.W	D3,(A1)+		;028fe: 32c3	sprite Y
 	MOVE.W	(A3)+,(A1)+		;02900: 32db    sprite code
 	MOVEQ	#0,D7			;02902: 7e00
 	MOVE.B	(A3),D7			;02904: 1e13
 	LSL.W	#8,D7			;02906: e14f
-	MOVE.W	(A3)+,D4		;02908: 381b
+	MOVE.W	(A3)+,D4		;02908: 381b    X offset
 	EXT.W	D4			;0290a: 4884
 	ADD.W	26(A0),D4		;0290c: d868001a
 	ANDI.W	#$01ff,D4		;02910: 024401ff
@@ -3826,8 +3828,8 @@ lb_028e8:
 	MOVE.W	D7,D5			;02922: 3a07
 lb_02924:
 	ADD.W	D5,D4			;02924: d845
-	MOVE.W	D4,(A1)+		;02926: 32c4
-	MOVE.W	(A3)+,(A1)+		;02928: 32db
+	MOVE.W	D4,(A1)+		;02926: 32c4     sprite X
+	MOVE.W	(A3)+,(A1)+		;02928: 32db     ??
 lb_0292a:
 	DBF	D2,lb_028e8		;0292a: 51caffbc
 lb_0292e:
@@ -3839,7 +3841,7 @@ lb_02930:
 	EXT.W	D4			;0293a: 4884
 	ADD.W	24(A0),D4		;0293c: d8680018
 	ANDI.W	#$01ff,D4		;02940: 024401ff
-	ADD.W	D4,D3			;02944: d644
+	ADD.W	D4,D3			;02944: d644  copy pasted with code above up to that point!
 	BCHG	#13,D3			;02946: 0843000d
 	MOVE.W	D3,(A1)+		;0294a: 32c3
 	MOVE.W	(A3)+,(A1)+		;0294c: 32db
@@ -82892,24 +82894,28 @@ lb_52194:
 	dc.w	$0d8c	;52196
 	dc.w	$0d90	;52198
 	dc.w	$0d94	;5219a
+	
+; 894 different composite objects made of 16x16 tiles. Some tile codes
+; have 2x height or width meaning the code allows to display the adjacent tiles
+; from hardware
 sprite_data_base_5219c:
-	dc.l	lb_52f54	;5219c
-	dc.l	lb_52f66	;521a0
-	dc.l	lb_52f78	;521a4
-	dc.l	lb_52f8a	;521a8
-	dc.l	lb_52f9c	;521ac
-	dc.l	lb_52fae	;521b0
-	dc.l	lb_52fd0	;521b4
-	dc.l	lb_52fe2	;521b8
-	dc.l	lb_52f9c	;521bc
-	dc.l	lb_53004	;521c0
-	dc.l	lb_53036	;521c4
-	dc.l	lb_53048	;521c8
-	dc.l	lb_5306a	;521cc
-	dc.l	lb_52f9c	;521d0
-	dc.l	lb_5307c	;521d4
-	dc.l	lb_5307c	;521d8
-	dc.l	lb_52fd0	;521dc
+	dc.l	lb_52f54	;5219c   00
+	dc.l	lb_52f66	;521a0   01
+	dc.l	lb_52f78	;521a4   02
+	dc.l	lb_52f8a	;521a8   03
+	dc.l	lb_52f9c	;521ac   04
+	dc.l	lb_52fae	;521b0   05
+	dc.l	lb_52fd0	;521b4   06
+	dc.l	lb_52fe2	;521b8   07
+	dc.l	lb_52f9c	;521bc   08
+	dc.l	lb_53004	;521c0   09
+	dc.l	lb_53036	;521c4   0A
+	dc.l	lb_53048	;521c8   0B
+	dc.l	lb_5306a	;521cc   0C
+	dc.l	lb_52f9c	;521d0   0D
+	dc.l	lb_5307c	;521d4   0E
+	dc.l	lb_5307c	;521d8   0F
+	dc.l	lb_52fd0	;521dc   10: main character (at start)
 	dc.l	lb_52fe2	;521e0
 	dc.l	lb_5308e	;521e4
 	dc.l	lb_530b0	;521e8
@@ -83099,7 +83105,7 @@ sprite_data_base_5219c:
 	dc.l	lb_54246	;524c8
 	dc.l	lb_54258	;524cc
 	dc.l	lb_5426a	;524d0
-	dc.l	lb_54234	;524d4
+	dc.l	lb_54234	;524d4    338: ninja walking
 	dc.l	lb_54246	;524d8
 	dc.l	lb_54258	;524dc
 	dc.l	lb_5426a	;524e0
@@ -83771,6 +83777,14 @@ sprite_data_base_5219c:
 	dc.l	lb_57b1e	;52f48
 	dc.l	lb_57b1e	;52f4c
 	dc.l	lb_57b1e	;52f50
+; object to display
+; structure: first word $08NN: NN: number of columns
+; then 4 words for each column (NN*4 total)
+; - offset (X/Y)
+; - start sprite code
+; - ??
+; - ??
+
 lb_52f54:
 	dc.w	$0802	;52f54
 	dc.w	$90e0	;52f56
@@ -86323,14 +86337,14 @@ lb_54202:
 	dc.w	$0333	;5422e
 	dc.w	$00f0	;54230
 	dc.w	$0000	;54232
-lb_54234:
+lb_54234:   ; ninja walking
 	dc.w	$0602	;54234
 	dc.w	$90e1	;54236
-	dc.w	$0308	;54238
+	dc.w	$0308	;54238 start sprite, left column
 	dc.w	$00ff	;5423a
 	dc.w	$0000	;5423c
 	dc.w	$90e1	;5423e
-	dc.w	$030c	;54240
+	dc.w	$030c	;54240 start sprite, right column
 	dc.w	$00ef	;54242
 	dc.w	$0000	;54244
 lb_54246:
