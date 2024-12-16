@@ -12356,7 +12356,7 @@ lb_07622:
 	movea.l	(a5),a0			;07628: 2055
 	move.l	a0,lb_07a36+2		;0762a: 23c800007a38
 	jsr	SwapDoubleBufferUnk		;07630: 4eb900010ede
-	jsr	lb_147d4		;07636: 4eb9000147d4
+	jsr	CopyNtoN		;07636: 4eb9000147d4
 	movea.l	(a5),a0			;0763c: 2055
 	move.l	a0,lb_07a32+2		;0763e: 23c800007a34
 lb_07644:
@@ -16282,7 +16282,7 @@ lb_0a36a:
 	move.l	(a5),d0			;0a37c: 2015
 	move.l	d0,256(a5)		;0a37e: 2b400100
 	move.l	d0,188(a5)		;0a382: 2b4000bc
-	jsr	lb_147d4		;0a386: 4eb9000147d4
+	jsr	CopyNtoN		;0a386: 4eb9000147d4
 lb_0a38c:
 	moveq	#0,d1			;0a38c: 7200
 	move.w	1166(a5),d1		;0a38e: 322d048e
@@ -17426,7 +17426,7 @@ lb_0b0bc:
 	jsr	Ressource_Clear		;0b0f2: 4eb900010e22
 lb_0b0f8:
 	moveq	#0,d0			;0b0f8: 7000
-	jsr	lb_0def0		;0b0fa: 4eb90000def0
+	jsr	TAD_ExecuteFunction		;0b0fa: 4eb90000def0
 	move.l	#$00005a6a,392(a5)	;0b100: 2b7c00005a6a0188
 	bsr.w	lb_0ab72		;0b108: 6100fa68
 	tst.w	d0			;0b10c: 4a40
@@ -17505,15 +17505,15 @@ lb_0b1d6:
 	jsr	WaitKeyReleased		;0b1d6: 4eb9000113bc
 lb_0b1dc:
 	move.b	3130(a5),d0		;0b1dc: 102d0c3a
-	cmpi.b	#$51,d0			;0b1e0: 0c000051
+	cmpi.b	#$51,d0			;0b1e0: 0c000051	; F2
 	bne.s	lb_0b1ec		;0b1e4: 6606
 	bchg	#0,2499(a5)		;0b1e6: 086d000009c3
 lb_0b1ec:
-	cmpi.b	#$52,d0			;0b1ec: 0c000052
+	cmpi.b	#$52,d0			;0b1ec: 0c000052	; F3
 	bne.s	lb_0b1f8		;0b1f0: 6606
 	bchg	#1,2499(a5)		;0b1f2: 086d000109c3
 lb_0b1f8:
-	cmpi.b	#$53,d0			;0b1f8: 0c000053
+	cmpi.b	#$53,d0			;0b1f8: 0c000053	; F4
 	bne.s	lb_0b204		;0b1fc: 6606
 	bchg	#2,2499(a5)		;0b1fe: 086d000209c3
 lb_0b204:
@@ -17625,7 +17625,7 @@ lb_0b322:
 	move.w	#$ffff,2152(a5)		;0b33c: 3b7cffff0868
 	jsr	lb_1d7a4		;0b342: 4eb90001d7a4
 lb_0b348:
-	jsr	lb_147d4		;0b348: 4eb9000147d4
+	jsr	CopyNtoN		;0b348: 4eb9000147d4
 	tst.b	d7			;0b34e: 4a07
 	bne.s	lb_0b36a		;0b350: 6618
 	movem.l	(a7)+,d0-d7/a0-a4/a6	;0b352: 4cdf5fff
@@ -17640,7 +17640,7 @@ lb_0b35c:
 	move.l	(a7)+,d0		;0b366: 201f
 	rts				;0b368: 4e75
 lb_0b36a:
-	jsr	lb_147d4		;0b36a: 4eb9000147d4
+	jsr	CopyNtoN		;0b36a: 4eb9000147d4
 	movem.l	(a7)+,d0-d7/a0-a4/a6	;0b370: 4cdf5fff
 	bsr.w	lb_0b37c		;0b374: 61000006
 	bra.w	lb_0b278		;0b378: 6000fefe
@@ -17797,13 +17797,13 @@ lb_0b54c:
 lb_0b55e:
 	moveq	#-1,d7			;0b55e: 7eff
 lb_0b560:
-	jsr	lb_147d4		;0b560: 4eb9000147d4
+	jsr	CopyNtoN		;0b560: 4eb9000147d4
 	bsr.w	lb_0a1c2		;0b566: 6100ec5a
 	bsr.w	MenuUnk01		;0b56a: 6100ed44
 	tst.b	d7			;0b56e: 4a07
 	rts				;0b570: 4e75
 lb_0b572:
-	jsr	lb_147d4		;0b572: 4eb9000147d4
+	jsr	CopyNtoN		;0b572: 4eb9000147d4
 	movem.l	(a7)+,d0-d7/a0-a4/a6	;0b578: 4cdf5fff
 	bsr.w	lb_0b37c		;0b57c: 6100fdfe
 	bra.w	lb_0b442		;0b580: 6000fec0
@@ -17922,7 +17922,7 @@ lb_0b6ca:
 	jsr	ExpandUnk01		;0b6e0: 4eb900011410
 	rts				;0b6e6: 4e75
 lb_0b6e8:
-	jsr	lb_147d4		;0b6e8: 4eb9000147d4
+	jsr	CopyNtoN		;0b6e8: 4eb9000147d4
 lb_0b6ee:
 	bsr.w	lb_0b37c		;0b6ee: 6100fc8c
 	jsr	lb_1474e		;0b6f2: 4eb90001474e
@@ -18161,7 +18161,7 @@ lb_0b94c:
 	move.w	1252(a5),d1		;0b964: 322d04e4
 	tst.b	d5			;0b968: 4a05
 	beq.s	lb_0b970		;0b96a: 6704
-	bsr.s	lb_0b97c		;0b96c: 610e
+	bsr.s	DrawIconLever		;0b96c: 610e
 	bra.s	lb_0b974		;0b96e: 6004
 lb_0b970:
 	bsr.w	lb_0baa8		;0b970: 61000136
@@ -18169,7 +18169,7 @@ lb_0b974:
 	addq.w	#8,1250(a5)		;0b974: 506d04e2
 	move.w	(a7)+,d0		;0b978: 301f
 	rts				;0b97a: 4e75
-lb_0b97c:
+DrawIconLever:
 	movem.l	d0-d7/a0-a4/a6,-(a7)	;0b97c: 48e7fffa
 	move.l	d0,d2			;0b980: 2400
 	andi.w	#$000f,d2		;0b982: 0242000f
@@ -18461,6 +18461,7 @@ lb_0bc26:
 	andi.w	#$fff8,d0		;0bc3c: 0240fff8
 	adda.w	d0,a1			;0bc40: d2c0
 	move.b	d7,1168(a5)		;0bc42: 1b470490
+DrawWallFloorUnk:
 	andi.w	#$000f,d2		;0bc46: 0242000f
 	beq.w	lb_0bc76		;0bc4a: 6700002a
 	move.w	d2,d1			;0bc4e: 3202
@@ -18490,7 +18491,7 @@ lb_0bc8e:
 	suba.w	#$0018,a6		;0bc8e: 9cfc0018
 	cmpi.b	#$08,d1			;0bc92: 0c010008
 	bgt.w	lb_0bd3e		;0bc96: 6e0000a6
-lb_0bc9a:
+loc_15270:
 	move.l	(a0)+,d2		;0bc9a: 2418
 	move.l	(a0)+,d3		;0bc9c: 2618
 	ror.l	d1,d2			;0bc9e: e2ba
@@ -18569,7 +18570,7 @@ lb_0bc9a:
 	move.l	d4,(a1)+		;0bd30: 22c4
 	adda.w	a6,a1			;0bd32: d2ce
 	subq.b	#1,1168(a5)		;0bd34: 532d0490
-	bne.w	lb_0bc9a		;0bd38: 6600ff60
+	bne.w	loc_15270		;0bd38: 6600ff60
 	rts				;0bd3c: 4e75
 lb_0bd3e:
 	moveq	#16,d2			;0bd3e: 7410
@@ -19300,7 +19301,7 @@ lb_0c3bc:
 	adda.l	d2,a4			;0c3c6: d9c2
 	move.l	a4,8(a0)		;0c3c8: 214c0008
 	cmpa.l	12(a0),a4		;0c3cc: b9e8000c
-	bgt.w	lb_0c43e		;0c3d0: 6e00006c
+	bgt.w	ShowProblemHQ_ExceededMaximumHeapSize		;0c3d0: 6e00006c
 	adda.l	a2,a4			;0c3d4: d9ca
 	adda.l	a2,a6			;0c3d6: ddca
 	move.l	a6,d5			;0c3d8: 2a0e
@@ -19349,7 +19350,7 @@ lb_0c434:
 lb_0c43a:
 	moveq	#-1,d0			;0c43a: 70ff
 	rts				;0c43c: 4e75
-lb_0c43e:
+ShowProblemHQ_ExceededMaximumHeapSize:
 	bra.s	lb_0c442		;0c43e: 6002
 	bra.s	lb_0c448		;0c440: 6006
 lb_0c442:
@@ -19449,7 +19450,7 @@ lb_0c514:
 	suba.l	d7,a4			;0c524: 99c7
 	adda.l	d2,a4			;0c526: d9c2
 	cmpa.l	12(a0),a4		;0c528: b9e8000c
-	bgt.w	lb_0c43e		;0c52c: 6e00ff10
+	bgt.w	ShowProblemHQ_ExceededMaximumHeapSize		;0c52c: 6e00ff10
 	move.l	a4,8(a0)		;0c530: 214c0008
 	adda.l	a2,a6			;0c534: ddca
 	adda.l	a2,a4			;0c536: d9ca
@@ -20119,14 +20120,14 @@ lb_0cbf6:
 lb_0cc0c:
 	rts				;0cc0c: 4e75
 InitCurrentRoomExits:
-	move.w	#$0000,1162(a5)		;0cc0e: 3b7c0000048a
-	movea.l	88(a5),a3		;0cc14: 266d0058
-	movea.l	164(a5),a1		;0cc18: 226d00a4
-	moveq	#0,d7			;0cc1c: 7e00
-	move.b	22(a1),d7		;0cc1e: 1e290016
-	beq.w	lb_0cd9e		;0cc22: 6700017a
-	lea	6(a1),a4		;0cc26: 49e90006
-	subq.b	#1,d7			;0cc2a: 5307
+	move.w	#$0000,1162(a5)		;0cc0e: 3b7c0000048a   move.w	#0,_currentRoomNbExits-register_a5(a5)
+	movea.l	88(a5),a3		;0cc14: 266d0058           movea.l	off_1830C-register_a5(a5),a3
+	movea.l	164(a5),a1		;0cc18: 226d00a4           movea.l	_pCurrentRoom-register_a5(a5),a1
+	moveq	#0,d7			;0cc1c: 7e00               moveq	#0,nbExits
+	move.b	22(a1),d7		;0cc1e: 1e290016           move.b	Room.nbExits(a1),nbExits
+	beq.w	lb_0cd9e		;0cc22: 6700017a           beq.w	locret_D3E6
+	lea	6(a1),a4		;0cc26: 49e90006               lea	Room.exitsIndex(a1),pExitsId
+	subq.b	#1,d7			;0cc2a: 5307               subq.b	#1,nbExits
 LoopExits:
 	moveq	#0,d1			;0cc2c: 7200
 	move.w	(a4)+,d1		;0cc2e: 321c
@@ -21945,14 +21946,14 @@ lb_0debe:
 	move.b	1(a2),d0		;0deda: 102a0001
 	beq.s	lb_0dee6		;0dede: 6706
 	addi.b	#$09,d0			;0dee0: 06000009
-	bsr.s	lb_0def0		;0dee4: 610a
+	bsr.s	TAD_ExecuteFunction		;0dee4: 610a
 lb_0dee6:
 	movem.l	(a7)+,d7/a2		;0dee6: 4cdf0480
 lb_0deea:
 	dbf	d7,lb_0debe		;0deea: 51cfffd2
 lb_0deee:
 	rts				;0deee: 4e75
-lb_0def0:
+TAD_ExecuteFunction:
 	movea.l	3134(a5),a1		;0def0: 226d0c3e
 	add.w	d0,d0			;0def4: d040
 	add.w	d0,d0			;0def6: d040
@@ -26493,7 +26494,7 @@ lb_11062:
 	moveq	#0,d7			;11074: 7e00
 	move.w	1224(a5),d7		;11076: 3e2d04c8
 	movem.l	d0-d2/a1,-(a7)		;1107a: 48e7e040
-	bsr.w	lb_0b97c		;1107e: 6100a8fc
+	bsr.w	DrawIconLever		;1107e: 6100a8fc
 	movem.l	(a7)+,d0-d2/a1		;11082: 4cdf0207
 lb_11086:
 	add.w	1226(a5),d0		;11086: d06d04ca
@@ -26904,40 +26905,40 @@ lb_1140a:
 ExpandUnk01:
 	move.l	a5,-(a7)		;11410: 2f0d
 	movea.l	a3,a4			;11412: 284b
-	move.l	a1,lb_119f2		;11414: 23c9000119f2
-	move.l	d0,lb_119f6		;1141a: 23c0000119f6
+	move.l	a1,_expand_pDst_l		;11414: 23c9000119f2
+	move.l	d0,_expand_lengthDst_l		;1141a: 23c0000119f6
 	bsr.w	ExpandUnk02		;11420: 61000006
 	movea.l	(a7)+,a5		;11424: 2a5f
 	rts				;11426: 4e75
 ExpandUnk02:
 	move.l	#$000004e6,d6		;11428: 2c3c000004e6
-	lea	lb_119f2,a0		;1142e: 41f9000119f2
-	lea	lb_119fa,a1		;11434: 43f9000119fa
-	lea	lb_11ee2,a2		;1143a: 45f900011ee2
-	lea	lb_1263a+2,a3		;11440: 47f90001263c
-	lea	lb_12b22+1,a6		;11446: 4df900012b23
-	tst.l	lb_119f6		;1144c: 4ab9000119f6
+	lea	_expand_pDst_l,a0		;1142e: 41f9000119f2
+	lea	_expand_unk01_w,a1		;11434: 43f9000119fa
+	lea	_expand_unk02_w,a2		;1143a: 45f900011ee2
+	lea	_expand_unk03_w,a3		;11440: 47f90001263c
+	lea	_expand_unk04_b,a6		;11446: 4df900012b23
+	tst.l	_expand_lengthDst_l		;1144c: 4ab9000119f6
 	beq.w	lb_114e6		;11452: 67000092
 	bsr.w	ExpandUnk03		;11456: 61000090
-	bsr.w	lb_11572		;1145a: 61000116
+	bsr.w	ExpandUnk04		;1145a: 61000116
 	move.w	#$0fc4,d5		;1145e: 3a3c0fc4
 lb_11462:
 	move.l	d5,-(a7)		;11462: 2f05
-	bsr.w	lb_115ae		;11464: 61000148
+	bsr.w	ExpandUnk05		;11464: 61000148
 	move.w	d0,d5			;11468: 3a00
 	cmpi.w	#$0100,d0		;1146a: 0c400100
 	bge.w	lb_11496		;1146e: 6c000026
 	move.l	(a7)+,d5		;11472: 2a1f
-	movea.l	lb_119f2,a5		;11474: 2a79000119f2
+	movea.l	_expand_pDst_l,a5		;11474: 2a79000119f2
 	move.b	d0,(a5)+		;1147a: 1ac0
-	move.l	a5,lb_119f2		;1147c: 23cd000119f2
+	move.l	a5,_expand_pDst_l		;1147c: 23cd000119f2
 	move.b	d0,0(a6,d5.w)		;11482: 1d805000
 	addq.w	#1,d5			;11486: 5245
 	andi.w	#$0fff,d5		;11488: 02450fff
-	subq.l	#1,lb_119f6		;1148c: 53b9000119f6
+	subq.l	#1,_expand_lengthDst_l		;1148c: 53b9000119f6
 	bra.w	lb_114dc		;11492: 60000048
 lb_11496:
-	bsr.w	lb_11644		;11496: 610001ac
+	bsr.w	ExpandUnk08		;11496: 610001ac
 	move.w	d5,d2			;1149a: 3405
 	move.l	(a7)+,d5		;1149c: 2a1f
 	move.w	d5,d4			;1149e: 3805
@@ -26946,9 +26947,9 @@ lb_11496:
 	andi.w	#$0fff,d4		;114a4: 02440fff
 	subi.w	#$00fd,d2		;114a8: 044200fd
 	ext.l	d2			;114ac: 48c2
-	sub.l	d2,lb_119f6		;114ae: 95b9000119f6
-	movea.l	lb_119f2,a5		;114b4: 2a79000119f2
-	add.l	d2,lb_119f2		;114ba: d5b9000119f2
+	sub.l	d2,_expand_lengthDst_l		;114ae: 95b9000119f6
+	movea.l	_expand_pDst_l,a5		;114b4: 2a79000119f2
+	add.l	d2,_expand_pDst_l		;114ba: d5b9000119f2
 	move.w	#$0fff,d3		;114c0: 363c0fff
 	bra.s	lb_114d8		;114c4: 6012
 lb_114c6:
@@ -26962,7 +26963,7 @@ lb_114c6:
 lb_114d8:
 	dbf	d2,lb_114c6		;114d8: 51caffec
 lb_114dc:
-	tst.l	lb_119f6		;114dc: 4ab9000119f6
+	tst.l	_expand_lengthDst_l		;114dc: 4ab9000119f6
 	bgt.w	lb_11462		;114e2: 6e00ff7e
 lb_114e6:
 	rts				;114e6: 4e75
@@ -26971,7 +26972,7 @@ ExpandUnk03:
 	move.l	d5,-(a7)		;114ea: 2f05
 	move.l	#$00010001,d0		;114ec: 203c00010001
 	move.w	#$009c,d2		;114f2: 343c009c
-	lea	lb_119fa,a5		;114f6: 4bf9000119fa
+	lea	_expand_unk01_w,a5		;114f6: 4bf9000119fa
 lb_114fc:
 	move.l	d0,(a5)+		;114fc: 2ac0
 	dbf	d2,lb_114fc		;114fe: 51cafffc
@@ -27011,8 +27012,8 @@ lb_11532:
 	move.l	(a7)+,d5		;1156c: 2a1f
 	move.l	(a7)+,d4		;1156e: 281f
 	rts				;11570: 4e75
-lb_11572:
-	lea	lb_12b22+1,a5		;11572: 4bf900012b23
+ExpandUnk04:
+	lea	_expand_unk04_b,a5		;11572: 4bf900012b23
 	clr.b	d0			;11578: 4200
 	moveq	#13,d1			;1157a: 720d
 lb_1157c:
@@ -27040,7 +27041,7 @@ lb_115a6:
 	move.b	d0,(a5)+		;115a6: 1ac0
 	dbf	d2,lb_115a6		;115a8: 51cafffc
 	rts				;115ac: 4e75
-lb_115ae:
+ExpandUnk05:
 	move.w	a4,d4			;115ae: 380c
 	btst	#0,d4			;115b0: 08040000
 	beq.s	lb_11600		;115b4: 674a
@@ -27106,7 +27107,7 @@ lb_1162a:
 	move.w	d3,d0			;1163e: 3003
 	lsr.w	#1,d0			;11640: e248
 	rts				;11642: 4e75
-lb_11644:
+ExpandUnk08:
 	moveq	#8,d1			;11644: 7208
 	bsr.w	lb_116ec		;11646: 610000a4
 	move.w	d0,d4			;1164a: 3800
@@ -27519,11 +27520,11 @@ lb_118f2:
 	dc.w	$0808			;119ec
 	dc.w	$0808			;119ee
 	dc.w	$0808			;119f0
-lb_119f2:
+_expand_pDst_l:
 	ori.b	#$00,d0			;119f2: 00000000
-lb_119f6:
+_expand_lengthDst_l:
 	ori.b	#$00,d0			;119f6: 00000000
-lb_119fa:
+_expand_unk01_w:
 	ori.b	#$00,d0			;119fa: 00000000
 	ori.b	#$00,d0			;119fe: 00000000
 	ori.b	#$00,d0			;11a02: 00000000
@@ -27839,7 +27840,7 @@ lb_119fa:
 	ori.b	#$00,d0			;11eda: 00000000
 lb_11ede:
 	ori.b	#$00,d0			;11ede: 00000000
-lb_11ee2:
+_expand_unk02_w:
 	ori.b	#$00,d0			;11ee2: 00000000
 	ori.b	#$00,d0			;11ee6: 00000000
 	ori.b	#$00,d0			;11eea: 00000000
@@ -30736,24 +30737,24 @@ lb_147be:
 	move.w	d7,88(a3)		;147ca: 37470058
 	movem.l	(a7)+,d1/d6-d7/a1	;147ce: 4cdf02c2
 	rts				;147d2: 4e75
-lb_147d4:
+CopyNtoN:
 	move.l	d0,-(a7)		;147d4: 2f00
 	move.l	28(a5),d0		;147d6: 202d001c
 	cmp.l	(a5),d0			;147da: b095
 	beq.s	lb_147e4		;147dc: 6706
-	bsr.s	lb_147f8		;147de: 6118
+	bsr.s	CopyBtoA		;147de: 6118
 	move.l	(a7)+,d0		;147e0: 201f
 	rts				;147e2: 4e75
 lb_147e4:
-	bsr.s	lb_147ea		;147e4: 6104
+	bsr.s	CopyAtoB		;147e4: 6104
 	move.l	(a7)+,d0		;147e6: 201f
 	rts				;147e8: 4e75
-lb_147ea:
+CopyAtoB:
 	movem.l	d1/d6-d7/a0-a2,-(a7)	;147ea: 48e743e0
 	movea.l	32(a5),a1		;147ee: 226d0020
 	movea.l	28(a5),a0		;147f2: 206d001c
 	bra.s	lb_14832		;147f6: 603a
-lb_147f8:
+CopyBtoA:
 	movem.l	d1/d6-d7/a0-a2,-(a7)	;147f8: 48e743e0
 	movea.l	28(a5),a1		;147fc: 226d001c
 	movea.l	32(a5),a0		;14800: 206d0020
