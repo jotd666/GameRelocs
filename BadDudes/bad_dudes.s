@@ -96,38 +96,38 @@
 ;	ROM_LOAD( "mb7122e.17e", 0x200, 0x400, CRC(a5cda23e) SHA1(d6c8534ae3c95b47a0701047fef67f15dd71f3fe) ) /* Also known to be labeled as A-2 */
 ;ROM_END
 ;	map(0x000000, 0x05ffff).rom();
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
 ;	map(0xff8000, 0xffbfff).ram().share("ram");                                 /* Main ram */
 ;	map(0xffc000, 0xffc7ff).ram().share("spriteram");
-	
+
 ext_00240000	EQU	$240000
 ext_00240002	EQU	$240002
 ext_00240004	EQU	$240004
@@ -138,6 +138,7 @@ ext_00240014	EQU	$240014
 ext_00240016	EQU	$240016
 ext_00242000	EQU	$242000
 ext_00242400	EQU	$242400
+; osd on the left (mame F4)
 tile_layer_0_244000	EQU	$244000
 ext_00244082	EQU	$244082
 ext_002440c0	EQU	$2440C0
@@ -176,7 +177,8 @@ ext_00244724	EQU	$244724
 ext_0024476a	EQU	$24476A
 ext_00244800	EQU	$244800
 ext_00244902	EQU	$244902
-ext_00245000	EQU	$245000
+; osd on the right (MAME F4)
+right_screen_245000	EQU	$245000
 ext_00245800	EQU	$245800
 ext_00246000	EQU	$246000
 ext_00246002	EQU	$246002
@@ -618,60 +620,60 @@ lb_00004:
 	dc.l	lb_0021a	;00024
 	dc.l	lb_00242	;00028
 	dc.l	lb_0026a	;0002c
-	dc.l	lb_00100	;00030
-	dc.l	lb_00100	;00034
-	dc.l	lb_00100	;00038
-	dc.l	lb_00100	;0003c
-	dc.l	lb_00100	;00040
+	dc.l	spurious_interrupt_00100	;00030
+	dc.l	spurious_interrupt_00100	;00034
+	dc.l	spurious_interrupt_00100	;00038
+	dc.l	spurious_interrupt_00100	;0003c
+	dc.l	spurious_interrupt_00100	;00040
 lb_00044:
-	dc.l	lb_00100	;00044
-	dc.l	lb_00100	;00048
-	dc.l	lb_00100	;0004c
-	dc.l	lb_00100	;00050
-	dc.l	lb_00100	;00054
-	dc.l	lb_00100	;00058
-	dc.l	lb_00100	;0005c
-	dc.l	lb_00100	;00060
-	dc.l	lb_00100	;00064
-	dc.l	lb_00100	;00068
-	dc.l	lb_00100	;0006c
+	dc.l	spurious_interrupt_00100	;00044
+	dc.l	spurious_interrupt_00100	;00048
+	dc.l	spurious_interrupt_00100	;0004c
+	dc.l	spurious_interrupt_00100	;00050
+	dc.l	spurious_interrupt_00100	;00054
+	dc.l	spurious_interrupt_00100	;00058
+	dc.l	spurious_interrupt_00100	;0005c
+	dc.l	spurious_interrupt_00100	;00060
+	dc.l	spurious_interrupt_00100	;00064
+	dc.l	spurious_interrupt_00100	;00068
+	dc.l	spurious_interrupt_00100	;0006c
 	dc.l	lb_0e002	;00070
 	dc.l	lb_09832	;00074
-	dc.l	lb_00384	;00078
-	dc.l	lb_00100	;0007c
-	dc.l	lb_00100	;00080
-	dc.l	lb_00100	;00084
-	dc.l	lb_00100	;00088
-	dc.l	lb_00100	;0008c
-	dc.l	lb_00100	;00090
-	dc.l	lb_00100	;00094
-	dc.l	lb_00100	;00098
-	dc.l	lb_00100	;0009c
-	dc.l	lb_00100	;000a0
-	dc.l	lb_00100	;000a4
-	dc.l	lb_00100	;000a8
-	dc.l	lb_00100	;000ac
-	dc.l	lb_00100	;000b0
-	dc.l	lb_00100	;000b4
-	dc.l	lb_00100	;000b8
-	dc.l	lb_00100	;000bc
-	dc.l	lb_00100	;000c0
-	dc.l	lb_00100	;000c4
-	dc.l	lb_00100	;000c8
-	dc.l	lb_00100	;000cc
-	dc.l	lb_00100	;000d0
-	dc.l	lb_00100	;000d4
-	dc.l	lb_00100	;000d8
-	dc.l	lb_00100	;000dc
-	dc.l	lb_00100	;000e0
-	dc.l	lb_00100	;000e4
-	dc.l	lb_00100	;000e8
-	dc.l	lb_00100	;000ec
-	dc.l	lb_00100	;000f0
-	dc.l	lb_00100	;000f4
-	dc.l	lb_00100	;000f8
-	dc.l	lb_00100	;000fc
-lb_00100:
+	dc.l	periodic_level_6_irq_00384	;00078
+	dc.l	spurious_interrupt_00100	;0007c
+	dc.l	spurious_interrupt_00100	;00080
+	dc.l	spurious_interrupt_00100	;00084
+	dc.l	spurious_interrupt_00100	;00088
+	dc.l	spurious_interrupt_00100	;0008c
+	dc.l	spurious_interrupt_00100	;00090
+	dc.l	spurious_interrupt_00100	;00094
+	dc.l	spurious_interrupt_00100	;00098
+	dc.l	spurious_interrupt_00100	;0009c
+	dc.l	spurious_interrupt_00100	;000a0
+	dc.l	spurious_interrupt_00100	;000a4
+	dc.l	spurious_interrupt_00100	;000a8
+	dc.l	spurious_interrupt_00100	;000ac
+	dc.l	spurious_interrupt_00100	;000b0
+	dc.l	spurious_interrupt_00100	;000b4
+	dc.l	spurious_interrupt_00100	;000b8
+	dc.l	spurious_interrupt_00100	;000bc
+	dc.l	spurious_interrupt_00100	;000c0
+	dc.l	spurious_interrupt_00100	;000c4
+	dc.l	spurious_interrupt_00100	;000c8
+	dc.l	spurious_interrupt_00100	;000cc
+	dc.l	spurious_interrupt_00100	;000d0
+	dc.l	spurious_interrupt_00100	;000d4
+	dc.l	spurious_interrupt_00100	;000d8
+	dc.l	spurious_interrupt_00100	;000dc
+	dc.l	spurious_interrupt_00100	;000e0
+	dc.l	spurious_interrupt_00100	;000e4
+	dc.l	spurious_interrupt_00100	;000e8
+	dc.l	spurious_interrupt_00100	;000ec
+	dc.l	spurious_interrupt_00100	;000f0
+	dc.l	spurious_interrupt_00100	;000f4
+	dc.l	spurious_interrupt_00100	;000f8
+	dc.l	spurious_interrupt_00100	;000fc
+spurious_interrupt_00100:
 	RTE				;00100: 4e73
 lb_00102:
 	JMP	lb_0031e.W		;00102: 4ef8031e
@@ -876,7 +878,7 @@ lb_0034e:
 	MOVE.W	mcu_reply_0030c008,D0		;00378: 30390030c008
 	MOVE	#$2300,SR		;0037e: 46fc2300
 	RTS				;00382: 4e75
-lb_00384:
+periodic_level_6_irq_00384:
 	MOVEM.L	D0-D7/A0-A6,-(A7)	;00384: 48e7fffe
 	BCLR	#1,ext_00ff8217		;00388: 08b9000100ff8217
 	BEQ.W	lb_0039a		;00390: 67000008
@@ -2786,7 +2788,7 @@ lb_01d70:
 lb_01d78:
 	MOVE.W	#$01ff,D0		;01d78: 303c01ff
 	MOVEQ	#0,D1			;01d7c: 7200
-	LEA	ext_00245000,A0		;01d7e: 41f900245000
+	LEA	right_screen_245000,A0		;01d7e: 41f900245000
 lb_01d84:
 	MOVE.L	D1,(A0)+		;01d84: 20c1
 	DBF	D0,lb_01d84		;01d86: 51c8fffc
@@ -3048,6 +3050,7 @@ lb_02038:
 	LSL.W	#8,D0			;020c2: e148
 	JSR	write_tiles_of_given_color_01fc4.W		;020c4: 4eb81fc4
 	RTS				;020c8: 4e75
+	; doesnt seem reached
 	LEA	ext_00ff801e,A0		;020ca: 41f900ff801e
 	MOVE.W	D2,(A0)+		;020d0: 30c2
 	MOVE.W	#$0000,(A0)+		;020d2: 30fc0000
@@ -3133,25 +3136,25 @@ lb_021e8:
 	DBF	D3,lb_021e8		;021ea: 51cbfffc
 	RTS				;021ee: 4e75
 lb_021f0:
-	dc.l	lb_0223c	;021f0
-	dc.l	lb_0224a	;021f4
-	dc.l	lb_02258	;021f8
-	dc.l	lb_02266	;021fc
-	dc.l	lb_02274	;02200
-	dc.l	lb_02282	;02204
-	dc.l	lb_02290	;02208
-	dc.l	lb_0229e	;0220c
-	dc.l	lb_022ac	;02210
-	dc.l	lb_022ba	;02214
-	dc.l	lb_022c8	;02218
-	dc.l	lb_022d6	;0221c
-	dc.l	lb_022e4	;02220
-	dc.l	lb_022f2	;02224
-	dc.l	lb_02300	;02228
-	dc.l	lb_0230e	;0222c
-	dc.l	lb_0231c	;02230
-	dc.l	lb_0232a	;02234
-	dc.l	lb_02338	;02238
+	dc.l	lb_0223c	;021f0 <data>
+	dc.l	lb_0224a	;021f4 <data>
+	dc.l	lb_02258	;021f8 <data>
+	dc.l	lb_02266	;021fc <data>
+	dc.l	lb_02274	;02200 <data>
+	dc.l	lb_02282	;02204 <data>
+	dc.l	lb_02290	;02208 <data>
+	dc.l	lb_0229e	;0220c <data>
+	dc.l	lb_022ac	;02210 <data>
+	dc.l	lb_022ba	;02214 <data>
+	dc.l	lb_022c8	;02218 <data>
+	dc.l	lb_022d6	;0221c <data>
+	dc.l	lb_022e4	;02220 <data>
+	dc.l	lb_022f2	;02224 <data>
+	dc.l	lb_02300	;02228 <data>
+	dc.l	lb_0230e	;0222c <data>
+	dc.l	lb_0231c	;02230 <data>
+	dc.l	lb_0232a	;02234 <data>
+	dc.l	lb_02338	;02238 <data>
 lb_0223c:
 	dc.w	$0020	;0223c
 	dc.w	$0020	;0223e
@@ -3473,7 +3476,7 @@ lb_02548:
 	RTS				;02548: 4e75
 videoram_address_table_0254a:
 	dc.l	tile_layer_0_244000	;0254a
-	dc.l	$245000	;0254e
+	dc.l	right_screen_245000	;0254e
 lb_02552:
 	MOVE.W	ext_00ff8114,D0		;02552: 303900ff8114
 	ADDI.W	#$01f8,D0		;02558: 064001f8
@@ -3508,13 +3511,13 @@ lb_02592:
 	MOVEQ	#0,D2			;025a4: 7400
 	MOVE.W	state_00ffa8f0,D2		;025a6: 343900ffa8f0
 	LSL.W	#2,D2			;025ac: e54a
-	LEA	lb_025bc.W,A3		;025ae: 47f825bc
+	LEA	jump_table_025bc.W,A3		;025ae: 47f825bc
 	NOP				;025b2: 4e71
 	ADDA.L	D2,A3			;025b4: d7c2
 	MOVEA.L	(A3),A3			;025b6: 2653
 	JSR	(A3)			;025b8: 4e93
 	RTS				;025ba: 4e75
-lb_025bc:
+jump_table_025bc:
 	dc.l	lb_025f0	;025bc
 	dc.l	lb_0264a	;025c0
 	dc.l	lb_026b4	;025c4
@@ -3860,9 +3863,9 @@ lb_02a10:
 	dc.l	lb_1cdf4	;02a30
 	dc.l	lb_02e06	;02a34
 	dc.l	lb_1c9a8	;02a38
-	dc.l	lb_02ad8	;02a3c
-	dc.l	lb_02ad8	;02a40
-	dc.l	lb_02ad8	;02a44
+	dc.l	do_nothing_02ad8	;02a3c
+	dc.l	do_nothing_02ad8	;02a40
+	dc.l	do_nothing_02ad8	;02a44
 	dc.l	lb_1f690	;02a48
 	dc.l	lb_1f316	;02a4c
 	dc.l	lb_02ca8	;02a50
@@ -3874,14 +3877,14 @@ lb_02a10:
 	dc.l	lb_14fb2	;02a68
 	dc.l	lb_14456	;02a6c
 	dc.l	lb_02ca8	;02a70
-	dc.l	lb_02ad8	;02a74
+	dc.l	do_nothing_02ad8	;02a74
 	dc.l	lb_15c46	;02a78
 	dc.l	lb_15d1a	;02a7c
 	dc.l	lb_15dee	;02a80
 	dc.l	lb_15ec2	;02a84
 	dc.l	lb_04490	;02a88
 	dc.l	lb_04506	;02a8c
-	dc.l	lb_02ad8	;02a90
+	dc.l	do_nothing_02ad8	;02a90
 	dc.l	lb_1f154	;02a94
 	dc.l	lb_047be	;02a98
 	dc.l	lb_047be	;02a9c
@@ -3890,16 +3893,16 @@ lb_02a10:
 	dc.l	lb_0ddf0	;02aa8
 	dc.l	lb_02de8	;02aac
 	dc.l	lb_15018	;02ab0
-	dc.l	lb_02ad8	;02ab4
+	dc.l	do_nothing_02ad8	;02ab4
 	dc.l	lb_11e70	;02ab8
 	dc.l	lb_11e70	;02abc
 	dc.l	lb_04322	;02ac0
 	dc.l	lb_02d7c	;02ac4
 	dc.l	lb_02dc2	;02ac8
-	dc.l	lb_02ad8	;02acc
-	dc.l	lb_02ad8	;02ad0
-	dc.l	lb_02ad8	;02ad4
-lb_02ad8:
+	dc.l	do_nothing_02ad8	;02acc
+	dc.l	do_nothing_02ad8	;02ad0
+	dc.l	do_nothing_02ad8	;02ad4
+do_nothing_02ad8:
 	NOP				;02ad8: 4e71
 	NOP				;02ada: 4e71
 	NOP				;02adc: 4e71
@@ -8005,7 +8008,7 @@ lb_06344:
 	MOVEQ	#0,D0			;06352: 7000
 	MOVE.W	D6,D0			;06354: 3006
 	LSL.W	#2,D0			;06356: e548
-	LEA	lb_067a0.W,A1		;06358: 43f867a0
+	LEA	jump_table_067a0.W,A1		;06358: 43f867a0
 	NOP				;0635c: 4e71
 	ADDA.L	D0,A1			;0635e: d3c0
 	MOVEA.L	(A1),A1			;06360: 2251
@@ -8018,7 +8021,7 @@ lb_06364:
 	MOVEQ	#0,D0			;06372: 7000
 	MOVE.W	D6,D0			;06374: 3006
 	LSL.W	#2,D0			;06376: e548
-	LEA	lb_067a0.W,A1		;06378: 43f867a0
+	LEA	jump_table_067a0.W,A1		;06378: 43f867a0
 	NOP				;0637c: 4e71
 	ADDA.L	D0,A1			;0637e: d3c0
 	MOVEA.L	(A1),A1			;06380: 2251
@@ -8286,7 +8289,7 @@ lb_06782:
 	MOVE.L	D3,ext_00ff8182		;06792: 23c300ff8182
 	ADD.L	D7,ext_00ff8192		;06798: dfb900ff8192
 	RTS				;0679e: 4e75
-lb_067a0:
+jump_table_067a0:
 	dc.l	lb_06386	;067a0
 	dc.l	lb_063de	;067a4
 	dc.l	lb_06436	;067a8
@@ -38556,21 +38559,21 @@ lb_1b234:
 	LEA	tile_layer_1_24A000,A1		;1b2ec: 43f90024a000
 	LEA	lb_1be58(PC),A2		;1b2f2: 45fa0b64
 	NOP				;1b2f6: 4e71
-	JSR	lb_1b310(PC)		;1b2f8: 4eba0016
+	JSR	copy_rom_to_video_1b310(PC)		;1b2f8: 4eba0016
 	NOP				;1b2fc: 4e71
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1b2fe: 48a7ffff
 	MOVEQ	#1,D0			;1b302: 7001
 	JSR	lb_0def0		;1b304: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1b30a: 4c9fffff
 	RTS				;1b30e: 4e75
-lb_1b310:
+copy_rom_to_video_1b310:
 	MOVE.W	(A2)+,(A1)+		;1b310: 32da
 	SUBQ.W	#1,D1			;1b312: 5341
-	BCC.S	lb_1b310		;1b314: 64fa
+	BCC.S	copy_rom_to_video_1b310		;1b314: 64fa
 	SUBQ.W	#1,D0			;1b316: 5340
 	BCS.S	lb_1b320		;1b318: 6506
 	MOVE.W	#$000f,D1		;1b31a: 323c000f
-	BRA.S	lb_1b310		;1b31e: 60f0
+	BRA.S	copy_rom_to_video_1b310		;1b31e: 60f0
 lb_1b320:
 	RTS				;1b320: 4e75
 lb_1b322:
@@ -39221,7 +39224,7 @@ lb_1ba8a:
 	LEA	tile_layer_2_24d000,A1		;1bb46: 43f90024d000
 	LEA	lb_1c056+2(PC),A2	;1bb4c: 45fa050a
 	NOP				;1bb50: 4e71
-	JSR	lb_1b310(PC)		;1bb52: 4ebaf7bc
+	JSR	copy_rom_to_video_1b310(PC)		;1bb52: 4ebaf7bc
 	LEA	lb_1c258(PC),A1		;1bb56: 43fa0700
 	NOP				;1bb5a: 4e71
 lb_1bb5c:
@@ -93915,709 +93918,368 @@ lb_57b1e:
 	dc.w	$0000	;57b24
 lb_57b26:
 	dc.w	$0000	;57b26
-	dc.w	$0005	;57b28
-	dc.w	$7b68	;57b2a
-	dc.w	$0005	;57b2c
-	dc.w	$7be4	;57b2e
-	dc.w	$0005	;57b30
-	dc.w	$7be4	;57b32
-	dc.w	$0005	;57b34
-	dc.w	$7ca4	;57b36
-	dc.w	$0005	;57b38
-	dc.w	$7be4	;57b3a
-	dc.w	$0005	;57b3c
-	dc.w	$7d64	;57b3e
-	dc.w	$0005	;57b40
-	dc.w	$7ea4	;57b42
-	dc.w	$0005	;57b44
-	dc.w	$7b68	;57b46
+	dc.l	lb_57b68	;57b28
+	dc.l	lb_57be4	;57b2c
+	dc.l	lb_57be4	;57b30
+	dc.l	lb_57ca4	;57b34
+	dc.l	lb_57be4	;57b38
+	dc.l	lb_57d64	;57b3c
+	dc.l	lb_57ea4	;57b40
+	dc.l	lb_57b68	;57b44
 lb_57b48:
-	dc.w	$0005	;57b48
-	dc.w	$7be4	;57b4a
-	dc.w	$0005	;57b4c
-	dc.w	$7b88	;57b4e
-	dc.w	$0005	;57b50
-	dc.w	$7c24	;57b52
-	dc.w	$0005	;57b54
-	dc.w	$7be4	;57b56
-	dc.w	$0005	;57b58
-	dc.w	$7e64	;57b5a
-	dc.w	$0005	;57b5c
-	dc.w	$7be4	;57b5e
-	dc.w	$0005	;57b60
-	dc.w	$7ee4	;57b62
-	dc.w	$0005	;57b64
-	dc.w	$7b68	;57b66
-	dc.w	$0005	;57b68
-	dc.w	$80a4	;57b6a
-	dc.w	$0005	;57b6c
-	dc.w	$80a4	;57b6e
-	dc.w	$0005	;57b70
-	dc.w	$80a4	;57b72
-	dc.w	$0005	;57b74
-	dc.w	$80a4	;57b76
-	dc.w	$0005	;57b78
-	dc.w	$80a4	;57b7a
-	dc.w	$0005	;57b7c
-	dc.w	$80a4	;57b7e
-	dc.w	$0005	;57b80
-	dc.w	$80a4	;57b82
-	dc.w	$0005	;57b84
-	dc.w	$80a4	;57b86
-	dc.w	$0005	;57b88
-	dc.w	$80a4	;57b8a
-	dc.w	$0005	;57b8c
-	dc.w	$80a4	;57b8e
-	dc.w	$0005	;57b90
-	dc.w	$80a4	;57b92
-	dc.w	$0005	;57b94
-	dc.w	$80a4	;57b96
-	dc.w	$0005	;57b98
-	dc.w	$80a4	;57b9a
-	dc.w	$0005	;57b9c
-	dc.w	$80a4	;57b9e
-	dc.w	$0005	;57ba0
-	dc.w	$80a4	;57ba2
-	dc.w	$0005	;57ba4
-	dc.w	$80a4	;57ba6
-	dc.w	$0005	;57ba8
-	dc.w	$86a4	;57baa
-	dc.w	$0005	;57bac
-	dc.w	$86a4	;57bae
-	dc.w	$0005	;57bb0
-	dc.w	$86a4	;57bb2
-	dc.w	$0005	;57bb4
-	dc.w	$86a4	;57bb6
-	dc.w	$0005	;57bb8
-	dc.w	$86a4	;57bba
-	dc.w	$0005	;57bbc
-	dc.w	$86a4	;57bbe
-	dc.w	$0005	;57bc0
-	dc.w	$86a4	;57bc2
-	dc.w	$0005	;57bc4
-	dc.w	$86a4	;57bc6
-	dc.w	$0005	;57bc8
-	dc.w	$84a4	;57bca
-	dc.w	$0005	;57bcc
-	dc.w	$84a4	;57bce
-	dc.w	$0005	;57bd0
-	dc.w	$8ca4	;57bd2
-	dc.w	$0005	;57bd4
-	dc.w	$8ea4	;57bd6
-	dc.w	$0005	;57bd8
-	dc.w	$90a4	;57bda
-	dc.w	$0005	;57bdc
-	dc.w	$84a4	;57bde
-	dc.w	$0005	;57be0
-	dc.w	$80a4	;57be2
-	dc.w	$0005	;57be4
-	dc.w	$80a4	;57be6
-	dc.w	$0005	;57be8
-	dc.w	$80a4	;57bea
-	dc.w	$0005	;57bec
-	dc.w	$80a4	;57bee
-	dc.w	$0005	;57bf0
-	dc.w	$80a4	;57bf2
-	dc.w	$0005	;57bf4
-	dc.w	$80a4	;57bf6
-	dc.w	$0005	;57bf8
-	dc.w	$80a4	;57bfa
-	dc.w	$0005	;57bfc
-	dc.w	$80a4	;57bfe
-	dc.w	$0005	;57c00
-	dc.w	$80a4	;57c02
-	dc.w	$0005	;57c04
-	dc.w	$80a4	;57c06
-	dc.w	$0005	;57c08
-	dc.w	$80a4	;57c0a
-	dc.w	$0005	;57c0c
-	dc.w	$80a4	;57c0e
-	dc.w	$0005	;57c10
-	dc.w	$80a4	;57c12
-	dc.w	$0005	;57c14
-	dc.w	$80a4	;57c16
-	dc.w	$0005	;57c18
-	dc.w	$80a4	;57c1a
-	dc.w	$0005	;57c1c
-	dc.w	$80a4	;57c1e
-	dc.w	$0005	;57c20
-	dc.w	$92a4	;57c22
-	dc.w	$0005	;57c24
-	dc.w	$92a4	;57c26
-	dc.w	$0005	;57c28
-	dc.w	$94a4	;57c2a
-	dc.w	$0005	;57c2c
-	dc.w	$96a4	;57c2e
-	dc.w	$0005	;57c30
-	dc.w	$98a4	;57c32
-	dc.w	$0005	;57c34
-	dc.w	$9aa4	;57c36
-	dc.w	$0005	;57c38
-	dc.w	$9ca4	;57c3a
-	dc.w	$0005	;57c3c
-	dc.w	$9ea4	;57c3e
-	dc.w	$0005	;57c40
-	dc.w	$92a4	;57c42
-	dc.w	$0005	;57c44
-	dc.w	$92a4	;57c46
-	dc.w	$0005	;57c48
-	dc.w	$80a4	;57c4a
-	dc.w	$0005	;57c4c
-	dc.w	$80a4	;57c4e
-	dc.w	$0005	;57c50
-	dc.w	$80a4	;57c52
-	dc.w	$0005	;57c54
-	dc.w	$80a4	;57c56
-	dc.w	$0005	;57c58
-	dc.w	$80a4	;57c5a
-	dc.w	$0005	;57c5c
-	dc.w	$80a4	;57c5e
-	dc.w	$0005	;57c60
-	dc.w	$80a4	;57c62
-	dc.w	$0005	;57c64
-	dc.w	$80a4	;57c66
-	dc.w	$0005	;57c68
-	dc.w	$80a4	;57c6a
-	dc.w	$0005	;57c6c
-	dc.w	$80a4	;57c6e
-	dc.w	$0005	;57c70
-	dc.w	$80a4	;57c72
-	dc.w	$0005	;57c74
-	dc.w	$80a4	;57c76
-	dc.w	$0005	;57c78
-	dc.w	$80a4	;57c7a
-	dc.w	$0005	;57c7c
-	dc.w	$80a4	;57c7e
-	dc.w	$0005	;57c80
-	dc.w	$80a4	;57c82
-	dc.w	$0005	;57c84
-	dc.w	$80a4	;57c86
-	dc.w	$0005	;57c88
-	dc.w	$80a4	;57c8a
-	dc.w	$0005	;57c8c
-	dc.w	$80a4	;57c8e
-	dc.w	$0005	;57c90
-	dc.w	$80a4	;57c92
-	dc.w	$0005	;57c94
-	dc.w	$80a4	;57c96
-	dc.w	$0005	;57c98
-	dc.w	$80a4	;57c9a
-	dc.w	$0005	;57c9c
-	dc.w	$80a4	;57c9e
-	dc.w	$0005	;57ca0
-	dc.w	$86a4	;57ca2
-	dc.w	$0005	;57ca4
-	dc.w	$86a4	;57ca6
-	dc.w	$0005	;57ca8
-	dc.w	$a0a4	;57caa
-	dc.w	$0005	;57cac
-	dc.w	$a2a4	;57cae
-	dc.w	$0005	;57cb0
-	dc.w	$80a4	;57cb2
-	dc.w	$0005	;57cb4
-	dc.w	$a4a4	;57cb6
-	dc.w	$0005	;57cb8
-	dc.w	$a6a4	;57cba
-	dc.w	$0005	;57cbc
-	dc.w	$a8a4	;57cbe
-	dc.w	$0005	;57cc0
-	dc.w	$aaa4	;57cc2
-	dc.w	$0005	;57cc4
-	dc.w	$aca4	;57cc6
-	dc.w	$0005	;57cc8
-	dc.w	$aea4	;57cca
-	dc.w	$0005	;57ccc
-	dc.w	$80a4	;57cce
-	dc.w	$0005	;57cd0
-	dc.w	$80a4	;57cd2
-	dc.w	$0005	;57cd4
-	dc.w	$80a4	;57cd6
-	dc.w	$0005	;57cd8
-	dc.w	$80a4	;57cda
-	dc.w	$0005	;57cdc
-	dc.w	$80a4	;57cde
-	dc.w	$0005	;57ce0
-	dc.w	$80a4	;57ce2
-	dc.w	$0005	;57ce4
-	dc.w	$80a4	;57ce6
-	dc.w	$0005	;57ce8
-	dc.w	$82a4	;57cea
-	dc.w	$0005	;57cec
-	dc.w	$82a4	;57cee
-	dc.w	$0005	;57cf0
-	dc.w	$b0a4	;57cf2
-	dc.w	$0005	;57cf4
-	dc.w	$b0a4	;57cf6
-	dc.w	$0005	;57cf8
-	dc.w	$82a4	;57cfa
-	dc.w	$0005	;57cfc
-	dc.w	$82a4	;57cfe
-	dc.w	$0005	;57d00
-	dc.w	$82a4	;57d02
-	dc.w	$0005	;57d04
-	dc.w	$b2a4	;57d06
-	dc.w	$0005	;57d08
-	dc.w	$b0a4	;57d0a
-	dc.w	$0005	;57d0c
-	dc.w	$b0a4	;57d0e
-	dc.w	$0005	;57d10
-	dc.w	$80a4	;57d12
-	dc.w	$0005	;57d14
-	dc.w	$80a4	;57d16
-	dc.w	$0005	;57d18
-	dc.w	$80a4	;57d1a
-	dc.w	$0005	;57d1c
-	dc.w	$80a4	;57d1e
-	dc.w	$0005	;57d20
-	dc.w	$80a4	;57d22
-	dc.w	$0005	;57d24
-	dc.w	$80a4	;57d26
-	dc.w	$0005	;57d28
-	dc.w	$80a4	;57d2a
-	dc.w	$0005	;57d2c
-	dc.w	$80a4	;57d2e
-	dc.w	$0005	;57d30
-	dc.w	$80a4	;57d32
-	dc.w	$0005	;57d34
-	dc.w	$80a4	;57d36
-	dc.w	$0005	;57d38
-	dc.w	$80a4	;57d3a
-	dc.w	$0005	;57d3c
-	dc.w	$80a4	;57d3e
-	dc.w	$0005	;57d40
-	dc.w	$80a4	;57d42
-	dc.w	$0005	;57d44
-	dc.w	$80a4	;57d46
-	dc.w	$0005	;57d48
-	dc.w	$80a4	;57d4a
-	dc.w	$0005	;57d4c
-	dc.w	$80a4	;57d4e
-	dc.w	$0005	;57d50
-	dc.w	$80a4	;57d52
-	dc.w	$0005	;57d54
-	dc.w	$80a4	;57d56
-	dc.w	$0005	;57d58
-	dc.w	$80a4	;57d5a
-	dc.w	$0005	;57d5c
-	dc.w	$80a4	;57d5e
-	dc.w	$0005	;57d60
-	dc.w	$86a4	;57d62
-	dc.w	$0005	;57d64
-	dc.w	$bca4	;57d66
-	dc.w	$0005	;57d68
-	dc.w	$86a4	;57d6a
-	dc.w	$0005	;57d6c
-	dc.w	$bea4	;57d6e
-	dc.w	$0005	;57d70
-	dc.w	$c0a4	;57d72
-	dc.w	$0005	;57d74
-	dc.w	$c2a4	;57d76
-	dc.w	$0005	;57d78
-	dc.w	$80a4	;57d7a
-	dc.w	$0005	;57d7c
-	dc.w	$80a4	;57d7e
-	dc.w	$0005	;57d80
-	dc.w	$80a4	;57d82
-	dc.w	$0005	;57d84
-	dc.w	$80a4	;57d86
-	dc.w	$0005	;57d88
-	dc.w	$80a4	;57d8a
-	dc.w	$0005	;57d8c
-	dc.w	$80a4	;57d8e
-	dc.w	$0005	;57d90
-	dc.w	$80a4	;57d92
-	dc.w	$0005	;57d94
-	dc.w	$80a4	;57d96
-	dc.w	$0005	;57d98
-	dc.w	$80a4	;57d9a
-	dc.w	$0005	;57d9c
-	dc.w	$80a4	;57d9e
-	dc.w	$0005	;57da0
-	dc.w	$80a4	;57da2
-	dc.w	$0005	;57da4
-	dc.w	$80a4	;57da6
-	dc.w	$0005	;57da8
-	dc.w	$80a4	;57daa
-	dc.w	$0005	;57dac
-	dc.w	$82a4	;57dae
-	dc.w	$0005	;57db0
-	dc.w	$82a4	;57db2
-	dc.w	$0005	;57db4
-	dc.w	$c4c4	;57db6
-	dc.w	$0005	;57db8
-	dc.w	$c4c4	;57dba
-	dc.w	$0005	;57dbc
-	dc.w	$c6c4	;57dbe
-	dc.w	$0005	;57dc0
-	dc.w	$c8c4	;57dc2
-	dc.w	$0005	;57dc4
-	dc.w	$cac4	;57dc6
-	dc.w	$0005	;57dc8
-	dc.w	$ccc4	;57dca
-	dc.w	$0005	;57dcc
-	dc.w	$cec4	;57dce
-	dc.w	$0005	;57dd0
-	dc.w	$cac4	;57dd2
-	dc.w	$0005	;57dd4
-	dc.w	$80a4	;57dd6
-	dc.w	$0005	;57dd8
-	dc.w	$80a4	;57dda
-	dc.w	$0005	;57ddc
-	dc.w	$80a4	;57dde
-	dc.w	$0005	;57de0
-	dc.w	$80a4	;57de2
-	dc.w	$0005	;57de4
-	dc.w	$80a4	;57de6
-	dc.w	$0005	;57de8
-	dc.w	$80a4	;57dea
-	dc.w	$0005	;57dec
-	dc.w	$80a4	;57dee
-	dc.w	$0005	;57df0
-	dc.w	$80a4	;57df2
-	dc.w	$0005	;57df4
-	dc.w	$80a4	;57df6
-	dc.w	$0005	;57df8
-	dc.w	$80a4	;57dfa
-	dc.w	$0005	;57dfc
-	dc.w	$82a4	;57dfe
-	dc.w	$0005	;57e00
-	dc.w	$82a4	;57e02
-	dc.w	$0005	;57e04
-	dc.w	$d0c4	;57e06
-	dc.w	$0005	;57e08
-	dc.w	$d2c4	;57e0a
-	dc.w	$0005	;57e0c
-	dc.w	$d0c4	;57e0e
-	dc.w	$0005	;57e10
-	dc.w	$d0c4	;57e12
-	dc.w	$0005	;57e14
-	dc.w	$80a4	;57e16
-	dc.w	$0005	;57e18
-	dc.w	$80a4	;57e1a
-	dc.w	$0005	;57e1c
-	dc.w	$80a4	;57e1e
-	dc.w	$0005	;57e20
-	dc.w	$80a4	;57e22
-	dc.w	$0005	;57e24
-	dc.w	$80a4	;57e26
-	dc.w	$0005	;57e28
-	dc.w	$80a4	;57e2a
-	dc.w	$0005	;57e2c
-	dc.w	$80a4	;57e2e
-	dc.w	$0005	;57e30
-	dc.w	$80a4	;57e32
-	dc.w	$0005	;57e34
-	dc.w	$80a4	;57e36
-	dc.w	$0005	;57e38
-	dc.w	$80a4	;57e3a
-	dc.w	$0005	;57e3c
-	dc.w	$80a4	;57e3e
-	dc.w	$0005	;57e40
-	dc.w	$80a4	;57e42
-	dc.w	$0005	;57e44
-	dc.w	$80a4	;57e46
-	dc.w	$0005	;57e48
-	dc.w	$80a4	;57e4a
-	dc.w	$0005	;57e4c
-	dc.w	$80a4	;57e4e
-	dc.w	$0005	;57e50
-	dc.w	$80a4	;57e52
-	dc.w	$0005	;57e54
-	dc.w	$80a4	;57e56
-	dc.w	$0005	;57e58
-	dc.w	$80a4	;57e5a
-	dc.w	$0005	;57e5c
-	dc.w	$80a4	;57e5e
-	dc.w	$0005	;57e60
-	dc.w	$b8a4	;57e62
-	dc.w	$0005	;57e64
-	dc.w	$b4a4	;57e66
-	dc.w	$0005	;57e68
-	dc.w	$b6a4	;57e6a
-	dc.w	$0005	;57e6c
-	dc.w	$b8a4	;57e6e
-	dc.w	$0005	;57e70
-	dc.w	$b8a4	;57e72
-	dc.w	$0005	;57e74
-	dc.w	$b8a4	;57e76
-	dc.w	$0005	;57e78
-	dc.w	$b8a4	;57e7a
-	dc.w	$0005	;57e7c
-	dc.w	$b8a4	;57e7e
-	dc.w	$0005	;57e80
-	dc.w	$b8a4	;57e82
-	dc.w	$0005	;57e84
-	dc.w	$baa4	;57e86
-	dc.w	$0005	;57e88
-	dc.w	$84a4	;57e8a
-	dc.w	$0005	;57e8c
-	dc.w	$80a4	;57e8e
-	dc.w	$0005	;57e90
-	dc.w	$80a4	;57e92
-	dc.w	$0005	;57e94
-	dc.w	$80a4	;57e96
-	dc.w	$0005	;57e98
-	dc.w	$80a4	;57e9a
-	dc.w	$0005	;57e9c
-	dc.w	$80a4	;57e9e
-	dc.w	$0005	;57ea0
-	dc.w	$80a4	;57ea2
-	dc.w	$0005	;57ea4
-	dc.w	$80a4	;57ea6
-	dc.w	$0005	;57ea8
-	dc.w	$80a4	;57eaa
-	dc.w	$0005	;57eac
-	dc.w	$80a4	;57eae
-	dc.w	$0005	;57eb0
-	dc.w	$80a4	;57eb2
-	dc.w	$0005	;57eb4
-	dc.w	$80a4	;57eb6
-	dc.w	$0005	;57eb8
-	dc.w	$80a4	;57eba
-	dc.w	$0005	;57ebc
-	dc.w	$80a4	;57ebe
-	dc.w	$0005	;57ec0
-	dc.w	$80a4	;57ec2
-	dc.w	$0005	;57ec4
-	dc.w	$80a4	;57ec6
-	dc.w	$0005	;57ec8
-	dc.w	$80a4	;57eca
-	dc.w	$0005	;57ecc
-	dc.w	$80a4	;57ece
-	dc.w	$0005	;57ed0
-	dc.w	$80a4	;57ed2
-	dc.w	$0005	;57ed4
-	dc.w	$80a4	;57ed6
-	dc.w	$0005	;57ed8
-	dc.w	$80a4	;57eda
-	dc.w	$0005	;57edc
-	dc.w	$80a4	;57ede
-	dc.w	$0005	;57ee0
-	dc.w	$80a4	;57ee2
-	dc.w	$0005	;57ee4
-	dc.w	$80a4	;57ee6
-	dc.w	$0005	;57ee8
-	dc.w	$80a4	;57eea
-	dc.w	$0005	;57eec
-	dc.w	$80a4	;57eee
-	dc.w	$0005	;57ef0
-	dc.w	$eac4	;57ef2
-	dc.w	$0005	;57ef4
-	dc.w	$eac4	;57ef6
-	dc.w	$0005	;57ef8
-	dc.w	$e8c4	;57efa
-	dc.w	$0005	;57efc
-	dc.w	$e6c4	;57efe
-	dc.w	$0005	;57f00
-	dc.w	$e4c4	;57f02
-	dc.w	$0005	;57f04
-	dc.w	$eac4	;57f06
-	dc.w	$0005	;57f08
-	dc.w	$80a4	;57f0a
-	dc.w	$0005	;57f0c
-	dc.w	$80a4	;57f0e
-	dc.w	$0005	;57f10
-	dc.w	$80a4	;57f12
-	dc.w	$0005	;57f14
-	dc.w	$80a4	;57f16
-	dc.w	$0005	;57f18
-	dc.w	$80a4	;57f1a
-	dc.w	$0005	;57f1c
-	dc.w	$80a4	;57f1e
-	dc.w	$0005	;57f20
-	dc.w	$80a4	;57f22
-	dc.w	$0005	;57f24
-	dc.w	$80a4	;57f26
-	dc.w	$0005	;57f28
-	dc.w	$ecc4	;57f2a
-	dc.w	$0005	;57f2c
-	dc.w	$80a4	;57f2e
-	dc.w	$0005	;57f30
-	dc.w	$80a4	;57f32
-	dc.w	$0005	;57f34
-	dc.w	$eec4	;57f36
-	dc.w	$0005	;57f38
-	dc.w	$80a4	;57f3a
-	dc.w	$0005	;57f3c
-	dc.w	$80a4	;57f3e
-	dc.w	$0005	;57f40
-	dc.w	$80a4	;57f42
-	dc.w	$0005	;57f44
-	dc.w	$80a4	;57f46
-	dc.w	$0005	;57f48
-	dc.w	$80a4	;57f4a
-	dc.w	$0005	;57f4c
-	dc.w	$80a4	;57f4e
-	dc.w	$0005	;57f50
-	dc.w	$80a4	;57f52
-	dc.w	$0005	;57f54
-	dc.w	$80a4	;57f56
-	dc.w	$0005	;57f58
-	dc.w	$80a4	;57f5a
-	dc.w	$0005	;57f5c
-	dc.w	$80a4	;57f5e
-	dc.w	$0005	;57f60
-	dc.w	$80a4	;57f62
-	dc.w	$0005	;57f64
-	dc.w	$80a4	;57f66
-	dc.w	$0005	;57f68
-	dc.w	$80a4	;57f6a
-	dc.w	$0005	;57f6c
-	dc.w	$80a4	;57f6e
-	dc.w	$0005	;57f70
-	dc.w	$80a4	;57f72
-	dc.w	$0005	;57f74
-	dc.w	$80a4	;57f76
-	dc.w	$0005	;57f78
-	dc.w	$80a4	;57f7a
-	dc.w	$0005	;57f7c
-	dc.w	$80a4	;57f7e
-	dc.w	$0005	;57f80
-	dc.w	$80a4	;57f82
-	dc.w	$0005	;57f84
-	dc.w	$80a4	;57f86
-	dc.w	$0005	;57f88
-	dc.w	$80a4	;57f8a
-	dc.w	$0005	;57f8c
-	dc.w	$80a4	;57f8e
-	dc.w	$0005	;57f90
-	dc.w	$80a4	;57f92
-	dc.w	$0005	;57f94
-	dc.w	$80a4	;57f96
-	dc.w	$0005	;57f98
-	dc.w	$80a4	;57f9a
-	dc.w	$0005	;57f9c
-	dc.w	$80a4	;57f9e
-	dc.w	$0005	;57fa0
-	dc.w	$80a4	;57fa2
-	dc.w	$0005	;57fa4
-	dc.w	$80a4	;57fa6
-	dc.w	$0005	;57fa8
-	dc.w	$80a4	;57faa
-	dc.w	$0005	;57fac
-	dc.w	$80a4	;57fae
-	dc.w	$0005	;57fb0
-	dc.w	$80a4	;57fb2
-	dc.w	$0005	;57fb4
-	dc.w	$80a4	;57fb6
-	dc.w	$0005	;57fb8
-	dc.w	$80a4	;57fba
-	dc.w	$0005	;57fbc
-	dc.w	$80a4	;57fbe
-	dc.w	$0005	;57fc0
-	dc.w	$80a4	;57fc2
-	dc.w	$0005	;57fc4
-	dc.w	$80a4	;57fc6
-	dc.w	$0005	;57fc8
-	dc.w	$80a4	;57fca
-	dc.w	$0005	;57fcc
-	dc.w	$80a4	;57fce
-	dc.w	$0005	;57fd0
-	dc.w	$80a4	;57fd2
-	dc.w	$0005	;57fd4
-	dc.w	$80a4	;57fd6
-	dc.w	$0005	;57fd8
-	dc.w	$80a4	;57fda
-	dc.w	$0005	;57fdc
-	dc.w	$80a4	;57fde
-	dc.w	$0005	;57fe0
-	dc.w	$d4c4	;57fe2
-	dc.w	$0005	;57fe4
-	dc.w	$d4c4	;57fe6
-	dc.w	$0005	;57fe8
-	dc.w	$d6c4	;57fea
-	dc.w	$0005	;57fec
-	dc.w	$d8c4	;57fee
-	dc.w	$0005	;57ff0
-	dc.w	$dac4	;57ff2
-	dc.w	$0005	;57ff4
-	dc.w	$80a4	;57ff6
-	dc.w	$0005	;57ff8
-	dc.w	$80a4	;57ffa
-	dc.w	$0005	;57ffc
-	dc.w	$80a4	;57ffe
-	dc.w	$0005	;58000
-	dc.w	$80a4	;58002
-	dc.w	$0005	;58004
-	dc.w	$80a4	;58006
-	dc.w	$0005	;58008
-	dc.w	$80a4	;5800a
-	dc.w	$0005	;5800c
-	dc.w	$80a4	;5800e
-	dc.w	$0005	;58010
-	dc.w	$80a4	;58012
-	dc.w	$0005	;58014
-	dc.w	$80a4	;58016
-	dc.w	$0005	;58018
-	dc.w	$80a4	;5801a
-	dc.w	$0005	;5801c
-	dc.w	$80a4	;5801e
-	dc.w	$0005	;58020
-	dc.w	$82a4	;58022
-	dc.w	$0005	;58024
-	dc.w	$82a4	;58026
-	dc.w	$0005	;58028
-	dc.w	$82a4	;5802a
-	dc.w	$0005	;5802c
-	dc.w	$82a4	;5802e
-	dc.w	$0005	;58030
-	dc.w	$dcc4	;58032
-	dc.w	$0005	;58034
-	dc.w	$dec4	;58036
-	dc.w	$0005	;58038
-	dc.w	$e0c4	;5803a
-	dc.w	$0005	;5803c
-	dc.w	$e2c4	;5803e
-	dc.w	$0005	;58040
-	dc.w	$e4c4	;58042
-	dc.w	$0005	;58044
-	dc.w	$e4c4	;58046
-	dc.w	$0005	;58048
-	dc.w	$80a4	;5804a
-	dc.w	$0005	;5804c
-	dc.w	$80a4	;5804e
-	dc.w	$0005	;58050
-	dc.w	$80a4	;58052
-	dc.w	$0005	;58054
-	dc.w	$80a4	;58056
-	dc.w	$0005	;58058
-	dc.w	$80a4	;5805a
-	dc.w	$0005	;5805c
-	dc.w	$80a4	;5805e
-	dc.w	$0005	;58060
-	dc.w	$80a4	;58062
-	dc.w	$0005	;58064
-	dc.w	$80a4	;58066
-	dc.w	$0005	;58068
-	dc.w	$80a4	;5806a
-	dc.w	$0005	;5806c
-	dc.w	$80a4	;5806e
-	dc.w	$0005	;58070
-	dc.w	$80a4	;58072
-	dc.w	$0005	;58074
-	dc.w	$80a4	;58076
-	dc.w	$0005	;58078
-	dc.w	$80a4	;5807a
-	dc.w	$0005	;5807c
-	dc.w	$80a4	;5807e
-	dc.w	$0005	;58080
-	dc.w	$80a4	;58082
-	dc.w	$0005	;58084
-	dc.w	$80a4	;58086
-	dc.w	$0005	;58088
-	dc.w	$80a4	;5808a
-	dc.w	$0005	;5808c
-	dc.w	$80a4	;5808e
-	dc.w	$0005	;58090
-	dc.w	$80a4	;58092
-	dc.w	$0005	;58094
-	dc.w	$80a4	;58096
-	dc.w	$0005	;58098
-	dc.w	$80a4	;5809a
-	dc.w	$0005	;5809c
-	dc.w	$80a4	;5809e
-	dc.w	$0005	;580a0
-	dc.w	$80a4	;580a2
+	dc.l	lb_57be4	;57b48
+	dc.l	lb_57b88	;57b4c
+	dc.l	lb_57c24	;57b50
+	dc.l	lb_57be4	;57b54
+	dc.l	lb_57e64	;57b58
+	dc.l	lb_57be4	;57b5c
+	dc.l	lb_57ee4	;57b60
+	dc.l	lb_57b68	;57b64
+lb_57b68:
+	dc.l	lb_580a4	;57b68
+	dc.l	lb_580a4	;57b6c
+	dc.l	lb_580a4	;57b70
+	dc.l	lb_580a4	;57b74
+	dc.l	lb_580a4	;57b78
+	dc.l	lb_580a4	;57b7c
+	dc.l	lb_580a4	;57b80
+	dc.l	lb_580a4	;57b84
+lb_57b88:
+	dc.l	lb_580a4	;57b88
+	dc.l	lb_580a4	;57b8c
+	dc.l	lb_580a4	;57b90
+	dc.l	lb_580a4	;57b94
+	dc.l	lb_580a4	;57b98
+	dc.l	lb_580a4	;57b9c
+	dc.l	lb_580a4	;57ba0
+	dc.l	lb_580a4	;57ba4
+	dc.l	lb_586a4	;57ba8
+	dc.l	lb_586a4	;57bac
+	dc.l	lb_586a4	;57bb0
+	dc.l	lb_586a4	;57bb4
+	dc.l	lb_586a4	;57bb8
+	dc.l	lb_586a4	;57bbc
+	dc.l	lb_586a4	;57bc0
+	dc.l	lb_586a4	;57bc4
+	dc.l	lb_584a4	;57bc8
+	dc.l	lb_584a4	;57bcc
+	dc.l	lb_58ca4	;57bd0
+	dc.l	lb_58ea4	;57bd4
+	dc.l	lb_590a4	;57bd8
+	dc.l	lb_584a4	;57bdc
+	dc.l	lb_580a4	;57be0
+lb_57be4:
+	dc.l	lb_580a4	;57be4
+	dc.l	lb_580a4	;57be8
+	dc.l	lb_580a4	;57bec
+	dc.l	lb_580a4	;57bf0
+	dc.l	lb_580a4	;57bf4
+	dc.l	lb_580a4	;57bf8
+	dc.l	lb_580a4	;57bfc
+	dc.l	lb_580a4	;57c00
+	dc.l	lb_580a4	;57c04
+	dc.l	lb_580a4	;57c08
+	dc.l	lb_580a4	;57c0c
+	dc.l	lb_580a4	;57c10
+	dc.l	lb_580a4	;57c14
+	dc.l	lb_580a4	;57c18
+	dc.l	lb_580a4	;57c1c
+	dc.l	lb_592a4	;57c20
+lb_57c24:
+	dc.l	lb_592a4	;57c24
+	dc.l	lb_594a4	;57c28
+	dc.l	lb_596a4	;57c2c
+	dc.l	lb_598a4	;57c30
+	dc.l	lb_59aa4	;57c34
+	dc.l	lb_59ca4	;57c38
+	dc.l	lb_59ea4	;57c3c
+	dc.l	lb_592a4	;57c40
+	dc.l	lb_592a4	;57c44
+	dc.l	lb_580a4	;57c48
+	dc.l	lb_580a4	;57c4c
+	dc.l	lb_580a4	;57c50
+	dc.l	lb_580a4	;57c54
+	dc.l	lb_580a4	;57c58
+	dc.l	lb_580a4	;57c5c
+	dc.l	lb_580a4	;57c60
+	dc.l	lb_580a4	;57c64
+	dc.l	lb_580a4	;57c68
+	dc.l	lb_580a4	;57c6c
+	dc.l	lb_580a4	;57c70
+	dc.l	lb_580a4	;57c74
+	dc.l	lb_580a4	;57c78
+	dc.l	lb_580a4	;57c7c
+	dc.l	lb_580a4	;57c80
+	dc.l	lb_580a4	;57c84
+	dc.l	lb_580a4	;57c88
+	dc.l	lb_580a4	;57c8c
+	dc.l	lb_580a4	;57c90
+	dc.l	lb_580a4	;57c94
+	dc.l	lb_580a4	;57c98
+	dc.l	lb_580a4	;57c9c
+	dc.l	lb_586a4	;57ca0
+lb_57ca4:
+	dc.l	lb_586a4	;57ca4
+	dc.l	lb_5a0a4	;57ca8
+	dc.l	lb_5a2a4	;57cac
+	dc.l	lb_580a4	;57cb0
+	dc.l	lb_5a4a4	;57cb4
+	dc.l	lb_5a6a4	;57cb8
+	dc.l	lb_5a8a4	;57cbc
+	dc.l	lb_5aaa4	;57cc0
+	dc.l	lb_5aca4	;57cc4
+	dc.l	lb_5aea4	;57cc8
+	dc.l	lb_580a4	;57ccc
+	dc.l	lb_580a4	;57cd0
+	dc.l	lb_580a4	;57cd4
+	dc.l	lb_580a4	;57cd8
+	dc.l	lb_580a4	;57cdc
+	dc.l	lb_580a4	;57ce0
+	dc.l	lb_580a4	;57ce4
+	dc.l	lb_582a4	;57ce8
+	dc.l	lb_582a4	;57cec
+	dc.l	lb_5b0a4	;57cf0
+	dc.l	lb_5b0a4	;57cf4
+	dc.l	lb_582a4	;57cf8
+	dc.l	lb_582a4	;57cfc
+	dc.l	lb_582a4	;57d00
+	dc.l	lb_5b2a4	;57d04
+	dc.l	lb_5b0a4	;57d08
+	dc.l	lb_5b0a4	;57d0c
+	dc.l	lb_580a4	;57d10
+	dc.l	lb_580a4	;57d14
+	dc.l	lb_580a4	;57d18
+	dc.l	lb_580a4	;57d1c
+	dc.l	lb_580a4	;57d20
+	dc.l	lb_580a4	;57d24
+	dc.l	lb_580a4	;57d28
+	dc.l	lb_580a4	;57d2c
+	dc.l	lb_580a4	;57d30
+	dc.l	lb_580a4	;57d34
+	dc.l	lb_580a4	;57d38
+	dc.l	lb_580a4	;57d3c
+	dc.l	lb_580a4	;57d40
+	dc.l	lb_580a4	;57d44
+	dc.l	lb_580a4	;57d48
+	dc.l	lb_580a4	;57d4c
+	dc.l	lb_580a4	;57d50
+	dc.l	lb_580a4	;57d54
+	dc.l	lb_580a4	;57d58
+	dc.l	lb_580a4	;57d5c
+	dc.l	lb_586a4	;57d60
+lb_57d64:
+	dc.l	lb_5bca4	;57d64
+	dc.l	lb_586a4	;57d68
+	dc.l	lb_5bea4	;57d6c
+	dc.l	lb_5c0a4	;57d70
+	dc.l	lb_5c2a4	;57d74
+	dc.l	lb_580a4	;57d78
+	dc.l	lb_580a4	;57d7c
+	dc.l	lb_580a4	;57d80
+	dc.l	lb_580a4	;57d84
+	dc.l	lb_580a4	;57d88
+	dc.l	lb_580a4	;57d8c
+	dc.l	lb_580a4	;57d90
+	dc.l	lb_580a4	;57d94
+	dc.l	lb_580a4	;57d98
+	dc.l	lb_580a4	;57d9c
+	dc.l	lb_580a4	;57da0
+	dc.l	lb_580a4	;57da4
+	dc.l	lb_580a4	;57da8
+	dc.l	lb_582a4	;57dac
+	dc.l	lb_582a4	;57db0
+	dc.l	lb_5c4c4	;57db4
+	dc.l	lb_5c4c4	;57db8
+	dc.l	lb_5c6c4	;57dbc
+	dc.l	lb_5c8c4	;57dc0
+	dc.l	lb_5cac4	;57dc4
+	dc.l	lb_5ccc4	;57dc8
+	dc.l	lb_5cec4	;57dcc
+	dc.l	lb_5cac4	;57dd0
+	dc.l	lb_580a4	;57dd4
+	dc.l	lb_580a4	;57dd8
+	dc.l	lb_580a4	;57ddc
+	dc.l	lb_580a4	;57de0
+	dc.l	lb_580a4	;57de4
+	dc.l	lb_580a4	;57de8
+	dc.l	lb_580a4	;57dec
+	dc.l	lb_580a4	;57df0
+	dc.l	lb_580a4	;57df4
+	dc.l	lb_580a4	;57df8
+	dc.l	lb_582a4	;57dfc
+	dc.l	lb_582a4	;57e00
+	dc.l	lb_5d0c4	;57e04
+	dc.l	lb_5d2c4	;57e08
+	dc.l	lb_5d0c4	;57e0c
+	dc.l	lb_5d0c4	;57e10
+	dc.l	lb_580a4	;57e14
+	dc.l	lb_580a4	;57e18
+	dc.l	lb_580a4	;57e1c
+	dc.l	lb_580a4	;57e20
+	dc.l	lb_580a4	;57e24
+	dc.l	lb_580a4	;57e28
+	dc.l	lb_580a4	;57e2c
+	dc.l	lb_580a4	;57e30
+	dc.l	lb_580a4	;57e34
+	dc.l	lb_580a4	;57e38
+	dc.l	lb_580a4	;57e3c
+	dc.l	lb_580a4	;57e40
+	dc.l	lb_580a4	;57e44
+	dc.l	lb_580a4	;57e48
+	dc.l	lb_580a4	;57e4c
+	dc.l	lb_580a4	;57e50
+	dc.l	lb_580a4	;57e54
+	dc.l	lb_580a4	;57e58
+	dc.l	lb_580a4	;57e5c
+	dc.l	lb_5b8a4	;57e60
+lb_57e64:
+	dc.l	lb_5b4a4	;57e64
+	dc.l	lb_5b6a4	;57e68
+	dc.l	lb_5b8a4	;57e6c
+	dc.l	lb_5b8a4	;57e70
+	dc.l	lb_5b8a4	;57e74
+	dc.l	lb_5b8a4	;57e78
+	dc.l	lb_5b8a4	;57e7c
+	dc.l	lb_5b8a4	;57e80
+	dc.l	lb_5baa4	;57e84
+	dc.l	lb_584a4	;57e88
+	dc.l	lb_580a4	;57e8c
+	dc.l	lb_580a4	;57e90
+	dc.l	lb_580a4	;57e94
+	dc.l	lb_580a4	;57e98
+	dc.l	lb_580a4	;57e9c
+	dc.l	lb_580a4	;57ea0
+lb_57ea4:
+	dc.l	lb_580a4	;57ea4
+	dc.l	lb_580a4	;57ea8
+	dc.l	lb_580a4	;57eac
+	dc.l	lb_580a4	;57eb0
+	dc.l	lb_580a4	;57eb4
+	dc.l	lb_580a4	;57eb8
+	dc.l	lb_580a4	;57ebc
+	dc.l	lb_580a4	;57ec0
+	dc.l	lb_580a4	;57ec4
+	dc.l	lb_580a4	;57ec8
+	dc.l	lb_580a4	;57ecc
+	dc.l	lb_580a4	;57ed0
+	dc.l	lb_580a4	;57ed4
+	dc.l	lb_580a4	;57ed8
+	dc.l	lb_580a4	;57edc
+	dc.l	lb_580a4	;57ee0
+lb_57ee4:
+	dc.l	lb_580a4	;57ee4
+	dc.l	lb_580a4	;57ee8
+	dc.l	lb_580a4	;57eec
+	dc.l	lb_5eac4	;57ef0
+	dc.l	lb_5eac4	;57ef4
+	dc.l	lb_5e8c4	;57ef8
+	dc.l	lb_5e6c4	;57efc
+	dc.l	lb_5e4c4	;57f00
+	dc.l	lb_5eac4	;57f04
+	dc.l	lb_580a4	;57f08
+	dc.l	lb_580a4	;57f0c
+	dc.l	lb_580a4	;57f10
+	dc.l	lb_580a4	;57f14
+	dc.l	lb_580a4	;57f18
+	dc.l	lb_580a4	;57f1c
+	dc.l	lb_580a4	;57f20
+	dc.l	lb_580a4	;57f24
+	dc.l	lb_5ecc4	;57f28
+	dc.l	lb_580a4	;57f2c
+	dc.l	lb_580a4	;57f30
+	dc.l	lb_5eec4	;57f34
+	dc.l	lb_580a4	;57f38
+	dc.l	lb_580a4	;57f3c
+	dc.l	lb_580a4	;57f40
+	dc.l	lb_580a4	;57f44
+	dc.l	lb_580a4	;57f48
+	dc.l	lb_580a4	;57f4c
+	dc.l	lb_580a4	;57f50
+	dc.l	lb_580a4	;57f54
+	dc.l	lb_580a4	;57f58
+	dc.l	lb_580a4	;57f5c
+	dc.l	lb_580a4	;57f60
+	dc.l	lb_580a4	;57f64
+	dc.l	lb_580a4	;57f68
+	dc.l	lb_580a4	;57f6c
+	dc.l	lb_580a4	;57f70
+	dc.l	lb_580a4	;57f74
+	dc.l	lb_580a4	;57f78
+	dc.l	lb_580a4	;57f7c
+	dc.l	lb_580a4	;57f80
+	dc.l	lb_580a4	;57f84
+	dc.l	lb_580a4	;57f88
+	dc.l	lb_580a4	;57f8c
+	dc.l	lb_580a4	;57f90
+	dc.l	lb_580a4	;57f94
+	dc.l	lb_580a4	;57f98
+	dc.l	lb_580a4	;57f9c
+	dc.l	lb_580a4	;57fa0
+	dc.l	lb_580a4	;57fa4
+	dc.l	lb_580a4	;57fa8
+	dc.l	lb_580a4	;57fac
+	dc.l	lb_580a4	;57fb0
+	dc.l	lb_580a4	;57fb4
+	dc.l	lb_580a4	;57fb8
+	dc.l	lb_580a4	;57fbc
+	dc.l	lb_580a4	;57fc0
+	dc.l	lb_580a4	;57fc4
+	dc.l	lb_580a4	;57fc8
+	dc.l	lb_580a4	;57fcc
+	dc.l	lb_580a4	;57fd0
+	dc.l	lb_580a4	;57fd4
+	dc.l	lb_580a4	;57fd8
+	dc.l	lb_580a4	;57fdc
+	dc.l	lb_5d4c4	;57fe0
+	dc.l	lb_5d4c4	;57fe4
+	dc.l	lb_5d6c4	;57fe8
+	dc.l	lb_5d8c4	;57fec
+	dc.l	lb_5dac4	;57ff0
+	dc.l	lb_580a4	;57ff4
+	dc.l	lb_580a4	;57ff8
+	dc.l	lb_580a4	;57ffc
+	dc.l	lb_580a4	;58000
+	dc.l	lb_580a4	;58004
+	dc.l	lb_580a4	;58008
+	dc.l	lb_580a4	;5800c
+	dc.l	lb_580a4	;58010
+	dc.l	lb_580a4	;58014
+	dc.l	lb_580a4	;58018
+	dc.l	lb_580a4	;5801c
+	dc.l	lb_582a4	;58020
+	dc.l	lb_582a4	;58024
+	dc.l	lb_582a4	;58028
+	dc.l	lb_582a4	;5802c
+	dc.l	lb_5dcc4	;58030
+	dc.l	lb_5dec4	;58034
+	dc.l	lb_5e0c4	;58038
+	dc.l	lb_5e2c4	;5803c
+	dc.l	lb_5e4c4	;58040
+	dc.l	lb_5e4c4	;58044
+	dc.l	lb_580a4	;58048
+	dc.l	lb_580a4	;5804c
+	dc.l	lb_580a4	;58050
+	dc.l	lb_580a4	;58054
+	dc.l	lb_580a4	;58058
+	dc.l	lb_580a4	;5805c
+	dc.l	lb_580a4	;58060
+	dc.l	lb_580a4	;58064
+	dc.l	lb_580a4	;58068
+	dc.l	lb_580a4	;5806c
+	dc.l	lb_580a4	;58070
+	dc.l	lb_580a4	;58074
+	dc.l	lb_580a4	;58078
+	dc.l	lb_580a4	;5807c
+	dc.l	lb_580a4	;58080
+	dc.l	lb_580a4	;58084
+	dc.l	lb_580a4	;58088
+	dc.l	lb_580a4	;5808c
+	dc.l	lb_580a4	;58090
+	dc.l	lb_580a4	;58094
+	dc.l	lb_580a4	;58098
+	dc.l	lb_580a4	;5809c
+	dc.l	lb_580a4	;580a0
+lb_580a4:
 	dc.w	$0000	;580a4
 	dc.w	$0000	;580a6
 	dc.w	$0000	;580a8
@@ -94874,6 +94536,7 @@ lb_57b48:
 	dc.w	$0000	;5829e
 	dc.w	$0000	;582a0
 	dc.w	$0000	;582a2
+lb_582a4:
 	dc.w	$0080	;582a4
 	dc.w	$0080	;582a6
 	dc.w	$0080	;582a8
@@ -95130,6 +94793,7 @@ lb_57b48:
 	dc.w	$0080	;5849e
 	dc.w	$0080	;584a0
 	dc.w	$0080	;584a2
+lb_584a4:
 	dc.w	$0000	;584a4
 	dc.w	$0000	;584a6
 	dc.w	$0000	;584a8
@@ -95386,6 +95050,7 @@ lb_57b48:
 	dc.w	$0080	;5869e
 	dc.w	$0080	;586a0
 	dc.w	$0080	;586a2
+lb_586a4:
 	dc.w	$0000	;586a4
 	dc.w	$0000	;586a6
 	dc.w	$0000	;586a8
@@ -96154,6 +95819,7 @@ lb_57b48:
 	dc.w	$0080	;58c9e
 	dc.w	$0080	;58ca0
 	dc.w	$0080	;58ca2
+lb_58ca4:
 	dc.w	$0000	;58ca4
 	dc.w	$0000	;58ca6
 	dc.w	$0000	;58ca8
@@ -96410,6 +96076,7 @@ lb_57b48:
 	dc.w	$0080	;58e9e
 	dc.w	$0080	;58ea0
 	dc.w	$0080	;58ea2
+lb_58ea4:
 	dc.w	$0000	;58ea4
 	dc.w	$0000	;58ea6
 	dc.w	$0000	;58ea8
@@ -96666,6 +96333,7 @@ lb_57b48:
 	dc.w	$0080	;5909e
 	dc.w	$0080	;590a0
 	dc.w	$0080	;590a2
+lb_590a4:
 	dc.w	$0000	;590a4
 	dc.w	$0000	;590a6
 	dc.w	$0000	;590a8
@@ -96922,6 +96590,7 @@ lb_57b48:
 	dc.w	$0080	;5929e
 	dc.w	$0080	;592a0
 	dc.w	$0080	;592a2
+lb_592a4:
 	dc.w	$0000	;592a4
 	dc.w	$0000	;592a6
 	dc.w	$0000	;592a8
@@ -97178,6 +96847,7 @@ lb_57b48:
 	dc.w	$0181	;5949e
 	dc.w	$0181	;594a0
 	dc.w	$0181	;594a2
+lb_594a4:
 	dc.w	$0000	;594a4
 	dc.w	$0000	;594a6
 	dc.w	$0000	;594a8
@@ -97434,6 +97104,7 @@ lb_57b48:
 	dc.w	$0181	;5969e
 	dc.w	$0181	;596a0
 	dc.w	$0181	;596a2
+lb_596a4:
 	dc.w	$0000	;596a4
 	dc.w	$0000	;596a6
 	dc.w	$0000	;596a8
@@ -97690,6 +97361,7 @@ lb_57b48:
 	dc.w	$0181	;5989e
 	dc.w	$0181	;598a0
 	dc.w	$0181	;598a2
+lb_598a4:
 	dc.w	$0000	;598a4
 	dc.w	$0000	;598a6
 	dc.w	$0000	;598a8
@@ -97946,6 +97618,7 @@ lb_57b48:
 	dc.w	$8181	;59a9e
 	dc.w	$0181	;59aa0
 	dc.w	$0181	;59aa2
+lb_59aa4:
 	dc.w	$0000	;59aa4
 	dc.w	$0000	;59aa6
 	dc.w	$0000	;59aa8
@@ -98202,6 +97875,7 @@ lb_57b48:
 	dc.w	$0181	;59c9e
 	dc.w	$0181	;59ca0
 	dc.w	$0181	;59ca2
+lb_59ca4:
 	dc.w	$0000	;59ca4
 	dc.w	$0000	;59ca6
 	dc.w	$0000	;59ca8
@@ -98458,6 +98132,7 @@ lb_57b48:
 	dc.w	$0181	;59e9e
 	dc.w	$0181	;59ea0
 	dc.w	$0181	;59ea2
+lb_59ea4:
 	dc.w	$0000	;59ea4
 	dc.w	$0000	;59ea6
 	dc.w	$0000	;59ea8
@@ -98714,6 +98389,7 @@ lb_57b48:
 	dc.w	$0181	;5a09e
 	dc.w	$0181	;5a0a0
 	dc.w	$0181	;5a0a2
+lb_5a0a4:
 	dc.w	$0000	;5a0a4
 	dc.w	$0000	;5a0a6
 	dc.w	$0000	;5a0a8
@@ -98970,6 +98646,7 @@ lb_57b48:
 	dc.w	$0080	;5a29e
 	dc.w	$0080	;5a2a0
 	dc.w	$0080	;5a2a2
+lb_5a2a4:
 	dc.w	$0000	;5a2a4
 	dc.w	$0000	;5a2a6
 	dc.w	$0000	;5a2a8
@@ -99226,6 +98903,7 @@ lb_57b48:
 	dc.w	$0080	;5a49e
 	dc.w	$0080	;5a4a0
 	dc.w	$0080	;5a4a2
+lb_5a4a4:
 	dc.w	$0000	;5a4a4
 	dc.w	$0000	;5a4a6
 	dc.w	$0000	;5a4a8
@@ -99482,6 +99160,7 @@ lb_57b48:
 	dc.w	$0000	;5a69e
 	dc.w	$0000	;5a6a0
 	dc.w	$0000	;5a6a2
+lb_5a6a4:
 	dc.w	$0000	;5a6a4
 	dc.w	$0000	;5a6a6
 	dc.w	$0000	;5a6a8
@@ -99738,6 +99417,7 @@ lb_57b48:
 	dc.w	$0080	;5a89e
 	dc.w	$0080	;5a8a0
 	dc.w	$0080	;5a8a2
+lb_5a8a4:
 	dc.w	$0000	;5a8a4
 	dc.w	$0000	;5a8a6
 	dc.w	$0000	;5a8a8
@@ -99994,6 +99674,7 @@ lb_57b48:
 	dc.w	$8085	;5aa9e
 	dc.w	$0080	;5aaa0
 	dc.w	$0080	;5aaa2
+lb_5aaa4:
 	dc.w	$0000	;5aaa4
 	dc.w	$0000	;5aaa6
 	dc.w	$0000	;5aaa8
@@ -100250,6 +99931,7 @@ lb_57b48:
 	dc.w	$0080	;5ac9e
 	dc.w	$0080	;5aca0
 	dc.w	$0080	;5aca2
+lb_5aca4:
 	dc.w	$0000	;5aca4
 	dc.w	$0000	;5aca6
 	dc.w	$0000	;5aca8
@@ -100506,6 +100188,7 @@ lb_57b48:
 	dc.w	$0000	;5ae9e
 	dc.w	$0000	;5aea0
 	dc.w	$0000	;5aea2
+lb_5aea4:
 	dc.w	$0000	;5aea4
 	dc.w	$0000	;5aea6
 	dc.w	$0000	;5aea8
@@ -100762,6 +100445,7 @@ lb_57b48:
 	dc.w	$0000	;5b09e
 	dc.w	$0000	;5b0a0
 	dc.w	$0000	;5b0a2
+lb_5b0a4:
 	dc.w	$0000	;5b0a4
 	dc.w	$0000	;5b0a6
 	dc.w	$0000	;5b0a8
@@ -101018,6 +100702,7 @@ lb_57b48:
 	dc.w	$0080	;5b29e
 	dc.w	$0080	;5b2a0
 	dc.w	$0080	;5b2a2
+lb_5b2a4:
 	dc.w	$0080	;5b2a4
 	dc.w	$0080	;5b2a6
 	dc.w	$0080	;5b2a8
@@ -101274,6 +100959,7 @@ lb_57b48:
 	dc.w	$0080	;5b49e
 	dc.w	$0080	;5b4a0
 	dc.w	$0080	;5b4a2
+lb_5b4a4:
 	dc.w	$0000	;5b4a4
 	dc.w	$0000	;5b4a6
 	dc.w	$0000	;5b4a8
@@ -101530,6 +101216,7 @@ lb_57b48:
 	dc.w	$0080	;5b69e
 	dc.w	$0080	;5b6a0
 	dc.w	$0080	;5b6a2
+lb_5b6a4:
 	dc.w	$0000	;5b6a4
 	dc.w	$0000	;5b6a6
 	dc.w	$0000	;5b6a8
@@ -101786,6 +101473,7 @@ lb_57b48:
 	dc.w	$0080	;5b89e
 	dc.w	$0080	;5b8a0
 	dc.w	$0080	;5b8a2
+lb_5b8a4:
 	dc.w	$0000	;5b8a4
 	dc.w	$0000	;5b8a6
 	dc.w	$0000	;5b8a8
@@ -102042,6 +101730,7 @@ lb_57b48:
 	dc.w	$0080	;5ba9e
 	dc.w	$0080	;5baa0
 	dc.w	$0080	;5baa2
+lb_5baa4:
 	dc.w	$0000	;5baa4
 	dc.w	$0000	;5baa6
 	dc.w	$0000	;5baa8
@@ -102298,6 +101987,7 @@ lb_57b48:
 	dc.w	$0080	;5bc9e
 	dc.w	$0080	;5bca0
 	dc.w	$0080	;5bca2
+lb_5bca4:
 	dc.w	$0000	;5bca4
 	dc.w	$0000	;5bca6
 	dc.w	$0000	;5bca8
@@ -102554,6 +102244,7 @@ lb_57b48:
 	dc.w	$0080	;5be9e
 	dc.w	$0080	;5bea0
 	dc.w	$0080	;5bea2
+lb_5bea4:
 	dc.w	$0000	;5bea4
 	dc.w	$0000	;5bea6
 	dc.w	$0000	;5bea8
@@ -102810,6 +102501,7 @@ lb_57b48:
 	dc.w	$0080	;5c09e
 	dc.w	$0080	;5c0a0
 	dc.w	$0080	;5c0a2
+lb_5c0a4:
 	dc.w	$0000	;5c0a4
 	dc.w	$0000	;5c0a6
 	dc.w	$0000	;5c0a8
@@ -103066,6 +102758,7 @@ lb_57b48:
 	dc.w	$0080	;5c29e
 	dc.w	$0080	;5c2a0
 	dc.w	$0080	;5c2a2
+lb_5c2a4:
 	dc.w	$0000	;5c2a4
 	dc.w	$0000	;5c2a6
 	dc.w	$0000	;5c2a8
@@ -103338,6 +103031,7 @@ lb_57b48:
 	dc.w	$0000	;5c4be
 	dc.w	$0000	;5c4c0
 	dc.w	$0000	;5c4c2
+lb_5c4c4:
 	dc.w	$0000	;5c4c4
 	dc.w	$0000	;5c4c6
 	dc.w	$0000	;5c4c8
@@ -103594,6 +103288,7 @@ lb_57b48:
 	dc.w	$0080	;5c6be
 	dc.w	$0080	;5c6c0
 	dc.w	$0080	;5c6c2
+lb_5c6c4:
 	dc.w	$0000	;5c6c4
 	dc.w	$0000	;5c6c6
 	dc.w	$0000	;5c6c8
@@ -103850,6 +103545,7 @@ lb_57b48:
 	dc.w	$0080	;5c8be
 	dc.w	$0080	;5c8c0
 	dc.w	$0080	;5c8c2
+lb_5c8c4:
 	dc.w	$0000	;5c8c4
 	dc.w	$0000	;5c8c6
 	dc.w	$0000	;5c8c8
@@ -104106,6 +103802,7 @@ lb_57b48:
 	dc.w	$0080	;5cabe
 	dc.w	$0080	;5cac0
 	dc.w	$0080	;5cac2
+lb_5cac4:
 	dc.w	$0000	;5cac4
 	dc.w	$0000	;5cac6
 	dc.w	$0000	;5cac8
@@ -104362,6 +104059,7 @@ lb_57b48:
 	dc.w	$0000	;5ccbe
 	dc.w	$0000	;5ccc0
 	dc.w	$0000	;5ccc2
+lb_5ccc4:
 	dc.w	$0000	;5ccc4
 	dc.w	$0000	;5ccc6
 	dc.w	$0000	;5ccc8
@@ -104618,6 +104316,7 @@ lb_57b48:
 	dc.w	$0000	;5cebe
 	dc.w	$0000	;5cec0
 	dc.w	$0000	;5cec2
+lb_5cec4:
 	dc.w	$0000	;5cec4
 	dc.w	$0000	;5cec6
 	dc.w	$0000	;5cec8
@@ -104874,6 +104573,7 @@ lb_57b48:
 	dc.w	$0000	;5d0be
 	dc.w	$0000	;5d0c0
 	dc.w	$0000	;5d0c2
+lb_5d0c4:
 	dc.w	$0085	;5d0c4
 	dc.w	$0085	;5d0c6
 	dc.w	$0085	;5d0c8
@@ -105130,6 +104830,7 @@ lb_57b48:
 	dc.w	$0080	;5d2be
 	dc.w	$0080	;5d2c0
 	dc.w	$0080	;5d2c2
+lb_5d2c4:
 	dc.w	$8000	;5d2c4
 	dc.w	$8000	;5d2c6
 	dc.w	$8085	;5d2c8
@@ -105386,6 +105087,7 @@ lb_57b48:
 	dc.w	$0080	;5d4be
 	dc.w	$0080	;5d4c0
 	dc.w	$0080	;5d4c2
+lb_5d4c4:
 	dc.w	$0000	;5d4c4
 	dc.w	$0000	;5d4c6
 	dc.w	$0000	;5d4c8
@@ -105642,6 +105344,7 @@ lb_57b48:
 	dc.w	$0080	;5d6be
 	dc.w	$0080	;5d6c0
 	dc.w	$0080	;5d6c2
+lb_5d6c4:
 	dc.w	$0000	;5d6c4
 	dc.w	$0000	;5d6c6
 	dc.w	$0000	;5d6c8
@@ -105898,6 +105601,7 @@ lb_57b48:
 	dc.w	$0080	;5d8be
 	dc.w	$0080	;5d8c0
 	dc.w	$0080	;5d8c2
+lb_5d8c4:
 	dc.w	$0000	;5d8c4
 	dc.w	$0000	;5d8c6
 	dc.w	$0000	;5d8c8
@@ -106154,6 +105858,7 @@ lb_57b48:
 	dc.w	$0080	;5dabe
 	dc.w	$0080	;5dac0
 	dc.w	$0080	;5dac2
+lb_5dac4:
 	dc.w	$0000	;5dac4
 	dc.w	$0000	;5dac6
 	dc.w	$0000	;5dac8
@@ -106410,6 +106115,7 @@ lb_57b48:
 	dc.w	$0000	;5dcbe
 	dc.w	$0000	;5dcc0
 	dc.w	$0000	;5dcc2
+lb_5dcc4:
 	dc.w	$0000	;5dcc4
 	dc.w	$0000	;5dcc6
 	dc.w	$0081	;5dcc8
@@ -106666,6 +106372,7 @@ lb_57b48:
 	dc.w	$0080	;5debe
 	dc.w	$0080	;5dec0
 	dc.w	$0080	;5dec2
+lb_5dec4:
 	dc.w	$0000	;5dec4
 	dc.w	$0000	;5dec6
 	dc.w	$0000	;5dec8
@@ -106922,6 +106629,7 @@ lb_57b48:
 	dc.w	$0080	;5e0be
 	dc.w	$0080	;5e0c0
 	dc.w	$0080	;5e0c2
+lb_5e0c4:
 	dc.w	$0000	;5e0c4
 	dc.w	$0000	;5e0c6
 	dc.w	$0000	;5e0c8
@@ -107178,6 +106886,7 @@ lb_57b48:
 	dc.w	$0080	;5e2be
 	dc.w	$0080	;5e2c0
 	dc.w	$0080	;5e2c2
+lb_5e2c4:
 	dc.w	$0000	;5e2c4
 	dc.w	$0000	;5e2c6
 	dc.w	$0000	;5e2c8
@@ -107434,6 +107143,7 @@ lb_57b48:
 	dc.w	$0080	;5e4be
 	dc.w	$0080	;5e4c0
 	dc.w	$0080	;5e4c2
+lb_5e4c4:
 	dc.w	$0000	;5e4c4
 	dc.w	$0000	;5e4c6
 	dc.w	$0000	;5e4c8
@@ -107690,6 +107400,7 @@ lb_57b48:
 	dc.w	$0080	;5e6be
 	dc.w	$0080	;5e6c0
 	dc.w	$0080	;5e6c2
+lb_5e6c4:
 	dc.w	$0000	;5e6c4
 	dc.w	$0000	;5e6c6
 	dc.w	$0000	;5e6c8
@@ -107946,6 +107657,7 @@ lb_57b48:
 	dc.w	$0080	;5e8be
 	dc.w	$0080	;5e8c0
 	dc.w	$0080	;5e8c2
+lb_5e8c4:
 	dc.w	$0000	;5e8c4
 	dc.w	$0000	;5e8c6
 	dc.w	$0000	;5e8c8
@@ -108202,6 +107914,7 @@ lb_57b48:
 	dc.w	$0080	;5eabe
 	dc.w	$0080	;5eac0
 	dc.w	$0080	;5eac2
+lb_5eac4:
 	dc.w	$0000	;5eac4
 	dc.w	$0000	;5eac6
 	dc.w	$0000	;5eac8
@@ -108458,6 +108171,7 @@ lb_57b48:
 	dc.w	$0080	;5ecbe
 	dc.w	$0080	;5ecc0
 	dc.w	$0080	;5ecc2
+lb_5ecc4:
 	dc.w	$0000	;5ecc4
 	dc.w	$0000	;5ecc6
 	dc.w	$0000	;5ecc8
@@ -108714,6 +108428,7 @@ lb_57b48:
 	dc.w	$0000	;5eebe
 	dc.w	$0000	;5eec0
 	dc.w	$0000	;5eec2
+lb_5eec4:
 	dc.w	$0000	;5eec4
 	dc.w	$0000	;5eec6
 	dc.w	$0000	;5eec8
