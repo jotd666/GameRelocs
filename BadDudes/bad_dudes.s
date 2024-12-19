@@ -555,7 +555,7 @@ ext_00ffa8e6	EQU	$FFA8E6
 ext_00ffa8e8	EQU	$FFA8E8
 ext_00ffa8ea	EQU	$FFA8EA
 ext_00ffa8ee	EQU	$FFA8EE
-ext_00ffa8f0	EQU	$FFA8F0
+state_00ffa8f0	EQU	$FFA8F0
 ext_00ffa8f2	EQU	$FFA8F2
 ext_00ffa8f6	EQU	$FFA8F6
 ext_00ffa8fa	EQU	$FFA8FA
@@ -826,13 +826,13 @@ lb_002b0:
 	LSL.L	#8,D0			;002c0: e188
 	LEA	ext_00ff8006,A0		;002c2: 41f900ff8006
 	LEA	ext_002446a0,A1		;002c8: 43f9002446a0
-	JSR	lb_01fc4.W		;002ce: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;002ce: 4eb81fc4
 	NOP				;002d2: 4e71
 	MOVEQ	#8,D0			;002d4: 7008
 	LSL.L	#8,D0			;002d6: e188
 	LEA	ext_00ff800a,A0		;002d8: 41f900ff800a
 	LEA	ext_002446ac,A1		;002de: 43f9002446ac
-	JSR	lb_01fc4.W		;002e4: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;002e4: 4eb81fc4
 	NOP				;002e8: 4e71
 	RTS				;002ea: 4e75
 lb_002ec:
@@ -2968,7 +2968,10 @@ lb_01fba:
 	MOVE.B	(A0)+,(A1)+		;01fbc: 12d8
 	DBF	D0,lb_01fa2		;01fbe: 51c8ffe2
 	RTS				;01fc2: 4e75
-lb_01fc4:
+; < A0: RAM pointer on tile data
+; < A1: video memory pointer
+; < D0.W: XXYY where XX=attribute to write and YY=count to write
+write_tiles_of_given_color_01fc4:
 	MOVE.B	D0,D1			;01fc4: 1200
 	LSR.W	#8,D0			;01fc6: e048
 	SUBQ.W	#1,D0			;01fc8: 5340
@@ -3038,12 +3041,12 @@ lb_02038:
 	LEA	ext_002446a4,A1		;020a6: 43f9002446a4
 	MOVEQ	#12,D0			;020ac: 700c
 	LSL.W	#8,D0			;020ae: e148
-	JSR	lb_01fc4.W		;020b0: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;020b0: 4eb81fc4
 	LEA	ext_00ff803e,A0		;020b4: 41f900ff803e
 	LEA	ext_00244724,A1		;020ba: 43f900244724
 	MOVEQ	#12,D0			;020c0: 700c
 	LSL.W	#8,D0			;020c2: e148
-	JSR	lb_01fc4.W		;020c4: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;020c4: 4eb81fc4
 	RTS				;020c8: 4e75
 	LEA	ext_00ff801e,A0		;020ca: 41f900ff801e
 	MOVE.W	D2,(A0)+		;020d0: 30c2
@@ -3073,12 +3076,12 @@ lb_020f2:
 	LEA	ext_00244684,A1		;02134: 43f900244684
 	MOVEQ	#12,D0			;0213a: 700c
 	LSL.W	#8,D0			;0213c: e148
-	JSR	lb_01fc4.W		;0213e: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;0213e: 4eb81fc4
 	LEA	ext_00ff803e,A0		;02142: 41f900ff803e
 	LEA	ext_00244704,A1		;02148: 43f900244704
 	MOVEQ	#12,D0			;0214e: 700c
 	LSL.W	#8,D0			;02150: e148
-	JSR	lb_01fc4.W		;02152: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;02152: 4eb81fc4
 	RTS				;02156: 4e75
 lb_02158:
 	MOVEQ	#0,D0			;02158: 7000
@@ -3442,7 +3445,7 @@ lb_02508:
 	MOVE.W	D0,D1			;0250c: 3200
 	ANDI.W	#$0100,D1		;0250e: 02410100
 	LSR.W	#6,D1			;02512: ec49
-	LEA	lb_0254a.W,A2		;02514: 45f8254a
+	LEA	videoram_address_table_0254a.W,A2		;02514: 45f8254a
 	NOP				;02518: 4e71
 	MOVEA.L	0(A2,D1.L),A1		;0251a: 22721800
 	ANDI.W	#$00f8,D0		;0251e: 024000f8
@@ -3468,7 +3471,7 @@ lb_02544:
 	BRA.S	lb_0252e		;02546: 60e6
 lb_02548:
 	RTS				;02548: 4e75
-lb_0254a:
+videoram_address_table_0254a:
 	dc.l	tile_layer_0_244000	;0254a
 	dc.l	$245000	;0254e
 lb_02552:
@@ -3480,7 +3483,7 @@ lb_02552:
 	MOVE.W	D0,D1			;02564: 3200
 	ANDI.W	#$0100,D1		;02566: 02410100
 	LSR.W	#6,D1			;0256a: ec49
-	LEA	lb_0254a.W,A2		;0256c: 45f8254a
+	LEA	videoram_address_table_0254a.W,A2		;0256c: 45f8254a
 	MOVEA.L	0(A2,D1.L),A1		;02570: 22721800
 	ANDI.W	#$00f8,D0		;02574: 024000f8
 	LSR.W	#2,D0			;02578: e448
@@ -3503,7 +3506,7 @@ lb_02592:
 	JSR	lb_029ca.W		;0259e: 4eb829ca
 	NOP				;025a2: 4e71
 	MOVEQ	#0,D2			;025a4: 7400
-	MOVE.W	ext_00ffa8f0,D2		;025a6: 343900ffa8f0
+	MOVE.W	state_00ffa8f0,D2		;025a6: 343900ffa8f0
 	LSL.W	#2,D2			;025ac: e54a
 	LEA	lb_025bc.W,A3		;025ae: 47f825bc
 	NOP				;025b2: 4e71
@@ -3536,19 +3539,19 @@ lb_025f0:
 	LEA	spriteram_00ffc000,A1		;025f6: 43f900ffc000
 	MOVEA.L	#$00ff81f4,A0		;025fc: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02602: 3c3c0013
-	JSR	lb_02788.W		;02606: 4eb82788
+	JSR	display_sprite_02788.W		;02606: 4eb82788
 	NOP				;0260a: 4e71
 	MOVEA.L	#$00ff8834,A0		;0260c: 207c00ff8834
 	MOVE.W	#$0051,D6		;02612: 3c3c0051
-	JSR	lb_02788.W		;02616: 4eb82788
+	JSR	display_sprite_02788.W		;02616: 4eb82788
 	NOP				;0261a: 4e71
 	MOVEA.L	#$00ffa1d4,A0		;0261c: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02622: 3c3c0007
-	JSR	lb_02788.W		;02626: 4eb82788
+	JSR	display_sprite_02788.W		;02626: 4eb82788
 	NOP				;0262a: 4e71
 	MOVEA.L	#$00ffa454,A0		;0262c: 207c00ffa454
 	MOVE.W	#$0009,D6		;02632: 3c3c0009
-	JSR	lb_02788.W		;02636: 4eb82788
+	JSR	display_sprite_02788.W		;02636: 4eb82788
 	NOP				;0263a: 4e71
 	JSR	lb_01e80.W		;0263c: 4eb81e80
 	BSET	#1,ext_00ff8217		;02640: 08f9000100ff8217
@@ -3559,23 +3562,23 @@ lb_0264a:
 	LEA	spriteram_00ffc000,A1		;02650: 43f900ffc000
 	MOVEA.L	#$00ff81f4,A0		;02656: 207c00ff81f4
 	MOVE.W	#$0009,D6		;0265c: 3c3c0009
-	JSR	lb_02788.W		;02660: 4eb82788
+	JSR	display_sprite_02788.W		;02660: 4eb82788
 	NOP				;02664: 4e71
 	MOVEA.L	#$00ff8834,A0		;02666: 207c00ff8834
 	MOVE.W	#$0051,D6		;0266c: 3c3c0051
-	JSR	lb_02788.W		;02670: 4eb82788
+	JSR	display_sprite_02788.W		;02670: 4eb82788
 	NOP				;02674: 4e71
 	MOVEA.L	#$00ff8514,A0		;02676: 207c00ff8514
 	MOVE.W	#$0009,D6		;0267c: 3c3c0009
-	JSR	lb_02788.W		;02680: 4eb82788
+	JSR	display_sprite_02788.W		;02680: 4eb82788
 	NOP				;02684: 4e71
 	MOVEA.L	#$00ffa1d4,A0		;02686: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;0268c: 3c3c0007
-	JSR	lb_02788.W		;02690: 4eb82788
+	JSR	display_sprite_02788.W		;02690: 4eb82788
 	NOP				;02694: 4e71
 	MOVEA.L	#$00ffa454,A0		;02696: 207c00ffa454
 	MOVE.W	#$0009,D6		;0269c: 3c3c0009
-	JSR	lb_02788.W		;026a0: 4eb82788
+	JSR	display_sprite_02788.W		;026a0: 4eb82788
 	NOP				;026a4: 4e71
 	JSR	lb_01e80.W		;026a6: 4eb81e80
 	BSET	#1,ext_00ff8217		;026aa: 08f9000100ff8217
@@ -3586,23 +3589,23 @@ lb_026b4:
 	LEA	spriteram_00ffc000,A1		;026ba: 43f900ffc000
 	MOVEA.L	#$00ff81f4,A0		;026c0: 207c00ff81f4
 	MOVE.W	#$0009,D6		;026c6: 3c3c0009
-	JSR	lb_02788.W		;026ca: 4eb82788
+	JSR	display_sprite_02788.W		;026ca: 4eb82788
 	NOP				;026ce: 4e71
 	MOVEA.L	#$00ff8834,A0		;026d0: 207c00ff8834
 	MOVE.W	#$0051,D6		;026d6: 3c3c0051
-	JSR	lb_02788.W		;026da: 4eb82788
+	JSR	display_sprite_02788.W		;026da: 4eb82788
 	NOP				;026de: 4e71
 	MOVEA.L	#$00ffa1d4,A0		;026e0: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;026e6: 3c3c0007
-	JSR	lb_02788.W		;026ea: 4eb82788
+	JSR	display_sprite_02788.W		;026ea: 4eb82788
 	NOP				;026ee: 4e71
 	MOVEA.L	#$00ff8514,A0		;026f0: 207c00ff8514
 	MOVE.W	#$0009,D6		;026f6: 3c3c0009
-	JSR	lb_02788.W		;026fa: 4eb82788
+	JSR	display_sprite_02788.W		;026fa: 4eb82788
 	NOP				;026fe: 4e71
 	MOVEA.L	#$00ffa454,A0		;02700: 207c00ffa454
 	MOVE.W	#$0009,D6		;02706: 3c3c0009
-	JSR	lb_02788.W		;0270a: 4eb82788
+	JSR	display_sprite_02788.W		;0270a: 4eb82788
 	NOP				;0270e: 4e71
 	JSR	lb_01e80.W		;02710: 4eb81e80
 	BSET	#1,ext_00ff8217		;02714: 08f9000100ff8217
@@ -3613,28 +3616,28 @@ lb_0271e:
 	LEA	spriteram_00ffc000,A1		;02724: 43f900ffc000
 	MOVEA.L	#$00ff81f4,A0		;0272a: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02730: 3c3c0013
-	JSR	lb_02788.W		;02734: 4eb82788
+	JSR	display_sprite_02788.W		;02734: 4eb82788
 	NOP				;02738: 4e71
 	MOVEA.L	#$00ff9eb4,A0		;0273a: 207c00ff9eb4
 	MOVE.W	#$0009,D6		;02740: 3c3c0009
-	JSR	lb_02788.W		;02744: 4eb82788
+	JSR	display_sprite_02788.W		;02744: 4eb82788
 	NOP				;02748: 4e71
 	MOVEA.L	#$00ff8834,A0		;0274a: 207c00ff8834
 	MOVE.W	#$0047,D6		;02750: 3c3c0047
-	JSR	lb_02788.W		;02754: 4eb82788
+	JSR	display_sprite_02788.W		;02754: 4eb82788
 	NOP				;02758: 4e71
 	MOVEA.L	#$00ffa1d4,A0		;0275a: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02760: 3c3c0007
-	JSR	lb_02788.W		;02764: 4eb82788
+	JSR	display_sprite_02788.W		;02764: 4eb82788
 	NOP				;02768: 4e71
 	MOVEA.L	#$00ffa454,A0		;0276a: 207c00ffa454
 	MOVE.W	#$0009,D6		;02770: 3c3c0009
-	JSR	lb_02788.W		;02774: 4eb82788
+	JSR	display_sprite_02788.W		;02774: 4eb82788
 	NOP				;02778: 4e71
 	JSR	lb_01e80.W		;0277a: 4eb81e80
 	BSET	#1,ext_00ff8217		;0277e: 08f9000100ff8217
 	RTS				;02786: 4e75
-lb_02788:
+display_sprite_02788:
 	ADDA.L	#$00000050,A0		;02788: d1fc00000050
 	BTST	#7,(A0)			;0278e: 08100007
 	BEQ.W	lb_027f0		;02792: 6700005c
@@ -3662,7 +3665,7 @@ lb_027c6:
 	JSR	display_multi_tile_object_028c6.W		;027ea: 4eb828c6
 	NOP				;027ee: 4e71
 lb_027f0:
-	DBF	D6,lb_02788		;027f0: 51ceff96
+	DBF	D6,display_sprite_02788		;027f0: 51ceff96
 	RTS				;027f4: 4e75
 lb_027f6:
 	MOVE.W	ext_00ffa852,D0		;027f6: 303900ffa852
@@ -3724,6 +3727,7 @@ lb_028c4:
 	RTS				;028c4: 4e75
 	
 ; < A0: instance structure of object to display
+; < A1: sprite ram to write into
 display_multi_tile_object_028c6:
 	MOVEQ	#0,D4			;028c6: 7800
 	MOVE.W	6(A0),D4		;028c8: 38280006: composite sprite type * 4
@@ -9113,7 +9117,7 @@ lb_0736a:
 	MOVE.W	#$0600,D0		;0738e: 303c0600
 	LEA	ext_00ff8020,A0		;07392: 41f900ff8020
 	MOVEA.L	#$0024408a,A1		;07398: 227c0024408a
-	JSR	lb_01fc4.W		;0739e: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;0739e: 4eb81fc4
 	RTS				;073a2: 4e75
 lb_073a4:
 	LEA	ext_00ff81d0,A0		;073a4: 41f900ff81d0
@@ -9127,7 +9131,7 @@ lb_073a4:
 	MOVE.W	#$0600,D0		;073c8: 303c0600
 	LEA	ext_00ff8020,A0		;073cc: 41f900ff8020
 	MOVEA.L	#$002440b0,A1		;073d2: 227c002440b0
-	JSR	lb_01fc4.W		;073d8: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;073d8: 4eb81fc4
 	RTS				;073dc: 4e75
 lb_073de:
 	LEA	ext_00ff81d4,A0		;073de: 41f900ff81d4
@@ -9141,7 +9145,7 @@ lb_073de:
 	MOVE.W	#$0600,D0		;07402: 303c0600
 	LEA	ext_00ff8020,A0		;07406: 41f900ff8020
 	MOVEA.L	#$0024409c,A1		;0740c: 227c0024409c
-	JSR	lb_01fc4.W		;07412: 4eb81fc4
+	JSR	write_tiles_of_given_color_01fc4.W		;07412: 4eb81fc4
 	RTS				;07416: 4e75
 lb_07418:
 	MOVE.B	#$20,(A0)+		;07418: 10fc0020
@@ -39270,7 +39274,7 @@ lb_1bbfc:
 	LEA	spriteram_00ffc000,A1		;1bc02: 43f900ffc000
 	MOVEA.L	#$00ffa454,A0		;1bc08: 207c00ffa454
 	MOVE.W	#$0009,D6		;1bc0e: 3c3c0009
-	JSR	lb_02788		;1bc12: 4eb900002788
+	JSR	display_sprite_02788		;1bc12: 4eb900002788
 	JSR	lb_01e80		;1bc18: 4eb900001e80
 	BSET	#1,ext_00ff8217		;1bc1e: 08f9000100ff8217
 	RTS				;1bc26: 4e75
@@ -44367,7 +44371,7 @@ lb_1f3f8:
 lb_1f40c:
 	SUBQ.B	#1,43(A0)		;1f40c: 5328002b
 	BNE.S	lb_1f488		;1f410: 6676
-	MOVE.W	#$0001,ext_00ffa8f0		;1f412: 33fc000100ffa8f0
+	MOVE.W	#$0001,state_00ffa8f0		;1f412: 33fc000100ffa8f0
 	BSET	#6,(A0)			;1f41a: 08d00006
 	CLR.L	D4			;1f41e: 4284
 	MOVE.W	#$0002,D6		;1f420: 3c3c0002
@@ -44638,7 +44642,7 @@ lb_1f722:
 	SUBQ.B	#1,43(A0)		;1f72c: 5328002b
 	BNE.S	lb_1f756		;1f730: 6624
 	MOVE.B	#$02,41(A0)		;1f732: 117c00020029
-	MOVE.W	#$0000,ext_00ffa8f0		;1f738: 33fc000000ffa8f0
+	MOVE.W	#$0000,state_00ffa8f0		;1f738: 33fc000000ffa8f0
 	BSET	#5,ext_00ffa843		;1f740: 08f9000500ffa843
 	BCLR	#6,ext_00ffa843		;1f748: 08b9000600ffa843
 	BCLR	#7,1(A0)		;1f750: 08a800070001
@@ -44698,7 +44702,7 @@ lb_1f7f4:
 	dc.w	$0010	;1f7fa
 	dc.w	$0000	;1f7fc
 lb_1f7fe:
-	MOVE.W	#$0002,ext_00ffa8f0		;1f7fe: 33fc000200ffa8f0
+	MOVE.W	#$0002,state_00ffa8f0		;1f7fe: 33fc000200ffa8f0
 	CLR.W	D0			;1f806: 4240
 	MOVE.B	3(A0),D0		;1f808: 10280003
 	LEA	lb_1f81c(PC),A1		;1f80c: 43fa000e
