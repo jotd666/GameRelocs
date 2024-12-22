@@ -96,32 +96,32 @@
 ;	ROM_LOAD( "mb7122e.17e", 0x200, 0x400, CRC(a5cda23e) SHA1(d6c8534ae3c95b47a0701047fef67f15dd71f3fe) ) /* Also known to be labeled as A-2 */
 ;ROM_END
 ;	map(0x000000, 0x05ffff).rom();
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -138,7 +138,7 @@ ext_00240014	EQU	$240014
 ext_00240016	EQU	$240016
 ext_00242000	EQU	$242000
 ext_00242400	EQU	$242400
-; osd on the left (mame F4)
+; osd on the left (mame F4) (scores, lives, energy)
 tile_layer_0_244000	EQU	$244000
 ext_00244082	EQU	$244082
 ext_002440c0	EQU	$2440C0
@@ -401,7 +401,7 @@ ext_00ff8210	EQU	$FF8210
 ext_00ff8212	EQU	$FF8212
 ext_00ff8215	EQU	$FF8215
 stage_control_flags_00ff8216	EQU	$FF8216
-ext_00ff8217	EQU	$FF8217
+sync_flags_00ff8217	EQU	$FF8217
 current_stage_00ff821d	EQU	$FF821D
 ext_00ff821f	EQU	$FF821F
 ext_00ff8220	EQU	$FF8220
@@ -551,6 +551,7 @@ ext_00ffa8bc	EQU	$FFA8BC
 ext_00ffa8be	EQU	$FFA8BE
 ext_00ffa8c0	EQU	$FFA8C0
 nb_credits_00ffa8c1	EQU	$FFA8C1
+ext_00ffa8c2	EQU	$FFA8C2
 ext_00ffa8c4	EQU	$FFA8C4
 ext_00ffa8c6	EQU	$FFA8C6
 ext_00ffa8c7	EQU	$FFA8C7
@@ -623,22 +624,21 @@ lb_00000:
 	dc.l	ext_00ffc000	;00000 stack location!
 lb_00004:
 	dc.l	start_013dc	;00004
-	dc.l	lb_00102	;00008
-	dc.l	lb_0012a	;0000c
-	dc.l	lb_00152	;00010
-	dc.l	lb_0017a	;00014
-	dc.l	lb_001a2	;00018
-	dc.l	lb_001ca	;0001c
-	dc.l	lb_001f2	;00020
-	dc.l	lb_0021a	;00024
-	dc.l	lb_00242	;00028
-	dc.l	lb_0026a	;0002c
+	dc.l	bus_error_00102	;00008
+	dc.l	address_error_0012a	;0000c
+	dc.l	illegal_instruction_00152	;00010
+	dc.l	division_by_zero_0017a	;00014
+	dc.l	chk_001a2	;00018
+	dc.l	trapv_001ca	;0001c
+	dc.l	privileged_001f2	;00020
+	dc.l	trace_0021a	;00024
+	dc.l	linea_00242	;00028
+	dc.l	linef_0026a	;0002c
 	dc.l	spurious_interrupt_00100	;00030
 	dc.l	spurious_interrupt_00100	;00034
 	dc.l	spurious_interrupt_00100	;00038
 	dc.l	spurious_interrupt_00100	;0003c
 	dc.l	spurious_interrupt_00100	;00040
-lb_00044:
 	dc.l	spurious_interrupt_00100	;00044
 	dc.l	spurious_interrupt_00100	;00048
 	dc.l	spurious_interrupt_00100	;0004c
@@ -688,7 +688,7 @@ lb_00044:
 	dc.l	spurious_interrupt_00100	;000fc
 spurious_interrupt_00100:
 	RTE				;00100: 4e73
-lb_00102:
+bus_error_00102:
 	JMP	lb_0031e.W		;00102: 4ef8031e
 lb_00106:
 	NOP				;00106: 4e71
@@ -704,7 +704,7 @@ lb_00120:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00120: 4cdfffff
 	BRA.W	loop_forever_0031c		;00124: 600001f6
 	RTE				;00128: 4e73
-lb_0012a:
+address_error_0012a:
 	JMP	lb_0031e.W		;0012a: 4ef8031e
 	NOP				;0012e: 4e71
 	STOP	#$2700			;00130: 4e722700
@@ -717,7 +717,7 @@ lb_0012a:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00148: 4cdfffff
 	BRA.W	loop_forever_0031c		;0014c: 600001ce
 	RTE				;00150: 4e73
-lb_00152:
+illegal_instruction_00152:
 	JMP	lb_0031e.W		;00152: 4ef8031e
 	NOP				;00156: 4e71
 	STOP	#$2700			;00158: 4e722700
@@ -730,7 +730,7 @@ lb_00152:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00170: 4cdfffff
 	BRA.W	loop_forever_0031c		;00174: 600001a6
 	RTE				;00178: 4e73
-lb_0017a:
+division_by_zero_0017a:
 	JMP	lb_0031e.W		;0017a: 4ef8031e
 	NOP				;0017e: 4e71
 	STOP	#$2700			;00180: 4e722700
@@ -743,7 +743,7 @@ lb_0017a:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00198: 4cdfffff
 	BRA.W	loop_forever_0031c		;0019c: 6000017e
 	RTE				;001a0: 4e73
-lb_001a2:
+chk_001a2:
 	JMP	lb_0031e.W		;001a2: 4ef8031e
 	NOP				;001a6: 4e71
 lb_001a8:
@@ -758,7 +758,7 @@ lb_001b6:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;001c0: 4cdfffff
 	BRA.W	loop_forever_0031c		;001c4: 60000156
 	RTE				;001c8: 4e73
-lb_001ca:
+trapv_001ca:
 	JMP	lb_0031e.W		;001ca: 4ef8031e
 	NOP				;001ce: 4e71
 	STOP	#$2700			;001d0: 4e722700
@@ -771,7 +771,7 @@ lb_001ca:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;001e8: 4cdfffff
 	BRA.W	loop_forever_0031c		;001ec: 6000012e
 	RTE				;001f0: 4e73
-lb_001f2:
+privileged_001f2:
 	JMP	lb_0031e.W		;001f2: 4ef8031e
 	NOP				;001f6: 4e71
 	STOP	#$2700			;001f8: 4e722700
@@ -785,7 +785,7 @@ lb_001fc:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00210: 4cdfffff
 	BRA.W	loop_forever_0031c		;00214: 60000106
 	RTE				;00218: 4e73
-lb_0021a:
+trace_0021a:
 	JMP	lb_0031e.W		;0021a: 4ef8031e
 	NOP				;0021e: 4e71
 	STOP	#$2700			;00220: 4e722700
@@ -798,7 +798,7 @@ lb_0021a:
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00238: 4cdfffff
 	BRA.W	loop_forever_0031c		;0023c: 600000de
 	RTE				;00240: 4e73
-lb_00242:
+linea_00242:
 	JMP	lb_0031e.W		;00242: 4ef8031e
 	NOP				;00246: 4e71
 	STOP	#$2700			;00248: 4e722700
@@ -812,7 +812,7 @@ lb_00242:
 	BRA.W	loop_forever_0031c		;00264: 600000b6
 lb_00268:
 	RTE				;00268: 4e73
-lb_0026a:
+linef_0026a:
 	JMP	lb_0031e.W		;0026a: 4ef8031e
 	NOP				;0026e: 4e71
 	STOP	#$2700			;00270: 4e722700
@@ -875,7 +875,7 @@ lb_0032a:
 	MOVEQ	#0,D0			;0032a: 7000
 	MOVE.B	D0,ext_00ffa846		;0032c: 13c000ffa846
 	MOVE.B	D0,stage_control_flags_00ff8216		;00332: 13c000ff8216
-	MOVE.B	D0,ext_00ff8217		;00338: 13c000ff8217
+	MOVE.B	D0,sync_flags_00ff8217		;00338: 13c000ff8217
 	ANDI.B	#$0f,ext_00ff8215		;0033e: 0239000f00ff8215
 	BSET	#7,ext_00ff8215		;00346: 08f9000700ff8215
 lb_0034e:
@@ -893,7 +893,7 @@ lb_0034e:
 	RTS				;00382: 4e75
 periodic_level_6_irq_00384:
 	MOVEM.L	D0-D7/A0-A6,-(A7)	;00384: 48e7fffe
-	BCLR	#1,ext_00ff8217		;00388: 08b9000100ff8217
+	BCLR	#1,sync_flags_00ff8217		;00388: 08b9000100ff8217
 	BEQ.W	lb_0039a		;00390: 67000008
 	MOVE.W	D0,sprite_dma_0030c012		;00394: 33c00030c012
 lb_0039a:
@@ -914,23 +914,23 @@ lb_003aa:
 	ADDQ.W	#1,ext_00ff8202		;003c0: 527900ff8202
 	ADDQ.W	#1,ext_00ff8210		;003c6: 527900ff8210
 	BSR.W	lb_0137c		;003cc: 61000fae
-lb_003d0:
+wait_for_hw_sync_003d0:
 	MOVE.W	system_inputs_0030c002,D0		;003d0: 30390030c002
 	BTST	#7,D0			;003d6: 08000007
-	BNE.S	lb_003d0		;003da: 66f4
-	BSET	#0,ext_00ff8217		;003dc: 08f9000000ff8217
+	BNE.S	wait_for_hw_sync_003d0		;003da: 66f4
+	BSET	#0,sync_flags_00ff8217		;003dc: 08f9000000ff8217
 	MOVE.W	D0,irq_ack_0030c018		;003e4: 33c00030c018
 	MOVEM.L	(A7)+,D0-D7/A0-A6	;003ea: 4cdf7fff
 	RTE				;003ee: 4e73
-lb_003f0:
-	BCLR	#0,ext_00ff8217		;003f0: 08b9000000ff8217
+wait_for_sync_003f0:
+	BCLR	#0,sync_flags_00ff8217		;003f0: 08b9000000ff8217
 	BNE.S	lb_00402		;003f8: 6608
 	ADDQ.B	#1,ext_00ff8212		;003fa: 523900ff8212
-	BRA.S	lb_003f0		;00400: 60ee
+	BRA.S	wait_for_sync_003f0		;00400: 60ee
 lb_00402:
 	RTS				;00402: 4e75
 lb_00404:
-	BSR.S	lb_003f0		;00404: 61ea
+	BSR.S	wait_for_sync_003f0		;00404: 61ea
 	JSR	lb_0059c.W		;00406: 4eb8059c
 	NOP				;0040a: 4e71
 	RTS				;0040c: 4e75
@@ -1223,397 +1223,397 @@ lb_00788:
 	dc.l	lb_00e60	;007b8
 lb_007bc:
 	RTS				;007bc: 4e75
-lb_007be:
+copy_to_palette_007be:
 	MOVE.W	#$000f,D1		;007be: 323c000f
 lb_007c2:
 	MOVE.W	(A1)+,(A0)+		;007c2: 30d9
 	DBF	D1,lb_007c2		;007c4: 51c9fffc
-	DBF	D0,lb_007be		;007c8: 51c8fff4
+	DBF	D0,copy_to_palette_007be		;007c8: 51c8fff4
 	RTS				;007cc: 4e75
 lb_007ce:
 	LEA	lb_504c0,A1		;007ce: 43f9000504c0
 	LEA	ext_00310400,A0		;007d4: 41f900310400
 	MOVE.W	#$0003,D0		;007da: 303c0003
-	BSR.S	lb_007be		;007de: 61de
+	BSR.S	copy_to_palette_007be		;007de: 61de
 	LEA	lb_504c0,A1		;007e0: 43f9000504c0
 	LEA	ext_00310500,A0		;007e6: 41f900310500
 	MOVE.W	#$0003,D0		;007ec: 303c0003
-	BSR.S	lb_007be		;007f0: 61cc
+	BSR.S	copy_to_palette_007be		;007f0: 61cc
 	LEA	lb_50540,A1		;007f2: 43f900050540
 	LEA	ext_00314400,A0		;007f8: 41f900314400
 lb_007fe:
 	MOVE.W	#$0003,D0		;007fe: 303c0003
 lb_00802:
-	BSR.S	lb_007be		;00802: 61ba
+	BSR.S	copy_to_palette_007be		;00802: 61ba
 lb_00804:
 	LEA	lb_40200,A1		;00804: 43f900040200
 	LEA	ext_00310200,A0		;0080a: 41f900310200
 lb_00810:
 	MOVE.W	#$000f,D0		;00810: 303c000f
-	BSR.S	lb_007be		;00814: 61a8
+	BSR.S	copy_to_palette_007be		;00814: 61a8
 	LEA	lb_40a00,A1		;00816: 43f900040a00
 	LEA	ext_00314200,A0		;0081c: 41f900314200
 	MOVE.W	#$000f,D0		;00822: 303c000f
-	BSR.S	lb_007be		;00826: 6196
+	BSR.S	copy_to_palette_007be		;00826: 6196
 	LEA	lb_50540,A1		;00828: 43f900050540
 	LEA	ext_00314500,A0		;0082e: 41f900314500
 	MOVE.W	#$0003,D0		;00834: 303c0003
-	BSR.S	lb_007be		;00838: 6184
+	BSR.S	copy_to_palette_007be		;00838: 6184
 	MOVE.W	#$8010,ext_00ffa8e0		;0083a: 33fc801000ffa8e0
 	RTS				;00842: 4e75
 lb_00844:
 	LEA	lb_09482,A1		;00844: 43f900009482
 	LEA	ext_00310600,A0		;0084a: 41f900310600
 	MOVE.W	#$0003,D0		;00850: 303c0003
-	BSR.W	lb_007be		;00854: 6100ff68
+	BSR.W	copy_to_palette_007be		;00854: 6100ff68
 	LEA	lb_09502,A1		;00858: 43f900009502
 	LEA	ext_00314600,A0		;0085e: 41f900314600
 	MOVE.W	#$0003,D0		;00864: 303c0003
-	BSR.W	lb_007be		;00868: 6100ff54
+	BSR.W	copy_to_palette_007be		;00868: 6100ff54
 	RTS				;0086c: 4e75
 lb_0086e:
 	LEA	lb_4fc00,A1		;0086e: 43f90004fc00
 	LEA	ext_00310400,A0		;00874: 41f900310400
 	MOVE.W	#$0007,D0		;0087a: 303c0007
-	BSR.W	lb_007be		;0087e: 6100ff3e
+	BSR.W	copy_to_palette_007be		;0087e: 6100ff3e
 	LEA	lb_4fc00,A1		;00882: 43f90004fc00
 	LEA	ext_00310500,A0		;00888: 41f900310500
 	MOVE.W	#$0007,D0		;0088e: 303c0007
-	BSR.W	lb_007be		;00892: 6100ff2a
+	BSR.W	copy_to_palette_007be		;00892: 6100ff2a
 	LEA	lb_4fd00,A1		;00896: 43f90004fd00
 	LEA	ext_00314400,A0		;0089c: 41f900314400
 	MOVE.W	#$0007,D0		;008a2: 303c0007
-	BSR.W	lb_007be		;008a6: 6100ff16
+	BSR.W	copy_to_palette_007be		;008a6: 6100ff16
 	LEA	lb_4fd00,A1		;008aa: 43f90004fd00
 	LEA	ext_00314500,A0		;008b0: 41f900314500
 	MOVE.W	#$0007,D0		;008b6: 303c0007
-	BSR.W	lb_007be		;008ba: 6100ff02
+	BSR.W	copy_to_palette_007be		;008ba: 6100ff02
 	LEA	lb_505c0,A1		;008be: 43f9000505c0
 	LEA	ext_00310600,A0		;008c4: 41f900310600
 	MOVE.W	#$0005,D0		;008ca: 303c0005
-	BSR.W	lb_007be		;008ce: 6100feee
+	BSR.W	copy_to_palette_007be		;008ce: 6100feee
 	LEA	lb_50680,A1		;008d2: 43f900050680
 	LEA	ext_00314600,A0		;008d8: 41f900314600
 	MOVE.W	#$0005,D0		;008de: 303c0005
-	BSR.W	lb_007be		;008e2: 6100feda
+	BSR.W	copy_to_palette_007be		;008e2: 6100feda
 	LEA	lb_511fa+6,A1		;008e6: 43f900051200
 	LEA	ext_00310060,A0		;008ec: 41f900310060
 	MOVE.W	#$0003,D0		;008f2: 303c0003
-	BSR.W	lb_007be		;008f6: 6100fec6
+	BSR.W	copy_to_palette_007be		;008f6: 6100fec6
 	LEA	lb_5127e+2,A1		;008fa: 43f900051280
 	LEA	ext_00314060,A0		;00900: 41f900314060
 	MOVE.W	#$0003,D0		;00906: 303c0003
-	BSR.W	lb_007be		;0090a: 6100feb2
+	BSR.W	copy_to_palette_007be		;0090a: 6100feb2
 	LEA	lb_40200,A1		;0090e: 43f900040200
 	LEA	ext_00310200,A0		;00914: 41f900310200
 	MOVE.W	#$000f,D0		;0091a: 303c000f
-	BSR.W	lb_007be		;0091e: 6100fe9e
+	BSR.W	copy_to_palette_007be		;0091e: 6100fe9e
 	LEA	lb_40a00,A1		;00922: 43f900040a00
 	LEA	ext_00314200,A0		;00928: 41f900314200
 	MOVE.W	#$000f,D0		;0092e: 303c000f
-	BSR.W	lb_007be		;00932: 6100fe8a
+	BSR.W	copy_to_palette_007be		;00932: 6100fe8a
 	RTS				;00936: 4e75
 lb_00938:
 	LEA	lb_501c0,A1		;00938: 43f9000501c0
 	LEA	ext_003104a0,A0		;0093e: 41f9003104a0
 	MOVE.W	#$0002,D0		;00944: 303c0002
-	BSR.W	lb_007be		;00948: 6100fe74
+	BSR.W	copy_to_palette_007be		;00948: 6100fe74
 	LEA	lb_501c0,A1		;0094c: 43f9000501c0
 	LEA	ext_003105a0,A0		;00952: 41f9003105a0
 	MOVE.W	#$0002,D0		;00958: 303c0002
-	BSR.W	lb_007be		;0095c: 6100fe60
+	BSR.W	copy_to_palette_007be		;0095c: 6100fe60
 	LEA	lb_50220,A1		;00960: 43f900050220
 	LEA	ext_003144a0,A0		;00966: 41f9003144a0
 	MOVE.W	#$0002,D0		;0096c: 303c0002
-	BSR.W	lb_007be		;00970: 6100fe4c
+	BSR.W	copy_to_palette_007be		;00970: 6100fe4c
 	LEA	lb_50220,A1		;00974: 43f900050220
 	LEA	ext_003145a0,A0		;0097a: 41f9003145a0
 	MOVE.W	#$0002,D0		;00980: 303c0002
-	BSR.W	lb_007be		;00984: 6100fe38
+	BSR.W	copy_to_palette_007be		;00984: 6100fe38
 	LEA	lb_508c0,A1		;00988: 43f9000508c0
 	LEA	ext_00310600,A0		;0098e: 41f900310600
 	MOVE.W	#$0004,D0		;00994: 303c0004
-	BSR.W	lb_007be		;00998: 6100fe24
+	BSR.W	copy_to_palette_007be		;00998: 6100fe24
 	LEA	lb_50960,A1		;0099c: 43f900050960
 	LEA	ext_00314600,A0		;009a2: 41f900314600
 	MOVE.W	#$0004,D0		;009a8: 303c0004
-	BSR.W	lb_007be		;009ac: 6100fe10
+	BSR.W	copy_to_palette_007be		;009ac: 6100fe10
 	LEA	lb_40200,A1		;009b0: 43f900040200
 	LEA	ext_00310200,A0		;009b6: 41f900310200
 	MOVE.W	#$000f,D0		;009bc: 303c000f
-	BSR.W	lb_007be		;009c0: 6100fdfc
+	BSR.W	copy_to_palette_007be		;009c0: 6100fdfc
 	LEA	lb_40a00,A1		;009c4: 43f900040a00
 	LEA	ext_00314200,A0		;009ca: 41f900314200
 	MOVE.W	#$000f,D0		;009d0: 303c000f
-	BSR.W	lb_007be		;009d4: 6100fde8
+	BSR.W	copy_to_palette_007be		;009d4: 6100fde8
 	MOVE.W	#$8011,ext_00ffa8e0		;009d8: 33fc801100ffa8e0
 	RTS				;009e0: 4e75
 lb_009e2:
 	LEA	lb_4fe00,A1		;009e2: 43f90004fe00
 	LEA	ext_00310400,A0		;009e8: 41f900310400
 	MOVE.W	#$0006,D0		;009ee: 303c0006
-	BSR.W	lb_007be		;009f2: 6100fdca
+	BSR.W	copy_to_palette_007be		;009f2: 6100fdca
 	LEA	lb_4fee0,A1		;009f6: 43f90004fee0
 	LEA	ext_00314400,A0		;009fc: 41f900314400
 lb_00a02:
 	MOVE.W	#$0006,D0		;00a02: 303c0006
-	BSR.W	lb_007be		;00a06: 6100fdb6
+	BSR.W	copy_to_palette_007be		;00a06: 6100fdb6
 	LEA	lb_4fe00,A1		;00a0a: 43f90004fe00
 	LEA	ext_00310500,A0		;00a10: 41f900310500
 	MOVE.W	#$0006,D0		;00a16: 303c0006
-	BSR.W	lb_007be		;00a1a: 6100fda2
+	BSR.W	copy_to_palette_007be		;00a1a: 6100fda2
 	LEA	lb_4fee0,A1		;00a1e: 43f90004fee0
 	LEA	ext_00314500,A0		;00a24: 41f900314500
 	MOVE.W	#$0006,D0		;00a2a: 303c0006
-	BSR.W	lb_007be		;00a2e: 6100fd8e
+	BSR.W	copy_to_palette_007be		;00a2e: 6100fd8e
 	LEA	lb_50a00,A1		;00a32: 43f900050a00
 	LEA	ext_00310600,A0		;00a38: 41f900310600
 	MOVE.W	#$0002,D0		;00a3e: 303c0002
-	BSR.W	lb_007be		;00a42: 6100fd7a
+	BSR.W	copy_to_palette_007be		;00a42: 6100fd7a
 	LEA	lb_50a60,A1		;00a46: 43f900050a60
 	LEA	ext_00314600,A0		;00a4c: 41f900314600
 	MOVE.W	#$0002,D0		;00a52: 303c0002
-	BSR.W	lb_007be		;00a56: 6100fd66
+	BSR.W	copy_to_palette_007be		;00a56: 6100fd66
 	LEA	lb_40200,A1		;00a5a: 43f900040200
 	LEA	ext_00310200,A0		;00a60: 41f900310200
 	MOVE.W	#$000f,D0		;00a66: 303c000f
-	BSR.W	lb_007be		;00a6a: 6100fd52
+	BSR.W	copy_to_palette_007be		;00a6a: 6100fd52
 	LEA	lb_40a00,A1		;00a6e: 43f900040a00
 	LEA	ext_00314200,A0		;00a74: 41f900314200
 	MOVE.W	#$000f,D0		;00a7a: 303c000f
-	BSR.W	lb_007be		;00a7e: 6100fd3e
+	BSR.W	copy_to_palette_007be		;00a7e: 6100fd3e
 	RTS				;00a82: 4e75
 lb_00a84:
 	LEA	lb_50280,A1		;00a84: 43f900050280
 	LEA	ext_00310400,A0		;00a8a: 41f900310400
 	MOVE.W	#$0008,D0		;00a90: 303c0008
-	BSR.W	lb_007be		;00a94: 6100fd28
+	BSR.W	copy_to_palette_007be		;00a94: 6100fd28
 	LEA	lb_503a0,A1		;00a98: 43f9000503a0
 	LEA	ext_00314400,A0		;00a9e: 41f900314400
 	MOVE.W	#$0008,D0		;00aa4: 303c0008
-	BSR.W	lb_007be		;00aa8: 6100fd14
+	BSR.W	copy_to_palette_007be		;00aa8: 6100fd14
 	LEA	lb_505c0,A1		;00aac: 43f9000505c0
 	LEA	ext_00310600,A0		;00ab2: 41f900310600
 	MOVE.W	#$0005,D0		;00ab8: 303c0005
-	BSR.W	lb_007be		;00abc: 6100fd00
+	BSR.W	copy_to_palette_007be		;00abc: 6100fd00
 	LEA	lb_50680,A1		;00ac0: 43f900050680
 	LEA	ext_00314600,A0		;00ac6: 41f900314600
 	MOVE.W	#$0005,D0		;00acc: 303c0005
-	BSR.W	lb_007be		;00ad0: 6100fcec
+	BSR.W	copy_to_palette_007be		;00ad0: 6100fcec
 	LEA	lb_51100,A1		;00ad4: 43f900051100
 	LEA	ext_00310060,A0		;00ada: 41f900310060
 	MOVE.W	#$0003,D0		;00ae0: 303c0003
-	BSR.W	lb_007be		;00ae4: 6100fcd8
+	BSR.W	copy_to_palette_007be		;00ae4: 6100fcd8
 	LEA	lb_51180,A1		;00ae8: 43f900051180
 	LEA	ext_00314060,A0		;00aee: 41f900314060
 	MOVE.W	#$0003,D0		;00af4: 303c0003
-	BSR.W	lb_007be		;00af8: 6100fcc4
+	BSR.W	copy_to_palette_007be		;00af8: 6100fcc4
 	LEA	lb_40200,A1		;00afc: 43f900040200
 	LEA	ext_00310200,A0		;00b02: 41f900310200
 	MOVE.W	#$000f,D0		;00b08: 303c000f
-	BSR.W	lb_007be		;00b0c: 6100fcb0
+	BSR.W	copy_to_palette_007be		;00b0c: 6100fcb0
 	LEA	lb_40a00,A1		;00b10: 43f900040a00
 	LEA	ext_00314200,A0		;00b16: 41f900314200
 	MOVE.W	#$000f,D0		;00b1c: 303c000f
-	BSR.W	lb_007be		;00b20: 6100fc9c
+	BSR.W	copy_to_palette_007be		;00b20: 6100fc9c
 	RTS				;00b24: 4e75
 lb_00b26:
 	LEA	lb_50280,A1		;00b26: 43f900050280
 	LEA	ext_00310400,A0		;00b2c: 41f900310400
 	MOVE.W	#$0007,D0		;00b32: 303c0007
-	BSR.W	lb_007be		;00b36: 6100fc86
+	BSR.W	copy_to_palette_007be		;00b36: 6100fc86
 	LEA	lb_503a0,A1		;00b3a: 43f9000503a0
 	LEA	ext_00314400,A0		;00b40: 41f900314400
 	MOVE.W	#$0007,D0		;00b46: 303c0007
-	BSR.W	lb_007be		;00b4a: 6100fc72
+	BSR.W	copy_to_palette_007be		;00b4a: 6100fc72
 	LEA	lb_50280,A1		;00b4e: 43f900050280
 	LEA	ext_00310500,A0		;00b54: 41f900310500
 	MOVE.W	#$0007,D0		;00b5a: 303c0007
-	BSR.W	lb_007be		;00b5e: 6100fc5e
+	BSR.W	copy_to_palette_007be		;00b5e: 6100fc5e
 	LEA	lb_503a0,A1		;00b62: 43f9000503a0
 	LEA	ext_00314500,A0		;00b68: 41f900314500
 	MOVE.W	#$0007,D0		;00b6e: 303c0007
-	BSR.W	lb_007be		;00b72: 6100fc4a
+	BSR.W	copy_to_palette_007be		;00b72: 6100fc4a
 	LEA	lb_505c0,A1		;00b76: 43f9000505c0
 	LEA	ext_00310600,A0		;00b7c: 41f900310600
 	MOVE.W	#$0005,D0		;00b82: 303c0005
-	BSR.W	lb_007be		;00b86: 6100fc36
+	BSR.W	copy_to_palette_007be		;00b86: 6100fc36
 	LEA	lb_50680,A1		;00b8a: 43f900050680
 	LEA	ext_00314600,A0		;00b90: 41f900314600
 lb_00b96:
 	MOVE.W	#$0005,D0		;00b96: 303c0005
 lb_00b9a:
-	BSR.W	lb_007be		;00b9a: 6100fc22
+	BSR.W	copy_to_palette_007be		;00b9a: 6100fc22
 lb_00b9e:
 	LEA	lb_512fe+2,A1		;00b9e: 43f900051300
 lb_00ba4:
 	LEA	ext_00310060,A0		;00ba4: 41f900310060
 lb_00baa:
 	MOVE.W	#$0000,D0		;00baa: 303c0000
-	BSR.W	lb_007be		;00bae: 6100fc0e
+	BSR.W	copy_to_palette_007be		;00bae: 6100fc0e
 lb_00bb2:
 	LEA	lb_51320,A1		;00bb2: 43f900051320
 	LEA	ext_00314060,A0		;00bb8: 41f900314060
 	MOVE.W	#$0000,D0		;00bbe: 303c0000
-	BSR.W	lb_007be		;00bc2: 6100fbfa
+	BSR.W	copy_to_palette_007be		;00bc2: 6100fbfa
 	LEA	lb_40200,A1		;00bc6: 43f900040200
 	LEA	ext_00310200,A0		;00bcc: 41f900310200
 	MOVE.W	#$000f,D0		;00bd2: 303c000f
-	BSR.W	lb_007be		;00bd6: 6100fbe6
+	BSR.W	copy_to_palette_007be		;00bd6: 6100fbe6
 	LEA	lb_40a00,A1		;00bda: 43f900040a00
 	LEA	ext_00314200,A0		;00be0: 41f900314200
 	MOVE.W	#$000f,D0		;00be6: 303c000f
-	BSR.W	lb_007be		;00bea: 6100fbd2
+	BSR.W	copy_to_palette_007be		;00bea: 6100fbd2
 	RTS				;00bee: 4e75
 lb_00bf0:
 	LEA	lb_4ffbc+4,A1		;00bf0: 43f90004ffc0
 	LEA	ext_00310400,A0		;00bf6: 41f900310400
 	MOVE.W	#$0007,D0		;00bfc: 303c0007
-	BSR.W	lb_007be		;00c00: 6100fbbc
+	BSR.W	copy_to_palette_007be		;00c00: 6100fbbc
 	LEA	lb_500be+2,A1		;00c04: 43f9000500c0
 	LEA	ext_00314400,A0		;00c0a: 41f900314400
 	MOVE.W	#$0007,D0		;00c10: 303c0007
-	BSR.W	lb_007be		;00c14: 6100fba8
+	BSR.W	copy_to_palette_007be		;00c14: 6100fba8
 	LEA	lb_4ffbc+4,A1		;00c18: 43f90004ffc0
 	LEA	ext_00310500,A0		;00c1e: 41f900310500
 	MOVE.W	#$0007,D0		;00c24: 303c0007
 lb_00c28:
-	BSR.W	lb_007be		;00c28: 6100fb94
+	BSR.W	copy_to_palette_007be		;00c28: 6100fb94
 	LEA	lb_500be+2,A1		;00c2c: 43f9000500c0
 	LEA	ext_00314500,A0		;00c32: 41f900314500
 	MOVE.W	#$0007,D0		;00c38: 303c0007
-	BSR.W	lb_007be		;00c3c: 6100fb80
+	BSR.W	copy_to_palette_007be		;00c3c: 6100fb80
 	LEA	lb_50ac0,A1		;00c40: 43f900050ac0
 	LEA	ext_00310600,A0		;00c46: 41f900310600
 	MOVE.W	#$0006,D0		;00c4c: 303c0006
-	BSR.W	lb_007be		;00c50: 6100fb6c
+	BSR.W	copy_to_palette_007be		;00c50: 6100fb6c
 	LEA	lb_50ba0,A1		;00c54: 43f900050ba0
 	LEA	ext_00314600,A0		;00c5a: 41f900314600
 	MOVE.W	#$0006,D0		;00c60: 303c0006
-	BSR.W	lb_007be		;00c64: 6100fb58
+	BSR.W	copy_to_palette_007be		;00c64: 6100fb58
 	LEA	lb_40200,A1		;00c68: 43f900040200
 	LEA	ext_00310200,A0		;00c6e: 41f900310200
 	MOVE.W	#$000f,D0		;00c74: 303c000f
-	BSR.W	lb_007be		;00c78: 6100fb44
+	BSR.W	copy_to_palette_007be		;00c78: 6100fb44
 	LEA	lb_40a00,A1		;00c7c: 43f900040a00
 	LEA	ext_00314200,A0		;00c82: 41f900314200
 	MOVE.W	#$000f,D0		;00c88: 303c000f
-	BSR.W	lb_007be		;00c8c: 6100fb30
+	BSR.W	copy_to_palette_007be		;00c8c: 6100fb30
 	RTS				;00c90: 4e75
 lb_00c92:
 	LEA	lb_50c7e+2,A1		;00c92: 43f900050c80
 	LEA	ext_00310400,A0		;00c98: 41f900310400
 	MOVE.W	#$0001,D0		;00c9e: 303c0001
-	BSR.W	lb_007be		;00ca2: 6100fb1a
+	BSR.W	copy_to_palette_007be		;00ca2: 6100fb1a
 	LEA	lb_50cbe+2,A1		;00ca6: 43f900050cc0
 	LEA	ext_00314400,A0		;00cac: 41f900314400
 	MOVE.W	#$0001,D0		;00cb2: 303c0001
-	BSR.W	lb_007be		;00cb6: 6100fb06
+	BSR.W	copy_to_palette_007be		;00cb6: 6100fb06
 	LEA	lb_50c7e+2,A1		;00cba: 43f900050c80
 	LEA	ext_00310500,A0		;00cc0: 41f900310500
 	MOVE.W	#$0001,D0		;00cc6: 303c0001
-	BSR.W	lb_007be		;00cca: 6100faf2
+	BSR.W	copy_to_palette_007be		;00cca: 6100faf2
 	LEA	lb_50cbe+2,A1		;00cce: 43f900050cc0
 	LEA	ext_00314500,A0		;00cd4: 41f900314500
 	MOVE.W	#$0001,D0		;00cda: 303c0001
-	BSR.W	lb_007be		;00cde: 6100fade
+	BSR.W	copy_to_palette_007be		;00cde: 6100fade
 	LEA	lb_50d00,A1		;00ce2: 43f900050d00
 	LEA	ext_00310600,A0		;00ce8: 41f900310600
 	MOVE.W	#$0000,D0		;00cee: 303c0000
-	BSR.W	lb_007be		;00cf2: 6100faca
+	BSR.W	copy_to_palette_007be		;00cf2: 6100faca
 	LEA	lb_50d20,A1		;00cf6: 43f900050d20
 	LEA	ext_00314600,A0		;00cfc: 41f900314600
 	MOVE.W	#$0000,D0		;00d02: 303c0000
-	BSR.W	lb_007be		;00d06: 6100fab6
+	BSR.W	copy_to_palette_007be		;00d06: 6100fab6
 	LEA	lb_40200,A1		;00d0a: 43f900040200
 	LEA	ext_00310200,A0		;00d10: 41f900310200
 	MOVE.W	#$000f,D0		;00d16: 303c000f
-	BSR.W	lb_007be		;00d1a: 6100faa2
+	BSR.W	copy_to_palette_007be		;00d1a: 6100faa2
 	LEA	lb_40a00,A1		;00d1e: 43f900040a00
 	LEA	ext_00314200,A0		;00d24: 41f900314200
 	MOVE.W	#$000f,D0		;00d2a: 303c000f
-	BSR.W	lb_007be		;00d2e: 6100fa8e
+	BSR.W	copy_to_palette_007be		;00d2e: 6100fa8e
 	MOVE.W	#$8012,ext_00ffa8e0		;00d32: 33fc801200ffa8e0
 	RTS				;00d3a: 4e75
 lb_00d3c:
 	LEA	lb_50d40,A1		;00d3c: 43f900050d40
 	LEA	ext_00310400,A0		;00d42: 41f900310400
 	MOVE.W	#$0006,D0		;00d48: 303c0006
-	BSR.W	lb_007be		;00d4c: 6100fa70
+	BSR.W	copy_to_palette_007be		;00d4c: 6100fa70
 	LEA	lb_50e20,A1		;00d50: 43f900050e20
 	LEA	ext_00314400,A0		;00d56: 41f900314400
 	MOVE.W	#$0006,D0		;00d5c: 303c0006
-	BSR.W	lb_007be		;00d60: 6100fa5c
+	BSR.W	copy_to_palette_007be		;00d60: 6100fa5c
 	LEA	lb_50d40,A1		;00d64: 43f900050d40
 	LEA	ext_00310500,A0		;00d6a: 41f900310500
 	MOVE.W	#$0006,D0		;00d70: 303c0006
-	BSR.W	lb_007be		;00d74: 6100fa48
+	BSR.W	copy_to_palette_007be		;00d74: 6100fa48
 lb_00d78:
 	LEA	lb_50e20,A1		;00d78: 43f900050e20
 	LEA	ext_00314500,A0		;00d7e: 41f900314500
 	MOVE.W	#$0006,D0		;00d84: 303c0006
-	BSR.W	lb_007be		;00d88: 6100fa34
+	BSR.W	copy_to_palette_007be		;00d88: 6100fa34
 	LEA	lb_50f00,A1		;00d8c: 43f900050f00
 	LEA	ext_00310600,A0		;00d92: 41f900310600
 	MOVE.W	#$0001,D0		;00d98: 303c0001
-	BSR.W	lb_007be		;00d9c: 6100fa20
+	BSR.W	copy_to_palette_007be		;00d9c: 6100fa20
 	LEA	lb_50f40,A1		;00da0: 43f900050f40
 	LEA	ext_00314600,A0		;00da6: 41f900314600
 	MOVE.W	#$0001,D0		;00dac: 303c0001
-	BSR.W	lb_007be		;00db0: 6100fa0c
+	BSR.W	copy_to_palette_007be		;00db0: 6100fa0c
 	LEA	lb_40200,A1		;00db4: 43f900040200
 	LEA	ext_00310200,A0		;00dba: 41f900310200
 	MOVE.W	#$000f,D0		;00dc0: 303c000f
-	BSR.W	lb_007be		;00dc4: 6100f9f8
+	BSR.W	copy_to_palette_007be		;00dc4: 6100f9f8
 	LEA	lb_40a00,A1		;00dc8: 43f900040a00
 	LEA	ext_00314200,A0		;00dce: 41f900314200
 	MOVE.W	#$000f,D0		;00dd4: 303c000f
-	BSR.W	lb_007be		;00dd8: 6100f9e4
+	BSR.W	copy_to_palette_007be		;00dd8: 6100f9e4
 	MOVE.W	#$8013,ext_00ff8170		;00ddc: 33fc801300ff8170
 	RTS				;00de4: 4e75
 lb_00de6:
 	LEA	lb_513fe+2,A1		;00de6: 43f900051400
 	LEA	ext_00310400,A0		;00dec: 41f900310400
 	MOVE.W	#$000a,D0		;00df2: 303c000a
-	BSR.W	lb_007be		;00df6: 6100f9c6
+	BSR.W	copy_to_palette_007be		;00df6: 6100f9c6
 	LEA	lb_5155e+2,A1		;00dfa: 43f900051560
 	LEA	ext_00314400,A0		;00e00: 41f900314400
 	MOVE.W	#$000a,D0		;00e06: 303c000a
-	BSR.W	lb_007be		;00e0a: 6100f9b2
+	BSR.W	copy_to_palette_007be		;00e0a: 6100f9b2
 	LEA	lb_5133e+2,A1		;00e0e: 43f900051340
 	LEA	ext_00310600,A0		;00e14: 41f900310600
 	MOVE.W	#$0002,D0		;00e1a: 303c0002
-	BSR.W	lb_007be		;00e1e: 6100f99e
+	BSR.W	copy_to_palette_007be		;00e1e: 6100f99e
 	LEA	lb_513a0,A1		;00e22: 43f9000513a0
 	LEA	ext_00314600,A0		;00e28: 41f900314600
 	MOVE.W	#$0002,D0		;00e2e: 303c0002
-	BSR.W	lb_007be		;00e32: 6100f98a
+	BSR.W	copy_to_palette_007be		;00e32: 6100f98a
 	LEA	lb_516bc+4,A1		;00e36: 43f9000516c0
 	LEA	ext_00310200,A0		;00e3c: 41f900310200
 	MOVE.W	#$000f,D0		;00e42: 303c000f
-	BSR.W	lb_007be		;00e46: 6100f976
+	BSR.W	copy_to_palette_007be		;00e46: 6100f976
 	LEA	lb_518c0,A1		;00e4a: 43f9000518c0
 	LEA	ext_00314200,A0		;00e50: 41f900314200
 	MOVE.W	#$000f,D0		;00e56: 303c000f
-	BSR.W	lb_007be		;00e5a: 6100f962
+	BSR.W	copy_to_palette_007be		;00e5a: 6100f962
 	RTS				;00e5e: 4e75
 lb_00e60:
 	LEA	lb_50f80,A1		;00e60: 43f900050f80
 	LEA	ext_00310600,A0		;00e66: 41f900310600
 	MOVE.W	#$0005,D0		;00e6c: 303c0005
-	BSR.W	lb_007be		;00e70: 6100f94c
+	BSR.W	copy_to_palette_007be		;00e70: 6100f94c
 	LEA	lb_51040,A1		;00e74: 43f900051040
 	LEA	ext_00314600,A0		;00e7a: 41f900314600
 	MOVE.W	#$0005,D0		;00e80: 303c0005
-	BSR.W	lb_007be		;00e84: 6100f938
+	BSR.W	copy_to_palette_007be		;00e84: 6100f938
 	LEA	lb_51d40,A1		;00e88: 43f900051d40
 	LEA	ext_00310200,A0		;00e8e: 41f900310200
 	MOVE.W	#$0003,D0		;00e94: 303c0003
-	BSR.W	lb_007be		;00e98: 6100f924
+	BSR.W	copy_to_palette_007be		;00e98: 6100f924
 	LEA	lb_51dc0,A1		;00e9c: 43f900051dc0
 	LEA	ext_00314200,A0		;00ea2: 41f900314200
 	MOVE.W	#$0003,D0		;00ea8: 303c0003
-	BSR.W	lb_007be		;00eac: 6100f910
+	BSR.W	copy_to_palette_007be		;00eac: 6100f910
 	RTS				;00eb0: 4e75
 lb_00eb2:
 	MOVE.W	ext_00ffa8e0,D2		;00eb2: 343900ffa8e0
@@ -1656,146 +1656,146 @@ lb_00f30:
 	LEA	lb_51bfe+2,A1		;00f30: 43f900051c00
 	LEA	ext_00310380,A0		;00f36: 41f900310380
 	MOVE.W	#$0002,D0		;00f3c: 303c0002
-	BSR.W	lb_007be		;00f40: 6100f87c
+	BSR.W	copy_to_palette_007be		;00f40: 6100f87c
 	LEA	lb_51c60,A1		;00f44: 43f900051c60
 	LEA	ext_00314380,A0		;00f4a: 41f900314380
 	MOVE.W	#$0002,D0		;00f50: 303c0002
-	BSR.W	lb_007be		;00f54: 6100f868
+	BSR.W	copy_to_palette_007be		;00f54: 6100f868
 	RTS				;00f58: 4e75
 lb_00f5a:
 	LEA	lb_51b40,A1		;00f5a: 43f900051b40
 	LEA	ext_003103c0,A0		;00f60: 41f9003103c0
 	MOVE.W	#$0000,D0		;00f66: 303c0000
-	BSR.W	lb_007be		;00f6a: 6100f852
+	BSR.W	copy_to_palette_007be		;00f6a: 6100f852
 	LEA	lb_51b5e+2,A1		;00f6e: 43f900051b60
 	LEA	ext_003143c0,A0		;00f74: 41f9003143c0
 	MOVE.W	#$0000,D0		;00f7a: 303c0000
-	BSR.W	lb_007be		;00f7e: 6100f83e
+	BSR.W	copy_to_palette_007be		;00f7e: 6100f83e
 	RTS				;00f82: 4e75
 lb_00f84:
 	LEA	lb_51b00,A1		;00f84: 43f900051b00
 	LEA	ext_003103c0,A0		;00f8a: 41f9003103c0
 	MOVE.W	#$0000,D0		;00f90: 303c0000
-	BSR.W	lb_007be		;00f94: 6100f828
+	BSR.W	copy_to_palette_007be		;00f94: 6100f828
 	LEA	lb_51b1e+2,A1		;00f98: 43f900051b20
 	LEA	ext_003143c0,A0		;00f9e: 41f9003143c0
 	MOVE.W	#$0000,D0		;00fa4: 303c0000
-	BSR.W	lb_007be		;00fa8: 6100f814
+	BSR.W	copy_to_palette_007be		;00fa8: 6100f814
 	RTS				;00fac: 4e75
 lb_00fae:
 	LEA	lb_51b80,A1		;00fae: 43f900051b80
 	LEA	ext_003103e0,A0		;00fb4: 41f9003103e0
 	MOVE.W	#$0000,D0		;00fba: 303c0000
-	BSR.W	lb_007be		;00fbe: 6100f7fe
+	BSR.W	copy_to_palette_007be		;00fbe: 6100f7fe
 	LEA	lb_51ba0,A1		;00fc2: 43f900051ba0
 	LEA	ext_003143e0,A0		;00fc8: 41f9003143e0
 	MOVE.W	#$0000,D0		;00fce: 303c0000
-	BSR.W	lb_007be		;00fd2: 6100f7ea
+	BSR.W	copy_to_palette_007be		;00fd2: 6100f7ea
 	RTS				;00fd6: 4e75
 lb_00fd8:
 	LEA	lb_51bc0,A1		;00fd8: 43f900051bc0
 	LEA	ext_003103e0,A0		;00fde: 41f9003103e0
 	MOVE.W	#$0000,D0		;00fe4: 303c0000
-	BSR.W	lb_007be		;00fe8: 6100f7d4
+	BSR.W	copy_to_palette_007be		;00fe8: 6100f7d4
 	LEA	lb_51be0,A1		;00fec: 43f900051be0
 	LEA	ext_003143e0,A0		;00ff2: 41f9003143e0
 	MOVE.W	#$0000,D0		;00ff8: 303c0000
-	BSR.W	lb_007be		;00ffc: 6100f7c0
+	BSR.W	copy_to_palette_007be		;00ffc: 6100f7c0
 	RTS				;01000: 4e75
 lb_01002:
 	LEA	lb_51abc+4,A1		;01002: 43f900051ac0
 	LEA	ext_003103e0,A0		;01008: 41f9003103e0
 	MOVE.W	#$0000,D0		;0100e: 303c0000
-	BSR.W	lb_007be		;01012: 6100f7aa
+	BSR.W	copy_to_palette_007be		;01012: 6100f7aa
 	LEA	lb_51adc+4,A1		;01016: 43f900051ae0
 	LEA	ext_003143e0,A0		;0101c: 41f9003143e0
 	MOVE.W	#$0000,D0		;01022: 303c0000
-	BSR.W	lb_007be		;01026: 6100f796
+	BSR.W	copy_to_palette_007be		;01026: 6100f796
 	RTS				;0102a: 4e75
 lb_0102c:
 	LEA	lb_0117c.W,A1		;0102c: 43f8117c
 	NOP				;01030: 4e71
 	LEA	ext_003103e0,A0		;01032: 41f9003103e0
 	MOVE.W	#$0000,D0		;01038: 303c0000
-	BSR.W	lb_007be		;0103c: 6100f780
+	BSR.W	copy_to_palette_007be		;0103c: 6100f780
 	LEA	lb_0119c.W,A1		;01040: 43f8119c
 	NOP				;01044: 4e71
 	LEA	ext_003143e0,A0		;01046: 41f9003143e0
 	MOVE.W	#$0000,D0		;0104c: 303c0000
-	BSR.W	lb_007be		;01050: 6100f76c
+	BSR.W	copy_to_palette_007be		;01050: 6100f76c
 	RTS				;01054: 4e75
 lb_01056:
 	LEA	lb_011bc.W,A1		;01056: 43f811bc
 	NOP				;0105a: 4e71
 	LEA	ext_003103e0,A0		;0105c: 41f9003103e0
 	MOVE.W	#$0000,D0		;01062: 303c0000
-	BSR.W	lb_007be		;01066: 6100f756
+	BSR.W	copy_to_palette_007be		;01066: 6100f756
 	LEA	lb_011dc.W,A1		;0106a: 43f811dc
 	NOP				;0106e: 4e71
 	LEA	ext_003143e0,A0		;01070: 41f9003143e0
 	MOVE.W	#$0000,D0		;01076: 303c0000
-	BSR.W	lb_007be		;0107a: 6100f742
+	BSR.W	copy_to_palette_007be		;0107a: 6100f742
 	RTS				;0107e: 4e75
 lb_01080:
 	LEA	lb_011fc.W,A1		;01080: 43f811fc
 	NOP				;01084: 4e71
 	LEA	ext_003103e0,A0		;01086: 41f9003103e0
 	MOVE.W	#$0000,D0		;0108c: 303c0000
-	BSR.W	lb_007be		;01090: 6100f72c
+	BSR.W	copy_to_palette_007be		;01090: 6100f72c
 	LEA	lb_0121c.W,A1		;01094: 43f8121c
 	NOP				;01098: 4e71
 	LEA	ext_003143e0,A0		;0109a: 41f9003143e0
 	MOVE.W	#$0000,D0		;010a0: 303c0000
-	BSR.W	lb_007be		;010a4: 6100f718
+	BSR.W	copy_to_palette_007be		;010a4: 6100f718
 	RTS				;010a8: 4e75
 lb_010aa:
 	LEA	lb_0123c.W,A1		;010aa: 43f8123c
 	NOP				;010ae: 4e71
 	LEA	ext_003103e0,A0		;010b0: 41f9003103e0
 	MOVE.W	#$0000,D0		;010b6: 303c0000
-	BSR.W	lb_007be		;010ba: 6100f702
+	BSR.W	copy_to_palette_007be		;010ba: 6100f702
 	LEA	lb_01258+4.W,A1		;010be: 43f8125c
 	NOP				;010c2: 4e71
 	LEA	ext_003143e0,A0		;010c4: 41f9003143e0
 	MOVE.W	#$0000,D0		;010ca: 303c0000
-	BSR.W	lb_007be		;010ce: 6100f6ee
+	BSR.W	copy_to_palette_007be		;010ce: 6100f6ee
 	RTS				;010d2: 4e75
 lb_010d4:
 	LEA	lb_0127c.W,A1		;010d4: 43f8127c
 	NOP				;010d8: 4e71
 	LEA	ext_003103e0,A0		;010da: 41f9003103e0
 	MOVE.W	#$0000,D0		;010e0: 303c0000
-	BSR.W	lb_007be		;010e4: 6100f6d8
+	BSR.W	copy_to_palette_007be		;010e4: 6100f6d8
 	LEA	lb_0129a+2.W,A1		;010e8: 43f8129c
 	NOP				;010ec: 4e71
 	LEA	ext_003143e0,A0		;010ee: 41f9003143e0
 	MOVE.W	#$0000,D0		;010f4: 303c0000
-	BSR.W	lb_007be		;010f8: 6100f6c4
+	BSR.W	copy_to_palette_007be		;010f8: 6100f6c4
 	RTS				;010fc: 4e75
 lb_010fe:
 	LEA	lb_012ba+2.W,A1		;010fe: 43f812bc
 	NOP				;01102: 4e71
 	LEA	ext_00310320,A0		;01104: 41f900310320
 	MOVE.W	#$0000,D0		;0110a: 303c0000
-	BSR.W	lb_007be		;0110e: 6100f6ae
+	BSR.W	copy_to_palette_007be		;0110e: 6100f6ae
 	LEA	lb_012da+2.W,A1		;01112: 43f812dc
 	NOP				;01116: 4e71
 	LEA	ext_00314320,A0		;01118: 41f900314320
 	MOVE.W	#$0000,D0		;0111e: 303c0000
-	BSR.W	lb_007be		;01122: 6100f69a
+	BSR.W	copy_to_palette_007be		;01122: 6100f69a
 	RTS				;01126: 4e75
 lb_01128:
 	LEA	lb_012fc.W,A1		;01128: 43f812fc
 	NOP				;0112c: 4e71
 	LEA	ext_003103c0,A0		;0112e: 41f9003103c0
 	MOVE.W	#$0000,D0		;01134: 303c0000
-	BSR.W	lb_007be		;01138: 6100f684
+	BSR.W	copy_to_palette_007be		;01138: 6100f684
 	LEA	lb_0131c.W,A1		;0113c: 43f8131c
 	NOP				;01140: 4e71
 lb_01142:
 	LEA	ext_003143c0,A0		;01142: 41f9003143c0
 	MOVE.W	#$0000,D0		;01148: 303c0000
-	BSR.W	lb_007be		;0114c: 6100f670
+	BSR.W	copy_to_palette_007be		;0114c: 6100f670
 	RTS				;01150: 4e75
 lb_01152:
 	LEA	lb_01338+4.W,A1		;01152: 43f8133c
@@ -1803,13 +1803,13 @@ lb_01152:
 lb_01158:
 	LEA	ext_003103c0,A0		;01158: 41f9003103c0
 	MOVE.W	#$0000,D0		;0115e: 303c0000
-	BSR.W	lb_007be		;01162: 6100f65a
+	BSR.W	copy_to_palette_007be		;01162: 6100f65a
 	LEA	lb_0135c.W,A1		;01166: 43f8135c
 	NOP				;0116a: 4e71
 	LEA	ext_003143c0,A0		;0116c: 41f9003143c0
 lb_01172:
 	MOVE.W	#$0000,D0		;01172: 303c0000
-	BSR.W	lb_007be		;01176: 6100f646
+	BSR.W	copy_to_palette_007be		;01176: 6100f646
 	RTS				;0117a: 4e75
 lb_0117c:
 	dc.w	$008e	;0117c
@@ -2135,7 +2135,7 @@ lb_0141c:
 	; set stack
 	LEA	ext_00ffc000,A7		;01422: 4ff900ffc000
 	BSR.W	lb_01498		;01428: 6100006e
-	JSR	lb_0979a		;0142c: 4eb90000979a
+	JSR	wait_for_mcu_reply_0979a		;0142c: 4eb90000979a
 	JSR	lb_097a4		;01432: 4eb9000097a4
 	MOVE.W	#$0000,sound_0030c010		;01438: 33fc00000030c010
 	BSR.W	lb_01cd8		;01440: 61000896
@@ -2152,10 +2152,11 @@ lb_01454:
 lb_0146a:
 	MOVE.L	(A2)+,(A0)+		;0146a: 20da
 	DBF	D0,lb_0146a		;0146c: 51c8fffc
-	JSR	lb_014ee.W		;01470: 4eb814ee
+	JSR	check_if_service_mode_14ee.W		;01470: 4eb814ee
 	NOP				;01474: 4e71
 	MOVE.W	mcu_reply_0030c008,D0		;01476: 30390030c008
 	MOVE.W	D0,irq_ack_0030c018		;0147c: 33c00030c018
+	; enables interrupts, now main IRQ (level 6) can work
 	MOVE	#$2300,SR		;01482: 46fc2300
 	MOVE.W	#$0000,ext_0030c01e		;01486: 33fc00000030c01e
 	JMP	lb_019a6.W		;0148e: 4ef819a6
@@ -2203,14 +2204,14 @@ lb_014b2:
 	dc.w	$0000	;014e8
 	dc.w	$0000	;014ea
 	dc.w	$0000	;014ec
-lb_014ee:
+check_if_service_mode_14ee:
 	BTST	#4,dsw_0030c005		;014ee: 083900040030c005
 	BNE.W	lb_01500		;014f6: 66000008
-	JMP	lb_01502.W		;014fa: 4ef81502
+	JMP	service_mode_1502.W		;014fa: 4ef81502
 	NOP				;014fe: 4e71
 lb_01500:
 	RTS				;01500: 4e75
-lb_01502:
+service_mode_1502:
 	CLR.W	sound_0030c010		;01502: 42790030c010
 	LEA	sprite_ram_0031c000,A0		;01508: 41f90031c000
 lb_0150e:
@@ -2295,6 +2296,7 @@ lb_015a8:
 	BSR.W	lb_017ea		;0164e: 6100019a
 	BTST	#4,dsw_0030c005		;01652: 083900040030c005
 	BEQ.W	lb_015a8		;0165a: 6700ff4c
+	; this is service mode
 lb_0165e:
 	LEA	tile_layer_0_244000,A0		;0165e: 41f900244000
 lb_01664:
@@ -2352,6 +2354,7 @@ lb_01692:
 	BSR.W	lb_017ea		;01738: 610000b0
 	BTST	#4,dsw_0030c005		;0173c: 083900040030c005
 	BEQ.W	lb_01692		;01744: 6700ff4c
+	; service mode
 	BRA.W	lb_0165e		;01748: 6000ff14
 lb_0174c:
 	BTST	#7,system_inputs_0030c003		;0174c: 083900070030c003
@@ -2543,7 +2546,7 @@ lb_019b2:
 	MOVE.B	#$40,ext_00ff8215		;019c8: 13fc004000ff8215
 	MOVE.B	D0,ext_00ffa846		;019d0: 13c000ffa846
 	MOVE.B	D0,stage_control_flags_00ff8216		;019d6: 13c000ff8216
-	MOVE.B	D0,ext_00ff8217		;019dc: 13c000ff8217
+	MOVE.B	D0,sync_flags_00ff8217		;019dc: 13c000ff8217
 	MOVE.B	D0,current_stage_00ff821d		;019e2: 13c000ff821d
 	MOVE.B	D0,ext_00ffa847		;019e8: 13c000ffa847
 	MOVE.L	D0,ext_00ff81cc		;019ee: 23c000ff81cc
@@ -2557,7 +2560,7 @@ lb_019b2:
 lb_01a12:
 	JSR	lb_0df32		;01a12: 4eb90000df32
 	MOVE.W	#$8000,ext_00ff8170		;01a18: 33fc800000ff8170
-	JSR	lb_003f0.W		;01a20: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;01a20: 4eb803f0
 	JSR	lb_01cd8.W		;01a24: 4eb81cd8
 	NOP				;01a28: 4e71
 	JSR	lb_01e98.W		;01a2a: 4eb81e98
@@ -2628,7 +2631,7 @@ lb_01abc:
 	MOVE.B	#$09,ext_00ffa8c6		;01b2a: 13fc000900ffa8c6
 	JSR	lb_0e1ee		;01b32: 4eb90000e1ee
 lb_01b38:
-	JSR	lb_003f0.W		;01b38: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;01b38: 4eb803f0
 	JSR	lb_0e31c		;01b3c: 4eb90000e31c
 	JSR	lb_0059c.W		;01b42: 4eb8059c
 	BSR.W	lb_01be0		;01b46: 61000098
@@ -2731,7 +2734,7 @@ lb_01c90:
 	NOT.B	D0			;01c98: 4600
 	BNE.S	lb_01c90		;01c9a: 66f4
 	RTS				;01c9c: 4e75
-	; unreached??
+	; probably unreached
 	MOVE.B	dsw_0030c004,D0		;01c9e: 10390030c004
 	NOT.B	D0			;01ca4: 4600
 	ANDI.B	#$3f,D0			;01ca6: 0200003f
@@ -2743,6 +2746,7 @@ lb_01c90:
 lb_01cbe:
 	MOVE.B	D0,current_stage_00ff821d		;01cbe: 13c000ff821d
 	RTS				;01cc4: 4e75
+	; also unreached
 lb_01cc6:
 	MOVE.B	dsw_0030c004,D0		;01cc6: 10390030c004
 	NOT.B	D0			;01ccc: 4600
@@ -2750,14 +2754,16 @@ lb_01cc6:
 	TST.B	D0			;01cd2: 4a00
 	BNE.S	lb_01cc6		;01cd4: 66f0
 	RTS				;01cd6: 4e75
+	
 lb_01cd8:
 	JSR	lb_01d20.W		;01cd8: 4eb81d20
 	NOP				;01cdc: 4e71
 	BRA.W	lb_01ce8		;01cde: 60000008
+	; not reached
 	JSR	lb_01d32.W		;01ce2: 4eb81d32
 	NOP				;01ce6: 4e71
 lb_01ce8:
-	JSR	lb_01dc2.W		;01ce8: 4eb81dc2
+	JSR	clear_sprite_ram_01dc2.W		;01ce8: 4eb81dc2
 	NOP				;01cec: 4e71
 	JSR	lb_01ddc.W		;01cee: 4eb81ddc
 	NOP				;01cf2: 4e71
@@ -2770,27 +2776,29 @@ lb_01ce8:
 	RTS				;01d1e: 4e75
 lb_01d20:
 	JSR	lb_01d32.W		;01d20: 4eb81d32
-	JSR	lb_01d64.W		;01d24: 4eb81d64
-	JSR	lb_01d78.W		;01d28: 4eb81d78
+	JSR	clear_tile_1_layer_01d64.W		;01d24: 4eb81d64
+	JSR	clear_tile_0_layer_01d78.W		;01d28: 4eb81d78
 	JSR	lb_01d8c.W		;01d2c: 4eb81d8c
 	RTS				;01d30: 4e75
 lb_01d32:
 	MOVEQ	#0,D0			;01d32: 7000
 	MOVE.W	D0,ext_00ff8114		;01d34: 33c000ff8114
-	JSR	lb_02396.W		;01d3a: 4eb82396
+	JSR	update_pf1_0_control_02396.W		;01d3a: 4eb82396
 	NOP				;01d3e: 4e71
 	MOVE.W	D0,ext_00ff8118		;01d40: 33c000ff8118
-	JSR	lb_023a2.W		;01d46: 4eb823a2
+	JSR	update_pf1_0_control_023a2.W		;01d46: 4eb823a2
 	NOP				;01d4a: 4e71
 	JSR	lb_01da0.W		;01d4c: 4eb81da0
 	MOVE.W	#$01ff,D0		;01d50: 303c01ff
 	MOVEQ	#0,D1			;01d54: 7200
+	; clear first tile layer (OSD)
 	LEA	tile_layer_0_244000,A0		;01d56: 41f900244000
 lb_01d5c:
 	MOVE.L	D1,(A0)+		;01d5c: 20c1
 	DBF	D0,lb_01d5c		;01d5e: 51c8fffc
 	RTS				;01d62: 4e75
-lb_01d64:
+	
+clear_tile_1_layer_01d64:
 	MOVE.W	#$01ff,D0		;01d64: 303c01ff
 	MOVEQ	#0,D1			;01d68: 7200
 	LEA	ext_00244800,A0		;01d6a: 41f900244800
@@ -2798,7 +2806,7 @@ lb_01d70:
 	MOVE.L	D1,(A0)+		;01d70: 20c1
 	DBF	D0,lb_01d70		;01d72: 51c8fffc
 	RTS				;01d76: 4e75
-lb_01d78:
+clear_tile_0_layer_01d78:
 	MOVE.W	#$01ff,D0		;01d78: 303c01ff
 	MOVEQ	#0,D1			;01d7c: 7200
 	LEA	right_screen_245000,A0		;01d7e: 41f900245000
@@ -2827,7 +2835,7 @@ lb_01dba:
 	MOVE.L	D0,(A0)+		;01dba: 20c0
 	DBF	D1,lb_01dba		;01dbc: 51c9fffc
 	RTS				;01dc0: 4e75
-lb_01dc2:
+clear_sprite_ram_01dc2:
 	MOVEQ	#0,D0			;01dc2: 7000
 	LEA	spriteram_00ffc000,A0		;01dc4: 41f900ffc000
 	MOVE.W	#$01ff,D1		;01dca: 323c01ff
@@ -2903,10 +2911,10 @@ lb_01e96:
 	RTS				;01e96: 4e75
 lb_01e98:
 	MOVE.L	#$00000000,ext_00ff8114	;01e98: 23fc0000000000ff8114
-	JSR	lb_02396.W		;01ea2: 4eb82396
+	JSR	update_pf1_0_control_02396.W		;01ea2: 4eb82396
 	NOP				;01ea6: 4e71
 	MOVE.L	#$00000000,ext_00ff8118	;01ea8: 23fc0000000000ff8118
-	JSR	lb_023a2.W		;01eb2: 4eb823a2
+	JSR	update_pf1_0_control_023a2.W		;01eb2: 4eb823a2
 	NOP				;01eb6: 4e71
 	MOVE.L	#$00000000,ext_00ff8128	;01eb8: 23fc0000000000ff8128
 	JSR	lb_02408.W		;01ec2: 4eb82408
@@ -3327,37 +3335,37 @@ lb_02346:
 	BSR.W	lb_02438		;0234e: 610000e8
 	RTS				;02352: 4e75
 lb_02354:
-	BSR.S	lb_02366		;02354: 6110
-	BSR.S	lb_02372		;02356: 611a
-	BSR.S	lb_0237e		;02358: 6124
-	BSR.S	lb_0238a		;0235a: 612e
-	BSR.S	lb_02396		;0235c: 6138
-	BSR.S	lb_023a2		;0235e: 6142
-	BSR.S	lb_023ae		;02360: 614c
-	BSR.S	lb_023ba		;02362: 6156
+	BSR.S	update_pf0_0_control_02366		;02354: 6110
+	BSR.S	update_pf0_0_control_02372		;02356: 611a
+	BSR.S	update_pf0_0_control_0237e		;02358: 6124
+	BSR.S	update_pf0_0_control_0238a		;0235a: 612e
+	BSR.S	update_pf1_0_control_02396		;0235c: 6138
+	BSR.S	update_pf1_0_control_023a2		;0235e: 6142
+	BSR.S	update_pf1_0_control_023ae		;02360: 614c
+	BSR.S	update_pf1_0_control_023ba		;02362: 6156
 	RTS				;02364: 4e75
-lb_02366:
+update_pf0_0_control_02366:
 	MOVE.W	ext_00ff810c,ext_00240000	;02366: 33f900ff810c00240000
 	RTS				;02370: 4e75
-lb_02372:
+update_pf0_0_control_02372:
 	MOVE.W	ext_00ff810e,ext_00240002	;02372: 33f900ff810e00240002
 	RTS				;0237c: 4e75
-lb_0237e:
+update_pf0_0_control_0237e:
 	MOVE.W	ext_00ff8110,ext_00240004	;0237e: 33f900ff811000240004
 	RTS				;02388: 4e75
-lb_0238a:
+update_pf0_0_control_0238a:
 	MOVE.W	ext_00ff8112,ext_00240006	;0238a: 33f900ff811200240006
 	RTS				;02394: 4e75
-lb_02396:
+update_pf1_0_control_02396:
 	MOVE.W	ext_00ff8114,ext_00240010	;02396: 33f900ff811400240010
 	RTS				;023a0: 4e75
-lb_023a2:
+update_pf1_0_control_023a2:
 	MOVE.W	ext_00ff8118,ext_00240012	;023a2: 33f900ff811800240012
 	RTS				;023ac: 4e75
-lb_023ae:
+update_pf1_0_control_023ae:
 	MOVE.W	ext_00ff811c,ext_00240014	;023ae: 33f900ff811c00240014
 	RTS				;023b8: 4e75
-lb_023ba:
+update_pf1_0_control_023ba:
 	MOVE.W	ext_00ff811e,ext_00240016	;023ba: 33f900ff811e00240016
 	RTS				;023c4: 4e75
 lb_023c6:
@@ -3570,7 +3578,7 @@ lb_025f0:
 	JSR	display_sprite_02788.W		;02636: 4eb82788
 	NOP				;0263a: 4e71
 	JSR	lb_01e80.W		;0263c: 4eb81e80
-	BSET	#1,ext_00ff8217		;02640: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;02640: 08f9000100ff8217
 	RTS				;02648: 4e75
 lb_0264a:
 	JSR	lb_027f6.W		;0264a: 4eb827f6
@@ -3597,7 +3605,7 @@ lb_0264a:
 	JSR	display_sprite_02788.W		;026a0: 4eb82788
 	NOP				;026a4: 4e71
 	JSR	lb_01e80.W		;026a6: 4eb81e80
-	BSET	#1,ext_00ff8217		;026aa: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;026aa: 08f9000100ff8217
 	RTS				;026b2: 4e75
 lb_026b4:
 	JSR	lb_027f6.W		;026b4: 4eb827f6
@@ -3624,7 +3632,7 @@ lb_026b4:
 	JSR	display_sprite_02788.W		;0270a: 4eb82788
 	NOP				;0270e: 4e71
 	JSR	lb_01e80.W		;02710: 4eb81e80
-	BSET	#1,ext_00ff8217		;02714: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;02714: 08f9000100ff8217
 	RTS				;0271c: 4e75
 lb_0271e:
 	JSR	lb_027f6.W		;0271e: 4eb827f6
@@ -3651,7 +3659,7 @@ lb_0271e:
 	JSR	display_sprite_02788.W		;02774: 4eb82788
 	NOP				;02778: 4e71
 	JSR	lb_01e80.W		;0277a: 4eb81e80
-	BSET	#1,ext_00ff8217		;0277e: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;0277e: 08f9000100ff8217
 	RTS				;02786: 4e75
 display_sprite_02788:
 	ADDA.L	#$00000050,A0		;02788: d1fc00000050
@@ -9587,7 +9595,7 @@ lb_07aea:
 	BSR.W	lb_07b34		;07aea: 61000048
 	MOVE.W	#$0136,D0		;07aee: 303c0136
 lb_07af2:
-	JSR	lb_003f0.W		;07af2: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;07af2: 4eb803f0
 	MOVE.W	D0,-(A7)		;07af6: 3f00
 	JSR	lb_07c90.W		;07af8: 4eb87c90
 	NOP				;07afc: 4e71
@@ -10177,13 +10185,13 @@ lb_0825e:
 	MOVE.W	#$0004,sound_0030c010		;0826e: 33fc00040030c010
 	LEA	lb_08e32,A0		;08276: 41f900008e32
 	LEA	tile_layer_1_24A000,A1		;0827c: 43f90024a000
-	BSR.W	lb_0837c		;08282: 610000f8
+	BSR.W	copy_memory_to_tiles_0837c		;08282: 610000f8
 	LEA	lb_08b0a,A0		;08286: 41f900008b0a
 	BSR.W	display_layer_1_tiles_08388		;0828c: 610000fa
 	BSR.W	display_rampant_ninja_message_08330		;08290: 6100009e
 	MOVE.W	#$0078,D0		;08294: 303c0078
 lb_08298:
-	JSR	lb_003f0.W		;08298: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;08298: 4eb803f0
 	TST.W	ext_00ffa8c0		;0829c: 4a7900ffa8c0
 	BEQ.W	lb_082ac		;082a2: 67000008
 	JMP	lb_08410		;082a6: 4ef900008410
@@ -10193,7 +10201,7 @@ lb_082ac:
 	BSR.W	display_layer_1_tiles_08388		;082b6: 610000d0
 	MOVE.W	#$003e,D0		;082ba: 303c003e
 lb_082be:
-	JSR	lb_003f0.W		;082be: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;082be: 4eb803f0
 	TST.W	ext_00ffa8c0		;082c2: 4a7900ffa8c0
 	BEQ.W	lb_082d2		;082c8: 67000008
 	JMP	lb_08410		;082cc: 4ef900008410
@@ -10205,7 +10213,7 @@ lb_082d2:
 	JSR	lb_01f78.W		;082e4: 4eb81f78
 	MOVE.W	#$007c,D0		;082e8: 303c007c
 lb_082ec:
-	JSR	lb_003f0.W		;082ec: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;082ec: 4eb803f0
 	TST.W	ext_00ffa8c0		;082f0: 4a7900ffa8c0
 	BEQ.W	lb_08300		;082f6: 67000008
 	JMP	lb_08410		;082fa: 4ef900008410
@@ -10214,7 +10222,7 @@ lb_08300:
 	JSR	lb_083ce		;08304: 4eb9000083ce
 	MOVE.W	#$007c,D0		;0830a: 303c007c
 lb_0830e:
-	JSR	lb_003f0.W		;0830e: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;0830e: 4eb803f0
 	TST.W	ext_00ffa8c0		;08312: 4a7900ffa8c0
 	BEQ.W	lb_08322		;08318: 67000008
 	JMP	lb_08410		;0831c: 4ef900008410
@@ -10236,7 +10244,7 @@ lb_08340:
 	MOVE.W	D0,(A1)+		;0834e: 32c0
 	MOVE.W	#$0003,D0		;08350: 303c0003
 lb_08354:
-	JSR	lb_003f0.W		;08354: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;08354: 4eb803f0
 	TST.W	ext_00ffa8c0		;08358: 4a7900ffa8c0
 	BEQ.W	lb_08368		;0835e: 67000008
 	JMP	lb_08410		;08362: 4ef900008410
@@ -10247,7 +10255,7 @@ lb_08368:
 	JMP	lb_0833c		;08374: 4ef90000833c
 lb_0837a:
 	RTS				;0837a: 4e75
-lb_0837c:
+copy_memory_to_tiles_0837c:
 	MOVE.W	#$01ff,D0		;0837c: 303c01ff
 lb_08380:
 	MOVE.L	(A0)+,(A1)+		;08380: 22d8
@@ -10288,7 +10296,7 @@ lb_083d4:
 	BNE.S	lb_083d4		;083e6: 66ec
 	MOVE.W	#$0002,D0		;083e8: 303c0002
 lb_083ec:
-	JSR	lb_003f0.W		;083ec: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;083ec: 4eb803f0
 	TST.B	ext_00ffa8c0		;083f0: 4a3900ffa8c0
 	BEQ.W	lb_08400		;083f6: 67000008
 	JMP	lb_08410		;083fa: 4ef900008410
@@ -10304,7 +10312,7 @@ lb_08410:
 	MOVE.W	#$0004,sound_0030c010		;08420: 33fc00040030c010
 	LEA	lb_08e32,A0		;08428: 41f900008e32
 	LEA	tile_layer_1_24A000,A1		;0842e: 43f90024a000
-	BSR.W	lb_0837c		;08434: 6100ff46
+	BSR.W	copy_memory_to_tiles_0837c		;08434: 6100ff46
 	LEA	lb_08be0,A0		;08438: 41f900008be0
 	BSR.W	display_layer_1_tiles_08388		;0843e: 6100ff48
 	LEA	lb_08a38,A0		;08442: 41f900008a38
@@ -10345,7 +10353,7 @@ lb_084ae:
 	JSR	lb_00404.W		;084ba: 4eb80404
 	LEA	lb_09032,A0		;084be: 41f900009032
 	LEA	tile_layer_1_24A000,A1		;084c4: 43f90024a000
-	JSR	lb_0837c		;084ca: 4eb90000837c
+	JSR	copy_memory_to_tiles_0837c		;084ca: 4eb90000837c
 	MOVE.W	#$0000,ext_00ff801e		;084d0: 33fc000000ff801e
 	MOVE.W	#$000a,ext_00ff8020		;084d8: 33fc000a00ff8020
 	JSR	lb_087c8		;084e0: 4eb9000087c8
@@ -10400,7 +10408,7 @@ lb_085ae:
 	JSR	lb_0def0		;085bc: 4eb90000def0
 	RTS				;085c2: 4e75
 lb_085c4:
-	MOVE.B	ext_00ff8217,D0		;085c4: 103900ff8217
+	MOVE.B	sync_flags_00ff8217,D0		;085c4: 103900ff8217
 	ANDI.B	#$02,D0			;085ca: 02000002
 	BNE.W	lb_08670		;085ce: 660000a0
 	LEA	spriteram_00ffc000,A0		;085d2: 41f900ffc000
@@ -10447,7 +10455,7 @@ lb_0865c:
 	MOVE.W	(A1)+,(A0)+		;08660: 30d9
 	MOVE.W	(A1)+,(A0)+		;08662: 30d9
 	DBF	D3,lb_0865c		;08664: 51cbfff6
-	BSET	#1,ext_00ff8217		;08668: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;08668: 08f9000100ff8217
 lb_08670:
 	RTS				;08670: 4e75
 	MOVE.W	ext_00ff801e,D0		;08672: 303900ff801e
@@ -10516,7 +10524,7 @@ lb_08740:
 	BNE.S	lb_08740		;08750: 66ee
 	RTS				;08752: 4e75
 lb_08754:
-	MOVE.B	ext_00ff8217,D0		;08754: 103900ff8217
+	MOVE.B	sync_flags_00ff8217,D0		;08754: 103900ff8217
 	ANDI.B	#$02,D0			;0875a: 02000002
 	BNE.W	lb_087c6		;0875e: 66000066
 	LEA	spriteram_00ffc000,A0		;08762: 41f900ffc000
@@ -10548,7 +10556,7 @@ lb_087b2:
 	MOVE.W	(A1)+,(A0)+		;087b6: 30d9
 	MOVE.W	(A1)+,(A0)+		;087b8: 30d9
 	DBF	D3,lb_087b2		;087ba: 51cbfff6
-	BSET	#1,ext_00ff8217		;087be: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;087be: 08f9000100ff8217
 lb_087c6:
 	RTS				;087c6: 4e75
 lb_087c8:
@@ -11767,7 +11775,7 @@ lb_09032:
 	CLR.L	ext_00ff813c		;09236: 42b900ff813c
 	CLR.L	ext_00ff8140		;0923c: 42b900ff8140
 	MOVE.W	#$800a,ext_00ff8170		;09242: 33fc800a00ff8170
-	JSR	lb_003f0.W		;0924a: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;0924a: 4eb803f0
 	MOVE.W	#$0000,sound_0030c010		;0924e: 33fc00000030c010
 	MOVEQ	#102,D0			;09256: 7066
 	JSR	lb_0def0		;09258: 4eb90000def0
@@ -11779,7 +11787,7 @@ lb_0926a:
 	BNE.S	lb_0926a		;09272: 66f6
 	MOVE.W	#$027f,D0		;09274: 303c027f
 lb_09278:
-	JSR	lb_003f0.W		;09278: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;09278: 4eb803f0
 	DBF	D0,lb_09278		;0927c: 51c8fffa
 	RTS				;09280: 4e75
 lb_09282:
@@ -12434,9 +12442,9 @@ lb_0959a:
 	dc.w	$86c1	;09794
 	dc.w	$86df	;09796
 	dc.w	$86c1	;09798
-lb_0979a:
+wait_for_mcu_reply_0979a:
 	TST.W	mcu_reply_0030c008		;0979a: 4a790030c008
-	BNE.S	lb_0979a		;097a0: 66f8
+	BNE.S	wait_for_mcu_reply_0979a		;097a0: 66f8
 	RTS				;097a2: 4e75
 lb_097a4:
 	MOVE.W	#$0b3b,D0		;097a4: 303c0b3b
@@ -12453,6 +12461,7 @@ lb_097c2:
 	MOVE.W	#$013b,D0		;097cc: 303c013b
 	MOVE.W	D0,ext_0030c016		;097d0: 33c00030c016
 	RTS				;097d6: 4e75
+	; not reached?
 	BSR.W	lb_09824		;097d8: 6100004a
 	TST.B	D0			;097dc: 4a00
 	BNE.W	lb_09800		;097de: 66000020
@@ -12607,7 +12616,7 @@ lb_09976:
 lb_0998e:
 	BCLR	#7,ext_00ff810d		;0998e: 08b9000700ff810d
 lb_09996:
-	JSR	lb_02366.W		;09996: 4eb82366
+	JSR	update_pf0_0_control_02366.W		;09996: 4eb82366
 	MOVEQ	#0,D0			;0999a: 7000
 	MOVE.B	ext_00ff810a,D0		;0999c: 103900ff810a
 	ANDI.B	#$0c,D0			;099a2: 0200000c
@@ -12634,7 +12643,7 @@ lb_099f0:
 	CMPA.L	#$00244800,A2		;099f2: b5fc00244800
 	BNE.S	lb_099f0		;099f8: 66f6
 lb_099fa:
-	JSR	lb_003f0.W		;099fa: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;099fa: 4eb803f0
 	BSR.W	lb_09a08		;099fe: 61000008
 	BSR.W	lb_09a58		;09a02: 61000054
 	BRA.S	lb_099fa		;09a06: 60f2
@@ -12690,8 +12699,8 @@ lb_09a86:
 	MOVEQ	#0,D0			;09a8a: 7000
 	MOVE.W	D0,ext_00ff8114		;09a8c: 33c000ff8114
 	MOVE.W	D0,ext_00ff8118		;09a92: 33c000ff8118
-	JSR	lb_02396.W		;09a98: 4eb82396
-	JSR	lb_023a2.W		;09a9c: 4eb823a2
+	JSR	update_pf1_0_control_02396.W		;09a98: 4eb82396
+	JSR	update_pf1_0_control_023a2.W		;09a9c: 4eb823a2
 	LEA	ext_002440c0,A2		;09aa0: 45f9002440c0
 lb_09aa6:
 	MOVE.L	D0,(A2)+		;09aa6: 24c0
@@ -12722,11 +12731,11 @@ lb_09afa:
 lb_09b18:
 	MOVE.W	#$0100,D0		;09b18: 303c0100
 lb_09b1c:
-	JSR	lb_003f0.W		;09b1c: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;09b1c: 4eb803f0
 	SUBQ.W	#1,D0			;09b20: 5340
 	BNE.S	lb_09b1c		;09b22: 66f8
-	JSR	lb_01dc2.W		;09b24: 4eb81dc2
-	JSR	lb_003f0.W		;09b28: 4eb803f0
+	JSR	clear_sprite_ram_01dc2.W		;09b24: 4eb81dc2
+	JSR	wait_for_sync_003f0.W		;09b28: 4eb803f0
 	MOVEQ	#4,D0			;09b2c: 7004
 	JSR	lb_0def0		;09b2e: 4eb90000def0
 	CMPI.B	#$07,current_stage_00ff821d		;09b34: 0c39000700ff821d
@@ -12736,7 +12745,7 @@ lb_09b1c:
 lb_09b46:
 	MOVE.W	#$00c0,D0		;09b46: 303c00c0
 lb_09b4a:
-	JSR	lb_003f0.W		;09b4a: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;09b4a: 4eb803f0
 	SUBQ.W	#1,D0			;09b4e: 5340
 	BNE.S	lb_09b4a		;09b50: 66f8
 	RTS				;09b52: 4e75
@@ -12835,7 +12844,7 @@ lb_09cb0:
 lb_09cb4:
 	RTS				;09cb4: 4e75
 lb_09cb6:
-	JSR	lb_003f0.W		;09cb6: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;09cb6: 4eb803f0
 	BTST	#7,stage_control_flags_00ff8216		;09cba: 0839000700ff8216
 	BNE.W	lb_09d20		;09cc2: 6600005c
 	MOVE.W	ext_00ffa8ba,D2		;09cc6: 343900ffa8ba
@@ -12880,7 +12889,7 @@ lb_09d50:
 	MOVEQ	#0,D0			;09d66: 7000
 	MOVE.W	D0,ext_00244902		;09d68: 33c000244902
 lb_09d6e:
-	JSR	lb_003f0.W		;09d6e: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;09d6e: 4eb803f0
 	JSR	lb_0059c.W		;09d72: 4eb8059c
 	JSR	lb_07d3c.W		;09d76: 4eb87d3c
 	MOVE.B	ext_00ffa9bb,D0		;09d7a: 103900ffa9bb
@@ -18383,7 +18392,7 @@ lb_0e238:
 	MOVEA.L	#lb_0e274,A0		;0e25c: 207c0000e274
 	MOVEA.L	0(A0,D0.W),A0		;0e262: 20700000
 	MOVE.W	#$0900,ext_0030c016		;0e266: 33fc09000030c016
-	JSR	lb_003f0.W		;0e26e: 4eb803f0
+	JSR	wait_for_sync_003f0.W		;0e26e: 4eb803f0
 	JMP	(A0)			;0e272: 4ed0
 lb_0e274:
 	dc.l	lb_0e294	;0e274
@@ -18871,7 +18880,7 @@ lb_0e70a:
 lb_0e714:
 	BNE.W	lb_0e752		;0e714: 6600003c
 lb_0e718:
-	MOVEA.L	#$00ffa8c2,A0		;0e718: 207c00ffa8c2
+	MOVEA.L	#ext_00ffa8c2,A0		;0e718: 207c00ffa8c2
 	LSR.W	#1,D1			;0e71e: e249
 	LEA	0(A0,D1.W),A0		;0e720: 41f01000
 	ADDQ.B	#1,(A0)			;0e724: 5210
@@ -38510,7 +38519,7 @@ lb_1b1be:
 lb_1b1c4:
 	RTS				;1b1c4: 4e75
 lb_1b1c6:
-	JSR	lb_003f0		;1b1c6: 4eb9000003f0
+	JSR	wait_for_sync_003f0		;1b1c6: 4eb9000003f0
 	JSR	lb_1b1e2(PC)		;1b1cc: 4eba0014
 	NOP				;1b1d0: 4e71
 	JSR	lb_1bbfc(PC)		;1b1d2: 4eba0a28
@@ -38562,7 +38571,7 @@ lb_1b234:
 	MOVE.W	#$0000,ext_0024c010		;1b298: 33fc00000024c010
 	MOVE.W	#$0000,ext_0024c012		;1b2a0: 33fc00000024c012
 	MOVE.W	#$0002,ext_00ff8112		;1b2a8: 33fc000200ff8112
-	JSR	lb_0238a		;1b2b0: 4eb90000238a
+	JSR	update_pf0_0_control_0238a		;1b2b0: 4eb90000238a
 	MOVE.W	#$0002,ext_00ff8126		;1b2b6: 33fc000200ff8126
 	JSR	lb_023fc		;1b2be: 4eb9000023fc
 	MOVE.W	#$0004,sound_0030c010		;1b2c4: 33fc00040030c010
@@ -38570,8 +38579,8 @@ lb_1b234:
 	NOP				;1b2d0: 4e71
 	JSR	lb_1b34a(PC)		;1b2d2: 4eba0076
 	NOP				;1b2d6: 4e71
-	JSR	lb_003f0		;1b2d8: 4eb9000003f0
-	JSR	lb_003f0		;1b2de: 4eb9000003f0
+	JSR	wait_for_sync_003f0		;1b2d8: 4eb9000003f0
+	JSR	wait_for_sync_003f0		;1b2de: 4eb9000003f0
 	MOVE.W	#$000f,D0		;1b2e4: 303c000f
 	MOVE.W	#$000f,D1		;1b2e8: 323c000f
 	LEA	tile_layer_1_24A000,A1		;1b2ec: 43f90024a000
@@ -38819,7 +38828,7 @@ lb_1b722:
 	CMPA.L	#$00242040,A1		;1b724: b3fc00242040
 	BNE.S	lb_1b722		;1b72a: 66f6
 	ORI.W	#$0003,ext_00ff810c		;1b72c: 0079000300ff810c
-	JSR	lb_02366		;1b734: 4eb900002366
+	JSR	update_pf0_0_control_02366		;1b734: 4eb900002366
 	LEA	ext_002443d2,A1		;1b73a: 43f9002443d2
 	LEA	lb_1b782(PC),A2		;1b740: 45fa0040
 	NOP				;1b744: 4e71
@@ -39215,17 +39224,17 @@ lb_1ba8a:
 	NOP				;1ba9e: 4e71
 	NOP				;1baa0: 4e71
 	ORI.W	#$000b,ext_00ff810c		;1baa2: 0079000b00ff810c
-	JSR	lb_02366		;1baaa: 4eb900002366
+	JSR	update_pf0_0_control_02366		;1baaa: 4eb900002366
 	MOVE.W	#$0002,ext_00ff8112		;1bab0: 33fc000200ff8112
-	JSR	lb_0238a		;1bab8: 4eb90000238a
+	JSR	update_pf0_0_control_0238a		;1bab8: 4eb90000238a
 	MOVE.W	#$0000,ext_00ff8114		;1babe: 33fc000000ff8114
-	JSR	lb_02396		;1bac6: 4eb900002396
+	JSR	update_pf1_0_control_02396		;1bac6: 4eb900002396
 	MOVE.W	#$0000,ext_00ff8118		;1bacc: 33fc000000ff8118
-	JSR	lb_023a2		;1bad4: 4eb9000023a2
+	JSR	update_pf1_0_control_023a2		;1bad4: 4eb9000023a2
 	MOVE.W	#$0000,ext_00ff811e		;1bada: 33fc000000ff811e
-	JSR	lb_023ba		;1bae2: 4eb9000023ba
+	JSR	update_pf1_0_control_023ba		;1bae2: 4eb9000023ba
 	MOVE.W	#$0000,ext_00ff811c		;1bae8: 33fc000000ff811c
-	JSR	lb_023ae		;1baf0: 4eb9000023ae
+	JSR	update_pf1_0_control_023ae		;1baf0: 4eb9000023ae
 	MOVE.W	#$0082,ext_00ff8134		;1baf6: 33fc008200ff8134
 	JSR	lb_0244a		;1bafe: 4eb90000244a
 	MOVE.W	#$0000,ext_00ff813c		;1bb04: 33fc000000ff813c
@@ -39279,7 +39288,7 @@ lb_1bba2:
 	ANDI.B	#$03,D0			;1bbae: 02000003
 	OR.B	D0,ext_00ffa9bb		;1bbb2: 813900ffa9bb
 lb_1bbb8:
-	JSR	lb_003f0		;1bbb8: 4eb9000003f0
+	JSR	wait_for_sync_003f0		;1bbb8: 4eb9000003f0
 	JSR	lb_0059c		;1bbbe: 4eb90000059c
 	JSR	lb_07d3c		;1bbc4: 4eb900007d3c
 	MOVE.B	ext_00ffa9bb,D0		;1bbca: 103900ffa9bb
@@ -39297,7 +39306,7 @@ lb_1bbfc:
 	MOVE.W	#$0009,D6		;1bc0e: 3c3c0009
 	JSR	display_sprite_02788		;1bc12: 4eb900002788
 	JSR	lb_01e80		;1bc18: 4eb900001e80
-	BSET	#1,ext_00ff8217		;1bc1e: 08f9000100ff8217
+	BSET	#1,sync_flags_00ff8217		;1bc1e: 08f9000100ff8217
 	RTS				;1bc26: 4e75
 	dc.b	"THIS VIDEO GAME MADE IN JAPAN BY DATA EAST CORPORATION.         "	;1bc28
 lb_1bc68:
@@ -110653,4 +110662,4 @@ lb_5eec4:
 	dc.w	$0000	;5fffa
 	dc.w	$0000	;5fffc
 	dc.w	$0000	;5fffe
-	ds.b	$20000
+
