@@ -301,6 +301,7 @@ ext_00ff80de	EQU	$FF80DE
 ext_00ff80e2	EQU	$FF80E2
 ext_00ff80e4	EQU	$FF80E4
 ext_00ff80e6	EQU	$FF80E6
+ext_00ffc7f8    EQU $ffc7f8
 ext_00ff80e7	EQU	$FF80E7
 ext_00ff80e8	EQU	$FF80E8
 ext_00ff80f2	EQU	$FF80F2
@@ -331,6 +332,10 @@ ext_00ff811e	EQU	$FF811E
 ext_00ff8120	EQU	$FF8120
 ext_00ff8122	EQU	$FF8122
 ext_00ff8124	EQU	$FF8124
+ext_00ff8514	EQU	$ff8514
+ext_00ff8834	EQU	$ff8834
+ext_00ffa454	EQU	$ffa454
+ext_00ffa1d4	EQU	$ffa1d4
 ext_00ff8126	EQU	$FF8126
 ext_00ff8128	EQU	$FF8128
 ext_00ff812c	EQU	$FF812C
@@ -549,7 +554,7 @@ ext_00ffa8aa	EQU	$FFA8AA
 ext_00ffa8ba	EQU	$FFA8BA
 ext_00ffa8bc	EQU	$FFA8BC
 ext_00ffa8be	EQU	$FFA8BE
-ext_00ffa8c0	EQU	$FFA8C0
+credit_inserted_flag_00ffa8c0	EQU	$FFA8C0
 nb_credits_00ffa8c1	EQU	$FFA8C1
 ext_00ffa8c2	EQU	$FFA8C2
 ext_00ffa8c4	EQU	$FFA8C4
@@ -869,6 +874,7 @@ loop_forever_0031c:
 lb_0031e:
 	JSR	lb_0032a.W		;0031e: 4eb8032a
 	NOP				;00322: 4e71
+	; unreached
 	JMP	lb_01a70.W		;00324: 4ef81a70
 	NOP				;00328: 4e71
 lb_0032a:
@@ -916,7 +922,7 @@ lb_003aa:
 	BSR.W	lb_0137c		;003cc: 61000fae
 wait_for_hw_sync_003d0:
 	MOVE.W	system_inputs_0030c002,D0		;003d0: 30390030c002
-	BTST	#7,D0			;003d6: 08000007
+	BTST	#7,D0			;003d6: 08000007  vblank
 	BNE.S	wait_for_hw_sync_003d0		;003da: 66f4
 	BSET	#0,sync_flags_00ff8217		;003dc: 08f9000000ff8217
 	MOVE.W	D0,irq_ack_0030c018		;003e4: 33c00030c018
@@ -958,20 +964,20 @@ lb_0044c:
 lb_00458:
 	RTS				;00458: 4e75
 lb_0045a:
-	MOVE.B	ext_00ffa8c0,D0		;0045a: 103900ffa8c0
+	MOVE.B	credit_inserted_flag_00ffa8c0,D0		;0045a: 103900ffa8c0
 	MOVE.B	nb_credits_00ffa8c1,D1		;00460: 123900ffa8c1
 	MOVEQ	#1,D2			;00466: 7401
 	MOVEQ	#0,D3			;00468: 7600
 	MOVE	#$0000,CCR		;0046a: 44fc0000
 	ABCD	D2,D1			;0046e: c302
 	ABCD	D3,D0			;00470: c103
-	MOVE.B	D0,ext_00ffa8c0		;00472: 13c000ffa8c0
+	MOVE.B	D0,credit_inserted_flag_00ffa8c0		;00472: 13c000ffa8c0
 	MOVE.B	D1,nb_credits_00ffa8c1		;00478: 13c100ffa8c1
 	MOVEQ	#93,D0			;0047e: 705d
 	JSR	lb_0def0		;00480: 4eb90000def0
 	RTS				;00486: 4e75
 lb_00488:
-	MOVE.W	ext_00ffa8c0,D0		;00488: 303900ffa8c0
+	MOVE.W	credit_inserted_flag_00ffa8c0,D0		;00488: 303900ffa8c0
 	BEQ.W	lb_004f0		;0048e: 67000060
 	MOVE.B	ext_00ff8215,D1		;00492: 123900ff8215
 	MOVE.B	ext_00ff8220,D2		;00498: 143900ff8220
@@ -1010,7 +1016,7 @@ lb_004f2:
 lb_0050c:
 	BTST	#3,D2			;0050c: 08020003
 	BEQ.W	lb_00536		;00510: 67000024
-	CMPI.W	#$0001,ext_00ffa8c0		;00514: 0c79000100ffa8c0
+	CMPI.W	#$0001,credit_inserted_flag_00ffa8c0		;00514: 0c79000100ffa8c0
 	BCS.W	lb_00536		;0051c: 65000018
 	MOVEQ	#-126,D1		;00520: 7282
 	BCLR	#0,ext_00ffa846		;00522: 08b9000000ffa846
@@ -1031,13 +1037,13 @@ lb_0054c:
 	MOVEM.L	D0-D3,-(A7)		;00556: 48e7f000
 	MOVEQ	#2,D2			;0055a: 7402
 lb_0055c:
-	MOVE.B	ext_00ffa8c0,D0		;0055c: 103900ffa8c0
+	MOVE.B	credit_inserted_flag_00ffa8c0,D0		;0055c: 103900ffa8c0
 	MOVE.B	nb_credits_00ffa8c1,D1		;00562: 123900ffa8c1
 	MOVEQ	#0,D3			;00568: 7600
 	MOVE	#$0000,CCR		;0056a: 44fc0000
 	SBCD	D2,D1			;0056e: 8302
 	SBCD	D3,D0			;00570: 8103
-	MOVE.B	D0,ext_00ffa8c0		;00572: 13c000ffa8c0
+	MOVE.B	D0,credit_inserted_flag_00ffa8c0		;00572: 13c000ffa8c0
 	MOVE.B	D1,nb_credits_00ffa8c1		;00578: 13c100ffa8c1
 	BRA.W	lb_00582		;0057e: 60000002
 lb_00582:
@@ -2765,7 +2771,7 @@ lb_01cd8:
 lb_01ce8:
 	JSR	clear_sprite_ram_01dc2.W		;01ce8: 4eb81dc2
 	NOP				;01cec: 4e71
-	JSR	lb_01ddc.W		;01cee: 4eb81ddc
+	JSR	clear_tile_1_ram_01ddc.W		;01cee: 4eb81ddc
 	NOP				;01cf2: 4e71
 	JSR	lb_01e2e.W		;01cf4: 4eb81e2e
 	NOP				;01cf8: 4e71
@@ -2844,7 +2850,7 @@ lb_01dce:
 	DBF	D1,lb_01dce		;01dd0: 51c9fffc
 	MOVE.W	D0,sprite_dma_0030c012		;01dd4: 33c00030c012
 	RTS				;01dda: 4e75
-lb_01ddc:
+clear_tile_1_ram_01ddc:
 	MOVEQ	#0,D0			;01ddc: 7000
 	MOVE.W	D0,ext_00ff8128		;01dde: 33c000ff8128
 	JSR	lb_02408.W		;01de4: 4eb82408
@@ -2903,7 +2909,7 @@ lb_01e78:
 lb_01e80:
 	dc.w	$0891	;01e80
 	dc.w	$000f	;01e82
-	CMPA.L	#$00ffc7f8,A1		;01e84: b3fc00ffc7f8
+	CMPA.L	#ext_00ffc7f8,A1		;01e84: b3fc00ffc7f8
 	BCC.W	lb_01e96		;01e8a: 6400000a
 	ADDA.L	#$00000008,A1		;01e8e: d3fc00000008
 	BRA.S	lb_01e80		;01e94: 60ea
@@ -3561,19 +3567,19 @@ lb_025f0:
 	JSR	lb_027f6.W		;025f0: 4eb827f6
 	NOP				;025f4: 4e71
 	LEA	spriteram_00ffc000,A1		;025f6: 43f900ffc000
-	MOVEA.L	#$00ff81f4,A0		;025fc: 207c00ff81f4
+	MOVEA.L	#ext_00ff81f4,A0		;025fc: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02602: 3c3c0013
 	JSR	display_sprite_02788.W		;02606: 4eb82788
 	NOP				;0260a: 4e71
-	MOVEA.L	#$00ff8834,A0		;0260c: 207c00ff8834
+	MOVEA.L	#ext_00ff8834,A0		;0260c: 207c00ff8834
 	MOVE.W	#$0051,D6		;02612: 3c3c0051
 	JSR	display_sprite_02788.W		;02616: 4eb82788
 	NOP				;0261a: 4e71
-	MOVEA.L	#$00ffa1d4,A0		;0261c: 207c00ffa1d4
+	MOVEA.L	#ext_00ffa1d4,A0		;0261c: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02622: 3c3c0007
 	JSR	display_sprite_02788.W		;02626: 4eb82788
 	NOP				;0262a: 4e71
-	MOVEA.L	#$00ffa454,A0		;0262c: 207c00ffa454
+	MOVEA.L	#ext_00ffa454,A0		;0262c: 207c00ffa454
 	MOVE.W	#$0009,D6		;02632: 3c3c0009
 	JSR	display_sprite_02788.W		;02636: 4eb82788
 	NOP				;0263a: 4e71
@@ -3584,23 +3590,23 @@ lb_0264a:
 	JSR	lb_027f6.W		;0264a: 4eb827f6
 	NOP				;0264e: 4e71
 	LEA	spriteram_00ffc000,A1		;02650: 43f900ffc000
-	MOVEA.L	#$00ff81f4,A0		;02656: 207c00ff81f4
+	MOVEA.L	#ext_00ff81f4,A0		;02656: 207c00ff81f4
 	MOVE.W	#$0009,D6		;0265c: 3c3c0009
 	JSR	display_sprite_02788.W		;02660: 4eb82788
 	NOP				;02664: 4e71
-	MOVEA.L	#$00ff8834,A0		;02666: 207c00ff8834
+	MOVEA.L	#ext_00ff8834,A0		;02666: 207c00ff8834
 	MOVE.W	#$0051,D6		;0266c: 3c3c0051
 	JSR	display_sprite_02788.W		;02670: 4eb82788
 	NOP				;02674: 4e71
-	MOVEA.L	#$00ff8514,A0		;02676: 207c00ff8514
+	MOVEA.L	#ext_00ff8514,A0		;02676: 207c00ff8514
 	MOVE.W	#$0009,D6		;0267c: 3c3c0009
 	JSR	display_sprite_02788.W		;02680: 4eb82788
 	NOP				;02684: 4e71
-	MOVEA.L	#$00ffa1d4,A0		;02686: 207c00ffa1d4
+	MOVEA.L	#ext_00ffa1d4,A0		;02686: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;0268c: 3c3c0007
 	JSR	display_sprite_02788.W		;02690: 4eb82788
 	NOP				;02694: 4e71
-	MOVEA.L	#$00ffa454,A0		;02696: 207c00ffa454
+	MOVEA.L	#ext_00ffa454,A0		;02696: 207c00ffa454
 	MOVE.W	#$0009,D6		;0269c: 3c3c0009
 	JSR	display_sprite_02788.W		;026a0: 4eb82788
 	NOP				;026a4: 4e71
@@ -3611,23 +3617,23 @@ lb_026b4:
 	JSR	lb_027f6.W		;026b4: 4eb827f6
 	NOP				;026b8: 4e71
 	LEA	spriteram_00ffc000,A1		;026ba: 43f900ffc000
-	MOVEA.L	#$00ff81f4,A0		;026c0: 207c00ff81f4
+	MOVEA.L	#ext_00ff81f4,A0		;026c0: 207c00ff81f4
 	MOVE.W	#$0009,D6		;026c6: 3c3c0009
 	JSR	display_sprite_02788.W		;026ca: 4eb82788
 	NOP				;026ce: 4e71
-	MOVEA.L	#$00ff8834,A0		;026d0: 207c00ff8834
+	MOVEA.L	#ext_00ff8834,A0		;026d0: 207c00ff8834
 	MOVE.W	#$0051,D6		;026d6: 3c3c0051
 	JSR	display_sprite_02788.W		;026da: 4eb82788
 	NOP				;026de: 4e71
-	MOVEA.L	#$00ffa1d4,A0		;026e0: 207c00ffa1d4
+	MOVEA.L	#ext_00ffa1d4,A0		;026e0: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;026e6: 3c3c0007
 	JSR	display_sprite_02788.W		;026ea: 4eb82788
 	NOP				;026ee: 4e71
-	MOVEA.L	#$00ff8514,A0		;026f0: 207c00ff8514
+	MOVEA.L	#ext_00ff8514,A0		;026f0: 207c00ff8514
 	MOVE.W	#$0009,D6		;026f6: 3c3c0009
 	JSR	display_sprite_02788.W		;026fa: 4eb82788
 	NOP				;026fe: 4e71
-	MOVEA.L	#$00ffa454,A0		;02700: 207c00ffa454
+	MOVEA.L	#ext_00ffa454,A0		;02700: 207c00ffa454
 	MOVE.W	#$0009,D6		;02706: 3c3c0009
 	JSR	display_sprite_02788.W		;0270a: 4eb82788
 	NOP				;0270e: 4e71
@@ -3638,23 +3644,23 @@ lb_0271e:
 	JSR	lb_027f6.W		;0271e: 4eb827f6
 	NOP				;02722: 4e71
 	LEA	spriteram_00ffc000,A1		;02724: 43f900ffc000
-	MOVEA.L	#$00ff81f4,A0		;0272a: 207c00ff81f4
+	MOVEA.L	#ext_00ff81f4,A0		;0272a: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02730: 3c3c0013
 	JSR	display_sprite_02788.W		;02734: 4eb82788
 	NOP				;02738: 4e71
-	MOVEA.L	#$00ff9eb4,A0		;0273a: 207c00ff9eb4
+	MOVEA.L	#ext_00ff9eb4,A0		;0273a: 207c00ff9eb4
 	MOVE.W	#$0009,D6		;02740: 3c3c0009
 	JSR	display_sprite_02788.W		;02744: 4eb82788
 	NOP				;02748: 4e71
-	MOVEA.L	#$00ff8834,A0		;0274a: 207c00ff8834
+	MOVEA.L	#ext_00ff8834,A0		;0274a: 207c00ff8834
 	MOVE.W	#$0047,D6		;02750: 3c3c0047
 	JSR	display_sprite_02788.W		;02754: 4eb82788
 	NOP				;02758: 4e71
-	MOVEA.L	#$00ffa1d4,A0		;0275a: 207c00ffa1d4
+	MOVEA.L	#ext_00ffa1d4,A0		;0275a: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02760: 3c3c0007
 	JSR	display_sprite_02788.W		;02764: 4eb82788
 	NOP				;02768: 4e71
-	MOVEA.L	#$00ffa454,A0		;0276a: 207c00ffa454
+	MOVEA.L	#ext_00ffa454,A0		;0276a: 207c00ffa454
 	MOVE.W	#$0009,D6		;02770: 3c3c0009
 	JSR	display_sprite_02788.W		;02774: 4eb82788
 	NOP				;02778: 4e71
@@ -3852,7 +3858,7 @@ lb_029b0:
 	MOVE.B	(A2),5(A0)		;029c4: 11520005
 	RTS				;029c8: 4e75
 lb_029ca:
-	MOVEA.L	#$00ff81f4,A0		;029ca: 207c00ff81f4
+	MOVEA.L	#ext_00ff81f4,A0		;029ca: 207c00ff81f4
 	MOVE.W	#$0065,ext_00ff80f2		;029d0: 33fc006500ff80f2
 lb_029d8:
 	SUBI.W	#$0001,ext_00ff80f2		;029d8: 0479000100ff80f2
@@ -7827,12 +7833,12 @@ lb_060e4:
 lb_060f2:
 	JSR	lb_06094.W		;060f2: 4eb86094
 	MOVE.L	D2,ext_00ff803e		;060f6: 23c200ff803e
-	MOVE.L	#$00ffa364,ext_00ff8042	;060fc: 23fc00ffa36400ff8042
+	MOVE.L	#ext_00ffa364,ext_00ff8042	;060fc: 23fc00ffa36400ff8042
 	RTS				;06106: 4e75
 lb_06108:
 	JSR	lb_06094.W		;06108: 4eb86094
 	MOVE.L	D3,ext_00ff803e		;0610c: 23c300ff803e
-	MOVE.L	#$00ffa224,ext_00ff8042	;06112: 23fc00ffa22400ff8042
+	MOVE.L	#ext_00ffa224,ext_00ff8042	;06112: 23fc00ffa22400ff8042
 	RTS				;0611c: 4e75
 lb_0611e:
 	JSR	lb_06094.W		;0611e: 4eb86094
@@ -9588,9 +9594,9 @@ lb_078b2:
 	dc.b	"     AND NORTH AMERICA."	;07ac2
 	dc.b	$ff	;07ad9
 lb_07ada:
-	TST.W	ext_00ffa8c0		;07ada: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;07ada: 4a7900ffa8c0
 	BEQ.W	lb_07aea		;07ae0: 67000008
-	JMP	lb_08410		;07ae4: 4ef900008410
+	JMP	credit_inserted_08410		;07ae4: 4ef900008410
 lb_07aea:
 	BSR.W	lb_07b34		;07aea: 61000048
 	MOVE.W	#$0136,D0		;07aee: 303c0136
@@ -9600,11 +9606,11 @@ lb_07af2:
 	JSR	lb_07c90.W		;07af8: 4eb87c90
 	NOP				;07afc: 4e71
 	MOVE.W	(A7)+,D0		;07afe: 301f
-	TST.W	ext_00ffa8c0		;07b00: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;07b00: 4a7900ffa8c0
 	BEQ.S	lb_07b1e		;07b06: 6716
 	MOVE.B	#$00,ext_00ffa9af		;07b08: 13fc000000ffa9af
 	MOVE.B	#$00,ext_00ffa9b9		;07b10: 13fc000000ffa9b9
-	JMP	lb_08410		;07b18: 4ef900008410
+	JMP	credit_inserted_08410		;07b18: 4ef900008410
 lb_07b1e:
 	DBF	D0,lb_07af2		;07b1e: 51c8ffd2
 	MOVE.B	#$00,ext_00ffa9af		;07b22: 13fc000000ffa9af
@@ -9883,7 +9889,7 @@ lb_07e46:
 	BSR.W	lb_07f10		;07e52: 610000bc
 	BRA.S	lb_07e72		;07e56: 601a
 lb_07e58:
-	TST.W	ext_00ffa8c0		;07e58: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;07e58: 4a7900ffa8c0
 	BEQ.S	lb_07e72		;07e5e: 6712
 	MOVE.B	D0,D1			;07e60: 1200
 	ADDI.B	#$02,D1			;07e62: 06010002
@@ -10179,7 +10185,7 @@ lb_08256:
 	dc.l	$244086	;08256
 	dc.l	$2440b0	;0825a
 lb_0825e:                                
-	move.b  $FFA9AF,D0		;0825E: 103900ffa9af
+	MOVE.B	ext_00ffa9af,D0		;0825E: 103900ffa9af
 	OR.B	ext_00ffa9b9,D0		;08264: 803900ffa9b9
 	BNE.W	lb_08326		;0826a: 660000ba
 	MOVE.W	#$0004,sound_0030c010		;0826e: 33fc00040030c010
@@ -10187,45 +10193,48 @@ lb_0825e:
 	LEA	tile_layer_1_24A000,A1		;0827c: 43f90024a000
 	BSR.W	copy_memory_to_tiles_0837c		;08282: 610000f8
 	LEA	lb_08b0a,A0		;08286: 41f900008b0a
-	BSR.W	display_layer_1_tiles_08388		;0828c: 610000fa
+	; ninjas at rest (during tile)
+	BSR.W	display_4x4_tile_blocks_08388		;0828c: 610000fa
 	BSR.W	display_rampant_ninja_message_08330		;08290: 6100009e
 	MOVE.W	#$0078,D0		;08294: 303c0078
 lb_08298:
 	JSR	wait_for_sync_003f0.W		;08298: 4eb803f0
-	TST.W	ext_00ffa8c0		;0829c: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;0829c: 4a7900ffa8c0
 	BEQ.W	lb_082ac		;082a2: 67000008
-	JMP	lb_08410		;082a6: 4ef900008410
+	JMP	credit_inserted_08410		;082a6: 4ef900008410
 lb_082ac:
 	DBF	D0,lb_08298		;082ac: 51c8ffea
 	LEA	lb_08be0,A0		;082b0: 41f900008be0
-	BSR.W	display_layer_1_tiles_08388		;082b6: 610000d0
+	; ninjas getting angry
+	BSR.W	display_4x4_tile_blocks_08388		;082b6: 610000d0
 	MOVE.W	#$003e,D0		;082ba: 303c003e
 lb_082be:
 	JSR	wait_for_sync_003f0.W		;082be: 4eb803f0
-	TST.W	ext_00ffa8c0		;082c2: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;082c2: 4a7900ffa8c0
 	BEQ.W	lb_082d2		;082c8: 67000008
-	JMP	lb_08410		;082cc: 4ef900008410
+	JMP	credit_inserted_08410		;082cc: 4ef900008410
 lb_082d2:
 	DBF	D0,lb_082be		;082d2: 51c8ffea
 	LEA	lb_08a38,A0		;082d6: 41f900008a38
-	BSR.W	display_layer_1_tiles_08388		;082dc: 610000aa
+	; "bad dudes vs dragonninja" title displayed
+	BSR.W	display_4x4_tile_blocks_08388		;082dc: 610000aa
 	MOVE.W	#$001e,D0		;082e0: 303c001e
 	JSR	lb_01f78.W		;082e4: 4eb81f78
 	MOVE.W	#$007c,D0		;082e8: 303c007c
 lb_082ec:
 	JSR	wait_for_sync_003f0.W		;082ec: 4eb803f0
-	TST.W	ext_00ffa8c0		;082f0: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;082f0: 4a7900ffa8c0
 	BEQ.W	lb_08300		;082f6: 67000008
-	JMP	lb_08410		;082fa: 4ef900008410
+	JMP	credit_inserted_08410		;082fa: 4ef900008410
 lb_08300:
 	DBF	D0,lb_082ec		;08300: 51c8ffea
-	JSR	lb_083ce		;08304: 4eb9000083ce
+	JSR	set_video_attribute_083ce		;08304: 4eb9000083ce
 	MOVE.W	#$007c,D0		;0830a: 303c007c
 lb_0830e:
 	JSR	wait_for_sync_003f0.W		;0830e: 4eb803f0
-	TST.W	ext_00ffa8c0		;08312: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;08312: 4a7900ffa8c0
 	BEQ.W	lb_08322		;08318: 67000008
-	JMP	lb_08410		;0831c: 4ef900008410
+	JMP	credit_inserted_08410		;0831c: 4ef900008410
 lb_08322:
 	DBF	D0,lb_0830e		;08322: 51c8ffea
 lb_08326:
@@ -10239,15 +10248,15 @@ lb_0833c:
 lb_08340:
 	MOVE.B	(A0)+,D0		;08340: 1018
 	CMPI.B	#$ff,D0			;08342: 0c0000ff
-	BEQ.W	lb_0837a		;08346: 67000032
+	BEQ.W	lb_0837a		;08346: 67000032 end of string
 	ANDI.W	#$00ff,D0		;0834a: 024000ff
 	MOVE.W	D0,(A1)+		;0834e: 32c0
 	MOVE.W	#$0003,D0		;08350: 303c0003
 lb_08354:
 	JSR	wait_for_sync_003f0.W		;08354: 4eb803f0
-	TST.W	ext_00ffa8c0		;08358: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;08358: 4a7900ffa8c0
 	BEQ.W	lb_08368		;0835e: 67000008
-	JMP	lb_08410		;08362: 4ef900008410
+	JMP	credit_inserted_08410		;08362: 4ef900008410
 lb_08368:
 	DBF	D0,lb_08354		;08368: 51c8ffea
 	DBF	D1,lb_08340		;0836c: 51c9ffd2
@@ -10263,7 +10272,7 @@ lb_08380:
 	RTS				;08386: 4e75
 ; display tiles on screen first layer
 ; < A0: tiles (ends on FFFF)
-display_layer_1_tiles_08388:
+display_4x4_tile_blocks_08388:
 	CMPI.W	#$ffff,(A0)		;08388: 0c50ffff
 	BEQ.W	lb_083cc		;0838c: 6700003e
 	MOVE.W	(A0)+,D0		;08390: 3018 offset
@@ -10273,6 +10282,7 @@ display_layer_1_tiles_08388:
 	ANDI.W	#$0fff,D1		;0839a: 02410fff
 	LSL.W	#2,D1			;0839e: e549
 	OR.W	D2,D1			;083a0: 8242
+	* write 4x4 block
 	LEA	tile_layer_0_244000,A1		;083a2: 43f900244000
 	LEA	0(A1,D0.L),A1		;083a8: 43f10800
 	MOVE.W	D1,(A1)			;083ac: 3281
@@ -10282,10 +10292,10 @@ display_layer_1_tiles_08388:
 	MOVE.W	D1,-2(A1)		;083ba: 3341fffe
 	ADDI.W	#$0001,D1		;083be: 06410001
 	MOVE.W	D1,62(A1)		;083c2: 3341003e
-	JMP	display_layer_1_tiles_08388		;083c6: 4ef900008388
+	JMP	display_4x4_tile_blocks_08388		;083c6: 4ef900008388
 lb_083cc:
 	RTS				;083cc: 4e75
-lb_083ce:
+set_video_attribute_083ce:
 	LEA	tile_layer_0_244000+$100,A0		;083ce: 41f900244100
 lb_083d4:
 	MOVE.W	(A0),D0			;083d4: 3010
@@ -10297,15 +10307,15 @@ lb_083d4:
 	MOVE.W	#$0002,D0		;083e8: 303c0002
 lb_083ec:
 	JSR	wait_for_sync_003f0.W		;083ec: 4eb803f0
-	TST.B	ext_00ffa8c0		;083f0: 4a3900ffa8c0
+	TST.B	credit_inserted_flag_00ffa8c0		;083f0: 4a3900ffa8c0
 	BEQ.W	lb_08400		;083f6: 67000008
-	JMP	lb_08410		;083fa: 4ef900008410
+	JMP	credit_inserted_08410		;083fa: 4ef900008410
 lb_08400:
 	DBF	D0,lb_083ec		;08400: 51c8ffea
 	LEA	lb_08a38,A0		;08404: 41f900008a38
-	BSR.W	display_layer_1_tiles_08388		;0840a: 6100ff7c
+	BSR.W	display_4x4_tile_blocks_08388		;0840a: 6100ff7c
 	RTS				;0840e: 4e75
-lb_08410:
+credit_inserted_08410:
 	CLR.B	ext_00ffa9af		;08410: 423900ffa9af
 	CLR.B	ext_00ffa9b9		;08416: 423900ffa9b9
 	JSR	lb_01cd8.W		;0841c: 4eb81cd8
@@ -10314,9 +10324,9 @@ lb_08410:
 	LEA	tile_layer_1_24A000,A1		;0842e: 43f90024a000
 	BSR.W	copy_memory_to_tiles_0837c		;08434: 6100ff46
 	LEA	lb_08be0,A0		;08438: 41f900008be0
-	BSR.W	display_layer_1_tiles_08388		;0843e: 6100ff48
+	BSR.W	display_4x4_tile_blocks_08388		;0843e: 6100ff48
 	LEA	lb_08a38,A0		;08442: 41f900008a38
-	BSR.W	display_layer_1_tiles_08388		;08448: 6100ff3e
+	BSR.W	display_4x4_tile_blocks_08388		;08448: 6100ff3e
 	MOVE.W	#$001e,D0		;0844c: 303c001e
 	JSR	lb_01f78.W		;08450: 4eb81f78
 	JMP	lb_099e4		;08454: 4ef9000099e4
@@ -10325,7 +10335,7 @@ lb_0845a:
 lb_08460:
 	TST.B	ext_00ff801e		;08460: 4a3900ff801e
 	BNE.S	lb_08488		;08466: 6620
-	MOVE.W	ext_00ffa8c0,D0		;08468: 303900ffa8c0
+	MOVE.W	credit_inserted_flag_00ffa8c0,D0		;08468: 303900ffa8c0
 	CMPI.W	#$0001,D0		;0846e: 0c400001
 	BNE.S	lb_0847e		;08472: 660a
 	MOVE.W	#$0021,D0		;08474: 303c0021
@@ -12652,7 +12662,7 @@ lb_09a08:
 	JSR	lb_01f78.W		;09a0a: 4eb81f78
 	MOVEQ	#0,D2			;09a0e: 7400
 	MOVEQ	#0,D3			;09a10: 7600
-	MOVE.W	ext_00ffa8c0,D2		;09a12: 343900ffa8c0
+	MOVE.W	credit_inserted_flag_00ffa8c0,D2		;09a12: 343900ffa8c0
 	MOVE.W	D2,D5			;09a18: 3a02
 	MOVE.W	#$0009,D4		;09a1a: 383c0009
 	CMP.W	D2,D4			;09a1e: b842
@@ -12687,7 +12697,7 @@ lb_09a68:
 	BSR.W	lb_09d92		;09a68: 61000328
 	RTS				;09a6c: 4e75
 lb_09a6e:
-	TST.W	ext_00ffa8c0		;09a6e: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;09a6e: 4a7900ffa8c0
 	BEQ.W	lb_09a7c		;09a74: 67000006
 	JMP	lb_01a12.W		;09a78: 4ef81a12
 lb_09a7c:
@@ -12816,7 +12826,7 @@ lb_09c22:
 lb_09c62:
 	BTST	#0,ext_00ffa9bb		;09c62: 0839000000ffa9bb
 	BNE.W	lb_09c8a		;09c6a: 6600001e
-	TST.W	ext_00ffa8c0		;09c6e: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;09c6e: 4a7900ffa8c0
 	BNE.W	lb_09c7e		;09c74: 66000008
 	MOVEQ	#36,D0			;09c78: 7024
 	BRA.W	lb_09c86		;09c7a: 6000000a
@@ -12831,7 +12841,7 @@ lb_09c8a:
 lb_09c8c:
 	BTST	#1,ext_00ffa9bb		;09c8c: 0839000100ffa9bb
 	BNE.W	lb_09cb4		;09c94: 6600001e
-	TST.W	ext_00ffa8c0		;09c98: 4a7900ffa8c0
+	TST.W	credit_inserted_flag_00ffa8c0		;09c98: 4a7900ffa8c0
 	BNE.W	lb_09ca8		;09c9e: 66000008
 	MOVEQ	#37,D0			;09ca2: 7025
 	BRA.W	lb_09cb0		;09ca4: 6000000a
@@ -18282,14 +18292,14 @@ lb_0e0f0:
 	CLR.W	D1			;0e0fa: 4241
 	MOVEA.L	#ext_00244704,A4		;0e0fc: 287c00244704
 	MOVE.B	p1_nb_lives_00ffa39a,D1		;0e102: 123900ffa39a
-	BSR.S	lb_0e122		;0e108: 6118
+	BSR.S	display_lives_0e122		;0e108: 6118
 lb_0e10a:
 	BTST	#1,ext_00ff8215		;0e10a: 0839000100ff8215
 	BEQ.S	lb_0e130		;0e112: 671c
 	CLR.W	D1			;0e114: 4241
 	MOVEA.L	#ext_00244734,A4		;0e116: 287c00244734
 	MOVE.B	p2_nb_lives_00ffa25a,D1		;0e11c: 123900ffa25a
-lb_0e122:
+display_lives_0e122:
 	SUBQ.W	#1,D1			;0e122: 5341
 	BMI.S	lb_0e12e		;0e124: 6b08
 lb_0e126:
@@ -18342,7 +18352,7 @@ lb_0e1a0:
 lb_0e1ae:
 	MOVE.W	inputs_0030c000,D0		;0e1ae: 30390030c000
 	MOVEA.L	ext_00ffa8e2,A0		;0e1b4: 207900ffa8e2
-	MOVEA.L	#$00ffa8e2,A2		;0e1ba: 247c00ffa8e2
+	MOVEA.L	#ext_00ffa8e2,A2		;0e1ba: 247c00ffa8e2
 	MOVE.W	(A0),D1			;0e1c0: 3210
 	CMP.W	D0,D1			;0e1c2: b240
 	BEQ.S	lb_0e1d2		;0e1c4: 670c
@@ -18902,13 +18912,13 @@ lb_0e73c:
 	MOVE.B	1(A1),D0		;0e74e: 10290001
 lb_0e752:
 	CLR.W	D1			;0e752: 4241
-	MOVE.W	ext_00ffa8c0,D1		;0e754: 323900ffa8c0
+	MOVE.W	credit_inserted_flag_00ffa8c0,D1		;0e754: 323900ffa8c0
 	ANDI.W	#$ffef,SR		;0e75a: 027cffef
 	ABCD	D0,D1			;0e75e: c300
 	BCC.S	lb_0e766		;0e760: 6404
 	MOVE.W	#$0099,D1		;0e762: 323c0099
 lb_0e766:
-	MOVE.W	D1,ext_00ffa8c0		;0e766: 33c100ffa8c0
+	MOVE.W	D1,credit_inserted_flag_00ffa8c0		;0e766: 33c100ffa8c0
 lb_0e76c:
 	MOVE.B	#$05,ext_0030c015		;0e76c: 13fc00050030c015
 lb_0e774:
@@ -25918,9 +25928,9 @@ lb_11dc4:
 lb_11dea:
 	MOVE.L	D0,(A3)+		;11dea: 26c0
 	DBF	D1,lb_11dea		;11dec: 51c9fffc
-	CMPA.L	#$00ffa364,A0		;11df0: b1fc00ffa364
+	CMPA.L	#ext_00ffa364,A0		;11df0: b1fc00ffa364
 	BEQ.S	lb_11e28		;11df6: 6730
-	CMPA.L	#$00ffa224,A0		;11df8: b1fc00ffa224
+	CMPA.L	#ext_00ffa224,A0		;11df8: b1fc00ffa224
 	BEQ.S	lb_11e28		;11dfe: 6728
 	MOVE.B	#$80,(A1)		;11e00: 12bc0080
 	MOVE.B	#$70,32(A1)		;11e04: 137c00700020
@@ -39302,7 +39312,7 @@ lb_1bbb8:
 lb_1bbfc:
 	JSR	lb_027f6		;1bbfc: 4eb9000027f6
 	LEA	spriteram_00ffc000,A1		;1bc02: 43f900ffc000
-	MOVEA.L	#$00ffa454,A0		;1bc08: 207c00ffa454
+	MOVEA.L	#ext_00ffa454,A0		;1bc08: 207c00ffa454
 	MOVE.W	#$0009,D6		;1bc0e: 3c3c0009
 	JSR	display_sprite_02788		;1bc12: 4eb900002788
 	JSR	lb_01e80		;1bc18: 4eb900001e80
