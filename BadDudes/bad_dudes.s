@@ -268,6 +268,8 @@ ext_00314600	EQU	$314600
 sprite_ram_0031c000	EQU	$31C000
 
 ram_ff8000	EQU	$FF8000
+ext_00ffa9b1	EQU	$FFA9B1
+ext_00ffa9a7	EQU	$FFA9A7
 ext_00ff8002	EQU	$FF8002
 ext_00ff8006	EQU	$FF8006
 ext_00ff800a	EQU	$FF800A
@@ -2906,13 +2908,12 @@ lb_01e78:
 	MOVE.L	D0,(A0)+		;01e78: 20c0
 	DBF	D1,lb_01e78		;01e7a: 51c9fffc
 	RTS				;01e7e: 4e75
-lb_01e80:
-	dc.w	$0891	;01e80
-	dc.w	$000f	;01e82
-	CMPA.L	#ext_00ffc7f8,A1		;01e84: b3fc00ffc7f8
+modify_sprites_attribute_1e80:
+	BCLR.B  #$000f,(a1)	;01e80: 0891000f
+	CMPA.L	#spriteram_00ffc000+$7f8,A1		;01e84: b3fc00ffc7f8
 	BCC.W	lb_01e96		;01e8a: 6400000a
 	ADDA.L	#$00000008,A1		;01e8e: d3fc00000008
-	BRA.S	lb_01e80		;01e94: 60ea
+	BRA.S	modify_sprites_attribute_1e80		;01e94: 60ea
 lb_01e96:
 	RTS				;01e96: 4e75
 lb_01e98:
@@ -3583,7 +3584,7 @@ lb_025f0:
 	MOVE.W	#$0009,D6		;02632: 3c3c0009
 	JSR	display_sprite_02788.W		;02636: 4eb82788
 	NOP				;0263a: 4e71
-	JSR	lb_01e80.W		;0263c: 4eb81e80
+	JSR	modify_sprites_attribute_1e80.W		;0263c: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02640: 08f9000100ff8217
 	RTS				;02648: 4e75
 lb_0264a:
@@ -3610,7 +3611,7 @@ lb_0264a:
 	MOVE.W	#$0009,D6		;0269c: 3c3c0009
 	JSR	display_sprite_02788.W		;026a0: 4eb82788
 	NOP				;026a4: 4e71
-	JSR	lb_01e80.W		;026a6: 4eb81e80
+	JSR	modify_sprites_attribute_1e80.W		;026a6: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;026aa: 08f9000100ff8217
 	RTS				;026b2: 4e75
 lb_026b4:
@@ -3637,7 +3638,7 @@ lb_026b4:
 	MOVE.W	#$0009,D6		;02706: 3c3c0009
 	JSR	display_sprite_02788.W		;0270a: 4eb82788
 	NOP				;0270e: 4e71
-	JSR	lb_01e80.W		;02710: 4eb81e80
+	JSR	modify_sprites_attribute_1e80.W		;02710: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02714: 08f9000100ff8217
 	RTS				;0271c: 4e75
 lb_0271e:
@@ -3664,7 +3665,7 @@ lb_0271e:
 	MOVE.W	#$0009,D6		;02770: 3c3c0009
 	JSR	display_sprite_02788.W		;02774: 4eb82788
 	NOP				;02778: 4e71
-	JSR	lb_01e80.W		;0277a: 4eb81e80
+	JSR	modify_sprites_attribute_1e80.W		;0277a: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;0277e: 08f9000100ff8217
 	RTS				;02786: 4e75
 display_sprite_02788:
@@ -9072,8 +9073,8 @@ lb_0725e:
 	MOVEM.L	(A7)+,A0		;07282: 4cdf0100
 	RTS				;07286: 4e75
 lb_07288:
-	dc.l	$ff81d8	;07288
-	dc.l	$ff81dc	;0728c
+	dc.l	ext_00ff81d8	;07288
+	dc.l	ext_00ff81dc	;0728c
 lb_07290:
 	LEA	ext_00ff81d0,A0		;07290: 41f900ff81d0
 	MOVEQ	#3,D4			;07296: 7803
@@ -9183,7 +9184,8 @@ lb_07418:
 	CMPI.B	#$30,D3			;0741e: 0c030030
 	DBNE	D1,lb_07418		;07422: 56c9fff4
 	RTS				;07426: 4e75
-lb_07428:              ; message structure table
+; message structure table
+lb_07428:
 	dc.l	lb_074e0	;07428
 	dc.l	lb_074f4	;0742c
 	dc.l	lb_0750c	;07430
@@ -9901,8 +9903,8 @@ lb_07e58:
 lb_07e72:
 	RTS				;07e72: 4e75
 lb_07e74:
-	dc.l	$ffa9a7	;07e74
-	dc.l	$ffa9b1	;07e78
+	dc.l	ext_00ffa9a7	;07e74
+	dc.l	ext_00ffa9b1	;07e78
 lb_07e7c:
 	OR.B	D1,ext_00ffa9bb		;07e7c: 833900ffa9bb
 	MOVE.B	#$00,(A1)		;07e82: 12bc0000
@@ -10037,8 +10039,8 @@ lb_07fe6:
 lb_0804a:
 	RTS				;0804a: 4e75
 lb_0804c:
-	dc.l	$ff81cc	;0804c
-	dc.l	$ff81d0	;08050
+	dc.l	ext_00ff81cc	;0804c
+	dc.l	ext_00ff81d0	;08050
 lb_08054:
 	dc.b	"ABCDEFGHIJKLMNOPQRSTUVWXYZ.&!?"	;08054
 	dc.b	$10	;08072
@@ -13809,7 +13811,7 @@ lb_0a9dc:
 	dc.w	$2824	;0a9f2
 	dc.w	$2a2b	;0a9f4
 lb_0a9f6:
-	LEA	ext_00ffa364,a2		;0a9f6: 45f900ffa364
+	LEA	ext_00ffa364,A2		;0a9f6: 45f900ffa364
 	LEA	ext_00ffa224,A3		;0a9fc: 47f900ffa224
 	BTST	#7,(A2)			;0aa02: 08120007
 	BEQ.W	lb_0aa38		;0aa06: 67000030
@@ -39315,7 +39317,7 @@ lb_1bbfc:
 	MOVEA.L	#ext_00ffa454,A0		;1bc08: 207c00ffa454
 	MOVE.W	#$0009,D6		;1bc0e: 3c3c0009
 	JSR	display_sprite_02788		;1bc12: 4eb900002788
-	JSR	lb_01e80		;1bc18: 4eb900001e80
+	JSR	modify_sprites_attribute_1e80		;1bc18: 4eb900001e80
 	BSET	#1,sync_flags_00ff8217		;1bc1e: 08f9000100ff8217
 	RTS				;1bc26: 4e75
 	dc.b	"THIS VIDEO GAME MADE IN JAPAN BY DATA EAST CORPORATION.         "	;1bc28
@@ -44399,10 +44401,10 @@ lb_1f3d0:
 lb_1f3e6:
 	RTS				;1f3e6: 4e75
 lb_1f3e8:
-	dc.l	$ff8884	;1f3e8
-	dc.l	$ff8f64	;1f3ec
-	dc.l	$ff9f04	;1f3f0
-	dc.l	$ffa224	;1f3f4
+	dc.l	ext_00ff8884	;1f3e8
+	dc.l	ext_00ff8f64	;1f3ec
+	dc.l	ext_00ff9f04	;1f3f0
+	dc.l	ext_00ffa224	;1f3f4
 lb_1f3f8:
 	BTST	#7,1(A0)		;1f3f8: 082800070001
 	BNE.S	lb_1f40c		;1f3fe: 660c
