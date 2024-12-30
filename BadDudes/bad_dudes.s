@@ -128,6 +128,24 @@
 ;	map(0xff8000, 0xffbfff).ram().share("ram");                                 /* Main ram */
 ;	map(0xffc000, 0xffc7ff).ram().share("spriteram");
 
+SIREN_SND =  89
+CREDIT_SND = 93
+CRASH_30_SND = 30
+UNKNOWN_88_SND = 88
+UNKNOWN_46_SND = 46
+SHOUT_26_SND = 26
+UNKNOWN_43_SND = 43
+UNKNOWN_50_SND = 50
+UNKNOWN_48_SND = 48
+UNKNOWN_49_SND = 49
+UNKNOWN_67_SND = 67
+UNKNOWN_68_SND = 68
+UNKNOWN_66_SND = 66
+UNKNOWN_23_SND = 23
+UNKNOWN_47_SND = 47
+UNKNOWN_94_SND = 94
+TYPING_SND = 105
+
 ext_00240000	EQU	$240000
 ext_00240002	EQU	$240002
 ext_00240004	EQU	$240004
@@ -307,9 +325,9 @@ ext_00ffc7f8    EQU $ffc7f8
 ext_00ff80e7	EQU	$FF80E7
 ext_00ff80e8	EQU	$FF80E8
 ext_00ff80f2	EQU	$FF80F2
-ext_00ff80f4	EQU	$FF80F4
+copy_of_inputs_00ff80f4	EQU	$FF80F4
 ext_00ff80f5	EQU	$FF80F5
-ext_00ff80f6	EQU	$FF80F6
+prev_inputs_00ff80f6	EQU	$FF80F6
 ext_00ff80f7	EQU	$FF80F7
 ext_00ff80f8	EQU	$FF80F8
 ext_00ff80f9	EQU	$FF80F9
@@ -320,8 +338,8 @@ ext_00ff80fd	EQU	$FF80FD
 ext_00ff8100	EQU	$FF8100
 ext_00ff8102	EQU	$FF8102
 ext_00ff8108	EQU	$FF8108
-ext_00ff810a	EQU	$FF810A
-ext_00ff810b	EQU	$FF810B
+copy_of_dsw_msb_00ff810a	EQU	$FF810A
+copy_of_dsw_lsb_00ff810b	EQU	$FF810B
 ext_00ff810c	EQU	$FF810C
 ext_00ff810d	EQU	$FF810D
 ext_00ff810e	EQU	$FF810E
@@ -406,7 +424,7 @@ ext_00ff820a	EQU	$FF820A
 ext_00ff820e	EQU	$FF820E
 ext_00ff8210	EQU	$FF8210
 ext_00ff8212	EQU	$FF8212
-ext_00ff8215	EQU	$FF8215
+is_actual_game_played_00ff8215	EQU	$FF8215
 stage_control_flags_00ff8216	EQU	$FF8216
 sync_flags_00ff8217	EQU	$FF8217
 current_stage_00ff821d	EQU	$FF821D
@@ -526,7 +544,7 @@ ext_00ffa844	EQU	$FFA844
 ext_00ffa845	EQU	$FFA845
 ext_00ffa846	EQU	$FFA846
 ext_00ffa847	EQU	$FFA847
-ext_00ffa848	EQU	$FFA848
+demo_stage_index_00ffa848	EQU	$FFA848
 ext_00ffa84a	EQU	$FFA84A
 ext_00ffa84b	EQU	$FFA84B
 ext_00ffa84e	EQU	$FFA84E
@@ -884,8 +902,8 @@ lb_0032a:
 	MOVE.B	D0,ext_00ffa846		;0032c: 13c000ffa846
 	MOVE.B	D0,stage_control_flags_00ff8216		;00332: 13c000ff8216
 	MOVE.B	D0,sync_flags_00ff8217		;00338: 13c000ff8217
-	ANDI.B	#$0f,ext_00ff8215		;0033e: 0239000f00ff8215
-	BSET	#7,ext_00ff8215		;00346: 08f9000700ff8215
+	ANDI.B	#$0f,is_actual_game_played_00ff8215		;0033e: 0239000f00ff8215
+	BSET	#7,is_actual_game_played_00ff8215		;00346: 08f9000700ff8215 real game
 lb_0034e:
 	MOVE.L	D0,ext_00ff81cc		;0034e: 23c000ff81cc
 	MOVE.L	D0,ext_00ff81d0		;00354: 23c000ff81d0
@@ -954,18 +972,18 @@ lb_0040e:
 	RTS				;00432: 4e75
 	BTST	#6,D1			;00434: 08010006
 	BEQ.W	lb_00440		;00438: 67000006
-	BSR.W	lb_0045a		;0043c: 6100001c
+	BSR.W	add_one_credit_0045a		;0043c: 6100001c
 lb_00440:
 	BTST	#5,D1			;00440: 08010005
 	BEQ.W	lb_0044c		;00444: 67000006
-	BSR.W	lb_0045a		;00448: 61000010
+	BSR.W	add_one_credit_0045a		;00448: 61000010
 lb_0044c:
 	BTST	#4,D1			;0044c: 08010004
 	BEQ.W	lb_00458		;00450: 67000006
-	BSR.W	lb_0045a		;00454: 61000004
+	BSR.W	add_one_credit_0045a		;00454: 61000004
 lb_00458:
 	RTS				;00458: 4e75
-lb_0045a:
+add_one_credit_0045a:
 	MOVE.B	credit_inserted_flag_00ffa8c0,D0		;0045a: 103900ffa8c0
 	MOVE.B	nb_credits_00ffa8c1,D1		;00460: 123900ffa8c1
 	MOVEQ	#1,D2			;00466: 7401
@@ -975,13 +993,13 @@ lb_0045a:
 	ABCD	D3,D0			;00470: c103
 	MOVE.B	D0,credit_inserted_flag_00ffa8c0		;00472: 13c000ffa8c0
 	MOVE.B	D1,nb_credits_00ffa8c1		;00478: 13c100ffa8c1
-	MOVEQ	#93,D0			;0047e: 705d
-	JSR	lb_0def0		;00480: 4eb90000def0
+	MOVEQ	#CREDIT_SND,D0			;0047e: 705d
+	JSR	play_sound_0def0		;00480: 4eb90000def0
 	RTS				;00486: 4e75
 lb_00488:
 	MOVE.W	credit_inserted_flag_00ffa8c0,D0		;00488: 303900ffa8c0
 	BEQ.W	lb_004f0		;0048e: 67000060
-	MOVE.B	ext_00ff8215,D1		;00492: 123900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D1		;00492: 123900ff8215
 	MOVE.B	ext_00ff8220,D2		;00498: 143900ff8220
 lb_0049e:
 	BTST	#7,D1			;0049e: 08010007
@@ -1005,7 +1023,7 @@ lb_004ca:
 lb_004e6:
 	BSR.W	lb_0054c		;004e6: 61000064
 lb_004ea:
-	MOVE.B	D1,ext_00ff8215		;004ea: 13c100ff8215
+	MOVE.B	D1,is_actual_game_played_00ff8215		;004ea: 13c100ff8215
 lb_004f0:
 	RTS				;004f0: 4e75
 lb_004f2:
@@ -1025,7 +1043,7 @@ lb_0050c:
 	BCLR	#1,ext_00ffa846		;0052a: 08b9000100ffa846
 	BSR.W	lb_0054c		;00532: 61000018
 lb_00536:
-	MOVE.B	D1,ext_00ff8215		;00536: 13c100ff8215
+	MOVE.B	D1,is_actual_game_played_00ff8215		;00536: 13c100ff8215
 	BTST	#7,D1			;0053c: 08010007
 	BNE.W	lb_00546		;00540: 66000004
 	RTS				;00544: 4e75
@@ -1057,7 +1075,7 @@ lb_00588:
 	MOVE	#$2300,SR		;00596: 46fc2300
 	RTS				;0059a: 4e75
 lb_0059c:
-	JSR	lb_0e152		;0059c: 4eb90000e152
+	JSR	read_inputs_if_game_playing_0e152		;0059c: 4eb90000e152
 	BSR.W	lb_005b4		;005a2: 61000010
 	BSR.W	lb_00618		;005a6: 61000070
 	BSR.W	lb_00646		;005aa: 6100009a
@@ -1065,13 +1083,13 @@ lb_0059c:
 lb_005b2:
 	RTS				;005b2: 4e75
 lb_005b4:
-	MOVE.W	ext_00ff80f4,ext_00ff80f6	;005b4: 33f900ff80f400ff80f6
-	MOVE.W	D0,ext_00ff80f4		;005be: 33c000ff80f4
-	ORI.W	#$c0c0,ext_00ff80f4		;005c4: 0079c0c000ff80f4
-	NOT.W	ext_00ff80f4		;005cc: 467900ff80f4
+	MOVE.W	copy_of_inputs_00ff80f4,prev_inputs_00ff80f6	;005b4: 33f900ff80f400ff80f6
+	MOVE.W	D0,copy_of_inputs_00ff80f4		;005be: 33c000ff80f4
+	ORI.W	#$c0c0,copy_of_inputs_00ff80f4		;005c4: 0079c0c000ff80f4
+	NOT.W	copy_of_inputs_00ff80f4		;005cc: 467900ff80f4
 	BSR.W	lb_005ec		;005d2: 61000018
-	MOVE.W	ext_00ff80f4,D0		;005d6: 303900ff80f4
-	MOVE.W	ext_00ff80f6,D1		;005dc: 323900ff80f6
+	MOVE.W	copy_of_inputs_00ff80f4,D0		;005d6: 303900ff80f4
+	MOVE.W	prev_inputs_00ff80f6,D1		;005dc: 323900ff80f6
 	EOR.W	D0,D1			;005e2: b141
 	MOVE.W	D1,ext_00ff8100		;005e4: 33c100ff8100
 	RTS				;005ea: 4e75
@@ -1081,16 +1099,16 @@ lb_005ec:
 	MOVEA.L	#lb_006fa,A0		;005f4: 207c000006fa
 	ADDA.L	D0,A0			;005fa: d1c0
 	MOVE.B	(A0),ext_00ff80f5		;005fc: 13d000ff80f5
-	MOVE.B	ext_00ff80f4,D0		;00602: 103900ff80f4
+	MOVE.B	copy_of_inputs_00ff80f4,D0		;00602: 103900ff80f4
 lb_00608:
 	MOVEA.L	#lb_006fa,A0		;00608: 207c000006fa
 	ADDA.L	D0,A0			;0060e: d1c0
-	MOVE.B	(A0),ext_00ff80f4		;00610: 13d000ff80f4
+	MOVE.B	(A0),copy_of_inputs_00ff80f4		;00610: 13d000ff80f4
 	RTS				;00616: 4e75
 lb_00618:
-	MOVE.W	ext_00ff80f4,D3		;00618: 363900ff80f4
+	MOVE.W	copy_of_inputs_00ff80f4,D3		;00618: 363900ff80f4
 	SWAP	D3			;0061e: 4843
-	MOVE.W	ext_00ff80f6,D3		;00620: 363900ff80f6
+	MOVE.W	prev_inputs_00ff80f6,D3		;00620: 363900ff80f6
 	ANDI.L	#$0f0f0f0f,D3		;00626: 02830f0f0f0f
 	MOVE.W	D3,D0			;0062c: 3003
 	SWAP	D3			;0062e: 4843
@@ -1104,11 +1122,11 @@ lb_00618:
 	MOVE.W	D0,ext_00ff80f8		;0063e: 33c000ff80f8
 	RTS				;00644: 4e75
 lb_00646:
-	MOVE.W	ext_00ff80f4,D0		;00646: 303900ff80f4
+	MOVE.W	copy_of_inputs_00ff80f4,D0		;00646: 303900ff80f4
 	ANDI.W	#$3030,D0		;0064c: 02403030
 	MOVE.W	D0,ext_00ff80ce		;00650: 33c000ff80ce
 	MOVE.W	ext_00ff8100,D0		;00656: 303900ff8100
-	MOVE.W	ext_00ff80f4,D1		;0065c: 323900ff80f4
+	MOVE.W	copy_of_inputs_00ff80f4,D1		;0065c: 323900ff80f4
 	AND.W	D1,D0			;00662: c041
 	ANDI.W	#$3030,D0		;00664: 02403030
 	MOVE.W	D0,ext_00ff80be		;00668: 33c000ff80be
@@ -1149,8 +1167,8 @@ lb_006ac:
 	ADD.B	D1,D2			;006de: d401
 	MOVE.B	D2,ext_00ff8108		;006e0: 13c200ff8108
 	RTS				;006e6: 4e75
-	MOVE.W	dsw_0030c004,ext_00ff810a	;006e8: 33f90030c00400ff810a
-	NOT.W	ext_00ff810a		;006f2: 467900ff810a
+	MOVE.W	dsw_0030c004,copy_of_dsw_msb_00ff810a	;006e8: 33f90030c00400ff810a
+	NOT.W	copy_of_dsw_msb_00ff810a		;006f2: 467900ff810a
 	RTS				;006f8: 4e75
 lb_006fa:
 	dc.w	$0001	;006fa
@@ -2146,7 +2164,7 @@ lb_0141c:
 	JSR	wait_for_mcu_reply_0979a		;0142c: 4eb90000979a
 	JSR	lb_097a4		;01432: 4eb9000097a4
 	MOVE.W	#$0000,sound_0030c010		;01438: 33fc00000030c010
-	BSR.W	lb_01cd8		;01440: 61000896
+	BSR.W	clear_pretty_much_all_video_01cd8		;01440: 61000896
 	; install tiles/graphics whatever
 	LEA	palette_310000,A0		;01444: 41f900310000
 	LEA	lb_40000,A2		;0144a: 45f900040000
@@ -2551,7 +2569,7 @@ lb_019b2:
 	JSR	lb_0059c.W		;019bc: 4eb8059c
 	JSR	lb_09976		;019c0: 4eb900009976
 	MOVEQ	#0,D0			;019c6: 7000
-	MOVE.B	#$40,ext_00ff8215		;019c8: 13fc004000ff8215
+	MOVE.B	#$40,is_actual_game_played_00ff8215		;019c8: 13fc004000ff8215
 	MOVE.B	D0,ext_00ffa846		;019d0: 13c000ffa846
 	MOVE.B	D0,stage_control_flags_00ff8216		;019d6: 13c000ff8216
 	MOVE.B	D0,sync_flags_00ff8217		;019dc: 13c000ff8217
@@ -2569,12 +2587,12 @@ lb_01a12:
 	JSR	lb_0df32		;01a12: 4eb90000df32
 	MOVE.W	#$8000,ext_00ff8170		;01a18: 33fc800000ff8170
 	JSR	wait_for_sync_003f0.W		;01a20: 4eb803f0
-	JSR	lb_01cd8.W		;01a24: 4eb81cd8
+	JSR	clear_pretty_much_all_video_01cd8.W		;01a24: 4eb81cd8
 	NOP				;01a28: 4e71
 	JSR	lb_01e98.W		;01a2a: 4eb81e98
 	NOP				;01a2e: 4e71
 	JSR	lb_0825e		;01a30: 4eb90000825e
-	BSR.W	lb_01cd8		;01a36: 610002a0
+	BSR.W	clear_pretty_much_all_video_01cd8		;01a36: 610002a0
 	JSR	copy_highscore_background_tiles_09582		;01a3a: 4eb900009582
 	JSR	lb_07ada.W		;01a40: 4eb87ada
 	NOP				;01a44: 4e71
@@ -2583,8 +2601,8 @@ lb_01a12:
 lb_01a58:
 	BCLR	#1,ext_00ff8202		;01a58: 08b9000100ff8202
 	BEQ.S	lb_01a58		;01a60: 67f6
-	BSR.W	lb_01cd8		;01a62: 61000274
-	ORI.B	#$03,ext_00ff8215		;01a66: 0039000300ff8215
+	BSR.W	clear_pretty_much_all_video_01cd8		;01a62: 61000274
+	ORI.B	#$03,is_actual_game_played_00ff8215		;01a66: 0039000300ff8215
 	BRA.S	lb_01a76		;01a6e: 6006
 lb_01a70:
 	LEA	ext_00ffc000,A7		;01a70: 4ff900ffc000
@@ -2600,12 +2618,12 @@ lb_01a86:
 	RTS				;01a94: 4e75
 lb_01a96:
 	JSR	lb_0df32		;01a96: 4eb90000df32
-	TST.B	ext_00ff8215		;01a9c: 4a3900ff8215
+	TST.B	is_actual_game_played_00ff8215		;01a9c: 4a3900ff8215
 	BPL.W	lb_01aac		;01aa2: 6a000008
-	JSR	lb_084ae		;01aa6: 4eb9000084ae
+	JSR	game_intro_sequence_084ae		;01aa6: 4eb9000084ae  only played on a real game not attract
 lb_01aac:
-	BSR.W	lb_01c1a		;01aac: 6100016c
-	NOP				;01ab0: 4e71
+	BSR.W	start_game_or_attract_mode_level_01c1a		;01aac: 6100016c
+	NOP				;01ab0: 4e71 here intro "are you a bad enough dude..." has been played
 	NOP				;01ab2: 4e71
 	NOP				;01ab4: 4e71
 	NOP				;01ab6: 4e71
@@ -2616,8 +2634,8 @@ lb_01abc:
 	JSR	lb_09976		;01ac0: 4eb900009976
 	BCLR	#5,stage_control_flags_00ff8216		;01ac6: 08b9000500ff8216
 	MOVEQ	#0,D0			;01ace: 7000
-	JSR	lb_0def0		;01ad0: 4eb90000def0
-	JSR	lb_01cd8.W		;01ad6: 4eb81cd8
+	JSR	play_sound_0def0		;01ad0: 4eb90000def0
+	JSR	clear_pretty_much_all_video_01cd8.W		;01ad6: 4eb81cd8
 	NOP				;01ada: 4e71
 	JSR	lb_0ccb6		;01adc: 4eb90000ccb6
 	JSR	lb_06e5e.W		;01ae2: 4eb86e5e
@@ -2630,7 +2648,7 @@ lb_01abc:
 	JSR	lb_09dae		;01afa: 4eb900009dae
 	JSR	lb_0e238		;01b00: 4eb90000e238
 	BSET	#5,stage_control_flags_00ff8216		;01b06: 08f9000500ff8216
-	TST.B	ext_00ff8215		;01b0e: 4a3900ff8215
+	TST.B	is_actual_game_played_00ff8215		;01b0e: 4a3900ff8215
 	BMI.S	lb_01b38		;01b14: 6b22
 	MOVEQ	#0,D0			;01b16: 7000
 	MOVE.B	D0,p1_nb_lives_00ffa39a		;01b18: 13c000ffa39a
@@ -2658,10 +2676,10 @@ lb_01b38:
 	NOP				;01b64: 4e71
 	NOP				;01b66: 4e71
 	JSR	lb_09b54		;01b68: 4eb900009b54
-	TST.B	ext_00ff8215		;01b6e: 4a3900ff8215
+	TST.B	is_actual_game_played_00ff8215		;01b6e: 4a3900ff8215
 	BPL.S	lb_01bc4		;01b74: 6a4e
 	JSR	lb_09bde		;01b76: 4eb900009bde
-	BCLR	#5,ext_00ff8215		;01b7c: 08b9000500ff8215
+	BCLR	#5,is_actual_game_played_00ff8215		;01b7c: 08b9000500ff8215
 	BEQ.S	lb_01b38		;01b84: 67b2
 	BCLR	#5,stage_control_flags_00ff8216		;01b86: 08b9000500ff8216
 	JSR	lb_09a86		;01b8e: 4eb900009a86
@@ -2670,14 +2688,14 @@ lb_01b38:
 	BNE.W	lb_01abc		;01ba2: 6600ff18
 	JSR	lb_01f32.W		;01ba6: 4eb81f32
 	NOP				;01baa: 4e71
-	JSR	lb_01cd8.W		;01bac: 4eb81cd8
+	JSR	clear_pretty_much_all_video_01cd8.W		;01bac: 4eb81cd8
 	NOP				;01bb0: 4e71
 	JSR	lb_1b1c6		;01bb2: 4eb90001b1c6
 	MOVE.B	#$00,current_stage_00ff821d		;01bb8: 13fc000000ff821d
 	BRA.W	lb_019b2		;01bc0: 6000fdf0
 lb_01bc4:
 	JSR	lb_09a6e		;01bc4: 4eb900009a6e
-	MOVE.B	ext_00ff8215,D0		;01bca: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;01bca: 103900ff8215
 	ANDI.B	#$03,D0			;01bd0: 02000003
 	BNE.W	lb_01b38		;01bd4: 6600ff62
 	BRA.W	lb_019b2		;01bd8: 6000fdd8
@@ -2704,27 +2722,31 @@ lb_01bf4:
 	MOVEQ	#26,D0			;01c12: 701a
 	BSR.W	lb_01f78		;01c14: 61000362
 	RTS				;01c18: 4e75
-lb_01c1a:
-	TST.B	ext_00ff8215		;01c1a: 4a3900ff8215
+start_game_or_attract_mode_level_01c1a:
+	TST.B	is_actual_game_played_00ff8215		;01c1a: 4a3900ff8215
 	BMI.W	lb_01c52		;01c20: 6b000030
-	ADDQ.B	#1,ext_00ffa848		;01c24: 523900ffa848
+	; demo/attract mode
+	ADDQ.B	#1,demo_stage_index_00ffa848		;01c24: 523900ffa848
 	MOVEQ	#0,D0			;01c2a: 7000
-	MOVE.B	ext_00ffa848,D0		;01c2c: 103900ffa848
+	MOVE.B	demo_stage_index_00ffa848,D0		;01c2c: 103900ffa848
 	CMPI.B	#$03,D0			;01c32: 0c000003
 	BNE.W	lb_01c3c		;01c36: 66000004
 	MOVEQ	#0,D0			;01c3a: 7000
 lb_01c3c:
-	MOVE.B	D0,ext_00ffa848		;01c3c: 13c000ffa848
-	LEA	lb_01c5c.W,A3		;01c42: 47f81c5c
+	MOVE.B	D0,demo_stage_index_00ffa848		;01c3c: 13c000ffa848
+	LEA	demo_stage_table_01c5c.W,A3		;01c42: 47f81c5c
 	NOP				;01c46: 4e71
+	; select the stage to show during attract mode: 1,3,7
 	MOVE.B	0(A3,D0.W),current_stage_00ff821d	;01c48: 13f3000000ff821d
 	RTS				;01c50: 4e75
 lb_01c52:
+	; real game started: start at level 1
 	MOVE.B	#$01,current_stage_00ff821d		;01c52: 13fc000100ff821d
 	RTS				;01c5a: 4e75
-lb_01c5c:
+demo_stage_table_01c5c:
 	dc.w	$0103	;01c5c
 	dc.w	$07ff	;01c5e
+	; not reached???
 	BSR.W	lb_02038		;01c60: 610003d6
 	MOVE.L	#$00000001,ext_00ff81d8	;01c64: 23fc0000000100ff81d8
 	MOVE.L	#$00000003,ext_00ff81dc	;01c6e: 23fc0000000300ff81dc
@@ -2763,7 +2785,7 @@ lb_01cc6:
 	BNE.S	lb_01cc6		;01cd4: 66f0
 	RTS				;01cd6: 4e75
 	
-lb_01cd8:
+clear_pretty_much_all_video_01cd8:
 	JSR	lb_01d20.W		;01cd8: 4eb81d20
 	NOP				;01cdc: 4e71
 	BRA.W	lb_01ce8		;01cde: 60000008
@@ -4434,7 +4456,7 @@ lb_03186:
 	LEA	ext_00ffa7c4,A0		;031e0: 41f900ffa7c4
 	JSR	lb_01efa.W		;031e6: 4eb81efa
 	MOVEM.L	(A7)+,A0		;031ea: 4cdf0100
-	BTST	#3,ext_00ff810a		;031ee: 0839000300ff810a
+	BTST	#3,copy_of_dsw_msb_00ff810a		;031ee: 0839000300ff810a
 	BEQ.W	lb_03200		;031f6: 67000008
 	ADDI.W	#$0500,28(A0)		;031fa: 06680500001c
 lb_03200:
@@ -4447,7 +4469,7 @@ lb_03200:
 	ADDA.L	D1,A3			;03218: d7c1
 	MOVEQ	#0,D0			;0321a: 7000
 	MOVE.B	(A3),D0			;0321c: 1013
-	JSR	lb_0def0		;0321e: 4eb90000def0
+	JSR	play_sound_0def0		;0321e: 4eb90000def0
 lb_03224:
 	ADDI.L	#$00000010,ext_00ff823a	;03224: 06b90000001000ff823a
 	MOVEQ	#0,D0			;0322e: 7000
@@ -4479,7 +4501,7 @@ lb_03248:
 	ADDA.L	D1,A3			;0328a: d7c1
 	MOVEQ	#0,D0			;0328c: 7000
 	MOVE.B	(A3),D0			;0328e: 1013
-	JSR	lb_0def0		;03290: 4eb90000def0
+	JSR	play_sound_0def0		;03290: 4eb90000def0
 	ADDI.L	#$00000010,ext_00ff823a	;03296: 06b90000001000ff823a
 	MOVEQ	#0,D0			;032a0: 7000
 	MOVE.B	2(A0),D0		;032a2: 10280002
@@ -5754,7 +5776,7 @@ lb_04308:
 	SUBI.B	#$01,40(A0)		;04308: 042800010028
 	BCC.W	lb_04320		;0430e: 64000010
 	MOVEQ	#88,D0			;04312: 7058
-	JSR	lb_0def0		;04314: 4eb90000def0
+	JSR	play_sound_0def0		;04314: 4eb90000def0
 	MOVE.B	#$30,40(A0)		;0431a: 117c00300028
 lb_04320:
 	RTS				;04320: 4e75
@@ -5800,7 +5822,7 @@ lb_04398:
 	JSR	lb_04434.W		;043b8: 4eb84434
 	NOP				;043bc: 4e71
 	MOVEQ	#30,D0			;043be: 701e
-	JSR	lb_0def0		;043c0: 4eb90000def0
+	JSR	play_sound_0def0		;043c0: 4eb90000def0
 	BRA.W	lb_043d8		;043c6: 60000010
 lb_043ca:
 	CMPI.B	#$05,4(A0)		;043ca: 0c2800050004
@@ -6087,7 +6109,7 @@ lb_047be:
 	BEQ.W	lb_04806		;047f4: 67000010
 	JSR	lb_11dc4		;047f8: 4eb900011dc4
 	MOVEQ	#46,D0			;047fe: 702e
-	JSR	lb_0def0		;04800: 4eb90000def0
+	JSR	play_sound_0def0		;04800: 4eb90000def0
 lb_04806:
 	RTS				;04806: 4e75
 lb_04808:
@@ -6145,7 +6167,7 @@ lb_048c4:
 	MOVE.B	#$0b,3(A0)		;048ce: 117c000b0003
 	MOVE.W	#$0015,4(A0)		;048d4: 317c00150004
 	MOVEQ	#26,D0			;048da: 701a
-	JSR	lb_0def0		;048dc: 4eb90000def0
+	JSR	play_sound_0def0		;048dc: 4eb90000def0
 	BRA.W	lb_04904		;048e2: 60000020
 lb_048e6:
 	BTST	#1,34(A0)		;048e6: 082800010022
@@ -6153,13 +6175,13 @@ lb_048e6:
 	MOVE.B	#$0c,3(A0)		;048f0: 117c000c0003
 	MOVE.W	#$0015,4(A0)		;048f6: 317c00150004
 	MOVEQ	#26,D0			;048fc: 701a
-	JSR	lb_0def0		;048fe: 4eb90000def0
+	JSR	play_sound_0def0		;048fe: 4eb90000def0
 lb_04904:
 	BTST	#2,34(A0)		;04904: 082800020022
 	BEQ.W	lb_0491c		;0490a: 67000010
 	JSR	lb_11dc4		;0490e: 4eb900011dc4
 	MOVEQ	#46,D0			;04914: 702e
-	JSR	lb_0def0		;04916: 4eb90000def0
+	JSR	play_sound_0def0		;04916: 4eb90000def0
 lb_0491c:
 	RTS				;0491c: 4e75
 lb_0491e:
@@ -6361,13 +6383,13 @@ lb_04bd2:
 	MOVE.B	#$02,3(A0)		;04bd2: 117c00020003
 	MOVE.W	#$0015,4(A0)		;04bd8: 317c00150004
 	MOVEQ	#26,D0			;04bde: 701a
-	JSR	lb_0def0		;04be0: 4eb90000def0
+	JSR	play_sound_0def0		;04be0: 4eb90000def0
 lb_04be6:
 	BTST	#2,34(A0)		;04be6: 082800020022
 	BEQ.W	lb_04bfe		;04bec: 67000010
 	JSR	lb_11dc4		;04bf0: 4eb900011dc4
 	MOVEQ	#46,D0			;04bf6: 702e
-	JSR	lb_0def0		;04bf8: 4eb90000def0
+	JSR	play_sound_0def0		;04bf8: 4eb90000def0
 lb_04bfe:
 	RTS				;04bfe: 4e75
 lb_04c00:
@@ -6395,7 +6417,7 @@ lb_04c2a:
 	MOVE.B	#$03,3(A0)		;04c3e: 117c00030003
 	MOVE.W	#$0005,4(A0)		;04c44: 317c00050004
 	MOVEQ	#43,D0			;04c4a: 702b
-	JSR	lb_0def0		;04c4c: 4eb90000def0
+	JSR	play_sound_0def0		;04c4c: 4eb90000def0
 	BRA.W	lb_04c8a		;04c52: 60000036
 	SWAP	D2			;04c56: 4842
 	CMPI.W	#$0050,D2		;04c58: 0c420050
@@ -6540,7 +6562,7 @@ lb_04e60:
 	JSR	lb_054ea.W		;04e80: 4eb854ea
 	NOP				;04e84: 4e71
 	MOVEQ	#50,D0			;04e86: 7032
-	JSR	lb_0def0		;04e88: 4eb90000def0
+	JSR	play_sound_0def0		;04e88: 4eb90000def0
 	BRA.W	lb_04e92		;04e8e: 60000002
 lb_04e92:
 	JSR	lb_05504.W		;04e92: 4eb85504
@@ -6555,7 +6577,7 @@ lb_04ea0:
 	MOVE.B	#$01,3(A0)		;04eac: 117c00010003
 	MOVE.W	#$0004,4(A0)		;04eb2: 317c00040004
 	MOVEQ	#50,D0			;04eb8: 7032
-	JSR	lb_0def0		;04eba: 4eb90000def0
+	JSR	play_sound_0def0		;04eba: 4eb90000def0
 lb_04ec0:
 	JSR	lb_055ac.W		;04ec0: 4eb855ac
 	NOP				;04ec4: 4e71
@@ -6576,7 +6598,7 @@ lb_04ec8:
 	CMPI.W	#$ffff,D0		;04f00: 0c40ffff
 	BEQ.W	lb_04f42		;04f04: 6700003c
 	MOVEQ	#48,D0			;04f08: 7030
-	JSR	lb_0def0		;04f0a: 4eb90000def0
+	JSR	play_sound_0def0		;04f0a: 4eb90000def0
 	MOVE.W	(A0),(A1)		;04f10: 3290
 	MOVE.L	A0,42(A1)		;04f12: 2348002a
 	MOVE.L	#$2e000004,2(A1)	;04f16: 237c2e0000040002
@@ -6640,7 +6662,7 @@ lb_05002:
 	CMPI.B	#$00,28(A0)		;05002: 0c280000001c
 	BGE.W	lb_05024		;05008: 6c00001a
 	MOVEQ	#49,D0			;0500c: 7031
-	JSR	lb_0def0		;0500e: 4eb90000def0
+	JSR	play_sound_0def0		;0500e: 4eb90000def0
 	MOVE.B	#$0b,3(A0)		;05014: 117c000b0003
 	MOVE.W	#$0010,4(A0)		;0501a: 317c00100004
 lb_05020:
@@ -6780,7 +6802,7 @@ lb_05232:
 	CMPI.B	#$00,28(A0)		;0523a: 0c280000001c
 	BGE.W	lb_0525c		;05240: 6c00001a
 	MOVEQ	#67,D0			;05244: 7043
-	JSR	lb_0def0		;05246: 4eb90000def0
+	JSR	play_sound_0def0		;05246: 4eb90000def0
 	MOVE.B	#$07,3(A0)		;0524c: 117c00070003
 	MOVE.W	#$0040,4(A0)		;05252: 317c00400004
 	BRA.W	lb_0526c		;05258: 60000012
@@ -6857,7 +6879,7 @@ lb_05354:
 	JSR	lb_054ea.W		;0536e: 4eb854ea
 	NOP				;05372: 4e71
 	MOVEQ	#68,D0			;05374: 7044
-	JSR	lb_0def0		;05376: 4eb90000def0
+	JSR	play_sound_0def0		;05376: 4eb90000def0
 	MOVE.B	1(A0),3(A0)		;0537c: 116800010003
 	MOVE.W	#$0014,4(A0)		;05382: 317c00140004
 	CMPI.B	#$03,3(A0)		;05388: 0c2800030003
@@ -6917,7 +6939,7 @@ lb_05458:
 	SUBI.B	#$01,5(A0)		;0545c: 042800010005
 	BCC.W	lb_05474		;05462: 64000010
 	MOVEQ	#66,D0			;05466: 7042
-	JSR	lb_0def0		;05468: 4eb90000def0
+	JSR	play_sound_0def0		;05468: 4eb90000def0
 	MOVE.B	#$12,5(A0)		;0546e: 117c00120005
 lb_05474:
 	MOVE.W	(A1),(A0)		;05474: 3091
@@ -6982,7 +7004,7 @@ lb_0552e:
 	MOVE.B	ext_00ffa224,54(A0)		;0555a: 117900ffa2240036
 lb_05562:
 	MOVEQ	#23,D0			;05562: 7017
-	JSR	lb_0def0		;05564: 4eb90000def0
+	JSR	play_sound_0def0		;05564: 4eb90000def0
 	MOVE.B	#$0a,3(A0)		;0556a: 117c000a0003
 	MOVE.W	#$0015,4(A0)		;05570: 317c00150004
 	MOVE.W	36(A0),D1		;05576: 32280024
@@ -6996,7 +7018,7 @@ lb_0557e:
 	BNE.W	lb_0559c		;05596: 66000004
 	MOVEQ	#47,D0			;0559a: 702f
 lb_0559c:
-	JSR	lb_0def0		;0559c: 4eb90000def0
+	JSR	play_sound_0def0		;0559c: 4eb90000def0
 lb_055a2:
 	RTS				;055a2: 4e75
 lb_055a4:
@@ -7023,7 +7045,7 @@ lb_055dc:
 	BNE.W	lb_055fa		;055f4: 66000004
 	MOVEQ	#47,D0			;055f8: 702f
 lb_055fa:
-	JSR	lb_0def0		;055fa: 4eb90000def0
+	JSR	play_sound_0def0		;055fa: 4eb90000def0
 lb_05600:
 	RTS				;05600: 4e75
 lb_05602:
@@ -7248,7 +7270,7 @@ lb_058ee:
 	BEQ.W	lb_05906		;058f4: 67000010
 	JSR	lb_11dc4		;058f8: 4eb900011dc4
 	MOVEQ	#46,D0			;058fe: 702e
-	JSR	lb_0def0		;05900: 4eb90000def0
+	JSR	play_sound_0def0		;05900: 4eb90000def0
 lb_05906:
 	RTS				;05906: 4e75
 lb_05908:
@@ -7275,7 +7297,7 @@ lb_05940:
 	BNE.W	lb_0595e		;05958: 66000004
 	MOVEQ	#47,D0			;0595c: 702f
 lb_0595e:
-	JSR	lb_0def0		;0595e: 4eb90000def0
+	JSR	play_sound_0def0		;0595e: 4eb90000def0
 lb_05964:
 	RTS				;05964: 4e75
 lb_05966:
@@ -9813,7 +9835,7 @@ lb_07d3c:
 	ADDQ.W	#1,ext_00ffa9bc		;07d3c: 527900ffa9bc
 	BTST	#0,ext_00ffa9bb		;07d42: 0839000000ffa9bb
 	BEQ.W	lb_07d8e		;07d4a: 67000042
-	BTST	#7,ext_00ff8215		;07d4e: 0839000700ff8215
+	BTST	#7,is_actual_game_played_00ff8215		;07d4e: 0839000700ff8215
 	BNE.S	lb_07d62		;07d56: 660a
 lb_07d58:
 	BCLR	#0,ext_00ffa9bb		;07d58: 08b9000000ffa9bb
@@ -9833,7 +9855,7 @@ lb_07d62:
 lb_07d8e:
 	BTST	#1,ext_00ffa9bb		;07d8e: 0839000100ffa9bb
 	BEQ.W	lb_07dda		;07d96: 67000042
-	BTST	#7,ext_00ff8215		;07d9a: 0839000700ff8215
+	BTST	#7,is_actual_game_played_00ff8215		;07d9a: 0839000700ff8215
 	BNE.S	lb_07dae		;07da2: 660a
 lb_07da4:
 	BCLR	#1,ext_00ffa9bb		;07da4: 08b9000100ffa9bb
@@ -10046,7 +10068,7 @@ lb_08054:
 	dc.b	$10	;08072
 	dc.b	" "	;08072
 lb_08074:
-	LEA	ext_00ff80f4,A2		;08074: 45f900ff80f4
+	LEA	copy_of_inputs_00ff80f4,A2		;08074: 45f900ff80f4
 	MOVE.L	D0,D2			;0807a: 2400
 	NOT.L	D2			;0807c: 4682
 	ANDI.L	#$00000001,D2		;0807e: 028200000001
@@ -10094,7 +10116,7 @@ lb_08122:
 	BNE.W	lb_08178		;08126: 66000050
 	MOVEM.L	D0/A3,-(A7)		;0812a: 48e78010
 	MOVEQ	#94,D0			;0812e: 705e
-	JSR	lb_0def0		;08130: 4eb90000def0
+	JSR	play_sound_0def0		;08130: 4eb90000def0
 	MOVEM.L	(A7)+,D0/A3		;08136: 4cdf0801
 	MOVE.B	#$01,4(A1)		;0813a: 137c00010004
 	CMPI.B	#$1e,1(A1)		;08140: 0c29001e0001
@@ -10322,7 +10344,7 @@ lb_08400:
 credit_inserted_08410:
 	CLR.B	ext_00ffa9af		;08410: 423900ffa9af
 	CLR.B	ext_00ffa9b9		;08416: 423900ffa9b9
-	JSR	lb_01cd8.W		;0841c: 4eb81cd8
+	JSR	clear_pretty_much_all_video_01cd8.W		;0841c: 4eb81cd8
 	MOVE.W	#$0004,sound_0030c010		;08420: 33fc00040030c010
 	LEA	lb_08e32,A0		;08428: 41f900008e32
 	LEA	tile_layer_1_24A000,A1		;0842e: 43f90024a000
@@ -10361,11 +10383,12 @@ lb_0849c:
 lb_084a6:
 	ADDQ.B	#1,ext_00ff801e		;084a6: 523900ff801e
 	BRA.S	lb_08460		;084ac: 60b2
-lb_084ae:
-	JSR	lb_01cd8.W		;084ae: 4eb81cd8
+game_intro_sequence_084ae:
+	JSR	clear_pretty_much_all_video_01cd8.W		;084ae: 4eb81cd8
 	MOVE.W	#$8009,ext_00ff8170		;084b2: 33fc800900ff8170
 	JSR	lb_00404.W		;084ba: 4eb80404
 	LEA	lb_09032,A0		;084be: 41f900009032
+	; install game intro screen ("are you bad enough...")
 	LEA	tile_layer_1_24A000,A1		;084c4: 43f90024a000
 	JSR	copy_memory_to_tiles_0837c		;084ca: 4eb90000837c
 	MOVE.W	#$0000,ext_00ff801e		;084d0: 33fc000000ff801e
@@ -10373,13 +10396,13 @@ lb_084ae:
 	JSR	lb_087c8		;084e0: 4eb9000087c8
 	MOVE.W	#$0020,ext_00ff802e		;084e6: 33fc002000ff802e
 	JSR	lb_086fe		;084ee: 4eb9000086fe
-	MOVEQ	#89,D0			;084f4: 7059
-	JSR	lb_0def0		;084f6: 4eb90000def0
+	MOVEQ	#SIREN_SND,D0			;084f4: 7059	siren warning sound
+	JSR	play_sound_0def0		;084f6: 4eb90000def0
 	MOVE.W	#$0038,ext_00ff802e		;084fc: 33fc003800ff802e
 	JSR	lb_086fe		;08504: 4eb9000086fe
 	BNE.W	lb_085ae		;0850a: 660000a2
-	MOVEQ	#89,D0			;0850e: 7059
-	JSR	lb_0def0		;08510: 4eb90000def0
+	MOVEQ	#SIREN_SND,D0			;0850e: 7059    siren warning sound
+	JSR	play_sound_0def0		;08510: 4eb90000def0
 	MOVE.W	#$0038,ext_00ff802e		;08516: 33fc003800ff802e
 	JSR	lb_086fe		;0851e: 4eb9000086fe
 	BNE.W	lb_085ae		;08524: 66000088
@@ -10387,7 +10410,7 @@ lb_08528:
 	CMPI.W	#$0003,ext_00ff801e		;08528: 0c79000300ff801e
 	BCS.W	lb_08562		;08530: 65000030
 	MOVEQ	#0,D0			;08534: 7000
-	MOVE.B	ext_00ff8215,D1		;08536: 123900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D1		;08536: 123900ff8215
 	MOVE.B	D1,D2			;0853c: 1401
 	ANDI.B	#$01,D1			;0853e: 02010001
 	BEQ.W	lb_0854c		;08542: 67000008
@@ -10395,7 +10418,7 @@ lb_08528:
 lb_0854c:
 	ANDI.B	#$02,D2			;0854c: 02020002
 	BEQ.W	lb_0855a		;08550: 67000008
-	OR.B	ext_00ff80f6,D0		;08554: 803900ff80f6
+	OR.B	prev_inputs_00ff80f6,D0		;08554: 803900ff80f6
 lb_0855a:
 	ANDI.B	#$30,D0			;0855a: 02000030
 	BNE.W	lb_085ae		;0855e: 6600004e
@@ -10416,10 +10439,10 @@ lb_0857c:
 	JSR	lb_086fe		;085a8: 4eb9000086fe
 lb_085ae:
 	MOVEQ	#1,D0			;085ae: 7001
-	JSR	lb_0def0		;085b0: 4eb90000def0
+	JSR	play_sound_0def0		;085b0: 4eb90000def0
 	MULU	#$0000,D0		;085b6: c0fc0000
 	MOVEQ	#3,D0			;085ba: 7003
-	JSR	lb_0def0		;085bc: 4eb90000def0
+	JSR	play_sound_0def0		;085bc: 4eb90000def0
 	RTS				;085c2: 4e75
 lb_085c4:
 	MOVE.B	sync_flags_00ff8217,D0		;085c4: 103900ff8217
@@ -10483,7 +10506,7 @@ lb_08670:
 	BEQ.S	lb_086a6		;08694: 6710
 	MOVEM.L	D0/A3,-(A7)		;08696: 48e78010
 	MOVEQ	#105,D0			;0869a: 7069
-	JSR	lb_0def0		;0869c: 4eb90000def0
+	JSR	play_sound_0def0		;0869c: 4eb90000def0
 	MOVEM.L	(A7)+,D0/A3		;086a2: 4cdf0801
 lb_086a6:
 	MOVE.W	ext_00ff801e,D1		;086a6: 323900ff801e
@@ -10515,7 +10538,7 @@ lb_086fe:
 	JSR	lb_085c4		;086fe: 4eb9000085c4
 	JSR	lb_00404.W		;08704: 4eb80404
 	MOVEQ	#0,D0			;08708: 7000
-	MOVE.B	ext_00ff8215,D1		;0870a: 123900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D1		;0870a: 123900ff8215
 	MOVE.B	D1,D2			;08710: 1401
 	ANDI.B	#$01,D1			;08712: 02010001
 	BEQ.W	lb_08720		;08716: 67000008
@@ -10523,7 +10546,7 @@ lb_086fe:
 lb_08720:
 	ANDI.B	#$02,D2			;08720: 02020002
 	BEQ.W	lb_0872e		;08724: 67000008
-	OR.B	ext_00ff80f6,D0		;08728: 803900ff80f6
+	OR.B	prev_inputs_00ff80f6,D0		;08728: 803900ff80f6
 lb_0872e:
 	ANDI.B	#$30,D0			;0872e: 02000030
 	BNE.W	lb_0873e		;08732: 6600000a
@@ -10584,10 +10607,10 @@ lb_087f0:
 	TST.W	ext_00ff806a		;087f8: 4a7900ff806a
 	BNE.W	lb_08810		;087fe: 66000010
 	MOVE.W	#$0005,ext_00ff806a		;08802: 33fc000500ff806a
-	JSR	lb_08812		;0880a: 4eb900008812
+	JSR	draw_letter_08812		;0880a: 4eb900008812
 lb_08810:
 	RTS				;08810: 4e75
-lb_08812:
+draw_letter_08812:
 	MOVEA.L	ext_00ff805e,A0		;08812: 207900ff805e
 	MOVEA.L	ext_00ff8062,A1		;08818: 227900ff8062
 	CMPI.B	#$fe,(A0)		;0881e: 0c1000fe
@@ -10596,7 +10619,7 @@ lb_08812:
 	MOVE.L	ext_00ff8066,ext_00ff8062	;08830: 23f900ff806600ff8062
 	ADDA.L	#$00000001,A0		;0883a: d1fc00000001
 	MOVE.L	A0,ext_00ff805e		;08840: 23c800ff805e
-	BRA.S	lb_08812		;08846: 60ca
+	BRA.S	draw_letter_08812		;08846: 60ca
 lb_08848:
 	MOVE.B	#$00,(A1)+		;08848: 12fc0000
 	MOVE.B	(A0)+,(A1)+		;0884c: 12d8
@@ -10604,8 +10627,8 @@ lb_08848:
 	MOVE.L	A1,ext_00ff8062		;08854: 23c900ff8062
 	CMPI.B	#$20,-1(A0)		;0885a: 0c280020ffff
 	BEQ.W	lb_0886e		;08860: 6700000c
-	MOVE.W	#$0069,D0		;08864: 303c0069
-	JSR	lb_0def0		;08868: 4eb90000def0
+	MOVE.W	#TYPING_SND,D0		;08864: 303c0069
+	JSR	play_sound_0def0		;08868: 4eb90000def0
 lb_0886e:
 	ADDI.W	#$0001,ext_00ff801e		;0886e: 0679000100ff801e
 	RTS				;08876: 4e75
@@ -11785,14 +11808,14 @@ lb_09032:
 	dc.w	$1695	;0922c
 	dc.w	$269b	;0922e
 	dc.w	$269d	;09230
-	JSR	lb_01cd8.W		;09232: 4eb81cd8
+	JSR	clear_pretty_much_all_video_01cd8.W		;09232: 4eb81cd8
 	CLR.L	ext_00ff813c		;09236: 42b900ff813c
 	CLR.L	ext_00ff8140		;0923c: 42b900ff8140
 	MOVE.W	#$800a,ext_00ff8170		;09242: 33fc800a00ff8170
 	JSR	wait_for_sync_003f0.W		;0924a: 4eb803f0
 	MOVE.W	#$0000,sound_0030c010		;0924e: 33fc00000030c010
 	MOVEQ	#102,D0			;09256: 7066
-	JSR	lb_0def0		;09258: 4eb90000def0
+	JSR	play_sound_0def0		;09258: 4eb90000def0
 	LEA	lb_09282,A0		;0925e: 41f900009282
 	LEA	tile_layer_2_24d000,A1		;09264: 43f90024d000
 lb_0926a:
@@ -12623,7 +12646,7 @@ lb_098f6:
 	dc.w	$0304	;09972
 	dc.w	$0304	;09974
 lb_09976:
-	BTST	#6,ext_00ff810b		;09976: 0839000600ff810b
+	BTST	#6,copy_of_dsw_lsb_00ff810b		;09976: 0839000600ff810b
 	BEQ.W	lb_0998e		;0997e: 6700000e
 	BSET	#7,ext_00ff810d		;09982: 08f9000700ff810d
 	BRA.W	lb_09996		;0998a: 6000000a
@@ -12632,7 +12655,7 @@ lb_0998e:
 lb_09996:
 	JSR	update_pf0_0_control_02366.W		;09996: 4eb82366
 	MOVEQ	#0,D0			;0999a: 7000
-	MOVE.B	ext_00ff810a,D0		;0999c: 103900ff810a
+	MOVE.B	copy_of_dsw_msb_00ff810a,D0		;0999c: 103900ff810a
 	ANDI.B	#$0c,D0			;099a2: 0200000c
 	CMPI.B	#$0c,D0			;099a6: 0c00000c
 	BNE.W	lb_099ba		;099aa: 6600000e
@@ -12641,7 +12664,7 @@ lb_09996:
 lb_099ba:
 	BCLR	#6,ext_00ffa846		;099ba: 08b9000600ffa846
 lb_099c2:
-	BTST	#4,ext_00ff810a		;099c2: 0839000400ff810a
+	BTST	#4,copy_of_dsw_msb_00ff810a		;099c2: 0839000400ff810a
 	BNE.W	lb_099da		;099ca: 6600000e
 	BCLR	#7,stage_control_flags_00ff8216		;099ce: 08b9000700ff8216
 	BRA.W	lb_099e2		;099d6: 6000000a
@@ -12721,7 +12744,7 @@ lb_09aa6:
 	CMPA.L	#$00244740,A2		;09aa8: b5fc00244740
 	BNE.S	lb_09aa6		;09aae: 66f6
 	MOVEQ	#99,D0			;09ab0: 7063
-	JSR	lb_0def0		;09ab2: 4eb90000def0
+	JSR	play_sound_0def0		;09ab2: 4eb90000def0
 	MOVEQ	#41,D0			;09ab8: 7029
 	JSR	lb_01f78.W		;09aba: 4eb81f78
 	MOVEQ	#48,D0			;09abe: 7030
@@ -12731,13 +12754,13 @@ lb_09aa6:
 	MOVE.B	ext_00ffa8c6,D0		;09ace: 103900ffa8c6
 	LSL.L	#8,D0			;09ad4: e188
 	MOVE.L	D0,ext_00ffa8aa		;09ad6: 23c000ffa8aa
-	BTST	#2,ext_00ff8215		;09adc: 0839000200ff8215
+	BTST	#2,is_actual_game_played_00ff8215		;09adc: 0839000200ff8215
 	BEQ.W	lb_09afa		;09ae4: 67000014
 	MOVE.L	ext_00ffa8aa,ext_00ff81d8	;09ae8: 23f900ffa8aa00ff81d8
 	JSR	lb_07290.W		;09af2: 4eb87290
 	JSR	lb_0736a.W		;09af6: 4eb8736a
 lb_09afa:
-	BTST	#3,ext_00ff8215		;09afa: 0839000300ff8215
+	BTST	#3,is_actual_game_played_00ff8215		;09afa: 0839000300ff8215
 	BEQ.W	lb_09b18		;09b02: 67000014
 	MOVE.L	ext_00ffa8aa,ext_00ff81dc	;09b06: 23f900ffa8aa00ff81dc
 	JSR	lb_07290.W		;09b10: 4eb87290
@@ -12751,7 +12774,7 @@ lb_09b1c:
 	JSR	clear_sprite_ram_01dc2.W		;09b24: 4eb81dc2
 	JSR	wait_for_sync_003f0.W		;09b28: 4eb803f0
 	MOVEQ	#4,D0			;09b2c: 7004
-	JSR	lb_0def0		;09b2e: 4eb90000def0
+	JSR	play_sound_0def0		;09b2e: 4eb90000def0
 	CMPI.B	#$07,current_stage_00ff821d		;09b34: 0c39000700ff821d
 	BEQ.W	lb_09b46		;09b3c: 67000008
 	MOVEQ	#42,D0			;09b40: 702a
@@ -12766,10 +12789,10 @@ lb_09b4a:
 lb_09b54:
 	BTST	#0,ext_00ffa846		;09b54: 0839000000ffa846
 	BEQ.W	lb_09b98		;09b5c: 6700003a
-	BCLR	#0,ext_00ff8215		;09b60: 08b9000000ff8215
+	BCLR	#0,is_actual_game_played_00ff8215		;09b60: 08b9000000ff8215
 	MOVEQ	#34,D0			;09b68: 7022
 	BSR.W	lb_09d92		;09b6a: 61000226
-	BCLR	#2,ext_00ff8215		;09b6e: 08b9000200ff8215
+	BCLR	#2,is_actual_game_played_00ff8215		;09b6e: 08b9000200ff8215
 lb_09b76:
 	SUBQ.W	#1,ext_00ffa8bc		;09b76: 537900ffa8bc
 	BNE.W	lb_09b98		;09b7c: 6600001a
@@ -12779,10 +12802,10 @@ lb_09b76:
 lb_09b98:
 	BTST	#1,ext_00ffa846		;09b98: 0839000100ffa846
 	BEQ.W	lb_09bdc		;09ba0: 6700003a
-	BCLR	#1,ext_00ff8215		;09ba4: 08b9000100ff8215
+	BCLR	#1,is_actual_game_played_00ff8215		;09ba4: 08b9000100ff8215
 	MOVEQ	#35,D0			;09bac: 7023
 	BSR.W	lb_09d92		;09bae: 610001e2
-	BCLR	#3,ext_00ff8215		;09bb2: 08b9000300ff8215
+	BCLR	#3,is_actual_game_played_00ff8215		;09bb2: 08b9000300ff8215
 	SUBQ.W	#1,ext_00ffa8be		;09bba: 537900ffa8be
 	BNE.W	lb_09bdc		;09bc0: 6600001a
 	BCLR	#1,ext_00ffa846		;09bc4: 08b9000100ffa846
@@ -12792,7 +12815,7 @@ lb_09bdc:
 	RTS				;09bdc: 4e75
 lb_09bde:
 	MOVEQ	#0,D0			;09bde: 7000
-	MOVE.B	ext_00ff8215,D0		;09be0: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;09be0: 103900ff8215
 	MOVE.B	ext_00ffa846,D1		;09be6: 123900ffa846
 	ANDI.B	#$03,D0			;09bec: 02000003
 	ANDI.B	#$0c,D1			;09bf0: 0201000c
@@ -12877,7 +12900,7 @@ lb_09ce0:
 	MOVE.W	#$0000,D0		;09cf2: 303c0000
 	MOVE.B	ext_00ffa8ba,D0		;09cf6: 103900ffa8ba
 	MOVE.W	D0,ext_0024476a		;09cfc: 33c00024476a
-	MOVE.B	ext_00ff8215,D0		;09d02: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;09d02: 103900ff8215
 	ANDI.B	#$03,D0			;09d08: 02000003
 	BEQ.S	lb_09cb6		;09d0c: 67a8
 	MOVEQ	#40,D0			;09d0e: 7028
@@ -12887,7 +12910,7 @@ lb_09ce0:
 lb_09d1e:
 	RTS				;09d1e: 4e75
 lb_09d20:
-	ORI.B	#$83,ext_00ff8215		;09d20: 0039008300ff8215
+	ORI.B	#$83,is_actual_game_played_00ff8215		;09d20: 0039008300ff8215
 	BTST	#2,ext_00ffa846		;09d28: 0839000200ffa846
 	BEQ.W	lb_09d3c		;09d30: 6700000a
 	BSET	#0,ext_00ffa9bb		;09d34: 08f9000000ffa9bb
@@ -12909,7 +12932,7 @@ lb_09d6e:
 	MOVE.B	ext_00ffa9bb,D0		;09d7a: 103900ffa9bb
 	ANDI.B	#$03,D0			;09d80: 02000003
 	BNE.S	lb_09d6e		;09d84: 66e8
-	ANDI.B	#$7c,ext_00ff8215		;09d86: 0239007c00ff8215
+	ANDI.B	#$7c,is_actual_game_played_00ff8215		;09d86: 0239007c00ff8215
 	JMP	lb_019b2.W		;09d8e: 4ef819b2
 lb_09d92:
 	MOVE.W	ext_00ff8202,D2		;09d92: 343900ff8202
@@ -12926,7 +12949,7 @@ lb_09dae:
 	MOVE.B	current_stage_00ff821d,D0		;09db0: 103900ff821d
 	LEA	lb_09dc8,A3		;09db6: 47f900009dc8
 	MOVE.B	0(A3,D0.W),D0		;09dbc: 10330000
-	JSR	lb_0def0		;09dc0: 4eb90000def0
+	JSR	play_sound_0def0		;09dc0: 4eb90000def0
 	RTS				;09dc6: 4e75
 lb_09dc8:
 	dc.w	$0060	;09dc8
@@ -12952,7 +12975,7 @@ lb_09e16:
 	BTST	#7,(A0)			;09e1c: 08100007
 	BEQ.W	lb_09e50		;09e20: 6700002e
 	LEA	ext_00ffa8aa,A2		;09e24: 45f900ffa8aa
-	MOVE.B	ext_00ff80f4,(A2)		;09e2a: 14b900ff80f4
+	MOVE.B	copy_of_inputs_00ff80f4,(A2)		;09e2a: 14b900ff80f4
 lb_09e30:
 	MOVE.B	ext_00ff80f8,1(A2)		;09e30: 157900ff80f80001
 	MOVE.B	ext_00ff8242,2(A2)		;09e38: 157900ff82420002
@@ -13060,19 +13083,19 @@ lb_09efc:
 lb_09fbc:
 	LEA	ext_00ffa364,A0		;09fbc: 41f900ffa364
 	JSR	lb_01efa.W		;09fc2: 4eb81efa
-	BTST	#0,ext_00ff8215		;09fc6: 0839000000ff8215
+	BTST	#0,is_actual_game_played_00ff8215		;09fc6: 0839000000ff8215
 	BEQ.W	lb_09ffc		;09fce: 6700002c
 	MOVE.W	#$a080,(A0)		;09fd2: 30bca080
 	BSR.W	lb_0a33c		;09fd6: 61000364
 	BSR.W	lb_0a376		;09fda: 6100039a
 	MOVE.B	#$00,55(A0)		;09fde: 117c00000037
-	BSET	#2,ext_00ff8215		;09fe4: 08f9000200ff8215
+	BSET	#2,is_actual_game_played_00ff8215		;09fe4: 08f9000200ff8215
 	BCLR	#0,ext_00ffa846		;09fec: 08b9000000ffa846
 	BCLR	#2,ext_00ffa846		;09ff4: 08b9000200ffa846
 lb_09ffc:
 	LEA	ext_00ffa224,A0		;09ffc: 41f900ffa224
 	JSR	lb_01efa.W		;0a002: 4eb81efa
-	BTST	#1,ext_00ff8215		;0a006: 0839000100ff8215
+	BTST	#1,is_actual_game_played_00ff8215		;0a006: 0839000100ff8215
 	BEQ.W	lb_0a048		;0a00e: 67000038
 	MOVE.W	#$a080,(A0)		;0a012: 30bca080
 	MOVE.B	#$01,2(A0)		;0a016: 117c00010002
@@ -13080,7 +13103,7 @@ lb_09ffc:
 	BSR.W	lb_0a33c		;0a022: 61000318
 	BSR.W	lb_0a376		;0a026: 6100034e
 	MOVE.B	#$00,55(A0)		;0a02a: 117c00000037
-	BSET	#3,ext_00ff8215		;0a030: 08f9000300ff8215
+	BSET	#3,is_actual_game_played_00ff8215		;0a030: 08f9000300ff8215
 	BCLR	#1,ext_00ffa846		;0a038: 08b9000100ffa846
 	BCLR	#3,ext_00ffa846		;0a040: 08b9000300ffa846
 lb_0a048:
@@ -13089,7 +13112,7 @@ lb_0a048:
 	MOVE.L	D0,ext_00ff81d0		;0a050: 23c000ff81d0
 	RTS				;0a056: 4e75
 lb_0a058:
-	MOVE.B	ext_00ff8215,D0		;0a058: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;0a058: 103900ff8215
 	BTST	#0,D0			;0a05e: 08000000
 	BEQ.W	lb_0a0da		;0a062: 67000076
 	BTST	#2,D0			;0a066: 08000002
@@ -13110,7 +13133,7 @@ lb_0a058:
 lb_0a0ae:
 	BCLR	#5,(A0)			;0a0ae: 08900005
 lb_0a0b2:
-	BSET	#2,ext_00ff8215		;0a0b2: 08f9000200ff8215
+	BSET	#2,is_actual_game_played_00ff8215		;0a0b2: 08f9000200ff8215
 	BCLR	#0,ext_00ffa846		;0a0ba: 08b9000000ffa846
 	BCLR	#2,ext_00ffa846		;0a0c2: 08b9000200ffa846
 	MOVEQ	#34,D0			;0a0ca: 7022
@@ -13141,7 +13164,7 @@ lb_0a0da:
 lb_0a136:
 	BCLR	#5,(A0)			;0a136: 08900005
 lb_0a13a:
-	BSET	#3,ext_00ff8215		;0a13a: 08f9000300ff8215
+	BSET	#3,is_actual_game_played_00ff8215		;0a13a: 08f9000300ff8215
 	BCLR	#1,ext_00ffa846		;0a142: 08b9000100ffa846
 	BCLR	#3,ext_00ffa846		;0a14a: 08b9000300ffa846
 	MOVEQ	#35,D0			;0a152: 7023
@@ -13152,7 +13175,7 @@ lb_0a13a:
 lb_0a162:
 	RTS				;0a162: 4e75
 lb_0a164:
-	MOVE.B	ext_00ff8215,D0		;0a164: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;0a164: 103900ff8215
 	MOVEQ	#0,D2			;0a16a: 7400
 	MOVE.B	current_stage_00ff821d,D2		;0a16c: 143900ff821d
 	SUBQ.B	#1,D2			;0a172: 5302
@@ -13313,7 +13336,7 @@ lb_0a32c:
 	RTS				;0a33a: 4e75
 lb_0a33c:
 	MOVEQ	#0,D0			;0a33c: 7000
-	MOVE.B	ext_00ff810a,D0		;0a33e: 103900ff810a
+	MOVE.B	copy_of_dsw_msb_00ff810a,D0		;0a33e: 103900ff810a
 	ANDI.B	#$03,D0			;0a344: 02000003
 	CMPI.B	#$03,D0			;0a348: 0c000003
 	BNE.W	lb_0a35c		;0a34c: 6600000e
@@ -13330,7 +13353,7 @@ lb_0a372:
 	dc.w	$0102	;0a374
 lb_0a376:
 	MOVEQ	#0,D0			;0a376: 7000
-	MOVE.B	ext_00ff810a,D0		;0a378: 103900ff810a
+	MOVE.B	copy_of_dsw_msb_00ff810a,D0		;0a378: 103900ff810a
 	LSR.B	#1,D0			;0a37e: e208
 	ANDI.B	#$06,D0			;0a380: 02000006
 	LEA	lb_0a392,A4		;0a384: 49f90000a392
@@ -13421,7 +13444,7 @@ lb_0a4a2:
 	BRA.W	lb_0a8e4		;0a4ae: 60000434
 lb_0a4b2:
 	MOVEQ	#11,D0			;0a4b2: 700b
-	JSR	lb_0def0		;0a4b4: 4eb90000def0
+	JSR	play_sound_0def0		;0a4b4: 4eb90000def0
 	JSR	lb_0bfa4		;0a4ba: 4eb90000bfa4
 	BCLR	#5,1(A0)		;0a4c0: 08a800050001
 	BCLR	#3,1(A0)		;0a4c6: 08a800030001
@@ -13431,7 +13454,7 @@ lb_0a4b2:
 	BRA.W	lb_0a8e6		;0a4d8: 6000040c
 lb_0a4dc:
 	MOVEQ	#11,D0			;0a4dc: 700b
-	JSR	lb_0def0		;0a4de: 4eb90000def0
+	JSR	play_sound_0def0		;0a4de: 4eb90000def0
 	JSR	lb_0bfa4		;0a4e4: 4eb90000bfa4
 	BSET	#5,1(A0)		;0a4ea: 08e800050001
 	BCLR	#3,1(A0)		;0a4f0: 08a800030001
@@ -13441,7 +13464,7 @@ lb_0a4dc:
 	BRA.W	lb_0a8e6		;0a500: 600003e4
 lb_0a504:
 	MOVEQ	#11,D0			;0a504: 700b
-	JSR	lb_0def0		;0a506: 4eb90000def0
+	JSR	play_sound_0def0		;0a506: 4eb90000def0
 	BSR.W	lb_0bf38		;0a50c: 61001a2a
 	BCLR	#5,1(A0)		;0a510: 08a800050001
 	BCLR	#3,1(A0)		;0a516: 08a800030001
@@ -13546,7 +13569,7 @@ lb_0a65e:
 	MOVEQ	#16,D2			;0a668: 7410
 	MOVE.W	#$0004,D3		;0a66a: 363c0004
 	MOVEQ	#10,D0			;0a66e: 700a
-	JSR	lb_0def0		;0a670: 4eb90000def0
+	JSR	play_sound_0def0		;0a670: 4eb90000def0
 	BRA.W	lb_0a8e6		;0a676: 6000026e
 lb_0a67a:
 	BCLR	#5,1(A0)		;0a67a: 08a800050001
@@ -13554,7 +13577,7 @@ lb_0a67a:
 	MOVEQ	#17,D2			;0a684: 7411
 	MOVE.W	#$0004,D3		;0a686: 363c0004
 	MOVEQ	#10,D0			;0a68a: 700a
-	JSR	lb_0def0		;0a68c: 4eb90000def0
+	JSR	play_sound_0def0		;0a68c: 4eb90000def0
 	BRA.W	lb_0a8e6		;0a692: 60000252
 lb_0a696:
 	BCLR	#5,1(A0)		;0a696: 08a800050001
@@ -13562,7 +13585,7 @@ lb_0a696:
 	MOVEQ	#18,D2			;0a6a0: 7412
 	MOVE.W	#$0004,D3		;0a6a2: 363c0004
 	MOVEQ	#10,D0			;0a6a6: 700a
-	JSR	lb_0def0		;0a6a8: 4eb90000def0
+	JSR	play_sound_0def0		;0a6a8: 4eb90000def0
 	BRA.W	lb_0a8e6		;0a6ae: 60000236
 lb_0a6b2:
 	BSET	#5,1(A0)		;0a6b2: 08e800050001
@@ -13577,7 +13600,7 @@ lb_0a6c8:
 	BRA.W	lb_0a8e6		;0a6d4: 60000210
 lb_0a6d8:
 	MOVEQ	#15,D0			;0a6d8: 700f
-	JSR	lb_0def0		;0a6da: 4eb90000def0
+	JSR	play_sound_0def0		;0a6da: 4eb90000def0
 	BSET	#5,1(A0)		;0a6e0: 08e800050001
 	MOVEQ	#21,D2			;0a6e6: 7415
 	MOVE.W	#$0108,D3		;0a6e8: 363c0108
@@ -13590,7 +13613,7 @@ lb_0a6f0:
 	BRA.W	lb_0a8e6		;0a702: 600001e2
 lb_0a706:
 	MOVEQ	#12,D0			;0a706: 700c
-	JSR	lb_0def0		;0a708: 4eb90000def0
+	JSR	play_sound_0def0		;0a708: 4eb90000def0
 	BCLR	#5,1(A0)		;0a70e: 08a800050001
 	BCLR	#3,1(A0)		;0a714: 08a800030001
 	BCLR	#0,40(A0)		;0a71a: 08a800000028
@@ -13600,7 +13623,7 @@ lb_0a706:
 	BRA.W	lb_0a8e6		;0a72a: 600001ba
 lb_0a72e:
 	MOVEQ	#14,D0			;0a72e: 700e
-	JSR	lb_0def0		;0a730: 4eb90000def0
+	JSR	play_sound_0def0		;0a730: 4eb90000def0
 	BSR.W	lb_0c21a		;0a736: 61001ae2
 	BCLR	#5,1(A0)		;0a73a: 08a800050001
 	MOVEQ	#24,D2			;0a740: 7418
@@ -13608,7 +13631,7 @@ lb_0a72e:
 	BRA.W	lb_0a77e		;0a746: 60000036
 lb_0a74a:
 	MOVEQ	#14,D0			;0a74a: 700e
-	JSR	lb_0def0		;0a74c: 4eb90000def0
+	JSR	play_sound_0def0		;0a74c: 4eb90000def0
 	BSR.W	lb_0c21a		;0a752: 61001ac6
 	BCLR	#5,1(A0)		;0a756: 08a800050001
 	MOVEQ	#25,D2			;0a75c: 7419
@@ -13616,7 +13639,7 @@ lb_0a74a:
 	BRA.W	lb_0a77e		;0a762: 6000001a
 lb_0a766:
 	MOVEQ	#14,D0			;0a766: 700e
-	JSR	lb_0def0		;0a768: 4eb90000def0
+	JSR	play_sound_0def0		;0a768: 4eb90000def0
 	BSR.W	lb_0c21a		;0a76e: 61001aaa
 	BCLR	#5,1(A0)		;0a772: 08a800050001
 	MOVEQ	#26,D2			;0a778: 741a
@@ -13627,7 +13650,7 @@ lb_0a77e:
 	BRA.W	lb_0a8e6		;0a78a: 6000015a
 lb_0a78e:
 	MOVEQ	#21,D0			;0a78e: 7015
-	JSR	lb_0def0		;0a790: 4eb90000def0
+	JSR	play_sound_0def0		;0a790: 4eb90000def0
 	BCLR	#5,1(A0)		;0a796: 08a800050001
 	MOVEQ	#27,D2			;0a79c: 741b
 	MOVE.W	#$0004,D3		;0a79e: 363c0004
@@ -13635,7 +13658,7 @@ lb_0a78e:
 lb_0a7a6:
 	BSR.W	lb_0a8fa		;0a7a6: 61000152
 	MOVEQ	#13,D0			;0a7aa: 700d
-	JSR	lb_0def0		;0a7ac: 4eb90000def0
+	JSR	play_sound_0def0		;0a7ac: 4eb90000def0
 	BCLR	#5,1(A0)		;0a7b2: 08a800050001
 	MOVEQ	#28,D2			;0a7b8: 741c
 	MOVE.W	#$0008,D3		;0a7ba: 363c0008
@@ -13647,7 +13670,7 @@ lb_0a7c2:
 	BRA.W	lb_0a8e6		;0a7ce: 60000116
 lb_0a7d2:
 	MOVEQ	#20,D0			;0a7d2: 7014
-	JSR	lb_0def0		;0a7d4: 4eb90000def0
+	JSR	play_sound_0def0		;0a7d4: 4eb90000def0
 	BSET	#3,1(A0)		;0a7da: 08e800030001
 	BSR.W	lb_0a902		;0a7e0: 61000120
 	BCLR	#5,1(A0)		;0a7e4: 08a800050001
@@ -13835,7 +13858,7 @@ lb_0aa4a:
 	BCLR	#3,40(A2)		;0aa4a: 08aa00030028
 	BCLR	#3,40(A3)		;0aa50: 08ab00030028
 	BCLR	#4,stage_control_flags_00ff8216		;0aa56: 08b9000400ff8216
-	BSET	#5,ext_00ff8215		;0aa5e: 08f9000500ff8215
+	BSET	#5,is_actual_game_played_00ff8215		;0aa5e: 08f9000500ff8215
 lb_0aa66:
 	RTS				;0aa66: 4e75
 lb_0aa68:
@@ -13844,7 +13867,7 @@ lb_0aa68:
 	BEQ.W	lb_0aa94		;0aa74: 6700001e
 	JSR	lb_01efa.W		;0aa78: 4eb81efa
 	BSET	#0,ext_00ffa846		;0aa7c: 08f9000000ffa846
-	BCLR	#2,ext_00ff8215		;0aa84: 08b9000200ff8215
+	BCLR	#2,is_actual_game_played_00ff8215		;0aa84: 08b9000200ff8215
 	MOVE.W	#$0080,ext_00ffa8bc		;0aa8c: 33fc008000ffa8bc
 lb_0aa94:
 	RTS				;0aa94: 4e75
@@ -13854,7 +13877,7 @@ lb_0aa96:
 	BEQ.S	lb_0aa94		;0aaa2: 67f0
 	JSR	lb_01efa.W		;0aaa4: 4eb81efa
 	BSET	#1,ext_00ffa846		;0aaa8: 08f9000100ffa846
-	BCLR	#3,ext_00ff8215		;0aab0: 08b9000300ff8215
+	BCLR	#3,is_actual_game_played_00ff8215		;0aab0: 08b9000300ff8215
 	MOVE.W	#$0080,ext_00ffa8be		;0aab8: 33fc008000ffa8be
 	RTS				;0aac0: 4e75
 lb_0aac2:
@@ -14230,7 +14253,7 @@ lb_0aef0:
 	BEQ.W	lb_0af08		;0aef6: 67000010
 	MOVE.B	#$10,3(A0)		;0aefa: 117c00100003
 	MOVEQ	#10,D0			;0af00: 700a
-	JSR	lb_0def0		;0af02: 4eb90000def0
+	JSR	play_sound_0def0		;0af02: 4eb90000def0
 lb_0af08:
 	RTS				;0af08: 4e75
 lb_0af0a:
@@ -14615,7 +14638,7 @@ lb_0b3b4:
 	BEQ.W	lb_0b3dc		;0b3cc: 6700000e
 	BSR.W	lb_0a47a		;0b3d0: 6100f0a8
 	MOVEQ	#17,D0			;0b3d4: 7011
-	JSR	lb_0def0		;0b3d6: 4eb90000def0
+	JSR	play_sound_0def0		;0b3d6: 4eb90000def0
 lb_0b3dc:
 	BSR.W	lb_0c120		;0b3dc: 61000d42
 	BRA.W	lb_0b058		;0b3e0: 6000fc76
@@ -14660,7 +14683,7 @@ lb_0b464:
 	BNE.W	lb_0b478		;0b468: 6600000e
 	BSR.W	lb_0a47a		;0b46c: 6100f00c
 	MOVEQ	#17,D0			;0b470: 7011
-	JSR	lb_0def0		;0b472: 4eb90000def0
+	JSR	play_sound_0def0		;0b472: 4eb90000def0
 lb_0b478:
 	BRA.W	lb_0b058		;0b478: 6000fbde
 lb_0b47c:
@@ -15292,7 +15315,7 @@ lb_0bcaa:
 	BSR.W	lb_0a920		;0bcb4: 6100ec6a
 	BSR.W	lb_0a94a		;0bcb8: 6100ec90
 	MOVEQ	#19,D0			;0bcbc: 7013
-	JSR	lb_0def0		;0bcbe: 4eb90000def0
+	JSR	play_sound_0def0		;0bcbe: 4eb90000def0
 lb_0bcc4:
 	BRA.W	lb_0b02c		;0bcc4: 6000f366
 lb_0bcc8:
@@ -15305,7 +15328,7 @@ lb_0bcda:
 	BEQ.W	lb_0bcf0		;0bce0: 6700000e
 lb_0bce4:
 	MOVEQ	#6,D0			;0bce4: 7006
-	JSR	lb_0def0		;0bce6: 4eb90000def0
+	JSR	play_sound_0def0		;0bce6: 4eb90000def0
 	BSR.W	lb_0c254		;0bcec: 61000566
 lb_0bcf0:
 	BTST	#5,(A0)			;0bcf0: 08100005
@@ -17940,7 +17963,7 @@ lb_0dcb2:
 	MOVEQ	#0,D2			;0dcb2: 7400
 	MOVE.L	ext_00ffa856,D4		;0dcb4: 283900ffa856
 	ADDI.L	#$00100000,D4		;0dcba: 068400100000
-	MOVE.B	ext_00ff8215,D3		;0dcc0: 163900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D3		;0dcc0: 163900ff8215
 	BTST	#0,D3			;0dcc6: 08030000
 	BEQ.W	lb_0dcda		;0dcca: 6700000e
 	CMP.L	ext_00ffa374,D4		;0dcce: b8b900ffa374
@@ -17956,7 +17979,7 @@ lb_0dcee:
 	RTS				;0dcee: 4e75
 lb_0dcf0:
 	BSR.W	lb_0ddae		;0dcf0: 610000bc
-	BTST	#0,ext_00ff8215		;0dcf4: 0839000000ff8215
+	BTST	#0,is_actual_game_played_00ff8215		;0dcf4: 0839000000ff8215
 	BEQ.W	lb_0dd3a		;0dcfc: 6700003c
 	LEA	ext_00ffa364,A2		;0dd00: 45f900ffa364
 	BSR.W	lb_0dda0		;0dd06: 61000098
@@ -17974,10 +17997,10 @@ lb_0dd22:
 	MOVEQ	#0,D0			;0dd24: 7000
 	BSET	#0,ext_00ffa844		;0dd26: 08f9000000ffa844
 lb_0dd2e:
-	OR.W	D2,ext_00ff80f4		;0dd2e: 857900ff80f4
+	OR.W	D2,copy_of_inputs_00ff80f4		;0dd2e: 857900ff80f4
 	OR.W	D2,ext_00ff80f8		;0dd34: 857900ff80f8
 lb_0dd3a:
-	BTST	#1,ext_00ff8215		;0dd3a: 0839000100ff8215
+	BTST	#1,is_actual_game_played_00ff8215		;0dd3a: 0839000100ff8215
 	BEQ.W	lb_0dd7e		;0dd42: 6700003a
 	LEA	ext_00ffa224,A2		;0dd46: 45f900ffa224
 	BSR.W	lb_0dda0		;0dd4c: 61000052
@@ -17992,10 +18015,10 @@ lb_0dd68:
 	MOVEQ	#0,D2			;0dd68: 7400
 	BSET	#1,ext_00ffa844		;0dd6a: 08f9000100ffa844
 lb_0dd72:
-	OR.W	D2,ext_00ff80f4		;0dd72: 857900ff80f4
+	OR.W	D2,copy_of_inputs_00ff80f4		;0dd72: 857900ff80f4
 	OR.W	D2,ext_00ff80f8		;0dd78: 857900ff80f8
 lb_0dd7e:
-	MOVE.B	ext_00ff8215,D2		;0dd7e: 143900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D2		;0dd7e: 143900ff8215
 	LSR.B	#2,D2			;0dd84: e40a
 	MOVE.B	ext_00ffa844,D3		;0dd86: 163900ffa844
 	EOR.B	D2,D3			;0dd8c: b503
@@ -18013,7 +18036,7 @@ lb_0dda0:
 	CMPI.W	#$07b0,D2		;0dda8: 0c4207b0
 	RTS				;0ddac: 4e75
 lb_0ddae:
-	MOVE.W	ext_00ff80f4,D0		;0ddae: 303900ff80f4
+	MOVE.W	copy_of_inputs_00ff80f4,D0		;0ddae: 303900ff80f4
 	MOVE.W	ext_00ff80f8,D1		;0ddb4: 323900ff80f8
 	BTST	#0,ext_00ffa9bb		;0ddba: 0839000000ffa9bb
 	BNE.W	lb_0ddce		;0ddc2: 6600000a
@@ -18027,7 +18050,7 @@ lb_0ddce:
 	AND.W	D2,D0			;0ddde: c042
 	AND.W	D2,D1			;0dde0: c242
 lb_0dde2:
-	MOVE.W	D0,ext_00ff80f4		;0dde2: 33c000ff80f4
+	MOVE.W	D0,copy_of_inputs_00ff80f4		;0dde2: 33c000ff80f4
 	MOVE.W	D1,ext_00ff80f8		;0dde8: 33c100ff80f8
 	RTS				;0ddee: 4e75
 lb_0ddf0:
@@ -18105,10 +18128,10 @@ lb_0dee6:
 lb_0deea:
 	MOVE.B	D5,4(A0)		;0deea: 11450004
 	RTS				;0deee: 4e75
-lb_0def0:
-	TST.B	ext_00ff8215		;0def0: 4a3900ff8215
+play_sound_0def0:
+	TST.B	is_actual_game_played_00ff8215		;0def0: 4a3900ff8215
 	BMI.W	lb_0df06		;0def6: 6b00000e
-	BTST	#5,ext_00ff810b		;0defa: 0839000500ff810b
+	BTST	#5,copy_of_dsw_lsb_00ff810b		;0defa: 0839000500ff810b attract mode on?
 	BNE.W	lb_0df30		;0df02: 6600002c
 lb_0df06:
 	CMPI.W	#$000a,D0		;0df06: 0c40000a
@@ -18212,7 +18235,7 @@ lb_0dfee:
 lb_0dff4:
 	MOVEQ	#6,D0			;0dff4: 7006
 lb_0dff6:
-	BSR.W	lb_0def0		;0dff6: 6100fef8
+	BSR.W	play_sound_0def0		;0dff6: 6100fef8
 lb_0dffa:
 	RTS				;0dffa: 4e75
 lb_0dffc:
@@ -18222,7 +18245,7 @@ lb_0dffe:
 	dc.w	$2829	;0e000
 ; this irq is triggered when ???
 level_4_irq_0e002:
-	JSR	lb_01cd8.W		;0e002: 4eb81cd8
+	JSR	clear_pretty_much_all_video_01cd8.W		;0e002: 4eb81cd8
 lb_0e006:
 	MOVEQ	#16,D0			;0e006: 7010
 	JSR	lb_01f78.W		;0e008: 4eb81f78
@@ -18239,7 +18262,7 @@ lb_0e018:
 	MOVEQ	#1,D0			;0e038: 7001
 	SBCD	D0,D1			;0e03a: 8300
 	BCC.S	lb_0e086		;0e03c: 6448
-	MOVE.B	ext_00ff8215,D0		;0e03e: 103900ff8215
+	MOVE.B	is_actual_game_played_00ff8215,D0		;0e03e: 103900ff8215
 	ANDI.W	#$0003,D0		;0e044: 02400003
 	MOVE.W	D0,D1			;0e048: 3200
 	ASL.W	#1,D0			;0e04a: e340
@@ -18289,14 +18312,14 @@ lb_0e0da:
 	BSR.S	lb_0e08c		;0e0ec: 619e
 	RTS				;0e0ee: 4e75
 lb_0e0f0:
-	BTST	#0,ext_00ff8215		;0e0f0: 0839000000ff8215
+	BTST	#0,is_actual_game_played_00ff8215		;0e0f0: 0839000000ff8215
 	BEQ.S	lb_0e10a		;0e0f8: 6710
 	CLR.W	D1			;0e0fa: 4241
 	MOVEA.L	#ext_00244704,A4		;0e0fc: 287c00244704
 	MOVE.B	p1_nb_lives_00ffa39a,D1		;0e102: 123900ffa39a
 	BSR.S	display_lives_0e122		;0e108: 6118
 lb_0e10a:
-	BTST	#1,ext_00ff8215		;0e10a: 0839000100ff8215
+	BTST	#1,is_actual_game_played_00ff8215		;0e10a: 0839000100ff8215
 	BEQ.S	lb_0e130		;0e112: 671c
 	CLR.W	D1			;0e114: 4241
 	MOVEA.L	#ext_00244734,A4		;0e116: 287c00244734
@@ -18329,16 +18352,16 @@ lb_0e142:
 	dc.w	$0020	;0e14c
 	dc.w	$0020	;0e14e
 	dc.w	$0020	;0e150
-lb_0e152:
+read_inputs_if_game_playing_0e152:
 	MOVE.W	dsw_0030c004,D0		;0e152: 30390030c004
 	NOT.W	D0			;0e158: 4640
-	MOVE.W	D0,ext_00ff810a		;0e15a: 33c000ff810a
-	TST.B	ext_00ff8215		;0e160: 4a3900ff8215
+	MOVE.W	D0,copy_of_dsw_msb_00ff810a		;0e15a: 33c000ff810a
+	TST.B	is_actual_game_played_00ff8215		;0e160: 4a3900ff8215
 	BPL.S	lb_0e170		;0e166: 6a08
 	MOVE.W	inputs_0030c000,D0		;0e168: 30390030c000   30C001: joystick P1
 	RTS				;0e16e: 4e75
 lb_0e170:
-	ANDI.W	#$f3ff,ext_00ff810a		;0e170: 0279f3ff00ff810a
+	ANDI.W	#$f3ff,copy_of_dsw_msb_00ff810a		;0e170: 0279f3ff00ff810a
 	TST.B	ext_00ffa8ea		;0e178: 4a3900ffa8ea
 	BNE.S	lb_0e1ae		;0e17e: 662e
 	TST.W	ext_00ffa8e8		;0e180: 4a7900ffa8e8
@@ -18460,7 +18483,7 @@ lb_0e2f4:
 	MOVE.W	(A1)+,D1		;0e30a: 3219
 	MOVE.W	(A1)+,D0		;0e30c: 3019
 lb_0e30e:
-	MOVE.W	D0,(A0)			;0e30e: 3080
+	MOVE.W	D0,(A0)			;0e30e: 3080 write to screen
 	LEA	64(A0),A0		;0e310: 41e80040
 	DBF	D1,lb_0e30e		;0e314: 51c9fff8
 	BRA.S	lb_0e2f4		;0e318: 60da
@@ -18878,6 +18901,7 @@ lb_0e6e8:
 	NOT.W	D0			;0e6ee: 4640	negative logic
 	LSR.W	#4,D0			;0e6f0: e848
 	ANDI.W	#$0007,D0		;0e6f2: 02400007
+	; bits 4 and 5: coin slots
 	MOVE.W	D0,D1			;0e6f6: 3200
 lb_0e6f8:
 	MOVE.W	ext_00ffa8c4,D2		;0e6f8: 343900ffa8c4
@@ -18890,7 +18914,7 @@ lb_0e70a:
 	MOVEQ	#1,D0			;0e70e: 7001
 	BTST	#2,D1			;0e710: 08010002
 lb_0e714:
-	BNE.W	lb_0e752		;0e714: 6600003c
+	BNE.W	add_one_credit_0e752		;0e714: 6600003c
 lb_0e718:
 	MOVEA.L	#ext_00ffa8c2,A0		;0e718: 207c00ffa8c2
 	LSR.W	#1,D1			;0e71e: e249
@@ -18912,7 +18936,7 @@ lb_0e73c:
 	BHI.S	lb_0e76c		;0e74a: 6220
 	SUB.B	D5,(A0)			;0e74c: 9b10
 	MOVE.B	1(A1),D0		;0e74e: 10290001
-lb_0e752:
+add_one_credit_0e752:
 	CLR.W	D1			;0e752: 4241
 	MOVE.W	credit_inserted_flag_00ffa8c0,D1		;0e754: 323900ffa8c0
 	ANDI.W	#$ffef,SR		;0e75a: 027cffef
@@ -26359,7 +26383,7 @@ lb_123bc:
 	BTST	#7,1(A0)		;123bc: 082800070001
 	BNE.S	lb_123d8		;123c2: 6614
 	MOVEQ	#26,D0			;123c4: 701a
-	JSR	lb_0def0		;123c6: 4eb90000def0
+	JSR	play_sound_0def0		;123c6: 4eb90000def0
 	BSET	#4,34(A0)		;123cc: 08e800040022
 	BSET	#7,1(A0)		;123d2: 08e800070001
 lb_123d8:
@@ -26819,7 +26843,7 @@ lb_1298e:
 	MOVE.L	16(A0),D0		;12996: 20280010
 	ADD.L	D0,16(A1)		;1299a: d1a90010
 	MOVEQ	#27,D0			;1299e: 701b
-	JSR	lb_0def0		;129a0: 4eb90000def0
+	JSR	play_sound_0def0		;129a0: 4eb90000def0
 	BRA.W	lb_12a60		;129a6: 600000b8
 lb_129aa:
 	MOVEA.L	A1,A3			;129aa: 2649
@@ -26901,7 +26925,7 @@ lb_12a68:
 	ADD.L	D0,16(A1)		;12a96: d1a90010
 	MOVE.B	#$01,33(A1)		;12a9a: 137c00010021
 	MOVEQ	#27,D0			;12aa0: 701b
-	JSR	lb_0def0		;12aa2: 4eb90000def0
+	JSR	play_sound_0def0		;12aa2: 4eb90000def0
 	BRA.S	lb_12a60		;12aa8: 60b6
 lb_12aaa:
 	dc.w	$fff8	;12aaa
@@ -27786,7 +27810,7 @@ lb_135b2:
 	CMPI.B	#$24,2(A0)		;135ca: 0c2800240002
 	BNE.S	lb_135e8		;135d0: 6616
 	MOVEQ	#16,D0			;135d2: 7010
-	JSR	lb_0def0		;135d4: 4eb90000def0
+	JSR	play_sound_0def0		;135d4: 4eb90000def0
 	BRA.S	lb_135e8		;135da: 600c
 lb_135dc:
 	BTST	#2,34(A0)		;135dc: 082800020022
@@ -27963,7 +27987,7 @@ lb_137cc:
 	MOVE.B	#$08,5(A0)		;137d6: 117c00080005
 	BCLR	#4,34(A0)		;137dc: 08a800040022
 	MOVEQ	#29,D0			;137e2: 701d
-	JSR	lb_0def0		;137e4: 4eb90000def0
+	JSR	play_sound_0def0		;137e4: 4eb90000def0
 	RTS				;137ea: 4e75
 lb_137ec:
 	SUBQ.B	#1,5(A0)		;137ec: 53280005
@@ -28212,7 +28236,7 @@ lb_13adc:
 	LEA	lb_13b28(PC),A1		;13aee: 43fa0038
 	NOP				;13af2: 4e71
 	MOVE.B	0(A1,D0.W),D0		;13af4: 10310000
-	JSR	lb_0def0		;13af8: 4eb90000def0
+	JSR	play_sound_0def0		;13af8: 4eb90000def0
 	BSET	#4,34(A0)		;13afe: 08e800040022
 	BSET	#7,1(A0)		;13b04: 08e800070001
 lb_13b0a:
@@ -28472,7 +28496,7 @@ lb_13e18:
 	BEQ.S	lb_13e2c		;13e1e: 670c
 	BSR.W	lb_11dc4		;13e20: 6100dfa2
 	MOVEQ	#39,D0			;13e24: 7027
-	JSR	lb_0def0		;13e26: 4eb90000def0
+	JSR	play_sound_0def0		;13e26: 4eb90000def0
 lb_13e2c:
 	CMPI.B	#$0b,3(A0)		;13e2c: 0c28000b0003
 	BEQ.S	lb_13ea2		;13e32: 676e
@@ -29245,7 +29269,7 @@ lb_147b2:
 	BTST	#6,1(A0)		;147b6: 082800060001
 	BNE.S	lb_147e8		;147bc: 662a
 	MOVEQ	#60,D0			;147be: 703c
-	JSR	lb_0def0		;147c0: 4eb90000def0
+	JSR	play_sound_0def0		;147c0: 4eb90000def0
 	BTST	#4,1(A0)		;147c6: 082800040001
 	BEQ.S	lb_147dc		;147cc: 670e
 	MOVE.B	40(A0),3(A0)		;147ce: 116800280003
@@ -29261,7 +29285,7 @@ lb_147ea:
 	BTST	#7,1(A0)		;147ea: 082800070001
 	BNE.S	lb_1480c		;147f0: 661a
 	MOVEQ	#59,D0			;147f2: 703b
-	JSR	lb_0def0		;147f4: 4eb90000def0
+	JSR	play_sound_0def0		;147f4: 4eb90000def0
 	BCLR	#4,34(A0)		;147fa: 08a800040022
 	BSET	#5,34(A0)		;14800: 08e800050022
 	BSET	#7,1(A0)		;14806: 08e800070001
@@ -29335,7 +29359,7 @@ lb_14906:
 	BTST	#7,1(A0)		;14906: 082800070001
 	BNE.S	lb_14922		;1490c: 6614
 	MOVEQ	#23,D0			;1490e: 7017
-	JSR	lb_0def0		;14910: 4eb90000def0
+	JSR	play_sound_0def0		;14910: 4eb90000def0
 	BSET	#4,34(A0)		;14916: 08e800040022
 	BSET	#7,1(A0)		;1491c: 08e800070001
 lb_14922:
@@ -29384,7 +29408,7 @@ lb_149d2:
 	BTST	#7,1(A0)		;149d2: 082800070001
 	BNE.S	lb_149ee		;149d8: 6614
 	MOVEQ	#58,D0			;149da: 703a
-	JSR	lb_0def0		;149dc: 4eb90000def0
+	JSR	play_sound_0def0		;149dc: 4eb90000def0
 	BSET	#4,34(A0)		;149e2: 08e800040022
 	BSET	#7,1(A0)		;149e8: 08e800070001
 lb_149ee:
@@ -29430,7 +29454,7 @@ lb_14a64:
 	LEA	lb_14a9e(PC),A1		;14a76: 43fa0026
 	NOP				;14a7a: 4e71
 	MOVE.B	0(A1,D0.W),D0		;14a7c: 10310000
-	JSR	lb_0def0		;14a80: 4eb90000def0
+	JSR	play_sound_0def0		;14a80: 4eb90000def0
 lb_14a86:
 	CMPI.B	#$04,current_stage_00ff821d		;14a86: 0c39000400ff821d
 	BNE.S	lb_14a96		;14a8e: 6606
@@ -30093,7 +30117,7 @@ lb_15320:
 	BTST	#7,1(A0)		;15320: 082800070001
 	BNE.S	lb_1533c		;15326: 6614
 	MOVEQ	#23,D0			;15328: 7017
-	JSR	lb_0def0		;1532a: 4eb90000def0
+	JSR	play_sound_0def0		;1532a: 4eb90000def0
 	BSET	#4,34(A0)		;15330: 08e800040022
 	BSET	#7,1(A0)		;15336: 08e800070001
 lb_1533c:
@@ -30139,7 +30163,7 @@ lb_153e0:
 	BSET	#4,34(A0)		;153e8: 08e800040022
 	BSET	#7,1(A0)		;153ee: 08e800070001
 	MOVEQ	#82,D0			;153f4: 7052
-	JSR	lb_0def0		;153f6: 4eb90000def0
+	JSR	play_sound_0def0		;153f6: 4eb90000def0
 lb_153fc:
 	BSR.W	lb_1587a		;153fc: 6100047c
 	BTST	#4,ext_00ffa7c4		;15400: 0839000400ffa7c4
@@ -30549,13 +30573,13 @@ lb_1592e:
 	ANDI.B	#$03,D0			;15940: 02000003
 	BEQ.W	lb_15952		;15944: 6700000c
 	MOVEQ	#16,D0			;15948: 7010
-	JSR	lb_0def0		;1594a: 4eb90000def0
+	JSR	play_sound_0def0		;1594a: 4eb90000def0
 	BRA.S	lb_15966		;15950: 6014
 lb_15952:
 	BTST	#2,34(A0)		;15952: 082800020022
 	BEQ.S	lb_1596a		;15958: 6710
 	MOVEQ	#77,D0			;1595a: 704d
-	JSR	lb_0def0		;1595c: 4eb90000def0
+	JSR	play_sound_0def0		;1595c: 4eb90000def0
 	BSR.W	lb_11dc4		;15962: 6100c460
 lb_15966:
 	BCLR	#7,(A0)			;15966: 08900007
@@ -30624,7 +30648,7 @@ lb_15a36:
 	DBF	D1,lb_15a36		;15a38: 51c9fffc
 	MOVE.W	#$003c,20(A0)		;15a3c: 317c003c0014
 	MOVEQ	#87,D0			;15a42: 7057
-	JSR	lb_0def0		;15a44: 4eb90000def0
+	JSR	play_sound_0def0		;15a44: 4eb90000def0
 	BSET	#7,(A0)			;15a4a: 08d00007
 lb_15a4e:
 	BTST	#5,(A0)			;15a4e: 08100005
@@ -30690,7 +30714,7 @@ lb_15b0e:
 	BGT.S	lb_15b22		;15b12: 6e0e
 	MOVE.W	#$003c,20(A0)		;15b14: 317c003c0014
 	MOVEQ	#87,D0			;15b1a: 7057
-	JSR	lb_0def0		;15b1c: 4eb90000def0
+	JSR	play_sound_0def0		;15b1c: 4eb90000def0
 lb_15b22:
 	RTS				;15b22: 4e75
 lb_15b24:
@@ -30849,7 +30873,7 @@ lb_15c80:
 	ANDI.B	#$03,D0			;15ca6: 02000003
 	BEQ.S	lb_15cbc		;15caa: 6710
 	MOVEQ	#16,D0			;15cac: 7010
-	JSR	lb_0def0		;15cae: 4eb90000def0
+	JSR	play_sound_0def0		;15cae: 4eb90000def0
 	MOVE.W	#$0030,56(A0)		;15cb4: 317c00300038
 	BRA.S	lb_15cc8		;15cba: 600c
 lb_15cbc:
@@ -30909,7 +30933,7 @@ lb_15d54:
 	ANDI.B	#$03,D0			;15d7a: 02000003
 	BEQ.S	lb_15d90		;15d7e: 6710
 	MOVEQ	#16,D0			;15d80: 7010
-	JSR	lb_0def0		;15d82: 4eb90000def0
+	JSR	play_sound_0def0		;15d82: 4eb90000def0
 	MOVE.W	#$0030,56(A0)		;15d88: 317c00300038
 	BRA.S	lb_15d9c		;15d8e: 600c
 lb_15d90:
@@ -30969,7 +30993,7 @@ lb_15e28:
 	ANDI.B	#$03,D0			;15e4e: 02000003
 	BEQ.S	lb_15e64		;15e52: 6710
 	MOVEQ	#16,D0			;15e54: 7010
-	JSR	lb_0def0		;15e56: 4eb90000def0
+	JSR	play_sound_0def0		;15e56: 4eb90000def0
 	MOVE.W	#$0030,56(A0)		;15e5c: 317c00300038
 	BRA.S	lb_15e70		;15e62: 600c
 lb_15e64:
@@ -31029,7 +31053,7 @@ lb_15efc:
 	ANDI.B	#$03,D0			;15f22: 02000003
 	BEQ.S	lb_15f38		;15f26: 6710
 	MOVEQ	#16,D0			;15f28: 7010
-	JSR	lb_0def0		;15f2a: 4eb90000def0
+	JSR	play_sound_0def0		;15f2a: 4eb90000def0
 	MOVE.W	#$0030,56(A0)		;15f30: 317c00300038
 	BRA.S	lb_15f44		;15f36: 600c
 lb_15f38:
@@ -35786,7 +35810,7 @@ lb_18c9a:
 	MOVE.B	#$0a,3(A0)		;18cb2: 117c000a0003
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;18cb8: 48a7ffff
 	MOVEQ	#26,D0			;18cbc: 701a
-	JSR	lb_0def0		;18cbe: 4eb90000def0
+	JSR	play_sound_0def0		;18cbe: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;18cc4: 4c9fffff
 lb_18cc8:
 	RTS				;18cc8: 4e75
@@ -36322,7 +36346,7 @@ lb_192ec:
 	MOVE.B	#$0a,3(A0)		;19318: 117c000a0003
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1931e: 48a7ffff
 	MOVEQ	#26,D0			;19322: 701a
-	JSR	lb_0def0		;19324: 4eb90000def0
+	JSR	play_sound_0def0		;19324: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1932a: 4c9fffff
 	BRA.S	lb_19340		;1932e: 6010
 lb_19330:
@@ -36477,7 +36501,7 @@ lb_1952e:
 	BEQ.S	lb_19560		;19538: 6726
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1953a: 48a7ffff
 	MOVEQ	#26,D0			;1953e: 701a
-	JSR	lb_0def0		;19540: 4eb90000def0
+	JSR	play_sound_0def0		;19540: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;19546: 4c9fffff
 	BSET	#6,41(A0)		;1954a: 08e800060029
 	MOVE.W	36(A0),D0		;19550: 30280024
@@ -36529,7 +36553,7 @@ lb_195fa:
 	BNE.S	lb_19610		;195fe: 6610
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;19600: 48a7ffff
 	MOVEQ	#28,D0			;19604: 701c
-	JSR	lb_0def0		;19606: 4eb90000def0
+	JSR	play_sound_0def0		;19606: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1960c: 4c9fffff
 lb_19610:
 	ANDI.B	#$18,D0			;19610: 02000018
@@ -36725,7 +36749,7 @@ lb_19880:
 	MOVE.B	#$60,60(A0)		;198ac: 117c0060003c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;198b2: 48a7ffff
 	MOVEQ	#53,D0			;198b6: 7035
-	JSR	lb_0def0		;198b8: 4eb90000def0
+	JSR	play_sound_0def0		;198b8: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;198be: 4c9fffff
 lb_198c2:
 	RTS				;198c2: 4e75
@@ -37276,7 +37300,7 @@ lb_19fa8:
 	BSET	#6,41(A0)		;19fb6: 08e800060029
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;19fbc: 48a7ffff
 	MOVEQ	#23,D0			;19fc0: 7017
-	JSR	lb_0def0		;19fc2: 4eb90000def0
+	JSR	play_sound_0def0		;19fc2: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;19fc8: 4c9fffff
 lb_19fcc:
 	CLR.B	50(A0)			;19fcc: 42280032
@@ -37292,7 +37316,7 @@ lb_19fcc:
 	MOVE.B	#$60,60(A0)		;19ffe: 117c0060003c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1a004: 48a7ffff
 	MOVEQ	#53,D0			;1a008: 7035
-	JSR	lb_0def0		;1a00a: 4eb90000def0
+	JSR	play_sound_0def0		;1a00a: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1a010: 4c9fffff
 	BRA.W	lb_1a0ac		;1a014: 60000096
 lb_1a018:
@@ -37426,7 +37450,7 @@ lb_1a1f0:
 	BEQ.S	lb_1a228		;1a1fa: 672c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1a1fc: 48a7ffff
 	MOVEQ	#23,D0			;1a200: 7017
-	JSR	lb_0def0		;1a202: 4eb90000def0
+	JSR	play_sound_0def0		;1a202: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1a208: 4c9fffff
 	BSET	#6,41(A0)		;1a20c: 08e800060029
 	BSET	#6,42(A0)		;1a212: 08e80006002a
@@ -37467,7 +37491,7 @@ lb_1a290:
 	BEQ.S	lb_1a2b4		;1a2a2: 6710
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1a2a4: 48a7ffff
 	MOVEQ	#52,D0			;1a2a8: 7034
-	JSR	lb_0def0		;1a2aa: 4eb90000def0
+	JSR	play_sound_0def0		;1a2aa: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1a2b0: 4c9fffff
 lb_1a2b4:
 	ADDQ.B	#1,50(A0)		;1a2b4: 52280032
@@ -37717,7 +37741,7 @@ lb_1a5f6:
 	MOVE.B	#$60,60(A0)		;1a626: 117c0060003c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1a62c: 48a7ffff
 	MOVEQ	#74,D0			;1a630: 704a
-	JSR	lb_0def0		;1a632: 4eb90000def0
+	JSR	play_sound_0def0		;1a632: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1a638: 4c9fffff
 lb_1a63c:
 	RTS				;1a63c: 4e75
@@ -38090,7 +38114,7 @@ lb_1ab34:
 	BEQ.W	lb_1acac		;1ab3e: 6700016c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1ab42: 48a7ffff
 	MOVEQ	#23,D0			;1ab46: 7017
-	JSR	lb_0def0		;1ab48: 4eb90000def0
+	JSR	play_sound_0def0		;1ab48: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1ab4e: 4c9fffff
 	BSET	#6,41(A0)		;1ab52: 08e800060029
 lb_1ab58:
@@ -38108,7 +38132,7 @@ lb_1ab58:
 	MOVE.B	#$60,60(A0)		;1ab8e: 117c0060003c
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1ab94: 48a7ffff
 	MOVEQ	#74,D0			;1ab98: 704a
-	JSR	lb_0def0		;1ab9a: 4eb90000def0
+	JSR	play_sound_0def0		;1ab9a: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1aba0: 4c9fffff
 	BRA.W	lb_1acac		;1aba4: 60000106
 lb_1aba8:
@@ -38190,7 +38214,7 @@ lb_1ace0:
 	BNE.S	lb_1ad06		;1acf4: 6610
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1acf6: 48a7ffff
 	MOVEQ	#72,D0			;1acfa: 7048
-	JSR	lb_0def0		;1acfc: 4eb90000def0
+	JSR	play_sound_0def0		;1acfc: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1ad02: 4c9fffff
 lb_1ad06:
 	BTST	#6,41(A0)		;1ad06: 082800060029
@@ -38219,7 +38243,7 @@ lb_1ad58:
 	BNE.S	lb_1ad74		;1ad62: 6610
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1ad64: 48a7ffff
 	MOVEQ	#72,D0			;1ad68: 7048
-	JSR	lb_0def0		;1ad6a: 4eb90000def0
+	JSR	play_sound_0def0		;1ad6a: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1ad70: 4c9fffff
 lb_1ad74:
 	JSR	lb_1a42c(PC)		;1ad74: 4ebaf6b6
@@ -38261,7 +38285,7 @@ lb_1ade0:
 	BNE.S	lb_1ae06		;1adf4: 6610
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1adf6: 48a7ffff
 	MOVEQ	#72,D0			;1adfa: 7048
-	JSR	lb_0def0		;1adfc: 4eb90000def0
+	JSR	play_sound_0def0		;1adfc: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1ae02: 4c9fffff
 lb_1ae06:
 	JSR	lb_1ab18(PC)		;1ae06: 4ebafd10
@@ -38281,7 +38305,7 @@ lb_1ae3a:
 	BNE.S	lb_1ae56		;1ae44: 6610
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1ae46: 48a7ffff
 	MOVEQ	#72,D0			;1ae4a: 7048
-	JSR	lb_0def0		;1ae4c: 4eb90000def0
+	JSR	play_sound_0def0		;1ae4c: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1ae52: 4c9fffff
 lb_1ae56:
 	BTST	#4,40(A0)		;1ae56: 082800040028
@@ -38390,7 +38414,7 @@ lb_1afb8:
 	BEQ.S	lb_1afdc		;1afca: 6710
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1afcc: 48a7ffff
 	MOVEQ	#71,D0			;1afd0: 7047
-	JSR	lb_0def0		;1afd2: 4eb90000def0
+	JSR	play_sound_0def0		;1afd2: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1afd8: 4c9fffff
 lb_1afdc:
 	ADDQ.B	#1,50(A0)		;1afdc: 52280032
@@ -38438,7 +38462,7 @@ lb_1b064:
 	BEQ.S	lb_1b088		;1b076: 6710
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1b078: 48a7ffff
 	MOVEQ	#73,D0			;1b07c: 7049
-	JSR	lb_0def0		;1b07e: 4eb90000def0
+	JSR	play_sound_0def0		;1b07e: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1b084: 4c9fffff
 lb_1b088:
 	ADDQ.B	#1,50(A0)		;1b088: 52280032
@@ -38568,8 +38592,8 @@ lb_1b214:
 lb_1b234:
 	JSR	lb_1ba74(PC)		;1b234: 4eba083e
 	NOP				;1b238: 4e71
-	MOVE.B	ext_00ff8215,ext_00ffa7d4	;1b23a: 13f900ff821500ffa7d4
-	ORI.B	#$03,ext_00ff8215		;1b244: 0039000300ff8215
+	MOVE.B	is_actual_game_played_00ff8215,ext_00ffa7d4	;1b23a: 13f900ff821500ffa7d4
+	ORI.B	#$03,is_actual_game_played_00ff8215		;1b244: 0039000300ff8215
 	CLR.W	ext_00ffa856		;1b24c: 427900ffa856
 	CLR.W	ext_00ffa852		;1b252: 427900ffa852
 	MOVE.W	#$800b,ext_00ff8170		;1b258: 33fc800b00ff8170
@@ -38602,7 +38626,7 @@ lb_1b234:
 	NOP				;1b2fc: 4e71
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1b2fe: 48a7ffff
 	MOVEQ	#1,D0			;1b302: 7001
-	JSR	lb_0def0		;1b304: 4eb90000def0
+	JSR	play_sound_0def0		;1b304: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1b30a: 4c9fffff
 	RTS				;1b30e: 4e75
 copy_rom_to_video_1b310:
@@ -38644,7 +38668,7 @@ lb_1b35e:
 	BNE.S	lb_1b388		;1b366: 6620
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1b368: 48a7ffff
 	MOVEQ	#102,D0			;1b36c: 7066
-	JSR	lb_0def0		;1b36e: 4eb90000def0
+	JSR	play_sound_0def0		;1b36e: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1b374: 4c9fffff
 	MOVE.W	#$0030,ext_00ffa7c8		;1b378: 33fc003000ffa7c8
 	BSET	#7,ext_00ffa7c5		;1b380: 08f9000700ffa7c5
@@ -38763,7 +38787,7 @@ lb_1b576:
 lb_1b58a:
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;1b58a: 48a7ffff
 	MOVEQ	#92,D0			;1b58e: 705c
-	JSR	lb_0def0		;1b590: 4eb90000def0
+	JSR	play_sound_0def0		;1b590: 4eb90000def0
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1b596: 4c9fffff
 lb_1b59a:
 	SUBQ.W	#1,ext_00ffa7d2		;1b59a: 537900ffa7d2
@@ -41039,7 +41063,7 @@ lb_1c9d4:
 	BSET	#6,1(A0)		;1c9ec: 08e800060001
 	BSET	#4,34(A0)		;1c9f2: 08e800040022
 	MOVEQ	#36,D0			;1c9f8: 7024
-	JSR	lb_0def0		;1c9fa: 4eb90000def0
+	JSR	play_sound_0def0		;1c9fa: 4eb90000def0
 	MOVE.B	#$04,3(A0)		;1ca00: 117c00040003
 	MOVE.B	#$00,4(A0)		;1ca06: 117c00000004
 	BCLR	#7,1(A0)		;1ca0c: 08a800070001
@@ -41109,7 +41133,7 @@ lb_1cad6:
 	ANDI.B	#$2f,D0			;1cae2: 0200002f
 	BNE.S	lb_1caf0		;1cae6: 6608
 	MOVEQ	#37,D0			;1cae8: 7025
-	JSR	lb_0def0		;1caea: 4eb90000def0
+	JSR	play_sound_0def0		;1caea: 4eb90000def0
 lb_1caf0:
 	MOVE.W	#$0003,D0		;1caf0: 303c0003
 	BTST	#5,(A0)			;1caf4: 08100005
@@ -42371,14 +42395,14 @@ lb_1dadc:
 	BTST	#2,D0			;1dae8: 08000002
 	BEQ.S	lb_1daf6		;1daec: 6708
 	MOVEQ	#24,D0			;1daee: 7018
-	JSR	lb_0def0		;1daf0: 4eb90000def0
+	JSR	play_sound_0def0		;1daf0: 4eb90000def0
 lb_1daf6:
 	ANDI.B	#$03,D1			;1daf6: 02010003
 	BEQ.S	lb_1db28		;1dafa: 672c
 	BSET	#6,1(A0)		;1dafc: 08e800060001
 	BCLR	#7,1(A0)		;1db02: 08a800070001
 	MOVEQ	#26,D0			;1db08: 701a
-	JSR	lb_0def0		;1db0a: 4eb90000def0
+	JSR	play_sound_0def0		;1db0a: 4eb90000def0
 	BTST	#0,1(A0)		;1db10: 082800000001
 	BEQ.S	lb_1db22		;1db16: 670a
 	MOVE.B	#$07,41(A0)		;1db18: 117c00070029
@@ -42631,7 +42655,7 @@ lb_1de16:
 	BTST	#7,1(A0)		;1de16: 082800070001
 	BNE.W	lb_1de3e		;1de1c: 66000020
 	MOVEQ	#65,D0			;1de20: 7041
-	JSR	lb_0def0		;1de22: 4eb90000def0
+	JSR	play_sound_0def0		;1de22: 4eb90000def0
 	MOVE.B	#$06,3(A0)		;1de28: 117c00060003
 	CLR.B	4(A0)			;1de2e: 42280004
 	MOVE.B	#$40,43(A0)		;1de32: 117c0040002b
@@ -42647,7 +42671,7 @@ lb_1de52:
 	BTST	#7,1(A0)		;1de52: 082800070001
 	BNE.W	lb_1dedc		;1de58: 66000082
 	MOVEQ	#61,D0			;1de5c: 703d
-	JSR	lb_0def0		;1de5e: 4eb90000def0
+	JSR	play_sound_0def0		;1de5e: 4eb90000def0
 	CLR.L	D2			;1de64: 4282
 	MOVEQ	#1,D1			;1de66: 7201
 	MOVEQ	#80,D0			;1de68: 7050
@@ -43814,7 +43838,7 @@ lb_1ec72:
 	TST.B	33(A0)			;1ec96: 4a280021
 	BEQ.S	lb_1eca4		;1ec9a: 6708
 	MOVEQ	#23,D0			;1ec9c: 7017
-	JSR	lb_0def0		;1ec9e: 4eb90000def0
+	JSR	play_sound_0def0		;1ec9e: 4eb90000def0
 lb_1eca4:
 	RTS				;1eca4: 4e75
 lb_1eca6:
@@ -43999,7 +44023,7 @@ lb_1eefc:
 	BNE.S	lb_1ef06		;1ef02: 6602
 	MOVEQ	#26,D0			;1ef04: 701a
 lb_1ef06:
-	JSR	lb_0def0		;1ef06: 4eb90000def0
+	JSR	play_sound_0def0		;1ef06: 4eb90000def0
 	RTS				;1ef0c: 4e75
 lb_1ef0e:
 	JSR	lb_1d712(PC)		;1ef0e: 4ebae802
@@ -44108,7 +44132,7 @@ lb_1f03c:
 	MOVE.W	0(A1,D2.W),D0		;1f076: 30312000
 	TST.W	D0			;1f07a: 4a40
 	BEQ.S	lb_1f084		;1f07c: 6706
-	JSR	lb_0def0		;1f07e: 4eb90000def0
+	JSR	play_sound_0def0		;1f07e: 4eb90000def0
 lb_1f084:
 	ANDI.B	#$03,D1			;1f084: 02010003
 	BEQ.S	lb_1f09e		;1f088: 6714
@@ -44370,7 +44394,7 @@ lb_1f382:
 	BTST	#7,1(A0)		;1f382: 082800070001
 	BNE.S	lb_1f398		;1f388: 660e
 	MOVEQ	#86,D0			;1f38a: 7056
-	JSR	lb_0def0		;1f38c: 4eb90000def0
+	JSR	play_sound_0def0		;1f38c: 4eb90000def0
 	BSET	#7,1(A0)		;1f392: 08e800070001
 lb_1f398:
 	MOVE.W	#$0002,12(A0)		;1f398: 317c0002000c
@@ -44608,7 +44632,7 @@ lb_1f63a:
 	CMPI.W	#$0020,D1		;1f64c: 0c410020
 	BCS.S	lb_1f67c		;1f650: 652a
 	MOVEQ	#86,D0			;1f652: 7056
-	JSR	lb_0def0		;1f654: 4eb90000def0
+	JSR	play_sound_0def0		;1f654: 4eb90000def0
 	BSET	#3,1(A0)		;1f65a: 08e800030001
 	MOVE.B	#$28,5(A0)		;1f660: 117c00280005
 	BRA.W	lb_1f67c		;1f666: 60000014
@@ -44676,7 +44700,7 @@ lb_1f70c:
 	BTST	#7,1(A0)		;1f70c: 082800070001
 	BNE.S	lb_1f722		;1f712: 660e
 	MOVEQ	#90,D0			;1f714: 705a
-	JSR	lb_0def0		;1f716: 4eb90000def0
+	JSR	play_sound_0def0		;1f716: 4eb90000def0
 	BSET	#7,1(A0)		;1f71c: 08e800070001
 lb_1f722:
 	MOVE.L	#$00010000,D0		;1f722: 203c00010000
@@ -44780,7 +44804,7 @@ lb_1f86e:
 lb_1f870:
 	MOVE.B	#$04,41(A0)		;1f870: 117c00040029
 	MOVEQ	#90,D0			;1f876: 705a
-	JSR	lb_0def0		;1f878: 4eb90000def0
+	JSR	play_sound_0def0		;1f878: 4eb90000def0
 	RTS				;1f87e: 4e75
 lb_1f880:
 	RTS				;1f880: 4e75
