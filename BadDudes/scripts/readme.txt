@@ -51,4 +51,8 @@ JSRW:MACRO
 
 create generic tool to change lea .w => leaw, jsrw, jmpw...
 
+to reloc JSR xxx.W:
+
+- JSR.W + NOP (lots of occurrences) => room for proper reloc
+- JSR .W without nop => install trap handler
 
