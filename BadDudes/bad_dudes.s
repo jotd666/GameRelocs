@@ -962,9 +962,9 @@ wait_for_sync_003f0:
 	BRA.S	wait_for_sync_003f0		;00400: 60ee
 lb_00402:
 	RTS				;00402: 4e75
-lb_00404:
+wait_and_process_inputs_00404:
 	BSR.S	wait_for_sync_003f0		;00404: 61ea
-	JSR	lb_0059c.W		;00406: 4eb8059c
+	JSR	process_inputs_0059c.W		;00406: 4eb8059c
 	NOP				;0040a: 4e71
 	RTS				;0040c: 4e75
 lb_0040e:
@@ -1081,7 +1081,7 @@ lb_00588:
 	MOVE.B	#$00,ext_00ff820e		;0058e: 13fc000000ff820e
 	MOVE	#$2300,SR		;00596: 46fc2300
 	RTS				;0059a: 4e75
-lb_0059c:
+process_inputs_0059c:
 	JSR	read_inputs_if_game_playing_0e152		;0059c: 4eb90000e152
 	BSR.W	lb_005b4		;005a2: 61000010
 	BSR.W	lb_00618		;005a6: 61000070
@@ -2573,7 +2573,7 @@ lb_019a6:
 lb_019b2:
 	LEA	ext_00ffc000,A7		;019b2: 4ff900ffc000
 	JSR	lb_01498.W		;019b8: 4eb81498
-	JSR	lb_0059c.W		;019bc: 4eb8059c
+	JSR	process_inputs_0059c.W		;019bc: 4eb8059c
 	JSR	lb_09976		;019c0: 4eb900009976
 	MOVEQ	#0,D0			;019c6: 7000
 	MOVE.B	#$40,is_actual_game_played_00ff8215		;019c8: 13fc004000ff8215
@@ -2620,7 +2620,7 @@ lb_01a76:
 	JMP	lb_01a12.W		;01a82: 4ef81a12
 lb_01a86:
 	JSR	lb_00588.W		;01a86: 4eb80588
-	JSR	lb_0059c.W		;01a8a: 4eb8059c
+	JSR	process_inputs_0059c.W		;01a8a: 4eb8059c
 	JSR	lb_09fbc		;01a8e: 4eb900009fbc
 	RTS				;01a94: 4e75
 lb_01a96:
@@ -2637,7 +2637,7 @@ lb_01aac:
 	NOP				;01ab8: 4e71
 	NOP				;01aba: 4e71
 lb_01abc:
-	JSR	lb_0059c.W		;01abc: 4eb8059c
+	JSR	process_inputs_0059c.W		;01abc: 4eb8059c
 	JSR	lb_09976		;01ac0: 4eb900009976
 	BCLR	#5,stage_control_flags_00ff8216		;01ac6: 08b9000500ff8216
 	MOVEQ	#0,D0			;01ace: 7000
@@ -2666,7 +2666,7 @@ lb_01abc:
 lb_01b38:
 	JSR	wait_for_sync_003f0.W		;01b38: 4eb803f0
 	JSR	lb_0e31c		;01b3c: 4eb90000e31c
-	JSR	lb_0059c.W		;01b42: 4eb8059c
+	JSR	process_inputs_0059c.W		;01b42: 4eb8059c
 	BSR.W	lb_01be0		;01b46: 61000098
 	NOP				;01b4a: 4e71
 	NOP				;01b4c: 4e71
@@ -7150,7 +7150,7 @@ lb_056ee:
 	dc.l	lb_056ec	;05722
 	dc.l	lb_056ec	;05726
 lb_0572a:
-	MOVE.B  $ff8212,D6		;0572a: 1c3900ff8212
+	MOVE.B  ext_00ff8212,D6		;0572a: 1c3900ff8212
     ANDI.L  #$3,D6          ;05730: 028600000003
 	LSL.W	#2,D6			;05736: e54e
 	BTST	#7,ext_00ff8020		;05738: 0839000700ff8020
@@ -10393,14 +10393,14 @@ lb_084a6:
 game_intro_sequence_084ae:
 	JSR	clear_pretty_much_all_video_01cd8.W		;084ae: 4eb81cd8
 	MOVE.W	#$8009,ext_00ff8170		;084b2: 33fc800900ff8170
-	JSR	lb_00404.W		;084ba: 4eb80404
+	JSR	wait_and_process_inputs_00404.W		;084ba: 4eb80404
 	LEA	lb_09032,A0		;084be: 41f900009032
-	; install game intro screen ("are you bad enough...")
+	; install game intro screen ("are you a bad enough dude...")
 	LEA	tile_layer_1_24A000,A1		;084c4: 43f90024a000
 	JSR	copy_memory_to_tiles_0837c		;084ca: 4eb90000837c
 	MOVE.W	#$0000,ext_00ff801e		;084d0: 33fc000000ff801e
 	MOVE.W	#$000a,ext_00ff8020		;084d8: 33fc000a00ff8020
-	JSR	lb_087c8		;084e0: 4eb9000087c8
+	JSR	init_stuff_in_game_intro_087c8		;084e0: 4eb9000087c8
 	MOVE.W	#$0020,ext_00ff802e		;084e6: 33fc002000ff802e
 	JSR	lb_086fe		;084ee: 4eb9000086fe
 	MOVEQ	#SIREN_SND,D0			;084f4: 7059	siren warning sound
@@ -10436,7 +10436,7 @@ lb_08562:
 	MOVE.W	#$000a,ext_00ff8020		;08574: 33fc000a00ff8020
 lb_0857c:
 	JSR	lb_087f0		;0857c: 4eb9000087f0
-	JSR	lb_00404.W		;08582: 4eb80404
+	JSR	wait_and_process_inputs_00404.W		;08582: 4eb80404
 	MOVEA.L	ext_00ff805e,A0		;08586: 207900ff805e
 	CMPI.B	#$ff,(A0)		;0858c: 0c1000ff
 	BNE.S	lb_08528		;08590: 6696
@@ -10459,21 +10459,22 @@ lb_085c4:
 	MOVE.W	ext_00ff801e,D0		;085d8: 303900ff801e
 	MOVE.W	D0,D1			;085de: 3200
 	ANDI.W	#$0001,D0		;085e0: 02400001
-	BEQ.W	lb_0863a		;085e4: 67000054
+	BEQ.W	clear_guy_mouth_sprites_0863a		;085e4: 67000054
 	LSL.W	#1,D1			;085e8: e349
 	ANDI.L	#$0000ffff,D1		;085ea: 02810000ffff
 	LEA	lb_0891c+2,A2		;085f0: 45f90000891e
 	MOVE.W	0(A2,D1.W),D1		;085f6: 32321000
 	TST.W	D1			;085fa: 4a41
-	BEQ.W	lb_0863a		;085fc: 6700003c
+	BEQ.W	clear_guy_mouth_sprites_0863a		;085fc: 6700003c
 	MOVEA.L	ext_00ff805e,A4		;08600: 287900ff805e
 	CMPI.B	#$20,(A4)		;08606: 0c140020
-	BEQ.W	lb_0863a		;0860a: 6700002e
+	BEQ.W	clear_guy_mouth_sprites_0863a		;0860a: 6700002e
 	CMPI.B	#$ff,(A4)		;0860e: 0c1400ff
-	BEQ.W	lb_0863a		;08612: 67000026
+	BEQ.W	clear_guy_mouth_sprites_0863a		;08612: 67000026
 	CMPI.W	#$ffff,D1		;08616: 0c41ffff
-	BEQ.W	lb_0863a		;0861a: 6700001e
-	LEA	lb_088fe,A1		;0861e: 43f9000088fe
+	BEQ.W	clear_guy_mouth_sprites_0863a		;0861a: 6700001e
+	; animate guy mouth (sprites) which overlaps guy tiles
+	LEA	guy_mouth_sprite_data_088fe,A1		;0861e: 43f9000088fe
 	MOVE.W	#$0003,D3		;08624: 363c0003
 lb_08628:
 	MOVE.W	(A1)+,(A0)+		;08628: 30d9
@@ -10482,7 +10483,7 @@ lb_08628:
 	MOVE.W	(A1)+,(A0)+		;0862e: 30d9
 	DBF	D3,lb_08628		;08630: 51cbfff6
 	JMP	lb_08652		;08634: 4ef900008652
-lb_0863a:
+clear_guy_mouth_sprites_0863a:
 	MOVE.W	#$0003,D3		;0863a: 363c0003
 lb_0863e:
 	MOVE.W	#$0000,(A0)+		;0863e: 30fc0000
@@ -10491,7 +10492,7 @@ lb_0863e:
 	MOVE.W	#$0000,(A0)+		;0864a: 30fc0000
 	DBF	D3,lb_0863e		;0864e: 51cbffee
 lb_08652:
-	LEA	lb_088de,A1		;08652: 43f9000088de
+	LEA	black_glasses_sprite_data_088de,A1		;08652: 43f9000088de
 	MOVE.W	#$0003,D3		;08658: 363c0003
 lb_0865c:
 	MOVE.W	(A1)+,(A0)+		;0865c: 30d9
@@ -10543,7 +10544,7 @@ lb_086fc:
 	RTS				;086fc: 4e75
 lb_086fe:
 	JSR	lb_085c4		;086fe: 4eb9000085c4
-	JSR	lb_00404.W		;08704: 4eb80404
+	JSR	wait_and_process_inputs_00404.W		;08704: 4eb80404
 	MOVEQ	#0,D0			;08708: 7000
 	MOVE.B	is_actual_game_played_00ff8215,D1		;0870a: 123900ff8215
 	MOVE.B	D1,D2			;08710: 1401
@@ -10561,20 +10562,21 @@ lb_0872e:
 	BNE.S	lb_086fe		;0873c: 66c0
 lb_0873e:
 	RTS				;0873e: 4e75
-lb_08740:
-	JSR	lb_08754		;08740: 4eb900008754
-	JSR	lb_00404.W		;08746: 4eb80404
+	* this appears to be not reacheable!
+unreached_08740:
+	JSR	unreached_08754		;08740: 4eb900008754
+	JSR	wait_and_process_inputs_00404.W		;08746: 4eb80404
 	SUBQ.W	#1,ext_00ff802e		;0874a: 537900ff802e
-	BNE.S	lb_08740		;08750: 66ee
+	BNE.S	unreached_08740		;08750: 66ee
 	RTS				;08752: 4e75
-lb_08754:
+unreached_08754:
 	MOVE.B	sync_flags_00ff8217,D0		;08754: 103900ff8217
 	ANDI.B	#$02,D0			;0875a: 02000002
 	BNE.W	lb_087c6		;0875e: 66000066
 	LEA	spriteram_00ffc000,A0		;08762: 41f900ffc000
 	BTST	#2,ext_00ff802f		;08768: 0839000200ff802f
 	BEQ.W	lb_08790		;08770: 6700001e
-	LEA	lb_088fe,A1		;08774: 43f9000088fe
+	LEA	guy_mouth_sprite_data_088fe,A1		;08774: 43f9000088fe
 	MOVE.W	#$0003,D3		;0877a: 363c0003
 lb_0877e:
 	MOVE.W	(A1)+,(A0)+		;0877e: 30d9
@@ -10592,7 +10594,7 @@ lb_08794:
 	MOVE.W	#$0000,(A0)+		;087a0: 30fc0000
 	DBF	D3,lb_08794		;087a4: 51cbffee
 lb_087a8:
-	LEA	lb_088de,A1		;087a8: 43f9000088de
+	LEA	black_glasses_sprite_data_088de,A1		;087a8: 43f9000088de
 	MOVE.W	#$0003,D3		;087ae: 363c0003
 lb_087b2:
 	MOVE.W	(A1)+,(A0)+		;087b2: 30d9
@@ -10603,7 +10605,7 @@ lb_087b2:
 	BSET	#1,sync_flags_00ff8217		;087be: 08f9000100ff8217
 lb_087c6:
 	RTS				;087c6: 4e75
-lb_087c8:
+init_stuff_in_game_intro_087c8:
 	MOVE.L	#lb_08878,ext_00ff805e	;087c8: 23fc0000887800ff805e
 	MOVE.L	#$00244186,ext_00ff8062	;087d2: 23fc0024418600ff8062
 	MOVE.L	ext_00ff8062,ext_00ff8066	;087dc: 23f900ff806200ff8066
@@ -10652,11 +10654,11 @@ lb_08878:
 	dc.b	$fe	;088ca
 	dc.b	"TO RESCUE RONNIE? "	;088cb
 	dc.b	$ff	;088dd
-lb_088de:
-	dc.w	$8040	;088de
-	dc.w	$0bba	;088e0
-	dc.w	$e030	;088e2
-	dc.w	$0000	;088e4
+black_glasses_sprite_data_088de:
+	dc.w	$8040	;088de	Y = 240-64
+	dc.w	$0bba	;088e0  code = 0xBBA
+	dc.w	$e030	;088e2  X = 240-48, color = 0xE000>>12 = 14
+	dc.w	$0000	;088e4  unused
 	dc.w	$8030	;088e6
 	dc.w	$0bbb	;088e8
 	dc.w	$e030	;088ea
@@ -10669,7 +10671,7 @@ lb_088de:
 	dc.w	$0bb9	;088f8
 	dc.w	$e040	;088fa
 	dc.w	$0000	;088fc
-lb_088fe:
+guy_mouth_sprite_data_088fe:
 	dc.w	$8030	;088fe
 	dc.w	$0bbe	;08900
 	dc.w	$e030	;08902
@@ -12934,7 +12936,7 @@ lb_09d50:
 	MOVE.W	D0,ext_00244902		;09d68: 33c000244902
 lb_09d6e:
 	JSR	wait_for_sync_003f0.W		;09d6e: 4eb803f0
-	JSR	lb_0059c.W		;09d72: 4eb8059c
+	JSR	process_inputs_0059c.W		;09d72: 4eb8059c
 	JSR	lb_07d3c.W		;09d76: 4eb87d3c
 	MOVE.B	ext_00ffa9bb,D0		;09d7a: 103900ffa9bb
 	ANDI.B	#$03,D0			;09d80: 02000003
@@ -36486,6 +36488,10 @@ lb_1950a:
 	JSR	lb_15f96		;19512: 4eb900015f96
 	BTST	#2,34(A0)		;19518: 082800020022
 	BEQ.S	lb_1952e		;1951e: 670e
+	* this is highly buggy, as MOVEM.W trashes address registers when restoring
+	* them, because they're sign extending them...
+	* (plus useless save of A7 in the stack...)
+	* There are a lot of occurrences of this construct
 	MOVEM.W	D0-D7/A0-A7,-(A7)	;19520: 48a7ffff
 	JSR	lb_11dc4		;19524: 4eb900011dc4
 	MOVEM.W	(A7)+,D0-D7/A0-A7	;1952a: 4c9fffff
@@ -39320,7 +39326,7 @@ lb_1bba2:
 	OR.B	D0,ext_00ffa9bb		;1bbb2: 813900ffa9bb
 lb_1bbb8:
 	JSR	wait_for_sync_003f0		;1bbb8: 4eb9000003f0
-	JSR	lb_0059c		;1bbbe: 4eb90000059c
+	JSR	process_inputs_0059c		;1bbbe: 4eb90000059c
 	JSR	lb_07d3c		;1bbc4: 4eb900007d3c
 	MOVE.B	ext_00ffa9bb,D0		;1bbca: 103900ffa9bb
 	ANDI.B	#$03,D0			;1bbd0: 02000003
