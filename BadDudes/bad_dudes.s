@@ -99,36 +99,36 @@
 ;
 ; layer #0 (used for OSD and some foreground objects (lamps))
 ;
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
 ;
 ; layer #1 (used in title, intro screen, highscore, level 1)
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ; layer #2 (used for background in sewer level 3 level, layer #1 is used for running water)
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -242,6 +242,7 @@ ext_0024408a	EQU	$24408a
 ext_00244776	EQU	$244776
 ext_0024474a	EQU	$24474a
 ext_00244084	EQU	$244084
+ext_00244740	EQU	$244740
 
 port_an0_00300000	EQU	$300000
 port_an1_00300008	EQU	$300008
@@ -290,7 +291,8 @@ ext_003144a0	EQU	$3144A0
 ext_00314500	EQU	$314500
 ext_003145a0	EQU	$3145A0
 ext_00314600	EQU	$314600
-sprite_ram_0031c000	EQU	$31C000
+sprite_ram_0031c000	EQU	$31C000		; mirrored address only used during service mode
+sprite_ram_end_0031c800 EQU	$31C800
 
 ram_ff8000	EQU	$FF8000
 ext_00ffa9b1	EQU	$FFA9B1
@@ -624,7 +626,7 @@ ext_00ffa9bc	EQU	$FFA9BC
 ext_00ffc000    EQU	$FFC000
 
 spriteram_00ffc000	EQU	$FFC000
-
+spriteram_end_00ffc7f8  EQU	$FFC7F8
  	
 
  	IFD	REAL_EXE
@@ -1174,6 +1176,7 @@ lb_006ac:
 	ADD.B	D1,D2			;006de: d401
 	MOVE.B	D2,ext_00ff8108		;006e0: 13c200ff8108
 	RTS				;006e6: 4e75
+	; unreached?
 	MOVE.W	dsw_0030c004,copy_of_dsw_msb_00ff810a	;006e8: 33f90030c00400ff810a
 	NOT.W	copy_of_dsw_msb_00ff810a		;006f2: 467900ff810a
 	RTS				;006f8: 4e75
@@ -2249,7 +2252,7 @@ service_mode_1502:
 	LEA	sprite_ram_0031c000,A0		;01508: 41f90031c000
 lb_0150e:
 	CLR.L	(A0)+			;0150e: 4298
-	CMPA.L	#sprite_ram_0031c000+$800,A0		;01510: b1fc0031c800
+	CMPA.L	#sprite_ram_end_0031c800,A0		;01510: b1fc0031c800
 	BNE.S	lb_0150e		;01516: 66f6
 	LEA	ext_00240000,A0		;01518: 41f900240000
 	MOVE.L	#$00030003,(A0)+	;0151e: 20fc00030003
@@ -2937,12 +2940,12 @@ lb_01e78:
 	MOVE.L	D0,(A0)+		;01e78: 20c0
 	DBF	D1,lb_01e78		;01e7a: 51c9fffc
 	RTS				;01e7e: 4e75
-modify_sprites_attribute_1e80:
+disable_rest_of_sprites_1e80:
 	BCLR.B  #$000f,(a1)	;01e80: 0891000f
-	CMPA.L	#spriteram_00ffc000+$7f8,A1		;01e84: b3fc00ffc7f8
+	CMPA.L	#spriteram_end_00ffc7f8,A1		;01e84: b3fc00ffc7f8
 	BCC.W	lb_01e96		;01e8a: 6400000a
 	ADDA.L	#$00000008,A1		;01e8e: d3fc00000008
-	BRA.S	modify_sprites_attribute_1e80		;01e94: 60ea
+	BRA.S	disable_rest_of_sprites_1e80		;01e94: 60ea
 lb_01e96:
 	RTS				;01e96: 4e75
 lb_01e98:
@@ -3613,7 +3616,7 @@ lb_025f0:
 	MOVE.W	#$0009,D6		;02632: 3c3c0009
 	JSR	display_sprite_02788.W		;02636: 4eb82788
 	NOP				;0263a: 4e71
-	JSR	modify_sprites_attribute_1e80.W		;0263c: 4eb81e80
+	JSR	disable_rest_of_sprites_1e80.W		;0263c: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02640: 08f9000100ff8217
 	RTS				;02648: 4e75
 lb_0264a:
@@ -3640,7 +3643,7 @@ lb_0264a:
 	MOVE.W	#$0009,D6		;0269c: 3c3c0009
 	JSR	display_sprite_02788.W		;026a0: 4eb82788
 	NOP				;026a4: 4e71
-	JSR	modify_sprites_attribute_1e80.W		;026a6: 4eb81e80
+	JSR	disable_rest_of_sprites_1e80.W		;026a6: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;026aa: 08f9000100ff8217
 	RTS				;026b2: 4e75
 lb_026b4:
@@ -3667,7 +3670,7 @@ lb_026b4:
 	MOVE.W	#$0009,D6		;02706: 3c3c0009
 	JSR	display_sprite_02788.W		;0270a: 4eb82788
 	NOP				;0270e: 4e71
-	JSR	modify_sprites_attribute_1e80.W		;02710: 4eb81e80
+	JSR	disable_rest_of_sprites_1e80.W		;02710: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02714: 08f9000100ff8217
 	RTS				;0271c: 4e75
 lb_0271e:
@@ -3694,7 +3697,7 @@ lb_0271e:
 	MOVE.W	#$0009,D6		;02770: 3c3c0009
 	JSR	display_sprite_02788.W		;02774: 4eb82788
 	NOP				;02778: 4e71
-	JSR	modify_sprites_attribute_1e80.W		;0277a: 4eb81e80
+	JSR	disable_rest_of_sprites_1e80.W		;0277a: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;0277e: 08f9000100ff8217
 	RTS				;02786: 4e75
 display_sprite_02788:
@@ -12750,7 +12753,7 @@ lb_09a86:
 	LEA	ext_002440c0,A2		;09aa0: 45f9002440c0
 lb_09aa6:
 	MOVE.L	D0,(A2)+		;09aa6: 24c0
-	CMPA.L	#$00244740,A2		;09aa8: b5fc00244740
+	CMPA.L	#ext_00244740,A2		;09aa8: b5fc00244740
 	BNE.S	lb_09aa6		;09aae: 66f6
 	MOVEQ	#99,D0			;09ab0: 7063
 	JSR	play_sound_0def0		;09ab2: 4eb90000def0
@@ -16916,20 +16919,13 @@ lb_0ce20:
 	dc.w	$0000	;0ce56
 	dc.w	$8001	;0ce58
 	dc.w	$0002	;0ce5a
-	dc.w	$0000	;0ce5c
-	dc.w	$f1b6	;0ce5e
-	dc.w	$0001	;0ce60
-	dc.w	$0c06	;0ce62
-	dc.w	$0001	;0ce64
-	dc.w	$1776	;0ce66
-	dc.w	$0001	;0ce68
-	dc.w	$17f6	;0ce6a
-	dc.w	$0001	;0ce6c
-	dc.w	$1896	;0ce6e
-	dc.w	$0001	;0ce70
-	dc.w	$18a6	;0ce72
-	dc.w	$0001	;0ce74
-	dc.w	$19fa	;0ce76
+	dc.l	lb_0f1b6	;0ce5c
+	dc.l	lb_10c06	;0ce60
+	dc.l	lb_11776	;0ce64
+	dc.l	lb_117f6	;0ce68
+	dc.l	lb_11896	;0ce6c
+	dc.l	lb_118a6	;0ce70
+	dc.l	lb_119fa	;0ce74
 	dc.w	$ccff	;0ce78
 	dc.w	$4140	;0ce7a
 	dc.w	$01ff	;0ce7c
@@ -20264,6 +20260,7 @@ lb_0ef1e:
 	dc.w	$0000	;0f1b0
 	dc.w	$0000	;0f1b2
 	dc.w	$0000	;0f1b4
+lb_0f1b6:
 	dc.w	$8000	;0f1b6
 	dc.w	$0217	;0f1b8
 	dc.w	$000a	;0f1ba
@@ -23640,6 +23637,7 @@ lb_10bf4:
 	dc.w	$0000	;10c00
 	dc.w	$0100	;10c02
 	dc.w	$ffff	;10c04
+lb_10c06:
 	dc.w	$a000	;10c06
 	dc.w	$0200	;10c08
 	dc.w	$000a	;10c0a
@@ -25110,6 +25108,7 @@ lb_115c2:
 	dc.w	$0100	;11772
 lb_11774:
 	dc.w	$ffff	;11774
+lb_11776:
 	dc.w	$ffff	;11776
 lb_11778:
 	dc.w	$8000	;11778
@@ -25180,6 +25179,7 @@ lb_117f0:
 lb_117f2:
 	dc.w	$ffff	;117f2
 	dc.w	$ffff	;117f4
+lb_117f6:
 	dc.w	$8100	;117f6
 	dc.w	$0202	;117f8
 	dc.w	$000a	;117fa
@@ -25266,6 +25266,7 @@ lb_11890:
 lb_11892:
 	dc.w	$ffff	;11892
 	dc.w	$ffff	;11894
+lb_11896:
 	dc.w	$ffff	;11896
 lb_11898:
 	dc.w	$ffff	;11898
@@ -25280,6 +25281,7 @@ lb_118a0:
 lb_118a2:
 	dc.w	$ffff	;118a2
 	dc.w	$ffff	;118a4
+lb_118a6:
 	dc.w	$ffff	;118a6
 lb_118a8:
 	dc.w	$8000	;118a8
@@ -25456,6 +25458,7 @@ lb_119f4:
 lb_119f6:
 	dc.w	$ffff	;119f6
 	dc.w	$ffff	;119f8
+lb_119fa:
 	dc.w	$8000	;119fa
 	dc.w	$1001	;119fc
 	dc.w	$000a	;119fe
@@ -39342,7 +39345,7 @@ lb_1bbfc:
 	MOVEA.L	#ext_00ffa454,A0		;1bc08: 207c00ffa454
 	MOVE.W	#$0009,D6		;1bc0e: 3c3c0009
 	JSR	display_sprite_02788		;1bc12: 4eb900002788
-	JSR	modify_sprites_attribute_1e80		;1bc18: 4eb900001e80
+	JSR	disable_rest_of_sprites_1e80		;1bc18: 4eb900001e80
 	BSET	#1,sync_flags_00ff8217		;1bc1e: 08f9000100ff8217
 	RTS				;1bc26: 4e75
 	dc.b	"THIS VIDEO GAME MADE IN JAPAN BY DATA EAST CORPORATION.         "	;1bc28
