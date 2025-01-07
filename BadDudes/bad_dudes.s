@@ -99,36 +99,36 @@
 ;
 ; layer #0 (used for OSD and some foreground objects (lamps))
 ;
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
 ;
 ; layer #1 (used in title, intro screen, highscore, level 1)
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ; layer #2 (used for background in sewer level 3 level, layer #1 is used for running water)
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -16904,15 +16904,13 @@ lb_0ce20:
 	dc.w	$fffe	;0ce38
 	dc.w	$0000	;0ce3a
 	dc.w	$0000	;0ce3c
-	dc.w	$0000	;0ce3e
-	dc.w	$0004	;0ce40
-	dc.w	$f200	;0ce42
+	dc.w	$0000	;0ce3e those $4xxxx relocs have been verified with MAME
+	dc.l	lb_4f200	;0ce40
 	dc.w	$0100	;0ce44
 	dc.w	$0000	;0ce46
 	dc.w	$0100	;0ce48
 	dc.w	$0000	;0ce4a
-	dc.w	$0004	;0ce4c
-	dc.w	$f7c0	;0ce4e
+	dc.l	lb_4f7c0	;0ce4c
 	dc.w	$0100	;0ce50
 	dc.w	$0000	;0ce52
 	dc.w	$0400	;0ce54
@@ -16946,14 +16944,12 @@ lb_0ce7e:
 	dc.w	$1000	;0ce98
 	dc.w	$0003	;0ce9a
 	dc.w	$0000	;0ce9c
-	dc.w	$0004	;0ce9e
-	dc.w	$f640	;0cea0
+	dc.l	lb_4f640	;0ce9e
 	dc.w	$0000	;0cea2
 	dc.w	$0000	;0cea4
 	dc.w	$0000	;0cea6
 	dc.w	$0000	;0cea8
-	dc.w	$0004	;0ceaa
-	dc.w	$f8c0	;0ceac
+	dc.l	lb_4f8c0	;0ceaa
 	dc.w	$0100	;0ceae
 	dc.w	$0000	;0ceb0
 	dc.w	$01b0	;0ceb2
@@ -16987,14 +16983,12 @@ lb_0cedc:
 	dc.w	$0000	;0cef6
 	dc.w	$0000	;0cef8
 	dc.w	$0000	;0cefa
-	dc.w	$0004	;0cefc
-	dc.w	$f600	;0cefe
+	dc.l	lb_4f600	;0cefc
 	dc.w	$0000	;0cf00
 	dc.w	$0000	;0cf02
 	dc.w	$0000	;0cf04
 	dc.w	$0000	;0cf06
-	dc.w	$0004	;0cf08
-	dc.w	$f814	;0cf0a
+	dc.l	lb_4f814	;0cf08
 	dc.w	$0000	;0cf0c
 	dc.w	$0000	;0cf0e
 	dc.w	$0000	;0cf10
@@ -17028,14 +17022,12 @@ lb_0cf3a:
 	dc.w	$0000	;0cf54
 	dc.w	$0000	;0cf56
 	dc.w	$0000	;0cf58
-	dc.w	$0004	;0cf5a
-	dc.w	$f2c0	;0cf5c
+	dc.l	lb_4f2c0	;0cf5a
 	dc.w	$0000	;0cf5e
 	dc.w	$0000	;0cf60
 	dc.w	$0000	;0cf62
 	dc.w	$0000	;0cf64
-	dc.w	$0004	;0cf66
-	dc.w	$f880	;0cf68
+	dc.l	lb_4f880	;0cf66
 	dc.w	$0000	;0cf6a
 	dc.w	$0000	;0cf6c
 	dc.w	$0000	;0cf6e
@@ -17069,14 +17061,12 @@ lb_0cf98:
 	dc.w	$d000	;0cfb2
 	dc.w	$fffc	;0cfb4
 	dc.w	$0000	;0cfb6
-	dc.w	$0004	;0cfb8
-	dc.w	$f5a8	;0cfba
+	dc.l	lb_4f5a8	;0cfb8
 	dc.w	$0000	;0cfbc
 	dc.w	$0000	;0cfbe
 	dc.w	$7000	;0cfc0
 	dc.w	$0000	;0cfc2
-	dc.w	$0004	;0cfc4
-	dc.w	$fa40	;0cfc6
+	dc.l	lb_4fa40	;0cfc4
 	dc.w	$0000	;0cfc8
 	dc.w	$0000	;0cfca
 	dc.w	$0790	;0cfcc
@@ -17111,14 +17101,12 @@ lb_0cff6:
 	dc.w	$0000	;0d010
 	dc.w	$0000	;0d012
 	dc.w	$0000	;0d014
-	dc.w	$0004	;0d016
-	dc.w	$f480	;0d018
+	dc.l	lb_4f480	;0d016
 	dc.w	$0000	;0d01a
 	dc.w	$0000	;0d01c
 	dc.w	$0000	;0d01e
 	dc.w	$0000	;0d020
-	dc.w	$0004	;0d022
-	dc.w	$f914	;0d024
+	dc.l	lb_4f914	;0d022
 	dc.w	$0000	;0d026
 	dc.w	$0000	;0d028
 	dc.w	$0000	;0d02a
@@ -17152,14 +17140,12 @@ lb_0d054:
 	dc.w	$0000	;0d06e
 	dc.w	$0000	;0d070
 	dc.w	$0000	;0d072
-	dc.w	$0004	;0d074
-	dc.w	$f5dc	;0d076
+	dc.l	lb_4f5dc	;0d074
 	dc.w	$04e0	;0d078
 	dc.w	$0000	;0d07a
 	dc.w	$0000	;0d07c
 	dc.w	$0000	;0d07e
-	dc.w	$0004	;0d080
-	dc.w	$f980	;0d082
+	dc.l	lb_4f980	;0d080
 	dc.w	$00f0	;0d084
 	dc.w	$0000	;0d086
 	dc.w	$0400	;0d088
@@ -17193,14 +17179,12 @@ lb_0d0b2:
 	dc.w	$0000	;0d0cc
 	dc.w	$0000	;0d0ce
 	dc.w	$0000	;0d0d0
-	dc.w	$0004	;0d0d2
-	dc.w	$f200	;0d0d4
+	dc.l	lb_4f200	;0d0d2
 	dc.w	$0100	;0d0d6
 	dc.w	$0000	;0d0d8
 	dc.w	$0100	;0d0da
 	dc.w	$0000	;0d0dc
-	dc.w	$0004	;0d0de
-	dc.w	$f7c0	;0d0e0
+	dc.l	lb_4f7c0	;0d0de
 	dc.w	$0100	;0d0e2
 	dc.w	$0000	;0d0e4
 	dc.w	$0400	;0d0e6
@@ -76753,6 +76737,7 @@ lb_40a00:
 	dc.w	$0000	;4f1fa
 	dc.w	$0000	;4f1fc
 	dc.w	$0000	;4f1fe
+lb_4f200:
 	dc.w	$0004	;4f200
 	dc.w	$1000	;4f202
 	dc.w	$0004	;4f204
@@ -76849,6 +76834,7 @@ lb_40a00:
 	dc.w	$1000	;4f2ba
 	dc.w	$0004	;4f2bc
 	dc.w	$1000	;4f2be
+lb_4f2c0:
 	dc.w	$0004	;4f2c0
 	dc.w	$2c00	;4f2c2
 	dc.w	$0004	;4f2c4
@@ -77073,6 +77059,7 @@ lb_40a00:
 	dc.w	$1000	;4f47a
 	dc.w	$0004	;4f47c
 	dc.w	$1000	;4f47e
+lb_4f480:
 	dc.w	$0004	;4f480
 	dc.w	$5a00	;4f482
 	dc.w	$0004	;4f484
@@ -77221,6 +77208,7 @@ lb_40a00:
 	dc.w	$5400	;4f5a2
 	dc.w	$0004	;4f5a4
 	dc.w	$5600	;4f5a6
+lb_4f5a8:
 	dc.w	$0004	;4f5a8
 	dc.w	$5800	;4f5aa
 	dc.w	$0004	;4f5ac
@@ -77247,6 +77235,7 @@ lb_40a00:
 	dc.w	$1000	;4f5d6
 	dc.w	$0004	;4f5d8
 	dc.w	$1000	;4f5da
+lb_4f5dc:
 	dc.w	$0004	;4f5dc
 	dc.w	$1000	;4f5de
 	dc.w	$0004	;4f5e0
@@ -77265,6 +77254,7 @@ lb_40a00:
 	dc.w	$1000	;4f5fa
 	dc.w	$0004	;4f5fc
 	dc.w	$1000	;4f5fe
+lb_4f600:
 	dc.w	$0004	;4f600
 	dc.w	$2600	;4f602
 	dc.w	$0004	;4f604
@@ -77297,6 +77287,7 @@ lb_40a00:
 	dc.w	$9600	;4f63a
 	dc.w	$0004	;4f63c
 	dc.w	$1000	;4f63e
+lb_4f640:
 	dc.w	$0004	;4f640
 	dc.w	$1e00	;4f642
 	dc.w	$0004	;4f644
@@ -77489,6 +77480,7 @@ lb_40a00:
 	dc.w	$1000	;4f7ba
 	dc.w	$0004	;4f7bc
 	dc.w	$1000	;4f7be
+lb_4f7c0:
 	dc.w	$0004	;4f7c0
 	dc.w	$1000	;4f7c2
 	dc.w	$0004	;4f7c4
@@ -77531,6 +77523,7 @@ lb_40a00:
 	dc.w	$ea00	;4f80e
 	dc.w	$0004	;4f810
 	dc.w	$1000	;4f812
+lb_4f814:
 	dc.w	$0004	;4f814
 	dc.w	$ae00	;4f816
 	dc.w	$0004	;4f818
@@ -77585,6 +77578,7 @@ lb_40a00:
 	dc.w	$1000	;4f87a
 	dc.w	$0004	;4f87c
 	dc.w	$1000	;4f87e
+lb_4f880:
 	dc.w	$0004	;4f880
 	dc.w	$be00	;4f882
 	dc.w	$0004	;4f884
@@ -77617,6 +77611,7 @@ lb_40a00:
 	dc.w	$c200	;4f8ba
 	dc.w	$0004	;4f8bc
 	dc.w	$c400	;4f8be
+lb_4f8c0:
 	dc.w	$0004	;4f8c0
 	dc.w	$1000	;4f8c2
 	dc.w	$0004	;4f8c4
@@ -77659,6 +77654,7 @@ lb_40a00:
 	dc.w	$f000	;4f90e
 	dc.w	$0004	;4f910
 	dc.w	$1000	;4f912
+lb_4f914:
 	dc.w	$0004	;4f914
 	dc.w	$d800	;4f916
 	dc.w	$0004	;4f918
@@ -77713,6 +77709,7 @@ lb_40a00:
 	dc.w	$1000	;4f97a
 	dc.w	$0004	;4f97c
 	dc.w	$1000	;4f97e
+lb_4f980:
 	dc.w	$0004	;4f980
 	dc.w	$1000	;4f982
 	dc.w	$0004	;4f984
@@ -77809,6 +77806,7 @@ lb_40a00:
 	dc.w	$1000	;4fa3a
 	dc.w	$0004	;4fa3c
 	dc.w	$1000	;4fa3e
+lb_4fa40:
 	dc.w	$0004	;4fa40
 	dc.w	$c600	;4fa42
 	dc.w	$0004	;4fa44
