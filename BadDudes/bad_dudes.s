@@ -99,36 +99,36 @@
 ;
 ; layer #0 (used for OSD and some foreground objects (lamps))
 ;
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
 ;
 ; layer #1 (used in title, intro screen, highscore, level 1)
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ; layer #2 (used for background in sewer level 3 level, layer #1 is used for running water)
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -2640,11 +2640,11 @@ lb_01aac:
 	NOP				;01ab8: 4e71
 	NOP				;01aba: 4e71
 lb_01abc:
-	JSR	process_inputs_0059c.W		;01abc: 4eb8059c
+	JSR	process_inputs_0059c.W		;01abc: 4eb8059c starting a new level here!
 	JSR	lb_09976		;01ac0: 4eb900009976
 	BCLR	#5,stage_control_flags_00ff8216		;01ac6: 08b9000500ff8216
 	MOVEQ	#0,D0			;01ace: 7000
-	JSR	play_sound_0def0		;01ad0: 4eb90000def0
+	JSR	play_sound_0def0		;01ad0: 4eb90000def0 stop sounds
 	JSR	clear_pretty_much_all_video_01cd8.W		;01ad6: 4eb81cd8
 	NOP				;01ada: 4e71
 	JSR	lb_0ccb6		;01adc: 4eb90000ccb6
@@ -2659,14 +2659,14 @@ lb_01abc:
 	JSR	lb_0e238		;01b00: 4eb90000e238
 	BSET	#5,stage_control_flags_00ff8216		;01b06: 08f9000500ff8216
 	TST.B	is_actual_game_played_00ff8215		;01b0e: 4a3900ff8215
-	BMI.S	lb_01b38		;01b14: 6b22
+	BMI.S	game_loop_01b38		;01b14: 6b22
 	MOVEQ	#0,D0			;01b16: 7000
 	MOVE.B	D0,p1_nb_lives_00ffa39a		;01b18: 13c000ffa39a
 	MOVE.B	D0,p2_nb_lives_00ffa25a		;01b1e: 13c000ffa25a
 	JSR	lb_0e0f0		;01b24: 4eb90000e0f0
 	MOVE.B	#$09,ext_00ffa8c6		;01b2a: 13fc000900ffa8c6
 	JSR	lb_0e1ee		;01b32: 4eb90000e1ee
-lb_01b38:
+game_loop_01b38:
 	JSR	wait_for_sync_003f0.W		;01b38: 4eb803f0
 	JSR	lb_0e31c		;01b3c: 4eb90000e31c
 	JSR	process_inputs_0059c.W		;01b42: 4eb8059c
@@ -2690,10 +2690,10 @@ lb_01b38:
 	BPL.S	lb_01bc4		;01b74: 6a4e
 	JSR	lb_09bde		;01b76: 4eb900009bde
 	BCLR	#5,is_actual_game_played_00ff8215		;01b7c: 08b9000500ff8215
-	BEQ.S	lb_01b38		;01b84: 67b2
+	BEQ.S	game_loop_01b38		;01b84: 67b2
 	BCLR	#5,stage_control_flags_00ff8216		;01b86: 08b9000500ff8216
 	JSR	lb_09a86		;01b8e: 4eb900009a86
-	ADDQ.B	#1,current_stage_00ff821d		;01b94: 523900ff821d
+	ADDQ.B	#1,current_stage_00ff821d		;01b94: 523900ff821d goto next stage (increase level)
 	CMPI.B	#$08,current_stage_00ff821d		;01b9a: 0c39000800ff821d
 	BNE.W	lb_01abc		;01ba2: 6600ff18
 	JSR	lb_01f32.W		;01ba6: 4eb81f32
@@ -2707,7 +2707,7 @@ lb_01bc4:
 	JSR	lb_09a6e		;01bc4: 4eb900009a6e
 	MOVE.B	is_actual_game_played_00ff8215,D0		;01bca: 103900ff8215
 	ANDI.B	#$03,D0			;01bd0: 02000003
-	BNE.W	lb_01b38		;01bd4: 6600ff62
+	BNE.W	game_loop_01b38		;01bd4: 6600ff62
 	BRA.W	lb_019b2		;01bd8: 6000fdd8
 lb_01bdc:
 	NOP				;01bdc: 4e71
@@ -8404,7 +8404,7 @@ lb_06836:
 lb_06844:
 	BSR.W	lb_06952		;06844: 6100010c
 	RTS				;06848: 4e75
-lb_0684a:
+scroll_truck_in_0684a:
 	MOVEA.L	ext_00ffa894,A3		;0684a: 267900ffa894
 	ADDA.L	ext_00ff81aa,A3		;06850: d7f900ff81aa
 	MOVE.L	A3,ext_00ff80de		;06856: 23cb00ff80de
@@ -8540,7 +8540,7 @@ lb_06aac:
 	RTS				;06ab8: 4e75
 lb_06aba:
 	dc.l	lb_067f2	;06aba
-	dc.l	lb_0684a	;06abe
+	dc.l	scroll_truck_in_0684a	;06abe
 	dc.l	lb_068a2	;06ac2
 	dc.l	lb_068fa	;06ac6
 lb_06aca:
@@ -82906,7 +82906,7 @@ sprite_data_base_5219c:
 	dc.l	lb_52f78	;521a4   02
 	dc.l	lb_52f8a	;521a8   03
 	dc.l	lb_52f9c	;521ac   04
-	dc.l	lb_52fae	;521b0   05
+	dc.l	lb_52fae	;521b0   05 player sommersault
 	dc.l	lb_52fd0	;521b4   06
 	dc.l	lb_52fe2	;521b8   07
 	dc.l	lb_52f9c	;521bc   08
@@ -82918,309 +82918,309 @@ sprite_data_base_5219c:
 	dc.l	lb_5307c	;521d4   0E
 	dc.l	lb_5307c	;521d8   0F
 	dc.l	lb_52fd0	;521dc   10: main character (at start)
-	dc.l	lb_52fe2	;521e0
-	dc.l	lb_5308e	;521e4
-	dc.l	lb_530b0	;521e8
-	dc.l	lb_530e2	;521ec
-	dc.l	lb_53114	;521f0
-	dc.l	lb_52fae	;521f4
-	dc.l	lb_52fae	;521f8
-	dc.l	lb_53136	;521fc
-	dc.l	lb_53158	;52200
-	dc.l	lb_52fae	;52204
-	dc.l	lb_52f9c	;52208
-	dc.l	lb_5317a	;5220c
-	dc.l	lb_5319c	;52210
-	dc.l	lb_531b6	;52214
-	dc.l	lb_52f9c	;52218
-	dc.l	lb_5329a	;5221c
-	dc.l	lb_532ac	;52220
-	dc.l	lb_52f9c	;52224
-	dc.l	lb_532c6	;52228
-	dc.l	lb_532e8	;5222c
-	dc.l	lb_52f9c	;52230
-	dc.l	lb_531d8	;52234
-	dc.l	lb_52fae	;52238
-	dc.l	lb_5320a	;5223c
-	dc.l	lb_53234	;52240
-	dc.l	lb_5325e	;52244
-	dc.l	lb_52fae	;52248
-	dc.l	lb_5330a	;5224c
-	dc.l	lb_5332c	;52250
-	dc.l	lb_52fae	;52254
-	dc.l	lb_53356	;52258
-	dc.l	lb_53380	;5225c
-	dc.l	lb_53288	;52260
-	dc.l	lb_533b2	;52264
-	dc.l	lb_533c4	;52268
-	dc.l	lb_52fd0	;5226c
-	dc.l	lb_52fe2	;52270
-	dc.l	lb_533ee	;52274
-	dc.l	lb_53420	;52278
-	dc.l	lb_53442	;5227c
-	dc.l	lb_52fe2	;52280
-	dc.l	lb_52fd0	;52284
-	dc.l	lb_52fe2	;52288
-	dc.l	lb_53464	;5228c
-	dc.l	lb_52fe2	;52290
-	dc.l	lb_52fae	;52294
-	dc.l	lb_5348e	;52298
-	dc.l	lb_534b8	;5229c
-	dc.l	lb_53158	;522a0
-	dc.l	lb_534e2	;522a4
-	dc.l	lb_52fae	;522a8
-	dc.l	lb_53504	;522ac
-	dc.l	lb_53526	;522b0
-	dc.l	lb_53538	;522b4
-	dc.l	lb_5355a	;522b8
-	dc.l	lb_53584	;522bc
-	dc.l	lb_535ae	;522c0
-	dc.l	lb_535f0	;522c4
-	dc.l	lb_53612	;522c8
-	dc.l	lb_53420	;522cc
-	dc.l	lb_53442	;522d0
-	dc.l	lb_53654	;522d4
-	dc.l	lb_5367e	;522d8
-	dc.l	lb_536a0	;522dc
-	dc.l	lb_52f9c	;522e0
-	dc.l	lb_536ba	;522e4
-	dc.l	lb_536dc	;522e8
-	dc.l	lb_536dc	;522ec
-	dc.l	lb_536fe	;522f0
-	dc.l	lb_53720	;522f4
-	dc.l	lb_53742	;522f8
-	dc.l	lb_53764	;522fc
-	dc.l	lb_53786	;52300
-	dc.l	lb_53798	;52304
-	dc.l	lb_53786	;52308
-	dc.l	lb_53798	;5230c
-	dc.l	lb_537aa	;52310
-	dc.l	lb_537bc	;52314
-	dc.l	lb_537ce	;52318
-	dc.l	lb_537e0	;5231c
-	dc.l	lb_537f2	;52320
-	dc.l	lb_52f9c	;52324
-	dc.l	lb_5319c	;52328
-	dc.l	lb_5385e	;5232c
-	dc.l	lb_538dc	;52330
-	dc.l	lb_5385e	;52334
-	dc.l	lb_53888	;52338
-	dc.l	lb_538b2	;5233c
-	dc.l	lb_53972	;52340
-	dc.l	lb_539a4	;52344
-	dc.l	lb_539c6	;52348
-	dc.l	lb_538dc	;5234c
-	dc.l	lb_5390e	;52350
-	dc.l	lb_53938	;52354
-	dc.l	lb_539f0	;52358
-	dc.l	lb_53a6e	;5235c
-	dc.l	lb_539f0	;52360
-	dc.l	lb_53a12	;52364
-	dc.l	lb_53a44	;52368
-	dc.l	lb_53b14	;5236c
-	dc.l	lb_53b56	;52370
-	dc.l	lb_53b98	;52374
-	dc.l	lb_53a6e	;52378
-	dc.l	lb_53a98	;5237c
-	dc.l	lb_53ada	;52380
-	dc.l	lb_53972	;52384
-	dc.l	lb_53b14	;52388
-	dc.l	lb_53bd2	;5238c
-	dc.l	lb_53bd2	;52390
-	dc.l	lb_53bd2	;52394
-	dc.l	lb_53804	;52398
-	dc.l	lb_53816	;5239c
-	dc.l	lb_53828	;523a0
-	dc.l	lb_5383a	;523a4
-	dc.l	lb_5384c	;523a8
-	dc.l	lb_53bdc	;523ac
-	dc.l	lb_53c0e	;523b0 running ninja frame
-	dc.l	lb_53c40	;523b4
-	dc.l	lb_53c72	;523b8
-	dc.l	lb_53ca4	;523bc
-	dc.l	lb_53cc6	;523c0
-	dc.l	lb_53ce8	;523c4
-	dc.l	lb_53d0a	;523c8
-	dc.l	lb_53ce8	;523cc
-	dc.l	lb_53d0a	;523d0
-	dc.l	lb_53d24	;523d4
-	dc.l	lb_53d46	;523d8
-	dc.l	lb_53d70	;523dc
-	dc.l	lb_53da2	;523e0
-	dc.l	lb_53d24	;523e4
-	dc.l	lb_53d46	;523e8
-	dc.l	lb_53d70	;523ec
-	dc.l	lb_53da2	;523f0
-	dc.l	lb_53d24	;523f4
-	dc.l	lb_53d46	;523f8
-	dc.l	lb_53d70	;523fc
-	dc.l	lb_53da2	;52400
-	dc.l	lb_53cc6	;52404
-	dc.l	lb_53dbc	;52408
-	dc.l	lb_53dce	;5240c
-	dc.l	lb_53e00	;52410
-	dc.l	lb_53e2a	;52414
-	dc.l	lb_53e44	;52418
-	dc.l	lb_53e5e	;5241c
-	dc.l	lb_53e88	;52420
-	dc.l	lb_53ca4	;52424
-	dc.l	lb_53ca4	;52428
-	dc.l	lb_53eaa	;5242c
-	dc.l	lb_53ec4	;52430
-	dc.l	lb_53ca4	;52434
-	dc.l	lb_53cc6	;52438
-	dc.l	lb_53eee	;5243c
-	dc.l	lb_53f18	;52440
-	dc.l	lb_53ca4	;52444
-	dc.l	lb_53f42	;52448
-	dc.l	lb_53f64	;5244c
-	dc.l	lb_53ce8	;52450
-	dc.l	lb_53d0a	;52454
-	dc.l	lb_53f86	;52458
-	dc.l	lb_53fb0	;5245c
-	dc.l	lb_53d0a	;52460
-	dc.l	lb_53fda	;52464
-	dc.l	lb_53fec	;52468
-	dc.l	lb_53ffe	;5246c
-	dc.l	lb_54020	;52470
-	dc.l	lb_54042	;52474
-	dc.l	lb_54054	;52478
-	dc.l	lb_5407e	;5247c
-	dc.l	lb_540a0	;52480
-	dc.l	lb_540ca	;52484
-	dc.l	lb_53ce8	;52488
-	dc.l	lb_53d0a	;5248c
-	dc.l	lb_53cc6	;52490
-	dc.l	lb_540fc	;52494
-	dc.l	lb_53cc6	;52498
-	dc.l	lb_5412e	;5249c
-	dc.l	lb_54150	;524a0
-	dc.l	lb_54150	;524a4
-	dc.l	lb_54182	;524a8
-	dc.l	lb_541a4	;524ac
-	dc.l	lb_541c6	;524b0
-	dc.l	lb_541f0	;524b4
-	dc.l	lb_540ca	;524b8
-	dc.l	lb_54202	;524bc
-	dc.l	lb_540fc	;524c0
-	dc.l	lb_54234	;524c4
-	dc.l	lb_54246	;524c8
-	dc.l	lb_54258	;524cc
-	dc.l	lb_5426a	;524d0
-	dc.l	lb_54234	;524d4    338: ninja walking
-	dc.l	lb_54246	;524d8
-	dc.l	lb_54258	;524dc
-	dc.l	lb_5426a	;524e0
-	dc.l	lb_54202	;524e4
-	dc.l	lb_541f0	;524e8
-	dc.l	lb_5427c	;524ec
-	dc.l	lb_53d24	;524f0
-	dc.l	lb_53d46	;524f4
-	dc.l	lb_53d70	;524f8
-	dc.l	lb_53da2	;524fc
-	dc.l	lb_54150	;52500
-	dc.l	lb_53cc6	;52504
-	dc.l	lb_53ce8	;52508
-	dc.l	lb_53d0a	;5250c
-	dc.l	lb_5428e	;52510
-	dc.l	lb_54150	;52514
-	dc.l	lb_542b8	;52518
-	dc.l	lb_542b8	;5251c
-	dc.l	lb_542ca	;52520
-	dc.l	lb_542ec	;52524
-	dc.l	lb_542fe	;52528
-	dc.l	lb_54310	;5252c
-	dc.l	lb_54322	;52530
-	dc.l	lb_54334	;52534
-	dc.l	lb_54346	;52538
-	dc.l	lb_54358	;5253c
-	dc.l	lb_5436a	;52540
-	dc.l	lb_5437c	;52544
-	dc.l	lb_5438e	;52548
-	dc.l	lb_543a0	;5254c
-	dc.l	lb_543ba	;52550
-	dc.l	lb_543dc	;52554
-	dc.l	lb_543ba	;52558
-	dc.l	lb_543fe	;5255c
-	dc.l	lb_543fe	;52560
-	dc.l	lb_54430	;52564
-	dc.l	lb_5730e	;52568
-	dc.l	lb_57b1e	;5256c
-	dc.l	lb_544c0	;52570
-	dc.l	lb_544d2	;52574
-	dc.l	lb_544e4	;52578
-	dc.l	lb_544f6	;5257c
-	dc.l	lb_57b1e	;52580
-	dc.l	lb_54518	;52584
-	dc.l	lb_5452a	;52588
-	dc.l	lb_5454c	;5258c
-	dc.l	lb_5456e	;52590
-	dc.l	lb_545b0	;52594
-	dc.l	lb_54614	;52598
-	dc.l	lb_54626	;5259c
-	dc.l	lb_54638	;525a0
-	dc.l	lb_54662	;525a4
-	dc.l	lb_54662	;525a8
-	dc.l	lb_5468c	;525ac
-	dc.l	lb_546b6	;525b0
-	dc.l	lb_546e0	;525b4
-	dc.l	lb_5470a	;525b8
-	dc.l	lb_54734	;525bc
-	dc.l	lb_54734	;525c0
-	dc.l	lb_54734	;525c4
-	dc.l	lb_54734	;525c8
-	dc.l	lb_54662	;525cc
-	dc.l	lb_54766	;525d0
-	dc.l	lb_547a8	;525d4
-	dc.l	lb_54662	;525d8
-	dc.l	lb_54734	;525dc
-	dc.l	lb_547d2	;525e0
-	dc.l	lb_54662	;525e4
-	dc.l	lb_54662	;525e8
-	dc.l	lb_547fc	;525ec
-	dc.l	lb_547fc	;525f0
-	dc.l	lb_5482e	;525f4
-	dc.l	lb_54870	;525f8
-	dc.l	lb_547fc	;525fc
-	dc.l	lb_548aa	;52600
-	dc.l	lb_548aa	;52604
-	dc.l	lb_548aa	;52608
-	dc.l	lb_548aa	;5260c
-	dc.l	lb_548d4	;52610
-	dc.l	lb_548d4	;52614
-	dc.l	lb_548d4	;52618
-	dc.l	lb_548d4	;5261c
-	dc.l	lb_548fe	;52620
-	dc.l	lb_54930	;52624
-	dc.l	lb_57b1e	;52628
-	dc.l	lb_54518	;5262c
-	dc.l	lb_5452a	;52630
-	dc.l	lb_5454c	;52634
-	dc.l	lb_54952	;52638
-	dc.l	lb_54984	;5263c
-	dc.l	lb_54614	;52640
-	dc.l	lb_54626	;52644
-	dc.l	lb_54638	;52648
-	dc.l	lb_549b6	;5264c
-	dc.l	lb_54cf2	;52650
-	dc.l	lb_54d04	;52654
-	dc.l	lb_54d16	;52658
-	dc.l	lb_54d28	;5265c
-	dc.l	lb_549b6	;52660
-	dc.l	lb_54a10	;52664
-	dc.l	lb_54a32	;52668
-	dc.l	lb_549b6	;5266c
-	dc.l	lb_54a5c	;52670
-	dc.l	lb_54a8e	;52674
-	dc.l	lb_54ab0	;52678
-	dc.l	lb_54aca	;5267c
-	dc.l	lb_54aec	;52680
-	dc.l	lb_54b1e	;52684
-	dc.l	lb_54b50	;52688
-	dc.l	lb_54b82	;5268c
-	dc.l	lb_54b94	;52690
-	dc.l	lb_54bbe	;52694
-	dc.l	lb_549b6	;52698
+	dc.l	lb_52fe2	;521e0   11
+	dc.l	lb_5308e	;521e4   12
+	dc.l	lb_530b0	;521e8   13
+	dc.l	lb_530e2	;521ec   14  player sommersault
+	dc.l	lb_53114	;521f0   15
+	dc.l	lb_52fae	;521f4   16
+	dc.l	lb_52fae	;521f8   17
+	dc.l	lb_53136	;521fc   18
+	dc.l	lb_53158	;52200   19
+	dc.l	lb_52fae	;52204   1A
+	dc.l	lb_52f9c	;52208   1B
+	dc.l	lb_5317a	;5220c   1C
+	dc.l	lb_5319c	;52210   1D
+	dc.l	lb_531b6	;52214   1E
+	dc.l	lb_52f9c	;52218   1F
+	dc.l	lb_5329a	;5221c   20
+	dc.l	lb_532ac	;52220   21
+	dc.l	lb_52f9c	;52224   22
+	dc.l	lb_532c6	;52228   23
+	dc.l	lb_532e8	;5222c   24
+	dc.l	lb_52f9c	;52230   25
+	dc.l	lb_531d8	;52234   26
+	dc.l	lb_52fae	;52238   27
+	dc.l	lb_5320a	;5223c   28
+	dc.l	lb_53234	;52240   29
+	dc.l	lb_5325e	;52244   2A
+	dc.l	lb_52fae	;52248   2B
+	dc.l	lb_5330a	;5224c   2C
+	dc.l	lb_5332c	;52250   2D
+	dc.l	lb_52fae	;52254   2E
+	dc.l	lb_53356	;52258   2F
+	dc.l	lb_53380	;5225c   30
+	dc.l	lb_53288	;52260   31
+	dc.l	lb_533b2	;52264   32
+	dc.l	lb_533c4	;52268   33
+	dc.l	lb_52fd0	;5226c   34
+	dc.l	lb_52fe2	;52270   35
+	dc.l	lb_533ee	;52274   36
+	dc.l	lb_53420	;52278   37
+	dc.l	lb_53442	;5227c   38
+	dc.l	lb_52fe2	;52280   39
+	dc.l	lb_52fd0	;52284   3A
+	dc.l	lb_52fe2	;52288   3B
+	dc.l	lb_53464	;5228c   3C
+	dc.l	lb_52fe2	;52290   3D
+	dc.l	lb_52fae	;52294   3E
+	dc.l	lb_5348e	;52298   3F
+	dc.l	lb_534b8	;5229c   40   player doing double low kick
+	dc.l	lb_53158	;522a0   41
+	dc.l	lb_534e2	;522a4   42
+	dc.l	lb_52fae	;522a8   43
+	dc.l	lb_53504	;522ac   44
+	dc.l	lb_53526	;522b0   45
+	dc.l	lb_53538	;522b4   46
+	dc.l	lb_5355a	;522b8   47
+	dc.l	lb_53584	;522bc   48
+	dc.l	lb_535ae	;522c0   49
+	dc.l	lb_535f0	;522c4   4A
+	dc.l	lb_53612	;522c8   4B
+	dc.l	lb_53420	;522cc   4C
+	dc.l	lb_53442	;522d0   4D
+	dc.l	lb_53654	;522d4   4E
+	dc.l	lb_5367e	;522d8   4F
+	dc.l	lb_536a0	;522dc   50
+	dc.l	lb_52f9c	;522e0   51
+	dc.l	lb_536ba	;522e4   52
+	dc.l	lb_536dc	;522e8   53
+	dc.l	lb_536dc	;522ec   54
+	dc.l	lb_536fe	;522f0   55
+	dc.l	lb_53720	;522f4   56
+	dc.l	lb_53742	;522f8   57
+	dc.l	lb_53764	;522fc   58
+	dc.l	lb_53786	;52300   59
+	dc.l	lb_53798	;52304   5A
+	dc.l	lb_53786	;52308   5B
+	dc.l	lb_53798	;5230c   5C
+	dc.l	lb_537aa	;52310   5D
+	dc.l	lb_537bc	;52314   5E
+	dc.l	lb_537ce	;52318   5F
+	dc.l	lb_537e0	;5231c   60
+	dc.l	lb_537f2	;52320   61
+	dc.l	lb_52f9c	;52324   62
+	dc.l	lb_5319c	;52328   63
+	dc.l	lb_5385e	;5232c   64
+	dc.l	lb_538dc	;52330   65
+	dc.l	lb_5385e	;52334   66
+	dc.l	lb_53888	;52338   67
+	dc.l	lb_538b2	;5233c   68
+	dc.l	lb_53972	;52340   69
+	dc.l	lb_539a4	;52344   6A
+	dc.l	lb_539c6	;52348   6B
+	dc.l	lb_538dc	;5234c   6C
+	dc.l	lb_5390e	;52350   6D
+	dc.l	lb_53938	;52354   6E
+	dc.l	lb_539f0	;52358   6F
+	dc.l	lb_53a6e	;5235c   70
+	dc.l	lb_539f0	;52360   71
+	dc.l	lb_53a12	;52364   72
+	dc.l	lb_53a44	;52368   73
+	dc.l	lb_53b14	;5236c   74
+	dc.l	lb_53b56	;52370   75
+	dc.l	lb_53b98	;52374   76
+	dc.l	lb_53a6e	;52378   77
+	dc.l	lb_53a98	;5237c   78
+	dc.l	lb_53ada	;52380   79
+	dc.l	lb_53972	;52384   7A
+	dc.l	lb_53b14	;52388   7B
+	dc.l	lb_53bd2	;5238c   7C
+	dc.l	lb_53bd2	;52390   7D
+	dc.l	lb_53bd2	;52394   7E
+	dc.l	lb_53804	;52398   7F
+	dc.l	lb_53816	;5239c   80
+	dc.l	lb_53828	;523a0   81
+	dc.l	lb_5383a	;523a4   82
+	dc.l	lb_5384c	;523a8   83
+	dc.l	lb_53bdc	;523ac   84
+	dc.l	lb_53c0e	;523b0   85    running ninja frame
+	dc.l	lb_53c40	;523b4   86
+	dc.l	lb_53c72	;523b8   87
+	dc.l	lb_53ca4	;523bc   88
+	dc.l	lb_53cc6	;523c0   89
+	dc.l	lb_53ce8	;523c4   8A
+	dc.l	lb_53d0a	;523c8   8B
+	dc.l	lb_53ce8	;523cc   8C
+	dc.l	lb_53d0a	;523d0   8D
+	dc.l	lb_53d24	;523d4   8E
+	dc.l	lb_53d46	;523d8   8F
+	dc.l	lb_53d70	;523dc   90
+	dc.l	lb_53da2	;523e0   91
+	dc.l	lb_53d24	;523e4   92
+	dc.l	lb_53d46	;523e8   93
+	dc.l	lb_53d70	;523ec   94
+	dc.l	lb_53da2	;523f0   95
+	dc.l	lb_53d24	;523f4   96
+	dc.l	lb_53d46	;523f8   97
+	dc.l	lb_53d70	;523fc   98
+	dc.l	lb_53da2	;52400   99
+	dc.l	lb_53cc6	;52404   9A
+	dc.l	lb_53dbc	;52408   9B
+	dc.l	lb_53dce	;5240c   9C
+	dc.l	lb_53e00	;52410   9D
+	dc.l	lb_53e2a	;52414   9E
+	dc.l	lb_53e44	;52418   9F
+	dc.l	lb_53e5e	;5241c   A0
+	dc.l	lb_53e88	;52420   A1
+	dc.l	lb_53ca4	;52424   A2
+	dc.l	lb_53ca4	;52428   A3
+	dc.l	lb_53eaa	;5242c   A4
+	dc.l	lb_53ec4	;52430   A5
+	dc.l	lb_53ca4	;52434   A6
+	dc.l	lb_53cc6	;52438   A7
+	dc.l	lb_53eee	;5243c   A8
+	dc.l	lb_53f18	;52440   A9
+	dc.l	lb_53ca4	;52444   AA
+	dc.l	lb_53f42	;52448   AB
+	dc.l	lb_53f64	;5244c   AC
+	dc.l	lb_53ce8	;52450   AD
+	dc.l	lb_53d0a	;52454   AE
+	dc.l	lb_53f86	;52458   AF
+	dc.l	lb_53fb0	;5245c   B0
+	dc.l	lb_53d0a	;52460   B1
+	dc.l	lb_53fda	;52464   B2
+	dc.l	lb_53fec	;52468   B3
+	dc.l	lb_53ffe	;5246c   B4
+	dc.l	lb_54020	;52470   B5
+	dc.l	lb_54042	;52474   B6
+	dc.l	lb_54054	;52478   B7
+	dc.l	lb_5407e	;5247c   B8
+	dc.l	lb_540a0	;52480   B9
+	dc.l	lb_540ca	;52484   BA
+	dc.l	lb_53ce8	;52488   BB
+	dc.l	lb_53d0a	;5248c   BC
+	dc.l	lb_53cc6	;52490   BD
+	dc.l	lb_540fc	;52494   BE
+	dc.l	lb_53cc6	;52498   BF
+	dc.l	lb_5412e	;5249c   C0
+	dc.l	lb_54150	;524a0   C1
+	dc.l	lb_54150	;524a4   C2
+	dc.l	lb_54182	;524a8   C3
+	dc.l	lb_541a4	;524ac   C4
+	dc.l	lb_541c6	;524b0   C5
+	dc.l	lb_541f0	;524b4   C6
+	dc.l	lb_540ca	;524b8   C7
+	dc.l	lb_54202	;524bc   C8
+	dc.l	lb_540fc	;524c0   C9
+	dc.l	lb_54234	;524c4   CA
+	dc.l	lb_54246	;524c8   CB
+	dc.l	lb_54258	;524cc   CC
+	dc.l	lb_5426a	;524d0   CD
+	dc.l	lb_54234	;524d4   CE 338: ninja walking
+	dc.l	lb_54246	;524d8   CF
+	dc.l	lb_54258	;524dc   D0
+	dc.l	lb_5426a	;524e0   D1
+	dc.l	lb_54202	;524e4   D2
+	dc.l	lb_541f0	;524e8   D3
+	dc.l	lb_5427c	;524ec   D4
+	dc.l	lb_53d24	;524f0   D5
+	dc.l	lb_53d46	;524f4   D6
+	dc.l	lb_53d70	;524f8   D7
+	dc.l	lb_53da2	;524fc   D8
+	dc.l	lb_54150	;52500   D9
+	dc.l	lb_53cc6	;52504   DA
+	dc.l	lb_53ce8	;52508   DB
+	dc.l	lb_53d0a	;5250c   DC
+	dc.l	lb_5428e	;52510   DD
+	dc.l	lb_54150	;52514   DE
+	dc.l	lb_542b8	;52518   DF
+	dc.l	lb_542b8	;5251c   E0
+	dc.l	lb_542ca	;52520   E1
+	dc.l	lb_542ec	;52524   E2
+	dc.l	lb_542fe	;52528   E3
+	dc.l	lb_54310	;5252c   E4
+	dc.l	lb_54322	;52530   E5
+	dc.l	lb_54334	;52534   E6
+	dc.l	lb_54346	;52538   E7
+	dc.l	lb_54358	;5253c   E8
+	dc.l	lb_5436a	;52540   E9
+	dc.l	lb_5437c	;52544   EA
+	dc.l	lb_5438e	;52548   EB
+	dc.l	lb_543a0	;5254c   EC
+	dc.l	lb_543ba	;52550   ED
+	dc.l	lb_543dc	;52554   EE
+	dc.l	lb_543ba	;52558   EF
+	dc.l	lb_543fe	;5255c   F0
+	dc.l	lb_543fe	;52560   F1
+	dc.l	lb_54430	;52564   F2
+	dc.l	lb_5730e	;52568   F3
+	dc.l	lb_57b1e	;5256c   F4
+	dc.l	lb_544c0	;52570   F5
+	dc.l	lb_544d2	;52574   F6
+	dc.l	lb_544e4	;52578   F7
+	dc.l	lb_544f6	;5257c   F8
+	dc.l	lb_57b1e	;52580   F9
+	dc.l	lb_54518	;52584   FA
+	dc.l	lb_5452a	;52588   FB
+	dc.l	lb_5454c	;5258c   FC
+	dc.l	lb_5456e	;52590   FD
+	dc.l	lb_545b0	;52594   FE
+	dc.l	lb_54614	;52598   FF
+	dc.l	lb_54626	;5259c   100
+	dc.l	lb_54638	;525a0   101
+	dc.l	lb_54662	;525a4   102
+	dc.l	lb_54662	;525a8   103
+	dc.l	lb_5468c	;525ac   104
+	dc.l	lb_546b6	;525b0   105
+	dc.l	lb_546e0	;525b4   106
+	dc.l	lb_5470a	;525b8   107
+	dc.l	lb_54734	;525bc   108
+	dc.l	lb_54734	;525c0   109
+	dc.l	lb_54734	;525c4   10A
+	dc.l	lb_54734	;525c8   10B
+	dc.l	lb_54662	;525cc   10C
+	dc.l	lb_54766	;525d0   10D
+	dc.l	lb_547a8	;525d4   10E
+	dc.l	lb_54662	;525d8   10F
+	dc.l	lb_54734	;525dc   110
+	dc.l	lb_547d2	;525e0   111
+	dc.l	lb_54662	;525e4   112
+	dc.l	lb_54662	;525e8   113
+	dc.l	lb_547fc	;525ec   114
+	dc.l	lb_547fc	;525f0   115
+	dc.l	lb_5482e	;525f4   116
+	dc.l	lb_54870	;525f8   117
+	dc.l	lb_547fc	;525fc   118
+	dc.l	lb_548aa	;52600   119
+	dc.l	lb_548aa	;52604   11A
+	dc.l	lb_548aa	;52608   11B
+	dc.l	lb_548aa	;5260c   11C
+	dc.l	lb_548d4	;52610   11D
+	dc.l	lb_548d4	;52614   11E
+	dc.l	lb_548d4	;52618   11F
+	dc.l	lb_548d4	;5261c   120
+	dc.l	lb_548fe	;52620   121
+	dc.l	lb_54930	;52624   122
+	dc.l	lb_57b1e	;52628   123
+	dc.l	lb_54518	;5262c   124
+	dc.l	lb_5452a	;52630   125
+	dc.l	lb_5454c	;52634   126
+	dc.l	lb_54952	;52638   127
+	dc.l	lb_54984	;5263c   128
+	dc.l	lb_54614	;52640   129
+	dc.l	lb_54626	;52644   12A
+	dc.l	lb_54638	;52648   12B
+	dc.l	lb_549b6	;5264c   12C
+	dc.l	lb_54cf2	;52650   12D
+	dc.l	lb_54d04	;52654   12E
+	dc.l	lb_54d16	;52658   12F
+	dc.l	lb_54d28	;5265c   130
+	dc.l	lb_549b6	;52660   131
+	dc.l	lb_54a10	;52664   132
+	dc.l	lb_54a32	;52668   133
+	dc.l	lb_549b6	;5266c   134
+	dc.l	lb_54a5c	;52670   135
+	dc.l	lb_54a8e	;52674   136
+	dc.l	lb_54ab0	;52678   137
+	dc.l	lb_54aca	;5267c   138
+	dc.l	lb_54aec	;52680   139
+	dc.l	lb_54b1e	;52684   13A
+	dc.l	lb_54b50	;52688   13B
+	dc.l	lb_54b82	;5268c   13C
+	dc.l	lb_54b94	;52690   13D
+	dc.l	lb_54bbe	;52694   13E
+	dc.l	lb_549b6	;52698   13F
 	dc.l	lb_54be0	;5269c
 	dc.l	lb_54bf2	;526a0
 	dc.l	lb_54c0c	;526a4
@@ -83354,7 +83354,7 @@ sprite_data_base_5219c:
 	dc.l	lb_55e3c	;528a4
 	dc.l	lb_55e5e	;528a8
 	dc.l	lb_55e80	;528ac
-	dc.l	lb_55eb2	;528b0
+	dc.l	lb_55eb2	;528b0  ninja level 2 boss
 	dc.l	lb_55eec	;528b4
 	dc.l	lb_55eec	;528b8
 	dc.l	lb_55eec	;528bc
@@ -83731,9 +83731,9 @@ sprite_data_base_5219c:
 	dc.l	lb_57354	;52e88
 	dc.l	lb_5735e	;52e8c
 	dc.l	lb_57368	;52e90
-	dc.l	lb_57372	;52e94
+	dc.l	hit_by_player_57372	;52e94	hit by player
 	dc.l	lb_5737c	;52e98
-	dc.l	lb_57386	;52e9c
+	dc.l	hit_by_enemy_57386	;52e9c  hit by enemy
 	dc.l	lb_574be	;52ea0
 	dc.l	lb_574d0	;52ea4
 	dc.l	lb_57390	;52ea8
@@ -92942,7 +92942,7 @@ lb_57368:
 	dc.w	$0bb4	;5736c
 	dc.w	$00f8	;5736e
 	dc.w	$0000	;57370
-lb_57372:
+hit_by_player_57372:
 	dc.w	$0801	;57372
 	dc.w	$80f8	;57374
 	dc.w	$0bb5	;57376
@@ -92954,7 +92954,7 @@ lb_5737c:
 	dc.w	$0bb6	;57380
 	dc.w	$00f8	;57382
 	dc.w	$0000	;57384
-lb_57386:
+hit_by_enemy_57386:
 	dc.w	$0801	;57386
 	dc.w	$80f8	;57388
 	dc.w	$0bb7	;5738a
