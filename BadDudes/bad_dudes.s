@@ -99,36 +99,36 @@
 ;
 ; layer #0 (used for OSD and some foreground objects (lamps))
 ;
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
+;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
 ;
 ; layer #1 (used in title, intro screen, highscore, level 1)
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ; layer #2 (used for background in sewer level 3 level, layer #1 is used for running water)
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_FUNC(deco_bac06_device::pf_data_r), LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -151,6 +151,8 @@ UNKNOWN_66_SND = 66
 UNKNOWN_23_SND = 23
 UNKNOWN_47_SND = 47
 UNKNOWN_94_SND = 94
+TUNE1_96_SND = 96
+TUNE2_97_SND = 97
 TYPING_SND = 105
 
 ext_00240000	EQU	$240000
@@ -263,7 +265,7 @@ mcu_reply_0030c008	EQU	$30C008		; during game, loops $700-$70F each frame
 sound_0030c010	EQU	$30C010
 sprite_dma_0030c012	EQU	$30C012
 ext_0030c014	EQU	$30C014
-ext_0030c015	EQU	$30C015
+sound_0030c015	EQU	$30C015
 ext_0030c016	EQU	$30C016
 irq_ack_0030c018	EQU	$30C018
 ext_0030c01e	EQU	$30C01E
@@ -630,19 +632,49 @@ spriteram_end_00ffc7f8  EQU	$FFC7F8
  	
 
  	IFD	REAL_EXE
-LEAW:MACRO
-	lea		\1,\2
+LEAW_NOP:MACRO
+	NOP
+	NOP
+	NOP
+	ENDM
+JMPW_NOP:MACRO
+	NOP
+	NOP
+	NOP
 	ENDM
 JMPW:MACRO
-	jmp		\1
+	NOP
+	NOP
+	ENDM
+LEAW:MACRO
+	NOP
+	NOP
 	ENDM
 JSRW:MACRO
-	jsr		\1
+	NOP
+	NOP
+	ENDM
+JSRW_NOP:MACRO
+	NOP
+	NOP
+	NOP
 	ENDM
 	ELSE
 	ORG	$0
 LEAW:MACRO
 	lea		\1.W,\2
+	ENDM
+LEAW_NOP:MACRO
+	lea		\1.W,\2
+	NOP
+	ENDM
+JMPW_NOP:MACRO
+	jmp		\1.W
+	nop
+	ENDM
+JSRW_NOP:MACRO
+	jsr		\1.W
+	NOP
 	ENDM
 JMPW:MACRO
 	jmp		\1.W
@@ -650,8 +682,7 @@ JMPW:MACRO
 JSRW:MACRO
 	jsr		\1.W
 	ENDM
-	ELSE
-	ORG	$0
+
     ENDC
 
 lb_00000:
@@ -723,14 +754,13 @@ lb_00004:
 spurious_interrupt_00100:
 	RTE				;00100: 4e73
 bus_error_00102:
-	JMP	lb_0031e.W		;00102: 4ef8031e
+	JMPW	lb_0031e	;00102: 4ef8031e
 lb_00106:
 	NOP				;00106: 4e71
 	STOP	#$2700			;00108: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;0010c: 48e7ffff
 	MOVEQ	#0,D0			;00110: 7000
-	JSR	lb_01f78.W		;00112: 4eb81f78
-	NOP				;00116: 4e71
+	JSRW_NOP	lb_01f78		;00112: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00118: 4cdfffff
 lb_0011c:
 	STOP	#$2700			;0011c: 4e722700
@@ -739,52 +769,45 @@ lb_00120:
 	BRA.W	loop_forever_0031c		;00124: 600001f6
 	RTE				;00128: 4e73
 address_error_0012a:
-	JMP	lb_0031e.W		;0012a: 4ef8031e
-	NOP				;0012e: 4e71
+	JMPW_NOP	lb_0031e	;0012a: 4ef8031e
 	STOP	#$2700			;00130: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;00134: 48e7ffff
 	MOVEQ	#1,D0			;00138: 7001
-	JSR	lb_01f78.W		;0013a: 4eb81f78
-	NOP				;0013e: 4e71
+	JSRW_NOP	lb_01f78	;0013a: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00140: 4cdfffff
 	STOP	#$2700			;00144: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00148: 4cdfffff
 	BRA.W	loop_forever_0031c		;0014c: 600001ce
 	RTE				;00150: 4e73
 illegal_instruction_00152:
-	JMP	lb_0031e.W		;00152: 4ef8031e
-	NOP				;00156: 4e71
+	JMPW_NOP	lb_0031e	;00152: 4ef8031e
 	STOP	#$2700			;00158: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;0015c: 48e7ffff
 	MOVEQ	#2,D0			;00160: 7002
-	JSR	lb_01f78.W		;00162: 4eb81f78
-	NOP				;00166: 4e71
+	JSRW_NOP	lb_01f78	;00162: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00168: 4cdfffff
 	STOP	#$2700			;0016c: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00170: 4cdfffff
 	BRA.W	loop_forever_0031c		;00174: 600001a6
 	RTE				;00178: 4e73
 division_by_zero_0017a:
-	JMP	lb_0031e.W		;0017a: 4ef8031e
-	NOP				;0017e: 4e71
+	JMPW_NOP	lb_0031e	;0017a: 4ef8031e
 	STOP	#$2700			;00180: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;00184: 48e7ffff
 	MOVEQ	#3,D0			;00188: 7003
-	JSR	lb_01f78.W		;0018a: 4eb81f78
-	NOP				;0018e: 4e71
+	JSRW_NOP	lb_01f78	;0018a: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00190: 4cdfffff
 	STOP	#$2700			;00194: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00198: 4cdfffff
 	BRA.W	loop_forever_0031c		;0019c: 6000017e
 	RTE				;001a0: 4e73
 chk_001a2:
-	JMP	lb_0031e.W		;001a2: 4ef8031e
-	NOP				;001a6: 4e71
+	JMPW_NOP	lb_0031e	;001a2: 4ef8031e
 lb_001a8:
 	STOP	#$2700			;001a8: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;001ac: 48e7ffff
 	MOVEQ	#4,D0			;001b0: 7004
-	JSR	lb_01f78.W		;001b2: 4eb81f78
+	JSRW	lb_01f78	;001b2: 4eb81f78
 lb_001b6:
 	NOP				;001b6: 4e71
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;001b8: 4cdfffff
@@ -793,53 +816,45 @@ lb_001b6:
 	BRA.W	loop_forever_0031c		;001c4: 60000156
 	RTE				;001c8: 4e73
 trapv_001ca:
-	JMP	lb_0031e.W		;001ca: 4ef8031e
-	NOP				;001ce: 4e71
+	JMPW_NOP	lb_0031e	;001ca: 4ef8031e
 	STOP	#$2700			;001d0: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;001d4: 48e7ffff
 	MOVEQ	#5,D0			;001d8: 7005
-	JSR	lb_01f78.W		;001da: 4eb81f78
-	NOP				;001de: 4e71
+	JSRW_NOP	lb_01f78	;001da: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;001e0: 4cdfffff
 	STOP	#$2700			;001e4: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;001e8: 4cdfffff
 	BRA.W	loop_forever_0031c		;001ec: 6000012e
 	RTE				;001f0: 4e73
 privileged_001f2:
-	JMP	lb_0031e.W		;001f2: 4ef8031e
-	NOP				;001f6: 4e71
+	JMPW_NOP	lb_0031e	;001f2: 4ef8031e
 	STOP	#$2700			;001f8: 4e722700
 lb_001fc:
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;001fc: 48e7ffff
 	MOVEQ	#6,D0			;00200: 7006
-	JSR	lb_01f78.W		;00202: 4eb81f78
-	NOP				;00206: 4e71
+	JSRW_NOP	lb_01f78	;00202: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00208: 4cdfffff
 	STOP	#$2700			;0020c: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00210: 4cdfffff
 	BRA.W	loop_forever_0031c		;00214: 60000106
 	RTE				;00218: 4e73
 trace_0021a:
-	JMP	lb_0031e.W		;0021a: 4ef8031e
-	NOP				;0021e: 4e71
+	JMPW_NOP	lb_0031e	;0021a: 4ef8031e
 	STOP	#$2700			;00220: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;00224: 48e7ffff
 	MOVEQ	#7,D0			;00228: 7007
-	JSR	lb_01f78.W		;0022a: 4eb81f78
-	NOP				;0022e: 4e71
+	JSRW_NOP	lb_01f78	;0022a: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00230: 4cdfffff
 	STOP	#$2700			;00234: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00238: 4cdfffff
 	BRA.W	loop_forever_0031c		;0023c: 600000de
 	RTE				;00240: 4e73
 linea_00242:
-	JMP	lb_0031e.W		;00242: 4ef8031e
-	NOP				;00246: 4e71
+	JMPW_NOP	lb_0031e	;00242: 4ef8031e
 	STOP	#$2700			;00248: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;0024c: 48e7ffff
 	MOVEQ	#8,D0			;00250: 7008
-	JSR	lb_01f78.W		;00252: 4eb81f78
-	NOP				;00256: 4e71
+	JSRW_NOP	lb_01f78	;00252: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00258: 4cdfffff
 	STOP	#$2700			;0025c: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00260: 4cdfffff
@@ -847,14 +862,12 @@ linea_00242:
 lb_00268:
 	RTE				;00268: 4e73
 linef_0026a:
-	JMP	lb_0031e.W		;0026a: 4ef8031e
-	NOP				;0026e: 4e71
+	JMPW_NOP	lb_0031e	;0026a: 4ef8031e
 	STOP	#$2700			;00270: 4e722700
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;00274: 48e7ffff
 	MOVEQ	#9,D0			;00278: 7009
 lb_0027a:
-	JSR	lb_01f78.W		;0027a: 4eb81f78
-	NOP				;0027e: 4e71
+	JSRW_NOP	lb_01f78	;0027a: 4eb81f78
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00280: 4cdfffff
 	STOP	#$2700			;00284: 4e722700
 	MOVEM.L	(A7)+,D0-D7/A0-A7	;00288: 4cdfffff
@@ -863,30 +876,25 @@ lb_0027a:
 	MOVE.W	12(A7),ram_ff8000		;00292: 33ef000c00ff8000
 	MOVE.L	14(A7),ext_00ff8002		;0029a: 23ef000e00ff8002
 	RTS				;002a2: 4e75
-	JSR	lb_01f78.W		;002a4: 4eb81f78
-	NOP				;002a8: 4e71
+	JSRW_NOP	lb_01f78	;002a4: 4eb81f78
 	LEA	ram_ff8000,A0		;002aa: 41f900ff8000
 lb_002b0:
 	LEA	ext_00ff8006,A1		;002b0: 43f900ff8006
 	MOVEQ	#5,D4			;002b6: 7805
-	JSR	lb_002ec.W		;002b8: 4eb802ec
-	NOP				;002bc: 4e71
+	JSRW_NOP	lb_002ec	;002b8: 4eb802ec
 	MOVEQ	#4,D0			;002be: 7004
 	LSL.L	#8,D0			;002c0: e188
 	LEA	ext_00ff8006,A0		;002c2: 41f900ff8006
 	LEA	ext_002446a0,A1		;002c8: 43f9002446a0
-	JSR	write_tiles_of_given_color_01fc4.W		;002ce: 4eb81fc4
-	NOP				;002d2: 4e71
+	JSRW_NOP	write_tiles_of_given_color_01fc4	;002ce: 4eb81fc4
 	MOVEQ	#8,D0			;002d4: 7008
 	LSL.L	#8,D0			;002d6: e188
 	LEA	ext_00ff800a,A0		;002d8: 41f900ff800a
 	LEA	ext_002446ac,A1		;002de: 43f9002446ac
-	JSR	write_tiles_of_given_color_01fc4.W		;002e4: 4eb81fc4
-	NOP				;002e8: 4e71
+	JSRW_NOP	write_tiles_of_given_color_01fc4	;002e4: 4eb81fc4
 	RTS				;002ea: 4e75
 lb_002ec:
-	LEA	hex_table_0030c.W,A5		;002ec: 4bf8030c
-	NOP				;002f0: 4e71
+	LEAW_NOP	hex_table_0030c,A5	;002ec: 4bf8030c
 	MOVEQ	#0,D3			;002f2: 7600
 	MOVE.B	(A0),D3			;002f4: 1610
 	LSR.W	#4,D3			;002f6: e84b
@@ -901,11 +909,9 @@ hex_table_0030c:
 loop_forever_0031c:
 	BRA.S	loop_forever_0031c		;0031c: 60fe
 lb_0031e:
-	JSR	lb_0032a.W		;0031e: 4eb8032a
-	NOP				;00322: 4e71
+	JSRW_NOP	lb_0032a	;0031e: 4eb8032a
 	; unreached
-	JMP	lb_01a70.W		;00324: 4ef81a70
-	NOP				;00328: 4e71
+	JMPW_NOP	lb_01a70	;00324: 4ef81a70
 lb_0032a:
 	MOVEQ	#0,D0			;0032a: 7000
 	MOVE.B	D0,ext_00ffa846		;0032c: 13c000ffa846
@@ -917,11 +923,9 @@ lb_0034e:
 	MOVE.L	D0,ext_00ff81cc		;0034e: 23c000ff81cc
 	MOVE.L	D0,ext_00ff81d0		;00354: 23c000ff81d0
 	LEA	ext_00ffa364,A0		;0035a: 41f900ffa364
-	JSR	lb_01efa.W		;00360: 4eb81efa
-	NOP				;00364: 4e71
+	JSRW_NOP	lb_01efa	;00360: 4eb81efa
 	LEA	ext_00ffa224,A0		;00366: 41f900ffa224
-	JSR	lb_01efa.W		;0036c: 4eb81efa
-	NOP				;00370: 4e71
+	JSRW_NOP	lb_01efa	;0036c: 4eb81efa
 	MOVE.W	D0,irq_ack_0030c018		;00372: 33c00030c018
 	MOVE.W	mcu_reply_0030c008,D0		;00378: 30390030c008
 	MOVE	#$2300,SR		;0037e: 46fc2300
@@ -932,8 +936,7 @@ periodic_level_6_irq_00384:
 	BEQ.W	lb_0039a		;00390: 67000008
 	MOVE.W	D0,sprite_dma_0030c012		;00394: 33c00030c012
 lb_0039a:
-	JSR	lb_06196.W		;0039a: 4eb86196
-	NOP				;0039e: 4e71
+	JSRW_NOP	lb_06196	;0039a: 4eb86196
 	BSR.W	lb_0074a		;003a0: 610003a8
 	NOP				;003a4: 4e71
 	NOP				;003a6: 4e71
@@ -966,8 +969,7 @@ lb_00402:
 	RTS				;00402: 4e75
 wait_and_process_inputs_00404:
 	BSR.S	wait_for_sync_003f0		;00404: 61ea
-	JSR	process_inputs_0059c.W		;00406: 4eb8059c
-	NOP				;0040a: 4e71
+	JSRW_NOP	process_inputs_0059c	;00406: 4eb8059c
 	RTS				;0040c: 4e75
 lb_0040e:
 	MOVE.W	system_inputs_0030c002,D0		;0040e: 30390030c002
@@ -1057,8 +1059,7 @@ lb_00536:
 	BNE.W	lb_00546		;00540: 66000004
 	RTS				;00544: 4e75
 lb_00546:
-	JMP	lb_01a70.W		;00546: 4ef81a70
-	NOP				;0054a: 4e71
+	JMPW_NOP	lb_01a70	;00546: 4ef81a70
 lb_0054c:
 	MOVEM.L	D0-D3,-(A7)		;0054c: 48e7f000
 	MOVEQ	#1,D2			;00550: 7401
@@ -1160,8 +1161,7 @@ lb_006ac:
 	ANDI.B	#$0f,D0			;006b2: 0200000f
 	MOVEQ	#0,D1			;006b6: 7200
 	MOVE.B	D0,D1			;006b8: 1200
-	LEA	lb_00738+2.W,A0		;006ba: 41f8073a
-	NOP				;006be: 4e71
+	LEAW_NOP	lb_00738+2,A0	;006ba: 41f8073a
 	ADDA.L	D1,A0			;006c0: d1c1
 	MOVE.B	(A0),D2			;006c2: 1410
 	LSL.W	#4,D2			;006c4: e94a
@@ -1169,8 +1169,7 @@ lb_006ac:
 	ANDI.B	#$0f,D0			;006cc: 0200000f
 	MOVEQ	#0,D1			;006d0: 7200
 	MOVE.B	D0,D1			;006d2: 1200
-	LEA	lb_00738+2.W,A0		;006d4: 41f8073a
-	NOP				;006d8: 4e71
+	LEAW_NOP	lb_00738+2,A0	;006d4: 41f8073a
 	ADDA.L	D1,A0			;006da: d1c1
 	MOVE.B	(A0),D1			;006dc: 1210
 	ADD.B	D1,D2			;006de: d401
@@ -1230,8 +1229,7 @@ lb_0074a:
 lb_0075e:
 	LSL.W	#2,D0			;0075e: e548
 lb_00760:
-	LEA	lb_00788.W,A0		;00760: 41f80788
-	NOP				;00764: 4e71
+	LEAW_NOP	lb_00788,A0	;00760: 41f80788
 	ADDA.L	D0,A0			;00766: d1c0
 	MOVEA.L	(A0),A0			;00768: 2050
 	JSR	(A0)			;0076a: 4e90
@@ -1239,8 +1237,7 @@ lb_0076c:
 	MOVE.W	#$0000,ext_00ff8170		;0076c: 33fc000000ff8170
 	BCLR	#7,ext_00ffa8e0		;00774: 08b9000700ffa8e0
 	BEQ.W	lb_00786		;0077c: 67000008
-	JSR	lb_00eb2.W		;00780: 4eb80eb2
-	NOP				;00784: 4e71
+	JSRW_NOP	lb_00eb2	;00780: 4eb80eb2
 lb_00786:
 	RTS				;00786: 4e75
 lb_00788:
@@ -1655,8 +1652,7 @@ lb_00eb2:
 	MOVE.W	ext_00ffa8e0,D2		;00eb2: 343900ffa8e0
 	ANDI.L	#$0000ffff,D2		;00eb8: 02820000ffff
 	LSL.W	#2,D2			;00ebe: e54a
-	LEA	lb_00ece.W,A3		;00ec0: 47f80ece
-	NOP				;00ec4: 4e71
+	LEAW_NOP	lb_00ece,A3	;00ec0: 47f80ece
 	ADDA.L	D2,A3			;00ec6: d7c2
 	MOVEA.L	(A3),A3			;00ec8: 2653
 	JSR	(A3)			;00eca: 4e93	initialize boss
@@ -1749,99 +1745,83 @@ lb_01002:
 	BSR.W	copy_to_palette_007be		;01026: 6100f796
 	RTS				;0102a: 4e75
 lb_0102c:
-	LEA	lb_0117c.W,A1		;0102c: 43f8117c
-	NOP				;01030: 4e71
+	LEAW_NOP	lb_0117c,A1	;0102c: 43f8117c
 	LEA	ext_003103e0,A0		;01032: 41f9003103e0
 	MOVE.W	#$0000,D0		;01038: 303c0000
 	BSR.W	copy_to_palette_007be		;0103c: 6100f780
-	LEA	lb_0119c.W,A1		;01040: 43f8119c
-	NOP				;01044: 4e71
+	LEAW_NOP	lb_0119c,A1	;01040: 43f8119c
 	LEA	ext_003143e0,A0		;01046: 41f9003143e0
 	MOVE.W	#$0000,D0		;0104c: 303c0000
 	BSR.W	copy_to_palette_007be		;01050: 6100f76c
 	RTS				;01054: 4e75
 lb_01056:
-	LEA	lb_011bc.W,A1		;01056: 43f811bc
-	NOP				;0105a: 4e71
+	LEAW_NOP	lb_011bc,A1	;01056: 43f811bc
 	LEA	ext_003103e0,A0		;0105c: 41f9003103e0
 	MOVE.W	#$0000,D0		;01062: 303c0000
 	BSR.W	copy_to_palette_007be		;01066: 6100f756
-	LEA	lb_011dc.W,A1		;0106a: 43f811dc
-	NOP				;0106e: 4e71
+	LEAW_NOP	lb_011dc,A1	;0106a: 43f811dc
 	LEA	ext_003143e0,A0		;01070: 41f9003143e0
 	MOVE.W	#$0000,D0		;01076: 303c0000
 	BSR.W	copy_to_palette_007be		;0107a: 6100f742
 	RTS				;0107e: 4e75
 lb_01080:
-	LEA	lb_011fc.W,A1		;01080: 43f811fc
-	NOP				;01084: 4e71
+	LEAW_NOP	lb_011fc,A1	;01080: 43f811fc
 	LEA	ext_003103e0,A0		;01086: 41f9003103e0
 	MOVE.W	#$0000,D0		;0108c: 303c0000
 	BSR.W	copy_to_palette_007be		;01090: 6100f72c
-	LEA	lb_0121c.W,A1		;01094: 43f8121c
-	NOP				;01098: 4e71
+	LEAW_NOP	lb_0121c,A1	;01094: 43f8121c
 	LEA	ext_003143e0,A0		;0109a: 41f9003143e0
 	MOVE.W	#$0000,D0		;010a0: 303c0000
 	BSR.W	copy_to_palette_007be		;010a4: 6100f718
 	RTS				;010a8: 4e75
 lb_010aa:
-	LEA	lb_0123c.W,A1		;010aa: 43f8123c
-	NOP				;010ae: 4e71
+	LEAW_NOP	lb_0123c,A1	;010aa: 43f8123c
 	LEA	ext_003103e0,A0		;010b0: 41f9003103e0
 	MOVE.W	#$0000,D0		;010b6: 303c0000
 	BSR.W	copy_to_palette_007be		;010ba: 6100f702
-	LEA	lb_01258+4.W,A1		;010be: 43f8125c
-	NOP				;010c2: 4e71
+	LEAW_NOP	lb_01258+4,A1	;010be: 43f8125c
 	LEA	ext_003143e0,A0		;010c4: 41f9003143e0
 	MOVE.W	#$0000,D0		;010ca: 303c0000
 	BSR.W	copy_to_palette_007be		;010ce: 6100f6ee
 	RTS				;010d2: 4e75
 lb_010d4:
-	LEA	lb_0127c.W,A1		;010d4: 43f8127c
-	NOP				;010d8: 4e71
+	LEAW_NOP	lb_0127c,A1	;010d4: 43f8127c
 	LEA	ext_003103e0,A0		;010da: 41f9003103e0
 	MOVE.W	#$0000,D0		;010e0: 303c0000
 	BSR.W	copy_to_palette_007be		;010e4: 6100f6d8
-	LEA	lb_0129a+2.W,A1		;010e8: 43f8129c
-	NOP				;010ec: 4e71
+	LEAW_NOP	lb_0129a+2,A1	;010e8: 43f8129c
 	LEA	ext_003143e0,A0		;010ee: 41f9003143e0
 	MOVE.W	#$0000,D0		;010f4: 303c0000
 	BSR.W	copy_to_palette_007be		;010f8: 6100f6c4
 	RTS				;010fc: 4e75
 lb_010fe:
-	LEA	lb_012ba+2.W,A1		;010fe: 43f812bc
-	NOP				;01102: 4e71
+	LEAW_NOP	lb_012ba+2,A1	;010fe: 43f812bc
 	LEA	ext_00310320,A0		;01104: 41f900310320
 	MOVE.W	#$0000,D0		;0110a: 303c0000
 	BSR.W	copy_to_palette_007be		;0110e: 6100f6ae
-	LEA	lb_012da+2.W,A1		;01112: 43f812dc
-	NOP				;01116: 4e71
+	LEAW_NOP	lb_012da+2,A1	;01112: 43f812dc
 	LEA	ext_00314320,A0		;01118: 41f900314320
 	MOVE.W	#$0000,D0		;0111e: 303c0000
 	BSR.W	copy_to_palette_007be		;01122: 6100f69a
 	RTS				;01126: 4e75
 lb_01128:
-	LEA	lb_012fc.W,A1		;01128: 43f812fc
-	NOP				;0112c: 4e71
+	LEAW_NOP	lb_012fc,A1	;01128: 43f812fc
 	LEA	ext_003103c0,A0		;0112e: 41f9003103c0
 	MOVE.W	#$0000,D0		;01134: 303c0000
 	BSR.W	copy_to_palette_007be		;01138: 6100f684
-	LEA	lb_0131c.W,A1		;0113c: 43f8131c
-	NOP				;01140: 4e71
+	LEAW_NOP	lb_0131c,A1	;0113c: 43f8131c
 lb_01142:
 	LEA	ext_003143c0,A0		;01142: 41f9003143c0
 	MOVE.W	#$0000,D0		;01148: 303c0000
 	BSR.W	copy_to_palette_007be		;0114c: 6100f670
 	RTS				;01150: 4e75
 lb_01152:
-	LEA	lb_01338+4.W,A1		;01152: 43f8133c
-	NOP				;01156: 4e71
+	LEAW_NOP	lb_01338+4,A1	;01152: 43f8133c
 lb_01158:
 	LEA	ext_003103c0,A0		;01158: 41f9003103c0
 	MOVE.W	#$0000,D0		;0115e: 303c0000
 	BSR.W	copy_to_palette_007be		;01162: 6100f65a
-	LEA	lb_0135c.W,A1		;01166: 43f8135c
-	NOP				;0116a: 4e71
+	LEAW_NOP	lb_0135c,A1	;01166: 43f8135c
 	LEA	ext_003143c0,A0		;0116c: 41f9003143c0
 lb_01172:
 	MOVE.W	#$0000,D0		;01172: 303c0000
@@ -2148,13 +2128,13 @@ lb_013d4:
 start_013dc:
 	; RAM test
 	MOVE.W	#$0003,ext_0030c01e		;013dc: 33fc00030030c01e
-	LEA	start_013dc.W,A0		;013e4: 41f813dc
+	LEAW	start_013dc,A0	;013e4: 41f813dc
 	LEA	ram_ff8000,A2		;013e8: 45f900ff8000
 	MOVE.W	#$1000,D0		;013ee: 303c1000
 lb_013f2:
 	MOVE.L	(A0)+,(A2)+		;013f2: 24d8
 	DBF	D0,lb_013f2		;013f4: 51c8fffc
-	LEA	start_013dc.W,A0		;013f8: 41f813dc
+	LEAW	start_013dc,A0	;013f8: 41f813dc
 	LEA	ram_ff8000,A2		;013fc: 45f900ff8000
 	MOVE.W	#$1000,D0		;01402: 303c1000
 lb_01406:
@@ -2188,21 +2168,18 @@ lb_01454:
 lb_0146a:
 	MOVE.L	(A2)+,(A0)+		;0146a: 20da
 	DBF	D0,lb_0146a		;0146c: 51c8fffc
-	JSR	check_if_service_mode_14ee.W		;01470: 4eb814ee
-	NOP				;01474: 4e71
+	JSRW_NOP	check_if_service_mode_14ee	;01470: 4eb814ee
 	MOVE.W	mcu_reply_0030c008,D0		;01476: 30390030c008
 	MOVE.W	D0,irq_ack_0030c018		;0147c: 33c00030c018
 	; enables interrupts, now main IRQ (level 6) can work
 	MOVE	#$2300,SR		;01482: 46fc2300
 	MOVE.W	#$0000,ext_0030c01e		;01486: 33fc00000030c01e
-	JMP	lb_019a6.W		;0148e: 4ef819a6
-	NOP				;01492: 4e71
+	JMPW_NOP	lb_019a6	;0148e: 4ef819a6
 bad_ram_01494:
-	JMP	bad_ram_01494.W		;01494: 4ef81494
+	JMPW	bad_ram_01494	;01494: 4ef81494
 lb_01498:
 	LEA	ext_00ff810c,A0		;01498: 41f900ff810c
-	LEA	lb_014b2.W,A1		;0149e: 43f814b2
-	NOP				;014a2: 4e71
+	LEAW_NOP	lb_014b2,A1	;0149e: 43f814b2
 	MOVEQ	#29,D0			;014a4: 701d
 lb_014a6:
 	MOVE.W	(A1)+,(A0)+		;014a6: 30d9
@@ -2243,8 +2220,7 @@ lb_014b2:
 check_if_service_mode_14ee:
 	BTST	#4,dsw_0030c005		;014ee: 083900040030c005
 	BNE.W	lb_01500		;014f6: 66000008
-	JMP	service_mode_1502.W		;014fa: 4ef81502
-	NOP				;014fe: 4e71
+	JMPW_NOP	service_mode_1502	;014fa: 4ef81502
 lb_01500:
 	RTS				;01500: 4e75
 service_mode_1502:
@@ -2278,16 +2254,14 @@ lb_01568:
 	CLR.L	(A0)+			;01568: 4298
 	CMPA.L	#$0024d200,A0		;0156a: b1fc0024d200
 	BNE.S	lb_01568		;01570: 66f6
-	LEA	lb_01820.W,A1		;01572: 43f81820
-	NOP				;01576: 4e71
+	LEAW_NOP	lb_01820,A1	;01572: 43f81820
 	MOVEQ	#0,D7			;01578: 7e00
 	BSR.W	lb_0174c		;0157a: 610001d0
 	MOVE.B	system_inputs_0030c003,D0		;0157e: 10390030c003
 	ANDI.B	#$0c,D0			;01584: 0200000c
 	CMPI.B	#$0c,D0			;01588: 0c00000c
 	BEQ.W	lb_01678		;0158c: 670000ea
-	LEA	lb_0189e.W,A0		;01590: 41f8189e
-	NOP				;01594: 4e71
+	LEAW_NOP	lb_0189e,A0	;01590: 41f8189e
 lb_01596:
 	MOVEA.L	(A0)+,A2		;01596: 2458
 	CMPA.L	#$00000000,A2		;01598: b5fc00000000
@@ -2301,8 +2275,7 @@ lb_015a8:
 	BSR.W	lb_01792		;015b8: 610001d8
 	LEA	ext_002444b0,A0		;015bc: 41f9002444b0
 	BSR.W	lb_01792		;015c2: 610001ce
-	LEA	lb_018f6.W,A1		;015c6: 43f818f6
-	NOP				;015ca: 4e71
+	LEAW_NOP	lb_018f6,A1	;015c6: 43f818f6
 	BSR.W	lb_017aa		;015cc: 610001dc
 	MOVE.W	port_an0_00300000,D1		;015d0: 323900300000
 	LEA	ext_0024449e,A0		;015d6: 41f90024449e
@@ -2310,8 +2283,7 @@ lb_015a8:
 	MOVE.W	port_an1_00300008,D1		;015e0: 323900300008
 	LEA	ext_0024449c,A0		;015e6: 41f90024449c
 	BSR.W	lb_017d0		;015ec: 610001e2
-	LEA	lb_01996.W,A1		;015f0: 43f81996
-	NOP				;015f4: 4e71
+	LEAW_NOP	lb_01996,A1	;015f0: 43f81996
 	CLR.W	D0			;015f6: 4240
 	CLR.W	D2			;015f8: 4242
 	LEA	ext_00244599,A0		;015fa: 41f900244599
@@ -2339,13 +2311,20 @@ lb_01664:
 	CLR.L	(A0)+			;01664: 4298
 	CMPA.L	#$00244800,A0		;01666: b1fc00244800
 	BNE.S	lb_01664		;0166c: 66f6
+	IFD	REAL_EXE
+	; we're not supporting service mode, not now
+	ILLEGAL
+	ILLEGAL
+	ILLEGAL
+	ILLEGAL
+	ELSE
 	MOVEA.L	lb_00000.W,A7		;0166e: 2e780000
 	MOVEA.L	lb_00004.W,A0		;01672: 20780004
+	ENDC
 	JMP	(A0)			;01676: 4ed0
 lb_01678:
 	MOVEQ	#15,D7			;01678: 7e0f
-	LEA	lb_018ca.W,A0		;0167a: 41f818ca
-	NOP				;0167e: 4e71
+	LEAW_NOP	lb_018ca,A0	;0167a: 41f818ca
 lb_01680:
 	MOVEA.L	(A0)+,A2		;01680: 2458
 	CMPA.L	#$00000000,A2		;01682: b5fc00000000
@@ -2359,8 +2338,7 @@ lb_01692:
 	BSR.W	lb_01792		;016a2: 610000ee
 	LEA	ext_002441e4,A0		;016a6: 41f9002441e4
 	BSR.W	lb_01792		;016ac: 610000e4
-	LEA	lb_01946.W,A1		;016b0: 43f81946
-	NOP				;016b4: 4e71
+	LEAW_NOP	lb_01946,A1	;016b0: 43f81946
 	BSR.W	lb_017aa		;016b6: 610000f2
 	MOVE.W	port_an0_00300000,D1		;016ba: 323900300000
 	LEA	ext_00244424,A0		;016c0: 41f900244424
@@ -2368,8 +2346,7 @@ lb_01692:
 	MOVE.W	port_an1_00300008,D1		;016ca: 323900300008
 	LEA	ext_00244464,A0		;016d0: 41f900244464
 	BSR.W	lb_017d0		;016d6: 610000f8
-	LEA	lb_01996.W,A1		;016da: 43f81996
-	NOP				;016de: 4e71
+	LEAW_NOP	lb_01996,A1	;016da: 43f81996
 	CLR.W	D0			;016e0: 4240
 	CLR.W	D2			;016e2: 4242
 	LEA	ext_002444ed,A0		;016e4: 41f9002444ed
@@ -2571,12 +2548,11 @@ lb_01996:
 	dc.b	"0123456789ABCDEF"	;01995
 lb_019a6:
 	LEA	ext_00ffc000,A7		;019a6: 4ff900ffc000
-	JSR	lb_07c50.W		;019ac: 4eb87c50
-	NOP				;019b0: 4e71
+	JSRW_NOP	lb_07c50	;019ac: 4eb87c50
 lb_019b2:
 	LEA	ext_00ffc000,A7		;019b2: 4ff900ffc000
-	JSR	lb_01498.W		;019b8: 4eb81498
-	JSR	process_inputs_0059c.W		;019bc: 4eb8059c
+	JSRW	lb_01498	;019b8: 4eb81498
+	JSRW	process_inputs_0059c	;019bc: 4eb8059c
 	JSR	lb_09976		;019c0: 4eb900009976
 	MOVEQ	#0,D0			;019c6: 7000
 	MOVE.B	#$40,is_actual_game_played_00ff8215		;019c8: 13fc004000ff8215
@@ -2588,24 +2564,19 @@ lb_019b2:
 	MOVE.L	D0,ext_00ff81cc		;019ee: 23c000ff81cc
 	MOVE.L	D0,ext_00ff81d0		;019f4: 23c000ff81d0
 	LEA	ext_00ffa364,A0		;019fa: 41f900ffa364
-	JSR	lb_01efa.W		;01a00: 4eb81efa
-	NOP				;01a04: 4e71
+	JSRW_NOP	lb_01efa	;01a00: 4eb81efa
 	LEA	ext_00ffa224,A0		;01a06: 41f900ffa224
-	JSR	lb_01efa.W		;01a0c: 4eb81efa
-	NOP				;01a10: 4e71
+	JSRW_NOP	lb_01efa	;01a0c: 4eb81efa
 lb_01a12:
 	JSR	lb_0df32		;01a12: 4eb90000df32
 	MOVE.W	#$8000,ext_00ff8170		;01a18: 33fc800000ff8170
-	JSR	wait_for_sync_003f0.W		;01a20: 4eb803f0
-	JSR	clear_pretty_much_all_video_01cd8.W		;01a24: 4eb81cd8
-	NOP				;01a28: 4e71
-	JSR	lb_01e98.W		;01a2a: 4eb81e98
-	NOP				;01a2e: 4e71
+	JSRW	wait_for_sync_003f0	;01a20: 4eb803f0
+	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01a24: 4eb81cd8
+	JSRW_NOP	lb_01e98	;01a2a: 4eb81e98
 	JSR	lb_0825e		;01a30: 4eb90000825e
 	BSR.W	clear_pretty_much_all_video_01cd8		;01a36: 610002a0
 	JSR	copy_highscore_background_tiles_09582		;01a3a: 4eb900009582
-	JSR	lb_07ada.W		;01a40: 4eb87ada
-	NOP				;01a44: 4e71
+	JSRW_NOP	lb_07ada	;01a40: 4eb87ada
 	MOVE.L	#$ffffff60,ext_00ff8206	;01a46: 23fcffffff6000ff8206
 	BSET	#0,ext_00ff8202		;01a50: 08f9000000ff8202
 lb_01a58:
@@ -2620,10 +2591,10 @@ lb_01a76:
 	BSR.W	lb_01a86		;01a76: 6100000e
 	BSR.W	lb_01a96		;01a7a: 6100001a
 	BSR.W	lb_01bdc		;01a7e: 6100015c
-	JMP	lb_01a12.W		;01a82: 4ef81a12
+	JMPW	lb_01a12	;01a82: 4ef81a12
 lb_01a86:
-	JSR	lb_00588.W		;01a86: 4eb80588
-	JSR	process_inputs_0059c.W		;01a8a: 4eb8059c
+	JSRW	lb_00588	;01a86: 4eb80588
+	JSRW	process_inputs_0059c	;01a8a: 4eb8059c
 	JSR	lb_09fbc		;01a8e: 4eb900009fbc
 	RTS				;01a94: 4e75
 lb_01a96:
@@ -2640,20 +2611,16 @@ lb_01aac:
 	NOP				;01ab8: 4e71
 	NOP				;01aba: 4e71
 lb_01abc:
-	JSR	process_inputs_0059c.W		;01abc: 4eb8059c starting a new level here!
+	JSRW	process_inputs_0059c	;01abc: 4eb8059c
 	JSR	lb_09976		;01ac0: 4eb900009976
 	BCLR	#5,stage_control_flags_00ff8216		;01ac6: 08b9000500ff8216
 	MOVEQ	#0,D0			;01ace: 7000
 	JSR	play_sound_0def0		;01ad0: 4eb90000def0 stop sounds
-	JSR	clear_pretty_much_all_video_01cd8.W		;01ad6: 4eb81cd8
-	NOP				;01ada: 4e71
+	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01ad6: 4eb81cd8
 	JSR	lb_0ccb6		;01adc: 4eb90000ccb6
-	JSR	lb_06e5e.W		;01ae2: 4eb86e5e
-	NOP				;01ae6: 4e71
-	JSR	lb_01bf4.W		;01ae8: 4eb81bf4
-	NOP				;01aec: 4e71
-	JSR	lb_01f12.W		;01aee: 4eb81f12
-	NOP				;01af2: 4e71
+	JSRW_NOP	lb_06e5e	;01ae2: 4eb86e5e
+	JSRW_NOP	lb_01bf4	;01ae8: 4eb81bf4
+	JSRW_NOP	lb_01f12	;01aee: 4eb81f12
 	JSR	lb_0a164		;01af4: 4eb90000a164
 	JSR	lb_09dae		;01afa: 4eb900009dae
 	JSR	lb_0e238		;01b00: 4eb90000e238
@@ -2667,9 +2634,9 @@ lb_01abc:
 	MOVE.B	#$09,ext_00ffa8c6		;01b2a: 13fc000900ffa8c6
 	JSR	lb_0e1ee		;01b32: 4eb90000e1ee
 game_loop_01b38:
-	JSR	wait_for_sync_003f0.W		;01b38: 4eb803f0
+	JSRW	wait_for_sync_003f0	;01b38: 4eb803f0
 	JSR	lb_0e31c		;01b3c: 4eb90000e31c
-	JSR	process_inputs_0059c.W		;01b42: 4eb8059c
+	JSRW	process_inputs_0059c	;01b42: 4eb8059c
 	BSR.W	lb_01be0		;01b46: 61000098
 	NOP				;01b4a: 4e71
 	NOP				;01b4c: 4e71
@@ -2696,10 +2663,8 @@ game_loop_01b38:
 	ADDQ.B	#1,current_stage_00ff821d		;01b94: 523900ff821d goto next stage (increase level)
 	CMPI.B	#$08,current_stage_00ff821d		;01b9a: 0c39000800ff821d
 	BNE.W	lb_01abc		;01ba2: 6600ff18
-	JSR	lb_01f32.W		;01ba6: 4eb81f32
-	NOP				;01baa: 4e71
-	JSR	clear_pretty_much_all_video_01cd8.W		;01bac: 4eb81cd8
-	NOP				;01bb0: 4e71
+	JSRW_NOP	lb_01f32	;01ba6: 4eb81f32
+	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01bac: 4eb81cd8
 	JSR	lb_1b1c6		;01bb2: 4eb90001b1c6
 	MOVE.B	#$00,current_stage_00ff821d		;01bb8: 13fc000000ff821d
 	BRA.W	lb_019b2		;01bc0: 6000fdf0
@@ -2715,8 +2680,7 @@ lb_01bdc:
 lb_01be0:
 	JSR	lb_0e018		;01be0: 4eb90000e018
 	JSR	lb_0e0f0		;01be6: 4eb90000e0f0
-	JSR	lb_073de.W		;01bec: 4eb873de
-	NOP				;01bf0: 4e71
+	JSRW_NOP	lb_073de	;01bec: 4eb873de
 	RTS				;01bf2: 4e75
 lb_01bf4:
 	MOVEQ	#19,D0			;01bf4: 7013
@@ -2744,8 +2708,7 @@ start_game_or_attract_mode_level_01c1a:
 	MOVEQ	#0,D0			;01c3a: 7000
 lb_01c3c:
 	MOVE.B	D0,demo_stage_index_00ffa848		;01c3c: 13c000ffa848
-	LEA	demo_stage_table_01c5c.W,A3		;01c42: 47f81c5c
-	NOP				;01c46: 4e71
+	LEAW_NOP	demo_stage_table_01c5c,A3	;01c42: 47f81c5c
 	; select the stage to show during attract mode: 1,3,7
 	MOVE.B	0(A3,D0.W),current_stage_00ff821d	;01c48: 13f3000000ff821d
 	RTS				;01c50: 4e75
@@ -2760,14 +2723,10 @@ demo_stage_table_01c5c:
 	BSR.W	lb_02038		;01c60: 610003d6
 	MOVE.L	#$00000001,ext_00ff81d8	;01c64: 23fc0000000100ff81d8
 	MOVE.L	#$00000003,ext_00ff81dc	;01c6e: 23fc0000000300ff81dc
-	JSR	lb_07290.W		;01c78: 4eb87290
-	NOP				;01c7c: 4e71
-	JSR	lb_0736a.W		;01c7e: 4eb8736a
-	NOP				;01c82: 4e71
-	JSR	lb_073a4.W		;01c84: 4eb873a4
-	NOP				;01c88: 4e71
-	JSR	lb_073de.W		;01c8a: 4eb873de
-	NOP				;01c8e: 4e71
+	JSRW_NOP	lb_07290	;01c78: 4eb87290
+	JSRW_NOP	lb_0736a	;01c7e: 4eb8736a
+	JSRW_NOP	lb_073a4	;01c84: 4eb873a4
+	JSRW_NOP	lb_073de	;01c8a: 4eb873de
 lb_01c90:
 	MOVE.B	dsw_0030c005,D0		;01c90: 10390030c005
 	TST.B	D0			;01c96: 4a00
@@ -2796,39 +2755,32 @@ lb_01cc6:
 	RTS				;01cd6: 4e75
 	
 clear_pretty_much_all_video_01cd8:
-	JSR	lb_01d20.W		;01cd8: 4eb81d20
-	NOP				;01cdc: 4e71
+	JSRW_NOP	lb_01d20	;01cd8: 4eb81d20
 	BRA.W	lb_01ce8		;01cde: 60000008
 	; not reached
-	JSR	lb_01d32.W		;01ce2: 4eb81d32
-	NOP				;01ce6: 4e71
+	JSRW_NOP	lb_01d32	;01ce2: 4eb81d32
 lb_01ce8:
-	JSR	clear_sprite_ram_01dc2.W		;01ce8: 4eb81dc2
-	NOP				;01cec: 4e71
-	JSR	clear_tile_1_ram_01ddc.W		;01cee: 4eb81ddc
-	NOP				;01cf2: 4e71
-	JSR	lb_01e2e.W		;01cf4: 4eb81e2e
-	NOP				;01cf8: 4e71
+	JSRW_NOP	clear_sprite_ram_01dc2	;01ce8: 4eb81dc2
+	JSRW_NOP	clear_tile_1_ram_01ddc	;01cee: 4eb81ddc
+	JSRW_NOP	lb_01e2e	;01cf4: 4eb81e2e
 	MOVE.W	#$0000,ext_0024841c		;01cfa: 33fc00000024841c
 	MOVE.W	#$0000,ext_0024841e		;01d02: 33fc00000024841e
 	MOVE.L	#$00000000,ext_00ff814c	;01d0a: 23fc0000000000ff814c
 	MOVE.L	#$00000000,ext_00ff8150	;01d14: 23fc0000000000ff8150
 	RTS				;01d1e: 4e75
 lb_01d20:
-	JSR	lb_01d32.W		;01d20: 4eb81d32
-	JSR	clear_tile_1_layer_01d64.W		;01d24: 4eb81d64
-	JSR	clear_tile_0_layer_01d78.W		;01d28: 4eb81d78
-	JSR	lb_01d8c.W		;01d2c: 4eb81d8c
+	JSRW	lb_01d32	;01d20: 4eb81d32
+	JSRW	clear_tile_1_layer_01d64	;01d24: 4eb81d64
+	JSRW	clear_tile_0_layer_01d78	;01d28: 4eb81d78
+	JSRW	lb_01d8c	;01d2c: 4eb81d8c
 	RTS				;01d30: 4e75
 lb_01d32:
 	MOVEQ	#0,D0			;01d32: 7000
 	MOVE.W	D0,ext_00ff8114		;01d34: 33c000ff8114
-	JSR	update_pf1_0_control_02396.W		;01d3a: 4eb82396
-	NOP				;01d3e: 4e71
+	JSRW_NOP	update_pf1_0_control_02396	;01d3a: 4eb82396
 	MOVE.W	D0,ext_00ff8118		;01d40: 33c000ff8118
-	JSR	update_pf1_0_control_023a2.W		;01d46: 4eb823a2
-	NOP				;01d4a: 4e71
-	JSR	lb_01da0.W		;01d4c: 4eb81da0
+	JSRW_NOP	update_pf1_0_control_023a2	;01d46: 4eb823a2
+	JSRW	lb_01da0	;01d4c: 4eb81da0
 	MOVE.W	#$01ff,D0		;01d50: 303c01ff
 	MOVEQ	#0,D1			;01d54: 7200
 	; clear first tile layer (OSD)
@@ -2887,17 +2839,15 @@ lb_01dce:
 clear_tile_1_ram_01ddc:
 	MOVEQ	#0,D0			;01ddc: 7000
 	MOVE.W	D0,ext_00ff8128		;01dde: 33c000ff8128
-	JSR	lb_02408.W		;01de4: 4eb82408
-	NOP				;01de8: 4e71
+	JSRW_NOP	lb_02408	;01de4: 4eb82408
 	MOVE.W	D0,ext_00ff812c		;01dea: 33c000ff812c
-	JSR	lb_02414.W		;01df0: 4eb82414
-	NOP				;01df4: 4e71
+	JSRW_NOP	lb_02414	;01df0: 4eb82414
 	LEA	tile_layer_1_24A000,A0		;01df6: 41f90024a000
 	MOVE.W	#$01ff,D1		;01dfc: 323c01ff
 lb_01e00:
 	MOVE.L	D0,(A0)+		;01e00: 20c0
 	DBF	D1,lb_01e00		;01e02: 51c9fffc
-	JSR	reset_row_and_column_scrolls_24A000_01e0c.W		;01e06: 4eb81e0c
+	JSRW	reset_row_and_column_scrolls_24A000_01e0c	;01e06: 4eb81e0c
 	RTS				;01e0a: 4e75
 reset_row_and_column_scrolls_24A000_01e0c:
 	MOVEQ	#0,D0			;01e0c: 7000
@@ -2915,17 +2865,15 @@ lb_01e26:
 lb_01e2e:
 	MOVEQ	#0,D0			;01e2e: 7000
 	MOVE.W	D0,ext_00ff813c		;01e30: 33c000ff813c
-	JSR	lb_0247a.W		;01e36: 4eb8247a
-	NOP				;01e3a: 4e71
+	JSRW_NOP	lb_0247a	;01e36: 4eb8247a
 	MOVE.W	D0,ext_00ff8140		;01e3c: 33c000ff8140
-	JSR	lb_02486.W		;01e42: 4eb82486
-	NOP				;01e46: 4e71
+	JSRW_NOP	lb_02486	;01e42: 4eb82486
 	LEA	tile_layer_2_24d000,A0		;01e48: 41f90024d000
 	MOVE.W	#$01ff,D1		;01e4e: 323c01ff
 lb_01e52:
 	MOVE.L	D0,(A0)+		;01e52: 20c0
 	DBF	D1,lb_01e52		;01e54: 51c9fffc
-	JSR	reset_h_and_v_scroll_24d000_01e5e.W		;01e58: 4eb81e5e
+	JSRW	reset_h_and_v_scroll_24d000_01e5e	;01e58: 4eb81e5e
 	RTS				;01e5c: 4e75
 reset_h_and_v_scroll_24d000_01e5e:
 	MOVEQ	#0,D0			;01e5e: 7000
@@ -2950,23 +2898,17 @@ lb_01e96:
 	RTS				;01e96: 4e75
 lb_01e98:
 	MOVE.L	#$00000000,ext_00ff8114	;01e98: 23fc0000000000ff8114
-	JSR	update_pf1_0_control_02396.W		;01ea2: 4eb82396
-	NOP				;01ea6: 4e71
+	JSRW_NOP	update_pf1_0_control_02396	;01ea2: 4eb82396
 	MOVE.L	#$00000000,ext_00ff8118	;01ea8: 23fc0000000000ff8118
-	JSR	update_pf1_0_control_023a2.W		;01eb2: 4eb823a2
-	NOP				;01eb6: 4e71
+	JSRW_NOP	update_pf1_0_control_023a2	;01eb2: 4eb823a2
 	MOVE.L	#$00000000,ext_00ff8128	;01eb8: 23fc0000000000ff8128
-	JSR	lb_02408.W		;01ec2: 4eb82408
-	NOP				;01ec6: 4e71
+	JSRW_NOP	lb_02408	;01ec2: 4eb82408
 	MOVE.L	#$00000000,ext_00ff812c	;01ec8: 23fc0000000000ff812c
-	JSR	lb_02414.W		;01ed2: 4eb82414
-	NOP				;01ed6: 4e71
+	JSRW_NOP	lb_02414	;01ed2: 4eb82414
 	MOVE.L	#$00000000,ext_00ff813c	;01ed8: 23fc0000000000ff813c
-	JSR	lb_0247a.W		;01ee2: 4eb8247a
-	NOP				;01ee6: 4e71
+	JSRW_NOP	lb_0247a	;01ee2: 4eb8247a
 	MOVE.L	#$00000000,ext_00ff8140	;01ee8: 23fc0000000000ff8140
-	JSR	lb_02486.W		;01ef2: 4eb82486
-	NOP				;01ef6: 4e71
+	JSRW_NOP	lb_02486	;01ef2: 4eb82486
 	RTS				;01ef8: 4e75
 lb_01efa:
 	MOVEM.L	D0-D7/A0-A7,-(A7)	;01efa: 48e7ffff
@@ -2981,11 +2923,10 @@ lb_01f12:
 	LEA	ext_00ff8244,A0		;01f12: 41f900ff8244
 	MOVE.W	#$0065,D2		;01f18: 343c0065
 lb_01f1c:
-	JSR	lb_01efa.W		;01f1c: 4eb81efa
+	JSRW	lb_01efa	;01f1c: 4eb81efa
 	ADDA.L	#$00000050,A0		;01f20: d1fc00000050
 	DBF	D2,lb_01f1c		;01f26: 51cafff4
-	JSR	lb_01f32.W		;01f2a: 4eb81f32
-	NOP				;01f2e: 4e71
+	JSRW_NOP	lb_01f32	;01f2a: 4eb81f32
 	RTS				;01f30: 4e75
 lb_01f32:
 	MOVE.W	#$0000,ext_00ff8108		;01f32: 33fc000000ff8108
@@ -3002,16 +2943,14 @@ lb_01f6e:
 	RTS				;01f76: 4e75
 lb_01f78:
 	ANDI.L	#$0000ffff,D0		;01f78: 02800000ffff
-	LEA	lb_07428.W,A3		;01f7e: 47f87428
-	NOP				;01f82: 4e71
+	LEAW_NOP	lb_07428,A3	;01f7e: 47f87428
 	LSL.W	#2,D0			;01f84: e548
 	MOVEA.L	0(A3,D0.W),A3		;01f86: 26730000
 	MOVEQ	#0,D0			;01f8a: 7000
 	MOVE.W	(A3)+,D0		;01f8c: 301b
 	MOVEA.L	(A3)+,A0		;01f8e: 205b
 	MOVEA.L	(A3),A1			;01f90: 2253
-	JSR	lb_01f9a.W		;01f92: 4eb81f9a
-	NOP				;01f96: 4e71
+	JSRW_NOP	lb_01f9a	;01f92: 4eb81f9a
 	RTS				;01f98: 4e75
 lb_01f9a:
 	MOVEA.L	A1,A2			;01f9a: 2449
@@ -3045,15 +2984,13 @@ lb_01fca:
 lb_01fd4:
 	ANDI.L	#$0000ffff,D0		;01fd4: 02800000ffff
 	LSL.W	#2,D0			;01fda: e548
-	LEA	lb_07428.W,A3		;01fdc: 47f87428
-	NOP				;01fe0: 4e71
+	LEAW_NOP	lb_07428,A3	;01fdc: 47f87428
 	ADDA.L	D0,A3			;01fe2: d7c0
 	MOVEA.L	(A3),A3			;01fe4: 2653
 	MOVEQ	#0,D1			;01fe6: 7200
 	MOVE.B	(A3),D1			;01fe8: 1213
 	MOVEA.L	6(A3),A1		;01fea: 226b0006
-	JSR	lb_01ff6.W		;01fee: 4eb81ff6
-	NOP				;01ff2: 4e71
+	JSRW_NOP	lb_01ff6	;01fee: 4eb81ff6
 	RTS				;01ff4: 4e75
 lb_01ff6:
 	SUBQ.W	#1,D1			;01ff6: 5341
@@ -3064,8 +3001,7 @@ lb_02000:
 	RTS				;02000: 4e75
 	MOVEA.L	#ext_00244084,A0		;02002: 207c00244084
 	MOVE.L	A0,D1			;02008: 2208
-	LEA	lb_078b2.W,A1		;0200a: 43f878b2
-	NOP				;0200e: 4e71
+	LEAW_NOP	lb_078b2,A1	;0200a: 43f878b2
 lb_02010:
 	CMPI.B	#$fe,(A1)		;02010: 0c1100fe
 	BNE.W	lb_02028		;02014: 66000012
@@ -3088,7 +3024,7 @@ lb_02038:
 	LEA	ext_00ff801e,A0		;0204e: 41f900ff801e
 	LEA	ext_00ff802e,A1		;02054: 43f900ff802e
 	MOVE.W	#$0005,D4		;0205a: 383c0005
-	JSR	lb_002ec.W		;0205e: 4eb802ec
+	JSRW	lb_002ec	;0205e: 4eb802ec
 	MOVE.L	#$20202020,ext_00ff8032	;02062: 23fc2020202000ff8032
 	LEA	ext_00ff801e,A0		;0206c: 41f900ff801e
 	MOVE.W	ext_00ff813c,(A0)+		;02072: 30f900ff813c
@@ -3097,18 +3033,18 @@ lb_02038:
 	LEA	ext_00ff801e,A0		;02082: 41f900ff801e
 	LEA	ext_00ff803e,A1		;02088: 43f900ff803e
 	MOVE.W	#$0005,D4		;0208e: 383c0005
-	JSR	lb_002ec.W		;02092: 4eb802ec
+	JSRW	lb_002ec	;02092: 4eb802ec
 	MOVE.L	#$20202020,ext_00ff8042	;02096: 23fc2020202000ff8042
 	LEA	ext_00ff802e,A0		;020a0: 41f900ff802e
 	LEA	ext_002446a4,A1		;020a6: 43f9002446a4
 	MOVEQ	#12,D0			;020ac: 700c
 	LSL.W	#8,D0			;020ae: e148
-	JSR	write_tiles_of_given_color_01fc4.W		;020b0: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;020b0: 4eb81fc4
 	LEA	ext_00ff803e,A0		;020b4: 41f900ff803e
 	LEA	ext_00244724,A1		;020ba: 43f900244724
 	MOVEQ	#12,D0			;020c0: 700c
 	LSL.W	#8,D0			;020c2: e148
-	JSR	write_tiles_of_given_color_01fc4.W		;020c4: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;020c4: 4eb81fc4
 	RTS				;020c8: 4e75
 	; doesnt seem reached
 	LEA	ext_00ff801e,A0		;020ca: 41f900ff801e
@@ -3121,7 +3057,7 @@ lb_02038:
 lb_020e6:
 	MOVE.W	#$0005,D4		;020e6: 383c0005
 	MOVEM.L	D3,-(A7)		;020ea: 48e71000
-	JSR	lb_002ec.W		;020ee: 4eb802ec
+	JSRW	lb_002ec	;020ee: 4eb802ec
 lb_020f2:
 	MOVEM.L	(A7)+,D3		;020f2: 4cdf0008
 	MOVE.L	#$20202020,ext_00ff8032	;020f6: 23fc2020202000ff8032
@@ -3133,18 +3069,18 @@ lb_020f2:
 	LEA	ext_00ff801e,A0		;02110: 41f900ff801e
 	LEA	ext_00ff803e,A1		;02116: 43f900ff803e
 	MOVE.W	#$0005,D4		;0211c: 383c0005
-	JSR	lb_002ec.W		;02120: 4eb802ec
+	JSRW	lb_002ec	;02120: 4eb802ec
 	MOVE.L	#$20202020,ext_00ff8042	;02124: 23fc2020202000ff8042
 	LEA	ext_00ff802e,A0		;0212e: 41f900ff802e
 	LEA	ext_00244684,A1		;02134: 43f900244684
 	MOVEQ	#12,D0			;0213a: 700c
 	LSL.W	#8,D0			;0213c: e148
-	JSR	write_tiles_of_given_color_01fc4.W		;0213e: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;0213e: 4eb81fc4
 	LEA	ext_00ff803e,A0		;02142: 41f900ff803e
 	LEA	ext_00244704,A1		;02148: 43f900244704
 	MOVEQ	#12,D0			;0214e: 700c
 	LSL.W	#8,D0			;02150: e148
-	JSR	write_tiles_of_given_color_01fc4.W		;02152: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;02152: 4eb81fc4
 	RTS				;02156: 4e75
 lb_02158:
 	MOVEQ	#0,D0			;02158: 7000
@@ -3165,7 +3101,7 @@ lb_02194:
 lb_02196:
 	MOVEM.L	A0,-(A7)		;02196: 48e70080
 	MOVEQ	#25,D0			;0219a: 7019
-	JSR	lb_01f78.W		;0219c: 4eb81f78
+	JSRW	lb_01f78	;0219c: 4eb81f78
 	MOVEM.L	(A7)+,A0		;021a0: 4cdf0100
 	MOVEQ	#0,D0			;021a4: 7000
 	MOVE.B	28(A0),D0		;021a6: 1028001c
@@ -3186,8 +3122,7 @@ update_energy_status_021ce:
 	MOVEQ	#18,D0			;021d6: 7012
 lb_021d8:
 	LSL.W	#2,D0			;021d8: e548
-	LEA	lb_021f0.W,A4		;021da: 49f821f0
-	NOP				;021de: 4e71
+	LEAW_NOP	lb_021f0,A4	;021da: 49f821f0
 	ADDA.L	D0,A4			;021e0: d9c0
 	MOVEA.L	(A4),A4			;021e2: 2854
 	MOVE.W	#$0006,D3		;021e4: 363c0006
@@ -3508,8 +3443,7 @@ lb_02508:
 	MOVE.W	D0,D1			;0250c: 3200
 	ANDI.W	#$0100,D1		;0250e: 02410100
 	LSR.W	#6,D1			;02512: ec49
-	LEA	videoram_address_table_0254a.W,A2		;02514: 45f8254a
-	NOP				;02518: 4e71
+	LEAW_NOP	videoram_address_table_0254a,A2	;02514: 45f8254a
 	MOVEA.L	0(A2,D1.L),A1		;0251a: 22721800
 	ANDI.W	#$00f8,D0		;0251e: 024000f8
 	LSR.W	#2,D0			;02522: e448
@@ -3546,7 +3480,7 @@ lb_02552:
 	MOVE.W	D0,D1			;02564: 3200
 	ANDI.W	#$0100,D1		;02566: 02410100
 	LSR.W	#6,D1			;0256a: ec49
-	LEA	videoram_address_table_0254a.W,A2		;0256c: 45f8254a
+	LEAW	videoram_address_table_0254a,A2	;0256c: 45f8254a
 	MOVEA.L	0(A2,D1.L),A1		;02570: 22721800
 	ANDI.W	#$00f8,D0		;02574: 024000f8
 	LSR.W	#2,D0			;02578: e448
@@ -3563,16 +3497,13 @@ lb_02588:
 lb_02590:
 	RTS				;02590: 4e75
 lb_02592:
-	JSR	lb_02e0e.W		;02592: 4eb82e0e
-	NOP				;02596: 4e71
+	JSRW_NOP	lb_02e0e	;02592: 4eb82e0e
 	JSR	lb_09dd2		;02598: 4eb900009dd2
-	JSR	lb_029ca.W		;0259e: 4eb829ca
-	NOP				;025a2: 4e71
+	JSRW_NOP	lb_029ca	;0259e: 4eb829ca
 	MOVEQ	#0,D2			;025a4: 7400
 	MOVE.W	state_00ffa8f0,D2		;025a6: 343900ffa8f0
 	LSL.W	#2,D2			;025ac: e54a
-	LEA	jump_table_025bc.W,A3		;025ae: 47f825bc
-	NOP				;025b2: 4e71
+	LEAW_NOP	jump_table_025bc,A3	;025ae: 47f825bc
 	ADDA.L	D2,A3			;025b4: d7c2
 	MOVEA.L	(A3),A3			;025b6: 2653
 	JSR	(A3)			;025b8: 4e93
@@ -3597,107 +3528,84 @@ lb_025e4:
 	DBEQ	D0,lb_025de		;025ea: 57c8fff2
 	RTS				;025ee: 4e75
 lb_025f0:
-	JSR	lb_027f6.W		;025f0: 4eb827f6
-	NOP				;025f4: 4e71
+	JSRW_NOP	lb_027f6	;025f0: 4eb827f6
 	LEA	spriteram_00ffc000,A1		;025f6: 43f900ffc000
 	MOVEA.L	#ext_00ff81f4,A0		;025fc: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02602: 3c3c0013
-	JSR	display_sprite_02788.W		;02606: 4eb82788
-	NOP				;0260a: 4e71
+	JSRW_NOP	display_sprite_02788	;02606: 4eb82788
 	MOVEA.L	#ext_00ff8834,A0		;0260c: 207c00ff8834
 	MOVE.W	#$0051,D6		;02612: 3c3c0051
-	JSR	display_sprite_02788.W		;02616: 4eb82788
-	NOP				;0261a: 4e71
+	JSRW_NOP	display_sprite_02788	;02616: 4eb82788
 	MOVEA.L	#ext_00ffa1d4,A0		;0261c: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02622: 3c3c0007
-	JSR	display_sprite_02788.W		;02626: 4eb82788
-	NOP				;0262a: 4e71
+	JSRW_NOP	display_sprite_02788	;02626: 4eb82788
 	MOVEA.L	#ext_00ffa454,A0		;0262c: 207c00ffa454
 	MOVE.W	#$0009,D6		;02632: 3c3c0009
-	JSR	display_sprite_02788.W		;02636: 4eb82788
-	NOP				;0263a: 4e71
-	JSR	disable_rest_of_sprites_1e80.W		;0263c: 4eb81e80
+	JSRW_NOP	display_sprite_02788	;02636: 4eb82788
+	JSRW	disable_rest_of_sprites_1e80	;0263c: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02640: 08f9000100ff8217
 	RTS				;02648: 4e75
 lb_0264a:
-	JSR	lb_027f6.W		;0264a: 4eb827f6
-	NOP				;0264e: 4e71
+	JSRW_NOP	lb_027f6	;0264a: 4eb827f6
 	LEA	spriteram_00ffc000,A1		;02650: 43f900ffc000
 	MOVEA.L	#ext_00ff81f4,A0		;02656: 207c00ff81f4
 	MOVE.W	#$0009,D6		;0265c: 3c3c0009
-	JSR	display_sprite_02788.W		;02660: 4eb82788
-	NOP				;02664: 4e71
+	JSRW_NOP	display_sprite_02788	;02660: 4eb82788
 	MOVEA.L	#ext_00ff8834,A0		;02666: 207c00ff8834
 	MOVE.W	#$0051,D6		;0266c: 3c3c0051
-	JSR	display_sprite_02788.W		;02670: 4eb82788
-	NOP				;02674: 4e71
+	JSRW_NOP	display_sprite_02788	;02670: 4eb82788
 	MOVEA.L	#ext_00ff8514,A0		;02676: 207c00ff8514
 	MOVE.W	#$0009,D6		;0267c: 3c3c0009
-	JSR	display_sprite_02788.W		;02680: 4eb82788
-	NOP				;02684: 4e71
+	JSRW_NOP	display_sprite_02788	;02680: 4eb82788
 	MOVEA.L	#ext_00ffa1d4,A0		;02686: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;0268c: 3c3c0007
-	JSR	display_sprite_02788.W		;02690: 4eb82788
-	NOP				;02694: 4e71
+	JSRW_NOP	display_sprite_02788	;02690: 4eb82788
 	MOVEA.L	#ext_00ffa454,A0		;02696: 207c00ffa454
 	MOVE.W	#$0009,D6		;0269c: 3c3c0009
-	JSR	display_sprite_02788.W		;026a0: 4eb82788
-	NOP				;026a4: 4e71
-	JSR	disable_rest_of_sprites_1e80.W		;026a6: 4eb81e80
+	JSRW_NOP	display_sprite_02788	;026a0: 4eb82788
+	JSRW	disable_rest_of_sprites_1e80	;026a6: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;026aa: 08f9000100ff8217
 	RTS				;026b2: 4e75
 lb_026b4:
-	JSR	lb_027f6.W		;026b4: 4eb827f6
-	NOP				;026b8: 4e71
+	JSRW_NOP	lb_027f6	;026b4: 4eb827f6
 	LEA	spriteram_00ffc000,A1		;026ba: 43f900ffc000
 	MOVEA.L	#ext_00ff81f4,A0		;026c0: 207c00ff81f4
 	MOVE.W	#$0009,D6		;026c6: 3c3c0009
-	JSR	display_sprite_02788.W		;026ca: 4eb82788
-	NOP				;026ce: 4e71
+	JSRW_NOP	display_sprite_02788	;026ca: 4eb82788
 	MOVEA.L	#ext_00ff8834,A0		;026d0: 207c00ff8834
 	MOVE.W	#$0051,D6		;026d6: 3c3c0051
-	JSR	display_sprite_02788.W		;026da: 4eb82788
-	NOP				;026de: 4e71
+	JSRW_NOP	display_sprite_02788	;026da: 4eb82788
 	MOVEA.L	#ext_00ffa1d4,A0		;026e0: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;026e6: 3c3c0007
-	JSR	display_sprite_02788.W		;026ea: 4eb82788
-	NOP				;026ee: 4e71
+	JSRW_NOP	display_sprite_02788	;026ea: 4eb82788
 	MOVEA.L	#ext_00ff8514,A0		;026f0: 207c00ff8514
 	MOVE.W	#$0009,D6		;026f6: 3c3c0009
-	JSR	display_sprite_02788.W		;026fa: 4eb82788
-	NOP				;026fe: 4e71
+	JSRW_NOP	display_sprite_02788	;026fa: 4eb82788
 	MOVEA.L	#ext_00ffa454,A0		;02700: 207c00ffa454
 	MOVE.W	#$0009,D6		;02706: 3c3c0009
-	JSR	display_sprite_02788.W		;0270a: 4eb82788
-	NOP				;0270e: 4e71
-	JSR	disable_rest_of_sprites_1e80.W		;02710: 4eb81e80
+	JSRW_NOP	display_sprite_02788	;0270a: 4eb82788
+	JSRW	disable_rest_of_sprites_1e80	;02710: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;02714: 08f9000100ff8217
 	RTS				;0271c: 4e75
 lb_0271e:
-	JSR	lb_027f6.W		;0271e: 4eb827f6
-	NOP				;02722: 4e71
+	JSRW_NOP	lb_027f6	;0271e: 4eb827f6
 	LEA	spriteram_00ffc000,A1		;02724: 43f900ffc000
 	MOVEA.L	#ext_00ff81f4,A0		;0272a: 207c00ff81f4
 	MOVE.W	#$0013,D6		;02730: 3c3c0013
-	JSR	display_sprite_02788.W		;02734: 4eb82788
-	NOP				;02738: 4e71
+	JSRW_NOP	display_sprite_02788	;02734: 4eb82788
 	MOVEA.L	#ext_00ff9eb4,A0		;0273a: 207c00ff9eb4
 	MOVE.W	#$0009,D6		;02740: 3c3c0009
-	JSR	display_sprite_02788.W		;02744: 4eb82788
-	NOP				;02748: 4e71
+	JSRW_NOP	display_sprite_02788	;02744: 4eb82788
 	MOVEA.L	#ext_00ff8834,A0		;0274a: 207c00ff8834
 	MOVE.W	#$0047,D6		;02750: 3c3c0047
-	JSR	display_sprite_02788.W		;02754: 4eb82788
-	NOP				;02758: 4e71
+	JSRW_NOP	display_sprite_02788	;02754: 4eb82788
 	MOVEA.L	#ext_00ffa1d4,A0		;0275a: 207c00ffa1d4
 	MOVE.W	#$0007,D6		;02760: 3c3c0007
-	JSR	display_sprite_02788.W		;02764: 4eb82788
-	NOP				;02768: 4e71
+	JSRW_NOP	display_sprite_02788	;02764: 4eb82788
 	MOVEA.L	#ext_00ffa454,A0		;0276a: 207c00ffa454
 	MOVE.W	#$0009,D6		;02770: 3c3c0009
-	JSR	display_sprite_02788.W		;02774: 4eb82788
-	NOP				;02778: 4e71
-	JSR	disable_rest_of_sprites_1e80.W		;0277a: 4eb81e80
+	JSRW_NOP	display_sprite_02788	;02774: 4eb82788
+	JSRW	disable_rest_of_sprites_1e80	;0277a: 4eb81e80
 	BSET	#1,sync_flags_00ff8217		;0277e: 08f9000100ff8217
 	RTS				;02786: 4e75
 display_sprite_02788:
@@ -3715,18 +3623,15 @@ display_sprite_02788:
 	MOVE.L	ext_00ffa8f2,D0		;027bc: 203900ffa8f2
 	ADD.L	D0,8(A0)		;027c2: d1a80008
 lb_027c6:
-	JSR	lb_02818.W		;027c6: 4eb82818
-	NOP				;027ca: 4e71
-	JSR	lb_02982.W		;027cc: 4eb82982
-	NOP				;027d0: 4e71
+	JSRW_NOP	lb_02818	;027c6: 4eb82818
+	JSRW_NOP	lb_02982	;027cc: 4eb82982
 	BTST	#7,(A0)			;027d2: 08100007
 	BEQ.W	lb_027f0		;027d6: 67000018
 	BTST	#6,(A0)			;027da: 08100006
 	BNE.W	lb_027f0		;027de: 66000010
 	BTST	#1,(A0)			;027e2: 08100001
 	BNE.W	lb_027f0		;027e6: 66000008
-	JSR	display_multi_tile_object_028c6.W		;027ea: 4eb828c6
-	NOP				;027ee: 4e71
+	JSRW_NOP	display_multi_tile_object_028c6	;027ea: 4eb828c6
 lb_027f0:
 	DBF	D6,display_sprite_02788		;027f0: 51ceff96
 	RTS				;027f4: 4e75
@@ -3739,8 +3644,7 @@ lb_027f6:
 	MOVE.W	D0,ext_00ff80e4		;02810: 33c000ff80e4
 	RTS				;02816: 4e75
 lb_02818:
-	JSR	lb_0284c.W		;02818: 4eb8284c
-	NOP				;0281c: 4e71
+	JSRW_NOP	lb_0284c	;02818: 4eb8284c
 	MOVE.W	8(A0),D1		;0281e: 32280008
 	SUB.W	ext_00ffa852,D1		;02822: 927900ffa852
 	ANDI.W	#$01ff,D1		;02828: 024101ff
@@ -3882,7 +3786,7 @@ lb_02982:
 	MOVE.W	D1,6(A0)		;029aa: 31410006
 	RTS				;029ae: 4e75
 lb_029b0:
-	JSR	lb_02982.W		;029b0: 4eb82982
+	JSRW	lb_02982	;029b0: 4eb82982
 	MOVEQ	#0,D2			;029b4: 7400
 	MOVE.W	6(A0),D2		;029b6: 34280006
 	LEA	sprite_data_base_5219c,A2		;029ba: 45f90005219c
@@ -3902,8 +3806,7 @@ lb_029d8:
 	MOVEQ	#0,D1			;029f0: 7200
 	MOVE.B	2(A0),D1		;029f2: 12280002
 	LSL.W	#2,D1			;029f6: e549
-	LEA	lb_02a10.W,A1		;029f8: 43f82a10
-	NOP				;029fc: 4e71
+	LEAW_NOP	lb_02a10,A1	;029f8: 43f82a10
 	ADDA.L	D1,A1			;029fe: d3c1
 	MOVEA.L	(A1),A1			;02a00: 2251
 	JSR	(A1)			;02a02: 4e91
@@ -3974,13 +3877,11 @@ lb_02ae6:
 	MOVEQ	#0,D2			;02ae6: 7400
 	MOVE.B	3(A0),D2		;02ae8: 14280003
 	LSL.W	#2,D2			;02aec: e54a
-	LEA	lb_02b02.W,A3		;02aee: 47f82b02
-	NOP				;02af2: 4e71
+	LEAW_NOP	lb_02b02,A3	;02aee: 47f82b02
 	ADDA.L	D2,A3			;02af4: d7c2
 	MOVEA.L	(A3),A3			;02af6: 2653
 	JSR	(A3)			;02af8: 4e93
-	JSR	lb_05f82.W		;02afa: 4eb85f82
-	NOP				;02afe: 4e71
+	JSRW_NOP	lb_05f82	;02afa: 4eb85f82
 	RTS				;02b00: 4e75
 lb_02b02:
 	dc.l	lb_03be0	;02b02
@@ -4029,13 +3930,11 @@ lb_02ba4:
 	MOVEQ	#0,D2			;02ba4: 7400
 	MOVE.B	3(A0),D2		;02ba6: 14280003
 	LSL.W	#2,D2			;02baa: e54a
-	LEA	lb_02bc0.W,A3		;02bac: 47f82bc0
-	NOP				;02bb0: 4e71
+	LEAW_NOP	lb_02bc0,A3	;02bac: 47f82bc0
 	ADDA.L	D2,A3			;02bb2: d7c2
 	MOVEA.L	(A3),A3			;02bb4: 2653
 	JSR	(A3)			;02bb6: 4e93
-	JSR	lb_05f82.W		;02bb8: 4eb85f82
-	NOP				;02bbc: 4e71
+	JSRW_NOP	lb_05f82	;02bb8: 4eb85f82
 	RTS				;02bbe: 4e75
 lb_02bc0:
 	dc.l	lb_045ee	;02bc0
@@ -4086,13 +3985,11 @@ lb_02c70:
 	MOVEQ	#0,D2			;02c70: 7400
 	MOVE.B	3(A0),D2		;02c72: 14280003
 	LSL.W	#2,D2			;02c76: e54a
-	LEA	lb_02c8c.W,A3		;02c78: 47f82c8c
-	NOP				;02c7c: 4e71
+	LEAW_NOP	lb_02c8c,A3	;02c78: 47f82c8c
 	ADDA.L	D2,A3			;02c7e: d7c2
 	MOVEA.L	(A3),A3			;02c80: 2653
 	JSR	(A3)			;02c82: 4e93
-	JSR	lb_05f82.W		;02c84: 4eb85f82
-	NOP				;02c88: 4e71
+	JSRW_NOP	lb_05f82	;02c84: 4eb85f82
 	RTS				;02c8a: 4e75
 lb_02c8c:
 	dc.l	lb_040c0	;02c8c
@@ -4106,16 +4003,14 @@ lb_02ca8:
 	MOVEQ	#0,D2			;02ca8: 7400
 	MOVE.B	3(A0),D2		;02caa: 14280003
 	LSL.W	#2,D2			;02cae: e54a
-	LEA	lb_02cd4.W,A3		;02cb0: 47f82cd4
-	NOP				;02cb4: 4e71
+	LEAW_NOP	lb_02cd4,A3	;02cb0: 47f82cd4
 	ADDA.L	D2,A3			;02cb6: d7c2
 	MOVEA.L	(A3),A3			;02cb8: 2653
 	JSR	(A3)			;02cba: 4e93
-	JSR	lb_05f82.W		;02cbc: 4eb85f82
-	NOP				;02cc0: 4e71
+	JSRW_NOP	lb_05f82	;02cbc: 4eb85f82
 	CMPI.B	#$01,current_stage_00ff821d		;02cc2: 0c39000100ff821d
 	BNE.W	lb_02cd2		;02cca: 66000006
-	JSR	lb_02196.W		;02cce: 4eb82196
+	JSRW	lb_02196	;02cce: 4eb82196
 lb_02cd2:
 	RTS				;02cd2: 4e75
 lb_02cd4:
@@ -4141,16 +4036,14 @@ lb_02d14:
 	MOVEQ	#0,D2			;02d24: 7400
 	MOVE.B	3(A0),D2		;02d26: 14280003
 	LSL.W	#2,D2			;02d2a: e54a
-	LEA	lb_02d50.W,A3		;02d2c: 47f82d50
-	NOP				;02d30: 4e71
+	LEAW_NOP	lb_02d50,A3	;02d2c: 47f82d50
 	ADDA.L	D2,A3			;02d32: d7c2
 	MOVEA.L	(A3),A3			;02d34: 2653
 	JSR	(A3)			;02d36: 4e93
-	JSR	lb_05f82.W		;02d38: 4eb85f82
-	NOP				;02d3c: 4e71
+	JSRW_NOP	lb_05f82	;02d38: 4eb85f82
 	CMPI.B	#$05,current_stage_00ff821d		;02d3e: 0c39000500ff821d
 	BNE.W	lb_02d4e		;02d46: 66000006
-	JSR	lb_02196.W		;02d4a: 4eb82196
+	JSRW	lb_02196	;02d4a: 4eb82196
 lb_02d4e:
 	RTS				;02d4e: 4e75
 lb_02d50:
@@ -4169,8 +4062,7 @@ lb_02d7c:
 	MOVEQ	#0,D2			;02d7c: 7400
 	MOVE.B	3(A0),D2		;02d7e: 14280003
 	LSL.W	#2,D2			;02d82: e54a
-	LEA	lb_02d92.W,A3		;02d84: 47f82d92
-	NOP				;02d88: 4e71
+	LEAW_NOP	lb_02d92,A3	;02d84: 47f82d92
 	ADDA.L	D2,A3			;02d8a: d7c2
 	MOVEA.L	(A3),A3			;02d8c: 2653
 	JSR	(A3)			;02d8e: 4e93
@@ -4192,8 +4084,7 @@ lb_02dc2:
 	MOVEQ	#0,D2			;02dc2: 7400
 	MOVE.B	3(A0),D2		;02dc4: 14280003
 	LSL.W	#2,D2			;02dc8: e54a
-	LEA	lb_02dd8.W,A3		;02dca: 47f82dd8
-	NOP				;02dce: 4e71
+	LEAW_NOP	lb_02dd8,A3	;02dca: 47f82dd8
 	ADDA.L	D2,A3			;02dd0: d7c2
 	MOVEA.L	(A3),A3			;02dd2: 2653
 	JSR	(A3)			;02dd4: 4e93
@@ -4207,8 +4098,7 @@ lb_02de8:
 	MOVEQ	#0,D2			;02de8: 7400
 	MOVE.B	3(A0),D2		;02dea: 14280003
 	LSL.W	#2,D2			;02dee: e54a
-	LEA	lb_02dfe.W,A3		;02df0: 47f82dfe
-	NOP				;02df4: 4e71
+	LEAW_NOP	lb_02dfe,A3	;02df0: 47f82dfe
 	ADDA.L	D2,A3			;02df6: d7c2
 	MOVEA.L	(A3),A3			;02df8: 2653
 	JSR	(A3)			;02dfa: 4e93
@@ -4217,27 +4107,18 @@ lb_02dfe:
 	dc.l	lb_04346	;02dfe
 	dc.l	lb_04398	;02e02
 lb_02e06:
-	JSR	lb_042ec.W		;02e06: 4eb842ec
-	NOP				;02e0a: 4e71
+	JSRW_NOP	lb_042ec	;02e06: 4eb842ec
 	RTS				;02e0c: 4e75
 lb_02e0e:
 	JSR	lb_09854		;02e0e: 4eb900009854
-	JSR	lb_0351e.W		;02e14: 4eb8351e
-	NOP				;02e18: 4e71
-	JSR	lb_02e46.W		;02e1a: 4eb82e46
-	NOP				;02e1e: 4e71
-	JSR	lb_02f3e.W		;02e20: 4eb82f3e
-	NOP				;02e24: 4e71
-	JSR	lb_02f88.W		;02e26: 4eb82f88
-	NOP				;02e2a: 4e71
-	JSR	lb_03082.W		;02e2c: 4eb83082
-	NOP				;02e30: 4e71
-	JSR	lb_03186.W		;02e32: 4eb83186
-	NOP				;02e36: 4e71
-	JSR	lb_030da.W		;02e38: 4eb830da
-	NOP				;02e3c: 4e71
-	JSR	lb_0380c.W		;02e3e: 4eb8380c
-	NOP				;02e42: 4e71
+	JSRW_NOP	lb_0351e	;02e14: 4eb8351e
+	JSRW_NOP	lb_02e46	;02e1a: 4eb82e46
+	JSRW_NOP	lb_02f3e	;02e20: 4eb82f3e
+	JSRW_NOP	lb_02f88	;02e26: 4eb82f88
+	JSRW_NOP	lb_03082	;02e2c: 4eb83082
+	JSRW_NOP	lb_03186	;02e32: 4eb83186
+	JSRW_NOP	lb_030da	;02e38: 4eb830da
+	JSRW_NOP	lb_0380c	;02e3e: 4eb8380c
 	RTS				;02e44: 4e75
 lb_02e46:
 	CMPI.B	#$05,current_stage_00ff821d		;02e46: 0c39000500ff821d
@@ -4256,22 +4137,20 @@ lb_02e46:
 	BEQ.W	lb_02eb2		;02e86: 6700002a
 	LEA	ext_00ff8884,A0		;02e8a: 41f900ff8884
 	MOVE.W	#$0016,D0		;02e90: 303c0016
-	JSR	lb_025d2.W		;02e94: 4eb825d2
+	JSRW	lb_025d2	;02e94: 4eb825d2
 	CMPI.W	#$ffff,D0		;02e98: 0c40ffff
 	BEQ.W	lb_02eb0		;02e9c: 67000012
-	JSR	lb_03322.W		;02ea0: 4eb83322
-	NOP				;02ea4: 4e71
+	JSRW_NOP	lb_03322	;02ea0: 4eb83322
 	ADDI.L	#$00000010,ext_00ff8222	;02ea6: 06b90000001000ff8222
 lb_02eb0:
 	RTS				;02eb0: 4e75
 lb_02eb2:
 	LEA	ext_00ff9f04,A0		;02eb2: 41f900ff9f04
 	MOVE.W	#$0005,D0		;02eb8: 303c0005
-	JSR	lb_025e4.W		;02ebc: 4eb825e4
+	JSRW	lb_025e4	;02ebc: 4eb825e4
 	CMPI.W	#$ffff,D0		;02ec0: 0c40ffff
 	BEQ.S	lb_02eb0		;02ec4: 67ea
-	JSR	lb_03322.W		;02ec6: 4eb83322
-	NOP				;02eca: 4e71
+	JSRW_NOP	lb_03322	;02ec6: 4eb83322
 	MOVE.L	(A0),80(A0)		;02ecc: 21500050
 	MOVE.B	#$22,82(A0)		;02ed0: 117c00220052
 	MOVE.B	33(A0),D0		;02ed6: 10280021
@@ -4292,11 +4171,10 @@ lb_02ef0:
 	BEQ.S	lb_02eb2		;02f14: 679c
 	LEA	ext_00ff8884,A0		;02f16: 41f900ff8884
 	MOVE.W	#$0016,D0		;02f1c: 303c0016
-	JSR	lb_025d2.W		;02f20: 4eb825d2
+	JSRW	lb_025d2	;02f20: 4eb825d2
 	CMPI.W	#$ffff,D0		;02f24: 0c40ffff
 	BEQ.S	lb_02eb0		;02f28: 6786
-	JSR	lb_03322.W		;02f2a: 4eb83322
-	NOP				;02f2e: 4e71
+	JSRW_NOP	lb_03322	;02f2a: 4eb83322
 	ADDI.L	#$00000010,ext_00ff8222	;02f30: 06b90000001000ff8222
 	BRA.W	lb_02eb0		;02f3a: 6000ff74
 lb_02f3e:
@@ -4310,11 +4188,10 @@ lb_02f3e:
 	BHI.W	lb_02f86		;02f5c: 62000028
 	LEA	ext_00ff8244,A0		;02f60: 41f900ff8244
 	MOVE.W	#$000a,D0		;02f66: 303c000a
-	JSR	lb_025d2.W		;02f6a: 4eb825d2
+	JSRW	lb_025d2	;02f6a: 4eb825d2
 	CMPI.W	#$ffff,D0		;02f6e: 0c40ffff
 	BEQ.W	lb_02f86		;02f72: 67000012
-	JSR	lb_03322.W		;02f76: 4eb83322
-	NOP				;02f7a: 4e71
+	JSRW_NOP	lb_03322	;02f76: 4eb83322
 	ADDI.L	#$00000010,ext_00ff8226	;02f7c: 06b90000001000ff8226
 lb_02f86:
 	RTS				;02f86: 4e75
@@ -4335,22 +4212,20 @@ lb_02f88:
 	BEQ.W	lb_02ff4		;02fc8: 6700002a
 	LEA	ext_00ff8884,A0		;02fcc: 41f900ff8884
 	MOVE.W	#$0016,D0		;02fd2: 303c0016
-	JSR	lb_025d2.W		;02fd6: 4eb825d2
+	JSRW	lb_025d2	;02fd6: 4eb825d2
 	CMPI.W	#$ffff,D0		;02fda: 0c40ffff
 	BEQ.W	lb_02ff2		;02fde: 67000012
-	JSR	lb_03322.W		;02fe2: 4eb83322
-	NOP				;02fe6: 4e71
+	JSRW_NOP	lb_03322	;02fe2: 4eb83322
 	ADDI.L	#$00000010,ext_00ff822a	;02fe8: 06b90000001000ff822a
 lb_02ff2:
 	RTS				;02ff2: 4e75
 lb_02ff4:
 	LEA	ext_00ff9f04,A0		;02ff4: 41f900ff9f04
 	MOVE.W	#$0005,D0		;02ffa: 303c0005
-	JSR	lb_025e4.W		;02ffe: 4eb825e4
+	JSRW	lb_025e4	;02ffe: 4eb825e4
 	CMPI.W	#$ffff,D0		;03002: 0c40ffff
 	BEQ.W	lb_02eb0		;03006: 6700fea8
-	JSR	lb_03322.W		;0300a: 4eb83322
-	NOP				;0300e: 4e71
+	JSRW_NOP	lb_03322	;0300a: 4eb83322
 	MOVE.L	(A0),80(A0)		;03010: 21500050
 	MOVE.B	#$22,82(A0)		;03014: 117c00220052
 	MOVE.B	33(A0),D0		;0301a: 10280021
@@ -4371,11 +4246,10 @@ lb_03034:
 	BEQ.S	lb_02ff4		;03058: 679a
 	LEA	ext_00ff8884,A0		;0305a: 41f900ff8884
 	MOVE.W	#$0016,D0		;03060: 303c0016
-	JSR	lb_025d2.W		;03064: 4eb825d2
+	JSRW	lb_025d2	;03064: 4eb825d2
 	CMPI.W	#$ffff,D0		;03068: 0c40ffff
 	BEQ.S	lb_02ff2		;0306c: 6784
-	JSR	lb_03322.W		;0306e: 4eb83322
-	NOP				;03072: 4e71
+	JSRW_NOP	lb_03322	;0306e: 4eb83322
 	ADDI.L	#$00000010,ext_00ff822a	;03074: 06b90000001000ff822a
 	BRA.W	lb_02ff2		;0307e: 6000ff72
 lb_03082:
@@ -4389,11 +4263,10 @@ lb_03082:
 	BCS.W	lb_030d8		;030a0: 65000036
 	LEA	ext_00ff8884,A0		;030a4: 41f900ff8884
 	MOVE.W	#$0016,D0		;030aa: 303c0016
-	JSR	lb_025d2.W		;030ae: 4eb825d2
+	JSRW	lb_025d2	;030ae: 4eb825d2
 	CMPI.W	#$ffff,D0		;030b2: 0c40ffff
 	BEQ.W	lb_030d8		;030b6: 67000020
-	JSR	lb_03362.W		;030ba: 4eb83362
-	NOP				;030be: 4e71
+	JSRW_NOP	lb_03362	;030ba: 4eb83362
 	ADDI.L	#$00000012,ext_00ff822e	;030c0: 06b90000001200ff822e
 	MOVE.W	ext_00ffa856,D0		;030ca: 303900ffa856
 	SUBI.W	#$0010,D0		;030d0: 04400010
@@ -4411,12 +4284,11 @@ lb_030da:
 	BHI.W	lb_03184		;030f8: 6200008a
 	LEA	ext_00ff98c4,A0		;030fc: 41f900ff98c4
 	MOVE.W	#$0014,D0		;03102: 303c0014
-	JSR	lb_025d2.W		;03106: 4eb825d2
+	JSRW	lb_025d2	;03106: 4eb825d2
 	CMPI.W	#$ffff,D0		;0310a: 0c40ffff
 	BEQ.W	lb_03184		;0310e: 67000074
 	MOVEA.L	A0,A4			;03112: 2848
-	JSR	lb_03322.W		;03114: 4eb83322
-	NOP				;03118: 4e71
+	JSRW_NOP	lb_03322	;03114: 4eb83322
 	ADDI.L	#$00000010,ext_00ff8236	;0311a: 06b90000001000ff8236
 lb_03124:
 	MOVEA.L	ext_00ff8236,A1		;03124: 227900ff8236
@@ -4424,12 +4296,11 @@ lb_03124:
 	BEQ.W	lb_0317a		;0312e: 6700004a
 	LEA	ext_00ff8884,A0		;03132: 41f900ff8884
 	MOVE.W	#$0016,D0		;03138: 303c0016
-	JSR	lb_025d2.W		;0313c: 4eb825d2
+	JSRW	lb_025d2	;0313c: 4eb825d2
 	CMPI.W	#$ffff,D0		;03140: 0c40ffff
 	BEQ.W	lb_03164		;03144: 6700001e
 	MOVEA.L	ext_00ff8236,A1		;03148: 227900ff8236
-	JSR	lb_03362.W		;0314e: 4eb83362
-	NOP				;03152: 4e71
+	JSRW_NOP	lb_03362	;0314e: 4eb83362
 	MOVE.L	A4,68(A2)		;03154: 254c0044
 	ADDI.L	#$00000012,ext_00ff8236	;03158: 06b90000001200ff8236
 	BRA.S	lb_03124		;03162: 60c0
@@ -4457,14 +4328,13 @@ lb_03186:
 	BHI.W	lb_03246		;031bc: 62000088
 	LEA	ext_00ff95a4,A0		;031c0: 41f900ff95a4
 	MOVE.W	#$0002,D0		;031c6: 303c0002
-	JSR	lb_025d2.W		;031ca: 4eb825d2
+	JSRW	lb_025d2	;031ca: 4eb825d2
 	CMPI.W	#$ffff,D0		;031ce: 0c40ffff
 	BEQ.W	lb_03246		;031d2: 67000072
-	JSR	lb_03322.W		;031d6: 4eb83322
-	NOP				;031da: 4e71
+	JSRW_NOP	lb_03322	;031d6: 4eb83322
 	MOVEM.L	A0,-(A7)		;031dc: 48e70080
 	LEA	ext_00ffa7c4,A0		;031e0: 41f900ffa7c4
-	JSR	lb_01efa.W		;031e6: 4eb81efa
+	JSRW	lb_01efa	;031e6: 4eb81efa
 	MOVEM.L	(A7)+,A0		;031ea: 4cdf0100
 	BTST	#3,copy_of_dsw_msb_00ff810a		;031ee: 0839000300ff810a
 	BEQ.W	lb_03200		;031f6: 67000008
@@ -4474,8 +4344,7 @@ lb_03200:
 	ANDI.L	#$0000000f,D1		;03204: 02810000000f
 	CMPI.B	#$07,D1			;0320a: 0c010007
 	BHI.W	lb_03224		;0320e: 62000014
-	LEA	lb_032ba.W,A3		;03212: 47f832ba
-	NOP				;03216: 4e71
+	LEAW_NOP	lb_032ba,A3	;03212: 47f832ba
 	ADDA.L	D1,A3			;03218: d7c1
 	MOVEQ	#0,D0			;0321a: 7000
 	MOVE.B	(A3),D0			;0321c: 1013
@@ -4497,17 +4366,15 @@ lb_03248:
 	BCS.S	lb_03246		;03258: 65ec
 	LEA	ext_00ff95a4,A0		;0325a: 41f900ff95a4
 	MOVE.W	#$0002,D0		;03260: 303c0002
-	JSR	lb_025d2.W		;03264: 4eb825d2
+	JSRW	lb_025d2	;03264: 4eb825d2
 	CMPI.W	#$ffff,D0		;03268: 0c40ffff
 	BEQ.S	lb_03246		;0326c: 67d8
-	JSR	lb_03322.W		;0326e: 4eb83322
-	NOP				;03272: 4e71
+	JSRW_NOP	lb_03322	;0326e: 4eb83322
 	MOVE.B	2(A0),D1		;03274: 12280002
 	ANDI.L	#$0000000f,D1		;03278: 02810000000f
 	CMPI.B	#$07,D1			;0327e: 0c010007
 	BHI.S	lb_03224		;03282: 62a0
-	LEA	lb_032ba.W,A3		;03284: 47f832ba
-	NOP				;03288: 4e71
+	LEAW_NOP	lb_032ba,A3	;03284: 47f832ba
 	ADDA.L	D1,A3			;0328a: d7c1
 	MOVEQ	#0,D0			;0328c: 7000
 	MOVE.B	(A3),D0			;0328e: 1013
@@ -4535,11 +4402,10 @@ lb_032ba:
 	BHI.W	lb_03320		;032e4: 6200003a
 	LEA	ext_00ff8884,A0		;032e8: 41f900ff8884
 	MOVE.W	#$0016,D0		;032ee: 303c0016
-	JSR	lb_025d2.W		;032f2: 4eb825d2
+	JSRW	lb_025d2	;032f2: 4eb825d2
 	CMPI.W	#$ffff,D0		;032f6: 0c40ffff
 	BEQ.W	lb_03320		;032fa: 67000024
-	JSR	lb_03322.W		;032fe: 4eb83322
-	NOP				;03302: 4e71
+	JSRW_NOP	lb_03322	;032fe: 4eb83322
 	MOVE.W	(A1),48(A0)		;03304: 31510030
 	MOVE.W	ext_00ff8128,D0		;03308: 303900ff8128
 	SUBI.W	#$0010,D0		;0330e: 04400010
@@ -4595,13 +4461,13 @@ lb_033a6:
 lb_033c6:
 	MOVEM.L	A0,-(A7)		;033c6: 48e70080
 	LEA	ext_00ff8244,A0		;033ca: 41f900ff8244
-	JSR	lb_01efa.W		;033d0: 4eb81efa
+	JSRW	lb_01efa	;033d0: 4eb81efa
 	LEA	ext_00ff8294,A0		;033d4: 41f900ff8294
-	JSR	lb_01efa.W		;033da: 4eb81efa
+	JSRW	lb_01efa	;033da: 4eb81efa
 	LEA	ext_00ff82e4,A0		;033de: 41f900ff82e4
-	JSR	lb_01efa.W		;033e4: 4eb81efa
+	JSRW	lb_01efa	;033e4: 4eb81efa
 	LEA	ext_00ff8334,A0		;033e8: 41f900ff8334
-	JSR	lb_01efa.W		;033ee: 4eb81efa
+	JSRW	lb_01efa	;033ee: 4eb81efa
 	MOVEM.L	(A7)+,A0		;033f2: 4cdf0100
 	MOVEM.L	A0,-(A7)		;033f6: 48e70080
 	MOVEA.L	#lb_0348e,A1		;033fa: 227c0000348e
@@ -4609,10 +4475,9 @@ lb_033c6:
 	MOVE.W	#$0003,D7		;03406: 3e3c0003
 lb_0340a:
 	ADDA.L	#$00000050,A0		;0340a: d1fc00000050
-	JSR	lb_03322.W		;03410: 4eb83322
+	JSRW	lb_03322	;03410: 4eb83322
 	DBF	D7,lb_0340a		;03414: 51cffff4
-	JSR	lb_03430.W		;03418: 4eb83430
-	NOP				;0341c: 4e71
+	JSRW_NOP	lb_03430	;03418: 4eb83430
 	MOVEM.L	(A7)+,A0		;0341e: 4cdf0100
 	BCLR	#7,(A0)			;03422: 08900007
 	MOVE.W	#$8014,ext_00ffa8e0		;03426: 33fc801400ffa8e0
@@ -4623,19 +4488,19 @@ lb_03430:
 	MOVE.W	#$0002,D7		;0343c: 3e3c0002
 lb_03440:
 	ADDA.L	#$00000050,A0		;03440: d1fc00000050
-	JSR	lb_03322.W		;03446: 4eb83322
+	JSRW	lb_03322	;03446: 4eb83322
 	DBF	D7,lb_03440		;0344a: 51cffff4
 	RTS				;0344e: 4e75
 lb_03450:
 	MOVEM.L	A0,-(A7)		;03450: 48e70080
 	MOVEA.L	#lb_0350e,A1		;03454: 227c0000350e
 	LEA	ext_00ffa634,A0		;0345a: 41f900ffa634
-	JSR	lb_03322.W		;03460: 4eb83322
+	JSRW	lb_03322	;03460: 4eb83322
 	MOVEM.L	(A7)+,A0		;03464: 4cdf0100
 	MOVEM.L	A0,-(A7)		;03468: 48e70080
 	MOVEA.L	#lb_034fe,A1		;0346c: 227c000034fe
 	LEA	ext_00ff8564,A0		;03472: 41f900ff8564
-	JSR	lb_03322.W		;03478: 4eb83322
+	JSRW	lb_03322	;03478: 4eb83322
 	MOVEM.L	(A7)+,A0		;0347c: 4cdf0100
 	BCLR	#7,(A0)			;03480: 08900007
 	MOVE.W	#$8013,ext_00ffa8e0		;03484: 33fc801300ffa8e0
@@ -4722,8 +4587,7 @@ lb_0351e:
 	MOVEQ	#0,D0			;03528: 7000
 	MOVE.B	ext_00ffa8d6,D0		;0352a: 103900ffa8d6
 	LSL.L	#2,D0			;03530: e588
-	LEA	lb_035cc.W,A1		;03532: 43f835cc
-	NOP				;03536: 4e71
+	LEAW_NOP	lb_035cc,A1	;03532: 43f835cc
 	ADDA.L	D0,A1			;03538: d3c0
 	MOVEA.L	(A1),A1			;0353a: 2251
 	MOVE.W	ext_00ffa856,D4		;0353c: 383900ffa856
@@ -4733,17 +4597,16 @@ lb_0351e:
 	MOVEQ	#0,D7			;0354e: 7e00
 	MOVE.B	ext_00ffa8d7,D7		;03550: 1e3900ffa8d7
 	SUBQ.L	#1,D7			;03556: 5387
-	JSR	lb_03560.W		;03558: 4eb83560
-	NOP				;0355c: 4e71
+	JSRW_NOP	lb_03560	;03558: 4eb83560
 lb_0355e:
 	RTS				;0355e: 4e75
 lb_03560:
 	LEA	ext_00ff8884,A0		;03560: 41f900ff8884
 	MOVE.W	#$0016,D0		;03566: 303c0016
-	JSR	lb_025d2.W		;0356a: 4eb825d2
+	JSRW	lb_025d2	;0356a: 4eb825d2
 	CMPI.W	#$ffff,D0		;0356e: 0c40ffff
 	BEQ.W	lb_035be		;03572: 6700004a
-	JSR	lb_01efa.W		;03576: 4eb81efa
+	JSRW	lb_01efa	;03576: 4eb81efa
 	MOVE.W	(A1)+,2(A0)		;0357a: 31590002
 	MOVE.W	(A1)+,4(A0)		;0357e: 31590004
 	MOVE.W	(A1)+,32(A0)		;03582: 31590020
@@ -5062,10 +4925,8 @@ lb_03820:
 	BNE.W	lb_0383c		;03820: 6600001a
 	CMPI.B	#$16,ext_00ff95a6		;03824: 0c39001600ff95a6
 	BNE.W	lb_0383c		;0382c: 6600000e
-	JSR	lb_0383e.W		;03830: 4eb8383e
-	NOP				;03834: 4e71
-	JSR	lb_038dc.W		;03836: 4eb838dc
-	NOP				;0383a: 4e71
+	JSRW_NOP	lb_0383e	;03830: 4eb8383e
+	JSRW_NOP	lb_038dc	;03836: 4eb838dc
 lb_0383c:
 	RTS				;0383c: 4e75
 lb_0383e:
@@ -5077,16 +4938,15 @@ lb_03846:
 	ADDI.B	#$01,ext_00ffa8fb		;0385a: 0639000100ffa8fb
 	LEA	ext_00ff8884,A0		;03862: 41f900ff8884
 	MOVE.W	#$0016,D0		;03868: 303c0016
-	JSR	lb_025d2.W		;0386c: 4eb825d2
+	JSRW	lb_025d2	;0386c: 4eb825d2
 	CMPI.W	#$ffff,D0		;03870: 0c40ffff
 	BEQ.W	lb_038ca		;03874: 67000054
-	JSR	lb_01efa.W		;03878: 4eb81efa
+	JSRW	lb_01efa	;03878: 4eb81efa
 	MOVEQ	#0,D0			;0387c: 7000
 	MOVE.B	ext_00ffa8fb,D0		;0387e: 103900ffa8fb
 	ANDI.B	#$01,D0			;03884: 02000001
 	LSL.L	#2,D0			;03888: e588
-	LEA	lb_038cc.W,A3		;0388a: 47f838cc
-	NOP				;0388e: 4e71
+	LEAW_NOP	lb_038cc,A3	;0388a: 47f838cc
 	ADDA.L	D0,A3			;03890: d7c0
 	MOVEA.L	(A3),A3			;03892: 2653
 	MOVE.W	(A3),(A0)		;03894: 3093
@@ -5115,8 +4975,7 @@ lb_038dc:
 	CMPI.B	#$07,ext_00ff95a7		;038dc: 0c39000700ff95a7
 	BNE.W	lb_038f6		;038e4: 66000010
 	BSET	#0,ext_00ffa8fa		;038e8: 08f9000000ffa8fa
-	JSR	lb_038f8.W		;038f0: 4eb838f8
-	NOP				;038f4: 4e71
+	JSRW_NOP	lb_038f8	;038f0: 4eb838f8
 lb_038f6:
 	RTS				;038f6: 4e75
 lb_038f8:
@@ -5131,8 +4990,7 @@ lb_03912:
 	BCLR	#7,(A0)			;03912: 08900007
 	RTS				;03916: 4e75
 lb_03918:
-	JSR	lb_060c2.W		;03918: 4eb860c2
-	NOP				;0391c: 4e71
+	JSRW_NOP	lb_060c2	;03918: 4eb860c2
 	CMPI.B	#$02,current_stage_00ff821d		;0391e: 0c39000200ff821d
 	BEQ.W	lb_0397a		;03926: 67000052
 	MOVE.B	67(A0),D0		;0392a: 10280043
@@ -5175,8 +5033,7 @@ lb_03994:
 	MOVE.L	#$fff80000,42(A0)	;039b8: 217cfff80000002a
 	BRA.S	lb_0396c		;039c0: 60aa
 lb_039c2:
-	JSR	lb_060c2.W		;039c2: 4eb860c2
-	NOP				;039c6: 4e71
+	JSRW_NOP	lb_060c2	;039c2: 4eb860c2
 	MOVE.W	ext_00ff8040,D0		;039c8: 303900ff8040
 	BTST	#15,D0			;039ce: 0800000f
 	BEQ.W	lb_039d8		;039d2: 67000004
@@ -5200,8 +5057,7 @@ lb_03a08:
 lb_03a16:
 	CMPI.B	#$00,4(A0)		;03a16: 0c2800000004
 	BNE.W	lb_03a46		;03a1c: 66000028
-	JSR	lb_060c2.W		;03a20: 4eb860c2
-	NOP				;03a24: 4e71
+	JSRW_NOP	lb_060c2	;03a20: 4eb860c2
 	MOVE.W	ext_00ff8040,D0		;03a26: 303900ff8040
 	BTST	#15,D0			;03a2c: 0800000f
 	BEQ.W	lb_03a36		;03a30: 67000004
@@ -5225,8 +5081,7 @@ lb_03a72:
 lb_03a74:
 	CMPI.B	#$00,4(A0)		;03a74: 0c2800000004
 	BNE.W	lb_03aa4		;03a7a: 66000028
-	JSR	lb_060c2.W		;03a7e: 4eb860c2
-	NOP				;03a82: 4e71
+	JSRW_NOP	lb_060c2	;03a7e: 4eb860c2
 	MOVE.W	ext_00ff8040,D0		;03a84: 303900ff8040
 	BTST	#15,D0			;03a8a: 0800000f
 	BEQ.W	lb_03a94		;03a8e: 67000004
@@ -5286,8 +5141,7 @@ lb_03b40:
 	BEQ.W	lb_03b70		;03b64: 6700000a
 	MOVE.L	#$00012000,20(A0)	;03b68: 217c000120000014
 lb_03b70:
-	JSR	lb_05c62.W		;03b70: 4eb85c62
-	NOP				;03b74: 4e71
+	JSRW_NOP	lb_05c62	;03b70: 4eb85c62
 	CMPI.W	#$ffff,D0		;03b76: 0c40ffff
 	BNE.W	lb_03ba0		;03b7a: 66000024
 	MOVE.B	3(A0),1(A0)		;03b7e: 116800030001
@@ -5304,17 +5158,13 @@ lb_03bac:
 	SUBI.B	#$01,5(A0)		;03bac: 042800010005
 	BCC.W	lb_03bc0		;03bb2: 6400000c
 	MOVE.B	#$06,D1			;03bb6: 123c0006
-	JSR	lb_04c8c.W		;03bba: 4eb84c8c
-	NOP				;03bbe: 4e71
+	JSRW_NOP	lb_04c8c	;03bba: 4eb84c8c
 lb_03bc0:
 	MOVE.W	8(A0),60(A0)		;03bc0: 31680008003c
 	MOVE.W	16(A0),62(A0)		;03bc6: 31680010003e
-	JSR	lb_0491e.W		;03bcc: 4eb8491e
-	NOP				;03bd0: 4e71
-	JSR	lb_04b32.W		;03bd2: 4eb84b32
-	NOP				;03bd6: 4e71
-	JSR	lb_04898.W		;03bd8: 4eb84898
-	NOP				;03bdc: 4e71
+	JSRW_NOP	lb_0491e	;03bcc: 4eb8491e
+	JSRW_NOP	lb_04b32	;03bd2: 4eb84b32
+	JSRW_NOP	lb_04898	;03bd8: 4eb84898
 	RTS				;03bde: 4e75
 lb_03be0:
 	MOVE.L	#$fffdc000,20(A0)	;03be0: 217cfffdc0000014
@@ -5326,8 +5176,7 @@ lb_03bfc:
 	BEQ.W	lb_03c08		;03c00: 67000006
 	NEG.L	20(A0)			;03c04: 44a80014
 lb_03c08:
-	JSR	lb_05c62.W		;03c08: 4eb85c62
-	NOP				;03c0c: 4e71
+	JSRW_NOP	lb_05c62	;03c08: 4eb85c62
 	CMPI.W	#$ffff,D0		;03c0e: 0c40ffff
 	BNE.W	lb_03c2c		;03c12: 66000018
 	MOVE.B	3(A0),1(A0)		;03c16: 116800030001
@@ -5342,23 +5191,18 @@ lb_03c38:
 	SUBI.B	#$01,5(A0)		;03c38: 042800010005
 	BCC.W	lb_03c64		;03c3e: 64000024
 	MOVE.B	#$04,D1			;03c42: 123c0004
-	JSR	lb_04c8c.W		;03c46: 4eb84c8c
-	NOP				;03c4a: 4e71
+	JSRW_NOP	lb_04c8c	;03c46: 4eb84c8c
 	BTST	#0,4(A0)		;03c4c: 082800000004
 	BNE.W	lb_03c64		;03c52: 66000010
 	TST.B	46(A0)			;03c56: 4a28002e
 	BNE.W	lb_03c64		;03c5a: 66000008
-	JSR	lb_049c2.W		;03c5e: 4eb849c2
-	NOP				;03c62: 4e71
+	JSRW_NOP	lb_049c2	;03c5e: 4eb849c2
 lb_03c64:
 	MOVE.W	8(A0),60(A0)		;03c64: 31680008003c
 	MOVE.W	16(A0),62(A0)		;03c6a: 31680010003e
-	JSR	lb_04a4c.W		;03c70: 4eb84a4c
-	NOP				;03c74: 4e71
-	JSR	lb_04b32.W		;03c76: 4eb84b32
-	NOP				;03c7a: 4e71
-	JSR	lb_04898.W		;03c7c: 4eb84898
-	NOP				;03c80: 4e71
+	JSRW_NOP	lb_04a4c	;03c70: 4eb84a4c
+	JSRW_NOP	lb_04b32	;03c76: 4eb84b32
+	JSRW_NOP	lb_04898	;03c7c: 4eb84898
 	RTS				;03c82: 4e75
 lb_03c84:
 	MOVE.L	#$00008000,20(A0)	;03c84: 217c000080000014
@@ -5367,34 +5211,28 @@ lb_03c84:
 	MOVE.L	#$ffff8000,20(A0)	;03c94: 217cffff80000014
 lb_03c9c:
 	MOVE.L	#$00000000,12(A0)	;03c9c: 217c00000000000c
-	JSR	lb_05c62.W		;03ca4: 4eb85c62
-	NOP				;03ca8: 4e71
-	JSR	lb_04880.W		;03caa: 4eb84880
-	NOP				;03cae: 4e71
+	JSRW_NOP	lb_05c62	;03ca4: 4eb85c62
+	JSRW_NOP	lb_04880	;03caa: 4eb84880
 	CMPI.W	#$ffff,D0		;03cb0: 0c40ffff
 	BNE.W	lb_03cca		;03cb4: 66000014
-	JSR	lb_054ea.W		;03cb8: 4eb854ea
-	NOP				;03cbc: 4e71
+	JSRW_NOP	lb_054ea	;03cb8: 4eb854ea
 	MOVE.B	#$00,3(A0)		;03cbe: 117c00000003
 	MOVE.W	#$0005,4(A0)		;03cc4: 317c00050004
 lb_03cca:
-	JSR	lb_04898.W		;03cca: 4eb84898
-	NOP				;03cce: 4e71
+	JSRW_NOP	lb_04898	;03cca: 4eb84898
 	RTS				;03cd0: 4e75
 lb_03cd2:
 	CMPI.B	#$04,4(A0)		;03cd2: 0c2800040004
 	BNE.W	lb_03d10		;03cd8: 66000036
 	MOVE.L	#$00050000,12(A0)	;03cdc: 217c00050000000c
-	JSR	lb_05d5e.W		;03ce4: 4eb85d5e
-	NOP				;03ce8: 4e71
+	JSRW_NOP	lb_05d5e	;03ce4: 4eb85d5e
 	CMPI.W	#$ffff,D0		;03cea: 0c40ffff
 	BNE.W	lb_03d32		;03cee: 66000042
 	MOVE.B	1(A0),3(A0)		;03cf2: 116800010003
 	MOVE.W	#$0005,4(A0)		;03cf8: 317c00050004
 	TST.B	46(A0)			;03cfe: 4a28002e
 	BNE.W	lb_03d32		;03d02: 6600002e
-	JSR	lb_054ea.W		;03d06: 4eb854ea
-	NOP				;03d0a: 4e71
+	JSRW_NOP	lb_054ea	;03d06: 4eb854ea
 	BRA.W	lb_03d32		;03d0c: 60000024
 lb_03d10:
 	CMPI.B	#$03,4(A0)		;03d10: 0c2800030004
@@ -5404,17 +5242,14 @@ lb_03d1e:
 	SUBI.B	#$01,5(A0)		;03d1e: 042800010005
 	BCC.W	lb_03d32		;03d24: 6400000c
 	ADDI.B	#$01,4(A0)		;03d28: 062800010004
-	JSR	lb_029b0.W		;03d2e: 4eb829b0
+	JSRW	lb_029b0	;03d2e: 4eb829b0
 lb_03d32:
-	JSR	lb_04b32.W		;03d32: 4eb84b32
-	NOP				;03d36: 4e71
-	JSR	lb_04898.W		;03d38: 4eb84898
-	NOP				;03d3c: 4e71
+	JSRW_NOP	lb_04b32	;03d32: 4eb84b32
+	JSRW_NOP	lb_04898	;03d38: 4eb84898
 	RTS				;03d3e: 4e75
 lb_03d40:
 	MOVE.L	#$00000000,12(A0)	;03d40: 217c00000000000c
-	JSR	lb_05d5e.W		;03d48: 4eb85d5e
-	NOP				;03d4c: 4e71
+	JSRW_NOP	lb_05d5e	;03d48: 4eb85d5e
 	CMPI.W	#$0fff,D0		;03d4e: 0c400fff
 	BEQ.W	lb_03d66		;03d52: 67000012
 	MOVE.B	#$12,3(A0)		;03d56: 117c00120003
@@ -5429,43 +5264,40 @@ lb_03d74:
 	SUBI.B	#$01,5(A0)		;03d74: 042800010005
 	BCC.W	lb_03da2		;03d7a: 64000026
 	ADDI.B	#$01,4(A0)		;03d7e: 062800010004
-	JSR	lb_029b0.W		;03d84: 4eb829b0
+	JSRW	lb_029b0	;03d84: 4eb829b0
 	CMPI.B	#$04,4(A0)		;03d88: 0c2800040004
 	BNE.W	lb_03da2		;03d8e: 66000012
 	ADDQ.B	#1,46(A0)		;03d92: 5228002e
 	MOVE.B	#$00,3(A0)		;03d96: 117c00000003
 	MOVE.W	#$0005,4(A0)		;03d9c: 317c00050004
 lb_03da2:
-	JSR	lb_04898.W		;03da2: 4eb84898
-	NOP				;03da6: 4e71
+	JSRW_NOP	lb_04898	;03da2: 4eb84898
 	RTS				;03da8: 4e75
 lb_03daa:
 	SUBI.B	#$01,5(A0)		;03daa: 042800010005
 	BCC.W	lb_03dd8		;03db0: 64000026
 	ADDI.B	#$01,4(A0)		;03db4: 062800010004
-	JSR	lb_029b0.W		;03dba: 4eb829b0
+	JSRW	lb_029b0	;03dba: 4eb829b0
 	CMPI.B	#$04,4(A0)		;03dbe: 0c2800040004
 	BNE.W	lb_03dd8		;03dc4: 66000012
 	ADDQ.B	#1,46(A0)		;03dc8: 5228002e
 	MOVE.B	#$00,3(A0)		;03dcc: 117c00000003
 	MOVE.W	#$0005,4(A0)		;03dd2: 317c00050004
 lb_03dd8:
-	JSR	lb_04898.W		;03dd8: 4eb84898
-	NOP				;03ddc: 4e71
+	JSRW_NOP	lb_04898	;03dd8: 4eb84898
 	RTS				;03dde: 4e75
 lb_03de0:
 	SUBI.B	#$01,5(A0)		;03de0: 042800010005
 	BCC.W	lb_03e0e		;03de6: 64000026
 	ADDI.B	#$01,4(A0)		;03dea: 062800010004
-	JSR	lb_029b0.W		;03df0: 4eb829b0
+	JSRW	lb_029b0	;03df0: 4eb829b0
 	CMPI.B	#$03,4(A0)		;03df4: 0c2800030004
 	BNE.W	lb_03e0e		;03dfa: 66000012
 	ADDQ.B	#1,46(A0)		;03dfe: 5228002e
 	MOVE.B	#$00,3(A0)		;03e02: 117c00000003
 	MOVE.W	#$0005,4(A0)		;03e08: 317c00050004
 lb_03e0e:
-	JSR	lb_04898.W		;03e0e: 4eb84898
-	NOP				;03e12: 4e71
+	JSRW_NOP	lb_04898	;03e0e: 4eb84898
 	RTS				;03e14: 4e75
 lb_03e16:
 	CMPI.B	#$00,4(A0)		;03e16: 0c2800000004
@@ -5477,10 +5309,8 @@ lb_03e16:
 lb_03e34:
 	MOVE.L	#$00000000,12(A0)	;03e34: 217c00000000000c
 	MOVE.L	D1,20(A0)		;03e3c: 21410014
-	JSR	lb_05c62.W		;03e40: 4eb85c62
-	NOP				;03e44: 4e71
-	JSR	lb_04880.W		;03e46: 4eb84880
-	NOP				;03e4a: 4e71
+	JSRW_NOP	lb_05c62	;03e40: 4eb85c62
+	JSRW_NOP	lb_04880	;03e46: 4eb84880
 	CMPI.W	#$ffff,D0		;03e4c: 0c40ffff
 	BEQ.W	lb_03e7e		;03e50: 6700002c
 lb_03e54:
@@ -5497,22 +5327,19 @@ lb_03e7e:
 	MOVE.W	#$0006,4(A0)		;03e84: 317c00060004
 	ADDI.B	#$01,46(A0)		;03e8a: 06280001002e
 lb_03e90:
-	JSR	lb_04898.W		;03e90: 4eb84898
-	NOP				;03e94: 4e71
+	JSRW_NOP	lb_04898	;03e90: 4eb84898
 	RTS				;03e96: 4e75
 lb_03e98:
 	SUBI.B	#$01,5(A0)		;03e98: 042800010005
 	BCC.W	lb_03ef4		;03e9e: 64000054
 	MOVE.B	#$06,D1			;03ea2: 123c0006
-	JSR	lb_04c8c.W		;03ea6: 4eb84c8c
-	NOP				;03eaa: 4e71
+	JSRW_NOP	lb_04c8c	;03ea6: 4eb84c8c
 	MOVE.L	#$ffe80000,20(A0)	;03eac: 217cffe800000014
 	BTST	#5,(A0)			;03eb4: 08100005
 	BEQ.W	lb_03ec4		;03eb8: 6700000a
 	MOVE.L	#$00180000,20(A0)	;03ebc: 217c001800000014
 lb_03ec4:
-	JSR	lb_05c62.W		;03ec4: 4eb85c62
-	NOP				;03ec8: 4e71
+	JSRW_NOP	lb_05c62	;03ec4: 4eb85c62
 	CMPI.W	#$ffff,D0		;03eca: 0c40ffff
 	BNE.W	lb_03ee8		;03ece: 66000018
 	MOVE.B	3(A0),1(A0)		;03ed2: 116800030001
@@ -5524,10 +5351,8 @@ lb_03ee8:
 	BNE.W	lb_03ef4		;03eec: 66000006
 	BCHG	#5,(A0)			;03ef0: 08500005
 lb_03ef4:
-	JSR	lb_049c2.W		;03ef4: 4eb849c2
-	NOP				;03ef8: 4e71
-	JSR	lb_04898.W		;03efa: 4eb84898
-	NOP				;03efe: 4e71
+	JSRW_NOP	lb_049c2	;03ef4: 4eb849c2
+	JSRW_NOP	lb_04898	;03efa: 4eb84898
 	RTS				;03f00: 4e75
 lb_03f02:
 	MOVE.L	#$00020000,D1		;03f02: 223c00020000
@@ -5537,10 +5362,8 @@ lb_03f02:
 lb_03f16:
 	MOVE.L	#$00000000,12(A0)	;03f16: 217c00000000000c
 	MOVE.L	D1,20(A0)		;03f1e: 21410014
-	JSR	lb_05c62.W		;03f22: 4eb85c62
-	NOP				;03f26: 4e71
-	JSR	lb_04880.W		;03f28: 4eb84880
-	NOP				;03f2c: 4e71
+	JSRW_NOP	lb_05c62	;03f22: 4eb85c62
+	JSRW_NOP	lb_04880	;03f28: 4eb84880
 	CMPI.W	#$ffff,D0		;03f2e: 0c40ffff
 	BEQ.W	lb_03f60		;03f32: 6700002c
 	SUBI.B	#$01,5(A0)		;03f36: 042800010005
@@ -5557,17 +5380,14 @@ lb_03f60:
 	MOVE.W	#$0006,4(A0)		;03f6c: 317c00060004
 	TST.B	46(A0)			;03f72: 4a28002e
 	BNE.W	lb_03f80		;03f76: 66000008
-	JSR	lb_054ea.W		;03f7a: 4eb854ea
-	NOP				;03f7e: 4e71
+	JSRW_NOP	lb_054ea	;03f7a: 4eb854ea
 lb_03f80:
-	JSR	lb_04898.W		;03f80: 4eb84898
-	NOP				;03f84: 4e71
+	JSRW_NOP	lb_04898	;03f80: 4eb84898
 	RTS				;03f86: 4e75
 lb_03f88:
 	MOVE.L	#$00040000,12(A0)	;03f88: 217c00040000000c
 	MOVE.L	#$00000000,20(A0)	;03f90: 217c000000000014
-	JSR	lb_05d5e.W		;03f98: 4eb85d5e
-	NOP				;03f9c: 4e71
+	JSRW_NOP	lb_05d5e	;03f98: 4eb85d5e
 	MOVE.W	D0,ext_00ff801e		;03f9e: 33c000ff801e
 	CMPI.B	#$ff,5(A0)		;03fa4: 0c2800ff0005
 	BEQ.W	lb_03fdc		;03faa: 67000030
@@ -5578,8 +5398,7 @@ lb_03f88:
 	BNE.W	lb_03fd2		;03fc6: 6600000a
 	MOVE.L	#$fffee000,20(A0)	;03fca: 217cfffee0000014
 lb_03fd2:
-	JSR	lb_05c62.W		;03fd2: 4eb85c62
-	NOP				;03fd6: 4e71
+	JSRW_NOP	lb_05c62	;03fd2: 4eb85c62
 	BRA.W	lb_03ff4		;03fd8: 6000001a
 lb_03fdc:
 	CMPI.W	#$ffff,ext_00ff801e		;03fdc: 0c79ffff00ff801e
@@ -5593,7 +5412,7 @@ lb_03ff6:
 	BCC.W	lb_0403a		;03ffc: 6400003c
 	BSET	#3,32(A0)		;04000: 08e800030020
 	ADDI.B	#$01,4(A0)		;04006: 062800010004
-	JSR	lb_029b0.W		;0400c: 4eb829b0
+	JSRW	lb_029b0	;0400c: 4eb829b0
 	CMPI.B	#$02,4(A0)		;04010: 0c2800020004
 	BNE.W	lb_0403a		;04016: 66000022
 	BCLR	#7,(A0)			;0401a: 08900007
@@ -5602,8 +5421,7 @@ lb_03ff6:
 	BEQ.W	lb_04034		;0402a: 67000008
 	MOVE.L	#$00000400,D0		;0402e: 203c00000400
 lb_04034:
-	JSR	lb_0725e.W		;04034: 4eb8725e
-	NOP				;04038: 4e71
+	JSRW_NOP	lb_0725e	;04034: 4eb8725e
 lb_0403a:
 	RTS				;0403a: 4e75
 lb_0403c:
@@ -5628,13 +5446,12 @@ lb_04094:
 	SUBI.B	#$01,5(A0)		;04094: 042800010005
 	BCC.W	lb_040b8		;0409a: 6400001c
 	ADDI.B	#$01,4(A0)		;0409e: 062800010004
-	JSR	lb_029b0.W		;040a4: 4eb829b0
+	JSRW	lb_029b0	;040a4: 4eb829b0
 	CMPI.B	#$03,4(A0)		;040a8: 0c2800030004
 	BNE.W	lb_040b8		;040ae: 66000008
 	MOVE.B	#$02,4(A0)		;040b2: 117c00020004
 lb_040b8:
-	JSR	lb_04b76.W		;040b8: 4eb84b76
-	NOP				;040bc: 4e71
+	JSRW_NOP	lb_04b76	;040b8: 4eb84b76
 	RTS				;040be: 4e75
 lb_040c0:
 	MOVE.L	#$fffd0000,20(A0)	;040c0: 217cfffd00000014
@@ -5642,8 +5459,7 @@ lb_040c0:
 	BEQ.W	lb_040d8		;040cc: 6700000a
 	MOVE.L	#$00030000,20(A0)	;040d0: 217c000300000014
 lb_040d8:
-	JSR	lb_05c62.W		;040d8: 4eb85c62
-	NOP				;040dc: 4e71
+	JSRW_NOP	lb_05c62	;040d8: 4eb85c62
 	CMPI.W	#$ffff,D0		;040de: 0c40ffff
 	BNE.W	lb_040fc		;040e2: 66000018
 	MOVE.B	3(A0),1(A0)		;040e6: 116800030001
@@ -5658,21 +5474,18 @@ lb_04108:
 	SUBI.B	#$01,5(A0)		;04108: 042800010005
 	BCC.W	lb_04122		;0410e: 64000012
 	MOVE.B	#$04,D1			;04112: 123c0004
-	JSR	lb_04c8c.W		;04116: 4eb84c8c
-	NOP				;0411a: 4e71
+	JSRW_NOP	lb_04c8c	;04116: 4eb84c8c
 	MOVE.B	#$05,5(A0)		;0411c: 117c00050005
 lb_04122:
 	MOVE.W	8(A0),60(A0)		;04122: 31680008003c
 	MOVE.W	16(A0),62(A0)		;04128: 31680010003e
-	JSR	lb_04b76.W		;0412e: 4eb84b76
-	NOP				;04132: 4e71
+	JSRW_NOP	lb_04b76	;0412e: 4eb84b76
 	RTS				;04134: 4e75
 lb_04136:
 	CMPI.W	#$0000,4(A0)		;04136: 0c6800000004
 	BEQ.W	lb_04166		;0413c: 67000028
 	MOVE.L	#$00040000,12(A0)	;04140: 217c00040000000c
-	JSR	lb_05d5e.W		;04148: 4eb85d5e
-	NOP				;0414c: 4e71
+	JSRW_NOP	lb_05d5e	;04148: 4eb85d5e
 	CMPI.W	#$ffff,D0		;0414e: 0c40ffff
 	BNE.W	lb_04176		;04152: 66000022
 	MOVE.B	1(A0),3(A0)		;04156: 116800010003
@@ -5683,16 +5496,14 @@ lb_04166:
 	BCC.W	lb_04176		;0416c: 64000008
 	ADDI.B	#$01,4(A0)		;04170: 062800010004
 lb_04176:
-	JSR	lb_04b76.W		;04176: 4eb84b76
-	NOP				;0417a: 4e71
+	JSRW_NOP	lb_04b76	;04176: 4eb84b76
 	RTS				;0417c: 4e75
 lb_0417e:
 	TST.B	4(A0)			;0417e: 4a280004
 	BNE.W	lb_041f4		;04182: 66000070
 	MOVE.L	#$00040000,12(A0)	;04186: 217c00040000000c
 	MOVE.L	#$00000000,20(A0)	;0418e: 217c000000000014
-	JSR	lb_05d5e.W		;04196: 4eb85d5e
-	NOP				;0419a: 4e71
+	JSRW_NOP	lb_05d5e	;04196: 4eb85d5e
 	MOVE.W	D0,ext_00ff801e		;0419c: 33c000ff801e
 	CMPI.B	#$ff,5(A0)		;041a2: 0c2800ff0005
 	BEQ.W	lb_041da		;041a8: 67000030
@@ -5703,8 +5514,7 @@ lb_0417e:
 	BNE.W	lb_041d0		;041c4: 6600000a
 	MOVE.L	#$fffee000,20(A0)	;041c8: 217cfffee0000014
 lb_041d0:
-	JSR	lb_05c62.W		;041d0: 4eb85c62
-	NOP				;041d4: 4e71
+	JSRW_NOP	lb_05c62	;041d0: 4eb85c62
 	BRA.W	lb_041f2		;041d6: 6000001a
 lb_041da:
 	CMPI.W	#$ffff,ext_00ff801e		;041da: 0c79ffff00ff801e
@@ -5721,15 +5531,14 @@ lb_041f4:
 	CMPI.B	#$03,4(A0)		;04208: 0c2800030004
 	BNE.S	lb_041f2		;0420e: 66e2
 	MOVE.L	#$00001000,D0		;04210: 203c00001000
-	JSR	lb_0725e.W		;04216: 4eb8725e
-	NOP				;0421a: 4e71
+	JSRW_NOP	lb_0725e	;04216: 4eb8725e
 	BCLR	#7,(A0)			;0421c: 08900007
 	BRA.S	lb_041f2		;04220: 60d0
 lb_04222:
 	SUBI.B	#$01,5(A0)		;04222: 042800010005
 	BCC.W	lb_04256		;04228: 6400002c
 	ADDI.B	#$01,4(A0)		;0422c: 062800010004
-	JSR	lb_029b0.W		;04232: 4eb829b0
+	JSRW	lb_029b0	;04232: 4eb829b0
 	CMPI.B	#$04,4(A0)		;04236: 0c2800040004
 	BNE.W	lb_04256		;0423c: 66000018
 	ADDQ.B	#1,46(A0)		;04240: 5228002e
@@ -5749,8 +5558,7 @@ lb_04258:
 	BEQ.W	lb_04288		;0427c: 6700000a
 	MOVE.L	#$0000a000,20(A0)	;04280: 217c0000a0000014
 lb_04288:
-	JSR	lb_05c62.W		;04288: 4eb85c62
-	NOP				;0428c: 4e71
+	JSRW_NOP	lb_05c62	;04288: 4eb85c62
 	CMPI.W	#$ffff,D0		;0428e: 0c40ffff
 	BNE.W	lb_042b8		;04292: 66000024
 	MOVE.B	3(A0),1(A0)		;04296: 116800030001
@@ -5767,11 +5575,9 @@ lb_042c4:
 	SUBI.B	#$01,5(A0)		;042c4: 042800010005
 	BCC.W	lb_042d8		;042ca: 6400000c
 	MOVE.B	#$06,D1			;042ce: 123c0006
-	JSR	lb_04c8c.W		;042d2: 4eb84c8c
-	NOP				;042d6: 4e71
+	JSRW_NOP	lb_04c8c	;042d2: 4eb84c8c
 lb_042d8:
-	JSR	lb_04c08.W		;042d8: 4eb84c08
-	NOP				;042dc: 4e71
+	JSRW_NOP	lb_04c08	;042d8: 4eb84c08
 	MOVE.W	8(A0),60(A0)		;042de: 31680008003c
 	MOVE.W	16(A0),62(A0)		;042e4: 31680010003e
 	RTS				;042ea: 4e75
@@ -5780,8 +5586,7 @@ lb_042ec:
 	SUBI.B	#$01,5(A0)		;042f4: 042800010005
 	BCC.W	lb_04308		;042fa: 6400000c
 	MOVE.B	#$04,D1			;042fe: 123c0004
-	JSR	lb_04c8c.W		;04302: 4eb84c8c
-	NOP				;04306: 4e71
+	JSRW_NOP	lb_04c8c	;04302: 4eb84c8c
 lb_04308:
 	SUBI.B	#$01,40(A0)		;04308: 042800010028
 	BCC.W	lb_04320		;0430e: 64000010
@@ -5796,8 +5601,7 @@ lb_04322:
 	SUBI.B	#$01,5(A0)		;04330: 042800010005
 	BCC.W	lb_04344		;04336: 6400000c
 	MOVE.B	#$02,D1			;0433a: 123c0002
-	JSR	lb_04c8c.W		;0433e: 4eb84c8c
-	NOP				;04342: 4e71
+	JSRW_NOP	lb_04c8c	;0433e: 4eb84c8c
 lb_04344:
 	RTS				;04344: 4e75
 lb_04346:
@@ -5806,8 +5610,7 @@ lb_04346:
 	BNE.W	lb_0435e		;04352: 6600000a
 	SUBI.L	#$00010000,16(A0)	;04356: 04a8000100000010
 lb_0435e:
-	JSR	lb_060c2.W		;0435e: 4eb860c2
-	NOP				;04362: 4e71
+	JSRW_NOP	lb_060c2	;0435e: 4eb860c2
 	MOVE.W	ext_00ff8040,D0		;04364: 303900ff8040
 	BTST	#15,D0			;0436a: 0800000f
 	BEQ.W	lb_04374		;0436e: 67000004
@@ -5829,8 +5632,7 @@ lb_04398:
 	ADDI.B	#$01,4(A0)		;043a8: 062800010004
 	CMPI.B	#$03,4(A0)		;043ae: 0c2800030004
 	BNE.W	lb_043ca		;043b4: 66000014
-	JSR	lb_04434.W		;043b8: 4eb84434
-	NOP				;043bc: 4e71
+	JSRW_NOP	lb_04434	;043b8: 4eb84434
 	MOVEQ	#30,D0			;043be: 701e
 	JSR	play_sound_0def0		;043c0: 4eb90000def0
 	BRA.W	lb_043d8		;043c6: 60000010
@@ -5843,8 +5645,7 @@ lb_043d8:
 lb_043da:
 	BTST	#0,32(A0)		;043da: 082800000020
 	BNE.W	lb_0440a		;043e0: 66000028
-	JSR	lb_060c2.W		;043e4: 4eb860c2
-	NOP				;043e8: 4e71
+	JSRW_NOP	lb_060c2	;043e4: 4eb860c2
 	MOVE.L	ext_00ff803e,D2		;043ea: 243900ff803e
 	BTST	#15,D2			;043f0: 0802000f
 	BEQ.W	lb_043fa		;043f4: 67000004
@@ -5856,21 +5657,19 @@ lb_043fa:
 	BSET	#0,32(A0)		;04404: 08e800000020
 lb_0440a:
 	MOVE.L	#$00028000,12(A0)	;0440a: 217c00028000000c
-	JSR	lb_05d5e.W		;04412: 4eb85d5e
-	NOP				;04416: 4e71
+	JSRW_NOP	lb_05d5e	;04412: 4eb85d5e
 	CMPI.W	#$ffff,D0		;04418: 0c40ffff
 	BNE.W	lb_04432		;0441c: 66000014
 	MOVE.B	#$00,3(A0)		;04420: 117c00000003
 	MOVE.W	#$0006,4(A0)		;04426: 317c00060004
-	JSR	lb_054ea.W		;0442c: 4eb854ea
-	NOP				;04430: 4e71
+	JSRW_NOP	lb_054ea	;0442c: 4eb854ea
 lb_04432:
 	RTS				;04432: 4e75
 lb_04434:
 	MOVEM.L	A0,-(A7)		;04434: 48e70080
 	LEA	ext_00ff8884,A0		;04438: 41f900ff8884
 	MOVE.W	#$0016,D0		;0443e: 303c0016
-	JSR	lb_025d2.W		;04442: 4eb825d2
+	JSRW	lb_025d2	;04442: 4eb825d2
 	MOVEA.L	A0,A1			;04446: 2248
 	MOVEM.L	(A7)+,A0		;04448: 4cdf0100
 	CMPI.W	#$ffff,D0		;0444c: 0c40ffff
@@ -5939,8 +5738,7 @@ lb_0454e:
 	BEQ.W	lb_0457e		;04572: 6700000a
 	MOVE.L	#$00012000,20(A0)	;04576: 217c000120000014
 lb_0457e:
-	JSR	lb_05c62.W		;0457e: 4eb85c62
-	NOP				;04582: 4e71
+	JSRW_NOP	lb_05c62	;0457e: 4eb85c62
 	CMPI.W	#$ffff,D0		;04584: 0c40ffff
 	BNE.W	lb_045ae		;04588: 66000024
 	MOVE.B	3(A0),1(A0)		;0458c: 116800030001
@@ -5957,17 +5755,13 @@ lb_045ba:
 	SUBI.B	#$01,5(A0)		;045ba: 042800010005
 	BCC.W	lb_045ce		;045c0: 6400000c
 	MOVE.B	#$06,D1			;045c4: 123c0006
-	JSR	lb_04c8c.W		;045c8: 4eb84c8c
-	NOP				;045cc: 4e71
+	JSRW_NOP	lb_04c8c	;045c8: 4eb84c8c
 lb_045ce:
 	MOVE.W	8(A0),60(A0)		;045ce: 31680008003c
 	MOVE.W	16(A0),62(A0)		;045d4: 31680010003e
-	JSR	lb_0491e.W		;045da: 4eb8491e
-	NOP				;045de: 4e71
-	JSR	lb_04b32.W		;045e0: 4eb84b32
-	NOP				;045e4: 4e71
-	JSR	lb_04898.W		;045e6: 4eb84898
-	NOP				;045ea: 4e71
+	JSRW_NOP	lb_0491e	;045da: 4eb8491e
+	JSRW_NOP	lb_04b32	;045e0: 4eb84b32
+	JSRW_NOP	lb_04898	;045e6: 4eb84898
 	RTS				;045ec: 4e75
 lb_045ee:
 	MOVE.L	#$fffd8000,20(A0)	;045ee: 217cfffd80000014
@@ -5975,8 +5769,7 @@ lb_045ee:
 	BEQ.W	lb_04606		;045fa: 6700000a
 	MOVE.L	#$00028000,20(A0)	;045fe: 217c000280000014
 lb_04606:
-	JSR	lb_05c62.W		;04606: 4eb85c62
-	NOP				;0460a: 4e71
+	JSRW_NOP	lb_05c62	;04606: 4eb85c62
 	CMPI.W	#$ffff,D0		;0460c: 0c40ffff
 	BNE.W	lb_0462a		;04610: 66000018
 	MOVE.B	3(A0),1(A0)		;04614: 116800030001
@@ -5991,23 +5784,18 @@ lb_04636:
 	SUBI.B	#$01,5(A0)		;04636: 042800010005
 	BCC.W	lb_04664		;0463c: 64000026
 	MOVE.B	#$04,D1			;04640: 123c0004
-	JSR	lb_04c8c.W		;04644: 4eb84c8c
-	NOP				;04648: 4e71
+	JSRW_NOP	lb_04c8c	;04644: 4eb84c8c
 	BTST	#0,4(A0)		;0464a: 082800000004
 	BNE.W	lb_04664		;04650: 66000012
 	CMPI.B	#$02,46(A0)		;04654: 0c280002002e
 	BCC.W	lb_04664		;0465a: 64000008
-	JSR	lb_049c2.W		;0465e: 4eb849c2
-	NOP				;04662: 4e71
+	JSRW_NOP	lb_049c2	;0465e: 4eb849c2
 lb_04664:
 	MOVE.W	8(A0),60(A0)		;04664: 31680008003c
 	MOVE.W	16(A0),62(A0)		;0466a: 31680010003e
-	JSR	lb_04748.W		;04670: 4eb84748
-	NOP				;04674: 4e71
-	JSR	lb_04b32.W		;04676: 4eb84b32
-	NOP				;0467a: 4e71
-	JSR	lb_04898.W		;0467c: 4eb84898
-	NOP				;04680: 4e71
+	JSRW_NOP	lb_04748	;04670: 4eb84748
+	JSRW_NOP	lb_04b32	;04676: 4eb84b32
+	JSRW_NOP	lb_04898	;0467c: 4eb84898
 	RTS				;04682: 4e75
 lb_04684:
 	MOVE.L	#$00020000,D1		;04684: 223c00020000
@@ -6022,10 +5810,8 @@ lb_04698:
 lb_046a4:
 	MOVE.L	#$00000000,12(A0)	;046a4: 217c00000000000c
 	MOVE.L	D1,20(A0)		;046ac: 21410014
-	JSR	lb_05c62.W		;046b0: 4eb85c62
-	NOP				;046b4: 4e71
-	JSR	lb_04880.W		;046b6: 4eb84880
-	NOP				;046ba: 4e71
+	JSRW_NOP	lb_05c62	;046b0: 4eb85c62
+	JSRW_NOP	lb_04880	;046b6: 4eb84880
 	CMPI.W	#$ffff,D0		;046bc: 0c40ffff
 	BEQ.W	lb_046ee		;046c0: 6700002c
 	SUBI.B	#$01,5(A0)		;046c4: 042800010005
@@ -6040,8 +5826,7 @@ lb_046ee:
 	MOVE.B	#$00,3(A0)		;046ee: 117c00000003
 	MOVE.W	#$0006,4(A0)		;046f4: 317c00060004
 lb_046fa:
-	JSR	lb_04898.W		;046fa: 4eb84898
-	NOP				;046fe: 4e71
+	JSRW_NOP	lb_04898	;046fa: 4eb84898
 	RTS				;04700: 4e75
 lb_04702:
 	SUBI.B	#$01,5(A0)		;04702: 042800010005
@@ -6056,13 +5841,11 @@ lb_04702:
 	MOVE.B	33(A0),48(A0)		;04732: 116800210030
 	MOVE.L	#$fffb0000,42(A0)	;04738: 217cfffb0000002a
 lb_04740:
-	JSR	lb_04898.W		;04740: 4eb84898
-	NOP				;04744: 4e71
+	JSRW_NOP	lb_04898	;04740: 4eb84898
 lb_04746:
 	RTS				;04746: 4e75
 lb_04748:
-	JSR	lb_060c2.W		;04748: 4eb860c2
-	NOP				;0474c: 4e71
+	JSRW_NOP	lb_060c2	;04748: 4eb860c2
 	MOVE.L	ext_00ff803e,D2		;0474e: 243900ff803e
 	BTST	#15,D2			;04754: 0802000f
 lb_04758:
@@ -6084,8 +5867,7 @@ lb_04774:
 	MOVEQ	#0,D0			;04780: 7000
 	MOVE.B	33(A0),D0		;04782: 10280021
 	LSL.W	#1,D0			;04786: e348
-	LEA	lb_047ba.W,A2		;04788: 45f847ba
-	NOP				;0478c: 4e71
+	LEAW_NOP	lb_047ba,A2	;04788: 45f847ba
 	ADDA.L	D0,A2			;0478e: d5c0
 	MOVE.W	(A2),D4			;04790: 3812
 	CMP.W	D4,D2			;04792: b444
@@ -6095,8 +5877,7 @@ lb_04774:
 	BHI.W	lb_047b6		;047a0: 62000014
 	MOVE.B	#$1d,3(A0)		;047a4: 117c001d0003
 	MOVE.W	#$0018,4(A0)		;047aa: 317c00180004
-	JSR	lb_054ea.W		;047b0: 4eb854ea
-	NOP				;047b4: 4e71
+	JSRW_NOP	lb_054ea	;047b0: 4eb854ea
 lb_047b6:
 	RTS				;047b6: 4e75
 lb_047b8:
@@ -6127,7 +5908,7 @@ lb_04808:
 	MOVEM.L	A0,-(A7)		;0480c: 48e70080
 	LEA	ext_00ff98c4,A0		;04810: 41f900ff98c4
 	MOVE.W	#$000e,D0		;04816: 303c000e
-	JSR	lb_025d2.W		;0481a: 4eb825d2
+	JSRW	lb_025d2	;0481a: 4eb825d2
 	MOVEA.L	A0,A1			;0481e: 2248
 	MOVEM.L	(A7)+,A0		;04820: 4cdf0100
 	CMPI.W	#$ffff,D0		;04824: 0c40ffff
@@ -6136,8 +5917,7 @@ lb_04808:
 	MOVE.B	#$26,2(A1)		;0482e: 137c00260002
 	MOVE.B	ext_00ff8212,D0		;04834: 103900ff8212
 	ANDI.L	#$00000007,D0		;0483a: 028000000007
-	LEA	lb_04878.W,A3		;04840: 47f84878
-	NOP				;04844: 4e71
+	LEAW_NOP	lb_04878,A3	;04840: 47f84878
 	ADDA.L	D0,A3			;04846: d7c0
 	MOVE.B	(A3),3(A1)		;04848: 13530003
 	MOVE.W	#$0000,4(A1)		;0484c: 337c00000004
@@ -6158,8 +5938,7 @@ lb_04880:
 	ADDI.L	#$00004000,42(A0)	;04880: 06a800004000002a
 	MOVE.L	42(A0),D0		;04888: 2028002a
 	MOVE.L	D0,12(A0)		;0488c: 2140000c
-	JSR	lb_05d5e.W		;04890: 4eb85d5e
-	NOP				;04894: 4e71
+	JSRW_NOP	lb_05d5e	;04890: 4eb85d5e
 	RTS				;04896: 4e75
 lb_04898:
 	JSR	lb_15f96		;04898: 4eb900015f96
@@ -6229,12 +6008,10 @@ lb_04964:
 	MOVE.B	#$11,3(A0)		;0498e: 117c00110003
 	MOVE.W	#$0208,4(A0)		;04994: 317c02080004
 	MOVE.L	#$fff80000,42(A0)	;0499a: 217cfff80000002a
-	JSR	lb_054ea.W		;049a2: 4eb854ea
-	NOP				;049a6: 4e71
+	JSRW_NOP	lb_054ea	;049a2: 4eb854ea
 	BRA.W	lb_049c0		;049a8: 60000016
 lb_049ac:
-	JSR	lb_05e6c.W		;049ac: 4eb85e6c
-	NOP				;049b0: 4e71
+	JSRW_NOP	lb_05e6c	;049ac: 4eb85e6c
 	BTST	#17,D0			;049b2: 08000011
 	BEQ.W	lb_049c0		;049b6: 67000008
 	MOVE.B	#$12,3(A0)		;049ba: 117c00120003
@@ -6267,17 +6044,14 @@ lb_049e4:
 	MOVE.B	#$11,3(A0)		;04a12: 117c00110003
 	MOVE.W	#$0208,4(A0)		;04a18: 317c02080004
 	MOVE.L	#$fff80000,42(A0)	;04a1e: 217cfff80000002a
-	JSR	lb_054ea.W		;04a26: 4eb854ea
-	NOP				;04a2a: 4e71
+	JSRW_NOP	lb_054ea	;04a26: 4eb854ea
 	BRA.W	lb_04a4a		;04a2c: 6000001c
 lb_04a30:
-	JSR	lb_05e6c.W		;04a30: 4eb85e6c
-	NOP				;04a34: 4e71
+	JSRW_NOP	lb_05e6c	;04a30: 4eb85e6c
 	BTST	#17,D0			;04a36: 08000011
 	BEQ.W	lb_04a4a		;04a3a: 6700000e
 	MOVE.B	#$12,3(A0)		;04a3e: 117c00120003
-	JSR	lb_054ea.W		;04a44: 4eb854ea
-	NOP				;04a48: 4e71
+	JSRW_NOP	lb_054ea	;04a44: 4eb854ea
 lb_04a4a:
 	RTS				;04a4a: 4e75
 lb_04a4c:
@@ -6302,8 +6076,7 @@ lb_04a76:
 	MOVEQ	#0,D0			;04a82: 7000
 	MOVE.B	33(A0),D0		;04a84: 10280021
 	LSL.W	#1,D0			;04a88: e348
-	LEA	lb_04ace.W,A2		;04a8a: 45f84ace
-	NOP				;04a8e: 4e71
+	LEAW_NOP	lb_04ace,A2	;04a8a: 45f84ace
 	ADDA.L	D0,A2			;04a90: d5c0
 	MOVE.W	(A2),D4			;04a92: 3812
 	CMP.W	D4,D2			;04a94: b444
@@ -6313,14 +6086,12 @@ lb_04a76:
 	BNE.W	lb_04acc		;04aa2: 66000028
 	MOVEQ	#0,D0			;04aa6: 7000
 	MOVE.B	33(A0),D0		;04aa8: 10280021
-	LEA	lb_04ad2+4.W,A2		;04aac: 45f84ad6
-	NOP				;04ab0: 4e71
+	LEAW_NOP	lb_04ad2+4,A2	;04aac: 45f84ad6
 	ADDA.L	D0,A2			;04ab2: d5c0
 	MOVE.B	(A2),3(A0)		;04ab4: 11520003
 	MOVE.W	#$0008,4(A0)		;04ab8: 317c00080004
 	MOVE.L	#$fffb0000,42(A0)	;04abe: 217cfffb0000002a
-	JSR	lb_054ea.W		;04ac6: 4eb854ea
-	NOP				;04aca: 4e71
+	JSRW_NOP	lb_054ea	;04ac6: 4eb854ea
 lb_04acc:
 	RTS				;04acc: 4e75
 lb_04ace:
@@ -6354,8 +6125,7 @@ lb_04ad2:
 lb_04b30:
 	RTS				;04b30: 4e75
 lb_04b32:
-	JSR	lb_05e6c.W		;04b32: 4eb85e6c
-	NOP				;04b36: 4e71
+	JSRW_NOP	lb_05e6c	;04b32: 4eb85e6c
 	BTST	#31,D0			;04b38: 0800001f
 	BEQ.W	lb_04b74		;04b3c: 67000036
 	MOVE.B	#$00,1(A0)		;04b40: 117c00000001
@@ -6470,8 +6240,7 @@ lb_04cde:
 	MOVE.B	#$04,3(A0)		;04cf0: 117c00040003
 	MOVE.B	#$01,1(A0)		;04cf6: 117c00010001
 	MOVE.W	#$0000,4(A0)		;04cfc: 317c00000004
-	JSR	lb_054ea.W		;04d02: 4eb854ea
-	NOP				;04d06: 4e71
+	JSRW_NOP	lb_054ea	;04d02: 4eb854ea
 	BRA.W	lb_04d38		;04d08: 6000002e
 lb_04d0c:
 	CMPI.W	#$ffff,D1		;04d0c: 0c41ffff
@@ -6484,13 +6253,10 @@ lb_04d18:
 	BSR.W	lb_04c8c		;04d26: 6100ff64
 	CMPI.B	#$ff,D1			;04d2a: 0c0100ff
 	BNE.W	lb_04d38		;04d2e: 66000008
-	JSR	lb_0560a.W		;04d32: 4eb8560a
-	NOP				;04d36: 4e71
+	JSRW_NOP	lb_0560a	;04d32: 4eb8560a
 lb_04d38:
-	JSR	lb_05504.W		;04d38: 4eb85504
-	NOP				;04d3c: 4e71
-	JSR	lb_0552e.W		;04d3e: 4eb8552e
-	NOP				;04d42: 4e71
+	JSRW_NOP	lb_05504	;04d38: 4eb85504
+	JSRW_NOP	lb_0552e	;04d3e: 4eb8552e
 	MOVE.W	8(A0),60(A0)		;04d44: 31680008003c
 	MOVE.W	16(A0),62(A0)		;04d4a: 31680010003e
 	RTS				;04d50: 4e75
@@ -6509,8 +6275,7 @@ lb_04d74:
 	MOVE.B	#$04,3(A0)		;04d86: 117c00040003
 	MOVE.B	#$01,1(A0)		;04d8c: 117c00010001
 	MOVE.W	#$0000,4(A0)		;04d92: 317c00000004
-	JSR	lb_054ea.W		;04d98: 4eb854ea
-	NOP				;04d9c: 4e71
+	JSRW_NOP	lb_054ea	;04d98: 4eb854ea
 	BRA.W	lb_04dc0		;04d9e: 60000020
 lb_04da2:
 	CMPI.W	#$ffff,D1		;04da2: 0c41ffff
@@ -6529,10 +6294,8 @@ lb_04dc0:
 	MOVE.B	#$01,3(A0)		;04dd6: 117c00010003
 	MOVE.W	#$0202,4(A0)		;04ddc: 317c02020004
 lb_04de2:
-	JSR	lb_05504.W		;04de2: 4eb85504
-	NOP				;04de6: 4e71
-	JSR	lb_0552e.W		;04de8: 4eb8552e
-	NOP				;04dec: 4e71
+	JSRW_NOP	lb_05504	;04de2: 4eb85504
+	JSRW_NOP	lb_0552e	;04de8: 4eb8552e
 	RTS				;04dee: 4e75
 lb_04df0:
 	BSET	#5,34(A0)		;04df0: 08e800050022
@@ -6545,8 +6308,7 @@ lb_04df0:
 	MOVE.B	#$01,3(A0)		;04e14: 117c00010003
 	MOVE.W	#$000a,4(A0)		;04e1a: 317c000a0004
 lb_04e20:
-	JSR	lb_0552e.W		;04e20: 4eb8552e
-	NOP				;04e24: 4e71
+	JSRW_NOP	lb_0552e	;04e20: 4eb8552e
 	RTS				;04e26: 4e75
 lb_04e28:
 	BSET	#5,34(A0)		;04e28: 08e800050022
@@ -6559,8 +6321,7 @@ lb_04e28:
 	MOVE.B	#$01,3(A0)		;04e4c: 117c00010003
 	MOVE.W	#$000a,4(A0)		;04e52: 317c000a0004
 lb_04e58:
-	JSR	lb_0552e.W		;04e58: 4eb8552e
-	NOP				;04e5c: 4e71
+	JSRW_NOP	lb_0552e	;04e58: 4eb8552e
 	RTS				;04e5e: 4e75
 lb_04e60:
 	MOVE.L	#$00050000,12(A0)	;04e60: 217c00050000000c
@@ -6569,19 +6330,16 @@ lb_04e60:
 	BNE.W	lb_04e92		;04e70: 66000020
 	MOVE.B	1(A0),3(A0)		;04e74: 116800010003
 	MOVE.W	#$0005,4(A0)		;04e7a: 317c00050004
-	JSR	lb_054ea.W		;04e80: 4eb854ea
-	NOP				;04e84: 4e71
+	JSRW_NOP	lb_054ea	;04e80: 4eb854ea
 	MOVEQ	#50,D0			;04e86: 7032
 	JSR	play_sound_0def0		;04e88: 4eb90000def0
 	BRA.W	lb_04e92		;04e8e: 60000002
 lb_04e92:
-	JSR	lb_05504.W		;04e92: 4eb85504
-	NOP				;04e96: 4e71
-	JSR	lb_055ac.W		;04e98: 4eb855ac
-	NOP				;04e9c: 4e71
+	JSRW_NOP	lb_05504	;04e92: 4eb85504
+	JSRW_NOP	lb_055ac	;04e98: 4eb855ac
 	RTS				;04e9e: 4e75
 lb_04ea0:
-	JSR	lb_04880.W		;04ea0: 4eb84880
+	JSRW	lb_04880	;04ea0: 4eb84880
 	CMPI.W	#$ffff,D0		;04ea4: 0c40ffff
 	BNE.W	lb_04ec0		;04ea8: 66000016
 	MOVE.B	#$01,3(A0)		;04eac: 117c00010003
@@ -6589,8 +6347,7 @@ lb_04ea0:
 	MOVEQ	#50,D0			;04eb8: 7032
 	JSR	play_sound_0def0		;04eba: 4eb90000def0
 lb_04ec0:
-	JSR	lb_055ac.W		;04ec0: 4eb855ac
-	NOP				;04ec4: 4e71
+	JSRW_NOP	lb_055ac	;04ec0: 4eb855ac
 	RTS				;04ec6: 4e75
 lb_04ec8:
 	ADDI.B	#$01,41(A0)		;04ec8: 062800010029
@@ -6619,8 +6376,7 @@ lb_04ec8:
 	BNE.W	lb_04f42		;04f36: 6600000a
 	ADDI.L	#$00100000,8(A1)	;04f3a: 06a9001000000008
 lb_04f42:
-	JSR	lb_0552e.W		;04f42: 4eb8552e
-	NOP				;04f46: 4e71
+	JSRW_NOP	lb_0552e	;04f42: 4eb8552e
 	RTS				;04f48: 4e75
 lb_04f4a:
 	MOVE.B	#$01,3(A0)		;04f4a: 117c00010003
@@ -6634,9 +6390,8 @@ lb_04f5e:
 	MOVE.L	#$fffe4000,20(A0)	;04f6e: 217cfffe40000014
 lb_04f76:
 	MOVE.L	#$00000000,12(A0)	;04f76: 217c00000000000c
-	JSR	lb_05c62.W		;04f7e: 4eb85c62
-	NOP				;04f82: 4e71
-	JSR	lb_04880.W		;04f84: 4eb84880
+	JSRW_NOP	lb_05c62	;04f7e: 4eb85c62
+	JSRW	lb_04880	;04f84: 4eb84880
 	CMPI.W	#$ffff,D0		;04f88: 0c40ffff
 	BEQ.W	lb_04fc4		;04f8c: 67000036
 	SUBI.B	#$01,5(A0)		;04f90: 042800010005
@@ -6647,10 +6402,8 @@ lb_04f76:
 	BNE.W	lb_04fb6		;04fac: 66000008
 	MOVE.W	#$0005,4(A0)		;04fb0: 317c00050004
 lb_04fb6:
-	JSR	lb_05504.W		;04fb6: 4eb85504
-	NOP				;04fba: 4e71
-	JSR	lb_055ac.W		;04fbc: 4eb855ac
-	NOP				;04fc0: 4e71
+	JSRW_NOP	lb_05504	;04fb6: 4eb85504
+	JSRW_NOP	lb_055ac	;04fbc: 4eb855ac
 	RTS				;04fc2: 4e75
 lb_04fc4:
 	MOVE.B	1(A0),3(A0)		;04fc4: 116800010003
@@ -6664,8 +6417,7 @@ lb_04fc4:
 	BEQ.W	lb_04ffa		;04ff0: 67000008
 	MOVE.W	#$0050,4(A0)		;04ff4: 317c00500004
 lb_04ffa:
-	JSR	lb_054ea.W		;04ffa: 4eb854ea
-	NOP				;04ffe: 4e71
+	JSRW_NOP	lb_054ea	;04ffa: 4eb854ea
 lb_05000:
 	BRA.S	lb_04fb6		;05000: 60b4
 lb_05002:
@@ -6680,8 +6432,7 @@ lb_05020:
 lb_05024:
 	SUBI.B	#$01,5(A0)		;05024: 042800010005
 	BCC.W	lb_05036		;0502a: 6400000a
-	JSR	lb_05826.W		;0502e: 4eb85826
-	NOP				;05032: 4e71
+	JSRW_NOP	lb_05826	;0502e: 4eb85826
 lb_05034:
 	RTS				;05034: 4e75
 lb_05036:
@@ -6691,8 +6442,7 @@ lb_05036:
 	BNE.W	lb_05058		;0504c: 6600000a
 	MOVE.L	#$fffec000,20(A0)	;05050: 217cfffec0000014
 lb_05058:
-	JSR	lb_05c62.W		;05058: 4eb85c62
-	NOP				;0505c: 4e71
+	JSRW_NOP	lb_05c62	;05058: 4eb85c62
 	BRA.S	lb_05034		;0505e: 60d4
 lb_05060:
 	CMPI.B	#$03,4(A0)		;05060: 0c2800030004
@@ -6707,13 +6457,11 @@ lb_05060:
 	BNE.W	lb_050ac		;05090: 6600001a
 	BSET	#4,stage_control_flags_00ff8216		;05094: 08f9000400ff8216
 	MOVE.L	#$00010000,D0		;0509c: 203c00010000
-	JSR	lb_0725e.W		;050a2: 4eb8725e
-	NOP				;050a6: 4e71
+	JSRW_NOP	lb_0725e	;050a2: 4eb8725e
 	BRA.W	lb_050c4		;050a8: 6000001a
 lb_050ac:
 	MOVE.L	#$00003000,D0		;050ac: 203c00003000
-	JSR	lb_0725e.W		;050b2: 4eb8725e
-	NOP				;050b6: 4e71
+	JSRW_NOP	lb_0725e	;050b2: 4eb8725e
 	BCLR	#7,(A0)			;050b8: 08900007
 	BSET	#0,ext_00ffa845		;050bc: 08f9000000ffa845
 lb_050c4:
@@ -6735,8 +6483,7 @@ lb_050fc:
 	MOVE.B	3(A0),1(A0)		;05108: 116800030001
 	MOVE.B	#$08,3(A0)		;0510e: 117c00080003
 	MOVE.W	#$0000,4(A0)		;05114: 317c00000004
-	JSR	lb_054ea.W		;0511a: 4eb854ea
-	NOP				;0511e: 4e71
+	JSRW_NOP	lb_054ea	;0511a: 4eb854ea
 	BRA.W	lb_05160		;05120: 6000003e
 lb_05124:
 	CMPI.W	#$ffff,D1		;05124: 0c41ffff
@@ -6753,13 +6500,10 @@ lb_05130:
 	ANDI.B	#$03,D0			;05150: 02000003
 	TST.B	D0			;05154: 4a00
 	BNE.W	lb_05160		;05156: 66000008
-	JSR	lb_0596e.W		;0515a: 4eb8596e
-	NOP				;0515e: 4e71
+	JSRW_NOP	lb_0596e	;0515a: 4eb8596e
 lb_05160:
-	JSR	lb_05c38.W		;05160: 4eb85c38
-	NOP				;05164: 4e71
-	JSR	lb_058a6.W		;05166: 4eb858a6
-	NOP				;0516a: 4e71
+	JSRW_NOP	lb_05c38	;05160: 4eb85c38
+	JSRW_NOP	lb_058a6	;05166: 4eb858a6
 	MOVE.W	8(A0),60(A0)		;0516c: 31680008003c
 	MOVE.W	16(A0),62(A0)		;05172: 31680010003e
 	RTS				;05178: 4e75
@@ -6781,8 +6525,7 @@ lb_051b0:
 	MOVE.B	#$04,3(A0)		;051c2: 117c00040003
 	MOVE.B	#$01,1(A0)		;051c8: 117c00010001
 	MOVE.W	#$0000,4(A0)		;051ce: 317c00000004
-	JSR	lb_054ea.W		;051d4: 4eb854ea
-	NOP				;051d8: 4e71
+	JSRW_NOP	lb_054ea	;051d4: 4eb854ea
 	BRA.W	lb_05202		;051da: 60000026
 lb_051de:
 	CMPI.W	#$ffff,D1		;051de: 0c41ffff
@@ -6802,10 +6545,8 @@ lb_05202:
 	MOVE.B	#$01,3(A0)		;05218: 117c00010003
 	MOVE.W	#$0102,4(A0)		;0521e: 317c01020004
 lb_05224:
-	JSR	lb_05c38.W		;05224: 4eb85c38
-	NOP				;05228: 4e71
-	JSR	lb_058a6.W		;0522a: 4eb858a6
-	NOP				;0522e: 4e71
+	JSRW_NOP	lb_05c38	;05224: 4eb85c38
+	JSRW_NOP	lb_058a6	;0522a: 4eb858a6
 	RTS				;05230: 4e75
 lb_05232:
 	BCLR	#7,ext_00ff9644		;05232: 08b9000700ff9644
@@ -6819,8 +6560,7 @@ lb_05232:
 lb_0525c:
 	SUBI.B	#$01,5(A0)		;0525c: 042800010005
 	BCC.W	lb_0526e		;05262: 6400000a
-	JSR	lb_05bda.W		;05266: 4eb85bda
-	NOP				;0526a: 4e71
+	JSRW_NOP	lb_05bda	;05266: 4eb85bda
 lb_0526c:
 	RTS				;0526c: 4e75
 lb_0526e:
@@ -6830,8 +6570,7 @@ lb_0526e:
 	BNE.W	lb_05290		;05284: 6600000a
 	MOVE.L	#$fffec000,20(A0)	;05288: 217cfffec0000014
 lb_05290:
-	JSR	lb_05c62.W		;05290: 4eb85c62
-	NOP				;05294: 4e71
+	JSRW_NOP	lb_05c62	;05290: 4eb85c62
 	BRA.S	lb_0526c		;05296: 60d4
 lb_05298:
 	BCLR	#7,ext_00ff9644		;05298: 08b9000700ff9644
@@ -6844,13 +6583,11 @@ lb_05298:
 	BNE.W	lb_052de		;052c2: 6600001a
 	BSET	#4,stage_control_flags_00ff8216		;052c6: 08f9000400ff8216
 	MOVE.L	#$00010000,D0		;052ce: 203c00010000
-	JSR	lb_0725e.W		;052d4: 4eb8725e
-	NOP				;052d8: 4e71
+	JSRW_NOP	lb_0725e	;052d4: 4eb8725e
 	BRA.W	lb_052f6		;052da: 6000001a
 lb_052de:
 	MOVE.L	#$00003000,D0		;052de: 203c00003000
-	JSR	lb_0725e.W		;052e4: 4eb8725e
-	NOP				;052e8: 4e71
+	JSRW_NOP	lb_0725e	;052e4: 4eb8725e
 	BCLR	#7,(A0)			;052ea: 08900007
 	BSET	#3,ext_00ffa845		;052ee: 08f9000300ffa845
 lb_052f6:
@@ -6862,17 +6599,15 @@ lb_052f8:
 	BNE.W	lb_05322		;05308: 66000018
 	MOVE.B	1(A0),3(A0)		;0530c: 116800010003
 	MOVE.W	#$0004,4(A0)		;05312: 317c00040004
-	JSR	lb_054ea.W		;05318: 4eb854ea
-	NOP				;0531c: 4e71
+	JSRW_NOP	lb_054ea	;05318: 4eb854ea
 	BRA.W	lb_05334		;0531e: 60000014
 lb_05322:
 	SUBI.B	#$01,5(A0)		;05322: 042800010005
 	BCC.W	lb_05334		;05328: 6400000a
 	MOVE.B	#$02,D1			;0532c: 123c0002
-	JSR	lb_04c8c.W		;05330: 4eb84c8c
+	JSRW	lb_04c8c	;05330: 4eb84c8c
 lb_05334:
-	JSR	lb_05910.W		;05334: 4eb85910
-	NOP				;05338: 4e71
+	JSRW_NOP	lb_05910	;05334: 4eb85910
 	RTS				;0533a: 4e75
 lb_0533c:
 	MOVE.L	#$00020000,20(A0)	;0533c: 217c000200000014
@@ -6881,13 +6616,11 @@ lb_0533c:
 	MOVE.L	#$fffe0000,20(A0)	;0534c: 217cfffe00000014
 lb_05354:
 	MOVE.L	#$00000000,12(A0)	;05354: 217c00000000000c
-	JSR	lb_05c62.W		;0535c: 4eb85c62
-	NOP				;05360: 4e71
-	JSR	lb_04880.W		;05362: 4eb84880
+	JSRW_NOP	lb_05c62	;0535c: 4eb85c62
+	JSRW	lb_04880	;05362: 4eb84880
 	CMPI.W	#$ffff,D0		;05366: 0c40ffff
 	BNE.W	lb_053b8		;0536a: 6600004c
-	JSR	lb_054ea.W		;0536e: 4eb854ea
-	NOP				;05372: 4e71
+	JSRW_NOP	lb_054ea	;0536e: 4eb854ea
 	MOVEQ	#68,D0			;05374: 7044
 	JSR	play_sound_0def0		;05376: 4eb90000def0
 	MOVE.B	1(A0),3(A0)		;0537c: 116800010003
@@ -6902,8 +6635,7 @@ lb_05354:
 	BEQ.W	lb_053b8		;053ae: 67000008
 	MOVE.W	#$0040,4(A0)		;053b2: 317c00400004
 lb_053b8:
-	JSR	lb_05910.W		;053b8: 4eb85910
-	NOP				;053bc: 4e71
+	JSRW_NOP	lb_05910	;053b8: 4eb85910
 	RTS				;053be: 4e75
 lb_053c0:
 	BSR.W	lb_05c62		;053c0: 610008a0
@@ -6922,8 +6654,7 @@ lb_053ee:
 	BSR.W	lb_04c8c		;053fc: 6100f88e
 	MOVE.B	#$03,5(A0)		;05400: 117c00030005
 lb_05406:
-	JSR	lb_058a6.W		;05406: 4eb858a6
-	NOP				;0540a: 4e71
+	JSRW_NOP	lb_058a6	;05406: 4eb858a6
 	RTS				;0540c: 4e75
 lb_0540e:
 	BSET	#5,34(A0)		;0540e: 08e800050022
@@ -6932,8 +6663,7 @@ lb_0540e:
 	MOVE.B	#$01,3(A0)		;0541e: 117c00010003
 	MOVE.W	#$0004,4(A0)		;05424: 317c00040004
 lb_0542a:
-	JSR	lb_058a6.W		;0542a: 4eb858a6
-	NOP				;0542e: 4e71
+	JSRW_NOP	lb_058a6	;0542a: 4eb858a6
 	RTS				;05430: 4e75
 lb_05432:
 	MOVEA.L	42(A0),A1		;05432: 2268002a
@@ -6990,8 +6720,7 @@ lb_054ea:
 lb_05502:
 	RTS				;05502: 4e75
 lb_05504:
-	JSR	lb_05e6c.W		;05504: 4eb85e6c
-	NOP				;05508: 4e71
+	JSRW_NOP	lb_05e6c	;05504: 4eb85e6c
 	BTST	#31,D0			;0550a: 0800001f
 	BEQ.W	lb_0552c		;0550e: 6700001c
 	MOVE.B	#$01,1(A0)		;05512: 117c00010001
@@ -7062,8 +6791,7 @@ lb_05602:
 	SUBI.B	#$01,56(A0)		;05602: 042800010038
 	BRA.S	lb_05600		;05608: 60f6
 lb_0560a:
-	JSR	lb_060c2.W		;0560a: 4eb860c2
-	NOP				;0560e: 4e71
+	JSRW_NOP	lb_060c2	;0560a: 4eb860c2
 	MOVE.L	ext_00ff803e,D2		;05610: 243900ff803e
 	BTST	#15,D2			;05616: 0802000f
 	BEQ.W	lb_05620		;0561a: 67000004
@@ -7089,8 +6817,7 @@ lb_05650:
 	ANDI.L	#$0000fff0,D2		;05652: 02820000fff0
 	ADD.L	D2,D2			;05658: d482
 	LSR.W	#2,D2			;0565a: e44a
-	LEA	lb_056ee.W,A3		;0565c: 47f856ee
-	NOP				;05660: 4e71
+	LEAW_NOP	lb_056ee,A3	;0565c: 47f856ee
 	ADDA.L	D2,A3			;05662: d7c2
 	MOVEA.L	(A3),A3			;05664: 2653
 	JSR	(A3)			;05666: 4e93
@@ -7111,7 +6838,7 @@ lb_05686:
 	BLS.S	lb_05668		;05692: 63d4
 	MOVE.B	#$0c,3(A0)		;05694: 117c000c0003
 	MOVE.L	#$fff80000,42(A0)	;0569a: 217cfff80000002a
-	JSR	lb_054ea.W		;056a2: 4eb854ea
+	JSRW	lb_054ea	;056a2: 4eb854ea
 	BRA.S	lb_05668		;056a6: 60c0
 lb_056a8:
 	MOVE.W	ext_00ff8040,D2		;056a8: 343900ff8040
@@ -7122,17 +6849,16 @@ lb_056b8:
 	NOP				;056b8: 4e71
 	CMPI.W	#$0035,D2		;056ba: 0c420035
 	BHI.S	lb_05668		;056be: 62a8
-	JSR	lb_05e6c.W		;056c0: 4eb85e6c
-	NOP				;056c4: 4e71
+	JSRW_NOP	lb_05e6c	;056c0: 4eb85e6c
 	BTST	#17,D0			;056c6: 08000011
 	BEQ.S	lb_05668		;056ca: 679c
 	MOVE.B	#$01,1(A0)		;056cc: 117c00010001
 	MOVE.B	#$04,3(A0)		;056d2: 117c00040003
 	ADDI.W	#$0010,8(A0)		;056d8: 066800100008
-	JSR	lb_054ea.W		;056de: 4eb854ea
+	JSRW	lb_054ea	;056de: 4eb854ea
 	BRA.S	lb_05668		;056e2: 6084
 lb_056e4:
-	JSR	lb_054ea.W		;056e4: 4eb854ea
+	JSRW	lb_054ea	;056e4: 4eb854ea
 	BRA.W	lb_05668		;056e8: 6000ff7e
 lb_056ec:
 	RTS				;056ec: 4e75
@@ -7161,8 +6887,7 @@ lb_0572a:
 	BTST	#5,(A0)			;05744: 08100005
 	BEQ.W	lb_05764		;05748: 6700001a
 lb_0574c:
-	LEA	lb_05778.W,A3		;0574c: 47f85778
-	NOP				;05750: 4e71
+	LEAW_NOP	lb_05778,A3	;0574c: 47f85778
 	ADDA.L	D6,A3			;05752: d7c6
 	MOVEA.L	(A3),A3			;05754: 2653
 	JSR	(A3)			;05756: 4e93
@@ -7173,8 +6898,7 @@ lb_0575a:
 	BNE.S	lb_0574c		;0575e: 66ec
 	BRA.W	lb_05764		;05760: 60000002
 lb_05764:
-	LEA	lb_05778.W,A3		;05764: 47f85778
-	NOP				;05768: 4e71
+	LEAW_NOP	lb_05778,A3	;05764: 47f85778
 	ADDA.L	#$00000010,A3		;0576a: d7fc00000010
 	ADDA.L	D6,A3			;05770: d7c6
 	MOVEA.L	(A3),A3			;05772: 2653
@@ -7192,10 +6916,10 @@ lb_05778:
 lb_05798:
 	MOVE.B	#$02,3(A0)		;05798: 117c00020003
 	MOVE.W	#$0010,4(A0)		;0579e: 317c00100004
-	JSR	lb_054ea.W		;057a4: 4eb854ea
+	JSRW	lb_054ea	;057a4: 4eb854ea
 	RTS				;057a8: 4e75
 lb_057aa:
-	JSR	lb_054ea.W		;057aa: 4eb854ea
+	JSRW	lb_054ea	;057aa: 4eb854ea
 	MOVE.B	#$05,3(A0)		;057ae: 117c00050003
 	MOVE.B	#$02,1(A0)		;057b4: 117c00020001
 	MOVE.W	#$0005,4(A0)		;057ba: 317c00050004
@@ -7204,7 +6928,7 @@ lb_057aa:
 	MOVE.W	16(A0),62(A0)		;057ce: 31680010003e
 	RTS				;057d4: 4e75
 lb_057d6:
-	JSR	lb_054ea.W		;057d6: 4eb854ea
+	JSRW	lb_054ea	;057d6: 4eb854ea
 	BCHG	#5,(A0)			;057da: 08500005
 	MOVE.B	#$03,3(A0)		;057de: 117c00030003
 	MOVE.W	#$0010,4(A0)		;057e4: 317c00100004
@@ -7213,7 +6937,7 @@ lb_057ec:
 	MOVE.W	#$0000,40(A0)		;057ec: 317c00000028
 	BTST	#0,ext_00ff8212		;057f2: 0839000000ff8212
 	BEQ.W	lb_05824		;057fa: 67000028
-	JSR	lb_054ea.W		;057fe: 4eb854ea
+	JSRW	lb_054ea	;057fe: 4eb854ea
 	MOVE.W	#$0010,4(A0)		;05802: 317c00100004
 	MOVE.B	#$08,3(A0)		;05808: 117c00080003
 	MOVEA.L	ext_00ff8042,A4		;0580e: 287900ff8042
@@ -7227,8 +6951,7 @@ lb_05826:
 	MOVE.B	ext_00ff8212,D1		;0582c: 123900ff8212
 	ANDI.L	#$00000003,D1		;05832: 028100000003
 	LSL.W	#2,D1			;05838: e549
-	LEA	lb_05848.W,A3		;0583a: 47f85848
-	NOP				;0583e: 4e71
+	LEAW_NOP	lb_05848,A3	;0583a: 47f85848
 	ADDA.L	D1,A3			;05840: d7c1
 	MOVEA.L	(A3),A3			;05842: 2653
 	JSR	(A3)			;05844: 4e93
@@ -7243,13 +6966,13 @@ lb_05858:
 	MOVE.W	#$0006,4(A0)		;0585e: 317c00060004
 	RTS				;05864: 4e75
 lb_05866:
-	JSR	lb_054ea.W		;05866: 4eb854ea
+	JSRW	lb_054ea	;05866: 4eb854ea
 	MOVE.B	#$20,58(A0)		;0586a: 117c0020003a
 	MOVE.B	#$0d,3(A0)		;05870: 117c000d0003
 	MOVE.W	#$0004,4(A0)		;05876: 317c00040004
 	RTS				;0587c: 4e75
 lb_0587e:
-	JSR	lb_054ea.W		;0587e: 4eb854ea
+	JSRW	lb_054ea	;0587e: 4eb854ea
 	MOVE.W	#$0000,40(A0)		;05882: 317c00000028
 	MOVE.B	#$08,3(A0)		;05888: 117c00080003
 	MOVEA.L	ext_00ff8042,A3		;0588e: 267900ff8042
@@ -7314,8 +7037,7 @@ lb_05966:
 	SUBI.B	#$01,56(A0)		;05966: 042800010038
 	BRA.S	lb_05964		;0596c: 60f6
 lb_0596e:
-	JSR	lb_060c2.W		;0596e: 4eb860c2
-	NOP				;05972: 4e71
+	JSRW_NOP	lb_060c2	;0596e: 4eb860c2
 	MOVE.L	ext_00ff803e,D2		;05974: 243900ff803e
 	BTST	#15,D2			;0597a: 0802000f
 	BEQ.W	lb_05984		;0597e: 67000004
@@ -7341,8 +7063,7 @@ lb_059b4:
 	ANDI.L	#$0000fff0,D2		;059b6: 02820000fff0
 	ADD.L	D2,D2			;059bc: d482
 	LSR.W	#2,D2			;059be: e44a
-	LEA	lb_05a66.W,A3		;059c0: 47f85a66
-	NOP				;059c4: 4e71
+	LEAW_NOP	lb_05a66,A3	;059c0: 47f85a66
 	ADDA.L	D2,A3			;059c6: d7c2
 	MOVEA.L	(A3),A3			;059c8: 2653
 	JSR	(A3)			;059ca: 4e93
@@ -7366,7 +7087,7 @@ lb_059ea:
 	MOVE.L	#$fff80000,42(A0)	;05a04: 217cfff80000002a
 	MOVE.W	8(A0),60(A0)		;05a0c: 31680008003c
 	MOVE.W	16(A0),62(A0)		;05a12: 31680010003e
-	JSR	lb_054ea.W		;05a18: 4eb854ea
+	JSRW	lb_054ea	;05a18: 4eb854ea
 	BRA.S	lb_059cc		;05a1c: 60ae
 lb_05a1e:
 	MOVE.W	ext_00ff8040,D2		;05a1e: 343900ff8040
@@ -7377,19 +7098,18 @@ lb_05a2e:
 	NOP				;05a2e: 4e71
 	CMPI.W	#$0035,D2		;05a30: 0c420035
 	BHI.S	lb_059cc		;05a34: 6296
-	JSR	lb_05e6c.W		;05a36: 4eb85e6c
-	NOP				;05a3a: 4e71
+	JSRW_NOP	lb_05e6c	;05a36: 4eb85e6c
 	BTST	#17,D0			;05a3c: 08000011
 	BEQ.S	lb_059cc		;05a40: 678a
 lb_05a42:
 	MOVE.B	#$08,3(A0)		;05a42: 117c00080003
 	MOVE.B	#$01,1(A0)		;05a48: 117c00010001
 	ADDI.W	#$0010,8(A0)		;05a4e: 066800100008
-	JSR	lb_054ea.W		;05a54: 4eb854ea
+	JSRW	lb_054ea	;05a54: 4eb854ea
 lb_05a58:
 	BRA.W	lb_059cc		;05a58: 6000ff72
 lb_05a5c:
-	JSR	lb_054ea.W		;05a5c: 4eb854ea
+	JSRW	lb_054ea	;05a5c: 4eb854ea
 	BRA.W	lb_059cc		;05a60: 6000ff6a
 lb_05a64:
 	RTS				;05a64: 4e75
@@ -7435,8 +7155,7 @@ lb_05af6:
 	ANDI.L	#$00000003,D2		;05afc: 028200000003
 	LSL.W	#2,D2			;05b02: e54a
 	ADD.L	D2,D1			;05b04: d282
-	LEA	lb_05b14.W,A3		;05b06: 47f85b14
-	NOP				;05b0a: 4e71
+	LEAW_NOP	lb_05b14,A3	;05b06: 47f85b14
 	ADDA.L	D1,A3			;05b0c: d7c1
 	MOVEA.L	(A3),A3			;05b0e: 2653
 	JSR	(A3)			;05b10: 4e93
@@ -7469,7 +7188,7 @@ lb_05b6c:
 	ANDI.L	#$00000003,D2		;05b72: 028200000003
 	LSL.W	#2,D2			;05b78: e54a
 	ADD.L	D2,D1			;05b7a: d282
-	LEA	lb_05b14.W,A3		;05b7c: 47f85b14
+	LEAW	lb_05b14,A3	;05b7c: 47f85b14
 	ADDA.L	D1,A3			;05b80: d7c1
 	MOVEA.L	(A3),A3			;05b82: 2653
 	JSR	(A3)			;05b84: 4e93
@@ -7477,7 +7196,7 @@ lb_05b6c:
 lb_05b88:
 	RTS				;05b88: 4e75
 lb_05b8a:
-	JSR	lb_054ea.W		;05b8a: 4eb854ea
+	JSRW	lb_054ea	;05b8a: 4eb854ea
 	MOVE.B	#$20,58(A0)		;05b8e: 117c0020003a
 	MOVE.B	#$09,3(A0)		;05b94: 117c00090003
 	MOVE.W	#$0004,4(A0)		;05b9a: 317c00040004
@@ -7486,25 +7205,24 @@ lb_05b8a:
 lb_05ba4:
 	MOVE.B	#$05,3(A0)		;05ba4: 117c00050003
 	MOVE.W	#$0020,4(A0)		;05baa: 317c00200004
-	JSR	lb_054ea.W		;05bb0: 4eb854ea
+	JSRW	lb_054ea	;05bb0: 4eb854ea
 	RTS				;05bb4: 4e75
 lb_05bb6:
 	MOVE.B	#$04,3(A0)		;05bb6: 117c00040003
 	MOVE.W	#$0020,4(A0)		;05bbc: 317c00200004
-	JSR	lb_054ea.W		;05bc2: 4eb854ea
+	JSRW	lb_054ea	;05bc2: 4eb854ea
 	RTS				;05bc6: 4e75
 lb_05bc8:
 	MOVE.B	#$03,3(A0)		;05bc8: 117c00030003
 	MOVE.W	#$0020,4(A0)		;05bce: 317c00200004
-	JSR	lb_054ea.W		;05bd4: 4eb854ea
+	JSRW	lb_054ea	;05bd4: 4eb854ea
 	RTS				;05bd8: 4e75
 lb_05bda:
 	MOVE.B	#$18,56(A0)		;05bda: 117c00180038
 	MOVE.B	ext_00ff8212,D1		;05be0: 123900ff8212
 	ANDI.L	#$00000003,D1		;05be6: 028100000003
 	LSL.W	#2,D1			;05bec: e549
-	LEA	lb_05bfc.W,A3		;05bee: 47f85bfc
-	NOP				;05bf2: 4e71
+	LEAW_NOP	lb_05bfc,A3	;05bee: 47f85bfc
 	ADDA.L	D1,A3			;05bf4: d7c1
 	MOVEA.L	(A3),A3			;05bf6: 2653
 	JSR	(A3)			;05bf8: 4e93
@@ -7515,7 +7233,7 @@ lb_05bfc:
 	dc.l	lb_05b8a	;05c04
 	dc.l	lb_05bc8	;05c08
 lb_05c0c:
-    JSR     lb_054ea.w          ;05c0c: 4eb854ea
+    JSRW     lb_054ea          ;05c0c: 4eb854ea
     MOVE.B  #$03,1(A0)        ;05C10: 117c00030001
     MOVE.B  #$02,3(A0)        ;05C16: 117c00020003
 	MOVE.W	#$0005,4(A0)		;05c1c: 317c00050004
@@ -7524,8 +7242,7 @@ lb_05c0c:
 	MOVE.W	16(A0),62(A0)		;05c30: 31680010003e
 	RTS				;05c36: 4e75
 lb_05c38:
-	JSR	lb_05e6c.W		;05c38: 4eb85e6c
-	NOP				;05c3c: 4e71
+	JSRW_NOP	lb_05e6c	;05c38: 4eb85e6c
 	BTST	#31,D0			;05c3e: 0800001f
 	BEQ.W	lb_05c60		;05c42: 6700001c
 	MOVE.B	#$01,1(A0)		;05c46: 117c00010001
@@ -7535,8 +7252,7 @@ lb_05c38:
 lb_05c60:
 	RTS				;05c60: 4e75
 lb_05c62:
-	JSR	lb_05ed4.W		;05c62: 4eb85ed4
-	NOP				;05c66: 4e71
+	JSRW_NOP	lb_05ed4	;05c62: 4eb85ed4
 	MOVE.L	#$00000000,ext_00ff80e2	;05c68: 23fc0000000000ff80e2
 	MOVE.L	16(A0),D0		;05c72: 20280010
 	ADD.L	20(A0),D0		;05c76: d0a80014
@@ -7591,8 +7307,7 @@ lb_05d50:
 	MOVE.L	D0,ext_00ff809e		;05d56: 23c000ff809e
 	RTS				;05d5c: 4e75
 lb_05d5e:
-	JSR	lb_05f04.W		;05d5e: 4eb85f04
-	NOP				;05d62: 4e71
+	JSRW_NOP	lb_05f04	;05d5e: 4eb85f04
 	MOVE.L	#$00000000,ext_00ff80e2	;05d64: 23fc0000000000ff80e2
 	BTST	#7,12(A0)		;05d6e: 08280007000c
 	BNE.W	lb_05e28		;05d74: 660000b2
@@ -7653,8 +7368,7 @@ lb_05e6c:
 	MOVE.L	#$00000000,12(A0)	;05e6c: 217c00000000000c
 	MOVE.L	#$00000000,20(A0)	;05e74: 217c000000000014
 	MOVE.L	#$00000000,ext_00ff80e2	;05e7c: 23fc0000000000ff80e2
-	JSR	lb_05f04.W		;05e86: 4eb85f04
-	NOP				;05e8a: 4e71
+	JSRW_NOP	lb_05f04	;05e86: 4eb85f04
 	ADDI.B	#$01,ext_00ff80e6		;05e8c: 0639000100ff80e6
 	MOVE.B	ext_00ff80e6,D4		;05e94: 183900ff80e6
 	MOVE.B	#$00,D5			;05e9a: 1a3c0000
@@ -7674,8 +7388,7 @@ lb_05ed4:
 	MOVEQ	#0,D0			;05ed4: 7000
 	MOVE.B	2(A0),D0		;05ed6: 10280002
 	LSL.W	#1,D0			;05eda: e348
-	LEA	lb_05f24.W,A3		;05edc: 47f85f24
-	NOP				;05ee0: 4e71
+	LEAW_NOP	lb_05f24,A3	;05edc: 47f85f24
 	ADDA.L	D0,A3			;05ee2: d7c0
 	MOVE.B	(A3),ext_00ff80e6		;05ee4: 13d300ff80e6
 	MOVE.B	1(A3),ext_00ff80e7		;05eea: 13eb000100ff80e7
@@ -7688,8 +7401,7 @@ lb_05f04:
 	MOVEQ	#0,D0			;05f04: 7000
 	MOVE.B	2(A0),D0		;05f06: 10280002
 	LSL.W	#1,D0			;05f0a: e348
-	LEA	lb_05f24.W,A3		;05f0c: 47f85f24
-	NOP				;05f10: 4e71
+	LEAW_NOP	lb_05f24,A3	;05f0c: 47f85f24
 	ADDA.L	D0,A3			;05f12: d7c0
 	MOVE.B	(A3),ext_00ff80e6		;05f14: 13d300ff80e6
 	MOVE.B	1(A3),ext_00ff80e7		;05f1a: 13eb000100ff80e7
@@ -7770,8 +7482,7 @@ lb_05fe6:
 	RTS				;05fe6: 4e75
 lb_05fe8:
 	MOVEQ	#0,D1			;05fe8: 7200
-	LEA	lb_06010.W,A2		;05fea: 45f86010
-	NOP				;05fee: 4e71
+	LEAW_NOP	lb_06010,A2	;05fea: 45f86010
 	MOVE.W	#$0003,D2		;05ff0: 343c0003
 	BTST	#15,D0			;05ff4: 0800000f
 	BEQ.W	lb_06000		;05ff8: 67000006
@@ -7790,8 +7501,7 @@ lb_06010:
 lb_06016:
 	ORI.W	#$48e7,D0		;06016: 004048e7
 	NEGX.B	D0			;0601a: 4000
-	JSR	lb_06094.W		;0601c: 4eb86094
-	NOP				;06020: 4e71
+	JSRW_NOP	lb_06094	;0601c: 4eb86094
 	MOVEQ	#0,D0			;06022: 7000
 	SWAP	D2			;06024: 4842
 	ADDI.W	#$0020,D2		;06026: 06420020
@@ -7847,7 +7557,7 @@ lb_06094:
 	SUB.W	16(A0),D3		;060bc: 96680010
 	RTS				;060c0: 4e75
 lb_060c2:
-	JSR	lb_06094.W		;060c2: 4eb86094
+	JSRW	lb_06094	;060c2: 4eb86094
 	MOVEQ	#0,D1			;060c6: 7200
 	BTST	#7,ext_00ffa364		;060c8: 0839000700ffa364
 	BEQ.W	lb_060d6		;060d0: 67000004
@@ -7857,24 +7567,23 @@ lb_060d6:
 	BEQ.W	lb_060e4		;060de: 67000004
 	ADDQ.L	#8,D1			;060e2: 5081
 lb_060e4:
-	LEA	lb_06184.W,A3		;060e4: 47f86184
-	NOP				;060e8: 4e71
+	LEAW_NOP	lb_06184,A3	;060e4: 47f86184
 	ADDA.L	D1,A3			;060ea: d7c1
 	MOVEA.L	(A3),A3			;060ec: 2653
 	JSR	(A3)			;060ee: 4e93
 	RTS				;060f0: 4e75
 lb_060f2:
-	JSR	lb_06094.W		;060f2: 4eb86094
+	JSRW	lb_06094	;060f2: 4eb86094
 	MOVE.L	D2,ext_00ff803e		;060f6: 23c200ff803e
 	MOVE.L	#ext_00ffa364,ext_00ff8042	;060fc: 23fc00ffa36400ff8042
 	RTS				;06106: 4e75
 lb_06108:
-	JSR	lb_06094.W		;06108: 4eb86094
+	JSRW	lb_06094	;06108: 4eb86094
 	MOVE.L	D3,ext_00ff803e		;0610c: 23c300ff803e
 	MOVE.L	#ext_00ffa224,ext_00ff8042	;06112: 23fc00ffa22400ff8042
 	RTS				;0611c: 4e75
 lb_0611e:
-	JSR	lb_06094.W		;0611e: 4eb86094
+	JSRW	lb_06094	;0611e: 4eb86094
 	MOVE.L	D2,D4			;06122: 2802
 	MOVE.L	D3,D5			;06124: 2a03
 	SWAP	D4			;06126: 4844
@@ -7895,8 +7604,7 @@ lb_06142:
 	BHI.W	lb_06150		;0614a: 62000004
 	ADDQ.L	#4,D1			;0614e: 5881
 lb_06150:
-	LEA	lb_06184.W,A3		;06150: 47f86184
-	NOP				;06154: 4e71
+	LEAW_NOP	lb_06184,A3	;06150: 47f86184
 	ADDA.L	D1,A3			;06156: d7c1
 	MOVEA.L	(A3),A3			;06158: 2653
 	JSR	(A3)			;0615a: 4e93
@@ -7936,7 +7644,7 @@ lb_06196:
 lb_061a4:
 	MOVE.B	current_stage_00ff821d,D0		;061a4: 103900ff821d
 	LSL.W	#2,D0			;061aa: e548
-	LEA	lb_061ba.W,A0		;061ac: 41f861ba
+	LEAW	lb_061ba,A0	;061ac: 41f861ba
 lb_061b0:
 	NOP				;061b0: 4e71
 lb_061b2:
@@ -8068,8 +7776,7 @@ lb_06344:
 	MOVEQ	#0,D0			;06352: 7000
 	MOVE.W	D6,D0			;06354: 3006
 	LSL.W	#2,D0			;06356: e548
-	LEA	jump_table_067a0.W,A1		;06358: 43f867a0
-	NOP				;0635c: 4e71
+	LEAW_NOP	jump_table_067a0,A1	;06358: 43f867a0
 	ADDA.L	D0,A1			;0635e: d3c0
 	MOVEA.L	(A1),A1			;06360: 2251
 	JSR	(A1)			;06362: 4e91
@@ -8081,8 +7788,7 @@ lb_06364:
 	MOVEQ	#0,D0			;06372: 7000
 	MOVE.W	D6,D0			;06374: 3006
 	LSL.W	#2,D0			;06376: e548
-	LEA	jump_table_067a0.W,A1		;06378: 43f867a0
-	NOP				;0637c: 4e71
+	LEAW_NOP	jump_table_067a0,A1	;06378: 43f867a0
 	ADDA.L	D0,A1			;0637e: d3c0
 	MOVEA.L	(A1),A1			;06380: 2251
 	JSR	(A1)			;06382: 4e91
@@ -8362,8 +8068,7 @@ lb_067b0:
 	MOVEQ	#0,D0			;067be: 7000
 	MOVE.W	D6,D0			;067c0: 3006
 	LSL.W	#2,D0			;067c2: e548
-	LEA	lb_06aba.W,A1		;067c4: 43f86aba
-	NOP				;067c8: 4e71
+	LEAW_NOP	lb_06aba,A1	;067c4: 43f86aba
 	ADDA.L	D0,A1			;067ca: d3c0
 	MOVEA.L	(A1),A1			;067cc: 2251
 	JSR	(A1)			;067ce: 4e91
@@ -8376,8 +8081,7 @@ lb_067d0:
 	MOVE.W	D6,D0			;067e0: 3006
 lb_067e2:
 	LSL.W	#2,D0			;067e2: e548
-	LEA	lb_06aba.W,A1		;067e4: 43f86aba
-	NOP				;067e8: 4e71
+	LEAW_NOP	lb_06aba,A1	;067e4: 43f86aba
 	ADDA.L	D0,A1			;067ea: d3c0
 	MOVEA.L	(A1),A1			;067ec: 2251
 	JSR	(A1)			;067ee: 4e91
@@ -8767,8 +8471,7 @@ lb_06e5e:
 	MOVEQ	#0,D0			;06e5e: 7000
 	MOVE.B	current_stage_00ff821d,D0		;06e60: 103900ff821d
 	LSL.W	#2,D0			;06e66: e548
-	LEA	lb_06e76.W,A0		;06e68: 41f86e76
-	NOP				;06e6c: 4e71
+	LEAW_NOP	lb_06e76,A0	;06e68: 41f86e76
 	ADDA.L	D0,A0			;06e6e: d1c0
 	MOVEA.L	(A0),A0			;06e70: 2050
 	JSR	(A0)			;06e72: 4e90
@@ -8783,17 +8486,13 @@ lb_06e76:
 	dc.l	lb_06e96	;06e8e
 	dc.l	lb_06e96	;06e92
 lb_06e96:
-	JSR	lb_06fb0.W		;06e96: 4eb86fb0
-	NOP				;06e9a: 4e71
+	JSRW_NOP	lb_06fb0	;06e96: 4eb86fb0
 lb_06e9c:
 	SUBI.L	#$00000008,ext_00ff8186	;06e9c: 04b90000000800ff8186
 	SUBI.L	#$00000008,ext_00ff81a6	;06ea6: 04b90000000800ff81a6
-	JSR	lb_06f88.W		;06eb0: 4eb86f88
-	NOP				;06eb4: 4e71
-	JSR	lb_06f9c.W		;06eb6: 4eb86f9c
-	NOP				;06eba: 4e71
-	JSR	lb_06fb0.W		;06ebc: 4eb86fb0
-	NOP				;06ec0: 4e71
+	JSRW_NOP	lb_06f88	;06eb0: 4eb86f88
+	JSRW_NOP	lb_06f9c	;06eb6: 4eb86f9c
+	JSRW_NOP	lb_06fb0	;06ebc: 4eb86fb0
 	MOVE.W	ext_00ff8128,ext_00246010	;06ec2: 33f900ff812800246010
 	MOVE.W	ext_00ff812c,ext_00246012	;06ecc: 33f900ff812c00246012
 lb_06ed6:
@@ -8801,67 +8500,51 @@ lb_06ed6:
 	MOVE.W	ext_00ff8140,ext_0024c012	;06ee0: 33f900ff81400024c012
 	RTS				;06eea: 4e75
 lb_06eec:
-	JSR	lb_06fb0.W		;06eec: 4eb86fb0
-	NOP				;06ef0: 4e71
+	JSRW_NOP	lb_06fb0	;06eec: 4eb86fb0
 	SUBI.L	#$00000008,ext_00ff8186	;06ef2: 04b90000000800ff8186
 	SUBI.L	#$00000008,ext_00ff81a6	;06efc: 04b90000000800ff81a6
-	JSR	lb_06f88.W		;06f06: 4eb86f88
-	NOP				;06f0a: 4e71
-	JSR	lb_06f9c.W		;06f0c: 4eb86f9c
-	NOP				;06f10: 4e71
-	JSR	lb_06fb0.W		;06f12: 4eb86fb0
-	NOP				;06f16: 4e71
-	JSR	lb_07034.W		;06f18: 4eb87034
-	NOP				;06f1c: 4e71
+	JSRW_NOP	lb_06f88	;06f06: 4eb86f88
+	JSRW_NOP	lb_06f9c	;06f0c: 4eb86f9c
+	JSRW_NOP	lb_06fb0	;06f12: 4eb86fb0
+	JSRW_NOP	lb_07034	;06f18: 4eb87034
 	RTS				;06f1e: 4e75
 lb_06f20:
-	JSR	lb_06fb0.W		;06f20: 4eb86fb0
-	NOP				;06f24: 4e71
+	JSRW_NOP	lb_06fb0	;06f20: 4eb86fb0
 	SUBI.L	#$00000008,ext_00ff8186	;06f26: 04b90000000800ff8186
 	SUBI.L	#$00000008,ext_00ff81a6	;06f30: 04b90000000800ff81a6
-	JSR	lb_06f88.W		;06f3a: 4eb86f88
-	NOP				;06f3e: 4e71
-	JSR	lb_06f9c.W		;06f40: 4eb86f9c
-	NOP				;06f44: 4e71
-	JSR	lb_06fb0.W		;06f46: 4eb86fb0
-	NOP				;06f4a: 4e71
-	JSR	lb_06ff6.W		;06f4c: 4eb86ff6
-	NOP				;06f50: 4e71
+	JSRW_NOP	lb_06f88	;06f3a: 4eb86f88
+	JSRW_NOP	lb_06f9c	;06f40: 4eb86f9c
+	JSRW_NOP	lb_06fb0	;06f46: 4eb86fb0
+	JSRW_NOP	lb_06ff6	;06f4c: 4eb86ff6
 	RTS				;06f52: 4e75
 lb_06f54:
-	JSR	lb_06fb0.W		;06f54: 4eb86fb0
-	NOP				;06f58: 4e71
+	JSRW_NOP	lb_06fb0	;06f54: 4eb86fb0
 	SUBI.L	#$00000008,ext_00ff8186	;06f5a: 04b90000000800ff8186
 	SUBI.L	#$00000008,ext_00ff81a6	;06f64: 04b90000000800ff81a6
-	JSR	lb_06f88.W		;06f6e: 4eb86f88
-	NOP				;06f72: 4e71
-	JSR	lb_06f9c.W		;06f74: 4eb86f9c
-	NOP				;06f78: 4e71
-	JSR	lb_06fb0.W		;06f7a: 4eb86fb0
-	NOP				;06f7e: 4e71
-	JSR	lb_0707e.W		;06f80: 4eb8707e
-	NOP				;06f84: 4e71
+	JSRW_NOP	lb_06f88	;06f6e: 4eb86f88
+	JSRW_NOP	lb_06f9c	;06f74: 4eb86f9c
+	JSRW_NOP	lb_06fb0	;06f7a: 4eb86fb0
+	JSRW_NOP	lb_0707e	;06f80: 4eb8707e
 	RTS				;06f86: 4e75
 lb_06f88:
 	MOVE.W	#$001f,D4		;06f88: 383c001f
 lb_06f8c:
 	MOVE.L	#$00000080,D6		;06f8c: 2c3c00000080
-	JSR	lb_06344.W		;06f92: 4eb86344
+	JSRW	lb_06344	;06f92: 4eb86344
 	DBF	D4,lb_06f8c		;06f96: 51ccfff4
 	RTS				;06f9a: 4e75
 lb_06f9c:
 	MOVE.W	#$001f,D4		;06f9c: 383c001f
 lb_06fa0:
 	MOVE.L	#$00000080,D6		;06fa0: 2c3c00000080
-	JSR	lb_067b0.W		;06fa6: 4eb867b0
+	JSRW	lb_067b0	;06fa6: 4eb867b0
 	DBF	D4,lb_06fa0		;06faa: 51ccfff4
 	RTS				;06fae: 4e75
 lb_06fb0:
 	MOVEQ	#0,D0			;06fb0: 7000
 	MOVE.B	current_stage_00ff821d,D0		;06fb2: 103900ff821d
 	LSL.W	#2,D0			;06fb8: e548
-	LEA	lb_06fd6.W,A0		;06fba: 41f86fd6
-	NOP				;06fbe: 4e71
+	LEAW_NOP	lb_06fd6,A0	;06fba: 41f86fd6
 	ADDA.L	D0,A0			;06fc0: d1c0
 	MOVEA.L	(A0),A0			;06fc2: 2050
 	LEA	ext_00ff8176,A1		;06fc4: 43f900ff8176
@@ -9091,17 +8774,14 @@ lb_0721e:
 lb_0725e:
 	MOVEM.L	A0,-(A7)		;0725e: 48e70080
 	MOVEQ	#0,D1			;07262: 7200
-	LEA	lb_07288.W,A3		;07264: 47f87288
-	NOP				;07268: 4e71
+	LEAW_NOP	lb_07288,A3	;07264: 47f87288
 	MOVE.B	64(A0),D1		;0726a: 12280040
 	LSL.W	#2,D1			;0726e: e549
 	ADDA.L	D1,A3			;07270: d7c1
 	MOVEA.L	(A3),A3			;07272: 2653
-	JSR	lb_072d6.W		;07274: 4eb872d6
-	NOP				;07278: 4e71
+	JSRW_NOP	lb_072d6	;07274: 4eb872d6
 	MOVE.L	D0,(A3)			;0727a: 2680
-	JSR	lb_07290.W		;0727c: 4eb87290
-	NOP				;07280: 4e71
+	JSRW_NOP	lb_07290	;0727c: 4eb87290
 	MOVEM.L	(A7)+,A0		;07282: 4cdf0100
 	RTS				;07286: 4e75
 lb_07288:
@@ -9112,15 +8792,13 @@ lb_07290:
 	MOVEQ	#3,D4			;07296: 7803
 	LEA	ext_00ff81dc,A1		;07298: 43f900ff81dc
 	ANDI.B	#$00,CCR		;0729e: 023c0000
-	JSR	lb_07332.W		;072a2: 4eb87332
-	NOP				;072a6: 4e71
+	JSRW_NOP	lb_07332	;072a2: 4eb87332
 	MOVE.L	#$00000000,ext_00ff81d8	;072a8: 23fc0000000000ff81d8
 	LEA	ext_00ff81d4,A0		;072b2: 41f900ff81d4
 	MOVEQ	#3,D4			;072b8: 7803
 	LEA	ext_00ff81e0,A1		;072ba: 43f900ff81e0
 	ANDI.B	#$00,CCR		;072c0: 023c0000
-	JSR	lb_07332.W		;072c4: 4eb87332
-	NOP				;072c8: 4e71
+	JSRW_NOP	lb_07332	;072c4: 4eb87332
 	MOVE.L	#$00000000,ext_00ff81dc	;072ca: 23fc0000000000ff81dc
 	RTS				;072d4: 4e75
 lb_072d6:
@@ -9130,27 +8808,22 @@ lb_072d6:
 	MOVEQ	#3,D4			;072e8: 7803
 	LEA	ext_00ff8066,A1		;072ea: 43f900ff8066
 	ANDI.B	#$00,CCR		;072f0: 023c0000
-	JSR	lb_07352.W		;072f4: 4eb87352
-	NOP				;072f8: 4e71
+	JSRW_NOP	lb_07352	;072f4: 4eb87352
 	LEA	ext_00ff8062,A0		;072fa: 41f900ff8062
 	MOVEQ	#3,D4			;07300: 7803
 	LEA	ext_00ff8066,A1		;07302: 43f900ff8066
 	ANDI.B	#$00,CCR		;07308: 023c0000
-	JSR	lb_07352.W		;0730c: 4eb87352
-	NOP				;07310: 4e71
+	JSRW_NOP	lb_07352	;0730c: 4eb87352
 	LEA	ext_00ff8062,A0		;07312: 41f900ff8062
 	MOVEQ	#3,D4			;07318: 7803
 	LEA	ext_00ff8066,A1		;0731a: 43f900ff8066
 	ANDI.B	#$00,CCR		;07320: 023c0000
-	JSR	lb_07352.W		;07324: 4eb87352
-	NOP				;07328: 4e71
+	JSRW_NOP	lb_07352	;07324: 4eb87352
 	MOVE.L	ext_00ff805e,D0		;0732a: 203900ff805e
 	RTS				;07330: 4e75
 lb_07332:
-	JSR	lb_07352.W		;07332: 4eb87352
-	NOP				;07336: 4e71
-	JSR	lb_0735a.W		;07338: 4eb8735a
-	NOP				;0733c: 4e71
+	JSRW_NOP	lb_07352	;07332: 4eb87352
+	JSRW_NOP	lb_0735a	;07338: 4eb8735a
 	MOVE.L	(A0),D5			;0733e: 2a10
 	CMP.L	ext_00ff81d4,D5		;07340: bab900ff81d4
 	BCS.W	lb_07350		;07346: 65000008
@@ -9172,43 +8845,40 @@ lb_0736a:
 	LEA	ext_00ff81cc,A0		;0736a: 41f900ff81cc
 	LEA	ext_00ff801e,A1		;07370: 43f900ff801e
 	MOVE.W	#$0005,D4		;07376: 383c0005
-	JSR	lb_002ec.W		;0737a: 4eb802ec
+	JSRW	lb_002ec	;0737a: 4eb802ec
 	MOVE.W	#$0004,D1		;0737e: 323c0004
 	LEA	ext_00ff801f,A0		;07382: 41f900ff801f
-	JSR	lb_07418.W		;07388: 4eb87418
-	NOP				;0738c: 4e71
+	JSRW_NOP	lb_07418	;07388: 4eb87418
 	MOVE.W	#$0600,D0		;0738e: 303c0600
 	LEA	ext_00ff8020,A0		;07392: 41f900ff8020
 	MOVEA.L	#ext_0024408a,A1		;07398: 227c0024408a
-	JSR	write_tiles_of_given_color_01fc4.W		;0739e: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;0739e: 4eb81fc4
 	RTS				;073a2: 4e75
 lb_073a4:
 	LEA	ext_00ff81d0,A0		;073a4: 41f900ff81d0
 	LEA	ext_00ff801e,A1		;073aa: 43f900ff801e
 	MOVE.W	#$0005,D4		;073b0: 383c0005
-	JSR	lb_002ec.W		;073b4: 4eb802ec
+	JSRW	lb_002ec	;073b4: 4eb802ec
 	MOVE.W	#$0004,D1		;073b8: 323c0004
 	LEA	ext_00ff801f,A0		;073bc: 41f900ff801f
-	JSR	lb_07418.W		;073c2: 4eb87418
-	NOP				;073c6: 4e71
+	JSRW_NOP	lb_07418	;073c2: 4eb87418
 	MOVE.W	#$0600,D0		;073c8: 303c0600
 	LEA	ext_00ff8020,A0		;073cc: 41f900ff8020
 	MOVEA.L	#ext_002440b0,A1		;073d2: 227c002440b0
-	JSR	write_tiles_of_given_color_01fc4.W		;073d8: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;073d8: 4eb81fc4
 	RTS				;073dc: 4e75
 lb_073de:
 	LEA	ext_00ff81d4,A0		;073de: 41f900ff81d4
 	LEA	ext_00ff801e,A1		;073e4: 43f900ff801e
 	MOVE.W	#$0005,D4		;073ea: 383c0005
-	JSR	lb_002ec.W		;073ee: 4eb802ec
+	JSRW	lb_002ec	;073ee: 4eb802ec
 	MOVE.W	#$0004,D1		;073f2: 323c0004
 	LEA	ext_00ff801f,A0		;073f6: 41f900ff801f
-	JSR	lb_07418.W		;073fc: 4eb87418
-	NOP				;07400: 4e71
+	JSRW_NOP	lb_07418	;073fc: 4eb87418
 	MOVE.W	#$0600,D0		;07402: 303c0600
 	LEA	ext_00ff8020,A0		;07406: 41f900ff8020
 	MOVEA.L	#ext_0024409c,A1		;0740c: 227c0024409c
-	JSR	write_tiles_of_given_color_01fc4.W		;07412: 4eb81fc4
+	JSRW	write_tiles_of_given_color_01fc4	;07412: 4eb81fc4
 	RTS				;07416: 4e75
 lb_07418:
 	MOVE.B	#$20,(A0)+		;07418: 10fc0020
@@ -9635,10 +9305,9 @@ lb_07aea:
 	BSR.W	display_high_scores_07b34		;07aea: 61000048
 	MOVE.W	#$0136,D0		;07aee: 303c0136
 lb_07af2:
-	JSR	wait_for_sync_003f0.W		;07af2: 4eb803f0
+	JSRW	wait_for_sync_003f0	;07af2: 4eb803f0
 	MOVE.W	D0,-(A7)		;07af6: 3f00
-	JSR	lb_07c90.W		;07af8: 4eb87c90
-	NOP				;07afc: 4e71
+	JSRW_NOP	lb_07c90	;07af8: 4eb87c90
 	MOVE.W	(A7)+,D0		;07afe: 301f
 	TST.W	credit_inserted_flag_00ffa8c0		;07b00: 4a7900ffa8c0
 	BEQ.S	lb_07b1e		;07b06: 6716
@@ -9652,9 +9321,9 @@ lb_07b1e:
 	RTS				;07b32: 4e75
 display_high_scores_07b34:
 	MOVE.W	#$001c,D0		;07b34: 303c001c
-	JSR	lb_01f78.W		;07b38: 4eb81f78
+	JSRW	lb_01f78	;07b38: 4eb81f78
 	MOVE.W	#$001d,D0		;07b3c: 303c001d
-	JSR	lb_01f78.W		;07b40: 4eb81f78
+	JSRW	lb_01f78	;07b40: 4eb81f78
 	LEA	ext_002441c0,A0		;07b44: 41f9002441c0
 	MOVEQ	#1,D0			;07b4a: 7001
 lb_07b4c:
@@ -9682,7 +9351,7 @@ lb_07b7e:
 	BCS.W	lb_07b90		;07b82: 6500000c
 	SUBI.W	#$000a,D1		;07b86: 0441000a
 	ADDQ.L	#1,D2			;07b8a: 5282
-	JMP	lb_07b7e.W		;07b8c: 4ef87b7e
+	JMPW	lb_07b7e	;07b8c: 4ef87b7e
 lb_07b90:
 	TST.W	D2			;07b90: 4a42
 	BEQ.W	lb_07b9a		;07b92: 67000006
@@ -9718,8 +9387,7 @@ lb_07bd8:
 	TST.W	D1			;07bea: 4a41
 	BNE.W	lb_07bfa		;07bec: 6600000c
 	MOVE.W	#$0000,(A2)+		;07bf0: 34fc0000
-	JMP	lb_07c02.W		;07bf4: 4ef87c02
-	NOP				;07bf8: 4e71
+	JMPW_NOP	lb_07c02	;07bf4: 4ef87c02
 lb_07bfa:
 	MOVEQ	#1,D4			;07bfa: 7801
 	ADDI.W	#$0030,D1		;07bfc: 06410030
@@ -9731,8 +9399,7 @@ lb_07c02:
 	TST.W	D2			;07c0c: 4a42
 	BNE.W	lb_07c1c		;07c0e: 6600000c
 	MOVE.W	#$0000,(A2)+		;07c12: 34fc0000
-	JMP	lb_07c24.W		;07c16: 4ef87c24
-	NOP				;07c1a: 4e71
+	JMPW_NOP	lb_07c24	;07c16: 4ef87c24
 lb_07c1c:
 	MOVEQ	#1,D4			;07c1c: 7801
 	ADDI.W	#$0030,D2		;07c1e: 06420030
@@ -9745,8 +9412,7 @@ lb_07c24:
 	CMPI.W	#$0008,D1		;07c32: 0c410008
 	BNE.W	lb_07c44		;07c36: 6600000c
 	MOVE.W	#$007e,D1		;07c3a: 323c007e
-	JMP	lb_07c4c.W		;07c3e: 4ef87c4c
-	NOP				;07c42: 4e71
+	JMPW_NOP	lb_07c4c	;07c3e: 4ef87c4c
 lb_07c44:
 	ANDI.W	#$000f,D1		;07c44: 0241000f
 	ADDI.W	#$0030,D1		;07c48: 06410030
@@ -9769,11 +9435,9 @@ lb_07c60:
 	RTS				;07c8e: 4e75
 lb_07c90:
 	MOVE.B	ext_00ffa9af,D7		;07c90: 1e3900ffa9af
-	JSR	lb_07cb0.W		;07c96: 4eb87cb0
-	NOP				;07c9a: 4e71
+	JSRW_NOP	lb_07cb0	;07c96: 4eb87cb0
 	MOVE.B	ext_00ffa9b9,D7		;07c9c: 1e3900ffa9b9
-	JSR	lb_07cb0.W		;07ca2: 4eb87cb0
-	NOP				;07ca6: 4e71
+	JSRW_NOP	lb_07cb0	;07ca2: 4eb87cb0
 	ADDQ.B	#1,ext_00ffa9a6		;07ca8: 523900ffa9a6
 	RTS				;07cae: 4e75
 lb_07cb0:
@@ -9788,8 +9452,7 @@ lb_07cb0:
 	LSL.W	#4,D0			;07cca: e948
 	SUBQ.W	#1,D7			;07ccc: 5347
 	LSL.W	#2,D7			;07cce: e54f
-	LEA	lb_07cec.W,A0		;07cd0: 41f87cec
-	NOP				;07cd4: 4e71
+	LEAW_NOP	lb_07cec,A0	;07cd0: 41f87cec
 	MOVEA.L	0(A0,D7.W),A0		;07cd6: 20707000
 	MOVEQ	#14,D7			;07cda: 7e0e
 lb_07cdc:
@@ -9888,8 +9551,7 @@ lb_07ddc:
 	MOVE.B	D0,D2			;07ddc: 1400
 	ANDI.L	#$000000ff,D2		;07dde: 0282000000ff
 	LSL.L	#2,D2			;07de4: e58a
-	LEA	lb_07e74.W,A0		;07de6: 41f87e74
-	NOP				;07dea: 4e71
+	LEAW_NOP	lb_07e74,A0	;07de6: 41f87e74
 	MOVEA.L	0(A0,D2.L),A1		;07dec: 22702800
 	MOVE.B	D0,D1			;07df0: 1200
 	ADDQ.B	#1,D1			;07df2: 5201
@@ -9903,15 +9565,13 @@ lb_07e06:
 	TST.B	9(A1)			;07e0a: 4a290009
 	BEQ.W	lb_07e1e		;07e0e: 6700000e
 	SUBI.B	#$01,9(A1)		;07e12: 042900010009
-	JMP	lb_07e46.W		;07e18: 4ef87e46
-	NOP				;07e1c: 4e71
+	JMPW_NOP	lb_07e46	;07e18: 4ef87e46
 lb_07e1e:
 	MOVE.B	#$3b,9(A1)		;07e1e: 137c003b0009
 	TST.B	3(A1)			;07e24: 4a290003
 	BNE.W	lb_07e36		;07e28: 6600000c
 	BSR.W	lb_07f10		;07e2c: 610000e2
-	JMP	lb_07e72.W		;07e30: 4ef87e72
-	NOP				;07e34: 4e71
+	JMPW_NOP	lb_07e72	;07e30: 4ef87e72
 lb_07e36:
 	MOVE.B	3(A1),D1		;07e36: 12290003
 	MOVEQ	#1,D2			;07e3a: 7401
@@ -9951,11 +9611,11 @@ lb_07e7c:
 	MOVE.B	#$00,9(A1)		;07eb6: 137c00000009
 	MOVEM.L	D0/A1,-(A7)		;07ebc: 48e78040
 	ADDI.W	#$002c,D0		;07ec0: 0640002c
-	JSR	lb_01f78.W		;07ec4: 4eb81f78
+	JSRW	lb_01f78	;07ec4: 4eb81f78
 	MOVEM.L	(A7)+,D0/A1		;07ec8: 4cdf0201
 	MOVEM.L	D0/A1,-(A7)		;07ecc: 48e78040
 	ADDI.W	#$0020,D0		;07ed0: 06400020
-	JSR	lb_01f78.W		;07ed4: 4eb81f78
+	JSRW	lb_01f78	;07ed4: 4eb81f78
 	MOVEM.L	(A7)+,D0/A1		;07ed8: 4cdf0201
 	RTS				;07edc: 4e75
 lb_07ede:
@@ -9966,8 +9626,7 @@ lb_07ede:
 	CMPI.W	#$0020,D2		;07ef0: 0c420020
 	BNE.W	lb_07f0e		;07ef4: 66000018
 	MOVE.W	#$00f8,(A3)		;07ef8: 36bc00f8
-	JMP	lb_07f0e.W		;07efc: 4ef87f0e
-	NOP				;07f00: 4e71
+	JMPW_NOP	lb_07f0e	;07efc: 4ef87f0e
 lb_07f02:
 	CMPI.B	#$04,D2			;07f02: 0c020004
 	BNE.W	lb_07f0e		;07f06: 66000006
@@ -9997,8 +9656,7 @@ lb_07f30:
 	SUBQ.L	#8,A2			;07f4e: 518a
 	CMPI.B	#$01,D3			;07f50: 0c030001
 	BNE.S	lb_07f30		;07f54: 66da
-	JMP	lb_07f68.W		;07f56: 4ef87f68
-	NOP				;07f5a: 4e71
+	JMPW_NOP	lb_07f68	;07f56: 4ef87f68
 lb_07f5c:
 	CMPI.B	#$15,D3			;07f5c: 0c030015
 	BNE.S	lb_07f68		;07f60: 6606
@@ -10049,12 +9707,12 @@ lb_07fe6:
 	AND.B	D2,ext_00ffa9bb		;07ffa: c53900ffa9bb
 	MOVEM.L	D0/A1,-(A7)		;08000: 48e78040
 	ADDI.W	#$002c,D0		;08004: 0640002c
-	JSR	lb_01f78.W		;08008: 4eb81f78
+	JSRW	lb_01f78	;08008: 4eb81f78
 	MOVEM.L	(A7)+,D0/A1		;0800c: 4cdf0201
 	MOVE.W	D0,D1			;08010: 3200
 	EORI.W	#$0001,D1		;08012: 0a410001
 	LSL.W	#2,D1			;08016: e549
-	LEA	lb_07e74.W,A2		;08018: 45f87e74
+	LEAW	lb_07e74,A2	;08018: 45f87e74
 	MOVEA.L	0(A2,D1.W),A2		;0801c: 24721000
 	CMPI.B	#$21,8(A2)		;08020: 0c2a00210008
 	BCC.S	lb_0804a		;08026: 6422
@@ -10234,7 +9892,7 @@ lb_0825e:
 	BSR.W	display_rampant_ninja_message_08330		;08290: 6100009e
 	MOVE.W	#$0078,D0		;08294: 303c0078
 lb_08298:
-	JSR	wait_for_sync_003f0.W		;08298: 4eb803f0
+	JSRW	wait_for_sync_003f0	;08298: 4eb803f0
 	TST.W	credit_inserted_flag_00ffa8c0		;0829c: 4a7900ffa8c0
 	BEQ.W	lb_082ac		;082a2: 67000008
 	JMP	credit_inserted_08410		;082a6: 4ef900008410
@@ -10245,7 +9903,7 @@ lb_082ac:
 	BSR.W	display_4x4_tile_blocks_08388		;082b6: 610000d0
 	MOVE.W	#$003e,D0		;082ba: 303c003e
 lb_082be:
-	JSR	wait_for_sync_003f0.W		;082be: 4eb803f0
+	JSRW	wait_for_sync_003f0	;082be: 4eb803f0
 	TST.W	credit_inserted_flag_00ffa8c0		;082c2: 4a7900ffa8c0
 	BEQ.W	lb_082d2		;082c8: 67000008
 	JMP	credit_inserted_08410		;082cc: 4ef900008410
@@ -10255,10 +9913,10 @@ lb_082d2:
 	; "bad dudes vs dragonninja" title displayed
 	BSR.W	display_4x4_tile_blocks_08388		;082dc: 610000aa
 	MOVE.W	#$001e,D0		;082e0: 303c001e
-	JSR	lb_01f78.W		;082e4: 4eb81f78
+	JSRW	lb_01f78	;082e4: 4eb81f78
 	MOVE.W	#$007c,D0		;082e8: 303c007c
 lb_082ec:
-	JSR	wait_for_sync_003f0.W		;082ec: 4eb803f0
+	JSRW	wait_for_sync_003f0	;082ec: 4eb803f0
 	TST.W	credit_inserted_flag_00ffa8c0		;082f0: 4a7900ffa8c0
 	BEQ.W	lb_08300		;082f6: 67000008
 	JMP	credit_inserted_08410		;082fa: 4ef900008410
@@ -10267,7 +9925,7 @@ lb_08300:
 	JSR	set_video_attribute_083ce		;08304: 4eb9000083ce
 	MOVE.W	#$007c,D0		;0830a: 303c007c
 lb_0830e:
-	JSR	wait_for_sync_003f0.W		;0830e: 4eb803f0
+	JSRW	wait_for_sync_003f0	;0830e: 4eb803f0
 	TST.W	credit_inserted_flag_00ffa8c0		;08312: 4a7900ffa8c0
 	BEQ.W	lb_08322		;08318: 67000008
 	JMP	credit_inserted_08410		;0831c: 4ef900008410
@@ -10289,7 +9947,7 @@ lb_08340:
 	MOVE.W	D0,(A1)+		;0834e: 32c0
 	MOVE.W	#$0003,D0		;08350: 303c0003
 lb_08354:
-	JSR	wait_for_sync_003f0.W		;08354: 4eb803f0
+	JSRW	wait_for_sync_003f0	;08354: 4eb803f0
 	TST.W	credit_inserted_flag_00ffa8c0		;08358: 4a7900ffa8c0
 	BEQ.W	lb_08368		;0835e: 67000008
 	JMP	credit_inserted_08410		;08362: 4ef900008410
@@ -10342,7 +10000,7 @@ lb_083d4:
 	BNE.S	lb_083d4		;083e6: 66ec
 	MOVE.W	#$0002,D0		;083e8: 303c0002
 lb_083ec:
-	JSR	wait_for_sync_003f0.W		;083ec: 4eb803f0
+	JSRW	wait_for_sync_003f0	;083ec: 4eb803f0
 	TST.B	credit_inserted_flag_00ffa8c0		;083f0: 4a3900ffa8c0
 	BEQ.W	lb_08400		;083f6: 67000008
 	JMP	credit_inserted_08410		;083fa: 4ef900008410
@@ -10354,7 +10012,7 @@ lb_08400:
 credit_inserted_08410:
 	CLR.B	ext_00ffa9af		;08410: 423900ffa9af
 	CLR.B	ext_00ffa9b9		;08416: 423900ffa9b9
-	JSR	clear_pretty_much_all_video_01cd8.W		;0841c: 4eb81cd8
+	JSRW	clear_pretty_much_all_video_01cd8	;0841c: 4eb81cd8
 	MOVE.W	#$0004,sound_0030c010		;08420: 33fc00040030c010
 	LEA	lb_08e32,A0		;08428: 41f900008e32
 	LEA	tile_layer_1_24A000,A1		;0842e: 43f90024a000
@@ -10364,7 +10022,7 @@ credit_inserted_08410:
 	LEA	lb_08a38,A0		;08442: 41f900008a38
 	BSR.W	display_4x4_tile_blocks_08388		;08448: 6100ff3e
 	MOVE.W	#$001e,D0		;0844c: 303c001e
-	JSR	lb_01f78.W		;08450: 4eb81f78
+	JSRW	lb_01f78	;08450: 4eb81f78
 	JMP	lb_099e4		;08454: 4ef9000099e4
 lb_0845a:
 	CLR.B	ext_00ff801e		;0845a: 423900ff801e
@@ -10375,17 +10033,17 @@ lb_08460:
 	CMPI.W	#$0001,D0		;0846e: 0c400001
 	BNE.S	lb_0847e		;08472: 660a
 	MOVE.W	#$0021,D0		;08474: 303c0021
-	JSR	lb_01f78.W		;08478: 4eb81f78
+	JSRW	lb_01f78	;08478: 4eb81f78
 	BRA.S	lb_084a6		;0847c: 6028
 lb_0847e:
 	MOVE.W	#$0022,D0		;0847e: 303c0022
-	JSR	lb_01f78.W		;08482: 4eb81f78
+	JSRW	lb_01f78	;08482: 4eb81f78
 	BRA.S	lb_084a6		;08486: 601e
 lb_08488:
 	CMPI.B	#$20,ext_00ff801e		;08488: 0c39002000ff801e
 	BNE.S	lb_0849c		;08490: 660a
 	MOVE.W	#$0023,D0		;08492: 303c0023
-	JSR	lb_01f78.W		;08496: 4eb81f78
+	JSRW	lb_01f78	;08496: 4eb81f78
 	BRA.S	lb_084a6		;0849a: 600a
 lb_0849c:
 	CMPI.B	#$38,ext_00ff801e		;0849c: 0c39003800ff801e
@@ -10394,9 +10052,9 @@ lb_084a6:
 	ADDQ.B	#1,ext_00ff801e		;084a6: 523900ff801e
 	BRA.S	lb_08460		;084ac: 60b2
 game_intro_sequence_084ae:
-	JSR	clear_pretty_much_all_video_01cd8.W		;084ae: 4eb81cd8
+	JSRW	clear_pretty_much_all_video_01cd8	;084ae: 4eb81cd8
 	MOVE.W	#$8009,ext_00ff8170		;084b2: 33fc800900ff8170
-	JSR	wait_and_process_inputs_00404.W		;084ba: 4eb80404
+	JSRW	wait_and_process_inputs_00404	;084ba: 4eb80404
 	LEA	lb_09032,A0		;084be: 41f900009032
 	; install game intro screen ("are you a bad enough dude...")
 	LEA	tile_layer_1_24A000,A1		;084c4: 43f90024a000
@@ -10439,7 +10097,7 @@ lb_08562:
 	MOVE.W	#$000a,ext_00ff8020		;08574: 33fc000a00ff8020
 lb_0857c:
 	JSR	lb_087f0		;0857c: 4eb9000087f0
-	JSR	wait_and_process_inputs_00404.W		;08582: 4eb80404
+	JSRW	wait_and_process_inputs_00404	;08582: 4eb80404
 	MOVEA.L	ext_00ff805e,A0		;08586: 207900ff805e
 	CMPI.B	#$ff,(A0)		;0858c: 0c1000ff
 	BNE.S	lb_08528		;08590: 6696
@@ -10547,7 +10205,7 @@ lb_086fc:
 	RTS				;086fc: 4e75
 lb_086fe:
 	JSR	lb_085c4		;086fe: 4eb9000085c4
-	JSR	wait_and_process_inputs_00404.W		;08704: 4eb80404
+	JSRW	wait_and_process_inputs_00404	;08704: 4eb80404
 	MOVEQ	#0,D0			;08708: 7000
 	MOVE.B	is_actual_game_played_00ff8215,D1		;0870a: 123900ff8215
 	MOVE.B	D1,D2			;08710: 1401
@@ -10568,7 +10226,7 @@ lb_0873e:
 	* this appears to be not reacheable!
 unreached_08740:
 	JSR	unreached_08754		;08740: 4eb900008754
-	JSR	wait_and_process_inputs_00404.W		;08746: 4eb80404
+	JSRW	wait_and_process_inputs_00404	;08746: 4eb80404
 	SUBQ.W	#1,ext_00ff802e		;0874a: 537900ff802e
 	BNE.S	unreached_08740		;08750: 66ee
 	RTS				;08752: 4e75
@@ -11820,11 +11478,11 @@ lb_09032:
 	dc.w	$1695	;0922c
 	dc.w	$269b	;0922e
 	dc.w	$269d	;09230
-	JSR	clear_pretty_much_all_video_01cd8.W		;09232: 4eb81cd8
+	JSRW	clear_pretty_much_all_video_01cd8	;09232: 4eb81cd8
 	CLR.L	ext_00ff813c		;09236: 42b900ff813c
 	CLR.L	ext_00ff8140		;0923c: 42b900ff8140
 	MOVE.W	#$800a,ext_00ff8170		;09242: 33fc800a00ff8170
-	JSR	wait_for_sync_003f0.W		;0924a: 4eb803f0
+	JSRW	wait_for_sync_003f0	;0924a: 4eb803f0
 	MOVE.W	#$0000,sound_0030c010		;0924e: 33fc00000030c010
 	MOVEQ	#102,D0			;09256: 7066
 	JSR	play_sound_0def0		;09258: 4eb90000def0
@@ -11836,7 +11494,7 @@ lb_0926a:
 	BNE.S	lb_0926a		;09272: 66f6
 	MOVE.W	#$027f,D0		;09274: 303c027f
 lb_09278:
-	JSR	wait_for_sync_003f0.W		;09278: 4eb803f0
+	JSRW	wait_for_sync_003f0	;09278: 4eb803f0
 	DBF	D0,lb_09278		;0927c: 51c8fffa
 	RTS				;09280: 4e75
 lb_09282:
@@ -12665,7 +12323,7 @@ lb_09976:
 lb_0998e:
 	BCLR	#7,ext_00ff810d		;0998e: 08b9000700ff810d
 lb_09996:
-	JSR	update_pf0_0_control_02366.W		;09996: 4eb82366
+	JSRW	update_pf0_0_control_02366	;09996: 4eb82366
 	MOVEQ	#0,D0			;0999a: 7000
 	MOVE.B	copy_of_dsw_msb_00ff810a,D0		;0999c: 103900ff810a
 	ANDI.B	#$0c,D0			;099a2: 0200000c
@@ -12692,13 +12350,13 @@ lb_099f0:
 	CMPA.L	#$00244800,A2		;099f2: b5fc00244800
 	BNE.S	lb_099f0		;099f8: 66f6
 lb_099fa:
-	JSR	wait_for_sync_003f0.W		;099fa: 4eb803f0
+	JSRW	wait_for_sync_003f0	;099fa: 4eb803f0
 	BSR.W	lb_09a08		;099fe: 61000008
 	BSR.W	lb_09a58		;09a02: 61000054
 	BRA.S	lb_099fa		;09a06: 60f2
 lb_09a08:
 	MOVEQ	#22,D0			;09a08: 7016
-	JSR	lb_01f78.W		;09a0a: 4eb81f78
+	JSRW	lb_01f78	;09a0a: 4eb81f78
 	MOVEQ	#0,D2			;09a0e: 7400
 	MOVEQ	#0,D3			;09a10: 7600
 	MOVE.W	credit_inserted_flag_00ffa8c0,D2		;09a12: 343900ffa8c0
@@ -12738,18 +12396,18 @@ lb_09a68:
 lb_09a6e:
 	TST.W	credit_inserted_flag_00ffa8c0		;09a6e: 4a7900ffa8c0
 	BEQ.W	lb_09a7c		;09a74: 67000006
-	JMP	lb_01a12.W		;09a78: 4ef81a12
+	JMPW	lb_01a12	;09a78: 4ef81a12
 lb_09a7c:
 	MOVEQ	#43,D0			;09a7c: 702b
 	JSR	lb_09d92		;09a7e: 4eb900009d92
 	RTS				;09a84: 4e75
 lb_09a86:
-	JSR	lb_01da0.W		;09a86: 4eb81da0
+	JSRW	lb_01da0	;09a86: 4eb81da0
 	MOVEQ	#0,D0			;09a8a: 7000
 	MOVE.W	D0,ext_00ff8114		;09a8c: 33c000ff8114
 	MOVE.W	D0,ext_00ff8118		;09a92: 33c000ff8118
-	JSR	update_pf1_0_control_02396.W		;09a98: 4eb82396
-	JSR	update_pf1_0_control_023a2.W		;09a9c: 4eb823a2
+	JSRW	update_pf1_0_control_02396	;09a98: 4eb82396
+	JSRW	update_pf1_0_control_023a2	;09a9c: 4eb823a2
 	LEA	ext_002440c0,A2		;09aa0: 45f9002440c0
 lb_09aa6:
 	MOVE.L	D0,(A2)+		;09aa6: 24c0
@@ -12758,7 +12416,7 @@ lb_09aa6:
 	MOVEQ	#99,D0			;09ab0: 7063
 	JSR	play_sound_0def0		;09ab2: 4eb90000def0
 	MOVEQ	#41,D0			;09ab8: 7029
-	JSR	lb_01f78.W		;09aba: 4eb81f78
+	JSRW	lb_01f78	;09aba: 4eb81f78
 	MOVEQ	#48,D0			;09abe: 7030
 	ADD.B	current_stage_00ff821d,D0		;09ac0: d03900ff821d
 	MOVE.W	D0,ext_00244420		;09ac6: 33c000244420
@@ -12769,32 +12427,32 @@ lb_09aa6:
 	BTST	#2,is_actual_game_played_00ff8215		;09adc: 0839000200ff8215
 	BEQ.W	lb_09afa		;09ae4: 67000014
 	MOVE.L	ext_00ffa8aa,ext_00ff81d8	;09ae8: 23f900ffa8aa00ff81d8
-	JSR	lb_07290.W		;09af2: 4eb87290
-	JSR	lb_0736a.W		;09af6: 4eb8736a
+	JSRW	lb_07290	;09af2: 4eb87290
+	JSRW	lb_0736a	;09af6: 4eb8736a
 lb_09afa:
 	BTST	#3,is_actual_game_played_00ff8215		;09afa: 0839000300ff8215
 	BEQ.W	lb_09b18		;09b02: 67000014
 	MOVE.L	ext_00ffa8aa,ext_00ff81dc	;09b06: 23f900ffa8aa00ff81dc
-	JSR	lb_07290.W		;09b10: 4eb87290
-	JSR	lb_073a4.W		;09b14: 4eb873a4
+	JSRW	lb_07290	;09b10: 4eb87290
+	JSRW	lb_073a4	;09b14: 4eb873a4
 lb_09b18:
 	MOVE.W	#$0100,D0		;09b18: 303c0100
 lb_09b1c:
-	JSR	wait_for_sync_003f0.W		;09b1c: 4eb803f0
+	JSRW	wait_for_sync_003f0	;09b1c: 4eb803f0
 	SUBQ.W	#1,D0			;09b20: 5340
 	BNE.S	lb_09b1c		;09b22: 66f8
-	JSR	clear_sprite_ram_01dc2.W		;09b24: 4eb81dc2
-	JSR	wait_for_sync_003f0.W		;09b28: 4eb803f0
+	JSRW	clear_sprite_ram_01dc2	;09b24: 4eb81dc2
+	JSRW	wait_for_sync_003f0	;09b28: 4eb803f0
 	MOVEQ	#4,D0			;09b2c: 7004
 	JSR	play_sound_0def0		;09b2e: 4eb90000def0
 	CMPI.B	#$07,current_stage_00ff821d		;09b34: 0c39000700ff821d
 	BEQ.W	lb_09b46		;09b3c: 67000008
 	MOVEQ	#42,D0			;09b40: 702a
-	JSR	lb_01f78.W		;09b42: 4eb81f78
+	JSRW	lb_01f78	;09b42: 4eb81f78
 lb_09b46:
 	MOVE.W	#$00c0,D0		;09b46: 303c00c0
 lb_09b4a:
-	JSR	wait_for_sync_003f0.W		;09b4a: 4eb803f0
+	JSRW	wait_for_sync_003f0	;09b4a: 4eb803f0
 	SUBQ.W	#1,D0			;09b4e: 5340
 	BNE.S	lb_09b4a		;09b50: 66f8
 	RTS				;09b52: 4e75
@@ -12893,7 +12551,7 @@ lb_09cb0:
 lb_09cb4:
 	RTS				;09cb4: 4e75
 lb_09cb6:
-	JSR	wait_for_sync_003f0.W		;09cb6: 4eb803f0
+	JSRW	wait_for_sync_003f0	;09cb6: 4eb803f0
 	BTST	#7,stage_control_flags_00ff8216		;09cba: 0839000700ff8216
 	BNE.W	lb_09d20		;09cc2: 6600005c
 	MOVE.W	ext_00ffa8ba,D2		;09cc6: 343900ffa8ba
@@ -12908,7 +12566,7 @@ lb_09ce0:
 	BSR.W	lb_09c62		;09ce6: 6100ff7a
 	BSR.S	lb_09c8c		;09cea: 61a0
 	MOVEQ	#40,D0			;09cec: 7028
-	JSR	lb_01f78.W		;09cee: 4eb81f78
+	JSRW	lb_01f78	;09cee: 4eb81f78
 	MOVE.W	#$0000,D0		;09cf2: 303c0000
 	MOVE.B	ext_00ffa8ba,D0		;09cf6: 103900ffa8ba
 	MOVE.W	D0,ext_0024476a		;09cfc: 33c00024476a
@@ -12916,7 +12574,7 @@ lb_09ce0:
 	ANDI.B	#$03,D0			;09d08: 02000003
 	BEQ.S	lb_09cb6		;09d0c: 67a8
 	MOVEQ	#40,D0			;09d0e: 7028
-	JSR	lb_01fd4.W		;09d10: 4eb81fd4
+	JSRW	lb_01fd4	;09d10: 4eb81fd4
 	MOVE.W	#$0000,D0		;09d14: 303c0000
 	MOVE.W	D0,ext_0024476a		;09d18: 33c00024476a
 lb_09d1e:
@@ -12934,37 +12592,37 @@ lb_09d50:
 	BCLR	#2,ext_00ffa846		;09d50: 08b9000200ffa846
 	BCLR	#3,ext_00ffa846		;09d58: 08b9000300ffa846
 	MOVEQ	#40,D0			;09d60: 7028
-	JSR	lb_01fd4.W		;09d62: 4eb81fd4
+	JSRW	lb_01fd4	;09d62: 4eb81fd4
 	MOVEQ	#0,D0			;09d66: 7000
 	MOVE.W	D0,ext_00244902		;09d68: 33c000244902
 lb_09d6e:
-	JSR	wait_for_sync_003f0.W		;09d6e: 4eb803f0
-	JSR	process_inputs_0059c.W		;09d72: 4eb8059c
-	JSR	lb_07d3c.W		;09d76: 4eb87d3c
+	JSRW	wait_for_sync_003f0	;09d6e: 4eb803f0
+	JSRW	process_inputs_0059c	;09d72: 4eb8059c
+	JSRW	lb_07d3c	;09d76: 4eb87d3c
 	MOVE.B	ext_00ffa9bb,D0		;09d7a: 103900ffa9bb
 	ANDI.B	#$03,D0			;09d80: 02000003
 	BNE.S	lb_09d6e		;09d84: 66e8
 	ANDI.B	#$7c,is_actual_game_played_00ff8215		;09d86: 0239007c00ff8215
-	JMP	lb_019b2.W		;09d8e: 4ef819b2
+	JMPW	lb_019b2	;09d8e: 4ef819b2
 lb_09d92:
 	MOVE.W	ext_00ff8202,D2		;09d92: 343900ff8202
 	ANDI.W	#$0010,D2		;09d98: 02420010
 	BNE.W	lb_09da8		;09d9c: 6600000a
-	JSR	lb_01f78.W		;09da0: 4eb81f78
+	JSRW	lb_01f78	;09da0: 4eb81f78
 	BRA.W	lb_09dac		;09da4: 60000006
 lb_09da8:
-	JSR	lb_01fd4.W		;09da8: 4eb81fd4
+	JSRW	lb_01fd4	;09da8: 4eb81fd4
 lb_09dac:
 	RTS				;09dac: 4e75
 lb_09dae:
 	MOVEQ	#0,D0			;09dae: 7000
 	MOVE.B	current_stage_00ff821d,D0		;09db0: 103900ff821d
-	LEA	lb_09dc8,A3		;09db6: 47f900009dc8
+	LEA	tunes_table_09dc8,A3		;09db6: 47f900009dc8
 	MOVE.B	0(A3,D0.W),D0		;09dbc: 10330000
 	JSR	play_sound_0def0		;09dc0: 4eb90000def0
 	RTS				;09dc6: 4e75
-lb_09dc8:
-	dc.w	$0060	;09dc8
+tunes_table_09dc8:
+	dc.w	$0060	;09dc8 2 tunes alternating between levels
 	dc.w	$6160	;09dca
 	dc.w	$6061	;09dcc
 	dc.w	$6060	;09dce
@@ -12981,7 +12639,7 @@ lb_09dd2:
 	MOVE.B	ext_00ff8243,2(A2)		;09dfe: 157900ff82430002
 	MOVE.B	ext_00ffa84b,5(A2)		;09e06: 157900ffa84b0005
 	BSR.W	lb_09e86		;09e0e: 61000076
-	JSR	lb_0736a.W		;09e12: 4eb8736a
+	JSRW	lb_0736a	;09e12: 4eb8736a
 lb_09e16:
 	LEA	ext_00ffa224,A0		;09e16: 41f900ffa224
 	BTST	#7,(A0)			;09e1c: 08100007
@@ -12993,7 +12651,7 @@ lb_09e30:
 	MOVE.B	ext_00ff8242,2(A2)		;09e38: 157900ff82420002
 	MOVE.B	ext_00ffa84a,5(A2)		;09e40: 157900ffa84a0005
 	BSR.W	lb_09e86		;09e48: 6100003c
-	JSR	lb_073a4.W		;09e4c: 4eb873a4
+	JSRW	lb_073a4	;09e4c: 4eb873a4
 lb_09e50:
 	BSR.W	lb_0c4ba		;09e50: 61002668
 	JSR	lb_0d10e		;09e54: 4eb90000d10e
@@ -13002,7 +12660,7 @@ lb_09e50:
 	BSR.W	lb_0a9f6		;09e66: 61000b8e
 	BSR.W	lb_0aa68		;09e6a: 61000bfc
 	BSR.W	lb_0aa96		;09e6e: 61000c26
-	JSR	lb_02158.W		;09e72: 4eb82158
+	JSRW	lb_02158	;09e72: 4eb82158
 	MOVEQ	#0,D0			;09e76: 7000
 	MOVE.W	D0,ext_00ff8242		;09e78: 33c000ff8242
 	MOVE.W	D0,ext_00ffa84a		;09e7e: 33c000ffa84a
@@ -13094,7 +12752,7 @@ lb_09efc:
 	dc.l	lb_0bd12	;09fb8
 lb_09fbc:
 	LEA	ext_00ffa364,A0		;09fbc: 41f900ffa364
-	JSR	lb_01efa.W		;09fc2: 4eb81efa
+	JSRW	lb_01efa	;09fc2: 4eb81efa
 	BTST	#0,is_actual_game_played_00ff8215		;09fc6: 0839000000ff8215
 	BEQ.W	lb_09ffc		;09fce: 6700002c
 	MOVE.W	#$a080,(A0)		;09fd2: 30bca080
@@ -13106,7 +12764,7 @@ lb_09fbc:
 	BCLR	#2,ext_00ffa846		;09ff4: 08b9000200ffa846
 lb_09ffc:
 	LEA	ext_00ffa224,A0		;09ffc: 41f900ffa224
-	JSR	lb_01efa.W		;0a002: 4eb81efa
+	JSRW	lb_01efa	;0a002: 4eb81efa
 	BTST	#1,is_actual_game_played_00ff8215		;0a006: 0839000100ff8215
 	BEQ.W	lb_0a048		;0a00e: 67000038
 	MOVE.W	#$a080,(A0)		;0a012: 30bca080
@@ -13132,7 +12790,7 @@ lb_0a058:
 	BTST	#0,ext_00ffa846		;0a06e: 0839000000ffa846
 	BNE.W	lb_0a0da		;0a076: 66000062
 	LEA	ext_00ffa364,A0		;0a07a: 41f900ffa364
-	JSR	lb_01efa.W		;0a080: 4eb81efa
+	JSRW	lb_01efa	;0a080: 4eb81efa
 	BSR.W	lb_0a2f6		;0a084: 61000270
 	BSR.W	lb_0a32c		;0a088: 610002a2
 	BSR.W	lb_0a33c		;0a08c: 610002ae
@@ -13149,9 +12807,9 @@ lb_0a0b2:
 	BCLR	#0,ext_00ffa846		;0a0ba: 08b9000000ffa846
 	BCLR	#2,ext_00ffa846		;0a0c2: 08b9000200ffa846
 	MOVEQ	#34,D0			;0a0ca: 7022
-	JSR	lb_01fd4.W		;0a0cc: 4eb81fd4
+	JSRW	lb_01fd4	;0a0cc: 4eb81fd4
 	MOVEQ	#19,D0			;0a0d0: 7013
-	JSR	lb_01f78.W		;0a0d2: 4eb81f78
+	JSRW	lb_01f78	;0a0d2: 4eb81f78
 	BSR.W	lb_0e0da		;0a0d6: 61004002
 lb_0a0da:
 	BTST	#1,D0			;0a0da: 08000001
@@ -13161,7 +12819,7 @@ lb_0a0da:
 	BTST	#1,ext_00ffa846		;0a0ea: 0839000100ffa846
 	BNE.W	lb_0a162		;0a0f2: 6600006e
 	LEA	ext_00ffa224,A0		;0a0f6: 41f900ffa224
-	JSR	lb_01efa.W		;0a0fc: 4eb81efa
+	JSRW	lb_01efa	;0a0fc: 4eb81efa
 	BSR.W	lb_0a2f6		;0a100: 610001f4
 	BSR.W	lb_0a32c		;0a104: 61000226
 	MOVE.B	#$01,2(A0)		;0a108: 117c00010002
@@ -13180,9 +12838,9 @@ lb_0a13a:
 	BCLR	#1,ext_00ffa846		;0a142: 08b9000100ffa846
 	BCLR	#3,ext_00ffa846		;0a14a: 08b9000300ffa846
 	MOVEQ	#35,D0			;0a152: 7023
-	JSR	lb_01fd4.W		;0a154: 4eb81fd4
+	JSRW	lb_01fd4	;0a154: 4eb81fd4
 	MOVEQ	#20,D0			;0a158: 7014
-	JSR	lb_01f78.W		;0a15a: 4eb81f78
+	JSRW	lb_01f78	;0a15a: 4eb81f78
 	BSR.W	lb_0e0da		;0a15e: 61003f7a
 lb_0a162:
 	RTS				;0a162: 4e75
@@ -13302,7 +12960,7 @@ lb_0a286:
 	MOVE.B	32(A0),(A2)+		;0a292: 14e80020
 	MOVE.W	54(A0),(A2)+		;0a296: 34e80036
 	MOVE.W	28(A0),(A2)		;0a29a: 34a8001c
-	JSR	lb_01efa.W		;0a29e: 4eb81efa
+	JSRW	lb_01efa	;0a29e: 4eb81efa
 	LEA	ext_00ffa8aa,A2		;0a2a2: 45f900ffa8aa
 	MOVE.W	(A2)+,(A0)		;0a2a8: 309a
 	MOVE.B	(A2)+,2(A0)		;0a2aa: 115a0002
@@ -13877,7 +13535,7 @@ lb_0aa68:
 	LEA	ext_00ffa364,A0		;0aa68: 41f900ffa364
 	BCLR	#0,55(A0)		;0aa6e: 08a800000037
 	BEQ.W	lb_0aa94		;0aa74: 6700001e
-	JSR	lb_01efa.W		;0aa78: 4eb81efa
+	JSRW	lb_01efa	;0aa78: 4eb81efa
 	BSET	#0,ext_00ffa846		;0aa7c: 08f9000000ffa846
 	BCLR	#2,is_actual_game_played_00ff8215		;0aa84: 08b9000200ff8215
 	MOVE.W	#$0080,ext_00ffa8bc		;0aa8c: 33fc008000ffa8bc
@@ -13887,7 +13545,7 @@ lb_0aa96:
 	LEA	ext_00ffa224,A0		;0aa96: 41f900ffa224
 	BCLR	#0,55(A0)		;0aa9c: 08a800000037
 	BEQ.S	lb_0aa94		;0aaa2: 67f0
-	JSR	lb_01efa.W		;0aaa4: 4eb81efa
+	JSRW	lb_01efa	;0aaa4: 4eb81efa
 	BSET	#1,ext_00ffa846		;0aaa8: 08f9000100ffa846
 	BCLR	#3,is_actual_game_played_00ff8215		;0aab0: 08b9000300ff8215
 	MOVE.W	#$0080,ext_00ffa8be		;0aab8: 33fc008000ffa8be
@@ -15505,7 +15163,7 @@ lb_0bef0:
 	BRA.W	lb_0befe		;0bef4: 60000008
 lb_0bef8:
 	MOVEQ	#0,D0			;0bef8: 7000
-	JSR	lb_06194.W		;0befa: 4eb86194
+	JSRW	lb_06194	;0befa: 4eb86194
 lb_0befe:
 	RTS				;0befe: 4e75
 	BCLR	#5,ext_00ffa38c		;0bf00: 08b9000500ffa38c
@@ -15517,7 +15175,7 @@ lb_0bf18:
 	BRA.W	lb_0bf26		;0bf1c: 60000008
 lb_0bf20:
 	MOVEQ	#1,D0			;0bf20: 7001
-	JSR	lb_06194.W		;0bf22: 4eb86194
+	JSRW	lb_06194	;0bf22: 4eb86194
 lb_0bf26:
 	RTS				;0bf26: 4e75
 lb_0bf28:
@@ -17787,7 +17445,7 @@ lb_0d9f6:
 	MOVE.L	#$01000000,D0		;0d9fe: 203c01000000
 	MOVE.L	D0,ext_00ffa852		;0da04: 23c000ffa852
 	MOVE.L	D0,ext_00ff812c		;0da0a: 23c000ff812c
-	JSR	lb_02414.W		;0da10: 4eb82414
+	JSRW	lb_02414	;0da10: 4eb82414
 	ADDQ.B	#1,ext_00ffa8a0		;0da14: 523900ffa8a0
 	RTS				;0da1a: 4e75
 lb_0da1c:
@@ -17798,7 +17456,7 @@ lb_0da2e:
 	BSR.W	lb_0ddae		;0da2e: 6100037e
 	RTS				;0da32: 4e75
 lb_0da34:
-	JSR	lb_033a6.W		;0da34: 4eb833a6
+	JSRW	lb_033a6	;0da34: 4eb833a6
 	BSET	#0,ext_00ffa8ee		;0da38: 08f9000000ffa8ee
 	BCLR	#7,ext_00ffa844		;0da40: 08b9000700ffa844
 	MOVE.W	#$ccff,ext_00ffa8a2		;0da48: 33fcccff00ffa8a2
@@ -18045,7 +17703,7 @@ lb_0dde2:
 lb_0ddf0:
 	MOVEQ	#0,D1			;0ddf0: 7200
 	MOVE.B	3(A0),D1		;0ddf2: 12280003
-	JSR	lb_06016+2.W		;0ddf6: 4eb86018
+	JSRW	lb_06016+2	;0ddf6: 4eb86018
 	JSR	lb_0dece		;0ddfa: 4eb90000dece
 	BTST	#7,ext_00ffa364		;0de00: 0839000700ffa364
 	BEQ.W	lb_0de2a		;0de08: 67000020
@@ -18129,7 +17787,7 @@ lb_0df06:
 	BEQ.W	lb_0df18		;0df12: 67000004
 	MOVEQ	#22,D0			;0df16: 7016
 lb_0df18:
-	LEA	lb_0df3c,A3		;0df18: 47f90000df3c
+	LEA	sound_table_0df3c,A3		;0df18: 47f90000df3c
 	MOVE.B	0(A3,D0.W),D0		;0df1e: 10330000
 	CMPI.W	#$0070,D0		;0df22: 0c400070
 	BPL.W	lb_0df30		;0df26: 6a000008
@@ -18140,7 +17798,7 @@ lb_0df32:
 	MOVEQ	#1,D0			;0df32: 7001
 	MOVE.W	D0,ext_0030c014		;0df34: 33c00030c014
 	RTS				;0df3a: 4e75
-lb_0df3c:
+sound_table_0df3c:
 	dc.w	$0101	;0df3c
 	dc.w	$0203	;0df3e
 	dc.w	$041e	;0df40
@@ -18234,12 +17892,12 @@ lb_0dffe:
 	dc.w	$2829	;0e000
 ; this irq is triggered when ???
 level_4_irq_0e002:
-	JSR	clear_pretty_much_all_video_01cd8.W		;0e002: 4eb81cd8
+	JSRW	clear_pretty_much_all_video_01cd8	;0e002: 4eb81cd8
 lb_0e006:
 	MOVEQ	#16,D0			;0e006: 7010
-	JSR	lb_01f78.W		;0e008: 4eb81f78
+	JSRW	lb_01f78	;0e008: 4eb81f78
 	MOVEQ	#30,D0			;0e00c: 701e
-	JSR	lb_01f78.W		;0e00e: 4eb81f78
+	JSRW	lb_01f78	;0e00e: 4eb81f78
 	JMP	lb_0e006		;0e012: 4ef90000e006
 lb_0e018:
 	BTST	#6,stage_control_flags_00ff8216		;0e018: 0839000600ff8216
@@ -18416,7 +18074,7 @@ lb_0e238:
 	MOVEA.L	#lb_0e274,A0		;0e25c: 207c0000e274
 	MOVEA.L	0(A0,D0.W),A0		;0e262: 20700000
 	MOVE.W	#$0900,ext_0030c016		;0e266: 33fc09000030c016
-	JSR	wait_for_sync_003f0.W		;0e26e: 4eb803f0
+	JSRW	wait_for_sync_003f0	;0e26e: 4eb803f0
 	JMP	(A0)			;0e272: 4ed0
 lb_0e274:
 	dc.l	lb_0e294	;0e274
@@ -18939,7 +18597,7 @@ add_one_credit_0e752:
 lb_0e766:
 	MOVE.W	D1,credit_inserted_flag_00ffa8c0		;0e766: 33c100ffa8c0
 lb_0e76c:
-	MOVE.B	#$05,ext_0030c015		;0e76c: 13fc00050030c015
+	MOVE.B	#$05,sound_0030c015		;0e76c: 13fc00050030c015	; play credit sound
 lb_0e774:
 	RTS				;0e774: 4e75
 lb_0e776:
