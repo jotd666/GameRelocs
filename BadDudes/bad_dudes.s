@@ -99,36 +99,36 @@
 ;
 ; layer #0 (used for OSD and some foreground objects (lamps))
 ;
-;	map(0x240000, 0x240007).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                          /* text layer control */
-;	map(0x240010, 0x240017).w(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x242000, 0x24207f).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x242400, 0x2427ff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x244000, 0x245fff).rw(m_tilegen[0], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));  HUD layer data
+;	map(0x240000, 0x240007).w(m_tilegen[0], FUNCT(deco_bac06_device::pf_control_0_w));                          /* text layer control */
+;	map(0x240010, 0x240017).w(m_tilegen[0], FUNCT(deco_bac06_device::pf_control_1_w));
+;	map(0x242000, 0x24207f).rw(m_tilegen[0], FUNCT(deco_bac06_device::pf_colscroll_r), FUNCT(deco_bac06_device::pf_colscroll_w));
+;	map(0x242400, 0x2427ff).rw(m_tilegen[0], FUNCT(deco_bac06_device::pf_rowscroll_r), FUNCT(deco_bac06_device::pf_rowscroll_w));
+;	map(0x244000, 0x245fff).rw(m_tilegen[0], FUNCT(deco_bac06_device::pf_data_r), FUNCT(deco_bac06_device::pf_data_w));  HUD layer data
 ;
 ; layer #1 (used in title, intro screen, highscore, level 1)
 ;
-;	map(0x246000, 0x246007).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
-;	map(0x246010, 0x246017).w(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x248000, 0x24807f).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x248400, 0x2487ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x246000, 0x246007).w(m_tilegen[1], FUNCT(deco_bac06_device::pf_control_0_w));                                  /* first tile layer */
+;	map(0x246010, 0x246017).w(m_tilegen[1], FUNCT(deco_bac06_device::pf_control_1_w));
+;	map(0x248000, 0x24807f).rw(m_tilegen[1], FUNCT(deco_bac06_device::pf_colscroll_r), FUNCT(deco_bac06_device::pf_colscroll_w));
+;	map(0x248400, 0x2487ff).rw(m_tilegen[1], FUNCT(deco_bac06_device::pf_rowscroll_r), FUNCT(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24a000, 0x24a7ff).rw(m_tilegen[1], FUNCT(deco_bac06_device::pf_data_r), FUNCT(deco_bac06_device::pf_data_w));
 ;
-; layer #2 (used for background in sewer level 3 level, layer #1 is used for running water)
+; layer #2 (used for trucks, train, background in sewer level 3 level, layer #1 is used for running water)
 ;
-;	map(0x24c000, 0x24c007).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
-;	map(0x24c010, 0x24c017).w(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_control_1_w));
-;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_colscroll_w));
-;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_rowscroll_w));
-;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_r), LAB_LAB_LAB_LAB_LAB_FUNC(deco_bac06_device::pf_data_w));
+;	map(0x24c000, 0x24c007).w(m_tilegen[2], FUNCT(deco_bac06_device::pf_control_0_w));                              /* second tile layer */
+;	map(0x24c010, 0x24c017).w(m_tilegen[2], FUNCT(deco_bac06_device::pf_control_1_w));
+;	map(0x24c800, 0x24c87f).rw(m_tilegen[2], FUNCT(deco_bac06_device::pf_colscroll_r), FUNCT(deco_bac06_device::pf_colscroll_w));
+;	map(0x24cc00, 0x24cfff).rw(m_tilegen[2], FUNCT(deco_bac06_device::pf_rowscroll_r), FUNCT(deco_bac06_device::pf_rowscroll_w));
+;	map(0x24d000, 0x24d7ff).rw(m_tilegen[2], FUNCT(deco_bac06_device::pf_data_r), FUNCT(deco_bac06_device::pf_data_w));
 ;
 ;	map(0x300000, 0x300001).portr("AN0");
 ;	map(0x300008, 0x300009).portr("AN1");
-;	map(0x30c000, 0x30c00b).r(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_controls_r));
-;	map(0x30c010, 0x30c01f).w(LAB_LAB_LAB_LAB_LAB_FUNC(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
+;	map(0x30c000, 0x30c00b).r(FUNCT(dec0_state::dec0_controls_r));
+;	map(0x30c010, 0x30c01f).w(FUNCT(dec0_state::dec0_control_w));                                   /* Priority, sound, etc. */
 ;	map(0x30c012, 0x30c013).nopr(); // clr.w for sprite DMA
 ;	map(0x30c018, 0x30c019).nopr(); // clr.w for irq ack
-;	map(0x310000, 0x3107ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16)).share("palette");
-;	map(0x314000, 0x3147ff).ram().w(m_palette, LAB_LAB_LAB_LAB_LAB_FUNC(palette_device::write16_ext)).share("palette_ext");
+;	map(0x310000, 0x3107ff).ram().w(m_palette, FUNCT(palette_device::write16)).share("palette");
+;	map(0x314000, 0x3147ff).ram().w(m_palette, FUNCT(palette_device::write16_ext)).share("palette_ext");
 ;
 ;	map(0x31c000, 0x31c7ff).ram().share("spriteram");
 ;
@@ -226,7 +226,7 @@ ext_0024c000	EQU	$24C000
 ext_0024c002	EQU	$24C002
 ext_0024c004	EQU	$24C004
 ext_0024c006	EQU	$24C006
-ext_0024c010	EQU	$24C010
+scroll_value_0024c010	EQU	$24C010
 ext_0024c012	EQU	$24C012
 ext_0024c014	EQU	$24C014
 ext_0024c016	EQU	$24C016
@@ -264,7 +264,7 @@ dsw_0030c005	EQU	$30C005
 mcu_reply_0030c008	EQU	$30C008		; during game, loops $700-$70F each frame
 sound_0030c010	EQU	$30C010
 sprite_dma_0030c012	EQU	$30C012
-ext_0030c014	EQU	$30C014
+sound_0030c014	EQU	$30C014
 sound_0030c015	EQU	$30C015
 ext_0030c016	EQU	$30C016
 irq_ack_0030c018	EQU	$30C018
@@ -376,7 +376,7 @@ ext_00ff8134	EQU	$FF8134
 ext_00ff8136	EQU	$FF8136
 ext_00ff8138	EQU	$FF8138
 ext_00ff813a	EQU	$FF813A
-ext_00ff813c	EQU	$FF813C
+layer_24dxxx_scroll_values_ff813c	EQU	$FF813C
 ext_00ff8140	EQU	$FF8140
 ext_00ff8144	EQU	$FF8144
 ext_00ff8146	EQU	$FF8146
@@ -2864,7 +2864,7 @@ lb_01e26:
 	RTS				;01e2c: 4e75
 lb_01e2e:
 	MOVEQ	#0,D0			;01e2e: 7000
-	MOVE.W	D0,ext_00ff813c		;01e30: 33c000ff813c
+	MOVE.W	D0,layer_24dxxx_scroll_values_ff813c		;01e30: 33c000ff813c
 	JSRW_NOP	lb_0247a	;01e36: 4eb8247a
 	MOVE.W	D0,ext_00ff8140		;01e3c: 33c000ff8140
 	JSRW_NOP	lb_02486	;01e42: 4eb82486
@@ -2905,7 +2905,7 @@ lb_01e98:
 	JSRW_NOP	lb_02408	;01ec2: 4eb82408
 	MOVE.L	#$00000000,ext_00ff812c	;01ec8: 23fc0000000000ff812c
 	JSRW_NOP	lb_02414	;01ed2: 4eb82414
-	MOVE.L	#$00000000,ext_00ff813c	;01ed8: 23fc0000000000ff813c
+	MOVE.L	#$00000000,layer_24dxxx_scroll_values_ff813c	;01ed8: 23fc0000000000ff813c
 	JSRW_NOP	lb_0247a	;01ee2: 4eb8247a
 	MOVE.L	#$00000000,ext_00ff8140	;01ee8: 23fc0000000000ff8140
 	JSRW_NOP	lb_02486	;01ef2: 4eb82486
@@ -3027,7 +3027,7 @@ lb_02038:
 	JSRW	lb_002ec	;0205e: 4eb802ec
 	MOVE.L	#$20202020,ext_00ff8032	;02062: 23fc2020202000ff8032
 	LEA	ext_00ff801e,A0		;0206c: 41f900ff801e
-	MOVE.W	ext_00ff813c,(A0)+		;02072: 30f900ff813c
+	MOVE.W	layer_24dxxx_scroll_values_ff813c,(A0)+		;02072: 30f900ff813c
 	MOVE.W	#$0000,(A0)+		;02078: 30fc0000
 	MOVE.W	ext_00ff8140,(A0)+		;0207c: 30f900ff8140
 	LEA	ext_00ff801e,A0		;02082: 41f900ff801e
@@ -3304,7 +3304,7 @@ lb_02338:
 	dc.w	$006f	;02342
 	dc.w	$006f	;02344
 lb_02346:
-	dc.l	$6100000c	;02346
+	BSR.W	lb_02354		;02346: 6100000c
  	BSR.W	lb_023c6		;0234a: 6100007a
 	BSR.W	lb_02438		;0234e: 610000e8
 	RTS				;02352: 4e75
@@ -3399,7 +3399,7 @@ lb_0246e:
 	MOVE.W	ext_00ff813a,ext_0024c006	;0246e: 33f900ff813a0024c006
 	RTS				;02478: 4e75
 lb_0247a:
-	MOVE.W	ext_00ff813c,ext_0024c010	;0247a: 33f900ff813c0024c010
+	MOVE.W	layer_24dxxx_scroll_values_ff813c,scroll_value_0024c010	;0247a: 33f900ff813c0024c010
 	RTS				;02484: 4e75
 lb_02486:
 	MOVE.W	ext_00ff8140,ext_0024c012	;02486: 33f900ff81400024c012
@@ -4257,7 +4257,7 @@ lb_03082:
 	CMPI.W	#$ffff,(A1)		;03088: 0c51ffff
 	BEQ.W	lb_030d8		;0308c: 6700004a
 	MOVE.W	8(A1),D1		;03090: 32290008
-	MOVE.W	ext_00ff813c,D2		;03094: 343900ff813c
+	MOVE.W	layer_24dxxx_scroll_values_ff813c,D2		;03094: 343900ff813c
 	SUBI.W	#$0010,D2		;0309a: 04420010
 	CMP.W	D2,D1			;0309e: b242
 	BCS.W	lb_030d8		;030a0: 65000036
@@ -4396,7 +4396,7 @@ lb_032ba:
 	CMPI.W	#$ffff,(A1)		;032cc: 0c51ffff
 	BEQ.W	lb_03320		;032d0: 6700004e
 	MOVE.W	8(A1),D1		;032d4: 32290008
-	MOVE.W	ext_00ff813c,D2		;032d8: 343900ff813c
+	MOVE.W	layer_24dxxx_scroll_values_ff813c,D2		;032d8: 343900ff813c
 	SUB.W	D2,D1			;032de: 9242
 	SUBI.W	#$0010,D1		;032e0: 04410010
 	BHI.W	lb_03320		;032e4: 6200003a
@@ -7644,9 +7644,7 @@ lb_06196:
 lb_061a4:
 	MOVE.B	current_stage_00ff821d,D0		;061a4: 103900ff821d
 	LSL.W	#2,D0			;061aa: e548
-	LEAW	lb_061ba,A0	;061ac: 41f861ba
-lb_061b0:
-	NOP				;061b0: 4e71
+	LEAW_NOP	lb_061ba,A0	;061ac: 41f861ba
 lb_061b2:
 	ADDA.L	D0,A0			;061b2: d1c0
 lb_061b4:
@@ -7665,7 +7663,7 @@ lb_061ba:
 	dc.l	lb_061da	;061d6
 lb_061da:
 	BSR.W	lb_061e4		;061da: 61000008
-	BSR.W	lb_06234		;061de: 61000054
+	BSR.W	handle_layer_24dxxx_scroll_06234		;061de: 61000054
 	RTS				;061e2: 4e75
 lb_061e4:
 	MOVE.L	ext_00ff815c,ext_00ff823e	;061e4: 23f900ff815c00ff823e
@@ -7683,19 +7681,19 @@ lb_061f8:
 	BSR.W	lb_06344		;0622e: 61000114
 lb_06232:
 	RTS				;06232: 4e75
-lb_06234:
+handle_layer_24dxxx_scroll_06234:
 	MOVE.L	ext_00ff8164,ext_00ff8148	;06234: 23f900ff816400ff8148
 	MOVE.L	ext_00ff8168,ext_00ffa8f6	;0623e: 23f900ff816800ffa8f6
 	MOVE.L	ext_00ff8164,D1		;06248: 223900ff8164
 	MOVE.L	ext_00ff8168,D0		;0624e: 203900ff8168
-	LEA	ext_00ff813c,A0		;06254: 41f900ff813c
-	LEA	ext_0024c010,A1		;0625a: 43f90024c010
+	LEA	layer_24dxxx_scroll_values_ff813c,A0		;06254: 41f900ff813c
+	LEA	scroll_value_0024c010,A1		;0625a: 43f90024c010
 	BSR.W	lb_06284		;06260: 61000022
 	MOVE.L	#$00000000,ext_00ff8164	;06264: 23fc0000000000ff8164
 	MOVE.L	#$00000000,ext_00ff8168	;0626e: 23fc0000000000ff8168
 	TST.L	D6			;06278: 4a86
 	BEQ.W	lb_06282		;0627a: 67000006
-	BSR.W	lb_067b0		;0627e: 61000530
+	BSR.W	handle_truck_scroll_67b0		;0627e: 61000530
 lb_06282:
 	RTS				;06282: 4e75
 lb_06284:
@@ -8060,7 +8058,7 @@ jump_table_067a0:
 	dc.l	lb_063de	;067a4
 	dc.l	lb_06436	;067a8
 	dc.l	lb_0648e	;067ac
-lb_067b0:
+handle_truck_scroll_67b0:
 	SWAP	D6			;067b0: 4846
 	CMPI.W	#$0000,D6		;067b2: 0c460000
 	BEQ.W	lb_067d0		;067b6: 67000018
@@ -8276,7 +8274,7 @@ lb_06b0a:
 	BSR.W	lb_06bae		;06b42: 6100006a
 lb_06b46:
 	MOVE.L	#$00000000,ext_00ff815c	;06b46: 23fc0000000000ff815c
-	BSR.W	lb_06234		;06b50: 6100f6e2
+	BSR.W	handle_layer_24dxxx_scroll_06234		;06b50: 6100f6e2
 	MOVE.L	#$00000000,ext_00ff8164	;06b54: 23fc0000000000ff8164
 	MOVE.L	#$00000000,ext_00ff816c	;06b5e: 23fc0000000000ff816c
 	RTS				;06b68: 4e75
@@ -8342,7 +8340,7 @@ lb_06c32:
 	BSR.W	lb_06c72		;06c54: 6100001c
 lb_06c58:
 	MOVE.L	#$00000000,ext_00ff815c	;06c58: 23fc0000000000ff815c
-	BSR.W	lb_06234		;06c62: 6100f5d0
+	BSR.W	handle_layer_24dxxx_scroll_06234		;06c62: 6100f5d0
 	MOVE.L	#$00000000,ext_00ff8164	;06c66: 23fc0000000000ff8164
 	RTS				;06c70: 4e75
 lb_06c72:
@@ -8408,7 +8406,7 @@ lb_06d24:
 	BSR.W	lb_06dda		;06d6e: 6100006a
 lb_06d72:
 	MOVE.L	#$00000000,ext_00ff815c	;06d72: 23fc0000000000ff815c
-	BSR.W	lb_06234		;06d7c: 6100f4b6
+	BSR.W	handle_layer_24dxxx_scroll_06234		;06d7c: 6100f4b6
 	MOVE.L	#$00000000,ext_00ff8164	;06d80: 23fc0000000000ff8164
 	MOVE.L	#$00000000,ext_00ff816c	;06d8a: 23fc0000000000ff816c
 	RTS				;06d94: 4e75
@@ -8496,7 +8494,7 @@ lb_06e9c:
 	MOVE.W	ext_00ff8128,ext_00246010	;06ec2: 33f900ff812800246010
 	MOVE.W	ext_00ff812c,ext_00246012	;06ecc: 33f900ff812c00246012
 lb_06ed6:
-	MOVE.W	ext_00ff813c,ext_0024c010	;06ed6: 33f900ff813c0024c010
+	MOVE.W	layer_24dxxx_scroll_values_ff813c,scroll_value_0024c010	;06ed6: 33f900ff813c0024c010
 	MOVE.W	ext_00ff8140,ext_0024c012	;06ee0: 33f900ff81400024c012
 	RTS				;06eea: 4e75
 lb_06eec:
@@ -8537,7 +8535,7 @@ lb_06f9c:
 	MOVE.W	#$001f,D4		;06f9c: 383c001f
 lb_06fa0:
 	MOVE.L	#$00000080,D6		;06fa0: 2c3c00000080
-	JSRW	lb_067b0	;06fa6: 4eb867b0
+	JSRW	handle_truck_scroll_67b0	;06fa6: 4eb867b0
 	DBF	D4,lb_06fa0		;06faa: 51ccfff4
 	RTS				;06fae: 4e75
 lb_06fb0:
@@ -11479,7 +11477,7 @@ lb_09032:
 	dc.w	$269b	;0922e
 	dc.w	$269d	;09230
 	JSRW	clear_pretty_much_all_video_01cd8	;09232: 4eb81cd8
-	CLR.L	ext_00ff813c		;09236: 42b900ff813c
+	CLR.L	layer_24dxxx_scroll_values_ff813c		;09236: 42b900ff813c
 	CLR.L	ext_00ff8140		;0923c: 42b900ff8140
 	MOVE.W	#$800a,ext_00ff8170		;09242: 33fc800a00ff8170
 	JSRW	wait_for_sync_003f0	;0924a: 4eb803f0
@@ -16448,7 +16446,7 @@ lb_0cc46:
 	MOVE.W	ext_00ffa856,D5		;0cc64: 3a3900ffa856
 	SUB.W	D4,D2			;0cc6a: 9444
 	SUB.W	D5,D3			;0cc6c: 9645
-	ADD.W	ext_00ff813c,D3		;0cc6e: d67900ff813c
+	ADD.W	layer_24dxxx_scroll_values_ff813c,D3		;0cc6e: d67900ff813c
 	ADD.W	ext_00ff8140,D2		;0cc74: d47900ff8140
 lb_0cc7a:
 	MOVE.W	#$00f0,D4		;0cc7a: 383c00f0
@@ -16496,7 +16494,7 @@ lb_0ccb6:
 	MOVE.L	(A0)+,ext_00ff8128		;0cd20: 23d800ff8128
 	MOVE.L	(A0)+,ext_00ffa894		;0cd26: 23d800ffa894
 	MOVE.L	(A0)+,ext_00ff8140		;0cd2c: 23d800ff8140
-	MOVE.L	(A0)+,ext_00ff813c		;0cd32: 23d800ff813c
+	MOVE.L	(A0)+,layer_24dxxx_scroll_values_ff813c		;0cd32: 23d800ff813c
 	MOVE.W	(A0)+,ext_00ff8170		;0cd38: 33d800ff8170
 	MOVE.W	(A0)+,sound_0030c010		;0cd3e: 33d80030c010
 	MOVE.L	(A0)+,ext_00ff8222		;0cd44: 23d800ff8222
@@ -17157,7 +17155,7 @@ lb_0d5a8:
 lb_0d5be:
 	MOVE.L	#$07000000,D0		;0d5be: 203c07000000
 	MOVE.L	D0,ext_00ffa856		;0d5c4: 23c000ffa856
-	MOVE.L	D0,ext_00ff813c		;0d5ca: 23c000ff813c
+	MOVE.L	D0,layer_24dxxx_scroll_values_ff813c		;0d5ca: 23c000ff813c
 	MOVE.W	#$4008,ext_00ffa850		;0d5d0: 33fc400800ffa850
 	RTS				;0d5d8: 4e75
 lb_0d5da:
@@ -17791,12 +17789,12 @@ lb_0df18:
 	MOVE.B	0(A3,D0.W),D0		;0df1e: 10330000
 	CMPI.W	#$0070,D0		;0df22: 0c400070
 	BPL.W	lb_0df30		;0df26: 6a000008
-	MOVE.W	D0,ext_0030c014		;0df2a: 33c00030c014
+	MOVE.W	D0,sound_0030c014		;0df2a: 33c00030c014
 lb_0df30:
 	RTS				;0df30: 4e75
 lb_0df32:
 	MOVEQ	#1,D0			;0df32: 7001
-	MOVE.W	D0,ext_0030c014		;0df34: 33c00030c014
+	MOVE.W	D0,sound_0030c014		;0df34: 33c00030c014
 	RTS				;0df3a: 4e75
 sound_table_0df3c:
 	dc.w	$0101	;0df3c
@@ -30368,9 +30366,9 @@ lb_15b24:
 	RTS				;15b3e: 4e75
 lb_15b40:
 	MOVE.L	#$ffff8000,ext_00ffa882	;15b40: 23fcffff800000ffa882
-	CMPI.W	#$0100,ext_00ff813c		;15b4a: 0c79010000ff813c
+	CMPI.W	#$0100,layer_24dxxx_scroll_values_ff813c		;15b4a: 0c79010000ff813c
 	BCS.S	lb_15b60		;15b52: 650c
-	CMPI.W	#$0100,ext_00ff813c		;15b54: 0c79010000ff813c
+	CMPI.W	#$0100,layer_24dxxx_scroll_values_ff813c		;15b54: 0c79010000ff813c
 	BHI.S	lb_15b6c		;15b5c: 620e
 	RTS				;15b5e: 4e75
 lb_15b60:
@@ -38246,11 +38244,11 @@ lb_1b234:
 	MOVE.W	#$0082,ext_00ff8120		;1b260: 33fc008200ff8120
 	MOVE.W	#$0000,ext_00ff8128		;1b268: 33fc000000ff8128
 	MOVE.W	#$0000,ext_00ff812c		;1b270: 33fc000000ff812c
-	MOVE.W	#$0000,ext_00ff813c		;1b278: 33fc000000ff813c
+	MOVE.W	#$0000,layer_24dxxx_scroll_values_ff813c		;1b278: 33fc000000ff813c
 	MOVE.W	#$0000,ext_00ff8140		;1b280: 33fc000000ff8140
 	MOVE.W	#$0000,ext_00246010		;1b288: 33fc000000246010
 	MOVE.W	#$0000,ext_00246012		;1b290: 33fc000000246012
-	MOVE.W	#$0000,ext_0024c010		;1b298: 33fc00000024c010
+	MOVE.W	#$0000,scroll_value_0024c010		;1b298: 33fc00000024c010
 	MOVE.W	#$0000,ext_0024c012		;1b2a0: 33fc00000024c012
 	MOVE.W	#$0002,ext_00ff8112		;1b2a8: 33fc000200ff8112
 	JSR	update_pf0_0_control_0238a		;1b2b0: 4eb90000238a
@@ -38919,7 +38917,7 @@ lb_1ba8a:
 	JSR	update_pf1_0_control_023ae		;1baf0: 4eb9000023ae
 	MOVE.W	#$0082,ext_00ff8134		;1baf6: 33fc008200ff8134
 	JSR	lb_0244a		;1bafe: 4eb90000244a
-	MOVE.W	#$0000,ext_00ff813c		;1bb04: 33fc000000ff813c
+	MOVE.W	#$0000,layer_24dxxx_scroll_values_ff813c		;1bb04: 33fc000000ff813c
 	JSR	lb_0247a		;1bb0c: 4eb90000247a
 	MOVE.W	#$0000,ext_00ff8140		;1bb12: 33fc000000ff8140
 	JSR	lb_02486		;1bb1a: 4eb900002486
