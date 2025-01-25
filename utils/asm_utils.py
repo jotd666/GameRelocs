@@ -228,7 +228,7 @@ def find_hidden_relocs(defines,threshold=0x20):
             print(";{:05x}  {}".format(real_offset,line.strip()))
 
 
-def dump_reloc_file(reloc_offsets,binary_file,extension,pack_file):
+def dump_reloc_file(reloc_offsets,binary_file,extension,pack_file,asm_as_mit=False):
     reloc_data = []
     for offset in reloc_offsets:
         reloc_data.extend(struct.pack(">I",offset))
@@ -241,11 +241,14 @@ def dump_reloc_file(reloc_offsets,binary_file,extension,pack_file):
         subprocess.check_output(["propack","p",outf,outf])
 
     print("saving .RTB asm file")
+
+    long_decl = ".long" if asm_as_mit else "dc.l"
+    hex_prefix = "0x" if asm_as_mit else "$"
     with open(outf+".s","w") as f:
         for s in reloc_offsets:
-            f.write("\tdc.l\t${:x}\n".format(s))
+            f.write(f"\t{long_decl}\t{hex_prefix}{s:x}\n")
 
-def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=False):
+def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=False,asm_as_mit=False):
     with open(defines.binary_file,"rb") as f:
         binary_contents = f.read()
 
@@ -294,7 +297,7 @@ def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=
         reloc_offsets = sorted(reloc_offsets)
         reloc_offsets.append(0)  # end with 0
 
-        dump_reloc_file(reloc_offsets,defines.binary_file,".reloc",pack_file=pack_file)
+        dump_reloc_file(reloc_offsets,defines.binary_file,".reloc",pack_file=pack_file,asm_as_mit=asm_as_mit)
 
         # unreloc file, cancel relocation of labels that should be in chipmem
         # it's much better to compute offsets from labels not to relocate
@@ -303,13 +306,13 @@ def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=
             unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in derog_labels])
             unreloc_offsets.append(0)  # end with 0
 
-            dump_reloc_file(unreloc_offsets,defines.binary_file,".unreloc",pack_file=pack_file)
+            dump_reloc_file(unreloc_offsets,defines.binary_file,".unreloc",pack_file=pack_file,asm_as_mit=asm_as_mit)
 
         if chip_derog_labels:
             unreloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) in chip_derog_labels])
             unreloc_offsets.append(0)  # end with 0
 
-            dump_reloc_file(unreloc_offsets,defines.binary_file,".chip_unreloc",pack_file=pack_file)
+            dump_reloc_file(unreloc_offsets,defines.binary_file,".chip_unreloc",pack_file=pack_file,asm_as_mit=asm_as_mit)
 
 
 
