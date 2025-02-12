@@ -41107,8 +41107,8 @@ lb_1cf16:
 	dc.l	lb_1cfca	;1cf1e
 	dc.l	lb_1cffc	;1cf22
 lb_1cf26:
-	dc.l	$8280007	;1cf26
-	dc.l	lb_16612	;1cf2a
+	BTST    #$7,1(A0)       ;1cf26: 082800070001
+	BNE.S	$1cf40          ;1cf2c: 6612
 	MOVE.B	#$10,43(A0)		;1cf2e: 117c0010002b
 	MOVE.B	#$00,3(A0)		;1cf34: 117c00000003
 	BSET	#7,1(A0)		;1cf3a: 08e800070001
