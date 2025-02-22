@@ -1661,7 +1661,7 @@ lb_00ece:
 	dc.l	lb_01080	;00ece
 	dc.l	load_boss_2_purple_colors_0102c	;00ed2
 	dc.l	lb_010aa	;00ed6
-	dc.l	lb_01056	;00eda
+	dc.l	load_boss_4_colors_01056	;00eda
 	dc.l	lb_01002	;00ede
 	dc.l	lb_010d4	;00ee2
 	dc.l	lb_00fd8	;00ee6
@@ -1754,7 +1754,7 @@ load_boss_2_purple_colors_0102c:
 	MOVE.W	#$0000,D0		;0104c: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;01050: 6100f76c
 	RTS				;01054: 4e75
-lb_01056:
+load_boss_4_colors_01056:
 	LEAW_NOP	lb_011bc,A1	;01056: 43f811bc
 	LEA	ext_003103e0,A0		;0105c: 41f9003103e0
 	MOVE.W	#$0000,D0		;01062: 303c0000
