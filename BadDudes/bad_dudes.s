@@ -1663,7 +1663,7 @@ lb_00ece:
 	dc.l	lb_010aa	;00ed6
 	dc.l	load_boss_4_colors_01056	;00eda
 	dc.l	lb_01002	;00ede
-	dc.l	lb_010d4	;00ee2
+	dc.l	load_boss_3_colors_010d4	;00ee2
 	dc.l	lb_00fd8	;00ee6
 	dc.l	lb_00fae	;00eea
 	dc.l	lb_010fe	;00eee
@@ -1784,7 +1784,7 @@ lb_010aa:
 	MOVE.W	#$0000,D0		;010ca: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;010ce: 6100f6ee
 	RTS				;010d2: 4e75
-lb_010d4:
+load_boss_3_colors_010d4:
 	LEAW_NOP	lb_0127c,A1	;010d4: 43f8127c
 	LEA	ext_003103e0,A0		;010da: 41f9003103e0
 	MOVE.W	#$0000,D0		;010e0: 303c0000
@@ -2663,9 +2663,10 @@ game_loop_01b38:
 	ADDQ.B	#1,current_stage_00ff821d		;01b94: 523900ff821d goto next stage (increase level)
 	CMPI.B	#$08,current_stage_00ff821d		;01b9a: 0c39000800ff821d
 	BNE.W	lb_01abc		;01ba2: 6600ff18
+	; game ending
 	JSRW_NOP	lb_01f32	;01ba6: 4eb81f32
 	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01bac: 4eb81cd8
-	JSR	lb_1b1c6		;01bb2: 4eb90001b1c6
+	JSR	end_sequence_1b1c6		;01bb2: 4eb90001b1c6
 	MOVE.B	#$00,current_stage_00ff821d		;01bb8: 13fc000000ff821d
 	BRA.W	lb_019b2		;01bc0: 6000fdf0
 lb_01bc4:
@@ -3709,7 +3710,7 @@ display_multi_tile_object_028c6:
 	BNE.W	lb_02930		;028e4: 6600004a
 lb_028e8:
 	MOVE.W	(A3)+,D3		;028e8: 361b    Y offset?
-	ANDI.W	#$fe00,D3		;028ea: 0243fe00
+	ANDI.W	#$fe00,D3		;028ea: 0243fe00  mask out flags
 	MOVE.B	-1(A3),D4		;028ee: 182bffff
 	EXT.W	D4			;028f2: 4884
 	ADD.W	24(A0),D4		;028f4: d8680018
@@ -38173,7 +38174,7 @@ lb_1b1be:
 	MOVE.B	D0,4(A0)		;1b1c0: 11400004
 lb_1b1c4:
 	RTS				;1b1c4: 4e75
-lb_1b1c6:
+end_sequence_1b1c6:
 	JSR	wait_for_sync_003f0		;1b1c6: 4eb9000003f0
 	JSR	lb_1b1e2(PC)		;1b1cc: 4eba0014
 	NOP				;1b1d0: 4e71
@@ -38182,7 +38183,7 @@ lb_1b1c6:
 	NOP				;1b1d8: 4e71
 	NOP				;1b1da: 4e71
 	NOP				;1b1dc: 4e71
-	BRA.S	lb_1b1c6		;1b1de: 60e6
+	BRA.S	end_sequence_1b1c6		;1b1de: 60e6
 	RTS				;1b1e0: 4e75
 lb_1b1e2:
 	BTST	#7,ext_00ffa7c4		;1b1e2: 0839000700ffa7c4
@@ -38230,9 +38231,9 @@ lb_1b234:
 	MOVE.W	#$0002,ext_00ff8126		;1b2b6: 33fc000200ff8126
 	JSR	lb_023fc		;1b2be: 4eb9000023fc
 	MOVE.W	#$0004,sound_0030c010		;1b2c4: 33fc00040030c010
-	JSR	lb_1b322(PC)		;1b2cc: 4eba0054
+	JSR	clear_8x8_tile_layer_1b322(PC)		;1b2cc: 4eba0054
 	NOP				;1b2d0: 4e71
-	JSR	lb_1b34a(PC)		;1b2d2: 4eba0076
+	JSR	clear_24d000_tile_layer_1b34a(PC)		;1b2d2: 4eba0076
 	NOP				;1b2d6: 4e71
 	JSR	wait_for_sync_003f0		;1b2d8: 4eb9000003f0
 	JSR	wait_for_sync_003f0		;1b2de: 4eb9000003f0
@@ -38258,7 +38259,7 @@ copy_rom_to_video_1b310:
 	BRA.S	copy_rom_to_video_1b310		;1b31e: 60f0
 lb_1b320:
 	RTS				;1b320: 4e75
-lb_1b322:
+clear_8x8_tile_layer_1b322:
 	LEA	tile_layer_0_244000,A1		;1b322: 43f900244000
 	MOVEQ	#0,D0			;1b328: 7000
 lb_1b32a:
@@ -38266,7 +38267,7 @@ lb_1b32a:
 	CMPA.L	#$00246000,A1		;1b32c: b3fc00246000
 	BNE.S	lb_1b32a		;1b332: 66f6
 	RTS				;1b334: 4e75
-lb_1b336:
+clear_24a000_tile_layer_1b336:
 	LEA	tile_layer_1_24A000,A1		;1b336: 43f90024a000
 	MOVEQ	#0,D0			;1b33c: 7000
 lb_1b33e:
@@ -38274,7 +38275,7 @@ lb_1b33e:
 	CMPA.L	#$0024a800,A1		;1b340: b3fc0024a800
 	BNE.S	lb_1b33e		;1b346: 66f6
 	RTS				;1b348: 4e75
-lb_1b34a:
+clear_24d000_tile_layer_1b34a:
 	LEA	tile_layer_2_24d000,A1		;1b34a: 43f90024d000
 	MOVEQ	#0,D0			;1b350: 7000
 lb_1b352:
@@ -38475,7 +38476,7 @@ lb_1b6a2:
 	MOVE.B	#$00,ext_00ffa5b4		;1b70c: 13fc000000ffa5b4
 	RTS				;1b714: 4e75
 lb_1b716:
-	JSR	lb_1b322(PC)		;1b716: 4ebafc0a
+	JSR	clear_8x8_tile_layer_1b322(PC)		;1b716: 4ebafc0a
 	LEA	ext_00242000,A1		;1b71a: 43f900242000
 	MOVEQ	#0,D0			;1b720: 7000
 lb_1b722:
@@ -38899,15 +38900,15 @@ lb_1ba8a:
 	MOVE.W	#$0002,ext_00ff813a		;1bb20: 33fc000200ff813a
 	JSR	lb_0246e		;1bb28: 4eb90000246e
 	MOVE.W	#$0000,sound_0030c010		;1bb2e: 33fc00000030c010
-	JSR	lb_1b322(PC)		;1bb36: 4ebaf7ea
-	JSR	lb_1b336(PC)		;1bb3a: 4ebaf7fa
+	JSR	clear_8x8_tile_layer_1b322(PC)		;1bb36: 4ebaf7ea
+	JSR	clear_24a000_tile_layer_1b336(PC)		;1bb3a: 4ebaf7fa
 	MOVE.W	#$000f,D0		;1bb3e: 303c000f
 	MOVE.W	#$000f,D1		;1bb42: 323c000f
 	LEA	tile_layer_2_24d000,A1		;1bb46: 43f90024d000
 	LEA	lb_1c056+2(PC),A2	;1bb4c: 45fa050a
 	NOP				;1bb50: 4e71
 	JSR	copy_rom_to_video_1b310(PC)		;1bb52: 4ebaf7bc
-	LEA	lb_1c258(PC),A1		;1bb56: 43fa0700
+	LEA	credits_text_table_1c258(PC),A1		;1bb56: 43fa0700
 	NOP				;1bb5a: 4e71
 lb_1bb5c:
 	CMPI.L	#$ffffffff,(A1)		;1bb5c: 0c91ffffffff
@@ -39722,22 +39723,9 @@ lb_1c056:
 	dc.w	$50ef	;1c252
 	dc.w	$50f1	;1c254
 	dc.w	$50ef	;1c256
-lb_1c258:
-	dc.w	$0024	;1c258
-	dc.w	$484c	;1c25a
-	dc.w	$2020	;1c25c
-	dc.w	$2020	;1c25e
-	dc.w	$2020	;1c260
-	dc.w	$2d53	;1c262
-	dc.w	$5441	;1c264
-	dc.w	$4646	;1c266
-	dc.w	$2d20	;1c268
-	dc.w	$2020	;1c26a
-	dc.w	$2020	;1c26c
-	dc.w	$2020	;1c26e
-	dc.w	$2020	;1c270
-	dc.w	$2020	;1c272
-	dc.w	$2020	;1c274
+credits_text_table_1c258:
+	dc.l	$0024484c	;1c258
+	dc.b	"      -STAFF-             "	;1c25c
 	dc.w	$3030	;1c276
 	dc.w	$3030	;1c278
 	dc.w	$3030	;1c27a
@@ -39751,21 +39739,8 @@ lb_1c258:
 	dc.w	$3030	;1c28a
 	dc.w	$3030	;1c28c
 	dc.w	$3030	;1c28e
-	dc.w	$0024	;1c290
-	dc.w	$490c	;1c292
-	dc.w	$504c	;1c294
-	dc.w	$414e	;1c296
-	dc.w	$4e49	;1c298
-	dc.w	$4e47	;1c29a
-	dc.w	$2020	;1c29c
-	dc.w	$2020	;1c29e
-	dc.w	$2020	;1c2a0
-	dc.w	$2020	;1c2a2
-	dc.w	$2020	;1c2a4
-	dc.w	$2020	;1c2a6
-	dc.w	$2020	;1c2a8
-	dc.w	$2020	;1c2aa
-	dc.w	$2020	;1c2ac
+	dc.l	$0024490c	;1c290
+	dc.b	"PLANNING                  "	;1c294
 	dc.w	$3131	;1c2ae
 	dc.w	$3131	;1c2b0
 	dc.w	$3131	;1c2b2
@@ -39779,21 +39754,8 @@ lb_1c258:
 	dc.w	$3030	;1c2c2
 	dc.w	$3030	;1c2c4
 	dc.w	$3030	;1c2c6
-	dc.w	$0024	;1c2c8
-	dc.w	$498c	;1c2ca
-	dc.w	$2020	;1c2cc
-	dc.w	$2020	;1c2ce
-	dc.w	$4d41	;1c2d0
-	dc.w	$4b4f	;1c2d2
-	dc.w	$544f	;1c2d4
-	dc.w	$204b	;1c2d6
-	dc.w	$494b	;1c2d8
-	dc.w	$5543	;1c2da
-	dc.w	$4849	;1c2dc
-	dc.w	$2020	;1c2de
-	dc.w	$2020	;1c2e0
-	dc.w	$2020	;1c2e2
-	dc.w	$2020	;1c2e4
+	dc.l	$0024498c	;1c2c8
+	dc.b	"    MAKOTO KIKUCHI        "	;1c2cc
 	dc.w	$3030	;1c2e6
 	dc.w	$3030	;1c2e8
 	dc.w	$3030	;1c2ea
@@ -39807,21 +39769,8 @@ lb_1c258:
 	dc.w	$3030	;1c2fa
 	dc.w	$3030	;1c2fc
 	dc.w	$3030	;1c2fe
-	dc.w	$0024	;1c300
-	dc.w	$4a4c	;1c302
-	dc.w	$5052	;1c304
-	dc.w	$4f47	;1c306
-	dc.w	$5241	;1c308
-	dc.w	$4d4d	;1c30a
-	dc.w	$494e	;1c30c
-	dc.w	$4720	;1c30e
-	dc.w	$2020	;1c310
-	dc.w	$2020	;1c312
-	dc.w	$2020	;1c314
-	dc.w	$2020	;1c316
-	dc.w	$2020	;1c318
-	dc.w	$2020	;1c31a
-	dc.w	$2020	;1c31c
+	dc.l	$00244a4c	;1c300
+	dc.b	"PROGRAMMING               "	;1c304
 	dc.w	$3131	;1c31e
 	dc.w	$3131	;1c320
 	dc.w	$3131	;1c322
@@ -39835,21 +39784,8 @@ lb_1c258:
 	dc.w	$3030	;1c332
 	dc.w	$3030	;1c334
 	dc.w	$3030	;1c336
-	dc.w	$0024	;1c338
-	dc.w	$4acc	;1c33a
-	dc.w	$2020	;1c33c
-	dc.w	$2020	;1c33e
-	dc.w	$544f	;1c340
-	dc.w	$4d4f	;1c342
-	dc.w	$5441	;1c344
-	dc.w	$4b41	;1c346
-	dc.w	$204f	;1c348
-	dc.w	$5341	;1c34a
-	dc.w	$4441	;1c34c
-	dc.w	$2020	;1c34e
-	dc.w	$2020	;1c350
-	dc.w	$2020	;1c352
-	dc.w	$2020	;1c354
+	dc.l	$00244acc	;1c338
+	dc.b	"    TOMOTAKA OSADA        "	;1c33c
 	dc.w	$3030	;1c356
 	dc.w	$3030	;1c358
 	dc.w	$3030	;1c35a
@@ -39863,21 +39799,8 @@ lb_1c258:
 	dc.w	$3030	;1c36a
 	dc.w	$3030	;1c36c
 	dc.w	$3030	;1c36e
-	dc.w	$0024	;1c370
-	dc.w	$4b4c	;1c372
-	dc.w	$2020	;1c374
-	dc.w	$2020	;1c376
-	dc.w	$4d41	;1c378
-	dc.w	$5341	;1c37a
-	dc.w	$414b	;1c37c
-	dc.w	$4920	;1c37e
-	dc.w	$5441	;1c380
-	dc.w	$4d55	;1c382
-	dc.w	$5241	;1c384
-	dc.w	$2020	;1c386
-	dc.w	$2020	;1c388
-	dc.w	$2020	;1c38a
-	dc.w	$2020	;1c38c
+	dc.l	$00244b4c	;1c370
+	dc.b	"    MASAAKI TAMURA        "	;1c374
 	dc.w	$3030	;1c38e
 	dc.w	$3030	;1c390
 	dc.w	$3030	;1c392
@@ -39891,18 +39814,8 @@ lb_1c258:
 	dc.w	$3030	;1c3a2
 	dc.w	$3030	;1c3a4
 	dc.w	$3030	;1c3a6
-	dc.w	$0024	;1c3a8
-	dc.w	$4bcc	;1c3aa
-	dc.w	$2020	;1c3ac
-	dc.w	$2020	;1c3ae
-	dc.w	$4e4f	;1c3b0
-	dc.w	$4255	;1c3b2
-	dc.w	$5355	;1c3b4
-	dc.w	$4b45	;1c3b6
-	dc.w	$2053	;1c3b8
-	dc.w	$4153	;1c3ba
-	dc.w	$414b	;1c3bc
-	dc.w	$4920	;1c3be
+	dc.l	$00244bcc	;1c3a8
+	dc.b	"    NOBUSUKE SASAKI "	;1c3ac
 	dc.w	$2020	;1c3c0
 	dc.w	$2020	;1c3c2
 	dc.w	$2020	;1c3c4
@@ -39919,21 +39832,8 @@ lb_1c258:
 	dc.w	$3030	;1c3da
 	dc.w	$3030	;1c3dc
 	dc.w	$3030	;1c3de
-	dc.w	$0024	;1c3e0
-	dc.w	$4c4c	;1c3e2
-	dc.w	$2020	;1c3e4
-	dc.w	$2020	;1c3e6
-	dc.w	$4e41	;1c3e8
-	dc.w	$4f4d	;1c3ea
-	dc.w	$4920	;1c3ec
-	dc.w	$5355	;1c3ee
-	dc.w	$5341	;1c3f0
-	dc.w	$2020	;1c3f2
-	dc.w	$2020	;1c3f4
-	dc.w	$2020	;1c3f6
-	dc.w	$2020	;1c3f8
-	dc.w	$2020	;1c3fa
-	dc.w	$2020	;1c3fc
+	dc.l	$00244c4c	;1c3e0
+	dc.b	"    NAOMI SUSA            "	;1c3e4
 	dc.w	$3030	;1c3fe
 	dc.w	$3030	;1c400
 	dc.w	$3030	;1c402
@@ -39947,21 +39847,8 @@ lb_1c258:
 	dc.w	$3030	;1c412
 	dc.w	$3030	;1c414
 	dc.w	$3030	;1c416
-	dc.w	$0024	;1c418
-	dc.w	$4ccc	;1c41a
-	dc.w	$2020	;1c41c
-	dc.w	$2020	;1c41e
-	dc.w	$4b45	;1c420
-	dc.w	$4e4a	;1c422
-	dc.w	$4920	;1c424
-	dc.w	$5441	;1c426
-	dc.w	$4b41	;1c428
-	dc.w	$4841	;1c42a
-	dc.w	$5348	;1c42c
-	dc.w	$4920	;1c42e
-	dc.w	$2020	;1c430
-	dc.w	$2020	;1c432
-	dc.w	$2020	;1c434
+	dc.l	$00244ccc	;1c418
+	dc.b	"    KENJI TAKAHASHI       "	;1c41b
 	dc.w	$3030	;1c436
 	dc.w	$3030	;1c438
 	dc.w	$3030	;1c43a
@@ -39975,21 +39862,8 @@ lb_1c258:
 	dc.w	$3030	;1c44a
 	dc.w	$3030	;1c44c
 	dc.w	$3030	;1c44e
-	dc.w	$0024	;1c450
-	dc.w	$4d8c	;1c452
-	dc.w	$5350	;1c454
-	dc.w	$4543	;1c456
-	dc.w	$4941	;1c458
-	dc.w	$4c20	;1c45a
-	dc.w	$5448	;1c45c
-	dc.w	$414e	;1c45e
-	dc.w	$4b53	;1c460
-	dc.w	$2020	;1c462
-	dc.w	$2020	;1c464
-	dc.w	$2020	;1c466
-	dc.w	$2020	;1c468
-	dc.w	$2020	;1c46a
-	dc.w	$2020	;1c46c
+	dc.l	$00244d8c	;1c450
+	dc.b	"SPECIAL THANKS            "	;1c453
 	dc.w	$3131	;1c46e
 	dc.w	$3131	;1c470
 	dc.w	$3131	;1c472
