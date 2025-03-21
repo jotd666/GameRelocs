@@ -536,7 +536,7 @@ ext_00ffa59c	EQU	$FFA59C
 ext_00ffa5a4	EQU	$FFA5A4
 ext_00ffa5b4	EQU	$FFA5B4
 ext_00ffa634	EQU	$FFA634
-ext_00ffa7c4	EQU	$FFA7C4
+ending_state_00ffa7c4	EQU	$FFA7C4
 ext_00ffa7c5	EQU	$FFA7C5
 ext_00ffa7c8	EQU	$FFA7C8
 ext_00ffa7ca	EQU	$FFA7CA
@@ -1659,13 +1659,13 @@ lb_00eb2:
 	RTS				;00ecc: 4e75
 lb_00ece:
 	dc.l	lb_01080	;00ece
-	dc.l	load_boss_2_purple_colors_0102c	;00ed2
-	dc.l	lb_010aa	;00ed6
-	dc.l	load_boss_4_colors_01056	;00eda
-	dc.l	lb_01002	;00ede
+	dc.l	load_boss_2_colors_0102c	;00ed2
+	dc.l	load_boss_6_colors_010aa	;00ed6 devil pole
+	dc.l	load_boss_4_colors_01056	;00eda animal
+	dc.l	load_boss_5_colors_01002	;00ede akaikage
 	dc.l	load_boss_3_colors_010d4	;00ee2
-	dc.l	lb_00fd8	;00ee6
-	dc.l	lb_00fae	;00eea
+	dc.l	load_dragonninja_colors_00fd8	;00ee6
+	dc.l	load_zombie_animal_colors_00fae	;00eea
 	dc.l	lb_010fe	;00eee
 	dc.l	lb_00f2e	;00ef2
 	dc.l	lb_00f2e	;00ef6
@@ -1714,7 +1714,7 @@ lb_00f84:
 	MOVE.W	#$0000,D0		;00fa4: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;00fa8: 6100f814
 	RTS				;00fac: 4e75
-lb_00fae:
+load_zombie_animal_colors_00fae:
 	LEA	lb_51b80,A1		;00fae: 43f900051b80
 	LEA	ext_003103e0,A0		;00fb4: 41f9003103e0
 	MOVE.W	#$0000,D0		;00fba: 303c0000
@@ -1724,7 +1724,7 @@ lb_00fae:
 	MOVE.W	#$0000,D0		;00fce: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;00fd2: 6100f7ea
 	RTS				;00fd6: 4e75
-lb_00fd8:
+load_dragonninja_colors_00fd8:
 	LEA	lb_51bc0,A1		;00fd8: 43f900051bc0
 	LEA	ext_003103e0,A0		;00fde: 41f9003103e0
 	MOVE.W	#$0000,D0		;00fe4: 303c0000
@@ -1734,7 +1734,7 @@ lb_00fd8:
 	MOVE.W	#$0000,D0		;00ff8: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;00ffc: 6100f7c0
 	RTS				;01000: 4e75
-lb_01002:
+load_boss_5_colors_01002:
 	LEA	lb_51abc+4,A1		;01002: 43f900051ac0
 	LEA	ext_003103e0,A0		;01008: 41f9003103e0
 	MOVE.W	#$0000,D0		;0100e: 303c0000
@@ -1744,7 +1744,7 @@ lb_01002:
 	MOVE.W	#$0000,D0		;01022: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;01026: 6100f796
 	RTS				;0102a: 4e75
-load_boss_2_purple_colors_0102c:
+load_boss_2_colors_0102c:
 	LEAW_NOP	lb_0117c,A1	;0102c: 43f8117c
 	LEA	ext_003103e0,A0		;01032: 41f9003103e0
 	MOVE.W	#$0000,D0		;01038: 303c0000
@@ -1774,7 +1774,7 @@ lb_01080:
 	MOVE.W	#$0000,D0		;010a0: 303c0000
 	BSR.W	copy_16_colors_to_palette_007be		;010a4: 6100f718
 	RTS				;010a8: 4e75
-lb_010aa:
+load_boss_6_colors_010aa:
 	LEAW_NOP	lb_0123c,A1	;010aa: 43f8123c
 	LEA	ext_003103e0,A0		;010b0: 41f9003103e0
 	MOVE.W	#$0000,D0		;010b6: 303c0000
@@ -2571,7 +2571,7 @@ lb_01a12:
 	JSR	lb_0df32		;01a12: 4eb90000df32
 	MOVE.W	#$8000,ext_00ff8170		;01a18: 33fc800000ff8170
 	JSRW	wait_for_sync_003f0	;01a20: 4eb803f0
-	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01a24: 4eb81cd8
+	JSRW_NOP	clear_pretty_much_all_video_01cd8	;01a24: 4eb81cd8 reaches here when about to display title screen
 	JSRW_NOP	lb_01e98	;01a2a: 4eb81e98
 	JSR	lb_0825e		;01a30: 4eb90000825e
 	BSR.W	clear_pretty_much_all_video_01cd8		;01a36: 610002a0
@@ -2937,7 +2937,7 @@ lb_01f32:
 	MOVE.L	#$00000000,ext_00ffa8fa	;01f52: 23fc0000000000ffa8fa
 	MOVE.W	#$0000,ext_00ff80fc		;01f5c: 33fc000000ff80fc
 	MOVE.W	#$0027,D0		;01f64: 303c0027
-	LEA	ext_00ffa7c4,A3		;01f68: 47f900ffa7c4
+	LEA	ending_state_00ffa7c4,A3		;01f68: 47f900ffa7c4
 lb_01f6e:
 	MOVE.W	#$0000,(A3)+		;01f6e: 36fc0000
 	DBF	D0,lb_01f6e		;01f72: 51c8fffa
@@ -3807,7 +3807,7 @@ lb_029d8:
 	MOVEQ	#0,D1			;029f0: 7200
 	MOVE.B	2(A0),D1		;029f2: 12280002
 	LSL.W	#2,D1			;029f6: e549
-	LEAW_NOP	lb_02a10,A1	;029f8: 43f82a10
+	LEAW_NOP	lb_02a10,A1	;029f8: 43f82a10  50 entries
 	ADDA.L	D1,A1			;029fe: d3c1
 	MOVEA.L	(A1),A1			;02a00: 2251
 	JSR	(A1)			;02a02: 4e91
@@ -4334,7 +4334,7 @@ lb_03186:
 	BEQ.W	lb_03246		;031d2: 67000072
 	JSRW_NOP	lb_03322	;031d6: 4eb83322
 	MOVEM.L	A0,-(A7)		;031dc: 48e70080
-	LEA	ext_00ffa7c4,A0		;031e0: 41f900ffa7c4
+	LEA	ending_state_00ffa7c4,A0		;031e0: 41f900ffa7c4
 	JSRW	lb_01efa	;031e6: 4eb81efa
 	MOVEM.L	(A7)+,A0		;031ea: 4cdf0100
 	BTST	#3,copy_of_dsw_msb_00ff810a		;031ee: 0839000300ff810a
@@ -14151,7 +14151,7 @@ lb_0b1ba:
 	BTST	#0,D0			;0b1c6: 08000000
 	BEQ.W	lb_0b1fe		;0b1ca: 67000032
 	MOVE.W	36(A0),D2		;0b1ce: 34280024
-	SUB.W	D2,28(A0)		;0b1d2: 9568001c
+	SUB.W	D2,28(A0)		;0b1d2: 9568001c		| decrease energy
 	BHI.W	lb_0b1e6		;0b1d6: 6200000e
 	CLR.W	28(A0)			;0b1da: 4268001c
 	BSR.W	lb_0a706		;0b1de: 6100f526
@@ -16730,8 +16730,7 @@ lb_0cf98:
 	dc.w	$0000	;0cfce
 	dc.w	$8005	;0cfd0
 	dc.w	$0002	;0cfd2
-	dc.w	$0001	;0cfd4
-	dc.w	$111e	;0cfd6
+	dc.l	lb_1111e	;0cfd4
 	dc.l	lb_0fc0e	;0cfd8
 	dc.l	lb_117ee	;0cfdc
 	dc.l	lb_1188e	;0cfe0
@@ -23936,6 +23935,7 @@ lb_10f0c:
 	dc.w	$0000	;11118
 	dc.w	$0100	;1111a
 	dc.w	$ffff	;1111c
+lb_1111e:
 	dc.w	$8000	;1111e
 	dc.w	$0217	;11120
 	dc.w	$000a	;11122
@@ -29500,7 +29500,7 @@ lb_14fb2:
 	MOVEA.L	(A7)+,A0		;14fb8: 205f
 	MOVE.L	ext_00ffa882,D0		;14fba: 203900ffa882
 	SUB.L	D0,8(A0)		;14fc0: 91a80008
-	BTST	#5,ext_00ffa7c4		;14fc4: 0839000500ffa7c4
+	BTST	#5,ending_state_00ffa7c4		;14fc4: 0839000500ffa7c4
 	BNE.S	lb_14fd2		;14fcc: 6604
 	CLR.W	10(A0)			;14fce: 4268000a
 lb_14fd2:
@@ -29773,7 +29773,7 @@ lb_1533c:
 	CLR.B	4(A0)			;15358: 42280004
 	BCLR	#6,1(A0)		;1535c: 08a800060001
 	BCLR	#7,1(A0)		;15362: 08a800070001
-	BSET	#5,ext_00ffa7c4		;15368: 08f9000500ffa7c4
+	BSET	#5,ending_state_00ffa7c4		;15368: 08f9000500ffa7c4
 	MOVE.B	#$01,ext_00ffa842		;15370: 13fc000100ffa842
 	RTS				;15378: 4e75
 lb_1537a:
@@ -29809,7 +29809,7 @@ lb_153e0:
 	JSR	play_sound_0def0		;153f6: 4eb90000def0
 lb_153fc:
 	BSR.W	lb_1587a		;153fc: 6100047c
-	BTST	#4,ext_00ffa7c4		;15400: 0839000400ffa7c4
+	BTST	#4,ending_state_00ffa7c4		;15400: 0839000400ffa7c4
 	BEQ.S	lb_15412		;15408: 6708
 	BSET	#4,ext_00ff80fd		;1540a: 08f9000400ff80fd
 lb_15412:
@@ -30280,7 +30280,7 @@ lb_159fe:
 lb_15a20:
 	RTS				;15a20: 4e75
 lb_15a22:
-	LEA	ext_00ffa7c4,A0		;15a22: 41f900ffa7c4
+	LEA	ending_state_00ffa7c4,A0		;15a22: 41f900ffa7c4
 	BTST	#7,(A0)			;15a28: 08100007
 	BNE.S	lb_15a4e		;15a2c: 6620
 	MOVEA.L	A0,A1			;15a2e: 2248
@@ -30507,7 +30507,7 @@ lb_15c80:
 	SUBQ.W	#1,56(A0)		;15c80: 53680038
 	BGE.S	lb_15cc8		;15c84: 6c42
 	CLR.W	56(A0)			;15c86: 42680038
-	BTST	#5,ext_00ffa7c4		;15c8a: 0839000500ffa7c4
+	BTST	#5,ending_state_00ffa7c4		;15c8a: 0839000500ffa7c4
 	BNE.S	lb_15cc8		;15c92: 6634
 	BTST	#4,34(A0)		;15c94: 082800040022
 	BNE.S	lb_15cc8		;15c9a: 662c
@@ -30567,7 +30567,7 @@ lb_15d54:
 	SUBQ.W	#1,56(A0)		;15d54: 53680038
 	BGE.S	lb_15d9c		;15d58: 6c42
 	CLR.W	56(A0)			;15d5a: 42680038
-	BTST	#5,ext_00ffa7c4		;15d5e: 0839000500ffa7c4
+	BTST	#5,ending_state_00ffa7c4		;15d5e: 0839000500ffa7c4
 	BNE.S	lb_15d9c		;15d66: 6634
 	BTST	#4,34(A0)		;15d68: 082800040022
 	BNE.S	lb_15d9c		;15d6e: 662c
@@ -30627,7 +30627,7 @@ lb_15e28:
 	SUBQ.W	#1,56(A0)		;15e28: 53680038
 	BGE.S	lb_15e70		;15e2c: 6c42
 	CLR.W	56(A0)			;15e2e: 42680038
-	BTST	#5,ext_00ffa7c4		;15e32: 0839000500ffa7c4
+	BTST	#5,ending_state_00ffa7c4		;15e32: 0839000500ffa7c4
 	BNE.S	lb_15e70		;15e3a: 6634
 	BTST	#4,34(A0)		;15e3c: 082800040022
 	BNE.S	lb_15e70		;15e42: 662c
@@ -30687,7 +30687,7 @@ lb_15efc:
 	SUBQ.W	#1,56(A0)		;15efc: 53680038
 	BGE.S	lb_15f44		;15f00: 6c42
 	CLR.W	56(A0)			;15f02: 42680038
-	BTST	#5,ext_00ffa7c4		;15f06: 0839000500ffa7c4
+	BTST	#5,ending_state_00ffa7c4		;15f06: 0839000500ffa7c4
 	BNE.S	lb_15f44		;15f0e: 6634
 	BTST	#4,34(A0)		;15f10: 082800040022
 	BNE.S	lb_15f44		;15f16: 662c
@@ -38186,13 +38186,13 @@ end_sequence_1b1c6:
 	BRA.S	end_sequence_1b1c6		;1b1de: 60e6
 	RTS				;1b1e0: 4e75
 lb_1b1e2:
-	BTST	#7,ext_00ffa7c4		;1b1e2: 0839000700ffa7c4
+	BTST	#7,ending_state_00ffa7c4		;1b1e2: 0839000700ffa7c4
 	BNE.S	lb_1b1fa		;1b1ea: 660e
 	JSR	lb_1b234(PC)		;1b1ec: 4eba0046
 	NOP				;1b1f0: 4e71
-	BSET	#7,ext_00ffa7c4		;1b1f2: 08f9000700ffa7c4
+	BSET	#7,ending_state_00ffa7c4		;1b1f2: 08f9000700ffa7c4
 lb_1b1fa:
-	MOVE.B	ext_00ffa7c4,D0		;1b1fa: 103900ffa7c4
+	MOVE.B	ending_state_00ffa7c4,D0		;1b1fa: 103900ffa7c4
 	ANDI.W	#$0007,D0		;1b200: 02400007
 	LSL.W	#2,D0			;1b204: e548
 	LEA	lb_1b214(PC),A1		;1b206: 43fa000c
@@ -38202,8 +38202,8 @@ lb_1b1fa:
 	RTS				;1b212: 4e75
 lb_1b214:
 	dc.l	lb_1b35e	;1b214
-	dc.l	lb_1b3c8	;1b218
-	dc.l	lb_1b4d2	;1b21c
+	dc.l	lb_1b3c8	;1b218  ronnie thanks message
+	dc.l	lb_1b4d2	;1b21c  white house pic
 	dc.l	lb_1bba2	;1b220
 	dc.l	lb_1bba2	;1b224
 	dc.l	lb_1bba2	;1b228
@@ -38296,7 +38296,7 @@ lb_1b388:
 	SUBQ.W	#1,ext_00ffa7c8		;1b388: 537900ffa7c8
 	BCC.S	lb_1b3a0		;1b38e: 6410
 	BCLR	#7,ext_00ffa7c5		;1b390: 08b9000700ffa7c5
-	ORI.B	#$01,ext_00ffa7c4		;1b398: 0039000100ffa7c4
+	ORI.B	#$01,ending_state_00ffa7c4		;1b398: 0039000100ffa7c4
 lb_1b3a0:
 	MOVE.L	#$80003102,ext_00ffa4a4	;1b3a0: 23fc8000310200ffa4a4
 	MOVE.L	#$008f0000,ext_00ffa4ac	;1b3aa: 23fc008f000000ffa4ac
@@ -38309,18 +38309,18 @@ lb_1b3c8:
 	CLR.W	ext_00ffa7d0		;1b3d2: 427900ffa7d0
 	BSET	#7,ext_00ffa7c5		;1b3d8: 08f9000700ffa7c5
 lb_1b3e0:
-	BTST	#6,ext_00ffa7c4		;1b3e0: 0839000600ffa7c4
-	BNE.W	lb_1b472		;1b3e8: 66000088
+	BTST	#6,ending_state_00ffa7c4		;1b3e0: 0839000600ffa7c4
+	BNE.W	show_white_house_screen_1b472		;1b3e8: 66000088
 	SUBQ.W	#1,ext_00ffa7c8		;1b3ec: 537900ffa7c8
 	BPL.W	lb_1b494		;1b3f2: 6a0000a0
-	LEA	lb_1bc86(PC),A2		;1b3f6: 45fa088e
+	LEA	president_thanks_1bc86(PC),A2		;1b3f6: 45fa088e
 	NOP				;1b3fa: 4e71
 	MOVE.W	ext_00ffa7d0,D0		;1b3fc: 303900ffa7d0
 	ANDI.L	#$0000ffff,D0		;1b402: 02800000ffff
 	ADDA.L	D0,A2			;1b408: d5c0
 	CMPI.W	#$ffff,(A2)		;1b40a: 0c52ffff
 	BNE.S	lb_1b42a		;1b40e: 661a
-	BSET	#6,ext_00ffa7c4		;1b410: 08f9000600ffa7c4
+	BSET	#6,ending_state_00ffa7c4		;1b410: 08f9000600ffa7c4
 	MOVE.W	#$0150,ext_00ffa7c8		;1b418: 33fc015000ffa7c8
 	BSET	#0,ext_00ffa7c5		;1b420: 08f9000000ffa7c5
 	BRA.S	lb_1b494		;1b428: 606a
@@ -38343,11 +38343,11 @@ lb_1b460:
 lb_1b468:
 	MOVE.W	#$0002,ext_00ffa7c8		;1b468: 33fc000200ffa7c8
 	BRA.S	lb_1b494		;1b470: 6022
-lb_1b472:
+show_white_house_screen_1b472:
 	SUBQ.W	#1,ext_00ffa7c8		;1b472: 537900ffa7c8
 	BPL.S	lb_1b494		;1b478: 6a1a
-	ANDI.B	#$88,ext_00ffa7c4		;1b47a: 0239008800ffa7c4
-	ORI.B	#$02,ext_00ffa7c4		;1b482: 0039000200ffa7c4
+	ANDI.B	#$88,ending_state_00ffa7c4		;1b47a: 0239008800ffa7c4
+	ORI.B	#$02,ending_state_00ffa7c4		;1b482: 0039000200ffa7c4
 	BCLR	#7,ext_00ffa7c5		;1b48a: 08b9000700ffa7c5
 	BRA.S	lb_1b4d0		;1b492: 603c
 lb_1b494:
@@ -38385,7 +38385,7 @@ lb_1b4f8:
 	BNE.W	lb_1b5f4		;1b520: 660000d2
 	BSET	#5,ext_00ffa7c5		;1b524: 08f9000500ffa7c5
 lb_1b52c:
-	BTST	#4,ext_00ffa7c4		;1b52c: 0839000400ffa7c4
+	BTST	#4,ending_state_00ffa7c4		;1b52c: 0839000400ffa7c4
 	BNE.W	lb_1b5ba		;1b534: 66000084
 	BTST	#4,ext_00ffa7c5		;1b538: 0839000400ffa7c5
 	BNE.S	lb_1b576		;1b540: 6634
@@ -38412,7 +38412,7 @@ lb_1b58a:
 lb_1b59a:
 	SUBQ.W	#1,ext_00ffa7d2		;1b59a: 537900ffa7d2
 	BNE.S	lb_1b5ba		;1b5a0: 6618
-	BSET	#4,ext_00ffa7c4		;1b5a2: 08f9000400ffa7c4
+	BSET	#4,ending_state_00ffa7c4		;1b5a2: 08f9000400ffa7c4
 	BRA.S	lb_1b5ba		;1b5aa: 600e
 lb_1b5ac:
 	ANDI.W	#$03ff,D0		;1b5ac: 024003ff
@@ -38421,11 +38421,11 @@ lb_1b5b0:
 	CMPA.L	#$00242040,A3		;1b5b2: b7fc00242040
 	BNE.S	lb_1b5b0		;1b5b8: 66f6
 lb_1b5ba:
-	BTST	#4,ext_00ffa7c4		;1b5ba: 0839000400ffa7c4
+	BTST	#4,ending_state_00ffa7c4		;1b5ba: 0839000400ffa7c4
 	BEQ.S	lb_1b5dc		;1b5c2: 6718
 	ANDI.B	#$3f,ext_00ffa7c5		;1b5c4: 0239003f00ffa7c5
-	ANDI.B	#$f8,ext_00ffa7c4		;1b5cc: 023900f800ffa7c4
-	ORI.B	#$03,ext_00ffa7c4		;1b5d4: 0039000300ffa7c4
+	ANDI.B	#$f8,ending_state_00ffa7c4		;1b5cc: 023900f800ffa7c4
+	ORI.B	#$03,ending_state_00ffa7c4		;1b5d4: 0039000300ffa7c4
 lb_1b5dc:
 	LEA	lb_1b5f6(PC),A1		;1b5dc: 43fa0018
 	NOP				;1b5e0: 4e71
@@ -38975,18 +38975,18 @@ lb_1bc68:
 	MOVE.W	D1,(A1)			;1bc7c: 3281
 	ADDQ.W	#4,ext_00ffa7d0		;1bc7e: 587900ffa7d0
 	RTS				;1bc84: 4e75
-lb_1bc86:
+president_thanks_1bc86:
 	dc.w	$0090	;1bc86
-	dc.w	$4800	;1bc88
+	dc.w	$4800	;1bc88	H
 	dc.w	$00ff	;1bc8a
 	dc.w	$0092	;1bc8c
-	dc.w	$4500	;1bc8e
+	dc.w	$4500	;1bc8e  E
 	dc.w	$00ff	;1bc90
 	dc.w	$0094	;1bc92
-	dc.w	$5900	;1bc94
+	dc.w	$5900	;1bc94  Y
 	dc.w	$00ff	;1bc96
 	dc.w	$0096	;1bc98
-	dc.w	$2000	;1bc9a
+	dc.w	$2000	;1bc9a  ... HEY DUDES THANKS FOR RESCUING ME LET'S GO FOR A BURGER
 	dc.w	$00ff	;1bc9c
 	dc.w	$0098	;1bc9e
 	dc.w	$4400	;1bca0
@@ -41990,7 +41990,7 @@ lb_1dc20:
 	BEQ.S	lb_1dc28		;1dc24: 6702
 	NEG.W	D7			;1dc26: 4447
 lb_1dc28:
-	LEA	ext_00ffa7c4,A1		;1dc28: 43f900ffa7c4
+	LEA	ending_state_00ffa7c4,A1		;1dc28: 43f900ffa7c4
 	CMP.W	D4,D6			;1dc2e: bc44
 	BEQ.S	lb_1dc58		;1dc30: 6726
 	BCS.S	lb_1dc46		;1dc32: 6512
@@ -42781,7 +42781,7 @@ lb_1e5a2:
 	CMPI.W	#$0018,D0		;1e5ac: 0c400018
 	BCS.S	lb_1e5ea		;1e5b0: 6538
 	JSR	lb_1ced6(PC)		;1e5b2: 4ebae922
-	LEA	ext_00ffa7c4,A1		;1e5b6: 43f900ffa7c4
+	LEA	ending_state_00ffa7c4,A1		;1e5b6: 43f900ffa7c4
 	BTST	#2,(A1)			;1e5bc: 08110002
 	BNE.S	lb_1e5cc		;1e5c0: 660a
 	LEA	lb_1e5ec(PC),A2		;1e5c2: 45fa0028
@@ -42816,7 +42816,7 @@ lb_1e60c:
 	CMPI.W	#$0020,D0		;1e616: 0c400020
 	BCS.S	lb_1e654		;1e61a: 6538
 	JSR	lb_1ced6(PC)		;1e61c: 4ebae8b8
-	LEA	ext_00ffa7c4,A1		;1e620: 43f900ffa7c4
+	LEA	ending_state_00ffa7c4,A1		;1e620: 43f900ffa7c4
 	BTST	#2,(A1)			;1e626: 08110002
 	BNE.S	lb_1e636		;1e62a: 660a
 	LEA	lb_1e656(PC),A2		;1e62c: 45fa0028
@@ -43451,7 +43451,7 @@ lb_1ee46:
 	LSR.W	#1,D0			;1ee56: e248
 	LEA	lb_1ee94(PC),A1		;1ee58: 43fa003a
 	NOP				;1ee5c: 4e71
-	BTST	#2,ext_00ffa7c4		;1ee5e: 0839000200ffa7c4
+	BTST	#2,ending_state_00ffa7c4		;1ee5e: 0839000200ffa7c4
 	BEQ.S	lb_1ee6e		;1ee66: 6706
 	LEA	lb_1eea4(PC),A1		;1ee68: 43fa003a
 	NOP				;1ee6c: 4e71
