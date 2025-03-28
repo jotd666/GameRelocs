@@ -257,7 +257,7 @@ ext_0030001b	EQU	$30001B
 ext_0030001d	EQU	$30001D
 ext_0030001f	EQU	$30001F
 inputs_0030c000	EQU	$30C000
-system_inputs_0030c002	EQU	$30C002		; coin & start buttons
+system_inputs_0030c002	EQU	$30C002		; coin & start buttons & vblank
 system_inputs_0030c003	EQU	$30C003		; coin & start buttons
 dsw_0030c004	EQU	$30C004
 dsw_0030c005	EQU	$30C005
@@ -910,7 +910,6 @@ loop_forever_0031c:
 	BRA.S	loop_forever_0031c		;0031c: 60fe
 lb_0031e:
 	JSRW_NOP	lb_0032a	;0031e: 4eb8032a
-	; unreached
 	JMPW_NOP	lb_01a70	;00324: 4ef81a70
 lb_0032a:
 	MOVEQ	#0,D0			;0032a: 7000
@@ -981,6 +980,7 @@ lb_0040e:
 	MOVE.B	D0,ext_00ff821f		;00426: 13c000ff821f
 	MOVE.B	D1,ext_00ff8220		;0042c: 13c100ff8220
 	RTS				;00432: 4e75
+	; unreached
 	BTST	#6,D1			;00434: 08010006
 	BEQ.W	lb_00440		;00438: 67000006
 	BSR.W	add_one_credit_0045a		;0043c: 6100001c
@@ -2630,7 +2630,7 @@ start_new_level_01abc:
 	MOVEQ	#0,D0			;01b16: 7000
 	MOVE.B	D0,p1_nb_lives_00ffa39a		;01b18: 13c000ffa39a
 	MOVE.B	D0,p2_nb_lives_00ffa25a		;01b1e: 13c000ffa25a
-	JSR	lb_0e0f0		;01b24: 4eb90000e0f0
+	JSR	udpate_lives_display_0e0f0		;01b24: 4eb90000e0f0
 	MOVE.B	#$09,ext_00ffa8c6		;01b2a: 13fc000900ffa8c6
 	JSR	lb_0e1ee		;01b32: 4eb90000e1ee
 game_loop_01b38:
@@ -2680,7 +2680,7 @@ lb_01bdc:
 	RTS				;01bde: 4e75
 lb_01be0:
 	JSR	lb_0e018		;01be0: 4eb90000e018
-	JSR	lb_0e0f0		;01be6: 4eb90000e0f0
+	JSR	udpate_lives_display_0e0f0		;01be6: 4eb90000e0f0
 	JSRW_NOP	lb_073de	;01bec: 4eb873de
 	RTS				;01bf2: 4e75
 lb_01bf4:
@@ -12881,7 +12881,7 @@ lb_0a1b8:
 lb_0a1ee:
 	BCLR	#5,(A0)			;0a1ee: 08900005
 lb_0a1f2:
-	JSR	lb_0e0f0		;0a1f2: 4eb90000e0f0
+	JSR	udpate_lives_display_0e0f0		;0a1f2: 4eb90000e0f0
 	RTS				;0a1f8: 4e75
 lb_0a1fa:
 	dc.l	lb_0a216	;0a1fa
@@ -12976,7 +12976,7 @@ lb_0a2bc:
 	BSR.W	lb_0a32c		;0a2ca: 61000060
 	BSR.W	lb_0a376		;0a2ce: 610000a6
 	JSR	lb_0c266		;0a2d2: 4eb90000c266
-	JSR	lb_0e0f0		;0a2d8: 4eb90000e0f0
+	JSR	udpate_lives_display_0e0f0		;0a2d8: 4eb90000e0f0
 lb_0a2de:
 	RTS				;0a2de: 4e75
 lb_0a2e0:
@@ -17964,7 +17964,7 @@ lb_0e0da:
 	MOVE.W	#$0140,ext_00ffa8c8		;0e0e4: 33fc014000ffa8c8
 	BSR.S	lb_0e08c		;0e0ec: 619e
 	RTS				;0e0ee: 4e75
-lb_0e0f0:
+udpate_lives_display_0e0f0:
 	BTST	#0,is_actual_game_played_00ff8215		;0e0f0: 0839000000ff8215
 	BEQ.S	lb_0e10a		;0e0f8: 6710
 	CLR.W	D1			;0e0fa: 4241
