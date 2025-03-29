@@ -578,7 +578,7 @@ ext_00ffa890	EQU	$FFA890
 ext_00ffa894	EQU	$FFA894
 ext_00ffa898	EQU	$FFA898
 ext_00ffa89c	EQU	$FFA89C
-ext_00ffa8a0	EQU	$FFA8A0
+level_section_00ffa8a0	EQU	$FFA8A0
 ext_00ffa8a2	EQU	$FFA8A2
 ext_00ffa8a6	EQU	$FFA8A6
 ext_00ffa8aa	EQU	$FFA8AA
@@ -16510,7 +16510,7 @@ lb_0ccb6:
 	MOVE.W	(A0)+,ext_00ffa8a2		;0cd6e: 33d800ffa8a2
 	MOVE.W	(A0)+,ext_00ffa8c6		;0cd74: 33d800ffa8c6
 	MOVE.B	(A0)+,ext_00ffa842		;0cd7a: 13d800ffa842
-	MOVE.B	D0,ext_00ffa8a0		;0cd80: 13c000ffa8a0
+	MOVE.B	D0,level_section_00ffa8a0		;0cd80: 13c000ffa8a0
 	MOVE.L	D0,ext_00ff814c		;0cd86: 23c000ff814c
 	MOVE.L	D0,front_layer_scroll_00ff8150		;0cd8c: 23c000ff8150
 	MOVE.W	D0,ext_00ffa8c8		;0cd92: 33c000ffa8c8
@@ -17028,19 +17028,19 @@ lb_0d3c6:
 	LSL.W	#2,D0			;0d3d0: e548
 	LEA	lb_0d3e8,A3		;0d3d2: 47f90000d3e8
 	MOVEQ	#0,D4			;0d3d8: 7800
-	MOVE.B	ext_00ffa8a0,D4		;0d3da: 183900ffa8a0
+	MOVE.B	level_section_00ffa8a0,D4		;0d3da: 183900ffa8a0
 	LSL.W	#2,D4			;0d3e0: e54c
 	MOVEA.L	0(A3,D0.W),A3		;0d3e2: 26730000
 	JMP	(A3)			;0d3e6: 4ed3
 lb_0d3e8:
-	dc.l	lb_0d404	;0d3e8
-	dc.l	lb_0d48a	;0d3ec
-	dc.l	lb_0d564	;0d3f0
-	dc.l	lb_0d5da	;0d3f4
-	dc.l	lb_0d6b6	;0d3f8
-	dc.l	lb_0d6e6	;0d3fc
-	dc.l	lb_0d7ac	;0d400
-lb_0d404:
+	dc.l	lb_stage_1_0d404	;0d3e8 stage 1
+	dc.l	lb_stage_2_0d48a	;0d3ec stage 2
+	dc.l	lb_stage_3_0d564	;0d3f0 stage 3
+	dc.l	lb_stage_4_0d5da	;0d3f4 stage 4
+	dc.l	lb_stage_5_0d6b6	;0d3f8 stage 5
+	dc.l	lb_stage_6_0d6e6	;0d3fc stage 6
+	dc.l	lb_stage_7_0d7ac	;0d400 stage 7
+lb_stage_1_0d404:
 	LEA     lb_0d410,A3  	;0d404: 47f90000d410
 	MOVEA.L	0(A3,D4.W),A3		;0d40a: 26734000
 	JMP	(A3)			;0d40e: 4ed3
@@ -17052,21 +17052,21 @@ lb_0d410:
 	dc.l	lb_0d46e	;0d420
 lb_0d424:
 	move.l  #$02000000,D0    ;04d24: 203c02000000
-	BSR.W	lb_0dbbc		;0d42a: 61000790
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d42a: 61000790
 	RTS				;0d42e: 4e75
 lb_0d430:
 	CMPI.W	#$0300,ext_00ffa856		;0d430: 0c79030000ffa856
 	BMI.W	lb_0db98		;0d438: 6b00075e
 	MOVE.W	#$0481,ext_00ffa850		;0d43c: 33fc048100ffa850
-	ADDQ.B	#1,ext_00ffa8a0		;0d444: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d444: 523900ffa8a0
 	RTS				;0d44a: 4e75
 lb_0d44c:
 	MOVE.L	#$04000000,D0		;0d44c: 203c04000000
-	BSR.W	lb_0dbbc		;0d452: 61000768
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d452: 61000768
 	RTS				;0d456: 4e75
 lb_0d458:
 	MOVE.L	#$06000000,D0		;0d458: 203c06000000
-	BSR.W	lb_0dbbc		;0d45e: 6100075c
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d45e: 6100075c
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d462: 23f900ffa85600ffa86e
 	RTS				;0d46c: 4e75
 lb_0d46e:
@@ -17075,7 +17075,7 @@ lb_0d46e:
 	MOVE.L	D0,x_primary_scroll_value_00ff8128		;0d47a: 23c000ff8128
 	MOVE.W	#$0840,ext_00ffa850		;0d480: 33fc084000ffa850
 	RTS				;0d488: 4e75
-lb_0d48a:
+lb_stage_2_0d48a:
 	LEA	lb_0d496,A3		;0d48a: 47f90000d496
 	MOVEA.L	0(A3,D4.W),A3		;0d490: 26734000
 	JMP	(A3)			;0d494: 4ed3
@@ -17090,12 +17090,12 @@ lb_0d4aa:
 	BMI.W	lb_0d562		;0d4b4: 6b0000ac
 	MOVE.L	#$00000000,ext_00ffa886	;0d4b8: 23fc0000000000ffa886
 	MOVE.W	#$0010,ext_00ffa88e		;0d4c2: 33fc001000ffa88e
-	ADDQ.B	#1,ext_00ffa8a0		;0d4ca: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d4ca: 523900ffa8a0
 	BRA.W	lb_0d562		;0d4d0: 60000090
 lb_0d4d4:
 	SUBQ.W	#1,ext_00ffa88e		;0d4d4: 537900ffa88e
 	BNE.W	lb_0d562		;0d4da: 66000086
-	ADDQ.B	#1,ext_00ffa8a0		;0d4de: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d4de: 523900ffa8a0
 	BRA.S	lb_0d562		;0d4e4: 607c
 lb_0d4e6:
 	SUBI.L	#$00000200,ext_00ffa88a	;0d4e6: 04b90000020000ffa88a
@@ -17106,11 +17106,11 @@ lb_0d4e6:
 	MOVE.L	D0,ext_00ff816c		;0d500: 23c000ff816c
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d506: 23f900ffa85600ffa86e
 	MOVE.W	#$8104,ext_00ffa850		;0d510: 33fc810400ffa850
-	ADDQ.B	#1,ext_00ffa8a0		;0d518: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d518: 523900ffa8a0
 	BRA.S	lb_0d562		;0d51e: 6042
 lb_0d520:
 	MOVE.L	#$03a00000,D0		;0d520: 203c03a00000
-	BSR.W	lb_0dbbc		;0d526: 61000694
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d526: 61000694
 	TST.B	D2			;0d52a: 4a02
 	BNE.S	lb_0d53c		;0d52c: 660e
 	MOVE.W	#$8808,ext_00ffa850		;0d52e: 33fc880800ffa850
@@ -17127,7 +17127,7 @@ lb_0d55a:
 	MOVE.W	#$4040,ext_00ffa850		;0d55a: 33fc404000ffa850
 lb_0d562:
 	RTS				;0d562: 4e75
-lb_0d564:
+lb_stage_3_0d564:
 	LEA	lb_0d570,A3		;0d564: 47f90000d570
 	MOVEA.L	0(A3,D4.W),A3		;0d56a: 26734000
 	JMP	(A3)			;0d56e: 4ed3
@@ -17139,19 +17139,19 @@ lb_0d570:
 	dc.l	lb_0d5be	;0d580
 lb_0d584:
 	MOVE.L	#$01000000,D0		;0d584: 203c01000000
-	BSR.W	lb_0dbbc		;0d58a: 61000630
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d58a: 61000630
 	RTS				;0d58e: 4e75
 lb_0d590:
 	MOVE.L	#$03000000,D0		;0d590: 203c03000000
-	BSR.W	lb_0dbbc		;0d596: 61000624
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d596: 61000624
 	RTS				;0d59a: 4e75
 lb_0d59c:
 	MOVE.L	#$05000000,D0		;0d59c: 203c05000000
-	BSR.W	lb_0dbbc		;0d5a2: 61000618
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d5a2: 61000618
 	RTS				;0d5a6: 4e75
 lb_0d5a8:
 	MOVE.L	#$07000000,D0		;0d5a8: 203c07000000
-	BSR.W	lb_0dbbc		;0d5ae: 6100060c
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d5ae: 6100060c
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d5b2: 23f900ffa85600ffa86e
 	RTS				;0d5bc: 4e75
 lb_0d5be:
@@ -17160,7 +17160,7 @@ lb_0d5be:
 	MOVE.L	D0,layer_24dxxx_scroll_values_ff813c		;0d5ca: 23c000ff813c
 	MOVE.W	#$4008,ext_00ffa850		;0d5d0: 33fc400800ffa850
 	RTS				;0d5d8: 4e75
-lb_0d5da:
+lb_stage_4_0d5da:
 	LEA	lb_0d5e6,A3		;0d5da: 47f90000d5e6
 	MOVEA.L	0(A3,D4.W),A3		;0d5e0: 26734000
 	JMP	(A3)			;0d5e4: 4ed3
@@ -17176,7 +17176,7 @@ lb_0d5e6:
 	dc.l	lb_0d69a	;0d606
 lb_0d60a:
 	MOVE.L	#$01a00000,D0		;0d60a: 203c01a00000
-	BSR.W	lb_0dbbc		;0d610: 610005aa
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d610: 610005aa
 	RTS				;0d614: 4e75
 lb_0d616:
 	MOVE.L	#$01e00000,D0		;0d616: 203c01e00000
@@ -17184,15 +17184,15 @@ lb_0d616:
 	RTS				;0d620: 4e75
 lb_0d622:
 	MOVE.L	#$04000000,D0		;0d622: 203c04000000
-	BSR.W	lb_0dbbc		;0d628: 61000592
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d628: 61000592
 	RTS				;0d62c: 4e75
 lb_0d62e:
 	MOVE.L	#$05400000,D0		;0d62e: 203c05400000
-	BSR.W	lb_0dbbc		;0d634: 61000586
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d634: 61000586
 	RTS				;0d638: 4e75
 lb_0d63a:
 	MOVE.L	#$05800000,D0		;0d63a: 203c05800000
-	BSR.W	lb_0dbbc		;0d640: 6100057a
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d640: 6100057a
 	TST.B	D2			;0d644: 4a02
 	BNE.S	lb_0d64e		;0d646: 6606
 	BSR.W	autoscroll_control_up_right_0dc7a		;0d648: 61000630
@@ -17206,7 +17206,7 @@ lb_0d66a:
 	RTS				;0d66a: 4e75
 lb_0d66c:
 	MOVE.L	#$07c00000,D0		;0d66c: 203c07c00000
-	BSR.W	lb_0dbbc		;0d672: 61000548
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d672: 61000548
 	RTS				;0d676: 4e75
 lb_0d678:
 	MOVE.L	#$08000000,D0		;0d678: 203c08000000
@@ -17214,7 +17214,7 @@ lb_0d678:
 	RTS				;0d682: 4e75
 lb_0d684:
 	MOVE.L	#$09000000,D0		;0d684: 203c09000000
-	BSR.W	lb_0dbbc		;0d68a: 61000530
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d68a: 61000530
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d68e: 23f900ffa85600ffa86e
 	RTS				;0d698: 4e75
 lb_0d69a:
@@ -17223,7 +17223,7 @@ lb_0d69a:
 	MOVE.L	D0,x_primary_scroll_value_00ff8128		;0d6a6: 23c000ff8128
 	MOVE.W	#$4040,ext_00ffa850		;0d6ac: 33fc404000ffa850
 	RTS				;0d6b4: 4e75
-lb_0d6b6:
+lb_stage_5_0d6b6:
 	LEA	lb_0d6c2,A3		;0d6b6: 47f90000d6c2
 	MOVEA.L	0(A3,D4.W),A3		;0d6bc: 26734000
 	JMP	(A3)			;0d6c0: 4ed3
@@ -17240,7 +17240,7 @@ lb_0d6e2:
 	RTS				;0d6e2: 4e75
 lb_0d6e4:
 	RTS				;0d6e4: 4e75
-lb_0d6e6:
+lb_stage_6_0d6e6:
 	LEA	lb_0d6f2,A3		;0d6e6: 47f90000d6f2
 	MOVEA.L	0(A3,D4.W),A3		;0d6ec: 26734000
 	JMP	(A3)			;0d6f0: 4ed3
@@ -17257,39 +17257,41 @@ lb_0d6f2:
 	dc.l	lb_0d790	;0d716
 lb_0d71a:
 	MOVE.L	#$01000000,D0		;0d71a: 203c01000000
-	BSR.W	lb_0dbbc		;0d720: 6100049a
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d720: 6100049a
 	RTS				;0d724: 4e75
 lb_0d726:
 	MOVE.L	#$02c00000,D0		;0d726: 203c02c00000
-	BSR.W	lb_0dbbc		;0d72c: 6100048e
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d72c: 6100048e
 	RTS				;0d730: 4e75
 lb_0d732:
+	; stage 6 first autoscroll down ($0060)
 	MOVE.L	#$00600000,D0		;0d732: 203c00600000
-	BSR.W	lb_0db68		;0d738: 6100042e
+	BSR.W	manage_autoscroll_right_down_0db68		;0d738: 6100042e
 	RTS				;0d73c: 4e75
 lb_0d73e:
 	MOVE.L	#$04c00000,D0		;0d73e: 203c04c00000
-	BSR.W	lb_0dbbc		;0d744: 61000476
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d744: 61000476
 	RTS				;0d748: 4e75
 lb_0d74a:
+	; stage 6 second autoscroll down ($0060)
 	MOVE.L	#$00c00000,D0		;0d74a: 203c00c00000
-	BSR.W	lb_0db68		;0d750: 61000416
+	BSR.W	manage_autoscroll_right_down_0db68		;0d750: 61000416
 	RTS				;0d754: 4e75
 lb_0d756:
 	MOVE.L	#$06c00000,D0		;0d756: 203c06c00000
-	BSR.W	lb_0dbbc		;0d75c: 6100045e
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d75c: 6100045e
 	RTS				;0d760: 4e75
 lb_0d762:
 	MOVE.L	#$01200000,D0		;0d762: 203c01200000
-	BSR.W	lb_0db68		;0d768: 610003fe
+	BSR.W	manage_autoscroll_right_down_0db68		;0d768: 610003fe
 	RTS				;0d76c: 4e75
 lb_0d76e:
 	MOVE.L	#$09000000,D0		;0d76e: 203c09000000
-	BSR.W	lb_0dbbc		;0d774: 61000446
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d774: 61000446
 	RTS				;0d778: 4e75
 lb_0d77a:
 	MOVE.L	#$0a000000,D0		;0d77a: 203c0a000000
-	BSR.W	lb_0dbbc		;0d780: 6100043a
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d780: 6100043a
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d784: 23f900ffa85600ffa86e
 	RTS				;0d78e: 4e75
 lb_0d790:
@@ -17298,11 +17300,12 @@ lb_0d790:
 	MOVE.L	D0,x_primary_scroll_value_00ff8128		;0d79c: 23c000ff8128
 	MOVE.W	#$4040,ext_00ffa850		;0d7a2: 33fc404000ffa850
 	RTS				;0d7aa: 4e75
-lb_0d7ac:
-	LEA	lb_0d7b8,A3		;0d7ac: 47f90000d7b8
+lb_stage_7_0d7ac:
+	LEA	lb_stage_7_section_table_0d7b8,A3		;0d7ac: 47f90000d7b8
+	* D4: level section *4
 	MOVEA.L	0(A3,D4.W),A3		;0d7b2: 26734000
 	JMP	(A3)			;0d7b6: 4ed3
-lb_0d7b8:
+lb_stage_7_section_table_0d7b8:
 	dc.l	lb_0d82c	;0d7b8
 	dc.l	lb_0d842	;0d7bc
 	dc.l	lb_0d84e	;0d7c0
@@ -17335,43 +17338,45 @@ lb_0d7b8:
 lb_0d82c:
 	MOVE.L	#$07000000,ext_00ffa8a6	;0d82c: 23fc0700000000ffa8a6
 	MOVE.L	#$01c00000,D0		;0d836: 203c01c00000
-	BSR.W	lb_0dbbc		;0d83c: 6100037e
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d83c: 6100037e
 	RTS				;0d840: 4e75
 lb_0d842:
+	; first autoscroll value at stage 7
 	MOVE.L	#$05400000,D0		;0d842: 203c05400000
-	BSR.W	lb_0db68		;0d848: 6100031e
+	BSR.W	manage_autoscroll_right_down_0db68		;0d848: 6100031e
 	RTS				;0d84c: 4e75
 lb_0d84e:
 	MOVE.W	ext_00ffa84e,ext_00ffa850	;0d84e: 33f900ffa84e00ffa850
 	MOVE.L	#$02c00000,D0		;0d858: 203c02c00000
-	BSR.W	lb_0dbbc		;0d85e: 6100035c
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d85e: 6100035c
 	RTS				;0d862: 4e75
 lb_0d864:
+	; second autoscroll value at stage 7
 	MOVE.L	#$05a00000,D0		;0d864: 203c05a00000
-	BSR.W	lb_0db68		;0d86a: 610002fc
+	BSR.W	manage_autoscroll_right_down_0db68		;0d86a: 610002fc
 	RTS				;0d86e: 4e75
 lb_0d870:
 	MOVE.W	ext_00ffa84e,ext_00ffa850	;0d870: 33f900ffa84e00ffa850
 	MOVE.L	#$03c00000,D0		;0d87a: 203c03c00000
-	BSR.W	lb_0dbbc		;0d880: 6100033a
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d880: 6100033a
 	RTS				;0d884: 4e75
 lb_0d886:
 	MOVE.L	#$06000000,D0		;0d886: 203c06000000
-	BSR.W	lb_0db68		;0d88c: 610002da
+	BSR.W	manage_autoscroll_right_down_0db68		;0d88c: 610002da
 	RTS				;0d890: 4e75
 lb_0d892:
 	MOVE.W	ext_00ffa84e,ext_00ffa850	;0d892: 33f900ffa84e00ffa850
 	MOVE.L	#$05000000,D0		;0d89c: 203c05000000
-	BSR.W	lb_0dbbc		;0d8a2: 61000318
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d8a2: 61000318
 	RTS				;0d8a6: 4e75
 lb_0d8a8:
 	MOVE.L	#$068e0000,D0		;0d8a8: 203c068e0000
-	BSR.W	lb_0dbbc		;0d8ae: 6100030c
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d8ae: 6100030c
 	RTS				;0d8b2: 4e75
 lb_0d8b4:
 	MOVE.L	#$07000000,D0		;0d8b4: 203c07000000
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0d8ba: 23f900ffa85600ffa86e
-	BSR.W	lb_0dbbc		;0d8c4: 610002f6
+	BSR.W	check_if_autoscroll_active_0dbbc		;0d8c4: 610002f6
 	RTS				;0d8c8: 4e75
 lb_0d8ca:
 	MOVE.L	#$07000000,D0		;0d8ca: 203c07000000
@@ -17381,12 +17386,12 @@ lb_0d8ca:
 	BTST	#0,ext_00ffa845		;0d8e4: 0839000000ffa845
 	BEQ.W	lb_0d96c		;0d8ec: 6700007e
 	BSET	#0,ext_00ffa843		;0d8f0: 08f9000000ffa843
-	ADDQ.B	#1,ext_00ffa8a0		;0d8f8: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d8f8: 523900ffa8a0
 	RTS				;0d8fe: 4e75
 lb_0d900:
 	TST.B	ext_00ffa843		;0d900: 4a3900ffa843
 	BPL.S	lb_0d96c		;0d906: 6a64
-	ADDQ.B	#1,ext_00ffa8a0		;0d908: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d908: 523900ffa8a0
 	BSET	#7,ext_00ffa844		;0d90e: 08f9000700ffa844
 	BRA.S	lb_0d96c		;0d916: 6054
 lb_0d918:
@@ -17394,20 +17399,20 @@ lb_0d918:
 	TST.B	D0			;0d91e: 4a00
 	BMI.W	lb_0d96c		;0d920: 6b00004a
 	MOVE.W	#$0020,ext_00ffa88e		;0d924: 33fc002000ffa88e
-	ADDQ.B	#1,ext_00ffa8a0		;0d92c: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d92c: 523900ffa8a0
 	BRA.W	lb_0d96c		;0d932: 60000038
 lb_0d936:
 	BSR.W	lb_0ddae		;0d936: 61000476
 	SUBQ.W	#1,ext_00ffa88e		;0d93a: 537900ffa88e
 	BNE.W	lb_0d96c		;0d940: 6600002a
 	BSET	#1,ext_00ffa843		;0d944: 08f9000100ffa843
-	ADDQ.B	#1,ext_00ffa8a0		;0d94c: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d94c: 523900ffa8a0
 	BRA.W	lb_0d96c		;0d952: 60000018
 lb_0d956:
 	BSR.W	lb_0ddae		;0d956: 61000456
 	BTST	#2,ext_00ffa843		;0d95a: 0839000200ffa843
 	BEQ.W	lb_0d96c		;0d962: 67000008
-	ADDQ.B	#1,ext_00ffa8a0		;0d966: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d966: 523900ffa8a0
 lb_0d96c:
 	RTS				;0d96c: 4e75
 lb_0d96e:
@@ -17417,26 +17422,26 @@ lb_0d96e:
 	MOVE.B	#$02,ext_00ffa842		;0d982: 13fc000200ffa842
 	MOVE.W	#$ffff,ext_00ffa8a2		;0d98a: 33fcffff00ffa8a2
 	MOVE.L	#$00000000,ext_00ffa86a	;0d992: 23fc0000000000ffa86a
-	ADDQ.B	#1,ext_00ffa8a0		;0d99c: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d99c: 523900ffa8a0
 	RTS				;0d9a2: 4e75
 lb_0d9a4:
 	BSR.W	lb_0ddae		;0d9a4: 61000408
 	SUBI.L	#$00000400,y_primary_delta_scroll_command_00ffa87a	;0d9a8: 04b90000040000ffa87a
 	CMPI.L	#$fffc0000,y_primary_delta_scroll_command_00ffa87a	;0d9b2: 0cb9fffc000000ffa87a
 	BHI.S	lb_0d9c4		;0d9bc: 6206
-	ADDQ.B	#1,ext_00ffa8a0		;0d9be: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d9be: 523900ffa8a0
 lb_0d9c4:
 	RTS				;0d9c4: 4e75
 lb_0d9c6:
 	CMPI.L	#$03040000,y_primary_scroll_value_00ff812c	;0d9c6: 0cb90304000000ff812c
 	BHI.S	lb_0d9f0		;0d9d0: 621e
-	ADDQ.B	#1,ext_00ffa8a0		;0d9d2: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d9d2: 523900ffa8a0
 	BSR.W	lb_0ddae		;0d9d8: 610003d4
 	RTS				;0d9dc: 4e75
 lb_0d9de:
 	ADDI.L	#$00000400,y_primary_delta_scroll_command_00ffa87a	;0d9de: 06b90000040000ffa87a
 	BNE.S	lb_0d9f0		;0d9e8: 6606
-	ADDQ.B	#1,ext_00ffa8a0		;0d9ea: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0d9ea: 523900ffa8a0
 lb_0d9f0:
 	BSR.W	lb_0ddae		;0d9f0: 610003bc
 	RTS				;0d9f4: 4e75
@@ -17446,12 +17451,12 @@ lb_0d9f6:
 	MOVE.L	D0,ext_00ffa852		;0da04: 23c000ffa852
 	MOVE.L	D0,y_primary_scroll_value_00ff812c		;0da0a: 23c000ff812c
 	JSRW	lb_02414	;0da10: 4eb82414
-	ADDQ.B	#1,ext_00ffa8a0		;0da14: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0da14: 523900ffa8a0
 	RTS				;0da1a: 4e75
 lb_0da1c:
 	BTST	#5,ext_00ffa843		;0da1c: 0839000500ffa843
 	BEQ.W	lb_0da2e		;0da24: 67000008
-	ADDQ.B	#1,ext_00ffa8a0		;0da28: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0da28: 523900ffa8a0
 lb_0da2e:
 	BSR.W	lb_0ddae		;0da2e: 6100037e
 	RTS				;0da32: 4e75
@@ -17463,28 +17468,28 @@ lb_0da34:
 	MOVE.L	#$07000000,ext_00ffa86e	;0da50: 23fc0700000000ffa86e
 	MOVE.W	#$0481,ext_00ffa850		;0da5a: 33fc048100ffa850
 	MOVE.B	#$01,ext_00ffa842		;0da62: 13fc000100ffa842
-	ADDQ.B	#1,ext_00ffa8a0		;0da6a: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0da6a: 523900ffa8a0
 	RTS				;0da70: 4e75
 lb_0da72:
 	MOVE.L	ext_00ffa856,ext_00ffa8a6	;0da72: 23f900ffa85600ffa8a6
 	BTST	#1,ext_00ffa845		;0da7c: 0839000100ffa845
 	BEQ.W	lb_0db18		;0da84: 67000092
 	MOVE.L	#$06800000,ext_00ffa86e	;0da88: 23fc0680000000ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0da92: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0da92: 523900ffa8a0
 	RTS				;0da98: 4e75
 lb_0da9a:
 	MOVE.L	ext_00ffa856,ext_00ffa8a6	;0da9a: 23f900ffa85600ffa8a6
 	BTST	#2,ext_00ffa845		;0daa4: 0839000200ffa845
 	BEQ.W	lb_0db18		;0daac: 6700006a
 	MOVE.L	#$06000000,ext_00ffa86e	;0dab0: 23fc0600000000ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0daba: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0daba: 523900ffa8a0
 	RTS				;0dac0: 4e75
 lb_0dac2:
 	MOVE.L	ext_00ffa856,ext_00ffa8a6	;0dac2: 23f900ffa85600ffa8a6
 	BTST	#3,ext_00ffa845		;0dacc: 0839000300ffa845
 	BEQ.W	lb_0db18		;0dad4: 67000042
 	MOVE.L	#$05800000,ext_00ffa86e	;0dad8: 23fc0580000000ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0dae2: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0dae2: 523900ffa8a0
 	RTS				;0dae8: 4e75
 lb_0daea:
 	MOVE.L	ext_00ffa856,ext_00ffa8a6	;0daea: 23f900ffa85600ffa8a6
@@ -17492,20 +17497,20 @@ lb_0daea:
 	BEQ.W	lb_0db18		;0dafc: 6700001a
 	MOVE.L	#$04000000,ext_00ffa86e	;0db00: 23fc0400000000ffa86e
 	MOVE.B	#$03,ext_00ffa842		;0db0a: 13fc000300ffa842
-	ADDQ.B	#1,ext_00ffa8a0		;0db12: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0db12: 523900ffa8a0
 lb_0db18:
 	RTS				;0db18: 4e75
 lb_0db1a:
 	MOVE.L	ext_00ffa856,ext_00ffa8a6	;0db1a: 23f900ffa85600ffa8a6
 	CMPI.W	#$0400,ext_00ffa856		;0db24: 0c79040000ffa856
 	BHI.S	lb_0db34		;0db2c: 6206
-	ADDQ.B	#1,ext_00ffa8a0		;0db2e: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0db2e: 523900ffa8a0
 lb_0db34:
 	RTS				;0db34: 4e75
 lb_0db36:
 	MOVE.L	#$04000000,ext_00ffa8a6	;0db36: 23fc0400000000ffa8a6
 	MOVE.W	#$0840,ext_00ffa850		;0db40: 33fc084000ffa850
-	ADDQ.B	#1,ext_00ffa8a0		;0db48: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0db48: 523900ffa8a0
 	RTS				;0db4e: 4e75
 lb_0db50:
 	RTS				;0db50: 4e75
@@ -17513,15 +17518,16 @@ lb_0db52:
 	RTS				;0db52: 4e75
 	RTS				;0db54: 4e75
 lb_0db56:
-	BSR.W	lb_0dbbc		;0db56: 61000064
+	BSR.W	check_if_autoscroll_active_0dbbc		;0db56: 61000064
 	TST.B	D2			;0db5a: 4a02
 	BNE.W	lb_0db7a		;0db5c: 6600001c
+	; autoscroll active
 	BSR.W	autoscroll_control_down_right_0dc42		;0db60: 610000e0
 	BRA.W	lb_0db98		;0db64: 60000032
-lb_0db68:
-	BSR.W	lb_0db9a		;0db68: 61000030
+manage_autoscroll_right_down_0db68:
+	BSR.W	check_if_next_section_0db9a		;0db68: 61000030
 	TST.B	D2			;0db6c: 4a02
-	BNE.W	lb_0db7a		;0db6e: 6600000a
+	BNE.W	lb_0db7a		;0db6e: 6600000a next section detected
 	BSR.W	autoscroll_control_down_right_0dc42		;0db72: 610000ce
 	BRA.W	lb_0db98		;0db76: 60000020
 lb_0db7a:
@@ -17531,23 +17537,25 @@ lb_0db7a:
 	MOVE.W	#$ccff,ext_00ffa8a2		;0db90: 33fcccff00ffa8a2
 lb_0db98:
 	RTS				;0db98: 4e75
-lb_0db9a:
+check_if_next_section_0db9a:
 	MOVEQ	#0,D2			;0db9a: 7400
 	MOVE.L	ext_00ffa852,D1		;0db9c: 223900ffa852
 	CMP.L	D1,D0			;0dba2: b081
 	BHI.W	lb_0dbba		;0dba4: 62000014
 	MOVE.L	ext_00ffa856,ext_00ffa86e	;0dba8: 23f900ffa85600ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0dbb2: 523900ffa8a0
+	; advance to level next section
+	ADDQ.B	#1,level_section_00ffa8a0		;0dbb2: 523900ffa8a0
 	MOVEQ	#-1,D2			;0dbb8: 74ff
 lb_0dbba:
 	RTS				;0dbba: 4e75
-lb_0dbbc:
+check_if_autoscroll_active_0dbbc:
 	MOVEQ	#0,D2			;0dbbc: 7400
 	MOVE.L	ext_00ffa856,D1		;0dbbe: 223900ffa856
 	CMP.L	D1,D0			;0dbc4: b081
 	BHI.W	lb_0dbd8		;0dbc6: 62000010
 	MOVE.L	D1,ext_00ffa86e		;0dbca: 23c100ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0dbd0: 523900ffa8a0
+	; advance to level next section
+	ADDQ.B	#1,level_section_00ffa8a0		;0dbd0: 523900ffa8a0
 	MOVEQ	#-1,D2			;0dbd6: 74ff
 lb_0dbd8:
 	RTS				;0dbd8: 4e75
@@ -17557,7 +17565,7 @@ lb_0dbda:
 	CMP.L	D0,D1			;0dbe2: b280
 	BHI.W	lb_0dbf6		;0dbe4: 62000010
 	MOVE.L	D1,ext_00ffa86e		;0dbe8: 23c100ffa86e
-	ADDQ.B	#1,ext_00ffa8a0		;0dbee: 523900ffa8a0
+	ADDQ.B	#1,level_section_00ffa8a0		;0dbee: 523900ffa8a0
 	MOVEQ	#-1,D2			;0dbf4: 74ff
 lb_0dbf6:
 	RTS				;0dbf6: 4e75
