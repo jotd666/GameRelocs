@@ -447,7 +447,7 @@ def add_undefined_labels(defines,extra_make_options=[]):
             if m:
                 undefs.add(int(m.group(1),16))
 
-        print(undefs)
+
         af = ira_asm_tools.AsmFile(asmname)
 
         # check if the undefined labels is not a fake Bcc (ascii data)
