@@ -1,6 +1,9 @@
-import os,sys,struct,collections,re,codecs,subprocess
+import os,sys,struct,collections,re,codecs,subprocess,pathlib
 import ira_asm_tools
 
+this_dir = pathlib.Path(os.path.dirname(os.path.abspath(__file__)))
+
+parentdir = pathlib.Path("..")  # relative, leave as is!!
 
 hunk_dict = {0x3F3:"header",0x3E9:"code",0x3EA:"data",0x3F2:"end",0x3EC:"reloc32",0x3EB:"bss",0x3F1:"debug"}
 
@@ -67,7 +70,7 @@ def read_long(f):
     return struct.unpack(">I",f.read(4))[0]
 
 def find_wrong_offsets(defines):
-    infile = "../{}.s".format(defines.project)
+    infile = parentdir / "{}.s".format(defines.project)
     af = ira_asm_tools.AsmFile(infile)
     current_address = None
     size = 0
@@ -404,7 +407,7 @@ def find_movea(defines,with_data_register=False):
             f.writelines(af.lines)
 
 def find_possible_tables(defines):
-    infile = "../{}.s".format(defines.project)
+    infile = parentdir / "{}.s".format(defines.project)
     af = ira_asm_tools.AsmFile(infile)
     current_operand = 0
     last_offset = 0
@@ -432,19 +435,19 @@ def find_possible_tables(defines):
 
 def add_undefined_labels(defines,extra_make_options=[]):
     ud = re.compile("undefined symbol <lb_(\w+)>")
-    build = ['cmd', '/c', 'wmake.py','-m',"makefile",'-n']+extra_make_options
-    p = subprocess.run(build,stdout=subprocess.DEVNULL,stderr=subprocess.PIPE,cwd="..")
+    build = ['cmd', '/c', 'wmake.py','-m',"makefile",'-n','-N']+extra_make_options
+    p = subprocess.run(build,cwd=parentdir,stdout=subprocess.PIPE,stderr=subprocess.STDOUT)
 
     asmname = defines.asm_file
 
     if p.returncode:
         undefs = set()
-        for line in p.stderr.decode().splitlines():
-            print(line.strip())
+        for line in p.stdout.decode().splitlines():
             m = ud.search(line)
             if m:
                 undefs.add(int(m.group(1),16))
 
+        print(undefs)
         af = ira_asm_tools.AsmFile(asmname)
 
         # check if the undefined labels is not a fake Bcc (ascii data)
