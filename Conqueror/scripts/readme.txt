@@ -25,7 +25,7 @@ git add %VER%.s %VER%_ref
 - run findmovea.py. This generates a lot of labels that don't exist.
 - run add_undefined_labels.py: this builds, parses link output for undefined labels and tries to insert them (run that twice). Works in-place on the original (no risk)
 
-
+- specific reloc %%DCL insert at 60f7a for addresses like $2xxxx
 - manually search for jump tables (regex: lsl.*#2,d that shifts data register)
 
 - use print_reloc.py to generate the binary & text reloc tables

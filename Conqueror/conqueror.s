@@ -8403,58 +8403,72 @@ lb_24f5a:
 	dc.w	$0000	;24f5e
 	dc.w	$0000	;24f60
 	dc.w	$0000	;24f62
+lb_24f64:
 	dc.w	$0000	;24f64
 	dc.w	$0000	;24f66
 	dc.w	$0000	;24f68
 	dc.w	$0000	;24f6a
+lb_24f6c:
 	dc.w	$0000	;24f6c
 	dc.w	$0000	;24f6e
 	dc.w	$0000	;24f70
 	dc.w	$0000	;24f72
+lb_24f74:
 	dc.w	$0000	;24f74
 	dc.w	$0000	;24f76
 	dc.w	$0000	;24f78
 	dc.w	$0000	;24f7a
+lb_24f7c:
 	dc.w	$0000	;24f7c
 	dc.w	$0000	;24f7e
 	dc.w	$0000	;24f80
 	dc.w	$0000	;24f82
+lb_24f84:
 	dc.w	$0000	;24f84
 	dc.w	$0000	;24f86
 	dc.w	$0000	;24f88
 	dc.w	$0000	;24f8a
+lb_24f8c:
 	dc.w	$0000	;24f8c
 	dc.w	$0000	;24f8e
 	dc.w	$0000	;24f90
 	dc.w	$0000	;24f92
+lb_24f94:
 	dc.w	$0000	;24f94
 	dc.w	$0000	;24f96
 	dc.w	$0000	;24f98
 	dc.w	$0000	;24f9a
+lb_24f9c:
 	dc.w	$0000	;24f9c
 	dc.w	$0000	;24f9e
 	dc.w	$0000	;24fa0
 	dc.w	$0000	;24fa2
+lb_24fa4:
 	dc.w	$0000	;24fa4
 	dc.w	$0000	;24fa6
 	dc.w	$0000	;24fa8
 	dc.w	$0000	;24faa
+lb_24fac:
 	dc.w	$0000	;24fac
 	dc.w	$0000	;24fae
 	dc.w	$0000	;24fb0
 	dc.w	$0000	;24fb2
+lb_24fb4:
 	dc.w	$0000	;24fb4
 	dc.w	$0000	;24fb6
 	dc.w	$0000	;24fb8
 	dc.w	$0000	;24fba
+lb_24fbc:
 	dc.w	$0000	;24fbc
 	dc.w	$0000	;24fbe
 	dc.w	$0000	;24fc0
 	dc.w	$0000	;24fc2
+lb_24fc4:
 	dc.w	$0000	;24fc4
 	dc.w	$0000	;24fc6
 	dc.w	$0000	;24fc8
 	dc.w	$0000	;24fca
+lb_24fcc:
 	dc.w	$0000	;24fcc
 	dc.w	$0000	;24fce
 	dc.w	$0000	;24fd0
@@ -8467,234 +8481,292 @@ lb_24f5a:
 	dc.w	$0000	;24fde
 	dc.w	$0000	;24fe0
 	dc.w	$0000	;24fe2
+lb_24fe4:
 	dc.w	$0000	;24fe4
 	dc.w	$0000	;24fe6
 	dc.w	$0000	;24fe8
 	dc.w	$0000	;24fea
+lb_24fec:
 	dc.w	$0000	;24fec
 	dc.w	$0000	;24fee
 	dc.w	$0000	;24ff0
 	dc.w	$0000	;24ff2
+lb_24ff4:
 	dc.w	$0000	;24ff4
 	dc.w	$0000	;24ff6
 	dc.w	$0000	;24ff8
 	dc.w	$0000	;24ffa
+lb_24ffc:
 	dc.w	$0000	;24ffc
 	dc.w	$0000	;24ffe
 	dc.w	$0000	;25000
 	dc.w	$0000	;25002
+lb_25004:
 	dc.w	$0000	;25004
 	dc.w	$0000	;25006
 	dc.w	$0000	;25008
 	dc.w	$0000	;2500a
+lb_2500c:
 	dc.w	$0000	;2500c
 	dc.w	$0000	;2500e
 	dc.w	$0000	;25010
 	dc.w	$0000	;25012
+lb_25014:
 	dc.w	$0000	;25014
 	dc.w	$0000	;25016
 	dc.w	$0000	;25018
 	dc.w	$0000	;2501a
+lb_2501c:
 	dc.w	$0000	;2501c
 	dc.w	$0000	;2501e
 	dc.w	$0000	;25020
 	dc.w	$0000	;25022
+lb_25024:
 	dc.w	$0000	;25024
 	dc.w	$0000	;25026
 	dc.w	$0000	;25028
 	dc.w	$0000	;2502a
+lb_2502c:
 	dc.w	$0000	;2502c
 	dc.w	$0000	;2502e
 	dc.w	$0000	;25030
 	dc.w	$0000	;25032
+lb_25034:
 	dc.w	$0000	;25034
 	dc.w	$0000	;25036
 	dc.w	$0000	;25038
 	dc.w	$0000	;2503a
+lb_2503c:
 	dc.w	$0000	;2503c
 	dc.w	$0000	;2503e
 	dc.w	$0000	;25040
 	dc.w	$0000	;25042
+lb_25044:
 	dc.w	$0000	;25044
 	dc.w	$0000	;25046
 	dc.w	$0000	;25048
 	dc.w	$0000	;2504a
+lb_2504c:
 	dc.w	$0000	;2504c
 	dc.w	$0000	;2504e
 	dc.w	$0000	;25050
 	dc.w	$0000	;25052
+lb_25054:
 	dc.w	$0000	;25054
 	dc.w	$0000	;25056
 	dc.w	$0000	;25058
 	dc.w	$0000	;2505a
+lb_2505c:
 	dc.w	$0000	;2505c
 	dc.w	$0000	;2505e
 	dc.w	$0000	;25060
 	dc.w	$0000	;25062
+lb_25064:
 	dc.w	$0000	;25064
 	dc.w	$0000	;25066
 	dc.w	$0000	;25068
 	dc.w	$0000	;2506a
+lb_2506c:
 	dc.w	$0000	;2506c
 	dc.w	$0000	;2506e
 	dc.w	$0000	;25070
 	dc.w	$0000	;25072
+lb_25074:
 	dc.w	$0000	;25074
 	dc.w	$0000	;25076
 	dc.w	$0000	;25078
 	dc.w	$0000	;2507a
+lb_2507c:
 	dc.w	$0000	;2507c
 	dc.w	$0000	;2507e
 	dc.w	$0000	;25080
 	dc.w	$0000	;25082
+lb_25084:
 	dc.w	$0000	;25084
 	dc.w	$0000	;25086
 	dc.w	$0000	;25088
 	dc.w	$0000	;2508a
+lb_2508c:
 	dc.w	$0000	;2508c
 	dc.w	$0000	;2508e
 	dc.w	$0000	;25090
 	dc.w	$0000	;25092
+lb_25094:
 	dc.w	$0000	;25094
 	dc.w	$0000	;25096
 	dc.w	$0000	;25098
 	dc.w	$0000	;2509a
+lb_2509c:
 	dc.w	$0000	;2509c
 	dc.w	$0000	;2509e
 	dc.w	$0000	;250a0
 	dc.w	$0000	;250a2
+lb_250a4:
 	dc.w	$0000	;250a4
 	dc.w	$0000	;250a6
 	dc.w	$0000	;250a8
 	dc.w	$0000	;250aa
+lb_250ac:
 	dc.w	$0000	;250ac
 	dc.w	$0000	;250ae
 	dc.w	$0000	;250b0
 	dc.w	$0000	;250b2
+lb_250b4:
 	dc.w	$0000	;250b4
 	dc.w	$0000	;250b6
 	dc.w	$0000	;250b8
 	dc.w	$0000	;250ba
+lb_250bc:
 	dc.w	$0000	;250bc
 	dc.w	$0000	;250be
 	dc.w	$0000	;250c0
 	dc.w	$0000	;250c2
+lb_250c4:
 	dc.w	$0000	;250c4
 	dc.w	$0000	;250c6
 	dc.w	$0000	;250c8
 	dc.w	$0000	;250ca
+lb_250cc:
 	dc.w	$0000	;250cc
 	dc.w	$0000	;250ce
 	dc.w	$0000	;250d0
 	dc.w	$0000	;250d2
+lb_250d4:
 	dc.w	$0000	;250d4
 	dc.w	$0000	;250d6
 	dc.w	$0000	;250d8
 	dc.w	$0000	;250da
+lb_250dc:
 	dc.w	$0000	;250dc
 	dc.w	$0000	;250de
 	dc.w	$0000	;250e0
 	dc.w	$0000	;250e2
+lb_250e4:
 	dc.w	$0000	;250e4
 	dc.w	$0000	;250e6
 	dc.w	$0000	;250e8
 	dc.w	$0000	;250ea
+lb_250ec:
 	dc.w	$0000	;250ec
 	dc.w	$0000	;250ee
 	dc.w	$0000	;250f0
 	dc.w	$0000	;250f2
+lb_250f4:
 	dc.w	$0000	;250f4
 	dc.w	$0000	;250f6
 	dc.w	$0000	;250f8
 	dc.w	$0000	;250fa
+lb_250fc:
 	dc.w	$0000	;250fc
 	dc.w	$0000	;250fe
 	dc.w	$0000	;25100
 	dc.w	$0000	;25102
+lb_25104:
 	dc.w	$0000	;25104
 	dc.w	$0000	;25106
 	dc.w	$0000	;25108
 	dc.w	$0000	;2510a
+lb_2510c:
 	dc.w	$0000	;2510c
 	dc.w	$0000	;2510e
 	dc.w	$0000	;25110
 	dc.w	$0000	;25112
+lb_25114:
 	dc.w	$0000	;25114
 	dc.w	$0000	;25116
 	dc.w	$0000	;25118
 	dc.w	$0000	;2511a
+lb_2511c:
 	dc.w	$0000	;2511c
 	dc.w	$0000	;2511e
 	dc.w	$0000	;25120
 	dc.w	$0000	;25122
+lb_25124:
 	dc.w	$0000	;25124
 	dc.w	$0000	;25126
 	dc.w	$0000	;25128
 	dc.w	$0000	;2512a
+lb_2512c:
 	dc.w	$0000	;2512c
 	dc.w	$0000	;2512e
 	dc.w	$0000	;25130
 	dc.w	$0000	;25132
+lb_25134:
 	dc.w	$0000	;25134
 	dc.w	$0000	;25136
 	dc.w	$0000	;25138
 	dc.w	$0000	;2513a
+lb_2513c:
 	dc.w	$0000	;2513c
 	dc.w	$0000	;2513e
 	dc.w	$0000	;25140
 	dc.w	$0000	;25142
+lb_25144:
 	dc.w	$0000	;25144
 	dc.w	$0000	;25146
 	dc.w	$0000	;25148
 	dc.w	$0000	;2514a
+lb_2514c:
 	dc.w	$0000	;2514c
 	dc.w	$0000	;2514e
 	dc.w	$0000	;25150
 	dc.w	$0000	;25152
+lb_25154:
 	dc.w	$0000	;25154
 	dc.w	$0000	;25156
 	dc.w	$0000	;25158
 	dc.w	$0000	;2515a
+lb_2515c:
 	dc.w	$0000	;2515c
 	dc.w	$0000	;2515e
 	dc.w	$0000	;25160
 	dc.w	$0000	;25162
+lb_25164:
 	dc.w	$0000	;25164
 	dc.w	$0000	;25166
 	dc.w	$0000	;25168
 	dc.w	$0000	;2516a
+lb_2516c:
 	dc.w	$0000	;2516c
 	dc.w	$0000	;2516e
 	dc.w	$0000	;25170
 	dc.w	$0000	;25172
+lb_25174:
 	dc.w	$0000	;25174
 	dc.w	$0000	;25176
 	dc.w	$0000	;25178
 	dc.w	$0000	;2517a
+lb_2517c:
 	dc.w	$0000	;2517c
 	dc.w	$0000	;2517e
 	dc.w	$0000	;25180
 	dc.w	$0000	;25182
+lb_25184:
 	dc.w	$0000	;25184
 	dc.w	$0000	;25186
 	dc.w	$0000	;25188
 	dc.w	$0000	;2518a
+lb_2518c:
 	dc.w	$0000	;2518c
 	dc.w	$0000	;2518e
 	dc.w	$0000	;25190
 	dc.w	$0000	;25192
+lb_25194:
 	dc.w	$0000	;25194
 	dc.w	$0000	;25196
 	dc.w	$0000	;25198
 	dc.w	$0000	;2519a
+lb_2519c:
 	dc.w	$0000	;2519c
 	dc.w	$0000	;2519e
 	dc.w	$0000	;251a0
 	dc.w	$0000	;251a2
+lb_251a4:
 	dc.w	$0000	;251a4
 	dc.w	$0000	;251a6
 	dc.w	$0000	;251a8
 	dc.w	$0000	;251aa
+lb_251ac:
 	dc.w	$0000	;251ac
 	dc.w	$0000	;251ae
 	dc.w	$0000	;251b0
@@ -110362,7 +110434,7 @@ lb_59300:
 	LEA	lb_5ffb2,A0		;593a6: 41f90005ffb2
 	TST.B	lb_24eee+1		;593ac: 4a3900024eef
 	BEQ.S	lb_593ba		;593b2: 6706
-	LEA	lb_5ffb8+2,A0		;593b4: 41f90005ffba
+	LEA	lb_5ffba,A0		;593b4: 41f90005ffba
 lb_593ba:
 	JSR	lb_5f892		;593ba: 4eb90005f892
 	LEA	lb_596e6,A0		;593c0: 41f9000596e6
@@ -112020,57 +112092,70 @@ lb_5a52c:
 	MOVE.W	#$0000,D0		;5a53c: 303c0000
 	JMP	lb_5fc22		;5a540: 4ef90005fc22
 lb_5a546:
-	BTST	D0,54(A4)		;5a546: 012c0036
-	BTST	D0,54(A7)		;5a54a: 012f0036
-	BTST	D0,54(A3,D0.W)		;5a54e: 01330036
-	BTST	D0,52(A7,D0.W)		;5a552: 01370034
-	BTST	D0,lb_5a58a(PC)		;5a556: 013a0032
-	BTST	D0,#$2f			;5a55a: 013c002f
-	DC.W	$013e			;5a55e
-	DC.W	$002b			;5a560
-	DC.W	$013e			;5a562
-	DC.W	$0027			;5a564
-	DC.W	$013e			;5a566
-	DC.W	$0024			;5a568
-	DC.W	$013e			;5a56a
-	DC.W	$0020			;5a56c
-	DC.W	$013e			;5a56e
-	DC.W	$001c			;5a570
-	BTST	D0,#$18			;5a572: 013c0018
-	BTST	D0,lb_5a58a+3(PC)	;5a576: 013a0015
-	BTST	D0,19(A7,D0.W)		;5a57a: 01370013
-	BTST	D0,17(A3,D0.W)		;5a57e: 01330011
-	BTST	D0,17(A7)		;5a582: 012f0011
-	BTST	D0,17(A4)		;5a586: 012c0011
-lb_5a58a:
-	BTST	D0,17(A0)		;5a58a: 01280011
-	BTST	D0,-(A4)		;5a58e: 0124
-	DC.W	$0011			;5a590
-	BTST	D0,-(A0)		;5a592: 0120
-	DC.W	$0013			;5a594
-	BTST	D0,(A5)+		;5a596: 011d
-	DC.W	$0015			;5a598
-	BTST	D0,(A3)+		;5a59a: 011b
-	DC.W	$0018			;5a59c
-	BTST	D0,(A1)+		;5a59e: 0119
-	DC.W	$001c			;5a5a0
-	BTST	D0,(A1)+		;5a5a2: 0119
-	DC.W	$0020			;5a5a4
-	BTST	D0,(A1)+		;5a5a6: 0119
-	DC.W	$0023			;5a5a8
-	BTST	D0,(A1)+		;5a5aa: 0119
-	DC.W	$0027			;5a5ac
-	BTST	D0,(A1)+		;5a5ae: 0119
-	DC.W	$002b			;5a5b0
-	BTST	D0,(A3)+		;5a5b2: 011b
-	DC.W	$002f			;5a5b4
-	BTST	D0,(A5)+		;5a5b6: 011d
-	DC.W	$0032			;5a5b8
-	BTST	D0,-(A0)		;5a5ba: 0120
-	DC.W	$0034			;5a5bc
-	BTST	D0,-(A4)		;5a5be: 0124
-	DC.W	$0036			;5a5c0
-	BTST	D0,54(A0)		;5a5c2: 01280036
+	dc.w	$012c	;5a546
+	dc.w	$0036	;5a548
+	dc.w	$012f	;5a54a
+	dc.w	$0036	;5a54c
+	dc.w	$0133	;5a54e
+	dc.w	$0036	;5a550
+	dc.w	$0137	;5a552
+	dc.w	$0034	;5a554
+	dc.w	$013a	;5a556
+	dc.w	$0032	;5a558
+	dc.w	$013c	;5a55a
+	dc.w	$002f	;5a55c
+	dc.w	$013e	;5a55e
+	dc.w	$002b	;5a560
+	dc.w	$013e	;5a562
+	dc.w	$0027	;5a564
+	dc.w	$013e	;5a566
+	dc.w	$0024	;5a568
+	dc.w	$013e	;5a56a
+	dc.w	$0020	;5a56c
+	dc.w	$013e	;5a56e
+	dc.w	$001c	;5a570
+	dc.w	$013c	;5a572
+	dc.w	$0018	;5a574
+	dc.w	$013a	;5a576
+	dc.w	$0015	;5a578
+	dc.w	$0137	;5a57a
+	dc.w	$0013	;5a57c
+	dc.w	$0133	;5a57e
+	dc.w	$0011	;5a580
+	dc.w	$012f	;5a582
+	dc.w	$0011	;5a584
+	dc.w	$012c	;5a586
+	dc.w	$0011	;5a588
+	dc.w	$0128	;5a58a
+	dc.w	$0011	;5a58c
+	dc.w	$0124	;5a58e
+	dc.w	$0011	;5a590
+	dc.w	$0120	;5a592
+	dc.w	$0013	;5a594
+	dc.w	$011d	;5a596
+	dc.w	$0015	;5a598
+	dc.w	$011b	;5a59a
+	dc.w	$0018	;5a59c
+	dc.w	$0119	;5a59e
+	dc.w	$001c	;5a5a0
+	dc.w	$0119	;5a5a2
+	dc.w	$0020	;5a5a4
+	dc.w	$0119	;5a5a6
+	dc.w	$0023	;5a5a8
+	dc.w	$0119	;5a5aa
+	dc.w	$0027	;5a5ac
+	dc.w	$0119	;5a5ae
+	dc.w	$002b	;5a5b0
+	dc.w	$011b	;5a5b2
+	dc.w	$002f	;5a5b4
+	dc.w	$011d	;5a5b6
+	dc.w	$0032	;5a5b8
+	dc.w	$0120	;5a5ba
+	dc.w	$0034	;5a5bc
+	dc.w	$0124	;5a5be
+	dc.w	$0036	;5a5c0
+	dc.w	$0128	;5a5c2
+	dc.w	$0036	;5a5c4
 lb_5a5c6:
 	MOVEA.L	lb_24f02,A2		;5a5c6: 247900024f02
 	MOVE.L	lb_24f06,lb_24f02	;5a5cc: 23f900024f0600024f02
@@ -113816,53 +113901,39 @@ lb_5bd8c:
 	MOVEM.L	(A7)+,D0-D7/A2-A5	;5bd8c: 4cdf3cff
 	RTS				;5bd90: 4e75
 lb_5bd92:
-	DC.W	$ffff			;5bd92
-	DC.W	$ffff			;5bd94
-	DC.W	$ff02			;5bd96
-	DC.W	$00ff			;5bd98
-	DC.W	$ff06			;5bd9a
+	dc.w	$ffff	;5bd92
+	dc.w	$ffff	;5bd94
+	dc.w	$ff02	;5bd96
+	dc.w	$00ff	;5bd98
+	dc.w	$ff06	;5bd9a
 lb_5bd9c:
-	SUBI.B	#$10,D0			;5bd9c: 04000010
-	DC.W	$00e0			;5bda0
-	ORI.B	#$e0,(A0)		;5bda2: 001000e0
+	dc.w	$0400	;5bd9c
+	dc.w	$0010	;5bd9e
+	dc.w	$00e0	;5bda0
+	dc.w	$0010	;5bda2
+	dc.w	$00e0	;5bda4
 lb_5bda6:
-	ORI.B	#$80,(A0)		;5bda6: 00100080
-	ORI.B	#$80,(A0)		;5bdaa: 00100080
+	dc.w	$0010	;5bda6
+	dc.w	$0080	;5bda8
+	dc.w	$0010	;5bdaa
+	dc.w	$0080	;5bdac
 lb_5bdae:
-	DC.W	$0006			;5bdae
-	BVS.S	lb_5bdc6		;5bdb0: 6914
-	DC.W	$0006			;5bdb2
-	BVS.S	lb_5be14+4		;5bdb4: 6962
-	DC.W	$0006			;5bdb6
-	BVS.S	lb_5bdce		;5bdb8: 6914
-	DC.W	$0006			;5bdba
-	BVS.S	lb_5be20		;5bdbc: 6962
-	DC.W	$0006			;5bdbe
-	MOVEQ	#74,D0			;5bdc0: 704a
-	DC.W	$0006			;5bdc2
-	MOVEQ	#68,D0			;5bdc4: 7044
-lb_5bdc6:
-	DC.W	$0006			;5bdc6
-	MOVEQ	#62,D0			;5bdc8: 703e
-	DC.W	$0006			;5bdca
-	MOVEQ	#56,D0			;5bdcc: 7038
-lb_5bdce:
-	DC.W	$0006			;5bdce
-	DC.W	$7d1c			;5bdd0
-	DC.W	$0006			;5bdd2
-	DC.W	$7d22			;5bdd4
-	DC.W	$0006			;5bdd6
-	DC.W	$7d1c			;5bdd8
-	DC.W	$0006			;5bdda
-	DC.W	$7d22			;5bddc
-	DC.W	$0006			;5bdde
-	MOVEQ	#-64,D7			;5bde0: 7ec0
-	DC.W	$0006			;5bde2
-	MOVEQ	#-70,D7			;5bde4: 7eba
-	DC.W	$0006			;5bde6
-	MOVEQ	#-76,D7			;5bde8: 7eb4
-	DC.W	$0006			;5bdea
-	MOVEQ	#-82,D7			;5bdec: 7eae
+	dc.l	lb_66914	;5bdae
+	dc.l	lb_66962	;5bdb2
+	dc.l	lb_66914	;5bdb6
+	dc.l	lb_66962	;5bdba
+	dc.l	lb_6704a	;5bdbe
+	dc.l	lb_67044	;5bdc2
+	dc.l	lb_6703e	;5bdc6
+	dc.l	lb_67038	;5bdca
+	dc.l	lb_67d1c	;5bdce
+	dc.l	lb_67d22	;5bdd2
+	dc.l	lb_67d1c	;5bdd6
+	dc.l	lb_67d22	;5bdda
+	dc.l	lb_67ec0	;5bdde
+	dc.l	lb_67eba	;5bde2
+	dc.l	lb_67eb4	;5bde6
+	dc.l	lb_67eae	;5bdea
 lb_5bdee:
 	MOVEM.L	D1-D7,-(A7)		;5bdee: 48e77f00
 	MOVE.W	0(A0),D0		;5bdf2: 30280000
@@ -114203,10 +114274,10 @@ lb_5c1f2:
 	MOVEM.L	(A7)+,D0-D2/A2		;5c1f8: 4cdf0407
 	RTS				;5c1fc: 4e75
 lb_5c1fe:
-	BTST	D0,D1			;5c1fe: 0101
-	BTST	D0,D1			;5c200: 0101
-	DC.W	$0202			;5c202
-	MOVE.B	(A0),D0			;5c204: 1010
+	dc.w	$0101	;5c1fe
+	dc.w	$0101	;5c200
+	dc.w	$0202	;5c202
+	dc.w	$1010	;5c204
 lb_5c206:
 	MOVE.W	#$0000,lb_24ece+2	;5c206: 33fc000000024ed0
 lb_5c20e:
@@ -115882,156 +115953,162 @@ lb_5d8fe:
 	JSR	lb_5f892		;5d902: 4eb90005f892
 	BRA.S	lb_5d8d0		;5d908: 60c6
 lb_5d90a:
-	DC.W	$0006			;5d90a
-	BCHG	D1,ext_00000006.W		;5d90c: 03780006
-	DC.W	$0ae4			;5d910
+	dc.l	lb_60378	;5d90a
+	dc.l	lb_60ae4	;5d90e
 lb_5d912:
-	DC.W	$0006			;5d912
-	BCLR	D1,(A6)			;5d914: 0396
-	DC.W	$0006			;5d916
-	MOVEP.W	32767(A2),D5		;5d918: 0b0a7fff
-	DC.W	$ffff			;5d91c
-	DC.W	$496d			;5d91e
-	MOVEQ	#111,D0			;5d920: 706f
-	DC.W	$7373			;5d922
-	BVS.S	lb_5d988		;5d924: 6962
-	DC.W	$6c65			;5d926
-	MOVEA.L	(A3),A0			;5d928: 2053
-	DC.W	$636f			;5d92a
-	MOVEQ	#101,D1			;5d92c: 7265
-	MOVE.L	-(A1),-(A0)		;5d92e: 2121
-	MOVE.L	D0,-(A0)		;5d930: 2100
+	dc.l	lb_60396	;5d912
+	dc.l	lb_60b0a	;5d916
+	dc.w	$7fff	;5d91a
+	dc.w	$ffff	;5d91c
+	dc.w	$496d	;5d91e
+	dc.w	$706f	;5d920
+	dc.w	$7373	;5d922
+	dc.w	$6962	;5d924
+	dc.w	$6c65	;5d926
+	dc.w	$2053	;5d928
+	dc.w	$636f	;5d92a
+	dc.w	$7265	;5d92c
+	dc.w	$2121	;5d92e
+	dc.w	$2100	;5d930
 lb_5d932:
-	DC.W	$0000			;5d932
-	MOVE.L	(A0),-(A3)		;5d934: 2710
-	MOVE.L	-(A0),D0		;5d936: 2020
-	MOVE.L	-(A0),D0		;5d938: 2020
-	MOVE.L	-(A0),D0		;5d93a: 2020
-	MOVE.L	-(A0),D0		;5d93c: 2020
-	MOVE.L	-(A0),D0		;5d93e: 2020
-	MOVE.L	-(A0),D0		;5d940: 2020
-	MOVE.L	-(A0),D0		;5d942: 2020
-	MOVE.L	-(A0),D0		;5d944: 2020
-	MOVE.L	-(A0),D0		;5d946: 2020
-	MOVE.L	D0,D0			;5d948: 2000
-	DC.W	$0000			;5d94a
-	MOVE.L	8224(A0),-(A1)		;5d94c: 23282020
-	MOVE.L	-(A0),D0		;5d950: 2020
-	MOVE.L	-(A0),D0		;5d952: 2020
-	MOVE.L	-(A0),D0		;5d954: 2020
-	MOVE.L	-(A0),D0		;5d956: 2020
-	MOVE.L	-(A0),D0		;5d958: 2020
-	MOVE.L	-(A0),D0		;5d95a: 2020
-	MOVE.L	-(A0),D0		;5d95c: 2020
-	MOVE.L	-(A0),D0		;5d95e: 2020
-	MOVE.L	D0,D0			;5d960: 2000
-	DC.W	$0000			;5d962
-	MOVE.B	D0,8224(A7)		;5d964: 1f402020
-	MOVE.L	-(A0),D0		;5d968: 2020
-	MOVE.L	-(A0),D0		;5d96a: 2020
-	MOVE.L	-(A0),D0		;5d96c: 2020
-	MOVE.L	-(A0),D0		;5d96e: 2020
-	MOVE.L	-(A0),D0		;5d970: 2020
-	MOVE.L	-(A0),D0		;5d972: 2020
-	MOVE.L	-(A0),D0		;5d974: 2020
-	MOVE.L	-(A0),D0		;5d976: 2020
-	MOVE.L	D0,D0			;5d978: 2000
-	DC.W	$0000			;5d97a
-	MOVE.B	(A0)+,8224(A5)		;5d97c: 1b582020
-	MOVE.L	-(A0),D0		;5d980: 2020
-	MOVE.L	-(A0),D0		;5d982: 2020
-	MOVE.L	-(A0),D0		;5d984: 2020
-	MOVE.L	-(A0),D0		;5d986: 2020
-lb_5d988:
-	MOVE.L	-(A0),D0		;5d988: 2020
-	MOVE.L	-(A0),D0		;5d98a: 2020
-	MOVE.L	-(A0),D0		;5d98c: 2020
-	MOVE.L	-(A0),D0		;5d98e: 2020
-	MOVE.L	D0,D0			;5d990: 2000
-	DC.W	$0000			;5d992
-	MOVE.B	32(A0,D2.W),8224(A3)	;5d994: 177020202020
-	MOVE.L	-(A0),D0		;5d99a: 2020
-	MOVE.L	-(A0),D0		;5d99c: 2020
-	MOVE.L	-(A0),D0		;5d99e: 2020
-	MOVE.L	-(A0),D0		;5d9a0: 2020
-	MOVE.L	-(A0),D0		;5d9a2: 2020
-	MOVE.L	-(A0),D0		;5d9a4: 2020
-	MOVE.L	-(A0),D0		;5d9a6: 2020
-	MOVE.L	D0,D0			;5d9a8: 2000
-	DC.W	$0000			;5d9aa
-	DC.W	$1388			;5d9ac
-	MOVE.L	-(A0),D0		;5d9ae: 2020
-	MOVE.L	-(A0),D0		;5d9b0: 2020
-	MOVE.L	-(A0),D0		;5d9b2: 2020
-	MOVE.L	-(A0),D0		;5d9b4: 2020
-	MOVE.L	-(A0),D0		;5d9b6: 2020
-	MOVE.L	-(A0),D0		;5d9b8: 2020
-	MOVE.L	-(A0),D0		;5d9ba: 2020
-	MOVE.L	-(A0),D0		;5d9bc: 2020
-	MOVE.L	-(A0),D0		;5d9be: 2020
-	MOVE.L	D0,D0			;5d9c0: 2000
-	DC.W	$0000			;5d9c2
-	BCLR	D7,-(A0)		;5d9c4: 0fa0
-	MOVE.L	-(A0),D0		;5d9c6: 2020
-	MOVE.L	-(A0),D0		;5d9c8: 2020
-	MOVE.L	-(A0),D0		;5d9ca: 2020
-	MOVE.L	-(A0),D0		;5d9cc: 2020
-	MOVE.L	-(A0),D0		;5d9ce: 2020
-	MOVE.L	-(A0),D0		;5d9d0: 2020
-	MOVE.L	-(A0),D0		;5d9d2: 2020
-	MOVE.L	-(A0),D0		;5d9d4: 2020
-	MOVE.L	-(A0),D0		;5d9d6: 2020
-	MOVE.L	D0,D0			;5d9d8: 2000
-	DC.W	$0000			;5d9da
-	BCLR	D5,ext_00002020.W		;5d9dc: 0bb82020
-	MOVE.L	-(A0),D0		;5d9e0: 2020
-	MOVE.L	-(A0),D0		;5d9e2: 2020
-	MOVE.L	-(A0),D0		;5d9e4: 2020
-	MOVE.L	-(A0),D0		;5d9e6: 2020
-	MOVE.L	-(A0),D0		;5d9e8: 2020
-	MOVE.L	-(A0),D0		;5d9ea: 2020
-	MOVE.L	-(A0),D0		;5d9ec: 2020
-	MOVE.L	-(A0),D0		;5d9ee: 2020
-	MOVE.L	D0,D0			;5d9f0: 2000
-	DC.W	$0000			;5d9f2
-	BSET	D3,(A0)			;5d9f4: 07d0
-	MOVE.L	-(A0),D0		;5d9f6: 2020
-	MOVE.L	-(A0),D0		;5d9f8: 2020
-	MOVE.L	-(A0),D0		;5d9fa: 2020
-	MOVE.L	-(A0),D0		;5d9fc: 2020
-	MOVE.L	-(A0),D0		;5d9fe: 2020
-	MOVE.L	-(A0),D0		;5da00: 2020
-	MOVE.L	-(A0),D0		;5da02: 2020
-	MOVE.L	-(A0),D0		;5da04: 2020
-	MOVE.L	-(A0),D0		;5da06: 2020
-	MOVE.L	D0,D0			;5da08: 2000
+	dc.w	$0000	;5d932
+	dc.w	$2710	;5d934
+	dc.w	$2020	;5d936
+	dc.w	$2020	;5d938
+	dc.w	$2020	;5d93a
+	dc.w	$2020	;5d93c
+	dc.w	$2020	;5d93e
+	dc.w	$2020	;5d940
+	dc.w	$2020	;5d942
+	dc.w	$2020	;5d944
+	dc.w	$2020	;5d946
+	dc.w	$2000	;5d948
+	dc.w	$0000	;5d94a
+	dc.w	$2328	;5d94c
+	dc.w	$2020	;5d94e
+	dc.w	$2020	;5d950
+	dc.w	$2020	;5d952
+	dc.w	$2020	;5d954
+	dc.w	$2020	;5d956
+	dc.w	$2020	;5d958
+	dc.w	$2020	;5d95a
+	dc.w	$2020	;5d95c
+	dc.w	$2020	;5d95e
+	dc.w	$2000	;5d960
+	dc.w	$0000	;5d962
+	dc.w	$1f40	;5d964
+	dc.w	$2020	;5d966
+	dc.w	$2020	;5d968
+	dc.w	$2020	;5d96a
+	dc.w	$2020	;5d96c
+	dc.w	$2020	;5d96e
+	dc.w	$2020	;5d970
+	dc.w	$2020	;5d972
+	dc.w	$2020	;5d974
+	dc.w	$2020	;5d976
+	dc.w	$2000	;5d978
+	dc.w	$0000	;5d97a
+	dc.w	$1b58	;5d97c
+	dc.w	$2020	;5d97e
+	dc.w	$2020	;5d980
+	dc.w	$2020	;5d982
+	dc.w	$2020	;5d984
+	dc.w	$2020	;5d986
+	dc.w	$2020	;5d988
+	dc.w	$2020	;5d98a
+	dc.w	$2020	;5d98c
+	dc.w	$2020	;5d98e
+	dc.w	$2000	;5d990
+	dc.w	$0000	;5d992
+	dc.w	$1770	;5d994
+	dc.w	$2020	;5d996
+	dc.w	$2020	;5d998
+	dc.w	$2020	;5d99a
+	dc.w	$2020	;5d99c
+	dc.w	$2020	;5d99e
+	dc.w	$2020	;5d9a0
+	dc.w	$2020	;5d9a2
+	dc.w	$2020	;5d9a4
+	dc.w	$2020	;5d9a6
+	dc.w	$2000	;5d9a8
+	dc.w	$0000	;5d9aa
+	dc.w	$1388	;5d9ac
+	dc.w	$2020	;5d9ae
+	dc.w	$2020	;5d9b0
+	dc.w	$2020	;5d9b2
+	dc.w	$2020	;5d9b4
+	dc.w	$2020	;5d9b6
+	dc.w	$2020	;5d9b8
+	dc.w	$2020	;5d9ba
+	dc.w	$2020	;5d9bc
+	dc.w	$2020	;5d9be
+	dc.w	$2000	;5d9c0
+	dc.w	$0000	;5d9c2
+	dc.w	$0fa0	;5d9c4
+	dc.w	$2020	;5d9c6
+	dc.w	$2020	;5d9c8
+	dc.w	$2020	;5d9ca
+	dc.w	$2020	;5d9cc
+	dc.w	$2020	;5d9ce
+	dc.w	$2020	;5d9d0
+	dc.w	$2020	;5d9d2
+	dc.w	$2020	;5d9d4
+	dc.w	$2020	;5d9d6
+	dc.w	$2000	;5d9d8
+	dc.w	$0000	;5d9da
+	dc.w	$0bb8	;5d9dc
+	dc.w	$2020	;5d9de
+	dc.w	$2020	;5d9e0
+	dc.w	$2020	;5d9e2
+	dc.w	$2020	;5d9e4
+	dc.w	$2020	;5d9e6
+	dc.w	$2020	;5d9e8
+	dc.w	$2020	;5d9ea
+	dc.w	$2020	;5d9ec
+	dc.w	$2020	;5d9ee
+	dc.w	$2000	;5d9f0
+	dc.w	$0000	;5d9f2
+	dc.w	$07d0	;5d9f4
+	dc.w	$2020	;5d9f6
+	dc.w	$2020	;5d9f8
+	dc.w	$2020	;5d9fa
+	dc.w	$2020	;5d9fc
+	dc.w	$2020	;5d9fe
+	dc.w	$2020	;5da00
+	dc.w	$2020	;5da02
+	dc.w	$2020	;5da04
+	dc.w	$2020	;5da06
+	dc.w	$2000	;5da08
 lb_5da0a:
-	DC.W	$0000			;5da0a
-	BSET	D1,8224(A0)		;5da0c: 03e82020
-	MOVE.L	-(A0),D0		;5da10: 2020
-	MOVE.L	-(A0),D0		;5da12: 2020
-	MOVE.L	-(A0),D0		;5da14: 2020
-	MOVE.L	-(A0),D0		;5da16: 2020
-	MOVE.L	-(A0),D0		;5da18: 2020
-	MOVE.L	-(A0),D0		;5da1a: 2020
-	MOVE.L	-(A0),D0		;5da1c: 2020
-	MOVE.L	-(A0),D0		;5da1e: 2020
-	MOVE.L	D0,D0			;5da20: 2000
-	dc.l  $0			;5da22: 00000000
-	MOVE.L	-(A0),D0		;5da26: 2020
-	MOVE.L	-(A0),D0		;5da28: 2020
-	MOVE.L	-(A0),D0		;5da2a: 2020
-	MOVE.L	-(A0),D0		;5da2c: 2020
-	MOVE.L	-(A0),D0		;5da2e: 2020
-	MOVE.L	-(A0),D0		;5da30: 2020
-	MOVE.L	-(A0),D0		;5da32: 2020
-	MOVE.L	-(A0),D0		;5da34: 2020
-	MOVE.L	-(A0),D0		;5da36: 2020
-	MOVE.L	D0,D0			;5da38: 2000
+	dc.w	$0000	;5da0a
+	dc.w	$03e8	;5da0c
+	dc.w	$2020	;5da0e
+	dc.w	$2020	;5da10
+	dc.w	$2020	;5da12
+	dc.w	$2020	;5da14
+	dc.w	$2020	;5da16
+	dc.w	$2020	;5da18
+	dc.w	$2020	;5da1a
+	dc.w	$2020	;5da1c
+	dc.w	$2020	;5da1e
+	dc.w	$2000	;5da20
+	dc.w	$0000	;5da22
+	dc.w	$0000	;5da24
+	dc.w	$2020	;5da26
+	dc.w	$2020	;5da28
+	dc.w	$2020	;5da2a
+	dc.w	$2020	;5da2c
+	dc.w	$2020	;5da2e
+	dc.w	$2020	;5da30
+	dc.w	$2020	;5da32
+	dc.w	$2020	;5da34
+	dc.w	$2020	;5da36
+	dc.w	$2000	;5da38
 lb_5da3a:
-	DC.W	$0006			;5da3a
-	BCLR	D1,6(A4)		;5da3c: 03ac0006
-	BTST	D5,-(A0)		;5da40: 0b20
+	dc.w	$0006	;5da3a
+	dc.w	$03ac	;5da3c
+	dc.w	$0006	;5da3e
+	dc.w	$0b20	;5da40
 lb_5da42:
 	MOVE.B	lb_4c29e+2,D0		;5da42: 10390004c2a0
 	BMI.S	lb_5da96		;5da48: 6b4c
@@ -116801,58 +116878,85 @@ lb_5e430:
 	JSR	lb_4db8e		;5e43c: 4eb90004db8e
 lb_5e442:
 	RTS				;5e442: 4e75
-	ORI.B	#$1b,(A7)+		;5e444: 001f001b
-	ORI.B	#$17,(A3)+		;5e448: 001b0017
-	ORI.B	#$13,(A7)		;5e44c: 00170013
+	dc.w	$001f	;5e444
+	dc.w	$001b	;5e446
+	dc.w	$001b	;5e448
+	dc.w	$0017	;5e44a
+	dc.w	$0017	;5e44c
+	dc.w	$0013	;5e44e
 lb_5e450:
-	ORI.B	#$17,(A3)		;5e450: 00130017
-	ORI.B	#$1b,(A7)		;5e454: 0017001b
-	ORI.B	#$1f,(A3)+		;5e458: 001b001f
-	ORI.B	#$23,(A7)+		;5e45c: 001f0023
-	ORI.B	#$23,-(A3)		;5e460: 00230023
-	ORI.B	#$23,-(A3)		;5e464: 00230023
-	ORI.B	#$23,-(A3)		;5e468: 00230023
-	ORI.B	#$23,-(A3)		;5e46c: 00230023
-	ORI.B	#$23,-(A3)		;5e470: 00230023
-	ORI.B	#$23,-(A3)		;5e474: 00230023
-	ORI.B	#$23,-(A3)		;5e478: 00230023
-	ORI.B	#$23,-(A3)		;5e47c: 00230023
+	dc.w	$0013	;5e450
+	dc.w	$0017	;5e452
+	dc.w	$0017	;5e454
+	dc.w	$001b	;5e456
+	dc.w	$001b	;5e458
+	dc.w	$001f	;5e45a
+	dc.w	$001f	;5e45c
+	dc.w	$0023	;5e45e
+	dc.w	$0023	;5e460
+	dc.w	$0023	;5e462
+	dc.w	$0023	;5e464
+	dc.w	$0023	;5e466
+	dc.w	$0023	;5e468
+	dc.w	$0023	;5e46a
+	dc.w	$0023	;5e46c
+	dc.w	$0023	;5e46e
+	dc.w	$0023	;5e470
+	dc.w	$0023	;5e472
+	dc.w	$0023	;5e474
+	dc.w	$0023	;5e476
+	dc.w	$0023	;5e478
+	dc.w	$0023	;5e47a
+	dc.w	$0023	;5e47c
+	dc.w	$0023	;5e47e
 lb_5e480:
-	ORI.B	#$01,D0			;5e480: 00000001
-	DC.W	$ffff			;5e484
-	DC.W	$0008			;5e486
-	ORI.B	#$01,D1			;5e488: 00010001
-	DC.W	$ffff			;5e48c
-	DC.W	$0008			;5e48e
-	DC.W	$ffff			;5e490
-	dc.l  $0			;5e492: 00000000
+	dc.w	$0000	;5e480
+	dc.w	$0001	;5e482
+	dc.w	$ffff	;5e484
+	dc.w	$0008	;5e486
+	dc.w	$0001	;5e488
+	dc.w	$0001	;5e48a
+	dc.w	$ffff	;5e48c
+	dc.w	$0008	;5e48e
+	dc.w	$ffff	;5e490
+	dc.w	$0000	;5e492
+	dc.w	$0000	;5e494
 lb_5e496:
-	ORI.B	#$01,D0			;5e496: 00000001
-	DC.W	$ffff			;5e49a
-	DC.W	$0008			;5e49c
-	DC.W	$ffff			;5e49e
-	dc.l  $0			;5e4a0: 00000000
-	DC.W	$0008			;5e4a4
-	ORI.B	#$01,D1			;5e4a6: 00010001
-	DC.W	$ffff			;5e4aa
+	dc.w	$0000	;5e496
+	dc.w	$0001	;5e498
+	dc.w	$ffff	;5e49a
+	dc.w	$0008	;5e49c
+	dc.w	$ffff	;5e49e
+	dc.w	$0000	;5e4a0
+	dc.w	$0000	;5e4a2
+	dc.w	$0008	;5e4a4
+	dc.w	$0001	;5e4a6
+	dc.w	$0001	;5e4a8
+	dc.w	$ffff	;5e4aa
 lb_5e4ac:
-	dc.l  $0			;5e4ac: 00000000
-	ORI.B	#$08,D0			;5e4b0: 00000008
-	DC.W	$ffff			;5e4b4
-	DC.W	$ffff			;5e4b6
-	DC.W	$ffff			;5e4b8
-	DC.W	$0008			;5e4ba
-	ORI.B	#$01,D1			;5e4bc: 00010001
+	dc.w	$0000	;5e4ac
+	dc.w	$0000	;5e4ae
+	dc.w	$0000	;5e4b0
+	dc.w	$0008	;5e4b2
+	dc.w	$ffff	;5e4b4
+	dc.w	$ffff	;5e4b6
+	dc.w	$ffff	;5e4b8
+	dc.w	$0008	;5e4ba
+	dc.w	$0001	;5e4bc
+	dc.w	$0001	;5e4be
 lb_5e4c0:
-	ORI.B	#$00,D1			;5e4c0: 00010000
-	DC.W	$0001			;5e4c4
-	DC.W	$ffff			;5e4c6
-	DC.W	$0008			;5e4c8
-	ORI.B	#$01,D0			;5e4ca: 00000001
-	DC.W	$ffff			;5e4ce
-	DC.W	$0008			;5e4d0
-	ORI.B	#$01,D0			;5e4d2: 00000001
-	DC.W	$ffff			;5e4d6
+	dc.w	$0001	;5e4c0
+	dc.w	$0000	;5e4c2
+	dc.w	$0001	;5e4c4
+	dc.w	$ffff	;5e4c6
+	dc.w	$0008	;5e4c8
+	dc.w	$0000	;5e4ca
+	dc.w	$0001	;5e4cc
+	dc.w	$ffff	;5e4ce
+	dc.w	$0008	;5e4d0
+	dc.w	$0000	;5e4d2
+	dc.w	$0001	;5e4d4
+	dc.w	$ffff	;5e4d6
 lb_5e4d8:
 	MOVEQ	#0,D0			;5e4d8: 7000
 	ANDI.W	#$007f,D7		;5e4da: 0247007f
@@ -118024,569 +118128,501 @@ lb_5f272:
 lb_5f274:
 	MOVE.B	D0,D0			;5f274: 1000
 lb_5f276:
-	DC.W	$0006			;5f276
-	DC.W	$0472			;5f278
-	DC.W	$0006			;5f27a
-	BSET	D5,-(A0)		;5f27c: 0be0
+	dc.l	lb_60472	;5f276
+	dc.l	lb_60be0	;5f27a
 lb_5f27e:
-	DC.W	$0005			;5f27e
-	DC.W	$f625			;5f280
-	DC.W	$0005			;5f282
-	DC.W	$f6f4			;5f284
-	DC.W	$0005			;5f286
-	DC.W	$f6f6			;5f288
-	DC.W	$0005			;5f28a
-	DC.W	$f6f8			;5f28c
-	DC.W	$0005			;5f28e
-	DC.W	$f6ee			;5f290
-	DC.W	$0005			;5f292
-	DC.W	$f6f0			;5f294
-	DC.W	$0005			;5f296
-	DC.W	$f6f2			;5f298
-	DC.W	$0005			;5f29a
-	DC.W	$f6e8			;5f29c
-	DC.W	$0005			;5f29e
-	DC.W	$f6ea			;5f2a0
-	DC.W	$0005			;5f2a2
-	DC.W	$f6ec			;5f2a4
-	DC.W	$0005			;5f2a6
-	DC.W	$f6fa			;5f2a8
-	DC.W	$0005			;5f2aa
-	DC.W	$f5da			;5f2ac
-	DC.W	$0005			;5f2ae
-	DC.W	$f5dc			;5f2b0
-	DC.W	$0005			;5f2b2
-	DC.W	$f6d9			;5f2b4
-	dc.l  $0			;5f2b6: 00000000
-	DC.W	$0005			;5f2ba
-	DC.W	$f6fa			;5f2bc
-	DC.W	$0005			;5f2be
-	DC.W	$f5ec			;5f2c0
-	DC.W	$0005			;5f2c2
-	DC.W	$f5ee			;5f2c4
-	DC.W	$0005			;5f2c6
-	DC.W	$f5f0			;5f2c8
-	DC.W	$0005			;5f2ca
-	DC.W	$f5f2			;5f2cc
-	DC.W	$0005			;5f2ce
-	DC.W	$f5f4			;5f2d0
-	DC.W	$0005			;5f2d2
-	DC.W	$f5f6			;5f2d4
-	DC.W	$0005			;5f2d6
-	DC.W	$f5f8			;5f2d8
-	DC.W	$0005			;5f2da
-	DC.W	$f5fa			;5f2dc
-	DC.W	$0005			;5f2de
-	DC.W	$f5fc			;5f2e0
-	DC.W	$0005			;5f2e2
-	DC.W	$f5fe			;5f2e4
-	DC.W	$0005			;5f2e6
-	DC.W	$f6d5			;5f2e8
-	DC.W	$0005			;5f2ea
-	DC.W	$f6d7			;5f2ec
-	dc.l  $0			;5f2ee: 00000000
-	DC.W	$0005			;5f2f2
-	DC.W	$f6f4			;5f2f4
-	DC.W	$0005			;5f2f6
-	DC.W	$f6f6			;5f2f8
-	DC.W	$0005			;5f2fa
-	DC.W	$f6f8			;5f2fc
-	DC.W	$0005			;5f2fe
-	DC.W	$f60f			;5f300
-	DC.W	$0005			;5f302
-	DC.W	$f611			;5f304
-	DC.W	$0005			;5f306
-	DC.W	$f613			;5f308
-	DC.W	$0005			;5f30a
-	DC.W	$f615			;5f30c
-	DC.W	$0005			;5f30e
-	DC.W	$f617			;5f310
-	DC.W	$0005			;5f312
-	DC.W	$f619			;5f314
-	DC.W	$0005			;5f316
-	DC.W	$f61b			;5f318
-	DC.W	$0005			;5f31a
-	DC.W	$f61d			;5f31c
-	DC.W	$0005			;5f31e
-	DC.W	$f61f			;5f320
-	DC.W	$0005			;5f322
-	DC.W	$f621			;5f324
-	DC.W	$0005			;5f326
-	DC.W	$f700			;5f328
-	dc.l  $0			;5f32a: 00000000
-	dc.l  $0			;5f32e: 00000000
-	DC.W	$0005			;5f332
-	DC.W	$f6ee			;5f334
-	DC.W	$0005			;5f336
-	DC.W	$f6f0			;5f338
-	DC.W	$0005			;5f33a
-	DC.W	$f6f2			;5f33c
-	dc.l  $0			;5f33e: 00000000
-	DC.W	$0005			;5f342
-	DC.W	$f632			;5f344
-	DC.W	$0005			;5f346
-	DC.W	$f634			;5f348
-	DC.W	$0005			;5f34a
-	DC.W	$f636			;5f34c
-	DC.W	$0005			;5f34e
-	DC.W	$f638			;5f350
-	DC.W	$0005			;5f352
-	DC.W	$f63a			;5f354
-	DC.W	$0005			;5f356
-	DC.W	$f63c			;5f358
-	DC.W	$0005			;5f35a
-	DC.W	$f63e			;5f35c
-	DC.W	$0005			;5f35e
-	DC.W	$f640			;5f360
-	DC.W	$0005			;5f362
-	DC.W	$f642			;5f364
-	DC.W	$0005			;5f366
-	DC.W	$f6e4			;5f368
-	dc.l  $0			;5f36a: 00000000
-	DC.W	$0005			;5f36e
-	DC.W	$f6fc			;5f370
-	DC.W	$0005			;5f372
-	DC.W	$f6e8			;5f374
-	DC.W	$0005			;5f376
-	DC.W	$f6ea			;5f378
-	DC.W	$0005			;5f37a
-	DC.W	$f6ec			;5f37c
-	DC.W	$0005			;5f37e
-	DC.W	$f665			;5f380
-	DC.W	$0005			;5f382
-	DC.W	$f5de			;5f384
-	DC.W	$0005			;5f386
-	DC.W	$f5e8			;5f388
-	DC.W	$0005			;5f38a
-	DC.W	$f702			;5f38c
-	DC.W	$0005			;5f38e
-	DC.W	$f600			;5f390
-	DC.W	$0005			;5f392
-	DC.W	$f5d6			;5f394
-	DC.W	$0005			;5f396
-	DC.W	$f6d1			;5f398
-	dc.l  $0			;5f39a: 00000000
-	dc.l  $0			;5f39e: 00000000
-	dc.l  $0			;5f3a2: 00000000
-	DC.W	$0005			;5f3a6
-	DC.W	$f5da			;5f3a8
-	dc.l  $0			;5f3aa: 00000000
-	DC.W	$0005			;5f3ae
-	DC.W	$f69d			;5f3b0
-	DC.W	$0005			;5f3b2
-	DC.W	$f6bf			;5f3b4
-	DC.W	$0005			;5f3b6
-	DC.W	$f6b1			;5f3b8
-	DC.W	$0005			;5f3ba
-	DC.W	$f6a6			;5f3bc
-	DC.W	$0005			;5f3be
-	DC.W	$f675			;5f3c0
-	DC.W	$0005			;5f3c2
-	DC.W	$f678			;5f3c4
-	DC.W	$0005			;5f3c6
-	DC.W	$f67b			;5f3c8
-	DC.W	$0005			;5f3ca
-	DC.W	$f67e			;5f3cc
-	DC.W	$0005			;5f3ce
-	DC.W	$f681			;5f3d0
-	DC.W	$0005			;5f3d2
-	DC.W	$f684			;5f3d4
-	DC.W	$0005			;5f3d6
-	DC.W	$f687			;5f3d8
-	DC.W	$0005			;5f3da
-	DC.W	$f68a			;5f3dc
-	DC.W	$0005			;5f3de
-	DC.W	$f68d			;5f3e0
-	DC.W	$0005			;5f3e2
-	DC.W	$f690			;5f3e4
-	DC.W	$0005			;5f3e6
-	DC.W	$f6e0			;5f3e8
-	DC.W	$0005			;5f3ea
-	DC.W	$f6e2			;5f3ec
-	DC.W	$0005			;5f3ee
-	DC.W	$f6e4			;5f3f0
-	DC.W	$0005			;5f3f2
-	DC.W	$f6e6			;5f3f4
-	DC.W	$0005			;5f3f6
-	DC.W	$f6bd			;5f3f8
-	DC.W	$0005			;5f3fa
-	DC.W	$f6db			;5f3fc
-	DC.W	$0005			;5f3fe
-	DC.W	$f627			;5f400
-	DC.W	$0005			;5f402
-	DC.W	$f646			;5f404
-	DC.W	$0005			;5f406
-	DC.W	$f66b			;5f408
-	DC.W	$0005			;5f40a
-	DC.W	$f607			;5f40c
-	DC.W	$0005			;5f40e
-	DC.W	$f652			;5f410
-	DC.W	$0005			;5f412
-	DC.W	$f65b			;5f414
-	DC.W	$0005			;5f416
-	DC.W	$f5bf			;5f418
-	DC.W	$0005			;5f41a
-	DC.W	$f5ca			;5f41c
+	dc.l	lb_5f624+1	;5f27e
+	dc.l	lb_5f6f4	;5f282
+	dc.l	lb_5f6f6	;5f286
+	dc.l	lb_5f6f8	;5f28a
+	dc.l	lb_5f6ee	;5f28e
+	dc.l	lb_5f6f0	;5f292
+	dc.l	lb_5f6f2	;5f296
+	dc.l	lb_5f6e8	;5f29a
+	dc.l	lb_5f6ea	;5f29e
+	dc.l	lb_5f6ec	;5f2a2
+	dc.l	lb_5f6fa	;5f2a6
+	dc.l	lb_5f5da	;5f2aa
+	dc.l	lb_5f5dc	;5f2ae
+	dc.l	lb_5f6d8+1	;5f2b2
+	dc.w	$0000	;5f2b6
+	dc.w	$0000	;5f2b8
+	dc.l	lb_5f6fa	;5f2ba
+	dc.l	lb_5f5ec	;5f2be
+	dc.l	lb_5f5ee	;5f2c2
+	dc.l	lb_5f5f0	;5f2c6
+	dc.l	lb_5f5f2	;5f2ca
+	dc.l	lb_5f5f4	;5f2ce
+	dc.l	lb_5f5f6	;5f2d2
+	dc.l	lb_5f5f8	;5f2d6
+	dc.l	lb_5f5fa	;5f2da
+	dc.l	lb_5f5fc	;5f2de
+	dc.l	lb_5f5fe	;5f2e2
+	dc.l	lb_5f6d4+1	;5f2e6
+	dc.l	lb_5f6d6+1	;5f2ea
+	dc.w	$0000	;5f2ee
+	dc.w	$0000	;5f2f0
+	dc.l	lb_5f6f4	;5f2f2
+	dc.l	lb_5f6f6	;5f2f6
+	dc.l	lb_5f6f8	;5f2fa
+	dc.l	lb_5f60e+1	;5f2fe
+	dc.l	lb_5f610+1	;5f302
+	dc.l	lb_5f612+1	;5f306
+	dc.l	lb_5f614+1	;5f30a
+	dc.l	lb_5f616+1	;5f30e
+	dc.l	lb_5f618+1	;5f312
+	dc.l	lb_5f61a+1	;5f316
+	dc.l	lb_5f61c+1	;5f31a
+	dc.l	lb_5f61e+1	;5f31e
+	dc.l	lb_5f620+1	;5f322
+	dc.l	lb_5f700	;5f326
+	dc.w	$0000	;5f32a
+	dc.w	$0000	;5f32c
+	dc.w	$0000	;5f32e
+	dc.w	$0000	;5f330
+	dc.l	lb_5f6ee	;5f332
+	dc.l	lb_5f6f0	;5f336
+	dc.l	lb_5f6f2	;5f33a
+	dc.w	$0000	;5f33e
+	dc.w	$0000	;5f340
+	dc.l	lb_5f632	;5f342
+	dc.l	lb_5f634	;5f346
+	dc.l	lb_5f636	;5f34a
+	dc.l	lb_5f638	;5f34e
+	dc.l	lb_5f63a	;5f352
+	dc.l	lb_5f63c	;5f356
+	dc.l	lb_5f63e	;5f35a
+	dc.l	lb_5f640	;5f35e
+	dc.l	lb_5f642	;5f362
+	dc.l	lb_5f6e4	;5f366
+	dc.w	$0000	;5f36a
+	dc.w	$0000	;5f36c
+	dc.l	lb_5f6fc	;5f36e
+	dc.l	lb_5f6e8	;5f372
+	dc.l	lb_5f6ea	;5f376
+	dc.l	lb_5f6ec	;5f37a
+	dc.l	lb_5f664+1	;5f37e
+	dc.l	lb_5f5de	;5f382
+	dc.l	lb_5f5e8	;5f386
+	dc.l	lb_5f702	;5f38a
+	dc.l	lb_5f600	;5f38e
+	dc.l	lb_5f5d6	;5f392
+	dc.l	lb_5f6d0+1	;5f396
+	dc.w	$0000	;5f39a
+	dc.w	$0000	;5f39c
+	dc.w	$0000	;5f39e
+	dc.w	$0000	;5f3a0
+	dc.w	$0000	;5f3a2
+	dc.w	$0000	;5f3a4
+	dc.l	lb_5f5da	;5f3a6
+	dc.w	$0000	;5f3aa
+	dc.w	$0000	;5f3ac
+	dc.l	lb_5f69c+1	;5f3ae
+	dc.l	lb_5f6be+1	;5f3b2
+	dc.l	lb_5f6b0+1	;5f3b6
+	dc.l	lb_5f6a6	;5f3ba
+	dc.l	lb_5f674+1	;5f3be
+	dc.l	lb_5f678	;5f3c2
+	dc.l	lb_5f67a+1	;5f3c6
+	dc.l	lb_5f67e	;5f3ca
+	dc.l	lb_5f680+1	;5f3ce
+	dc.l	lb_5f684	;5f3d2
+	dc.l	lb_5f686+1	;5f3d6
+	dc.l	lb_5f68a	;5f3da
+	dc.l	lb_5f68c+1	;5f3de
+	dc.l	lb_5f690	;5f3e2
+	dc.l	lb_5f6e0	;5f3e6
+	dc.l	lb_5f6e2	;5f3ea
+	dc.l	lb_5f6e4	;5f3ee
+	dc.l	lb_5f6e6	;5f3f2
+	dc.l	lb_5f6bc+1	;5f3f6
+	dc.l	lb_5f6da+1	;5f3fa
+	dc.l	lb_5f626+1	;5f3fe
+	dc.l	lb_5f646	;5f402
+	dc.l	lb_5f66a+1	;5f406
+	dc.l	lb_5f606+1	;5f40a
+	dc.l	lb_5f652	;5f40e
+	dc.l	lb_5f65a+1	;5f412
+	dc.l	lb_5f5be+1	;5f416
+	dc.l	lb_5f5ca	;5f41a
 lb_5f41e:
-	DC.W	$0005			;5f41e
-	DC.W	$f6d5			;5f420
-	DC.W	$0005			;5f422
-	DC.W	$f6f4			;5f424
-	DC.W	$0005			;5f426
-	DC.W	$f6f6			;5f428
-	DC.W	$0005			;5f42a
-	DC.W	$f6f8			;5f42c
-	DC.W	$0005			;5f42e
-	DC.W	$f6ee			;5f430
-	DC.W	$0005			;5f432
-	DC.W	$f6f0			;5f434
-	DC.W	$0005			;5f436
-	DC.W	$f6f2			;5f438
-	DC.W	$0005			;5f43a
-	DC.W	$f6e8			;5f43c
-	DC.W	$0005			;5f43e
-	DC.W	$f6ea			;5f440
-	DC.W	$0005			;5f442
-	DC.W	$f6ec			;5f444
-	DC.W	$0005			;5f446
-	DC.W	$f6fa			;5f448
-	DC.W	$0005			;5f44a
-	DC.W	$f5da			;5f44c
-	DC.W	$0005			;5f44e
-	DC.W	$f625			;5f450
-	DC.W	$0005			;5f452
-	DC.W	$f6d9			;5f454
-	dc.l  $0			;5f456: 00000000
-	DC.W	$0005			;5f45a
-	DC.W	$f6fa			;5f45c
-	DC.W	$0005			;5f45e
-	DC.W	$f5ec			;5f460
-	DC.W	$0005			;5f462
-	DC.W	$f5ee			;5f464
-	DC.W	$0005			;5f466
-	DC.W	$f5f0			;5f468
-	DC.W	$0005			;5f46a
-	DC.W	$f5f2			;5f46c
-	DC.W	$0005			;5f46e
-	DC.W	$f5f4			;5f470
-	DC.W	$0005			;5f472
-	DC.W	$f632			;5f474
-	DC.W	$0005			;5f476
-	DC.W	$f5f8			;5f478
-	DC.W	$0005			;5f47a
-	DC.W	$f5fa			;5f47c
-	DC.W	$0005			;5f47e
-	DC.W	$f5fc			;5f480
-	DC.W	$0005			;5f482
-	DC.W	$f5fe			;5f484
-	DC.W	$0005			;5f486
-	DC.W	$f71a			;5f488
-	DC.W	$0005			;5f48a
-	DC.W	$f6bd			;5f48c
-	dc.l  $0			;5f48e: 00000000
-	DC.W	$0005			;5f492
-	DC.W	$f6f4			;5f494
-	DC.W	$0005			;5f496
-	DC.W	$f6f6			;5f498
-	DC.W	$0005			;5f49a
-	DC.W	$f6f8			;5f49c
-	DC.W	$0005			;5f49e
-	DC.W	$f60f			;5f4a0
-	DC.W	$0005			;5f4a2
-	DC.W	$f611			;5f4a4
-	DC.W	$0005			;5f4a6
-	DC.W	$f613			;5f4a8
-	DC.W	$0005			;5f4aa
-	DC.W	$f615			;5f4ac
-	DC.W	$0005			;5f4ae
-	DC.W	$f617			;5f4b0
-	DC.W	$0005			;5f4b2
-	DC.W	$f619			;5f4b4
-	DC.W	$0005			;5f4b6
-	DC.W	$f61b			;5f4b8
-	DC.W	$0005			;5f4ba
-	DC.W	$f61d			;5f4bc
-	DC.W	$0005			;5f4be
-	DC.W	$f61f			;5f4c0
-	DC.W	$0005			;5f4c2
-	DC.W	$f711			;5f4c4
-	DC.W	$0005			;5f4c6
-	DC.W	$f708			;5f4c8
-	DC.W	$0005			;5f4ca
-	DC.W	$f700			;5f4cc
-	dc.l  $0			;5f4ce: 00000000
-	DC.W	$0005			;5f4d2
-	DC.W	$f6ee			;5f4d4
-	DC.W	$0005			;5f4d6
-	DC.W	$f6f0			;5f4d8
-	DC.W	$0005			;5f4da
-	DC.W	$f6f2			;5f4dc
-	DC.W	$0005			;5f4de
-	DC.W	$f640			;5f4e0
-	DC.W	$0005			;5f4e2
-	DC.W	$f5f6			;5f4e4
-	DC.W	$0005			;5f4e6
-	DC.W	$f634			;5f4e8
-	DC.W	$0005			;5f4ea
-	DC.W	$f636			;5f4ec
-	DC.W	$0005			;5f4ee
-	DC.W	$f638			;5f4f0
-	DC.W	$0005			;5f4f2
-	DC.W	$f63a			;5f4f4
-	DC.W	$0005			;5f4f6
-	DC.W	$f63c			;5f4f8
-	DC.W	$0005			;5f4fa
-	DC.W	$f63e			;5f4fc
-	DC.W	$0005			;5f4fe
-	DC.W	$f6fe			;5f500
-	DC.W	$0005			;5f502
-	DC.W	$f6fc			;5f504
-	DC.W	$0005			;5f506
-	DC.W	$f5da			;5f508
-	dc.l  $0			;5f50a: 00000000
-	DC.W	$0005			;5f50e
-	DC.W	$f6fc			;5f510
-	DC.W	$0005			;5f512
-	DC.W	$f6e8			;5f514
-	DC.W	$0005			;5f516
-	DC.W	$f6ea			;5f518
-	DC.W	$0005			;5f51a
-	DC.W	$f6ec			;5f51c
-	DC.W	$0005			;5f51e
-	DC.W	$f665			;5f520
-	DC.W	$0005			;5f522
-	DC.W	$f5de			;5f524
-	DC.W	$0005			;5f526
-	DC.W	$f5e8			;5f528
-	DC.W	$0005			;5f52a
-	DC.W	$f702			;5f52c
-	DC.W	$0005			;5f52e
-	DC.W	$f600			;5f530
-	DC.W	$0005			;5f532
-	DC.W	$f5d6			;5f534
-	DC.W	$0005			;5f536
-	DC.W	$f6d1			;5f538
-	dc.l  $0			;5f53a: 00000000
-	dc.l  $0			;5f53e: 00000000
-	dc.l  $0			;5f542: 00000000
-	DC.W	$0005			;5f546
-	DC.W	$f5da			;5f548
-	dc.l  $0			;5f54a: 00000000
-	DC.W	$0005			;5f54e
-	DC.W	$f69d			;5f550
-	DC.W	$0005			;5f552
-	DC.W	$f6bf			;5f554
-	DC.W	$0005			;5f556
-	DC.W	$f6b1			;5f558
-	DC.W	$0005			;5f55a
-	DC.W	$f6a6			;5f55c
-	DC.W	$0005			;5f55e
-	DC.W	$f675			;5f560
-	DC.W	$0005			;5f562
-	DC.W	$f678			;5f564
-	DC.W	$0005			;5f566
-	DC.W	$f67b			;5f568
-	DC.W	$0005			;5f56a
-	DC.W	$f67e			;5f56c
-	DC.W	$0005			;5f56e
-	DC.W	$f681			;5f570
-	DC.W	$0005			;5f572
-	DC.W	$f684			;5f574
-	DC.W	$0005			;5f576
-	DC.W	$f687			;5f578
-	DC.W	$0005			;5f57a
-	DC.W	$f68a			;5f57c
-	DC.W	$0005			;5f57e
-	DC.W	$f68d			;5f580
-	DC.W	$0005			;5f582
-	DC.W	$f690			;5f584
-	DC.W	$0005			;5f586
-	DC.W	$f6e0			;5f588
-	DC.W	$0005			;5f58a
-	DC.W	$f6e2			;5f58c
-	DC.W	$0005			;5f58e
-	DC.W	$f6e4			;5f590
-	DC.W	$0005			;5f592
-	DC.W	$f6e6			;5f594
-	DC.W	$0005			;5f596
-	DC.W	$f6bd			;5f598
-	DC.W	$0005			;5f59a
-	DC.W	$f6db			;5f59c
-	DC.W	$0005			;5f59e
-	DC.W	$f627			;5f5a0
-	DC.W	$0005			;5f5a2
-	DC.W	$f646			;5f5a4
-	DC.W	$0005			;5f5a6
-	DC.W	$f66b			;5f5a8
-	DC.W	$0005			;5f5aa
-	DC.W	$f607			;5f5ac
-	DC.W	$0005			;5f5ae
-	DC.W	$f652			;5f5b0
-	DC.W	$0005			;5f5b2
-	DC.W	$f65b			;5f5b4
-	DC.W	$0005			;5f5b6
-	DC.W	$f5bf			;5f5b8
-	DC.W	$0005			;5f5ba
-	DC.W	$f5ca			;5f5bc
-	DC.W	$004c			;5f5be
-	BCS.S	lb_5f628		;5f5c0: 6566
-	MOVEQ	#32,D2			;5f5c2: 7420
-	DC.W	$416d			;5f5c4
-	DC.W	$6967			;5f5c6
-	DC.W	$6100			;5f5c8
-	ADDQ.W	#1,26472(A1)		;5f5ca: 52696768
-	MOVEQ	#32,D2			;5f5ce: 7420
-	DC.W	$416d			;5f5d0
-	DC.W	$6967			;5f5d2
-	DC.W	$6100			;5f5d4
-	DC.W	$4573			;5f5d6
-	BLS.W	lb_622da		;5f5d8: 63002d00
-	MOVE.W	D0,-(A6)		;5f5dc: 3d00
-	CLR.W	-(A1)			;5f5de: 4261
-	DC.W	$636b			;5f5e0
-	DC.W	$7370			;5f5e2
-	DC.W	$6163			;5f5e4
-	DC.W	$6500			;5f5e6
-	ADDQ.W	#2,-(A1)		;5f5e8: 5461
-	BHI.W	lb_646ec		;5f5ea: 62005100
-	SUBQ.B	#3,D0			;5f5ee: 5700
-	DC.W	$4500			;5f5f0
-	ADDQ.B	#1,D0			;5f5f2: 5200
-	ADDQ.B	#2,D0			;5f5f4: 5400
-	SUBQ.B	#4,D0			;5f5f6: 5900
-	SUBQ.B	#2,D0			;5f5f8: 5500
-	DC.W	$4900			;5f5fa
-	DC.W	$4f00			;5f5fc
-	ADDQ.B	#8,D0			;5f5fe: 5000
-	ADDQ.W	#1,-(A5)		;5f600: 5265
-	MOVEQ	#117,D2			;5f602: 7475
-	MOVEQ	#110,D1			;5f604: 726e
-	ORI.W	#$6f6e,D3		;5f606: 00436f6e
-	MOVEQ	#114,D2			;5f60a: 7472
-	BLE.S	lb_5f678+2		;5f60c: 6f6c
-	ORI.W	#$0053,D1		;5f60e: 00410053
-	ORI.W	#$0046,D4		;5f612: 00440046
-	ORI.W	#$0048,D7		;5f616: 00470048
-	DC.W	$004a			;5f61a
-	DC.W	$004b			;5f61c
-	DC.W	$004c			;5f61e
-	DC.W	$003b			;5f620
-	ORI.W	#$0027,D0		;5f622: 00400027
-	DC.W	$004c			;5f626
-lb_5f628:
-	BCS.S	lb_5f690		;5f628: 6566
-	MOVEQ	#32,D2			;5f62a: 7420
-	SUBQ.W	#1,26982(A0)		;5f62c: 53686966
-	MOVEQ	#0,D2			;5f630: 7400
-	ADDQ.B	#5,D0			;5f632: 5a00
-	ADDQ.B	#4,D0			;5f634: 5800
-	DC.W	$4300			;5f636
-	ADDQ.B	#3,D0			;5f638: 5600
-	CLR.B	D0			;5f63a: 4200
-	DC.W	$4e00			;5f63c
-	DC.W	$4d00			;5f63e
-	MOVE.W	D0,D6			;5f640: 3c00
-	MOVE.W	D0,D7			;5f642: 3e00
-	MOVE.W	D0,-(A7)		;5f644: 3f00
-	ADDQ.W	#1,26472(A1)		;5f646: 52696768
-	MOVEQ	#32,D2			;5f64a: 7420
-	SUBQ.W	#1,26982(A0)		;5f64c: 53686966
-	MOVEQ	#0,D2			;5f650: 7400
-	DC.W	$4c65			;5f652
-	BNE.S	lb_5f6ca		;5f654: 6674
-	MOVEA.L	D1,A0			;5f656: 2041
-	BGE.S	lb_5f6ce		;5f658: 6c74
-	ORI.W	#$6967,(A2)		;5f65a: 00526967
-	BVC.S	lb_5f6d4		;5f65e: 6874
-	MOVEA.L	D1,A0			;5f660: 2041
-	BGE.S	lb_5f6d8		;5f662: 6c74
-	ORI.W	#$7061,(A3)		;5f664: 00537061
-	DC.W	$6365			;5f668
-	ORI.W	#$6170,D3		;5f66a: 00436170
-	DC.W	$7320			;5f66e
-	DC.W	$4c6f			;5f670
-	DC.W	$636b			;5f672
-	ORI.W	#$3100,D6		;5f674: 00463100
+	dc.l	lb_5f6d4+1	;5f41e
+	dc.l	lb_5f6f4	;5f422
+	dc.l	lb_5f6f6	;5f426
+	dc.l	lb_5f6f8	;5f42a
+	dc.l	lb_5f6ee	;5f42e
+	dc.l	lb_5f6f0	;5f432
+	dc.l	lb_5f6f2	;5f436
+	dc.l	lb_5f6e8	;5f43a
+	dc.l	lb_5f6ea	;5f43e
+	dc.l	lb_5f6ec	;5f442
+	dc.l	lb_5f6fa	;5f446
+	dc.l	lb_5f5da	;5f44a
+	dc.l	lb_5f624+1	;5f44e
+	dc.l	lb_5f6d8+1	;5f452
+	dc.w	$0000	;5f456
+	dc.w	$0000	;5f458
+	dc.l	lb_5f6fa	;5f45a
+	dc.l	lb_5f5ec	;5f45e
+	dc.l	lb_5f5ee	;5f462
+	dc.l	lb_5f5f0	;5f466
+	dc.l	lb_5f5f2	;5f46a
+	dc.l	lb_5f5f4	;5f46e
+	dc.l	lb_5f632	;5f472
+	dc.l	lb_5f5f8	;5f476
+	dc.l	lb_5f5fa	;5f47a
+	dc.l	lb_5f5fc	;5f47e
+	dc.l	lb_5f5fe	;5f482
+	dc.l	lb_5f71a	;5f486
+	dc.l	lb_5f6bc+1	;5f48a
+	dc.w	$0000	;5f48e
+	dc.w	$0000	;5f490
+	dc.l	lb_5f6f4	;5f492
+	dc.l	lb_5f6f6	;5f496
+	dc.l	lb_5f6f8	;5f49a
+	dc.l	lb_5f60e+1	;5f49e
+	dc.l	lb_5f610+1	;5f4a2
+	dc.l	lb_5f612+1	;5f4a6
+	dc.l	lb_5f614+1	;5f4aa
+	dc.l	lb_5f616+1	;5f4ae
+	dc.l	lb_5f618+1	;5f4b2
+	dc.l	lb_5f61a+1	;5f4b6
+	dc.l	lb_5f61c+1	;5f4ba
+	dc.l	lb_5f61e+1	;5f4be
+	dc.l	lb_5f710+1	;5f4c2
+	dc.l	lb_5f708	;5f4c6
+	dc.l	lb_5f700	;5f4ca
+	dc.w	$0000	;5f4ce
+	dc.w	$0000	;5f4d0
+	dc.l	lb_5f6ee	;5f4d2
+	dc.l	lb_5f6f0	;5f4d6
+	dc.l	lb_5f6f2	;5f4da
+	dc.l	lb_5f640	;5f4de
+	dc.l	lb_5f5f6	;5f4e2
+	dc.l	lb_5f634	;5f4e6
+	dc.l	lb_5f636	;5f4ea
+	dc.l	lb_5f638	;5f4ee
+	dc.l	lb_5f63a	;5f4f2
+	dc.l	lb_5f63c	;5f4f6
+	dc.l	lb_5f63e	;5f4fa
+	dc.l	lb_5f6fe	;5f4fe
+	dc.l	lb_5f6fc	;5f502
+	dc.l	lb_5f5da	;5f506
+	dc.w	$0000	;5f50a
+	dc.w	$0000	;5f50c
+	dc.l	lb_5f6fc	;5f50e
+	dc.l	lb_5f6e8	;5f512
+	dc.l	lb_5f6ea	;5f516
+	dc.l	lb_5f6ec	;5f51a
+	dc.l	lb_5f664+1	;5f51e
+	dc.l	lb_5f5de	;5f522
+	dc.l	lb_5f5e8	;5f526
+	dc.l	lb_5f702	;5f52a
+	dc.l	lb_5f600	;5f52e
+	dc.l	lb_5f5d6	;5f532
+	dc.l	lb_5f6d0+1	;5f536
+	dc.w	$0000	;5f53a
+	dc.w	$0000	;5f53c
+	dc.w	$0000	;5f53e
+	dc.w	$0000	;5f540
+	dc.w	$0000	;5f542
+	dc.w	$0000	;5f544
+	dc.l	lb_5f5da	;5f546
+	dc.w	$0000	;5f54a
+	dc.w	$0000	;5f54c
+	dc.l	lb_5f69c+1	;5f54e
+	dc.l	lb_5f6be+1	;5f552
+	dc.l	lb_5f6b0+1	;5f556
+	dc.l	lb_5f6a6	;5f55a
+	dc.l	lb_5f674+1	;5f55e
+	dc.l	lb_5f678	;5f562
+	dc.l	lb_5f67a+1	;5f566
+	dc.l	lb_5f67e	;5f56a
+	dc.l	lb_5f680+1	;5f56e
+	dc.l	lb_5f684	;5f572
+	dc.l	lb_5f686+1	;5f576
+	dc.l	lb_5f68a	;5f57a
+	dc.l	lb_5f68c+1	;5f57e
+	dc.l	lb_5f690	;5f582
+	dc.l	lb_5f6e0	;5f586
+	dc.l	lb_5f6e2	;5f58a
+	dc.l	lb_5f6e4	;5f58e
+	dc.l	lb_5f6e6	;5f592
+	dc.l	lb_5f6bc+1	;5f596
+	dc.l	lb_5f6da+1	;5f59a
+	dc.l	lb_5f626+1	;5f59e
+	dc.l	lb_5f646	;5f5a2
+	dc.l	lb_5f66a+1	;5f5a6
+	dc.l	lb_5f606+1	;5f5aa
+	dc.l	lb_5f652	;5f5ae
+	dc.l	lb_5f65a+1	;5f5b2
+	dc.l	lb_5f5be+1	;5f5b6
+	dc.l	lb_5f5ca	;5f5ba
+lb_5f5be:
+	dc.w	$004c	;5f5be
+	dc.w	$6566	;5f5c0
+	dc.w	$7420	;5f5c2
+	dc.w	$416d	;5f5c4
+	dc.w	$6967	;5f5c6
+	dc.w	$6100	;5f5c8
+lb_5f5ca:
+	dc.w	$5269	;5f5ca
+	dc.w	$6768	;5f5cc
+	dc.w	$7420	;5f5ce
+	dc.w	$416d	;5f5d0
+	dc.w	$6967	;5f5d2
+	dc.w	$6100	;5f5d4
+lb_5f5d6:
+	dc.w	$4573	;5f5d6
+	dc.w	$6300	;5f5d8
+lb_5f5da:
+	dc.w	$2d00	;5f5da
+lb_5f5dc:
+	dc.w	$3d00	;5f5dc
+lb_5f5de:
+	dc.w	$4261	;5f5de
+	dc.w	$636b	;5f5e0
+	dc.w	$7370	;5f5e2
+	dc.w	$6163	;5f5e4
+	dc.w	$6500	;5f5e6
+lb_5f5e8:
+	dc.w	$5461	;5f5e8
+	dc.w	$6200	;5f5ea
+lb_5f5ec:
+	dc.w	$5100	;5f5ec
+lb_5f5ee:
+	dc.w	$5700	;5f5ee
+lb_5f5f0:
+	dc.w	$4500	;5f5f0
+lb_5f5f2:
+	dc.w	$5200	;5f5f2
+lb_5f5f4:
+	dc.w	$5400	;5f5f4
+lb_5f5f6:
+	dc.w	$5900	;5f5f6
+lb_5f5f8:
+	dc.w	$5500	;5f5f8
+lb_5f5fa:
+	dc.w	$4900	;5f5fa
+lb_5f5fc:
+	dc.w	$4f00	;5f5fc
+lb_5f5fe:
+	dc.w	$5000	;5f5fe
+lb_5f600:
+	dc.w	$5265	;5f600
+	dc.w	$7475	;5f602
+	dc.w	$726e	;5f604
+lb_5f606:
+	dc.w	$0043	;5f606
+	dc.w	$6f6e	;5f608
+	dc.w	$7472	;5f60a
+	dc.w	$6f6c	;5f60c
+lb_5f60e:
+	dc.w	$0041	;5f60e
+lb_5f610:
+	dc.w	$0053	;5f610
+lb_5f612:
+	dc.w	$0044	;5f612
+lb_5f614:
+	dc.w	$0046	;5f614
+lb_5f616:
+	dc.w	$0047	;5f616
+lb_5f618:
+	dc.w	$0048	;5f618
+lb_5f61a:
+	dc.w	$004a	;5f61a
+lb_5f61c:
+	dc.w	$004b	;5f61c
+lb_5f61e:
+	dc.w	$004c	;5f61e
+lb_5f620:
+	dc.w	$003b	;5f620
+	dc.w	$0040	;5f622
+lb_5f624:
+	dc.w	$0027	;5f624
+lb_5f626:
+	dc.w	$004c	;5f626
+	dc.w	$6566	;5f628
+	dc.w	$7420	;5f62a
+	dc.w	$5368	;5f62c
+	dc.w	$6966	;5f62e
+	dc.w	$7400	;5f630
+lb_5f632:
+	dc.w	$5a00	;5f632
+lb_5f634:
+	dc.w	$5800	;5f634
+lb_5f636:
+	dc.w	$4300	;5f636
+lb_5f638:
+	dc.w	$5600	;5f638
+lb_5f63a:
+	dc.w	$4200	;5f63a
+lb_5f63c:
+	dc.w	$4e00	;5f63c
+lb_5f63e:
+	dc.w	$4d00	;5f63e
+lb_5f640:
+	dc.w	$3c00	;5f640
+lb_5f642:
+	dc.w	$3e00	;5f642
+	dc.w	$3f00	;5f644
+lb_5f646:
+	dc.w	$5269	;5f646
+	dc.w	$6768	;5f648
+	dc.w	$7420	;5f64a
+	dc.w	$5368	;5f64c
+	dc.w	$6966	;5f64e
+	dc.w	$7400	;5f650
+lb_5f652:
+	dc.w	$4c65	;5f652
+	dc.w	$6674	;5f654
+	dc.w	$2041	;5f656
+	dc.w	$6c74	;5f658
+lb_5f65a:
+	dc.w	$0052	;5f65a
+	dc.w	$6967	;5f65c
+	dc.w	$6874	;5f65e
+	dc.w	$2041	;5f660
+	dc.w	$6c74	;5f662
+lb_5f664:
+	dc.w	$0053	;5f664
+	dc.w	$7061	;5f666
+	dc.w	$6365	;5f668
+lb_5f66a:
+	dc.w	$0043	;5f66a
+	dc.w	$6170	;5f66c
+	dc.w	$7320	;5f66e
+	dc.w	$4c6f	;5f670
+	dc.w	$636b	;5f672
+lb_5f674:
+	dc.w	$0046	;5f674
+	dc.w	$3100	;5f676
 lb_5f678:
-	NOT.B	70(A2,D0.W)		;5f678: 46320046
-	MOVE.W	D0,-(A1)		;5f67c: 3300
-	NOT.B	70(A4,D0.W)		;5f67e: 46340046
-	MOVE.W	D0,-(A2)		;5f682: 3500
-	NOT.B	70(A6,D0.W)		;5f684: 46360046
-	MOVE.W	D0,-(A3)		;5f688: 3700
-	NOT.B	ext_00000046.W		;5f68a: 46380046
-	MOVE.W	D0,-(A4)		;5f68e: 3900
+	dc.w	$4632	;5f678
+lb_5f67a:
+	dc.w	$0046	;5f67a
+	dc.w	$3300	;5f67c
+lb_5f67e:
+	dc.w	$4634	;5f67e
+lb_5f680:
+	dc.w	$0046	;5f680
+	dc.w	$3500	;5f682
+lb_5f684:
+	dc.w	$4636	;5f684
+lb_5f686:
+	dc.w	$0046	;5f686
+	dc.w	$3700	;5f688
+lb_5f68a:
+	dc.w	$4638	;5f68a
+lb_5f68c:
+	dc.w	$0046	;5f68c
+	dc.w	$3900	;5f68e
 lb_5f690:
-	NOT.B	0(A1,D3.W)		;5f690: 46313000
-	DC.W	$436c			;5f694
-	MOVEQ	#32,D1			;5f696: 7220
-	PEA	28005(A7)		;5f698: 486f6d65
-	ORI.W	#$7020,(A5)		;5f69c: 00557020
-	DC.W	$4172			;5f6a0
-	MOVEQ	#111,D1			;5f6a2: 726f
-	DC.W	$7700			;5f6a4
-	DC.W	$4c65			;5f6a6
-	BNE.S	lb_5f71e		;5f6a8: 6674
-	MOVEA.L	D1,A0			;5f6aa: 2041
-	MOVEQ	#114,D1			;5f6ac: 7272
-	DC.W	$6f77			;5f6ae
-	ORI.W	#$6967,(A2)		;5f6b0: 00526967
-	BVC.S	lb_5f72a		;5f6b4: 6874
-	MOVEA.L	D1,A0			;5f6b6: 2041
-	MOVEQ	#114,D1			;5f6b8: 7272
-	DC.W	$6f77			;5f6ba
-	ORI.B	#$44,28535(A3)		;5f6bc: 002b00446f77
-	BGT.S	lb_5f6e4		;5f6c2: 6e20
-	DC.W	$4172			;5f6c4
-	MOVEQ	#111,D1			;5f6c6: 726f
-	DC.W	$7700			;5f6c8
-lb_5f6ca:
-	DC.W	$496e			;5f6ca
-	DC.W	$7365			;5f6cc
-lb_5f6ce:
-	MOVEQ	#116,D1			;5f6ce: 7274
-	ORI.W	#$656c,D4		;5f6d0: 0044656c
+	dc.w	$4631	;5f690
+	dc.w	$3000	;5f692
+	dc.w	$436c	;5f694
+	dc.w	$7220	;5f696
+	dc.w	$486f	;5f698
+	dc.w	$6d65	;5f69a
+lb_5f69c:
+	dc.w	$0055	;5f69c
+	dc.w	$7020	;5f69e
+	dc.w	$4172	;5f6a0
+	dc.w	$726f	;5f6a2
+	dc.w	$7700	;5f6a4
+lb_5f6a6:
+	dc.w	$4c65	;5f6a6
+	dc.w	$6674	;5f6a8
+	dc.w	$2041	;5f6aa
+	dc.w	$7272	;5f6ac
+	dc.w	$6f77	;5f6ae
+lb_5f6b0:
+	dc.w	$0052	;5f6b0
+	dc.w	$6967	;5f6b2
+	dc.w	$6874	;5f6b4
+	dc.w	$2041	;5f6b6
+	dc.w	$7272	;5f6b8
+	dc.w	$6f77	;5f6ba
+lb_5f6bc:
+	dc.w	$002b	;5f6bc
+lb_5f6be:
+	dc.w	$0044	;5f6be
+	dc.w	$6f77	;5f6c0
+	dc.w	$6e20	;5f6c2
+	dc.w	$4172	;5f6c4
+	dc.w	$726f	;5f6c6
+	dc.w	$7700	;5f6c8
+	dc.w	$496e	;5f6ca
+	dc.w	$7365	;5f6cc
+	dc.w	$7274	;5f6ce
+lb_5f6d0:
+	dc.w	$0044	;5f6d0
+	dc.w	$656c	;5f6d2
 lb_5f6d4:
-	ORI.W	#$005d,(A3)+		;5f6d4: 005b005d
+	dc.w	$005b	;5f6d4
+lb_5f6d6:
+	dc.w	$005d	;5f6d6
 lb_5f6d8:
-	ORI.W	#$0048,(A4)+		;5f6d8: 005c0048
-	BCS.S	lb_5f748+2		;5f6dc: 656c
-	MOVEQ	#0,D0			;5f6de: 7000
-	MOVE.L	D0,D4			;5f6e0: 2800
-	MOVE.L	D0,-(A4)		;5f6e2: 2900
+	dc.w	$005c	;5f6d8
+lb_5f6da:
+	dc.w	$0048	;5f6da
+	dc.w	$656c	;5f6dc
+	dc.w	$7000	;5f6de
+lb_5f6e0:
+	dc.w	$2800	;5f6e0
+lb_5f6e2:
+	dc.w	$2900	;5f6e2
 lb_5f6e4:
-	MOVE.L	D0,-(A7)		;5f6e4: 2f00
-	MOVE.L	D0,D5			;5f6e6: 2a00
-	MOVE.W	D0,-(A3)		;5f6e8: 3700
-	MOVE.W	D0,D4			;5f6ea: 3800
-	MOVE.W	D0,-(A4)		;5f6ec: 3900
-	MOVE.W	D0,D2			;5f6ee: 3400
-	MOVE.W	D0,-(A2)		;5f6f0: 3500
-	MOVE.W	D0,D3			;5f6f2: 3600
-	MOVE.W	D0,-(A0)		;5f6f4: 3100
-	MOVE.W	D0,D1			;5f6f6: 3200
-	MOVE.W	D0,-(A1)		;5f6f8: 3300
-	MOVE.W	D0,D0			;5f6fa: 3000
-	MOVE.L	D0,D7			;5f6fc: 2e00
-	MOVE.L	D0,D6			;5f6fe: 2c00
-	MOVE.L	D0,-(A1)		;5f700: 2300
-	DC.W	$456e			;5f702
-	MOVEQ	#101,D2			;5f704: 7465
-	MOVEQ	#0,D1			;5f706: 7200
-	DC.W	$412d			;5f708
-	DC.W	$756d			;5f70a
-	DC.W	$6c61			;5f70c
-	DC.W	$7574			;5f70e
-	DC.W	$004f			;5f710
-	DC.W	$2d75			;5f712
-	BLT.S	lb_5f780+2		;5f714: 6d6c
-	DC.W	$6175			;5f716
-	MOVEQ	#0,D2			;5f718: 7400
-	SUBQ.B	#2,30061(A5)		;5f71a: 552d756d
-lb_5f71e:
-	DC.W	$6c61			;5f71e
-	DC.W	$7574			;5f720
-	DC.W	$0000			;5f722
+	dc.w	$2f00	;5f6e4
+lb_5f6e6:
+	dc.w	$2a00	;5f6e6
+lb_5f6e8:
+	dc.w	$3700	;5f6e8
+lb_5f6ea:
+	dc.w	$3800	;5f6ea
+lb_5f6ec:
+	dc.w	$3900	;5f6ec
+lb_5f6ee:
+	dc.w	$3400	;5f6ee
+lb_5f6f0:
+	dc.w	$3500	;5f6f0
+lb_5f6f2:
+	dc.w	$3600	;5f6f2
+lb_5f6f4:
+	dc.w	$3100	;5f6f4
+lb_5f6f6:
+	dc.w	$3200	;5f6f6
+lb_5f6f8:
+	dc.w	$3300	;5f6f8
+lb_5f6fa:
+	dc.w	$3000	;5f6fa
+lb_5f6fc:
+	dc.w	$2e00	;5f6fc
+lb_5f6fe:
+	dc.w	$2c00	;5f6fe
+lb_5f700:
+	dc.w	$2300	;5f700
+lb_5f702:
+	dc.w	$456e	;5f702
+	dc.w	$7465	;5f704
+	dc.w	$7200	;5f706
+lb_5f708:
+	dc.w	$412d	;5f708
+	dc.w	$756d	;5f70a
+	dc.w	$6c61	;5f70c
+	dc.w	$7574	;5f70e
+lb_5f710:
+	dc.w	$004f	;5f710
+	dc.w	$2d75	;5f712
+	dc.w	$6d6c	;5f714
+	dc.w	$6175	;5f716
+	dc.w	$7400	;5f718
+lb_5f71a:
+	dc.w	$552d	;5f71a
+	dc.w	$756d	;5f71c
+	dc.w	$6c61	;5f71e
+	dc.w	$7574	;5f720
+	dc.w	$0000	;5f722
 lb_5f724:
 	JSR	lb_5605e		;5f724: 4eb90005605e
 lb_5f72a:
@@ -118769,7 +118805,7 @@ lb_5f95a:
 	ORI.L	#$53707261,D6		;5f984: 008653707261
 	BLS.S	lb_5f9f4		;5f98a: 6368
 lb_5f98c:
-	BCS.W	lb_635ca		;5f98c: 65003c3c
+	dc.l	$65003c3c	;5f98c
 	DC.W	$0014			;5f990
 	MOVE.W	#$0028,D7		;5f992: 3e3c0028
 	MOVE.W	#$008c,D4		;5f996: 383c008c
@@ -119278,17098 +119314,20993 @@ lb_5ff5a:
 	DBF	D7,lb_5ff5a		;5ff6c: 51cfffec
 	RTS				;5ff70: 4e75
 lb_5ff72:
-	DC.W	$0005			;5ff72
-	DC.W	$fdb6			;5ff74
-	DC.W	$0005			;5ff76
-	DC.W	$fdd2			;5ff78
-	DC.W	$0005			;5ff7a
-	DC.W	$fdee			;5ff7c
-	DC.W	$0005			;5ff7e
-	DC.W	$fe0a			;5ff80
-	DC.W	$0005			;5ff82
-	DC.W	$fe26			;5ff84
-	DC.W	$0005			;5ff86
-	DC.W	$fe42			;5ff88
-	DC.W	$0005			;5ff8a
-	DC.W	$fe5e			;5ff8c
-	DC.W	$0005			;5ff8e
-	DC.W	$fe7a			;5ff90
-	DC.W	$0005			;5ff92
-	DC.W	$fe96			;5ff94
-	DC.W	$0005			;5ff96
-	DC.W	$feb2			;5ff98
-	DC.W	$0005			;5ff9a
-	DC.W	$fece			;5ff9c
-	DC.W	$0005			;5ff9e
-	DC.W	$feea			;5ffa0
-	DC.W	$0005			;5ffa2
-	DC.W	$ff06			;5ffa4
-	DC.W	$0005			;5ffa6
-	DC.W	$ff22			;5ffa8
-	DC.W	$0005			;5ffaa
-	DC.W	$ff3e			;5ffac
-	DC.W	$0005			;5ffae
-	DC.W	$ff5a			;5ffb0
+	dc.l	lb_5fdb6	;5ff72
+	dc.l	lb_5fdd2	;5ff76
+	dc.l	lb_5fdee	;5ff7a
+	dc.l	lb_5fe0a	;5ff7e
+	dc.l	lb_5fe26	;5ff82
+	dc.l	lb_5fe42	;5ff86
+	dc.l	lb_5fe5e	;5ff8a
+	dc.l	lb_5fe7a	;5ff8e
+	dc.l	lb_5fe96	;5ff92
+	dc.l	lb_5feb2	;5ff96
+	dc.l	lb_5fece	;5ff9a
+	dc.l	lb_5feea	;5ff9e
+	dc.l	lb_5ff06	;5ffa2
+	dc.l	lb_5ff22	;5ffa6
+	dc.l	lb_5ff3e	;5ffaa
+	dc.l	lb_5ff5a	;5ffae
 lb_5ffb2:
-	DC.W	$0006			;5ffb2
-	BTST	D1,6(A0)		;5ffb4: 03280006
-lb_5ffb8:
-	EORI.L	#$0006033e,(A6)+	;5ffb8: 0a9e0006033e
-	DC.W	$0006			;5ffbe
-	DC.W	$0ab4			;5ffc0
-	BTST	D0,(A0)+		;5ffc2: 0118
-	DC.W	$0000			;5ffc4
-	SUBI.W	#$494e,(A7)		;5ffc6: 0457494e
-	DC.W	$0000			;5ffca
-	BTST	D0,(A0)+		;5ffcc: 0118
-	DC.W	$0000			;5ffce
-	DC.W	$084c			;5ffd0
-	DC.W	$4f53			;5ffd2
-	DC.W	$4500			;5ffd4
+	dc.l	lb_60328	;5ffb2
+	dc.l	lb_60a9e	;5ffb6
+lb_5ffba:
+	dc.l	lb_6033e	;5ffba
+	dc.l	lb_60ab4	;5ffbe
+	dc.w	$0118	;5ffc2
+	dc.w	$0000	;5ffc4
+	dc.w	$0457	;5ffc6
+	dc.w	$494e	;5ffc8
+	dc.w	$0000	;5ffca
+	dc.w	$0118	;5ffcc
+	dc.w	$0000	;5ffce
+	dc.w	$084c	;5ffd0
+	dc.w	$4f53	;5ffd2
+	dc.w	$4500	;5ffd4
 lb_5ffd6:
-	ORI.L	#$005f5374,D6		;5ffd6: 0086005f5374
-	BSR.S	lb_6004c		;5ffdc: 616e
-	BCC.S	lb_60042		;5ffde: 6462
-	DC.W	$792e			;5ffe0
-	MOVE.L	0(A6),D7		;5ffe2: 2e2e0000
-	ORI.L	#$00645765,D2		;5ffe6: 008200645765
-	BGE.S	lb_6005a		;5ffec: 6c6c
-	MOVEA.L	D4,A0			;5ffee: 2044
-	BLE.S	lb_60060		;5fff0: 6f6e
-	BCS.W	lb_60076		;5fff2: 65000082
-	ORI.W	#$4761,-(A4)		;5fff6: 00644761
-	DC.W	$6d65			;5fffa
-	MOVEA.L	A7,A0			;5fffc: 204f
-	MOVEQ	#101,D3			;5fffe: 7665
-	MOVEQ	#0,D1			;60000: 7200
-	ORI.B	#$64,CCR		;60002: 003c0064
-	SUBQ.W	#4,29984(A7)		;60006: 596f7520
-	DC.W	$6861			;6000a
-	MOVEQ	#101,D3			;6000c: 7665
-	MOVEA.L	28531(A4),A0		;6000e: 206c6f73
-	MOVEQ	#32,D2			;60012: 7420
-	MOVEQ	#104,D2			;60014: 7468
-	DC.W	$6973			;60016
-	MOVEA.L	-(A2),A0		;60018: 2062
-	BSR.S	lb_60090		;6001a: 6174
-	MOVEQ	#108,D2			;6001c: 746c
-	BCS.S	lb_6004c		;6001e: 652c
-	MOVEA.L	-(A2),A0		;60020: 2062
-	DC.W	$7574			;60022
-	MOVE.B	D0,-(A7)		;60024: 1f00
-	ORI.B	#$6e,97(A2,D6.L)	;60026: 0032006e6861
-	MOVEQ	#101,D3			;6002c: 7665
-	MOVEA.L	-(A5),A0		;6002e: 2065
-	DC.W	$6e6f			;60030
-	DC.W	$7567			;60032
-	BVC.S	lb_60056		;60034: 6820
-	MOVEQ	#111,D0			;60036: 706f
-	BVS.S	lb_600a8		;60038: 696e
-	MOVEQ	#115,D2			;6003a: 7473
-	DC.W	$2074			;6003c
-	BLE.S	lb_60060		;6003e: 6f20
-	MOVEQ	#114,D2			;60040: 7472
-lb_60042:
-	DC.W	$7920			;60042
-	DC.W	$6167			;60044
-	DC.W	$6169			;60046
-	BGT.W	lb_60090		;60048: 6e000046
-lb_6004c:
-	ORI.L	#$50726573,29472(A2)	;6004c: 00aa507265737320
-	DC.W	$7370			;60054
-lb_60056:
-	DC.W	$6163			;60056
-	BCS.S	lb_6007a		;60058: 6520
-lb_6005a:
-	DC.W	$6261			;6005a
-	MOVEQ	#32,D1			;6005c: 7220
-	MOVEQ	#111,D2			;6005e: 746f
-lb_60060:
-	MOVEA.L	-(A3),A0		;60060: 2063
-	BLE.S	lb_600d2		;60062: 6f6e
-	MOVEQ	#105,D2			;60064: 7469
-	DC.W	$6e75			;60066
-	DC.W	$6500			;60068
-	CLR.W	28277(A7)		;6006a: 426f6e75
-	DC.W	$7320			;6006e
-	DC.W	$666f			;60070
-	MOVEQ	#32,D1			;60072: 7220
-	DC.W	$6d69			;60074
-lb_60076:
-	DC.W	$7373			;60076
-	DC.W	$696f			;60078
-lb_6007a:
-	BGT.S	lb_6009c		;6007a: 6e20
-	ORI.B	#$36,D0			;6007c: 00000036
-	DC.W	$002c			;60080
-	DC.W	$0850			;60082
-	MOVEQ	#101,D1			;60084: 7265
-	DC.W	$7373			;60086
-	MOVEA.L	97(A3,D7.W),A0		;60088: 20737061
-	DC.W	$6365			;6008c
-	MOVEA.L	-(A2),A0		;6008e: 2062
-lb_60090:
-	BSR.S	lb_60104		;60090: 6172
-	MOVEA.L	29216(A7),A0		;60092: 206f7220
-	ADDQ.W	#1,-(A5)		;60096: 5265
-	MOVEQ	#117,D2			;60098: 7475
-	MOVEQ	#110,D1			;6009a: 726e
-lb_6009c:
-	DC.W	$2074			;6009c
-	BLE.S	lb_600c0		;6009e: 6f20
-	DC.W	$7374			;600a0
-	BSR.S	lb_60116		;600a2: 6172
-	MOVEQ	#0,D2			;600a4: 7400
-	DC.W	$004a			;600a6
-lb_600a8:
-	DC.W	$002c			;600a8
-	DC.W	$0850			;600aa
-	MOVEQ	#101,D1			;600ac: 7265
-	DC.W	$7373			;600ae
-	MOVEA.L	D6,A0			;600b0: 2046
-	MOVE.W	116(A0,D2.W),-(A0)	;600b2: 31302074
-	BLE.S	lb_600d8		;600b6: 6f20
-	MOVEQ	#101,D1			;600b8: 7265
-	DC.W	$6465			;600ba
-	DC.W	$6669			;600bc
-	DC.W	$6e65			;600be
-lb_600c0:
-	MOVEA.L	25977(A3),A0		;600c0: 206b6579
-	DC.W	$7300			;600c4
-	ORI.W	#$002c,D0		;600c6: 0040002c
-	DC.W	$0850			;600ca
-	MOVEQ	#101,D1			;600cc: 7265
-	DC.W	$7373			;600ce
-	MOVEA.L	D6,A0			;600d0: 2046
-lb_600d2:
-	MOVE.W	-(A0),-(A4)		;600d2: 3920
-	MOVEQ	#111,D2			;600d4: 746f
-	MOVEA.L	-(A3),A0		;600d6: 2063
-lb_600d8:
-	DC.W	$6861			;600d8
-	DC.W	$6e67			;600da
-	BCS.S	lb_600fe		;600dc: 6520
-	MOVEQ	#97,D2			;600de: 7461
-	DC.W	$6e6b			;600e0
-	MOVEA.L	-(A3),A0		;600e2: 2063
-	BLE.S	lb_60154		;600e4: 6f6e
-	MOVEQ	#114,D2			;600e6: 7472
-	BLE.S	lb_60156		;600e8: 6f6c
-	ORI.B	#$10,D0			;600ea: 00000010
-	DC.W	$0018			;600ee
-	DC.W	$4761			;600f0
-	DC.W	$6d65			;600f2
-	MOVEA.L	(A4),A0			;600f4: 2054
-	DC.W	$7970			;600f6
-	DC.W	$651f			;600f8
-	ORI.B	#$20,(A0)		;600fa: 00100020
-lb_600fe:
-	MOVE.L	-(A0),D0		;600fe: 2020
-	DC.W	$4172			;60100
-	DC.W	$6361			;60102
-lb_60104:
-	DC.W	$6465			;60104
-	ORI.B	#$10,D0			;60106: 00000010
-	DC.W	$0018			;6010a
-	DC.W	$4761			;6010c
-	DC.W	$6d65			;6010e
-	MOVEA.L	(A4),A0			;60110: 2054
-	DC.W	$7970			;60112
-	DC.W	$651f			;60114
-lb_60116:
-	ORI.B	#$20,(A0)		;60116: 00100020
-	DC.W	$4174			;6011a
-	MOVEQ	#114,D2			;6011c: 7472
-	BVS.S	lb_60194		;6011e: 6974
-	DC.W	$696f			;60120
-	BGT.W	lb_60132+2		;60122: 6e000010
-	DC.W	$0018			;60126
-	DC.W	$4761			;60128
-	DC.W	$6d65			;6012a
-	MOVEA.L	(A4),A0			;6012c: 2054
-	DC.W	$7970			;6012e
-	DC.W	$651f			;60130
-lb_60132:
-	ORI.B	#$20,(A0)		;60132: 00100020
-	DC.W	$5374			;60136
-	MOVEQ	#97,D1			;60138: 7261
-	MOVEQ	#101,D2			;6013a: 7465
-	DC.W	$6779			;6013c
-	ORI.B	#$88,D0			;6013e: 00000088
-	DC.W	$0018			;60142
-	DC.W	$4c65			;60144
-	MOVEQ	#101,D3			;60146: 7665
-	BGE.S	lb_6016a		;60148: 6c20
-	ORI.B	#$f8,D0			;6014a: 000000f8
-	DC.W	$0018			;6014e
-	DC.W	$4175			;60150
-	MOVEQ	#111,D2			;60152: 746f
-lb_60154:
-	MOVE.L	-(A0),D0		;60154: 2020
-lb_60156:
-	MOVE.L	-(A0),D0		;60156: 2020
-	MOVE.L	(A7)+,D0		;60158: 201f
-	DC.W	$00f8			;6015a
-	DC.W	$0020			;6015c
-	DC.W	$5374			;6015e
-	MOVEQ	#97,D1			;60160: 7261
-	MOVEQ	#101,D2			;60162: 7465
-	DC.W	$6779			;60164
-	MOVE.L	D0,D0			;60166: 2000
-	DC.W	$00f8			;60168
-lb_6016a:
-	DC.W	$0018			;6016a
-	DC.W	$4d61			;6016c
-	DC.W	$6e75			;6016e
-	BSR.S	lb_601de		;60170: 616c
-	MOVE.L	-(A0),D0		;60172: 2020
-	MOVE.L	(A7)+,D0		;60174: 201f
-	DC.W	$00f8			;60176
-	DC.W	$0020			;60178
-	DC.W	$5374			;6017a
-	MOVEQ	#97,D1			;6017c: 7261
-	MOVEQ	#101,D2			;6017e: 7465
-	DC.W	$6779			;60180
-	MOVE.L	D0,D0			;60182: 2000
-	ADDQ.W	#2,-(A1)		;60184: 5461
-	DC.W	$6e6b			;60186
-	MOVEA.L	A7,A0			;60188: 204f
-	DC.W	$4b00			;6018a
-	DC.W	$4861			;6018c
-	BGE.S	lb_601f6		;6018e: 6c66
-	MOVEA.L	(A3),A0			;60190: 2053
-	MOVEQ	#101,D0			;60192: 7065
-lb_60194:
-	BCS.S	lb_601fa		;60194: 6564
-	ORI.W	#$7561,(A1)		;60196: 00517561
-	MOVEQ	#116,D1			;6019a: 7274
-	BCS.S	lb_60210		;6019c: 6572
-	MOVEA.L	(A3),A0			;6019e: 2053
-	MOVEQ	#101,D0			;601a0: 7065
-	BCS.S	lb_60206+2		;601a2: 6564
-	ORI.W	#$7261,(A4)		;601a4: 00547261
-	DC.W	$636b			;601a8
-	DC.W	$7320			;601aa
-	DC.W	$5772			;601ac
-	DC.W	$6563			;601ae
-	DC.W	$6b65			;601b0
-	DC.W	$6400			;601b2
-	DC.W	$4775			;601b4
-	BGT.S	lb_601d8		;601b6: 6e20
-	TST.W	-(A1)			;601b8: 4a61
-	DC.W	$6d6d			;601ba
-	BCS.S	lb_60222		;601bc: 6564
-	ORI.W	#$7572,(A4)		;601be: 00547572
-	MOVEQ	#101,D1			;601c2: 7265
-	MOVEQ	#32,D2			;601c4: 7420
-	TST.W	-(A1)			;601c6: 4a61
-	DC.W	$6d6d			;601c8
-	BCS.S	lb_60230		;601ca: 6564
-	DC.W	$004f			;601cc
-	BGT.S	lb_601f0		;601ce: 6e20
-	NOT.W	29285(A1)		;601d0: 46697265
-	DC.W	$004e			;601d4
-	BLE.S	lb_601f8		;601d6: 6f20
-lb_601d8:
-	DC.W	$416d			;601d8
-	DC.W	$6d6f			;601da
-	DC.W	$004e			;601dc
-lb_601de:
-	BLE.S	lb_601fe+2		;601de: 6f20
-	DC.W	$4675			;601e0
-	BCS.S	lb_60250		;601e2: 656c
-	DC.W	$004b			;601e4
-	DC.W	$6e6f			;601e6
-	DC.W	$636b			;601e8
-	BCS.S	lb_60250		;601ea: 6564
-	MOVEA.L	A7,A0			;601ec: 204f
-	DC.W	$7574			;601ee
-lb_601f0:
-	ORI.W	#$616e,(A4)		;601f0: 0054616e
-	BMI.S	lb_60216		;601f4: 6b20
-lb_601f6:
-	ADDQ.W	#1,-(A5)		;601f6: 5265
-lb_601f8:
-	MOVEQ	#97,D0			;601f8: 7061
-lb_601fa:
-	BVS.S	lb_6026c+2		;601fa: 6972
-	BCS.S	lb_60262		;601fc: 6564
-lb_601fe:
-	ORI.W	#$746f,(A3)		;601fe: 0053746f
-	MOVEQ	#32,D0			;60202: 7020
-	MOVE.L	-(A0),D0		;60204: 2020
-lb_60206:
-	ORI.W	#$6861,D3		;60206: 00436861
-	MOVEQ	#103,D1			;6020a: 7267
-	BCS.S	lb_6022e		;6020c: 6520
-	DC.W	$0049			;6020e
-lb_60210:
-	DC.W	$6e73			;60210
-	DC.W	$7566			;60212
-	DC.W	$6669			;60214
-lb_60216:
-	DC.W	$6369			;60216
-	BCS.S	lb_60286+2		;60218: 656e
-	MOVEQ	#32,D2			;6021a: 7420
-	BLS.S	lb_60290		;6021c: 6372
-	BCS.S	lb_60284		;6021e: 6564
-	BVS.S	lb_60294+2		;60220: 6974
-lb_60222:
-	ORI.W	#$6f69,(A0)		;60222: 00506f69
-	BGT.S	lb_6029c		;60226: 6e74
-	DC.W	$2074			;60228
-	BLE.S	lb_6024c		;6022a: 6f20
-	MOVEQ	#104,D2			;6022c: 7468
-lb_6022e:
-	BCS.S	lb_60250		;6022e: 6520
-lb_60230:
-	DC.W	$6365			;60230
-	BGT.S	lb_602a8		;60232: 6e74
-	MOVEQ	#101,D1			;60234: 7265
-	MOVEA.L	26144(A7),A0		;60236: 206f6620
-	MOVEQ	#104,D2			;6023a: 7468
-	BCS.S	lb_6025e		;6023c: 6520
-	MOVEQ	#117,D2			;6023e: 7475
-	MOVEQ	#114,D1			;60240: 7272
-	BCS.S	lb_602b8		;60242: 6574
-	ORI.W	#$6f75,(A1)+		;60244: 00596f75
-	MOVEA.L	30067(A5),A0		;60248: 206d7573
-lb_6024c:
-	MOVEQ	#32,D2			;6024c: 7420
-	DC.W	$6275			;6024e
-lb_60250:
-	DC.W	$7920			;60250
-	BSR.S	lb_602c8		;60252: 6174
-	MOVEA.L	25953(A4),A0		;60254: 206c6561
-	DC.W	$7374			;60258
-	MOVEA.L	28261(A7),A0		;6025a: 206f6e65
-lb_6025e:
-	DC.W	$2074			;6025e
-	BSR.S	lb_602d0		;60260: 616e
-lb_60262:
-	BMI.W	lb_62e82+2		;60262: 6b002c20
-	DC.W	$636f			;60266
-	DC.W	$7374			;60268
-	MOVE.L	D0,D0			;6026a: 2000
-lb_6026c:
-	SUBQ.W	#4,30066(A7)		;6026c: 596f7572
-	MOVEA.L	-(A7),A0		;60270: 2067
-	DC.W	$756e			;60272
-	DC.W	$6e65			;60274
-	MOVEQ	#32,D1			;60276: 7220
-	DC.W	$6861			;60278
-	DC.W	$7320			;6027a
-	DC.W	$7365			;6027c
-	BCS.S	lb_602ee		;6027e: 656e
-	MOVE.L	D0,D0			;60280: 2000
-	DC.W	$4564			;60282
-lb_60284:
-	DC.W	$6765			;60284
-lb_60286:
-	MOVEA.L	26144(A7),A0		;60286: 206f6620
-	DC.W	$6261			;6028a
-	MOVEQ	#116,D2			;6028c: 7474
-	DC.W	$6c65			;6028e
-lb_60290:
-	MOVEA.L	-(A1),A0		;60290: 2061
-	MOVEQ	#101,D1			;60292: 7265
-lb_60294:
-	BSR.W	lb_62304		;60294: 6100206e
-	DC.W	$6565			;60298
-	DC.W	$6473			;6029a
-lb_6029c:
-	MOVEA.L	-(A1),A0		;6029c: 2061
-	MOVEA.L	-(A4),A0		;6029e: 2064
-	DC.W	$6573			;602a0
-	MOVEQ	#105,D2			;602a2: 7469
-	DC.W	$6e61			;602a4
-	MOVEQ	#105,D2			;602a6: 7469
-lb_602a8:
-	BLE.S	lb_60318		;602a8: 6f6e
-	DC.W	$0003			;602aa
-	DC.W	$4765			;602ac
-	MOVEQ	#109,D1			;602ae: 726d
-	BSR.S	lb_60320		;602b0: 616e
-	DC.W	$0003			;602b2
-	DC.W	$416d			;602b4
-	BCS.S	lb_6032a		;602b6: 6572
-lb_602b8:
-	DC.W	$6963			;602b8
-	BSR.S	lb_6032a		;602ba: 616e
-	DC.W	$0003			;602bc
-	DC.W	$5275			;602be
-	DC.W	$7373			;602c0
-	DC.W	$6961			;602c2
-	BGT.W	lb_64938		;602c4: 6e004672
-lb_602c8:
-	BLE.S	lb_60338		;602c8: 6f6e
-	MOVEQ	#97,D2			;602ca: 7461
-	BGE.S	lb_602ee		;602cc: 6c20
-	DC.W	$4172			;602ce
-lb_602d0:
-	DC.W	$6d6f			;602d0
-	DC.W	$7572			;602d2
-	ORI.W	#$6964,(A3)		;602d4: 00536964
-	BCS.S	lb_602fa		;602d8: 6520
-	DC.W	$4172			;602da
-	DC.W	$6d6f			;602dc
-	DC.W	$7572			;602de
-	ORI.W	#$6561,(A2)		;602e0: 00526561
-	MOVEQ	#32,D1			;602e4: 7220
-	DC.W	$4172			;602e6
-	DC.W	$6d6f			;602e8
-	DC.W	$7572			;602ea
-	DC.W	$004d			;602ec
-lb_602ee:
-	BSR.S	lb_60368		;602ee: 6178
-	MOVEA.L	D1,A0			;602f0: 2041
-	MOVEQ	#109,D1			;602f2: 726d
-	DC.W	$6f75			;602f4
-	MOVEQ	#32,D1			;602f6: 7220
-	ADDQ.W	#8,-(A5)		;602f8: 5065
-lb_602fa:
-	DC.W	$6e65			;602fa
-	MOVEQ	#114,D2			;602fc: 7472
-	BSR.S	lb_60374		;602fe: 6174
-	DC.W	$696f			;60300
-	DC.W	$6e00			;60302
-	DC.W	$4d61			;60304
-	MOVEQ	#32,D4			;60306: 7820
-	ADDQ.W	#1,24932(A7)		;60308: 526f6164
-	MOVEA.L	(A3),A0			;6030c: 2053
-	MOVEQ	#101,D0			;6030e: 7065
-	BCS.S	lb_60376		;60310: 6564
-	DC.W	$004d			;60312
-	BSR.S	lb_6038e		;60314: 6178
-	MOVEA.L	(A0)+,A0		;60316: 2058
-lb_60318:
-	MOVE.L	D3,28533(A6)		;60318: 2d436f75
-	BGT.S	lb_60392		;6031c: 6e74
-	MOVEQ	#121,D1			;6031e: 7279
-lb_60320:
-	MOVEA.L	(A3),A0			;60320: 2053
-	MOVEQ	#101,D0			;60322: 7065
-	BCS.S	lb_60388+2		;60324: 6564
-	DC.W	$0000			;60326
-	BTST	D0,D0			;60328: 0100
-lb_6032a:
-	DC.W	$0000			;6032a
-	DC.W	$436f			;6032c
-	DC.W	$6d6d			;6032e
-	BSR.S	lb_603a0		;60330: 616e
-	DC.W	$641f			;60332
-	BTST	D0,D0			;60334: 0100
-	DC.W	$0008			;60336
-lb_60338:
-	DC.W	$4d6f			;60338
-	DC.W	$6465			;6033a
-	DC.W	$0000			;6033c
-	BTST	D0,D0			;6033e: 0100
-	DC.W	$0000			;60340
-	ADDQ.W	#8,24931(A4)		;60342: 506c6163
-	DC.W	$656d			;60346
-	BCS.S	lb_603b8		;60348: 656e
-	MOVEQ	#31,D2			;6034a: 741f
-	BTST	D0,D0			;6034c: 0100
-	DC.W	$0008			;6034e
-	DC.W	$4d6f			;60350
-	DC.W	$6465			;60352
-	DC.W	$0000			;60354
-	BTST	D0,D0			;60356: 0100
-	DC.W	$0018			;60358
-	DC.W	$4c65			;6035a
-	MOVEQ	#101,D3			;6035c: 7665
-	BGE.W	lb_6037a+4		;6035e: 6c00001e
-	DC.W	$0014			;60362
-	NEG.W	-(A5)			;60364: 4465
-	DC.W	$6d6f			;60366
-lb_60368:
-	DC.W	$6e73			;60368
-	MOVEQ	#114,D2			;6036a: 7472
-	BSR.S	lb_603e2		;6036c: 6174
-	DC.W	$696f			;6036e
-	BGT.S	lb_60392		;60370: 6e20
-	DC.W	$4d6f			;60372
-lb_60374:
-	DC.W	$6465			;60374
-lb_60376:
-	ORI.B	#$3c,D0			;60376: 0000003c
-lb_6037a:
-	ORI.W	#$5768,ext_00006174.W	;6037a: 007857686174
-	MOVEA.L	29472(A1),A0		;60380: 20697320
-	DC.W	$796f			;60384
-	DC.W	$7572			;60386
-lb_60388:
-	MOVEA.L	24941(A6),A0		;60388: 206e616d
-	BCS.S	lb_603ac+2		;6038c: 6520
-lb_6038e:
-	MOVEQ	#108,D0			;6038e: 706c
-	DC.W	$6561			;60390
-lb_60392:
-	DC.W	$7365			;60392
-	MOVE.W	D0,-(A7)		;60394: 3f00
-	ORI.W	#$0014,852(A6)		;60396: 006e00140354
-	BLE.S	lb_6040e		;6039c: 6f70
-	MOVEA.L	(A4),A0			;6039e: 2054
-lb_603a0:
-	BSR.S	lb_60410		;603a0: 616e
-	BMI.S	lb_603c4		;603a2: 6b20
-	DC.W	$4275			;603a4
-	DC.W	$7374			;603a6
-	BCS.S	lb_6041a+2		;603a8: 6572
-	DC.W	$7300			;603aa
-lb_603ac:
-	ORI.W	#$0022,(A0)		;603ac: 00500022
-	DC.W	$044a			;603b0
-	BLE.S	lb_60422		;603b2: 6f6e
-	BSR.S	lb_60428+2		;603b4: 6174
-	DC.W	$6861			;603b6
-lb_603b8:
-	BGT.S	lb_603da		;603b8: 6e20
-	DC.W	$4772			;603ba
-	BVS.S	lb_60424		;603bc: 6966
-	DC.W	$6669			;603be
-	MOVEQ	#104,D2			;603c0: 7468
-	DC.W	$731f			;603c2
-lb_603c4:
-	ORI.W	#$002e,(A0)		;603c4: 0050002e
-	BSR.S	lb_60438		;603c8: 616e
-	BCC.S	lb_603ec		;603ca: 6420
-	NEG.W	-(A1)			;603cc: 4461
-	MOVEQ	#105,D3			;603ce: 7669
-	BCC.S	lb_603f0+2		;603d0: 6420
-	DC.W	$4272			;603d2
-	BSR.S	lb_60438		;603d4: 6162
-	BCS.S	lb_60446		;603d6: 656e
-	MOVE.B	D0,-(A7)		;603d8: 1f00
-lb_603da:
-	ORI.W	#$003a,(A0)		;603da: 0050003a
-	DC.W	$7769			;603de
-	DC.W	$7368			;603e0
-lb_603e2:
-	DC.W	$2074			;603e2
-	BLE.S	lb_60406		;603e4: 6f20
-	MOVEQ	#104,D2			;603e6: 7468
-	BSR.S	lb_60458		;603e8: 616e
-	BMI.S	lb_6040a+2		;603ea: 6b20
-lb_603ec:
-	MOVEQ	#104,D2			;603ec: 7468
-	DC.W	$651f			;603ee
-lb_603f0:
-	ORI.W	#$0046,(A0)		;603f0: 00500046
-	DC.W	$666f			;603f4
-	BGE.S	lb_60464		;603f6: 6c6c
-	DC.W	$6f77			;603f8
-	BVS.S	lb_6046a		;603fa: 696e
-	BEQ.S	lb_6041e		;603fc: 6720
-	MOVEQ	#101,D0			;603fe: 7065
-	BLE.S	lb_60470+2		;60400: 6f70
-	DC.W	$6c65			;60402
-	MOVE.W	(A7)+,-(A5)		;60404: 3b1f
-lb_60406:
-	ORI.W	#$0056,(A0)		;60406: 00500056
-lb_6040a:
-	MOVEP.L	24931(A2),D7		;6040a: 0f4a6163
-lb_6040e:
-	DC.W	$7175			;6040e
-lb_60410:
-	BVS.S	lb_60432		;60410: 6920
-	DC.W	$4c79			;60412
-	BLE.S	lb_60484		;60414: 6f6e
-	DC.W	$732c			;60416
-	MOVE.B	D0,-(A7)		;60418: 1f00
-lb_6041a:
-	ORI.W	#$0062,(A0)		;6041a: 00500062
-lb_6041e:
-	TST.W	28192(A7)		;6041e: 4a6f6e20
-lb_60422:
-	NEG.W	-(A5)			;60422: 4465
-lb_60424:
-	BSR.S	lb_60494		;60424: 616e
-	MOVE.L	(A7)+,D6		;60426: 2c1f
-lb_60428:
-	ORI.W	#$006e,(A0)		;60428: 0050006e
-	ADDQ.W	#8,-(A1)		;6042c: 5061
-	DC.W	$756c			;6042e
-	MOVEA.L	D6,A0			;60430: 2046
-lb_60432:
-	BCS.S	lb_604a0		;60432: 656c
-	DC.W	$6c6f			;60434
-	DC.W	$7773			;60436
-lb_60438:
-	MOVE.L	(A7)+,D6		;60438: 2c1f
-	ORI.W	#$007a,(A0)		;6043a: 0050007a
-	CLR.W	30313(A7)		;6043e: 426f7669
-	DC.W	$6e67			;60442
-	MOVEQ	#111,D2			;60444: 746f
-lb_60446:
-	BGT.S	lb_60468		;60446: 6e20
-	ADDQ.W	#1,D1			;60448: 5241
-	DC.W	$4320			;6044a
-	ADDQ.W	#2,-(A1)		;6044c: 5461
-	DC.W	$6e6b			;6044e
-	MOVEA.L	A5,A0			;60450: 204d
-	DC.W	$7573			;60452
-	DC.W	$6575			;60454
-	BLT.S	lb_60484		;60456: 6d2c
-lb_60458:
-	MOVE.B	D0,-(A7)		;60458: 1f00
-	ORI.W	#$0086,(A0)		;6045a: 00500086
-	BSR.S	lb_604ce		;6045e: 616e
-	BCC.S	lb_60482		;60460: 6420
-	ADDQ.W	#2,-(A5)		;60462: 5465
-lb_60464:
-	DC.W	$7574			;60464
-	MOVEA.L	(A7),A0			;60466: 2057
-lb_60468:
-	DC.W	$6569			;60468
-lb_6046a:
-	DC.W	$6465			;6046a
-	DC.W	$6d61			;6046c
-	BGT.S	lb_604de		;6046e: 6e6e
-lb_60470:
-	ORI.B	#$74,D0			;60470: 00000074
-	DC.W	$0018			;60474
-	BCHG	D1,(A2)			;60476: 0352
-	BCS.S	lb_604de		;60478: 6564
-	BCS.S	lb_604e2		;6047a: 6566
-	BVS.S	lb_604ea+2		;6047c: 696e
-	BCS.S	lb_604a0		;6047e: 6520
-	DC.W	$4b65			;60480
-lb_60482:
-	DC.W	$7973			;60482
-lb_60484:
-	MOVE.B	D0,-(A7)		;60484: 1f00
-	ORI.W	#$0028,(A0)		;60486: 00500028
-	BTST	D7,8262(A5)		;6048a: 0f2d2046
-	BLE.S	lb_60502		;6048e: 6f72
-	DC.W	$7761			;60490
-	MOVEQ	#100,D1			;60492: 7264
-lb_60494:
-	DC.W	$7320			;60494
-	DC.W	$4c65			;60496
-	BNE.S	lb_6050e		;60498: 6674
-	MOVEA.L	(A4),A0			;6049a: 2054
-	MOVEQ	#97,D1			;6049c: 7261
-	DC.W	$636b			;6049e
-lb_604a0:
-	MOVE.B	D0,-(A7)		;604a0: 1f00
-	ORI.W	#$0032,(A0)		;604a2: 00500032
-	MOVE.L	-(A0),-(A6)		;604a6: 2d20
-	NOT.W	29303(A7)		;604a8: 466f7277
-	BSR.S	lb_60520		;604ac: 6172
-	DC.W	$6473			;604ae
-	MOVEA.L	(A2),A0			;604b0: 2052
-	DC.W	$6967			;604b2
-	BVC.S	lb_6052a		;604b4: 6874
-	MOVEA.L	(A4),A0			;604b6: 2054
-	MOVEQ	#97,D1			;604b8: 7261
-	DC.W	$636b			;604ba
-	MOVE.B	D0,-(A7)		;604bc: 1f00
-	ORI.W	#$003c,(A0)		;604be: 0050003c
-	MOVE.L	-(A0),-(A6)		;604c2: 2d20
-	CLR.W	-(A1)			;604c4: 4261
-	DC.W	$636b			;604c6
-	DC.W	$7761			;604c8
-	MOVEQ	#100,D1			;604ca: 7264
-	DC.W	$7320			;604cc
-lb_604ce:
-	DC.W	$4c65			;604ce
-	BNE.S	lb_60546		;604d0: 6674
-	MOVEA.L	(A4),A0			;604d2: 2054
-	MOVEQ	#97,D1			;604d4: 7261
-	DC.W	$636b			;604d6
-	MOVE.B	D0,-(A7)		;604d8: 1f00
-	ORI.W	#$0046,(A0)		;604da: 00500046
-lb_604de:
-	MOVE.L	-(A0),-(A6)		;604de: 2d20
-	CLR.W	-(A1)			;604e0: 4261
-lb_604e2:
-	DC.W	$636b			;604e2
-	DC.W	$7761			;604e4
-	MOVEQ	#100,D1			;604e6: 7264
-	DC.W	$7320			;604e8
-lb_604ea:
-	ADDQ.W	#1,26472(A1)		;604ea: 52696768
-	MOVEQ	#32,D2			;604ee: 7420
-	DC.W	$5472			;604f0
-	DC.W	$6163			;604f2
-	DC.W	$6b1f			;604f4
-	ORI.W	#$0050,(A0)		;604f6: 00500050
-	MOVE.L	-(A0),-(A6)		;604fa: 2d20
-	ADDQ.W	#1,29793(A7)		;604fc: 526f7461
-	MOVEQ	#101,D2			;60500: 7465
-lb_60502:
-	MOVEA.L	(A4),A0			;60502: 2054
-	DC.W	$7572			;60504
-	MOVEQ	#101,D1			;60506: 7265
-	MOVEQ	#32,D2			;60508: 7420
-	DC.W	$436c			;6050a
-	DC.W	$6f63			;6050c
-lb_6050e:
-	DC.W	$6b77			;6050e
-	DC.W	$6973			;60510
-	DC.W	$651f			;60512
-	ORI.W	#$005a,(A0)		;60514: 0050005a
-	MOVE.L	-(A0),-(A6)		;60518: 2d20
-	ADDQ.W	#1,29793(A7)		;6051a: 526f7461
-	MOVEQ	#101,D2			;6051e: 7465
-lb_60520:
-	MOVEA.L	(A4),A0			;60520: 2054
-	DC.W	$7572			;60522
-	MOVEQ	#101,D1			;60524: 7265
-	MOVEQ	#32,D2			;60526: 7420
-	DC.W	$416e			;60528
-lb_6052a:
-	MOVEQ	#105,D2			;6052a: 7469
-	MOVE.L	D3,27759(A6)		;6052c: 2d436c6f
-	DC.W	$636b			;60530
-	DC.W	$7769			;60532
-	DC.W	$7365			;60534
-	MOVE.B	D0,-(A7)		;60536: 1f00
-	ORI.W	#$0064,(A0)		;60538: 00500064
-	MOVE.L	-(A0),-(A6)		;6053c: 2d20
-	DC.W	$456c			;6053e
-	BCS.S	lb_605b8		;60540: 6576
-	BSR.S	lb_605b8		;60542: 6174
-	BCS.S	lb_60566		;60544: 6520
-lb_60546:
-	DC.W	$4775			;60546
-	DC.W	$6e1f			;60548
-	ORI.W	#$006e,(A0)		;6054a: 0050006e
-	MOVE.L	-(A0),-(A6)		;6054e: 2d20
-	NEG.W	-(A5)			;60550: 4465
-	MOVEQ	#114,D0			;60552: 7072
-	DC.W	$6573			;60554
-	DC.W	$7320			;60556
-	DC.W	$4775			;60558
-	DC.W	$6e1f			;6055a
-	ORI.W	#$0078,(A0)		;6055c: 00500078
-	MOVE.L	-(A0),-(A6)		;60560: 2d20
-	NOT.W	29285(A1)		;60562: 46697265
-lb_60566:
-	MOVEA.L	D7,A0			;60566: 2047
-	DC.W	$756e			;60568
-	MOVE.B	D0,-(A7)		;6056a: 1f00
-	ORI.W	#$0082,(A0)		;6056c: 00500082
-	MOVE.L	-(A0),-(A6)		;60570: 2d20
-	SUBQ.W	#1,-(A5)		;60572: 5365
-	DC.W	$6c65			;60574
-	BLS.S	lb_605ec		;60576: 6374
-	MOVEA.L	A5,A0			;60578: 204d
-	BSR.S	lb_605ec		;6057a: 6170
-	MOVE.B	D0,-(A7)		;6057c: 1f00
-	ORI.W	#$008c,(A0)		;6057e: 0050008c
-	MOVE.L	-(A0),-(A6)		;60582: 2d20
-	ADDQ.W	#8,-(A1)		;60584: 5061
-	DC.W	$7573			;60586
-	BCS.S	lb_605aa		;60588: 6520
-	DC.W	$4761			;6058a
-	DC.W	$6d65			;6058c
-	MOVE.B	D0,-(A7)		;6058e: 1f00
-	ORI.W	#$0096,(A0)		;60590: 00500096
-	MOVE.L	-(A0),-(A6)		;60594: 2d20
-	DC.W	$5475			;60596
-	MOVEQ	#110,D1			;60598: 726e
-	MOVEA.L	(A3),A0			;6059a: 2053
-	DC.W	$6f75			;6059c
-	BGT.S	lb_60604		;6059e: 6e64
-	MOVEA.L	A7,A0			;605a0: 204f
-	DC.W	$6e1f			;605a2
-	ORI.W	#$00a0,(A0)		;605a4: 005000a0
-	MOVE.L	-(A0),-(A6)		;605a8: 2d20
-lb_605aa:
-	DC.W	$5475			;605aa
-	MOVEQ	#110,D1			;605ac: 726e
-	MOVEA.L	(A3),A0			;605ae: 2053
-	DC.W	$6f75			;605b0
-	BGT.S	lb_60618		;605b2: 6e64
-	MOVEA.L	A7,A0			;605b4: 204f
-	BNE.S	lb_6061c+2		;605b6: 6666
-lb_605b8:
-	MOVE.B	D0,-(A7)		;605b8: 1f00
-	ORI.W	#$00ac,(A2)+		;605ba: 005a00ac
-	SUBI.W	#$656c,(A3)		;605be: 0453656c
-	DC.W	$6563			;605c2
-	MOVEQ	#32,D2			;605c4: 7420
-	MOVEQ	#104,D2			;605c6: 7468
-	DC.W	$6973			;605c8
-	MOVEA.L	26990(A4),A0		;605ca: 206c696e
-	BCS.S	lb_605f0		;605ce: 6520
-	MOVEQ	#111,D2			;605d0: 746f
-	DC.W	$2071			;605d2
-	DC.W	$7569			;605d4
-	MOVEQ	#0,D2			;605d6: 7400
-	ORI.B	#$64,D0			;605d8: 00000064
-	DC.W	$5072			;605dc
-	DC.W	$6573			;605de
-	DC.W	$7320			;605e0
-	ADDQ.W	#1,-(A5)		;605e2: 5265
-	MOVEQ	#117,D2			;605e4: 7475
-	MOVEQ	#110,D1			;605e6: 726e
-	MOVEA.L	101(A7,D6.L),A0		;605e8: 20776865
-lb_605ec:
-	BGT.S	lb_6060e		;605ec: 6e20
-	DC.W	$6a6f			;605ee
-lb_605f0:
-	DC.W	$7973			;605f0
-	MOVEQ	#105,D2			;605f2: 7469
-	DC.W	$636b			;605f4
-	DC.W	$732f			;605f6
-	DC.W	$6d6f			;605f8
-	DC.W	$7573			;605fa
-	BCS.S	lb_6061c+2		;605fc: 6520
-	MOVEQ	#101,D1			;605fe: 7265
-	BSR.S	lb_60664+2		;60600: 6164
-	DC.W	$7900			;60602
-lb_60604:
-	ORI.B	#$28,75(A0)		;60604: 00280028004b
-	DC.W	$6579			;6060a
-	DC.W	$626f			;6060c
-lb_6060e:
-	BSR.S	lb_60682		;6060e: 6172
-	BCC.S	lb_60632		;60610: 6420
-	MOVE.L	-(A0),D3		;60612: 2620
-	BLE.S	lb_60686		;60614: 6f70
-	MOVEQ	#105,D2			;60616: 7469
-lb_60618:
-	BLE.S	lb_60688		;60618: 6f6e
-	BSR.S	lb_60688		;6061a: 616c
-lb_6061c:
-	MOVEA.L	28533(A5),A0		;6061c: 206d6f75
-	DC.W	$7365			;60620
-	MOVEA.L	-(A6),A0		;60622: 2066
-	BLE.S	lb_60698		;60624: 6f72
-	MOVEA.L	-(A7),A0		;60626: 2067
-	DC.W	$756e			;60628
-	DC.W	$6e65			;6062a
-	MOVEQ	#0,D1			;6062c: 7200
-	ORI.B	#$34,(A2)		;6062e: 00120034
-lb_60632:
-	DC.W	$004a			;60632
-	DC.W	$6f79			;60634
-	DC.W	$7374			;60636
-	DC.W	$6963			;60638
-	BMI.S	lb_6065c		;6063a: 6b20
-	MOVE.W	-(A0),-(A0)		;6063c: 3120
-	DC.W	$666f			;6063e
-	MOVEQ	#32,D1			;60640: 7220
-	BCC.S	lb_606b6		;60642: 6472
-	BVS.S	lb_606bc		;60644: 6976
-	BCS.S	lb_606ba		;60646: 6572
-	MOVE.L	-(A6),D0		;60648: 2026
-	MOVEA.L	28537(A2),A0		;6064a: 206a6f79
-	DC.W	$7374			;6064e
-	DC.W	$6963			;60650
-	BMI.S	lb_60674		;60652: 6b20
-	MOVE.W	-(A0),D1		;60654: 3220
-	DC.W	$666f			;60656
-	MOVEQ	#32,D1			;60658: 7220
-	DC.W	$6775			;6065a
-lb_6065c:
-	BGT.S	lb_606cc		;6065c: 6e6e
-	BCS.S	lb_606d2		;6065e: 6572
-	ORI.B	#$0f,D0			;60660: 0000000f
-lb_60664:
-	ORI.W	#$004a,D0		;60664: 0040004a
-	DC.W	$6f79			;60668
-	DC.W	$7374			;6066a
-	DC.W	$6963			;6066c
-	BMI.S	lb_60690		;6066e: 6b20
-	MOVE.W	-(A0),-(A0)		;60670: 3120
-	DC.W	$666f			;60672
-lb_60674:
-	MOVEQ	#32,D1			;60674: 7220
-	DC.W	$6c65			;60676
-	BNE.S	lb_606ec+2		;60678: 6674
-	DC.W	$2074			;6067a
-	MOVEQ	#97,D1			;6067c: 7261
-	DC.W	$636b			;6067e
-	MOVE.L	-(A6),D0		;60680: 2026
-lb_60682:
-	MOVEA.L	28537(A2),A0		;60682: 206a6f79
-lb_60686:
-	DC.W	$7374			;60686
-lb_60688:
-	DC.W	$6963			;60688
-	BMI.S	lb_606aa+2		;6068a: 6b20
-	MOVE.W	-(A0),D1		;6068c: 3220
-	DC.W	$666f			;6068e
-lb_60690:
-	MOVEQ	#32,D1			;60690: 7220
-	MOVEQ	#105,D1			;60692: 7269
-	BEQ.S	lb_606fc+2		;60694: 6768
-	MOVEQ	#0,D2			;60696: 7400
-lb_60698:
-	DC.W	$0074			;60698
-	DC.W	$0078			;6069a
-	DC.W	$4d61			;6069c
-	DC.W	$6e75			;6069e
-	BSR.S	lb_6070c+2		;606a0: 616c
-	MOVEA.L	-(A4),A0		;606a2: 2064
-	MOVEQ	#105,D1			;606a4: 7269
-	MOVEQ	#101,D3			;606a6: 7665
-	MOVEQ	#0,D1			;606a8: 7200
-lb_606aa:
-	ORI.W	#$0078,16757(A4)	;606aa: 006c00784175
-	MOVEQ	#111,D2			;606b0: 746f
-	DC.W	$6d61			;606b2
-	MOVEQ	#105,D2			;606b4: 7469
-lb_606b6:
-	BLS.S	lb_606d8		;606b6: 6320
-	BCC.S	lb_6072c		;606b8: 6472
-lb_606ba:
-	BVS.S	lb_60730+2		;606ba: 6976
-lb_606bc:
-	BCS.S	lb_60730		;606bc: 6572
-	ORI.B	#$74,D0			;606be: 00000074
-	DC.W	$008c			;606c2
-	DC.W	$4d61			;606c4
-	DC.W	$6e75			;606c6
-	BSR.S	lb_60736		;606c8: 616c
-	MOVEA.L	-(A7),A0		;606ca: 2067
-lb_606cc:
-	DC.W	$756e			;606cc
-	DC.W	$6e65			;606ce
-	MOVEQ	#0,D1			;606d0: 7200
-lb_606d2:
-	ORI.W	#$008c,16757(A4)	;606d2: 006c008c4175
-lb_606d8:
-	MOVEQ	#111,D2			;606d8: 746f
-	DC.W	$6d61			;606da
-	MOVEQ	#105,D2			;606dc: 7469
-	BLS.S	lb_60700		;606de: 6320
-	DC.W	$6775			;606e0
-	BGT.S	lb_60752		;606e2: 6e6e
-	BCS.S	lb_60758		;606e4: 6572
-	DC.W	$0000			;606e6
-	BTST	D0,(A0)+		;606e8: 0118
-	DC.W	$0000			;606ea
-lb_606ec:
-	SUBI.W	#$494e,(A7)		;606ec: 0457494e
-	DC.W	$0000			;606f0
-	BTST	D0,(A0)+		;606f2: 0118
-	DC.W	$0000			;606f4
-	DC.W	$084c			;606f6
-	DC.W	$4f53			;606f8
-	DC.W	$4500			;606fa
+	dc.w	$0086	;5ffd6
+	dc.w	$005f	;5ffd8
+	dc.w	$5374	;5ffda
+	dc.w	$616e	;5ffdc
+	dc.w	$6462	;5ffde
+	dc.w	$792e	;5ffe0
+	dc.w	$2e2e	;5ffe2
+	dc.w	$0000	;5ffe4
+	dc.w	$0082	;5ffe6
+	dc.w	$0064	;5ffe8
+	dc.w	$5765	;5ffea
+	dc.w	$6c6c	;5ffec
+	dc.w	$2044	;5ffee
+	dc.w	$6f6e	;5fff0
+	dc.w	$6500	;5fff2
+	dc.w	$0082	;5fff4
+	dc.w	$0064	;5fff6
+	dc.w	$4761	;5fff8
+	dc.w	$6d65	;5fffa
+	dc.w	$204f	;5fffc
+	dc.w	$7665	;5fffe
+	dc.w	$7200	;60000
+	dc.w	$003c	;60002
+	dc.w	$0064	;60004
+	dc.w	$596f	;60006
+	dc.w	$7520	;60008
+	dc.w	$6861	;6000a
+	dc.w	$7665	;6000c
+	dc.w	$206c	;6000e
+	dc.w	$6f73	;60010
+	dc.w	$7420	;60012
+	dc.w	$7468	;60014
+	dc.w	$6973	;60016
+	dc.w	$2062	;60018
+	dc.w	$6174	;6001a
+	dc.w	$746c	;6001c
+	dc.w	$652c	;6001e
+	dc.w	$2062	;60020
+	dc.w	$7574	;60022
+	dc.w	$1f00	;60024
+	dc.w	$0032	;60026
+	dc.w	$006e	;60028
+	dc.w	$6861	;6002a
+	dc.w	$7665	;6002c
+	dc.w	$2065	;6002e
+	dc.w	$6e6f	;60030
+	dc.w	$7567	;60032
+	dc.w	$6820	;60034
+	dc.w	$706f	;60036
+	dc.w	$696e	;60038
+	dc.w	$7473	;6003a
+	dc.w	$2074	;6003c
+	dc.w	$6f20	;6003e
+	dc.w	$7472	;60040
+	dc.w	$7920	;60042
+	dc.w	$6167	;60044
+	dc.w	$6169	;60046
+	dc.w	$6e00	;60048
+	dc.w	$0046	;6004a
+	dc.w	$00aa	;6004c
+	dc.w	$5072	;6004e
+	dc.w	$6573	;60050
+	dc.w	$7320	;60052
+	dc.w	$7370	;60054
+	dc.w	$6163	;60056
+	dc.w	$6520	;60058
+	dc.w	$6261	;6005a
+	dc.w	$7220	;6005c
+	dc.w	$746f	;6005e
+	dc.w	$2063	;60060
+	dc.w	$6f6e	;60062
+	dc.w	$7469	;60064
+	dc.w	$6e75	;60066
+	dc.w	$6500	;60068
+	dc.w	$426f	;6006a
+	dc.w	$6e75	;6006c
+	dc.w	$7320	;6006e
+	dc.w	$666f	;60070
+	dc.w	$7220	;60072
+	dc.w	$6d69	;60074
+	dc.w	$7373	;60076
+	dc.w	$696f	;60078
+	dc.w	$6e20	;6007a
+	dc.w	$0000	;6007c
+	dc.w	$0036	;6007e
+	dc.w	$002c	;60080
+	dc.w	$0850	;60082
+	dc.w	$7265	;60084
+	dc.w	$7373	;60086
+	dc.w	$2073	;60088
+	dc.w	$7061	;6008a
+	dc.w	$6365	;6008c
+	dc.w	$2062	;6008e
+	dc.w	$6172	;60090
+	dc.w	$206f	;60092
+	dc.w	$7220	;60094
+	dc.w	$5265	;60096
+	dc.w	$7475	;60098
+	dc.w	$726e	;6009a
+	dc.w	$2074	;6009c
+	dc.w	$6f20	;6009e
+	dc.w	$7374	;600a0
+	dc.w	$6172	;600a2
+	dc.w	$7400	;600a4
+	dc.w	$004a	;600a6
+	dc.w	$002c	;600a8
+	dc.w	$0850	;600aa
+	dc.w	$7265	;600ac
+	dc.w	$7373	;600ae
+	dc.w	$2046	;600b0
+	dc.w	$3130	;600b2
+	dc.w	$2074	;600b4
+	dc.w	$6f20	;600b6
+	dc.w	$7265	;600b8
+	dc.w	$6465	;600ba
+	dc.w	$6669	;600bc
+	dc.w	$6e65	;600be
+	dc.w	$206b	;600c0
+	dc.w	$6579	;600c2
+	dc.w	$7300	;600c4
+	dc.w	$0040	;600c6
+	dc.w	$002c	;600c8
+	dc.w	$0850	;600ca
+	dc.w	$7265	;600cc
+	dc.w	$7373	;600ce
+	dc.w	$2046	;600d0
+	dc.w	$3920	;600d2
+	dc.w	$746f	;600d4
+	dc.w	$2063	;600d6
+	dc.w	$6861	;600d8
+	dc.w	$6e67	;600da
+	dc.w	$6520	;600dc
+	dc.w	$7461	;600de
+	dc.w	$6e6b	;600e0
+	dc.w	$2063	;600e2
+	dc.w	$6f6e	;600e4
+	dc.w	$7472	;600e6
+	dc.w	$6f6c	;600e8
+	dc.w	$0000	;600ea
+	dc.w	$0010	;600ec
+	dc.w	$0018	;600ee
+	dc.w	$4761	;600f0
+	dc.w	$6d65	;600f2
+	dc.w	$2054	;600f4
+	dc.w	$7970	;600f6
+	dc.w	$651f	;600f8
+	dc.w	$0010	;600fa
+	dc.w	$0020	;600fc
+	dc.w	$2020	;600fe
+	dc.w	$4172	;60100
+	dc.w	$6361	;60102
+	dc.w	$6465	;60104
+	dc.w	$0000	;60106
+	dc.w	$0010	;60108
+	dc.w	$0018	;6010a
+	dc.w	$4761	;6010c
+	dc.w	$6d65	;6010e
+	dc.w	$2054	;60110
+	dc.w	$7970	;60112
+	dc.w	$651f	;60114
+	dc.w	$0010	;60116
+	dc.w	$0020	;60118
+	dc.w	$4174	;6011a
+	dc.w	$7472	;6011c
+	dc.w	$6974	;6011e
+	dc.w	$696f	;60120
+	dc.w	$6e00	;60122
+	dc.w	$0010	;60124
+	dc.w	$0018	;60126
+	dc.w	$4761	;60128
+	dc.w	$6d65	;6012a
+	dc.w	$2054	;6012c
+	dc.w	$7970	;6012e
+	dc.w	$651f	;60130
+	dc.w	$0010	;60132
+	dc.w	$0020	;60134
+	dc.w	$5374	;60136
+	dc.w	$7261	;60138
+	dc.w	$7465	;6013a
+	dc.w	$6779	;6013c
+	dc.w	$0000	;6013e
+	dc.w	$0088	;60140
+	dc.w	$0018	;60142
+	dc.w	$4c65	;60144
+	dc.w	$7665	;60146
+	dc.w	$6c20	;60148
+	dc.w	$0000	;6014a
+	dc.w	$00f8	;6014c
+	dc.w	$0018	;6014e
+	dc.w	$4175	;60150
+	dc.w	$746f	;60152
+	dc.w	$2020	;60154
+	dc.w	$2020	;60156
+	dc.w	$201f	;60158
+	dc.w	$00f8	;6015a
+	dc.w	$0020	;6015c
+	dc.w	$5374	;6015e
+	dc.w	$7261	;60160
+	dc.w	$7465	;60162
+	dc.w	$6779	;60164
+	dc.w	$2000	;60166
+	dc.w	$00f8	;60168
+	dc.w	$0018	;6016a
+	dc.w	$4d61	;6016c
+	dc.w	$6e75	;6016e
+	dc.w	$616c	;60170
+	dc.w	$2020	;60172
+	dc.w	$201f	;60174
+	dc.w	$00f8	;60176
+	dc.w	$0020	;60178
+	dc.w	$5374	;6017a
+	dc.w	$7261	;6017c
+	dc.w	$7465	;6017e
+	dc.w	$6779	;60180
+	dc.w	$2000	;60182
+	dc.w	$5461	;60184
+	dc.w	$6e6b	;60186
+	dc.w	$204f	;60188
+	dc.w	$4b00	;6018a
+	dc.w	$4861	;6018c
+	dc.w	$6c66	;6018e
+	dc.w	$2053	;60190
+	dc.w	$7065	;60192
+	dc.w	$6564	;60194
+	dc.w	$0051	;60196
+	dc.w	$7561	;60198
+	dc.w	$7274	;6019a
+	dc.w	$6572	;6019c
+	dc.w	$2053	;6019e
+	dc.w	$7065	;601a0
+	dc.w	$6564	;601a2
+	dc.w	$0054	;601a4
+	dc.w	$7261	;601a6
+	dc.w	$636b	;601a8
+	dc.w	$7320	;601aa
+	dc.w	$5772	;601ac
+	dc.w	$6563	;601ae
+	dc.w	$6b65	;601b0
+	dc.w	$6400	;601b2
+	dc.w	$4775	;601b4
+	dc.w	$6e20	;601b6
+	dc.w	$4a61	;601b8
+	dc.w	$6d6d	;601ba
+	dc.w	$6564	;601bc
+	dc.w	$0054	;601be
+	dc.w	$7572	;601c0
+	dc.w	$7265	;601c2
+	dc.w	$7420	;601c4
+	dc.w	$4a61	;601c6
+	dc.w	$6d6d	;601c8
+	dc.w	$6564	;601ca
+	dc.w	$004f	;601cc
+	dc.w	$6e20	;601ce
+	dc.w	$4669	;601d0
+	dc.w	$7265	;601d2
+	dc.w	$004e	;601d4
+	dc.w	$6f20	;601d6
+	dc.w	$416d	;601d8
+	dc.w	$6d6f	;601da
+	dc.w	$004e	;601dc
+	dc.w	$6f20	;601de
+	dc.w	$4675	;601e0
+	dc.w	$656c	;601e2
+	dc.w	$004b	;601e4
+	dc.w	$6e6f	;601e6
+	dc.w	$636b	;601e8
+	dc.w	$6564	;601ea
+	dc.w	$204f	;601ec
+	dc.w	$7574	;601ee
+	dc.w	$0054	;601f0
+	dc.w	$616e	;601f2
+	dc.w	$6b20	;601f4
+	dc.w	$5265	;601f6
+	dc.w	$7061	;601f8
+	dc.w	$6972	;601fa
+	dc.w	$6564	;601fc
+	dc.w	$0053	;601fe
+	dc.w	$746f	;60200
+	dc.w	$7020	;60202
+	dc.w	$2020	;60204
+	dc.w	$0043	;60206
+	dc.w	$6861	;60208
+	dc.w	$7267	;6020a
+	dc.w	$6520	;6020c
+	dc.w	$0049	;6020e
+	dc.w	$6e73	;60210
+	dc.w	$7566	;60212
+	dc.w	$6669	;60214
+	dc.w	$6369	;60216
+	dc.w	$656e	;60218
+	dc.w	$7420	;6021a
+	dc.w	$6372	;6021c
+	dc.w	$6564	;6021e
+	dc.w	$6974	;60220
+	dc.w	$0050	;60222
+	dc.w	$6f69	;60224
+	dc.w	$6e74	;60226
+	dc.w	$2074	;60228
+	dc.w	$6f20	;6022a
+	dc.w	$7468	;6022c
+	dc.w	$6520	;6022e
+	dc.w	$6365	;60230
+	dc.w	$6e74	;60232
+	dc.w	$7265	;60234
+	dc.w	$206f	;60236
+	dc.w	$6620	;60238
+	dc.w	$7468	;6023a
+	dc.w	$6520	;6023c
+	dc.w	$7475	;6023e
+	dc.w	$7272	;60240
+	dc.w	$6574	;60242
+	dc.w	$0059	;60244
+	dc.w	$6f75	;60246
+	dc.w	$206d	;60248
+	dc.w	$7573	;6024a
+	dc.w	$7420	;6024c
+	dc.w	$6275	;6024e
+	dc.w	$7920	;60250
+	dc.w	$6174	;60252
+	dc.w	$206c	;60254
+	dc.w	$6561	;60256
+	dc.w	$7374	;60258
+	dc.w	$206f	;6025a
+	dc.w	$6e65	;6025c
+	dc.w	$2074	;6025e
+	dc.w	$616e	;60260
+	dc.w	$6b00	;60262
+	dc.w	$2c20	;60264
+	dc.w	$636f	;60266
+	dc.w	$7374	;60268
+	dc.w	$2000	;6026a
+	dc.w	$596f	;6026c
+	dc.w	$7572	;6026e
+	dc.w	$2067	;60270
+	dc.w	$756e	;60272
+	dc.w	$6e65	;60274
+	dc.w	$7220	;60276
+	dc.w	$6861	;60278
+	dc.w	$7320	;6027a
+	dc.w	$7365	;6027c
+	dc.w	$656e	;6027e
+	dc.w	$2000	;60280
+	dc.w	$4564	;60282
+	dc.w	$6765	;60284
+	dc.w	$206f	;60286
+	dc.w	$6620	;60288
+	dc.w	$6261	;6028a
+	dc.w	$7474	;6028c
+	dc.w	$6c65	;6028e
+	dc.w	$2061	;60290
+	dc.w	$7265	;60292
+	dc.w	$6100	;60294
+	dc.w	$206e	;60296
+	dc.w	$6565	;60298
+	dc.w	$6473	;6029a
+	dc.w	$2061	;6029c
+	dc.w	$2064	;6029e
+	dc.w	$6573	;602a0
+	dc.w	$7469	;602a2
+	dc.w	$6e61	;602a4
+	dc.w	$7469	;602a6
+	dc.w	$6f6e	;602a8
+	dc.w	$0003	;602aa
+	dc.w	$4765	;602ac
+	dc.w	$726d	;602ae
+	dc.w	$616e	;602b0
+	dc.w	$0003	;602b2
+	dc.w	$416d	;602b4
+	dc.w	$6572	;602b6
+	dc.w	$6963	;602b8
+	dc.w	$616e	;602ba
+	dc.w	$0003	;602bc
+	dc.w	$5275	;602be
+	dc.w	$7373	;602c0
+	dc.w	$6961	;602c2
+	dc.w	$6e00	;602c4
+	dc.w	$4672	;602c6
+	dc.w	$6f6e	;602c8
+	dc.w	$7461	;602ca
+	dc.w	$6c20	;602cc
+	dc.w	$4172	;602ce
+	dc.w	$6d6f	;602d0
+	dc.w	$7572	;602d2
+	dc.w	$0053	;602d4
+	dc.w	$6964	;602d6
+	dc.w	$6520	;602d8
+	dc.w	$4172	;602da
+	dc.w	$6d6f	;602dc
+	dc.w	$7572	;602de
+	dc.w	$0052	;602e0
+	dc.w	$6561	;602e2
+	dc.w	$7220	;602e4
+	dc.w	$4172	;602e6
+	dc.w	$6d6f	;602e8
+	dc.w	$7572	;602ea
+	dc.w	$004d	;602ec
+	dc.w	$6178	;602ee
+	dc.w	$2041	;602f0
+	dc.w	$726d	;602f2
+	dc.w	$6f75	;602f4
+	dc.w	$7220	;602f6
+	dc.w	$5065	;602f8
+	dc.w	$6e65	;602fa
+	dc.w	$7472	;602fc
+	dc.w	$6174	;602fe
+	dc.w	$696f	;60300
+	dc.w	$6e00	;60302
+	dc.w	$4d61	;60304
+	dc.w	$7820	;60306
+	dc.w	$526f	;60308
+	dc.w	$6164	;6030a
+	dc.w	$2053	;6030c
+	dc.w	$7065	;6030e
+	dc.w	$6564	;60310
+	dc.w	$004d	;60312
+	dc.w	$6178	;60314
+	dc.w	$2058	;60316
+	dc.w	$2d43	;60318
+	dc.w	$6f75	;6031a
+	dc.w	$6e74	;6031c
+	dc.w	$7279	;6031e
+	dc.w	$2053	;60320
+	dc.w	$7065	;60322
+	dc.w	$6564	;60324
+	dc.w	$0000	;60326
+lb_60328:
+	dc.w	$0100	;60328
+	dc.w	$0000	;6032a
+	dc.w	$436f	;6032c
+	dc.w	$6d6d	;6032e
+	dc.w	$616e	;60330
+	dc.w	$641f	;60332
+	dc.w	$0100	;60334
+	dc.w	$0008	;60336
+	dc.w	$4d6f	;60338
+	dc.w	$6465	;6033a
+	dc.w	$0000	;6033c
+lb_6033e:
+	dc.w	$0100	;6033e
+	dc.w	$0000	;60340
+	dc.w	$506c	;60342
+	dc.w	$6163	;60344
+	dc.w	$656d	;60346
+	dc.w	$656e	;60348
+	dc.w	$741f	;6034a
+	dc.w	$0100	;6034c
+	dc.w	$0008	;6034e
+	dc.w	$4d6f	;60350
+	dc.w	$6465	;60352
+	dc.w	$0000	;60354
+	dc.w	$0100	;60356
+	dc.w	$0018	;60358
+	dc.w	$4c65	;6035a
+	dc.w	$7665	;6035c
+	dc.w	$6c00	;6035e
+	dc.w	$001e	;60360
+	dc.w	$0014	;60362
+	dc.w	$4465	;60364
+	dc.w	$6d6f	;60366
+	dc.w	$6e73	;60368
+	dc.w	$7472	;6036a
+	dc.w	$6174	;6036c
+	dc.w	$696f	;6036e
+	dc.w	$6e20	;60370
+	dc.w	$4d6f	;60372
+	dc.w	$6465	;60374
+	dc.w	$0000	;60376
+lb_60378:
+	dc.w	$003c	;60378
+	dc.w	$0078	;6037a
+	dc.w	$5768	;6037c
+	dc.w	$6174	;6037e
+	dc.w	$2069	;60380
+	dc.w	$7320	;60382
+	dc.w	$796f	;60384
+	dc.w	$7572	;60386
+	dc.w	$206e	;60388
+	dc.w	$616d	;6038a
+	dc.w	$6520	;6038c
+	dc.w	$706c	;6038e
+	dc.w	$6561	;60390
+	dc.w	$7365	;60392
+	dc.w	$3f00	;60394
+lb_60396:
+	dc.w	$006e	;60396
+	dc.w	$0014	;60398
+	dc.w	$0354	;6039a
+	dc.w	$6f70	;6039c
+	dc.w	$2054	;6039e
+	dc.w	$616e	;603a0
+	dc.w	$6b20	;603a2
+	dc.w	$4275	;603a4
+	dc.w	$7374	;603a6
+	dc.w	$6572	;603a8
+	dc.w	$7300	;603aa
+	dc.w	$0050	;603ac
+	dc.w	$0022	;603ae
+	dc.w	$044a	;603b0
+	dc.w	$6f6e	;603b2
+	dc.w	$6174	;603b4
+	dc.w	$6861	;603b6
+	dc.w	$6e20	;603b8
+	dc.w	$4772	;603ba
+	dc.w	$6966	;603bc
+	dc.w	$6669	;603be
+	dc.w	$7468	;603c0
+	dc.w	$731f	;603c2
+	dc.w	$0050	;603c4
+	dc.w	$002e	;603c6
+	dc.w	$616e	;603c8
+	dc.w	$6420	;603ca
+	dc.w	$4461	;603cc
+	dc.w	$7669	;603ce
+	dc.w	$6420	;603d0
+	dc.w	$4272	;603d2
+	dc.w	$6162	;603d4
+	dc.w	$656e	;603d6
+	dc.w	$1f00	;603d8
+	dc.w	$0050	;603da
+	dc.w	$003a	;603dc
+	dc.w	$7769	;603de
+	dc.w	$7368	;603e0
+	dc.w	$2074	;603e2
+	dc.w	$6f20	;603e4
+	dc.w	$7468	;603e6
+	dc.w	$616e	;603e8
+	dc.w	$6b20	;603ea
+	dc.w	$7468	;603ec
+	dc.w	$651f	;603ee
+	dc.w	$0050	;603f0
+	dc.w	$0046	;603f2
+	dc.w	$666f	;603f4
+	dc.w	$6c6c	;603f6
+	dc.w	$6f77	;603f8
+	dc.w	$696e	;603fa
+	dc.w	$6720	;603fc
+	dc.w	$7065	;603fe
+	dc.w	$6f70	;60400
+	dc.w	$6c65	;60402
+	dc.w	$3b1f	;60404
+	dc.w	$0050	;60406
+	dc.w	$0056	;60408
+	dc.w	$0f4a	;6040a
+	dc.w	$6163	;6040c
+	dc.w	$7175	;6040e
+	dc.w	$6920	;60410
+	dc.w	$4c79	;60412
+	dc.w	$6f6e	;60414
+	dc.w	$732c	;60416
+	dc.w	$1f00	;60418
+	dc.w	$0050	;6041a
+	dc.w	$0062	;6041c
+	dc.w	$4a6f	;6041e
+	dc.w	$6e20	;60420
+	dc.w	$4465	;60422
+	dc.w	$616e	;60424
+	dc.w	$2c1f	;60426
+	dc.w	$0050	;60428
+	dc.w	$006e	;6042a
+	dc.w	$5061	;6042c
+	dc.w	$756c	;6042e
+	dc.w	$2046	;60430
+	dc.w	$656c	;60432
+	dc.w	$6c6f	;60434
+	dc.w	$7773	;60436
+	dc.w	$2c1f	;60438
+	dc.w	$0050	;6043a
+	dc.w	$007a	;6043c
+	dc.w	$426f	;6043e
+	dc.w	$7669	;60440
+	dc.w	$6e67	;60442
+	dc.w	$746f	;60444
+	dc.w	$6e20	;60446
+	dc.w	$5241	;60448
+	dc.w	$4320	;6044a
+	dc.w	$5461	;6044c
+	dc.w	$6e6b	;6044e
+	dc.w	$204d	;60450
+	dc.w	$7573	;60452
+	dc.w	$6575	;60454
+	dc.w	$6d2c	;60456
+	dc.w	$1f00	;60458
+	dc.w	$0050	;6045a
+	dc.w	$0086	;6045c
+	dc.w	$616e	;6045e
+	dc.w	$6420	;60460
+	dc.w	$5465	;60462
+	dc.w	$7574	;60464
+	dc.w	$2057	;60466
+	dc.w	$6569	;60468
+	dc.w	$6465	;6046a
+	dc.w	$6d61	;6046c
+	dc.w	$6e6e	;6046e
+	dc.w	$0000	;60470
+lb_60472:
+	dc.w	$0074	;60472
+	dc.w	$0018	;60474
+	dc.w	$0352	;60476
+	dc.w	$6564	;60478
+	dc.w	$6566	;6047a
+	dc.w	$696e	;6047c
+	dc.w	$6520	;6047e
+	dc.w	$4b65	;60480
+	dc.w	$7973	;60482
+	dc.w	$1f00	;60484
+	dc.w	$0050	;60486
+	dc.w	$0028	;60488
+	dc.w	$0f2d	;6048a
+	dc.w	$2046	;6048c
+	dc.w	$6f72	;6048e
+	dc.w	$7761	;60490
+	dc.w	$7264	;60492
+	dc.w	$7320	;60494
+	dc.w	$4c65	;60496
+	dc.w	$6674	;60498
+	dc.w	$2054	;6049a
+	dc.w	$7261	;6049c
+	dc.w	$636b	;6049e
+	dc.w	$1f00	;604a0
+	dc.w	$0050	;604a2
+	dc.w	$0032	;604a4
+	dc.w	$2d20	;604a6
+	dc.w	$466f	;604a8
+	dc.w	$7277	;604aa
+	dc.w	$6172	;604ac
+	dc.w	$6473	;604ae
+	dc.w	$2052	;604b0
+	dc.w	$6967	;604b2
+	dc.w	$6874	;604b4
+	dc.w	$2054	;604b6
+	dc.w	$7261	;604b8
+	dc.w	$636b	;604ba
+	dc.w	$1f00	;604bc
+	dc.w	$0050	;604be
+	dc.w	$003c	;604c0
+	dc.w	$2d20	;604c2
+	dc.w	$4261	;604c4
+	dc.w	$636b	;604c6
+	dc.w	$7761	;604c8
+	dc.w	$7264	;604ca
+	dc.w	$7320	;604cc
+	dc.w	$4c65	;604ce
+	dc.w	$6674	;604d0
+	dc.w	$2054	;604d2
+	dc.w	$7261	;604d4
+	dc.w	$636b	;604d6
+	dc.w	$1f00	;604d8
+	dc.w	$0050	;604da
+	dc.w	$0046	;604dc
+	dc.w	$2d20	;604de
+	dc.w	$4261	;604e0
+	dc.w	$636b	;604e2
+	dc.w	$7761	;604e4
+	dc.w	$7264	;604e6
+	dc.w	$7320	;604e8
+	dc.w	$5269	;604ea
+	dc.w	$6768	;604ec
+	dc.w	$7420	;604ee
+	dc.w	$5472	;604f0
+	dc.w	$6163	;604f2
+	dc.w	$6b1f	;604f4
+	dc.w	$0050	;604f6
+	dc.w	$0050	;604f8
+	dc.w	$2d20	;604fa
+	dc.w	$526f	;604fc
+	dc.w	$7461	;604fe
+	dc.w	$7465	;60500
+	dc.w	$2054	;60502
+	dc.w	$7572	;60504
+	dc.w	$7265	;60506
+	dc.w	$7420	;60508
+	dc.w	$436c	;6050a
+	dc.w	$6f63	;6050c
+	dc.w	$6b77	;6050e
+	dc.w	$6973	;60510
+	dc.w	$651f	;60512
+	dc.w	$0050	;60514
+	dc.w	$005a	;60516
+	dc.w	$2d20	;60518
+	dc.w	$526f	;6051a
+	dc.w	$7461	;6051c
+	dc.w	$7465	;6051e
+	dc.w	$2054	;60520
+	dc.w	$7572	;60522
+	dc.w	$7265	;60524
+	dc.w	$7420	;60526
+	dc.w	$416e	;60528
+	dc.w	$7469	;6052a
+	dc.w	$2d43	;6052c
+	dc.w	$6c6f	;6052e
+	dc.w	$636b	;60530
+	dc.w	$7769	;60532
+	dc.w	$7365	;60534
+	dc.w	$1f00	;60536
+	dc.w	$0050	;60538
+	dc.w	$0064	;6053a
+	dc.w	$2d20	;6053c
+	dc.w	$456c	;6053e
+	dc.w	$6576	;60540
+	dc.w	$6174	;60542
+	dc.w	$6520	;60544
+	dc.w	$4775	;60546
+	dc.w	$6e1f	;60548
+	dc.w	$0050	;6054a
+	dc.w	$006e	;6054c
+	dc.w	$2d20	;6054e
+	dc.w	$4465	;60550
+	dc.w	$7072	;60552
+	dc.w	$6573	;60554
+	dc.w	$7320	;60556
+	dc.w	$4775	;60558
+	dc.w	$6e1f	;6055a
+	dc.w	$0050	;6055c
+	dc.w	$0078	;6055e
+	dc.w	$2d20	;60560
+	dc.w	$4669	;60562
+	dc.w	$7265	;60564
+	dc.w	$2047	;60566
+	dc.w	$756e	;60568
+	dc.w	$1f00	;6056a
+	dc.w	$0050	;6056c
+	dc.w	$0082	;6056e
+	dc.w	$2d20	;60570
+	dc.w	$5365	;60572
+	dc.w	$6c65	;60574
+	dc.w	$6374	;60576
+	dc.w	$204d	;60578
+	dc.w	$6170	;6057a
+	dc.w	$1f00	;6057c
+	dc.w	$0050	;6057e
+	dc.w	$008c	;60580
+	dc.w	$2d20	;60582
+	dc.w	$5061	;60584
+	dc.w	$7573	;60586
+	dc.w	$6520	;60588
+	dc.w	$4761	;6058a
+	dc.w	$6d65	;6058c
+	dc.w	$1f00	;6058e
+	dc.w	$0050	;60590
+	dc.w	$0096	;60592
+	dc.w	$2d20	;60594
+	dc.w	$5475	;60596
+	dc.w	$726e	;60598
+	dc.w	$2053	;6059a
+	dc.w	$6f75	;6059c
+	dc.w	$6e64	;6059e
+	dc.w	$204f	;605a0
+	dc.w	$6e1f	;605a2
+	dc.w	$0050	;605a4
+	dc.w	$00a0	;605a6
+	dc.w	$2d20	;605a8
+	dc.w	$5475	;605aa
+	dc.w	$726e	;605ac
+	dc.w	$2053	;605ae
+	dc.w	$6f75	;605b0
+	dc.w	$6e64	;605b2
+	dc.w	$204f	;605b4
+	dc.w	$6666	;605b6
+	dc.w	$1f00	;605b8
+	dc.w	$005a	;605ba
+	dc.w	$00ac	;605bc
+	dc.w	$0453	;605be
+	dc.w	$656c	;605c0
+	dc.w	$6563	;605c2
+	dc.w	$7420	;605c4
+	dc.w	$7468	;605c6
+	dc.w	$6973	;605c8
+	dc.w	$206c	;605ca
+	dc.w	$696e	;605cc
+	dc.w	$6520	;605ce
+	dc.w	$746f	;605d0
+	dc.w	$2071	;605d2
+	dc.w	$7569	;605d4
+	dc.w	$7400	;605d6
+	dc.w	$0000	;605d8
+	dc.w	$0064	;605da
+	dc.w	$5072	;605dc
+	dc.w	$6573	;605de
+	dc.w	$7320	;605e0
+	dc.w	$5265	;605e2
+	dc.w	$7475	;605e4
+	dc.w	$726e	;605e6
+	dc.w	$2077	;605e8
+	dc.w	$6865	;605ea
+	dc.w	$6e20	;605ec
+	dc.w	$6a6f	;605ee
+	dc.w	$7973	;605f0
+	dc.w	$7469	;605f2
+	dc.w	$636b	;605f4
+	dc.w	$732f	;605f6
+	dc.w	$6d6f	;605f8
+	dc.w	$7573	;605fa
+	dc.w	$6520	;605fc
+	dc.w	$7265	;605fe
+	dc.w	$6164	;60600
+	dc.w	$7900	;60602
+	dc.w	$0028	;60604
+	dc.w	$0028	;60606
+	dc.w	$004b	;60608
+	dc.w	$6579	;6060a
+	dc.w	$626f	;6060c
+	dc.w	$6172	;6060e
+	dc.w	$6420	;60610
+	dc.w	$2620	;60612
+	dc.w	$6f70	;60614
+	dc.w	$7469	;60616
+	dc.w	$6f6e	;60618
+	dc.w	$616c	;6061a
+	dc.w	$206d	;6061c
+	dc.w	$6f75	;6061e
+	dc.w	$7365	;60620
+	dc.w	$2066	;60622
+	dc.w	$6f72	;60624
+	dc.w	$2067	;60626
+	dc.w	$756e	;60628
+	dc.w	$6e65	;6062a
+	dc.w	$7200	;6062c
+	dc.w	$0012	;6062e
+	dc.w	$0034	;60630
+	dc.w	$004a	;60632
+	dc.w	$6f79	;60634
+	dc.w	$7374	;60636
+	dc.w	$6963	;60638
+	dc.w	$6b20	;6063a
+	dc.w	$3120	;6063c
+	dc.w	$666f	;6063e
+	dc.w	$7220	;60640
+	dc.w	$6472	;60642
+	dc.w	$6976	;60644
+	dc.w	$6572	;60646
+	dc.w	$2026	;60648
+	dc.w	$206a	;6064a
+	dc.w	$6f79	;6064c
+	dc.w	$7374	;6064e
+	dc.w	$6963	;60650
+	dc.w	$6b20	;60652
+	dc.w	$3220	;60654
+	dc.w	$666f	;60656
+	dc.w	$7220	;60658
+	dc.w	$6775	;6065a
+	dc.w	$6e6e	;6065c
+	dc.w	$6572	;6065e
+	dc.w	$0000	;60660
+	dc.w	$000f	;60662
+	dc.w	$0040	;60664
+	dc.w	$004a	;60666
+	dc.w	$6f79	;60668
+	dc.w	$7374	;6066a
+	dc.w	$6963	;6066c
+	dc.w	$6b20	;6066e
+	dc.w	$3120	;60670
+	dc.w	$666f	;60672
+	dc.w	$7220	;60674
+	dc.w	$6c65	;60676
+	dc.w	$6674	;60678
+	dc.w	$2074	;6067a
+	dc.w	$7261	;6067c
+	dc.w	$636b	;6067e
+	dc.w	$2026	;60680
+	dc.w	$206a	;60682
+	dc.w	$6f79	;60684
+	dc.w	$7374	;60686
+	dc.w	$6963	;60688
+	dc.w	$6b20	;6068a
+	dc.w	$3220	;6068c
+	dc.w	$666f	;6068e
+	dc.w	$7220	;60690
+	dc.w	$7269	;60692
+	dc.w	$6768	;60694
+	dc.w	$7400	;60696
+	dc.w	$0074	;60698
+	dc.w	$0078	;6069a
+	dc.w	$4d61	;6069c
+	dc.w	$6e75	;6069e
+	dc.w	$616c	;606a0
+	dc.w	$2064	;606a2
+	dc.w	$7269	;606a4
+	dc.w	$7665	;606a6
+	dc.w	$7200	;606a8
+	dc.w	$006c	;606aa
+	dc.w	$0078	;606ac
+	dc.w	$4175	;606ae
+	dc.w	$746f	;606b0
+	dc.w	$6d61	;606b2
+	dc.w	$7469	;606b4
+	dc.w	$6320	;606b6
+	dc.w	$6472	;606b8
+	dc.w	$6976	;606ba
+	dc.w	$6572	;606bc
+	dc.w	$0000	;606be
+	dc.w	$0074	;606c0
+	dc.w	$008c	;606c2
+	dc.w	$4d61	;606c4
+	dc.w	$6e75	;606c6
+	dc.w	$616c	;606c8
+	dc.w	$2067	;606ca
+	dc.w	$756e	;606cc
+	dc.w	$6e65	;606ce
+	dc.w	$7200	;606d0
+	dc.w	$006c	;606d2
+	dc.w	$008c	;606d4
+	dc.w	$4175	;606d6
+	dc.w	$746f	;606d8
+	dc.w	$6d61	;606da
+	dc.w	$7469	;606dc
+	dc.w	$6320	;606de
+	dc.w	$6775	;606e0
+	dc.w	$6e6e	;606e2
+	dc.w	$6572	;606e4
+	dc.w	$0000	;606e6
+	dc.w	$0118	;606e8
+	dc.w	$0000	;606ea
+	dc.w	$0457	;606ec
+	dc.w	$494e	;606ee
+	dc.w	$0000	;606f0
+	dc.w	$0118	;606f2
+	dc.w	$0000	;606f4
+	dc.w	$084c	;606f6
+	dc.w	$4f53	;606f8
+	dc.w	$4500	;606fa
 lb_606fc:
-	ORI.W	#$0069,SR		;606fc: 007c0069
-lb_60700:
-	CLR.W	29812(A1)		;60700: 42697474
-	BCS.S	lb_60726		;60704: 6520
-	DC.W	$7761			;60706
-	MOVEQ	#116,D1			;60708: 7274
-	BCS.S	lb_6077a		;6070a: 656e
-lb_6070c:
-	MOVE.L	11776(A6),D7		;6070c: 2e2e2e00
-	DC.W	$0078			;60710
-	ORI.W	#$4775,-(A4)		;60712: 00644775
-	MOVEQ	#32,D2			;60716: 7420
-	DC.W	$6765			;60718
-	DC.W	$6d61			;6071a
-	BLS.S	lb_60786		;6071c: 6368
-	MOVEQ	#0,D2			;6071e: 7400
-	ORI.L	#$00645370,D2		;60720: 008200645370
-lb_60726:
-	DC.W	$6965			;60726
-	DC.W	$6c65			;60728
-	BGT.S	lb_60790		;6072a: 6e64
-lb_6072c:
-	BCS.W	lb_60756		;6072c: 65000028
-lb_60730:
-	ORI.W	#$5369,-(A4)		;60730: 00645369
-	BCS.S	lb_60756		;60734: 6520
-lb_60736:
-	DC.W	$6861			;60736
-	DC.W	$6265			;60738
-	BGT.S	lb_6075c		;6073a: 6e20
-	DC.W	$6469			;6073c
-	BCS.S	lb_60760		;6073e: 6520
-	SUBQ.W	#1,-(A3)		;60740: 5363
-	BVC.S	lb_607b0		;60742: 686c
-	DC.W	$6163			;60744
-	BVC.S	lb_607bc		;60746: 6874
-	DC.W	$2076			;60748
-	BCS.S	lb_607be		;6074a: 6572
-	DC.W	$6c6f			;6074c
-	MOVEQ	#101,D1			;6074e: 7265
-	BGT.S	lb_6077e		;60750: 6e2c
-lb_60752:
-	MOVEA.L	-(A1),A0		;60752: 2061
-	DC.W	$6265			;60754
-lb_60756:
-	MOVEQ	#31,D1			;60756: 721f
-lb_60758:
-	ORI.B	#$6e,(A4)		;60758: 0014006e
-lb_6075c:
-	DC.W	$6765			;6075c
-	DC.W	$6e75			;6075e
-lb_60760:
-	BEQ.S	lb_60782		;60760: 6720
-	DC.W	$5075			;60762
-	DC.W	$6e6b			;60764
-	MOVEQ	#101,D2			;60766: 7465
-	MOVE.L	-(A0),D6		;60768: 2c20
-	DC.W	$756d			;6076a
-	MOVEA.L	-(A5),A0		;6076c: 2065
-	DC.W	$7320			;6076e
-	DC.W	$7769			;60770
-	BCS.S	lb_607d8		;60772: 6564
-	BCS.S	lb_607e6+2		;60774: 6572
-	MOVEA.L	lb_67c98(PC),A0		;60776: 207a7520
-lb_6077a:
-	MOVEQ	#101,D3			;6077a: 7665
-	MOVEQ	#115,D1			;6077c: 7273
-lb_6077e:
-	DC.W	$7563			;6077e
-	DC.W	$6865			;60780
-lb_60782:
-	BGT.W	lb_607ca		;60782: 6e000046
-lb_60786:
-	ORI.L	#$44728263,27493(A2)	;60786: 00aa447282636b65
-	BGT.S	lb_607b0		;6078e: 6e20
-lb_60790:
-	SUBQ.W	#1,25888(A1)		;60790: 53696520
-	DC.W	$6469			;60794
-	BCS.S	lb_607b6+2		;60796: 6520
-	DC.W	$5370			;60798
-	DC.W	$6163			;6079a
-	BCS.S	lb_607be		;6079c: 6520
-	ADDQ.W	#2,-(A1)		;6079e: 5461
-	DC.W	$7374			;607a0
-	DC.W	$6500			;607a2
-	CLR.W	28277(A7)		;607a4: 426f6e75
-	DC.W	$7320			;607a8
-	BNE.S	lb_6072c+2		;607aa: 6682
-	MOVEQ	#32,D1			;607ac: 7220
-	DC.W	$4d69			;607ae
-lb_607b0:
-	DC.W	$7373			;607b0
-	DC.W	$696f			;607b2
-	BGT.S	lb_607d6		;607b4: 6e20
-lb_607b6:
-	ORI.B	#$38,D0			;607b6: 00000038
-	DC.W	$002c			;607ba
-lb_607bc:
-	DC.W	$0853			;607bc
-lb_607be:
-	MOVEQ	#97,D0			;607be: 7061
-	DC.W	$6365			;607c0
-	MOVEA.L	25701(A7),A0		;607c2: 206f6465
-	MOVEQ	#32,D1			;607c6: 7220
-	ADDQ.W	#1,-(A5)		;607c8: 5265
-lb_607ca:
-	MOVEQ	#117,D2			;607ca: 7475
-	MOVEQ	#110,D1			;607cc: 726e
-	DC.W	$2075			;607ce
-	BLT.S	lb_607f2		;607d0: 6d20
-	DC.W	$666f			;607d2
-	MOVEQ	#116,D1			;607d4: 7274
-lb_607d6:
-	MOVEQ	#117,D5			;607d6: 7a75
-lb_607d8:
-	DC.W	$6661			;607d8
-	BVC.S	lb_6084e		;607da: 6872
-	BCS.S	lb_6084c		;607dc: 656e
-	ORI.B	#$38,D0			;607de: 00000038
-	DC.W	$002c			;607e2
-	DC.W	$0846			;607e4
-lb_607e6:
-	MOVE.W	117(A0,D2.W),-(A0)	;607e6: 31302075
-	BLT.S	lb_6080c		;607ea: 6d20
-	ADDQ.W	#2,-(A1)		;607ec: 5461
-	DC.W	$7374			;607ee
-	BSR.S	lb_60866		;607f0: 6174
-lb_607f2:
-	DC.W	$7572			;607f2
-	DC.W	$6265			;607f4
-	DC.W	$6c65			;607f6
-	DC.W	$6775			;607f8
-	DC.W	$6e67			;607fa
-	MOVEA.L	lb_67d1c+2(PC),A0	;607fc: 207a7520
-	OR.W	25701(A6),D0		;60800: 806e6465
-	MOVEQ	#110,D1			;60804: 726e
-	ORI.B	#$40,D0			;60806: 00000040
-	DC.W	$002c			;6080a
-lb_6080c:
-	DC.W	$0846			;6080c
-	MOVE.W	-(A0),-(A4)		;6080e: 3920
-	DC.W	$756d			;60810
-	MOVEA.L	(A3),A0			;60812: 2053
-	MOVEQ	#101,D2			;60814: 7465
-	DC.W	$7565			;60816
-	MOVEQ	#117,D1			;60818: 7275
-	DC.W	$6e67			;6081a
-	MOVEA.L	lb_67d3e(PC),A0		;6081c: 207a7520
-	OR.W	25701(A6),D0		;60820: 806e6465
-	MOVEQ	#110,D1			;60824: 726e
-	ORI.B	#$10,D0			;60826: 00000010
-	DC.W	$0018			;6082a
-	DC.W	$5370			;6082c
-	DC.W	$6965			;6082e
-	DC.W	$6c61			;60830
-	MOVEQ	#116,D1			;60832: 7274
-	MOVE.B	D0,-(A7)		;60834: 1f00
-	ORI.B	#$20,(A0)		;60836: 00100020
-	MOVEA.L	D1,A0			;6083a: 2041
-	BLS.S	lb_608b2		;6083c: 6374
-	DC.W	$696f			;6083e
-	BGT.W	lb_60850+2		;60840: 6e000010
-	DC.W	$0018			;60844
-	DC.W	$5370			;60846
-	DC.W	$6965			;60848
-	DC.W	$6c61			;6084a
-lb_6084c:
-	MOVEQ	#116,D1			;6084c: 7274
-lb_6084e:
-	MOVE.B	D0,-(A7)		;6084e: 1f00
-lb_60850:
-	ORI.B	#$20,(A0)		;60850: 00100020
-	CLR.W	-(A1)			;60854: 4261
-	MOVEQ	#97,D2			;60856: 7461
-	BGE.S	lb_608c6		;60858: 6c6c
-	DC.W	$696f			;6085a
-	BGT.W	lb_6086c+2		;6085c: 6e000010
-	DC.W	$0018			;60860
-	DC.W	$5370			;60862
-	DC.W	$6965			;60864
-lb_60866:
-	DC.W	$6c61			;60866
-	MOVEQ	#116,D1			;60868: 7274
-	MOVE.B	D0,-(A7)		;6086a: 1f00
-lb_6086c:
-	ORI.B	#$20,(A0)		;6086c: 00100020
-	DC.W	$5374			;60870
-	MOVEQ	#97,D1			;60872: 7261
-	MOVEQ	#101,D2			;60874: 7465
-	DC.W	$6769			;60876
-	BCS.W	lb_60902		;60878: 65000088
-	DC.W	$0018			;6087c
-	DC.W	$4c65			;6087e
-	MOVEQ	#101,D3			;60880: 7665
-	BGE.S	lb_608a4		;60882: 6c20
-	ORI.B	#$f8,D0			;60884: 000000f8
-	DC.W	$0018			;60888
-	DC.W	$4175			;6088a
-	MOVEQ	#111,D2			;6088c: 746f
-	DC.W	$6d61			;6088e
-	MOVEQ	#46,D2			;60890: 742e
-	MOVE.L	(A7)+,D0		;60892: 201f
-	DC.W	$00f8			;60894
-	DC.W	$0020			;60896
-	DC.W	$5374			;60898
-	MOVEQ	#97,D1			;6089a: 7261
-	MOVEQ	#101,D2			;6089c: 7465
-	DC.W	$6769			;6089e
-	BCS.W	lb_6099a		;608a0: 650000f8
-lb_608a4:
-	DC.W	$0018			;608a4
-	DC.W	$4d61			;608a6
-	DC.W	$6e75			;608a8
-	BCS.S	lb_60918		;608aa: 656c
-	DC.W	$6c65			;608ac
-	MOVEQ	#31,D1			;608ae: 721f
-	DC.W	$00f8			;608b0
-lb_608b2:
-	DC.W	$0020			;608b2
-	DC.W	$5374			;608b4
-	MOVEQ	#97,D1			;608b6: 7261
-	MOVEQ	#101,D2			;608b8: 7465
-	DC.W	$6769			;608ba
-	DC.W	$6500			;608bc
-	ADDQ.W	#8,-(A1)		;608be: 5061
-	BGT.S	lb_6093c		;608c0: 6e7a
-	BCS.S	lb_60936		;608c2: 6572
-	MOVEA.L	A7,A0			;608c4: 204f
-lb_608c6:
-	DC.W	$4b00			;608c6
-	DC.W	$4861			;608c8
-	BGE.S	lb_6092e		;608ca: 6c62
-	BCS.S	lb_608ee		;608cc: 6520
-	DC.W	$4765			;608ce
-	DC.W	$7363			;608d0
-	DC.W	$6877			;608d2
-	MOVE.L	D0,D7			;608d4: 2e00
-	ADDQ.W	#3,25970(A1)		;608d6: 56696572
-	MOVEQ	#101,D2			;608da: 7465
-	BGE.S	lb_608fe		;608dc: 6c20
-	DC.W	$4765			;608de
-	DC.W	$7363			;608e0
-	DC.W	$6877			;608e2
-	MOVE.L	D0,D7			;608e4: 2e00
-	DC.W	$4b65			;608e6
-	MOVEQ	#116,D2			;608e8: 7474
-	BCS.S	lb_6095a		;608ea: 656e
-	MOVEA.L	-(A2),A0		;608ec: 2062
-lb_608ee:
-	DC.W	$6573			;608ee
-	BLS.S	lb_6095a		;608f0: 6368
-	OR.W	-(A4),D0		;608f2: 8064
-	MOVE.L	D0,D7			;608f4: 2e00
-	DC.W	$4c61			;608f6
-	DC.W	$6465			;608f8
-	DC.W	$6865			;608fa
-	DC.W	$6d6d			;608fc
-lb_608fe:
-	DC.W	$756e			;608fe
-	DC.W	$6700			;60900
-lb_60902:
-	DC.W	$5475			;60902
-	MOVEQ	#109,D1			;60904: 726d
-	MOVEA.L	-(A2),A0		;60906: 2062
-	DC.W	$6573			;60908
-	BLS.S	lb_60974		;6090a: 6368
-	OR.W	-(A4),D0		;6090c: 8064
-	MOVE.L	D0,D7			;6090e: 2e00
-	SUBQ.W	#3,29216(A1)		;60910: 57697220
-	BHI.S	lb_60988		;60914: 6272
-	BCS.S	lb_60986		;60916: 656e
-lb_60918:
-	DC.W	$6e65			;60918
-lb_6091a:
-	DC.W	$6e21			;6091a
-	DC.W	$004b			;6091c
-	DC.W	$6569			;6091e
-	DC.W	$6e65			;60920
-	MOVEA.L	A5,A0			;60922: 204d
-	DC.W	$756e			;60924
-	BVS.S	lb_6099c		;60926: 6974
-	DC.W	$696f			;60928
-	DC.W	$6e00			;6092a
-	DC.W	$4b65			;6092c
-lb_6092e:
-	BVS.S	lb_6099c+2		;6092e: 696e
-	BCS.S	lb_60952		;60930: 6520
-	DC.W	$5472			;60932
-	DC.W	$6569			;60934
-lb_60936:
-	DC.W	$6273			;60936
-	MOVEQ	#111,D2			;60938: 746f
-	BNE.S	lb_609a2		;6093a: 6666
-lb_6093c:
-	ORI.W	#$6572,(A2)+		;6093c: 005a6572
-	DC.W	$7374			;60940
-	DC.W	$8172			;60942
-	MOVEQ	#33,D2			;60944: 7421
-	ORI.W	#$616e,(A0)		;60946: 0050616e
-	MOVEQ	#101,D5			;6094a: 7a65
-	MOVEQ	#32,D1			;6094c: 7220
-	MOVEQ	#101,D1			;6094e: 7265
-	MOVEQ	#97,D0			;60950: 7061
-lb_60952:
-	MOVEQ	#105,D1			;60952: 7269
-	BCS.S	lb_609c8		;60954: 6572
-	MOVEQ	#0,D2			;60956: 7400
-	DC.W	$4861			;60958
-lb_6095a:
-	BGE.S	lb_609d0		;6095a: 6c74
-	BCS.S	lb_609cc		;6095c: 656e
-	MOVE.L	D0,D0			;6095e: 2000
-	NOT.W	-(A1)			;60960: 4661
-	BVC.S	lb_609d6		;60962: 6872
-	BCS.S	lb_609d4		;60964: 656e
-	MOVE.L	D0,D0			;60966: 2000
-	ADDQ.W	#5,119(A5,D2.W)		;60968: 5a752077
-	BCS.S	lb_609dc		;6096c: 656e
-	DC.W	$6967			;6096e
-	MOVEA.L	(A0),A0			;60970: 2050
-	DC.W	$756e			;60972
-lb_60974:
-	BMI.S	lb_609ea		;60974: 6b74
-	DC.W	$6500			;60976
-	CLR.W	29812(A1)		;60978: 42697474
-	BCS.S	lb_6099c+2		;6097c: 6520
-	DC.W	$6175			;6097e
-	BNE.S	lb_609a2		;60980: 6620
-	DC.W	$6465			;60982
-	BGT.S	lb_609a6		;60984: 6e20
-lb_60986:
-	DC.W	$5475			;60986
-lb_60988:
-	MOVEQ	#109,D1			;60988: 726d
-	DC.W	$207a			;6098a
-	DC.W	$6569			;6098c
-	DC.W	$6765			;6098e
-	DC.W	$6e00			;60990
-	SUBQ.W	#1,25888(A1)		;60992: 53696520
-	BLT.S	lb_6091a		;60996: 6d82
-	DC.W	$7373			;60998
-lb_6099a:
-	BCS.S	lb_60a0a		;6099a: 656e
-lb_6099c:
-	MOVEA.L	26990(A5),A0		;6099c: 206d696e
-	BCC.S	lb_609d0		;609a0: 642e
-lb_609a2:
-	MOVEA.L	-(A5),A0		;609a2: 2065
-	BVS.S	lb_60a14		;609a4: 696e
-lb_609a6:
-	BCS.S	lb_60a16		;609a6: 656e
-	MOVEA.L	24949(A3),A0		;609a8: 206b6175
-	DC.W	$6665			;609ac
-	BGT.W	lb_635d0		;609ae: 6e002c20
-	DC.W	$6b6f			;609b2
-	DC.W	$7374			;609b4
-	BCS.S	lb_60a2c		;609b6: 6574
-	MOVE.L	D0,D0			;609b8: 2000
-	DC.W	$4968			;609ba
-	MOVEQ	#32,D1			;609bc: 7220
-	DC.W	$4b61			;609be
-	DC.W	$6e6f			;609c0
-	DC.W	$6e69			;609c2
-	BCS.S	lb_60a38		;609c4: 6572
-	DC.W	$2073			;609c6
-lb_609c8:
-	DC.W	$6965			;609c8
-	BVC.S	lb_60a40		;609ca: 6874
-lb_609cc:
-	MOVE.L	D0,D0			;609cc: 2000
-	DC.W	$456e			;609ce
-lb_609d0:
-	DC.W	$6465			;609d0
-	MOVEA.L	-(A4),A0		;609d2: 2064
-lb_609d4:
-	BCS.S	lb_60a48		;609d4: 6572
-lb_609d6:
-	MOVEA.L	A3,A0			;609d6: 204b
-	DC.W	$616d			;609d8
-	MOVEQ	#102,D0			;609da: 7066
-lb_609dc:
-	BSR.S	lb_60a50		;609dc: 6172
-	BCS.S	lb_60a4e		;609de: 656e
-	BSR.W	lb_62a42+2		;609e0: 61002062
-	MOVEQ	#97,D1			;609e4: 7261
-	DC.W	$7563			;609e6
-	BVC.S	lb_60a5e		;609e8: 6874
-lb_609ea:
-	MOVEA.L	D1,A0			;609ea: 2041
-	DC.W	$6e77			;609ec
-	DC.W	$6569			;609ee
-	DC.W	$7375			;609f0
-	DC.W	$6e67			;609f2
-	BCS.S	lb_60a64		;609f4: 656e
-	DC.W	$0003			;609f6
-	NEG.W	-(A5)			;609f8: 4465
-	DC.W	$7574			;609fa
-	DC.W	$7363			;609fc
-	DC.W	$6865			;609fe
-	MOVEQ	#0,D1			;60a00: 7200
-	BCHG	D1,D1			;60a02: 0341
-	DC.W	$6d65			;60a04
-	MOVEQ	#105,D1			;60a06: 7269
-	DC.W	$6b61			;60a08
-lb_60a0a:
-	DC.W	$6e69			;60a0a
-	DC.W	$7363			;60a0c
-	DC.W	$6865			;60a0e
-	MOVEQ	#0,D1			;60a10: 7200
-	BCHG	D1,(A2)			;60a12: 0352
-lb_60a14:
-	DC.W	$7573			;60a14
-lb_60a16:
-	DC.W	$7369			;60a16
-	DC.W	$7363			;60a18
-	DC.W	$6865			;60a1a
-	MOVEQ	#0,D1			;60a1c: 7200
-	DC.W	$4672			;60a1e
-	BLE.S	lb_60a90		;60a20: 6f6e
-	MOVEQ	#45,D2			;60a22: 742d
-	ADDQ.W	#8,-(A1)		;60a24: 5061
-	BGT.S	lb_60aa2		;60a26: 6e7a
-	BCS.S	lb_60a9c		;60a28: 6572
-	DC.W	$756e			;60a2a
-lb_60a2c:
-	DC.W	$6700			;60a2c
-	SUBQ.W	#1,-(A5)		;60a2e: 5365
-	BVS.S	lb_60aa6		;60a30: 6974
-	BCS.S	lb_60aa2		;60a32: 656e
-	MOVE.L	(A0),24942(A6)		;60a34: 2d50616e
-lb_60a38:
-	MOVEQ	#101,D5			;60a38: 7a65
-	MOVEQ	#117,D1			;60a3a: 7275
-	DC.W	$6e67			;60a3c
-	DC.W	$0048			;60a3e
-lb_60a40:
-	DC.W	$6563			;60a40
-	DC.W	$6b2d			;60a42
-	ADDQ.W	#8,-(A1)		;60a44: 5061
-	BGT.S	lb_60ac2		;60a46: 6e7a
-lb_60a48:
-	BCS.S	lb_60abc		;60a48: 6572
-	DC.W	$756e			;60a4a
-	DC.W	$6700			;60a4c
-lb_60a4e:
-	DC.W	$4d61			;60a4e
-lb_60a50:
-	MOVEQ	#46,D4			;60a50: 782e
-	MOVEA.L	D4,A0			;60a52: 2044
-	DC.W	$7572			;60a54
-	BLS.S	lb_60ac0		;60a56: 6368
-	DC.W	$7363			;60a58
-	BVC.S	lb_60ac8		;60a5a: 686c
-	DC.W	$6167			;60a5c
-lb_60a5e:
-	DC.W	$736b			;60a5e
-	MOVEQ	#97,D1			;60a60: 7261
-	BNE.S	lb_60ad8		;60a62: 6674
-lb_60a64:
-	DC.W	$004d			;60a64
-	BSR.S	lb_60ae0		;60a66: 6178
-	MOVE.L	-(A0),D7		;60a68: 2e20
-	DC.W	$5374			;60a6a
-	MOVEQ	#97,D1			;60a6c: 7261
-	OR.W	D1,-(A5)		;60a6e: 8365
-	DC.W	$6e67			;60a70
-	DC.W	$6573			;60a72
-	BLS.S	lb_60ade		;60a74: 6368
-	DC.W	$7769			;60a76
-	BGT.S	lb_60ade		;60a78: 6e64
-	DC.W	$6967			;60a7a
-	DC.W	$6b65			;60a7c
-	BVS.S	lb_60af4		;60a7e: 6974
-	DC.W	$004d			;60a80
-	BSR.S	lb_60afc		;60a82: 6178
-	MOVE.L	-(A0),D7		;60a84: 2e20
-	DC.W	$4765			;60a86
-	BGE.S	lb_60a0a		;60a88: 6c80
-	BGT.S	lb_60af0		;60a8a: 6e64
-	DC.W	$6567			;60a8c
-	DC.W	$6573			;60a8e
-lb_60a90:
-	BLS.S	lb_60afa		;60a90: 6368
-	DC.W	$7769			;60a92
-	BGT.S	lb_60afa		;60a94: 6e64
-	DC.W	$6967			;60a96
-	DC.W	$6b65			;60a98
-	BVS.S	lb_60b10		;60a9a: 6974
-lb_60a9c:
-	DC.W	$0000			;60a9c
-	BTST	D0,D0			;60a9e: 0100
-	DC.W	$0000			;60aa0
-lb_60aa2:
-	DC.W	$4b61			;60aa2
-	BLT.S	lb_60b16		;60aa4: 6d70
-lb_60aa6:
-	DC.W	$662d			;60aa6
-	MOVE.B	D0,-(A7)		;60aa8: 1f00
-	BTST	D0,D0			;60aaa: 0100
-	DC.W	$0008			;60aac
-	DC.W	$6d6f			;60aae
-	DC.W	$6475			;60ab0
-	DC.W	$7300			;60ab2
-	BTST	D0,D0			;60ab4: 0100
-	DC.W	$0000			;60ab6
-	SUBQ.W	#1,-(A5)		;60ab8: 5365
-	MOVEQ	#122,D2			;60aba: 747a
-lb_60abc:
-	MOVE.L	(A7)+,-(A6)		;60abc: 2d1f
-	BTST	D0,D0			;60abe: 0100
-lb_60ac0:
-	DC.W	$0008			;60ac0
-lb_60ac2:
-	DC.W	$6d6f			;60ac2
-	DC.W	$6475			;60ac4
-	DC.W	$7300			;60ac6
-lb_60ac8:
-	BTST	D0,D0			;60ac8: 0100
-	DC.W	$0018			;60aca
-	DC.W	$4c65			;60acc
-	MOVEQ	#101,D3			;60ace: 7665
-	BGE.W	lb_60af0		;60ad0: 6c00001e
-	DC.W	$0014			;60ad4
-	NEG.W	-(A5)			;60ad6: 4465
-lb_60ad8:
-	DC.W	$6d6f			;60ad8
-	DC.W	$6e73			;60ada
-	MOVEQ	#114,D2			;60adc: 7472
-lb_60ade:
-	BSR.S	lb_60b54		;60ade: 6174
-lb_60ae0:
-	DC.W	$696f			;60ae0
-	BGT.W	lb_60b20		;60ae2: 6e00003c
-	ORI.W	#$4269,ext_00007474.W	;60ae6: 007842697474
-	BCS.S	lb_60b0e		;60aec: 6520
-	DC.W	$6765			;60aee
-lb_60af0:
-	DC.W	$6265			;60af0
-	BGT.S	lb_60b14		;60af2: 6e20
-lb_60af4:
-	SUBQ.W	#1,25888(A1)		;60af4: 53696520
-	DC.W	$4968			;60af8
-lb_60afa:
-	MOVEQ	#101,D1			;60afa: 7265
-lb_60afc:
-	BGT.S	lb_60b1e		;60afc: 6e20
-	MOVE.L	A1,USP			;60afe: 4e61
-	DC.W	$6d65			;60b00
-	BGT.S	lb_60b24		;60b02: 6e20
-	DC.W	$6569			;60b04
-	BGT.S	lb_60b42		;60b06: 6e3a
-	ORI.B	#$6e,D0			;60b08: 0000006e
-	DC.W	$0014			;60b0c
-lb_60b0e:
-	BCHG	D1,(A4)			;60b0e: 0354
-lb_60b10:
-	BLE.S	lb_60b82		;60b10: 6f70
-	MOVEA.L	(A4),A0			;60b12: 2054
-lb_60b14:
-	BSR.S	lb_60b84		;60b14: 616e
-lb_60b16:
-	BMI.S	lb_60b38		;60b16: 6b20
-	DC.W	$4275			;60b18
-	DC.W	$7374			;60b1a
-	BCS.S	lb_60b90		;60b1c: 6572
-lb_60b1e:
-	DC.W	$7300			;60b1e
-lb_60b20:
-	ORI.W	#$0022,(A0)		;60b20: 00500022
-lb_60b24:
-	DC.W	$044a			;60b24
-	BLE.S	lb_60b96		;60b26: 6f6e
-	BSR.S	lb_60b9e		;60b28: 6174
-	DC.W	$6861			;60b2a
-	BGT.S	lb_60b4e		;60b2c: 6e20
-	DC.W	$4772			;60b2e
-	BVS.S	lb_60b96+2		;60b30: 6966
-	DC.W	$6669			;60b32
-	MOVEQ	#104,D2			;60b34: 7468
-	DC.W	$731f			;60b36
-lb_60b38:
-	ORI.W	#$002e,(A0)		;60b38: 0050002e
-	DC.W	$756e			;60b3c
-	BCC.S	lb_60b5e+2		;60b3e: 6420
-	NEG.W	-(A1)			;60b40: 4461
-lb_60b42:
-	MOVEQ	#105,D3			;60b42: 7669
-	BCC.S	lb_60b66		;60b44: 6420
-	DC.W	$4272			;60b46
-	BSR.S	lb_60bac		;60b48: 6162
-	BCS.S	lb_60bba		;60b4a: 656e
-	MOVE.B	D0,-(A7)		;60b4c: 1f00
-lb_60b4e:
-	ORI.W	#$003a,(A0)		;60b4e: 0050003a
-	DC.W	$6461			;60b52
-lb_60b54:
-	DC.W	$6e6b			;60b54
-	BCS.S	lb_60bc6		;60b56: 656e
-	MOVEA.L	-(A4),A0		;60b58: 2064
-	BCS.S	lb_60bc8+2		;60b5a: 656e
-	MOVE.B	D0,-(A7)		;60b5c: 1f00
-lb_60b5e:
-	ORI.W	#$0046,(A0)		;60b5e: 00500046
-	DC.W	$666f			;60b62
-	DC.W	$6c67			;60b64
-lb_60b66:
-	BCS.S	lb_60bd6		;60b66: 656e
-	DC.W	$6465			;60b68
-	BGT.S	lb_60b8c		;60b6a: 6e20
-	DC.W	$4c65			;60b6c
-	DC.W	$7574			;60b6e
-	BCS.S	lb_60bde+2		;60b70: 656e
-	MOVE.W	(A7)+,D5		;60b72: 3a1f
-	ORI.W	#$0056,(A0)		;60b74: 00500056
-	MOVEP.L	24931(A2),D7		;60b78: 0f4a6163
-	DC.W	$7175			;60b7c
-	BVS.S	lb_60ba0		;60b7e: 6920
-	DC.W	$4c79			;60b80
-lb_60b82:
-	BLE.S	lb_60bf2		;60b82: 6f6e
-lb_60b84:
-	DC.W	$732c			;60b84
-	MOVE.B	D0,-(A7)		;60b86: 1f00
-	ORI.W	#$0062,(A0)		;60b88: 00500062
-lb_60b8c:
-	TST.W	28192(A7)		;60b8c: 4a6f6e20
-lb_60b90:
-	NEG.W	-(A5)			;60b90: 4465
-	BSR.S	lb_60c02		;60b92: 616e
-	MOVE.L	(A7)+,D6		;60b94: 2c1f
-lb_60b96:
-	ORI.W	#$006e,(A0)		;60b96: 0050006e
-	ADDQ.W	#8,-(A1)		;60b9a: 5061
-	DC.W	$756c			;60b9c
-lb_60b9e:
-	MOVEA.L	D6,A0			;60b9e: 2046
-lb_60ba0:
-	BCS.S	lb_60c0c+2		;60ba0: 656c
-	DC.W	$6c6f			;60ba2
-	DC.W	$7773			;60ba4
-	MOVE.L	(A7)+,D6		;60ba6: 2c1f
-	ORI.W	#$007a,(A0)		;60ba8: 0050007a
-lb_60bac:
-	CLR.W	30313(A7)		;60bac: 426f7669
-	DC.W	$6e67			;60bb0
-	MOVEQ	#111,D2			;60bb2: 746f
-	BGT.S	lb_60bd6		;60bb4: 6e20
-	ADDQ.W	#1,D1			;60bb6: 5241
-	DC.W	$4320			;60bb8
-lb_60bba:
-	ADDQ.W	#2,-(A1)		;60bba: 5461
-	DC.W	$6e6b			;60bbc
-	MOVEA.L	A5,A0			;60bbe: 204d
-	DC.W	$7573			;60bc0
-	DC.W	$6575			;60bc2
-	BLT.S	lb_60bf2		;60bc4: 6d2c
-lb_60bc6:
-	MOVE.B	D0,-(A7)		;60bc6: 1f00
-lb_60bc8:
-	ORI.W	#$0086,(A0)		;60bc8: 00500086
-	DC.W	$756e			;60bcc
-	BCC.S	lb_60bf0		;60bce: 6420
-	ADDQ.W	#2,-(A5)		;60bd0: 5465
-	DC.W	$7574			;60bd2
-	MOVEA.L	(A7),A0			;60bd4: 2057
-lb_60bd6:
-	DC.W	$6569			;60bd6
-	DC.W	$6465			;60bd8
-	DC.W	$6d61			;60bda
-	BGT.S	lb_60c4c		;60bdc: 6e6e
-lb_60bde:
-	ORI.B	#$6a,D0			;60bde: 0000006a
-	DC.W	$0018			;60be2
-	BCHG	D1,(A4)			;60be4: 0354
-	DC.W	$6173			;60be6
-	MOVEQ	#97,D2			;60be8: 7461
-	MOVEQ	#117,D2			;60bea: 7475
-	MOVEQ	#98,D1			;60bec: 7262
-	BCS.S	lb_60c5a+2		;60bee: 656c
-lb_60bf0:
-	DC.W	$6567			;60bf0
-lb_60bf2:
-	DC.W	$756e			;60bf2
-	DC.W	$671f			;60bf4
-	ORI.W	#$0028,(A0)		;60bf6: 00500028
-	BTST	D7,8278(A5)		;60bfa: 0f2d2056
-	BLE.S	lb_60c72		;60bfe: 6f72
-	DC.W	$7780			;60c00
-lb_60c02:
-	MOVEQ	#116,D1			;60c02: 7274
-	DC.W	$7320			;60c04
-	DC.W	$6c69			;60c06
-	DC.W	$6e6b			;60c08
-	DC.W	$731f			;60c0a
-lb_60c0c:
-	ORI.W	#$0032,(A0)		;60c0c: 00500032
-	MOVE.L	-(A0),-(A6)		;60c10: 2d20
-	ADDQ.W	#3,29303(A7)		;60c12: 566f7277
-	DC.W	$8072			;60c16
-	MOVEQ	#115,D2			;60c18: 7473
-	DC.W	$2072			;60c1a
-	DC.W	$6563			;60c1c
-	BVC.S	lb_60c94		;60c1e: 6874
-	DC.W	$731f			;60c20
-	ORI.W	#$003c,(A0)		;60c22: 0050003c
-	MOVE.L	-(A0),-(A6)		;60c26: 2d20
-	ADDQ.L	#1,D2			;60c28: 5282
-	DC.W	$636b			;60c2a
-	DC.W	$7780			;60c2c
-	MOVEQ	#116,D1			;60c2e: 7274
-	DC.W	$7320			;60c30
-	DC.W	$6c69			;60c32
-	DC.W	$6e6b			;60c34
-	DC.W	$731f			;60c36
-	ORI.W	#$0046,(A0)		;60c38: 00500046
-	MOVE.L	-(A0),-(A6)		;60c3c: 2d20
-	ADDQ.L	#1,D2			;60c3e: 5282
-	DC.W	$636b			;60c40
-	DC.W	$7780			;60c42
-	MOVEQ	#116,D1			;60c44: 7274
-	DC.W	$7320			;60c46
-	MOVEQ	#101,D1			;60c48: 7265
-	BLS.S	lb_60cb4		;60c4a: 6368
-lb_60c4c:
-	MOVEQ	#115,D2			;60c4c: 7473
-	MOVE.B	D0,-(A7)		;60c4e: 1f00
-	ORI.W	#$0050,(A0)		;60c50: 00500050
-	MOVE.L	-(A0),-(A6)		;60c54: 2d20
-	DC.W	$5475			;60c56
-	MOVEQ	#109,D1			;60c58: 726d
-lb_60c5a:
-	MOVEA.L	27936(A1),A0		;60c5a: 20696d20
-	SUBQ.W	#2,29306(A0)		;60c5e: 5568727a
-	DC.W	$6569			;60c62
-	DC.W	$6765			;60c64
-	MOVEQ	#115,D1			;60c66: 7273
-	BVS.S	lb_60cd8		;60c68: 696e
-	BGT.S	lb_60c8c		;60c6a: 6e20
-	BCC.S	lb_60ce0		;60c6c: 6472
-	BCS.S	lb_60cd8		;60c6e: 6568
-	BCS.S	lb_60ce0		;60c70: 656e
-lb_60c72:
-	MOVE.B	D0,-(A7)		;60c72: 1f00
-	ORI.W	#$005a,(A0)		;60c74: 0050005a
-	MOVE.L	-(A0),-(A6)		;60c78: 2d20
-	DC.W	$5475			;60c7a
-	MOVEQ	#109,D1			;60c7c: 726d
-	MOVEA.L	-(A7),A0		;60c7e: 2067
-	DC.W	$6567			;60c80
-	BCS.S	lb_60cf2		;60c82: 656e
-	MOVEA.L	(A5),A0			;60c84: 2055
-	BVC.S	lb_60cfa		;60c86: 6872
-	MOVEQ	#101,D5			;60c88: 7a65
-	DC.W	$6967			;60c8a
-lb_60c8c:
-	BCS.S	lb_60d00		;60c8c: 6572
-	DC.W	$7369			;60c8e
-	BGT.S	lb_60d00		;60c90: 6e6e
-	MOVE.B	D0,-(A7)		;60c92: 1f00
-lb_60c94:
-	ORI.W	#$0064,(A0)		;60c94: 00500064
-	MOVE.L	-(A0),-(A6)		;60c98: 2d20
-	DC.W	$4b61			;60c9a
-	DC.W	$6e6f			;60c9c
-	DC.W	$6e65			;60c9e
-	MOVEA.L	25954(A0),A0		;60ca0: 20686562
-	BCS.S	lb_60d14		;60ca4: 656e
-	MOVE.B	D0,-(A7)		;60ca6: 1f00
-	ORI.W	#$006e,(A0)		;60ca8: 0050006e
-	MOVE.L	-(A0),-(A6)		;60cac: 2d20
-	DC.W	$4b61			;60cae
-	DC.W	$6e6f			;60cb0
-	DC.W	$6e65			;60cb2
-lb_60cb4:
-	DC.W	$2073			;60cb4
-	BCS.S	lb_60d24+2		;60cb6: 656e
-	DC.W	$6b65			;60cb8
-	DC.W	$6e1f			;60cba
-	ORI.W	#$0078,(A0)		;60cbc: 00500078
-	MOVE.L	-(A0),-(A6)		;60cc0: 2d20
-	DC.W	$4b61			;60cc2
-	DC.W	$6e6f			;60cc4
-	DC.W	$6e65			;60cc6
-	MOVEA.L	-(A1),A0		;60cc8: 2061
-	BHI.S	lb_60d32		;60cca: 6266
-	DC.W	$6575			;60ccc
-	MOVEQ	#101,D1			;60cce: 7265
-	DC.W	$6e1f			;60cd0
-	ORI.W	#$0082,(A0)		;60cd2: 00500082
-	MOVE.L	-(A0),-(A6)		;60cd6: 2d20
-lb_60cd8:
-	DC.W	$4b61			;60cd8
-	MOVEQ	#116,D1			;60cda: 7274
-	BCS.S	lb_60cfe		;60cdc: 6520
-	BSR.S	lb_60d4e		;60cde: 616e
-lb_60ce0:
-	DC.W	$7780			;60ce0
-	BVC.S	lb_60d50		;60ce2: 686c
-	BCS.S	lb_60d54		;60ce4: 656e
-	MOVE.B	D0,-(A7)		;60ce6: 1f00
-	ORI.W	#$008c,(A0)		;60ce8: 0050008c
-	MOVE.L	-(A0),-(A6)		;60cec: 2d20
-	ADDQ.W	#8,-(A1)		;60cee: 5061
-	DC.W	$7573			;60cf0
-lb_60cf2:
-	BCS.S	lb_60d20		;60cf2: 652c
-	MOVEA.L	(A3),A0			;60cf4: 2053
-	MOVEQ	#105,D0			;60cf6: 7069
-	BCS.S	lb_60d66		;60cf8: 656c
-lb_60cfa:
-	MOVEA.L	-(A1),A0		;60cfa: 2061
-	BGT.S	lb_60d66		;60cfc: 6e68
-lb_60cfe:
-	BSR.S	lb_60d6a+2		;60cfe: 616c
-lb_60d00:
-	MOVEQ	#101,D2			;60d00: 7465
-	DC.W	$6e1f			;60d02
-	ORI.W	#$0096,(A0)		;60d04: 00500096
-	MOVE.L	-(A0),-(A6)		;60d08: 2d20
-	SUBQ.W	#1,30062(A7)		;60d0a: 536f756e
-lb_60d0e:
-	BCC.S	lb_60d30		;60d0e: 6420
-	DC.W	$416e			;60d10
-	MOVE.B	D0,-(A7)		;60d12: 1f00
-lb_60d14:
-	ORI.W	#$00a0,(A0)		;60d14: 005000a0
-	MOVE.L	-(A0),-(A6)		;60d18: 2d20
-	SUBQ.W	#1,30062(A7)		;60d1a: 536f756e
-	BCC.S	lb_60d40		;60d1e: 6420
-lb_60d20:
-	DC.W	$4175			;60d20
-	DC.W	$731f			;60d22
-lb_60d24:
-	ORI.W	#$00ac,(A2)+		;60d24: 005a00ac
-	DC.W	$0448			;60d28
-	DC.W	$6965			;60d2a
-lb_60d2c:
-	MOVEQ	#32,D1			;60d2c: 7220
-	BMI.S	lb_60d9c		;60d2e: 6b6c
-lb_60d30:
-	DC.W	$6963			;60d30
-lb_60d32:
-	DC.W	$6b65			;60d32
-	BGT.S	lb_60d56		;60d34: 6e20
-	DC.W	$756d			;60d36
-	MOVEA.L	-(A6),A0		;60d38: 2066
-	BLE.S	lb_60dae		;60d3a: 6f72
-	MOVEQ	#122,D2			;60d3c: 747a
-	DC.W	$7566			;60d3e
-lb_60d40:
-	BSR.S	lb_60daa		;60d40: 6168
-	MOVEQ	#101,D1			;60d42: 7265
-lb_60d44:
-	DC.W	$6e00			;60d44
-	ORI.B	#$64,D0			;60d46: 00000064
-	ADDQ.W	#1,-(A5)		;60d4a: 5265
-	MOVEQ	#117,D2			;60d4c: 7475
-lb_60d4e:
-	MOVEQ	#110,D1			;60d4e: 726e
-lb_60d50:
-	DC.W	$2077			;60d50
-	BCS.S	lb_60dc2		;60d52: 656e
-lb_60d54:
-	BGT.S	lb_60d76		;60d54: 6e20
-lb_60d56:
-	TST.W	31091(A7)		;60d56: 4a6f7973
-	MOVEQ	#105,D2			;60d5a: 7469
-	DC.W	$636b			;60d5c
-	MOVE.L	A5,24949(A7)		;60d5e: 2f4d6175
-lb_60d62:
-	DC.W	$7320			;60d62
-	DC.W	$6665			;60d64
-lb_60d66:
-	MOVEQ	#116,D1			;60d66: 7274
-	DC.W	$6967			;60d68
-lb_60d6a:
-	ORI.B	#$28,D0			;60d6a: 00000028
-	ORI.B	#$54,24947(A0)		;60d6e: 002800546173
-	MOVEQ	#97,D2			;60d74: 7461
-lb_60d76:
-	MOVEQ	#117,D2			;60d76: 7475
-	MOVEQ	#32,D1			;60d78: 7220
-	MOVE.L	-(A0),D3		;60d7a: 2620
-	BLE.S	lb_60dee		;60d7c: 6f70
-	MOVEQ	#105,D2			;60d7e: 7469
-	BLE.S	lb_60df0		;60d80: 6f6e
-	BSR.S	lb_60df0		;60d82: 616c
-	MOVEA.L	A5,A0			;60d84: 204d
-	DC.W	$6175			;60d86
-	DC.W	$7320			;60d88
-	BNE.S	lb_60d0e		;60d8a: 6682
-	MOVEQ	#32,D1			;60d8c: 7220
-	DC.W	$4b61			;60d8e
-	DC.W	$6e6f			;60d90
-	DC.W	$6e69			;60d92
-	BCS.S	lb_60e08		;60d94: 6572
-	ORI.B	#$0a,D0			;60d96: 0000000a
-	DC.W	$0034			;60d9a
-lb_60d9c:
-	DC.W	$004a			;60d9c
-	DC.W	$6f79			;60d9e
-	DC.W	$7374			;60da0
-	DC.W	$6963			;60da2
-	BMI.S	lb_60dc6		;60da4: 6b20
-	MOVE.W	-(A0),-(A0)		;60da6: 3120
-	BNE.S	lb_60d2c		;60da8: 6682
-lb_60daa:
-	MOVEQ	#32,D1			;60daa: 7220
-	NOT.W	-(A1)			;60dac: 4661
-lb_60dae:
-	BVC.S	lb_60e22		;60dae: 6872
-	BCS.S	lb_60e24		;60db0: 6572
-	MOVE.L	-(A6),D0		;60db2: 2026
-	MOVEA.L	A2,A0			;60db4: 204a
-	DC.W	$6f79			;60db6
-	DC.W	$7374			;60db8
-	DC.W	$6963			;60dba
-	BMI.S	lb_60dde		;60dbc: 6b20
-	MOVE.W	-(A0),D1		;60dbe: 3220
-	BNE.S	lb_60d44		;60dc0: 6682
-lb_60dc2:
-	MOVEQ	#32,D1			;60dc2: 7220
-	DC.W	$4b61			;60dc4
-lb_60dc6:
-	DC.W	$6e6f			;60dc6
-	DC.W	$6e69			;60dc8
-	BCS.S	lb_60e3e		;60dca: 6572
-	ORI.B	#$08,D0			;60dcc: 00000008
-	ORI.W	#$004a,D0		;60dd0: 0040004a
-	DC.W	$6f79			;60dd4
-	DC.W	$7374			;60dd6
-	DC.W	$6963			;60dd8
-	BMI.S	lb_60dfc		;60dda: 6b20
-	MOVE.W	-(A0),-(A0)		;60ddc: 3120
-lb_60dde:
-	BNE.S	lb_60d62		;60dde: 6682
-	MOVEQ	#32,D1			;60de0: 7220
-	DC.W	$6c69			;60de2
-	DC.W	$6e6b			;60de4
-	BCS.S	lb_60e08		;60de6: 6520
-	DC.W	$4b65			;60de8
-	MOVEQ	#116,D2			;60dea: 7474
-	BCS.S	lb_60e0e		;60dec: 6520
-lb_60dee:
-	MOVE.L	-(A0),D3		;60dee: 2620
-lb_60df0:
-	TST.W	31091(A7)		;60df0: 4a6f7973
-	MOVEQ	#105,D2			;60df4: 7469
-	DC.W	$636b			;60df6
-	MOVE.L	102(A2,D2.W),D0		;60df8: 20322066
-lb_60dfc:
-	OR.W	114(A2,D2.W),D1		;60dfc: 82722072
-	DC.W	$6563			;60e00
-	BVC.S	lb_60e78		;60e02: 6874
-	dc.w	$6500  ;60e04
+	dc.w	$007c	;606fc
+	dc.w	$0069	;606fe
+	dc.w	$4269	;60700
+	dc.w	$7474	;60702
+	dc.w	$6520	;60704
+	dc.w	$7761	;60706
+	dc.w	$7274	;60708
+	dc.w	$656e	;6070a
+	dc.w	$2e2e	;6070c
+	dc.w	$2e00	;6070e
+	dc.w	$0078	;60710
+	dc.w	$0064	;60712
+	dc.w	$4775	;60714
+	dc.w	$7420	;60716
+	dc.w	$6765	;60718
+	dc.w	$6d61	;6071a
+	dc.w	$6368	;6071c
+	dc.w	$7400	;6071e
+	dc.w	$0082	;60720
+	dc.w	$0064	;60722
+	dc.w	$5370	;60724
+	dc.w	$6965	;60726
+	dc.w	$6c65	;60728
+	dc.w	$6e64	;6072a
+	dc.w	$6500	;6072c
+	dc.w	$0028	;6072e
+	dc.w	$0064	;60730
+	dc.w	$5369	;60732
+	dc.w	$6520	;60734
+	dc.w	$6861	;60736
+	dc.w	$6265	;60738
+	dc.w	$6e20	;6073a
+	dc.w	$6469	;6073c
+	dc.w	$6520	;6073e
+	dc.w	$5363	;60740
+	dc.w	$686c	;60742
+	dc.w	$6163	;60744
+	dc.w	$6874	;60746
+	dc.w	$2076	;60748
+	dc.w	$6572	;6074a
+	dc.w	$6c6f	;6074c
+	dc.w	$7265	;6074e
+	dc.w	$6e2c	;60750
+	dc.w	$2061	;60752
+	dc.w	$6265	;60754
+	dc.w	$721f	;60756
+	dc.w	$0014	;60758
+	dc.w	$006e	;6075a
+	dc.w	$6765	;6075c
+	dc.w	$6e75	;6075e
+	dc.w	$6720	;60760
+	dc.w	$5075	;60762
+	dc.w	$6e6b	;60764
+	dc.w	$7465	;60766
+	dc.w	$2c20	;60768
+	dc.w	$756d	;6076a
+	dc.w	$2065	;6076c
+	dc.w	$7320	;6076e
+	dc.w	$7769	;60770
+	dc.w	$6564	;60772
+	dc.w	$6572	;60774
+	dc.w	$207a	;60776
+	dc.w	$7520	;60778
+	dc.w	$7665	;6077a
+	dc.w	$7273	;6077c
+	dc.w	$7563	;6077e
+	dc.w	$6865	;60780
+	dc.w	$6e00	;60782
+	dc.w	$0046	;60784
+	dc.w	$00aa	;60786
+	dc.w	$4472	;60788
+	dc.w	$8263	;6078a
+	dc.w	$6b65	;6078c
+	dc.w	$6e20	;6078e
+	dc.w	$5369	;60790
+	dc.w	$6520	;60792
+	dc.w	$6469	;60794
+	dc.w	$6520	;60796
+	dc.w	$5370	;60798
+	dc.w	$6163	;6079a
+	dc.w	$6520	;6079c
+	dc.w	$5461	;6079e
+	dc.w	$7374	;607a0
+	dc.w	$6500	;607a2
+	dc.w	$426f	;607a4
+	dc.w	$6e75	;607a6
+	dc.w	$7320	;607a8
+	dc.w	$6682	;607aa
+	dc.w	$7220	;607ac
+	dc.w	$4d69	;607ae
+	dc.w	$7373	;607b0
+	dc.w	$696f	;607b2
+	dc.w	$6e20	;607b4
+	dc.w	$0000	;607b6
+	dc.w	$0038	;607b8
+	dc.w	$002c	;607ba
+	dc.w	$0853	;607bc
+	dc.w	$7061	;607be
+	dc.w	$6365	;607c0
+	dc.w	$206f	;607c2
+	dc.w	$6465	;607c4
+	dc.w	$7220	;607c6
+	dc.w	$5265	;607c8
+	dc.w	$7475	;607ca
+	dc.w	$726e	;607cc
+	dc.w	$2075	;607ce
+	dc.w	$6d20	;607d0
+	dc.w	$666f	;607d2
+	dc.w	$7274	;607d4
+	dc.w	$7a75	;607d6
+	dc.w	$6661	;607d8
+	dc.w	$6872	;607da
+	dc.w	$656e	;607dc
+	dc.w	$0000	;607de
+	dc.w	$0038	;607e0
+	dc.w	$002c	;607e2
+	dc.w	$0846	;607e4
+	dc.w	$3130	;607e6
+	dc.w	$2075	;607e8
+	dc.w	$6d20	;607ea
+	dc.w	$5461	;607ec
+	dc.w	$7374	;607ee
+	dc.w	$6174	;607f0
+	dc.w	$7572	;607f2
+	dc.w	$6265	;607f4
+	dc.w	$6c65	;607f6
+	dc.w	$6775	;607f8
+	dc.w	$6e67	;607fa
+	dc.w	$207a	;607fc
+	dc.w	$7520	;607fe
+	dc.w	$806e	;60800
+	dc.w	$6465	;60802
+	dc.w	$726e	;60804
+	dc.w	$0000	;60806
+	dc.w	$0040	;60808
+	dc.w	$002c	;6080a
+	dc.w	$0846	;6080c
+	dc.w	$3920	;6080e
+	dc.w	$756d	;60810
+	dc.w	$2053	;60812
+	dc.w	$7465	;60814
+	dc.w	$7565	;60816
+	dc.w	$7275	;60818
+	dc.w	$6e67	;6081a
+	dc.w	$207a	;6081c
+	dc.w	$7520	;6081e
+	dc.w	$806e	;60820
+	dc.w	$6465	;60822
+	dc.w	$726e	;60824
+	dc.w	$0000	;60826
+	dc.w	$0010	;60828
+	dc.w	$0018	;6082a
+	dc.w	$5370	;6082c
+	dc.w	$6965	;6082e
+	dc.w	$6c61	;60830
+	dc.w	$7274	;60832
+	dc.w	$1f00	;60834
+	dc.w	$0010	;60836
+	dc.w	$0020	;60838
+	dc.w	$2041	;6083a
+	dc.w	$6374	;6083c
+	dc.w	$696f	;6083e
+	dc.w	$6e00	;60840
+	dc.w	$0010	;60842
+	dc.w	$0018	;60844
+	dc.w	$5370	;60846
+	dc.w	$6965	;60848
+	dc.w	$6c61	;6084a
+	dc.w	$7274	;6084c
+	dc.w	$1f00	;6084e
+	dc.w	$0010	;60850
+	dc.w	$0020	;60852
+	dc.w	$4261	;60854
+	dc.w	$7461	;60856
+	dc.w	$6c6c	;60858
+	dc.w	$696f	;6085a
+	dc.w	$6e00	;6085c
+	dc.w	$0010	;6085e
+	dc.w	$0018	;60860
+	dc.w	$5370	;60862
+	dc.w	$6965	;60864
+	dc.w	$6c61	;60866
+	dc.w	$7274	;60868
+	dc.w	$1f00	;6086a
+	dc.w	$0010	;6086c
+	dc.w	$0020	;6086e
+	dc.w	$5374	;60870
+	dc.w	$7261	;60872
+	dc.w	$7465	;60874
+	dc.w	$6769	;60876
+	dc.w	$6500	;60878
+	dc.w	$0088	;6087a
+	dc.w	$0018	;6087c
+	dc.w	$4c65	;6087e
+	dc.w	$7665	;60880
+	dc.w	$6c20	;60882
+	dc.w	$0000	;60884
+	dc.w	$00f8	;60886
+	dc.w	$0018	;60888
+	dc.w	$4175	;6088a
+	dc.w	$746f	;6088c
+	dc.w	$6d61	;6088e
+	dc.w	$742e	;60890
+	dc.w	$201f	;60892
+	dc.w	$00f8	;60894
+	dc.w	$0020	;60896
+	dc.w	$5374	;60898
+	dc.w	$7261	;6089a
+	dc.w	$7465	;6089c
+	dc.w	$6769	;6089e
+	dc.w	$6500	;608a0
+	dc.w	$00f8	;608a2
+	dc.w	$0018	;608a4
+	dc.w	$4d61	;608a6
+	dc.w	$6e75	;608a8
+	dc.w	$656c	;608aa
+	dc.w	$6c65	;608ac
+	dc.w	$721f	;608ae
+	dc.w	$00f8	;608b0
+	dc.w	$0020	;608b2
+	dc.w	$5374	;608b4
+	dc.w	$7261	;608b6
+	dc.w	$7465	;608b8
+	dc.w	$6769	;608ba
+	dc.w	$6500	;608bc
+	dc.w	$5061	;608be
+	dc.w	$6e7a	;608c0
+	dc.w	$6572	;608c2
+	dc.w	$204f	;608c4
+	dc.w	$4b00	;608c6
+	dc.w	$4861	;608c8
+	dc.w	$6c62	;608ca
+	dc.w	$6520	;608cc
+	dc.w	$4765	;608ce
+	dc.w	$7363	;608d0
+	dc.w	$6877	;608d2
+	dc.w	$2e00	;608d4
+	dc.w	$5669	;608d6
+	dc.w	$6572	;608d8
+	dc.w	$7465	;608da
+	dc.w	$6c20	;608dc
+	dc.w	$4765	;608de
+	dc.w	$7363	;608e0
+	dc.w	$6877	;608e2
+	dc.w	$2e00	;608e4
+	dc.w	$4b65	;608e6
+	dc.w	$7474	;608e8
+	dc.w	$656e	;608ea
+	dc.w	$2062	;608ec
+	dc.w	$6573	;608ee
+	dc.w	$6368	;608f0
+	dc.w	$8064	;608f2
+	dc.w	$2e00	;608f4
+	dc.w	$4c61	;608f6
+	dc.w	$6465	;608f8
+	dc.w	$6865	;608fa
+	dc.w	$6d6d	;608fc
+	dc.w	$756e	;608fe
+	dc.w	$6700	;60900
+	dc.w	$5475	;60902
+	dc.w	$726d	;60904
+	dc.w	$2062	;60906
+	dc.w	$6573	;60908
+	dc.w	$6368	;6090a
+	dc.w	$8064	;6090c
+	dc.w	$2e00	;6090e
+	dc.w	$5769	;60910
+	dc.w	$7220	;60912
+	dc.w	$6272	;60914
+	dc.w	$656e	;60916
+	dc.w	$6e65	;60918
+	dc.w	$6e21	;6091a
+	dc.w	$004b	;6091c
+	dc.w	$6569	;6091e
+	dc.w	$6e65	;60920
+	dc.w	$204d	;60922
+	dc.w	$756e	;60924
+	dc.w	$6974	;60926
+	dc.w	$696f	;60928
+	dc.w	$6e00	;6092a
+	dc.w	$4b65	;6092c
+	dc.w	$696e	;6092e
+	dc.w	$6520	;60930
+	dc.w	$5472	;60932
+	dc.w	$6569	;60934
+	dc.w	$6273	;60936
+	dc.w	$746f	;60938
+	dc.w	$6666	;6093a
+	dc.w	$005a	;6093c
+	dc.w	$6572	;6093e
+	dc.w	$7374	;60940
+	dc.w	$8172	;60942
+	dc.w	$7421	;60944
+	dc.w	$0050	;60946
+	dc.w	$616e	;60948
+	dc.w	$7a65	;6094a
+	dc.w	$7220	;6094c
+	dc.w	$7265	;6094e
+	dc.w	$7061	;60950
+	dc.w	$7269	;60952
+	dc.w	$6572	;60954
+	dc.w	$7400	;60956
+	dc.w	$4861	;60958
+	dc.w	$6c74	;6095a
+	dc.w	$656e	;6095c
+	dc.w	$2000	;6095e
+	dc.w	$4661	;60960
+	dc.w	$6872	;60962
+	dc.w	$656e	;60964
+	dc.w	$2000	;60966
+	dc.w	$5a75	;60968
+	dc.w	$2077	;6096a
+	dc.w	$656e	;6096c
+	dc.w	$6967	;6096e
+	dc.w	$2050	;60970
+	dc.w	$756e	;60972
+	dc.w	$6b74	;60974
+	dc.w	$6500	;60976
+	dc.w	$4269	;60978
+	dc.w	$7474	;6097a
+	dc.w	$6520	;6097c
+	dc.w	$6175	;6097e
+	dc.w	$6620	;60980
+	dc.w	$6465	;60982
+	dc.w	$6e20	;60984
+	dc.w	$5475	;60986
+	dc.w	$726d	;60988
+	dc.w	$207a	;6098a
+	dc.w	$6569	;6098c
+	dc.w	$6765	;6098e
+	dc.w	$6e00	;60990
+	dc.w	$5369	;60992
+	dc.w	$6520	;60994
+	dc.w	$6d82	;60996
+	dc.w	$7373	;60998
+	dc.w	$656e	;6099a
+	dc.w	$206d	;6099c
+	dc.w	$696e	;6099e
+	dc.w	$642e	;609a0
+	dc.w	$2065	;609a2
+	dc.w	$696e	;609a4
+	dc.w	$656e	;609a6
+	dc.w	$206b	;609a8
+	dc.w	$6175	;609aa
+	dc.w	$6665	;609ac
+	dc.w	$6e00	;609ae
+	dc.w	$2c20	;609b0
+	dc.w	$6b6f	;609b2
+	dc.w	$7374	;609b4
+	dc.w	$6574	;609b6
+	dc.w	$2000	;609b8
+	dc.w	$4968	;609ba
+	dc.w	$7220	;609bc
+	dc.w	$4b61	;609be
+	dc.w	$6e6f	;609c0
+	dc.w	$6e69	;609c2
+	dc.w	$6572	;609c4
+	dc.w	$2073	;609c6
+	dc.w	$6965	;609c8
+	dc.w	$6874	;609ca
+	dc.w	$2000	;609cc
+	dc.w	$456e	;609ce
+	dc.w	$6465	;609d0
+	dc.w	$2064	;609d2
+	dc.w	$6572	;609d4
+	dc.w	$204b	;609d6
+	dc.w	$616d	;609d8
+	dc.w	$7066	;609da
+	dc.w	$6172	;609dc
+	dc.w	$656e	;609de
+	dc.w	$6100	;609e0
+	dc.w	$2062	;609e2
+	dc.w	$7261	;609e4
+	dc.w	$7563	;609e6
+	dc.w	$6874	;609e8
+	dc.w	$2041	;609ea
+	dc.w	$6e77	;609ec
+	dc.w	$6569	;609ee
+	dc.w	$7375	;609f0
+	dc.w	$6e67	;609f2
+	dc.w	$656e	;609f4
+	dc.w	$0003	;609f6
+	dc.w	$4465	;609f8
+	dc.w	$7574	;609fa
+	dc.w	$7363	;609fc
+	dc.w	$6865	;609fe
+	dc.w	$7200	;60a00
+	dc.w	$0341	;60a02
+	dc.w	$6d65	;60a04
+	dc.w	$7269	;60a06
+	dc.w	$6b61	;60a08
+	dc.w	$6e69	;60a0a
+	dc.w	$7363	;60a0c
+	dc.w	$6865	;60a0e
+	dc.w	$7200	;60a10
+	dc.w	$0352	;60a12
+	dc.w	$7573	;60a14
+	dc.w	$7369	;60a16
+	dc.w	$7363	;60a18
+	dc.w	$6865	;60a1a
+	dc.w	$7200	;60a1c
+	dc.w	$4672	;60a1e
+	dc.w	$6f6e	;60a20
+	dc.w	$742d	;60a22
+	dc.w	$5061	;60a24
+	dc.w	$6e7a	;60a26
+	dc.w	$6572	;60a28
+	dc.w	$756e	;60a2a
+	dc.w	$6700	;60a2c
+	dc.w	$5365	;60a2e
+	dc.w	$6974	;60a30
+	dc.w	$656e	;60a32
+	dc.w	$2d50	;60a34
+	dc.w	$616e	;60a36
+	dc.w	$7a65	;60a38
+	dc.w	$7275	;60a3a
+	dc.w	$6e67	;60a3c
+	dc.w	$0048	;60a3e
+	dc.w	$6563	;60a40
+	dc.w	$6b2d	;60a42
+	dc.w	$5061	;60a44
+	dc.w	$6e7a	;60a46
+	dc.w	$6572	;60a48
+	dc.w	$756e	;60a4a
+	dc.w	$6700	;60a4c
+	dc.w	$4d61	;60a4e
+	dc.w	$782e	;60a50
+	dc.w	$2044	;60a52
+	dc.w	$7572	;60a54
+	dc.w	$6368	;60a56
+	dc.w	$7363	;60a58
+	dc.w	$686c	;60a5a
+	dc.w	$6167	;60a5c
+	dc.w	$736b	;60a5e
+	dc.w	$7261	;60a60
+	dc.w	$6674	;60a62
+	dc.w	$004d	;60a64
+	dc.w	$6178	;60a66
+	dc.w	$2e20	;60a68
+	dc.w	$5374	;60a6a
+	dc.w	$7261	;60a6c
+	dc.w	$8365	;60a6e
+	dc.w	$6e67	;60a70
+	dc.w	$6573	;60a72
+	dc.w	$6368	;60a74
+	dc.w	$7769	;60a76
+	dc.w	$6e64	;60a78
+	dc.w	$6967	;60a7a
+	dc.w	$6b65	;60a7c
+	dc.w	$6974	;60a7e
+	dc.w	$004d	;60a80
+	dc.w	$6178	;60a82
+	dc.w	$2e20	;60a84
+	dc.w	$4765	;60a86
+	dc.w	$6c80	;60a88
+	dc.w	$6e64	;60a8a
+	dc.w	$6567	;60a8c
+	dc.w	$6573	;60a8e
+	dc.w	$6368	;60a90
+	dc.w	$7769	;60a92
+	dc.w	$6e64	;60a94
+	dc.w	$6967	;60a96
+	dc.w	$6b65	;60a98
+	dc.w	$6974	;60a9a
+	dc.w	$0000	;60a9c
+lb_60a9e:
+	dc.w	$0100	;60a9e
+	dc.w	$0000	;60aa0
+	dc.w	$4b61	;60aa2
+	dc.w	$6d70	;60aa4
+	dc.w	$662d	;60aa6
+	dc.w	$1f00	;60aa8
+	dc.w	$0100	;60aaa
+	dc.w	$0008	;60aac
+	dc.w	$6d6f	;60aae
+	dc.w	$6475	;60ab0
+	dc.w	$7300	;60ab2
+lb_60ab4:
+	dc.w	$0100	;60ab4
+	dc.w	$0000	;60ab6
+	dc.w	$5365	;60ab8
+	dc.w	$747a	;60aba
+	dc.w	$2d1f	;60abc
+	dc.w	$0100	;60abe
+	dc.w	$0008	;60ac0
+	dc.w	$6d6f	;60ac2
+	dc.w	$6475	;60ac4
+	dc.w	$7300	;60ac6
+	dc.w	$0100	;60ac8
+	dc.w	$0018	;60aca
+	dc.w	$4c65	;60acc
+	dc.w	$7665	;60ace
+	dc.w	$6c00	;60ad0
+	dc.w	$001e	;60ad2
+	dc.w	$0014	;60ad4
+	dc.w	$4465	;60ad6
+	dc.w	$6d6f	;60ad8
+	dc.w	$6e73	;60ada
+	dc.w	$7472	;60adc
+	dc.w	$6174	;60ade
+	dc.w	$696f	;60ae0
+	dc.w	$6e00	;60ae2
+lb_60ae4:
+	dc.w	$003c	;60ae4
+	dc.w	$0078	;60ae6
+	dc.w	$4269	;60ae8
+	dc.w	$7474	;60aea
+	dc.w	$6520	;60aec
+	dc.w	$6765	;60aee
+	dc.w	$6265	;60af0
+	dc.w	$6e20	;60af2
+	dc.w	$5369	;60af4
+	dc.w	$6520	;60af6
+	dc.w	$4968	;60af8
+	dc.w	$7265	;60afa
+	dc.w	$6e20	;60afc
+	dc.w	$4e61	;60afe
+	dc.w	$6d65	;60b00
+	dc.w	$6e20	;60b02
+	dc.w	$6569	;60b04
+	dc.w	$6e3a	;60b06
+	dc.w	$0000	;60b08
+lb_60b0a:
+	dc.w	$006e	;60b0a
+	dc.w	$0014	;60b0c
+	dc.w	$0354	;60b0e
+	dc.w	$6f70	;60b10
+	dc.w	$2054	;60b12
+	dc.w	$616e	;60b14
+	dc.w	$6b20	;60b16
+	dc.w	$4275	;60b18
+	dc.w	$7374	;60b1a
+	dc.w	$6572	;60b1c
+	dc.w	$7300	;60b1e
+	dc.w	$0050	;60b20
+	dc.w	$0022	;60b22
+	dc.w	$044a	;60b24
+	dc.w	$6f6e	;60b26
+	dc.w	$6174	;60b28
+	dc.w	$6861	;60b2a
+	dc.w	$6e20	;60b2c
+	dc.w	$4772	;60b2e
+	dc.w	$6966	;60b30
+	dc.w	$6669	;60b32
+	dc.w	$7468	;60b34
+	dc.w	$731f	;60b36
+	dc.w	$0050	;60b38
+	dc.w	$002e	;60b3a
+	dc.w	$756e	;60b3c
+	dc.w	$6420	;60b3e
+	dc.w	$4461	;60b40
+	dc.w	$7669	;60b42
+	dc.w	$6420	;60b44
+	dc.w	$4272	;60b46
+	dc.w	$6162	;60b48
+	dc.w	$656e	;60b4a
+	dc.w	$1f00	;60b4c
+	dc.w	$0050	;60b4e
+	dc.w	$003a	;60b50
+	dc.w	$6461	;60b52
+	dc.w	$6e6b	;60b54
+	dc.w	$656e	;60b56
+	dc.w	$2064	;60b58
+	dc.w	$656e	;60b5a
+	dc.w	$1f00	;60b5c
+	dc.w	$0050	;60b5e
+	dc.w	$0046	;60b60
+	dc.w	$666f	;60b62
+	dc.w	$6c67	;60b64
+	dc.w	$656e	;60b66
+	dc.w	$6465	;60b68
+	dc.w	$6e20	;60b6a
+	dc.w	$4c65	;60b6c
+	dc.w	$7574	;60b6e
+	dc.w	$656e	;60b70
+	dc.w	$3a1f	;60b72
+	dc.w	$0050	;60b74
+	dc.w	$0056	;60b76
+	dc.w	$0f4a	;60b78
+	dc.w	$6163	;60b7a
+	dc.w	$7175	;60b7c
+	dc.w	$6920	;60b7e
+	dc.w	$4c79	;60b80
+	dc.w	$6f6e	;60b82
+	dc.w	$732c	;60b84
+	dc.w	$1f00	;60b86
+	dc.w	$0050	;60b88
+	dc.w	$0062	;60b8a
+	dc.w	$4a6f	;60b8c
+	dc.w	$6e20	;60b8e
+	dc.w	$4465	;60b90
+	dc.w	$616e	;60b92
+	dc.w	$2c1f	;60b94
+	dc.w	$0050	;60b96
+	dc.w	$006e	;60b98
+	dc.w	$5061	;60b9a
+	dc.w	$756c	;60b9c
+	dc.w	$2046	;60b9e
+	dc.w	$656c	;60ba0
+	dc.w	$6c6f	;60ba2
+	dc.w	$7773	;60ba4
+	dc.w	$2c1f	;60ba6
+	dc.w	$0050	;60ba8
+	dc.w	$007a	;60baa
+	dc.w	$426f	;60bac
+	dc.w	$7669	;60bae
+	dc.w	$6e67	;60bb0
+	dc.w	$746f	;60bb2
+	dc.w	$6e20	;60bb4
+	dc.w	$5241	;60bb6
+	dc.w	$4320	;60bb8
+	dc.w	$5461	;60bba
+	dc.w	$6e6b	;60bbc
+	dc.w	$204d	;60bbe
+	dc.w	$7573	;60bc0
+	dc.w	$6575	;60bc2
+	dc.w	$6d2c	;60bc4
+	dc.w	$1f00	;60bc6
+	dc.w	$0050	;60bc8
+	dc.w	$0086	;60bca
+	dc.w	$756e	;60bcc
+	dc.w	$6420	;60bce
+	dc.w	$5465	;60bd0
+	dc.w	$7574	;60bd2
+	dc.w	$2057	;60bd4
+	dc.w	$6569	;60bd6
+	dc.w	$6465	;60bd8
+	dc.w	$6d61	;60bda
+	dc.w	$6e6e	;60bdc
+	dc.w	$0000	;60bde
+lb_60be0:
+	dc.w	$006a	;60be0
+	dc.w	$0018	;60be2
+	dc.w	$0354	;60be4
+	dc.w	$6173	;60be6
+	dc.w	$7461	;60be8
+	dc.w	$7475	;60bea
+	dc.w	$7262	;60bec
+	dc.w	$656c	;60bee
+	dc.w	$6567	;60bf0
+	dc.w	$756e	;60bf2
+	dc.w	$671f	;60bf4
+	dc.w	$0050	;60bf6
+	dc.w	$0028	;60bf8
+	dc.w	$0f2d	;60bfa
+	dc.w	$2056	;60bfc
+	dc.w	$6f72	;60bfe
+	dc.w	$7780	;60c00
+	dc.w	$7274	;60c02
+	dc.w	$7320	;60c04
+	dc.w	$6c69	;60c06
+	dc.w	$6e6b	;60c08
+	dc.w	$731f	;60c0a
+	dc.w	$0050	;60c0c
+	dc.w	$0032	;60c0e
+	dc.w	$2d20	;60c10
+	dc.w	$566f	;60c12
+	dc.w	$7277	;60c14
+	dc.w	$8072	;60c16
+	dc.w	$7473	;60c18
+	dc.w	$2072	;60c1a
+	dc.w	$6563	;60c1c
+	dc.w	$6874	;60c1e
+	dc.w	$731f	;60c20
+	dc.w	$0050	;60c22
+	dc.w	$003c	;60c24
+	dc.w	$2d20	;60c26
+	dc.w	$5282	;60c28
+	dc.w	$636b	;60c2a
+	dc.w	$7780	;60c2c
+	dc.w	$7274	;60c2e
+	dc.w	$7320	;60c30
+	dc.w	$6c69	;60c32
+	dc.w	$6e6b	;60c34
+	dc.w	$731f	;60c36
+	dc.w	$0050	;60c38
+	dc.w	$0046	;60c3a
+	dc.w	$2d20	;60c3c
+	dc.w	$5282	;60c3e
+	dc.w	$636b	;60c40
+	dc.w	$7780	;60c42
+	dc.w	$7274	;60c44
+	dc.w	$7320	;60c46
+	dc.w	$7265	;60c48
+	dc.w	$6368	;60c4a
+	dc.w	$7473	;60c4c
+	dc.w	$1f00	;60c4e
+	dc.w	$0050	;60c50
+	dc.w	$0050	;60c52
+	dc.w	$2d20	;60c54
+	dc.w	$5475	;60c56
+	dc.w	$726d	;60c58
+	dc.w	$2069	;60c5a
+	dc.w	$6d20	;60c5c
+	dc.w	$5568	;60c5e
+	dc.w	$727a	;60c60
+	dc.w	$6569	;60c62
+	dc.w	$6765	;60c64
+	dc.w	$7273	;60c66
+	dc.w	$696e	;60c68
+	dc.w	$6e20	;60c6a
+	dc.w	$6472	;60c6c
+	dc.w	$6568	;60c6e
+	dc.w	$656e	;60c70
+	dc.w	$1f00	;60c72
+	dc.w	$0050	;60c74
+	dc.w	$005a	;60c76
+	dc.w	$2d20	;60c78
+	dc.w	$5475	;60c7a
+	dc.w	$726d	;60c7c
+	dc.w	$2067	;60c7e
+	dc.w	$6567	;60c80
+	dc.w	$656e	;60c82
+	dc.w	$2055	;60c84
+	dc.w	$6872	;60c86
+	dc.w	$7a65	;60c88
+	dc.w	$6967	;60c8a
+	dc.w	$6572	;60c8c
+	dc.w	$7369	;60c8e
+	dc.w	$6e6e	;60c90
+	dc.w	$1f00	;60c92
+	dc.w	$0050	;60c94
+	dc.w	$0064	;60c96
+	dc.w	$2d20	;60c98
+	dc.w	$4b61	;60c9a
+	dc.w	$6e6f	;60c9c
+	dc.w	$6e65	;60c9e
+	dc.w	$2068	;60ca0
+	dc.w	$6562	;60ca2
+	dc.w	$656e	;60ca4
+	dc.w	$1f00	;60ca6
+	dc.w	$0050	;60ca8
+	dc.w	$006e	;60caa
+	dc.w	$2d20	;60cac
+	dc.w	$4b61	;60cae
+	dc.w	$6e6f	;60cb0
+	dc.w	$6e65	;60cb2
+	dc.w	$2073	;60cb4
+	dc.w	$656e	;60cb6
+	dc.w	$6b65	;60cb8
+	dc.w	$6e1f	;60cba
+	dc.w	$0050	;60cbc
+	dc.w	$0078	;60cbe
+	dc.w	$2d20	;60cc0
+	dc.w	$4b61	;60cc2
+	dc.w	$6e6f	;60cc4
+	dc.w	$6e65	;60cc6
+	dc.w	$2061	;60cc8
+	dc.w	$6266	;60cca
+	dc.w	$6575	;60ccc
+	dc.w	$7265	;60cce
+	dc.w	$6e1f	;60cd0
+	dc.w	$0050	;60cd2
+	dc.w	$0082	;60cd4
+	dc.w	$2d20	;60cd6
+	dc.w	$4b61	;60cd8
+	dc.w	$7274	;60cda
+	dc.w	$6520	;60cdc
+	dc.w	$616e	;60cde
+	dc.w	$7780	;60ce0
+	dc.w	$686c	;60ce2
+	dc.w	$656e	;60ce4
+	dc.w	$1f00	;60ce6
+	dc.w	$0050	;60ce8
+	dc.w	$008c	;60cea
+	dc.w	$2d20	;60cec
+	dc.w	$5061	;60cee
+	dc.w	$7573	;60cf0
+	dc.w	$652c	;60cf2
+	dc.w	$2053	;60cf4
+	dc.w	$7069	;60cf6
+	dc.w	$656c	;60cf8
+	dc.w	$2061	;60cfa
+	dc.w	$6e68	;60cfc
+	dc.w	$616c	;60cfe
+	dc.w	$7465	;60d00
+	dc.w	$6e1f	;60d02
+	dc.w	$0050	;60d04
+	dc.w	$0096	;60d06
+	dc.w	$2d20	;60d08
+	dc.w	$536f	;60d0a
+	dc.w	$756e	;60d0c
+	dc.w	$6420	;60d0e
+	dc.w	$416e	;60d10
+	dc.w	$1f00	;60d12
+	dc.w	$0050	;60d14
+	dc.w	$00a0	;60d16
+	dc.w	$2d20	;60d18
+	dc.w	$536f	;60d1a
+	dc.w	$756e	;60d1c
+	dc.w	$6420	;60d1e
+	dc.w	$4175	;60d20
+	dc.w	$731f	;60d22
+	dc.w	$005a	;60d24
+	dc.w	$00ac	;60d26
+	dc.w	$0448	;60d28
+	dc.w	$6965	;60d2a
+	dc.w	$7220	;60d2c
+	dc.w	$6b6c	;60d2e
+	dc.w	$6963	;60d30
+	dc.w	$6b65	;60d32
+	dc.w	$6e20	;60d34
+	dc.w	$756d	;60d36
+	dc.w	$2066	;60d38
+	dc.w	$6f72	;60d3a
+	dc.w	$747a	;60d3c
+	dc.w	$7566	;60d3e
+	dc.w	$6168	;60d40
+	dc.w	$7265	;60d42
+	dc.w	$6e00	;60d44
+	dc.w	$0000	;60d46
+	dc.w	$0064	;60d48
+	dc.w	$5265	;60d4a
+	dc.w	$7475	;60d4c
+	dc.w	$726e	;60d4e
+	dc.w	$2077	;60d50
+	dc.w	$656e	;60d52
+	dc.w	$6e20	;60d54
+	dc.w	$4a6f	;60d56
+	dc.w	$7973	;60d58
+	dc.w	$7469	;60d5a
+	dc.w	$636b	;60d5c
+	dc.w	$2f4d	;60d5e
+	dc.w	$6175	;60d60
+	dc.w	$7320	;60d62
+	dc.w	$6665	;60d64
+	dc.w	$7274	;60d66
+	dc.w	$6967	;60d68
+	dc.w	$0000	;60d6a
+	dc.w	$0028	;60d6c
+	dc.w	$0028	;60d6e
+	dc.w	$0054	;60d70
+	dc.w	$6173	;60d72
+	dc.w	$7461	;60d74
+	dc.w	$7475	;60d76
+	dc.w	$7220	;60d78
+	dc.w	$2620	;60d7a
+	dc.w	$6f70	;60d7c
+	dc.w	$7469	;60d7e
+	dc.w	$6f6e	;60d80
+	dc.w	$616c	;60d82
+	dc.w	$204d	;60d84
+	dc.w	$6175	;60d86
+	dc.w	$7320	;60d88
+	dc.w	$6682	;60d8a
+	dc.w	$7220	;60d8c
+	dc.w	$4b61	;60d8e
+	dc.w	$6e6f	;60d90
+	dc.w	$6e69	;60d92
+	dc.w	$6572	;60d94
+	dc.w	$0000	;60d96
+	dc.w	$000a	;60d98
+	dc.w	$0034	;60d9a
+	dc.w	$004a	;60d9c
+	dc.w	$6f79	;60d9e
+	dc.w	$7374	;60da0
+	dc.w	$6963	;60da2
+	dc.w	$6b20	;60da4
+	dc.w	$3120	;60da6
+	dc.w	$6682	;60da8
+	dc.w	$7220	;60daa
+	dc.w	$4661	;60dac
+	dc.w	$6872	;60dae
+	dc.w	$6572	;60db0
+	dc.w	$2026	;60db2
+	dc.w	$204a	;60db4
+	dc.w	$6f79	;60db6
+	dc.w	$7374	;60db8
+	dc.w	$6963	;60dba
+	dc.w	$6b20	;60dbc
+	dc.w	$3220	;60dbe
+	dc.w	$6682	;60dc0
+	dc.w	$7220	;60dc2
+	dc.w	$4b61	;60dc4
+	dc.w	$6e6f	;60dc6
+	dc.w	$6e69	;60dc8
+	dc.w	$6572	;60dca
+	dc.w	$0000	;60dcc
+	dc.w	$0008	;60dce
+	dc.w	$0040	;60dd0
+	dc.w	$004a	;60dd2
+	dc.w	$6f79	;60dd4
+	dc.w	$7374	;60dd6
+	dc.w	$6963	;60dd8
+	dc.w	$6b20	;60dda
+	dc.w	$3120	;60ddc
+	dc.w	$6682	;60dde
+	dc.w	$7220	;60de0
+	dc.w	$6c69	;60de2
+	dc.w	$6e6b	;60de4
+	dc.w	$6520	;60de6
+	dc.w	$4b65	;60de8
+	dc.w	$7474	;60dea
+	dc.w	$6520	;60dec
+	dc.w	$2620	;60dee
+	dc.w	$4a6f	;60df0
+	dc.w	$7973	;60df2
+	dc.w	$7469	;60df4
+	dc.w	$636b	;60df6
+	dc.w	$2032	;60df8
+	dc.w	$2066	;60dfa
+	dc.w	$8272	;60dfc
+	dc.w	$2072	;60dfe
+	dc.w	$6563	;60e00
+	dc.w	$6874	;60e02
+	dc.w	$6500	;60e04
 lb_60e06:
-	dc.w	$0068  ;60e06
-lb_60e08:
-	DC.W	$0078			;60e08
-	DC.W	$4d61			;60e0a
-	DC.W	$6e75			;60e0c
-lb_60e0e:
-	BCS.S	lb_60e7a+2		;60e0e: 656c
-	DC.W	$6c65			;60e10
-	MOVEQ	#32,D1			;60e12: 7220
-	NOT.W	-(A1)			;60e14: 4661
-	BVC.S	lb_60e8a		;60e16: 6872
-	BCS.S	lb_60e8c		;60e18: 6572
-	dc.w	$0000  ;60e1a
+	dc.w	$0068	;60e06
+	dc.w	$0078	;60e08
+	dc.w	$4d61	;60e0a
+	dc.w	$6e75	;60e0c
+	dc.w	$656c	;60e0e
+	dc.w	$6c65	;60e10
+	dc.w	$7220	;60e12
+	dc.w	$4661	;60e14
+	dc.w	$6872	;60e16
+	dc.w	$6572	;60e18
+	dc.w	$0000	;60e1a
 lb_60e1c:
-	dc.w	$005c  ;60e1c
-	DC.W	$0078			;60e1e
-	DC.W	$4175			;60e20
-lb_60e22:
-	MOVEQ	#111,D2			;60e22: 746f
-lb_60e24:
-	DC.W	$6d61			;60e24
-	MOVEQ	#105,D2			;60e26: 7469
-	DC.W	$7363			;60e28
-	DC.W	$6865			;60e2a
-	MOVEQ	#32,D1			;60e2c: 7220
-	NOT.W	-(A1)			;60e2e: 4661
-	BVC.S	lb_60ea4		;60e30: 6872
-	BCS.S	lb_60ea6		;60e32: 6572
-	ORI.B	#$60,D0			;60e34: 00000060
-	DC.W	$008c			;60e38
-	DC.W	$4d61			;60e3a
-	DC.W	$6e75			;60e3c
-lb_60e3e:
-	BCS.S	lb_60eac		;60e3e: 656c
-	DC.W	$6c65			;60e40
-	MOVEQ	#32,D1			;60e42: 7220
-	DC.W	$4b61			;60e44
-	DC.W	$6e6f			;60e46
-	DC.W	$6e69			;60e48
-	BCS.S	lb_60ebc+2		;60e4a: 6572
-	ORI.B	#$56,D0			;60e4c: 00000056
-	DC.W	$008c			;60e50
-	DC.W	$4175			;60e52
-	MOVEQ	#111,D2			;60e54: 746f
-	DC.W	$6d61			;60e56
-	MOVEQ	#105,D2			;60e58: 7469
-	DC.W	$7363			;60e5a
-	DC.W	$6865			;60e5c
-	MOVEQ	#32,D1			;60e5e: 7220
-	DC.W	$4b61			;60e60
-	DC.W	$6e6f			;60e62
-	DC.W	$6e69			;60e64
-	BCS.S	lb_60eda		;60e66: 6572
-	DC.W	$0000			;60e68
-	BTST	D0,D0			;60e6a: 0100
-lb_60e6c:
-	ORI.B	#$35,266(A2)		;60e6c: 002a0035010a
-	dc.l  $0			;60e72: 00000000
-	DC.W	$0000			;60e76
-lb_60e78:
-	DC.W	$ff70			;60e78
-lb_60e7a:
-	ORI.B	#$58,D0			;60e7a: 00000058
-	DC.W	$00f0			;60e7e
-	ORI.B	#$58,D0			;60e80: 00000058
-	DC.W	$00f0			;60e84
-	DC.W	$0000			;60e86
-	DC.W	$ffa8			;60e88
-lb_60e8a:
-	DC.W	$ff70			;60e8a
-lb_60e8c:
-	DC.W	$0000			;60e8c
-	DC.W	$ffa8			;60e8e
-	DC.W	$ff50			;60e90
-	DC.W	$0020			;60e92
-	DC.W	$ffa8			;60e94
-	DC.W	$ff50			;60e96
-	ORI.B	#$58,-(A0)		;60e98: 00200058
-	DC.W	$ff40			;60e9c
-	DC.W	$0030			;60e9e
-	ORI.W	#$ff40,(A0)+		;60ea0: 0058ff40
-lb_60ea4:
-	DC.W	$0030			;60ea4
-lb_60ea6:
-	DC.W	$ffa8			;60ea6
-	DC.W	$ff30			;60ea8
-	DC.W	$0030			;60eaa
-lb_60eac:
-	DC.W	$ffa8			;60eac
-	DC.W	$ff30			;60eae
-	DC.W	$0030			;60eb0
-	DC.W	$ff88			;60eb2
-	DC.W	$ff30			;60eb4
-	DC.W	$0030			;60eb6
-	ORI.W	#$ff30,(A0)+		;60eb8: 0058ff30
-lb_60ebc:
-	ORI.B	#$78,-16(A0,D0.W)	;60ebc: 0030007800f0
-	ORI.B	#$78,-(A0)		;60ec2: 00200078
-	DC.W	$00f0			;60ec6
-	DC.W	$0020			;60ec8
-	DC.W	$ff88			;60eca
-	DC.W	$00f0			;60ecc
-	DC.W	$0020			;60ece
-	DC.W	$ffa8			;60ed0
-	DC.W	$00f0			;60ed2
-	ORI.B	#$58,-(A0)		;60ed4: 00200058
-	DC.W	$ff50			;60ed8
-lb_60eda:
-	ORI.B	#$78,-(A0)		;60eda: 00200078
-	DC.W	$ff50			;60ede
-	DC.W	$0020			;60ee0
-	DC.W	$ff88			;60ee2
-	DC.W	$ff50			;60ee4
-	ORI.W	#$0058,-(A0)		;60ee6: 00600058
-	DC.W	$ff50			;60eea
-	ORI.W	#$ffa8,-(A0)		;60eec: 0060ffa8
-	DC.W	$ff70			;60ef0
-	ORI.L	#$0058ff70,D0		;60ef2: 00800058ff70
-	ORI.L	#$ffa8ff70,D0		;60ef8: 0080ffa8ff70
-	ORI.L	#$0078ff70,D0		;60efe: 00800078ff70
-	ORI.L	#$ff88ff30,D0		;60f04: 0080ff88ff30
-	ORI.W	#$0078,(A0)		;60f0a: 00500078
-	DC.W	$ff30			;60f0e
-	ORI.W	#$ff88,(A0)		;60f10: 0050ff88
-	DC.W	$ff30			;60f14
-	ORI.W	#$0058,(A0)		;60f16: 00500058
-	DC.W	$ff30			;60f1a
-	ORI.W	#$ffa8,(A0)		;60f1c: 0050ffa8
-	DC.W	$00f0			;60f20
-	ORI.W	#$0078,(A0)		;60f22: 00500078
-	DC.W	$00f0			;60f26
-	ORI.W	#$ff88,(A0)		;60f28: 0050ff88
-	ORI.L	#$0080ff88,-80(A0,D0.W)	;60f2c: 00b00080ff8800b0
-	ORI.L	#$007800b0,D0		;60f34: 0080007800b0
-	ORI.L	#$ffa800b0,D0		;60f3a: 0080ffa800b0
-	ORI.L	#$005800f0,D0		;60f40: 0080005800f0
-	ORI.W	#$ffa8,(A0)		;60f46: 0050ffa8
-	DC.W	$00f0			;60f4a
-	ORI.W	#$0058,(A0)		;60f4c: 00500058
-	DC.W	$00f0			;60f50
-	DC.W	$0030			;60f52
-	DC.W	$ffa8			;60f54
-	DC.W	$00f0			;60f56
-	ORI.B	#$58,-48(A0,D0.W)	;60f58: 0030005800d0
-	ORI.W	#$ffa8,-(A0)		;60f5e: 0060ffa8
-	DC.W	$00d0			;60f62
-	ORI.W	#$0058,-(A0)		;60f64: 00600058
-	DC.W	$ff70			;60f68
-	DC.W	$0020			;60f6a
-	DC.W	$ffa8			;60f6c
-	DC.W	$ff70			;60f6e
-	ORI.B	#$58,-(A0)		;60f70: 00200058
-	DC.W	$ab26			;60f74
-	DC.W	$ab26			;60f76
-	ORI.B	#$02,D0			;60f78: 00000002
-	DC.W	$4f8c			;60f7c
-	DC.W	$0002			;60f7e
-	CHK.W	(A4),D7			;60f80: 4f94
-	DC.W	$0002			;60f82
-	CHK.W	(A4)+,D7		;60f84: 4f9c
-	ORI.B	#$0c,D0			;60f86: 0000000c
-	DC.W	$ab26			;60f8a
-	DC.W	$ab26			;60f8c
-	ORI.B	#$02,D0			;60f8e: 00000002
-	CHK.W	D4,D7			;60f92: 4f84
-	DC.W	$0002			;60f94
-	DC.W	$4f8c			;60f96
-	DC.W	$0002			;60f98
-	CHK.W	(A4)+,D7		;60f9a: 4f9c
-	ORI.B	#$0c,D0			;60f9c: 0000000c
-	AND.W	(A6),D5			;60fa0: ca56
-	SUB.L	0(A4),D2		;60fa2: 94ac0000
-	DC.W	$0002			;60fa6
-	DC.W	$4f8c			;60fa8
-	DC.W	$0002			;60faa
-	CHK.W	2(A4,D0.W),D7		;60fac: 4fb40002
-	CHK.W	#$0000,D7		;60fb0: 4fbc0000
-	DC.W	$0014			;60fb4
-	AND.W	(A6),D5			;60fb6: ca56
-	SUB.L	0(A4),D2		;60fb8: 94ac0000
-	DC.W	$0002			;60fbc
-	DC.W	$4f8c			;60fbe
-	DC.W	$0002			;60fc0
-	CHK.W	#$0002,D7		;60fc2: 4fbc0002
-	DC.W	$4fe4			;60fc6
-	ORI.B	#$14,D0			;60fc8: 00000014
-	AND.W	(A6),D5			;60fcc: ca56
-	SUB.L	0(A4),D2		;60fce: 94ac0000
-	DC.W	$0002			;60fd2
-	CHK.W	D4,D7			;60fd4: 4f84
-	DC.W	$0002			;60fd6
-	CHK.W	-(A4),D7		;60fd8: 4fa4
-	DC.W	$0002			;60fda
-	CHK.W	0(A4),D7		;60fdc: 4fac0000
-	DC.W	$0014			;60fe0
-	AND.W	(A6),D5			;60fe2: ca56
-	SUB.L	0(A4),D2		;60fe4: 94ac0000
-	DC.W	$0002			;60fe8
-	CHK.W	D4,D7			;60fea: 4f84
-	DC.W	$0002			;60fec
-	CHK.W	2(A4),D7		;60fee: 4fac0002
-	LEA	0(A4),A7		;60ff2: 4fec0000
-	DC.W	$0014			;60ff6
-	OR.B	9714(A1),D7		;60ff8: 8e2925f2
-lb_60ffc:
-	ORI.B	#$02,D0			;60ffc: 00000002
-	CHK.W	(A4),D7			;61000: 4f94
-	DC.W	$0002			;61002
-	LEA	2(A4,D0.W),A7		;61004: 4ff40002
-	DC.W	$4ffc			;61008
-	ORI.B	#$09,D0			;6100a: 00000009
-	OR.B	9714(A1),D7		;6100e: 8e2925f2
-lb_61012:
-	ORI.B	#$02,D0			;61012: 00000002
-	CHK.W	(A4),D7			;61016: 4f94
-	DC.W	$0002			;61018
-	CHK.W	(A4)+,D7		;6101a: 4f9c
-	DC.W	$0002			;6101c
-	DC.W	$4ffc			;6101e
-	ORI.B	#$09,D0			;61020: 00000009
-	BLS.S	lb_60ffc+2		;61024: 63d8
-	CLR.L	(A0)			;61026: 4290
-	ORI.B	#$02,D0			;61028: 00000002
-	ADDQ.L	#8,D4			;6102c: 5084
-	DC.W	$0002			;6102e
-	ADDQ.L	#8,A4			;61030: 508c
-	DC.W	$0002			;61032
-	ADDQ.L	#8,(A4)			;61034: 5094
-	ORI.B	#$09,D0			;61036: 00000009
-	BLS.S	lb_61012+2		;6103a: 63d8
-	CLR.L	(A0)			;6103c: 4290
-	ORI.B	#$02,D0			;6103e: 00000002
-	ADDQ.L	#8,A4			;61042: 508c
-	DC.W	$0002			;61044
-	ADDQ.L	#8,(A4)			;61046: 5094
-	DC.W	$0002			;61048
-	ADDQ.L	#8,(A4)+		;6104a: 509c
-	ORI.B	#$09,D0			;6104c: 00000009
-	MOVEQ	#0,D4			;61050: 7800
-	dc.l  $0			;61052: 00000000
-	DC.W	$0002			;61056
-	DC.W	$4fcc			;61058
-	DC.W	$0002			;6105a
-	LEA	(A4),A7			;6105c: 4fd4
-	DC.W	$0002			;6105e
-	ADDQ.W	#8,A4			;61060: 504c
-	ORI.B	#$17,D0			;61062: 00000017
-	MOVEQ	#0,D4			;61066: 7800
-	dc.l  $0			;61068: 00000000
-	DC.W	$0002			;6106c
-	LEA	(A4),A7			;6106e: 4fd4
-	DC.W	$0002			;61070
-	ADDQ.W	#8,A4			;61072: 504c
-	DC.W	$0002			;61074
-	ADDQ.W	#8,0(A4,D0.W)		;61076: 50740000
-	DC.W	$0017			;6107a
-	NBCD	D0			;6107c: 4800
-	DC.W	$6000			;6107e
-	ORI.B	#$02,D0			;61080: 00000002
-	ADDQ.W	#8,A4			;61084: 504c
-	DC.W	$0002			;61086
-	ADDQ.W	#8,(A4)			;61088: 5054
-	DC.W	$0002			;6108a
-	ADDQ.W	#8,0(A4,D0.W)		;6108c: 50740000
-	DC.W	$0017			;61090
-	NBCD	D0			;61092: 4800
-	DC.W	$6000			;61094
-	ORI.B	#$02,D0			;61096: 00000002
-	ADDQ.W	#8,(A4)			;6109a: 5054
-	DC.W	$0002			;6109c
-	ADDQ.W	#8,-(A4)		;6109e: 5064
-	DC.W	$0002			;610a0
-	ADDQ.W	#8,0(A4,D0.W)		;610a2: 50740000
-	DC.W	$0017			;610a6
-	MOVEQ	#0,D4			;610a8: 7800
-	dc.l  $0			;610aa: 00000000
-	DC.W	$0002			;610ae
-	DC.W	$4fc4			;610b0
-	DC.W	$0002			;610b2
-	DC.W	$4fdc			;610b4
-	DC.W	$0002			;610b6
-	ADDQ.W	#8,D4			;610b8: 5044
-	ORI.B	#$17,D0			;610ba: 00000017
-	MOVEQ	#0,D4			;610be: 7800
-	dc.l  $0			;610c0: 00000000
-	DC.W	$0002			;610c4
-	DC.W	$4fdc			;610c6
-	DC.W	$0002			;610c8
-	ADDQ.W	#8,D4			;610ca: 5044
-	DC.W	$0002			;610cc
-	DC.W	$507c			;610ce
-	ORI.B	#$17,D0			;610d0: 00000017
-	NBCD	D0			;610d4: 4800
-	DC.W	$6000			;610d6
-	ORI.B	#$02,D0			;610d8: 00000002
-	ADDQ.W	#8,D4			;610dc: 5044
-	DC.W	$0002			;610de
-	ADDQ.W	#8,(A4)+		;610e0: 505c
-	DC.W	$0002			;610e2
-	DC.W	$507c			;610e4
-	ORI.B	#$17,D0			;610e6: 00000017
-	NBCD	D0			;610ea: 4800
-	DC.W	$6000			;610ec
-	ORI.B	#$02,D0			;610ee: 00000002
-	ADDQ.W	#8,(A4)+		;610f2: 505c
-	DC.W	$0002			;610f4
-	ADDQ.W	#8,2(A4)		;610f6: 506c0002
-	DC.W	$507c			;610fa
-	ORI.B	#$17,D0			;610fc: 00000017
-	OR.B	D0,D4			;61100: 8800
-	dc.l  $0			;61102: 00000000
-	DC.W	$0002			;61106
-	CHK.W	2(A4,D0.W),D7		;61108: 4fb40002
-	CHK.W	#$0002,D7		;6110c: 4fbc0002
-	ADDQ.B	#8,-(A4)		;61110: 5024
-	ORI.B	#$17,D0			;61112: 00000017
-	OR.B	D0,D4			;61116: 8800
-	dc.l  $0			;61118: 00000000
-	DC.W	$0002			;6111c
-	CHK.W	2(A4,D0.W),D7		;6111e: 4fb40002
-	ADDQ.B	#8,-(A4)		;61122: 5024
-	DC.W	$0002			;61124
-	ADDQ.B	#8,0(A4,D0.W)		;61126: 50340000
-	DC.W	$0017			;6112a
-	CMP.B	D0,D4			;6112c: b800
-	DC.W	$6000			;6112e
-	ORI.B	#$02,D0			;61130: 00000002
-	ADDQ.B	#8,(A4)			;61134: 5014
-	DC.W	$0002			;61136
-	ADDQ.B	#8,-(A4)		;61138: 5024
-	DC.W	$0002			;6113a
-	ADDQ.B	#8,0(A4,D0.W)		;6113c: 50340000
-	DC.W	$0017			;61140
-	CMP.B	D0,D4			;61142: b800
-	DC.W	$6000			;61144
-	ORI.B	#$02,D0			;61146: 00000002
-	ADDQ.B	#8,D4			;6114a: 5004
-	DC.W	$0002			;6114c
-	ADDQ.B	#8,(A4)			;6114e: 5014
-	DC.W	$0002			;61150
-	ADDQ.B	#8,0(A4,D0.W)		;61152: 50340000
-	DC.W	$0017			;61156
-	CMP.B	D0,D4			;61158: b800
-	DC.W	$6000			;6115a
-	ORI.B	#$02,D0			;6115c: 00000002
-	DC.W	$500c			;61160
-	DC.W	$0002			;61162
-	ADDQ.B	#8,(A4)+		;61164: 501c
-	DC.W	$0002			;61166
-	DC.W	$503c			;61168
-	ORI.B	#$17,D0			;6116a: 00000017
-	CMP.B	D0,D4			;6116e: b800
-	DC.W	$6000			;61170
-	ORI.B	#$02,D0			;61172: 00000002
-	ADDQ.B	#8,(A4)+		;61176: 501c
-	DC.W	$0002			;61178
-	ADDQ.B	#8,2(A4)		;6117a: 502c0002
-	DC.W	$503c			;6117e
-	ORI.B	#$17,D0			;61180: 00000017
-	OR.B	D0,D4			;61184: 8800
-	dc.l  $0			;61186: 00000000
-	DC.W	$0002			;6118a
-	CHK.W	-(A4),D7		;6118c: 4fa4
-	DC.W	$0002			;6118e
-	ADDQ.B	#8,2(A4)		;61190: 502c0002
-	DC.W	$503c			;61194
-	ORI.B	#$17,D0			;61196: 00000017
-	OR.B	D0,D4			;6119a: 8800
-	dc.l  $0			;6119c: 00000000
-	DC.W	$0002			;611a0
-	CHK.W	-(A4),D7		;611a2: 4fa4
-	DC.W	$0002			;611a4
-	CHK.W	2(A4),D7		;611a6: 4fac0002
-	ADDQ.B	#8,0(A4)		;611aa: 502c0000
-	ORI.B	#$00,(A7)		;611ae: 00170000
-	DC.W	$0000			;611b2
-	OR.B	D0,D4			;611b4: 8800
-	DC.W	$0002			;611b6
-	CHK.W	2(A4),D7		;611b8: 4fac0002
-	LEA	2(A4),A7		;611bc: 4fec0002
-	ADDQ.B	#8,0(A4)		;611c0: 502c0000
-	ORI.B	#$00,(A1)		;611c4: 00110000
-	DC.W	$0000			;611c8
-	OR.B	D0,D4			;611ca: 8800
-	DC.W	$0002			;611cc
-	LEA	2(A4),A7		;611ce: 4fec0002
-	ADDQ.B	#8,(A4)+		;611d2: 501c
-	DC.W	$0002			;611d4
-	ADDQ.B	#8,0(A4)		;611d6: 502c0000
-	ORI.B	#$00,(A1)		;611da: 00110000
-	DC.W	$0000			;611de
-	OR.B	D0,D4			;611e0: 8800
-	DC.W	$0002			;611e2
-	LEA	2(A4),A7		;611e4: 4fec0002
-	ADDQ.B	#8,(A4)+		;611e8: 501c
-	DC.W	$0002			;611ea
-	ADDQ.W	#8,(A4)			;611ec: 5054
-	ORI.B	#$11,D0			;611ee: 00000011
-	dc.l  $0			;611f2: 00000000
-	OR.B	D0,D4			;611f6: 8800
-	DC.W	$0002			;611f8
-	LEA	2(A4),A7		;611fa: 4fec0002
-	ADDQ.W	#8,A4			;611fe: 504c
-	DC.W	$0002			;61200
-	ADDQ.W	#8,(A4)			;61202: 5054
-	ORI.B	#$11,D0			;61204: 00000011
-	dc.l  $0			;61208: 00000000
-	OR.B	D0,D4			;6120c: 8800
-	DC.W	$0002			;6120e
-	DC.W	$4fcc			;61210
-	DC.W	$0002			;61212
-	LEA	2(A4),A7		;61214: 4fec0002
-	ADDQ.W	#8,A4			;61218: 504c
-	ORI.B	#$11,D0			;6121a: 00000011
-	dc.l  $0			;6121e: 00000000
-	MOVEQ	#0,D4			;61222: 7800
-	DC.W	$0002			;61224
-	CHK.W	#$0002,D7		;61226: 4fbc0002
-	DC.W	$4fe4			;6122a
-	DC.W	$0002			;6122c
-	ADDQ.B	#8,-(A4)		;6122e: 5024
-	ORI.B	#$11,D0			;61230: 00000011
-	dc.l  $0			;61234: 00000000
-	MOVEQ	#0,D4			;61238: 7800
-	DC.W	$0002			;6123a
-	DC.W	$4fe4			;6123c
-	DC.W	$0002			;6123e
-	ADDQ.B	#8,(A4)			;61240: 5014
-	DC.W	$0002			;61242
-	ADDQ.B	#8,-(A4)		;61244: 5024
-	ORI.B	#$11,D0			;61246: 00000011
-	dc.l  $0			;6124a: 00000000
-	MOVEQ	#0,D4			;6124e: 7800
-	DC.W	$0002			;61250
-	DC.W	$4fe4			;61252
-	DC.W	$0002			;61254
-	ADDQ.B	#8,(A4)			;61256: 5014
-	DC.W	$0002			;61258
-	ADDQ.W	#8,(A4)+		;6125a: 505c
-	ORI.B	#$11,D0			;6125c: 00000011
-	dc.l  $0			;61260: 00000000
-	MOVEQ	#0,D4			;61264: 7800
-	DC.W	$0002			;61266
-	DC.W	$4fe4			;61268
-	DC.W	$0002			;6126a
-	ADDQ.W	#8,D4			;6126c: 5044
-	DC.W	$0002			;6126e
-	ADDQ.W	#8,(A4)+		;61270: 505c
-	ORI.B	#$11,D0			;61272: 00000011
-	dc.l  $0			;61276: 00000000
-	MOVEQ	#0,D4			;6127a: 7800
-	DC.W	$0002			;6127c
-	DC.W	$4fc4			;6127e
-	DC.W	$0002			;61280
-	DC.W	$4fe4			;61282
-	DC.W	$0002			;61284
-	ADDQ.W	#8,D4			;61286: 5044
-	ORI.B	#$11,D0			;61288: 00000011
-	DC.W	$0000			;6128c
-	OR.B	D0,D4			;6128e: 8800
-	ORI.B	#$02,D0			;61290: 00000002
-	ADDQ.L	#8,2(A4)		;61294: 50ac0002
-	CHK.W	D4,D7			;61298: 4f84
-	DC.W	$0002			;6129a
-	DC.W	$4f8c			;6129c
-	ORI.B	#$14,D0			;6129e: 00000014
-	DC.W	$0000			;612a2
-	OR.B	D0,D4			;612a4: 8800
-	ORI.B	#$02,D0			;612a6: 00000002
-	ADDQ.L	#8,2(A4)		;612aa: 50ac0002
-	ADDQ.L	#8,-(A4)		;612ae: 50a4
-	DC.W	$0002			;612b0
-	CHK.W	D4,D7			;612b2: 4f84
-	ORI.B	#$14,D0			;612b4: 00000014
-	DC.W	$0000			;612b8
-	OR.B	D0,D4			;612ba: 8800
-	ORI.B	#$02,D0			;612bc: 00000002
-	CHK.W	D4,D7			;612c0: 4f84
-	DC.W	$0002			;612c2
-	LEA	2(A4),A7		;612c4: 4fec0002
-	ADDQ.L	#8,-(A4)		;612c8: 50a4
-	ORI.B	#$04,D0			;612ca: 00000004
-	DC.W	$0000			;612ce
-	OR.B	D0,D4			;612d0: 8800
-	ORI.B	#$02,D0			;612d2: 00000002
-	LEA	(A4),A7			;612d6: 4fd4
-	DC.W	$0002			;612d8
-	LEA	2(A4),A7		;612da: 4fec0002
-	ADDQ.L	#8,-(A4)		;612de: 50a4
-	ORI.B	#$04,D0			;612e0: 00000004
-	DC.W	$0000			;612e4
-	OR.B	D0,D4			;612e6: 8800
-	ORI.B	#$02,D0			;612e8: 00000002
-	DC.W	$4fcc			;612ec
-	DC.W	$0002			;612ee
-	LEA	(A4),A7			;612f0: 4fd4
-	DC.W	$0002			;612f2
-	LEA	0(A4),A7		;612f4: 4fec0000
-	ORI.B	#$00,D4			;612f8: 00040000
-	OR.B	D0,D4			;612fc: 8800
-	ORI.B	#$02,D0			;612fe: 00000002
-	DC.W	$4f8c			;61302
-	DC.W	$0002			;61304
-	DC.W	$4fe4			;61306
-	DC.W	$0002			;61308
-	ADDQ.L	#8,0(A4)		;6130a: 50ac0000
-	ORI.B	#$00,D4			;6130e: 00040000
-	OR.B	D0,D4			;61312: 8800
-	ORI.B	#$02,D0			;61314: 00000002
-	DC.W	$4fdc			;61318
-	DC.W	$0002			;6131a
-	DC.W	$4fe4			;6131c
-	DC.W	$0002			;6131e
-	ADDQ.L	#8,0(A4)		;61320: 50ac0000
-	ORI.B	#$00,D4			;61324: 00040000
-	OR.B	D0,D4			;61328: 8800
-	ORI.B	#$02,D0			;6132a: 00000002
-	DC.W	$4fc4			;6132e
-	DC.W	$0002			;61330
-	DC.W	$4fdc			;61332
-	DC.W	$0002			;61334
-	DC.W	$4fe4			;61336
-	ORI.B	#$04,D0			;61338: 00000004
-	OR.B	D0,D4			;6133c: 8800
-	dc.l  $0			;6133e: 00000000
-	DC.W	$0002			;61342
-	DC.W	$4f64			;61344
-	DC.W	$0002			;61346
-	ADDQ.L	#8,-(A4)		;61348: 50a4
-	DC.W	$0002			;6134a
-	ADDQ.L	#8,0(A4)		;6134c: 50ac0000
-	DC.W	$000c			;61350
-	OR.B	D0,D4			;61352: 8800
-	dc.l  $0			;61354: 00000000
-	DC.W	$0002			;61358
-	DC.W	$4f64			;6135a
-	DC.W	$0002			;6135c
-	DC.W	$4f7c			;6135e
-	DC.W	$0002			;61360
-	ADDQ.L	#8,-(A4)		;61362: 50a4
-	ORI.B	#$0c,D0			;61364: 0000000c
-	MOVEQ	#0,D4			;61368: 7800
-	dc.l  $0			;6136a: 00000000
-	DC.W	$0002			;6136e
-	DC.W	$4f6c			;61370
-	DC.W	$0002			;61372
-	DC.W	$4f74			;61374
-	DC.W	$0002			;61376
-	ADDQ.L	#8,D4			;61378: 5084
-	ORI.B	#$11,D0			;6137a: 00000011
-	MOVEQ	#0,D4			;6137e: 7800
-	dc.l  $0			;61380: 00000000
-	DC.W	$0002			;61384
-	DC.W	$4f6c			;61386
-	DC.W	$0002			;61388
-	ADDQ.L	#8,D4			;6138a: 5084
-	DC.W	$0002			;6138c
-	ADDQ.L	#8,A4			;6138e: 508c
-	ORI.B	#$11,D0			;61390: 00000011
-	dc.l  $0			;61394: 00000000
-	OR.B	D0,D4			;61398: 8800
-	DC.W	$0002			;6139a
-	DC.W	$4f7c			;6139c
-	DC.W	$0002			;6139e
-	LEA	(A4),A7			;613a0: 4fd4
-	DC.W	$0002			;613a2
-	ADDQ.L	#8,-(A4)		;613a4: 50a4
-	ORI.B	#$01,D0			;613a6: 00000001
-	dc.l  $0			;613aa: 00000000
-	OR.B	D0,D4			;613ae: 8800
-	DC.W	$0002			;613b0
-	DC.W	$4f74			;613b2
-	DC.W	$0002			;613b4
-	DC.W	$4f7c			;613b6
-	DC.W	$0002			;613b8
-	LEA	(A4),A7			;613ba: 4fd4
-	ORI.B	#$01,D0			;613bc: 00000001
-	dc.l  $0			;613c0: 00000000
-	MOVEQ	#0,D4			;613c4: 7800
-	DC.W	$0002			;613c6
-	DC.W	$4f64			;613c8
-	DC.W	$0002			;613ca
-	DC.W	$4f6c			;613cc
-	DC.W	$0002			;613ce
-	DC.W	$4fdc			;613d0
-	ORI.B	#$01,D0			;613d2: 00000001
-	dc.l  $0			;613d6: 00000000
-	MOVEQ	#0,D4			;613da: 7800
-	DC.W	$0002			;613dc
-	DC.W	$4f64			;613de
-	DC.W	$0002			;613e0
-	DC.W	$4fdc			;613e2
-	DC.W	$0002			;613e4
-	ADDQ.L	#8,0(A4)		;613e6: 50ac0000
-	ORI.B	#$00,D1			;613ea: 00010000
-	dc.l  $0			;613ee: 00000000
-	DC.W	$0002			;613f2
-	DC.W	$4f64			;613f4
-	DC.W	$0002			;613f6
-	DC.W	$4f6c			;613f8
-	DC.W	$0002			;613fa
-	DC.W	$4f7c			;613fc
-	ORI.B	#$04,D0			;613fe: 00000004
-	dc.l  $0			;61402: 00000000
-	ORI.B	#$02,D0			;61406: 00000002
-	DC.W	$4f6c			;6140a
-	DC.W	$0002			;6140c
-	DC.W	$4f74			;6140e
-	DC.W	$0002			;61410
-	DC.W	$4f7c			;61412
-	ORI.B	#$04,D0			;61414: 00000004
-	BTST	D0,D0			;61418: 0100
-	ORI.B	#$15,(A0)		;6141a: 00100015
-	ORI.W	#$0000,0(A6)		;6141e: 006e00000000
-	DC.W	$0000			;61424
-	DC.W	$ffa0			;61426
-	DC.W	$ffd0			;61428
-	ORI.W	#$0000,D0		;6142a: 00400000
-	DC.W	$ffd0			;6142e
-	ORI.W	#$0050,(A0)		;61430: 00500050
-	DC.W	$ffd0			;61434
-	DC.W	$0030			;61436
-	ORI.W	#$ffd0,48(A0,D0.W)	;61438: 0070ffd00030
-	DC.W	$0070			;6143e
-	DC.W	$ffd0			;61440
-	DC.W	$ffd0			;61442
-	ORI.W	#$ffd0,(A0)		;61444: 0050ffd0
-	DC.W	$ffd0			;61448
-	DC.W	$0000			;6144a
-	DC.W	$ffd0			;6144c
-	DC.W	$ffb0			;6144e
-	DC.W	$ffa0			;61450
-	DC.W	$ffd0			;61452
-	DC.W	$ffc0			;61454
-	DC.W	$ffa0			;61456
-	ORI.B	#$40,D0			;61458: 00000040
-	DC.W	$ffa0			;6145c
-	DC.W	$0000			;6145e
-	DC.W	$ffc0			;61460
-	dc.l  $0			;61462: 00000000
-	DC.W	$ffb0			;61466
-	dc.l  $0			;61468: 00000000
-	ORI.W	#$0070,(A0)		;6146c: 00500070
-	DC.W	$0000			;61470
-	DC.W	$ffd0			;61472
-	ORI.W	#$0000,48(A0,D0.W)	;61474: 007000000030
-	ORI.W	#$0000,(A0)		;6147a: 00500000
-	DC.W	$ffd0			;6147e
-	ORI.W	#$0000,(A0)		;61480: 00500000
-	DC.W	$0030			;61484
-	MOVEQ	#0,D4			;61486: 7800
-	dc.l  $0			;61488: 00000000
-	DC.W	$0002			;6148c
-	DC.W	$4f7c			;6148e
-	DC.W	$0002			;61490
-	CHK.W	D4,D7			;61492: 4f84
-	DC.W	$0002			;61494
-	DC.W	$4fc4			;61496
-	ORI.B	#$01,D0			;61498: 00000001
-	MOVEQ	#0,D4			;6149c: 7800
-	dc.l  $0			;6149e: 00000000
-	DC.W	$0002			;614a2
-	DC.W	$4f7c			;614a4
-	DC.W	$0002			;614a6
-	DC.W	$4fc4			;614a8
-	DC.W	$0002			;614aa
-	DC.W	$4fcc			;614ac
-	ORI.B	#$01,D0			;614ae: 00000001
-	OR.B	D0,D4			;614b2: 8800
-	dc.l  $0			;614b4: 00000000
-	DC.W	$0002			;614b8
-	DC.W	$4f64			;614ba
-	DC.W	$0002			;614bc
-	CHK.W	(A4)+,D7		;614be: 4f9c
-	DC.W	$0002			;614c0
-	CHK.W	-(A4),D7		;614c2: 4fa4
-	ORI.B	#$01,D0			;614c4: 00000001
-	OR.B	D0,D4			;614c8: 8800
-	dc.l  $0			;614ca: 00000000
-	DC.W	$0002			;614ce
-	CHK.W	(A4)+,D7		;614d0: 4f9c
-	DC.W	$0002			;614d2
-	CHK.W	-(A4),D7		;614d4: 4fa4
-	DC.W	$0002			;614d6
-	CHK.W	0(A4),D7		;614d8: 4fac0000
-	ORI.B	#$00,D1			;614dc: 00010000
-	DC.W	$0000			;614e0
-	OR.B	D0,D4			;614e2: 8800
-	DC.W	$0002			;614e4
-	DC.W	$4f8c			;614e6
-	DC.W	$0002			;614e8
-	DC.W	$4fc4			;614ea
-	DC.W	$0002			;614ec
-	LEA	(A4),A7			;614ee: 4fd4
-	ORI.B	#$0c,D0			;614f0: 0000000c
-	dc.l  $0			;614f4: 00000000
-	OR.B	D0,D4			;614f8: 8800
-	DC.W	$0002			;614fa
-	CHK.W	D4,D7			;614fc: 4f84
-	DC.W	$0002			;614fe
-	DC.W	$4f8c			;61500
-	DC.W	$0002			;61502
-	DC.W	$4fc4			;61504
-	ORI.B	#$0c,D0			;61506: 0000000c
-	dc.l  $0			;6150a: 00000000
-	MOVEQ	#0,D4			;6150e: 7800
-	DC.W	$0002			;61510
-	DC.W	$4f74			;61512
-	DC.W	$0002			;61514
-	DC.W	$4fcc			;61516
-	DC.W	$0002			;61518
-	DC.W	$4fdc			;6151a
-	ORI.B	#$0c,D0			;6151c: 0000000c
-	dc.l  $0			;61520: 00000000
-	MOVEQ	#0,D4			;61524: 7800
-	DC.W	$0002			;61526
-	DC.W	$4f74			;61528
-	DC.W	$0002			;6152a
-	DC.W	$4f7c			;6152c
-	DC.W	$0002			;6152e
-	DC.W	$4fcc			;61530
-	ORI.B	#$0c,D0			;61532: 0000000c
-	MOVE.L	(A1),(A6)		;61536: 2c91
-	DC.W	$0000			;61538
-	BLE.S	lb_615a6		;6153a: 6f6a
-	DC.W	$0002			;6153c
-	DC.W	$4f6c			;6153e
-	DC.W	$0002			;61540
-	DC.W	$4f74			;61542
-	DC.W	$0002			;61544
-	DC.W	$4fdc			;61546
-	ORI.B	#$14,D0			;61548: 00000014
-	MOVE.L	(A1),(A6)		;6154c: 2c91
-	DC.W	$0000			;6154e
-	BLE.S	lb_615bc		;61550: 6f6a
-	DC.W	$0002			;61552
-	DC.W	$4f6c			;61554
-	DC.W	$0002			;61556
-	CHK.W	#$0002,D7		;61558: 4fbc0002
-	DC.W	$4fdc			;6155c
-	ORI.B	#$14,D0			;6155e: 00000014
-	ASR.W	#6,D6			;61562: ec46
-	DC.W	$0000			;61564
-	MOVEQ	#94,D3			;61566: 765e
-	DC.W	$0002			;61568
-	DC.W	$4f64			;6156a
-	DC.W	$0002			;6156c
-	DC.W	$4f6c			;6156e
-	DC.W	$0002			;61570
-	CHK.W	#$0000,D7		;61572: 4fbc0000
-	DC.W	$000c			;61576
-	ASR.W	#6,D6			;61578: ec46
-	DC.W	$0000			;6157a
-	MOVEQ	#94,D3			;6157c: 765e
-	DC.W	$0002			;6157e
-	DC.W	$4f64			;61580
-	DC.W	$0002			;61582
-	CHK.W	-(A4),D7		;61584: 4fa4
-	DC.W	$0002			;61586
-	CHK.W	#$0000,D7		;61588: 4fbc0000
-	DC.W	$000c			;6158c
-	MOVE.L	(A1),(A6)		;6158e: 2c91
-	DC.W	$0000			;61590
-	SUB.L	(A6),D0			;61592: 9096
-	DC.W	$0002			;61594
-	DC.W	$4f8c			;61596
-	DC.W	$0002			;61598
-	CHK.W	(A4),D7			;6159a: 4f94
-	DC.W	$0002			;6159c
-	LEA	(A4),A7			;6159e: 4fd4
-	ORI.B	#$14,D0			;615a0: 00000014
-	MOVE.L	(A1),(A6)		;615a4: 2c91
-lb_615a6:
-	DC.W	$0000			;615a6
-	SUB.L	(A6),D0			;615a8: 9096
-	DC.W	$0002			;615aa
-	CHK.W	(A4),D7			;615ac: 4f94
-	DC.W	$0002			;615ae
-	CHK.W	2(A4,D0.W),D7		;615b0: 4fb40002
-	LEA	(A4),A7			;615b4: 4fd4
-	ORI.B	#$14,D0			;615b6: 00000014
-	ASR.W	#6,D6			;615ba: ec46
-lb_615bc:
-	DC.W	$0000			;615bc
-	OR.L	D4,-(A2)		;615be: 89a2
-	DC.W	$0002			;615c0
-	CHK.W	(A4),D7			;615c2: 4f94
-	DC.W	$0002			;615c4
-	CHK.W	(A4)+,D7		;615c6: 4f9c
-	DC.W	$0002			;615c8
-	CHK.W	0(A4,D0.W),D7		;615ca: 4fb40000
-	DC.W	$000c			;615ce
-	ASR.W	#6,D6			;615d0: ec46
-	DC.W	$0000			;615d2
-	OR.L	D4,-(A2)		;615d4: 89a2
-	DC.W	$0002			;615d6
-	CHK.W	(A4)+,D7		;615d8: 4f9c
-	DC.W	$0002			;615da
-	CHK.W	2(A4),D7		;615dc: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;615e0: 4fb40000
-	DC.W	$000c			;615e4
-	DC.W	$0000			;615e6
-	OR.B	D0,D4			;615e8: 8800
-	ORI.B	#$02,D0			;615ea: 00000002
-	DC.W	$4f64			;615ee
-	DC.W	$0002			;615f0
-	DC.W	$4f6c			;615f2
-	DC.W	$0002			;615f4
-	CHK.W	(A4)+,D7		;615f6: 4f9c
-	ORI.B	#$04,D0			;615f8: 00000004
-	DC.W	$0000			;615fc
-	OR.B	D0,D4			;615fe: 8800
-	ORI.B	#$02,D0			;61600: 00000002
-	DC.W	$4f6c			;61604
-	DC.W	$0002			;61606
-	CHK.W	(A4),D7			;61608: 4f94
-	DC.W	$0002			;6160a
-	CHK.W	(A4)+,D7		;6160c: 4f9c
-	ORI.B	#$04,D0			;6160e: 00000004
-	DC.W	$0000			;61612
-	OR.B	D0,D4			;61614: 8800
-	ORI.B	#$02,D0			;61616: 00000002
-	DC.W	$4f6c			;6161a
-	DC.W	$0002			;6161c
-	DC.W	$4f74			;6161e
-	DC.W	$0002			;61620
-	CHK.W	(A4),D7			;61622: 4f94
-	ORI.B	#$04,D0			;61624: 00000004
-	DC.W	$0000			;61628
-	OR.B	D0,D4			;6162a: 8800
-	ORI.B	#$02,D0			;6162c: 00000002
-	DC.W	$4f74			;61630
-	DC.W	$0002			;61632
-	DC.W	$4f8c			;61634
-	DC.W	$0002			;61636
-	CHK.W	(A4),D7			;61638: 4f94
-	ORI.B	#$04,D0			;6163a: 00000004
-	DC.W	$0000			;6163e
-	OR.B	D0,D4			;61640: 8800
-	ORI.B	#$02,D0			;61642: 00000002
-	DC.W	$4f74			;61646
-	DC.W	$0002			;61648
-	DC.W	$4f7c			;6164a
-	DC.W	$0002			;6164c
-	DC.W	$4f8c			;6164e
-	ORI.B	#$04,D0			;61650: 00000004
-	DC.W	$0000			;61654
-	OR.B	D0,D4			;61656: 8800
-	ORI.B	#$02,D0			;61658: 00000002
-	DC.W	$4f7c			;6165c
-	DC.W	$0002			;6165e
-	CHK.W	D4,D7			;61660: 4f84
-	DC.W	$0002			;61662
-	DC.W	$4f8c			;61664
-	ORI.B	#$04,D0			;61666: 00000004
-	BTST	D0,D0			;6166a: 0100
-	ORI.B	#$05,D6			;6166c: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;61670: 003200000000
-	DC.W	$0000			;61676
-	DC.W	$fef0			;61678
-	DC.W	$ffe0			;6167a
-	DC.W	$fff8			;6167c
-	DC.W	$ffa0			;6167e
-	DC.W	$ffe0			;61680
-	DC.W	$0008			;61682
-	DC.W	$ffa0			;61684
-	DC.W	$ffe0			;61686
-	DC.W	$fff8			;61688
-	DC.W	$fef0			;6168a
-	DC.W	$fff0			;6168c
-	DC.W	$0000			;6168e
-	DC.W	$ffa0			;61690
-	DC.W	$fff0			;61692
-	DC.W	$0000			;61694
-	DC.W	$fef0			;61696
-	DC.W	$ffe0			;61698
-	DC.W	$0008			;6169a
-	DC.W	$0000			;6169c
-	AND.W	(A6),D5			;6169e: ca56
-	BMI.S	lb_616f6		;616a0: 6b54
-	DC.W	$0002			;616a2
-	DC.W	$4f64			;616a4
-	DC.W	$0002			;616a6
-	DC.W	$4f7c			;616a8
-	DC.W	$0002			;616aa
-	CHK.W	D4,D7			;616ac: 4f84
-	ORI.B	#$0c,D0			;616ae: 0000000c
-	DC.W	$0000			;616b2
-	AND.W	(A6),D5			;616b4: ca56
-	BMI.S	lb_6170c		;616b6: 6b54
-	DC.W	$0002			;616b8
-	DC.W	$4f64			;616ba
-	DC.W	$0002			;616bc
-	DC.W	$4f74			;616be
-	DC.W	$0002			;616c0
-	CHK.W	D4,D7			;616c2: 4f84
-	ORI.B	#$0c,D0			;616c4: 0000000c
-	DC.W	$0000			;616c8
-	AND.W	(A6),D5			;616ca: ca56
-	SUB.L	2(A4),D2		;616cc: 94ac0002
-	DC.W	$4f8c			;616d0
-	DC.W	$0002			;616d2
-	DC.W	$4f6c			;616d4
-	DC.W	$0002			;616d6
-	CHK.W	D4,D7			;616d8: 4f84
-	ORI.B	#$0c,D0			;616da: 0000000c
-	DC.W	$0000			;616de
-	AND.W	(A6),D5			;616e0: ca56
-	SUB.L	2(A4),D2		;616e2: 94ac0002
-	DC.W	$4f8c			;616e6
-	DC.W	$0002			;616e8
-	DC.W	$4f7c			;616ea
-	DC.W	$0002			;616ec
-	CHK.W	D4,D7			;616ee: 4f84
-	ORI.B	#$0c,D0			;616f0: 0000000c
-	DC.W	$0000			;616f4
-lb_616f6:
-	OR.B	D0,D4			;616f6: 8800
-	ORI.B	#$02,D0			;616f8: 00000002
-	DC.W	$4f8c			;616fc
-	DC.W	$0002			;616fe
-	DC.W	$4f64			;61700
-	DC.W	$0002			;61702
-	DC.W	$4f6c			;61704
-	ORI.B	#$04,D0			;61706: 00000004
-	DC.W	$0000			;6170a
-lb_6170c:
-	OR.B	D0,D4			;6170c: 8800
-	ORI.B	#$02,D0			;6170e: 00000002
-	DC.W	$4f64			;61712
-	DC.W	$0002			;61714
-	DC.W	$4f6c			;61716
-	DC.W	$0002			;61718
-	DC.W	$4f74			;6171a
-	ORI.B	#$04,D0			;6171c: 00000004
-	BTST	D0,D0			;61720: 0100
-	ORI.B	#$29,-(A0)		;61722: 00200029
-	DC.W	$00ce			;61726
-	dc.l  $0			;61728: 00000000
-	DC.W	$0000			;6172c
-	DC.W	$ffa0			;6172e
-	ORI.B	#$58,D0			;61730: 00000058
-	ORI.L	#$00000058,(A0)		;61734: 009000000058
-	ORI.L	#$0000ffa8,(A0)		;6173a: 00900000ffa8
-	DC.W	$ffa0			;61740
-	DC.W	$0000			;61742
-	DC.W	$ffa8			;61744
-	DC.W	$ff50			;61746
-	DC.W	$0030			;61748
-	DC.W	$ffa8			;6174a
-	DC.W	$ff50			;6174c
-	ORI.B	#$58,-16(A0,D0.W)	;6174e: 0030005800f0
-	ORI.B	#$58,-16(A0,D0.W)	;61754: 0030005800f0
-	DC.W	$0030			;6175a
-	DC.W	$ffa8			;6175c
-	DC.W	$00f0			;6175e
-	DC.W	$0030			;61760
-	DC.W	$ff88			;61762
-	DC.W	$ff50			;61764
-	DC.W	$0030			;61766
-	DC.W	$ff88			;61768
-	DC.W	$ff50			;6176a
-	ORI.B	#$78,-16(A0,D0.W)	;6176c: 0030007800f0
-	ORI.B	#$78,-16(A0,D0.W)	;61772: 0030007800f0
-	ORI.W	#$0078,(A0)		;61778: 00500078
-	DC.W	$00f0			;6177c
-	ORI.W	#$ff88,(A0)		;6177e: 0050ff88
-	ORI.L	#$00800078,-(A0)	;61782: 00a000800078
-	ORI.L	#$0080ff88,-(A0)	;61788: 00a00080ff88
-	ORI.L	#$00800058,-(A0)	;6178e: 00a000800058
-	ORI.L	#$0080ffa8,-(A0)	;61794: 00a00080ffa8
-	DC.W	$00f0			;6179a
-	ORI.W	#$ffa8,(A0)		;6179c: 0050ffa8
-	DC.W	$00f0			;617a0
-	ORI.W	#$0058,(A0)		;617a2: 00500058
-	DC.W	$00d0			;617a6
-	ORI.W	#$ffa8,(A0)		;617a8: 0050ffa8
-	DC.W	$00d0			;617ac
-	ORI.W	#$0058,(A0)		;617ae: 00500058
-	DC.W	$ff50			;617b2
-	ORI.W	#$0078,(A0)		;617b4: 00500078
-	DC.W	$ff50			;617b8
-	ORI.W	#$ff88,(A0)		;617ba: 0050ff88
-	DC.W	$ffa0			;617be
-	ORI.L	#$0078ffa0,D0		;617c0: 00800078ffa0
-	ORI.L	#$ff88ffa0,D0		;617c6: 0080ff88ffa0
-	ORI.L	#$0058ffa0,D0		;617cc: 00800058ffa0
-	ORI.L	#$ffa8ff50,D0		;617d2: 0080ffa8ff50
-	ORI.W	#$0058,(A0)		;617d8: 00500058
-	DC.W	$ff50			;617dc
-	ORI.W	#$ffa8,(A0)		;617de: 0050ffa8
-	DC.W	$ff70			;617e2
-	ORI.W	#$0058,(A0)		;617e4: 00500058
-	DC.W	$ff70			;617e8
-	ORI.W	#$ffa8,(A0)		;617ea: 0050ffa8
-	DC.W	$ab26			;617ee
-	SCC	(A2)+			;617f0: 54da
-	ORI.B	#$02,D0			;617f2: 00000002
-	CHK.W	D4,D7			;617f6: 4f84
-	DC.W	$0002			;617f8
-	DC.W	$4f8c			;617fa
-	DC.W	$0002			;617fc
-	ADDQ.W	#8,(A4)			;617fe: 5054
-	ORI.B	#$0e,D0			;61800: 0000000e
-	DC.W	$ab26			;61804
-	SCC	(A2)+			;61806: 54da
-	ORI.B	#$02,D0			;61808: 00000002
-	CHK.W	D4,D7			;6180c: 4f84
-	DC.W	$0002			;6180e
-	ADDQ.W	#8,(A4)			;61810: 5054
-	DC.W	$0002			;61812
-	ADDQ.W	#8,(A4)+		;61814: 505c
-	ORI.B	#$0e,D0			;61816: 0000000e
-	SCC	(A2)+			;6181a: 54da
-	SCC	(A2)+			;6181c: 54da
-	ORI.B	#$02,D0			;6181e: 00000002
-	CHK.W	(A4),D7			;61822: 4f94
-	DC.W	$0002			;61824
-	CHK.W	(A4)+,D7		;61826: 4f9c
-	DC.W	$0002			;61828
-	ADDQ.B	#8,D4			;6182a: 5004
-	ORI.B	#$0e,D0			;6182c: 0000000e
-	SCC	(A2)+			;61830: 54da
-	SCC	(A2)+			;61832: 54da
-	ORI.B	#$02,D0			;61834: 00000002
-	CHK.W	(A4),D7			;61838: 4f94
-	DC.W	$0002			;6183a
-	ADDQ.B	#8,D4			;6183c: 5004
-	DC.W	$0002			;6183e
-	DC.W	$500c			;61840
-	ORI.B	#$0e,D0			;61842: 0000000e
-	OR.B	D0,D4			;61846: 8800
-	dc.l  $0			;61848: 00000000
-	DC.W	$0002			;6184c
-	DC.W	$4f8c			;6184e
-	DC.W	$0002			;61850
-	CHK.W	2(A4,D0.W),D7		;61852: 4fb40002
-	ADDQ.B	#8,(A4)			;61856: 5014
-	ORI.B	#$17,D0			;61858: 00000017
-lb_6185c:
-	OR.B	D0,D4			;6185c: 8800
-	dc.l  $0			;6185e: 00000000
-	DC.W	$0002			;61862
-	DC.W	$4f8c			;61864
-	DC.W	$0002			;61866
-	ADDQ.B	#8,(A4)			;61868: 5014
-	DC.W	$0002			;6186a
-	ADDQ.W	#8,D4			;6186c: 5044
-	ORI.B	#$17,D0			;6186e: 00000017
-lb_61872:
-	AND.W	D3,D1			;61872: c243
-	BNE.S	lb_6185c		;61874: 66e6
-	ORI.B	#$02,D0			;61876: 00000002
-	ADDQ.B	#8,(A4)			;6187a: 5014
-	DC.W	$0002			;6187c
-	ADDQ.B	#8,-(A4)		;6187e: 5024
-	DC.W	$0002			;61880
-	ADDQ.W	#8,D4			;61882: 5044
-	ORI.B	#$17,D0			;61884: 00000017
-	AND.W	D3,D1			;61888: c243
-	BNE.S	lb_61872		;6188a: 66e6
-	ORI.B	#$02,D0			;6188c: 00000002
-	ADDQ.B	#8,-(A4)		;61890: 5024
-	DC.W	$0002			;61892
-	ADDQ.B	#8,2(A4,D0.W)		;61894: 50340002
-	ADDQ.W	#8,D4			;61898: 5044
-	ORI.B	#$17,D0			;6189a: 00000017
-	OR.B	D0,D4			;6189e: 8800
-	dc.l  $0			;618a0: 00000000
-	DC.W	$0002			;618a4
-	CHK.W	D4,D7			;618a6: 4f84
-	DC.W	$0002			;618a8
-	CHK.W	2(A4),D7		;618aa: 4fac0002
-	ADDQ.B	#8,(A4)+		;618ae: 501c
-	ORI.B	#$17,D0			;618b0: 00000017
-lb_618b4:
-	OR.B	D0,D4			;618b4: 8800
-	dc.l  $0			;618b6: 00000000
-	DC.W	$0002			;618ba
-	CHK.W	D4,D7			;618bc: 4f84
-	DC.W	$0002			;618be
-	ADDQ.B	#8,(A4)+		;618c0: 501c
-	DC.W	$0002			;618c2
-	ADDQ.W	#8,A4			;618c4: 504c
-	ORI.B	#$17,D0			;618c6: 00000017
-lb_618ca:
-	AND.W	D3,D1			;618ca: c243
-	BNE.S	lb_618b4		;618cc: 66e6
-	ORI.B	#$02,D0			;618ce: 00000002
-	ADDQ.B	#8,(A4)+		;618d2: 501c
-	DC.W	$0002			;618d4
-	ADDQ.B	#8,2(A4)		;618d6: 502c0002
-	ADDQ.W	#8,A4			;618da: 504c
-	ORI.B	#$17,D0			;618dc: 00000017
-	AND.W	D3,D1			;618e0: c243
-	BNE.S	lb_618ca		;618e2: 66e6
-	ORI.B	#$02,D0			;618e4: 00000002
-	ADDQ.B	#8,2(A4)		;618e8: 502c0002
-	DC.W	$503c			;618ec
-	DC.W	$0002			;618ee
-	ADDQ.W	#8,A4			;618f0: 504c
-	ORI.B	#$17,D0			;618f2: 00000017
-	MOVEQ	#0,D4			;618f6: 7800
-	dc.l  $0			;618f8: 00000000
-	DC.W	$0002			;618fc
-	CHK.W	(A4)+,D7		;618fe: 4f9c
-	DC.W	$0002			;61900
-	CHK.W	-(A4),D7		;61902: 4fa4
-	DC.W	$0002			;61904
-	DC.W	$4fcc			;61906
-	ORI.B	#$17,D0			;61908: 00000017
-lb_6190c:
-	MOVEQ	#0,D4			;6190c: 7800
-	dc.l  $0			;6190e: 00000000
-	DC.W	$0002			;61912
-	CHK.W	(A4)+,D7		;61914: 4f9c
-	DC.W	$0002			;61916
-	DC.W	$4fcc			;61918
-	DC.W	$0002			;6191a
-	LEA	0(A4,D0.W),A7		;6191c: 4ff40000
-	DC.W	$0017			;61920
-lb_61922:
-	DC.W	$3dbd			;61922
-	BNE.S	lb_6190c		;61924: 66e6
-	ORI.B	#$02,D0			;61926: 00000002
-	DC.W	$4fcc			;6192a
-	DC.W	$0002			;6192c
-	DC.W	$4fdc			;6192e
-	DC.W	$0002			;61930
-	LEA	0(A4,D0.W),A7		;61932: 4ff40000
-	DC.W	$0017			;61936
-	DC.W	$3dbd			;61938
-	BNE.S	lb_61922		;6193a: 66e6
-	ORI.B	#$02,D0			;6193c: 00000002
-	DC.W	$4fdc			;61940
-	DC.W	$0002			;61942
-	LEA	2(A4),A7		;61944: 4fec0002
-	LEA	0(A4,D0.W),A7		;61948: 4ff40000
-	DC.W	$0017			;6194c
-	MOVEQ	#0,D4			;6194e: 7800
-	dc.l  $0			;61950: 00000000
-	DC.W	$0002			;61954
-	CHK.W	(A4),D7			;61956: 4f94
-	DC.W	$0002			;61958
-	CHK.W	#$0002,D7		;6195a: 4fbc0002
-	DC.W	$4fc4			;6195e
-	ORI.B	#$17,D0			;61960: 00000017
-lb_61964:
-	MOVEQ	#0,D4			;61964: 7800
-	dc.l  $0			;61966: 00000000
-	DC.W	$0002			;6196a
-	CHK.W	(A4),D7			;6196c: 4f94
-	DC.W	$0002			;6196e
-	DC.W	$4fc4			;61970
-	DC.W	$0002			;61972
-	DC.W	$4ffc			;61974
-	ORI.B	#$17,D0			;61976: 00000017
-lb_6197a:
-	DC.W	$3dbd			;6197a
-	BNE.S	lb_61964		;6197c: 66e6
-	ORI.B	#$02,D0			;6197e: 00000002
-	DC.W	$4fc4			;61982
-	DC.W	$0002			;61984
-	LEA	(A4),A7			;61986: 4fd4
-	DC.W	$0002			;61988
-	DC.W	$4ffc			;6198a
-	ORI.B	#$17,D0			;6198c: 00000017
-	DC.W	$3dbd			;61990
-	BNE.S	lb_6197a		;61992: 66e6
-	ORI.B	#$02,D0			;61994: 00000002
-	LEA	(A4),A7			;61998: 4fd4
-	DC.W	$0002			;6199a
-	DC.W	$4fe4			;6199c
-	DC.W	$0002			;6199e
-	DC.W	$4ffc			;619a0
-	ORI.B	#$17,D0			;619a2: 00000017
-	dc.l  $0			;619a6: 00000000
-	MOVEQ	#0,D4			;619aa: 7800
-	DC.W	$0002			;619ac
-	CHK.W	#$0002,D7		;619ae: 4fbc0002
-	DC.W	$4fc4			;619b2
-	DC.W	$0002			;619b4
-	LEA	(A4),A7			;619b6: 4fd4
-	ORI.B	#$16,D0			;619b8: 00000016
-	dc.l  $0			;619bc: 00000000
-	MOVEQ	#0,D4			;619c0: 7800
-	DC.W	$0002			;619c2
-	CHK.W	#$0002,D7		;619c4: 4fbc0002
-	LEA	(A4),A7			;619c8: 4fd4
-	DC.W	$0002			;619ca
-	ADDQ.B	#8,-(A4)		;619cc: 5024
-	ORI.B	#$16,D0			;619ce: 00000016
-	dc.l  $0			;619d2: 00000000
-	MOVEQ	#0,D4			;619d6: 7800
-	DC.W	$0002			;619d8
-	CHK.W	#$0002,D7		;619da: 4fbc0002
-	ADDQ.B	#8,(A4)			;619de: 5014
-	DC.W	$0002			;619e0
-	ADDQ.B	#8,-(A4)		;619e2: 5024
-	ORI.B	#$16,D0			;619e4: 00000016
-	dc.l  $0			;619e8: 00000000
-	MOVEQ	#0,D4			;619ec: 7800
-	DC.W	$0002			;619ee
-	CHK.W	2(A4,D0.W),D7		;619f0: 4fb40002
-	CHK.W	#$0002,D7		;619f4: 4fbc0002
-	ADDQ.B	#8,(A4)			;619f8: 5014
-	ORI.B	#$16,D0			;619fa: 00000016
-	dc.l  $0			;619fe: 00000000
-	OR.B	D0,D4			;61a02: 8800
-	DC.W	$0002			;61a04
-	CHK.W	-(A4),D7		;61a06: 4fa4
-	DC.W	$0002			;61a08
-	CHK.W	2(A4),D7		;61a0a: 4fac0002
-	ADDQ.B	#8,(A4)+		;61a0e: 501c
-	ORI.B	#$16,D0			;61a10: 00000016
-	dc.l  $0			;61a14: 00000000
-	OR.B	D0,D4			;61a18: 8800
-	DC.W	$0002			;61a1a
-	CHK.W	-(A4),D7		;61a1c: 4fa4
-	DC.W	$0002			;61a1e
-	ADDQ.B	#8,(A4)+		;61a20: 501c
-	DC.W	$0002			;61a22
-	ADDQ.B	#8,0(A4)		;61a24: 502c0000
-	ORI.B	#$00,(A6)		;61a28: 00160000
-	DC.W	$0000			;61a2c
-	OR.B	D0,D4			;61a2e: 8800
-	DC.W	$0002			;61a30
-	CHK.W	-(A4),D7		;61a32: 4fa4
-	DC.W	$0002			;61a34
-	DC.W	$4fdc			;61a36
-	DC.W	$0002			;61a38
-	ADDQ.B	#8,0(A4)		;61a3a: 502c0000
-	ORI.B	#$00,(A6)		;61a3e: 00160000
-	DC.W	$0000			;61a42
-	OR.B	D0,D4			;61a44: 8800
-	DC.W	$0002			;61a46
-	CHK.W	-(A4),D7		;61a48: 4fa4
-	DC.W	$0002			;61a4a
-	DC.W	$4fcc			;61a4c
-	DC.W	$0002			;61a4e
-	DC.W	$4fdc			;61a50
-	ORI.B	#$16,D0			;61a52: 00000016
-	DC.W	$0000			;61a56
-	OR.B	D0,D4			;61a58: 8800
-	ORI.B	#$02,D0			;61a5a: 00000002
-	DC.W	$4f8c			;61a5e
-	DC.W	$0002			;61a60
-	CHK.W	(A4),D7			;61a62: 4f94
-	DC.W	$0002			;61a64
-	CHK.W	0(A4,D0.W),D7		;61a66: 4fb40000
-	ORI.B	#$00,D2			;61a6a: 00020000
-	OR.B	D0,D4			;61a6e: 8800
-	ORI.B	#$02,D0			;61a70: 00000002
-	CHK.W	(A4),D7			;61a74: 4f94
-	DC.W	$0002			;61a76
-	CHK.W	2(A4,D0.W),D7		;61a78: 4fb40002
-	CHK.W	#$0000,D7		;61a7c: 4fbc0000
-	ORI.B	#$00,D2			;61a80: 00020000
-	OR.B	D0,D4			;61a84: 8800
-	ORI.B	#$02,D0			;61a86: 00000002
-	CHK.W	D4,D7			;61a8a: 4f84
-	DC.W	$0002			;61a8c
-	CHK.W	(A4)+,D7		;61a8e: 4f9c
-	DC.W	$0002			;61a90
-	CHK.W	0(A4),D7		;61a92: 4fac0000
-	ORI.B	#$00,D2			;61a96: 00020000
-	OR.B	D0,D4			;61a9a: 8800
-	ORI.B	#$02,D0			;61a9c: 00000002
-	CHK.W	(A4)+,D7		;61aa0: 4f9c
-	DC.W	$0002			;61aa2
-	CHK.W	-(A4),D7		;61aa4: 4fa4
-	DC.W	$0002			;61aa6
-	CHK.W	0(A4),D7		;61aa8: 4fac0000
-	ORI.B	#$00,D2			;61aac: 00020000
-	DC.W	$0000			;61ab0
-	OR.B	D0,D4			;61ab2: 8800
-	DC.W	$0002			;61ab4
-	DC.W	$4f74			;61ab6
-	DC.W	$0002			;61ab8
-	DC.W	$4f7c			;61aba
-	DC.W	$0002			;61abc
-	CHK.W	D4,D7			;61abe: 4f84
-	ORI.B	#$06,D0			;61ac0: 00000006
-	dc.l  $0			;61ac4: 00000000
-	OR.B	D0,D4			;61ac8: 8800
-	DC.W	$0002			;61aca
-	DC.W	$4f74			;61acc
-	DC.W	$0002			;61ace
-	CHK.W	(A4)+,D7		;61ad0: 4f9c
-	DC.W	$0002			;61ad2
-	CHK.W	D4,D7			;61ad4: 4f84
-	ORI.B	#$06,D0			;61ad6: 00000006
-	dc.l  $0			;61ada: 00000000
-	MOVEQ	#0,D4			;61ade: 7800
-	DC.W	$0002			;61ae0
-	DC.W	$4f64			;61ae2
-	DC.W	$0002			;61ae4
-	DC.W	$4f6c			;61ae6
-	DC.W	$0002			;61ae8
-	DC.W	$4f8c			;61aea
-	ORI.B	#$06,D0			;61aec: 00000006
-	dc.l  $0			;61af0: 00000000
-	MOVEQ	#0,D4			;61af4: 7800
-	DC.W	$0002			;61af6
-	DC.W	$4f6c			;61af8
-	DC.W	$0002			;61afa
-	DC.W	$4f8c			;61afc
-	DC.W	$0002			;61afe
-	CHK.W	(A4),D7			;61b00: 4f94
-	ORI.B	#$06,D0			;61b02: 00000006
-	AND.W	D3,D1			;61b06: c243
-	SUB.B	D4,(A2)+		;61b08: 991a
-	ORI.B	#$02,D0			;61b0a: 00000002
-	DC.W	$4f64			;61b0e
-	DC.W	$0002			;61b10
-	CHK.W	D4,D7			;61b12: 4f84
-	DC.W	$0002			;61b14
-	DC.W	$4f8c			;61b16
-	ORI.B	#$12,D0			;61b18: 00000012
-	AND.W	D3,D1			;61b1c: c243
-	SUB.B	D4,(A2)+		;61b1e: 991a
-	ORI.B	#$02,D0			;61b20: 00000002
-	DC.W	$4f64			;61b24
-	DC.W	$0002			;61b26
-	DC.W	$4f7c			;61b28
-	DC.W	$0002			;61b2a
-	CHK.W	D4,D7			;61b2c: 4f84
-	ORI.B	#$12,D0			;61b2e: 00000012
-	MOVE.W	-27476(A2),0(A2,D0.W)	;61b32: 35aa94ac0000
-	DC.W	$0002			;61b38
-	DC.W	$4f6c			;61b3a
-	DC.W	$0002			;61b3c
-	DC.W	$4f74			;61b3e
-	DC.W	$0002			;61b40
-	CHK.W	(A4),D7			;61b42: 4f94
-	ORI.B	#$12,D0			;61b44: 00000012
-	MOVE.W	-27476(A2),0(A2,D0.W)	;61b48: 35aa94ac0000
-	DC.W	$0002			;61b4e
-	DC.W	$4f74			;61b50
-	DC.W	$0002			;61b52
-	CHK.W	(A4),D7			;61b54: 4f94
-	DC.W	$0002			;61b56
-	CHK.W	(A4)+,D7		;61b58: 4f9c
-	ORI.B	#$12,D0			;61b5a: 00000012
-	dc.l  $0			;61b5e: 00000000
-	ORI.B	#$02,D0			;61b62: 00000002
-	DC.W	$4f64			;61b66
-	DC.W	$0002			;61b68
-	DC.W	$4f6c			;61b6a
-	DC.W	$0002			;61b6c
-	DC.W	$4f7c			;61b6e
-	ORI.B	#$02,D0			;61b70: 00000002
-	dc.l  $0			;61b74: 00000000
-	ORI.B	#$02,D0			;61b78: 00000002
-	DC.W	$4f6c			;61b7c
-	DC.W	$0002			;61b7e
-	DC.W	$4f74			;61b80
-	DC.W	$0002			;61b82
-	DC.W	$4f7c			;61b84
-	ORI.B	#$02,D0			;61b86: 00000002
-	BTST	D0,D0			;61b8a: 0100
-	DC.W	$000e			;61b8c
-	ORI.B	#$62,(A3)		;61b8e: 00130062
-	dc.l  $0			;61b92: 00000000
-	DC.W	$0000			;61b96
-	DC.W	$ffc0			;61b98
-	DC.W	$ffd0			;61b9a
-	ORI.B	#$00,-48(A0)		;61b9c: 00280000ffd0
-	ORI.W	#$0090,(A0)+		;61ba2: 00580090
-	DC.W	$ffe0			;61ba6
-	ORI.B	#$90,-32(A0)		;61ba8: 00280090ffe0
-	DC.W	$ffd8			;61bae
-	DC.W	$0000			;61bb0
-	DC.W	$ffd0			;61bb2
-	DC.W	$ffa8			;61bb4
-	DC.W	$ffc0			;61bb6
-	DC.W	$ffd0			;61bb8
-	DC.W	$ffd8			;61bba
-	DC.W	$ffb0			;61bbc
-	DC.W	$ffe8			;61bbe
-	DC.W	$ffd8			;61bc0
-	DC.W	$ffb0			;61bc2
-	DC.W	$ffe8			;61bc4
-	ORI.B	#$00,0(A0)		;61bc6: 002800000000
-	DC.W	$ffa8			;61bcc
-	dc.l  $0			;61bce: 00000000
-	ORI.W	#$ffc0,(A0)+		;61bd2: 0058ffc0
-	ORI.B	#$28,D0			;61bd6: 00000028
-	DC.W	$ffc0			;61bda
-	DC.W	$0000			;61bdc
-	DC.W	$ffd8			;61bde
-	ORI.L	#$0000ffd8,(A0)		;61be0: 00900000ffd8
-	ORI.L	#$00000028,(A0)		;61be6: 009000000028
-	SUB.B	17040(A0),D6		;61bec: 9c284290
-	ORI.B	#$02,D0			;61bf0: 00000002
-	CHK.W	(A4),D7			;61bf4: 4f94
-	DC.W	$0002			;61bf6
-	CHK.W	(A4)+,D7		;61bf8: 4f9c
-	DC.W	$0002			;61bfa
-	CHK.W	0(A4,D0.W),D7		;61bfc: 4fb40000
-	DC.W	$000e			;61c00
-	SUB.B	17040(A0),D6		;61c02: 9c284290
-	ORI.B	#$02,D0			;61c06: 00000002
-	CHK.W	(A4),D7			;61c0a: 4f94
-	DC.W	$0002			;61c0c
-	CHK.W	2(A4,D0.W),D7		;61c0e: 4fb40002
-	CHK.W	#$0000,D7		;61c12: 4fbc0000
-	DC.W	$000e			;61c16
-	CMP.B	D0,D4			;61c18: b800
-	DC.W	$0000			;61c1a
-	BRA.W	lb_61c20		;61c1c: 60000002
-lb_61c20:
-	DC.W	$4f64			;61c20
-	DC.W	$0002			;61c22
-	DC.W	$4f6c			;61c24
-	DC.W	$0002			;61c26
-	CHK.W	0(A4),D7		;61c28: 4fac0000
-	DC.W	$0006			;61c2c
-	CMP.B	D0,D4			;61c2e: b800
-	DC.W	$0000			;61c30
-	BRA.W	lb_61c36		;61c32: 60000002
-lb_61c36:
-	DC.W	$4f64			;61c36
-	DC.W	$0002			;61c38
-	CHK.W	2(A4,D0.W),D7		;61c3a: 4fb40002
-	CHK.W	0(A4),D7		;61c3e: 4fac0000
-	DC.W	$0006			;61c42
-	CMP.B	D0,D4			;61c44: b800
-	DC.W	$0000			;61c46
-	DC.W	$a000			;61c48
-	DC.W	$0002			;61c4a
-	CHK.W	D4,D7			;61c4c: 4f84
-	DC.W	$0002			;61c4e
-	DC.W	$4f8c			;61c50
-	DC.W	$0002			;61c52
-	CHK.W	-(A4),D7		;61c54: 4fa4
-	ORI.B	#$06,D0			;61c56: 00000006
-	CMP.B	D0,D4			;61c5a: b800
-	DC.W	$0000			;61c5c
-	DC.W	$a000			;61c5e
-	DC.W	$0002			;61c60
-	DC.W	$4f8c			;61c62
-	DC.W	$0002			;61c64
-	CHK.W	#$0002,D7		;61c66: 4fbc0002
-	CHK.W	-(A4),D7		;61c6a: 4fa4
-	ORI.B	#$06,D0			;61c6c: 00000006
-	MOVEQ	#0,D4			;61c70: 7800
-	dc.l  $0			;61c72: 00000000
-	DC.W	$0002			;61c76
-	DC.W	$4f7c			;61c78
-	DC.W	$0002			;61c7a
-	DC.W	$4fc4			;61c7c
-	DC.W	$0002			;61c7e
-	DC.W	$4fcc			;61c80
-	ORI.B	#$06,D0			;61c82: 00000006
-	MOVEQ	#0,D4			;61c86: 7800
-	dc.l  $0			;61c88: 00000000
-	DC.W	$0002			;61c8c
-	DC.W	$4f74			;61c8e
-	DC.W	$0002			;61c90
-	DC.W	$4f7c			;61c92
-	DC.W	$0002			;61c94
-	DC.W	$4fcc			;61c96
-	ORI.B	#$06,D0			;61c98: 00000006
-	DC.W	$25f2			;61c9c
-	DC.W	$0000			;61c9e
-	OR.B	2(A1),D7		;61ca0: 8e290002
-	CHK.W	D4,D7			;61ca4: 4f84
-	DC.W	$0002			;61ca6
-	DC.W	$4fc4			;61ca8
-	DC.W	$0002			;61caa
-	CHK.W	-(A4),D7		;61cac: 4fa4
-	ORI.B	#$0a,D0			;61cae: 0000000a
-	DC.W	$25f2			;61cb2
-	DC.W	$0000			;61cb4
-	OR.B	2(A1),D7		;61cb6: 8e290002
-	DC.W	$4f7c			;61cba
-	DC.W	$0002			;61cbc
-	CHK.W	D4,D7			;61cbe: 4f84
-	DC.W	$0002			;61cc0
-	DC.W	$4fc4			;61cc2
-	ORI.B	#$0a,D0			;61cc4: 0000000a
-	DC.W	$25f2			;61cc8
-	DC.W	$0000			;61cca
-	DC.W	$71d7			;61ccc
-	DC.W	$0002			;61cce
-	DC.W	$4f6c			;61cd0
-	DC.W	$0002			;61cd2
-	DC.W	$4f74			;61cd4
-	DC.W	$0002			;61cd6
-	DC.W	$4fcc			;61cd8
-	ORI.B	#$0a,D0			;61cda: 0000000a
-	DC.W	$25f2			;61cde
-	DC.W	$0000			;61ce0
-	DC.W	$71d7			;61ce2
-	DC.W	$0002			;61ce4
-	DC.W	$4f6c			;61ce6
-	DC.W	$0002			;61ce8
-	DC.W	$4fcc			;61cea
-	DC.W	$0002			;61cec
-	CHK.W	0(A4),D7		;61cee: 4fac0000
-	DC.W	$000a			;61cf2
-	dc.l  $0			;61cf4: 00000000
-	OR.B	D0,D4			;61cf8: 8800
-	DC.W	$0002			;61cfa
-	DC.W	$4f8c			;61cfc
-	DC.W	$0002			;61cfe
-	CHK.W	(A4),D7			;61d00: 4f94
-	DC.W	$0002			;61d02
-	CHK.W	#$0000,D7		;61d04: 4fbc0000
-	DC.W	$000a			;61d08
-	dc.l  $0			;61d0a: 00000000
-	MOVEQ	#0,D4			;61d0e: 7800
-	DC.W	$0002			;61d10
-	DC.W	$4f64			;61d12
-	DC.W	$0002			;61d14
-	CHK.W	(A4)+,D7		;61d16: 4f9c
-	DC.W	$0002			;61d18
-	CHK.W	0(A4,D0.W),D7		;61d1a: 4fb40000
-	DC.W	$000a			;61d1e
-	SUB.B	-17040(A0),D6		;61d20: 9c28bd70
-	ORI.B	#$02,D0			;61d24: 00000002
-	DC.W	$4f64			;61d28
-	DC.W	$0002			;61d2a
-	CHK.W	(A4),D7			;61d2c: 4f94
-	DC.W	$0002			;61d2e
-	CHK.W	(A4)+,D7		;61d30: 4f9c
-	ORI.B	#$12,D0			;61d32: 00000012
-	SUB.B	-17040(A0),D6		;61d36: 9c28bd70
-	ORI.B	#$02,D0			;61d3a: 00000002
-	DC.W	$4f64			;61d3e
-	DC.W	$0002			;61d40
-	DC.W	$4f8c			;61d42
-	DC.W	$0002			;61d44
-	CHK.W	(A4),D7			;61d46: 4f94
-	ORI.B	#$12,D0			;61d48: 00000012
-	DC.W	$0000			;61d4c
-	OR.B	D0,D4			;61d4e: 8800
-	ORI.B	#$02,D0			;61d50: 00000002
-	DC.W	$4f64			;61d54
-	DC.W	$0002			;61d56
-	DC.W	$4f6c			;61d58
-	DC.W	$0002			;61d5a
-	DC.W	$4f8c			;61d5c
-	ORI.B	#$02,D0			;61d5e: 00000002
-	DC.W	$0000			;61d62
-	OR.B	D0,D4			;61d64: 8800
-	ORI.B	#$02,D0			;61d66: 00000002
-	DC.W	$4f6c			;61d6a
-	DC.W	$0002			;61d6c
-	CHK.W	D4,D7			;61d6e: 4f84
-	DC.W	$0002			;61d70
-	DC.W	$4f8c			;61d72
-	ORI.B	#$02,D0			;61d74: 00000002
-	BCHG	D6,D0			;61d78: 0d40
-	OR.L	#$00000002,D4		;61d7a: 88bc00000002
-	DC.W	$4f6c			;61d80
-	DC.W	$0002			;61d82
-	DC.W	$4f74			;61d84
-	DC.W	$0002			;61d86
-	CHK.W	D4,D7			;61d88: 4f84
-	ORI.B	#$02,D0			;61d8a: 00000002
-	BCHG	D6,D0			;61d8e: 0d40
-	OR.L	#$00000002,D4		;61d90: 88bc00000002
-	DC.W	$4f74			;61d96
-	DC.W	$0002			;61d98
-	DC.W	$4f7c			;61d9a
-	DC.W	$0002			;61d9c
-	CHK.W	D4,D7			;61d9e: 4f84
-	ORI.B	#$02,D0			;61da0: 00000002
-	BTST	D0,D0			;61da4: 0100
-	ORI.B	#$05,D6			;61da6: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;61daa: 003200000000
-	DC.W	$0000			;61db0
-	DC.W	$ff20			;61db2
-	DC.W	$ffe0			;61db4
-	DC.W	$fff8			;61db6
-	DC.W	$ffb0			;61db8
-	DC.W	$ffe0			;61dba
-	DC.W	$0008			;61dbc
-	DC.W	$ffb0			;61dbe
-	DC.W	$ffe0			;61dc0
-	DC.W	$fff8			;61dc2
-	DC.W	$ff20			;61dc4
-	DC.W	$fff0			;61dc6
-	DC.W	$0000			;61dc8
-	DC.W	$ffb0			;61dca
-	DC.W	$fff0			;61dcc
-	DC.W	$0000			;61dce
-	DC.W	$ff20			;61dd0
-	DC.W	$ffe0			;61dd2
-	DC.W	$0008			;61dd4
-	DC.W	$0000			;61dd6
-	AND.W	(A6),D5			;61dd8: ca56
-	BMI.S	lb_61e30		;61dda: 6b54
-	DC.W	$0002			;61ddc
-	DC.W	$4f64			;61dde
-	DC.W	$0002			;61de0
-	DC.W	$4f7c			;61de2
-	DC.W	$0002			;61de4
-	CHK.W	D4,D7			;61de6: 4f84
-	ORI.B	#$0a,D0			;61de8: 0000000a
-	DC.W	$0000			;61dec
-	AND.W	(A6),D5			;61dee: ca56
-	BMI.S	lb_61e46		;61df0: 6b54
-	DC.W	$0002			;61df2
-	DC.W	$4f64			;61df4
-	DC.W	$0002			;61df6
-	DC.W	$4f74			;61df8
-	DC.W	$0002			;61dfa
-	CHK.W	D4,D7			;61dfc: 4f84
-	ORI.B	#$0a,D0			;61dfe: 0000000a
-	DC.W	$0000			;61e02
-	AND.W	(A6),D5			;61e04: ca56
-	SUB.L	2(A4),D2		;61e06: 94ac0002
-	DC.W	$4f8c			;61e0a
-	DC.W	$0002			;61e0c
-	DC.W	$4f6c			;61e0e
-	DC.W	$0002			;61e10
-	CHK.W	D4,D7			;61e12: 4f84
-	ORI.B	#$0a,D0			;61e14: 0000000a
-	DC.W	$0000			;61e18
-	AND.W	(A6),D5			;61e1a: ca56
-	SUB.L	2(A4),D2		;61e1c: 94ac0002
-	DC.W	$4f8c			;61e20
-	DC.W	$0002			;61e22
-	DC.W	$4f7c			;61e24
-	DC.W	$0002			;61e26
-	CHK.W	D4,D7			;61e28: 4f84
-	ORI.B	#$0a,D0			;61e2a: 0000000a
-	DC.W	$0000			;61e2e
-lb_61e30:
-	OR.B	D0,D4			;61e30: 8800
-	ORI.B	#$02,D0			;61e32: 00000002
-	DC.W	$4f8c			;61e36
-	DC.W	$0002			;61e38
-	DC.W	$4f64			;61e3a
-	DC.W	$0002			;61e3c
-	DC.W	$4f6c			;61e3e
-	ORI.B	#$02,D0			;61e40: 00000002
-	DC.W	$0000			;61e44
-lb_61e46:
-	OR.B	D0,D4			;61e46: 8800
-	ORI.B	#$02,D0			;61e48: 00000002
-	DC.W	$4f64			;61e4c
-	DC.W	$0002			;61e4e
-	DC.W	$4f6c			;61e50
-	DC.W	$0002			;61e52
-	DC.W	$4f74			;61e54
-	ORI.B	#$02,D0			;61e56: 00000002
-	BTST	D0,D0			;61e5a: 0100
-	ORI.B	#$31,-(A6)		;61e5c: 00260031
-	DC.W	$00f2			;61e60
-	dc.l  $0			;61e62: 00000000
-	DC.W	$0000			;61e66
-	DC.W	$ff30			;61e68
-	ORI.B	#$70,D0			;61e6a: 00000070
-	BTST	D0,D0			;61e6e: 0100
-	ORI.B	#$70,D0			;61e70: 00000070
-	BTST	D0,D0			;61e74: 0100
-	DC.W	$0000			;61e76
-	DC.W	$ff90			;61e78
-	DC.W	$ff30			;61e7a
-	DC.W	$0000			;61e7c
-	DC.W	$ff90			;61e7e
-	DC.W	$fef0			;61e80
-	DC.W	$0030			;61e82
-	DC.W	$ff70			;61e84
-	DC.W	$00d0			;61e86
-	ORI.W	#$ff70,-(A0)		;61e88: 0060ff70
-	DC.W	$00d0			;61e8c
-	ORI.W	#$0090,-(A0)		;61e8e: 00600090
-	DC.W	$fef0			;61e92
-	DC.W	$0030			;61e94
-	ORI.L	#$fec00040,(A0)		;61e96: 0090fec00040
-	ORI.L	#$fec00040,(A0)		;61e9c: 0090fec00040
-	DC.W	$ff70			;61ea2
-	DC.W	$fec0			;61ea4
-	ORI.W	#$ffa0,D0		;61ea6: 0040ffa0
-	DC.W	$fec0			;61eaa
-	ORI.W	#$0060,D0		;61eac: 00400060
-	DC.W	$fed0			;61eb0
-	ORI.W	#$0060,(A0)		;61eb2: 00500060
-	DC.W	$fed0			;61eb6
-	ORI.W	#$ffa0,(A0)		;61eb8: 0050ffa0
-	DC.W	$fef0			;61ebc
-	DC.W	$0030			;61ebe
-	DC.W	$ffa0			;61ec0
-	DC.W	$fef0			;61ec2
-	DC.W	$0030			;61ec4
-	ORI.W	#$fec0,-(A0)		;61ec6: 0060fec0
-	DC.W	$0070			;61eca
-	ORI.L	#$fec00070,(A0)		;61ecc: 0090fec00070
-	DC.W	$ff70			;61ed2
-	DC.W	$fef0			;61ed4
-	DC.W	$0070			;61ed6
-	ORI.W	#$fef0,-(A0)		;61ed8: 0060fef0
-	DC.W	$0070			;61edc
-	DC.W	$ffa0			;61ede
-	DC.W	$ff30			;61ee0
-	ORI.L	#$0090ff30,-(A0)	;61ee2: 00a00090ff30
-	ORI.L	#$ff70ff30,-(A0)	;61ee8: 00a0ff70ff30
-	ORI.L	#$0060ff30,-(A0)	;61eee: 00a00060ff30
-	ORI.L	#$ffa000d0,-(A0)	;61ef4: 00a0ffa000d0
-	ORI.L	#$ff7000d0,D0		;61efa: 0080ff7000d0
-	ORI.L	#$00900090,D0		;61f00: 008000900090
-	ORI.L	#$ff700090,-(A0)	;61f06: 00a0ff700090
-	ORI.L	#$00900090,-(A0)	;61f0c: 00a000900090
-	ORI.L	#$ffa00090,-(A0)	;61f12: 00a0ffa00090
-	ORI.L	#$006000d0,-(A0)	;61f18: 00a0006000d0
-	ORI.L	#$ffa000d0,D0		;61f1e: 0080ffa000d0
-	ORI.L	#$006000c0,D0		;61f24: 0080006000c0
-	ORI.W	#$ffa0,-64(A0,D0.W)	;61f2a: 0070ffa000c0
-	ORI.W	#$0060,-48(A0,D0.W)	;61f30: 0070006000d0
-	ORI.W	#$ffa0,-(A0)		;61f36: 0060ffa0
-	DC.W	$00d0			;61f3a
-	ORI.W	#$0060,-(A0)		;61f3c: 00600060
-	DC.W	$fec0			;61f40
-	DC.W	$0070			;61f42
-	DC.W	$ffa0			;61f44
-	DC.W	$fec0			;61f46
-	DC.W	$0070			;61f48
-	ORI.W	#$ab26,-(A0)		;61f4a: 0060ab26
-	SCC	(A2)+			;61f4e: 54da
-	ORI.B	#$02,D0			;61f50: 00000002
-	DC.W	$4fc4			;61f54
-	DC.W	$0002			;61f56
-	DC.W	$4fcc			;61f58
-	DC.W	$0002			;61f5a
-	LEA	0(A4,D0.W),A7		;61f5c: 4ff40000
-	DC.W	$0009			;61f60
-	DC.W	$ab26			;61f62
-	SCC	(A2)+			;61f64: 54da
-	ORI.B	#$02,D0			;61f66: 00000002
-	DC.W	$4fcc			;61f6a
-	DC.W	$0002			;61f6c
-	LEA	2(A4,D0.W),A7		;61f6e: 4ff40002
-	DC.W	$4ffc			;61f72
-	ORI.B	#$09,D0			;61f74: 00000009
-	OR.B	D0,D4			;61f78: 8800
-	dc.l  $0			;61f7a: 00000000
-	DC.W	$0002			;61f7e
-	CHK.W	-(A4),D7		;61f80: 4fa4
-	DC.W	$0002			;61f82
-	CHK.W	#$0002,D7		;61f84: 4fbc0002
-	DC.W	$4fe4			;61f88
-	ORI.B	#$17,D0			;61f8a: 00000017
-	OR.B	D0,D4			;61f8e: 8800
-	dc.l  $0			;61f90: 00000000
-	DC.W	$0002			;61f94
-	CHK.W	#$0002,D7		;61f96: 4fbc0002
-	DC.W	$4fe4			;61f9a
-	DC.W	$0002			;61f9c
-	ADDQ.L	#8,A4			;61f9e: 508c
-	ORI.B	#$17,D0			;61fa0: 00000017
-	OR.B	D0,D4			;61fa4: 8800
-	dc.l  $0			;61fa6: 00000000
-	DC.W	$0002			;61faa
-	CHK.W	2(A4,D0.W),D7		;61fac: 4fb40002
-	LEA	2(A4),A7		;61fb0: 4fec0002
-	ADDQ.L	#8,D4			;61fb4: 5084
-	ORI.B	#$17,D0			;61fb6: 00000017
-	OR.B	D0,D4			;61fba: 8800
-	dc.l  $0			;61fbc: 00000000
-	DC.W	$0002			;61fc0
-	CHK.W	2(A4),D7		;61fc2: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;61fc6: 4fb40002
-	LEA	0(A4),A7		;61fca: 4fec0000
-	DC.W	$0017			;61fce
-	DC.W	$d0bb			;61fd0
-	BGT.S	lb_62020		;61fd2: 6e4c
-	ORI.B	#$02,D0			;61fd4: 00000002
-	DC.W	$500c			;61fd8
-	DC.W	$0002			;61fda
-	ADDQ.B	#8,(A4)+		;61fdc: 501c
-	DC.W	$0002			;61fde
-	ADDQ.L	#8,D4			;61fe0: 5084
-	ORI.B	#$17,D0			;61fe2: 00000017
-	DC.W	$d0bb			;61fe6
-	BGT.S	lb_62034+2		;61fe8: 6e4c
-	ORI.B	#$02,D0			;61fea: 00000002
-	LEA	2(A4),A7		;61fee: 4fec0002
-	DC.W	$500c			;61ff2
-	DC.W	$0002			;61ff4
-	ADDQ.L	#8,D4			;61ff6: 5084
-	ORI.B	#$17,D0			;61ff8: 00000017
-	DC.W	$d0bb			;61ffc
-	BGT.S	lb_6204a+2		;61ffe: 6e4c
-	ORI.B	#$02,D0			;62000: 00000002
-	DC.W	$4fe4			;62004
-	DC.W	$0002			;62006
-	ADDQ.B	#8,D4			;62008: 5004
-	DC.W	$0002			;6200a
-	ADDQ.L	#8,A4			;6200c: 508c
-	ORI.B	#$17,D0			;6200e: 00000017
-	DC.W	$d0bb			;62012
-	BGT.S	lb_62062		;62014: 6e4c
-	ORI.B	#$02,D0			;62016: 00000002
-	ADDQ.B	#8,D4			;6201a: 5004
-	DC.W	$0002			;6201c
-	ADDQ.B	#8,(A4)			;6201e: 5014
-lb_62020:
-	DC.W	$0002			;62020
-	ADDQ.L	#8,A4			;62022: 508c
-	ORI.B	#$17,D0			;62024: 00000017
-	SCC	(A2)+			;62028: 54da
-	SCC	(A2)+			;6202a: 54da
-	ORI.B	#$02,D0			;6202c: 00000002
-	ADDQ.W	#8,-(A4)		;62030: 5064
-	DC.W	$0002			;62032
-lb_62034:
-	ADDQ.W	#8,2(A4,D0.W)		;62034: 50740002
-	DC.W	$507c			;62038
-	ORI.B	#$09,D0			;6203a: 00000009
-	SCC	(A2)+			;6203e: 54da
-	SCC	(A2)+			;62040: 54da
-	ORI.B	#$02,D0			;62042: 00000002
-	ADDQ.W	#8,-(A4)		;62046: 5064
-	DC.W	$0002			;62048
-lb_6204a:
-	ADDQ.W	#8,2(A4)		;6204a: 506c0002
-	DC.W	$507c			;6204e
-	ORI.B	#$09,D0			;62050: 00000009
-	MOVEQ	#0,D4			;62054: 7800
-	dc.l  $0			;62056: 00000000
-	DC.W	$0002			;6205a
-	DC.W	$4f8c			;6205c
-	DC.W	$0002			;6205e
-	ADDQ.B	#8,-(A4)		;62060: 5024
-lb_62062:
-	DC.W	$0002			;62062
-	ADDQ.W	#8,(A4)			;62064: 5054
-	ORI.B	#$17,D0			;62066: 00000017
-	MOVEQ	#0,D4			;6206a: 7800
-	dc.l  $0			;6206c: 00000000
-	DC.W	$0002			;62070
-	DC.W	$4f8c			;62072
-	DC.W	$0002			;62074
-	ADDQ.W	#8,(A4)			;62076: 5054
-	DC.W	$0002			;62078
-	ADDQ.W	#8,0(A4,D0.W)		;6207a: 50740000
-	DC.W	$0017			;6207e
-	MOVE.W	27476(A2),0(A2,D0.W)	;62080: 35aa6b540000
-	DC.W	$0002			;62086
-	ADDQ.B	#8,-(A4)		;62088: 5024
-	DC.W	$0002			;6208a
-	ADDQ.B	#8,2(A4,D0.W)		;6208c: 50340002
-	ADDQ.W	#8,D4			;62090: 5044
-	ORI.B	#$17,D0			;62092: 00000017
-	MOVE.W	27476(A2),0(A2,D0.W)	;62096: 35aa6b540000
-	DC.W	$0002			;6209c
-	ADDQ.B	#8,-(A4)		;6209e: 5024
-	DC.W	$0002			;620a0
-	ADDQ.W	#8,D4			;620a2: 5044
-	DC.W	$0002			;620a4
-	ADDQ.W	#8,(A4)			;620a6: 5054
-	ORI.B	#$17,D0			;620a8: 00000017
-	MOVEQ	#0,D4			;620ac: 7800
-	dc.l  $0			;620ae: 00000000
-	DC.W	$0002			;620b2
-	CHK.W	(A4),D7			;620b4: 4f94
-	DC.W	$0002			;620b6
-	ADDQ.W	#8,(A4)+		;620b8: 505c
-	DC.W	$0002			;620ba
-	DC.W	$507c			;620bc
-	ORI.B	#$17,D0			;620be: 00000017
-	MOVEQ	#0,D4			;620c2: 7800
-	dc.l  $0			;620c4: 00000000
-	DC.W	$0002			;620c8
-	CHK.W	(A4),D7			;620ca: 4f94
-	DC.W	$0002			;620cc
-	ADDQ.W	#8,(A4)+		;620ce: 505c
-	DC.W	$0002			;620d0
-	ADDQ.B	#8,0(A4)		;620d2: 502c0000
-	DC.W	$0017			;620d6
-	MOVE.W	27476(A2),0(A2,D0.W)	;620d8: 35aa6b540000
-	DC.W	$0002			;620de
-	ADDQ.B	#8,2(A4)		;620e0: 502c0002
-	ADDQ.W	#8,A4			;620e4: 504c
-	DC.W	$0002			;620e6
-	ADDQ.W	#8,(A4)+		;620e8: 505c
-	ORI.B	#$17,D0			;620ea: 00000017
-	MOVE.W	27476(A2),0(A2,D0.W)	;620ee: 35aa6b540000
-	DC.W	$0002			;620f4
-	ADDQ.B	#8,2(A4)		;620f6: 502c0002
-	DC.W	$503c			;620fa
-	DC.W	$0002			;620fc
-	ADDQ.W	#8,A4			;620fe: 504c
-	ORI.B	#$17,D0			;62100: 00000017
-	dc.l  $0			;62104: 00000000
-	OR.B	D0,D4			;62108: 8800
-	DC.W	$0002			;6210a
-	CHK.W	D4,D7			;6210c: 4f84
-	DC.W	$0002			;6210e
-	CHK.W	2(A4),D7		;62110: 4fac0002
-	LEA	0(A4),A7		;62114: 4fec0000
-	ORI.B	#$00,(A1)		;62118: 00110000
-	DC.W	$0000			;6211c
-	OR.B	D0,D4			;6211e: 8800
-	DC.W	$0002			;62120
-	CHK.W	D4,D7			;62122: 4f84
-	DC.W	$0002			;62124
-	LEA	2(A4),A7		;62126: 4fec0002
-	DC.W	$500c			;6212a
-	ORI.B	#$11,D0			;6212c: 00000011
-	dc.l  $0			;62130: 00000000
-	OR.B	D1,D4			;62134: 8801
-	DC.W	$0002			;62136
-	CHK.W	D4,D7			;62138: 4f84
-	DC.W	$0002			;6213a
-	DC.W	$4f8c			;6213c
-	DC.W	$0002			;6213e
-	DC.W	$500c			;62140
-	ORI.B	#$11,D0			;62142: 00000011
-	dc.l  $0			;62146: 00000000
-	OR.B	D0,D4			;6214a: 8800
-	DC.W	$0002			;6214c
-	DC.W	$4f8c			;6214e
-	DC.W	$0002			;62150
-	DC.W	$500c			;62152
-	DC.W	$0002			;62154
-	ADDQ.B	#8,0(A4,D0.W)		;62156: 50340000
-	ORI.B	#$00,(A1)		;6215a: 00110000
-	DC.W	$0000			;6215e
-	OR.B	D0,D4			;62160: 8800
-	DC.W	$0002			;62162
-	DC.W	$4f8c			;62164
-	DC.W	$0002			;62166
-	ADDQ.B	#8,2(A4,D0.W)		;62168: 50340002
-	ADDQ.B	#8,-(A4)		;6216c: 5024
-	ORI.B	#$11,D0			;6216e: 00000011
-	dc.l  $0			;62172: 00000000
-	MOVEQ	#0,D4			;62176: 7800
-	DC.W	$0002			;62178
-	CHK.W	(A4)+,D7		;6217a: 4f9c
-	DC.W	$0002			;6217c
-	CHK.W	-(A4),D7		;6217e: 4fa4
-	DC.W	$0002			;62180
-	DC.W	$4fe4			;62182
-	ORI.B	#$11,D0			;62184: 00000011
-	dc.l  $0			;62188: 00000000
-	MOVEQ	#0,D4			;6218c: 7800
-	DC.W	$0002			;6218e
-	CHK.W	(A4)+,D7		;62190: 4f9c
-	DC.W	$0002			;62192
-	ADDQ.B	#8,D4			;62194: 5004
-	DC.W	$0002			;62196
-	DC.W	$4fe4			;62198
-	ORI.B	#$11,D0			;6219a: 00000011
-	dc.l  $0			;6219e: 00000000
-	DC.W	$77ff			;621a2
-	DC.W	$0002			;621a4
-	CHK.W	(A4),D7			;621a6: 4f94
-	DC.W	$0002			;621a8
-	CHK.W	(A4)+,D7		;621aa: 4f9c
-	DC.W	$0002			;621ac
-	ADDQ.B	#8,D4			;621ae: 5004
-	ORI.B	#$11,D0			;621b0: 00000011
-	dc.l  $0			;621b4: 00000000
-	MOVEQ	#0,D4			;621b8: 7800
-	DC.W	$0002			;621ba
-	CHK.W	(A4),D7			;621bc: 4f94
-	DC.W	$0002			;621be
-	DC.W	$503c			;621c0
-	DC.W	$0002			;621c2
-	ADDQ.B	#8,D4			;621c4: 5004
-	ORI.B	#$11,D0			;621c6: 00000011
-	dc.l  $0			;621ca: 00000000
-	MOVEQ	#0,D4			;621ce: 7800
-	DC.W	$0002			;621d0
-	CHK.W	(A4),D7			;621d2: 4f94
-	DC.W	$0002			;621d4
-	ADDQ.B	#8,2(A4)		;621d6: 502c0002
-	DC.W	$503c			;621da
-	ORI.B	#$11,D0			;621dc: 00000011
-	DC.W	$ab26			;621e0
-	DC.W	$ab26			;621e2
-	ORI.B	#$02,D0			;621e4: 00000002
-	DC.W	$4fc4			;621e8
-	DC.W	$0002			;621ea
-	LEA	(A4),A7			;621ec: 4fd4
-	DC.W	$0002			;621ee
-	DC.W	$4fdc			;621f0
-	ORI.B	#$14,D0			;621f2: 00000014
-	DC.W	$ab26			;621f6
-	DC.W	$ab26			;621f8
-	ORI.B	#$02,D0			;621fa: 00000002
-	DC.W	$4fc4			;621fe
-	DC.W	$0002			;62200
-	DC.W	$4fcc			;62202
-	DC.W	$0002			;62204
-	LEA	(A4),A7			;62206: 4fd4
-	ORI.B	#$14,D0			;62208: 00000014
-	DC.W	$da0e			;6220c
-	OR.B	0(A1),D7		;6220e: 8e290000
-	DC.W	$0002			;62212
-	CHK.W	-(A4),D7		;62214: 4fa4
-	DC.W	$0002			;62216
-	CHK.W	#$0002,D7		;62218: 4fbc0002
-	DC.W	$4fdc			;6221c
-	ORI.B	#$17,D0			;6221e: 00000017
-	DC.W	$da0e			;62222
-	OR.B	0(A1),D7		;62224: 8e290000
-	DC.W	$0002			;62228
-	CHK.W	(A4)+,D7		;6222a: 4f9c
-	DC.W	$0002			;6222c
-	CHK.W	-(A4),D7		;6222e: 4fa4
-	DC.W	$0002			;62230
-	DC.W	$4fdc			;62232
-	ORI.B	#$17,D0			;62234: 00000017
-	DC.W	$da0e			;62238
-	OR.B	0(A1),D7		;6223a: 8e290000
-	DC.W	$0002			;6223e
-	CHK.W	2(A4),D7		;62240: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;62244: 4fb40002
-	LEA	(A4),A7			;62248: 4fd4
-	ORI.B	#$17,D0			;6224a: 00000017
-	DC.W	$da0e			;6224e
-	OR.B	0(A1),D7		;62250: 8e290000
-	DC.W	$0002			;62254
-	CHK.W	D4,D7			;62256: 4f84
-	DC.W	$0002			;62258
-	CHK.W	2(A4),D7		;6225a: 4fac0002
-	LEA	(A4),A7			;6225e: 4fd4
-	ORI.B	#$17,D0			;62260: 00000017
-	BMI.S	lb_622b8+2		;62264: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;62266: 35aa00000002
-	DC.W	$4f6c			;6226c
-	DC.W	$0002			;6226e
-	DC.W	$4f74			;62270
-	DC.W	$0002			;62272
-	ADDQ.W	#8,0(A4,D0.W)		;62274: 50740000
-	DC.W	$0009			;62278
-	BMI.S	lb_622ce+2		;6227a: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;6227c: 35aa00000002
-	DC.W	$4f6c			;62282
-	DC.W	$0002			;62284
-	ADDQ.W	#8,2(A4,D0.W)		;62286: 50740002
-	DC.W	$507c			;6228a
-	ORI.B	#$09,D0			;6228c: 00000009
-	BMI.S	lb_622e4+2		;62290: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;62292: 35aa00000002
-	DC.W	$4f74			;62298
-	DC.W	$0002			;6229a
-	DC.W	$4f8c			;6229c
-	DC.W	$0002			;6229e
-	ADDQ.W	#8,0(A4,D0.W)		;622a0: 50740000
-	DC.W	$0009			;622a4
-	BMI.S	lb_622fa+2		;622a6: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;622a8: 35aa00000002
-	DC.W	$4f6c			;622ae
-	DC.W	$0002			;622b0
-	CHK.W	(A4),D7			;622b2: 4f94
-	DC.W	$0002			;622b4
-	DC.W	$507c			;622b6
-lb_622b8:
-	ORI.B	#$09,D0			;622b8: 00000009
-	DC.W	$0613			;622bc
-	DC.W	$c33d			;622be
-	SUB.L	2(A4,D0.W),D4		;622c0: 98b40002
-	DC.W	$4f7c			;622c4
-	DC.W	$0002			;622c6
-	CHK.W	D4,D7			;622c8: 4f84
-	DC.W	$0002			;622ca
-	DC.W	$4f8c			;622cc
-lb_622ce:
-	ORI.B	#$0c,D0			;622ce: 0000000c
-	DC.W	$0000			;622d2
-	DC.W	$da0e			;622d4
-	OR.B	2(A1),D7		;622d6: 8e290002
-lb_622da:
-	DC.W	$4f74			;622da
-	DC.W	$0002			;622dc
-	DC.W	$4f7c			;622de
-	DC.W	$0002			;622e0
-	DC.W	$4f8c			;622e2
-lb_622e4:
-	ORI.B	#$0c,D0			;622e4: 0000000c
-	DC.W	$0000			;622e8
-	DC.W	$da0e			;622ea
-	DC.W	$71d7			;622ec
-	DC.W	$0002			;622ee
-	DC.W	$4f64			;622f0
-	DC.W	$0002			;622f2
-	DC.W	$4f6c			;622f4
-	DC.W	$0002			;622f6
-	CHK.W	(A4),D7			;622f8: 4f94
-lb_622fa:
-	ORI.B	#$0c,D0			;622fa: 0000000c
-	DC.W	$0613			;622fe
-	DC.W	$c33d			;62300
-	BEQ.S	lb_62350		;62302: 674c
-lb_62304:
-	DC.W	$0002			;62304
-	DC.W	$4f64			;62306
-	DC.W	$0002			;62308
-	CHK.W	(A4),D7			;6230a: 4f94
-	DC.W	$0002			;6230c
-	CHK.W	(A4)+,D7		;6230e: 4f9c
-	ORI.B	#$0c,D0			;62310: 0000000c
-	CMP.B	D0,D4			;62314: b800
-	DC.W	$a000			;62316
-	ORI.B	#$02,D0			;62318: 00000002
-	DC.W	$4f64			;6231c
-	DC.W	$0002			;6231e
-	DC.W	$4f7c			;62320
-	DC.W	$0002			;62322
-	DC.W	$4fdc			;62324
-	ORI.B	#$14,D0			;62326: 00000014
-	CMP.B	D0,D4			;6232a: b800
-	DC.W	$a000			;6232c
-	ORI.B	#$02,D0			;6232e: 00000002
-	DC.W	$4f7c			;62332
-	DC.W	$0002			;62334
-	LEA	(A4),A7			;62336: 4fd4
-	DC.W	$0002			;62338
-	DC.W	$4fdc			;6233a
-	ORI.B	#$14,D0			;6233c: 00000014
-	CMP.B	D0,D4			;62340: b800
-	DC.W	$a000			;62342
-	ORI.B	#$02,D0			;62344: 00000002
-	DC.W	$4f64			;62348
-	DC.W	$0002			;6234a
-	CHK.W	(A4)+,D7		;6234c: 4f9c
-	DC.W	$0002			;6234e
-lb_62350:
-	DC.W	$4fdc			;62350
-	ORI.B	#$14,D0			;62352: 00000014
-	CMP.B	D0,D4			;62356: b800
-	DC.W	$a000			;62358
-	ORI.B	#$02,D0			;6235a: 00000002
-	DC.W	$4f7c			;6235e
-	DC.W	$0002			;62360
-	CHK.W	D4,D7			;62362: 4f84
-	DC.W	$0002			;62364
-	LEA	(A4),A7			;62366: 4fd4
-	ORI.B	#$14,D0			;62368: 00000014
-	dc.l  $0			;6236c: 00000000
-	ORI.B	#$02,D0			;62370: 00000002
-	DC.W	$4f64			;62374
-	DC.W	$0002			;62376
-	DC.W	$4f6c			;62378
-	DC.W	$0002			;6237a
-	DC.W	$4f7c			;6237c
-	ORI.B	#$04,D0			;6237e: 00000004
-	dc.l  $0			;62382: 00000000
-	ORI.B	#$02,D0			;62386: 00000002
-	DC.W	$4f6c			;6238a
-	DC.W	$0002			;6238c
-	DC.W	$4f74			;6238e
-	DC.W	$0002			;62390
-	DC.W	$4f7c			;62392
-	ORI.B	#$04,D0			;62394: 00000004
-	BTST	D0,D0			;62398: 0100
-	ORI.B	#$15,(A0)		;6239a: 00100015
-	ORI.W	#$0000,0(A6)		;6239e: 006e00000000
-	DC.W	$0000			;623a4
-	DC.W	$ffa0			;623a6
-	DC.W	$ffb0			;623a8
-	ORI.B	#$30,ext_ffffffb0.W		;623aa: 00380030ffb0
-	DC.W	$0048			;623b0
-	ORI.W	#$ffb0,(A0)		;623b2: 0050ffb0
-	ORI.B	#$50,ext_ffffffb0.W		;623b6: 00380050ffb0
-	DC.W	$ffc8			;623bc
-	DC.W	$0030			;623be
-	DC.W	$ffb0			;623c0
-	DC.W	$ffb8			;623c2
-	DC.W	$ffa0			;623c4
-	DC.W	$ffb0			;623c6
-	DC.W	$ffc8			;623c8
-	DC.W	$ffa0			;623ca
-	DC.W	$0000			;623cc
-	DC.W	$ffa8			;623ce
-	DC.W	$0030			;623d0
-	DC.W	$0000			;623d2
-	DC.W	$ff98			;623d4
-	DC.W	$0070			;623d6
-	DC.W	$0000			;623d8
-	DC.W	$ffb8			;623da
-	ORI.W	#$0000,72(A0,D0.W)	;623dc: 007000000048
-	ORI.B	#$00,104(A0,D0.W)	;623e2: 003000000068
-	DC.W	$ffa0			;623e8
-	ORI.B	#$58,D0			;623ea: 00000058
-	DC.W	$ff80			;623ee
-	DC.W	$ffd0			;623f0
-	DC.W	$0038			;623f2
-	DC.W	$ff80			;623f4
-	DC.W	$ffd0			;623f6
-	DC.W	$ffc8			;623f8
-	DC.W	$ffa0			;623fa
-	DC.W	$fff0			;623fc
-	DC.W	$0038			;623fe
-	DC.W	$ffa0			;62400
-	DC.W	$fff0			;62402
-	DC.W	$ffc8			;62404
-	OR.B	D0,D4			;62406: 8800
-	dc.l  $0			;62408: 00000000
-	DC.W	$0002			;6240c
-	DC.W	$4f64			;6240e
-	DC.W	$0002			;62410
-	DC.W	$4f8c			;62412
-	DC.W	$0002			;62414
-	CHK.W	#$0000,D7		;62416: 4fbc0000
-	DC.W	$0011			;6241a
-	OR.B	D0,D4			;6241c: 8800
-	dc.l  $0			;6241e: 00000000
-	DC.W	$0002			;62422
-	DC.W	$4f8c			;62424
-	DC.W	$0002			;62426
-	CHK.W	(A4),D7			;62428: 4f94
-	DC.W	$0002			;6242a
-	CHK.W	#$0000,D7		;6242c: 4fbc0000
-	ORI.B	#$00,(A1)		;62430: 00110000
-	DC.W	$0000			;62434
-	OR.B	D0,D4			;62436: 8800
-	DC.W	$0002			;62438
-	DC.W	$4f8c			;6243a
-	DC.W	$0002			;6243c
-	DC.W	$4fcc			;6243e
-	DC.W	$0002			;62440
-	DC.W	$4fdc			;62442
-	ORI.B	#$0c,D0			;62444: 0000000c
-	dc.l  $0			;62448: 00000000
-	MOVEQ	#0,D4			;6244c: 7800
-	DC.W	$0002			;6244e
-	DC.W	$4f64			;62450
-	DC.W	$0002			;62452
-	DC.W	$4fc4			;62454
-	DC.W	$0002			;62456
-	LEA	(A4),A7			;62458: 4fd4
-	ORI.B	#$0c,D0			;6245a: 0000000c
-	DC.W	$ab26			;6245e
-	SCC	(A2)+			;62460: 54da
-	ORI.B	#$02,D0			;62462: 00000002
-	DC.W	$4fc4			;62466
-	DC.W	$0002			;62468
-	LEA	(A4),A7			;6246a: 4fd4
-	DC.W	$0002			;6246c
-	DC.W	$4fdc			;6246e
-	ORI.B	#$01,D0			;62470: 00000001
-	DC.W	$ab26			;62474
-	SCC	(A2)+			;62476: 54da
-	ORI.B	#$02,D0			;62478: 00000002
-	DC.W	$4fc4			;6247c
-	DC.W	$0002			;6247e
-	DC.W	$4fcc			;62480
-	DC.W	$0002			;62482
-	DC.W	$4fdc			;62484
-	ORI.B	#$01,D0			;62486: 00000001
-	DC.W	$f3b0			;6248a
-	ADD.L	D1,28372(A4)		;6248c: d3ac6ed4
-	DC.W	$0002			;62490
-	DC.W	$4f64			;62492
-	DC.W	$0002			;62494
-	CHK.W	2(A4,D0.W),D7		;62496: 4fb40002
-	CHK.W	#$0000,D7		;6249a: 4fbc0000
-	DC.W	$000c			;6249e
-	DC.W	$f3b0			;624a0
-	ADD.L	D1,28372(A4)		;624a2: d3ac6ed4
-	DC.W	$0002			;624a6
-	DC.W	$4f64			;624a8
-	DC.W	$0002			;624aa
-	DC.W	$4f6c			;624ac
-	DC.W	$0002			;624ae
-	CHK.W	0(A4,D0.W),D7		;624b0: 4fb40000
-	DC.W	$000c			;624b4
-	DC.W	$f3b0			;624b6
-	ADD.L	D1,-28372(A4)		;624b8: d3ac912c
-	DC.W	$0002			;624bc
-	DC.W	$4f8c			;624be
-	DC.W	$0002			;624c0
-	CHK.W	(A4),D7			;624c2: 4f94
-	DC.W	$0002			;624c4
-	CHK.W	(A4)+,D7		;624c6: 4f9c
-	ORI.B	#$0c,D0			;624c8: 0000000c
-	DC.W	$f3b0			;624cc
-	ADD.L	D1,-28372(A4)		;624ce: d3ac912c
-	DC.W	$0002			;624d2
-	CHK.W	D4,D7			;624d4: 4f84
-	DC.W	$0002			;624d6
-	DC.W	$4f8c			;624d8
-	DC.W	$0002			;624da
-	CHK.W	(A4)+,D7		;624dc: 4f9c
-	ORI.B	#$0c,D0			;624de: 0000000c
-	MOVE.W	D7,(A1)			;624e2: 3287
-	ADD.L	D3,(A4)			;624e4: d794
-	BCS.S	lb_624f6		;624e6: 650e
-	DC.W	$0002			;624e8
-	DC.W	$4f6c			;624ea
-	DC.W	$0002			;624ec
-	CHK.W	2(A4),D7		;624ee: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;624f2: 4fb40000
-lb_624f6:
-	DC.W	$0014			;624f6
-	MOVE.W	D7,(A1)			;624f8: 3287
-	ADD.L	D3,(A4)			;624fa: d794
-	BCS.S	lb_6250c		;624fc: 650e
-	DC.W	$0002			;624fe
-	DC.W	$4f6c			;62500
-	DC.W	$0002			;62502
-	DC.W	$4f74			;62504
-	DC.W	$0002			;62506
-	CHK.W	0(A4),D7		;62508: 4fac0000
-lb_6250c:
-	DC.W	$0014			;6250c
-	MOVE.W	D7,(A1)			;6250e: 3287
-	ADD.L	D3,(A4)			;62510: d794
-	SUBA.W	2(A2,D0.W),A5		;62512: 9af20002
-	CHK.W	D4,D7			;62516: 4f84
-	DC.W	$0002			;62518
-	CHK.W	(A4)+,D7		;6251a: 4f9c
-	DC.W	$0002			;6251c
-	CHK.W	-(A4),D7		;6251e: 4fa4
-	ORI.B	#$14,D0			;62520: 00000014
-	MOVE.W	D7,(A1)			;62524: 3287
-	ADD.L	D3,(A4)			;62526: d794
-	SUBA.W	2(A2,D0.W),A5		;62528: 9af20002
-	DC.W	$4f7c			;6252c
-	DC.W	$0002			;6252e
-	CHK.W	D4,D7			;62530: 4f84
-	DC.W	$0002			;62532
-	CHK.W	-(A4),D7		;62534: 4fa4
-	ORI.B	#$14,D0			;62536: 00000014
-	BLE.S	lb_625a4+2		;6253a: 6f6a
-	ADD.W	D1,0(A7)		;6253c: d36f0000
-	DC.W	$0002			;62540
-	DC.W	$4f74			;62542
-	DC.W	$0002			;62544
-	DC.W	$4f7c			;62546
-	DC.W	$0002			;62548
-	CHK.W	0(A4),D7		;6254a: 4fac0000
-	DC.W	$000c			;6254e
-	BLE.S	lb_625ba+2		;62550: 6f6a
-	ADD.W	D1,0(A7)		;62552: d36f0000
-	DC.W	$0002			;62556
-	DC.W	$4f7c			;62558
-	DC.W	$0002			;6255a
-	CHK.W	-(A4),D7		;6255c: 4fa4
-	DC.W	$0002			;6255e
-	CHK.W	0(A4),D7		;62560: 4fac0000
-	DC.W	$000c			;62564
-	DC.W	$ab26			;62566
-	DC.W	$ab26			;62568
-	ORI.B	#$02,D0			;6256a: 00000002
-	DC.W	$4f64			;6256e
-	DC.W	$0002			;62570
-	DC.W	$4fc4			;62572
-	DC.W	$0002			;62574
-	DC.W	$4fcc			;62576
-	ORI.B	#$14,D0			;62578: 00000014
-	DC.W	$ab26			;6257c
-	DC.W	$ab26			;6257e
-	ORI.B	#$02,D0			;62580: 00000002
-	DC.W	$4f64			;62584
-	DC.W	$0002			;62586
-	DC.W	$4f8c			;62588
-	DC.W	$0002			;6258a
-	DC.W	$4fcc			;6258c
-	ORI.B	#$14,D0			;6258e: 00000014
-	DC.W	$0000			;62592
-	OR.B	D0,D4			;62594: 8800
-	ORI.B	#$02,D0			;62596: 00000002
-	DC.W	$4f64			;6259a
-	DC.W	$0002			;6259c
-	DC.W	$4f6c			;6259e
-	DC.W	$0002			;625a0
-	DC.W	$4f8c			;625a2
-lb_625a4:
-	ORI.B	#$04,D0			;625a4: 00000004
-	DC.W	$0000			;625a8
-	OR.B	D0,D4			;625aa: 8800
-	ORI.B	#$02,D0			;625ac: 00000002
-	DC.W	$4f6c			;625b0
-	DC.W	$0002			;625b2
-	DC.W	$4f74			;625b4
-	DC.W	$0002			;625b6
-	DC.W	$4f8c			;625b8
-lb_625ba:
-	ORI.B	#$04,D0			;625ba: 00000004
-	DC.W	$0000			;625be
-	OR.B	D0,D4			;625c0: 8800
-	ORI.B	#$02,D0			;625c2: 00000002
-	DC.W	$4f74			;625c6
-	DC.W	$0002			;625c8
-	DC.W	$4f7c			;625ca
-	DC.W	$0002			;625cc
-	DC.W	$4f8c			;625ce
-	ORI.B	#$04,D0			;625d0: 00000004
-	DC.W	$0000			;625d4
-	OR.B	D0,D4			;625d6: 8800
-	ORI.B	#$02,D0			;625d8: 00000002
-	DC.W	$4f7c			;625dc
-	DC.W	$0002			;625de
-	CHK.W	D4,D7			;625e0: 4f84
-	DC.W	$0002			;625e2
-	DC.W	$4f8c			;625e4
-	ORI.B	#$04,D0			;625e6: 00000004
-	BTST	D0,D0			;625ea: 0100
-	ORI.B	#$05,D6			;625ec: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;625f0: 003200000000
-	DC.W	$0000			;625f6
-	DC.W	$fe10			;625f8
-	DC.W	$ffd0			;625fa
-	DC.W	$fff8			;625fc
-	DC.W	$ff80			;625fe
-	DC.W	$ffd0			;62600
-	DC.W	$0008			;62602
-	DC.W	$ff80			;62604
-	DC.W	$ffd0			;62606
-	DC.W	$fff8			;62608
-	DC.W	$fe10			;6260a
-	DC.W	$ffe0			;6260c
-	DC.W	$0000			;6260e
-	DC.W	$ff90			;62610
-	DC.W	$ffe0			;62612
-	DC.W	$0000			;62614
-	DC.W	$fe10			;62616
-	DC.W	$ffd0			;62618
-	DC.W	$0008			;6261a
-	DC.W	$0000			;6261c
-	AND.W	(A6),D5			;6261e: ca56
-	BMI.S	lb_62676		;62620: 6b54
-	DC.W	$0002			;62622
-	DC.W	$4f64			;62624
-	DC.W	$0002			;62626
-	DC.W	$4f7c			;62628
-	DC.W	$0002			;6262a
-	CHK.W	D4,D7			;6262c: 4f84
-	ORI.B	#$0c,D0			;6262e: 0000000c
-	DC.W	$0000			;62632
-	AND.W	(A6),D5			;62634: ca56
-	BMI.S	lb_6268c		;62636: 6b54
-	DC.W	$0002			;62638
-	DC.W	$4f64			;6263a
-	DC.W	$0002			;6263c
-	DC.W	$4f74			;6263e
-	DC.W	$0002			;62640
-	CHK.W	D4,D7			;62642: 4f84
-	ORI.B	#$0c,D0			;62644: 0000000c
-	DC.W	$0000			;62648
-	AND.W	(A6),D5			;6264a: ca56
-	SUB.L	2(A4),D2		;6264c: 94ac0002
-	DC.W	$4f8c			;62650
-	DC.W	$0002			;62652
-	DC.W	$4f6c			;62654
-	DC.W	$0002			;62656
-	CHK.W	D4,D7			;62658: 4f84
-	ORI.B	#$0c,D0			;6265a: 0000000c
-	DC.W	$0000			;6265e
-	AND.W	(A6),D5			;62660: ca56
-	SUB.L	2(A4),D2		;62662: 94ac0002
-	DC.W	$4f8c			;62666
-	DC.W	$0002			;62668
-	DC.W	$4f7c			;6266a
-	DC.W	$0002			;6266c
-	CHK.W	D4,D7			;6266e: 4f84
-	ORI.B	#$0c,D0			;62670: 0000000c
-	DC.W	$0000			;62674
-lb_62676:
-	OR.B	D0,D4			;62676: 8800
-	ORI.B	#$02,D0			;62678: 00000002
-	DC.W	$4f8c			;6267c
-	DC.W	$0002			;6267e
-	DC.W	$4f64			;62680
-	DC.W	$0002			;62682
-	DC.W	$4f6c			;62684
-	ORI.B	#$04,D0			;62686: 00000004
-	DC.W	$0000			;6268a
-lb_6268c:
-	OR.B	D0,D4			;6268c: 8800
-	ORI.B	#$02,D0			;6268e: 00000002
-	DC.W	$4f64			;62692
-	DC.W	$0002			;62694
-	DC.W	$4f6c			;62696
-	DC.W	$0002			;62698
-	DC.W	$4f74			;6269a
-	ORI.B	#$04,D0			;6269c: 00000004
-	BTST	D0,D0			;626a0: 0100
-	ORI.B	#$2b,-(A4)		;626a2: 0024002b
-	DC.W	$00e6			;626a6
-	dc.l  $0			;626a8: 00000000
-	DC.W	$0000			;626ac
-	DC.W	$ff80			;626ae
-	ORI.B	#$60,D0			;626b0: 00000060
-	DC.W	$00e0			;626b4
-	ORI.B	#$60,D0			;626b6: 00000060
-	DC.W	$00e0			;626ba
-	DC.W	$0000			;626bc
-	DC.W	$ffa0			;626be
-	DC.W	$ff80			;626c0
-	DC.W	$0000			;626c2
-	DC.W	$ffa0			;626c4
-	DC.W	$ff40			;626c6
-	DC.W	$0030			;626c8
-	DC.W	$ff80			;626ca
-	DC.W	$ff40			;626cc
-	ORI.B	#$80,-16(A0,D0.W)	;626ce: 0030008000f0
-	ORI.B	#$80,-16(A0,D0.W)	;626d4: 0030008000f0
-	DC.W	$0030			;626da
-	DC.W	$ff80			;626dc
-	DC.W	$ff40			;626de
-	DC.W	$0030			;626e0
-	DC.W	$ffb0			;626e2
-	DC.W	$ff40			;626e4
-	DC.W	$0030			;626e6
-	ORI.W	#$ff10,(A0)		;626e8: 0050ff10
-	ORI.W	#$0050,(A0)		;626ec: 00500050
-	DC.W	$ff10			;626f0
-	ORI.W	#$ffb0,(A0)		;626f2: 0050ffb0
-	DC.W	$ff00			;626f6
-	DC.W	$0030			;626f8
-	ORI.L	#$ff000030,D0		;626fa: 0080ff000030
-	ORI.W	#$ff00,(A0)		;62700: 0050ff00
-	DC.W	$0030			;62704
-	DC.W	$ffb0			;62706
-	DC.W	$ff00			;62708
-	DC.W	$0030			;6270a
-	DC.W	$ff80			;6270c
-	DC.W	$ff10			;6270e
-	ORI.W	#$0080,-(A0)		;62710: 00600080
-	DC.W	$ff70			;62714
-	ORI.L	#$00800080,D0		;62716: 008000800080
-	ORI.L	#$008000e0,D0		;6271c: 0080008000e0
-	ORI.W	#$0080,-(A0)		;62722: 00600080
-	DC.W	$00e0			;62726
-	DC.W	$0030			;62728
-	ORI.L	#$ff100060,D0		;6272a: 0080ff100060
-	DC.W	$ff80			;62730
-	DC.W	$ff70			;62732
-	ORI.L	#$ff800080,D0		;62734: 0080ff800080
-	ORI.L	#$ff8000e0,D0		;6273a: 0080ff8000e0
-	ORI.W	#$ff80,-(A0)		;62740: 0060ff80
-	DC.W	$00e0			;62744
-	DC.W	$0030			;62746
-	DC.W	$ff80			;62748
-	DC.W	$ff10			;6274a
-	ORI.W	#$0050,-(A0)		;6274c: 00600050
-	DC.W	$ff10			;62750
-	ORI.W	#$ffb0,-(A0)		;62752: 0060ffb0
-	DC.W	$ff70			;62756
-	ORI.L	#$0050ff70,D0		;62758: 00800050ff70
-	ORI.L	#$ffb00080,D0		;6275e: 0080ffb00080
-	ORI.L	#$00500080,D0		;62764: 008000500080
-	ORI.L	#$ffb000e0,D0		;6276a: 0080ffb000e0
-	ORI.W	#$0050,-(A0)		;62770: 00600050
-	DC.W	$00e0			;62774
-	ORI.W	#$ffb0,-(A0)		;62776: 0060ffb0
-	DC.W	$00f0			;6277a
-	ORI.B	#$50,-16(A0,D0.W)	;6277c: 0030005000f0
-	DC.W	$0030			;62782
-	DC.W	$ffb0			;62784
-	DC.W	$da0e			;62786
-	DC.W	$71d7			;62788
-	ORI.B	#$02,D0			;6278a: 00000002
-	DC.W	$4fe4			;6278e
-	DC.W	$0002			;62790
-	LEA	2(A4),A7		;62792: 4fec0002
-	ADDQ.W	#8,D4			;62796: 5044
-	ORI.B	#$17,D0			;62798: 00000017
-	DC.W	$da0e			;6279c
-	DC.W	$71d7			;6279e
-	ORI.B	#$02,D0			;627a0: 00000002
-	DC.W	$4fe4			;627a4
-	DC.W	$0002			;627a6
-	ADDQ.B	#8,2(A4,D0.W)		;627a8: 50340002
-	ADDQ.W	#8,D4			;627ac: 5044
-	ORI.B	#$17,D0			;627ae: 00000017
-	DC.W	$da0e			;627b2
-	DC.W	$71d7			;627b4
-	ORI.B	#$02,D0			;627b6: 00000002
-	ADDQ.B	#8,(A4)			;627ba: 5014
-	DC.W	$0002			;627bc
-	DC.W	$503c			;627be
-	DC.W	$0002			;627c0
-	ADDQ.W	#8,A4			;627c2: 504c
-	ORI.B	#$17,D0			;627c4: 00000017
-	DC.W	$da0e			;627c8
-	DC.W	$71d7			;627ca
-	ORI.B	#$02,D0			;627cc: 00000002
-	DC.W	$500c			;627d0
-	DC.W	$0002			;627d2
-	ADDQ.B	#8,(A4)			;627d4: 5014
-	DC.W	$0002			;627d6
-	DC.W	$503c			;627d8
-	ORI.B	#$17,D0			;627da: 00000017
-	DC.W	$25f2			;627de
-	DC.W	$71d7			;627e0
-	ORI.B	#$02,D0			;627e2: 00000002
-	LEA	2(A4,D0.W),A7		;627e6: 4ff40002
-	DC.W	$4ffc			;627ea
-	DC.W	$0002			;627ec
-	ADDQ.W	#8,-(A4)		;627ee: 5064
-	ORI.B	#$17,D0			;627f0: 00000017
-	DC.W	$25f2			;627f4
-	DC.W	$71d7			;627f6
-	ORI.B	#$02,D0			;627f8: 00000002
-	LEA	2(A4,D0.W),A7		;627fc: 4ff40002
-	ADDQ.W	#8,(A4)			;62800: 5054
-	DC.W	$0002			;62802
-	ADDQ.W	#8,-(A4)		;62804: 5064
-	ORI.B	#$17,D0			;62806: 00000017
-	DC.W	$25f2			;6280a
-	DC.W	$71d7			;6280c
-	ORI.B	#$02,D0			;6280e: 00000002
-	ADDQ.B	#8,-(A4)		;62812: 5024
-	DC.W	$0002			;62814
-	ADDQ.W	#8,(A4)+		;62816: 505c
-	DC.W	$0002			;62818
-	ADDQ.W	#8,0(A4)		;6281a: 506c0000
-	DC.W	$0017			;6281e
-	DC.W	$25f2			;62820
-	DC.W	$71d7			;62822
-	ORI.B	#$02,D0			;62824: 00000002
-	ADDQ.B	#8,(A4)+		;62828: 501c
-	DC.W	$0002			;6282a
-	ADDQ.B	#8,-(A4)		;6282c: 5024
-	DC.W	$0002			;6282e
-	ADDQ.W	#8,(A4)+		;62830: 505c
-	ORI.B	#$17,D0			;62832: 00000017
-	dc.l  $0			;62836: 00000000
-	MOVEQ	#0,D4			;6283a: 7800
-	DC.W	$0002			;6283c
-	LEA	2(A4),A7		;6283e: 4fec0002
-	LEA	2(A4,D0.W),A7		;62842: 4ff40002
-	DC.W	$4ffc			;62846
-	ORI.B	#$16,D0			;62848: 00000016
-	dc.l  $0			;6284c: 00000000
-	DC.W	$77ff			;62850
-	DC.W	$0002			;62852
-	DC.W	$4fe4			;62854
-	DC.W	$0002			;62856
-	LEA	2(A4),A7		;62858: 4fec0002
-	DC.W	$4ffc			;6285c
-	ORI.B	#$16,D0			;6285e: 00000016
-	dc.l  $0			;62862: 00000000
-	OR.B	D0,D4			;62866: 8800
-	DC.W	$0002			;62868
-	ADDQ.B	#8,(A4)			;6286a: 5014
-	DC.W	$0002			;6286c
-	ADDQ.B	#8,(A4)+		;6286e: 501c
-	DC.W	$0002			;62870
-	ADDQ.B	#8,-(A4)		;62872: 5024
-	ORI.B	#$16,D0			;62874: 00000016
-	dc.l  $0			;62878: 00000000
-	OR.B	D1,D4			;6287c: 8801
-	DC.W	$0002			;6287e
-	DC.W	$500c			;62880
-	DC.W	$0002			;62882
-	ADDQ.B	#8,(A4)			;62884: 5014
-	DC.W	$0002			;62886
-	ADDQ.B	#8,-(A4)		;62888: 5024
-	ORI.B	#$16,D0			;6288a: 00000016
-	DC.W	$bd70			;6288e
-	SUB.B	0(A0),D6		;62890: 9c280000
-	DC.W	$0002			;62894
-	CHK.W	-(A4),D7		;62896: 4fa4
-	DC.W	$0002			;62898
-	CHK.W	2(A4),D7		;6289a: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;6289e: 4fb40000
-	DC.W	$0012			;628a2
-	DC.W	$bd70			;628a4
-	SUB.B	0(A0),D6		;628a6: 9c280000
-	DC.W	$0002			;628aa
-	CHK.W	-(A4),D7		;628ac: 4fa4
-	DC.W	$0002			;628ae
-	CHK.W	2(A4,D0.W),D7		;628b0: 4fb40002
-	CHK.W	#$0000,D7		;628b4: 4fbc0000
-	DC.W	$0012			;628b8
-	OR.B	9714(A1),D7		;628ba: 8e2925f2
-	ORI.B	#$02,D0			;628be: 00000002
-	DC.W	$4fc4			;628c2
-	DC.W	$0002			;628c4
-	DC.W	$4fe4			;628c6
-	DC.W	$0002			;628c8
-	ADDQ.B	#8,0(A4,D0.W)		;628ca: 50340000
-	DC.W	$0017			;628ce
-	OR.B	9714(A1),D7		;628d0: 8e2925f2
-	ORI.B	#$02,D0			;628d4: 00000002
-	DC.W	$4fc4			;628d8
-	DC.W	$0002			;628da
-	DC.W	$4fcc			;628dc
-	DC.W	$0002			;628de
-	ADDQ.B	#8,0(A4,D0.W)		;628e0: 50340000
-	DC.W	$0017			;628e4
-	OR.B	9714(A1),D7		;628e6: 8e2925f2
-	ORI.B	#$02,D0			;628ea: 00000002
-	LEA	(A4),A7			;628ee: 4fd4
-	DC.W	$0002			;628f0
-	DC.W	$500c			;628f2
-	DC.W	$0002			;628f4
-	DC.W	$503c			;628f6
-	ORI.B	#$17,D0			;628f8: 00000017
-	OR.B	9714(A1),D7		;628fc: 8e2925f2
-	ORI.B	#$02,D0			;62900: 00000002
-	LEA	(A4),A7			;62904: 4fd4
-	DC.W	$0002			;62906
-	DC.W	$4fdc			;62908
-	DC.W	$0002			;6290a
-	DC.W	$500c			;6290c
-	ORI.B	#$17,D0			;6290e: 00000017
-	DC.W	$71d7			;62912
-	DC.W	$25f2			;62914
-	ORI.B	#$02,D0			;62916: 00000002
-	ADDQ.W	#8,-(A4)		;6291a: 5064
-	DC.W	$0002			;6291c
-	ADDQ.W	#8,2(A4,D0.W)		;6291e: 50740002
-	DC.W	$507c			;62922
-	ORI.B	#$0e,D0			;62924: 0000000e
-	DC.W	$71d7			;62928
-	DC.W	$25f2			;6292a
-	ORI.B	#$02,D0			;6292c: 00000002
-	ADDQ.W	#8,-(A4)		;62930: 5064
-	DC.W	$0002			;62932
-	ADDQ.W	#8,2(A4)		;62934: 506c0002
-	DC.W	$507c			;62938
-	ORI.B	#$0e,D0			;6293a: 0000000e
-	DC.W	$71d7			;6293e
-	DC.W	$0000			;62940
-	DC.W	$25f2			;62942
-	DC.W	$0002			;62944
-	DC.W	$4ffc			;62946
-	DC.W	$0002			;62948
-	ADDQ.B	#8,D4			;6294a: 5004
-	DC.W	$0002			;6294c
-	ADDQ.W	#8,0(A4,D0.W)		;6294e: 50740000
-	DC.W	$0017			;62952
-	DC.W	$71d7			;62954
-	DC.W	$25f2			;62956
-	ORI.B	#$02,D0			;62958: 00000002
-	DC.W	$4ffc			;6295c
-	DC.W	$0002			;6295e
-	ADDQ.W	#8,-(A4)		;62960: 5064
-	DC.W	$0002			;62962
-	ADDQ.W	#8,0(A4,D0.W)		;62964: 50740000
-	DC.W	$0017			;62968
-	DC.W	$6c8b			;6296a
-	MOVE.L	-9262(A6),D2		;6296c: 242edbd2
-	DC.W	$0002			;62970
-	ADDQ.B	#8,2(A4)		;62972: 502c0002
-	ADDQ.W	#8,2(A4)		;62976: 506c0002
-	DC.W	$507c			;6297a
-	ORI.B	#$17,D0			;6297c: 00000017
-	MOVEQ	#0,D4			;62980: 7800
-	dc.l  $0			;62982: 00000000
-	DC.W	$0002			;62986
-	ADDQ.B	#8,-(A4)		;62988: 5024
-	DC.W	$0002			;6298a
-	ADDQ.B	#8,2(A4)		;6298c: 502c0002
-	ADDQ.W	#8,0(A4)		;62990: 506c0000
-	ORI.B	#$00,(A7)		;62994: 00170000
-	DC.W	$0000			;62998
-	MOVEQ	#0,D4			;6299a: 7800
-	DC.W	$0002			;6299c
-	DC.W	$4fc4			;6299e
-	DC.W	$0002			;629a0
-	DC.W	$4fe4			;629a2
-	DC.W	$0002			;629a4
-	DC.W	$4ffc			;629a6
-	ORI.B	#$16,D0			;629a8: 00000016
-	dc.l  $0			;629ac: 00000000
-	MOVEQ	#0,D4			;629b0: 7800
-	DC.W	$0002			;629b2
-	DC.W	$4fc4			;629b4
-	DC.W	$0002			;629b6
-	DC.W	$4ffc			;629b8
-	DC.W	$0002			;629ba
-	ADDQ.B	#8,D4			;629bc: 5004
-	ORI.B	#$16,D0			;629be: 00000016
-	dc.l  $0			;629c2: 00000000
-	OR.B	D0,D4			;629c6: 8800
-	DC.W	$0002			;629c8
-	DC.W	$4fdc			;629ca
-	DC.W	$0002			;629cc
-	DC.W	$500c			;629ce
-	DC.W	$0002			;629d0
-	ADDQ.B	#8,-(A4)		;629d2: 5024
-	ORI.B	#$16,D0			;629d4: 00000016
-	dc.l  $0			;629d8: 00000000
-	OR.B	D0,D4			;629dc: 8800
-	DC.W	$0002			;629de
-	DC.W	$4fdc			;629e0
-	DC.W	$0002			;629e2
-	ADDQ.B	#8,-(A4)		;629e4: 5024
-	DC.W	$0002			;629e6
-	ADDQ.B	#8,0(A4)		;629e8: 502c0000
-	ORI.B	#$00,(A6)		;629ec: 00160000
-	OR.B	D0,D4			;629f0: 8800
-	ORI.B	#$02,D0			;629f2: 00000002
-	CHK.W	D4,D7			;629f6: 4f84
-	DC.W	$0002			;629f8
-	LEA	(A4),A7			;629fa: 4fd4
-	DC.W	$0002			;629fc
-	DC.W	$4fdc			;629fe
-	ORI.B	#$0a,D0			;62a00: 0000000a
-	DC.W	$0000			;62a04
-	OR.B	D0,D4			;62a06: 8800
-	ORI.B	#$02,D0			;62a08: 00000002
-	CHK.W	D4,D7			;62a0c: 4f84
-	DC.W	$0002			;62a0e
-	CHK.W	-(A4),D7		;62a10: 4fa4
-	DC.W	$0002			;62a12
-	LEA	(A4),A7			;62a14: 4fd4
-	ORI.B	#$0a,D0			;62a16: 0000000a
-	DC.W	$0000			;62a1a
-	OR.B	D0,D4			;62a1c: 8800
-	ORI.B	#$02,D0			;62a1e: 00000002
-	CHK.W	2(A4),D7		;62a22: 4fac0002
-	DC.W	$4fc4			;62a26
-	DC.W	$0002			;62a28
-	DC.W	$4fcc			;62a2a
-	ORI.B	#$0a,D0			;62a2c: 0000000a
-	DC.W	$0000			;62a30
-	OR.B	D0,D4			;62a32: 8800
-	ORI.B	#$02,D0			;62a34: 00000002
-	DC.W	$4f8c			;62a38
-	DC.W	$0002			;62a3a
-	CHK.W	2(A4),D7		;62a3c: 4fac0002
-	DC.W	$4fc4			;62a40
-lb_62a42:
-	ORI.B	#$0a,D0			;62a42: 0000000a
-	CMP.B	D0,D4			;62a46: b800
-	DC.W	$a000			;62a48
-	ORI.B	#$02,D0			;62a4a: 00000002
-	DC.W	$4f64			;62a4e
-	DC.W	$0002			;62a50
-	CHK.W	-(A4),D7		;62a52: 4fa4
-	DC.W	$0002			;62a54
-	CHK.W	0(A4),D7		;62a56: 4fac0000
-	DC.W	$0012			;62a5a
-	CMP.B	D0,D4			;62a5c: b800
-	DC.W	$a000			;62a5e
-	ORI.B	#$02,D0			;62a60: 00000002
-	DC.W	$4f64			;62a64
-	DC.W	$0002			;62a66
-	DC.W	$4f7c			;62a68
-	DC.W	$0002			;62a6a
-	CHK.W	-(A4),D7		;62a6c: 4fa4
-	ORI.B	#$12,D0			;62a6e: 00000012
-	CMP.B	D0,D4			;62a72: b800
-	DC.W	$a000			;62a74
-	ORI.B	#$02,D0			;62a76: 00000002
-	DC.W	$4f64			;62a7a
-lb_62a7c:
-	DC.W	$0002			;62a7c
-	DC.W	$4f8c			;62a7e
-	DC.W	$0002			;62a80
-	CHK.W	0(A4),D7		;62a82: 4fac0000
-	DC.W	$0012			;62a86
-	CMP.B	D0,D4			;62a88: b800
-	DC.W	$a000			;62a8a
-	ORI.B	#$02,D0			;62a8c: 00000002
-	DC.W	$4f7c			;62a90
-lb_62a92:
-	DC.W	$0002			;62a92
-	CHK.W	D4,D7			;62a94: 4f84
-	DC.W	$0002			;62a96
-	CHK.W	-(A4),D7		;62a98: 4fa4
-	ORI.B	#$12,D0			;62a9a: 00000012
-	DC.W	$0000			;62a9e
-	DC.W	$bd70			;62aa0
-	BLS.S	lb_62a7c		;62aa2: 63d8
-	DC.W	$0002			;62aa4
-	DC.W	$4f64			;62aa6
-	DC.W	$0002			;62aa8
-	DC.W	$4f8c			;62aaa
-	DC.W	$0002			;62aac
-	CHK.W	(A4),D7			;62aae: 4f94
-	ORI.B	#$0a,D0			;62ab0: 0000000a
-	DC.W	$0000			;62ab4
-	DC.W	$bd70			;62ab6
-	BLS.S	lb_62a92		;62ab8: 63d8
-	DC.W	$0002			;62aba
-	DC.W	$4f64			;62abc
-	DC.W	$0002			;62abe
-	DC.W	$4f6c			;62ac0
-	DC.W	$0002			;62ac2
-	CHK.W	(A4),D7			;62ac4: 4f94
-	ORI.B	#$0a,D0			;62ac6: 0000000a
-	DC.W	$0000			;62aca
-	DC.W	$bd70			;62acc
-	SUB.B	2(A0),D6		;62ace: 9c280002
-	DC.W	$4f7c			;62ad2
-	DC.W	$0002			;62ad4
-	CHK.W	D4,D7			;62ad6: 4f84
-	DC.W	$0002			;62ad8
-	CHK.W	(A4)+,D7		;62ada: 4f9c
-	ORI.B	#$0a,D0			;62adc: 0000000a
-	DC.W	$0000			;62ae0
-	DC.W	$bd70			;62ae2
-	SUB.B	2(A0),D6		;62ae4: 9c280002
-	DC.W	$4f74			;62ae8
-	DC.W	$0002			;62aea
-	DC.W	$4f7c			;62aec
-	DC.W	$0002			;62aee
-	CHK.W	(A4)+,D7		;62af0: 4f9c
-	ORI.B	#$0a,D0			;62af2: 0000000a
-	DC.W	$71d7			;62af6
-	DC.W	$da0e			;62af8
-	ORI.B	#$02,D0			;62afa: 00000002
-	DC.W	$4f6c			;62afe
-	DC.W	$0002			;62b00
-	DC.W	$4f74			;62b02
-	DC.W	$0002			;62b04
-	CHK.W	(A4),D7			;62b06: 4f94
-	ORI.B	#$06,D0			;62b08: 00000006
-	DC.W	$71d7			;62b0c
-	DC.W	$da0e			;62b0e
-	ORI.B	#$02,D0			;62b10: 00000002
-	DC.W	$4f74			;62b14
-	DC.W	$0002			;62b16
-	CHK.W	(A4)+,D7		;62b18: 4f9c
-	DC.W	$0002			;62b1a
-	CHK.W	(A4),D7			;62b1c: 4f94
-	ORI.B	#$06,D0			;62b1e: 00000006
-	dc.l  $0			;62b22: 00000000
-	ORI.B	#$02,D0			;62b26: 00000002
-	DC.W	$4f64			;62b2a
-	DC.W	$0002			;62b2c
-	DC.W	$4f74			;62b2e
-	DC.W	$0002			;62b30
-	DC.W	$4f7c			;62b32
-	ORI.B	#$02,D0			;62b34: 00000002
-	dc.l  $0			;62b38: 00000000
-	ORI.B	#$02,D0			;62b3c: 00000002
-	DC.W	$4f64			;62b40
-	DC.W	$0002			;62b42
-	DC.W	$4f6c			;62b44
-	DC.W	$0002			;62b46
-	DC.W	$4f74			;62b48
-	ORI.B	#$02,D0			;62b4a: 00000002
-	BTST	D0,D0			;62b4e: 0100
-	DC.W	$000e			;62b50
-	ORI.B	#$62,(A3)		;62b52: 00130062
-	dc.l  $0			;62b56: 00000000
-	DC.W	$0000			;62b5a
-	DC.W	$ffc0			;62b5c
-	DC.W	$ffd0			;62b5e
-	ORI.B	#$00,-48(A0)		;62b60: 00280000ffd0
-	ORI.W	#$0090,(A0)+		;62b66: 00580090
-	DC.W	$ffe0			;62b6a
-	ORI.B	#$90,-32(A0)		;62b6c: 00280090ffe0
-	DC.W	$ffd8			;62b72
-	DC.W	$0000			;62b74
-	DC.W	$ffd0			;62b76
-	DC.W	$ffa8			;62b78
-	DC.W	$ffc0			;62b7a
-	DC.W	$ffd0			;62b7c
-	DC.W	$ffd8			;62b7e
-	DC.W	$ffb0			;62b80
-	DC.W	$ffe8			;62b82
-	DC.W	$ffd8			;62b84
-	DC.W	$ffb0			;62b86
-	DC.W	$ffe8			;62b88
-	ORI.B	#$00,0(A0)		;62b8a: 002800000000
-	DC.W	$ffa8			;62b90
-	dc.l  $0			;62b92: 00000000
-	ORI.W	#$ffc0,(A0)+		;62b96: 0058ffc0
-	ORI.B	#$28,D0			;62b9a: 00000028
-	DC.W	$ffc0			;62b9e
-	DC.W	$0000			;62ba0
-	DC.W	$ffd8			;62ba2
-	ORI.L	#$0000ffd8,(A0)		;62ba4: 00900000ffd8
-	ORI.L	#$00000028,(A0)		;62baa: 009000000028
-	SUB.B	17040(A0),D6		;62bb0: 9c284290
-	ORI.B	#$02,D0			;62bb4: 00000002
-	CHK.W	(A4),D7			;62bb8: 4f94
-	DC.W	$0002			;62bba
-	CHK.W	(A4)+,D7		;62bbc: 4f9c
-	DC.W	$0002			;62bbe
-	CHK.W	0(A4,D0.W),D7		;62bc0: 4fb40000
-	DC.W	$000e			;62bc4
-	SUB.B	17040(A0),D6		;62bc6: 9c284290
-	ORI.B	#$02,D0			;62bca: 00000002
-	CHK.W	(A4),D7			;62bce: 4f94
-	DC.W	$0002			;62bd0
-	CHK.W	2(A4,D0.W),D7		;62bd2: 4fb40002
-	CHK.W	#$0000,D7		;62bd6: 4fbc0000
-	DC.W	$000e			;62bda
-	CMP.B	D0,D4			;62bdc: b800
-	DC.W	$0000			;62bde
-	BRA.W	lb_62be4		;62be0: 60000002
-lb_62be4:
-	DC.W	$4f64			;62be4
-	DC.W	$0002			;62be6
-	DC.W	$4f6c			;62be8
-	DC.W	$0002			;62bea
-	CHK.W	0(A4),D7		;62bec: 4fac0000
-	DC.W	$0006			;62bf0
-	CMP.B	D0,D4			;62bf2: b800
-	DC.W	$0000			;62bf4
-	BRA.W	lb_62bfa		;62bf6: 60000002
-lb_62bfa:
-	DC.W	$4f64			;62bfa
-	DC.W	$0002			;62bfc
-	CHK.W	2(A4,D0.W),D7		;62bfe: 4fb40002
-	CHK.W	0(A4),D7		;62c02: 4fac0000
-	DC.W	$0006			;62c06
-	CMP.B	D0,D4			;62c08: b800
-	DC.W	$0000			;62c0a
-	DC.W	$a000			;62c0c
-	DC.W	$0002			;62c0e
-	CHK.W	D4,D7			;62c10: 4f84
-	DC.W	$0002			;62c12
-	DC.W	$4f8c			;62c14
-	DC.W	$0002			;62c16
-	CHK.W	-(A4),D7		;62c18: 4fa4
-	ORI.B	#$06,D0			;62c1a: 00000006
-	CMP.B	D0,D4			;62c1e: b800
-	DC.W	$0000			;62c20
-	DC.W	$a000			;62c22
-	DC.W	$0002			;62c24
-	DC.W	$4f8c			;62c26
-	DC.W	$0002			;62c28
-	CHK.W	#$0002,D7		;62c2a: 4fbc0002
-	CHK.W	-(A4),D7		;62c2e: 4fa4
-	ORI.B	#$06,D0			;62c30: 00000006
-	MOVEQ	#0,D4			;62c34: 7800
-	dc.l  $0			;62c36: 00000000
-	DC.W	$0002			;62c3a
-	DC.W	$4f7c			;62c3c
-	DC.W	$0002			;62c3e
-	DC.W	$4fc4			;62c40
-	DC.W	$0002			;62c42
-	DC.W	$4fcc			;62c44
-	ORI.B	#$06,D0			;62c46: 00000006
-	MOVEQ	#0,D4			;62c4a: 7800
-	dc.l  $0			;62c4c: 00000000
-	DC.W	$0002			;62c50
-	DC.W	$4f74			;62c52
-	DC.W	$0002			;62c54
-	DC.W	$4f7c			;62c56
-	DC.W	$0002			;62c58
-	DC.W	$4fcc			;62c5a
-	ORI.B	#$06,D0			;62c5c: 00000006
-	DC.W	$25f2			;62c60
-	DC.W	$0000			;62c62
-	OR.B	2(A1),D7		;62c64: 8e290002
-	CHK.W	D4,D7			;62c68: 4f84
-	DC.W	$0002			;62c6a
-	DC.W	$4fc4			;62c6c
-	DC.W	$0002			;62c6e
-	CHK.W	-(A4),D7		;62c70: 4fa4
-	ORI.B	#$0a,D0			;62c72: 0000000a
-	DC.W	$25f2			;62c76
-	DC.W	$0000			;62c78
-	OR.B	2(A1),D7		;62c7a: 8e290002
-	DC.W	$4f7c			;62c7e
-	DC.W	$0002			;62c80
-	CHK.W	D4,D7			;62c82: 4f84
-	DC.W	$0002			;62c84
-	DC.W	$4fc4			;62c86
-	ORI.B	#$0a,D0			;62c88: 0000000a
-	DC.W	$25f2			;62c8c
-	DC.W	$0000			;62c8e
-	DC.W	$71d7			;62c90
-	DC.W	$0002			;62c92
-	DC.W	$4f6c			;62c94
-	DC.W	$0002			;62c96
-	DC.W	$4f74			;62c98
-	DC.W	$0002			;62c9a
-	DC.W	$4fcc			;62c9c
-	ORI.B	#$0a,D0			;62c9e: 0000000a
-	DC.W	$25f2			;62ca2
-	DC.W	$0000			;62ca4
-	DC.W	$71d7			;62ca6
-	DC.W	$0002			;62ca8
-	DC.W	$4f6c			;62caa
-	DC.W	$0002			;62cac
-	DC.W	$4fcc			;62cae
-	DC.W	$0002			;62cb0
-	CHK.W	0(A4),D7		;62cb2: 4fac0000
-	DC.W	$000a			;62cb6
-	dc.l  $0			;62cb8: 00000000
-	OR.B	D0,D4			;62cbc: 8800
-	DC.W	$0002			;62cbe
-	DC.W	$4f8c			;62cc0
-	DC.W	$0002			;62cc2
-	CHK.W	(A4),D7			;62cc4: 4f94
-	DC.W	$0002			;62cc6
-	CHK.W	#$0000,D7		;62cc8: 4fbc0000
-	ORI.B	#$00,(A6)		;62ccc: 00160000
-	DC.W	$0000			;62cd0
-	MOVEQ	#0,D4			;62cd2: 7800
-	DC.W	$0002			;62cd4
-	DC.W	$4f64			;62cd6
-	DC.W	$0002			;62cd8
-	CHK.W	(A4)+,D7		;62cda: 4f9c
-	DC.W	$0002			;62cdc
-	CHK.W	0(A4,D0.W),D7		;62cde: 4fb40000
-	DC.W	$0016			;62ce2
-	SUB.B	-17040(A0),D6		;62ce4: 9c28bd70
-	ORI.B	#$02,D0			;62ce8: 00000002
-	DC.W	$4f64			;62cec
-	DC.W	$0002			;62cee
-	CHK.W	(A4),D7			;62cf0: 4f94
-	DC.W	$0002			;62cf2
-	CHK.W	(A4)+,D7		;62cf4: 4f9c
-	ORI.B	#$12,D0			;62cf6: 00000012
-	SUB.B	-17040(A0),D6		;62cfa: 9c28bd70
-	ORI.B	#$02,D0			;62cfe: 00000002
-	DC.W	$4f64			;62d02
-	DC.W	$0002			;62d04
-	DC.W	$4f8c			;62d06
-	DC.W	$0002			;62d08
-	CHK.W	(A4),D7			;62d0a: 4f94
-	ORI.B	#$12,D0			;62d0c: 00000012
-	DC.W	$0000			;62d10
-	OR.B	D0,D4			;62d12: 8800
-	ORI.B	#$02,D0			;62d14: 00000002
-	DC.W	$4f64			;62d18
-	DC.W	$0002			;62d1a
-	DC.W	$4f6c			;62d1c
-	DC.W	$0002			;62d1e
-	DC.W	$4f8c			;62d20
-	ORI.B	#$02,D0			;62d22: 00000002
-	DC.W	$0000			;62d26
-	OR.B	D0,D4			;62d28: 8800
-	ORI.B	#$02,D0			;62d2a: 00000002
-	DC.W	$4f6c			;62d2e
-	DC.W	$0002			;62d30
-	CHK.W	D4,D7			;62d32: 4f84
-	DC.W	$0002			;62d34
-	DC.W	$4f8c			;62d36
-	ORI.B	#$02,D0			;62d38: 00000002
-	BCHG	D6,D0			;62d3c: 0d40
-	OR.L	#$00000002,D4		;62d3e: 88bc00000002
-	DC.W	$4f6c			;62d44
-	DC.W	$0002			;62d46
-	DC.W	$4f74			;62d48
-	DC.W	$0002			;62d4a
-	CHK.W	D4,D7			;62d4c: 4f84
-	ORI.B	#$02,D0			;62d4e: 00000002
-	BCHG	D6,D0			;62d52: 0d40
-	OR.L	#$00000002,D4		;62d54: 88bc00000002
-	DC.W	$4f74			;62d5a
-	DC.W	$0002			;62d5c
-	DC.W	$4f7c			;62d5e
-	DC.W	$0002			;62d60
-	CHK.W	D4,D7			;62d62: 4f84
-	ORI.B	#$02,D0			;62d64: 00000002
-	BTST	D0,D0			;62d68: 0100
-	ORI.B	#$05,D6			;62d6a: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;62d6e: 003200000000
-	DC.W	$0000			;62d74
-	DC.W	$fec0			;62d76
-	DC.W	$ffe0			;62d78
-	DC.W	$fff8			;62d7a
-	DC.W	$ffb0			;62d7c
-	DC.W	$ffe0			;62d7e
-	DC.W	$0008			;62d80
-	DC.W	$ffb0			;62d82
-	DC.W	$ffe0			;62d84
-	DC.W	$fff8			;62d86
-	DC.W	$fec0			;62d88
-	DC.W	$fff0			;62d8a
-	DC.W	$0000			;62d8c
-	DC.W	$ffb0			;62d8e
-	DC.W	$fff0			;62d90
-	DC.W	$0000			;62d92
-	DC.W	$fec0			;62d94
-	DC.W	$ffe0			;62d96
-	DC.W	$0008			;62d98
-	DC.W	$0000			;62d9a
-	AND.W	(A6),D5			;62d9c: ca56
-	BMI.S	lb_62df4		;62d9e: 6b54
-	DC.W	$0002			;62da0
-	DC.W	$4f64			;62da2
-	DC.W	$0002			;62da4
-	DC.W	$4f7c			;62da6
-	DC.W	$0002			;62da8
-	CHK.W	D4,D7			;62daa: 4f84
-	ORI.B	#$0a,D0			;62dac: 0000000a
-	DC.W	$0000			;62db0
-	AND.W	(A6),D5			;62db2: ca56
-	BMI.S	lb_62e0a		;62db4: 6b54
-	DC.W	$0002			;62db6
-	DC.W	$4f64			;62db8
-	DC.W	$0002			;62dba
-	DC.W	$4f74			;62dbc
-	DC.W	$0002			;62dbe
-	CHK.W	D4,D7			;62dc0: 4f84
-	ORI.B	#$0a,D0			;62dc2: 0000000a
-	DC.W	$0000			;62dc6
-	AND.W	(A6),D5			;62dc8: ca56
-	SUB.L	2(A4),D2		;62dca: 94ac0002
-	DC.W	$4f8c			;62dce
-	DC.W	$0002			;62dd0
-	DC.W	$4f6c			;62dd2
-	DC.W	$0002			;62dd4
-	CHK.W	D4,D7			;62dd6: 4f84
-	ORI.B	#$0a,D0			;62dd8: 0000000a
-	DC.W	$0000			;62ddc
-	AND.W	(A6),D5			;62dde: ca56
-	SUB.L	2(A4),D2		;62de0: 94ac0002
-	DC.W	$4f8c			;62de4
-	DC.W	$0002			;62de6
-	DC.W	$4f7c			;62de8
-	DC.W	$0002			;62dea
-	CHK.W	D4,D7			;62dec: 4f84
-	ORI.B	#$0a,D0			;62dee: 0000000a
-	DC.W	$0000			;62df2
-lb_62df4:
-	OR.B	D0,D4			;62df4: 8800
-	ORI.B	#$02,D0			;62df6: 00000002
-	DC.W	$4f8c			;62dfa
-	DC.W	$0002			;62dfc
-	DC.W	$4f64			;62dfe
-	DC.W	$0002			;62e00
-	DC.W	$4f6c			;62e02
-	ORI.B	#$02,D0			;62e04: 00000002
-	DC.W	$0000			;62e08
-lb_62e0a:
-	OR.B	D0,D4			;62e0a: 8800
-	ORI.B	#$02,D0			;62e0c: 00000002
-	DC.W	$4f64			;62e10
-	DC.W	$0002			;62e12
-	DC.W	$4f6c			;62e14
-	DC.W	$0002			;62e16
-	DC.W	$4f74			;62e18
-	ORI.B	#$02,D0			;62e1a: 00000002
-	BTST	D0,D0			;62e1e: 0100
-	ORI.B	#$33,266(A2)		;62e20: 002a0033010a
-	dc.l  $0			;62e26: 00000000
-	DC.W	$0000			;62e2a
-	DC.W	$ff90			;62e2c
-	ORI.B	#$70,D0			;62e2e: 00000070
-	ORI.W	#$0000,D0		;62e32: 00400000
-	ORI.W	#$0040,0(A0,D0.W)	;62e36: 007000400000
-	DC.W	$ff90			;62e3c
-	DC.W	$ff90			;62e3e
-	DC.W	$0000			;62e40
-	DC.W	$ff90			;62e42
-	DC.W	$ff40			;62e44
-	ORI.W	#$ff90,(A0)		;62e46: 0050ff90
-	DC.W	$ff40			;62e4a
-	ORI.W	#$0070,(A0)		;62e4c: 00500070
-	DC.W	$00f0			;62e50
-	ORI.B	#$70,-(A0)		;62e52: 00200070
-	DC.W	$00f0			;62e56
-	DC.W	$0020			;62e58
-	DC.W	$ff90			;62e5a
-	BTST	D0,(A0)			;62e5c: 0110
-	ORI.W	#$ff90,-(A0)		;62e5e: 0060ff90
-	BTST	D0,(A0)			;62e62: 0110
-	ORI.W	#$0070,-(A0)		;62e64: 00600070
-	DC.W	$ff00			;62e68
-	ORI.W	#$0070,(A0)		;62e6a: 00500070
-	DC.W	$ff00			;62e6e
-	ORI.W	#$ff90,(A0)		;62e70: 0050ff90
-	DC.W	$ff00			;62e74
-	ORI.W	#$ffc0,(A0)		;62e76: 0050ffc0
-	DC.W	$ff00			;62e7a
-	ORI.W	#$0040,(A0)		;62e7c: 00500040
-	DC.W	$ff40			;62e80
-lb_62e82:
-	ORI.W	#$ffc0,(A0)		;62e82: 0050ffc0
-	DC.W	$ff40			;62e86
-	ORI.W	#$0040,(A0)		;62e88: 00500040
-	DC.W	$ff30			;62e8c
-	ORI.W	#$0040,-(A0)		;62e8e: 00600040
-	DC.W	$ff30			;62e92
-	ORI.W	#$ffc0,-(A0)		;62e94: 0060ffc0
-	DC.W	$ff40			;62e98
-	DC.W	$0070			;62e9a
-	ORI.W	#$ff40,D0		;62e9c: 0040ff40
-	DC.W	$0070			;62ea0
-	DC.W	$ffc0			;62ea2
-	DC.W	$ff00			;62ea4
-	DC.W	$0070			;62ea6
-	ORI.W	#$ff00,112(A0,D0.W)	;62ea8: 0070ff000070
-	DC.W	$ff90			;62eae
-	DC.W	$ff40			;62eb0
-	ORI.L	#$0070ff40,-(A0)	;62eb2: 00a00070ff40
-	ORI.L	#$ff90ff40,-(A0)	;62eb8: 00a0ff90ff40
-	ORI.L	#$ffc0ff40,-(A0)	;62ebe: 00a0ffc0ff40
-	ORI.L	#$0040ff00,-(A0)	;62ec4: 00a00040ff00
-	DC.W	$0070			;62eca
-	ORI.W	#$ff00,D0		;62ecc: 0040ff00
-	DC.W	$0070			;62ed0
-	DC.W	$ffc0			;62ed2
-	BTST	D0,(A0)			;62ed4: 0110
-	DC.W	$0070			;62ed6
-	DC.W	$ff90			;62ed8
-	BTST	D0,(A0)			;62eda: 0110
-	DC.W	$0070			;62edc
-	ORI.W	#$0110,112(A0,D0.W)	;62ede: 007001100070
-	DC.W	$ffc0			;62ee4
-	BTST	D0,(A0)			;62ee6: 0110
-	ORI.W	#$0040,-64(A0,D0.W)	;62ee8: 0070004000c0
-	ORI.L	#$ff9000c0,-(A0)	;62eee: 00a0ff9000c0
-	ORI.L	#$007000c0,-(A0)	;62ef4: 00a0007000c0
-	ORI.L	#$ffc000c0,-(A0)	;62efa: 00a0ffc000c0
-	ORI.L	#$004000f0,-(A0)	;62f00: 00a0004000f0
-	ORI.W	#$ffc0,-(A0)		;62f06: 0060ffc0
-	DC.W	$00f0			;62f0a
-	ORI.W	#$0040,-(A0)		;62f0c: 00600040
-	DC.W	$00f0			;62f10
-	ORI.W	#$ffc0,-16(A0,D0.W)	;62f12: 0070ffc000f0
-	DC.W	$0070			;62f18
-	ORI.W	#$0110,D0		;62f1a: 00400110
-	ORI.W	#$ffc0,(A0)		;62f1e: 0050ffc0
-	BTST	D0,(A0)			;62f22: 0110
-	ORI.W	#$0040,(A0)		;62f24: 00500040
-	DC.W	$ab26			;62f28
-	SCC	(A2)+			;62f2a: 54da
-	ORI.B	#$02,D0			;62f2c: 00000002
-	DC.W	$4fe4			;62f30
-	DC.W	$0002			;62f32
-	LEA	2(A4),A7		;62f34: 4fec0002
-	DC.W	$4ffc			;62f38
-	ORI.B	#$0e,D0			;62f3a: 0000000e
-	DC.W	$ab26			;62f3e
-	SCC	(A2)+			;62f40: 54da
-	ORI.B	#$02,D0			;62f42: 00000002
-	DC.W	$4fe4			;62f46
-	DC.W	$0002			;62f48
-	LEA	2(A4,D0.W),A7		;62f4a: 4ff40002
-	DC.W	$4ffc			;62f4e
-	ORI.B	#$0e,D0			;62f50: 0000000e
-	DC.W	$ab26			;62f54
-	DC.W	$ab26			;62f56
-	ORI.B	#$02,D0			;62f58: 00000002
-	DC.W	$4fdc			;62f5c
-	DC.W	$0002			;62f5e
-	DC.W	$4fe4			;62f60
-	DC.W	$0002			;62f62
-	LEA	0(A4),A7		;62f64: 4fec0000
-	DC.W	$000a			;62f68
-	DC.W	$ab26			;62f6a
-	DC.W	$ab26			;62f6c
-	ORI.B	#$02,D0			;62f6e: 00000002
-	LEA	(A4),A7			;62f72: 4fd4
-	DC.W	$0002			;62f74
-	DC.W	$4fdc			;62f76
-	DC.W	$0002			;62f78
-	LEA	0(A4),A7		;62f7a: 4fec0000
-	DC.W	$000a			;62f7e
-	MOVEQ	#0,D4			;62f80: 7800
-	dc.l  $0			;62f82: 00000000
-	DC.W	$0002			;62f86
-	ADDQ.L	#8,D4			;62f88: 5084
-	DC.W	$0002			;62f8a
-	ADDQ.L	#8,A4			;62f8c: 508c
-	DC.W	$0002			;62f8e
-	ADDQ.L	#8,(A4)+		;62f90: 509c
-	ORI.B	#$0e,D0			;62f92: 0000000e
-	MOVEQ	#0,D4			;62f96: 7800
-	dc.l  $0			;62f98: 00000000
-	DC.W	$0002			;62f9c
-	ADDQ.L	#8,D4			;62f9e: 5084
-	DC.W	$0002			;62fa0
-	ADDQ.L	#8,(A4)			;62fa2: 5094
-	DC.W	$0002			;62fa4
-	ADDQ.L	#8,(A4)+		;62fa6: 509c
-	ORI.B	#$0e,D0			;62fa8: 0000000e
-	OR.B	D0,D4			;62fac: 8800
-	dc.l  $0			;62fae: 00000000
-	DC.W	$0002			;62fb2
-	CHK.W	#$0002,D7		;62fb4: 4fbc0002
-	DC.W	$4fc4			;62fb8
-	DC.W	$0002			;62fba
-	DC.W	$503c			;62fbc
-	ORI.B	#$17,D0			;62fbe: 00000017
-	OR.B	D0,D4			;62fc2: 8800
-	dc.l  $0			;62fc4: 00000000
-	DC.W	$0002			;62fc8
-	CHK.W	#$0002,D7		;62fca: 4fbc0002
-	DC.W	$500c			;62fce
-	DC.W	$0002			;62fd0
-	DC.W	$503c			;62fd2
-	ORI.B	#$17,D0			;62fd4: 00000017
-	OR.B	D0,D4			;62fd8: 8800
-	dc.l  $0			;62fda: 00000000
-	DC.W	$0002			;62fde
-	CHK.W	2(A4,D0.W),D7		;62fe0: 4fb40002
-	DC.W	$4fcc			;62fe4
-	DC.W	$0002			;62fe6
-	ADDQ.B	#8,0(A4,D0.W)		;62fe8: 50340000
-	DC.W	$0017			;62fec
-	OR.B	D0,D4			;62fee: 8800
-	dc.l  $0			;62ff0: 00000000
-	DC.W	$0002			;62ff4
-	CHK.W	2(A4,D0.W),D7		;62ff6: 4fb40002
-	ADDQ.B	#8,D4			;62ffa: 5004
-	DC.W	$0002			;62ffc
-	ADDQ.B	#8,0(A4,D0.W)		;62ffe: 50340000
-	DC.W	$0017			;63002
-	CMP.B	D0,D4			;63004: b800
-	DC.W	$6000			;63006
-	ORI.B	#$02,D0			;63008: 00000002
-	ADDQ.B	#8,D4			;6300c: 5004
-	DC.W	$0002			;6300e
-	ADDQ.B	#8,(A4)			;63010: 5014
-	DC.W	$0002			;63012
-	ADDQ.B	#8,0(A4)		;63014: 502c0000
-	DC.W	$0017			;63018
-	CMP.B	D0,D4			;6301a: b800
-	DC.W	$6000			;6301c
-	ORI.B	#$02,D0			;6301e: 00000002
-	ADDQ.B	#8,D4			;63022: 5004
-	DC.W	$0002			;63024
-	ADDQ.B	#8,2(A4)		;63026: 502c0002
-	ADDQ.B	#8,0(A4,D0.W)		;6302a: 50340000
-	DC.W	$0017			;6302e
-	CMP.B	D0,D4			;63030: b800
-	DC.W	$6000			;63032
-	ORI.B	#$02,D0			;63034: 00000002
-	DC.W	$500c			;63038
-	DC.W	$0002			;6303a
-	ADDQ.B	#8,(A4)+		;6303c: 501c
-	DC.W	$0002			;6303e
-	ADDQ.B	#8,-(A4)		;63040: 5024
-	ORI.B	#$17,D0			;63042: 00000017
-	CMP.B	D0,D4			;63046: b800
-	DC.W	$6000			;63048
-	ORI.B	#$02,D0			;6304a: 00000002
-	DC.W	$500c			;6304e
-	DC.W	$0002			;63050
-	ADDQ.B	#8,-(A4)		;63052: 5024
-	DC.W	$0002			;63054
-	DC.W	$503c			;63056
-	ORI.B	#$17,D0			;63058: 00000017
-	MOVEQ	#0,D4			;6305c: 7800
-	dc.l  $0			;6305e: 00000000
-	DC.W	$0002			;63062
-	CHK.W	-(A4),D7		;63064: 4fa4
-	DC.W	$0002			;63066
-	ADDQ.W	#8,D4			;63068: 5044
-	DC.W	$0002			;6306a
-	ADDQ.W	#8,(A4)			;6306c: 5054
-	ORI.B	#$17,D0			;6306e: 00000017
-	MOVEQ	#0,D4			;63072: 7800
-	dc.l  $0			;63074: 00000000
-	DC.W	$0002			;63078
-	CHK.W	-(A4),D7		;6307a: 4fa4
-	DC.W	$0002			;6307c
-	ADDQ.W	#8,(A4)			;6307e: 5054
-	DC.W	$0002			;63080
-	ADDQ.L	#8,-(A4)		;63082: 50a4
-	ORI.B	#$17,D0			;63084: 00000017
-	MOVEQ	#0,D4			;63088: 7800
-	dc.l  $0			;6308a: 00000000
-	DC.W	$0002			;6308e
-	CHK.W	2(A4),D7		;63090: 4fac0002
-	ADDQ.W	#8,(A4)+		;63094: 505c
-	DC.W	$0002			;63096
-	ADDQ.L	#8,0(A4)		;63098: 50ac0000
-	DC.W	$0017			;6309c
-lb_6309e:
-	MOVEQ	#0,D4			;6309e: 7800
-	dc.l  $0			;630a0: 00000000
-	DC.W	$0002			;630a4
-	CHK.W	2(A4),D7		;630a6: 4fac0002
-	ADDQ.W	#8,A4			;630aa: 504c
-	DC.W	$0002			;630ac
-	ADDQ.W	#8,(A4)+		;630ae: 505c
-	ORI.B	#$17,D0			;630b0: 00000017
-lb_630b4:
-	DC.W	$3dbd			;630b4
-	BNE.S	lb_6309e		;630b6: 66e6
-	ORI.B	#$02,D0			;630b8: 00000002
-	ADDQ.W	#8,A4			;630bc: 504c
-	DC.W	$0002			;630be
-	ADDQ.W	#8,(A4)+		;630c0: 505c
-	DC.W	$0002			;630c2
-	DC.W	$507c			;630c4
-	ORI.B	#$17,D0			;630c6: 00000017
-lb_630ca:
-	DC.W	$3dbd			;630ca
-	BNE.S	lb_630b4		;630cc: 66e6
-	ORI.B	#$02,D0			;630ce: 00000002
-	ADDQ.W	#8,A4			;630d2: 504c
-	DC.W	$0002			;630d4
-	ADDQ.W	#8,2(A4)		;630d6: 506c0002
-	DC.W	$507c			;630da
-	ORI.B	#$17,D0			;630dc: 00000017
-lb_630e0:
-	DC.W	$3dbd			;630e0
-	BNE.S	lb_630ca		;630e2: 66e6
-	ORI.B	#$02,D0			;630e4: 00000002
-	ADDQ.W	#8,D4			;630e8: 5044
-	DC.W	$0002			;630ea
-	ADDQ.W	#8,-(A4)		;630ec: 5064
-	DC.W	$0002			;630ee
-	ADDQ.W	#8,0(A4,D0.W)		;630f0: 50740000
-	DC.W	$0017			;630f4
-	DC.W	$3dbd			;630f6
-	BNE.S	lb_630e0		;630f8: 66e6
-	ORI.B	#$02,D0			;630fa: 00000002
-	ADDQ.W	#8,D4			;630fe: 5044
-	DC.W	$0002			;63100
-	ADDQ.W	#8,(A4)			;63102: 5054
-	DC.W	$0002			;63104
-	ADDQ.W	#8,0(A4,D0.W)		;63106: 50740000
-	ORI.B	#$00,(A7)		;6310a: 00170000
-	DC.W	$0000			;6310e
-	OR.B	D0,D4			;63110: 8800
-	DC.W	$0002			;63112
-	CHK.W	-(A4),D7		;63114: 4fa4
-	DC.W	$0002			;63116
-	DC.W	$500c			;63118
-	DC.W	$0002			;6311a
-	ADDQ.B	#8,(A4)+		;6311c: 501c
-	ORI.B	#$16,D0			;6311e: 00000016
-	dc.l  $0			;63122: 00000000
-	OR.B	D1,D4			;63126: 8801
-	DC.W	$0002			;63128
-	CHK.W	-(A4),D7		;6312a: 4fa4
-	DC.W	$0002			;6312c
-	ADDQ.B	#8,(A4)+		;6312e: 501c
-	DC.W	$0002			;63130
-	ADDQ.W	#8,D4			;63132: 5044
-	ORI.B	#$16,D0			;63134: 00000016
-	dc.l  $0			;63138: 00000000
-	OR.B	D0,D4			;6313c: 8800
-	DC.W	$0002			;6313e
-	ADDQ.B	#8,(A4)+		;63140: 501c
-	DC.W	$0002			;63142
-	ADDQ.W	#8,D4			;63144: 5044
-	DC.W	$0002			;63146
-	ADDQ.W	#8,-(A4)		;63148: 5064
-	ORI.B	#$16,D0			;6314a: 00000016
-	dc.l  $0			;6314e: 00000000
-	MOVEQ	#0,D4			;63152: 7800
-	DC.W	$0002			;63154
-	CHK.W	2(A4),D7		;63156: 4fac0002
-	ADDQ.B	#8,D4			;6315a: 5004
-	DC.W	$0002			;6315c
-	ADDQ.B	#8,(A4)			;6315e: 5014
-	ORI.B	#$16,D0			;63160: 00000016
-	dc.l  $0			;63164: 00000000
-	DC.W	$77ff			;63168
-	DC.W	$0002			;6316a
-	CHK.W	2(A4),D7		;6316c: 4fac0002
-	ADDQ.B	#8,(A4)			;63170: 5014
-	DC.W	$0002			;63172
-	ADDQ.W	#8,A4			;63174: 504c
-	ORI.B	#$16,D0			;63176: 00000016
-	dc.l  $0			;6317a: 00000000
-	MOVEQ	#0,D4			;6317e: 7800
-	DC.W	$0002			;63180
-	ADDQ.B	#8,(A4)			;63182: 5014
-	DC.W	$0002			;63184
-	ADDQ.W	#8,A4			;63186: 504c
-	DC.W	$0002			;63188
-	ADDQ.W	#8,0(A4)		;6318a: 506c0000
-	ORI.B	#$00,(A6)		;6318e: 00160000
-	OR.B	D0,D4			;63192: 8800
-	ORI.B	#$02,D0			;63194: 00000002
-	DC.W	$4f8c			;63198
-	DC.W	$0002			;6319a
-	CHK.W	2(A4,D0.W),D7		;6319c: 4fb40002
-	DC.W	$4fcc			;631a0
-	ORI.B	#$0a,D0			;631a2: 0000000a
-	DC.W	$0000			;631a6
-	OR.B	D0,D4			;631a8: 8800
-	ORI.B	#$02,D0			;631aa: 00000002
-	DC.W	$4f8c			;631ae
-	DC.W	$0002			;631b0
-	DC.W	$4fcc			;631b2
-	DC.W	$0002			;631b4
-	DC.W	$4fdc			;631b6
-	ORI.B	#$0a,D0			;631b8: 0000000a
-	DC.W	$0000			;631bc
-	OR.B	D0,D4			;631be: 8800
-	ORI.B	#$02,D0			;631c0: 00000002
-	CHK.W	D4,D7			;631c4: 4f84
-	DC.W	$0002			;631c6
-	DC.W	$4fc4			;631c8
-	DC.W	$0002			;631ca
-	LEA	(A4),A7			;631cc: 4fd4
-	ORI.B	#$0a,D0			;631ce: 0000000a
-	DC.W	$0000			;631d2
-	OR.B	D0,D4			;631d4: 8800
-	ORI.B	#$02,D0			;631d6: 00000002
-	CHK.W	D4,D7			;631da: 4f84
-	DC.W	$0002			;631dc
-	CHK.W	#$0002,D7		;631de: 4fbc0002
-	DC.W	$4fc4			;631e2
-	ORI.B	#$0a,D0			;631e4: 0000000a
-	BMI.S	lb_6323e		;631e8: 6b54
-	AND.W	(A6),D5			;631ea: ca56
-	ORI.B	#$02,D0			;631ec: 00000002
-	CHK.W	(A4),D7			;631f0: 4f94
-	DC.W	$0002			;631f2
-	CHK.W	(A4)+,D7		;631f4: 4f9c
-	DC.W	$0002			;631f6
-	CHK.W	0(A4),D7		;631f8: 4fac0000
-	DC.W	$0006			;631fc
-	BMI.S	lb_63254		;631fe: 6b54
-	AND.W	(A6),D5			;63200: ca56
-	ORI.B	#$02,D0			;63202: 00000002
-	CHK.W	(A4)+,D7		;63206: 4f9c
-	DC.W	$0002			;63208
-	CHK.W	-(A4),D7		;6320a: 4fa4
-	DC.W	$0002			;6320c
-	CHK.W	0(A4),D7		;6320e: 4fac0000
-	ORI.B	#$00,D6			;63212: 00060000
-	DC.W	$0000			;63216
-	MOVEQ	#0,D4			;63218: 7800
-	DC.W	$0002			;6321a
-	DC.W	$4f64			;6321c
-	DC.W	$0002			;6321e
-	DC.W	$4f6c			;63220
-	DC.W	$0002			;63222
-	CHK.W	(A4),D7			;63224: 4f94
-	ORI.B	#$06,D0			;63226: 00000006
-	dc.l  $0			;6322a: 00000000
-	MOVEQ	#0,D4			;6322e: 7800
-	DC.W	$0002			;63230
-	DC.W	$4f64			;63232
-	DC.W	$0002			;63234
-	CHK.W	(A4),D7			;63236: 4f94
-	DC.W	$0002			;63238
-	CHK.W	0(A4),D7		;6323a: 4fac0000
-lb_6323e:
-	ORI.B	#$00,D6			;6323e: 00060000
-	DC.W	$0000			;63242
-	MOVEQ	#0,D4			;63244: 7800
-	DC.W	$0002			;63246
-	DC.W	$4f64			;63248
-	DC.W	$0002			;6324a
-	DC.W	$4f8c			;6324c
-	DC.W	$0002			;6324e
-	CHK.W	0(A4),D7		;63250: 4fac0000
-lb_63254:
-	ORI.B	#$00,D6			;63254: 00060000
-	DC.W	$0000			;63258
-	MOVEQ	#0,D4			;6325a: 7800
-	DC.W	$0002			;6325c
-	DC.W	$4f8c			;6325e
-	DC.W	$0002			;63260
-	CHK.W	2(A4),D7		;63262: 4fac0002
-	ADDQ.B	#8,D4			;63266: 5004
-	ORI.B	#$06,D0			;63268: 00000006
-	dc.l  $0			;6326c: 00000000
-	MOVEQ	#0,D4			;63270: 7800
-	DC.W	$0002			;63272
-	DC.W	$4f8c			;63274
-	DC.W	$0002			;63276
-	CHK.W	2(A4,D0.W),D7		;63278: 4fb40002
-	ADDQ.B	#8,D4			;6327c: 5004
-	ORI.B	#$06,D0			;6327e: 00000006
-	dc.l  $0			;63282: 00000000
-	OR.B	D0,D4			;63286: 8800
-	DC.W	$0002			;63288
-	DC.W	$4f74			;6328a
-	DC.W	$0002			;6328c
-	DC.W	$4f7c			;6328e
-	DC.W	$0002			;63290
-	CHK.W	(A4)+,D7		;63292: 4f9c
-	ORI.B	#$06,D0			;63294: 00000006
-	dc.l  $0			;63298: 00000000
-	OR.B	D0,D4			;6329c: 8800
-	DC.W	$0002			;6329e
-	DC.W	$4f7c			;632a0
-	DC.W	$0002			;632a2
-	CHK.W	(A4)+,D7		;632a4: 4f9c
-	DC.W	$0002			;632a6
-	CHK.W	-(A4),D7		;632a8: 4fa4
-	ORI.B	#$06,D0			;632aa: 00000006
-	dc.l  $0			;632ae: 00000000
-	OR.B	D0,D4			;632b2: 8800
-	DC.W	$0002			;632b4
-	DC.W	$4f7c			;632b6
-	DC.W	$0002			;632b8
-	CHK.W	D4,D7			;632ba: 4f84
-	DC.W	$0002			;632bc
-	CHK.W	-(A4),D7		;632be: 4fa4
-	ORI.B	#$06,D0			;632c0: 00000006
-	dc.l  $0			;632c4: 00000000
-	OR.B	D0,D4			;632c8: 8800
-	DC.W	$0002			;632ca
-	CHK.W	D4,D7			;632cc: 4f84
-	DC.W	$0002			;632ce
-	CHK.W	-(A4),D7		;632d0: 4fa4
-	DC.W	$0002			;632d2
-	DC.W	$500c			;632d4
-	ORI.B	#$06,D0			;632d6: 00000006
-	dc.l  $0			;632da: 00000000
-	OR.B	D0,D4			;632de: 8800
-	DC.W	$0002			;632e0
-	CHK.W	D4,D7			;632e2: 4f84
-	DC.W	$0002			;632e4
-	CHK.W	#$0002,D7		;632e6: 4fbc0002
-	DC.W	$500c			;632ea
-	ORI.B	#$06,D0			;632ec: 00000006
-	DC.W	$1577			;632f0
-	DIVS	0(A0,D0.W),D4		;632f2: 89f00000
-	DC.W	$0002			;632f6
-	DC.W	$4f6c			;632f8
-	DC.W	$0002			;632fa
-	DC.W	$4f74			;632fc
-	DC.W	$0002			;632fe
-	CHK.W	(A4),D7			;63300: 4f94
-	ORI.B	#$12,D0			;63302: 00000012
-	DC.W	$1577			;63306
-	DIVS	0(A0,D0.W),D4		;63308: 89f00000
-	DC.W	$0002			;6330c
-	DC.W	$4f74			;6330e
-	DC.W	$0002			;63310
-	CHK.W	(A4),D7			;63312: 4f94
-	DC.W	$0002			;63314
-	CHK.W	(A4)+,D7		;63316: 4f9c
-	ORI.B	#$12,D0			;63318: 00000012
-	DC.W	$ab26			;6331c
-	DC.W	$ab26			;6331e
-	ORI.B	#$02,D0			;63320: 00000002
-	DC.W	$4f64			;63324
-	DC.W	$0002			;63326
-	LEA	(A4),A7			;63328: 4fd4
-	DC.W	$0002			;6332a
-	DC.W	$4fdc			;6332c
-	ORI.B	#$12,D0			;6332e: 00000012
-	DC.W	$ab26			;63332
-	DC.W	$ab26			;63334
-	ORI.B	#$02,D0			;63336: 00000002
-	DC.W	$4f64			;6333a
-	DC.W	$0002			;6333c
-	DC.W	$4f7c			;6333e
-	DC.W	$0002			;63340
-	LEA	(A4),A7			;63342: 4fd4
-	ORI.B	#$12,D0			;63344: 00000012
-	DC.W	$ab26			;63348
-	DC.W	$ab26			;6334a
-	ORI.B	#$02,D0			;6334c: 00000002
-	DC.W	$4f64			;63350
-	DC.W	$0002			;63352
-	DC.W	$4f8c			;63354
-	DC.W	$0002			;63356
-	DC.W	$4fdc			;63358
-	ORI.B	#$12,D0			;6335a: 00000012
-	DC.W	$ab26			;6335e
-	DC.W	$ab26			;63360
-	ORI.B	#$02,D0			;63362: 00000002
-	DC.W	$4f7c			;63366
-	DC.W	$0002			;63368
-	CHK.W	D4,D7			;6336a: 4f84
-	DC.W	$0002			;6336c
-	LEA	(A4),A7			;6336e: 4fd4
-	ORI.B	#$12,D0			;63370: 00000012
-	dc.l  $0			;63374: 00000000
-	ORI.B	#$02,D0			;63378: 00000002
-	DC.W	$4f64			;6337c
-	DC.W	$0002			;6337e
-	DC.W	$4f6c			;63380
-	DC.W	$0002			;63382
-	DC.W	$4f7c			;63384
-	ORI.B	#$02,D0			;63386: 00000002
-	dc.l  $0			;6338a: 00000000
-	ORI.B	#$02,D0			;6338e: 00000002
-	DC.W	$4f6c			;63392
-	DC.W	$0002			;63394
-	DC.W	$4f74			;63396
-	DC.W	$0002			;63398
-	DC.W	$4f7c			;6339a
-	ORI.B	#$02,D0			;6339c: 00000002
-	BTST	D0,D0			;633a0: 0100
-	ORI.B	#$23,(A0)+		;633a2: 00180023
-	ORI.L	#$00000000,(A6)+	;633a6: 009e00000000
-	DC.W	$0000			;633ac
-	DC.W	$ffe0			;633ae
-	DC.W	$ffb0			;633b0
-	ORI.W	#$0030,(A0)+		;633b2: 00580030
-	DC.W	$ffb0			;633b6
-	ORI.W	#$0040,(A0)+		;633b8: 00580040
-	DC.W	$ffb0			;633bc
-	DC.W	$0048			;633be
-	ORI.W	#$ffb0,D0		;633c0: 0040ffb0
-	DC.W	$ffb8			;633c4
-	DC.W	$0030			;633c6
-	DC.W	$ffb0			;633c8
-	DC.W	$ffa8			;633ca
-	DC.W	$ffe0			;633cc
-	DC.W	$ffb0			;633ce
-	DC.W	$ffa8			;633d0
-	DC.W	$ffc0			;633d2
-	DC.W	$ffb0			;633d4
-	DC.W	$ffd8			;633d6
-	DC.W	$ffc0			;633d8
-	DC.W	$ffb0			;633da
-	DC.W	$0028			;633dc
-	DC.W	$ffa0			;633de
-	DC.W	$ffd0			;633e0
-	DC.W	$0028			;633e2
-	DC.W	$ffa0			;633e4
-	DC.W	$ffd0			;633e6
-	DC.W	$ffd8			;633e8
-	ORI.W	#$ffd0,-(A0)		;633ea: 0060ffd0
-	ORI.B	#$60,-48(A0)		;633ee: 00280060ffd0
-	DC.W	$ffd8			;633f4
-	ORI.L	#$ffd00028,D0		;633f6: 0080ffd00028
-	ORI.L	#$ffd0ffd8,D0		;633fc: 0080ffd0ffd8
-	ORI.L	#$0000ffd8,D0		;63402: 00800000ffd8
-	ORI.L	#$00000028,D0		;63408: 008000000028
-	ORI.B	#$00,88(A0,D0.W)	;6340e: 003000000058
-	DC.W	$0030			;63414
-	DC.W	$0000			;63416
-	DC.W	$ffa8			;63418
-	ORI.W	#$0000,-(A0)		;6341a: 00600000
-	ORI.B	#$60,0(A0)		;6341e: 002800600000
-	DC.W	$ffd8			;63424
-	DC.W	$ffe0			;63426
-	ORI.B	#$58,D0			;63428: 00000058
-	DC.W	$ffe0			;6342c
-	DC.W	$0000			;6342e
-	DC.W	$ffa8			;63430
-	DC.W	$ffa0			;63432
-	ORI.B	#$28,D0			;63434: 00000028
-	DC.W	$ffa0			;63438
-	DC.W	$0000			;6343a
-	DC.W	$ffd8			;6343c
-	MOVEQ	#0,D4			;6343e: 7800
-	dc.l  $0			;63440: 00000000
-	DC.W	$0002			;63444
-	DC.W	$4fc4			;63446
-	DC.W	$0002			;63448
-	DC.W	$4fcc			;6344a
-	DC.W	$0002			;6344c
-	LEA	(A4),A7			;6344e: 4fd4
-	ORI.B	#$16,D0			;63450: 00000016
-	MOVEQ	#0,D4			;63454: 7800
-	dc.l  $0			;63456: 00000000
-	DC.W	$0002			;6345a
-	DC.W	$4fc4			;6345c
-	DC.W	$0002			;6345e
-	LEA	(A4),A7			;63460: 4fd4
-	DC.W	$0002			;63462
-	DC.W	$4fdc			;63464
-	ORI.B	#$16,D0			;63466: 00000016
-	OR.B	D0,D4			;6346a: 8800
-	dc.l  $0			;6346c: 00000000
-	DC.W	$0002			;63470
-	CHK.W	-(A4),D7		;63472: 4fa4
-	DC.W	$0002			;63474
-	CHK.W	2(A4),D7		;63476: 4fac0002
-	ADDQ.B	#8,(A4)			;6347a: 5014
-	ORI.B	#$16,D0			;6347c: 00000016
-	OR.B	D0,D4			;63480: 8800
-	dc.l  $0			;63482: 00000000
-	DC.W	$0002			;63486
-	CHK.W	2(A4),D7		;63488: 4fac0002
-	ADDQ.B	#8,(A4)			;6348c: 5014
-	DC.W	$0002			;6348e
-	ADDQ.B	#8,(A4)+		;63490: 501c
-	ORI.B	#$16,D0			;63492: 00000016
-	DC.W	$a144			;63496
-	ADD.B	(A3)+,D5		;63498: da1b
-	MULU	(A0)+,D0		;6349a: c0d8
-	DC.W	$0002			;6349c
-	DC.W	$4f8c			;6349e
-	DC.W	$0002			;634a0
-	CHK.W	(A4),D7			;634a2: 4f94
-	DC.W	$0002			;634a4
-	ADDQ.B	#8,(A4)+		;634a6: 501c
-	ORI.B	#$12,D0			;634a8: 00000012
-	CMP.B	D0,D4			;634ac: b800
-	DC.W	$0000			;634ae
-	DC.W	$a000			;634b0
-	DC.W	$0002			;634b2
-	DC.W	$4f8c			;634b4
-	DC.W	$0002			;634b6
-	DC.W	$500c			;634b8
-	DC.W	$0002			;634ba
-	ADDQ.B	#8,(A4)+		;634bc: 501c
-	ORI.B	#$0a,D0			;634be: 0000000a
-	dc.l  $0			;634c2: 00000000
-	OR.B	D0,D4			;634c6: 8800
-	DC.W	$0002			;634c8
-	CHK.W	(A4),D7			;634ca: 4f94
-	DC.W	$0002			;634cc
-	CHK.W	2(A4),D7		;634ce: 4fac0002
-	ADDQ.B	#8,(A4)+		;634d2: 501c
-	ORI.B	#$06,D0			;634d4: 00000006
-	dc.l  $0			;634d8: 00000000
-	OR.B	D0,D4			;634dc: 8800
-	DC.W	$0002			;634de
-	CHK.W	D4,D7			;634e0: 4f84
-	DC.W	$0002			;634e2
-	DC.W	$4f8c			;634e4
-	DC.W	$0002			;634e6
-	DC.W	$500c			;634e8
-	ORI.B	#$06,D0			;634ea: 00000006
-	dc.l  $0			;634ee: 00000000
-	OR.B	D0,D4			;634f2: 8800
-	DC.W	$0002			;634f4
-	CHK.W	D4,D7			;634f6: 4f84
-	DC.W	$0002			;634f8
-	LEA	2(A4),A7		;634fa: 4fec0002
-	DC.W	$500c			;634fe
-	ORI.B	#$06,D0			;63500: 00000006
-	SCC	(A2)+			;63504: 54da
-	DC.W	$0000			;63506
-	DC.W	$ab26			;63508
-	DC.W	$0002			;6350a
-	DC.W	$4f7c			;6350c
-	DC.W	$0002			;6350e
-	CHK.W	D4,D7			;63510: 4f84
-	DC.W	$0002			;63512
-	LEA	0(A4),A7		;63514: 4fec0000
-	DC.W	$000a			;63518
-	SCC	(A2)+			;6351a: 54da
-	DC.W	$0000			;6351c
-	DC.W	$ab26			;6351e
-	DC.W	$0002			;63520
-	DC.W	$4f7c			;63522
-	DC.W	$0002			;63524
-	CHK.W	#$0002,D7		;63526: 4fbc0002
-	LEA	0(A4),A7		;6352a: 4fec0000
-	DC.W	$000a			;6352e
-	SCC	(A2)+			;63530: 54da
-	DC.W	$0000			;63532
-	DC.W	$ab26			;63534
-	DC.W	$0002			;63536
-	CHK.W	#$0002,D7		;63538: 4fbc0002
-	LEA	2(A4),A7		;6353c: 4fec0002
-	DC.W	$4ffc			;63540
-	ORI.B	#$0a,D0			;63542: 0000000a
-	dc.l  $0			;63546: 00000000
-	OR.B	D0,D4			;6354a: 8800
-	DC.W	$0002			;6354c
-	CHK.W	#$0002,D7		;6354e: 4fbc0002
-	DC.W	$4fcc			;63552
-	DC.W	$0002			;63554
-	DC.W	$4ffc			;63556
-	ORI.B	#$06,D0			;63558: 00000006
-	dc.l  $0			;6355c: 00000000
-	OR.B	D0,D4			;63560: 8800
-	DC.W	$0002			;63562
-	DC.W	$4fcc			;63564
-	DC.W	$0002			;63566
-	LEA	(A4),A7			;63568: 4fd4
-	DC.W	$0002			;6356a
-	DC.W	$4ffc			;6356c
-	ORI.B	#$06,D0			;6356e: 00000006
-	dc.l  $0			;63572: 00000000
-	MOVEQ	#0,D4			;63576: 7800
-	DC.W	$0002			;63578
-	CHK.W	(A4)+,D7		;6357a: 4f9c
-	DC.W	$0002			;6357c
-	CHK.W	-(A4),D7		;6357e: 4fa4
-	DC.W	$0002			;63580
-	ADDQ.B	#8,(A4)			;63582: 5014
-	ORI.B	#$06,D0			;63584: 00000006
-	DC.W	$a144			;63588
-	ADD.B	(A3)+,D5		;6358a: da1b
-	MOVE.W	2(A0),-(A7)		;6358c: 3f280002
-	DC.W	$4f64			;63590
-	DC.W	$0002			;63592
-	CHK.W	(A4)+,D7		;63594: 4f9c
-	DC.W	$0002			;63596
-	ADDQ.B	#8,(A4)			;63598: 5014
-	ORI.B	#$12,D0			;6359a: 00000012
-	CMP.B	D0,D4			;6359e: b800
-	DC.W	$0000			;635a0
-	BRA.W	lb_635a6		;635a2: 60000002
-lb_635a6:
-	DC.W	$4f64			;635a6
-	DC.W	$0002			;635a8
-	ADDQ.B	#8,D4			;635aa: 5004
-	DC.W	$0002			;635ac
-	ADDQ.B	#8,(A4)			;635ae: 5014
-	ORI.B	#$0a,D0			;635b0: 0000000a
-	dc.l  $0			;635b4: 00000000
-	MOVEQ	#0,D4			;635b8: 7800
-	DC.W	$0002			;635ba
-	DC.W	$4f64			;635bc
-	DC.W	$0002			;635be
-	DC.W	$4f6c			;635c0
-	DC.W	$0002			;635c2
-	ADDQ.B	#8,D4			;635c4: 5004
-	ORI.B	#$06,D0			;635c6: 00000006
+	dc.w	$005c	;60e1c
+	dc.w	$0078	;60e1e
+	dc.w	$4175	;60e20
+	dc.w	$746f	;60e22
+	dc.w	$6d61	;60e24
+	dc.w	$7469	;60e26
+	dc.w	$7363	;60e28
+	dc.w	$6865	;60e2a
+	dc.w	$7220	;60e2c
+	dc.w	$4661	;60e2e
+	dc.w	$6872	;60e30
+	dc.w	$6572	;60e32
+	dc.w	$0000	;60e34
+	dc.w	$0060	;60e36
+	dc.w	$008c	;60e38
+	dc.w	$4d61	;60e3a
+	dc.w	$6e75	;60e3c
+	dc.w	$656c	;60e3e
+	dc.w	$6c65	;60e40
+	dc.w	$7220	;60e42
+	dc.w	$4b61	;60e44
+	dc.w	$6e6f	;60e46
+	dc.w	$6e69	;60e48
+	dc.w	$6572	;60e4a
+	dc.w	$0000	;60e4c
+	dc.w	$0056	;60e4e
+	dc.w	$008c	;60e50
+	dc.w	$4175	;60e52
+	dc.w	$746f	;60e54
+	dc.w	$6d61	;60e56
+	dc.w	$7469	;60e58
+	dc.w	$7363	;60e5a
+	dc.w	$6865	;60e5c
+	dc.w	$7220	;60e5e
+	dc.w	$4b61	;60e60
+	dc.w	$6e6f	;60e62
+	dc.w	$6e69	;60e64
+	dc.w	$6572	;60e66
+	dc.w	$0000	;60e68
+	dc.w	$0100	;60e6a
+	dc.w	$002a	;60e6c
+	dc.w	$0035	;60e6e
+	dc.w	$010a	;60e70
+	dc.w	$0000	;60e72
+	dc.w	$0000	;60e74
+	dc.w	$0000	;60e76
+	dc.w	$ff70	;60e78
+	dc.w	$0000	;60e7a
+	dc.w	$0058	;60e7c
+	dc.w	$00f0	;60e7e
+	dc.w	$0000	;60e80
+	dc.w	$0058	;60e82
+	dc.w	$00f0	;60e84
+	dc.w	$0000	;60e86
+	dc.w	$ffa8	;60e88
+	dc.w	$ff70	;60e8a
+	dc.w	$0000	;60e8c
+	dc.w	$ffa8	;60e8e
+	dc.w	$ff50	;60e90
+	dc.w	$0020	;60e92
+	dc.w	$ffa8	;60e94
+	dc.w	$ff50	;60e96
+	dc.w	$0020	;60e98
+	dc.w	$0058	;60e9a
+	dc.w	$ff40	;60e9c
+	dc.w	$0030	;60e9e
+	dc.w	$0058	;60ea0
+	dc.w	$ff40	;60ea2
+	dc.w	$0030	;60ea4
+	dc.w	$ffa8	;60ea6
+	dc.w	$ff30	;60ea8
+	dc.w	$0030	;60eaa
+	dc.w	$ffa8	;60eac
+	dc.w	$ff30	;60eae
+	dc.w	$0030	;60eb0
+	dc.w	$ff88	;60eb2
+	dc.w	$ff30	;60eb4
+	dc.w	$0030	;60eb6
+	dc.w	$0058	;60eb8
+	dc.w	$ff30	;60eba
+	dc.w	$0030	;60ebc
+	dc.w	$0078	;60ebe
+	dc.w	$00f0	;60ec0
+	dc.w	$0020	;60ec2
+	dc.w	$0078	;60ec4
+	dc.w	$00f0	;60ec6
+	dc.w	$0020	;60ec8
+	dc.w	$ff88	;60eca
+	dc.w	$00f0	;60ecc
+	dc.w	$0020	;60ece
+	dc.w	$ffa8	;60ed0
+	dc.w	$00f0	;60ed2
+	dc.w	$0020	;60ed4
+	dc.w	$0058	;60ed6
+	dc.w	$ff50	;60ed8
+	dc.w	$0020	;60eda
+	dc.w	$0078	;60edc
+	dc.w	$ff50	;60ede
+	dc.w	$0020	;60ee0
+	dc.w	$ff88	;60ee2
+	dc.w	$ff50	;60ee4
+	dc.w	$0060	;60ee6
+	dc.w	$0058	;60ee8
+	dc.w	$ff50	;60eea
+	dc.w	$0060	;60eec
+	dc.w	$ffa8	;60eee
+	dc.w	$ff70	;60ef0
+	dc.w	$0080	;60ef2
+	dc.w	$0058	;60ef4
+	dc.w	$ff70	;60ef6
+	dc.w	$0080	;60ef8
+	dc.w	$ffa8	;60efa
+	dc.w	$ff70	;60efc
+	dc.w	$0080	;60efe
+	dc.w	$0078	;60f00
+	dc.w	$ff70	;60f02
+	dc.w	$0080	;60f04
+	dc.w	$ff88	;60f06
+	dc.w	$ff30	;60f08
+	dc.w	$0050	;60f0a
+	dc.w	$0078	;60f0c
+	dc.w	$ff30	;60f0e
+	dc.w	$0050	;60f10
+	dc.w	$ff88	;60f12
+	dc.w	$ff30	;60f14
+	dc.w	$0050	;60f16
+	dc.w	$0058	;60f18
+	dc.w	$ff30	;60f1a
+	dc.w	$0050	;60f1c
+	dc.w	$ffa8	;60f1e
+	dc.w	$00f0	;60f20
+	dc.w	$0050	;60f22
+	dc.w	$0078	;60f24
+	dc.w	$00f0	;60f26
+	dc.w	$0050	;60f28
+	dc.w	$ff88	;60f2a
+	dc.w	$00b0	;60f2c
+	dc.w	$0080	;60f2e
+	dc.w	$ff88	;60f30
+	dc.w	$00b0	;60f32
+	dc.w	$0080	;60f34
+	dc.w	$0078	;60f36
+	dc.w	$00b0	;60f38
+	dc.w	$0080	;60f3a
+	dc.w	$ffa8	;60f3c
+	dc.w	$00b0	;60f3e
+	dc.w	$0080	;60f40
+	dc.w	$0058	;60f42
+	dc.w	$00f0	;60f44
+	dc.w	$0050	;60f46
+	dc.w	$ffa8	;60f48
+	dc.w	$00f0	;60f4a
+	dc.w	$0050	;60f4c
+	dc.w	$0058	;60f4e
+	dc.w	$00f0	;60f50
+	dc.w	$0030	;60f52
+	dc.w	$ffa8	;60f54
+	dc.w	$00f0	;60f56
+	dc.w	$0030	;60f58
+	dc.w	$0058	;60f5a
+	dc.w	$00d0	;60f5c
+	dc.w	$0060	;60f5e
+	dc.w	$ffa8	;60f60
+	dc.w	$00d0	;60f62
+	dc.w	$0060	;60f64
+	dc.w	$0058	;60f66
+	dc.w	$ff70	;60f68
+	dc.w	$0020	;60f6a
+	dc.w	$ffa8	;60f6c
+	dc.w	$ff70	;60f6e
+	dc.w	$0020	;60f70
+	dc.w	$0058	;60f72
+	dc.w	$ab26	;60f74
+	dc.w	$ab26	;60f76
+	dc.w	$0000	;60f78
+	dc.w	$0002	;60f7a
+	dc.w	$4f8c	;60f7c
+	dc.w	$0002	;60f7e
+	dc.w	$4f94	;60f80
+	dc.w	$0002	;60f82
+	dc.w	$4f9c	;60f84
+	dc.w	$0000	;60f86
+	dc.w	$000c	;60f88
+	dc.w	$ab26	;60f8a
+	dc.w	$ab26	;60f8c
+	dc.w	$0000	;60f8e
+	dc.w	$0002	;60f90
+	dc.w	$4f84	;60f92
+	dc.w	$0002	;60f94
+	dc.w	$4f8c	;60f96
+	dc.w	$0002	;60f98
+	dc.w	$4f9c	;60f9a
+	dc.w	$0000	;60f9c
+	dc.w	$000c	;60f9e
+	dc.w	$ca56	;60fa0
+	dc.w	$94ac	;60fa2
+	dc.w	$0000	;60fa4
+	dc.w	$0002	;60fa6
+	dc.w	$4f8c	;60fa8
+	dc.w	$0002	;60faa
+	dc.w	$4fb4	;60fac
+	dc.w	$0002	;60fae
+	dc.w	$4fbc	;60fb0
+	dc.w	$0000	;60fb2
+	dc.w	$0014	;60fb4
+	dc.w	$ca56	;60fb6
+	dc.w	$94ac	;60fb8
+	dc.w	$0000	;60fba
+	dc.w	$0002	;60fbc
+	dc.w	$4f8c	;60fbe
+	dc.w	$0002	;60fc0
+	dc.w	$4fbc	;60fc2
+	dc.w	$0002	;60fc4
+	dc.w	$4fe4	;60fc6
+	dc.w	$0000	;60fc8
+	dc.w	$0014	;60fca
+	dc.w	$ca56	;60fcc
+	dc.w	$94ac	;60fce
+	dc.w	$0000	;60fd0
+	dc.w	$0002	;60fd2
+	dc.w	$4f84	;60fd4
+	dc.w	$0002	;60fd6
+	dc.w	$4fa4	;60fd8
+	dc.w	$0002	;60fda
+	dc.w	$4fac	;60fdc
+	dc.w	$0000	;60fde
+	dc.w	$0014	;60fe0
+	dc.w	$ca56	;60fe2
+	dc.w	$94ac	;60fe4
+	dc.w	$0000	;60fe6
+	dc.w	$0002	;60fe8
+	dc.w	$4f84	;60fea
+	dc.w	$0002	;60fec
+	dc.w	$4fac	;60fee
+	dc.w	$0002	;60ff0
+	dc.w	$4fec	;60ff2
+	dc.w	$0000	;60ff4
+	dc.w	$0014	;60ff6
+	dc.w	$8e29	;60ff8
+	dc.w	$25f2	;60ffa
+	dc.w	$0000	;60ffc
+	dc.w	$0002	;60ffe
+	dc.w	$4f94	;61000
+	dc.w	$0002	;61002
+	dc.w	$4ff4	;61004
+	dc.w	$0002	;61006
+	dc.w	$4ffc	;61008
+	dc.w	$0000	;6100a
+	dc.w	$0009	;6100c
+	dc.w	$8e29	;6100e
+	dc.w	$25f2	;61010
+	dc.w	$0000	;61012
+	dc.w	$0002	;61014
+	dc.w	$4f94	;61016
+	dc.w	$0002	;61018
+	dc.w	$4f9c	;6101a
+	dc.w	$0002	;6101c
+	dc.w	$4ffc	;6101e
+	dc.w	$0000	;61020
+	dc.w	$0009	;61022
+	dc.w	$63d8	;61024
+	dc.w	$4290	;61026
+	dc.w	$0000	;61028
+	dc.w	$0002	;6102a
+	dc.w	$5084	;6102c
+	dc.w	$0002	;6102e
+	dc.w	$508c	;61030
+	dc.w	$0002	;61032
+	dc.w	$5094	;61034
+	dc.w	$0000	;61036
+	dc.w	$0009	;61038
+	dc.w	$63d8	;6103a
+	dc.w	$4290	;6103c
+	dc.w	$0000	;6103e
+	dc.w	$0002	;61040
+	dc.w	$508c	;61042
+	dc.w	$0002	;61044
+	dc.w	$5094	;61046
+	dc.w	$0002	;61048
+	dc.w	$509c	;6104a
+	dc.w	$0000	;6104c
+	dc.w	$0009	;6104e
+	dc.w	$7800	;61050
+	dc.w	$0000	;61052
+	dc.w	$0000	;61054
+	dc.w	$0002	;61056
+	dc.w	$4fcc	;61058
+	dc.w	$0002	;6105a
+	dc.w	$4fd4	;6105c
+	dc.w	$0002	;6105e
+	dc.w	$504c	;61060
+	dc.w	$0000	;61062
+	dc.w	$0017	;61064
+	dc.w	$7800	;61066
+	dc.w	$0000	;61068
+	dc.w	$0000	;6106a
+	dc.w	$0002	;6106c
+	dc.w	$4fd4	;6106e
+	dc.w	$0002	;61070
+	dc.w	$504c	;61072
+	dc.w	$0002	;61074
+	dc.w	$5074	;61076
+	dc.w	$0000	;61078
+	dc.w	$0017	;6107a
+	dc.w	$4800	;6107c
+	dc.w	$6000	;6107e
+	dc.w	$0000	;61080
+	dc.w	$0002	;61082
+	dc.w	$504c	;61084
+	dc.w	$0002	;61086
+	dc.w	$5054	;61088
+	dc.w	$0002	;6108a
+	dc.w	$5074	;6108c
+	dc.w	$0000	;6108e
+	dc.w	$0017	;61090
+	dc.w	$4800	;61092
+	dc.w	$6000	;61094
+	dc.w	$0000	;61096
+	dc.w	$0002	;61098
+	dc.w	$5054	;6109a
+	dc.w	$0002	;6109c
+	dc.w	$5064	;6109e
+	dc.w	$0002	;610a0
+	dc.w	$5074	;610a2
+	dc.w	$0000	;610a4
+	dc.w	$0017	;610a6
+	dc.w	$7800	;610a8
+	dc.w	$0000	;610aa
+	dc.w	$0000	;610ac
+	dc.w	$0002	;610ae
+	dc.w	$4fc4	;610b0
+	dc.w	$0002	;610b2
+	dc.w	$4fdc	;610b4
+	dc.w	$0002	;610b6
+	dc.w	$5044	;610b8
+	dc.w	$0000	;610ba
+	dc.w	$0017	;610bc
+	dc.w	$7800	;610be
+	dc.w	$0000	;610c0
+	dc.w	$0000	;610c2
+	dc.w	$0002	;610c4
+	dc.w	$4fdc	;610c6
+	dc.w	$0002	;610c8
+	dc.w	$5044	;610ca
+	dc.w	$0002	;610cc
+	dc.w	$507c	;610ce
+	dc.w	$0000	;610d0
+	dc.w	$0017	;610d2
+	dc.w	$4800	;610d4
+	dc.w	$6000	;610d6
+	dc.w	$0000	;610d8
+	dc.w	$0002	;610da
+	dc.w	$5044	;610dc
+	dc.w	$0002	;610de
+	dc.w	$505c	;610e0
+	dc.w	$0002	;610e2
+	dc.w	$507c	;610e4
+	dc.w	$0000	;610e6
+	dc.w	$0017	;610e8
+	dc.w	$4800	;610ea
+	dc.w	$6000	;610ec
+	dc.w	$0000	;610ee
+	dc.w	$0002	;610f0
+	dc.w	$505c	;610f2
+	dc.w	$0002	;610f4
+	dc.w	$506c	;610f6
+	dc.w	$0002	;610f8
+	dc.w	$507c	;610fa
+	dc.w	$0000	;610fc
+	dc.w	$0017	;610fe
+	dc.w	$8800	;61100
+	dc.w	$0000	;61102
+	dc.w	$0000	;61104
+	dc.w	$0002	;61106
+	dc.w	$4fb4	;61108
+	dc.w	$0002	;6110a
+	dc.w	$4fbc	;6110c
+	dc.w	$0002	;6110e
+	dc.w	$5024	;61110
+	dc.w	$0000	;61112
+	dc.w	$0017	;61114
+	dc.w	$8800	;61116
+	dc.w	$0000	;61118
+	dc.w	$0000	;6111a
+	dc.w	$0002	;6111c
+	dc.w	$4fb4	;6111e
+	dc.w	$0002	;61120
+	dc.w	$5024	;61122
+	dc.w	$0002	;61124
+	dc.w	$5034	;61126
+	dc.w	$0000	;61128
+	dc.w	$0017	;6112a
+	dc.w	$b800	;6112c
+	dc.w	$6000	;6112e
+	dc.w	$0000	;61130
+	dc.w	$0002	;61132
+	dc.w	$5014	;61134
+	dc.w	$0002	;61136
+	dc.w	$5024	;61138
+	dc.w	$0002	;6113a
+	dc.w	$5034	;6113c
+	dc.w	$0000	;6113e
+	dc.w	$0017	;61140
+	dc.w	$b800	;61142
+	dc.w	$6000	;61144
+	dc.w	$0000	;61146
+	dc.w	$0002	;61148
+	dc.w	$5004	;6114a
+	dc.w	$0002	;6114c
+	dc.w	$5014	;6114e
+	dc.w	$0002	;61150
+	dc.w	$5034	;61152
+	dc.w	$0000	;61154
+	dc.w	$0017	;61156
+	dc.w	$b800	;61158
+	dc.w	$6000	;6115a
+	dc.w	$0000	;6115c
+	dc.w	$0002	;6115e
+	dc.w	$500c	;61160
+	dc.w	$0002	;61162
+	dc.w	$501c	;61164
+	dc.w	$0002	;61166
+	dc.w	$503c	;61168
+	dc.w	$0000	;6116a
+	dc.w	$0017	;6116c
+	dc.w	$b800	;6116e
+	dc.w	$6000	;61170
+	dc.w	$0000	;61172
+	dc.w	$0002	;61174
+	dc.w	$501c	;61176
+	dc.w	$0002	;61178
+	dc.w	$502c	;6117a
+	dc.w	$0002	;6117c
+	dc.w	$503c	;6117e
+	dc.w	$0000	;61180
+	dc.w	$0017	;61182
+	dc.w	$8800	;61184
+	dc.w	$0000	;61186
+	dc.w	$0000	;61188
+	dc.w	$0002	;6118a
+	dc.w	$4fa4	;6118c
+	dc.w	$0002	;6118e
+	dc.w	$502c	;61190
+	dc.w	$0002	;61192
+	dc.w	$503c	;61194
+	dc.w	$0000	;61196
+	dc.w	$0017	;61198
+	dc.w	$8800	;6119a
+	dc.w	$0000	;6119c
+	dc.w	$0000	;6119e
+	dc.w	$0002	;611a0
+	dc.w	$4fa4	;611a2
+	dc.w	$0002	;611a4
+	dc.w	$4fac	;611a6
+	dc.w	$0002	;611a8
+	dc.w	$502c	;611aa
+	dc.w	$0000	;611ac
+	dc.w	$0017	;611ae
+	dc.w	$0000	;611b0
+	dc.w	$0000	;611b2
+	dc.w	$8800	;611b4
+	dc.w	$0002	;611b6
+	dc.w	$4fac	;611b8
+	dc.w	$0002	;611ba
+	dc.w	$4fec	;611bc
+	dc.w	$0002	;611be
+	dc.w	$502c	;611c0
+	dc.w	$0000	;611c2
+	dc.w	$0011	;611c4
+	dc.w	$0000	;611c6
+	dc.w	$0000	;611c8
+	dc.w	$8800	;611ca
+	dc.w	$0002	;611cc
+	dc.w	$4fec	;611ce
+	dc.w	$0002	;611d0
+	dc.w	$501c	;611d2
+	dc.w	$0002	;611d4
+	dc.w	$502c	;611d6
+	dc.w	$0000	;611d8
+	dc.w	$0011	;611da
+	dc.w	$0000	;611dc
+	dc.w	$0000	;611de
+	dc.w	$8800	;611e0
+	dc.w	$0002	;611e2
+	dc.w	$4fec	;611e4
+	dc.w	$0002	;611e6
+	dc.w	$501c	;611e8
+	dc.w	$0002	;611ea
+	dc.w	$5054	;611ec
+	dc.w	$0000	;611ee
+	dc.w	$0011	;611f0
+	dc.w	$0000	;611f2
+	dc.w	$0000	;611f4
+	dc.w	$8800	;611f6
+	dc.w	$0002	;611f8
+	dc.w	$4fec	;611fa
+	dc.w	$0002	;611fc
+	dc.w	$504c	;611fe
+	dc.w	$0002	;61200
+	dc.w	$5054	;61202
+	dc.w	$0000	;61204
+	dc.w	$0011	;61206
+	dc.w	$0000	;61208
+	dc.w	$0000	;6120a
+	dc.w	$8800	;6120c
+	dc.w	$0002	;6120e
+	dc.w	$4fcc	;61210
+	dc.w	$0002	;61212
+	dc.w	$4fec	;61214
+	dc.w	$0002	;61216
+	dc.w	$504c	;61218
+	dc.w	$0000	;6121a
+	dc.w	$0011	;6121c
+	dc.w	$0000	;6121e
+	dc.w	$0000	;61220
+	dc.w	$7800	;61222
+	dc.w	$0002	;61224
+	dc.w	$4fbc	;61226
+	dc.w	$0002	;61228
+	dc.w	$4fe4	;6122a
+	dc.w	$0002	;6122c
+	dc.w	$5024	;6122e
+	dc.w	$0000	;61230
+	dc.w	$0011	;61232
+	dc.w	$0000	;61234
+	dc.w	$0000	;61236
+	dc.w	$7800	;61238
+	dc.w	$0002	;6123a
+	dc.w	$4fe4	;6123c
+	dc.w	$0002	;6123e
+	dc.w	$5014	;61240
+	dc.w	$0002	;61242
+	dc.w	$5024	;61244
+	dc.w	$0000	;61246
+	dc.w	$0011	;61248
+	dc.w	$0000	;6124a
+	dc.w	$0000	;6124c
+	dc.w	$7800	;6124e
+	dc.w	$0002	;61250
+	dc.w	$4fe4	;61252
+	dc.w	$0002	;61254
+	dc.w	$5014	;61256
+	dc.w	$0002	;61258
+	dc.w	$505c	;6125a
+	dc.w	$0000	;6125c
+	dc.w	$0011	;6125e
+	dc.w	$0000	;61260
+	dc.w	$0000	;61262
+	dc.w	$7800	;61264
+	dc.w	$0002	;61266
+	dc.w	$4fe4	;61268
+	dc.w	$0002	;6126a
+	dc.w	$5044	;6126c
+	dc.w	$0002	;6126e
+	dc.w	$505c	;61270
+	dc.w	$0000	;61272
+	dc.w	$0011	;61274
+	dc.w	$0000	;61276
+	dc.w	$0000	;61278
+	dc.w	$7800	;6127a
+	dc.w	$0002	;6127c
+	dc.w	$4fc4	;6127e
+	dc.w	$0002	;61280
+	dc.w	$4fe4	;61282
+	dc.w	$0002	;61284
+	dc.w	$5044	;61286
+	dc.w	$0000	;61288
+	dc.w	$0011	;6128a
+	dc.w	$0000	;6128c
+	dc.w	$8800	;6128e
+	dc.w	$0000	;61290
+	dc.w	$0002	;61292
+	dc.w	$50ac	;61294
+	dc.w	$0002	;61296
+	dc.w	$4f84	;61298
+	dc.w	$0002	;6129a
+	dc.w	$4f8c	;6129c
+	dc.w	$0000	;6129e
+	dc.w	$0014	;612a0
+	dc.w	$0000	;612a2
+	dc.w	$8800	;612a4
+	dc.w	$0000	;612a6
+	dc.w	$0002	;612a8
+	dc.w	$50ac	;612aa
+	dc.w	$0002	;612ac
+	dc.w	$50a4	;612ae
+	dc.w	$0002	;612b0
+	dc.w	$4f84	;612b2
+	dc.w	$0000	;612b4
+	dc.w	$0014	;612b6
+	dc.w	$0000	;612b8
+	dc.w	$8800	;612ba
+	dc.w	$0000	;612bc
+	dc.w	$0002	;612be
+	dc.w	$4f84	;612c0
+	dc.w	$0002	;612c2
+	dc.w	$4fec	;612c4
+	dc.w	$0002	;612c6
+	dc.w	$50a4	;612c8
+	dc.w	$0000	;612ca
+	dc.w	$0004	;612cc
+	dc.w	$0000	;612ce
+	dc.w	$8800	;612d0
+	dc.w	$0000	;612d2
+	dc.w	$0002	;612d4
+	dc.w	$4fd4	;612d6
+	dc.w	$0002	;612d8
+	dc.w	$4fec	;612da
+	dc.w	$0002	;612dc
+	dc.w	$50a4	;612de
+	dc.w	$0000	;612e0
+	dc.w	$0004	;612e2
+	dc.w	$0000	;612e4
+	dc.w	$8800	;612e6
+	dc.w	$0000	;612e8
+	dc.w	$0002	;612ea
+	dc.w	$4fcc	;612ec
+	dc.w	$0002	;612ee
+	dc.w	$4fd4	;612f0
+	dc.w	$0002	;612f2
+	dc.w	$4fec	;612f4
+	dc.w	$0000	;612f6
+	dc.w	$0004	;612f8
+	dc.w	$0000	;612fa
+	dc.w	$8800	;612fc
+	dc.w	$0000	;612fe
+	dc.w	$0002	;61300
+	dc.w	$4f8c	;61302
+	dc.w	$0002	;61304
+	dc.w	$4fe4	;61306
+	dc.w	$0002	;61308
+	dc.w	$50ac	;6130a
+	dc.w	$0000	;6130c
+	dc.w	$0004	;6130e
+	dc.w	$0000	;61310
+	dc.w	$8800	;61312
+	dc.w	$0000	;61314
+	dc.w	$0002	;61316
+	dc.w	$4fdc	;61318
+	dc.w	$0002	;6131a
+	dc.w	$4fe4	;6131c
+	dc.w	$0002	;6131e
+	dc.w	$50ac	;61320
+	dc.w	$0000	;61322
+	dc.w	$0004	;61324
+	dc.w	$0000	;61326
+	dc.w	$8800	;61328
+	dc.w	$0000	;6132a
+	dc.w	$0002	;6132c
+	dc.w	$4fc4	;6132e
+	dc.w	$0002	;61330
+	dc.w	$4fdc	;61332
+	dc.w	$0002	;61334
+	dc.w	$4fe4	;61336
+	dc.w	$0000	;61338
+	dc.w	$0004	;6133a
+	dc.w	$8800	;6133c
+	dc.w	$0000	;6133e
+	dc.w	$0000	;61340
+	dc.w	$0002	;61342
+	dc.w	$4f64	;61344
+	dc.w	$0002	;61346
+	dc.w	$50a4	;61348
+	dc.w	$0002	;6134a
+	dc.w	$50ac	;6134c
+	dc.w	$0000	;6134e
+	dc.w	$000c	;61350
+	dc.w	$8800	;61352
+	dc.w	$0000	;61354
+	dc.w	$0000	;61356
+	dc.w	$0002	;61358
+	dc.w	$4f64	;6135a
+	dc.w	$0002	;6135c
+	dc.w	$4f7c	;6135e
+	dc.w	$0002	;61360
+	dc.w	$50a4	;61362
+	dc.w	$0000	;61364
+	dc.w	$000c	;61366
+	dc.w	$7800	;61368
+	dc.w	$0000	;6136a
+	dc.w	$0000	;6136c
+	dc.w	$0002	;6136e
+	dc.w	$4f6c	;61370
+	dc.w	$0002	;61372
+	dc.w	$4f74	;61374
+	dc.w	$0002	;61376
+	dc.w	$5084	;61378
+	dc.w	$0000	;6137a
+	dc.w	$0011	;6137c
+	dc.w	$7800	;6137e
+	dc.w	$0000	;61380
+	dc.w	$0000	;61382
+	dc.w	$0002	;61384
+	dc.w	$4f6c	;61386
+	dc.w	$0002	;61388
+	dc.w	$5084	;6138a
+	dc.w	$0002	;6138c
+	dc.w	$508c	;6138e
+	dc.w	$0000	;61390
+	dc.w	$0011	;61392
+	dc.w	$0000	;61394
+	dc.w	$0000	;61396
+	dc.w	$8800	;61398
+	dc.w	$0002	;6139a
+	dc.w	$4f7c	;6139c
+	dc.w	$0002	;6139e
+	dc.w	$4fd4	;613a0
+	dc.w	$0002	;613a2
+	dc.w	$50a4	;613a4
+	dc.w	$0000	;613a6
+	dc.w	$0001	;613a8
+	dc.w	$0000	;613aa
+	dc.w	$0000	;613ac
+	dc.w	$8800	;613ae
+	dc.w	$0002	;613b0
+	dc.w	$4f74	;613b2
+	dc.w	$0002	;613b4
+	dc.w	$4f7c	;613b6
+	dc.w	$0002	;613b8
+	dc.w	$4fd4	;613ba
+	dc.w	$0000	;613bc
+	dc.w	$0001	;613be
+	dc.w	$0000	;613c0
+	dc.w	$0000	;613c2
+	dc.w	$7800	;613c4
+	dc.w	$0002	;613c6
+	dc.w	$4f64	;613c8
+	dc.w	$0002	;613ca
+	dc.w	$4f6c	;613cc
+	dc.w	$0002	;613ce
+	dc.w	$4fdc	;613d0
+	dc.w	$0000	;613d2
+	dc.w	$0001	;613d4
+	dc.w	$0000	;613d6
+	dc.w	$0000	;613d8
+	dc.w	$7800	;613da
+	dc.w	$0002	;613dc
+	dc.w	$4f64	;613de
+	dc.w	$0002	;613e0
+	dc.w	$4fdc	;613e2
+	dc.w	$0002	;613e4
+	dc.w	$50ac	;613e6
+	dc.w	$0000	;613e8
+	dc.w	$0001	;613ea
+	dc.w	$0000	;613ec
+	dc.w	$0000	;613ee
+	dc.w	$0000	;613f0
+	dc.w	$0002	;613f2
+	dc.w	$4f64	;613f4
+	dc.w	$0002	;613f6
+	dc.w	$4f6c	;613f8
+	dc.w	$0002	;613fa
+	dc.w	$4f7c	;613fc
+	dc.w	$0000	;613fe
+	dc.w	$0004	;61400
+	dc.w	$0000	;61402
+	dc.w	$0000	;61404
+	dc.w	$0000	;61406
+	dc.w	$0002	;61408
+	dc.w	$4f6c	;6140a
+	dc.w	$0002	;6140c
+	dc.w	$4f74	;6140e
+	dc.w	$0002	;61410
+	dc.w	$4f7c	;61412
+	dc.w	$0000	;61414
+	dc.w	$0004	;61416
+	dc.w	$0100	;61418
+	dc.w	$0010	;6141a
+	dc.w	$0015	;6141c
+	dc.w	$006e	;6141e
+	dc.w	$0000	;61420
+	dc.w	$0000	;61422
+	dc.w	$0000	;61424
+	dc.w	$ffa0	;61426
+	dc.w	$ffd0	;61428
+	dc.w	$0040	;6142a
+	dc.w	$0000	;6142c
+	dc.w	$ffd0	;6142e
+	dc.w	$0050	;61430
+	dc.w	$0050	;61432
+	dc.w	$ffd0	;61434
+	dc.w	$0030	;61436
+	dc.w	$0070	;61438
+	dc.w	$ffd0	;6143a
+	dc.w	$0030	;6143c
+	dc.w	$0070	;6143e
+	dc.w	$ffd0	;61440
+	dc.w	$ffd0	;61442
+	dc.w	$0050	;61444
+	dc.w	$ffd0	;61446
+	dc.w	$ffd0	;61448
+	dc.w	$0000	;6144a
+	dc.w	$ffd0	;6144c
+	dc.w	$ffb0	;6144e
+	dc.w	$ffa0	;61450
+	dc.w	$ffd0	;61452
+	dc.w	$ffc0	;61454
+	dc.w	$ffa0	;61456
+	dc.w	$0000	;61458
+	dc.w	$0040	;6145a
+	dc.w	$ffa0	;6145c
+	dc.w	$0000	;6145e
+	dc.w	$ffc0	;61460
+	dc.w	$0000	;61462
+	dc.w	$0000	;61464
+	dc.w	$ffb0	;61466
+	dc.w	$0000	;61468
+	dc.w	$0000	;6146a
+	dc.w	$0050	;6146c
+	dc.w	$0070	;6146e
+	dc.w	$0000	;61470
+	dc.w	$ffd0	;61472
+	dc.w	$0070	;61474
+	dc.w	$0000	;61476
+	dc.w	$0030	;61478
+	dc.w	$0050	;6147a
+	dc.w	$0000	;6147c
+	dc.w	$ffd0	;6147e
+	dc.w	$0050	;61480
+	dc.w	$0000	;61482
+	dc.w	$0030	;61484
+	dc.w	$7800	;61486
+	dc.w	$0000	;61488
+	dc.w	$0000	;6148a
+	dc.w	$0002	;6148c
+	dc.w	$4f7c	;6148e
+	dc.w	$0002	;61490
+	dc.w	$4f84	;61492
+	dc.w	$0002	;61494
+	dc.w	$4fc4	;61496
+	dc.w	$0000	;61498
+	dc.w	$0001	;6149a
+	dc.w	$7800	;6149c
+	dc.w	$0000	;6149e
+	dc.w	$0000	;614a0
+	dc.w	$0002	;614a2
+	dc.w	$4f7c	;614a4
+	dc.w	$0002	;614a6
+	dc.w	$4fc4	;614a8
+	dc.w	$0002	;614aa
+	dc.w	$4fcc	;614ac
+	dc.w	$0000	;614ae
+	dc.w	$0001	;614b0
+	dc.w	$8800	;614b2
+	dc.w	$0000	;614b4
+	dc.w	$0000	;614b6
+	dc.w	$0002	;614b8
+	dc.w	$4f64	;614ba
+	dc.w	$0002	;614bc
+	dc.w	$4f9c	;614be
+	dc.w	$0002	;614c0
+	dc.w	$4fa4	;614c2
+	dc.w	$0000	;614c4
+	dc.w	$0001	;614c6
+	dc.w	$8800	;614c8
+	dc.w	$0000	;614ca
+	dc.w	$0000	;614cc
+	dc.w	$0002	;614ce
+	dc.w	$4f9c	;614d0
+	dc.w	$0002	;614d2
+	dc.w	$4fa4	;614d4
+	dc.w	$0002	;614d6
+	dc.w	$4fac	;614d8
+	dc.w	$0000	;614da
+	dc.w	$0001	;614dc
+	dc.w	$0000	;614de
+	dc.w	$0000	;614e0
+	dc.w	$8800	;614e2
+	dc.w	$0002	;614e4
+	dc.w	$4f8c	;614e6
+	dc.w	$0002	;614e8
+	dc.w	$4fc4	;614ea
+	dc.w	$0002	;614ec
+	dc.w	$4fd4	;614ee
+	dc.w	$0000	;614f0
+	dc.w	$000c	;614f2
+	dc.w	$0000	;614f4
+	dc.w	$0000	;614f6
+	dc.w	$8800	;614f8
+	dc.w	$0002	;614fa
+	dc.w	$4f84	;614fc
+	dc.w	$0002	;614fe
+	dc.w	$4f8c	;61500
+	dc.w	$0002	;61502
+	dc.w	$4fc4	;61504
+	dc.w	$0000	;61506
+	dc.w	$000c	;61508
+	dc.w	$0000	;6150a
+	dc.w	$0000	;6150c
+	dc.w	$7800	;6150e
+	dc.w	$0002	;61510
+	dc.w	$4f74	;61512
+	dc.w	$0002	;61514
+	dc.w	$4fcc	;61516
+	dc.w	$0002	;61518
+	dc.w	$4fdc	;6151a
+	dc.w	$0000	;6151c
+	dc.w	$000c	;6151e
+	dc.w	$0000	;61520
+	dc.w	$0000	;61522
+	dc.w	$7800	;61524
+	dc.w	$0002	;61526
+	dc.w	$4f74	;61528
+	dc.w	$0002	;6152a
+	dc.w	$4f7c	;6152c
+	dc.w	$0002	;6152e
+	dc.w	$4fcc	;61530
+	dc.w	$0000	;61532
+	dc.w	$000c	;61534
+	dc.w	$2c91	;61536
+	dc.w	$0000	;61538
+	dc.w	$6f6a	;6153a
+	dc.w	$0002	;6153c
+	dc.w	$4f6c	;6153e
+	dc.w	$0002	;61540
+	dc.w	$4f74	;61542
+	dc.w	$0002	;61544
+	dc.w	$4fdc	;61546
+	dc.w	$0000	;61548
+	dc.w	$0014	;6154a
+	dc.w	$2c91	;6154c
+	dc.w	$0000	;6154e
+	dc.w	$6f6a	;61550
+	dc.w	$0002	;61552
+	dc.w	$4f6c	;61554
+	dc.w	$0002	;61556
+	dc.w	$4fbc	;61558
+	dc.w	$0002	;6155a
+	dc.w	$4fdc	;6155c
+	dc.w	$0000	;6155e
+	dc.w	$0014	;61560
+	dc.w	$ec46	;61562
+	dc.w	$0000	;61564
+	dc.w	$765e	;61566
+	dc.w	$0002	;61568
+	dc.w	$4f64	;6156a
+	dc.w	$0002	;6156c
+	dc.w	$4f6c	;6156e
+	dc.w	$0002	;61570
+	dc.w	$4fbc	;61572
+	dc.w	$0000	;61574
+	dc.w	$000c	;61576
+	dc.w	$ec46	;61578
+	dc.w	$0000	;6157a
+	dc.w	$765e	;6157c
+	dc.w	$0002	;6157e
+	dc.w	$4f64	;61580
+	dc.w	$0002	;61582
+	dc.w	$4fa4	;61584
+	dc.w	$0002	;61586
+	dc.w	$4fbc	;61588
+	dc.w	$0000	;6158a
+	dc.w	$000c	;6158c
+	dc.w	$2c91	;6158e
+	dc.w	$0000	;61590
+	dc.w	$9096	;61592
+	dc.w	$0002	;61594
+	dc.w	$4f8c	;61596
+	dc.w	$0002	;61598
+	dc.w	$4f94	;6159a
+	dc.w	$0002	;6159c
+	dc.w	$4fd4	;6159e
+	dc.w	$0000	;615a0
+	dc.w	$0014	;615a2
+	dc.w	$2c91	;615a4
+	dc.w	$0000	;615a6
+	dc.w	$9096	;615a8
+	dc.w	$0002	;615aa
+	dc.w	$4f94	;615ac
+	dc.w	$0002	;615ae
+	dc.w	$4fb4	;615b0
+	dc.w	$0002	;615b2
+	dc.w	$4fd4	;615b4
+	dc.w	$0000	;615b6
+	dc.w	$0014	;615b8
+	dc.w	$ec46	;615ba
+	dc.w	$0000	;615bc
+	dc.w	$89a2	;615be
+	dc.w	$0002	;615c0
+	dc.w	$4f94	;615c2
+	dc.w	$0002	;615c4
+	dc.w	$4f9c	;615c6
+	dc.w	$0002	;615c8
+	dc.w	$4fb4	;615ca
+	dc.w	$0000	;615cc
+	dc.w	$000c	;615ce
+	dc.w	$ec46	;615d0
+	dc.w	$0000	;615d2
+	dc.w	$89a2	;615d4
+	dc.w	$0002	;615d6
+	dc.w	$4f9c	;615d8
+	dc.w	$0002	;615da
+	dc.w	$4fac	;615dc
+	dc.w	$0002	;615de
+	dc.w	$4fb4	;615e0
+	dc.w	$0000	;615e2
+	dc.w	$000c	;615e4
+	dc.w	$0000	;615e6
+	dc.w	$8800	;615e8
+	dc.w	$0000	;615ea
+	dc.w	$0002	;615ec
+	dc.w	$4f64	;615ee
+	dc.w	$0002	;615f0
+	dc.w	$4f6c	;615f2
+	dc.w	$0002	;615f4
+	dc.w	$4f9c	;615f6
+	dc.w	$0000	;615f8
+	dc.w	$0004	;615fa
+	dc.w	$0000	;615fc
+	dc.w	$8800	;615fe
+	dc.w	$0000	;61600
+	dc.w	$0002	;61602
+	dc.w	$4f6c	;61604
+	dc.w	$0002	;61606
+	dc.w	$4f94	;61608
+	dc.w	$0002	;6160a
+	dc.w	$4f9c	;6160c
+	dc.w	$0000	;6160e
+	dc.w	$0004	;61610
+	dc.w	$0000	;61612
+	dc.w	$8800	;61614
+	dc.w	$0000	;61616
+	dc.w	$0002	;61618
+	dc.w	$4f6c	;6161a
+	dc.w	$0002	;6161c
+	dc.w	$4f74	;6161e
+	dc.w	$0002	;61620
+	dc.w	$4f94	;61622
+	dc.w	$0000	;61624
+	dc.w	$0004	;61626
+	dc.w	$0000	;61628
+	dc.w	$8800	;6162a
+	dc.w	$0000	;6162c
+	dc.w	$0002	;6162e
+	dc.w	$4f74	;61630
+	dc.w	$0002	;61632
+	dc.w	$4f8c	;61634
+	dc.w	$0002	;61636
+	dc.w	$4f94	;61638
+	dc.w	$0000	;6163a
+	dc.w	$0004	;6163c
+	dc.w	$0000	;6163e
+	dc.w	$8800	;61640
+	dc.w	$0000	;61642
+	dc.w	$0002	;61644
+	dc.w	$4f74	;61646
+	dc.w	$0002	;61648
+	dc.w	$4f7c	;6164a
+	dc.w	$0002	;6164c
+	dc.w	$4f8c	;6164e
+	dc.w	$0000	;61650
+	dc.w	$0004	;61652
+	dc.w	$0000	;61654
+	dc.w	$8800	;61656
+	dc.w	$0000	;61658
+	dc.w	$0002	;6165a
+	dc.w	$4f7c	;6165c
+	dc.w	$0002	;6165e
+	dc.w	$4f84	;61660
+	dc.w	$0002	;61662
+	dc.w	$4f8c	;61664
+	dc.w	$0000	;61666
+	dc.w	$0004	;61668
+	dc.w	$0100	;6166a
+	dc.w	$0006	;6166c
+	dc.w	$0005	;6166e
+	dc.w	$0032	;61670
+	dc.w	$0000	;61672
+	dc.w	$0000	;61674
+	dc.w	$0000	;61676
+	dc.w	$fef0	;61678
+	dc.w	$ffe0	;6167a
+	dc.w	$fff8	;6167c
+	dc.w	$ffa0	;6167e
+	dc.w	$ffe0	;61680
+	dc.w	$0008	;61682
+	dc.w	$ffa0	;61684
+	dc.w	$ffe0	;61686
+	dc.w	$fff8	;61688
+	dc.w	$fef0	;6168a
+	dc.w	$fff0	;6168c
+	dc.w	$0000	;6168e
+	dc.w	$ffa0	;61690
+	dc.w	$fff0	;61692
+	dc.w	$0000	;61694
+	dc.w	$fef0	;61696
+	dc.w	$ffe0	;61698
+	dc.w	$0008	;6169a
+	dc.w	$0000	;6169c
+	dc.w	$ca56	;6169e
+	dc.w	$6b54	;616a0
+	dc.w	$0002	;616a2
+	dc.w	$4f64	;616a4
+	dc.w	$0002	;616a6
+	dc.w	$4f7c	;616a8
+	dc.w	$0002	;616aa
+	dc.w	$4f84	;616ac
+	dc.w	$0000	;616ae
+	dc.w	$000c	;616b0
+	dc.w	$0000	;616b2
+	dc.w	$ca56	;616b4
+	dc.w	$6b54	;616b6
+	dc.w	$0002	;616b8
+	dc.w	$4f64	;616ba
+	dc.w	$0002	;616bc
+	dc.w	$4f74	;616be
+	dc.w	$0002	;616c0
+	dc.w	$4f84	;616c2
+	dc.w	$0000	;616c4
+	dc.w	$000c	;616c6
+	dc.w	$0000	;616c8
+	dc.w	$ca56	;616ca
+	dc.w	$94ac	;616cc
+	dc.w	$0002	;616ce
+	dc.w	$4f8c	;616d0
+	dc.w	$0002	;616d2
+	dc.w	$4f6c	;616d4
+	dc.w	$0002	;616d6
+	dc.w	$4f84	;616d8
+	dc.w	$0000	;616da
+	dc.w	$000c	;616dc
+	dc.w	$0000	;616de
+	dc.w	$ca56	;616e0
+	dc.w	$94ac	;616e2
+	dc.w	$0002	;616e4
+	dc.w	$4f8c	;616e6
+	dc.w	$0002	;616e8
+	dc.w	$4f7c	;616ea
+	dc.w	$0002	;616ec
+	dc.w	$4f84	;616ee
+	dc.w	$0000	;616f0
+	dc.w	$000c	;616f2
+	dc.w	$0000	;616f4
+	dc.w	$8800	;616f6
+	dc.w	$0000	;616f8
+	dc.w	$0002	;616fa
+	dc.w	$4f8c	;616fc
+	dc.w	$0002	;616fe
+	dc.w	$4f64	;61700
+	dc.w	$0002	;61702
+	dc.w	$4f6c	;61704
+	dc.w	$0000	;61706
+	dc.w	$0004	;61708
+	dc.w	$0000	;6170a
+	dc.w	$8800	;6170c
+	dc.w	$0000	;6170e
+	dc.w	$0002	;61710
+	dc.w	$4f64	;61712
+	dc.w	$0002	;61714
+	dc.w	$4f6c	;61716
+	dc.w	$0002	;61718
+	dc.w	$4f74	;6171a
+	dc.w	$0000	;6171c
+	dc.w	$0004	;6171e
+	dc.w	$0100	;61720
+	dc.w	$0020	;61722
+	dc.w	$0029	;61724
+	dc.w	$00ce	;61726
+	dc.w	$0000	;61728
+	dc.w	$0000	;6172a
+	dc.w	$0000	;6172c
+	dc.w	$ffa0	;6172e
+	dc.w	$0000	;61730
+	dc.w	$0058	;61732
+	dc.w	$0090	;61734
+	dc.w	$0000	;61736
+	dc.w	$0058	;61738
+	dc.w	$0090	;6173a
+	dc.w	$0000	;6173c
+	dc.w	$ffa8	;6173e
+	dc.w	$ffa0	;61740
+	dc.w	$0000	;61742
+	dc.w	$ffa8	;61744
+	dc.w	$ff50	;61746
+	dc.w	$0030	;61748
+	dc.w	$ffa8	;6174a
+	dc.w	$ff50	;6174c
+	dc.w	$0030	;6174e
+	dc.w	$0058	;61750
+	dc.w	$00f0	;61752
+	dc.w	$0030	;61754
+	dc.w	$0058	;61756
+	dc.w	$00f0	;61758
+	dc.w	$0030	;6175a
+	dc.w	$ffa8	;6175c
+	dc.w	$00f0	;6175e
+	dc.w	$0030	;61760
+	dc.w	$ff88	;61762
+	dc.w	$ff50	;61764
+	dc.w	$0030	;61766
+	dc.w	$ff88	;61768
+	dc.w	$ff50	;6176a
+	dc.w	$0030	;6176c
+	dc.w	$0078	;6176e
+	dc.w	$00f0	;61770
+	dc.w	$0030	;61772
+	dc.w	$0078	;61774
+	dc.w	$00f0	;61776
+	dc.w	$0050	;61778
+	dc.w	$0078	;6177a
+	dc.w	$00f0	;6177c
+	dc.w	$0050	;6177e
+	dc.w	$ff88	;61780
+	dc.w	$00a0	;61782
+	dc.w	$0080	;61784
+	dc.w	$0078	;61786
+	dc.w	$00a0	;61788
+	dc.w	$0080	;6178a
+	dc.w	$ff88	;6178c
+	dc.w	$00a0	;6178e
+	dc.w	$0080	;61790
+	dc.w	$0058	;61792
+	dc.w	$00a0	;61794
+	dc.w	$0080	;61796
+	dc.w	$ffa8	;61798
+	dc.w	$00f0	;6179a
+	dc.w	$0050	;6179c
+	dc.w	$ffa8	;6179e
+	dc.w	$00f0	;617a0
+	dc.w	$0050	;617a2
+	dc.w	$0058	;617a4
+	dc.w	$00d0	;617a6
+	dc.w	$0050	;617a8
+	dc.w	$ffa8	;617aa
+	dc.w	$00d0	;617ac
+	dc.w	$0050	;617ae
+	dc.w	$0058	;617b0
+	dc.w	$ff50	;617b2
+	dc.w	$0050	;617b4
+	dc.w	$0078	;617b6
+	dc.w	$ff50	;617b8
+	dc.w	$0050	;617ba
+	dc.w	$ff88	;617bc
+	dc.w	$ffa0	;617be
+	dc.w	$0080	;617c0
+	dc.w	$0078	;617c2
+	dc.w	$ffa0	;617c4
+	dc.w	$0080	;617c6
+	dc.w	$ff88	;617c8
+	dc.w	$ffa0	;617ca
+	dc.w	$0080	;617cc
+	dc.w	$0058	;617ce
+	dc.w	$ffa0	;617d0
+	dc.w	$0080	;617d2
+	dc.w	$ffa8	;617d4
+	dc.w	$ff50	;617d6
+	dc.w	$0050	;617d8
+	dc.w	$0058	;617da
+	dc.w	$ff50	;617dc
+	dc.w	$0050	;617de
+	dc.w	$ffa8	;617e0
+	dc.w	$ff70	;617e2
+	dc.w	$0050	;617e4
+	dc.w	$0058	;617e6
+	dc.w	$ff70	;617e8
+	dc.w	$0050	;617ea
+	dc.w	$ffa8	;617ec
+	dc.w	$ab26	;617ee
+	dc.w	$54da	;617f0
+	dc.w	$0000	;617f2
+	dc.w	$0002	;617f4
+	dc.w	$4f84	;617f6
+	dc.w	$0002	;617f8
+	dc.w	$4f8c	;617fa
+	dc.w	$0002	;617fc
+	dc.w	$5054	;617fe
+	dc.w	$0000	;61800
+	dc.w	$000e	;61802
+	dc.w	$ab26	;61804
+	dc.w	$54da	;61806
+	dc.w	$0000	;61808
+	dc.w	$0002	;6180a
+	dc.w	$4f84	;6180c
+	dc.w	$0002	;6180e
+	dc.w	$5054	;61810
+	dc.w	$0002	;61812
+	dc.w	$505c	;61814
+	dc.w	$0000	;61816
+	dc.w	$000e	;61818
+	dc.w	$54da	;6181a
+	dc.w	$54da	;6181c
+	dc.w	$0000	;6181e
+	dc.w	$0002	;61820
+	dc.w	$4f94	;61822
+	dc.w	$0002	;61824
+	dc.w	$4f9c	;61826
+	dc.w	$0002	;61828
+	dc.w	$5004	;6182a
+	dc.w	$0000	;6182c
+	dc.w	$000e	;6182e
+	dc.w	$54da	;61830
+	dc.w	$54da	;61832
+	dc.w	$0000	;61834
+	dc.w	$0002	;61836
+	dc.w	$4f94	;61838
+	dc.w	$0002	;6183a
+	dc.w	$5004	;6183c
+	dc.w	$0002	;6183e
+	dc.w	$500c	;61840
+	dc.w	$0000	;61842
+	dc.w	$000e	;61844
+	dc.w	$8800	;61846
+	dc.w	$0000	;61848
+	dc.w	$0000	;6184a
+	dc.w	$0002	;6184c
+	dc.w	$4f8c	;6184e
+	dc.w	$0002	;61850
+	dc.w	$4fb4	;61852
+	dc.w	$0002	;61854
+	dc.w	$5014	;61856
+	dc.w	$0000	;61858
+	dc.w	$0017	;6185a
+	dc.w	$8800	;6185c
+	dc.w	$0000	;6185e
+	dc.w	$0000	;61860
+	dc.w	$0002	;61862
+	dc.w	$4f8c	;61864
+	dc.w	$0002	;61866
+	dc.w	$5014	;61868
+	dc.w	$0002	;6186a
+	dc.w	$5044	;6186c
+	dc.w	$0000	;6186e
+	dc.w	$0017	;61870
+	dc.w	$c243	;61872
+	dc.w	$66e6	;61874
+	dc.w	$0000	;61876
+	dc.w	$0002	;61878
+	dc.w	$5014	;6187a
+	dc.w	$0002	;6187c
+	dc.w	$5024	;6187e
+	dc.w	$0002	;61880
+	dc.w	$5044	;61882
+	dc.w	$0000	;61884
+	dc.w	$0017	;61886
+	dc.w	$c243	;61888
+	dc.w	$66e6	;6188a
+	dc.w	$0000	;6188c
+	dc.w	$0002	;6188e
+	dc.w	$5024	;61890
+	dc.w	$0002	;61892
+	dc.w	$5034	;61894
+	dc.w	$0002	;61896
+	dc.w	$5044	;61898
+	dc.w	$0000	;6189a
+	dc.w	$0017	;6189c
+	dc.w	$8800	;6189e
+	dc.w	$0000	;618a0
+	dc.w	$0000	;618a2
+	dc.w	$0002	;618a4
+	dc.w	$4f84	;618a6
+	dc.w	$0002	;618a8
+	dc.w	$4fac	;618aa
+	dc.w	$0002	;618ac
+	dc.w	$501c	;618ae
+	dc.w	$0000	;618b0
+	dc.w	$0017	;618b2
+	dc.w	$8800	;618b4
+	dc.w	$0000	;618b6
+	dc.w	$0000	;618b8
+	dc.w	$0002	;618ba
+	dc.w	$4f84	;618bc
+	dc.w	$0002	;618be
+	dc.w	$501c	;618c0
+	dc.w	$0002	;618c2
+	dc.w	$504c	;618c4
+	dc.w	$0000	;618c6
+	dc.w	$0017	;618c8
+	dc.w	$c243	;618ca
+	dc.w	$66e6	;618cc
+	dc.w	$0000	;618ce
+	dc.w	$0002	;618d0
+	dc.w	$501c	;618d2
+	dc.w	$0002	;618d4
+	dc.w	$502c	;618d6
+	dc.w	$0002	;618d8
+	dc.w	$504c	;618da
+	dc.w	$0000	;618dc
+	dc.w	$0017	;618de
+	dc.w	$c243	;618e0
+	dc.w	$66e6	;618e2
+	dc.w	$0000	;618e4
+	dc.w	$0002	;618e6
+	dc.w	$502c	;618e8
+	dc.w	$0002	;618ea
+	dc.w	$503c	;618ec
+	dc.w	$0002	;618ee
+	dc.w	$504c	;618f0
+	dc.w	$0000	;618f2
+	dc.w	$0017	;618f4
+	dc.w	$7800	;618f6
+	dc.w	$0000	;618f8
+	dc.w	$0000	;618fa
+	dc.w	$0002	;618fc
+	dc.w	$4f9c	;618fe
+	dc.w	$0002	;61900
+	dc.w	$4fa4	;61902
+	dc.w	$0002	;61904
+	dc.w	$4fcc	;61906
+	dc.w	$0000	;61908
+	dc.w	$0017	;6190a
+	dc.w	$7800	;6190c
+	dc.w	$0000	;6190e
+	dc.w	$0000	;61910
+	dc.w	$0002	;61912
+	dc.w	$4f9c	;61914
+	dc.w	$0002	;61916
+	dc.w	$4fcc	;61918
+	dc.w	$0002	;6191a
+	dc.w	$4ff4	;6191c
+	dc.w	$0000	;6191e
+	dc.w	$0017	;61920
+	dc.w	$3dbd	;61922
+	dc.w	$66e6	;61924
+	dc.w	$0000	;61926
+	dc.w	$0002	;61928
+	dc.w	$4fcc	;6192a
+	dc.w	$0002	;6192c
+	dc.w	$4fdc	;6192e
+	dc.w	$0002	;61930
+	dc.w	$4ff4	;61932
+	dc.w	$0000	;61934
+	dc.w	$0017	;61936
+	dc.w	$3dbd	;61938
+	dc.w	$66e6	;6193a
+	dc.w	$0000	;6193c
+	dc.w	$0002	;6193e
+	dc.w	$4fdc	;61940
+	dc.w	$0002	;61942
+	dc.w	$4fec	;61944
+	dc.w	$0002	;61946
+	dc.w	$4ff4	;61948
+	dc.w	$0000	;6194a
+	dc.w	$0017	;6194c
+	dc.w	$7800	;6194e
+	dc.w	$0000	;61950
+	dc.w	$0000	;61952
+	dc.w	$0002	;61954
+	dc.w	$4f94	;61956
+	dc.w	$0002	;61958
+	dc.w	$4fbc	;6195a
+	dc.w	$0002	;6195c
+	dc.w	$4fc4	;6195e
+	dc.w	$0000	;61960
+	dc.w	$0017	;61962
+	dc.w	$7800	;61964
+	dc.w	$0000	;61966
+	dc.w	$0000	;61968
+	dc.w	$0002	;6196a
+	dc.w	$4f94	;6196c
+	dc.w	$0002	;6196e
+	dc.w	$4fc4	;61970
+	dc.w	$0002	;61972
+	dc.w	$4ffc	;61974
+	dc.w	$0000	;61976
+	dc.w	$0017	;61978
+	dc.w	$3dbd	;6197a
+	dc.w	$66e6	;6197c
+	dc.w	$0000	;6197e
+	dc.w	$0002	;61980
+	dc.w	$4fc4	;61982
+	dc.w	$0002	;61984
+	dc.w	$4fd4	;61986
+	dc.w	$0002	;61988
+	dc.w	$4ffc	;6198a
+	dc.w	$0000	;6198c
+	dc.w	$0017	;6198e
+	dc.w	$3dbd	;61990
+	dc.w	$66e6	;61992
+	dc.w	$0000	;61994
+	dc.w	$0002	;61996
+	dc.w	$4fd4	;61998
+	dc.w	$0002	;6199a
+	dc.w	$4fe4	;6199c
+	dc.w	$0002	;6199e
+	dc.w	$4ffc	;619a0
+	dc.w	$0000	;619a2
+	dc.w	$0017	;619a4
+	dc.w	$0000	;619a6
+	dc.w	$0000	;619a8
+	dc.w	$7800	;619aa
+	dc.w	$0002	;619ac
+	dc.w	$4fbc	;619ae
+	dc.w	$0002	;619b0
+	dc.w	$4fc4	;619b2
+	dc.w	$0002	;619b4
+	dc.w	$4fd4	;619b6
+	dc.w	$0000	;619b8
+	dc.w	$0016	;619ba
+	dc.w	$0000	;619bc
+	dc.w	$0000	;619be
+	dc.w	$7800	;619c0
+	dc.w	$0002	;619c2
+	dc.w	$4fbc	;619c4
+	dc.w	$0002	;619c6
+	dc.w	$4fd4	;619c8
+	dc.w	$0002	;619ca
+	dc.w	$5024	;619cc
+	dc.w	$0000	;619ce
+	dc.w	$0016	;619d0
+	dc.w	$0000	;619d2
+	dc.w	$0000	;619d4
+	dc.w	$7800	;619d6
+	dc.w	$0002	;619d8
+	dc.w	$4fbc	;619da
+	dc.w	$0002	;619dc
+	dc.w	$5014	;619de
+	dc.w	$0002	;619e0
+	dc.w	$5024	;619e2
+	dc.w	$0000	;619e4
+	dc.w	$0016	;619e6
+	dc.w	$0000	;619e8
+	dc.w	$0000	;619ea
+	dc.w	$7800	;619ec
+	dc.w	$0002	;619ee
+	dc.w	$4fb4	;619f0
+	dc.w	$0002	;619f2
+	dc.w	$4fbc	;619f4
+	dc.w	$0002	;619f6
+	dc.w	$5014	;619f8
+	dc.w	$0000	;619fa
+	dc.w	$0016	;619fc
+	dc.w	$0000	;619fe
+	dc.w	$0000	;61a00
+	dc.w	$8800	;61a02
+	dc.w	$0002	;61a04
+	dc.w	$4fa4	;61a06
+	dc.w	$0002	;61a08
+	dc.w	$4fac	;61a0a
+	dc.w	$0002	;61a0c
+	dc.w	$501c	;61a0e
+	dc.w	$0000	;61a10
+	dc.w	$0016	;61a12
+	dc.w	$0000	;61a14
+	dc.w	$0000	;61a16
+	dc.w	$8800	;61a18
+	dc.w	$0002	;61a1a
+	dc.w	$4fa4	;61a1c
+	dc.w	$0002	;61a1e
+	dc.w	$501c	;61a20
+	dc.w	$0002	;61a22
+	dc.w	$502c	;61a24
+	dc.w	$0000	;61a26
+	dc.w	$0016	;61a28
+	dc.w	$0000	;61a2a
+	dc.w	$0000	;61a2c
+	dc.w	$8800	;61a2e
+	dc.w	$0002	;61a30
+	dc.w	$4fa4	;61a32
+	dc.w	$0002	;61a34
+	dc.w	$4fdc	;61a36
+	dc.w	$0002	;61a38
+	dc.w	$502c	;61a3a
+	dc.w	$0000	;61a3c
+	dc.w	$0016	;61a3e
+	dc.w	$0000	;61a40
+	dc.w	$0000	;61a42
+	dc.w	$8800	;61a44
+	dc.w	$0002	;61a46
+	dc.w	$4fa4	;61a48
+	dc.w	$0002	;61a4a
+	dc.w	$4fcc	;61a4c
+	dc.w	$0002	;61a4e
+	dc.w	$4fdc	;61a50
+	dc.w	$0000	;61a52
+	dc.w	$0016	;61a54
+	dc.w	$0000	;61a56
+	dc.w	$8800	;61a58
+	dc.w	$0000	;61a5a
+	dc.w	$0002	;61a5c
+	dc.w	$4f8c	;61a5e
+	dc.w	$0002	;61a60
+	dc.w	$4f94	;61a62
+	dc.w	$0002	;61a64
+	dc.w	$4fb4	;61a66
+	dc.w	$0000	;61a68
+	dc.w	$0002	;61a6a
+	dc.w	$0000	;61a6c
+	dc.w	$8800	;61a6e
+	dc.w	$0000	;61a70
+	dc.w	$0002	;61a72
+	dc.w	$4f94	;61a74
+	dc.w	$0002	;61a76
+	dc.w	$4fb4	;61a78
+	dc.w	$0002	;61a7a
+	dc.w	$4fbc	;61a7c
+	dc.w	$0000	;61a7e
+	dc.w	$0002	;61a80
+	dc.w	$0000	;61a82
+	dc.w	$8800	;61a84
+	dc.w	$0000	;61a86
+	dc.w	$0002	;61a88
+	dc.w	$4f84	;61a8a
+	dc.w	$0002	;61a8c
+	dc.w	$4f9c	;61a8e
+	dc.w	$0002	;61a90
+	dc.w	$4fac	;61a92
+	dc.w	$0000	;61a94
+	dc.w	$0002	;61a96
+	dc.w	$0000	;61a98
+	dc.w	$8800	;61a9a
+	dc.w	$0000	;61a9c
+	dc.w	$0002	;61a9e
+	dc.w	$4f9c	;61aa0
+	dc.w	$0002	;61aa2
+	dc.w	$4fa4	;61aa4
+	dc.w	$0002	;61aa6
+	dc.w	$4fac	;61aa8
+	dc.w	$0000	;61aaa
+	dc.w	$0002	;61aac
+	dc.w	$0000	;61aae
+	dc.w	$0000	;61ab0
+	dc.w	$8800	;61ab2
+	dc.w	$0002	;61ab4
+	dc.w	$4f74	;61ab6
+	dc.w	$0002	;61ab8
+	dc.w	$4f7c	;61aba
+	dc.w	$0002	;61abc
+	dc.w	$4f84	;61abe
+	dc.w	$0000	;61ac0
+	dc.w	$0006	;61ac2
+	dc.w	$0000	;61ac4
+	dc.w	$0000	;61ac6
+	dc.w	$8800	;61ac8
+	dc.w	$0002	;61aca
+	dc.w	$4f74	;61acc
+	dc.w	$0002	;61ace
+	dc.w	$4f9c	;61ad0
+	dc.w	$0002	;61ad2
+	dc.w	$4f84	;61ad4
+	dc.w	$0000	;61ad6
+	dc.w	$0006	;61ad8
+	dc.w	$0000	;61ada
+	dc.w	$0000	;61adc
+	dc.w	$7800	;61ade
+	dc.w	$0002	;61ae0
+	dc.w	$4f64	;61ae2
+	dc.w	$0002	;61ae4
+	dc.w	$4f6c	;61ae6
+	dc.w	$0002	;61ae8
+	dc.w	$4f8c	;61aea
+	dc.w	$0000	;61aec
+	dc.w	$0006	;61aee
+	dc.w	$0000	;61af0
+	dc.w	$0000	;61af2
+	dc.w	$7800	;61af4
+	dc.w	$0002	;61af6
+	dc.w	$4f6c	;61af8
+	dc.w	$0002	;61afa
+	dc.w	$4f8c	;61afc
+	dc.w	$0002	;61afe
+	dc.w	$4f94	;61b00
+	dc.w	$0000	;61b02
+	dc.w	$0006	;61b04
+	dc.w	$c243	;61b06
+	dc.w	$991a	;61b08
+	dc.w	$0000	;61b0a
+	dc.w	$0002	;61b0c
+	dc.w	$4f64	;61b0e
+	dc.w	$0002	;61b10
+	dc.w	$4f84	;61b12
+	dc.w	$0002	;61b14
+	dc.w	$4f8c	;61b16
+	dc.w	$0000	;61b18
+	dc.w	$0012	;61b1a
+	dc.w	$c243	;61b1c
+	dc.w	$991a	;61b1e
+	dc.w	$0000	;61b20
+	dc.w	$0002	;61b22
+	dc.w	$4f64	;61b24
+	dc.w	$0002	;61b26
+	dc.w	$4f7c	;61b28
+	dc.w	$0002	;61b2a
+	dc.w	$4f84	;61b2c
+	dc.w	$0000	;61b2e
+	dc.w	$0012	;61b30
+	dc.w	$35aa	;61b32
+	dc.w	$94ac	;61b34
+	dc.w	$0000	;61b36
+	dc.w	$0002	;61b38
+	dc.w	$4f6c	;61b3a
+	dc.w	$0002	;61b3c
+	dc.w	$4f74	;61b3e
+	dc.w	$0002	;61b40
+	dc.w	$4f94	;61b42
+	dc.w	$0000	;61b44
+	dc.w	$0012	;61b46
+	dc.w	$35aa	;61b48
+	dc.w	$94ac	;61b4a
+	dc.w	$0000	;61b4c
+	dc.w	$0002	;61b4e
+	dc.w	$4f74	;61b50
+	dc.w	$0002	;61b52
+	dc.w	$4f94	;61b54
+	dc.w	$0002	;61b56
+	dc.w	$4f9c	;61b58
+	dc.w	$0000	;61b5a
+	dc.w	$0012	;61b5c
+	dc.w	$0000	;61b5e
+	dc.w	$0000	;61b60
+	dc.w	$0000	;61b62
+	dc.w	$0002	;61b64
+	dc.w	$4f64	;61b66
+	dc.w	$0002	;61b68
+	dc.w	$4f6c	;61b6a
+	dc.w	$0002	;61b6c
+	dc.w	$4f7c	;61b6e
+	dc.w	$0000	;61b70
+	dc.w	$0002	;61b72
+	dc.w	$0000	;61b74
+	dc.w	$0000	;61b76
+	dc.w	$0000	;61b78
+	dc.w	$0002	;61b7a
+	dc.w	$4f6c	;61b7c
+	dc.w	$0002	;61b7e
+	dc.w	$4f74	;61b80
+	dc.w	$0002	;61b82
+	dc.w	$4f7c	;61b84
+	dc.w	$0000	;61b86
+	dc.w	$0002	;61b88
+	dc.w	$0100	;61b8a
+	dc.w	$000e	;61b8c
+	dc.w	$0013	;61b8e
+	dc.w	$0062	;61b90
+	dc.w	$0000	;61b92
+	dc.w	$0000	;61b94
+	dc.w	$0000	;61b96
+	dc.w	$ffc0	;61b98
+	dc.w	$ffd0	;61b9a
+	dc.w	$0028	;61b9c
+	dc.w	$0000	;61b9e
+	dc.w	$ffd0	;61ba0
+	dc.w	$0058	;61ba2
+	dc.w	$0090	;61ba4
+	dc.w	$ffe0	;61ba6
+	dc.w	$0028	;61ba8
+	dc.w	$0090	;61baa
+	dc.w	$ffe0	;61bac
+	dc.w	$ffd8	;61bae
+	dc.w	$0000	;61bb0
+	dc.w	$ffd0	;61bb2
+	dc.w	$ffa8	;61bb4
+	dc.w	$ffc0	;61bb6
+	dc.w	$ffd0	;61bb8
+	dc.w	$ffd8	;61bba
+	dc.w	$ffb0	;61bbc
+	dc.w	$ffe8	;61bbe
+	dc.w	$ffd8	;61bc0
+	dc.w	$ffb0	;61bc2
+	dc.w	$ffe8	;61bc4
+	dc.w	$0028	;61bc6
+	dc.w	$0000	;61bc8
+	dc.w	$0000	;61bca
+	dc.w	$ffa8	;61bcc
+	dc.w	$0000	;61bce
+	dc.w	$0000	;61bd0
+	dc.w	$0058	;61bd2
+	dc.w	$ffc0	;61bd4
+	dc.w	$0000	;61bd6
+	dc.w	$0028	;61bd8
+	dc.w	$ffc0	;61bda
+	dc.w	$0000	;61bdc
+	dc.w	$ffd8	;61bde
+	dc.w	$0090	;61be0
+	dc.w	$0000	;61be2
+	dc.w	$ffd8	;61be4
+	dc.w	$0090	;61be6
+	dc.w	$0000	;61be8
+	dc.w	$0028	;61bea
+	dc.w	$9c28	;61bec
+	dc.w	$4290	;61bee
+	dc.w	$0000	;61bf0
+	dc.w	$0002	;61bf2
+	dc.w	$4f94	;61bf4
+	dc.w	$0002	;61bf6
+	dc.w	$4f9c	;61bf8
+	dc.w	$0002	;61bfa
+	dc.w	$4fb4	;61bfc
+	dc.w	$0000	;61bfe
+	dc.w	$000e	;61c00
+	dc.w	$9c28	;61c02
+	dc.w	$4290	;61c04
+	dc.w	$0000	;61c06
+	dc.w	$0002	;61c08
+	dc.w	$4f94	;61c0a
+	dc.w	$0002	;61c0c
+	dc.w	$4fb4	;61c0e
+	dc.w	$0002	;61c10
+	dc.w	$4fbc	;61c12
+	dc.w	$0000	;61c14
+	dc.w	$000e	;61c16
+	dc.w	$b800	;61c18
+	dc.w	$0000	;61c1a
+	dc.w	$6000	;61c1c
+	dc.w	$0002	;61c1e
+	dc.w	$4f64	;61c20
+	dc.w	$0002	;61c22
+	dc.w	$4f6c	;61c24
+	dc.w	$0002	;61c26
+	dc.w	$4fac	;61c28
+	dc.w	$0000	;61c2a
+	dc.w	$0006	;61c2c
+	dc.w	$b800	;61c2e
+	dc.w	$0000	;61c30
+	dc.w	$6000	;61c32
+	dc.w	$0002	;61c34
+	dc.w	$4f64	;61c36
+	dc.w	$0002	;61c38
+	dc.w	$4fb4	;61c3a
+	dc.w	$0002	;61c3c
+	dc.w	$4fac	;61c3e
+	dc.w	$0000	;61c40
+	dc.w	$0006	;61c42
+	dc.w	$b800	;61c44
+	dc.w	$0000	;61c46
+	dc.w	$a000	;61c48
+	dc.w	$0002	;61c4a
+	dc.w	$4f84	;61c4c
+	dc.w	$0002	;61c4e
+	dc.w	$4f8c	;61c50
+	dc.w	$0002	;61c52
+	dc.w	$4fa4	;61c54
+	dc.w	$0000	;61c56
+	dc.w	$0006	;61c58
+	dc.w	$b800	;61c5a
+	dc.w	$0000	;61c5c
+	dc.w	$a000	;61c5e
+	dc.w	$0002	;61c60
+	dc.w	$4f8c	;61c62
+	dc.w	$0002	;61c64
+	dc.w	$4fbc	;61c66
+	dc.w	$0002	;61c68
+	dc.w	$4fa4	;61c6a
+	dc.w	$0000	;61c6c
+	dc.w	$0006	;61c6e
+	dc.w	$7800	;61c70
+	dc.w	$0000	;61c72
+	dc.w	$0000	;61c74
+	dc.w	$0002	;61c76
+	dc.w	$4f7c	;61c78
+	dc.w	$0002	;61c7a
+	dc.w	$4fc4	;61c7c
+	dc.w	$0002	;61c7e
+	dc.w	$4fcc	;61c80
+	dc.w	$0000	;61c82
+	dc.w	$0006	;61c84
+	dc.w	$7800	;61c86
+	dc.w	$0000	;61c88
+	dc.w	$0000	;61c8a
+	dc.w	$0002	;61c8c
+	dc.w	$4f74	;61c8e
+	dc.w	$0002	;61c90
+	dc.w	$4f7c	;61c92
+	dc.w	$0002	;61c94
+	dc.w	$4fcc	;61c96
+	dc.w	$0000	;61c98
+	dc.w	$0006	;61c9a
+	dc.w	$25f2	;61c9c
+	dc.w	$0000	;61c9e
+	dc.w	$8e29	;61ca0
+	dc.w	$0002	;61ca2
+	dc.w	$4f84	;61ca4
+	dc.w	$0002	;61ca6
+	dc.w	$4fc4	;61ca8
+	dc.w	$0002	;61caa
+	dc.w	$4fa4	;61cac
+	dc.w	$0000	;61cae
+	dc.w	$000a	;61cb0
+	dc.w	$25f2	;61cb2
+	dc.w	$0000	;61cb4
+	dc.w	$8e29	;61cb6
+	dc.w	$0002	;61cb8
+	dc.w	$4f7c	;61cba
+	dc.w	$0002	;61cbc
+	dc.w	$4f84	;61cbe
+	dc.w	$0002	;61cc0
+	dc.w	$4fc4	;61cc2
+	dc.w	$0000	;61cc4
+	dc.w	$000a	;61cc6
+	dc.w	$25f2	;61cc8
+	dc.w	$0000	;61cca
+	dc.w	$71d7	;61ccc
+	dc.w	$0002	;61cce
+	dc.w	$4f6c	;61cd0
+	dc.w	$0002	;61cd2
+	dc.w	$4f74	;61cd4
+	dc.w	$0002	;61cd6
+	dc.w	$4fcc	;61cd8
+	dc.w	$0000	;61cda
+	dc.w	$000a	;61cdc
+	dc.w	$25f2	;61cde
+	dc.w	$0000	;61ce0
+	dc.w	$71d7	;61ce2
+	dc.w	$0002	;61ce4
+	dc.w	$4f6c	;61ce6
+	dc.w	$0002	;61ce8
+	dc.w	$4fcc	;61cea
+	dc.w	$0002	;61cec
+	dc.w	$4fac	;61cee
+	dc.w	$0000	;61cf0
+	dc.w	$000a	;61cf2
+	dc.w	$0000	;61cf4
+	dc.w	$0000	;61cf6
+	dc.w	$8800	;61cf8
+	dc.w	$0002	;61cfa
+	dc.w	$4f8c	;61cfc
+	dc.w	$0002	;61cfe
+	dc.w	$4f94	;61d00
+	dc.w	$0002	;61d02
+	dc.w	$4fbc	;61d04
+	dc.w	$0000	;61d06
+	dc.w	$000a	;61d08
+	dc.w	$0000	;61d0a
+	dc.w	$0000	;61d0c
+	dc.w	$7800	;61d0e
+	dc.w	$0002	;61d10
+	dc.w	$4f64	;61d12
+	dc.w	$0002	;61d14
+	dc.w	$4f9c	;61d16
+	dc.w	$0002	;61d18
+	dc.w	$4fb4	;61d1a
+	dc.w	$0000	;61d1c
+	dc.w	$000a	;61d1e
+	dc.w	$9c28	;61d20
+	dc.w	$bd70	;61d22
+	dc.w	$0000	;61d24
+	dc.w	$0002	;61d26
+	dc.w	$4f64	;61d28
+	dc.w	$0002	;61d2a
+	dc.w	$4f94	;61d2c
+	dc.w	$0002	;61d2e
+	dc.w	$4f9c	;61d30
+	dc.w	$0000	;61d32
+	dc.w	$0012	;61d34
+	dc.w	$9c28	;61d36
+	dc.w	$bd70	;61d38
+	dc.w	$0000	;61d3a
+	dc.w	$0002	;61d3c
+	dc.w	$4f64	;61d3e
+	dc.w	$0002	;61d40
+	dc.w	$4f8c	;61d42
+	dc.w	$0002	;61d44
+	dc.w	$4f94	;61d46
+	dc.w	$0000	;61d48
+	dc.w	$0012	;61d4a
+	dc.w	$0000	;61d4c
+	dc.w	$8800	;61d4e
+	dc.w	$0000	;61d50
+	dc.w	$0002	;61d52
+	dc.w	$4f64	;61d54
+	dc.w	$0002	;61d56
+	dc.w	$4f6c	;61d58
+	dc.w	$0002	;61d5a
+	dc.w	$4f8c	;61d5c
+	dc.w	$0000	;61d5e
+	dc.w	$0002	;61d60
+	dc.w	$0000	;61d62
+	dc.w	$8800	;61d64
+	dc.w	$0000	;61d66
+	dc.w	$0002	;61d68
+	dc.w	$4f6c	;61d6a
+	dc.w	$0002	;61d6c
+	dc.w	$4f84	;61d6e
+	dc.w	$0002	;61d70
+	dc.w	$4f8c	;61d72
+	dc.w	$0000	;61d74
+	dc.w	$0002	;61d76
+	dc.w	$0d40	;61d78
+	dc.w	$88bc	;61d7a
+	dc.w	$0000	;61d7c
+	dc.w	$0002	;61d7e
+	dc.w	$4f6c	;61d80
+	dc.w	$0002	;61d82
+	dc.w	$4f74	;61d84
+	dc.w	$0002	;61d86
+	dc.w	$4f84	;61d88
+	dc.w	$0000	;61d8a
+	dc.w	$0002	;61d8c
+	dc.w	$0d40	;61d8e
+	dc.w	$88bc	;61d90
+	dc.w	$0000	;61d92
+	dc.w	$0002	;61d94
+	dc.w	$4f74	;61d96
+	dc.w	$0002	;61d98
+	dc.w	$4f7c	;61d9a
+	dc.w	$0002	;61d9c
+	dc.w	$4f84	;61d9e
+	dc.w	$0000	;61da0
+	dc.w	$0002	;61da2
+	dc.w	$0100	;61da4
+	dc.w	$0006	;61da6
+	dc.w	$0005	;61da8
+	dc.w	$0032	;61daa
+	dc.w	$0000	;61dac
+	dc.w	$0000	;61dae
+	dc.w	$0000	;61db0
+	dc.w	$ff20	;61db2
+	dc.w	$ffe0	;61db4
+	dc.w	$fff8	;61db6
+	dc.w	$ffb0	;61db8
+	dc.w	$ffe0	;61dba
+	dc.w	$0008	;61dbc
+	dc.w	$ffb0	;61dbe
+	dc.w	$ffe0	;61dc0
+	dc.w	$fff8	;61dc2
+	dc.w	$ff20	;61dc4
+	dc.w	$fff0	;61dc6
+	dc.w	$0000	;61dc8
+	dc.w	$ffb0	;61dca
+	dc.w	$fff0	;61dcc
+	dc.w	$0000	;61dce
+	dc.w	$ff20	;61dd0
+	dc.w	$ffe0	;61dd2
+	dc.w	$0008	;61dd4
+	dc.w	$0000	;61dd6
+	dc.w	$ca56	;61dd8
+	dc.w	$6b54	;61dda
+	dc.w	$0002	;61ddc
+	dc.w	$4f64	;61dde
+	dc.w	$0002	;61de0
+	dc.w	$4f7c	;61de2
+	dc.w	$0002	;61de4
+	dc.w	$4f84	;61de6
+	dc.w	$0000	;61de8
+	dc.w	$000a	;61dea
+	dc.w	$0000	;61dec
+	dc.w	$ca56	;61dee
+	dc.w	$6b54	;61df0
+	dc.w	$0002	;61df2
+	dc.w	$4f64	;61df4
+	dc.w	$0002	;61df6
+	dc.w	$4f74	;61df8
+	dc.w	$0002	;61dfa
+	dc.w	$4f84	;61dfc
+	dc.w	$0000	;61dfe
+	dc.w	$000a	;61e00
+	dc.w	$0000	;61e02
+	dc.w	$ca56	;61e04
+	dc.w	$94ac	;61e06
+	dc.w	$0002	;61e08
+	dc.w	$4f8c	;61e0a
+	dc.w	$0002	;61e0c
+	dc.w	$4f6c	;61e0e
+	dc.w	$0002	;61e10
+	dc.w	$4f84	;61e12
+	dc.w	$0000	;61e14
+	dc.w	$000a	;61e16
+	dc.w	$0000	;61e18
+	dc.w	$ca56	;61e1a
+	dc.w	$94ac	;61e1c
+	dc.w	$0002	;61e1e
+	dc.w	$4f8c	;61e20
+	dc.w	$0002	;61e22
+	dc.w	$4f7c	;61e24
+	dc.w	$0002	;61e26
+	dc.w	$4f84	;61e28
+	dc.w	$0000	;61e2a
+	dc.w	$000a	;61e2c
+	dc.w	$0000	;61e2e
+	dc.w	$8800	;61e30
+	dc.w	$0000	;61e32
+	dc.w	$0002	;61e34
+	dc.w	$4f8c	;61e36
+	dc.w	$0002	;61e38
+	dc.w	$4f64	;61e3a
+	dc.w	$0002	;61e3c
+	dc.w	$4f6c	;61e3e
+	dc.w	$0000	;61e40
+	dc.w	$0002	;61e42
+	dc.w	$0000	;61e44
+	dc.w	$8800	;61e46
+	dc.w	$0000	;61e48
+	dc.w	$0002	;61e4a
+	dc.w	$4f64	;61e4c
+	dc.w	$0002	;61e4e
+	dc.w	$4f6c	;61e50
+	dc.w	$0002	;61e52
+	dc.w	$4f74	;61e54
+	dc.w	$0000	;61e56
+	dc.w	$0002	;61e58
+	dc.w	$0100	;61e5a
+	dc.w	$0026	;61e5c
+	dc.w	$0031	;61e5e
+	dc.w	$00f2	;61e60
+	dc.w	$0000	;61e62
+	dc.w	$0000	;61e64
+	dc.w	$0000	;61e66
+	dc.w	$ff30	;61e68
+	dc.w	$0000	;61e6a
+	dc.w	$0070	;61e6c
+	dc.w	$0100	;61e6e
+	dc.w	$0000	;61e70
+	dc.w	$0070	;61e72
+	dc.w	$0100	;61e74
+	dc.w	$0000	;61e76
+	dc.w	$ff90	;61e78
+	dc.w	$ff30	;61e7a
+	dc.w	$0000	;61e7c
+	dc.w	$ff90	;61e7e
+	dc.w	$fef0	;61e80
+	dc.w	$0030	;61e82
+	dc.w	$ff70	;61e84
+	dc.w	$00d0	;61e86
+	dc.w	$0060	;61e88
+	dc.w	$ff70	;61e8a
+	dc.w	$00d0	;61e8c
+	dc.w	$0060	;61e8e
+	dc.w	$0090	;61e90
+	dc.w	$fef0	;61e92
+	dc.w	$0030	;61e94
+	dc.w	$0090	;61e96
+	dc.w	$fec0	;61e98
+	dc.w	$0040	;61e9a
+	dc.w	$0090	;61e9c
+	dc.w	$fec0	;61e9e
+	dc.w	$0040	;61ea0
+	dc.w	$ff70	;61ea2
+	dc.w	$fec0	;61ea4
+	dc.w	$0040	;61ea6
+	dc.w	$ffa0	;61ea8
+	dc.w	$fec0	;61eaa
+	dc.w	$0040	;61eac
+	dc.w	$0060	;61eae
+	dc.w	$fed0	;61eb0
+	dc.w	$0050	;61eb2
+	dc.w	$0060	;61eb4
+	dc.w	$fed0	;61eb6
+	dc.w	$0050	;61eb8
+	dc.w	$ffa0	;61eba
+	dc.w	$fef0	;61ebc
+	dc.w	$0030	;61ebe
+	dc.w	$ffa0	;61ec0
+	dc.w	$fef0	;61ec2
+	dc.w	$0030	;61ec4
+	dc.w	$0060	;61ec6
+	dc.w	$fec0	;61ec8
+	dc.w	$0070	;61eca
+	dc.w	$0090	;61ecc
+	dc.w	$fec0	;61ece
+	dc.w	$0070	;61ed0
+	dc.w	$ff70	;61ed2
+	dc.w	$fef0	;61ed4
+	dc.w	$0070	;61ed6
+	dc.w	$0060	;61ed8
+	dc.w	$fef0	;61eda
+	dc.w	$0070	;61edc
+	dc.w	$ffa0	;61ede
+	dc.w	$ff30	;61ee0
+	dc.w	$00a0	;61ee2
+	dc.w	$0090	;61ee4
+	dc.w	$ff30	;61ee6
+	dc.w	$00a0	;61ee8
+	dc.w	$ff70	;61eea
+	dc.w	$ff30	;61eec
+	dc.w	$00a0	;61eee
+	dc.w	$0060	;61ef0
+	dc.w	$ff30	;61ef2
+	dc.w	$00a0	;61ef4
+	dc.w	$ffa0	;61ef6
+	dc.w	$00d0	;61ef8
+	dc.w	$0080	;61efa
+	dc.w	$ff70	;61efc
+	dc.w	$00d0	;61efe
+	dc.w	$0080	;61f00
+	dc.w	$0090	;61f02
+	dc.w	$0090	;61f04
+	dc.w	$00a0	;61f06
+	dc.w	$ff70	;61f08
+	dc.w	$0090	;61f0a
+	dc.w	$00a0	;61f0c
+	dc.w	$0090	;61f0e
+	dc.w	$0090	;61f10
+	dc.w	$00a0	;61f12
+	dc.w	$ffa0	;61f14
+	dc.w	$0090	;61f16
+	dc.w	$00a0	;61f18
+	dc.w	$0060	;61f1a
+	dc.w	$00d0	;61f1c
+	dc.w	$0080	;61f1e
+	dc.w	$ffa0	;61f20
+	dc.w	$00d0	;61f22
+	dc.w	$0080	;61f24
+	dc.w	$0060	;61f26
+	dc.w	$00c0	;61f28
+	dc.w	$0070	;61f2a
+	dc.w	$ffa0	;61f2c
+	dc.w	$00c0	;61f2e
+	dc.w	$0070	;61f30
+	dc.w	$0060	;61f32
+	dc.w	$00d0	;61f34
+	dc.w	$0060	;61f36
+	dc.w	$ffa0	;61f38
+	dc.w	$00d0	;61f3a
+	dc.w	$0060	;61f3c
+	dc.w	$0060	;61f3e
+	dc.w	$fec0	;61f40
+	dc.w	$0070	;61f42
+	dc.w	$ffa0	;61f44
+	dc.w	$fec0	;61f46
+	dc.w	$0070	;61f48
+	dc.w	$0060	;61f4a
+	dc.w	$ab26	;61f4c
+	dc.w	$54da	;61f4e
+	dc.w	$0000	;61f50
+	dc.w	$0002	;61f52
+	dc.w	$4fc4	;61f54
+	dc.w	$0002	;61f56
+	dc.w	$4fcc	;61f58
+	dc.w	$0002	;61f5a
+	dc.w	$4ff4	;61f5c
+	dc.w	$0000	;61f5e
+	dc.w	$0009	;61f60
+	dc.w	$ab26	;61f62
+	dc.w	$54da	;61f64
+	dc.w	$0000	;61f66
+	dc.w	$0002	;61f68
+	dc.w	$4fcc	;61f6a
+	dc.w	$0002	;61f6c
+	dc.w	$4ff4	;61f6e
+	dc.w	$0002	;61f70
+	dc.w	$4ffc	;61f72
+	dc.w	$0000	;61f74
+	dc.w	$0009	;61f76
+	dc.w	$8800	;61f78
+	dc.w	$0000	;61f7a
+	dc.w	$0000	;61f7c
+	dc.w	$0002	;61f7e
+	dc.w	$4fa4	;61f80
+	dc.w	$0002	;61f82
+	dc.w	$4fbc	;61f84
+	dc.w	$0002	;61f86
+	dc.w	$4fe4	;61f88
+	dc.w	$0000	;61f8a
+	dc.w	$0017	;61f8c
+	dc.w	$8800	;61f8e
+	dc.w	$0000	;61f90
+	dc.w	$0000	;61f92
+	dc.w	$0002	;61f94
+	dc.w	$4fbc	;61f96
+	dc.w	$0002	;61f98
+	dc.w	$4fe4	;61f9a
+	dc.w	$0002	;61f9c
+	dc.w	$508c	;61f9e
+	dc.w	$0000	;61fa0
+	dc.w	$0017	;61fa2
+	dc.w	$8800	;61fa4
+	dc.w	$0000	;61fa6
+	dc.w	$0000	;61fa8
+	dc.w	$0002	;61faa
+	dc.w	$4fb4	;61fac
+	dc.w	$0002	;61fae
+	dc.w	$4fec	;61fb0
+	dc.w	$0002	;61fb2
+	dc.w	$5084	;61fb4
+	dc.w	$0000	;61fb6
+	dc.w	$0017	;61fb8
+	dc.w	$8800	;61fba
+	dc.w	$0000	;61fbc
+	dc.w	$0000	;61fbe
+	dc.w	$0002	;61fc0
+	dc.w	$4fac	;61fc2
+	dc.w	$0002	;61fc4
+	dc.w	$4fb4	;61fc6
+	dc.w	$0002	;61fc8
+	dc.w	$4fec	;61fca
+	dc.w	$0000	;61fcc
+	dc.w	$0017	;61fce
+	dc.w	$d0bb	;61fd0
+	dc.w	$6e4c	;61fd2
+	dc.w	$0000	;61fd4
+	dc.w	$0002	;61fd6
+	dc.w	$500c	;61fd8
+	dc.w	$0002	;61fda
+	dc.w	$501c	;61fdc
+	dc.w	$0002	;61fde
+	dc.w	$5084	;61fe0
+	dc.w	$0000	;61fe2
+	dc.w	$0017	;61fe4
+	dc.w	$d0bb	;61fe6
+	dc.w	$6e4c	;61fe8
+	dc.w	$0000	;61fea
+	dc.w	$0002	;61fec
+	dc.w	$4fec	;61fee
+	dc.w	$0002	;61ff0
+	dc.w	$500c	;61ff2
+	dc.w	$0002	;61ff4
+	dc.w	$5084	;61ff6
+	dc.w	$0000	;61ff8
+	dc.w	$0017	;61ffa
+	dc.w	$d0bb	;61ffc
+	dc.w	$6e4c	;61ffe
+	dc.w	$0000	;62000
+	dc.w	$0002	;62002
+	dc.w	$4fe4	;62004
+	dc.w	$0002	;62006
+	dc.w	$5004	;62008
+	dc.w	$0002	;6200a
+	dc.w	$508c	;6200c
+	dc.w	$0000	;6200e
+	dc.w	$0017	;62010
+	dc.w	$d0bb	;62012
+	dc.w	$6e4c	;62014
+	dc.w	$0000	;62016
+	dc.w	$0002	;62018
+	dc.w	$5004	;6201a
+	dc.w	$0002	;6201c
+	dc.w	$5014	;6201e
+	dc.w	$0002	;62020
+	dc.w	$508c	;62022
+	dc.w	$0000	;62024
+	dc.w	$0017	;62026
+	dc.w	$54da	;62028
+	dc.w	$54da	;6202a
+	dc.w	$0000	;6202c
+	dc.w	$0002	;6202e
+	dc.w	$5064	;62030
+	dc.w	$0002	;62032
+	dc.w	$5074	;62034
+	dc.w	$0002	;62036
+	dc.w	$507c	;62038
+	dc.w	$0000	;6203a
+	dc.w	$0009	;6203c
+	dc.w	$54da	;6203e
+	dc.w	$54da	;62040
+	dc.w	$0000	;62042
+	dc.w	$0002	;62044
+	dc.w	$5064	;62046
+	dc.w	$0002	;62048
+	dc.w	$506c	;6204a
+	dc.w	$0002	;6204c
+	dc.w	$507c	;6204e
+	dc.w	$0000	;62050
+	dc.w	$0009	;62052
+	dc.w	$7800	;62054
+	dc.w	$0000	;62056
+	dc.w	$0000	;62058
+	dc.w	$0002	;6205a
+	dc.w	$4f8c	;6205c
+	dc.w	$0002	;6205e
+	dc.w	$5024	;62060
+	dc.w	$0002	;62062
+	dc.w	$5054	;62064
+	dc.w	$0000	;62066
+	dc.w	$0017	;62068
+	dc.w	$7800	;6206a
+	dc.w	$0000	;6206c
+	dc.w	$0000	;6206e
+	dc.w	$0002	;62070
+	dc.w	$4f8c	;62072
+	dc.w	$0002	;62074
+	dc.w	$5054	;62076
+	dc.w	$0002	;62078
+	dc.w	$5074	;6207a
+	dc.w	$0000	;6207c
+	dc.w	$0017	;6207e
+	dc.w	$35aa	;62080
+	dc.w	$6b54	;62082
+	dc.w	$0000	;62084
+	dc.w	$0002	;62086
+	dc.w	$5024	;62088
+	dc.w	$0002	;6208a
+	dc.w	$5034	;6208c
+	dc.w	$0002	;6208e
+	dc.w	$5044	;62090
+	dc.w	$0000	;62092
+	dc.w	$0017	;62094
+	dc.w	$35aa	;62096
+	dc.w	$6b54	;62098
+	dc.w	$0000	;6209a
+	dc.w	$0002	;6209c
+	dc.w	$5024	;6209e
+	dc.w	$0002	;620a0
+	dc.w	$5044	;620a2
+	dc.w	$0002	;620a4
+	dc.w	$5054	;620a6
+	dc.w	$0000	;620a8
+	dc.w	$0017	;620aa
+	dc.w	$7800	;620ac
+	dc.w	$0000	;620ae
+	dc.w	$0000	;620b0
+	dc.w	$0002	;620b2
+	dc.w	$4f94	;620b4
+	dc.w	$0002	;620b6
+	dc.w	$505c	;620b8
+	dc.w	$0002	;620ba
+	dc.w	$507c	;620bc
+	dc.w	$0000	;620be
+	dc.w	$0017	;620c0
+	dc.w	$7800	;620c2
+	dc.w	$0000	;620c4
+	dc.w	$0000	;620c6
+	dc.w	$0002	;620c8
+	dc.w	$4f94	;620ca
+	dc.w	$0002	;620cc
+	dc.w	$505c	;620ce
+	dc.w	$0002	;620d0
+	dc.w	$502c	;620d2
+	dc.w	$0000	;620d4
+	dc.w	$0017	;620d6
+	dc.w	$35aa	;620d8
+	dc.w	$6b54	;620da
+	dc.w	$0000	;620dc
+	dc.w	$0002	;620de
+	dc.w	$502c	;620e0
+	dc.w	$0002	;620e2
+	dc.w	$504c	;620e4
+	dc.w	$0002	;620e6
+	dc.w	$505c	;620e8
+	dc.w	$0000	;620ea
+	dc.w	$0017	;620ec
+	dc.w	$35aa	;620ee
+	dc.w	$6b54	;620f0
+	dc.w	$0000	;620f2
+	dc.w	$0002	;620f4
+	dc.w	$502c	;620f6
+	dc.w	$0002	;620f8
+	dc.w	$503c	;620fa
+	dc.w	$0002	;620fc
+	dc.w	$504c	;620fe
+	dc.w	$0000	;62100
+	dc.w	$0017	;62102
+	dc.w	$0000	;62104
+	dc.w	$0000	;62106
+	dc.w	$8800	;62108
+	dc.w	$0002	;6210a
+	dc.w	$4f84	;6210c
+	dc.w	$0002	;6210e
+	dc.w	$4fac	;62110
+	dc.w	$0002	;62112
+	dc.w	$4fec	;62114
+	dc.w	$0000	;62116
+	dc.w	$0011	;62118
+	dc.w	$0000	;6211a
+	dc.w	$0000	;6211c
+	dc.w	$8800	;6211e
+	dc.w	$0002	;62120
+	dc.w	$4f84	;62122
+	dc.w	$0002	;62124
+	dc.w	$4fec	;62126
+	dc.w	$0002	;62128
+	dc.w	$500c	;6212a
+	dc.w	$0000	;6212c
+	dc.w	$0011	;6212e
+	dc.w	$0000	;62130
+	dc.w	$0000	;62132
+	dc.w	$8801	;62134
+	dc.w	$0002	;62136
+	dc.w	$4f84	;62138
+	dc.w	$0002	;6213a
+	dc.w	$4f8c	;6213c
+	dc.w	$0002	;6213e
+	dc.w	$500c	;62140
+	dc.w	$0000	;62142
+	dc.w	$0011	;62144
+	dc.w	$0000	;62146
+	dc.w	$0000	;62148
+	dc.w	$8800	;6214a
+	dc.w	$0002	;6214c
+	dc.w	$4f8c	;6214e
+	dc.w	$0002	;62150
+	dc.w	$500c	;62152
+	dc.w	$0002	;62154
+	dc.w	$5034	;62156
+	dc.w	$0000	;62158
+	dc.w	$0011	;6215a
+	dc.w	$0000	;6215c
+	dc.w	$0000	;6215e
+	dc.w	$8800	;62160
+	dc.w	$0002	;62162
+	dc.w	$4f8c	;62164
+	dc.w	$0002	;62166
+	dc.w	$5034	;62168
+	dc.w	$0002	;6216a
+	dc.w	$5024	;6216c
+	dc.w	$0000	;6216e
+	dc.w	$0011	;62170
+	dc.w	$0000	;62172
+	dc.w	$0000	;62174
+	dc.w	$7800	;62176
+	dc.w	$0002	;62178
+	dc.w	$4f9c	;6217a
+	dc.w	$0002	;6217c
+	dc.w	$4fa4	;6217e
+	dc.w	$0002	;62180
+	dc.w	$4fe4	;62182
+	dc.w	$0000	;62184
+	dc.w	$0011	;62186
+	dc.w	$0000	;62188
+	dc.w	$0000	;6218a
+	dc.w	$7800	;6218c
+	dc.w	$0002	;6218e
+	dc.w	$4f9c	;62190
+	dc.w	$0002	;62192
+	dc.w	$5004	;62194
+	dc.w	$0002	;62196
+	dc.w	$4fe4	;62198
+	dc.w	$0000	;6219a
+	dc.w	$0011	;6219c
+	dc.w	$0000	;6219e
+	dc.w	$0000	;621a0
+	dc.w	$77ff	;621a2
+	dc.w	$0002	;621a4
+	dc.w	$4f94	;621a6
+	dc.w	$0002	;621a8
+	dc.w	$4f9c	;621aa
+	dc.w	$0002	;621ac
+	dc.w	$5004	;621ae
+	dc.w	$0000	;621b0
+	dc.w	$0011	;621b2
+	dc.w	$0000	;621b4
+	dc.w	$0000	;621b6
+	dc.w	$7800	;621b8
+	dc.w	$0002	;621ba
+	dc.w	$4f94	;621bc
+	dc.w	$0002	;621be
+	dc.w	$503c	;621c0
+	dc.w	$0002	;621c2
+	dc.w	$5004	;621c4
+	dc.w	$0000	;621c6
+	dc.w	$0011	;621c8
+	dc.w	$0000	;621ca
+	dc.w	$0000	;621cc
+	dc.w	$7800	;621ce
+	dc.w	$0002	;621d0
+	dc.w	$4f94	;621d2
+	dc.w	$0002	;621d4
+	dc.w	$502c	;621d6
+	dc.w	$0002	;621d8
+	dc.w	$503c	;621da
+	dc.w	$0000	;621dc
+	dc.w	$0011	;621de
+	dc.w	$ab26	;621e0
+	dc.w	$ab26	;621e2
+	dc.w	$0000	;621e4
+	dc.w	$0002	;621e6
+	dc.w	$4fc4	;621e8
+	dc.w	$0002	;621ea
+	dc.w	$4fd4	;621ec
+	dc.w	$0002	;621ee
+	dc.w	$4fdc	;621f0
+	dc.w	$0000	;621f2
+	dc.w	$0014	;621f4
+	dc.w	$ab26	;621f6
+	dc.w	$ab26	;621f8
+	dc.w	$0000	;621fa
+	dc.w	$0002	;621fc
+	dc.w	$4fc4	;621fe
+	dc.w	$0002	;62200
+	dc.w	$4fcc	;62202
+	dc.w	$0002	;62204
+	dc.w	$4fd4	;62206
+	dc.w	$0000	;62208
+	dc.w	$0014	;6220a
+	dc.w	$da0e	;6220c
+	dc.w	$8e29	;6220e
+	dc.w	$0000	;62210
+	dc.w	$0002	;62212
+	dc.w	$4fa4	;62214
+	dc.w	$0002	;62216
+	dc.w	$4fbc	;62218
+	dc.w	$0002	;6221a
+	dc.w	$4fdc	;6221c
+	dc.w	$0000	;6221e
+	dc.w	$0017	;62220
+	dc.w	$da0e	;62222
+	dc.w	$8e29	;62224
+	dc.w	$0000	;62226
+	dc.w	$0002	;62228
+	dc.w	$4f9c	;6222a
+	dc.w	$0002	;6222c
+	dc.w	$4fa4	;6222e
+	dc.w	$0002	;62230
+	dc.w	$4fdc	;62232
+	dc.w	$0000	;62234
+	dc.w	$0017	;62236
+	dc.w	$da0e	;62238
+	dc.w	$8e29	;6223a
+	dc.w	$0000	;6223c
+	dc.w	$0002	;6223e
+	dc.w	$4fac	;62240
+	dc.w	$0002	;62242
+	dc.w	$4fb4	;62244
+	dc.w	$0002	;62246
+	dc.w	$4fd4	;62248
+	dc.w	$0000	;6224a
+	dc.w	$0017	;6224c
+	dc.w	$da0e	;6224e
+	dc.w	$8e29	;62250
+	dc.w	$0000	;62252
+	dc.w	$0002	;62254
+	dc.w	$4f84	;62256
+	dc.w	$0002	;62258
+	dc.w	$4fac	;6225a
+	dc.w	$0002	;6225c
+	dc.w	$4fd4	;6225e
+	dc.w	$0000	;62260
+	dc.w	$0017	;62262
+	dc.w	$6b54	;62264
+	dc.w	$35aa	;62266
+	dc.w	$0000	;62268
+	dc.w	$0002	;6226a
+	dc.w	$4f6c	;6226c
+	dc.w	$0002	;6226e
+	dc.w	$4f74	;62270
+	dc.w	$0002	;62272
+	dc.w	$5074	;62274
+	dc.w	$0000	;62276
+	dc.w	$0009	;62278
+	dc.w	$6b54	;6227a
+	dc.w	$35aa	;6227c
+	dc.w	$0000	;6227e
+	dc.w	$0002	;62280
+	dc.w	$4f6c	;62282
+	dc.w	$0002	;62284
+	dc.w	$5074	;62286
+	dc.w	$0002	;62288
+	dc.w	$507c	;6228a
+	dc.w	$0000	;6228c
+	dc.w	$0009	;6228e
+	dc.w	$6b54	;62290
+	dc.w	$35aa	;62292
+	dc.w	$0000	;62294
+	dc.w	$0002	;62296
+	dc.w	$4f74	;62298
+	dc.w	$0002	;6229a
+	dc.w	$4f8c	;6229c
+	dc.w	$0002	;6229e
+	dc.w	$5074	;622a0
+	dc.w	$0000	;622a2
+	dc.w	$0009	;622a4
+	dc.w	$6b54	;622a6
+	dc.w	$35aa	;622a8
+	dc.w	$0000	;622aa
+	dc.w	$0002	;622ac
+	dc.w	$4f6c	;622ae
+	dc.w	$0002	;622b0
+	dc.w	$4f94	;622b2
+	dc.w	$0002	;622b4
+	dc.w	$507c	;622b6
+	dc.w	$0000	;622b8
+	dc.w	$0009	;622ba
+	dc.w	$0613	;622bc
+	dc.w	$c33d	;622be
+	dc.w	$98b4	;622c0
+	dc.w	$0002	;622c2
+	dc.w	$4f7c	;622c4
+	dc.w	$0002	;622c6
+	dc.w	$4f84	;622c8
+	dc.w	$0002	;622ca
+	dc.w	$4f8c	;622cc
+	dc.w	$0000	;622ce
+	dc.w	$000c	;622d0
+	dc.w	$0000	;622d2
+	dc.w	$da0e	;622d4
+	dc.w	$8e29	;622d6
+	dc.w	$0002	;622d8
+	dc.w	$4f74	;622da
+	dc.w	$0002	;622dc
+	dc.w	$4f7c	;622de
+	dc.w	$0002	;622e0
+	dc.w	$4f8c	;622e2
+	dc.w	$0000	;622e4
+	dc.w	$000c	;622e6
+	dc.w	$0000	;622e8
+	dc.w	$da0e	;622ea
+	dc.w	$71d7	;622ec
+	dc.w	$0002	;622ee
+	dc.w	$4f64	;622f0
+	dc.w	$0002	;622f2
+	dc.w	$4f6c	;622f4
+	dc.w	$0002	;622f6
+	dc.w	$4f94	;622f8
+	dc.w	$0000	;622fa
+	dc.w	$000c	;622fc
+	dc.w	$0613	;622fe
+	dc.w	$c33d	;62300
+	dc.w	$674c	;62302
+	dc.w	$0002	;62304
+	dc.w	$4f64	;62306
+	dc.w	$0002	;62308
+	dc.w	$4f94	;6230a
+	dc.w	$0002	;6230c
+	dc.w	$4f9c	;6230e
+	dc.w	$0000	;62310
+	dc.w	$000c	;62312
+	dc.w	$b800	;62314
+	dc.w	$a000	;62316
+	dc.w	$0000	;62318
+	dc.w	$0002	;6231a
+	dc.w	$4f64	;6231c
+	dc.w	$0002	;6231e
+	dc.w	$4f7c	;62320
+	dc.w	$0002	;62322
+	dc.w	$4fdc	;62324
+	dc.w	$0000	;62326
+	dc.w	$0014	;62328
+	dc.w	$b800	;6232a
+	dc.w	$a000	;6232c
+	dc.w	$0000	;6232e
+	dc.w	$0002	;62330
+	dc.w	$4f7c	;62332
+	dc.w	$0002	;62334
+	dc.w	$4fd4	;62336
+	dc.w	$0002	;62338
+	dc.w	$4fdc	;6233a
+	dc.w	$0000	;6233c
+	dc.w	$0014	;6233e
+	dc.w	$b800	;62340
+	dc.w	$a000	;62342
+	dc.w	$0000	;62344
+	dc.w	$0002	;62346
+	dc.w	$4f64	;62348
+	dc.w	$0002	;6234a
+	dc.w	$4f9c	;6234c
+	dc.w	$0002	;6234e
+	dc.w	$4fdc	;62350
+	dc.w	$0000	;62352
+	dc.w	$0014	;62354
+	dc.w	$b800	;62356
+	dc.w	$a000	;62358
+	dc.w	$0000	;6235a
+	dc.w	$0002	;6235c
+	dc.w	$4f7c	;6235e
+	dc.w	$0002	;62360
+	dc.w	$4f84	;62362
+	dc.w	$0002	;62364
+	dc.w	$4fd4	;62366
+	dc.w	$0000	;62368
+	dc.w	$0014	;6236a
+	dc.w	$0000	;6236c
+	dc.w	$0000	;6236e
+	dc.w	$0000	;62370
+	dc.w	$0002	;62372
+	dc.w	$4f64	;62374
+	dc.w	$0002	;62376
+	dc.w	$4f6c	;62378
+	dc.w	$0002	;6237a
+	dc.w	$4f7c	;6237c
+	dc.w	$0000	;6237e
+	dc.w	$0004	;62380
+	dc.w	$0000	;62382
+	dc.w	$0000	;62384
+	dc.w	$0000	;62386
+	dc.w	$0002	;62388
+	dc.w	$4f6c	;6238a
+	dc.w	$0002	;6238c
+	dc.w	$4f74	;6238e
+	dc.w	$0002	;62390
+	dc.w	$4f7c	;62392
+	dc.w	$0000	;62394
+	dc.w	$0004	;62396
+	dc.w	$0100	;62398
+	dc.w	$0010	;6239a
+	dc.w	$0015	;6239c
+	dc.w	$006e	;6239e
+	dc.w	$0000	;623a0
+	dc.w	$0000	;623a2
+	dc.w	$0000	;623a4
+	dc.w	$ffa0	;623a6
+	dc.w	$ffb0	;623a8
+	dc.w	$0038	;623aa
+	dc.w	$0030	;623ac
+	dc.w	$ffb0	;623ae
+	dc.w	$0048	;623b0
+	dc.w	$0050	;623b2
+	dc.w	$ffb0	;623b4
+	dc.w	$0038	;623b6
+	dc.w	$0050	;623b8
+	dc.w	$ffb0	;623ba
+	dc.w	$ffc8	;623bc
+	dc.w	$0030	;623be
+	dc.w	$ffb0	;623c0
+	dc.w	$ffb8	;623c2
+	dc.w	$ffa0	;623c4
+	dc.w	$ffb0	;623c6
+	dc.w	$ffc8	;623c8
+	dc.w	$ffa0	;623ca
+	dc.w	$0000	;623cc
+	dc.w	$ffa8	;623ce
+	dc.w	$0030	;623d0
+	dc.w	$0000	;623d2
+	dc.w	$ff98	;623d4
+	dc.w	$0070	;623d6
+	dc.w	$0000	;623d8
+	dc.w	$ffb8	;623da
+	dc.w	$0070	;623dc
+	dc.w	$0000	;623de
+	dc.w	$0048	;623e0
+	dc.w	$0030	;623e2
+	dc.w	$0000	;623e4
+	dc.w	$0068	;623e6
+	dc.w	$ffa0	;623e8
+	dc.w	$0000	;623ea
+	dc.w	$0058	;623ec
+	dc.w	$ff80	;623ee
+	dc.w	$ffd0	;623f0
+	dc.w	$0038	;623f2
+	dc.w	$ff80	;623f4
+	dc.w	$ffd0	;623f6
+	dc.w	$ffc8	;623f8
+	dc.w	$ffa0	;623fa
+	dc.w	$fff0	;623fc
+	dc.w	$0038	;623fe
+	dc.w	$ffa0	;62400
+	dc.w	$fff0	;62402
+	dc.w	$ffc8	;62404
+	dc.w	$8800	;62406
+	dc.w	$0000	;62408
+	dc.w	$0000	;6240a
+	dc.w	$0002	;6240c
+	dc.w	$4f64	;6240e
+	dc.w	$0002	;62410
+	dc.w	$4f8c	;62412
+	dc.w	$0002	;62414
+	dc.w	$4fbc	;62416
+	dc.w	$0000	;62418
+	dc.w	$0011	;6241a
+	dc.w	$8800	;6241c
+	dc.w	$0000	;6241e
+	dc.w	$0000	;62420
+	dc.w	$0002	;62422
+	dc.w	$4f8c	;62424
+	dc.w	$0002	;62426
+	dc.w	$4f94	;62428
+	dc.w	$0002	;6242a
+	dc.w	$4fbc	;6242c
+	dc.w	$0000	;6242e
+	dc.w	$0011	;62430
+	dc.w	$0000	;62432
+	dc.w	$0000	;62434
+	dc.w	$8800	;62436
+	dc.w	$0002	;62438
+	dc.w	$4f8c	;6243a
+	dc.w	$0002	;6243c
+	dc.w	$4fcc	;6243e
+	dc.w	$0002	;62440
+	dc.w	$4fdc	;62442
+	dc.w	$0000	;62444
+	dc.w	$000c	;62446
+	dc.w	$0000	;62448
+	dc.w	$0000	;6244a
+	dc.w	$7800	;6244c
+	dc.w	$0002	;6244e
+	dc.w	$4f64	;62450
+	dc.w	$0002	;62452
+	dc.w	$4fc4	;62454
+	dc.w	$0002	;62456
+	dc.w	$4fd4	;62458
+	dc.w	$0000	;6245a
+	dc.w	$000c	;6245c
+	dc.w	$ab26	;6245e
+	dc.w	$54da	;62460
+	dc.w	$0000	;62462
+	dc.w	$0002	;62464
+	dc.w	$4fc4	;62466
+	dc.w	$0002	;62468
+	dc.w	$4fd4	;6246a
+	dc.w	$0002	;6246c
+	dc.w	$4fdc	;6246e
+	dc.w	$0000	;62470
+	dc.w	$0001	;62472
+	dc.w	$ab26	;62474
+	dc.w	$54da	;62476
+	dc.w	$0000	;62478
+	dc.w	$0002	;6247a
+	dc.w	$4fc4	;6247c
+	dc.w	$0002	;6247e
+	dc.w	$4fcc	;62480
+	dc.w	$0002	;62482
+	dc.w	$4fdc	;62484
+	dc.w	$0000	;62486
+	dc.w	$0001	;62488
+	dc.w	$f3b0	;6248a
+	dc.w	$d3ac	;6248c
+	dc.w	$6ed4	;6248e
+	dc.w	$0002	;62490
+	dc.w	$4f64	;62492
+	dc.w	$0002	;62494
+	dc.w	$4fb4	;62496
+	dc.w	$0002	;62498
+	dc.w	$4fbc	;6249a
+	dc.w	$0000	;6249c
+	dc.w	$000c	;6249e
+	dc.w	$f3b0	;624a0
+	dc.w	$d3ac	;624a2
+	dc.w	$6ed4	;624a4
+	dc.w	$0002	;624a6
+	dc.w	$4f64	;624a8
+	dc.w	$0002	;624aa
+	dc.w	$4f6c	;624ac
+	dc.w	$0002	;624ae
+	dc.w	$4fb4	;624b0
+	dc.w	$0000	;624b2
+	dc.w	$000c	;624b4
+	dc.w	$f3b0	;624b6
+	dc.w	$d3ac	;624b8
+	dc.w	$912c	;624ba
+	dc.w	$0002	;624bc
+	dc.w	$4f8c	;624be
+	dc.w	$0002	;624c0
+	dc.w	$4f94	;624c2
+	dc.w	$0002	;624c4
+	dc.w	$4f9c	;624c6
+	dc.w	$0000	;624c8
+	dc.w	$000c	;624ca
+	dc.w	$f3b0	;624cc
+	dc.w	$d3ac	;624ce
+	dc.w	$912c	;624d0
+	dc.w	$0002	;624d2
+	dc.w	$4f84	;624d4
+	dc.w	$0002	;624d6
+	dc.w	$4f8c	;624d8
+	dc.w	$0002	;624da
+	dc.w	$4f9c	;624dc
+	dc.w	$0000	;624de
+	dc.w	$000c	;624e0
+	dc.w	$3287	;624e2
+	dc.w	$d794	;624e4
+	dc.w	$650e	;624e6
+	dc.w	$0002	;624e8
+	dc.w	$4f6c	;624ea
+	dc.w	$0002	;624ec
+	dc.w	$4fac	;624ee
+	dc.w	$0002	;624f0
+	dc.w	$4fb4	;624f2
+	dc.w	$0000	;624f4
+	dc.w	$0014	;624f6
+	dc.w	$3287	;624f8
+	dc.w	$d794	;624fa
+	dc.w	$650e	;624fc
+	dc.w	$0002	;624fe
+	dc.w	$4f6c	;62500
+	dc.w	$0002	;62502
+	dc.w	$4f74	;62504
+	dc.w	$0002	;62506
+	dc.w	$4fac	;62508
+	dc.w	$0000	;6250a
+	dc.w	$0014	;6250c
+	dc.w	$3287	;6250e
+	dc.w	$d794	;62510
+	dc.w	$9af2	;62512
+	dc.w	$0002	;62514
+	dc.w	$4f84	;62516
+	dc.w	$0002	;62518
+	dc.w	$4f9c	;6251a
+	dc.w	$0002	;6251c
+	dc.w	$4fa4	;6251e
+	dc.w	$0000	;62520
+	dc.w	$0014	;62522
+	dc.w	$3287	;62524
+	dc.w	$d794	;62526
+	dc.w	$9af2	;62528
+	dc.w	$0002	;6252a
+	dc.w	$4f7c	;6252c
+	dc.w	$0002	;6252e
+	dc.w	$4f84	;62530
+	dc.w	$0002	;62532
+	dc.w	$4fa4	;62534
+	dc.w	$0000	;62536
+	dc.w	$0014	;62538
+	dc.w	$6f6a	;6253a
+	dc.w	$d36f	;6253c
+	dc.w	$0000	;6253e
+	dc.w	$0002	;62540
+	dc.w	$4f74	;62542
+	dc.w	$0002	;62544
+	dc.w	$4f7c	;62546
+	dc.w	$0002	;62548
+	dc.w	$4fac	;6254a
+	dc.w	$0000	;6254c
+	dc.w	$000c	;6254e
+	dc.w	$6f6a	;62550
+	dc.w	$d36f	;62552
+	dc.w	$0000	;62554
+	dc.w	$0002	;62556
+	dc.w	$4f7c	;62558
+	dc.w	$0002	;6255a
+	dc.w	$4fa4	;6255c
+	dc.w	$0002	;6255e
+	dc.w	$4fac	;62560
+	dc.w	$0000	;62562
+	dc.w	$000c	;62564
+	dc.w	$ab26	;62566
+	dc.w	$ab26	;62568
+	dc.w	$0000	;6256a
+	dc.w	$0002	;6256c
+	dc.w	$4f64	;6256e
+	dc.w	$0002	;62570
+	dc.w	$4fc4	;62572
+	dc.w	$0002	;62574
+	dc.w	$4fcc	;62576
+	dc.w	$0000	;62578
+	dc.w	$0014	;6257a
+	dc.w	$ab26	;6257c
+	dc.w	$ab26	;6257e
+	dc.w	$0000	;62580
+	dc.w	$0002	;62582
+	dc.w	$4f64	;62584
+	dc.w	$0002	;62586
+	dc.w	$4f8c	;62588
+	dc.w	$0002	;6258a
+	dc.w	$4fcc	;6258c
+	dc.w	$0000	;6258e
+	dc.w	$0014	;62590
+	dc.w	$0000	;62592
+	dc.w	$8800	;62594
+	dc.w	$0000	;62596
+	dc.w	$0002	;62598
+	dc.w	$4f64	;6259a
+	dc.w	$0002	;6259c
+	dc.w	$4f6c	;6259e
+	dc.w	$0002	;625a0
+	dc.w	$4f8c	;625a2
+	dc.w	$0000	;625a4
+	dc.w	$0004	;625a6
+	dc.w	$0000	;625a8
+	dc.w	$8800	;625aa
+	dc.w	$0000	;625ac
+	dc.w	$0002	;625ae
+	dc.w	$4f6c	;625b0
+	dc.w	$0002	;625b2
+	dc.w	$4f74	;625b4
+	dc.w	$0002	;625b6
+	dc.w	$4f8c	;625b8
+	dc.w	$0000	;625ba
+	dc.w	$0004	;625bc
+	dc.w	$0000	;625be
+	dc.w	$8800	;625c0
+	dc.w	$0000	;625c2
+	dc.w	$0002	;625c4
+	dc.w	$4f74	;625c6
+	dc.w	$0002	;625c8
+	dc.w	$4f7c	;625ca
+	dc.w	$0002	;625cc
+	dc.w	$4f8c	;625ce
+	dc.w	$0000	;625d0
+	dc.w	$0004	;625d2
+	dc.w	$0000	;625d4
+	dc.w	$8800	;625d6
+	dc.w	$0000	;625d8
+	dc.w	$0002	;625da
+	dc.w	$4f7c	;625dc
+	dc.w	$0002	;625de
+	dc.w	$4f84	;625e0
+	dc.w	$0002	;625e2
+	dc.w	$4f8c	;625e4
+	dc.w	$0000	;625e6
+	dc.w	$0004	;625e8
+	dc.w	$0100	;625ea
+	dc.w	$0006	;625ec
+	dc.w	$0005	;625ee
+	dc.w	$0032	;625f0
+	dc.w	$0000	;625f2
+	dc.w	$0000	;625f4
+	dc.w	$0000	;625f6
+	dc.w	$fe10	;625f8
+	dc.w	$ffd0	;625fa
+	dc.w	$fff8	;625fc
+	dc.w	$ff80	;625fe
+	dc.w	$ffd0	;62600
+	dc.w	$0008	;62602
+	dc.w	$ff80	;62604
+	dc.w	$ffd0	;62606
+	dc.w	$fff8	;62608
+	dc.w	$fe10	;6260a
+	dc.w	$ffe0	;6260c
+	dc.w	$0000	;6260e
+	dc.w	$ff90	;62610
+	dc.w	$ffe0	;62612
+	dc.w	$0000	;62614
+	dc.w	$fe10	;62616
+	dc.w	$ffd0	;62618
+	dc.w	$0008	;6261a
+	dc.w	$0000	;6261c
+	dc.w	$ca56	;6261e
+	dc.w	$6b54	;62620
+	dc.w	$0002	;62622
+	dc.w	$4f64	;62624
+	dc.w	$0002	;62626
+	dc.w	$4f7c	;62628
+	dc.w	$0002	;6262a
+	dc.w	$4f84	;6262c
+	dc.w	$0000	;6262e
+	dc.w	$000c	;62630
+	dc.w	$0000	;62632
+	dc.w	$ca56	;62634
+	dc.w	$6b54	;62636
+	dc.w	$0002	;62638
+	dc.w	$4f64	;6263a
+	dc.w	$0002	;6263c
+	dc.w	$4f74	;6263e
+	dc.w	$0002	;62640
+	dc.w	$4f84	;62642
+	dc.w	$0000	;62644
+	dc.w	$000c	;62646
+	dc.w	$0000	;62648
+	dc.w	$ca56	;6264a
+	dc.w	$94ac	;6264c
+	dc.w	$0002	;6264e
+	dc.w	$4f8c	;62650
+	dc.w	$0002	;62652
+	dc.w	$4f6c	;62654
+	dc.w	$0002	;62656
+	dc.w	$4f84	;62658
+	dc.w	$0000	;6265a
+	dc.w	$000c	;6265c
+	dc.w	$0000	;6265e
+	dc.w	$ca56	;62660
+	dc.w	$94ac	;62662
+	dc.w	$0002	;62664
+	dc.w	$4f8c	;62666
+	dc.w	$0002	;62668
+	dc.w	$4f7c	;6266a
+	dc.w	$0002	;6266c
+	dc.w	$4f84	;6266e
+	dc.w	$0000	;62670
+	dc.w	$000c	;62672
+	dc.w	$0000	;62674
+	dc.w	$8800	;62676
+	dc.w	$0000	;62678
+	dc.w	$0002	;6267a
+	dc.w	$4f8c	;6267c
+	dc.w	$0002	;6267e
+	dc.w	$4f64	;62680
+	dc.w	$0002	;62682
+	dc.w	$4f6c	;62684
+	dc.w	$0000	;62686
+	dc.w	$0004	;62688
+	dc.w	$0000	;6268a
+	dc.w	$8800	;6268c
+	dc.w	$0000	;6268e
+	dc.w	$0002	;62690
+	dc.w	$4f64	;62692
+	dc.w	$0002	;62694
+	dc.w	$4f6c	;62696
+	dc.w	$0002	;62698
+	dc.w	$4f74	;6269a
+	dc.w	$0000	;6269c
+	dc.w	$0004	;6269e
+	dc.w	$0100	;626a0
+	dc.w	$0024	;626a2
+	dc.w	$002b	;626a4
+	dc.w	$00e6	;626a6
+	dc.w	$0000	;626a8
+	dc.w	$0000	;626aa
+	dc.w	$0000	;626ac
+	dc.w	$ff80	;626ae
+	dc.w	$0000	;626b0
+	dc.w	$0060	;626b2
+	dc.w	$00e0	;626b4
+	dc.w	$0000	;626b6
+	dc.w	$0060	;626b8
+	dc.w	$00e0	;626ba
+	dc.w	$0000	;626bc
+	dc.w	$ffa0	;626be
+	dc.w	$ff80	;626c0
+	dc.w	$0000	;626c2
+	dc.w	$ffa0	;626c4
+	dc.w	$ff40	;626c6
+	dc.w	$0030	;626c8
+	dc.w	$ff80	;626ca
+	dc.w	$ff40	;626cc
+	dc.w	$0030	;626ce
+	dc.w	$0080	;626d0
+	dc.w	$00f0	;626d2
+	dc.w	$0030	;626d4
+	dc.w	$0080	;626d6
+	dc.w	$00f0	;626d8
+	dc.w	$0030	;626da
+	dc.w	$ff80	;626dc
+	dc.w	$ff40	;626de
+	dc.w	$0030	;626e0
+	dc.w	$ffb0	;626e2
+	dc.w	$ff40	;626e4
+	dc.w	$0030	;626e6
+	dc.w	$0050	;626e8
+	dc.w	$ff10	;626ea
+	dc.w	$0050	;626ec
+	dc.w	$0050	;626ee
+	dc.w	$ff10	;626f0
+	dc.w	$0050	;626f2
+	dc.w	$ffb0	;626f4
+	dc.w	$ff00	;626f6
+	dc.w	$0030	;626f8
+	dc.w	$0080	;626fa
+	dc.w	$ff00	;626fc
+	dc.w	$0030	;626fe
+	dc.w	$0050	;62700
+	dc.w	$ff00	;62702
+	dc.w	$0030	;62704
+	dc.w	$ffb0	;62706
+	dc.w	$ff00	;62708
+	dc.w	$0030	;6270a
+	dc.w	$ff80	;6270c
+	dc.w	$ff10	;6270e
+	dc.w	$0060	;62710
+	dc.w	$0080	;62712
+	dc.w	$ff70	;62714
+	dc.w	$0080	;62716
+	dc.w	$0080	;62718
+	dc.w	$0080	;6271a
+	dc.w	$0080	;6271c
+	dc.w	$0080	;6271e
+	dc.w	$00e0	;62720
+	dc.w	$0060	;62722
+	dc.w	$0080	;62724
+	dc.w	$00e0	;62726
+	dc.w	$0030	;62728
+	dc.w	$0080	;6272a
+	dc.w	$ff10	;6272c
+	dc.w	$0060	;6272e
+	dc.w	$ff80	;62730
+	dc.w	$ff70	;62732
+	dc.w	$0080	;62734
+	dc.w	$ff80	;62736
+	dc.w	$0080	;62738
+	dc.w	$0080	;6273a
+	dc.w	$ff80	;6273c
+	dc.w	$00e0	;6273e
+	dc.w	$0060	;62740
+	dc.w	$ff80	;62742
+	dc.w	$00e0	;62744
+	dc.w	$0030	;62746
+	dc.w	$ff80	;62748
+	dc.w	$ff10	;6274a
+	dc.w	$0060	;6274c
+	dc.w	$0050	;6274e
+	dc.w	$ff10	;62750
+	dc.w	$0060	;62752
+	dc.w	$ffb0	;62754
+	dc.w	$ff70	;62756
+	dc.w	$0080	;62758
+	dc.w	$0050	;6275a
+	dc.w	$ff70	;6275c
+	dc.w	$0080	;6275e
+	dc.w	$ffb0	;62760
+	dc.w	$0080	;62762
+	dc.w	$0080	;62764
+	dc.w	$0050	;62766
+	dc.w	$0080	;62768
+	dc.w	$0080	;6276a
+	dc.w	$ffb0	;6276c
+	dc.w	$00e0	;6276e
+	dc.w	$0060	;62770
+	dc.w	$0050	;62772
+	dc.w	$00e0	;62774
+	dc.w	$0060	;62776
+	dc.w	$ffb0	;62778
+	dc.w	$00f0	;6277a
+	dc.w	$0030	;6277c
+	dc.w	$0050	;6277e
+	dc.w	$00f0	;62780
+	dc.w	$0030	;62782
+	dc.w	$ffb0	;62784
+	dc.w	$da0e	;62786
+	dc.w	$71d7	;62788
+	dc.w	$0000	;6278a
+	dc.w	$0002	;6278c
+	dc.w	$4fe4	;6278e
+	dc.w	$0002	;62790
+	dc.w	$4fec	;62792
+	dc.w	$0002	;62794
+	dc.w	$5044	;62796
+	dc.w	$0000	;62798
+	dc.w	$0017	;6279a
+	dc.w	$da0e	;6279c
+	dc.w	$71d7	;6279e
+	dc.w	$0000	;627a0
+	dc.w	$0002	;627a2
+	dc.w	$4fe4	;627a4
+	dc.w	$0002	;627a6
+	dc.w	$5034	;627a8
+	dc.w	$0002	;627aa
+	dc.w	$5044	;627ac
+	dc.w	$0000	;627ae
+	dc.w	$0017	;627b0
+	dc.w	$da0e	;627b2
+	dc.w	$71d7	;627b4
+	dc.w	$0000	;627b6
+	dc.w	$0002	;627b8
+	dc.w	$5014	;627ba
+	dc.w	$0002	;627bc
+	dc.w	$503c	;627be
+	dc.w	$0002	;627c0
+	dc.w	$504c	;627c2
+	dc.w	$0000	;627c4
+	dc.w	$0017	;627c6
+	dc.w	$da0e	;627c8
+	dc.w	$71d7	;627ca
+	dc.w	$0000	;627cc
+	dc.w	$0002	;627ce
+	dc.w	$500c	;627d0
+	dc.w	$0002	;627d2
+	dc.w	$5014	;627d4
+	dc.w	$0002	;627d6
+	dc.w	$503c	;627d8
+	dc.w	$0000	;627da
+	dc.w	$0017	;627dc
+	dc.w	$25f2	;627de
+	dc.w	$71d7	;627e0
+	dc.w	$0000	;627e2
+	dc.w	$0002	;627e4
+	dc.w	$4ff4	;627e6
+	dc.w	$0002	;627e8
+	dc.w	$4ffc	;627ea
+	dc.w	$0002	;627ec
+	dc.w	$5064	;627ee
+	dc.w	$0000	;627f0
+	dc.w	$0017	;627f2
+	dc.w	$25f2	;627f4
+	dc.w	$71d7	;627f6
+	dc.w	$0000	;627f8
+	dc.w	$0002	;627fa
+	dc.w	$4ff4	;627fc
+	dc.w	$0002	;627fe
+	dc.w	$5054	;62800
+	dc.w	$0002	;62802
+	dc.w	$5064	;62804
+	dc.w	$0000	;62806
+	dc.w	$0017	;62808
+	dc.w	$25f2	;6280a
+	dc.w	$71d7	;6280c
+	dc.w	$0000	;6280e
+	dc.w	$0002	;62810
+	dc.w	$5024	;62812
+	dc.w	$0002	;62814
+	dc.w	$505c	;62816
+	dc.w	$0002	;62818
+	dc.w	$506c	;6281a
+	dc.w	$0000	;6281c
+	dc.w	$0017	;6281e
+	dc.w	$25f2	;62820
+	dc.w	$71d7	;62822
+	dc.w	$0000	;62824
+	dc.w	$0002	;62826
+	dc.w	$501c	;62828
+	dc.w	$0002	;6282a
+	dc.w	$5024	;6282c
+	dc.w	$0002	;6282e
+	dc.w	$505c	;62830
+	dc.w	$0000	;62832
+	dc.w	$0017	;62834
+	dc.w	$0000	;62836
+	dc.w	$0000	;62838
+	dc.w	$7800	;6283a
+	dc.w	$0002	;6283c
+	dc.w	$4fec	;6283e
+	dc.w	$0002	;62840
+	dc.w	$4ff4	;62842
+	dc.w	$0002	;62844
+	dc.w	$4ffc	;62846
+	dc.w	$0000	;62848
+	dc.w	$0016	;6284a
+	dc.w	$0000	;6284c
+	dc.w	$0000	;6284e
+	dc.w	$77ff	;62850
+	dc.w	$0002	;62852
+	dc.w	$4fe4	;62854
+	dc.w	$0002	;62856
+	dc.w	$4fec	;62858
+	dc.w	$0002	;6285a
+	dc.w	$4ffc	;6285c
+	dc.w	$0000	;6285e
+	dc.w	$0016	;62860
+	dc.w	$0000	;62862
+	dc.w	$0000	;62864
+	dc.w	$8800	;62866
+	dc.w	$0002	;62868
+	dc.w	$5014	;6286a
+	dc.w	$0002	;6286c
+	dc.w	$501c	;6286e
+	dc.w	$0002	;62870
+	dc.w	$5024	;62872
+	dc.w	$0000	;62874
+	dc.w	$0016	;62876
+	dc.w	$0000	;62878
+	dc.w	$0000	;6287a
+	dc.w	$8801	;6287c
+	dc.w	$0002	;6287e
+	dc.w	$500c	;62880
+	dc.w	$0002	;62882
+	dc.w	$5014	;62884
+	dc.w	$0002	;62886
+	dc.w	$5024	;62888
+	dc.w	$0000	;6288a
+	dc.w	$0016	;6288c
+	dc.w	$bd70	;6288e
+	dc.w	$9c28	;62890
+	dc.w	$0000	;62892
+	dc.w	$0002	;62894
+	dc.w	$4fa4	;62896
+	dc.w	$0002	;62898
+	dc.w	$4fac	;6289a
+	dc.w	$0002	;6289c
+	dc.w	$4fb4	;6289e
+	dc.w	$0000	;628a0
+	dc.w	$0012	;628a2
+	dc.w	$bd70	;628a4
+	dc.w	$9c28	;628a6
+	dc.w	$0000	;628a8
+	dc.w	$0002	;628aa
+	dc.w	$4fa4	;628ac
+	dc.w	$0002	;628ae
+	dc.w	$4fb4	;628b0
+	dc.w	$0002	;628b2
+	dc.w	$4fbc	;628b4
+	dc.w	$0000	;628b6
+	dc.w	$0012	;628b8
+	dc.w	$8e29	;628ba
+	dc.w	$25f2	;628bc
+	dc.w	$0000	;628be
+	dc.w	$0002	;628c0
+	dc.w	$4fc4	;628c2
+	dc.w	$0002	;628c4
+	dc.w	$4fe4	;628c6
+	dc.w	$0002	;628c8
+	dc.w	$5034	;628ca
+	dc.w	$0000	;628cc
+	dc.w	$0017	;628ce
+	dc.w	$8e29	;628d0
+	dc.w	$25f2	;628d2
+	dc.w	$0000	;628d4
+	dc.w	$0002	;628d6
+	dc.w	$4fc4	;628d8
+	dc.w	$0002	;628da
+	dc.w	$4fcc	;628dc
+	dc.w	$0002	;628de
+	dc.w	$5034	;628e0
+	dc.w	$0000	;628e2
+	dc.w	$0017	;628e4
+	dc.w	$8e29	;628e6
+	dc.w	$25f2	;628e8
+	dc.w	$0000	;628ea
+	dc.w	$0002	;628ec
+	dc.w	$4fd4	;628ee
+	dc.w	$0002	;628f0
+	dc.w	$500c	;628f2
+	dc.w	$0002	;628f4
+	dc.w	$503c	;628f6
+	dc.w	$0000	;628f8
+	dc.w	$0017	;628fa
+	dc.w	$8e29	;628fc
+	dc.w	$25f2	;628fe
+	dc.w	$0000	;62900
+	dc.w	$0002	;62902
+	dc.w	$4fd4	;62904
+	dc.w	$0002	;62906
+	dc.w	$4fdc	;62908
+	dc.w	$0002	;6290a
+	dc.w	$500c	;6290c
+	dc.w	$0000	;6290e
+	dc.w	$0017	;62910
+	dc.w	$71d7	;62912
+	dc.w	$25f2	;62914
+	dc.w	$0000	;62916
+	dc.w	$0002	;62918
+	dc.w	$5064	;6291a
+	dc.w	$0002	;6291c
+	dc.w	$5074	;6291e
+	dc.w	$0002	;62920
+	dc.w	$507c	;62922
+	dc.w	$0000	;62924
+	dc.w	$000e	;62926
+	dc.w	$71d7	;62928
+	dc.w	$25f2	;6292a
+	dc.w	$0000	;6292c
+	dc.w	$0002	;6292e
+	dc.w	$5064	;62930
+	dc.w	$0002	;62932
+	dc.w	$506c	;62934
+	dc.w	$0002	;62936
+	dc.w	$507c	;62938
+	dc.w	$0000	;6293a
+	dc.w	$000e	;6293c
+	dc.w	$71d7	;6293e
+	dc.w	$0000	;62940
+	dc.w	$25f2	;62942
+	dc.w	$0002	;62944
+	dc.w	$4ffc	;62946
+	dc.w	$0002	;62948
+	dc.w	$5004	;6294a
+	dc.w	$0002	;6294c
+	dc.w	$5074	;6294e
+	dc.w	$0000	;62950
+	dc.w	$0017	;62952
+	dc.w	$71d7	;62954
+	dc.w	$25f2	;62956
+	dc.w	$0000	;62958
+	dc.w	$0002	;6295a
+	dc.w	$4ffc	;6295c
+	dc.w	$0002	;6295e
+	dc.w	$5064	;62960
+	dc.w	$0002	;62962
+	dc.w	$5074	;62964
+	dc.w	$0000	;62966
+	dc.w	$0017	;62968
+	dc.w	$6c8b	;6296a
+	dc.w	$242e	;6296c
+	dc.w	$dbd2	;6296e
+	dc.w	$0002	;62970
+	dc.w	$502c	;62972
+	dc.w	$0002	;62974
+	dc.w	$506c	;62976
+	dc.w	$0002	;62978
+	dc.w	$507c	;6297a
+	dc.w	$0000	;6297c
+	dc.w	$0017	;6297e
+	dc.w	$7800	;62980
+	dc.w	$0000	;62982
+	dc.w	$0000	;62984
+	dc.w	$0002	;62986
+	dc.w	$5024	;62988
+	dc.w	$0002	;6298a
+	dc.w	$502c	;6298c
+	dc.w	$0002	;6298e
+	dc.w	$506c	;62990
+	dc.w	$0000	;62992
+	dc.w	$0017	;62994
+	dc.w	$0000	;62996
+	dc.w	$0000	;62998
+	dc.w	$7800	;6299a
+	dc.w	$0002	;6299c
+	dc.w	$4fc4	;6299e
+	dc.w	$0002	;629a0
+	dc.w	$4fe4	;629a2
+	dc.w	$0002	;629a4
+	dc.w	$4ffc	;629a6
+	dc.w	$0000	;629a8
+	dc.w	$0016	;629aa
+	dc.w	$0000	;629ac
+	dc.w	$0000	;629ae
+	dc.w	$7800	;629b0
+	dc.w	$0002	;629b2
+	dc.w	$4fc4	;629b4
+	dc.w	$0002	;629b6
+	dc.w	$4ffc	;629b8
+	dc.w	$0002	;629ba
+	dc.w	$5004	;629bc
+	dc.w	$0000	;629be
+	dc.w	$0016	;629c0
+	dc.w	$0000	;629c2
+	dc.w	$0000	;629c4
+	dc.w	$8800	;629c6
+	dc.w	$0002	;629c8
+	dc.w	$4fdc	;629ca
+	dc.w	$0002	;629cc
+	dc.w	$500c	;629ce
+	dc.w	$0002	;629d0
+	dc.w	$5024	;629d2
+	dc.w	$0000	;629d4
+	dc.w	$0016	;629d6
+	dc.w	$0000	;629d8
+	dc.w	$0000	;629da
+	dc.w	$8800	;629dc
+	dc.w	$0002	;629de
+	dc.w	$4fdc	;629e0
+	dc.w	$0002	;629e2
+	dc.w	$5024	;629e4
+	dc.w	$0002	;629e6
+	dc.w	$502c	;629e8
+	dc.w	$0000	;629ea
+	dc.w	$0016	;629ec
+	dc.w	$0000	;629ee
+	dc.w	$8800	;629f0
+	dc.w	$0000	;629f2
+	dc.w	$0002	;629f4
+	dc.w	$4f84	;629f6
+	dc.w	$0002	;629f8
+	dc.w	$4fd4	;629fa
+	dc.w	$0002	;629fc
+	dc.w	$4fdc	;629fe
+	dc.w	$0000	;62a00
+	dc.w	$000a	;62a02
+	dc.w	$0000	;62a04
+	dc.w	$8800	;62a06
+	dc.w	$0000	;62a08
+	dc.w	$0002	;62a0a
+	dc.w	$4f84	;62a0c
+	dc.w	$0002	;62a0e
+	dc.w	$4fa4	;62a10
+	dc.w	$0002	;62a12
+	dc.w	$4fd4	;62a14
+	dc.w	$0000	;62a16
+	dc.w	$000a	;62a18
+	dc.w	$0000	;62a1a
+	dc.w	$8800	;62a1c
+	dc.w	$0000	;62a1e
+	dc.w	$0002	;62a20
+	dc.w	$4fac	;62a22
+	dc.w	$0002	;62a24
+	dc.w	$4fc4	;62a26
+	dc.w	$0002	;62a28
+	dc.w	$4fcc	;62a2a
+	dc.w	$0000	;62a2c
+	dc.w	$000a	;62a2e
+	dc.w	$0000	;62a30
+	dc.w	$8800	;62a32
+	dc.w	$0000	;62a34
+	dc.w	$0002	;62a36
+	dc.w	$4f8c	;62a38
+	dc.w	$0002	;62a3a
+	dc.w	$4fac	;62a3c
+	dc.w	$0002	;62a3e
+	dc.w	$4fc4	;62a40
+	dc.w	$0000	;62a42
+	dc.w	$000a	;62a44
+	dc.w	$b800	;62a46
+	dc.w	$a000	;62a48
+	dc.w	$0000	;62a4a
+	dc.w	$0002	;62a4c
+	dc.w	$4f64	;62a4e
+	dc.w	$0002	;62a50
+	dc.w	$4fa4	;62a52
+	dc.w	$0002	;62a54
+	dc.w	$4fac	;62a56
+	dc.w	$0000	;62a58
+	dc.w	$0012	;62a5a
+	dc.w	$b800	;62a5c
+	dc.w	$a000	;62a5e
+	dc.w	$0000	;62a60
+	dc.w	$0002	;62a62
+	dc.w	$4f64	;62a64
+	dc.w	$0002	;62a66
+	dc.w	$4f7c	;62a68
+	dc.w	$0002	;62a6a
+	dc.w	$4fa4	;62a6c
+	dc.w	$0000	;62a6e
+	dc.w	$0012	;62a70
+	dc.w	$b800	;62a72
+	dc.w	$a000	;62a74
+	dc.w	$0000	;62a76
+	dc.w	$0002	;62a78
+	dc.w	$4f64	;62a7a
+	dc.w	$0002	;62a7c
+	dc.w	$4f8c	;62a7e
+	dc.w	$0002	;62a80
+	dc.w	$4fac	;62a82
+	dc.w	$0000	;62a84
+	dc.w	$0012	;62a86
+	dc.w	$b800	;62a88
+	dc.w	$a000	;62a8a
+	dc.w	$0000	;62a8c
+	dc.w	$0002	;62a8e
+	dc.w	$4f7c	;62a90
+	dc.w	$0002	;62a92
+	dc.w	$4f84	;62a94
+	dc.w	$0002	;62a96
+	dc.w	$4fa4	;62a98
+	dc.w	$0000	;62a9a
+	dc.w	$0012	;62a9c
+	dc.w	$0000	;62a9e
+	dc.w	$bd70	;62aa0
+	dc.w	$63d8	;62aa2
+	dc.w	$0002	;62aa4
+	dc.w	$4f64	;62aa6
+	dc.w	$0002	;62aa8
+	dc.w	$4f8c	;62aaa
+	dc.w	$0002	;62aac
+	dc.w	$4f94	;62aae
+	dc.w	$0000	;62ab0
+	dc.w	$000a	;62ab2
+	dc.w	$0000	;62ab4
+	dc.w	$bd70	;62ab6
+	dc.w	$63d8	;62ab8
+	dc.w	$0002	;62aba
+	dc.w	$4f64	;62abc
+	dc.w	$0002	;62abe
+	dc.w	$4f6c	;62ac0
+	dc.w	$0002	;62ac2
+	dc.w	$4f94	;62ac4
+	dc.w	$0000	;62ac6
+	dc.w	$000a	;62ac8
+	dc.w	$0000	;62aca
+	dc.w	$bd70	;62acc
+	dc.w	$9c28	;62ace
+	dc.w	$0002	;62ad0
+	dc.w	$4f7c	;62ad2
+	dc.w	$0002	;62ad4
+	dc.w	$4f84	;62ad6
+	dc.w	$0002	;62ad8
+	dc.w	$4f9c	;62ada
+	dc.w	$0000	;62adc
+	dc.w	$000a	;62ade
+	dc.w	$0000	;62ae0
+	dc.w	$bd70	;62ae2
+	dc.w	$9c28	;62ae4
+	dc.w	$0002	;62ae6
+	dc.w	$4f74	;62ae8
+	dc.w	$0002	;62aea
+	dc.w	$4f7c	;62aec
+	dc.w	$0002	;62aee
+	dc.w	$4f9c	;62af0
+	dc.w	$0000	;62af2
+	dc.w	$000a	;62af4
+	dc.w	$71d7	;62af6
+	dc.w	$da0e	;62af8
+	dc.w	$0000	;62afa
+	dc.w	$0002	;62afc
+	dc.w	$4f6c	;62afe
+	dc.w	$0002	;62b00
+	dc.w	$4f74	;62b02
+	dc.w	$0002	;62b04
+	dc.w	$4f94	;62b06
+	dc.w	$0000	;62b08
+	dc.w	$0006	;62b0a
+	dc.w	$71d7	;62b0c
+	dc.w	$da0e	;62b0e
+	dc.w	$0000	;62b10
+	dc.w	$0002	;62b12
+	dc.w	$4f74	;62b14
+	dc.w	$0002	;62b16
+	dc.w	$4f9c	;62b18
+	dc.w	$0002	;62b1a
+	dc.w	$4f94	;62b1c
+	dc.w	$0000	;62b1e
+	dc.w	$0006	;62b20
+	dc.w	$0000	;62b22
+	dc.w	$0000	;62b24
+	dc.w	$0000	;62b26
+	dc.w	$0002	;62b28
+	dc.w	$4f64	;62b2a
+	dc.w	$0002	;62b2c
+	dc.w	$4f74	;62b2e
+	dc.w	$0002	;62b30
+	dc.w	$4f7c	;62b32
+	dc.w	$0000	;62b34
+	dc.w	$0002	;62b36
+	dc.w	$0000	;62b38
+	dc.w	$0000	;62b3a
+	dc.w	$0000	;62b3c
+	dc.w	$0002	;62b3e
+	dc.w	$4f64	;62b40
+	dc.w	$0002	;62b42
+	dc.w	$4f6c	;62b44
+	dc.w	$0002	;62b46
+	dc.w	$4f74	;62b48
+	dc.w	$0000	;62b4a
+	dc.w	$0002	;62b4c
+	dc.w	$0100	;62b4e
+	dc.w	$000e	;62b50
+	dc.w	$0013	;62b52
+	dc.w	$0062	;62b54
+	dc.w	$0000	;62b56
+	dc.w	$0000	;62b58
+	dc.w	$0000	;62b5a
+	dc.w	$ffc0	;62b5c
+	dc.w	$ffd0	;62b5e
+	dc.w	$0028	;62b60
+	dc.w	$0000	;62b62
+	dc.w	$ffd0	;62b64
+	dc.w	$0058	;62b66
+	dc.w	$0090	;62b68
+	dc.w	$ffe0	;62b6a
+	dc.w	$0028	;62b6c
+	dc.w	$0090	;62b6e
+	dc.w	$ffe0	;62b70
+	dc.w	$ffd8	;62b72
+	dc.w	$0000	;62b74
+	dc.w	$ffd0	;62b76
+	dc.w	$ffa8	;62b78
+	dc.w	$ffc0	;62b7a
+	dc.w	$ffd0	;62b7c
+	dc.w	$ffd8	;62b7e
+	dc.w	$ffb0	;62b80
+	dc.w	$ffe8	;62b82
+	dc.w	$ffd8	;62b84
+	dc.w	$ffb0	;62b86
+	dc.w	$ffe8	;62b88
+	dc.w	$0028	;62b8a
+	dc.w	$0000	;62b8c
+	dc.w	$0000	;62b8e
+	dc.w	$ffa8	;62b90
+	dc.w	$0000	;62b92
+	dc.w	$0000	;62b94
+	dc.w	$0058	;62b96
+	dc.w	$ffc0	;62b98
+	dc.w	$0000	;62b9a
+	dc.w	$0028	;62b9c
+	dc.w	$ffc0	;62b9e
+	dc.w	$0000	;62ba0
+	dc.w	$ffd8	;62ba2
+	dc.w	$0090	;62ba4
+	dc.w	$0000	;62ba6
+	dc.w	$ffd8	;62ba8
+	dc.w	$0090	;62baa
+	dc.w	$0000	;62bac
+	dc.w	$0028	;62bae
+	dc.w	$9c28	;62bb0
+	dc.w	$4290	;62bb2
+	dc.w	$0000	;62bb4
+	dc.w	$0002	;62bb6
+	dc.w	$4f94	;62bb8
+	dc.w	$0002	;62bba
+	dc.w	$4f9c	;62bbc
+	dc.w	$0002	;62bbe
+	dc.w	$4fb4	;62bc0
+	dc.w	$0000	;62bc2
+	dc.w	$000e	;62bc4
+	dc.w	$9c28	;62bc6
+	dc.w	$4290	;62bc8
+	dc.w	$0000	;62bca
+	dc.w	$0002	;62bcc
+	dc.w	$4f94	;62bce
+	dc.w	$0002	;62bd0
+	dc.w	$4fb4	;62bd2
+	dc.w	$0002	;62bd4
+	dc.w	$4fbc	;62bd6
+	dc.w	$0000	;62bd8
+	dc.w	$000e	;62bda
+	dc.w	$b800	;62bdc
+	dc.w	$0000	;62bde
+	dc.w	$6000	;62be0
+	dc.w	$0002	;62be2
+	dc.w	$4f64	;62be4
+	dc.w	$0002	;62be6
+	dc.w	$4f6c	;62be8
+	dc.w	$0002	;62bea
+	dc.w	$4fac	;62bec
+	dc.w	$0000	;62bee
+	dc.w	$0006	;62bf0
+	dc.w	$b800	;62bf2
+	dc.w	$0000	;62bf4
+	dc.w	$6000	;62bf6
+	dc.w	$0002	;62bf8
+	dc.w	$4f64	;62bfa
+	dc.w	$0002	;62bfc
+	dc.w	$4fb4	;62bfe
+	dc.w	$0002	;62c00
+	dc.w	$4fac	;62c02
+	dc.w	$0000	;62c04
+	dc.w	$0006	;62c06
+	dc.w	$b800	;62c08
+	dc.w	$0000	;62c0a
+	dc.w	$a000	;62c0c
+	dc.w	$0002	;62c0e
+	dc.w	$4f84	;62c10
+	dc.w	$0002	;62c12
+	dc.w	$4f8c	;62c14
+	dc.w	$0002	;62c16
+	dc.w	$4fa4	;62c18
+	dc.w	$0000	;62c1a
+	dc.w	$0006	;62c1c
+	dc.w	$b800	;62c1e
+	dc.w	$0000	;62c20
+	dc.w	$a000	;62c22
+	dc.w	$0002	;62c24
+	dc.w	$4f8c	;62c26
+	dc.w	$0002	;62c28
+	dc.w	$4fbc	;62c2a
+	dc.w	$0002	;62c2c
+	dc.w	$4fa4	;62c2e
+	dc.w	$0000	;62c30
+	dc.w	$0006	;62c32
+	dc.w	$7800	;62c34
+	dc.w	$0000	;62c36
+	dc.w	$0000	;62c38
+	dc.w	$0002	;62c3a
+	dc.w	$4f7c	;62c3c
+	dc.w	$0002	;62c3e
+	dc.w	$4fc4	;62c40
+	dc.w	$0002	;62c42
+	dc.w	$4fcc	;62c44
+	dc.w	$0000	;62c46
+	dc.w	$0006	;62c48
+	dc.w	$7800	;62c4a
+	dc.w	$0000	;62c4c
+	dc.w	$0000	;62c4e
+	dc.w	$0002	;62c50
+	dc.w	$4f74	;62c52
+	dc.w	$0002	;62c54
+	dc.w	$4f7c	;62c56
+	dc.w	$0002	;62c58
+	dc.w	$4fcc	;62c5a
+	dc.w	$0000	;62c5c
+	dc.w	$0006	;62c5e
+	dc.w	$25f2	;62c60
+	dc.w	$0000	;62c62
+	dc.w	$8e29	;62c64
+	dc.w	$0002	;62c66
+	dc.w	$4f84	;62c68
+	dc.w	$0002	;62c6a
+	dc.w	$4fc4	;62c6c
+	dc.w	$0002	;62c6e
+	dc.w	$4fa4	;62c70
+	dc.w	$0000	;62c72
+	dc.w	$000a	;62c74
+	dc.w	$25f2	;62c76
+	dc.w	$0000	;62c78
+	dc.w	$8e29	;62c7a
+	dc.w	$0002	;62c7c
+	dc.w	$4f7c	;62c7e
+	dc.w	$0002	;62c80
+	dc.w	$4f84	;62c82
+	dc.w	$0002	;62c84
+	dc.w	$4fc4	;62c86
+	dc.w	$0000	;62c88
+	dc.w	$000a	;62c8a
+	dc.w	$25f2	;62c8c
+	dc.w	$0000	;62c8e
+	dc.w	$71d7	;62c90
+	dc.w	$0002	;62c92
+	dc.w	$4f6c	;62c94
+	dc.w	$0002	;62c96
+	dc.w	$4f74	;62c98
+	dc.w	$0002	;62c9a
+	dc.w	$4fcc	;62c9c
+	dc.w	$0000	;62c9e
+	dc.w	$000a	;62ca0
+	dc.w	$25f2	;62ca2
+	dc.w	$0000	;62ca4
+	dc.w	$71d7	;62ca6
+	dc.w	$0002	;62ca8
+	dc.w	$4f6c	;62caa
+	dc.w	$0002	;62cac
+	dc.w	$4fcc	;62cae
+	dc.w	$0002	;62cb0
+	dc.w	$4fac	;62cb2
+	dc.w	$0000	;62cb4
+	dc.w	$000a	;62cb6
+	dc.w	$0000	;62cb8
+	dc.w	$0000	;62cba
+	dc.w	$8800	;62cbc
+	dc.w	$0002	;62cbe
+	dc.w	$4f8c	;62cc0
+	dc.w	$0002	;62cc2
+	dc.w	$4f94	;62cc4
+	dc.w	$0002	;62cc6
+	dc.w	$4fbc	;62cc8
+	dc.w	$0000	;62cca
+	dc.w	$0016	;62ccc
+	dc.w	$0000	;62cce
+	dc.w	$0000	;62cd0
+	dc.w	$7800	;62cd2
+	dc.w	$0002	;62cd4
+	dc.w	$4f64	;62cd6
+	dc.w	$0002	;62cd8
+	dc.w	$4f9c	;62cda
+	dc.w	$0002	;62cdc
+	dc.w	$4fb4	;62cde
+	dc.w	$0000	;62ce0
+	dc.w	$0016	;62ce2
+	dc.w	$9c28	;62ce4
+	dc.w	$bd70	;62ce6
+	dc.w	$0000	;62ce8
+	dc.w	$0002	;62cea
+	dc.w	$4f64	;62cec
+	dc.w	$0002	;62cee
+	dc.w	$4f94	;62cf0
+	dc.w	$0002	;62cf2
+	dc.w	$4f9c	;62cf4
+	dc.w	$0000	;62cf6
+	dc.w	$0012	;62cf8
+	dc.w	$9c28	;62cfa
+	dc.w	$bd70	;62cfc
+	dc.w	$0000	;62cfe
+	dc.w	$0002	;62d00
+	dc.w	$4f64	;62d02
+	dc.w	$0002	;62d04
+	dc.w	$4f8c	;62d06
+	dc.w	$0002	;62d08
+	dc.w	$4f94	;62d0a
+	dc.w	$0000	;62d0c
+	dc.w	$0012	;62d0e
+	dc.w	$0000	;62d10
+	dc.w	$8800	;62d12
+	dc.w	$0000	;62d14
+	dc.w	$0002	;62d16
+	dc.w	$4f64	;62d18
+	dc.w	$0002	;62d1a
+	dc.w	$4f6c	;62d1c
+	dc.w	$0002	;62d1e
+	dc.w	$4f8c	;62d20
+	dc.w	$0000	;62d22
+	dc.w	$0002	;62d24
+	dc.w	$0000	;62d26
+	dc.w	$8800	;62d28
+	dc.w	$0000	;62d2a
+	dc.w	$0002	;62d2c
+	dc.w	$4f6c	;62d2e
+	dc.w	$0002	;62d30
+	dc.w	$4f84	;62d32
+	dc.w	$0002	;62d34
+	dc.w	$4f8c	;62d36
+	dc.w	$0000	;62d38
+	dc.w	$0002	;62d3a
+	dc.w	$0d40	;62d3c
+	dc.w	$88bc	;62d3e
+	dc.w	$0000	;62d40
+	dc.w	$0002	;62d42
+	dc.w	$4f6c	;62d44
+	dc.w	$0002	;62d46
+	dc.w	$4f74	;62d48
+	dc.w	$0002	;62d4a
+	dc.w	$4f84	;62d4c
+	dc.w	$0000	;62d4e
+	dc.w	$0002	;62d50
+	dc.w	$0d40	;62d52
+	dc.w	$88bc	;62d54
+	dc.w	$0000	;62d56
+	dc.w	$0002	;62d58
+	dc.w	$4f74	;62d5a
+	dc.w	$0002	;62d5c
+	dc.w	$4f7c	;62d5e
+	dc.w	$0002	;62d60
+	dc.w	$4f84	;62d62
+	dc.w	$0000	;62d64
+	dc.w	$0002	;62d66
+	dc.w	$0100	;62d68
+	dc.w	$0006	;62d6a
+	dc.w	$0005	;62d6c
+	dc.w	$0032	;62d6e
+	dc.w	$0000	;62d70
+	dc.w	$0000	;62d72
+	dc.w	$0000	;62d74
+	dc.w	$fec0	;62d76
+	dc.w	$ffe0	;62d78
+	dc.w	$fff8	;62d7a
+	dc.w	$ffb0	;62d7c
+	dc.w	$ffe0	;62d7e
+	dc.w	$0008	;62d80
+	dc.w	$ffb0	;62d82
+	dc.w	$ffe0	;62d84
+	dc.w	$fff8	;62d86
+	dc.w	$fec0	;62d88
+	dc.w	$fff0	;62d8a
+	dc.w	$0000	;62d8c
+	dc.w	$ffb0	;62d8e
+	dc.w	$fff0	;62d90
+	dc.w	$0000	;62d92
+	dc.w	$fec0	;62d94
+	dc.w	$ffe0	;62d96
+	dc.w	$0008	;62d98
+	dc.w	$0000	;62d9a
+	dc.w	$ca56	;62d9c
+	dc.w	$6b54	;62d9e
+	dc.w	$0002	;62da0
+	dc.w	$4f64	;62da2
+	dc.w	$0002	;62da4
+	dc.w	$4f7c	;62da6
+	dc.w	$0002	;62da8
+	dc.w	$4f84	;62daa
+	dc.w	$0000	;62dac
+	dc.w	$000a	;62dae
+	dc.w	$0000	;62db0
+	dc.w	$ca56	;62db2
+	dc.w	$6b54	;62db4
+	dc.w	$0002	;62db6
+	dc.w	$4f64	;62db8
+	dc.w	$0002	;62dba
+	dc.w	$4f74	;62dbc
+	dc.w	$0002	;62dbe
+	dc.w	$4f84	;62dc0
+	dc.w	$0000	;62dc2
+	dc.w	$000a	;62dc4
+	dc.w	$0000	;62dc6
+	dc.w	$ca56	;62dc8
+	dc.w	$94ac	;62dca
+	dc.w	$0002	;62dcc
+	dc.w	$4f8c	;62dce
+	dc.w	$0002	;62dd0
+	dc.w	$4f6c	;62dd2
+	dc.w	$0002	;62dd4
+	dc.w	$4f84	;62dd6
+	dc.w	$0000	;62dd8
+	dc.w	$000a	;62dda
+	dc.w	$0000	;62ddc
+	dc.w	$ca56	;62dde
+	dc.w	$94ac	;62de0
+	dc.w	$0002	;62de2
+	dc.w	$4f8c	;62de4
+	dc.w	$0002	;62de6
+	dc.w	$4f7c	;62de8
+	dc.w	$0002	;62dea
+	dc.w	$4f84	;62dec
+	dc.w	$0000	;62dee
+	dc.w	$000a	;62df0
+	dc.w	$0000	;62df2
+	dc.w	$8800	;62df4
+	dc.w	$0000	;62df6
+	dc.w	$0002	;62df8
+	dc.w	$4f8c	;62dfa
+	dc.w	$0002	;62dfc
+	dc.w	$4f64	;62dfe
+	dc.w	$0002	;62e00
+	dc.w	$4f6c	;62e02
+	dc.w	$0000	;62e04
+	dc.w	$0002	;62e06
+	dc.w	$0000	;62e08
+	dc.w	$8800	;62e0a
+	dc.w	$0000	;62e0c
+	dc.w	$0002	;62e0e
+	dc.w	$4f64	;62e10
+	dc.w	$0002	;62e12
+	dc.w	$4f6c	;62e14
+	dc.w	$0002	;62e16
+	dc.w	$4f74	;62e18
+	dc.w	$0000	;62e1a
+	dc.w	$0002	;62e1c
+	dc.w	$0100	;62e1e
+	dc.w	$002a	;62e20
+	dc.w	$0033	;62e22
+	dc.w	$010a	;62e24
+	dc.w	$0000	;62e26
+	dc.w	$0000	;62e28
+	dc.w	$0000	;62e2a
+	dc.w	$ff90	;62e2c
+	dc.w	$0000	;62e2e
+	dc.w	$0070	;62e30
+	dc.w	$0040	;62e32
+	dc.w	$0000	;62e34
+	dc.w	$0070	;62e36
+	dc.w	$0040	;62e38
+	dc.w	$0000	;62e3a
+	dc.w	$ff90	;62e3c
+	dc.w	$ff90	;62e3e
+	dc.w	$0000	;62e40
+	dc.w	$ff90	;62e42
+	dc.w	$ff40	;62e44
+	dc.w	$0050	;62e46
+	dc.w	$ff90	;62e48
+	dc.w	$ff40	;62e4a
+	dc.w	$0050	;62e4c
+	dc.w	$0070	;62e4e
+	dc.w	$00f0	;62e50
+	dc.w	$0020	;62e52
+	dc.w	$0070	;62e54
+	dc.w	$00f0	;62e56
+	dc.w	$0020	;62e58
+	dc.w	$ff90	;62e5a
+	dc.w	$0110	;62e5c
+	dc.w	$0060	;62e5e
+	dc.w	$ff90	;62e60
+	dc.w	$0110	;62e62
+	dc.w	$0060	;62e64
+	dc.w	$0070	;62e66
+	dc.w	$ff00	;62e68
+	dc.w	$0050	;62e6a
+	dc.w	$0070	;62e6c
+	dc.w	$ff00	;62e6e
+	dc.w	$0050	;62e70
+	dc.w	$ff90	;62e72
+	dc.w	$ff00	;62e74
+	dc.w	$0050	;62e76
+	dc.w	$ffc0	;62e78
+	dc.w	$ff00	;62e7a
+	dc.w	$0050	;62e7c
+	dc.w	$0040	;62e7e
+	dc.w	$ff40	;62e80
+	dc.w	$0050	;62e82
+	dc.w	$ffc0	;62e84
+	dc.w	$ff40	;62e86
+	dc.w	$0050	;62e88
+	dc.w	$0040	;62e8a
+	dc.w	$ff30	;62e8c
+	dc.w	$0060	;62e8e
+	dc.w	$0040	;62e90
+	dc.w	$ff30	;62e92
+	dc.w	$0060	;62e94
+	dc.w	$ffc0	;62e96
+	dc.w	$ff40	;62e98
+	dc.w	$0070	;62e9a
+	dc.w	$0040	;62e9c
+	dc.w	$ff40	;62e9e
+	dc.w	$0070	;62ea0
+	dc.w	$ffc0	;62ea2
+	dc.w	$ff00	;62ea4
+	dc.w	$0070	;62ea6
+	dc.w	$0070	;62ea8
+	dc.w	$ff00	;62eaa
+	dc.w	$0070	;62eac
+	dc.w	$ff90	;62eae
+	dc.w	$ff40	;62eb0
+	dc.w	$00a0	;62eb2
+	dc.w	$0070	;62eb4
+	dc.w	$ff40	;62eb6
+	dc.w	$00a0	;62eb8
+	dc.w	$ff90	;62eba
+	dc.w	$ff40	;62ebc
+	dc.w	$00a0	;62ebe
+	dc.w	$ffc0	;62ec0
+	dc.w	$ff40	;62ec2
+	dc.w	$00a0	;62ec4
+	dc.w	$0040	;62ec6
+	dc.w	$ff00	;62ec8
+	dc.w	$0070	;62eca
+	dc.w	$0040	;62ecc
+	dc.w	$ff00	;62ece
+	dc.w	$0070	;62ed0
+	dc.w	$ffc0	;62ed2
+	dc.w	$0110	;62ed4
+	dc.w	$0070	;62ed6
+	dc.w	$ff90	;62ed8
+	dc.w	$0110	;62eda
+	dc.w	$0070	;62edc
+	dc.w	$0070	;62ede
+	dc.w	$0110	;62ee0
+	dc.w	$0070	;62ee2
+	dc.w	$ffc0	;62ee4
+	dc.w	$0110	;62ee6
+	dc.w	$0070	;62ee8
+	dc.w	$0040	;62eea
+	dc.w	$00c0	;62eec
+	dc.w	$00a0	;62eee
+	dc.w	$ff90	;62ef0
+	dc.w	$00c0	;62ef2
+	dc.w	$00a0	;62ef4
+	dc.w	$0070	;62ef6
+	dc.w	$00c0	;62ef8
+	dc.w	$00a0	;62efa
+	dc.w	$ffc0	;62efc
+	dc.w	$00c0	;62efe
+	dc.w	$00a0	;62f00
+	dc.w	$0040	;62f02
+	dc.w	$00f0	;62f04
+	dc.w	$0060	;62f06
+	dc.w	$ffc0	;62f08
+	dc.w	$00f0	;62f0a
+	dc.w	$0060	;62f0c
+	dc.w	$0040	;62f0e
+	dc.w	$00f0	;62f10
+	dc.w	$0070	;62f12
+	dc.w	$ffc0	;62f14
+	dc.w	$00f0	;62f16
+	dc.w	$0070	;62f18
+	dc.w	$0040	;62f1a
+	dc.w	$0110	;62f1c
+	dc.w	$0050	;62f1e
+	dc.w	$ffc0	;62f20
+	dc.w	$0110	;62f22
+	dc.w	$0050	;62f24
+	dc.w	$0040	;62f26
+	dc.w	$ab26	;62f28
+	dc.w	$54da	;62f2a
+	dc.w	$0000	;62f2c
+	dc.w	$0002	;62f2e
+	dc.w	$4fe4	;62f30
+	dc.w	$0002	;62f32
+	dc.w	$4fec	;62f34
+	dc.w	$0002	;62f36
+	dc.w	$4ffc	;62f38
+	dc.w	$0000	;62f3a
+	dc.w	$000e	;62f3c
+	dc.w	$ab26	;62f3e
+	dc.w	$54da	;62f40
+	dc.w	$0000	;62f42
+	dc.w	$0002	;62f44
+	dc.w	$4fe4	;62f46
+	dc.w	$0002	;62f48
+	dc.w	$4ff4	;62f4a
+	dc.w	$0002	;62f4c
+	dc.w	$4ffc	;62f4e
+	dc.w	$0000	;62f50
+	dc.w	$000e	;62f52
+	dc.w	$ab26	;62f54
+	dc.w	$ab26	;62f56
+	dc.w	$0000	;62f58
+	dc.w	$0002	;62f5a
+	dc.w	$4fdc	;62f5c
+	dc.w	$0002	;62f5e
+	dc.w	$4fe4	;62f60
+	dc.w	$0002	;62f62
+	dc.w	$4fec	;62f64
+	dc.w	$0000	;62f66
+	dc.w	$000a	;62f68
+	dc.w	$ab26	;62f6a
+	dc.w	$ab26	;62f6c
+	dc.w	$0000	;62f6e
+	dc.w	$0002	;62f70
+	dc.w	$4fd4	;62f72
+	dc.w	$0002	;62f74
+	dc.w	$4fdc	;62f76
+	dc.w	$0002	;62f78
+	dc.w	$4fec	;62f7a
+	dc.w	$0000	;62f7c
+	dc.w	$000a	;62f7e
+	dc.w	$7800	;62f80
+	dc.w	$0000	;62f82
+	dc.w	$0000	;62f84
+	dc.w	$0002	;62f86
+	dc.w	$5084	;62f88
+	dc.w	$0002	;62f8a
+	dc.w	$508c	;62f8c
+	dc.w	$0002	;62f8e
+	dc.w	$509c	;62f90
+	dc.w	$0000	;62f92
+	dc.w	$000e	;62f94
+	dc.w	$7800	;62f96
+	dc.w	$0000	;62f98
+	dc.w	$0000	;62f9a
+	dc.w	$0002	;62f9c
+	dc.w	$5084	;62f9e
+	dc.w	$0002	;62fa0
+	dc.w	$5094	;62fa2
+	dc.w	$0002	;62fa4
+	dc.w	$509c	;62fa6
+	dc.w	$0000	;62fa8
+	dc.w	$000e	;62faa
+	dc.w	$8800	;62fac
+	dc.w	$0000	;62fae
+	dc.w	$0000	;62fb0
+	dc.w	$0002	;62fb2
+	dc.w	$4fbc	;62fb4
+	dc.w	$0002	;62fb6
+	dc.w	$4fc4	;62fb8
+	dc.w	$0002	;62fba
+	dc.w	$503c	;62fbc
+	dc.w	$0000	;62fbe
+	dc.w	$0017	;62fc0
+	dc.w	$8800	;62fc2
+	dc.w	$0000	;62fc4
+	dc.w	$0000	;62fc6
+	dc.w	$0002	;62fc8
+	dc.w	$4fbc	;62fca
+	dc.w	$0002	;62fcc
+	dc.w	$500c	;62fce
+	dc.w	$0002	;62fd0
+	dc.w	$503c	;62fd2
+	dc.w	$0000	;62fd4
+	dc.w	$0017	;62fd6
+	dc.w	$8800	;62fd8
+	dc.w	$0000	;62fda
+	dc.w	$0000	;62fdc
+	dc.w	$0002	;62fde
+	dc.w	$4fb4	;62fe0
+	dc.w	$0002	;62fe2
+	dc.w	$4fcc	;62fe4
+	dc.w	$0002	;62fe6
+	dc.w	$5034	;62fe8
+	dc.w	$0000	;62fea
+	dc.w	$0017	;62fec
+	dc.w	$8800	;62fee
+	dc.w	$0000	;62ff0
+	dc.w	$0000	;62ff2
+	dc.w	$0002	;62ff4
+	dc.w	$4fb4	;62ff6
+	dc.w	$0002	;62ff8
+	dc.w	$5004	;62ffa
+	dc.w	$0002	;62ffc
+	dc.w	$5034	;62ffe
+	dc.w	$0000	;63000
+	dc.w	$0017	;63002
+	dc.w	$b800	;63004
+	dc.w	$6000	;63006
+	dc.w	$0000	;63008
+	dc.w	$0002	;6300a
+	dc.w	$5004	;6300c
+	dc.w	$0002	;6300e
+	dc.w	$5014	;63010
+	dc.w	$0002	;63012
+	dc.w	$502c	;63014
+	dc.w	$0000	;63016
+	dc.w	$0017	;63018
+	dc.w	$b800	;6301a
+	dc.w	$6000	;6301c
+	dc.w	$0000	;6301e
+	dc.w	$0002	;63020
+	dc.w	$5004	;63022
+	dc.w	$0002	;63024
+	dc.w	$502c	;63026
+	dc.w	$0002	;63028
+	dc.w	$5034	;6302a
+	dc.w	$0000	;6302c
+	dc.w	$0017	;6302e
+	dc.w	$b800	;63030
+	dc.w	$6000	;63032
+	dc.w	$0000	;63034
+	dc.w	$0002	;63036
+	dc.w	$500c	;63038
+	dc.w	$0002	;6303a
+	dc.w	$501c	;6303c
+	dc.w	$0002	;6303e
+	dc.w	$5024	;63040
+	dc.w	$0000	;63042
+	dc.w	$0017	;63044
+	dc.w	$b800	;63046
+	dc.w	$6000	;63048
+	dc.w	$0000	;6304a
+	dc.w	$0002	;6304c
+	dc.w	$500c	;6304e
+	dc.w	$0002	;63050
+	dc.w	$5024	;63052
+	dc.w	$0002	;63054
+	dc.w	$503c	;63056
+	dc.w	$0000	;63058
+	dc.w	$0017	;6305a
+	dc.w	$7800	;6305c
+	dc.w	$0000	;6305e
+	dc.w	$0000	;63060
+	dc.w	$0002	;63062
+	dc.w	$4fa4	;63064
+	dc.w	$0002	;63066
+	dc.w	$5044	;63068
+	dc.w	$0002	;6306a
+	dc.w	$5054	;6306c
+	dc.w	$0000	;6306e
+	dc.w	$0017	;63070
+	dc.w	$7800	;63072
+	dc.w	$0000	;63074
+	dc.w	$0000	;63076
+	dc.w	$0002	;63078
+	dc.w	$4fa4	;6307a
+	dc.w	$0002	;6307c
+	dc.w	$5054	;6307e
+	dc.w	$0002	;63080
+	dc.w	$50a4	;63082
+	dc.w	$0000	;63084
+	dc.w	$0017	;63086
+	dc.w	$7800	;63088
+	dc.w	$0000	;6308a
+	dc.w	$0000	;6308c
+	dc.w	$0002	;6308e
+	dc.w	$4fac	;63090
+	dc.w	$0002	;63092
+	dc.w	$505c	;63094
+	dc.w	$0002	;63096
+	dc.w	$50ac	;63098
+	dc.w	$0000	;6309a
+	dc.w	$0017	;6309c
+	dc.w	$7800	;6309e
+	dc.w	$0000	;630a0
+	dc.w	$0000	;630a2
+	dc.w	$0002	;630a4
+	dc.w	$4fac	;630a6
+	dc.w	$0002	;630a8
+	dc.w	$504c	;630aa
+	dc.w	$0002	;630ac
+	dc.w	$505c	;630ae
+	dc.w	$0000	;630b0
+	dc.w	$0017	;630b2
+	dc.w	$3dbd	;630b4
+	dc.w	$66e6	;630b6
+	dc.w	$0000	;630b8
+	dc.w	$0002	;630ba
+	dc.w	$504c	;630bc
+	dc.w	$0002	;630be
+	dc.w	$505c	;630c0
+	dc.w	$0002	;630c2
+	dc.w	$507c	;630c4
+	dc.w	$0000	;630c6
+	dc.w	$0017	;630c8
+	dc.w	$3dbd	;630ca
+	dc.w	$66e6	;630cc
+	dc.w	$0000	;630ce
+	dc.w	$0002	;630d0
+	dc.w	$504c	;630d2
+	dc.w	$0002	;630d4
+	dc.w	$506c	;630d6
+	dc.w	$0002	;630d8
+	dc.w	$507c	;630da
+	dc.w	$0000	;630dc
+	dc.w	$0017	;630de
+	dc.w	$3dbd	;630e0
+	dc.w	$66e6	;630e2
+	dc.w	$0000	;630e4
+	dc.w	$0002	;630e6
+	dc.w	$5044	;630e8
+	dc.w	$0002	;630ea
+	dc.w	$5064	;630ec
+	dc.w	$0002	;630ee
+	dc.w	$5074	;630f0
+	dc.w	$0000	;630f2
+	dc.w	$0017	;630f4
+	dc.w	$3dbd	;630f6
+	dc.w	$66e6	;630f8
+	dc.w	$0000	;630fa
+	dc.w	$0002	;630fc
+	dc.w	$5044	;630fe
+	dc.w	$0002	;63100
+	dc.w	$5054	;63102
+	dc.w	$0002	;63104
+	dc.w	$5074	;63106
+	dc.w	$0000	;63108
+	dc.w	$0017	;6310a
+	dc.w	$0000	;6310c
+	dc.w	$0000	;6310e
+	dc.w	$8800	;63110
+	dc.w	$0002	;63112
+	dc.w	$4fa4	;63114
+	dc.w	$0002	;63116
+	dc.w	$500c	;63118
+	dc.w	$0002	;6311a
+	dc.w	$501c	;6311c
+	dc.w	$0000	;6311e
+	dc.w	$0016	;63120
+	dc.w	$0000	;63122
+	dc.w	$0000	;63124
+	dc.w	$8801	;63126
+	dc.w	$0002	;63128
+	dc.w	$4fa4	;6312a
+	dc.w	$0002	;6312c
+	dc.w	$501c	;6312e
+	dc.w	$0002	;63130
+	dc.w	$5044	;63132
+	dc.w	$0000	;63134
+	dc.w	$0016	;63136
+	dc.w	$0000	;63138
+	dc.w	$0000	;6313a
+	dc.w	$8800	;6313c
+	dc.w	$0002	;6313e
+	dc.w	$501c	;63140
+	dc.w	$0002	;63142
+	dc.w	$5044	;63144
+	dc.w	$0002	;63146
+	dc.w	$5064	;63148
+	dc.w	$0000	;6314a
+	dc.w	$0016	;6314c
+	dc.w	$0000	;6314e
+	dc.w	$0000	;63150
+	dc.w	$7800	;63152
+	dc.w	$0002	;63154
+	dc.w	$4fac	;63156
+	dc.w	$0002	;63158
+	dc.w	$5004	;6315a
+	dc.w	$0002	;6315c
+	dc.w	$5014	;6315e
+	dc.w	$0000	;63160
+	dc.w	$0016	;63162
+	dc.w	$0000	;63164
+	dc.w	$0000	;63166
+	dc.w	$77ff	;63168
+	dc.w	$0002	;6316a
+	dc.w	$4fac	;6316c
+	dc.w	$0002	;6316e
+	dc.w	$5014	;63170
+	dc.w	$0002	;63172
+	dc.w	$504c	;63174
+	dc.w	$0000	;63176
+	dc.w	$0016	;63178
+	dc.w	$0000	;6317a
+	dc.w	$0000	;6317c
+	dc.w	$7800	;6317e
+	dc.w	$0002	;63180
+	dc.w	$5014	;63182
+	dc.w	$0002	;63184
+	dc.w	$504c	;63186
+	dc.w	$0002	;63188
+	dc.w	$506c	;6318a
+	dc.w	$0000	;6318c
+	dc.w	$0016	;6318e
+	dc.w	$0000	;63190
+	dc.w	$8800	;63192
+	dc.w	$0000	;63194
+	dc.w	$0002	;63196
+	dc.w	$4f8c	;63198
+	dc.w	$0002	;6319a
+	dc.w	$4fb4	;6319c
+	dc.w	$0002	;6319e
+	dc.w	$4fcc	;631a0
+	dc.w	$0000	;631a2
+	dc.w	$000a	;631a4
+	dc.w	$0000	;631a6
+	dc.w	$8800	;631a8
+	dc.w	$0000	;631aa
+	dc.w	$0002	;631ac
+	dc.w	$4f8c	;631ae
+	dc.w	$0002	;631b0
+	dc.w	$4fcc	;631b2
+	dc.w	$0002	;631b4
+	dc.w	$4fdc	;631b6
+	dc.w	$0000	;631b8
+	dc.w	$000a	;631ba
+	dc.w	$0000	;631bc
+	dc.w	$8800	;631be
+	dc.w	$0000	;631c0
+	dc.w	$0002	;631c2
+	dc.w	$4f84	;631c4
+	dc.w	$0002	;631c6
+	dc.w	$4fc4	;631c8
+	dc.w	$0002	;631ca
+	dc.w	$4fd4	;631cc
+	dc.w	$0000	;631ce
+	dc.w	$000a	;631d0
+	dc.w	$0000	;631d2
+	dc.w	$8800	;631d4
+	dc.w	$0000	;631d6
+	dc.w	$0002	;631d8
+	dc.w	$4f84	;631da
+	dc.w	$0002	;631dc
+	dc.w	$4fbc	;631de
+	dc.w	$0002	;631e0
+	dc.w	$4fc4	;631e2
+	dc.w	$0000	;631e4
+	dc.w	$000a	;631e6
+	dc.w	$6b54	;631e8
+	dc.w	$ca56	;631ea
+	dc.w	$0000	;631ec
+	dc.w	$0002	;631ee
+	dc.w	$4f94	;631f0
+	dc.w	$0002	;631f2
+	dc.w	$4f9c	;631f4
+	dc.w	$0002	;631f6
+	dc.w	$4fac	;631f8
+	dc.w	$0000	;631fa
+	dc.w	$0006	;631fc
+	dc.w	$6b54	;631fe
+	dc.w	$ca56	;63200
+	dc.w	$0000	;63202
+	dc.w	$0002	;63204
+	dc.w	$4f9c	;63206
+	dc.w	$0002	;63208
+	dc.w	$4fa4	;6320a
+	dc.w	$0002	;6320c
+	dc.w	$4fac	;6320e
+	dc.w	$0000	;63210
+	dc.w	$0006	;63212
+	dc.w	$0000	;63214
+	dc.w	$0000	;63216
+	dc.w	$7800	;63218
+	dc.w	$0002	;6321a
+	dc.w	$4f64	;6321c
+	dc.w	$0002	;6321e
+	dc.w	$4f6c	;63220
+	dc.w	$0002	;63222
+	dc.w	$4f94	;63224
+	dc.w	$0000	;63226
+	dc.w	$0006	;63228
+	dc.w	$0000	;6322a
+	dc.w	$0000	;6322c
+	dc.w	$7800	;6322e
+	dc.w	$0002	;63230
+	dc.w	$4f64	;63232
+	dc.w	$0002	;63234
+	dc.w	$4f94	;63236
+	dc.w	$0002	;63238
+	dc.w	$4fac	;6323a
+	dc.w	$0000	;6323c
+	dc.w	$0006	;6323e
+	dc.w	$0000	;63240
+	dc.w	$0000	;63242
+	dc.w	$7800	;63244
+	dc.w	$0002	;63246
+	dc.w	$4f64	;63248
+	dc.w	$0002	;6324a
+	dc.w	$4f8c	;6324c
+	dc.w	$0002	;6324e
+	dc.w	$4fac	;63250
+	dc.w	$0000	;63252
+	dc.w	$0006	;63254
+	dc.w	$0000	;63256
+	dc.w	$0000	;63258
+	dc.w	$7800	;6325a
+	dc.w	$0002	;6325c
+	dc.w	$4f8c	;6325e
+	dc.w	$0002	;63260
+	dc.w	$4fac	;63262
+	dc.w	$0002	;63264
+	dc.w	$5004	;63266
+	dc.w	$0000	;63268
+	dc.w	$0006	;6326a
+	dc.w	$0000	;6326c
+	dc.w	$0000	;6326e
+	dc.w	$7800	;63270
+	dc.w	$0002	;63272
+	dc.w	$4f8c	;63274
+	dc.w	$0002	;63276
+	dc.w	$4fb4	;63278
+	dc.w	$0002	;6327a
+	dc.w	$5004	;6327c
+	dc.w	$0000	;6327e
+	dc.w	$0006	;63280
+	dc.w	$0000	;63282
+	dc.w	$0000	;63284
+	dc.w	$8800	;63286
+	dc.w	$0002	;63288
+	dc.w	$4f74	;6328a
+	dc.w	$0002	;6328c
+	dc.w	$4f7c	;6328e
+	dc.w	$0002	;63290
+	dc.w	$4f9c	;63292
+	dc.w	$0000	;63294
+	dc.w	$0006	;63296
+	dc.w	$0000	;63298
+	dc.w	$0000	;6329a
+	dc.w	$8800	;6329c
+	dc.w	$0002	;6329e
+	dc.w	$4f7c	;632a0
+	dc.w	$0002	;632a2
+	dc.w	$4f9c	;632a4
+	dc.w	$0002	;632a6
+	dc.w	$4fa4	;632a8
+	dc.w	$0000	;632aa
+	dc.w	$0006	;632ac
+	dc.w	$0000	;632ae
+	dc.w	$0000	;632b0
+	dc.w	$8800	;632b2
+	dc.w	$0002	;632b4
+	dc.w	$4f7c	;632b6
+	dc.w	$0002	;632b8
+	dc.w	$4f84	;632ba
+	dc.w	$0002	;632bc
+	dc.w	$4fa4	;632be
+	dc.w	$0000	;632c0
+	dc.w	$0006	;632c2
+	dc.w	$0000	;632c4
+	dc.w	$0000	;632c6
+	dc.w	$8800	;632c8
+	dc.w	$0002	;632ca
+	dc.w	$4f84	;632cc
+	dc.w	$0002	;632ce
+	dc.w	$4fa4	;632d0
+	dc.w	$0002	;632d2
+	dc.w	$500c	;632d4
+	dc.w	$0000	;632d6
+	dc.w	$0006	;632d8
+	dc.w	$0000	;632da
+	dc.w	$0000	;632dc
+	dc.w	$8800	;632de
+	dc.w	$0002	;632e0
+	dc.w	$4f84	;632e2
+	dc.w	$0002	;632e4
+	dc.w	$4fbc	;632e6
+	dc.w	$0002	;632e8
+	dc.w	$500c	;632ea
+	dc.w	$0000	;632ec
+	dc.w	$0006	;632ee
+	dc.w	$1577	;632f0
+	dc.w	$89f0	;632f2
+	dc.w	$0000	;632f4
+	dc.w	$0002	;632f6
+	dc.w	$4f6c	;632f8
+	dc.w	$0002	;632fa
+	dc.w	$4f74	;632fc
+	dc.w	$0002	;632fe
+	dc.w	$4f94	;63300
+	dc.w	$0000	;63302
+	dc.w	$0012	;63304
+	dc.w	$1577	;63306
+	dc.w	$89f0	;63308
+	dc.w	$0000	;6330a
+	dc.w	$0002	;6330c
+	dc.w	$4f74	;6330e
+	dc.w	$0002	;63310
+	dc.w	$4f94	;63312
+	dc.w	$0002	;63314
+	dc.w	$4f9c	;63316
+	dc.w	$0000	;63318
+	dc.w	$0012	;6331a
+	dc.w	$ab26	;6331c
+	dc.w	$ab26	;6331e
+	dc.w	$0000	;63320
+	dc.w	$0002	;63322
+	dc.w	$4f64	;63324
+	dc.w	$0002	;63326
+	dc.w	$4fd4	;63328
+	dc.w	$0002	;6332a
+	dc.w	$4fdc	;6332c
+	dc.w	$0000	;6332e
+	dc.w	$0012	;63330
+	dc.w	$ab26	;63332
+	dc.w	$ab26	;63334
+	dc.w	$0000	;63336
+	dc.w	$0002	;63338
+	dc.w	$4f64	;6333a
+	dc.w	$0002	;6333c
+	dc.w	$4f7c	;6333e
+	dc.w	$0002	;63340
+	dc.w	$4fd4	;63342
+	dc.w	$0000	;63344
+	dc.w	$0012	;63346
+	dc.w	$ab26	;63348
+	dc.w	$ab26	;6334a
+	dc.w	$0000	;6334c
+	dc.w	$0002	;6334e
+	dc.w	$4f64	;63350
+	dc.w	$0002	;63352
+	dc.w	$4f8c	;63354
+	dc.w	$0002	;63356
+	dc.w	$4fdc	;63358
+	dc.w	$0000	;6335a
+	dc.w	$0012	;6335c
+	dc.w	$ab26	;6335e
+	dc.w	$ab26	;63360
+	dc.w	$0000	;63362
+	dc.w	$0002	;63364
+	dc.w	$4f7c	;63366
+	dc.w	$0002	;63368
+	dc.w	$4f84	;6336a
+	dc.w	$0002	;6336c
+	dc.w	$4fd4	;6336e
+	dc.w	$0000	;63370
+	dc.w	$0012	;63372
+	dc.w	$0000	;63374
+	dc.w	$0000	;63376
+	dc.w	$0000	;63378
+	dc.w	$0002	;6337a
+	dc.w	$4f64	;6337c
+	dc.w	$0002	;6337e
+	dc.w	$4f6c	;63380
+	dc.w	$0002	;63382
+	dc.w	$4f7c	;63384
+	dc.w	$0000	;63386
+	dc.w	$0002	;63388
+	dc.w	$0000	;6338a
+	dc.w	$0000	;6338c
+	dc.w	$0000	;6338e
+	dc.w	$0002	;63390
+	dc.w	$4f6c	;63392
+	dc.w	$0002	;63394
+	dc.w	$4f74	;63396
+	dc.w	$0002	;63398
+	dc.w	$4f7c	;6339a
+	dc.w	$0000	;6339c
+	dc.w	$0002	;6339e
+	dc.w	$0100	;633a0
+	dc.w	$0018	;633a2
+	dc.w	$0023	;633a4
+	dc.w	$009e	;633a6
+	dc.w	$0000	;633a8
+	dc.w	$0000	;633aa
+	dc.w	$0000	;633ac
+	dc.w	$ffe0	;633ae
+	dc.w	$ffb0	;633b0
+	dc.w	$0058	;633b2
+	dc.w	$0030	;633b4
+	dc.w	$ffb0	;633b6
+	dc.w	$0058	;633b8
+	dc.w	$0040	;633ba
+	dc.w	$ffb0	;633bc
+	dc.w	$0048	;633be
+	dc.w	$0040	;633c0
+	dc.w	$ffb0	;633c2
+	dc.w	$ffb8	;633c4
+	dc.w	$0030	;633c6
+	dc.w	$ffb0	;633c8
+	dc.w	$ffa8	;633ca
+	dc.w	$ffe0	;633cc
+	dc.w	$ffb0	;633ce
+	dc.w	$ffa8	;633d0
+	dc.w	$ffc0	;633d2
+	dc.w	$ffb0	;633d4
+	dc.w	$ffd8	;633d6
+	dc.w	$ffc0	;633d8
+	dc.w	$ffb0	;633da
+	dc.w	$0028	;633dc
+	dc.w	$ffa0	;633de
+	dc.w	$ffd0	;633e0
+	dc.w	$0028	;633e2
+	dc.w	$ffa0	;633e4
+	dc.w	$ffd0	;633e6
+	dc.w	$ffd8	;633e8
+	dc.w	$0060	;633ea
+	dc.w	$ffd0	;633ec
+	dc.w	$0028	;633ee
+	dc.w	$0060	;633f0
+	dc.w	$ffd0	;633f2
+	dc.w	$ffd8	;633f4
+	dc.w	$0080	;633f6
+	dc.w	$ffd0	;633f8
+	dc.w	$0028	;633fa
+	dc.w	$0080	;633fc
+	dc.w	$ffd0	;633fe
+	dc.w	$ffd8	;63400
+	dc.w	$0080	;63402
+	dc.w	$0000	;63404
+	dc.w	$ffd8	;63406
+	dc.w	$0080	;63408
+	dc.w	$0000	;6340a
+	dc.w	$0028	;6340c
+	dc.w	$0030	;6340e
+	dc.w	$0000	;63410
+	dc.w	$0058	;63412
+	dc.w	$0030	;63414
+	dc.w	$0000	;63416
+	dc.w	$ffa8	;63418
+	dc.w	$0060	;6341a
+	dc.w	$0000	;6341c
+	dc.w	$0028	;6341e
+	dc.w	$0060	;63420
+	dc.w	$0000	;63422
+	dc.w	$ffd8	;63424
+	dc.w	$ffe0	;63426
+	dc.w	$0000	;63428
+	dc.w	$0058	;6342a
+	dc.w	$ffe0	;6342c
+	dc.w	$0000	;6342e
+	dc.w	$ffa8	;63430
+	dc.w	$ffa0	;63432
+	dc.w	$0000	;63434
+	dc.w	$0028	;63436
+	dc.w	$ffa0	;63438
+	dc.w	$0000	;6343a
+	dc.w	$ffd8	;6343c
+	dc.w	$7800	;6343e
+	dc.w	$0000	;63440
+	dc.w	$0000	;63442
+	dc.w	$0002	;63444
+	dc.w	$4fc4	;63446
+	dc.w	$0002	;63448
+	dc.w	$4fcc	;6344a
+	dc.w	$0002	;6344c
+	dc.w	$4fd4	;6344e
+	dc.w	$0000	;63450
+	dc.w	$0016	;63452
+	dc.w	$7800	;63454
+	dc.w	$0000	;63456
+	dc.w	$0000	;63458
+	dc.w	$0002	;6345a
+	dc.w	$4fc4	;6345c
+	dc.w	$0002	;6345e
+	dc.w	$4fd4	;63460
+	dc.w	$0002	;63462
+	dc.w	$4fdc	;63464
+	dc.w	$0000	;63466
+	dc.w	$0016	;63468
+	dc.w	$8800	;6346a
+	dc.w	$0000	;6346c
+	dc.w	$0000	;6346e
+	dc.w	$0002	;63470
+	dc.w	$4fa4	;63472
+	dc.w	$0002	;63474
+	dc.w	$4fac	;63476
+	dc.w	$0002	;63478
+	dc.w	$5014	;6347a
+	dc.w	$0000	;6347c
+	dc.w	$0016	;6347e
+	dc.w	$8800	;63480
+	dc.w	$0000	;63482
+	dc.w	$0000	;63484
+	dc.w	$0002	;63486
+	dc.w	$4fac	;63488
+	dc.w	$0002	;6348a
+	dc.w	$5014	;6348c
+	dc.w	$0002	;6348e
+	dc.w	$501c	;63490
+	dc.w	$0000	;63492
+	dc.w	$0016	;63494
+	dc.w	$a144	;63496
+	dc.w	$da1b	;63498
+	dc.w	$c0d8	;6349a
+	dc.w	$0002	;6349c
+	dc.w	$4f8c	;6349e
+	dc.w	$0002	;634a0
+	dc.w	$4f94	;634a2
+	dc.w	$0002	;634a4
+	dc.w	$501c	;634a6
+	dc.w	$0000	;634a8
+	dc.w	$0012	;634aa
+	dc.w	$b800	;634ac
+	dc.w	$0000	;634ae
+	dc.w	$a000	;634b0
+	dc.w	$0002	;634b2
+	dc.w	$4f8c	;634b4
+	dc.w	$0002	;634b6
+	dc.w	$500c	;634b8
+	dc.w	$0002	;634ba
+	dc.w	$501c	;634bc
+	dc.w	$0000	;634be
+	dc.w	$000a	;634c0
+	dc.w	$0000	;634c2
+	dc.w	$0000	;634c4
+	dc.w	$8800	;634c6
+	dc.w	$0002	;634c8
+	dc.w	$4f94	;634ca
+	dc.w	$0002	;634cc
+	dc.w	$4fac	;634ce
+	dc.w	$0002	;634d0
+	dc.w	$501c	;634d2
+	dc.w	$0000	;634d4
+	dc.w	$0006	;634d6
+	dc.w	$0000	;634d8
+	dc.w	$0000	;634da
+	dc.w	$8800	;634dc
+	dc.w	$0002	;634de
+	dc.w	$4f84	;634e0
+	dc.w	$0002	;634e2
+	dc.w	$4f8c	;634e4
+	dc.w	$0002	;634e6
+	dc.w	$500c	;634e8
+	dc.w	$0000	;634ea
+	dc.w	$0006	;634ec
+	dc.w	$0000	;634ee
+	dc.w	$0000	;634f0
+	dc.w	$8800	;634f2
+	dc.w	$0002	;634f4
+	dc.w	$4f84	;634f6
+	dc.w	$0002	;634f8
+	dc.w	$4fec	;634fa
+	dc.w	$0002	;634fc
+	dc.w	$500c	;634fe
+	dc.w	$0000	;63500
+	dc.w	$0006	;63502
+	dc.w	$54da	;63504
+	dc.w	$0000	;63506
+	dc.w	$ab26	;63508
+	dc.w	$0002	;6350a
+	dc.w	$4f7c	;6350c
+	dc.w	$0002	;6350e
+	dc.w	$4f84	;63510
+	dc.w	$0002	;63512
+	dc.w	$4fec	;63514
+	dc.w	$0000	;63516
+	dc.w	$000a	;63518
+	dc.w	$54da	;6351a
+	dc.w	$0000	;6351c
+	dc.w	$ab26	;6351e
+	dc.w	$0002	;63520
+	dc.w	$4f7c	;63522
+	dc.w	$0002	;63524
+	dc.w	$4fbc	;63526
+	dc.w	$0002	;63528
+	dc.w	$4fec	;6352a
+	dc.w	$0000	;6352c
+	dc.w	$000a	;6352e
+	dc.w	$54da	;63530
+	dc.w	$0000	;63532
+	dc.w	$ab26	;63534
+	dc.w	$0002	;63536
+	dc.w	$4fbc	;63538
+	dc.w	$0002	;6353a
+	dc.w	$4fec	;6353c
+	dc.w	$0002	;6353e
+	dc.w	$4ffc	;63540
+	dc.w	$0000	;63542
+	dc.w	$000a	;63544
+	dc.w	$0000	;63546
+	dc.w	$0000	;63548
+	dc.w	$8800	;6354a
+	dc.w	$0002	;6354c
+	dc.w	$4fbc	;6354e
+	dc.w	$0002	;63550
+	dc.w	$4fcc	;63552
+	dc.w	$0002	;63554
+	dc.w	$4ffc	;63556
+	dc.w	$0000	;63558
+	dc.w	$0006	;6355a
+	dc.w	$0000	;6355c
+	dc.w	$0000	;6355e
+	dc.w	$8800	;63560
+	dc.w	$0002	;63562
+	dc.w	$4fcc	;63564
+	dc.w	$0002	;63566
+	dc.w	$4fd4	;63568
+	dc.w	$0002	;6356a
+	dc.w	$4ffc	;6356c
+	dc.w	$0000	;6356e
+	dc.w	$0006	;63570
+	dc.w	$0000	;63572
+	dc.w	$0000	;63574
+	dc.w	$7800	;63576
+	dc.w	$0002	;63578
+	dc.w	$4f9c	;6357a
+	dc.w	$0002	;6357c
+	dc.w	$4fa4	;6357e
+	dc.w	$0002	;63580
+	dc.w	$5014	;63582
+	dc.w	$0000	;63584
+	dc.w	$0006	;63586
+	dc.w	$a144	;63588
+	dc.w	$da1b	;6358a
+	dc.w	$3f28	;6358c
+	dc.w	$0002	;6358e
+	dc.w	$4f64	;63590
+	dc.w	$0002	;63592
+	dc.w	$4f9c	;63594
+	dc.w	$0002	;63596
+	dc.w	$5014	;63598
+	dc.w	$0000	;6359a
+	dc.w	$0012	;6359c
+	dc.w	$b800	;6359e
+	dc.w	$0000	;635a0
+	dc.w	$6000	;635a2
+	dc.w	$0002	;635a4
+	dc.w	$4f64	;635a6
+	dc.w	$0002	;635a8
+	dc.w	$5004	;635aa
+	dc.w	$0002	;635ac
+	dc.w	$5014	;635ae
+	dc.w	$0000	;635b0
+	dc.w	$000a	;635b2
+	dc.w	$0000	;635b4
+	dc.w	$0000	;635b6
+	dc.w	$7800	;635b8
+	dc.w	$0002	;635ba
+	dc.w	$4f64	;635bc
+	dc.w	$0002	;635be
+	dc.w	$4f6c	;635c0
+	dc.w	$0002	;635c2
+	dc.w	$5004	;635c4
+	dc.w	$0000	;635c6
+	dc.w	$0006	;635c8
 lb_635ca:
-	dc.l  $0			;635ca: 00000000
-	MOVEQ	#0,D4			;635ce: 7800
-lb_635d0:
-	DC.W	$0002			;635d0
-	DC.W	$4f6c			;635d2
-	DC.W	$0002			;635d4
-	DC.W	$4fe4			;635d6
-	DC.W	$0002			;635d8
-	ADDQ.B	#8,D4			;635da: 5004
-	ORI.B	#$06,D0			;635dc: 00000006
-	SCC	(A2)+			;635e0: 54da
-	DC.W	$0000			;635e2
-	SCC	(A2)+			;635e4: 54da
-	DC.W	$0002			;635e6
-	DC.W	$4f6c			;635e8
-	DC.W	$0002			;635ea
-	DC.W	$4f74			;635ec
-	DC.W	$0002			;635ee
-	DC.W	$4fe4			;635f0
-	ORI.B	#$0a,D0			;635f2: 0000000a
-	SCC	(A2)+			;635f6: 54da
-	DC.W	$0000			;635f8
-	SCC	(A2)+			;635fa: 54da
-	DC.W	$0002			;635fc
-	DC.W	$4f74			;635fe
-	DC.W	$0002			;63600
-	CHK.W	2(A4,D0.W),D7		;63602: 4fb40002
-	DC.W	$4fe4			;63606
-	ORI.B	#$0a,D0			;63608: 0000000a
-	SCC	(A2)+			;6360c: 54da
-	DC.W	$0000			;6360e
-	SCC	(A2)+			;63610: 54da
-	DC.W	$0002			;63612
-	CHK.W	2(A4,D0.W),D7		;63614: 4fb40002
-	DC.W	$4fe4			;63618
-	DC.W	$0002			;6361a
-	LEA	0(A4,D0.W),A7		;6361c: 4ff40000
-	DC.W	$000a			;63620
-	dc.l  $0			;63622: 00000000
-	MOVEQ	#0,D4			;63626: 7800
-	DC.W	$0002			;63628
-	CHK.W	2(A4,D0.W),D7		;6362a: 4fb40002
-	DC.W	$4fc4			;6362e
-	DC.W	$0002			;63630
-	LEA	0(A4,D0.W),A7		;63632: 4ff40000
-	ORI.B	#$00,D6			;63636: 00060000
-	DC.W	$0000			;6363a
-	MOVEQ	#0,D4			;6363c: 7800
-	DC.W	$0002			;6363e
-	DC.W	$4fc4			;63640
-	DC.W	$0002			;63642
-	DC.W	$4fdc			;63644
-	DC.W	$0002			;63646
-	LEA	0(A4,D0.W),A7		;63648: 4ff40000
-	DC.W	$0006			;6364c
-	DC.W	$ab26			;6364e
-	DC.W	$ab26			;63650
-	ORI.B	#$02,D0			;63652: 00000002
-	CHK.W	(A4),D7			;63656: 4f94
-	DC.W	$0002			;63658
-	CHK.W	(A4)+,D7		;6365a: 4f9c
-	DC.W	$0002			;6365c
-	CHK.W	-(A4),D7		;6365e: 4fa4
-	ORI.B	#$12,D0			;63660: 00000012
-	DC.W	$ab26			;63664
-	DC.W	$ab26			;63666
-	ORI.B	#$02,D0			;63668: 00000002
-	CHK.W	(A4),D7			;6366c: 4f94
-	DC.W	$0002			;6366e
-	CHK.W	-(A4),D7		;63670: 4fa4
-	DC.W	$0002			;63672
-	CHK.W	0(A4),D7		;63674: 4fac0000
-	DC.W	$0012			;63678
-	SCC	(A2)+			;6367a: 54da
-	DC.W	$ab26			;6367c
-	ORI.B	#$02,D0			;6367e: 00000002
-	DC.W	$4f74			;63682
-	DC.W	$0002			;63684
-	DC.W	$4f7c			;63686
-	DC.W	$0002			;63688
-	CHK.W	0(A4,D0.W),D7		;6368a: 4fb40000
-	DC.W	$0012			;6368e
-	SCC	(A2)+			;63690: 54da
-	DC.W	$ab26			;63692
-	ORI.B	#$02,D0			;63694: 00000002
-	DC.W	$4f7c			;63698
-	DC.W	$0002			;6369a
-	CHK.W	2(A4,D0.W),D7		;6369c: 4fb40002
-	CHK.W	#$0000,D7		;636a0: 4fbc0000
-	ORI.B	#$00,(A2)		;636a4: 00120000
-	OR.B	D0,D4			;636a8: 8800
-	ORI.B	#$02,D0			;636aa: 00000002
-	CHK.W	2(A4,D0.W),D7		;636ae: 4fb40002
-	CHK.W	#$0002,D7		;636b2: 4fbc0002
-	DC.W	$4fc4			;636b6
-	ORI.B	#$0a,D0			;636b8: 0000000a
-	DC.W	$0000			;636bc
-	OR.B	D0,D4			;636be: 8800
-	ORI.B	#$02,D0			;636c0: 00000002
-	CHK.W	#$0002,D7		;636c4: 4fbc0002
-	DC.W	$4fc4			;636c8
-	DC.W	$0002			;636ca
-	DC.W	$4fcc			;636cc
-	ORI.B	#$02,D0			;636ce: 00000002
-	DC.W	$0000			;636d2
-	OR.B	D0,D4			;636d4: 8800
-	ORI.B	#$02,D0			;636d6: 00000002
-	DC.W	$4f8c			;636da
-	DC.W	$0002			;636dc
-	CHK.W	(A4),D7			;636de: 4f94
-	DC.W	$0002			;636e0
-	CHK.W	(A4)+,D7		;636e2: 4f9c
-	ORI.B	#$02,D0			;636e4: 00000002
-	DC.W	$0000			;636e8
-	OR.B	D0,D4			;636ea: 8800
-	ORI.B	#$02,D0			;636ec: 00000002
-	DC.W	$4f64			;636f0
-	DC.W	$0002			;636f2
-	DC.W	$4f8c			;636f4
-	DC.W	$0002			;636f6
-	CHK.W	(A4)+,D7		;636f8: 4f9c
-	ORI.B	#$02,D0			;636fa: 00000002
-	DC.W	$0000			;636fe
-	OR.B	D0,D4			;63700: 8800
-	ORI.B	#$02,D0			;63702: 00000002
-	DC.W	$4f64			;63706
-	DC.W	$0002			;63708
-	DC.W	$4f6c			;6370a
-	DC.W	$0002			;6370c
-	DC.W	$4f8c			;6370e
-	ORI.B	#$02,D0			;63710: 00000002
-	DC.W	$0000			;63714
-	OR.B	D0,D4			;63716: 8800
-	ORI.B	#$02,D0			;63718: 00000002
-	DC.W	$4f6c			;6371c
-	DC.W	$0002			;6371e
-	DC.W	$4f74			;63720
-	DC.W	$0002			;63722
-	DC.W	$4f8c			;63724
-	ORI.B	#$02,D0			;63726: 00000002
-	DC.W	$0000			;6372a
-	OR.B	D0,D4			;6372c: 8800
-	ORI.B	#$02,D0			;6372e: 00000002
-	DC.W	$4f74			;63732
-	DC.W	$0002			;63734
-	DC.W	$4f7c			;63736
-	DC.W	$0002			;63738
-	DC.W	$4f8c			;6373a
-	ORI.B	#$02,D0			;6373c: 00000002
-	DC.W	$0000			;63740
-	OR.B	D0,D4			;63742: 8800
-	ORI.B	#$02,D0			;63744: 00000002
-	DC.W	$4f7c			;63748
-	DC.W	$0002			;6374a
-	CHK.W	D4,D7			;6374c: 4f84
-	DC.W	$0002			;6374e
-	DC.W	$4f8c			;63750
-	ORI.B	#$02,D0			;63752: 00000002
-	BTST	D0,D0			;63756: 0100
-	ORI.B	#$05,D6			;63758: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;6375c: 003200000000
-	DC.W	$0000			;63762
-	DC.W	$fe80			;63764
-	DC.W	$ffd0			;63766
-	DC.W	$fff8			;63768
-	DC.W	$ffa0			;6376a
-	DC.W	$ffd0			;6376c
-	DC.W	$0008			;6376e
-	DC.W	$ffa0			;63770
-	DC.W	$ffd0			;63772
-	DC.W	$fff8			;63774
-	DC.W	$fe80			;63776
-	DC.W	$ffe0			;63778
-	DC.W	$0000			;6377a
-	DC.W	$ffa0			;6377c
-	DC.W	$ffe0			;6377e
-	DC.W	$0000			;63780
-	DC.W	$fe80			;63782
-	DC.W	$ffd0			;63784
-	DC.W	$0008			;63786
-	DC.W	$0000			;63788
-	AND.W	(A6),D5			;6378a: ca56
-	BMI.S	lb_637e2		;6378c: 6b54
-	DC.W	$0002			;6378e
-	DC.W	$4f64			;63790
-	DC.W	$0002			;63792
-	DC.W	$4f7c			;63794
-	DC.W	$0002			;63796
-	CHK.W	D4,D7			;63798: 4f84
-	ORI.B	#$0a,D0			;6379a: 0000000a
-	DC.W	$0000			;6379e
-	AND.W	(A6),D5			;637a0: ca56
-	BMI.S	lb_637f8		;637a2: 6b54
-	DC.W	$0002			;637a4
-	DC.W	$4f64			;637a6
-	DC.W	$0002			;637a8
-	DC.W	$4f74			;637aa
-	DC.W	$0002			;637ac
-	CHK.W	D4,D7			;637ae: 4f84
-	ORI.B	#$0a,D0			;637b0: 0000000a
-	DC.W	$0000			;637b4
-	AND.W	(A6),D5			;637b6: ca56
-	SUB.L	2(A4),D2		;637b8: 94ac0002
-	DC.W	$4f8c			;637bc
-	DC.W	$0002			;637be
-	DC.W	$4f6c			;637c0
-	DC.W	$0002			;637c2
-	CHK.W	D4,D7			;637c4: 4f84
-	ORI.B	#$0a,D0			;637c6: 0000000a
-	DC.W	$0000			;637ca
-	AND.W	(A6),D5			;637cc: ca56
-	SUB.L	2(A4),D2		;637ce: 94ac0002
-	DC.W	$4f8c			;637d2
-	DC.W	$0002			;637d4
-	DC.W	$4f7c			;637d6
-	DC.W	$0002			;637d8
-	CHK.W	D4,D7			;637da: 4f84
-	ORI.B	#$0a,D0			;637dc: 0000000a
-	DC.W	$0000			;637e0
-lb_637e2:
-	OR.B	D0,D4			;637e2: 8800
-	ORI.B	#$02,D0			;637e4: 00000002
-	DC.W	$4f8c			;637e8
-	DC.W	$0002			;637ea
-	DC.W	$4f64			;637ec
-	DC.W	$0002			;637ee
-	DC.W	$4f6c			;637f0
-	ORI.B	#$02,D0			;637f2: 00000002
-	DC.W	$0000			;637f6
-lb_637f8:
-	OR.B	D0,D4			;637f8: 8800
-	ORI.B	#$02,D0			;637fa: 00000002
-	DC.W	$4f64			;637fe
-	DC.W	$0002			;63800
-	DC.W	$4f6c			;63802
-	DC.W	$0002			;63804
-	DC.W	$4f74			;63806
-	ORI.B	#$02,D0			;63808: 00000002
-	BTST	D0,D0			;6380c: 0100
-	ORI.B	#$31,-(A2)		;6380e: 00220031
-	DC.W	$00da			;63812
-	dc.l  $0			;63814: 00000000
-	DC.W	$0000			;63818
-	DC.W	$ff40			;6381a
-	ORI.B	#$90,D0			;6381c: 00000090
-	BTST	D0,(A0)			;63820: 0110
-	ORI.B	#$90,D0			;63822: 00000090
-	BTST	D0,(A0)			;63826: 0110
-	DC.W	$0000			;63828
-	DC.W	$ff70			;6382a
-	DC.W	$ff40			;6382c
-	DC.W	$0000			;6382e
-	DC.W	$ff70			;63830
-	DC.W	$ff40			;63832
-	ORI.B	#$90,-(A0)		;63834: 00200090
-	BTST	D0,(A0)			;63838: 0110
-	ORI.B	#$90,-(A0)		;6383a: 00200090
-	BTST	D0,(A0)			;6383e: 0110
-	DC.W	$0020			;63840
-	DC.W	$ff70			;63842
-	DC.W	$ff40			;63844
-	DC.W	$0020			;63846
-	DC.W	$ff70			;63848
-	DC.W	$ff00			;6384a
-	DC.W	$0030			;6384c
-	ORI.L	#$01100020,-(A0)	;6384e: 00a001100020
-	ORI.L	#$01100020,-(A0)	;63854: 00a001100020
-	DC.W	$ff60			;6385a
-	DC.W	$ff00			;6385c
-	DC.W	$0030			;6385e
-	DC.W	$ff60			;63860
-	DC.W	$ff40			;63862
-	ORI.B	#$a0,-(A0)		;63864: 002000a0
-	DC.W	$ff40			;63868
-	DC.W	$0020			;6386a
-	DC.W	$ff60			;6386c
-	DC.W	$ff00			;6386e
-	DC.W	$0030			;63870
-	ORI.W	#$ff00,-(A0)		;63872: 0060ff00
-	DC.W	$0030			;63876
-	DC.W	$ffa0			;63878
-	DC.W	$ff10			;6387a
-	DC.W	$0070			;6387c
-	ORI.L	#$ff100070,-(A0)	;6387e: 00a0ff100070
-	DC.W	$ff60			;63884
-	DC.W	$ff10			;63886
-	DC.W	$0070			;63888
-	ORI.W	#$ff10,-(A0)		;6388a: 0060ff10
-	DC.W	$0070			;6388e
-	DC.W	$ffa0			;63890
-	DC.W	$ff50			;63892
-	ORI.L	#$00a0ff50,-(A0)	;63894: 00a000a0ff50
-	ORI.L	#$ff60ff50,-(A0)	;6389a: 00a0ff60ff50
-	ORI.L	#$0060ff50,-(A0)	;638a0: 00a00060ff50
-	ORI.L	#$ffa00100,-(A0)	;638a6: 00a0ffa00100
-	DC.W	$0070			;638ac
-	DC.W	$ff60			;638ae
-	BTST	D0,D0			;638b0: 0100
-	ORI.W	#$00a0,-48(A0,D0.W)	;638b2: 007000a000d0
-	ORI.L	#$ff6000d0,-(A0)	;638b8: 00a0ff6000d0
-	ORI.L	#$00a000d0,-(A0)	;638be: 00a000a000d0
-	ORI.L	#$ffa000d0,-(A0)	;638c4: 00a0ffa000d0
-	ORI.L	#$00600110,-(A0)	;638ca: 00a000600110
-	DC.W	$0030			;638d0
-	DC.W	$ffa0			;638d2
-	BTST	D0,(A0)			;638d4: 0110
-	DC.W	$0030			;638d6
-	ORI.W	#$0100,-(A0)		;638d8: 00600100
-	DC.W	$0070			;638dc
-	DC.W	$ffa0			;638de
-	BTST	D0,D0			;638e0: 0100
-	ORI.W	#$0060,0(A0,A3.L)	;638e2: 00700060b800
-	DC.W	$6000			;638e8
-	ORI.B	#$02,D0			;638ea: 00000002
-	DC.W	$4fe4			;638ee
-	DC.W	$0002			;638f0
-	ADDQ.B	#8,D4			;638f2: 5004
-	DC.W	$0002			;638f4
-	ADDQ.B	#8,(A4)			;638f6: 5014
-	ORI.B	#$17,D0			;638f8: 00000017
-	CMP.B	D0,D4			;638fc: b800
-	DC.W	$6000			;638fe
-	ORI.B	#$02,D0			;63900: 00000002
-	DC.W	$4fe4			;63904
-	DC.W	$0002			;63906
-	LEA	2(A4,D0.W),A7		;63908: 4ff40002
-	ADDQ.B	#8,(A4)			;6390c: 5014
-	ORI.B	#$17,D0			;6390e: 00000017
-	CMP.B	D0,D4			;63912: b800
-	DC.W	$6000			;63914
-	ORI.B	#$02,D0			;63916: 00000002
-	LEA	2(A4),A7		;6391a: 4fec0002
-	DC.W	$4ffc			;6391e
-	DC.W	$0002			;63920
-	ADDQ.B	#8,(A4)+		;63922: 501c
-	ORI.B	#$17,D0			;63924: 00000017
-	CMP.B	D0,D4			;63928: b800
-	DC.W	$6000			;6392a
-	ORI.B	#$02,D0			;6392c: 00000002
-	LEA	2(A4),A7		;63930: 4fec0002
-	DC.W	$500c			;63934
-	DC.W	$0002			;63936
-	ADDQ.B	#8,(A4)+		;63938: 501c
-	ORI.B	#$17,D0			;6393a: 00000017
-	SCC	(A2)+			;6393e: 54da
-	SCC	(A2)+			;63940: 54da
-	ORI.B	#$02,D0			;63942: 00000002
-	ADDQ.B	#8,-(A4)		;63946: 5024
-	DC.W	$0002			;63948
-	ADDQ.B	#8,2(A4,D0.W)		;6394a: 50340002
-	ADDQ.W	#8,-(A4)		;6394e: 5064
-	ORI.B	#$17,D0			;63950: 00000017
-	SCC	(A2)+			;63954: 54da
-	SCC	(A2)+			;63956: 54da
-	ORI.B	#$02,D0			;63958: 00000002
-	ADDQ.B	#8,2(A4,D0.W)		;6395c: 50340002
-	ADDQ.W	#8,D4			;63960: 5044
-	DC.W	$0002			;63962
-	ADDQ.W	#8,-(A4)		;63964: 5064
-	ORI.B	#$17,D0			;63966: 00000017
-	SCC	(A2)+			;6396a: 54da
-	SCC	(A2)+			;6396c: 54da
-	ORI.B	#$02,D0			;6396e: 00000002
-	DC.W	$503c			;63972
-	DC.W	$0002			;63974
-	ADDQ.W	#8,A4			;63976: 504c
-	DC.W	$0002			;63978
-	ADDQ.W	#8,0(A4)		;6397a: 506c0000
-	DC.W	$0017			;6397e
-	SCC	(A2)+			;63980: 54da
-	SCC	(A2)+			;63982: 54da
-	ORI.B	#$02,D0			;63984: 00000002
-	ADDQ.B	#8,2(A4)		;63988: 502c0002
-	DC.W	$503c			;6398c
-	DC.W	$0002			;6398e
-	ADDQ.W	#8,0(A4)		;63990: 506c0000
-	DC.W	$0017			;63994
-	DC.W	$7587			;63996
-	DC.W	$1781			;63998
-	DC.W	$fa20			;6399a
-	DC.W	$0002			;6399c
-	CHK.W	2(A4,D0.W),D7		;6399e: 4fb40002
-	ADDQ.B	#8,-(A4)		;639a2: 5024
-	DC.W	$0002			;639a4
-	ADDQ.W	#8,(A4)			;639a6: 5054
-	ORI.B	#$17,D0			;639a8: 00000017
-	MOVEQ	#106,D2			;639ac: 746a
-	MOVE.B	(A2)+,-(A6)		;639ae: 1d1a
-	ORI.B	#$02,D0			;639b0: 00000002
-	ADDQ.B	#8,-(A4)		;639b4: 5024
-	DC.W	$0002			;639b6
-	ADDQ.W	#8,(A4)			;639b8: 5054
-	DC.W	$0002			;639ba
-	ADDQ.W	#8,-(A4)		;639bc: 5064
-	ORI.B	#$17,D0			;639be: 00000017
-	MOVEQ	#106,D2			;639c2: 746a
-	MOVE.B	(A2)+,-(A6)		;639c4: 1d1a
-	ORI.B	#$02,D0			;639c6: 00000002
-	ADDQ.B	#8,2(A4)		;639ca: 502c0002
-	ADDQ.W	#8,(A4)+		;639ce: 505c
-	DC.W	$0002			;639d0
-	ADDQ.W	#8,0(A4)		;639d2: 506c0000
-	DC.W	$0017			;639d6
-	DC.W	$7587			;639d8
-	DC.W	$1781			;639da
-	BSET	D2,-(A0)		;639dc: 05e0
-	DC.W	$0002			;639de
-	CHK.W	2(A4),D7		;639e0: 4fac0002
-	ADDQ.B	#8,2(A4)		;639e4: 502c0002
-	ADDQ.W	#8,(A4)+		;639e8: 505c
-	ORI.B	#$17,D0			;639ea: 00000017
-	OR.L	D5,(A6)			;639ee: 8b96
-	MOVE.B	(A2)+,-(A6)		;639f0: 1d1a
-	ORI.B	#$02,D0			;639f2: 00000002
-	CHK.W	-(A4),D7		;639f6: 4fa4
-	DC.W	$0002			;639f8
-	DC.W	$4fe4			;639fa
-	DC.W	$0002			;639fc
-	LEA	0(A4,D0.W),A7		;639fe: 4ff40000
-	DC.W	$0017			;63a02
-	OR.L	D5,(A6)			;63a04: 8b96
-	MOVE.B	(A2)+,-(A6)		;63a06: 1d1a
-	ORI.B	#$02,D0			;63a08: 00000002
-	CHK.W	-(A4),D7		;63a0c: 4fa4
-	DC.W	$0002			;63a0e
-	LEA	(A4),A7			;63a10: 4fd4
-	DC.W	$0002			;63a12
-	LEA	0(A4,D0.W),A7		;63a14: 4ff40000
-	DC.W	$0017			;63a18
-	OR.L	D5,(A6)			;63a1a: 8b96
-	MOVE.B	(A2)+,-(A6)		;63a1c: 1d1a
-	ORI.B	#$02,D0			;63a1e: 00000002
-	CHK.W	#$0002,D7		;63a22: 4fbc0002
-	DC.W	$4fdc			;63a26
-	DC.W	$0002			;63a28
-	DC.W	$4ffc			;63a2a
-	ORI.B	#$17,D0			;63a2c: 00000017
-	OR.L	D5,(A6)			;63a30: 8b96
-	MOVE.B	(A2)+,-(A6)		;63a32: 1d1a
-	ORI.B	#$02,D0			;63a34: 00000002
-	CHK.W	#$0002,D7		;63a38: 4fbc0002
-	LEA	2(A4),A7		;63a3c: 4fec0002
-	DC.W	$4ffc			;63a40
-	ORI.B	#$17,D0			;63a42: 00000017
-	dc.l  $0			;63a46: 00000000
-	OR.B	D0,D4			;63a4a: 8800
-	DC.W	$0002			;63a4c
-	CHK.W	#$0002,D7		;63a4e: 4fbc0002
-	DC.W	$4fcc			;63a52
-	DC.W	$0002			;63a54
-	LEA	0(A4),A7		;63a56: 4fec0000
-	ORI.B	#$00,(A1)		;63a5a: 00110000
-	DC.W	$0000			;63a5e
-	OR.B	D1,D4			;63a60: 8801
-	DC.W	$0002			;63a62
-	DC.W	$4fcc			;63a64
-	DC.W	$0002			;63a66
-	LEA	2(A4),A7		;63a68: 4fec0002
-	DC.W	$500c			;63a6c
-	ORI.B	#$11,D0			;63a6e: 00000011
-	dc.l  $0			;63a72: 00000000
-	OR.B	D0,D4			;63a76: 8800
-	DC.W	$0002			;63a78
-	DC.W	$4fcc			;63a7a
-	DC.W	$0002			;63a7c
-	DC.W	$500c			;63a7e
-	DC.W	$0002			;63a80
-	ADDQ.B	#8,0(A4,D0.W)		;63a82: 50340000
-	ORI.B	#$00,(A1)		;63a86: 00110000
-	DC.W	$0000			;63a8a
-	OR.B	D1,D4			;63a8c: 8801
-	DC.W	$0002			;63a8e
-	CHK.W	2(A4,D0.W),D7		;63a90: 4fb40002
-	DC.W	$4fcc			;63a94
-	DC.W	$0002			;63a96
-	ADDQ.B	#8,0(A4,D0.W)		;63a98: 50340000
-	ORI.B	#$00,(A1)		;63a9c: 00110000
-	DC.W	$0000			;63aa0
-	OR.B	D0,D4			;63aa2: 8800
-	DC.W	$0002			;63aa4
-	CHK.W	2(A4,D0.W),D7		;63aa6: 4fb40002
-	ADDQ.B	#8,-(A4)		;63aaa: 5024
-	DC.W	$0002			;63aac
-	ADDQ.B	#8,0(A4,D0.W)		;63aae: 50340000
-	ORI.B	#$00,(A1)		;63ab2: 00110000
-	DC.W	$0000			;63ab6
-	MOVEQ	#0,D4			;63ab8: 7800
-	DC.W	$0002			;63aba
-	CHK.W	-(A4),D7		;63abc: 4fa4
-	DC.W	$0002			;63abe
-	DC.W	$4fc4			;63ac0
-	DC.W	$0002			;63ac2
-	DC.W	$4fe4			;63ac4
-	ORI.B	#$11,D0			;63ac6: 00000011
-	dc.l  $0			;63aca: 00000000
-	DC.W	$77ff			;63ace
-	DC.W	$0002			;63ad0
-	DC.W	$4fc4			;63ad2
-	DC.W	$0002			;63ad4
-	DC.W	$4fe4			;63ad6
-	DC.W	$0002			;63ad8
-	ADDQ.B	#8,D4			;63ada: 5004
-	ORI.B	#$11,D0			;63adc: 00000011
-	dc.l  $0			;63ae0: 00000000
-	MOVEQ	#0,D4			;63ae4: 7800
-	DC.W	$0002			;63ae6
-	DC.W	$4fc4			;63ae8
-	DC.W	$0002			;63aea
-	ADDQ.B	#8,D4			;63aec: 5004
-	DC.W	$0002			;63aee
-	DC.W	$503c			;63af0
-	ORI.B	#$11,D0			;63af2: 00000011
-	dc.l  $0			;63af6: 00000000
-	DC.W	$77ff			;63afa
-	DC.W	$0002			;63afc
-	CHK.W	2(A4),D7		;63afe: 4fac0002
-	DC.W	$4fc4			;63b02
-	DC.W	$0002			;63b04
-	DC.W	$503c			;63b06
-	ORI.B	#$11,D0			;63b08: 00000011
-	dc.l  $0			;63b0c: 00000000
-	MOVEQ	#0,D4			;63b10: 7800
-	DC.W	$0002			;63b12
-	CHK.W	2(A4),D7		;63b14: 4fac0002
-	ADDQ.B	#8,2(A4)		;63b18: 502c0002
-	DC.W	$503c			;63b1c
-	ORI.B	#$11,D0			;63b1e: 00000011
-	MOVEQ	#106,D2			;63b22: 746a
-	MOVE.B	(A2)+,-(A6)		;63b24: 1d1a
-	ORI.B	#$02,D0			;63b26: 00000002
-	ADDQ.W	#8,(A4)			;63b2a: 5054
-	DC.W	$0002			;63b2c
-	ADDQ.W	#8,(A4)+		;63b2e: 505c
-	DC.W	$0002			;63b30
-	ADDQ.W	#8,-(A4)		;63b32: 5064
-	ORI.B	#$01,D0			;63b34: 00000001
-	MOVEQ	#106,D2			;63b38: 746a
-	MOVE.B	(A2)+,-(A6)		;63b3a: 1d1a
-	ORI.B	#$02,D0			;63b3c: 00000002
-	ADDQ.W	#8,(A4)+		;63b40: 505c
-	DC.W	$0002			;63b42
-	ADDQ.W	#8,-(A4)		;63b44: 5064
-	DC.W	$0002			;63b46
-	ADDQ.W	#8,0(A4)		;63b48: 506c0000
-	DC.W	$0001			;63b4c
-	OR.L	D5,(A6)			;63b4e: 8b96
-	MOVE.B	(A2)+,-(A6)		;63b50: 1d1a
-	ORI.B	#$02,D0			;63b52: 00000002
-	LEA	(A4),A7			;63b56: 4fd4
-	DC.W	$0002			;63b58
-	LEA	2(A4,D0.W),A7		;63b5a: 4ff40002
-	DC.W	$4ffc			;63b5e
-	ORI.B	#$09,D0			;63b60: 00000009
-	OR.L	D5,(A6)			;63b64: 8b96
-	MOVE.B	(A2)+,-(A6)		;63b66: 1d1a
-	ORI.B	#$02,D0			;63b68: 00000002
-	LEA	(A4),A7			;63b6c: 4fd4
-	DC.W	$0002			;63b6e
-	DC.W	$4fdc			;63b70
-	DC.W	$0002			;63b72
-	DC.W	$4ffc			;63b74
-	ORI.B	#$09,D0			;63b76: 00000009
-	LSR	-(A6)			;63b7a: e2e6
-	OR.L	D5,(A6)			;63b7c: 8b96
-	ORI.B	#$02,D0			;63b7e: 00000002
-	CHK.W	D4,D7			;63b82: 4f84
-	DC.W	$0002			;63b84
-	CHK.W	-(A4),D7		;63b86: 4fa4
-	DC.W	$0002			;63b88
-	CHK.W	#$0000,D7		;63b8a: 4fbc0000
-	DC.W	$0004			;63b8e
-	LSR	-(A6)			;63b90: e2e6
-	OR.L	D5,(A6)			;63b92: 8b96
-	ORI.B	#$02,D0			;63b94: 00000002
-	CHK.W	D4,D7			;63b98: 4f84
-	DC.W	$0002			;63b9a
-	CHK.W	(A4)+,D7		;63b9c: 4f9c
-	DC.W	$0002			;63b9e
-	CHK.W	#$0000,D7		;63ba0: 4fbc0000
-	DC.W	$0004			;63ba4
-	LSR	-(A6)			;63ba6: e2e6
-	OR.L	D5,(A6)			;63ba8: 8b96
-	ORI.B	#$02,D0			;63baa: 00000002
-	CHK.W	D4,D7			;63bae: 4f84
-	DC.W	$0002			;63bb0
-	CHK.W	-(A4),D7		;63bb2: 4fa4
-	DC.W	$0002			;63bb4
-	DC.W	$4fc4			;63bb6
-	ORI.B	#$04,D0			;63bb8: 00000004
-	LSR	-(A6)			;63bbc: e2e6
-	OR.L	D5,(A6)			;63bbe: 8b96
-	ORI.B	#$02,D0			;63bc0: 00000002
-	CHK.W	(A4)+,D7		;63bc4: 4f9c
-	DC.W	$0002			;63bc6
-	CHK.W	#$0002,D7		;63bc8: 4fbc0002
-	DC.W	$4fcc			;63bcc
-	ORI.B	#$04,D0			;63bce: 00000004
-	DC.W	$0000			;63bd2
-	OR.B	D1,D4			;63bd4: 8801
-	ORI.B	#$02,D0			;63bd6: 00000002
-	CHK.W	D4,D7			;63bda: 4f84
-	DC.W	$0002			;63bdc
-	DC.W	$4f8c			;63bde
-	DC.W	$0002			;63be0
-	DC.W	$4fc4			;63be2
-	ORI.B	#$04,D0			;63be4: 00000004
-	DC.W	$0000			;63be8
-	OR.B	D1,D4			;63bea: 8801
-	ORI.B	#$02,D0			;63bec: 00000002
-	DC.W	$4f8c			;63bf0
-	DC.W	$0002			;63bf2
-	CHK.W	2(A4),D7		;63bf4: 4fac0002
-	DC.W	$4fc4			;63bf8
-	ORI.B	#$04,D0			;63bfa: 00000004
-	DC.W	$0000			;63bfe
-	OR.B	D1,D4			;63c00: 8801
-	ORI.B	#$02,D0			;63c02: 00000002
-	CHK.W	(A4),D7			;63c06: 4f94
-	DC.W	$0002			;63c08
-	CHK.W	(A4)+,D7		;63c0a: 4f9c
-	DC.W	$0002			;63c0c
-	DC.W	$4fcc			;63c0e
-	ORI.B	#$04,D0			;63c10: 00000004
-	DC.W	$0000			;63c14
-	OR.B	D1,D4			;63c16: 8801
-	ORI.B	#$02,D0			;63c18: 00000002
-	CHK.W	(A4),D7			;63c1c: 4f94
-	DC.W	$0002			;63c1e
-	CHK.W	2(A4,D0.W),D7		;63c20: 4fb40002
-	DC.W	$4fcc			;63c24
-	ORI.B	#$04,D0			;63c26: 00000004
-	MOVEQ	#0,D4			;63c2a: 7800
-	dc.l  $0			;63c2c: 00000000
-	DC.W	$0002			;63c30
-	DC.W	$4f6c			;63c32
-	DC.W	$0002			;63c34
-	DC.W	$4f74			;63c36
-	DC.W	$0002			;63c38
-	ADDQ.W	#8,(A4)			;63c3a: 5054
-	ORI.B	#$01,D0			;63c3c: 00000001
-	MOVEQ	#0,D4			;63c40: 7800
-	dc.l  $0			;63c42: 00000000
-	DC.W	$0002			;63c46
-	DC.W	$4f6c			;63c48
-	DC.W	$0002			;63c4a
-	ADDQ.W	#8,(A4)			;63c4c: 5054
-	DC.W	$0002			;63c4e
-	ADDQ.W	#8,(A4)+		;63c50: 505c
-	ORI.B	#$01,D0			;63c52: 00000001
-	MOVEQ	#0,D4			;63c56: 7800
-	dc.l  $0			;63c58: 00000000
-	DC.W	$0002			;63c5c
-	DC.W	$4f74			;63c5e
-	DC.W	$0002			;63c60
-	CHK.W	(A4),D7			;63c62: 4f94
-	DC.W	$0002			;63c64
-	ADDQ.W	#8,(A4)			;63c66: 5054
-	ORI.B	#$01,D0			;63c68: 00000001
-	MOVEQ	#0,D4			;63c6c: 7800
-	dc.l  $0			;63c6e: 00000000
-	DC.W	$0002			;63c72
-	DC.W	$4f6c			;63c74
-	DC.W	$0002			;63c76
-	DC.W	$4f8c			;63c78
-	DC.W	$0002			;63c7a
-	ADDQ.W	#8,(A4)+		;63c7c: 505c
-	ORI.B	#$01,D0			;63c7e: 00000001
-	OR.B	D0,D4			;63c82: 8800
-	dc.l  $0			;63c84: 00000000
-	DC.W	$0002			;63c88
-	DC.W	$4f64			;63c8a
-	DC.W	$0002			;63c8c
-	DC.W	$4f7c			;63c8e
-	DC.W	$0002			;63c90
-	CHK.W	D4,D7			;63c92: 4f84
-	ORI.B	#$01,D0			;63c94: 00000001
-	OR.B	D0,D4			;63c98: 8800
-	dc.l  $0			;63c9a: 00000000
-	DC.W	$0002			;63c9e
-	DC.W	$4f7c			;63ca0
-	DC.W	$0002			;63ca2
-	CHK.W	D4,D7			;63ca4: 4f84
-	DC.W	$0002			;63ca6
-	CHK.W	(A4)+,D7		;63ca8: 4f9c
-	ORI.B	#$01,D0			;63caa: 00000001
-	dc.l  $0			;63cae: 00000000
-	OR.B	D1,D4			;63cb2: 8801
-	DC.W	$0002			;63cb4
-	DC.W	$4f74			;63cb6
-	DC.W	$0002			;63cb8
-	DC.W	$4f7c			;63cba
-	DC.W	$0002			;63cbc
-	CHK.W	(A4)+,D7		;63cbe: 4f9c
-	ORI.B	#$01,D0			;63cc0: 00000001
-	dc.l  $0			;63cc4: 00000000
-	OR.B	D1,D4			;63cc8: 8801
-	DC.W	$0002			;63cca
-	DC.W	$4f74			;63ccc
-	DC.W	$0002			;63cce
-	CHK.W	(A4),D7			;63cd0: 4f94
-	DC.W	$0002			;63cd2
-	CHK.W	(A4)+,D7		;63cd4: 4f9c
-	ORI.B	#$01,D0			;63cd6: 00000001
-	dc.l  $0			;63cda: 00000000
-	DC.W	$77ff			;63cde
-	DC.W	$0002			;63ce0
-	DC.W	$4f64			;63ce2
-	DC.W	$0002			;63ce4
-	DC.W	$4f6c			;63ce6
-	DC.W	$0002			;63ce8
-	CHK.W	D4,D7			;63cea: 4f84
-	ORI.B	#$01,D0			;63cec: 00000001
-	dc.l  $0			;63cf0: 00000000
-	DC.W	$77ff			;63cf4
-	DC.W	$0002			;63cf6
-	DC.W	$4f6c			;63cf8
-	DC.W	$0002			;63cfa
-	CHK.W	D4,D7			;63cfc: 4f84
-	DC.W	$0002			;63cfe
-	DC.W	$4f8c			;63d00
-	ORI.B	#$01,D0			;63d02: 00000001
-	dc.l  $0			;63d06: 00000000
-	ORI.B	#$02,D0			;63d0a: 00000002
-	DC.W	$4f64			;63d0e
-	DC.W	$0002			;63d10
-	DC.W	$4f6c			;63d12
-	DC.W	$0002			;63d14
-	DC.W	$4f7c			;63d16
-	ORI.B	#$04,D0			;63d18: 00000004
-	dc.l  $0			;63d1c: 00000000
-	ORI.B	#$02,D0			;63d20: 00000002
-	DC.W	$4f6c			;63d24
-	DC.W	$0002			;63d26
-	DC.W	$4f74			;63d28
-	DC.W	$0002			;63d2a
-	DC.W	$4f7c			;63d2c
-	ORI.B	#$04,D0			;63d2e: 00000004
-	BTST	D0,D0			;63d32: 0100
-	DC.W	$000c			;63d34
-	DC.W	$000f			;63d36
-	ORI.W	#$0000,(A6)		;63d38: 00560000
-	dc.l  $0			;63d3c: 00000000
-	DC.W	$ff90			;63d40
-	DC.W	$ffc0			;63d42
-	DC.W	$0048			;63d44
-	DC.W	$0000			;63d46
-	DC.W	$ffc0			;63d48
-	ORI.W	#$0060,-64(A0)		;63d4a: 00680060ffc0
-	ORI.B	#$60,-64(A0)		;63d50: 00280060ffc0
-	DC.W	$ffd8			;63d56
-	DC.W	$0000			;63d58
-	DC.W	$ffc0			;63d5a
-	DC.W	$ff98			;63d5c
-	DC.W	$ff90			;63d5e
-	DC.W	$ffc0			;63d60
-	DC.W	$ffb8			;63d62
-	DC.W	$ff90			;63d64
-	ORI.B	#$48,D0			;63d66: 00000048
-	dc.l  $0			;63d6a: 00000000
-	ORI.W	#$0060,0(A0)		;63d6e: 006800600000
-	ORI.B	#$60,0(A0)		;63d74: 002800600000
-	DC.W	$ffd8			;63d7a
-	dc.l  $0			;63d7c: 00000000
-	DC.W	$ff98			;63d80
-	DC.W	$ff90			;63d82
-	DC.W	$0000			;63d84
-	DC.W	$ffb8			;63d86
-	ADDX.B	-(A1),-(A7)		;63d88: df09
-	DC.W	$0000			;63d8a
-	OR.L	(A6)+,D6		;63d8c: 8c9e
-	DC.W	$0002			;63d8e
-	CHK.W	D4,D7			;63d90: 4f84
-	DC.W	$0002			;63d92
-	DC.W	$4f8c			;63d94
-	DC.W	$0002			;63d96
-	CHK.W	#$0000,D7		;63d98: 4fbc0000
-	DC.W	$0001			;63d9c
-	ADDX.B	-(A1),-(A7)		;63d9e: df09
-	DC.W	$0000			;63da0
-	OR.L	(A6)+,D6		;63da2: 8c9e
-	DC.W	$0002			;63da4
-	CHK.W	D4,D7			;63da6: 4f84
-	DC.W	$0002			;63da8
-	CHK.W	2(A4,D0.W),D7		;63daa: 4fb40002
-	CHK.W	#$0000,D7		;63dae: 4fbc0000
-	DC.W	$0001			;63db2
-	CLR.L	(A0)			;63db4: 4290
-	DC.W	$0000			;63db6
-	SUB.B	2(A0),D6		;63db8: 9c280002
-	CHK.W	D4,D7			;63dbc: 4f84
-	DC.W	$0002			;63dbe
-	CHK.W	2(A4),D7		;63dc0: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;63dc4: 4fb40000
-	DC.W	$000c			;63dc8
-	CLR.L	(A0)			;63dca: 4290
-	DC.W	$0000			;63dcc
-	SUB.B	2(A0),D6		;63dce: 9c280002
-	DC.W	$4f7c			;63dd2
-	DC.W	$0002			;63dd4
-	CHK.W	D4,D7			;63dd6: 4f84
-	DC.W	$0002			;63dd8
-	CHK.W	0(A4),D7		;63dda: 4fac0000
-	DC.W	$000c			;63dde
-	MOVEQ	#0,D4			;63de0: 7800
-	dc.l  $0			;63de2: 00000000
-	DC.W	$0002			;63de6
-	DC.W	$4f7c			;63de8
-lb_63dea:
-	DC.W	$0002			;63dea
-	CHK.W	-(A4),D7		;63dec: 4fa4
-	DC.W	$0002			;63dee
-	CHK.W	0(A4),D7		;63df0: 4fac0000
-	DC.W	$0011			;63df4
-	MOVEQ	#0,D4			;63df6: 7800
-	dc.l  $0			;63df8: 00000000
-	DC.W	$0002			;63dfc
-	DC.W	$4f74			;63dfe
-lb_63e00:
-	DC.W	$0002			;63e00
-	DC.W	$4f7c			;63e02
-	DC.W	$0002			;63e04
-	CHK.W	-(A4),D7		;63e06: 4fa4
-	ORI.B	#$11,D0			;63e08: 00000011
-	CLR.L	(A0)			;63e0c: 4290
-	DC.W	$0000			;63e0e
-	BLS.S	lb_63dea		;63e10: 63d8
-	DC.W	$0002			;63e12
-	DC.W	$4f6c			;63e14
-	DC.W	$0002			;63e16
-	DC.W	$4f74			;63e18
-	DC.W	$0002			;63e1a
-	CHK.W	-(A4),D7		;63e1c: 4fa4
-	ORI.B	#$0c,D0			;63e1e: 0000000c
-	CLR.L	(A0)			;63e22: 4290
-	DC.W	$0000			;63e24
-	BLS.S	lb_63e00		;63e26: 63d8
-	DC.W	$0002			;63e28
-	DC.W	$4f6c			;63e2a
-	DC.W	$0002			;63e2c
-	CHK.W	(A4)+,D7		;63e2e: 4f9c
-	DC.W	$0002			;63e30
-	CHK.W	-(A4),D7		;63e32: 4fa4
-	ORI.B	#$0c,D0			;63e34: 0000000c
-	ADDX.B	-(A1),-(A7)		;63e38: df09
-	DC.W	$0000			;63e3a
-	DC.W	$7362			;63e3c
-	DC.W	$0002			;63e3e
-	DC.W	$4f6c			;63e40
-	DC.W	$0002			;63e42
-	CHK.W	(A4),D7			;63e44: 4f94
-	DC.W	$0002			;63e46
-	CHK.W	(A4)+,D7		;63e48: 4f9c
-	ORI.B	#$01,D0			;63e4a: 00000001
-	ADDX.B	-(A1),-(A7)		;63e4e: df09
-	DC.W	$0000			;63e50
-	DC.W	$7362			;63e52
-	DC.W	$0002			;63e54
-	DC.W	$4f64			;63e56
-	DC.W	$0002			;63e58
-	DC.W	$4f6c			;63e5a
-	DC.W	$0002			;63e5c
-	CHK.W	(A4),D7			;63e5e: 4f94
-	ORI.B	#$01,D0			;63e60: 00000001
-	OR.B	D0,D4			;63e64: 8800
-	dc.l  $0			;63e66: 00000000
-	DC.W	$0002			;63e6a
-	DC.W	$4f64			;63e6c
-	DC.W	$0002			;63e6e
-	DC.W	$4f8c			;63e70
-	DC.W	$0002			;63e72
-	CHK.W	(A4),D7			;63e74: 4f94
-	ORI.B	#$11,D0			;63e76: 00000011
-	OR.B	D0,D4			;63e7a: 8800
-	dc.l  $0			;63e7c: 00000000
-	DC.W	$0002			;63e80
-	DC.W	$4f8c			;63e82
-	DC.W	$0002			;63e84
-	CHK.W	(A4),D7			;63e86: 4f94
-	DC.W	$0002			;63e88
-	CHK.W	#$0000,D7		;63e8a: 4fbc0000
-	ORI.B	#$00,(A1)		;63e8e: 00110000
-	OR.B	D0,D4			;63e92: 8800
-	ORI.B	#$02,D0			;63e94: 00000002
-	DC.W	$4f64			;63e98
-	DC.W	$0002			;63e9a
-	DC.W	$4f6c			;63e9c
-	DC.W	$0002			;63e9e
-	DC.W	$4f8c			;63ea0
-	ORI.B	#$04,D0			;63ea2: 00000004
-	DC.W	$0000			;63ea6
-	OR.B	D0,D4			;63ea8: 8800
-	ORI.B	#$02,D0			;63eaa: 00000002
-	DC.W	$4f6c			;63eae
-	DC.W	$0002			;63eb0
-	CHK.W	D4,D7			;63eb2: 4f84
-	DC.W	$0002			;63eb4
-	DC.W	$4f8c			;63eb6
-	ORI.B	#$04,D0			;63eb8: 00000004
-	DC.W	$0000			;63ebc
-	OR.B	D0,D4			;63ebe: 8800
-	ORI.B	#$02,D0			;63ec0: 00000002
-	DC.W	$4f6c			;63ec4
-	DC.W	$0002			;63ec6
-	DC.W	$4f7c			;63ec8
-	DC.W	$0002			;63eca
-	CHK.W	D4,D7			;63ecc: 4f84
-	ORI.B	#$04,D0			;63ece: 00000004
-	DC.W	$0000			;63ed2
-	OR.B	D0,D4			;63ed4: 8800
-	ORI.B	#$02,D0			;63ed6: 00000002
-	DC.W	$4f6c			;63eda
-	DC.W	$0002			;63edc
-	DC.W	$4f74			;63ede
-	DC.W	$0002			;63ee0
-	DC.W	$4f7c			;63ee2
-	ORI.B	#$04,D0			;63ee4: 00000004
-	BTST	D0,D0			;63ee8: 0100
-	ORI.B	#$05,D6			;63eea: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;63eee: 003200000000
-	DC.W	$0000			;63ef4
-	DC.W	$fe40			;63ef6
-	DC.W	$ffd0			;63ef8
-	DC.W	$fff8			;63efa
-	DC.W	$ff90			;63efc
-	DC.W	$ffd0			;63efe
-	DC.W	$0008			;63f00
-	DC.W	$ff90			;63f02
-	DC.W	$ffd0			;63f04
-	DC.W	$fff8			;63f06
-	DC.W	$fe40			;63f08
-	DC.W	$ffe0			;63f0a
-	DC.W	$0000			;63f0c
-	DC.W	$ff90			;63f0e
-	DC.W	$ffe0			;63f10
-	DC.W	$0000			;63f12
-	DC.W	$fe40			;63f14
-	DC.W	$ffd0			;63f16
-	DC.W	$0008			;63f18
-	DC.W	$0000			;63f1a
-	AND.W	(A6),D5			;63f1c: ca56
-	BMI.S	lb_63f74		;63f1e: 6b54
-	DC.W	$0002			;63f20
-	DC.W	$4f64			;63f22
-	DC.W	$0002			;63f24
-	DC.W	$4f7c			;63f26
-	DC.W	$0002			;63f28
-	CHK.W	D4,D7			;63f2a: 4f84
-	ORI.B	#$0c,D0			;63f2c: 0000000c
-	DC.W	$0000			;63f30
-	AND.W	(A6),D5			;63f32: ca56
-	BMI.S	lb_63f8a		;63f34: 6b54
-	DC.W	$0002			;63f36
-	DC.W	$4f64			;63f38
-	DC.W	$0002			;63f3a
-	DC.W	$4f74			;63f3c
-	DC.W	$0002			;63f3e
-	CHK.W	D4,D7			;63f40: 4f84
-	ORI.B	#$0c,D0			;63f42: 0000000c
-	DC.W	$0000			;63f46
-	AND.W	(A6),D5			;63f48: ca56
-	SUB.L	2(A4),D2		;63f4a: 94ac0002
-	DC.W	$4f8c			;63f4e
-	DC.W	$0002			;63f50
-	DC.W	$4f6c			;63f52
-	DC.W	$0002			;63f54
-	CHK.W	D4,D7			;63f56: 4f84
-	ORI.B	#$0c,D0			;63f58: 0000000c
-	DC.W	$0000			;63f5c
-	AND.W	(A6),D5			;63f5e: ca56
-	SUB.L	2(A4),D2		;63f60: 94ac0002
-	DC.W	$4f8c			;63f64
-	DC.W	$0002			;63f66
-	DC.W	$4f7c			;63f68
-	DC.W	$0002			;63f6a
-	CHK.W	D4,D7			;63f6c: 4f84
-	ORI.B	#$0c,D0			;63f6e: 0000000c
-	DC.W	$0000			;63f72
-lb_63f74:
-	OR.B	D0,D4			;63f74: 8800
-	ORI.B	#$02,D0			;63f76: 00000002
-	DC.W	$4f8c			;63f7a
-	DC.W	$0002			;63f7c
-	DC.W	$4f64			;63f7e
-	DC.W	$0002			;63f80
-	DC.W	$4f6c			;63f82
-	ORI.B	#$04,D0			;63f84: 00000004
-	DC.W	$0000			;63f88
-lb_63f8a:
-	OR.B	D0,D4			;63f8a: 8800
-	ORI.B	#$02,D0			;63f8c: 00000002
-	DC.W	$4f64			;63f90
-	DC.W	$0002			;63f92
-	DC.W	$4f6c			;63f94
-	DC.W	$0002			;63f96
-	DC.W	$4f74			;63f98
-	ORI.B	#$04,D0			;63f9a: 00000004
-	BTST	D0,D0			;63f9e: 0100
-	ORI.B	#$31,-(A6)		;63fa0: 00260031
-	DC.W	$00f2			;63fa4
-	dc.l  $0			;63fa6: 00000000
-	DC.W	$0000			;63faa
-	DC.W	$ff30			;63fac
-	ORI.B	#$70,D0			;63fae: 00000070
-	BTST	D0,0(A0,D0.W)		;63fb2: 01300000
-	ORI.W	#$0130,0(A0,D0.W)	;63fb6: 007001300000
-	DC.W	$ff90			;63fbc
-	DC.W	$ff30			;63fbe
-	DC.W	$0000			;63fc0
-	DC.W	$ff90			;63fc2
-	DC.W	$fef0			;63fc4
-	DC.W	$0030			;63fc6
-	DC.W	$ff60			;63fc8
-	BTST	D0,D0			;63fca: 0100
-	ORI.W	#$ff60,-(A0)		;63fcc: 0060ff60
-	BTST	D0,D0			;63fd0: 0100
-	ORI.W	#$00a0,-(A0)		;63fd2: 006000a0
-	DC.W	$fef0			;63fd6
-	DC.W	$0030			;63fd8
-	ORI.L	#$fec00040,-(A0)	;63fda: 00a0fec00040
-	ORI.L	#$fec00040,-(A0)	;63fe0: 00a0fec00040
-	DC.W	$ff60			;63fe6
-	DC.W	$fec0			;63fe8
-	ORI.W	#$ffa0,D0		;63fea: 0040ffa0
-	DC.W	$fec0			;63fee
-	ORI.W	#$0060,D0		;63ff0: 00400060
-	DC.W	$fed0			;63ff4
-	ORI.W	#$0060,(A0)		;63ff6: 00500060
-	DC.W	$fed0			;63ffa
-	ORI.W	#$ffa0,(A0)		;63ffc: 0050ffa0
-	DC.W	$fef0			;64000
-	DC.W	$0030			;64002
-	DC.W	$ffa0			;64004
-	DC.W	$fef0			;64006
-	DC.W	$0030			;64008
-	ORI.W	#$fec0,-(A0)		;6400a: 0060fec0
-	DC.W	$0070			;6400e
-	ORI.L	#$fec00070,-(A0)	;64010: 00a0fec00070
-	DC.W	$ff60			;64016
-	DC.W	$fef0			;64018
-	DC.W	$0070			;6401a
-	ORI.W	#$fef0,-(A0)		;6401c: 0060fef0
-	DC.W	$0070			;64020
-	DC.W	$ffa0			;64022
-	DC.W	$ff30			;64024
-	ORI.L	#$00a0ff30,-80(A0,D0.W)	;64026: 00b000a0ff3000b0
-	DC.W	$ff60			;6402e
-	DC.W	$ff30			;64030
-	ORI.L	#$0060ff30,-80(A0,D0.W)	;64032: 00b00060ff3000b0
-	DC.W	$ffa0			;6403a
-	BTST	D0,D0			;6403c: 0100
-	ORI.L	#$ff600100,D0		;6403e: 0080ff600100
-	ORI.L	#$00a000c0,D0		;64044: 008000a000c0
-	ORI.L	#$ff6000c0,-80(A0,D0.W)	;6404a: 00b0ff6000c000b0
-	ORI.L	#$00c000b0,-(A0)	;64052: 00a000c000b0
-	DC.W	$ffa0			;64058
-	DC.W	$00c0			;6405a
-	ORI.L	#$00600100,-128(A0,D0.W) ;6405c: 00b0006001000080
-	DC.W	$ffa0			;64064
-	BTST	D0,D0			;64066: 0100
-	ORI.L	#$006000f0,D0		;64068: 0080006000f0
-	ORI.W	#$ffa0,-16(A0,D0.W)	;6406e: 0070ffa000f0
-	DC.W	$0070			;64074
-	ORI.W	#$0100,-(A0)		;64076: 00600100
-	ORI.W	#$ffa0,-(A0)		;6407a: 0060ffa0
-	BTST	D0,D0			;6407e: 0100
-	ORI.W	#$0060,-(A0)		;64080: 00600060
-	DC.W	$fec0			;64084
-	DC.W	$0070			;64086
-	DC.W	$ffa0			;64088
-	DC.W	$fec0			;6408a
-	DC.W	$0070			;6408c
-	ORI.W	#$ab26,-(A0)		;6408e: 0060ab26
-	SCC	(A2)+			;64092: 54da
-	ORI.B	#$02,D0			;64094: 00000002
-	DC.W	$4fc4			;64098
-	DC.W	$0002			;6409a
-	DC.W	$4fcc			;6409c
-	DC.W	$0002			;6409e
-	LEA	0(A4,D0.W),A7		;640a0: 4ff40000
-	DC.W	$0009			;640a4
-	DC.W	$ab26			;640a6
-	SCC	(A2)+			;640a8: 54da
-	ORI.B	#$02,D0			;640aa: 00000002
-	DC.W	$4fcc			;640ae
-	DC.W	$0002			;640b0
-	LEA	2(A4,D0.W),A7		;640b2: 4ff40002
-	DC.W	$4ffc			;640b6
-	ORI.B	#$09,D0			;640b8: 00000009
-	OR.B	D0,D4			;640bc: 8800
-	dc.l  $0			;640be: 00000000
-	DC.W	$0002			;640c2
-	CHK.W	-(A4),D7		;640c4: 4fa4
-	DC.W	$0002			;640c6
-	CHK.W	#$0002,D7		;640c8: 4fbc0002
-	DC.W	$4fe4			;640cc
-	ORI.B	#$17,D0			;640ce: 00000017
-	OR.B	D0,D4			;640d2: 8800
-	dc.l  $0			;640d4: 00000000
-	DC.W	$0002			;640d8
-	CHK.W	#$0002,D7		;640da: 4fbc0002
-	DC.W	$4fe4			;640de
-	DC.W	$0002			;640e0
-	ADDQ.L	#8,A4			;640e2: 508c
-	ORI.B	#$17,D0			;640e4: 00000017
-	OR.B	D0,D4			;640e8: 8800
-	dc.l  $0			;640ea: 00000000
-	DC.W	$0002			;640ee
-	CHK.W	2(A4,D0.W),D7		;640f0: 4fb40002
-	LEA	2(A4),A7		;640f4: 4fec0002
-	ADDQ.L	#8,D4			;640f8: 5084
-	ORI.B	#$17,D0			;640fa: 00000017
-	OR.B	D0,D4			;640fe: 8800
-	dc.l  $0			;64100: 00000000
-	DC.W	$0002			;64104
-	CHK.W	2(A4),D7		;64106: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;6410a: 4fb40002
-	LEA	0(A4),A7		;6410e: 4fec0000
-	DC.W	$0017			;64112
-	AND.W	48(A7,D6.L),D2		;64114: c4776830
-	ORI.B	#$02,D0			;64118: 00000002
-	DC.W	$500c			;6411c
-	DC.W	$0002			;6411e
-	ADDQ.B	#8,(A4)+		;64120: 501c
-	DC.W	$0002			;64122
-	ADDQ.L	#8,D4			;64124: 5084
-	ORI.B	#$17,D0			;64126: 00000017
-	AND.W	48(A7,D6.L),D2		;6412a: c4776830
-	ORI.B	#$02,D0			;6412e: 00000002
-	LEA	2(A4),A7		;64132: 4fec0002
-	DC.W	$500c			;64136
-	DC.W	$0002			;64138
-	ADDQ.L	#8,D4			;6413a: 5084
-	ORI.B	#$17,D0			;6413c: 00000017
-	AND.W	48(A7,D6.L),D2		;64140: c4776830
-	ORI.B	#$02,D0			;64144: 00000002
-	DC.W	$4fe4			;64148
-	DC.W	$0002			;6414a
-	ADDQ.B	#8,D4			;6414c: 5004
-	DC.W	$0002			;6414e
-	ADDQ.L	#8,A4			;64150: 508c
-	ORI.B	#$17,D0			;64152: 00000017
-	AND.W	48(A7,D6.L),D2		;64156: c4776830
-	ORI.B	#$02,D0			;6415a: 00000002
-	ADDQ.B	#8,D4			;6415e: 5004
-	DC.W	$0002			;64160
-	ADDQ.B	#8,(A4)			;64162: 5014
-	DC.W	$0002			;64164
-	ADDQ.L	#8,A4			;64166: 508c
-	ORI.B	#$17,D0			;64168: 00000017
-	SCC	(A2)+			;6416c: 54da
-	SCC	(A2)+			;6416e: 54da
-	ORI.B	#$02,D0			;64170: 00000002
-	ADDQ.W	#8,-(A4)		;64174: 5064
-	DC.W	$0002			;64176
-	ADDQ.W	#8,2(A4,D0.W)		;64178: 50740002
-	DC.W	$507c			;6417c
-	ORI.B	#$09,D0			;6417e: 00000009
-	SCC	(A2)+			;64182: 54da
-	SCC	(A2)+			;64184: 54da
-	ORI.B	#$02,D0			;64186: 00000002
-	ADDQ.W	#8,-(A4)		;6418a: 5064
-	DC.W	$0002			;6418c
-	ADDQ.W	#8,2(A4)		;6418e: 506c0002
-	DC.W	$507c			;64192
-	ORI.B	#$09,D0			;64194: 00000009
-	MOVEQ	#0,D4			;64198: 7800
-	dc.l  $0			;6419a: 00000000
-	DC.W	$0002			;6419e
-	DC.W	$4f8c			;641a0
-	DC.W	$0002			;641a2
-	ADDQ.B	#8,-(A4)		;641a4: 5024
-	DC.W	$0002			;641a6
-	ADDQ.W	#8,(A4)			;641a8: 5054
-	ORI.B	#$17,D0			;641aa: 00000017
-	MOVEQ	#0,D4			;641ae: 7800
-	dc.l  $0			;641b0: 00000000
-	DC.W	$0002			;641b4
-	DC.W	$4f8c			;641b6
-	DC.W	$0002			;641b8
-	ADDQ.W	#8,(A4)			;641ba: 5054
-	DC.W	$0002			;641bc
-	ADDQ.W	#8,0(A4,D0.W)		;641be: 50740000
-	DC.W	$0017			;641c2
-	NBCD	D0			;641c4: 4800
-	DC.W	$6000			;641c6
-	ORI.B	#$02,D0			;641c8: 00000002
-	ADDQ.B	#8,-(A4)		;641cc: 5024
-	DC.W	$0002			;641ce
-	ADDQ.B	#8,2(A4,D0.W)		;641d0: 50340002
-	ADDQ.W	#8,D4			;641d4: 5044
-	ORI.B	#$17,D0			;641d6: 00000017
-	NBCD	D0			;641da: 4800
-	DC.W	$6000			;641dc
-	ORI.B	#$02,D0			;641de: 00000002
-	ADDQ.B	#8,-(A4)		;641e2: 5024
-	DC.W	$0002			;641e4
-	ADDQ.W	#8,D4			;641e6: 5044
-	DC.W	$0002			;641e8
-	ADDQ.W	#8,(A4)			;641ea: 5054
-	ORI.B	#$17,D0			;641ec: 00000017
-	MOVEQ	#0,D4			;641f0: 7800
-	dc.l  $0			;641f2: 00000000
-	DC.W	$0002			;641f6
-	CHK.W	(A4),D7			;641f8: 4f94
-	DC.W	$0002			;641fa
-	ADDQ.W	#8,(A4)+		;641fc: 505c
-	DC.W	$0002			;641fe
-	DC.W	$507c			;64200
-	ORI.B	#$17,D0			;64202: 00000017
-	MOVEQ	#0,D4			;64206: 7800
-	dc.l  $0			;64208: 00000000
-	DC.W	$0002			;6420c
-	CHK.W	(A4),D7			;6420e: 4f94
-	DC.W	$0002			;64210
-	ADDQ.W	#8,(A4)+		;64212: 505c
-	DC.W	$0002			;64214
-	ADDQ.B	#8,0(A4)		;64216: 502c0000
-	DC.W	$0017			;6421a
-	NBCD	D0			;6421c: 4800
-	DC.W	$6000			;6421e
-	ORI.B	#$02,D0			;64220: 00000002
-	ADDQ.B	#8,2(A4)		;64224: 502c0002
-	ADDQ.W	#8,A4			;64228: 504c
-	DC.W	$0002			;6422a
-	ADDQ.W	#8,(A4)+		;6422c: 505c
-	ORI.B	#$17,D0			;6422e: 00000017
-	NBCD	D0			;64232: 4800
-	DC.W	$6000			;64234
-	ORI.B	#$02,D0			;64236: 00000002
-	ADDQ.B	#8,2(A4)		;6423a: 502c0002
-	DC.W	$503c			;6423e
-	DC.W	$0002			;64240
-	ADDQ.W	#8,A4			;64242: 504c
-	ORI.B	#$17,D0			;64244: 00000017
-	dc.l  $0			;64248: 00000000
-	OR.B	D0,D4			;6424c: 8800
-	DC.W	$0002			;6424e
-	CHK.W	D4,D7			;64250: 4f84
-	DC.W	$0002			;64252
-	CHK.W	2(A4),D7		;64254: 4fac0002
-	LEA	0(A4),A7		;64258: 4fec0000
-	ORI.B	#$00,(A1)		;6425c: 00110000
-	DC.W	$0000			;64260
-	OR.B	D0,D4			;64262: 8800
-	DC.W	$0002			;64264
-	CHK.W	D4,D7			;64266: 4f84
-	DC.W	$0002			;64268
-	LEA	2(A4),A7		;6426a: 4fec0002
-	DC.W	$500c			;6426e
-	ORI.B	#$11,D0			;64270: 00000011
-	dc.l  $0			;64274: 00000000
-	OR.B	D0,D4			;64278: 8800
-	DC.W	$0002			;6427a
-	CHK.W	D4,D7			;6427c: 4f84
-	DC.W	$0002			;6427e
-	DC.W	$4f8c			;64280
-	DC.W	$0002			;64282
-	DC.W	$500c			;64284
-	ORI.B	#$11,D0			;64286: 00000011
-	dc.l  $0			;6428a: 00000000
-	OR.B	D0,D4			;6428e: 8800
-	DC.W	$0002			;64290
-	DC.W	$4f8c			;64292
-	DC.W	$0002			;64294
-	DC.W	$500c			;64296
-	DC.W	$0002			;64298
-	ADDQ.B	#8,0(A4,D0.W)		;6429a: 50340000
-	ORI.B	#$00,(A1)		;6429e: 00110000
-	DC.W	$0000			;642a2
-	OR.B	D0,D4			;642a4: 8800
-	DC.W	$0002			;642a6
-	DC.W	$4f8c			;642a8
-	DC.W	$0002			;642aa
-	ADDQ.B	#8,2(A4,D0.W)		;642ac: 50340002
-	ADDQ.B	#8,-(A4)		;642b0: 5024
-	ORI.B	#$11,D0			;642b2: 00000011
-	dc.l  $0			;642b6: 00000000
-	MOVEQ	#0,D4			;642ba: 7800
-	DC.W	$0002			;642bc
-	CHK.W	(A4)+,D7		;642be: 4f9c
-	DC.W	$0002			;642c0
-	CHK.W	-(A4),D7		;642c2: 4fa4
-	DC.W	$0002			;642c4
-	DC.W	$4fe4			;642c6
-	ORI.B	#$11,D0			;642c8: 00000011
-	dc.l  $0			;642cc: 00000000
-	MOVEQ	#0,D4			;642d0: 7800
-	DC.W	$0002			;642d2
-	CHK.W	(A4)+,D7		;642d4: 4f9c
-	DC.W	$0002			;642d6
-	ADDQ.B	#8,D4			;642d8: 5004
-	DC.W	$0002			;642da
-	DC.W	$4fe4			;642dc
-	ORI.B	#$11,D0			;642de: 00000011
-	dc.l  $0			;642e2: 00000000
-	MOVEQ	#0,D4			;642e6: 7800
-	DC.W	$0002			;642e8
-	CHK.W	(A4),D7			;642ea: 4f94
-	DC.W	$0002			;642ec
-	CHK.W	(A4)+,D7		;642ee: 4f9c
-	DC.W	$0002			;642f0
-	ADDQ.B	#8,D4			;642f2: 5004
-	ORI.B	#$11,D0			;642f4: 00000011
-	dc.l  $0			;642f8: 00000000
-	MOVEQ	#0,D4			;642fc: 7800
-	DC.W	$0002			;642fe
-	CHK.W	(A4),D7			;64300: 4f94
-	DC.W	$0002			;64302
-	DC.W	$503c			;64304
-	DC.W	$0002			;64306
-	ADDQ.B	#8,D4			;64308: 5004
-	ORI.B	#$11,D0			;6430a: 00000011
-	dc.l  $0			;6430e: 00000000
-	MOVEQ	#0,D4			;64312: 7800
-	DC.W	$0002			;64314
-	CHK.W	(A4),D7			;64316: 4f94
-	DC.W	$0002			;64318
-	ADDQ.B	#8,2(A4)		;6431a: 502c0002
-	DC.W	$503c			;6431e
-	ORI.B	#$11,D0			;64320: 00000011
-	DC.W	$ab26			;64324
-	DC.W	$ab26			;64326
-	ORI.B	#$02,D0			;64328: 00000002
-	DC.W	$4fc4			;6432c
-	DC.W	$0002			;6432e
-	LEA	(A4),A7			;64330: 4fd4
-	DC.W	$0002			;64332
-	DC.W	$4fdc			;64334
-	ORI.B	#$14,D0			;64336: 00000014
-	DC.W	$ab26			;6433a
-	DC.W	$ab26			;6433c
-	ORI.B	#$02,D0			;6433e: 00000002
-	DC.W	$4fc4			;64342
-	DC.W	$0002			;64344
-	DC.W	$4fcc			;64346
-	DC.W	$0002			;64348
-	LEA	(A4),A7			;6434a: 4fd4
-	ORI.B	#$14,D0			;6434c: 00000014
-	DC.W	$da0e			;64350
-	OR.B	0(A1),D7		;64352: 8e290000
-	DC.W	$0002			;64356
-	CHK.W	-(A4),D7		;64358: 4fa4
-	DC.W	$0002			;6435a
-	CHK.W	#$0002,D7		;6435c: 4fbc0002
-	DC.W	$4fdc			;64360
-	ORI.B	#$17,D0			;64362: 00000017
-	DC.W	$da0e			;64366
-	OR.B	0(A1),D7		;64368: 8e290000
-	DC.W	$0002			;6436c
-	CHK.W	(A4)+,D7		;6436e: 4f9c
-	DC.W	$0002			;64370
-	CHK.W	-(A4),D7		;64372: 4fa4
-	DC.W	$0002			;64374
-	DC.W	$4fdc			;64376
-	ORI.B	#$17,D0			;64378: 00000017
-	DC.W	$da0e			;6437c
-	OR.B	0(A1),D7		;6437e: 8e290000
-	DC.W	$0002			;64382
-	CHK.W	2(A4),D7		;64384: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;64388: 4fb40002
-	LEA	(A4),A7			;6438c: 4fd4
-	ORI.B	#$17,D0			;6438e: 00000017
-	DC.W	$da0e			;64392
-	OR.B	0(A1),D7		;64394: 8e290000
-	DC.W	$0002			;64398
-	CHK.W	D4,D7			;6439a: 4f84
-	DC.W	$0002			;6439c
-	CHK.W	2(A4),D7		;6439e: 4fac0002
-	LEA	(A4),A7			;643a2: 4fd4
-	ORI.B	#$17,D0			;643a4: 00000017
-	BMI.S	lb_643fc+2		;643a8: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;643aa: 35aa00000002
-	DC.W	$4f6c			;643b0
-	DC.W	$0002			;643b2
-	DC.W	$4f74			;643b4
-	DC.W	$0002			;643b6
-	ADDQ.W	#8,0(A4,D0.W)		;643b8: 50740000
-	DC.W	$0009			;643bc
-	BMI.S	lb_64412+2		;643be: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;643c0: 35aa00000002
-	DC.W	$4f6c			;643c6
-	DC.W	$0002			;643c8
-	ADDQ.W	#8,2(A4,D0.W)		;643ca: 50740002
-	DC.W	$507c			;643ce
-	ORI.B	#$09,D0			;643d0: 00000009
-	BMI.S	lb_64428+2		;643d4: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;643d6: 35aa00000002
-	DC.W	$4f74			;643dc
-	DC.W	$0002			;643de
-	DC.W	$4f8c			;643e0
-	DC.W	$0002			;643e2
-	ADDQ.W	#8,0(A4,D0.W)		;643e4: 50740000
-	DC.W	$0009			;643e8
-	BMI.S	lb_6443e+2		;643ea: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;643ec: 35aa00000002
-	DC.W	$4f6c			;643f2
-	DC.W	$0002			;643f4
-	CHK.W	(A4),D7			;643f6: 4f94
-	DC.W	$0002			;643f8
-	DC.W	$507c			;643fa
-lb_643fc:
-	ORI.B	#$09,D0			;643fc: 00000009
-	DC.W	$073f			;64400
-	CMP.W	D6,D0			;64402: b046
-	DC.W	$a69c			;64404
-	DC.W	$0002			;64406
-	DC.W	$4f7c			;64408
-	DC.W	$0002			;6440a
-	CHK.W	D4,D7			;6440c: 4f84
-	DC.W	$0002			;6440e
-	DC.W	$4f8c			;64410
-lb_64412:
-	ORI.B	#$0c,D0			;64412: 0000000c
-	DC.W	$0000			;64416
-	AND.W	(A6),D5			;64418: ca56
-	SUB.L	2(A4),D2		;6441a: 94ac0002
-	DC.W	$4f74			;6441e
-	DC.W	$0002			;64420
-	DC.W	$4f7c			;64422
-	DC.W	$0002			;64424
-	DC.W	$4f8c			;64426
-lb_64428:
-	ORI.B	#$0c,D0			;64428: 0000000c
-	DC.W	$0000			;6442c
-	AND.W	(A6),D5			;6442e: ca56
-	BMI.S	lb_64486		;64430: 6b54
-	DC.W	$0002			;64432
-	DC.W	$4f64			;64434
-	DC.W	$0002			;64436
-	DC.W	$4f6c			;64438
-	DC.W	$0002			;6443a
-	CHK.W	(A4),D7			;6443c: 4f94
-lb_6443e:
-	ORI.B	#$0c,D0			;6443e: 0000000c
-	DC.W	$073f			;64442
-	CMP.W	D6,D0			;64444: b046
-	SUBQ.W	#4,-(A4)		;64446: 5964
-	DC.W	$0002			;64448
-	DC.W	$4f64			;6444a
-	DC.W	$0002			;6444c
-	CHK.W	(A4),D7			;6444e: 4f94
-	DC.W	$0002			;64450
-	CHK.W	(A4)+,D7		;64452: 4f9c
-	ORI.B	#$0c,D0			;64454: 0000000c
-	CMP.B	D0,D4			;64458: b800
-	DC.W	$a000			;6445a
-	ORI.B	#$02,D0			;6445c: 00000002
-	DC.W	$4f64			;64460
-	DC.W	$0002			;64462
-	DC.W	$4f7c			;64464
-	DC.W	$0002			;64466
-	DC.W	$4fdc			;64468
-	ORI.B	#$14,D0			;6446a: 00000014
-	CMP.B	D0,D4			;6446e: b800
-	DC.W	$a000			;64470
-	ORI.B	#$02,D0			;64472: 00000002
-	DC.W	$4f7c			;64476
-	DC.W	$0002			;64478
-	LEA	(A4),A7			;6447a: 4fd4
-	DC.W	$0002			;6447c
-	DC.W	$4fdc			;6447e
-	ORI.B	#$14,D0			;64480: 00000014
-	CMP.B	D0,D4			;64484: b800
-lb_64486:
-	DC.W	$a000			;64486
-	ORI.B	#$02,D0			;64488: 00000002
-	DC.W	$4f64			;6448c
-	DC.W	$0002			;6448e
-	CHK.W	(A4)+,D7		;64490: 4f9c
-	DC.W	$0002			;64492
-	DC.W	$4fdc			;64494
-	ORI.B	#$14,D0			;64496: 00000014
-	CMP.B	D0,D4			;6449a: b800
-	DC.W	$a000			;6449c
-	ORI.B	#$02,D0			;6449e: 00000002
-	DC.W	$4f7c			;644a2
-	DC.W	$0002			;644a4
-	CHK.W	D4,D7			;644a6: 4f84
-	DC.W	$0002			;644a8
-	LEA	(A4),A7			;644aa: 4fd4
-	ORI.B	#$14,D0			;644ac: 00000014
-	dc.l  $0			;644b0: 00000000
-	ORI.B	#$02,D0			;644b4: 00000002
-	DC.W	$4f64			;644b8
-	DC.W	$0002			;644ba
-	DC.W	$4f6c			;644bc
-	DC.W	$0002			;644be
-	DC.W	$4f7c			;644c0
-	ORI.B	#$04,D0			;644c2: 00000004
-	dc.l  $0			;644c6: 00000000
-	ORI.B	#$02,D0			;644ca: 00000002
-	DC.W	$4f6c			;644ce
-	DC.W	$0002			;644d0
-	DC.W	$4f74			;644d2
-	DC.W	$0002			;644d4
-	DC.W	$4f7c			;644d6
-	ORI.B	#$04,D0			;644d8: 00000004
-	BTST	D0,D0			;644dc: 0100
-	DC.W	$000c			;644de
-	DC.W	$000f			;644e0
-	ORI.W	#$0000,(A6)		;644e2: 00560000
-	dc.l  $0			;644e6: 00000000
-	DC.W	$ff60			;644ea
-	DC.W	$ffc0			;644ec
-	DC.W	$0030			;644ee
-	DC.W	$0000			;644f0
-	DC.W	$ffa0			;644f2
-	ORI.W	#$0090,(A0)		;644f4: 00500090
-	DC.W	$ffc0			;644f8
-	DC.W	$0030			;644fa
-	ORI.L	#$ffc0ffd0,(A0)		;644fc: 0090ffc0ffd0
-	DC.W	$0000			;64502
-	DC.W	$ffa0			;64504
-	DC.W	$ffb0			;64506
-	DC.W	$ff60			;64508
-	DC.W	$ffc0			;6450a
-	DC.W	$ffd0			;6450c
-	DC.W	$ff60			;6450e
-	ORI.B	#$40,D0			;64510: 00000040
-	dc.l  $0			;64514: 00000000
-	ORI.W	#$00a0,0(A0,D0.W)	;64518: 007000a00000
-	ORI.W	#$00a0,D0		;6451e: 004000a0
-	DC.W	$0000			;64522
-	DC.W	$ffc0			;64524
-	dc.l  $0			;64526: 00000000
-	DC.W	$ff90			;6452a
-	DC.W	$ff60			;6452c
-	DC.W	$0000			;6452e
-	DC.W	$ffc0			;64530
-	MOVEQ	#106,D2			;64532: 746a
-	LSR	-(A6)			;64534: e2e6
-	ORI.B	#$02,D0			;64536: 00000002
-	DC.W	$4f74			;6453a
-	DC.W	$0002			;6453c
-	DC.W	$4f7c			;6453e
-	DC.W	$0002			;64540
-	CHK.W	0(A4),D7		;64542: 4fac0000
-	DC.W	$0001			;64546
-	MOVEQ	#106,D2			;64548: 746a
-	LSR	-(A6)			;6454a: e2e6
-	ORI.B	#$02,D0			;6454c: 00000002
-	DC.W	$4f74			;64550
-	DC.W	$0002			;64552
-	CHK.W	-(A4),D7		;64554: 4fa4
-	DC.W	$0002			;64556
-	CHK.W	0(A4),D7		;64558: 4fac0000
-	DC.W	$0001			;6455c
-	OR.B	D0,D4			;6455e: 8800
-	dc.l  $0			;64560: 00000000
-	DC.W	$0002			;64564
-	DC.W	$4f64			;64566
-	DC.W	$0002			;64568
-	DC.W	$4f8c			;6456a
-	DC.W	$0002			;6456c
-	CHK.W	(A4),D7			;6456e: 4f94
-	ORI.B	#$01,D0			;64570: 00000001
-	OR.B	D0,D4			;64574: 8800
-	dc.l  $0			;64576: 00000000
-	DC.W	$0002			;6457a
-	DC.W	$4f8c			;6457c
-	DC.W	$0002			;6457e
-	CHK.W	(A4),D7			;64580: 4f94
-	DC.W	$0002			;64582
-	CHK.W	#$0000,D7		;64584: 4fbc0000
-	DC.W	$0001			;64588
-	ROL.L	D1,D0			;6458a: e3b8
-	ROL.L	D1,D0			;6458c: e3b8
-	DC.W	$7123			;6458e
-	DC.W	$0002			;64590
-	DC.W	$4f64			;64592
-	DC.W	$0002			;64594
-	DC.W	$4f6c			;64596
-	DC.W	$0002			;64598
-	CHK.W	(A4),D7			;6459a: 4f94
-	ORI.B	#$0c,D0			;6459c: 0000000c
-	ADD.B	D7,-(A7)		;645a0: df27
-	ADDX.L	D1,D5			;645a2: db81
-	BLT.S	lb_64624		;645a4: 6d7e
-	DC.W	$0002			;645a6
-	DC.W	$4f6c			;645a8
-	DC.W	$0002			;645aa
-	CHK.W	(A4),D7			;645ac: 4f94
-	DC.W	$0002			;645ae
-	CHK.W	(A4)+,D7		;645b0: 4f9c
-	ORI.B	#$0c,D0			;645b2: 0000000c
-	ROL.L	D1,D0			;645b6: e3b8
-	ROL.L	D1,D0			;645b8: e3b8
-	DIVU	(A5)+,D7		;645ba: 8edd
-	DC.W	$0002			;645bc
-	CHK.W	D4,D7			;645be: 4f84
-	DC.W	$0002			;645c0
-	DC.W	$4f8c			;645c2
-	DC.W	$0002			;645c4
-	CHK.W	#$0000,D7		;645c6: 4fbc0000
-	DC.W	$000c			;645ca
-	ADD.B	D7,-(A7)		;645cc: df27
-	ADDX.L	D1,D5			;645ce: db81
-	SUB.L	D2,D1			;645d0: 9282
-	DC.W	$0002			;645d2
-	CHK.W	D4,D7			;645d4: 4f84
-	DC.W	$0002			;645d6
-	CHK.W	2(A4,D0.W),D7		;645d8: 4fb40002
-	CHK.W	#$0000,D7		;645dc: 4fbc0000
-	DC.W	$000c			;645e0
-	MOVE.L	(A1)+,(A0)+		;645e2: 20d9
-	ADDX.L	D1,D5			;645e4: db81
-	SUB.L	D2,D1			;645e6: 9282
-	DC.W	$0002			;645e8
-	CHK.W	D4,D7			;645ea: 4f84
-	DC.W	$0002			;645ec
-	CHK.W	2(A4),D7		;645ee: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;645f2: 4fb40000
-	DC.W	$0014			;645f6
-	MOVEA.L	(A6),A0			;645f8: 2056
-	ADD.W	-28147(A6),D6		;645fa: dc6e920d
-	DC.W	$0002			;645fe
-	DC.W	$4f7c			;64600
-	DC.W	$0002			;64602
-	CHK.W	D4,D7			;64604: 4f84
-	DC.W	$0002			;64606
-	CHK.W	0(A4),D7		;64608: 4fac0000
-	DC.W	$0014			;6460c
-	MOVEA.L	(A6),A0			;6460e: 2056
-	ADD.W	28147(A6),D6		;64610: dc6e6df3
-	DC.W	$0002			;64614
-	DC.W	$4f6c			;64616
-	DC.W	$0002			;64618
-	DC.W	$4f74			;6461a
-	DC.W	$0002			;6461c
-	CHK.W	-(A4),D7		;6461e: 4fa4
-	ORI.B	#$14,D0			;64620: 00000014
-lb_64624:
-	MOVE.L	(A1)+,(A0)+		;64624: 20d9
-	ADDX.L	D1,D5			;64626: db81
-	BLT.S	lb_646a8		;64628: 6d7e
-	DC.W	$0002			;6462a
-	DC.W	$4f6c			;6462c
-	DC.W	$0002			;6462e
-	CHK.W	(A4)+,D7		;64630: 4f9c
-	DC.W	$0002			;64632
-	CHK.W	-(A4),D7		;64634: 4fa4
-	ORI.B	#$14,D0			;64636: 00000014
-	ROR.W	D4,D0			;6463a: e878
-	OR.W	(A5),D5			;6463c: 8a55
-	ORI.B	#$02,D0			;6463e: 00000002
-	DC.W	$4f64			;64642
-	DC.W	$0002			;64644
-	DC.W	$4f6c			;64646
-	DC.W	$0002			;64648
-	DC.W	$4f8c			;6464a
-	ORI.B	#$04,D0			;6464c: 00000004
-	ROR.W	D4,D0			;64650: e878
-	OR.W	(A5),D5			;64652: 8a55
-	ORI.B	#$02,D0			;64654: 00000002
-	DC.W	$4f6c			;64658
-	DC.W	$0002			;6465a
-	CHK.W	D4,D7			;6465c: 4f84
-	DC.W	$0002			;6465e
-	DC.W	$4f8c			;64660
-	ORI.B	#$04,D0			;64662: 00000004
-	DC.W	$1a08			;64666
-	DIVU	(A4)+,D5		;64668: 8adc
-	ORI.B	#$02,D0			;6466a: 00000002
-	DC.W	$4f6c			;6466e
-	DC.W	$0002			;64670
-	DC.W	$4f7c			;64672
-	DC.W	$0002			;64674
-	CHK.W	D4,D7			;64676: 4f84
-	ORI.B	#$04,D0			;64678: 00000004
-	DC.W	$1a08			;6467c
-	DIVU	(A4)+,D5		;6467e: 8adc
-	ORI.B	#$02,D0			;64680: 00000002
-	DC.W	$4f6c			;64684
-	DC.W	$0002			;64686
-	DC.W	$4f74			;64688
-	DC.W	$0002			;6468a
-	DC.W	$4f7c			;6468c
-	ORI.B	#$04,D0			;6468e: 00000004
-	BTST	D0,D0			;64692: 0100
-	ORI.B	#$05,D6			;64694: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;64698: 003200000000
-	DC.W	$0000			;6469e
-	DC.W	$fdb0			;646a0
-	DC.W	$ffd8			;646a2
-	DC.W	$fff8			;646a4
-	DC.W	$ff60			;646a6
-lb_646a8:
-	DC.W	$ffd0			;646a8
-	DC.W	$0010			;646aa
-	DC.W	$ff60			;646ac
-	DC.W	$ffd0			;646ae
-	DC.W	$fff0			;646b0
-	DC.W	$fdb0			;646b2
-	DC.W	$ffe8			;646b4
-	DC.W	$0000			;646b6
-	DC.W	$ff60			;646b8
-	DC.W	$fff0			;646ba
-	DC.W	$0000			;646bc
-	DC.W	$fdb0			;646be
-	DC.W	$ffd8			;646c0
-	DC.W	$0008			;646c2
-	DC.W	$00fe			;646c4
-	AND.W	(A7),D5			;646c6: ca57
-	DC.W	$6b53			;646c8
-	DC.W	$0002			;646ca
-	DC.W	$4f64			;646cc
-	DC.W	$0002			;646ce
-	DC.W	$4f7c			;646d0
-	DC.W	$0002			;646d2
-	CHK.W	D4,D7			;646d4: 4f84
-	ORI.B	#$0c,D0			;646d6: 0000000c
-	DC.W	$00fe			;646da
-	AND.W	(A7),D5			;646dc: ca57
-	DC.W	$6b53			;646de
-	DC.W	$0002			;646e0
-	DC.W	$4f64			;646e2
-	DC.W	$0002			;646e4
-	DC.W	$4f74			;646e6
-	DC.W	$0002			;646e8
-	CHK.W	D4,D7			;646ea: 4f84
-lb_646ec:
-	ORI.B	#$0c,D0			;646ec: 0000000c
-	DC.W	$00fe			;646f0
-	AND.W	(A7),D5			;646f2: ca57
-	SUB.L	2(A5),D2		;646f4: 94ad0002
-	DC.W	$4f8c			;646f8
-	DC.W	$0002			;646fa
-	DC.W	$4f6c			;646fc
-	DC.W	$0002			;646fe
-	CHK.W	D4,D7			;64700: 4f84
-	ORI.B	#$0c,D0			;64702: 0000000c
-	DC.W	$00fe			;64706
-	AND.W	(A7),D5			;64708: ca57
-	SUB.L	2(A5),D2		;6470a: 94ad0002
-	DC.W	$4f8c			;6470e
-	DC.W	$0002			;64710
-	DC.W	$4f7c			;64712
-	DC.W	$0002			;64714
-	CHK.W	D4,D7			;64716: 4f84
-	ORI.B	#$0c,D0			;64718: 0000000c
-	DC.W	$fdc8			;6471c
-	OR.B	D6,D4			;6471e: 8806
-	ORI.B	#$02,D0			;64720: 00000002
-	DC.W	$4f8c			;64724
-	DC.W	$0002			;64726
-	DC.W	$4f64			;64728
-	DC.W	$0002			;6472a
-	DC.W	$4f6c			;6472c
-	ORI.B	#$04,D0			;6472e: 00000004
-	DC.W	$fdc8			;64732
-	OR.B	D6,D4			;64734: 8806
-	ORI.B	#$02,D0			;64736: 00000002
-	DC.W	$4f64			;6473a
-	DC.W	$0002			;6473c
-	DC.W	$4f6c			;6473e
-	DC.W	$0002			;64740
-	DC.W	$4f74			;64742
-	ORI.B	#$04,D0			;64744: 00000004
-	BTST	D0,D0			;64748: 0100
-	ORI.B	#$2b,-(A4)		;6474a: 0024002b
-	DC.W	$00e6			;6474e
-	dc.l  $0			;64750: 00000000
-	DC.W	$0000			;64754
-	DC.W	$ff90			;64756
-	ORI.B	#$58,D0			;64758: 00000058
-	DC.W	$00d0			;6475c
-	ORI.B	#$58,D0			;6475e: 00000058
-	DC.W	$00d0			;64762
-	DC.W	$0000			;64764
-	DC.W	$ffa8			;64766
-	DC.W	$ff90			;64768
-	DC.W	$0000			;6476a
-	DC.W	$ffa8			;6476c
-	BTST	D0,16(A0,D0.W)		;6476e: 01300010
-	ORI.W	#$0130,(A0)+		;64772: 00580130
-	DC.W	$0010			;64776
-	DC.W	$ffa8			;64778
-	DC.W	$ff50			;6477a
-	ORI.W	#$ffa8,D0		;6477c: 0040ffa8
-	DC.W	$ff50			;64780
-	ORI.W	#$0058,D0		;64782: 00400058
-	DC.W	$ff30			;64786
-	ORI.B	#$58,-(A0)		;64788: 00200058
-	DC.W	$ff30			;6478c
-	DC.W	$0020			;6478e
-	DC.W	$ffa8			;64790
-	DC.W	$ff30			;64792
-	ORI.B	#$88,-(A0)		;64794: 00200088
-	DC.W	$ff30			;64798
-	DC.W	$0020			;6479a
-	DC.W	$ff78			;6479c
-	BTST	D0,32(A0,D0.W)		;6479e: 01300020
-	DC.W	$0088			;647a2
-	BTST	D0,32(A0,D0.W)		;647a4: 01300020
-	DC.W	$ff78			;647a8
-	BTST	D0,32(A0,D0.W)		;647aa: 01300020
-	DC.W	$ffa8			;647ae
-	BTST	D0,32(A0,D0.W)		;647b0: 01300020
-	ORI.W	#$0130,(A0)+		;647b4: 00580130
-	ORI.W	#$ffa8,(A0)		;647b8: 0050ffa8
-	BTST	D0,80(A0,D0.W)		;647bc: 01300050
-	ORI.W	#$ff70,(A0)+		;647c0: 0058ff70
-	ORI.W	#$0058,(A0)		;647c4: 00500058
-	DC.W	$ff70			;647c8
-	ORI.W	#$ffa8,(A0)		;647ca: 0050ffa8
-	DC.W	$ff70			;647ce
-	DC.W	$0070			;647d0
-	ORI.W	#$ff70,(A0)+		;647d2: 0058ff70
-	DC.W	$0070			;647d6
-	DC.W	$ffa8			;647d8
-	DC.W	$ff70			;647da
-	DC.W	$0070			;647dc
-	DC.W	$0088			;647de
-	DC.W	$ff70			;647e0
-	DC.W	$0070			;647e2
-	DC.W	$ff78			;647e4
-	DC.W	$ff30			;647e6
-	ORI.W	#$0088,D0		;647e8: 00400088
-	DC.W	$ff30			;647ec
-	ORI.W	#$ff78,D0		;647ee: 0040ff78
-	BTST	D0,D0			;647f2: 0100
-	DC.W	$0070			;647f4
-	DC.W	$ffa8			;647f6
-	BTST	D0,D0			;647f8: 0100
-	DC.W	$0070			;647fa
-	ORI.W	#$0100,(A0)+		;647fc: 00580100
-	DC.W	$0070			;64800
-	DC.W	$ff78			;64802
-	BTST	D0,D0			;64804: 0100
-	DC.W	$0070			;64806
-	DC.W	$0088			;64808
-	BTST	D0,80(A0,D0.W)		;6480a: 01300050
-	DC.W	$ff78			;6480e
-	BTST	D0,80(A0,D0.W)		;64810: 01300050
-	DC.W	$0088			;64814
-	DC.W	$ff70			;64816
-	DC.W	$0020			;64818
-	DC.W	$ffa8			;6481a
-	DC.W	$ff70			;6481c
-	ORI.B	#$58,-(A0)		;6481e: 00200058
-	DC.W	$ff30			;64822
-	ORI.W	#$0058,D0		;64824: 00400058
-	DC.W	$ff30			;64828
-	ORI.W	#$ffa8,D0		;6482a: 0040ffa8
-	AND.W	(A6),D5			;6482e: ca56
-	BMI.S	lb_64886		;64830: 6b54
-	ORI.B	#$02,D0			;64832: 00000002
-	CHK.W	(A4),D7			;64836: 4f94
-	DC.W	$0002			;64838
-	CHK.W	(A4)+,D7		;6483a: 4f9c
-	DC.W	$0002			;6483c
-	LEA	0(A4,D0.W),A7		;6483e: 4ff40000
-	DC.W	$000e			;64842
-	AND.W	(A6),D5			;64844: ca56
-	BMI.S	lb_6489c		;64846: 6b54
-	ORI.B	#$02,D0			;64848: 00000002
-	CHK.W	(A4),D7			;6484c: 4f94
-	DC.W	$0002			;6484e
-	LEA	2(A4,D0.W),A7		;64850: 4ff40002
-	DC.W	$4ffc			;64854
-	ORI.B	#$0e,D0			;64856: 0000000e
-	OR.B	D0,D4			;6485a: 8800
-	dc.l  $0			;6485c: 00000000
-	DC.W	$0002			;64860
-	ADDQ.W	#8,2(A4,D0.W)		;64862: 50740002
-	CHK.W	2(A4,D0.W),D7		;64866: 4fb40002
-	ADDQ.B	#8,-(A4)		;6486a: 5024
-	ORI.B	#$17,D0			;6486c: 00000017
-	OR.B	D0,D4			;64870: 8800
-	dc.l  $0			;64872: 00000000
-	DC.W	$0002			;64876
-	ADDQ.W	#8,2(A4,D0.W)		;64878: 50740002
-	CHK.W	-(A4),D7		;6487c: 4fa4
-	DC.W	$0002			;6487e
-	CHK.W	0(A4,D0.W),D7		;64880: 4fb40000
-	DC.W	$0017			;64884
-lb_64886:
-	CMP.B	D0,D4			;64886: b800
-	DC.W	$6000			;64888
-	ORI.B	#$02,D0			;6488a: 00000002
-	ADDQ.B	#8,D4			;6488e: 5004
-	DC.W	$0002			;64890
-	ADDQ.B	#8,(A4)			;64892: 5014
-	DC.W	$0002			;64894
-	ADDQ.B	#8,-(A4)		;64896: 5024
-	ORI.B	#$17,D0			;64898: 00000017
-lb_6489c:
-	CMP.B	D0,D4			;6489c: b800
-	DC.W	$6000			;6489e
-	ORI.B	#$02,D0			;648a0: 00000002
-	ADDQ.W	#8,2(A4,D0.W)		;648a4: 50740002
-	ADDQ.B	#8,D4			;648a8: 5004
-	DC.W	$0002			;648aa
-	ADDQ.B	#8,-(A4)		;648ac: 5024
-	ORI.B	#$17,D0			;648ae: 00000017
-	CMP.B	D0,D4			;648b2: b800
-	DC.W	$6000			;648b4
-	ORI.B	#$02,D0			;648b6: 00000002
-	DC.W	$507c			;648ba
-	DC.W	$0002			;648bc
-	DC.W	$500c			;648be
-	DC.W	$0002			;648c0
-	ADDQ.B	#8,0(A4)		;648c2: 502c0000
-	DC.W	$0017			;648c6
-	CMP.B	D0,D4			;648c8: b800
-	DC.W	$6000			;648ca
-	ORI.B	#$02,D0			;648cc: 00000002
-	DC.W	$500c			;648d0
-	DC.W	$0002			;648d2
-	ADDQ.B	#8,(A4)+		;648d4: 501c
-	DC.W	$0002			;648d6
-	ADDQ.B	#8,0(A4)		;648d8: 502c0000
-	DC.W	$0017			;648dc
-	OR.B	D0,D4			;648de: 8800
-	dc.l  $0			;648e0: 00000000
-	DC.W	$0002			;648e4
-	DC.W	$507c			;648e6
-	DC.W	$0002			;648e8
-	CHK.W	2(A4),D7		;648ea: 4fac0002
-	CHK.W	#$0000,D7		;648ee: 4fbc0000
-	DC.W	$0017			;648f2
-	OR.B	D0,D4			;648f4: 8800
-	dc.l  $0			;648f6: 00000000
-	DC.W	$0002			;648fa
-	DC.W	$507c			;648fc
-	DC.W	$0002			;648fe
-	CHK.W	#$0002,D7		;64900: 4fbc0002
-	ADDQ.B	#8,0(A4)		;64904: 502c0000
-	DC.W	$0017			;64908
-	MOVEQ	#0,D4			;6490a: 7800
-	dc.l  $0			;6490c: 00000000
-	DC.W	$0002			;64910
-lb_64912:
-	DC.W	$4fcc			;64912
-	DC.W	$0002			;64914
-	LEA	(A4),A7			;64916: 4fd4
-	DC.W	$0002			;64918
-	ADDQ.W	#8,(A4)			;6491a: 5054
-	ORI.B	#$17,D0			;6491c: 00000017
-	MOVEQ	#0,D4			;64920: 7800
-	dc.l  $0			;64922: 00000000
-	DC.W	$0002			;64926
-lb_64928:
-	LEA	(A4),A7			;64928: 4fd4
-	DC.W	$0002			;6492a
-	DC.W	$4fe4			;6492c
-	DC.W	$0002			;6492e
-	ADDQ.W	#8,(A4)			;64930: 5054
-	ORI.B	#$17,D0			;64932: 00000017
-	CLR.L	(A0)			;64936: 4290
-lb_64938:
-	BLS.S	lb_64912		;64938: 63d8
-	ORI.B	#$02,D0			;6493a: 00000002
-lb_6493e:
-	DC.W	$4fe4			;6493e
-	DC.W	$0002			;64940
-	ADDQ.W	#8,D4			;64942: 5044
-	DC.W	$0002			;64944
-	ADDQ.W	#8,(A4)			;64946: 5054
-	ORI.B	#$17,D0			;64948: 00000017
-	CLR.L	(A0)			;6494c: 4290
-	BLS.S	lb_64928		;6494e: 63d8
-	ORI.B	#$02,D0			;64950: 00000002
-lb_64954:
-	DC.W	$4fe4			;64954
-	DC.W	$0002			;64956
-	ADDQ.B	#8,2(A4,D0.W)		;64958: 50340002
-	ADDQ.W	#8,D4			;6495c: 5044
-	ORI.B	#$17,D0			;6495e: 00000017
-	CLR.L	(A0)			;64962: 4290
-	BLS.S	lb_6493e		;64964: 63d8
-	ORI.B	#$02,D0			;64966: 00000002
-	LEA	2(A4),A7		;6496a: 4fec0002
-	DC.W	$503c			;6496e
-	DC.W	$0002			;64970
-	ADDQ.W	#8,(A4)+		;64972: 505c
-	ORI.B	#$17,D0			;64974: 00000017
-	CLR.L	(A0)			;64978: 4290
-	BLS.S	lb_64954		;6497a: 63d8
-	ORI.B	#$02,D0			;6497c: 00000002
-	DC.W	$503c			;64980
-	DC.W	$0002			;64982
-	ADDQ.W	#8,A4			;64984: 504c
-	DC.W	$0002			;64986
-	ADDQ.W	#8,(A4)+		;64988: 505c
-	ORI.B	#$17,D0			;6498a: 00000017
-	MOVEQ	#0,D4			;6498e: 7800
-	dc.l  $0			;64990: 00000000
-	DC.W	$0002			;64994
-	DC.W	$4fc4			;64996
-	DC.W	$0002			;64998
-	DC.W	$4fdc			;6499a
-	DC.W	$0002			;6499c
-	LEA	0(A4),A7		;6499e: 4fec0000
-	DC.W	$0017			;649a2
-	MOVEQ	#0,D4			;649a4: 7800
-	dc.l  $0			;649a6: 00000000
-	DC.W	$0002			;649aa
-	DC.W	$4fc4			;649ac
-	DC.W	$0002			;649ae
-	LEA	2(A4),A7		;649b0: 4fec0002
-	ADDQ.W	#8,(A4)+		;649b4: 505c
-	ORI.B	#$17,D0			;649b6: 00000017
-	dc.l  $0			;649ba: 00000000
-	OR.B	D0,D4			;649be: 8800
-	DC.W	$0002			;649c0
-	CHK.W	#$0002,D7		;649c2: 4fbc0002
-	ADDQ.B	#8,(A4)+		;649c6: 501c
-	DC.W	$0002			;649c8
-	ADDQ.B	#8,0(A4)		;649ca: 502c0000
-	ORI.B	#$00,(A6)		;649ce: 00160000
-	DC.W	$0000			;649d2
-	OR.B	D0,D4			;649d4: 8800
-	DC.W	$0002			;649d6
-	CHK.W	#$0002,D7		;649d8: 4fbc0002
-	ADDQ.B	#8,(A4)+		;649dc: 501c
-	DC.W	$0002			;649de
-	ADDQ.W	#8,D4			;649e0: 5044
-	ORI.B	#$16,D0			;649e2: 00000016
-	dc.l  $0			;649e6: 00000000
-	OR.B	D0,D4			;649ea: 8800
-	DC.W	$0002			;649ec
-	CHK.W	#$0002,D7		;649ee: 4fbc0002
-	ADDQ.W	#8,D4			;649f2: 5044
-	DC.W	$0002			;649f4
-	ADDQ.W	#8,(A4)			;649f6: 5054
-	ORI.B	#$16,D0			;649f8: 00000016
-	dc.l  $0			;649fc: 00000000
-	OR.B	D0,D4			;64a00: 8800
-	DC.W	$0002			;64a02
-	CHK.W	#$0002,D7		;64a04: 4fbc0002
-	DC.W	$4fcc			;64a08
-	DC.W	$0002			;64a0a
-	ADDQ.W	#8,(A4)			;64a0c: 5054
-	ORI.B	#$16,D0			;64a0e: 00000016
-	dc.l  $0			;64a12: 00000000
-	MOVEQ	#0,D4			;64a16: 7800
-	DC.W	$0002			;64a18
-	CHK.W	2(A4,D0.W),D7		;64a1a: 4fb40002
-	ADDQ.B	#8,(A4)			;64a1e: 5014
-	DC.W	$0002			;64a20
-	ADDQ.B	#8,-(A4)		;64a22: 5024
-	ORI.B	#$16,D0			;64a24: 00000016
-	dc.l  $0			;64a28: 00000000
-	MOVEQ	#0,D4			;64a2c: 7800
-	DC.W	$0002			;64a2e
-	CHK.W	2(A4,D0.W),D7		;64a30: 4fb40002
-	ADDQ.B	#8,(A4)			;64a34: 5014
-	DC.W	$0002			;64a36
-	ADDQ.W	#8,A4			;64a38: 504c
-	ORI.B	#$16,D0			;64a3a: 00000016
-	dc.l  $0			;64a3e: 00000000
-	MOVEQ	#0,D4			;64a42: 7800
-	DC.W	$0002			;64a44
-	CHK.W	2(A4,D0.W),D7		;64a46: 4fb40002
-	ADDQ.W	#8,A4			;64a4a: 504c
-	DC.W	$0002			;64a4c
-	ADDQ.W	#8,(A4)+		;64a4e: 505c
-	ORI.B	#$16,D0			;64a50: 00000016
-	dc.l  $0			;64a54: 00000000
-	MOVEQ	#0,D4			;64a58: 7800
-	DC.W	$0002			;64a5a
-	CHK.W	2(A4,D0.W),D7		;64a5c: 4fb40002
-	DC.W	$4fc4			;64a60
-	DC.W	$0002			;64a62
-	ADDQ.W	#8,(A4)+		;64a64: 505c
-	ORI.B	#$16,D0			;64a66: 00000016
-	DC.W	$0000			;64a6a
-	OR.B	D0,D4			;64a6c: 8800
-	ORI.B	#$02,D0			;64a6e: 00000002
-	CHK.W	-(A4),D7		;64a72: 4fa4
-	DC.W	$0002			;64a74
-	CHK.W	2(A4,D0.W),D7		;64a76: 4fb40002
-	DC.W	$4fc4			;64a7a
-	ORI.B	#$02,D0			;64a7c: 00000002
-	DC.W	$0000			;64a80
-	OR.B	D0,D4			;64a82: 8800
-	ORI.B	#$02,D0			;64a84: 00000002
-	CHK.W	-(A4),D7		;64a88: 4fa4
-	DC.W	$0002			;64a8a
-	DC.W	$4fc4			;64a8c
-	DC.W	$0002			;64a8e
-	DC.W	$4fdc			;64a90
-	ORI.B	#$02,D0			;64a92: 00000002
-	DC.W	$0000			;64a96
-	OR.B	D0,D4			;64a98: 8800
-	ORI.B	#$02,D0			;64a9a: 00000002
-	CHK.W	2(A4),D7		;64a9e: 4fac0002
-	CHK.W	#$0002,D7		;64aa2: 4fbc0002
-	DC.W	$4fcc			;64aa6
-	ORI.B	#$02,D0			;64aa8: 00000002
-	DC.W	$0000			;64aac
-	OR.B	D0,D4			;64aae: 8800
-	ORI.B	#$02,D0			;64ab0: 00000002
-	CHK.W	2(A4),D7		;64ab4: 4fac0002
-	DC.W	$4fcc			;64ab8
-	DC.W	$0002			;64aba
-	LEA	(A4),A7			;64abc: 4fd4
-	ORI.B	#$02,D0			;64abe: 00000002
-	DC.W	$ab26			;64ac2
-	DC.W	$ab26			;64ac4
-	ORI.B	#$02,D0			;64ac6: 00000002
-	DC.W	$4f64			;64aca
-	DC.W	$0002			;64acc
-	CHK.W	(A4),D7			;64ace: 4f94
-	DC.W	$0002			;64ad0
-	CHK.W	(A4)+,D7		;64ad2: 4f9c
-	ORI.B	#$12,D0			;64ad4: 00000012
-	DC.W	$ab26			;64ad8
-	DC.W	$ab26			;64ada
-	ORI.B	#$02,D0			;64adc: 00000002
-	DC.W	$4f64			;64ae0
-	DC.W	$0002			;64ae2
-	DC.W	$4f7c			;64ae4
-	DC.W	$0002			;64ae6
-	CHK.W	(A4),D7			;64ae8: 4f94
-	ORI.B	#$12,D0			;64aea: 00000012
-	MOVEQ	#0,D4			;64aee: 7800
-	dc.l  $0			;64af0: 00000000
-	DC.W	$0002			;64af4
-	CHK.W	D4,D7			;64af6: 4f84
-	DC.W	$0002			;64af8
-	DC.W	$4f8c			;64afa
-	DC.W	$0002			;64afc
-	DC.W	$4fe4			;64afe
-	ORI.B	#$16,D0			;64b00: 00000016
-	MOVEQ	#0,D4			;64b04: 7800
-	dc.l  $0			;64b06: 00000000
-	DC.W	$0002			;64b0a
-	CHK.W	D4,D7			;64b0c: 4f84
-	DC.W	$0002			;64b0e
-	DC.W	$4fe4			;64b10
-	DC.W	$0002			;64b12
-	LEA	0(A4),A7		;64b14: 4fec0000
-	ORI.B	#$00,(A6)		;64b18: 00160000
-	DC.W	$0000			;64b1c
-	MOVEQ	#0,D4			;64b1e: 7800
-	DC.W	$0002			;64b20
-	DC.W	$4f64			;64b22
-	DC.W	$0002			;64b24
-	DC.W	$4f6c			;64b26
-	DC.W	$0002			;64b28
-	CHK.W	D4,D7			;64b2a: 4f84
-	ORI.B	#$06,D0			;64b2c: 00000006
-	dc.l  $0			;64b30: 00000000
-	MOVEQ	#0,D4			;64b34: 7800
-	DC.W	$0002			;64b36
-	DC.W	$4f64			;64b38
-	DC.W	$0002			;64b3a
-	DC.W	$4fdc			;64b3c
-	DC.W	$0002			;64b3e
-	ADDQ.W	#8,0(A4)		;64b40: 506c0000
-	ORI.B	#$00,D6			;64b44: 00060000
-	DC.W	$0000			;64b48
-	OR.B	D0,D4			;64b4a: 8800
-	DC.W	$0002			;64b4c
-	DC.W	$4f74			;64b4e
-	DC.W	$0002			;64b50
-	DC.W	$4f7c			;64b52
-	DC.W	$0002			;64b54
-	DC.W	$4f8c			;64b56
-	ORI.B	#$06,D0			;64b58: 00000006
-	dc.l  $0			;64b5c: 00000000
-	OR.B	D0,D4			;64b60: 8800
-	DC.W	$0002			;64b62
-	DC.W	$4f7c			;64b64
-	DC.W	$0002			;64b66
-	LEA	(A4),A7			;64b68: 4fd4
-	DC.W	$0002			;64b6a
-	ADDQ.W	#8,-(A4)		;64b6c: 5064
-	ORI.B	#$06,D0			;64b6e: 00000006
-	dc.l  $0			;64b72: 00000000
-	OR.B	D0,D4			;64b76: 8800
-	DC.W	$0002			;64b78
-	DC.W	$4f7c			;64b7a
-	DC.W	$0002			;64b7c
-	DC.W	$4f8c			;64b7e
-	DC.W	$0002			;64b80
-	LEA	(A4),A7			;64b82: 4fd4
-	ORI.B	#$06,D0			;64b84: 00000006
-	dc.l  $0			;64b88: 00000000
-	MOVEQ	#0,D4			;64b8c: 7800
-	DC.W	$0002			;64b8e
-	DC.W	$4f64			;64b90
-	DC.W	$0002			;64b92
-	CHK.W	D4,D7			;64b94: 4f84
-	DC.W	$0002			;64b96
-	DC.W	$4fdc			;64b98
-	ORI.B	#$06,D0			;64b9a: 00000006
-	MOVE.B	lb_5d542(PC),0(A1,D0.W)	;64b9e: 13ba89a20000
-	DC.W	$0002			;64ba4
-	DC.W	$4f6c			;64ba6
-	DC.W	$0002			;64ba8
-	DC.W	$4f74			;64baa
-	DC.W	$0002			;64bac
-	CHK.W	D4,D7			;64bae: 4f84
-	ORI.B	#$12,D0			;64bb0: 00000012
-	MOVE.B	lb_5d556+2(PC),0(A1,D0.W) ;64bb4: 13ba89a20000
-	DC.W	$0002			;64bba
-	DC.W	$4f74			;64bbc
-	DC.W	$0002			;64bbe
-	CHK.W	D4,D7			;64bc0: 4f84
-	DC.W	$0002			;64bc2
-	DC.W	$4f8c			;64bc4
-	ORI.B	#$12,D0			;64bc6: 00000012
-	dc.l  $0			;64bca: 00000000
-	ORI.B	#$02,D0			;64bce: 00000002
-	DC.W	$4f64			;64bd2
-	DC.W	$0002			;64bd4
-	DC.W	$4f6c			;64bd6
-	DC.W	$0002			;64bd8
-	DC.W	$4f7c			;64bda
-	ORI.B	#$02,D0			;64bdc: 00000002
-	dc.l  $0			;64be0: 00000000
-	ORI.B	#$02,D0			;64be4: 00000002
-	DC.W	$4f6c			;64be8
-	DC.W	$0002			;64bea
-	DC.W	$4f74			;64bec
-	DC.W	$0002			;64bee
-	DC.W	$4f7c			;64bf0
-	ORI.B	#$02,D0			;64bf2: 00000002
-	BTST	D0,D0			;64bf6: 0100
-	DC.W	$000c			;64bf8
-	DC.W	$000f			;64bfa
-	ORI.W	#$0000,(A6)		;64bfc: 00560000
-	dc.l  $0			;64c00: 00000000
-	DC.W	$ffb0			;64c04
-	DC.W	$ffb0			;64c06
-	ORI.W	#$0000,D0		;64c08: 00400000
-	DC.W	$ffb0			;64c0c
-	ORI.W	#$00a0,-(A0)		;64c0e: 006000a0
-	DC.W	$ffb0			;64c12
-	DC.W	$0030			;64c14
-	ORI.L	#$ffb0ffd0,-(A0)	;64c16: 00a0ffb0ffd0
-	DC.W	$0000			;64c1c
-	DC.W	$ffb0			;64c1e
-	DC.W	$ffa0			;64c20
-	DC.W	$ffb0			;64c22
-	DC.W	$ffb0			;64c24
-	DC.W	$ffc0			;64c26
-	DC.W	$ffa0			;64c28
-	DC.W	$0000			;64c2a
-	DC.W	$ffc0			;64c2c
-	DC.W	$ffa0			;64c2e
-	ORI.B	#$40,D0			;64c30: 00000040
-	dc.l  $0			;64c34: 00000000
-	DC.W	$ffa0			;64c38
-	dc.l  $0			;64c3a: 00000000
-	ORI.W	#$00a0,-(A0)		;64c3e: 006000a0
-	DC.W	$fff0			;64c42
-	DC.W	$ffd0			;64c44
-	ORI.L	#$fff00030,-(A0)	;64c46: 00a0fff00030
-	OR.W	(A5),D5			;64c4c: 8a55
-	ROR.W	D4,D0			;64c4e: e878
-	ORI.B	#$02,D0			;64c50: 00000002
-	DC.W	$4f64			;64c54
-	DC.W	$0002			;64c56
-	CHK.W	(A4),D7			;64c58: 4f94
-	DC.W	$0002			;64c5a
-	CHK.W	(A4)+,D7		;64c5c: 4f9c
-	ORI.B	#$12,D0			;64c5e: 00000012
-	OR.W	(A5),D5			;64c62: 8a55
-	ROR.W	D4,D0			;64c64: e878
-	ORI.B	#$02,D0			;64c66: 00000002
-	DC.W	$4f64			;64c6a
-	DC.W	$0002			;64c6c
-	DC.W	$4f8c			;64c6e
-	DC.W	$0002			;64c70
-	CHK.W	(A4),D7			;64c72: 4f94
-	ORI.B	#$12,D0			;64c74: 00000012
-	MOVEQ	#0,D4			;64c78: 7800
-	dc.l  $0			;64c7a: 00000000
-	DC.W	$0002			;64c7e
-	DC.W	$4f74			;64c80
-	DC.W	$0002			;64c82
-	DC.W	$4f7c			;64c84
-	DC.W	$0002			;64c86
-	CHK.W	0(A4,D0.W),D7		;64c88: 4fb40000
-	DC.W	$0006			;64c8c
-	MOVEQ	#0,D4			;64c8e: 7800
-	dc.l  $0			;64c90: 00000000
-	DC.W	$0002			;64c94
-	DC.W	$4f74			;64c96
-	DC.W	$0002			;64c98
-	CHK.W	2(A4,D0.W),D7		;64c9a: 4fb40002
-	CHK.W	#$0000,D7		;64c9e: 4fbc0000
-	DC.W	$0006			;64ca2
-lb_64ca4:
-	MOVEA.L	lb_64ca4+2(PC,D0.W),A1	;64ca4: 227b0000
-	OR.B	D6,(A0)			;64ca8: 8d10
-	DC.W	$0002			;64caa
-	DC.W	$4f7c			;64cac
-	DC.W	$0002			;64cae
-	CHK.W	D4,D7			;64cb0: 4f84
-	DC.W	$0002			;64cb2
-	CHK.W	0(A4,D0.W),D7		;64cb4: 4fb40000
-	DC.W	$000a			;64cb8
-lb_64cba:
-	MOVEA.L	lb_64cba+2(PC,D0.W),A1	;64cba: 227b0000
-	OR.B	D6,(A0)			;64cbe: 8d10
-	DC.W	$0002			;64cc0
-	CHK.W	D4,D7			;64cc2: 4f84
-	DC.W	$0002			;64cc4
-	CHK.W	-(A4),D7		;64cc6: 4fa4
-	DC.W	$0002			;64cc8
-	CHK.W	0(A4,D0.W),D7		;64cca: 4fb40000
-	DC.W	$000a			;64cce
-lb_64cd0:
-	MOVEA.L	lb_64cd0+2(PC,D0.W),A1	;64cd0: 227b0000
-	MOVEQ	#-16,D1			;64cd4: 72f0
-	DC.W	$0002			;64cd6
-	DC.W	$4f6c			;64cd8
-	DC.W	$0002			;64cda
-	DC.W	$4f74			;64cdc
-	DC.W	$0002			;64cde
-	CHK.W	#$0000,D7		;64ce0: 4fbc0000
-	DC.W	$000a			;64ce4
-lb_64ce6:
-	MOVEA.L	lb_64ce6+2(PC,D0.W),A1	;64ce6: 227b0000
-	MOVEQ	#-16,D1			;64cea: 72f0
-	DC.W	$0002			;64cec
-	DC.W	$4f6c			;64cee
-	DC.W	$0002			;64cf0
-	CHK.W	2(A4),D7		;64cf2: 4fac0002
-	CHK.W	#$0000,D7		;64cf6: 4fbc0000
-	DC.W	$000a			;64cfa
-	ADDX.L	-(A7),-(A1)		;64cfc: d38f
-	DC.W	$f71d			;64cfe
-	BLE.S	lb_64d1e		;64d00: 6f1c
-	DC.W	$0002			;64d02
-	DC.W	$4f64			;64d04
-	DC.W	$0002			;64d06
-	DC.W	$4f6c			;64d08
-	DC.W	$0002			;64d0a
-	CHK.W	(A4)+,D7		;64d0c: 4f9c
-	ORI.B	#$06,D0			;64d0e: 00000006
-	DC.W	$da0e			;64d12
-	DC.W	$0000			;64d14
-	DC.W	$71d7			;64d16
-	DC.W	$0002			;64d18
-	DC.W	$4f6c			;64d1a
-	DC.W	$0002			;64d1c
-lb_64d1e:
-	CHK.W	(A4)+,D7		;64d1e: 4f9c
-	DC.W	$0002			;64d20
-	CHK.W	0(A4),D7		;64d22: 4fac0000
-	DC.W	$0006			;64d26
-	ADDX.L	-(A7),-(A1)		;64d28: d38f
-	DC.W	$f71d			;64d2a
-	SUBA.W	-(A4),A0		;64d2c: 90e4
-	DC.W	$0002			;64d2e
-	CHK.W	D4,D7			;64d30: 4f84
-	DC.W	$0002			;64d32
-	DC.W	$4f8c			;64d34
-	DC.W	$0002			;64d36
-	CHK.W	(A4),D7			;64d38: 4f94
-	ORI.B	#$06,D0			;64d3a: 00000006
-	DC.W	$da0e			;64d3e
-	DC.W	$0000			;64d40
-	OR.B	2(A1),D7		;64d42: 8e290002
-	CHK.W	D4,D7			;64d46: 4f84
-	DC.W	$0002			;64d48
-	CHK.W	(A4),D7			;64d4a: 4f94
-	DC.W	$0002			;64d4c
-	CHK.W	-(A4),D7		;64d4e: 4fa4
-	ORI.B	#$06,D0			;64d50: 00000006
-	DC.W	$0000			;64d54
-	OR.B	D0,D4			;64d56: 8800
-	ORI.B	#$02,D0			;64d58: 00000002
-	DC.W	$4f64			;64d5c
-	DC.W	$0002			;64d5e
-	DC.W	$4f6c			;64d60
-	DC.W	$0002			;64d62
-	DC.W	$4f8c			;64d64
-	ORI.B	#$02,D0			;64d66: 00000002
-	DC.W	$0000			;64d6a
-	OR.B	D0,D4			;64d6c: 8800
-	ORI.B	#$02,D0			;64d6e: 00000002
-	DC.W	$4f6c			;64d72
-	DC.W	$0002			;64d74
-	CHK.W	D4,D7			;64d76: 4f84
-	DC.W	$0002			;64d78
-	DC.W	$4f8c			;64d7a
-	ORI.B	#$02,D0			;64d7c: 00000002
-	DC.W	$0000			;64d80
-	OR.B	D0,D4			;64d82: 8800
-	ORI.B	#$02,D0			;64d84: 00000002
-	DC.W	$4f6c			;64d88
-	DC.W	$0002			;64d8a
-	DC.W	$4f74			;64d8c
-	DC.W	$0002			;64d8e
-	CHK.W	D4,D7			;64d90: 4f84
-	ORI.B	#$02,D0			;64d92: 00000002
-	DC.W	$0000			;64d96
-	OR.B	D0,D4			;64d98: 8800
-	ORI.B	#$02,D0			;64d9a: 00000002
-	DC.W	$4f74			;64d9e
-	DC.W	$0002			;64da0
-	DC.W	$4f7c			;64da2
-	DC.W	$0002			;64da4
-	CHK.W	D4,D7			;64da6: 4f84
-	ORI.B	#$02,D0			;64da8: 00000002
-	BTST	D0,D0			;64dac: 0100
-	ORI.B	#$05,D6			;64dae: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;64db2: 003200000000
-	DC.W	$0000			;64db8
-	DC.W	$fe70			;64dba
-	DC.W	$ffd0			;64dbc
-	DC.W	$fff8			;64dbe
-	DC.W	$ffb0			;64dc0
-	DC.W	$ffd0			;64dc2
-	DC.W	$0008			;64dc4
-	DC.W	$ffb0			;64dc6
-	DC.W	$ffd0			;64dc8
-	DC.W	$fff8			;64dca
-	DC.W	$fe70			;64dcc
-	DC.W	$ffe0			;64dce
-	DC.W	$0000			;64dd0
-	DC.W	$ffb0			;64dd2
-	DC.W	$ffe0			;64dd4
-	DC.W	$0000			;64dd6
-	DC.W	$fe70			;64dd8
-	DC.W	$ffd0			;64dda
-	DC.W	$0008			;64ddc
-	DC.W	$0000			;64dde
-	AND.W	(A6),D5			;64de0: ca56
-	BMI.S	lb_64e38		;64de2: 6b54
-	DC.W	$0002			;64de4
-	DC.W	$4f64			;64de6
-	DC.W	$0002			;64de8
-	DC.W	$4f7c			;64dea
-	DC.W	$0002			;64dec
-	CHK.W	D4,D7			;64dee: 4f84
-	ORI.B	#$0a,D0			;64df0: 0000000a
-	DC.W	$0000			;64df4
-	AND.W	(A6),D5			;64df6: ca56
-	BMI.S	lb_64e4e		;64df8: 6b54
-	DC.W	$0002			;64dfa
-	DC.W	$4f64			;64dfc
-	DC.W	$0002			;64dfe
-	DC.W	$4f74			;64e00
-	DC.W	$0002			;64e02
-	CHK.W	D4,D7			;64e04: 4f84
-	ORI.B	#$0a,D0			;64e06: 0000000a
-	DC.W	$0000			;64e0a
-	AND.W	(A6),D5			;64e0c: ca56
-	SUB.L	2(A4),D2		;64e0e: 94ac0002
-	DC.W	$4f8c			;64e12
-	DC.W	$0002			;64e14
-	DC.W	$4f6c			;64e16
-	DC.W	$0002			;64e18
-	CHK.W	D4,D7			;64e1a: 4f84
-	ORI.B	#$0a,D0			;64e1c: 0000000a
-	DC.W	$0000			;64e20
-	AND.W	(A6),D5			;64e22: ca56
-	SUB.L	2(A4),D2		;64e24: 94ac0002
-	DC.W	$4f8c			;64e28
-	DC.W	$0002			;64e2a
-	DC.W	$4f7c			;64e2c
-	DC.W	$0002			;64e2e
-	CHK.W	D4,D7			;64e30: 4f84
-	ORI.B	#$0a,D0			;64e32: 0000000a
-	DC.W	$0000			;64e36
-lb_64e38:
-	OR.B	D0,D4			;64e38: 8800
-	ORI.B	#$02,D0			;64e3a: 00000002
-	DC.W	$4f8c			;64e3e
-	DC.W	$0002			;64e40
-	DC.W	$4f64			;64e42
-	DC.W	$0002			;64e44
-	DC.W	$4f6c			;64e46
-	ORI.B	#$02,D0			;64e48: 00000002
-	DC.W	$0000			;64e4c
-lb_64e4e:
-	OR.B	D0,D4			;64e4e: 8800
-	ORI.B	#$02,D0			;64e50: 00000002
-	DC.W	$4f64			;64e54
-	DC.W	$0002			;64e56
-	DC.W	$4f6c			;64e58
-	DC.W	$0002			;64e5a
-	DC.W	$4f74			;64e5c
-	ORI.B	#$02,D0			;64e5e: 00000002
-	BTST	D0,D0			;64e62: 0100
-	ORI.B	#$3d,290(A6)		;64e64: 002e003d0122
-	dc.l  $0			;64e6a: 00000000
-	DC.W	$0000			;64e6e
-	DC.W	$ff40			;64e70
-	ORI.B	#$80,256(A0)		;64e72: 002800800100
-	ORI.B	#$80,256(A0)		;64e78: 002800800100
-	DC.W	$0028			;64e7e
-	DC.W	$ff80			;64e80
-	DC.W	$ff40			;64e82
-	DC.W	$0028			;64e84
-	DC.W	$ff80			;64e86
-	DC.W	$ff40			;64e88
-	ORI.B	#$50,288(A0)		;64e8a: 002800500120
-	ORI.W	#$0080,D0		;64e90: 00400080
-	BTST	D0,-(A0)		;64e94: 0120
-	ORI.W	#$ff80,D0		;64e96: 0040ff80
-	DC.W	$ff40			;64e9a
-	DC.W	$0028			;64e9c
-	DC.W	$ffb0			;64e9e
-	DC.W	$ff78			;64ea0
-	ORI.B	#$50,-136(A0)		;64ea2: 00280050ff78
-	DC.W	$0028			;64ea8
-	DC.W	$ffb0			;64eaa
-	DC.W	$ffb0			;64eac
-	ORI.B	#$50,D0			;64eae: 00000050
-	DC.W	$ffb0			;64eb2
-	DC.W	$0000			;64eb4
-	DC.W	$ffb0			;64eb6
-	DC.W	$00d0			;64eb8
-	ORI.B	#$50,D0			;64eba: 00000050
-	DC.W	$00d0			;64ebe
-	DC.W	$0000			;64ec0
-	DC.W	$ffb0			;64ec2
-	DC.W	$ff40			;64ec4
-	ORI.W	#$0050,(A0)		;64ec6: 00500050
-	DC.W	$ff40			;64eca
-	ORI.W	#$ffb0,(A0)		;64ecc: 0050ffb0
-	BTST	D0,D0			;64ed0: 0100
-	ORI.B	#$68,256(A0)		;64ed2: 002800680100
-	DC.W	$0028			;64ed8
-	DC.W	$ff98			;64eda
-	DC.W	$ff30			;64edc
-	ORI.W	#$0080,-(A0)		;64ede: 00600080
-	DC.W	$ff30			;64ee2
-	ORI.W	#$ff80,-(A0)		;64ee4: 0060ff80
-	DC.W	$ff78			;64ee8
-	ORI.B	#$68,-136(A0)		;64eea: 00280068ff78
-	DC.W	$0028			;64ef0
-	DC.W	$ff98			;64ef2
-	DC.W	$ffa0			;64ef4
-	ORI.L	#$0080ffa0,D0		;64ef6: 00800080ffa0
-	ORI.L	#$ff8000d0,D0		;64efc: 0080ff8000d0
-	ORI.L	#$008000d0,D0		;64f02: 0080008000d0
-	ORI.L	#$ff800120,D0		;64f08: 0080ff800120
-	ORI.W	#$0080,-(A0)		;64f0e: 00600080
-	BTST	D0,-(A0)		;64f12: 0120
-	ORI.W	#$ff80,-(A0)		;64f14: 0060ff80
-	BTST	D0,D0			;64f18: 0100
-	ORI.W	#$0050,-(A0)		;64f1a: 00600050
-	BTST	D0,D0			;64f1e: 0100
-	ORI.W	#$ffb0,-(A0)		;64f20: 0060ffb0
-	BTST	D0,-(A0)		;64f24: 0120
-	ORI.W	#$0050,-(A0)		;64f26: 00600050
-	BTST	D0,-(A0)		;64f2a: 0120
-	ORI.W	#$ffb0,-(A0)		;64f2c: 0060ffb0
-	DC.W	$00d0			;64f30
-	ORI.L	#$005000d0,D0		;64f32: 0080005000d0
-	ORI.L	#$ffb00120,D0		;64f38: 0080ffb00120
-	ORI.W	#$0050,D0		;64f3e: 00400050
-	BTST	D0,-(A0)		;64f42: 0120
-	ORI.W	#$ffb0,D0		;64f44: 0040ffb0
-	DC.W	$ff60			;64f48
-	ORI.W	#$0050,-(A0)		;64f4a: 00600050
-	DC.W	$ff60			;64f4e
-	ORI.W	#$ffb0,-(A0)		;64f50: 0060ffb0
-	DC.W	$ff30			;64f54
-	ORI.W	#$0050,-(A0)		;64f56: 00600050
-	DC.W	$ff30			;64f5a
-	ORI.W	#$ffb0,-(A0)		;64f5c: 0060ffb0
-	DC.W	$ffa0			;64f60
-	ORI.L	#$0050ffa0,D0		;64f62: 00800050ffa0
-	ORI.L	#$ffb0ff30,D0		;64f68: 0080ffb0ff30
-	ORI.B	#$80,ext_ffffff30.W		;64f6e: 00380080ff30
-	ORI.B	#$50,ext_ffffff30.W		;64f74: 00380050ff30
-	DC.W	$0038			;64f7a
-	DC.W	$ffb0			;64f7c
-	DC.W	$ff30			;64f7e
-	DC.W	$0038			;64f80
-	DC.W	$ff80			;64f82
-	ADDX.B	-(A1),-(A7)		;64f84: df09
-	DC.W	$7362			;64f86
-	ORI.B	#$02,D0			;64f88: 00000002
-	DC.W	$4ffc			;64f8c
-	DC.W	$0002			;64f8e
-	ADDQ.L	#8,(A4)+		;64f90: 509c
-	DC.W	$0002			;64f92
-	ADDQ.L	#8,0(A4)		;64f94: 50ac0000
-	DC.W	$0017			;64f98
-	ADDX.B	-(A1),-(A7)		;64f9a: df09
-	DC.W	$7362			;64f9c
-	ORI.B	#$02,D0			;64f9e: 00000002
-	DC.W	$4ffc			;64fa2
-	DC.W	$0002			;64fa4
-	ADDQ.B	#8,(A4)+		;64fa6: 501c
-	DC.W	$0002			;64fa8
-	ADDQ.L	#8,0(A4)		;64faa: 50ac0000
-	DC.W	$0017			;64fae
-	ADDX.B	-(A1),-(A7)		;64fb0: df09
-	DC.W	$7362			;64fb2
-	ORI.B	#$02,D0			;64fb4: 00000002
-	LEA	2(A4,D0.W),A7		;64fb8: 4ff40002
-	ADDQ.B	#8,(A4)			;64fbc: 5014
-	DC.W	$0002			;64fbe
-	ADDQ.L	#8,(A4)			;64fc0: 5094
-	ORI.B	#$17,D0			;64fc2: 00000017
-	ADDX.B	-(A1),-(A7)		;64fc6: df09
-	DC.W	$7362			;64fc8
-	ORI.B	#$02,D0			;64fca: 00000002
-	ADDQ.B	#8,(A4)			;64fce: 5014
-	DC.W	$0002			;64fd0
-	ADDQ.L	#8,(A4)			;64fd2: 5094
-	DC.W	$0002			;64fd4
-	ADDQ.L	#8,-(A4)		;64fd6: 50a4
-	ORI.B	#$17,D0			;64fd8: 00000017
-	MOVE.L	(A1),(A6)		;64fdc: 2c91
-	BLE.S	lb_6504a		;64fde: 6f6a
-	ORI.B	#$02,D0			;64fe0: 00000002
-	ADDQ.B	#8,-(A4)		;64fe4: 5024
-	DC.W	$0002			;64fe6
-	ADDQ.B	#8,2(A4,D0.W)		;64fe8: 50340002
-	ADDQ.W	#8,-(A4)		;64fec: 5064
-	ORI.B	#$17,D0			;64fee: 00000017
-	MOVE.L	(A1),(A6)		;64ff2: 2c91
-	BLE.S	lb_6505e+2		;64ff4: 6f6a
-	ORI.B	#$02,D0			;64ff6: 00000002
-	ADDQ.B	#8,2(A4,D0.W)		;64ffa: 50340002
-	ADDQ.W	#8,(A4)			;64ffe: 5054
-	DC.W	$0002			;65000
-	ADDQ.W	#8,-(A4)		;65002: 5064
-	ORI.B	#$17,D0			;65004: 00000017
-	MOVE.L	(A1),(A6)		;65008: 2c91
-	BLE.S	lb_65074+2		;6500a: 6f6a
-	ORI.B	#$02,D0			;6500c: 00000002
-	ADDQ.B	#8,2(A4)		;65010: 502c0002
-	ADDQ.W	#8,(A4)+		;65014: 505c
-	DC.W	$0002			;65016
-	ADDQ.W	#8,0(A4)		;65018: 506c0000
-	DC.W	$0017			;6501c
-	MOVE.L	(A1),(A6)		;6501e: 2c91
-	BLE.S	lb_6508c		;65020: 6f6a
-	ORI.B	#$02,D0			;65022: 00000002
-	ADDQ.B	#8,2(A4)		;65026: 502c0002
-	DC.W	$503c			;6502a
-	DC.W	$0002			;6502c
-	ADDQ.W	#8,(A4)+		;6502e: 505c
-	ORI.B	#$17,D0			;65030: 00000017
-	dc.l  $0			;65034: 00000000
-	MOVEQ	#0,D4			;65038: 7800
-	DC.W	$0002			;6503a
-	LEA	2(A4,D0.W),A7		;6503c: 4ff40002
-	ADDQ.B	#8,(A4)			;65040: 5014
-	DC.W	$0002			;65042
-	ADDQ.B	#8,-(A4)		;65044: 5024
-	ORI.B	#$16,D0			;65046: 00000016
-lb_6504a:
-	dc.l  $0			;6504a: 00000000
-	OR.B	D0,D4			;6504e: 8800
-	DC.W	$0002			;65050
-	DC.W	$4ffc			;65052
-	DC.W	$0002			;65054
-	ADDQ.B	#8,(A4)+		;65056: 501c
-	DC.W	$0002			;65058
-	ADDQ.B	#8,0(A4)		;6505a: 502c0000
-lb_6505e:
-	ORI.B	#$00,(A6)		;6505e: 00160000
-	DC.W	$0000			;65062
-	MOVEQ	#0,D4			;65064: 7800
-	DC.W	$0002			;65066
-	LEA	2(A4,D0.W),A7		;65068: 4ff40002
-	ADDQ.B	#8,-(A4)		;6506c: 5024
-	DC.W	$0002			;6506e
-	ADDQ.B	#8,0(A4,D0.W)		;65070: 50340000
-lb_65074:
-	ORI.B	#$00,(A6)		;65074: 00160000
-	DC.W	$0000			;65078
-	OR.B	D0,D4			;6507a: 8800
-	DC.W	$0002			;6507c
-	DC.W	$4ffc			;6507e
-	DC.W	$0002			;65080
-	ADDQ.B	#8,2(A4)		;65082: 502c0002
-	DC.W	$503c			;65086
-	ORI.B	#$16,D0			;65088: 00000016
-lb_6508c:
-	AND.W	(A6),D5			;6508c: ca56
-	BMI.S	lb_650e4		;6508e: 6b54
-	ORI.B	#$02,D0			;65090: 00000002
-	LEA	(A4),A7			;65094: 4fd4
-	DC.W	$0002			;65096
-	DC.W	$4fdc			;65098
-	DC.W	$0002			;6509a
-	ADDQ.L	#8,D4			;6509c: 5084
-	ORI.B	#$0e,D0			;6509e: 0000000e
-	AND.W	(A6),D5			;650a2: ca56
-	BMI.S	lb_650fa		;650a4: 6b54
-	ORI.B	#$02,D0			;650a6: 00000002
-	DC.W	$4fdc			;650aa
-	DC.W	$0002			;650ac
-	ADDQ.L	#8,D4			;650ae: 5084
-	DC.W	$0002			;650b0
-	ADDQ.L	#8,A4			;650b2: 508c
-	ORI.B	#$0e,D0			;650b4: 0000000e
-	CMP.W	D1,D5			;650b8: ba41
-	SUB.W	(A3)+,D7		;650ba: 9e5b
-	ORI.B	#$02,D0			;650bc: 00000002
-	CHK.W	2(A4),D7		;650c0: 4fac0002
-	LEA	(A4),A7			;650c4: 4fd4
-	DC.W	$0002			;650c6
-	DC.W	$4fdc			;650c8
-	ORI.B	#$12,D0			;650ca: 00000012
-	CMP.W	D1,D5			;650ce: ba41
-	SUB.W	(A3)+,D7		;650d0: 9e5b
-	ORI.B	#$02,D0			;650d2: 00000002
-	CHK.W	-(A4),D7		;650d6: 4fa4
-	DC.W	$0002			;650d8
-	CHK.W	2(A4),D7		;650da: 4fac0002
-	LEA	(A4),A7			;650de: 4fd4
-	ORI.B	#$12,D0			;650e0: 00000012
-lb_650e4:
-	OR.B	D0,D4			;650e4: 8800
-	dc.l  $0			;650e6: 00000000
-	DC.W	$0002			;650ea
-	LEA	2(A4,D0.W),A7		;650ec: 4ff40002
-	ADDQ.L	#8,2(A4,D0.W)		;650f0: 50b40002
-	DC.W	$50bc			;650f4
-	ORI.B	#$17,D0			;650f6: 00000017
-lb_650fa:
-	OR.B	D0,D4			;650fa: 8800
-	dc.l  $0			;650fc: 00000000
-	DC.W	$0002			;65100
-	LEA	2(A4,D0.W),A7		;65102: 4ff40002
-	ADDQ.L	#8,(A4)			;65106: 5094
-	DC.W	$0002			;65108
-	DC.W	$50bc			;6510a
-	ORI.B	#$17,D0			;6510c: 00000017
-	OR.B	D0,D4			;65110: 8800
-	dc.l  $0			;65112: 00000000
-	DC.W	$0002			;65116
-	ADDQ.L	#8,(A4)+		;65118: 509c
-	DC.W	$0002			;6511a
-	ST	D4			;6511c: 50c4
-	DC.W	$0002			;6511e
-	DC.W	$50cc			;65120
-	ORI.B	#$17,D0			;65122: 00000017
-	OR.B	D0,D4			;65126: 8800
-	dc.l  $0			;65128: 00000000
-	DC.W	$0002			;6512c
-	DC.W	$4ffc			;6512e
-	DC.W	$0002			;65130
-	ADDQ.L	#8,(A4)+		;65132: 509c
-	DC.W	$0002			;65134
-	DC.W	$50cc			;65136
-	ORI.B	#$17,D0			;65138: 00000017
-	SCC	(A2)+			;6513c: 54da
-	SCC	(A2)+			;6513e: 54da
-	ORI.B	#$02,D0			;65140: 00000002
-	ADDQ.W	#8,D4			;65144: 5044
-	DC.W	$0002			;65146
-	ADDQ.W	#8,A4			;65148: 504c
-	DC.W	$0002			;6514a
-	ADDQ.W	#8,0(A4,D0.W)		;6514c: 50740000
-	DC.W	$000e			;65150
-	SCC	(A2)+			;65152: 54da
-	SCC	(A2)+			;65154: 54da
-	ORI.B	#$02,D0			;65156: 00000002
-	ADDQ.W	#8,A4			;6515a: 504c
-	DC.W	$0002			;6515c
-	ADDQ.W	#8,2(A4,D0.W)		;6515e: 50740002
-	DC.W	$507c			;65162
-	ORI.B	#$0e,D0			;65164: 0000000e
-	MOVEQ	#0,D4			;65168: 7800
-	dc.l  $0			;6516a: 00000000
-	DC.W	$0002			;6516e
-	DC.W	$4f8c			;65170
-	DC.W	$0002			;65172
-	ADDQ.B	#8,2(A4,D0.W)		;65174: 50340002
-	ADDQ.W	#8,(A4)			;65178: 5054
-	ORI.B	#$17,D0			;6517a: 00000017
-	MOVEQ	#0,D4			;6517e: 7800
-	dc.l  $0			;65180: 00000000
-	DC.W	$0002			;65184
-	DC.W	$4f8c			;65186
-	DC.W	$0002			;65188
-	ADDQ.W	#8,(A4)			;6518a: 5054
-	DC.W	$0002			;6518c
-	ADDQ.W	#8,0(A4,D0.W)		;6518e: 50740000
-	DC.W	$0017			;65192
-	MOVEQ	#0,D4			;65194: 7800
-	dc.l  $0			;65196: 00000000
-	DC.W	$0002			;6519a
-	DC.W	$503c			;6519c
-	DC.W	$0002			;6519e
-	ADDQ.W	#8,(A4)+		;651a0: 505c
-	DC.W	$0002			;651a2
-	DC.W	$507c			;651a4
-	ORI.B	#$17,D0			;651a6: 00000017
-	MOVEQ	#0,D4			;651aa: 7800
-	dc.l  $0			;651ac: 00000000
-	DC.W	$0002			;651b0
-	CHK.W	(A4),D7			;651b2: 4f94
-	DC.W	$0002			;651b4
-	DC.W	$503c			;651b6
-	DC.W	$0002			;651b8
-	DC.W	$507c			;651ba
-	ORI.B	#$17,D0			;651bc: 00000017
-	dc.l  $0			;651c0: 00000000
-	MOVEQ	#0,D4			;651c4: 7800
-	DC.W	$0002			;651c6
-	DC.W	$4f8c			;651c8
-	DC.W	$0002			;651ca
-	LEA	2(A4,D0.W),A7		;651cc: 4ff40002
-	ADDQ.B	#8,0(A4,D0.W)		;651d0: 50340000
-	ORI.B	#$00,(A6)		;651d4: 00160000
-	DC.W	$0000			;651d8
-	OR.B	D0,D4			;651da: 8800
-	DC.W	$0002			;651dc
-	CHK.W	(A4),D7			;651de: 4f94
-	DC.W	$0002			;651e0
-	DC.W	$4ffc			;651e2
-	DC.W	$0002			;651e4
-	DC.W	$503c			;651e6
-	ORI.B	#$16,D0			;651e8: 00000016
-	dc.l  $0			;651ec: 00000000
-	MOVEQ	#0,D4			;651f0: 7800
-	DC.W	$0002			;651f2
-	DC.W	$4f64			;651f4
-	DC.W	$0002			;651f6
-	DC.W	$4f8c			;651f8
-	DC.W	$0002			;651fa
-	LEA	0(A4,D0.W),A7		;651fc: 4ff40000
-	ORI.B	#$00,(A6)		;65200: 00160000
-	DC.W	$0000			;65204
-	OR.B	D0,D4			;65206: 8800
-	DC.W	$0002			;65208
-	DC.W	$4f7c			;6520a
-	DC.W	$0002			;6520c
-	CHK.W	(A4),D7			;6520e: 4f94
-	DC.W	$0002			;65210
-	DC.W	$4ffc			;65212
-	ORI.B	#$16,D0			;65214: 00000016
-	dc.l  $0			;65218: 00000000
-	MOVEQ	#0,D4			;6521c: 7800
-	DC.W	$0002			;6521e
-	DC.W	$4f64			;65220
-	DC.W	$0002			;65222
-	DC.W	$4f6c			;65224
-	DC.W	$0002			;65226
-	DC.W	$4f8c			;65228
-	ORI.B	#$16,D0			;6522a: 00000016
-	dc.l  $0			;6522e: 00000000
-	OR.B	D0,D4			;65232: 8800
-	DC.W	$0002			;65234
-	DC.W	$4f74			;65236
-	DC.W	$0002			;65238
-	DC.W	$4f7c			;6523a
-	DC.W	$0002			;6523c
-	CHK.W	(A4),D7			;6523e: 4f94
-	ORI.B	#$16,D0			;65240: 00000016
-	dc.l  $0			;65244: 00000000
-	MOVEQ	#0,D4			;65248: 7800
-	DC.W	$0002			;6524a
-	DC.W	$4f64			;6524c
-	DC.W	$0002			;6524e
-	LEA	2(A4,D0.W),A7		;65250: 4ff40002
-	ADDQ.L	#8,0(A4,D0.W)		;65254: 50b40000
-	ORI.B	#$00,(A6)		;65258: 00160000
-	DC.W	$0000			;6525c
-	OR.B	D0,D4			;6525e: 8800
-	DC.W	$0002			;65260
-	DC.W	$4f7c			;65262
-	DC.W	$0002			;65264
-	DC.W	$4ffc			;65266
-	DC.W	$0002			;65268
-	DC.W	$50cc			;6526a
-	ORI.B	#$16,D0			;6526c: 00000016
-	DC.W	$0000			;65270
-	OR.B	D0,D4			;65272: 8800
-	ORI.B	#$02,D0			;65274: 00000002
-	DC.W	$4f7c			;65278
-	DC.W	$0002			;6527a
-	LEA	2(A4),A7		;6527c: 4fec0002
-	DC.W	$500c			;65280
-	ORI.B	#$12,D0			;65282: 00000012
-	DC.W	$0000			;65286
-	OR.B	D0,D4			;65288: 8800
-	ORI.B	#$02,D0			;6528a: 00000002
-	DC.W	$4f74			;6528e
-	DC.W	$0002			;65290
-	DC.W	$4f7c			;65292
-	DC.W	$0002			;65294
-	LEA	0(A4),A7		;65296: 4fec0000
-	ORI.B	#$00,(A2)		;6529a: 00120000
-	OR.B	D0,D4			;6529e: 8800
-	ORI.B	#$02,D0			;652a0: 00000002
-	DC.W	$4f64			;652a4
-	DC.W	$0002			;652a6
-	DC.W	$4f6c			;652a8
-	DC.W	$0002			;652aa
-	ADDQ.B	#8,D4			;652ac: 5004
-	ORI.B	#$12,D0			;652ae: 00000012
-	DC.W	$0000			;652b2
-	OR.B	D0,D4			;652b4: 8800
-	ORI.B	#$02,D0			;652b6: 00000002
-	DC.W	$4f6c			;652ba
-	DC.W	$0002			;652bc
-	DC.W	$4fe4			;652be
-	DC.W	$0002			;652c0
-	ADDQ.B	#8,D4			;652c2: 5004
-	ORI.B	#$12,D0			;652c4: 00000012
-	DC.W	$0000			;652c8
-	OR.B	D0,D4			;652ca: 8800
-	ORI.B	#$02,D0			;652cc: 00000002
-	DC.W	$4f64			;652d0
-	DC.W	$0002			;652d2
-	CHK.W	D4,D7			;652d4: 4f84
-	DC.W	$0002			;652d6
-	ADDQ.B	#8,D4			;652d8: 5004
-	ORI.B	#$12,D0			;652da: 00000012
-	DC.W	$0000			;652de
-	OR.B	D0,D4			;652e0: 8800
-	ORI.B	#$02,D0			;652e2: 00000002
-	CHK.W	D4,D7			;652e6: 4f84
-	DC.W	$0002			;652e8
-	CHK.W	-(A4),D7		;652ea: 4fa4
-	DC.W	$0002			;652ec
-	ADDQ.B	#8,D4			;652ee: 5004
-	ORI.B	#$12,D0			;652f0: 00000012
-	DC.W	$0000			;652f4
-	OR.B	D0,D4			;652f6: 8800
-	ORI.B	#$02,D0			;652f8: 00000002
-	DC.W	$4f7c			;652fc
-	DC.W	$0002			;652fe
-	CHK.W	(A4)+,D7		;65300: 4f9c
-	DC.W	$0002			;65302
-	CHK.W	0(A4),D7		;65304: 4fac0000
-	ORI.B	#$00,(A2)		;65308: 00120000
-	OR.B	D0,D4			;6530c: 8800
-	ORI.B	#$02,D0			;6530e: 00000002
-	DC.W	$4f7c			;65312
-	DC.W	$0002			;65314
-	CHK.W	2(A4),D7		;65316: 4fac0002
-	DC.W	$500c			;6531a
-	ORI.B	#$12,D0			;6531c: 00000012
-	DC.W	$ab26			;65320
-	DC.W	$ab26			;65322
-	ORI.B	#$02,D0			;65324: 00000002
-	DC.W	$4f64			;65328
-	DC.W	$0002			;6532a
-	CHK.W	D4,D7			;6532c: 4f84
-	DC.W	$0002			;6532e
-	ADDQ.L	#8,0(A4,D0.W)		;65330: 50b40000
-	DC.W	$000a			;65334
-	DC.W	$ab26			;65336
-	DC.W	$ab26			;65338
-	ORI.B	#$02,D0			;6533a: 00000002
-	CHK.W	D4,D7			;6533e: 4f84
-	DC.W	$0002			;65340
-	ADDQ.L	#8,2(A4,D0.W)		;65342: 50b40002
-	DC.W	$50bc			;65346
-	ORI.B	#$0a,D0			;65348: 0000000a
-	DC.W	$ab26			;6534c
-	DC.W	$ab26			;6534e
-	ORI.B	#$02,D0			;65350: 00000002
-	DC.W	$4f7c			;65354
-	DC.W	$0002			;65356
-	CHK.W	(A4)+,D7		;65358: 4f9c
-	DC.W	$0002			;6535a
-	ST	D4			;6535c: 50c4
-	ORI.B	#$0a,D0			;6535e: 0000000a
-	DC.W	$ab26			;65362
-	DC.W	$ab26			;65364
-	ORI.B	#$02,D0			;65366: 00000002
-	DC.W	$4f7c			;6536a
-	DC.W	$0002			;6536c
-	ST	D4			;6536e: 50c4
-	DC.W	$0002			;65370
-	DC.W	$50cc			;65372
-	ORI.B	#$0a,D0			;65374: 0000000a
-	NBCD	D0			;65378: 4800
-	DC.W	$a000			;6537a
-	ORI.B	#$02,D0			;6537c: 00000002
-	DC.W	$4f6c			;65380
-	DC.W	$0002			;65382
-	DC.W	$4f8c			;65384
-	DC.W	$0002			;65386
-	DC.W	$4fe4			;65388
-	ORI.B	#$12,D0			;6538a: 00000012
-	NBCD	D0			;6538e: 4800
-	DC.W	$a000			;65390
-	ORI.B	#$02,D0			;65392: 00000002
-	DC.W	$4f74			;65396
-	DC.W	$0002			;65398
-	CHK.W	(A4),D7			;6539a: 4f94
-	DC.W	$0002			;6539c
-	LEA	0(A4),A7		;6539e: 4fec0000
-	DC.W	$0012			;653a2
-	NBCD	D0			;653a4: 4800
-	DC.W	$a000			;653a6
-	ORI.B	#$02,D0			;653a8: 00000002
-	DC.W	$4f8c			;653ac
-	DC.W	$0002			;653ae
-	DC.W	$4fe4			;653b0
-	DC.W	$0002			;653b2
-	LEA	0(A4),A7		;653b4: 4fec0000
-	DC.W	$0012			;653b8
-	NBCD	D0			;653ba: 4800
-	DC.W	$a000			;653bc
-	ORI.B	#$02,D0			;653be: 00000002
-	DC.W	$4f8c			;653c2
-	DC.W	$0002			;653c4
-	CHK.W	(A4),D7			;653c6: 4f94
-	DC.W	$0002			;653c8
-	LEA	0(A4),A7		;653ca: 4fec0000
-	DC.W	$0012			;653ce
-	CMP.W	D1,D5			;653d0: ba41
-	SUB.W	(A3)+,D7		;653d2: 9e5b
-	ORI.B	#$02,D0			;653d4: 00000002
-	CHK.W	-(A4),D7		;653d8: 4fa4
-	DC.W	$0002			;653da
-	CHK.W	2(A4),D7		;653dc: 4fac0002
-	CHK.W	#$0000,D7		;653e0: 4fbc0000
-	DC.W	$0012			;653e4
-	CMP.W	D1,D5			;653e6: ba41
-	SUB.W	(A3)+,D7		;653e8: 9e5b
-	ORI.B	#$02,D0			;653ea: 00000002
-	CHK.W	-(A4),D7		;653ee: 4fa4
-	DC.W	$0002			;653f0
-	CHK.W	2(A4,D0.W),D7		;653f2: 4fb40002
-	CHK.W	#$0000,D7		;653f6: 4fbc0000
-	DC.W	$0012			;653fa
-	CMP.W	D1,D5			;653fc: ba41
-	SUB.W	(A3)+,D7		;653fe: 9e5b
-	ORI.B	#$02,D0			;65400: 00000002
-	CHK.W	-(A4),D7		;65404: 4fa4
-	DC.W	$0002			;65406
-	CHK.W	2(A4,D0.W),D7		;65408: 4fb40002
-	ADDQ.B	#8,D4			;6540c: 5004
-	ORI.B	#$12,D0			;6540e: 00000012
-	CMP.W	D1,D5			;65412: ba41
-	SUB.W	(A3)+,D7		;65414: 9e5b
-	ORI.B	#$02,D0			;65416: 00000002
-	CHK.W	2(A4),D7		;6541a: 4fac0002
-	CHK.W	#$0002,D7		;6541e: 4fbc0002
-	DC.W	$500c			;65422
-	ORI.B	#$12,D0			;65424: 00000012
-	MOVEM.L	(A2),D0/D4/D6-D7/A0-A1/A5/A7 ;65428: 4cd2a3d1
-	ORI.B	#$02,D0			;6542c: 00000002
-	DC.W	$4fc4			;65430
-	DC.W	$0002			;65432
-	DC.W	$4fcc			;65434
-	DC.W	$0002			;65436
-	DC.W	$4fe4			;65438
-	ORI.B	#$12,D0			;6543a: 00000012
-lb_6543e:
-	MOVEM.L	(A2),D0/D4/D6-D7/A0-A1/A5/A7 ;6543e: 4cd2a3d1
-	ORI.B	#$02,D0			;65442: 00000002
-	DC.W	$4fcc			;65446
-	DC.W	$0002			;65448
-	DC.W	$4fe4			;6544a
-	DC.W	$0002			;6544c
-	LEA	0(A4),A7		;6544e: 4fec0000
-	ORI.B	#$00,(A2)		;65452: 00120000
-lb_65456:
-	AND.W	D3,D1			;65456: c243
-	BNE.S	lb_6543e+2		;65458: 66e6
-	DC.W	$0002			;6545a
-	ADDQ.B	#8,D4			;6545c: 5004
-	DC.W	$0002			;6545e
-	CHK.W	2(A4,D0.W),D7		;65460: 4fb40002
-	DC.W	$4fe4			;65464
-	ORI.B	#$0a,D0			;65466: 0000000a
-	DC.W	$0000			;6546a
-	AND.W	D3,D1			;6546c: c243
-	BNE.S	lb_65456		;6546e: 66e6
-	DC.W	$0002			;65470
-	CHK.W	2(A4,D0.W),D7		;65472: 4fb40002
-	DC.W	$4fc4			;65476
-	DC.W	$0002			;65478
-	DC.W	$4fe4			;6547a
-	ORI.B	#$0a,D0			;6547c: 0000000a
-	DC.W	$0000			;65480
-	AND.W	D3,D1			;65482: c243
-	SUB.B	D4,(A2)+		;65484: 991a
-	DC.W	$0002			;65486
-	CHK.W	#$0002,D7		;65488: 4fbc0002
-	LEA	2(A4),A7		;6548c: 4fec0002
-	DC.W	$500c			;65490
-	ORI.B	#$0a,D0			;65492: 0000000a
-	DC.W	$0000			;65496
-	AND.W	D3,D1			;65498: c243
-	SUB.B	D4,(A2)+		;6549a: 991a
-	DC.W	$0002			;6549c
-	CHK.W	#$0002,D7		;6549e: 4fbc0002
-	DC.W	$4fcc			;654a2
-	DC.W	$0002			;654a4
-	LEA	0(A4),A7		;654a6: 4fec0000
-	DC.W	$000a			;654aa
-	dc.l  $0			;654ac: 00000000
-	ORI.B	#$02,D0			;654b0: 00000002
-	CHK.W	2(A4,D0.W),D7		;654b4: 4fb40002
-	CHK.W	#$0002,D7		;654b8: 4fbc0002
-	DC.W	$4fcc			;654bc
-	ORI.B	#$02,D0			;654be: 00000002
-	dc.l  $0			;654c2: 00000000
-	ORI.B	#$02,D0			;654c6: 00000002
-	CHK.W	2(A4,D0.W),D7		;654ca: 4fb40002
-	DC.W	$4fc4			;654ce
-	DC.W	$0002			;654d0
-	DC.W	$4fcc			;654d2
-	ORI.B	#$02,D0			;654d4: 00000002
-	BTST	D0,D0			;654d8: 0100
-	DC.W	$000c			;654da
-	DC.W	$000f			;654dc
-	ORI.W	#$0000,(A6)		;654de: 00560000
-	dc.l  $0			;654e2: 00000000
-	DC.W	$ffb8			;654e6
-	DC.W	$ffd0			;654e8
-	DC.W	$ffe0			;654ea
-	DC.W	$ffb8			;654ec
-	DC.W	$ffd0			;654ee
-	ORI.B	#$00,-(A0)		;654f0: 00200000
-	DC.W	$ffd0			;654f4
-	DC.W	$0030			;654f6
-	ORI.W	#$ffd0,(A0)		;654f8: 0050ffd0
-	ORI.B	#$50,(A0)		;654fc: 00100050
-	DC.W	$ffd0			;65500
-	DC.W	$fff0			;65502
-	DC.W	$0000			;65504
-	DC.W	$ffd0			;65506
-	DC.W	$ffd0			;65508
-	DC.W	$ffb0			;6550a
-	DC.W	$0000			;6550c
-	DC.W	$ffd0			;6550e
-	DC.W	$ffb0			;65510
-	ORI.B	#$30,D0			;65512: 00000030
-	dc.l  $0			;65516: 00000000
-	DC.W	$0048			;6551a
-	ORI.W	#$0000,-(A0)		;6551c: 00600000
-	ORI.B	#$60,0(A0)		;65520: 002800600000
-	DC.W	$ffd8			;65526
-	dc.l  $0			;65528: 00000000
-	DC.W	$ffb8			;6552c
-	MOVEA.L	A1,A1			;6552e: 2249
-	AND.L	(A3),D6			;65530: cc93
-	DC.W	$66db			;65532
-	DC.W	$0002			;65534
-	DC.W	$4f74			;65536
-	DC.W	$0002			;65538
-	CHK.W	-(A4),D7		;6553a: 4fa4
-	DC.W	$0002			;6553c
-	CHK.W	0(A4),D7		;6553e: 4fac0000
-	DC.W	$0006			;65542
-	MOVEA.L	-15571(A2),A3		;65544: 266ac32d
-	BRA.S	lb_65554		;65548: 600a
-	DC.W	$0002			;6554a
-	DC.W	$4f74			;6554c
-	DC.W	$0002			;6554e
-	DC.W	$4f7c			;65550
-	DC.W	$0002			;65552
-lb_65554:
-	CHK.W	0(A4),D7		;65554: 4fac0000
-	DC.W	$0006			;65558
-	ADD.L	D7,-(A2)		;6555a: dfa2
-	ADD.L	-(A4),D3		;6555c: d6a4
-	SUB.B	(A3)+,D2		;6555e: 941b
-	DC.W	$0002			;65560
-	DC.W	$4f64			;65562
-	DC.W	$0002			;65564
-	CHK.W	(A4),D7			;65566: 4f94
-	DC.W	$0002			;65568
-	CHK.W	#$0000,D7		;6556a: 4fbc0000
-	DC.W	$000a			;6556e
-	ROR.L	#4,D4			;65570: e89c
-	AND.W	D5,(A6)+		;65572: cb5e
-	SUB.L	lb_65578(PC,D0.W),D3	;65574: 96bb0002
-lb_65578:
-	DC.W	$4f64			;65578
-	DC.W	$0002			;6557a
-	DC.W	$4f8c			;6557c
-	DC.W	$0002			;6557e
-	CHK.W	#$0000,D7		;65580: 4fbc0000
-	DC.W	$000a			;65584
-	ASL.L	#3,D5			;65586: e785
-	DC.W	$d733			;65588
-	DC.W	$6e29			;6558a
-	DC.W	$0002			;6558c
-	DC.W	$4f6c			;6558e
-	DC.W	$0002			;65590
-	DC.W	$4f74			;65592
-	DC.W	$0002			;65594
-	CHK.W	(A4)+,D7		;65596: 4f9c
-	ORI.B	#$0a,D0			;65598: 0000000a
-	ASR	-(A7)			;6559c: e0e7
-	AND.B	26538(A3),D6		;6559e: cc2b67aa
-	DC.W	$0002			;655a2
-	DC.W	$4f74			;655a4
-	DC.W	$0002			;655a6
-	CHK.W	(A4)+,D7		;655a8: 4f9c
-	DC.W	$0002			;655aa
-	CHK.W	-(A4),D7		;655ac: 4fa4
-	ORI.B	#$0a,D0			;655ae: 0000000a
-	MOVEA.L	-12935(A4),A4		;655b2: 286ccd79
-	SUBA.W	2(A2,D0.W),A5		;655b6: 9af20002
-	CHK.W	D4,D7			;655ba: 4f84
-	DC.W	$0002			;655bc
-	DC.W	$4f8c			;655be
-	DC.W	$0002			;655c0
-	CHK.W	#$0000,D7		;655c2: 4fbc0000
-	DC.W	$0006			;655c6
-	MOVE.L	(A4),(A0)+		;655c8: 20d4
-	MULS	(A1),D1			;655ca: c3d1
-	SUBX.L	D4,D6			;655cc: 9d84
-	DC.W	$0002			;655ce
-	CHK.W	D4,D7			;655d0: 4f84
-	DC.W	$0002			;655d2
-	CHK.W	2(A4,D0.W),D7		;655d4: 4fb40002
-	CHK.W	#$0000,D7		;655d8: 4fbc0000
-	DC.W	$0006			;655dc
-	DC.W	$71d7			;655de
-	DC.W	$da0e			;655e0
-	ORI.B	#$02,D0			;655e2: 00000002
-	DC.W	$4f7c			;655e6
-	DC.W	$0002			;655e8
-	CHK.W	D4,D7			;655ea: 4f84
-	DC.W	$0002			;655ec
-	CHK.W	0(A4,D0.W),D7		;655ee: 4fb40000
-	DC.W	$0016			;655f2
-	DC.W	$71d7			;655f4
-	DC.W	$da0e			;655f6
-	ORI.B	#$02,D0			;655f8: 00000002
-	DC.W	$4f7c			;655fc
-	DC.W	$0002			;655fe
-	CHK.W	2(A4),D7		;65600: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;65604: 4fb40000
-	DC.W	$0016			;65608
-	OR.L	D4,-(A2)		;6560a: 89a2
-	ASR.W	#6,D6			;6560c: ec46
-	ORI.B	#$02,D0			;6560e: 00000002
-	DC.W	$4f6c			;65612
-	DC.W	$0002			;65614
-	CHK.W	(A4),D7			;65616: 4f94
-	DC.W	$0002			;65618
-	CHK.W	(A4)+,D7		;6561a: 4f9c
-	ORI.B	#$16,D0			;6561c: 00000016
-	OR.L	D4,-(A2)		;65620: 89a2
-	ASR.W	#6,D6			;65622: ec46
-	ORI.B	#$02,D0			;65624: 00000002
-	DC.W	$4f64			;65628
-	DC.W	$0002			;6562a
-	DC.W	$4f6c			;6562c
-	DC.W	$0002			;6562e
-	CHK.W	(A4),D7			;65630: 4f94
-	ORI.B	#$16,D0			;65632: 00000016
-	DC.W	$0000			;65636
-	OR.B	D0,D4			;65638: 8800
-	ORI.B	#$02,D0			;6563a: 00000002
-	DC.W	$4f64			;6563e
-	DC.W	$0002			;65640
-	DC.W	$4f6c			;65642
-	DC.W	$0002			;65644
-	DC.W	$4f8c			;65646
-	ORI.B	#$02,D0			;65648: 00000002
-	DC.W	$0000			;6564c
-	OR.B	D0,D4			;6564e: 8800
-	ORI.B	#$02,D0			;65650: 00000002
-	DC.W	$4f6c			;65654
-	DC.W	$0002			;65656
-	DC.W	$4f74			;65658
-	DC.W	$0002			;6565a
-	DC.W	$4f8c			;6565c
-	ORI.B	#$02,D0			;6565e: 00000002
-	DC.W	$0000			;65662
-	OR.B	D0,D4			;65664: 8800
-	ORI.B	#$02,D0			;65666: 00000002
-	DC.W	$4f74			;6566a
-	DC.W	$0002			;6566c
-	CHK.W	D4,D7			;6566e: 4f84
-	DC.W	$0002			;65670
-	DC.W	$4f8c			;65672
-	ORI.B	#$02,D0			;65674: 00000002
-	DC.W	$0000			;65678
-	OR.B	D0,D4			;6567a: 8800
-	ORI.B	#$02,D0			;6567c: 00000002
-	DC.W	$4f74			;65680
-	DC.W	$0002			;65682
-	DC.W	$4f7c			;65684
-	DC.W	$0002			;65686
-	CHK.W	D4,D7			;65688: 4f84
-	ORI.B	#$02,D0			;6568a: 00000002
-	BTST	D0,D0			;6568e: 0100
-	ORI.B	#$05,D6			;65690: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;65694: 003200000000
-	DC.W	$0000			;6569a
-	DC.W	$ff10			;6569c
-	DC.W	$ffe0			;6569e
-	DC.W	$fff8			;656a0
-	DC.W	$ffb4			;656a2
-	DC.W	$ffe0			;656a4
-	DC.W	$0008			;656a6
-	DC.W	$ffb4			;656a8
-	DC.W	$ffe0			;656aa
-	DC.W	$fff8			;656ac
-	DC.W	$ff10			;656ae
-	DC.W	$fff0			;656b0
-	DC.W	$0000			;656b2
-	DC.W	$ffb4			;656b4
-	DC.W	$fff0			;656b6
-	DC.W	$0000			;656b8
-	DC.W	$ff10			;656ba
-	DC.W	$ffe0			;656bc
-	DC.W	$0008			;656be
-	DC.W	$0000			;656c0
-	AND.W	(A6),D5			;656c2: ca56
-	BMI.S	lb_6571a		;656c4: 6b54
-	DC.W	$0002			;656c6
-	DC.W	$4f64			;656c8
-	DC.W	$0002			;656ca
-	DC.W	$4f7c			;656cc
-	DC.W	$0002			;656ce
-	CHK.W	D4,D7			;656d0: 4f84
-	ORI.B	#$0a,D0			;656d2: 0000000a
-	DC.W	$0000			;656d6
-	AND.W	(A6),D5			;656d8: ca56
-	BMI.S	lb_65730		;656da: 6b54
-	DC.W	$0002			;656dc
-	DC.W	$4f64			;656de
-	DC.W	$0002			;656e0
-	DC.W	$4f74			;656e2
-	DC.W	$0002			;656e4
-	CHK.W	D4,D7			;656e6: 4f84
-	ORI.B	#$0a,D0			;656e8: 0000000a
-	DC.W	$0000			;656ec
-	AND.W	(A6),D5			;656ee: ca56
-	SUB.L	2(A4),D2		;656f0: 94ac0002
-	DC.W	$4f8c			;656f4
-	DC.W	$0002			;656f6
-	DC.W	$4f6c			;656f8
-	DC.W	$0002			;656fa
-	CHK.W	D4,D7			;656fc: 4f84
-	ORI.B	#$0a,D0			;656fe: 0000000a
-	DC.W	$0000			;65702
-	AND.W	(A6),D5			;65704: ca56
-	SUB.L	2(A4),D2		;65706: 94ac0002
-	DC.W	$4f8c			;6570a
-	DC.W	$0002			;6570c
-	DC.W	$4f7c			;6570e
-	DC.W	$0002			;65710
-	CHK.W	D4,D7			;65712: 4f84
-	ORI.B	#$0a,D0			;65714: 0000000a
-	DC.W	$0000			;65718
-lb_6571a:
-	OR.B	D0,D4			;6571a: 8800
-	ORI.B	#$02,D0			;6571c: 00000002
-	DC.W	$4f8c			;65720
-	DC.W	$0002			;65722
-	DC.W	$4f64			;65724
-	DC.W	$0002			;65726
-	DC.W	$4f6c			;65728
-	ORI.B	#$02,D0			;6572a: 00000002
-	DC.W	$0000			;6572e
-lb_65730:
-	OR.B	D0,D4			;65730: 8800
-	ORI.B	#$02,D0			;65732: 00000002
-	DC.W	$4f64			;65736
-	DC.W	$0002			;65738
-	DC.W	$4f6c			;6573a
-	DC.W	$0002			;6573c
-	DC.W	$4f74			;6573e
-	ORI.B	#$02,D0			;65740: 00000002
-	BTST	D0,D0			;65744: 0100
-	ORI.B	#$2b,-(A4)		;65746: 0024002b
-	DC.W	$00e6			;6574a
-	dc.l  $0			;6574c: 00000000
-	DC.W	$0000			;65750
-	DC.W	$ff10			;65752
-	ORI.B	#$88,-(A0)		;65754: 00200088
-	BCHG	D0,D0			;65758: 0140
-	ORI.B	#$88,-(A0)		;6575a: 00200088
-	BCHG	D0,D0			;6575e: 0140
-	DC.W	$0020			;65760
-	DC.W	$ff78			;65762
-	DC.W	$ff10			;65764
-	DC.W	$0020			;65766
-	DC.W	$ff78			;65768
-	DC.W	$ff10			;6576a
-	ORI.B	#$50,-(A0)		;6576c: 00200050
-	BCHG	D0,D0			;65770: 0140
-	ORI.B	#$50,-(A0)		;65772: 00200050
-	BCHG	D0,D0			;65776: 0140
-	DC.W	$0020			;65778
-	DC.W	$ffb0			;6577a
-	DC.W	$ff10			;6577c
-	DC.W	$0020			;6577e
-	DC.W	$ffb0			;65780
-	DC.W	$ff60			;65782
-	ORI.B	#$50,-(A0)		;65784: 00200050
-	DC.W	$ff60			;65788
-	DC.W	$0020			;6578a
-	DC.W	$ffb0			;6578c
-	DC.W	$ff78			;6578e
-	ORI.B	#$50,D0			;65790: 00000050
-	DC.W	$ff78			;65794
-	DC.W	$0000			;65796
-	DC.W	$ffb0			;65798
-	BTST	D0,0(A0,D0.W)		;6579a: 01300000
-	ORI.W	#$0130,(A0)		;6579e: 00500130
-	DC.W	$0000			;657a2
-	DC.W	$ffb0			;657a4
-	DC.W	$ff10			;657a6
-	DC.W	$0030			;657a8
-	ORI.W	#$ff10,(A0)		;657aa: 0050ff10
-	DC.W	$0030			;657ae
-	DC.W	$ffb0			;657b0
-	DC.W	$ff20			;657b2
-	DC.W	$0070			;657b4
-	DC.W	$0088			;657b6
-	DC.W	$ff20			;657b8
-	DC.W	$0070			;657ba
-	DC.W	$ff78			;657bc
-	DC.W	$ff70			;657be
-	ORI.L	#$0088ff70,(A0)		;657c0: 00900088ff70
-	ORI.L	#$ff7800d0,(A0)		;657c6: 0090ff7800d0
-	ORI.L	#$008800d0,(A0)		;657cc: 0090008800d0
-	ORI.L	#$ff780130,(A0)		;657d2: 0090ff780130
-	DC.W	$0070			;657d8
-	DC.W	$0088			;657da
-	BTST	D0,112(A0,D0.W)		;657dc: 01300070
-	DC.W	$ff78			;657e0
-	DC.W	$ff30			;657e2
-	DC.W	$0070			;657e4
-	ORI.W	#$ff30,(A0)		;657e6: 0050ff30
-	DC.W	$0070			;657ea
-	DC.W	$ffb0			;657ec
-	DC.W	$ff20			;657ee
-	DC.W	$0070			;657f0
-	ORI.W	#$ff20,(A0)		;657f2: 0050ff20
-	DC.W	$0070			;657f6
-	DC.W	$ffb0			;657f8
-	DC.W	$ff70			;657fa
-	ORI.L	#$0050ff70,(A0)		;657fc: 00900050ff70
-	ORI.L	#$ffb00130,(A0)		;65802: 0090ffb00130
-	DC.W	$0070			;65808
-	ORI.W	#$0130,(A0)		;6580a: 00500130
-	ORI.W	#$ffb0,-48(A0,D0.W)	;6580e: 0070ffb000d0
-	ORI.L	#$005000d0,(A0)		;65814: 0090005000d0
-	ORI.L	#$ffb00110,(A0)		;6581a: 0090ffb00110
-	DC.W	$0070			;65820
-	ORI.W	#$0110,(A0)		;65822: 00500110
-	DC.W	$0070			;65826
-	DC.W	$ffb0			;65828
-	ADD.W	D1,28522(A7)		;6582a: d36f6f6a
-	ORI.B	#$02,D0			;6582e: 00000002
-	DC.W	$4fe4			;65832
-	DC.W	$0002			;65834
-	LEA	2(A4,D0.W),A7		;65836: 4ff40002
-	ADDQ.W	#8,D4			;6583a: 5044
-	ORI.B	#$17,D0			;6583c: 00000017
-	ADD.W	D1,28522(A7)		;65840: d36f6f6a
-	ORI.B	#$02,D0			;65844: 00000002
-	DC.W	$4fe4			;65848
-	DC.W	$0002			;6584a
-	ADDQ.B	#8,2(A4,D0.W)		;6584c: 50340002
-	ADDQ.W	#8,D4			;65850: 5044
-	ORI.B	#$17,D0			;65852: 00000017
-	ADD.W	D1,28522(A7)		;65856: d36f6f6a
-	ORI.B	#$02,D0			;6585a: 00000002
-	LEA	2(A4),A7		;6585e: 4fec0002
-	DC.W	$503c			;65862
-	DC.W	$0002			;65864
-	ADDQ.W	#8,A4			;65866: 504c
-	ORI.B	#$17,D0			;65868: 00000017
-	ADD.W	D1,28522(A7)		;6586c: d36f6f6a
-	ORI.B	#$02,D0			;65870: 00000002
-	LEA	2(A4),A7		;65874: 4fec0002
-	DC.W	$4ffc			;65878
-	DC.W	$0002			;6587a
-	ADDQ.W	#8,A4			;6587c: 504c
-	ORI.B	#$17,D0			;6587e: 00000017
-	DC.W	$25f2			;65882
-	DC.W	$71d7			;65884
-	ORI.B	#$02,D0			;65886: 00000002
-	ADDQ.B	#8,D4			;6588a: 5004
-	DC.W	$0002			;6588c
-	ADDQ.B	#8,(A4)			;6588e: 5014
-	DC.W	$0002			;65890
-	ADDQ.W	#8,(A4)			;65892: 5054
-	ORI.B	#$17,D0			;65894: 00000017
-	DC.W	$25f2			;65898
-	DC.W	$71d7			;6589a
-	ORI.B	#$02,D0			;6589c: 00000002
-	ADDQ.B	#8,D4			;658a0: 5004
-	DC.W	$0002			;658a2
-	ADDQ.W	#8,(A4)			;658a4: 5054
-	DC.W	$0002			;658a6
-	ADDQ.W	#8,-(A4)		;658a8: 5064
-	ORI.B	#$17,D0			;658aa: 00000017
-	DC.W	$25f2			;658ae
-	DC.W	$71d7			;658b0
-	ORI.B	#$02,D0			;658b2: 00000002
-	DC.W	$500c			;658b6
-	DC.W	$0002			;658b8
-	ADDQ.W	#8,(A4)+		;658ba: 505c
-	DC.W	$0002			;658bc
-	ADDQ.W	#8,0(A4)		;658be: 506c0000
-	DC.W	$0017			;658c2
-	DC.W	$25f2			;658c4
-	DC.W	$71d7			;658c6
-	ORI.B	#$02,D0			;658c8: 00000002
-	DC.W	$500c			;658cc
-	DC.W	$0002			;658ce
-	ADDQ.B	#8,(A4)+		;658d0: 501c
-	DC.W	$0002			;658d2
-	ADDQ.W	#8,(A4)+		;658d4: 505c
-	ORI.B	#$17,D0			;658d6: 00000017
-	dc.l  $0			;658da: 00000000
-	MOVEQ	#0,D4			;658de: 7800
-	DC.W	$0002			;658e0
-	DC.W	$4fe4			;658e2
-	DC.W	$0002			;658e4
-	LEA	2(A4,D0.W),A7		;658e6: 4ff40002
-	ADDQ.B	#8,D4			;658ea: 5004
-	ORI.B	#$16,D0			;658ec: 00000016
-	dc.l  $0			;658f0: 00000000
-	MOVEQ	#0,D4			;658f4: 7800
-	DC.W	$0002			;658f6
-	DC.W	$4fe4			;658f8
-	DC.W	$0002			;658fa
-	ADDQ.B	#8,D4			;658fc: 5004
-	DC.W	$0002			;658fe
-	ADDQ.B	#8,(A4)			;65900: 5014
-	ORI.B	#$16,D0			;65902: 00000016
-	dc.l  $0			;65906: 00000000
-	OR.B	D0,D4			;6590a: 8800
-	DC.W	$0002			;6590c
-	LEA	2(A4),A7		;6590e: 4fec0002
-	DC.W	$4ffc			;65912
-	DC.W	$0002			;65914
-	DC.W	$500c			;65916
-	ORI.B	#$16,D0			;65918: 00000016
-	dc.l  $0			;6591c: 00000000
-	OR.B	D0,D4			;65920: 8800
-	DC.W	$0002			;65922
-	LEA	2(A4),A7		;65924: 4fec0002
-	DC.W	$500c			;65928
-	DC.W	$0002			;6592a
-	ADDQ.B	#8,(A4)+		;6592c: 501c
-	ORI.B	#$16,D0			;6592e: 00000016
-	SUB.L	13738(A4),D2		;65932: 94ac35aa
-	ORI.B	#$02,D0			;65936: 00000002
-	LEA	(A4),A7			;6593a: 4fd4
-	DC.W	$0002			;6593c
-	DC.W	$4fdc			;6593e
-	DC.W	$0002			;65940
-	ADDQ.B	#8,-(A4)		;65942: 5024
-	ORI.B	#$0e,D0			;65944: 0000000e
-	SUB.L	13738(A4),D2		;65948: 94ac35aa
-	ORI.B	#$02,D0			;6594c: 00000002
-	DC.W	$4fdc			;65950
-	DC.W	$0002			;65952
-	ADDQ.B	#8,-(A4)		;65954: 5024
-	DC.W	$0002			;65956
-	ADDQ.B	#8,0(A4)		;65958: 502c0000
-	DC.W	$000e			;6595c
-	OR.W	(A5),D5			;6595e: 8a55
-	DC.W	$1788			;65960
-	ORI.B	#$02,D0			;65962: 00000002
-	DC.W	$4f64			;65966
-	DC.W	$0002			;65968
-	DC.W	$4fe4			;6596a
-	DC.W	$0002			;6596c
-	ADDQ.B	#8,0(A4,D0.W)		;6596e: 50340000
-	DC.W	$0017			;65972
-	OR.W	(A5),D5			;65974: 8a55
-	DC.W	$1788			;65976
-	ORI.B	#$02,D0			;65978: 00000002
-	DC.W	$4f64			;6597c
-	DC.W	$0002			;6597e
-	CHK.W	D4,D7			;65980: 4f84
-	DC.W	$0002			;65982
-	ADDQ.B	#8,0(A4,D0.W)		;65984: 50340000
-	DC.W	$0017			;65988
-	OR.W	(A5),D5			;6598a: 8a55
-	DC.W	$1788			;6598c
-	ORI.B	#$02,D0			;6598e: 00000002
-	DC.W	$4f7c			;65992
-	DC.W	$0002			;65994
-	CHK.W	(A4)+,D7		;65996: 4f9c
-	DC.W	$0002			;65998
-	DC.W	$503c			;6599a
-lb_6599c:
-	ORI.B	#$17,D0			;6599c: 00000017
-	OR.W	(A5),D5			;659a0: 8a55
-	DC.W	$1788			;659a2
-	ORI.B	#$02,D0			;659a4: 00000002
-	DC.W	$4f7c			;659a8
-	DC.W	$0002			;659aa
-	LEA	2(A4),A7		;659ac: 4fec0002
-	DC.W	$503c			;659b0
-lb_659b2:
-	ORI.B	#$17,D0			;659b2: 00000017
-	BNE.S	lb_6599c+2		;659b6: 66e6
-	DC.W	$3dbd			;659b8
-	ORI.B	#$02,D0			;659ba: 00000002
-	CHK.W	(A4),D7			;659be: 4f94
-	DC.W	$0002			;659c0
-	ADDQ.W	#8,2(A4,D0.W)		;659c2: 50740002
-	DC.W	$507c			;659c6
-	ORI.B	#$16,D0			;659c8: 00000016
-	BNE.S	lb_659b2+2		;659cc: 66e6
-	DC.W	$3dbd			;659ce
-	ORI.B	#$02,D0			;659d0: 00000002
-	DC.W	$4f8c			;659d4
-	DC.W	$0002			;659d6
-	CHK.W	(A4),D7			;659d8: 4f94
-	DC.W	$0002			;659da
-	ADDQ.W	#8,0(A4,D0.W)		;659dc: 50740000
-	DC.W	$0016			;659e0
-	DC.W	$75ab			;659e2
-	DC.W	$1788			;659e4
-	ORI.B	#$02,D0			;659e6: 00000002
-	DC.W	$4f6c			;659ea
-	DC.W	$0002			;659ec
-	DC.W	$4f8c			;659ee
-	DC.W	$0002			;659f0
-	ADDQ.B	#8,(A4)			;659f2: 5014
-	ORI.B	#$17,D0			;659f4: 00000017
-	DC.W	$75ab			;659f8
-	DC.W	$1788			;659fa
-	ORI.B	#$02,D0			;659fc: 00000002
-	DC.W	$4f8c			;65a00
-	DC.W	$0002			;65a02
-	ADDQ.B	#8,(A4)			;65a04: 5014
-	DC.W	$0002			;65a06
-	ADDQ.W	#8,(A4)			;65a08: 5054
-	ORI.B	#$17,D0			;65a0a: 00000017
-	DC.W	$75ab			;65a0e
-	DC.W	$1788			;65a10
-	ORI.B	#$02,D0			;65a12: 00000002
-	DC.W	$4f74			;65a16
-	DC.W	$0002			;65a18
-	ADDQ.B	#8,(A4)+		;65a1a: 501c
-	DC.W	$0002			;65a1c
-	ADDQ.W	#8,(A4)+		;65a1e: 505c
-	ORI.B	#$17,D0			;65a20: 00000017
-	DC.W	$75ab			;65a24
-	DC.W	$1788			;65a26
-	ORI.B	#$02,D0			;65a28: 00000002
-	DC.W	$4f74			;65a2c
-	DC.W	$0002			;65a2e
-	CHK.W	(A4),D7			;65a30: 4f94
-	DC.W	$0002			;65a32
-	ADDQ.W	#8,(A4)+		;65a34: 505c
-	ORI.B	#$17,D0			;65a36: 00000017
-	dc.l  $0			;65a3a: 00000000
-	MOVEQ	#0,D4			;65a3e: 7800
-	DC.W	$0002			;65a40
-	DC.W	$4f64			;65a42
-	DC.W	$0002			;65a44
-	DC.W	$4fe4			;65a46
-	DC.W	$0002			;65a48
-	ADDQ.B	#8,(A4)			;65a4a: 5014
-	ORI.B	#$16,D0			;65a4c: 00000016
-	dc.l  $0			;65a50: 00000000
-	MOVEQ	#0,D4			;65a54: 7800
-	DC.W	$0002			;65a56
-	DC.W	$4f64			;65a58
-	DC.W	$0002			;65a5a
-	DC.W	$4f6c			;65a5c
-	DC.W	$0002			;65a5e
-	ADDQ.B	#8,(A4)			;65a60: 5014
-	ORI.B	#$16,D0			;65a62: 00000016
-	dc.l  $0			;65a66: 00000000
-	OR.B	D0,D4			;65a6a: 8800
-	DC.W	$0002			;65a6c
-	DC.W	$4f7c			;65a6e
-	DC.W	$0002			;65a70
-	LEA	2(A4),A7		;65a72: 4fec0002
-	ADDQ.B	#8,(A4)+		;65a76: 501c
-	ORI.B	#$16,D0			;65a78: 00000016
-	dc.l  $0			;65a7c: 00000000
-	OR.B	D0,D4			;65a80: 8800
-	DC.W	$0002			;65a82
-	DC.W	$4f74			;65a84
-	DC.W	$0002			;65a86
-	DC.W	$4f7c			;65a88
-	DC.W	$0002			;65a8a
-	ADDQ.B	#8,(A4)+		;65a8c: 501c
-	ORI.B	#$16,D0			;65a8e: 00000016
-	DC.W	$0000			;65a92
-	OR.B	D0,D4			;65a94: 8800
-	ORI.B	#$02,D0			;65a96: 00000002
-	DC.W	$4f74			;65a9a
-	DC.W	$0002			;65a9c
-	DC.W	$4f7c			;65a9e
-	DC.W	$0002			;65aa0
-	CHK.W	(A4)+,D7		;65aa2: 4f9c
-	ORI.B	#$02,D0			;65aa4: 00000002
-	DC.W	$0000			;65aa8
-	OR.B	D0,D4			;65aaa: 8800
-	ORI.B	#$02,D0			;65aac: 00000002
-	DC.W	$4f74			;65ab0
-	DC.W	$0002			;65ab2
-	CHK.W	(A4),D7			;65ab4: 4f94
-	DC.W	$0002			;65ab6
-	CHK.W	(A4)+,D7		;65ab8: 4f9c
-	ORI.B	#$02,D0			;65aba: 00000002
-	DC.W	$0000			;65abe
-	OR.B	D0,D4			;65ac0: 8800
-	ORI.B	#$02,D0			;65ac2: 00000002
-	DC.W	$4f64			;65ac6
-	DC.W	$0002			;65ac8
-	DC.W	$4f6c			;65aca
-	DC.W	$0002			;65acc
-	CHK.W	D4,D7			;65ace: 4f84
-	ORI.B	#$02,D0			;65ad0: 00000002
-	DC.W	$0000			;65ad4
-	OR.B	D0,D4			;65ad6: 8800
-	ORI.B	#$02,D0			;65ad8: 00000002
-	DC.W	$4f6c			;65adc
-	DC.W	$0002			;65ade
-	CHK.W	D4,D7			;65ae0: 4f84
-	DC.W	$0002			;65ae2
-	DC.W	$4f8c			;65ae4
-	ORI.B	#$02,D0			;65ae6: 00000002
-	dc.l  $0			;65aea: 00000000
-	ORI.B	#$02,D0			;65aee: 00000002
-	CHK.W	2(A4),D7		;65af2: 4fac0002
-	LEA	(A4),A7			;65af6: 4fd4
-	DC.W	$0002			;65af8
-	DC.W	$4fdc			;65afa
-	ORI.B	#$12,D0			;65afc: 00000012
-	dc.l  $0			;65b00: 00000000
-	ORI.B	#$02,D0			;65b04: 00000002
-	CHK.W	-(A4),D7		;65b08: 4fa4
-	DC.W	$0002			;65b0a
-	CHK.W	2(A4),D7		;65b0c: 4fac0002
-	LEA	(A4),A7			;65b10: 4fd4
-	ORI.B	#$12,D0			;65b12: 00000012
-	DC.W	$a000			;65b16
-	CMP.B	D0,D4			;65b18: b800
-	ORI.B	#$02,D0			;65b1a: 00000002
-	CHK.W	-(A4),D7		;65b1e: 4fa4
-	DC.W	$0002			;65b20
-	CHK.W	2(A4),D7		;65b22: 4fac0002
-	CHK.W	#$0000,D7		;65b26: 4fbc0000
-	DC.W	$0006			;65b2a
-	DC.W	$a000			;65b2c
-	CMP.B	D0,D4			;65b2e: b800
-	ORI.B	#$02,D0			;65b30: 00000002
-	CHK.W	-(A4),D7		;65b34: 4fa4
-	DC.W	$0002			;65b36
-	CHK.W	2(A4,D0.W),D7		;65b38: 4fb40002
-	CHK.W	#$0000,D7		;65b3c: 4fbc0000
-	DC.W	$0006			;65b40
-	BMI.S	lb_65b96+2		;65b42: 6b54
-	AND.W	(A6),D5			;65b44: ca56
-	ORI.B	#$02,D0			;65b46: 00000002
-	CHK.W	(A4),D7			;65b4a: 4f94
-	DC.W	$0002			;65b4c
-	DC.W	$4fc4			;65b4e
-	DC.W	$0002			;65b50
-	DC.W	$4fcc			;65b52
-	ORI.B	#$06,D0			;65b54: 00000006
-	BMI.S	lb_65bac+2		;65b58: 6b54
-	AND.W	(A6),D5			;65b5a: ca56
-	ORI.B	#$02,D0			;65b5c: 00000002
-	DC.W	$4f8c			;65b60
-	DC.W	$0002			;65b62
-	CHK.W	(A4),D7			;65b64: 4f94
-	DC.W	$0002			;65b66
-	DC.W	$4fc4			;65b68
-	ORI.B	#$06,D0			;65b6a: 00000006
-	dc.l  $0			;65b6e: 00000000
-	MOVEQ	#0,D4			;65b72: 7800
-	DC.W	$0002			;65b74
-	DC.W	$4f8c			;65b76
-	DC.W	$0002			;65b78
-	CHK.W	-(A4),D7		;65b7a: 4fa4
-	DC.W	$0002			;65b7c
-	DC.W	$4fc4			;65b7e
-	ORI.B	#$16,D0			;65b80: 00000016
-	dc.l  $0			;65b84: 00000000
-	MOVEQ	#0,D4			;65b88: 7800
-	DC.W	$0002			;65b8a
-	CHK.W	-(A4),D7		;65b8c: 4fa4
-	DC.W	$0002			;65b8e
-	CHK.W	2(A4,D0.W),D7		;65b90: 4fb40002
-	DC.W	$4fc4			;65b94
-lb_65b96:
-	ORI.B	#$16,D0			;65b96: 00000016
-	dc.l  $0			;65b9a: 00000000
-	OR.B	D0,D4			;65b9e: 8800
-	DC.W	$0002			;65ba0
-	CHK.W	(A4),D7			;65ba2: 4f94
-	DC.W	$0002			;65ba4
-	CHK.W	2(A4),D7		;65ba6: 4fac0002
-	DC.W	$4fcc			;65baa
-lb_65bac:
-	ORI.B	#$16,D0			;65bac: 00000016
-	dc.l  $0			;65bb0: 00000000
-	OR.B	D0,D4			;65bb4: 8800
-	DC.W	$0002			;65bb6
-	CHK.W	2(A4),D7		;65bb8: 4fac0002
-	CHK.W	#$0002,D7		;65bbc: 4fbc0002
-	DC.W	$4fcc			;65bc0
-	ORI.B	#$16,D0			;65bc2: 00000016
-	dc.l  $0			;65bc6: 00000000
-	ORI.B	#$02,D0			;65bca: 00000002
-	CHK.W	2(A4,D0.W),D7		;65bce: 4fb40002
-	CHK.W	#$0002,D7		;65bd2: 4fbc0002
-	DC.W	$4fcc			;65bd6
-	ORI.B	#$02,D0			;65bd8: 00000002
-	dc.l  $0			;65bdc: 00000000
-	ORI.B	#$02,D0			;65be0: 00000002
-	CHK.W	2(A4,D0.W),D7		;65be4: 4fb40002
-	DC.W	$4fc4			;65be8
-	DC.W	$0002			;65bea
-	DC.W	$4fcc			;65bec
-	ORI.B	#$02,D0			;65bee: 00000002
-	BTST	D0,D0			;65bf2: 0100
-	DC.W	$000c			;65bf4
-	DC.W	$000f			;65bf6
-	ORI.W	#$0000,(A6)		;65bf8: 00560000
-	dc.l  $0			;65bfc: 00000000
-	DC.W	$ffb0			;65c00
-	DC.W	$ffc0			;65c02
-	DC.W	$ffc8			;65c04
-	DC.W	$ffb0			;65c06
-	DC.W	$ffc0			;65c08
-	ORI.B	#$00,ext_ffffffc0.W		;65c0a: 00380000ffc0
-	ORI.W	#$0070,D0		;65c10: 00400070
-	DC.W	$ffc0			;65c14
-	ORI.B	#$70,ext_ffffffc0.W		;65c16: 00380070ffc0
-	DC.W	$ffc8			;65c1c
-	DC.W	$0000			;65c1e
-	DC.W	$ffc0			;65c20
-	DC.W	$ffc0			;65c22
-	DC.W	$ffa0			;65c24
-	DC.W	$0000			;65c26
-	DC.W	$ffb8			;65c28
-	DC.W	$ffa0			;65c2a
-	ORI.B	#$48,D0			;65c2c: 00000048
-	dc.l  $0			;65c30: 00000000
-	ORI.W	#$0080,(A0)		;65c34: 00500080
-	ORI.B	#$40,D0			;65c38: 00000040
-	ORI.L	#$0000ffc0,D0		;65c3c: 00800000ffc0
-	dc.l  $0			;65c42: 00000000
-	DC.W	$ffb0			;65c46
-	DC.W	$0e72			;65c48
-	ROL.B	#1,D4			;65c4a: e31c
-	DC.W	$7392			;65c4c
-	DC.W	$0002			;65c4e
-	DC.W	$4f74			;65c50
-	DC.W	$0002			;65c52
-	CHK.W	-(A4),D7		;65c54: 4fa4
-	DC.W	$0002			;65c56
-	CHK.W	0(A4),D7		;65c58: 4fac0000
-	DC.W	$0006			;65c5c
-	DC.W	$0876			;65c5e
-	ROXL.B	#7,D3			;65c60: ef13
-	MOVEQ	#127,D3			;65c62: 767f
-	DC.W	$0002			;65c64
-	DC.W	$4f74			;65c66
-	DC.W	$0002			;65c68
-	DC.W	$4f7c			;65c6a
-	DC.W	$0002			;65c6c
-	CHK.W	0(A4),D7		;65c6e: 4fac0000
-	DC.W	$0006			;65c72
-	DC.W	$f661			;65c74
-	ROR.L	D0,D4			;65c76: e0bc
-	DC.W	$8c8c			;65c78
-	DC.W	$0002			;65c7a
-	DC.W	$4f64			;65c7c
-	DC.W	$0002			;65c7e
-	CHK.W	(A4),D7			;65c80: 4f94
-	DC.W	$0002			;65c82
-	CHK.W	#$0000,D7		;65c84: 4fbc0000
-	DC.W	$000a			;65c88
-	DC.W	$f46a			;65c8a
-	LSL.B	#1,D1			;65c8c: e309
-	OR.B	-(A1),D6		;65c8e: 8c21
-	DC.W	$0002			;65c90
-	DC.W	$4f64			;65c92
-	DC.W	$0002			;65c94
-	DC.W	$4f8c			;65c96
-	DC.W	$0002			;65c98
-	CHK.W	#$0000,D7		;65c9a: 4fbc0000
-	DC.W	$000a			;65c9e
-	DC.W	$f47c			;65ca0
-	ROXR.W	#8,D4			;65ca2: e054
-	DC.W	$732b			;65ca4
-	DC.W	$0002			;65ca6
-	DC.W	$4f6c			;65ca8
-	DC.W	$0002			;65caa
-	DC.W	$4f74			;65cac
-	DC.W	$0002			;65cae
-	CHK.W	(A4)+,D7		;65cb0: 4f9c
-	ORI.B	#$0a,D0			;65cb2: 0000000a
-	DC.W	$f655			;65cb6
-	DC.W	$e2fe			;65cb8
-	MOVEQ	#9,D2			;65cba: 7409
-	DC.W	$0002			;65cbc
-	DC.W	$4f74			;65cbe
-	DC.W	$0002			;65cc0
-	CHK.W	(A4)+,D7		;65cc2: 4f9c
-	DC.W	$0002			;65cc4
-	CHK.W	-(A4),D7		;65cc6: 4fa4
-	ORI.B	#$0a,D0			;65cc8: 0000000a
-	DC.W	$084b			;65ccc
-	DC.W	$e2f8			;65cce
-	DIVS	(A5)+,D5		;65cd0: 8bdd
-	DC.W	$0002			;65cd2
-	CHK.W	D4,D7			;65cd4: 4f84
-	DC.W	$0002			;65cd6
-	DC.W	$4f8c			;65cd8
-	DC.W	$0002			;65cda
-	CHK.W	#$0000,D7		;65cdc: 4fbc0000
-	DC.W	$0006			;65ce0
-	DC.W	$0eb5			;65ce2
-	ROL.L	#6,D6			;65ce4: ed9e
-	OR.W	(A6),D5			;65ce6: 8a56
-	DC.W	$0002			;65ce8
-	CHK.W	D4,D7			;65cea: 4f84
-	DC.W	$0002			;65cec
-	CHK.W	2(A4,D0.W),D7		;65cee: 4fb40002
-	CHK.W	#$0000,D7		;65cf2: 4fbc0000
-	DC.W	$0006			;65cf6
-	MOVEQ	#106,D2			;65cf8: 746a
-	LSR	-(A6)			;65cfa: e2e6
-	ORI.B	#$02,D0			;65cfc: 00000002
-	DC.W	$4f7c			;65d00
-	DC.W	$0002			;65d02
-	CHK.W	D4,D7			;65d04: 4f84
-	DC.W	$0002			;65d06
-	CHK.W	0(A4,D0.W),D7		;65d08: 4fb40000
-	DC.W	$0016			;65d0c
-	MOVEQ	#106,D2			;65d0e: 746a
-	LSR	-(A6)			;65d10: e2e6
-	ORI.B	#$02,D0			;65d12: 00000002
-	DC.W	$4f7c			;65d16
-	DC.W	$0002			;65d18
-	CHK.W	2(A4),D7		;65d1a: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;65d1e: 4fb40000
-	DC.W	$0016			;65d22
-	OR.L	D5,(A6)			;65d24: 8b96
-	LSR	-(A6)			;65d26: e2e6
-	ORI.B	#$02,D0			;65d28: 00000002
-	DC.W	$4f6c			;65d2c
-	DC.W	$0002			;65d2e
-	CHK.W	(A4),D7			;65d30: 4f94
-	DC.W	$0002			;65d32
-	CHK.W	(A4)+,D7		;65d34: 4f9c
-	ORI.B	#$16,D0			;65d36: 00000016
-	OR.L	D5,(A6)			;65d3a: 8b96
-	LSR	-(A6)			;65d3c: e2e6
-	ORI.B	#$02,D0			;65d3e: 00000002
-	DC.W	$4f64			;65d42
-	DC.W	$0002			;65d44
-	DC.W	$4f6c			;65d46
-	DC.W	$0002			;65d48
-	CHK.W	(A4),D7			;65d4a: 4f94
-	ORI.B	#$16,D0			;65d4c: 00000016
-	DC.W	$0000			;65d50
-	OR.B	D0,D4			;65d52: 8800
-	ORI.B	#$02,D0			;65d54: 00000002
-	DC.W	$4f64			;65d58
-	DC.W	$0002			;65d5a
-	DC.W	$4f6c			;65d5c
-	DC.W	$0002			;65d5e
-	DC.W	$4f8c			;65d60
-	ORI.B	#$02,D0			;65d62: 00000002
-	DC.W	$0000			;65d66
-	OR.B	D0,D4			;65d68: 8800
-	ORI.B	#$02,D0			;65d6a: 00000002
-	DC.W	$4f6c			;65d6e
-	DC.W	$0002			;65d70
-	DC.W	$4f74			;65d72
-	DC.W	$0002			;65d74
-	DC.W	$4f8c			;65d76
-	ORI.B	#$02,D0			;65d78: 00000002
-	DC.W	$0000			;65d7c
-	OR.B	D0,D4			;65d7e: 8800
-	ORI.B	#$02,D0			;65d80: 00000002
-	DC.W	$4f74			;65d84
-	DC.W	$0002			;65d86
-	CHK.W	D4,D7			;65d88: 4f84
-	DC.W	$0002			;65d8a
-	DC.W	$4f8c			;65d8c
-	ORI.B	#$02,D0			;65d8e: 00000002
-	DC.W	$0000			;65d92
-	OR.B	D0,D4			;65d94: 8800
-	ORI.B	#$02,D0			;65d96: 00000002
-	DC.W	$4f74			;65d9a
-	DC.W	$0002			;65d9c
-	DC.W	$4f7c			;65d9e
-	DC.W	$0002			;65da0
-	CHK.W	D4,D7			;65da2: 4f84
-	ORI.B	#$02,D0			;65da4: 00000002
-	BTST	D0,D0			;65da8: 0100
-	ORI.B	#$05,D6			;65daa: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;65dae: 003200000000
-	DC.W	$0000			;65db4
-	DC.W	$ff10			;65db6
-	DC.W	$ffe0			;65db8
-	DC.W	$fff8			;65dba
-	DC.W	$ffa8			;65dbc
-	DC.W	$ffe0			;65dbe
-	DC.W	$0008			;65dc0
-	DC.W	$ffa8			;65dc2
-	DC.W	$ffe0			;65dc4
-	DC.W	$fff8			;65dc6
-	DC.W	$ff10			;65dc8
-	DC.W	$fff0			;65dca
-	DC.W	$0000			;65dcc
-	DC.W	$ffa8			;65dce
-	DC.W	$fff0			;65dd0
-	DC.W	$0000			;65dd2
-	DC.W	$ff10			;65dd4
-	DC.W	$ffe0			;65dd6
-	DC.W	$0008			;65dd8
-	DC.W	$0000			;65dda
-	AND.W	(A6),D5			;65ddc: ca56
-	BMI.S	lb_65e34		;65dde: 6b54
-	DC.W	$0002			;65de0
-	DC.W	$4f64			;65de2
-	DC.W	$0002			;65de4
-	DC.W	$4f7c			;65de6
-	DC.W	$0002			;65de8
-	CHK.W	D4,D7			;65dea: 4f84
-	ORI.B	#$0a,D0			;65dec: 0000000a
-	DC.W	$0000			;65df0
-	AND.W	(A6),D5			;65df2: ca56
-	BMI.S	lb_65e4a		;65df4: 6b54
-	DC.W	$0002			;65df6
-	DC.W	$4f64			;65df8
-	DC.W	$0002			;65dfa
-	DC.W	$4f74			;65dfc
-	DC.W	$0002			;65dfe
-	CHK.W	D4,D7			;65e00: 4f84
-	ORI.B	#$0a,D0			;65e02: 0000000a
-	DC.W	$0000			;65e06
-	AND.W	(A6),D5			;65e08: ca56
-	SUB.L	2(A4),D2		;65e0a: 94ac0002
-	DC.W	$4f8c			;65e0e
-	DC.W	$0002			;65e10
-	DC.W	$4f6c			;65e12
-	DC.W	$0002			;65e14
-	CHK.W	D4,D7			;65e16: 4f84
-	ORI.B	#$0a,D0			;65e18: 0000000a
-	DC.W	$0000			;65e1c
-	AND.W	(A6),D5			;65e1e: ca56
-	SUB.L	2(A4),D2		;65e20: 94ac0002
-	DC.W	$4f8c			;65e24
-	DC.W	$0002			;65e26
-	DC.W	$4f7c			;65e28
-	DC.W	$0002			;65e2a
-	CHK.W	D4,D7			;65e2c: 4f84
-	ORI.B	#$0a,D0			;65e2e: 0000000a
-	DC.W	$0000			;65e32
-lb_65e34:
-	OR.B	D0,D4			;65e34: 8800
-	ORI.B	#$02,D0			;65e36: 00000002
-	DC.W	$4f8c			;65e3a
-	DC.W	$0002			;65e3c
-	DC.W	$4f64			;65e3e
-	DC.W	$0002			;65e40
-	DC.W	$4f6c			;65e42
-	ORI.B	#$02,D0			;65e44: 00000002
-	DC.W	$0000			;65e48
-lb_65e4a:
-	OR.B	D0,D4			;65e4a: 8800
-	ORI.B	#$02,D0			;65e4c: 00000002
-	DC.W	$4f64			;65e50
-	DC.W	$0002			;65e52
-	DC.W	$4f6c			;65e54
-	DC.W	$0002			;65e56
-	DC.W	$4f74			;65e58
-	ORI.B	#$02,D0			;65e5a: 00000002
-	BTST	D0,D0			;65e5e: 0100
-	ORI.B	#$05,D6			;65e60: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;65e64: 003200000000
-	DC.W	$0000			;65e6a
-	DC.W	$fec0			;65e6c
-	DC.W	$ffe0			;65e6e
-	DC.W	$fff8			;65e70
-	DC.W	$ffa8			;65e72
-	DC.W	$ffe0			;65e74
-	DC.W	$0008			;65e76
-	DC.W	$ffa8			;65e78
-	DC.W	$ffe0			;65e7a
-	DC.W	$fff8			;65e7c
-	DC.W	$fec0			;65e7e
-	DC.W	$fff0			;65e80
-	DC.W	$0000			;65e82
-	DC.W	$ffa8			;65e84
-	DC.W	$fff0			;65e86
-	DC.W	$0000			;65e88
-	DC.W	$fec0			;65e8a
-	DC.W	$ffe0			;65e8c
-	DC.W	$0008			;65e8e
-	DC.W	$0000			;65e90
-	AND.W	(A6),D5			;65e92: ca56
-	BMI.S	lb_65eea		;65e94: 6b54
-	DC.W	$0002			;65e96
-	DC.W	$4f64			;65e98
-	DC.W	$0002			;65e9a
-	DC.W	$4f7c			;65e9c
-	DC.W	$0002			;65e9e
-	CHK.W	D4,D7			;65ea0: 4f84
-	ORI.B	#$0a,D0			;65ea2: 0000000a
-	DC.W	$0000			;65ea6
-	AND.W	(A6),D5			;65ea8: ca56
-	BMI.S	lb_65f00		;65eaa: 6b54
-	DC.W	$0002			;65eac
-	DC.W	$4f64			;65eae
-	DC.W	$0002			;65eb0
-	DC.W	$4f74			;65eb2
-	DC.W	$0002			;65eb4
-	CHK.W	D4,D7			;65eb6: 4f84
-	ORI.B	#$0a,D0			;65eb8: 0000000a
-	DC.W	$0000			;65ebc
-	AND.W	(A6),D5			;65ebe: ca56
-	SUB.L	2(A4),D2		;65ec0: 94ac0002
-	DC.W	$4f8c			;65ec4
-	DC.W	$0002			;65ec6
-	DC.W	$4f6c			;65ec8
-	DC.W	$0002			;65eca
-	CHK.W	D4,D7			;65ecc: 4f84
-	ORI.B	#$0a,D0			;65ece: 0000000a
-	DC.W	$0000			;65ed2
-	AND.W	(A6),D5			;65ed4: ca56
-	SUB.L	2(A4),D2		;65ed6: 94ac0002
-	DC.W	$4f8c			;65eda
-	DC.W	$0002			;65edc
-	DC.W	$4f7c			;65ede
-	DC.W	$0002			;65ee0
-	CHK.W	D4,D7			;65ee2: 4f84
-	ORI.B	#$0a,D0			;65ee4: 0000000a
-	DC.W	$0000			;65ee8
-lb_65eea:
-	OR.B	D1,D4			;65eea: 8801
-	ORI.B	#$02,D0			;65eec: 00000002
-	DC.W	$4f8c			;65ef0
-	DC.W	$0002			;65ef2
-	DC.W	$4f64			;65ef4
-	DC.W	$0002			;65ef6
-	DC.W	$4f6c			;65ef8
-	ORI.B	#$02,D0			;65efa: 00000002
-	DC.W	$0000			;65efe
-lb_65f00:
-	OR.B	D1,D4			;65f00: 8801
-	ORI.B	#$02,D0			;65f02: 00000002
-	DC.W	$4f64			;65f06
-	DC.W	$0002			;65f08
-	DC.W	$4f6c			;65f0a
-	DC.W	$0002			;65f0c
-	DC.W	$4f74			;65f0e
-	ORI.B	#$02,D0			;65f10: 00000002
-	BTST	D0,D0			;65f14: 0100
-	DC.W	$0030			;65f16
-	DC.W	$003d			;65f18
-	BTST	D0,0(A6)		;65f1a: 012e0000
-	dc.l  $0			;65f1e: 00000000
-	DC.W	$ff10			;65f22
-	ORI.B	#$80,(A0)+		;65f24: 00180080
-	BCHG	D0,(A0)			;65f28: 0150
-	DC.W	$0030			;65f2a
-	ORI.L	#$01500030,D0		;65f2c: 008001500030
-	DC.W	$ff80			;65f32
-	DC.W	$ff10			;65f34
-	DC.W	$0018			;65f36
-	DC.W	$ff80			;65f38
-	DC.W	$ff10			;65f3a
-	ORI.B	#$40,(A0)+		;65f3c: 00180040
-	DC.W	$ff10			;65f40
-	DC.W	$0018			;65f42
-	DC.W	$ffc0			;65f44
-	DC.W	$ff70			;65f46
-	ORI.B	#$40,(A0)+		;65f48: 00180040
-	DC.W	$ff70			;65f4c
-	DC.W	$0018			;65f4e
-	DC.W	$ffc0			;65f50
-	DC.W	$ffd0			;65f52
-	ORI.B	#$70,(A0)+		;65f54: 00180070
-	DC.W	$ffd0			;65f58
-	DC.W	$0018			;65f5a
-	DC.W	$ff90			;65f5c
-	BTST	D0,24(A0,D0.W)		;65f5e: 01300018
-	DC.W	$ff90			;65f62
-	BTST	D0,24(A0,D0.W)		;65f64: 01300018
-	ORI.W	#$0130,24(A0,D0.W)	;65f68: 007001300018
-	DC.W	$ff80			;65f6e
-	BTST	D0,24(A0,D0.W)		;65f70: 01300018
-	ORI.L	#$ffd00000,D0		;65f74: 0080ffd00000
-	ORI.W	#$0110,-(A0)		;65f7a: 00600110
-	ORI.B	#$60,D0			;65f7e: 00000060
-	BTST	D0,(A0)			;65f82: 0110
-	DC.W	$0000			;65f84
-	DC.W	$ffa0			;65f86
-	DC.W	$ffd0			;65f88
-	DC.W	$0000			;65f8a
-	DC.W	$ffa0			;65f8c
-	DC.W	$ff70			;65f8e
-	DC.W	$0000			;65f90
-	DC.W	$ffe0			;65f92
-	DC.W	$ff70			;65f94
-	ORI.B	#$20,D0			;65f96: 00000020
-	DC.W	$ff40			;65f9a
-	ORI.B	#$40,(A0)+		;65f9c: 00180040
-	DC.W	$ff40			;65fa0
-	DC.W	$0018			;65fa2
-	DC.W	$ffc0			;65fa4
-	DC.W	$ff20			;65fa6
-	DC.W	$0028			;65fa8
-	DC.W	$ffc0			;65faa
-	DC.W	$ff20			;65fac
-	ORI.B	#$40,-224(A0)		;65fae: 00280040ff20
-	ORI.B	#$80,-224(A0)		;65fb4: 00280080ff20
-	DC.W	$0028			;65fba
-	DC.W	$ff80			;65fbc
-	DC.W	$ff20			;65fbe
-	ORI.W	#$0080,(A0)		;65fc0: 00500080
-	DC.W	$ff20			;65fc4
-	ORI.W	#$ff80,(A0)		;65fc6: 0050ff80
-	DC.W	$ff70			;65fca
-	DC.W	$0070			;65fcc
-	ORI.L	#$ff700070,D0		;65fce: 0080ff700070
-	DC.W	$ff80			;65fd4
-	DC.W	$00f0			;65fd6
-	ORI.W	#$0080,-16(A0,D0.W)	;65fd8: 0070008000f0
-	DC.W	$0070			;65fde
-	DC.W	$ff80			;65fe0
-	BTST	D0,80(A0,D0.W)		;65fe2: 01300050
-	ORI.L	#$01300050,D0		;65fe6: 008001300050
-	DC.W	$ff80			;65fec
-	BTST	D0,80(A0,D0.W)		;65fee: 01300050
-	ORI.W	#$0130,D0		;65ff2: 00400130
-	ORI.W	#$ffc0,(A0)		;65ff6: 0050ffc0
-	DC.W	$ff40			;65ffa
-	ORI.W	#$0040,(A0)		;65ffc: 00500040
-	DC.W	$ff40			;66000
-	ORI.W	#$ffc0,(A0)		;66002: 0050ffc0
-	DC.W	$ff20			;66006
-	ORI.W	#$0040,(A0)		;66008: 00500040
-	DC.W	$ff20			;6600c
-	ORI.W	#$ffc0,(A0)		;6600e: 0050ffc0
-	DC.W	$ff70			;66012
-	DC.W	$0070			;66014
-	ORI.W	#$ff70,D0		;66016: 0040ff70
-	DC.W	$0070			;6601a
-	DC.W	$ffc0			;6601c
-	BCHG	D0,(A0)			;6601e: 0150
-	DC.W	$0030			;66020
-	DC.W	$ffc0			;66022
-	BCHG	D0,(A0)			;66024: 0150
-	DC.W	$0030			;66026
-	ORI.W	#$0110,D0		;66028: 00400110
-	DC.W	$0070			;6602c
-	DC.W	$ffc0			;6602e
-	BTST	D0,(A0)			;66030: 0110
-	DC.W	$0070			;66032
-	ORI.W	#$ffd0,D0		;66034: 0040ffd0
-	ORI.B	#$80,(A0)+		;66038: 00180080
-	DC.W	$ffd0			;6603c
-	DC.W	$0018			;6603e
-	DC.W	$ff80			;66040
-	ADD.W	D1,28522(A7)		;66042: d36f6f6a
-	ORI.B	#$02,D0			;66046: 00000002
-	ADDQ.B	#8,2(A4,D0.W)		;6604a: 50340002
-	ADDQ.W	#8,D4			;6604e: 5044
-	DC.W	$0002			;66050
-	ADDQ.L	#8,-(A4)		;66052: 50a4
-	ORI.B	#$17,D0			;66054: 00000017
-	ADD.W	D1,28522(A7)		;66058: d36f6f6a
-	ORI.B	#$02,D0			;6605c: 00000002
-	ADDQ.B	#8,2(A4,D0.W)		;66060: 50340002
-	ADDQ.L	#8,(A4)			;66064: 5094
-	DC.W	$0002			;66066
-	ADDQ.L	#8,-(A4)		;66068: 50a4
-	ORI.B	#$17,D0			;6606a: 00000017
-	ADD.W	D1,28522(A7)		;6606e: d36f6f6a
-	ORI.B	#$02,D0			;66072: 00000002
-	DC.W	$503c			;66076
-	DC.W	$0002			;66078
-	ADDQ.W	#8,A4			;6607a: 504c
-	DC.W	$0002			;6607c
-	ADDQ.L	#8,0(A4)		;6607e: 50ac0000
-	DC.W	$0017			;66082
-	ADD.W	D1,28522(A7)		;66084: d36f6f6a
-	ORI.B	#$02,D0			;66088: 00000002
-	DC.W	$503c			;6608c
-	DC.W	$0002			;6608e
-	ADDQ.L	#8,(A4)+		;66090: 509c
-	DC.W	$0002			;66092
-	ADDQ.L	#8,0(A4)		;66094: 50ac0000
-	DC.W	$0017			;66098
-	MOVE.W	27476(A2),0(A2,D0.W)	;6609a: 35aa6b540000
-	DC.W	$0002			;660a0
-	ADDQ.W	#8,(A4)+		;660a2: 505c
-	DC.W	$0002			;660a4
-	ADDQ.W	#8,2(A4)		;660a6: 506c0002
-	DC.W	$507c			;660aa
-	ORI.B	#$17,D0			;660ac: 00000017
-	ADDQ.B	#8,D0			;660b0: 5000
-	ADDQ.B	#8,D0			;660b2: 5000
-	ADD.B	D0,D4			;660b4: d800
-	DC.W	$0002			;660b6
-	ADDQ.W	#8,(A4)+		;660b8: 505c
-	DC.W	$0002			;660ba
-	DC.W	$507c			;660bc
-	DC.W	$0002			;660be
-	ST	D4			;660c0: 50c4
-	ORI.B	#$17,D0			;660c2: 00000017
-	MOVE.W	27476(A2),0(A2,D0.W)	;660c6: 35aa6b540000
-	DC.W	$0002			;660cc
-	ADDQ.W	#8,(A4)			;660ce: 5054
-	DC.W	$0002			;660d0
-	ADDQ.W	#8,-(A4)		;660d2: 5064
-	DC.W	$0002			;660d4
-	ADDQ.W	#8,0(A4,D0.W)		;660d6: 50740000
-	ORI.B	#$00,(A7)		;660da: 00170000
-	MOVEQ	#0,D4			;660de: 7800
-	ORI.B	#$02,D0			;660e0: 00000002
-	ADDQ.W	#8,(A4)			;660e4: 5054
-	DC.W	$0002			;660e6
-	ST	D4			;660e8: 50c4
-	DC.W	$0002			;660ea
-	DC.W	$50cc			;660ec
-	ORI.B	#$17,D0			;660ee: 00000017
-	dc.l  $0			;660f2: 00000000
-	MOVEQ	#0,D4			;660f6: 7800
-	DC.W	$0002			;660f8
-	ADDQ.W	#8,D4			;660fa: 5044
-	DC.W	$0002			;660fc
-	ADDQ.W	#8,(A4)			;660fe: 5054
-	DC.W	$0002			;66100
-	ADDQ.W	#8,-(A4)		;66102: 5064
-	ORI.B	#$16,D0			;66104: 00000016
-	dc.l  $0			;66108: 00000000
-	MOVEQ	#0,D4			;6610c: 7800
-	DC.W	$0002			;6610e
-	ADDQ.B	#8,2(A4,D0.W)		;66110: 50340002
-	ADDQ.W	#8,D4			;66114: 5044
-	DC.W	$0002			;66116
-	ADDQ.W	#8,-(A4)		;66118: 5064
-	ORI.B	#$16,D0			;6611a: 00000016
-	dc.l  $0			;6611e: 00000000
-	OR.B	D0,D4			;66122: 8800
-	DC.W	$0002			;66124
-	ADDQ.W	#8,A4			;66126: 504c
-	DC.W	$0002			;66128
-	ADDQ.W	#8,(A4)+		;6612a: 505c
-	DC.W	$0002			;6612c
-	ADDQ.W	#8,0(A4)		;6612e: 506c0000
-	ORI.B	#$00,(A6)		;66132: 00160000
-	DC.W	$0000			;66136
-	OR.B	D0,D4			;66138: 8800
-	DC.W	$0002			;6613a
-	DC.W	$503c			;6613c
-	DC.W	$0002			;6613e
-	ADDQ.W	#8,A4			;66140: 504c
-	DC.W	$0002			;66142
-	ADDQ.W	#8,0(A4)		;66144: 506c0000
-	DC.W	$0016			;66148
-	DC.W	$a24c			;6614a
-	TAS	0(A6,D0.W)		;6614c: 4af60000
-	DC.W	$0002			;66150
-	ADDQ.B	#8,(A4)			;66152: 5014
-	DC.W	$0002			;66154
-	ADDQ.B	#8,(A4)+		;66156: 501c
-	DC.W	$0002			;66158
-	ADDQ.L	#8,D4			;6615a: 5084
-	ORI.B	#$0e,D0			;6615c: 0000000e
-	DC.W	$a24c			;66160
-	TAS	0(A6,D0.W)		;66162: 4af60000
-	DC.W	$0002			;66166
-	ADDQ.B	#8,(A4)			;66168: 5014
-	DC.W	$0002			;6616a
-	ADDQ.L	#8,D4			;6616c: 5084
-	DC.W	$0002			;6616e
-	ADDQ.L	#8,A4			;66170: 508c
-	ORI.B	#$0e,D0			;66172: 0000000e
-	OR.L	(A6)+,D6		;66176: 8c9e
-	MOVE.L	0(A7,D0.W),(A0)+	;66178: 20f70000
-	DC.W	$0002			;6617c
-	DC.W	$4f64			;6617e
-	DC.W	$0002			;66180
-	ADDQ.B	#8,2(A4,D0.W)		;66182: 50340002
-	ADDQ.L	#8,(A4)			;66186: 5094
-	ORI.B	#$17,D0			;66188: 00000017
-	OR.L	(A6)+,D6		;6618c: 8c9e
-	MOVE.L	0(A7,D0.W),(A0)+	;6618e: 20f70000
-	DC.W	$0002			;66192
-	DC.W	$4f64			;66194
-	DC.W	$0002			;66196
-	CHK.W	D4,D7			;66198: 4f84
-	DC.W	$0002			;6619a
-	ADDQ.L	#8,(A4)			;6619c: 5094
-	ORI.B	#$17,D0			;6619e: 00000017
-	OR.L	(A6)+,D6		;661a2: 8c9e
-	MOVE.L	0(A7,D0.W),(A0)+	;661a4: 20f70000
-	DC.W	$0002			;661a8
-	DC.W	$4f8c			;661aa
-	DC.W	$0002			;661ac
-	DC.W	$503c			;661ae
-	DC.W	$0002			;661b0
-	ADDQ.L	#8,(A4)+		;661b2: 509c
-	ORI.B	#$17,D0			;661b4: 00000017
-	OR.L	(A6)+,D6		;661b8: 8c9e
-	MOVE.L	0(A7,D0.W),(A0)+	;661ba: 20f70000
-	DC.W	$0002			;661be
-	DC.W	$4f7c			;661c0
-	DC.W	$0002			;661c2
-	DC.W	$4f8c			;661c4
-	DC.W	$0002			;661c6
-	DC.W	$503c			;661c8
-	ORI.B	#$17,D0			;661ca: 00000017
-	SCC	(A2)+			;661ce: 54da
-	SCC	(A2)+			;661d0: 54da
-	ORI.B	#$02,D0			;661d2: 00000002
-	DC.W	$507c			;661d6
-	DC.W	$0002			;661d8
-	ADDQ.L	#8,2(A4,D0.W)		;661da: 50b40002
-	DC.W	$50bc			;661de
-	ORI.B	#$16,D0			;661e0: 00000016
-	SCC	(A2)+			;661e4: 54da
-	SCC	(A2)+			;661e6: 54da
-	ORI.B	#$02,D0			;661e8: 00000002
-	ADDQ.W	#8,2(A4,D0.W)		;661ec: 50740002
-	DC.W	$507c			;661f0
-	DC.W	$0002			;661f2
-	DC.W	$50bc			;661f4
-	ORI.B	#$16,D0			;661f6: 00000016
-	BMI.S	lb_6624e+2		;661fa: 6b54
-	DC.W	$0000			;661fc
-	AND.W	(A6),D5			;661fe: ca56
-	DC.W	$0002			;66200
-	DC.W	$4fc4			;66202
-	DC.W	$0002			;66204
-	ADDQ.L	#8,2(A4,D0.W)		;66206: 50b40002
-	ADDQ.W	#8,0(A4)		;6620a: 506c0000
-	DC.W	$0017			;6620e
-	SCC	(A2)+			;66210: 54da
-	SCC	(A2)+			;66212: 54da
-	ORI.B	#$02,D0			;66214: 00000002
-	ADDQ.W	#8,2(A4)		;66218: 506c0002
-	DC.W	$507c			;6621c
-	DC.W	$0002			;6621e
-	ADDQ.L	#8,0(A4,D0.W)		;66220: 50b40000
-	DC.W	$0017			;66224
-	BMI.S	lb_6627c		;66226: 6b54
-	DC.W	$0000			;66228
-	DC.W	$35aa			;6622a
-	DC.W	$0002			;6622c
-	DC.W	$4fcc			;6622e
-	DC.W	$0002			;66230
-	ADDQ.W	#8,-(A4)		;66232: 5064
-	DC.W	$0002			;66234
-	DC.W	$50bc			;66236
-	ORI.B	#$17,D0			;66238: 00000017
-	SCC	(A2)+			;6623c: 54da
-	SCC	(A2)+			;6623e: 54da
-	ORI.B	#$02,D0			;66240: 00000002
-	ADDQ.W	#8,-(A4)		;66244: 5064
-	DC.W	$0002			;66246
-	ADDQ.W	#8,2(A4,D0.W)		;66248: 50740002
-	DC.W	$50bc			;6624c
-lb_6624e:
-	ORI.B	#$17,D0			;6624e: 00000017
-	dc.l  $0			;66252: 00000000
-	MOVEQ	#0,D4			;66256: 7800
-	DC.W	$0002			;66258
-	DC.W	$4fcc			;6625a
-	DC.W	$0002			;6625c
-	ADDQ.B	#8,2(A4,D0.W)		;6625e: 50340002
-	ADDQ.W	#8,-(A4)		;66262: 5064
-	ORI.B	#$16,D0			;66264: 00000016
-	dc.l  $0			;66268: 00000000
-	MOVEQ	#0,D4			;6626c: 7800
-	DC.W	$0002			;6626e
-	DC.W	$4f64			;66270
-	DC.W	$0002			;66272
-	DC.W	$4fcc			;66274
-	DC.W	$0002			;66276
-	ADDQ.B	#8,0(A4,D0.W)		;66278: 50340000
-lb_6627c:
-	ORI.B	#$00,(A6)		;6627c: 00160000
-	DC.W	$0000			;66280
-	OR.B	D0,D4			;66282: 8800
-	DC.W	$0002			;66284
-	DC.W	$4fc4			;66286
-	DC.W	$0002			;66288
-	DC.W	$503c			;6628a
-	DC.W	$0002			;6628c
-	ADDQ.W	#8,0(A4)		;6628e: 506c0000
-	ORI.B	#$00,(A6)		;66292: 00160000
-	DC.W	$0000			;66296
-	OR.B	D0,D4			;66298: 8800
-	DC.W	$0002			;6629a
-	DC.W	$4f7c			;6629c
-	DC.W	$0002			;6629e
-	DC.W	$4fc4			;662a0
-	DC.W	$0002			;662a2
-	DC.W	$503c			;662a4
-	ORI.B	#$16,D0			;662a6: 00000016
-	DC.W	$0000			;662aa
-	OR.B	D0,D4			;662ac: 8800
-	ORI.B	#$02,D0			;662ae: 00000002
-	DC.W	$4f7c			;662b2
-	DC.W	$0002			;662b4
-	DC.W	$4f8c			;662b6
-	DC.W	$0002			;662b8
-	CHK.W	(A4)+,D7		;662ba: 4f9c
-	ORI.B	#$02,D0			;662bc: 00000002
-	DC.W	$0000			;662c0
-	OR.B	D0,D4			;662c2: 8800
-	ORI.B	#$02,D0			;662c4: 00000002
-	DC.W	$4f7c			;662c8
-	DC.W	$0002			;662ca
-	CHK.W	(A4)+,D7		;662cc: 4f9c
-	DC.W	$0002			;662ce
-	CHK.W	0(A4),D7		;662d0: 4fac0000
-	ORI.B	#$00,D2			;662d4: 00020000
-	OR.B	D0,D4			;662d8: 8800
-	ORI.B	#$02,D0			;662da: 00000002
-	DC.W	$4f64			;662de
-	DC.W	$0002			;662e0
-	CHK.W	D4,D7			;662e2: 4f84
-	DC.W	$0002			;662e4
-	CHK.W	(A4),D7			;662e6: 4f94
-	ORI.B	#$02,D0			;662e8: 00000002
-	DC.W	$0000			;662ec
-	OR.B	D0,D4			;662ee: 8800
-	ORI.B	#$02,D0			;662f0: 00000002
-	DC.W	$4f64			;662f4
-	DC.W	$0002			;662f6
-	CHK.W	(A4),D7			;662f8: 4f94
-	DC.W	$0002			;662fa
-	CHK.W	-(A4),D7		;662fc: 4fa4
-	ORI.B	#$02,D0			;662fe: 00000002
-	DC.W	$0000			;66302
-	OR.B	D0,D4			;66304: 8800
-	ORI.B	#$02,D0			;66306: 00000002
-	DC.W	$4f64			;6630a
-	DC.W	$0002			;6630c
-	CHK.W	-(A4),D7		;6630e: 4fa4
-	DC.W	$0002			;66310
-	ST	(A4)			;66312: 50d4
-	ORI.B	#$02,D0			;66314: 00000002
-	DC.W	$0000			;66318
-	OR.B	D0,D4			;6631a: 8800
-	ORI.B	#$02,D0			;6631c: 00000002
-	DC.W	$4f7c			;66320
-	DC.W	$0002			;66322
-	CHK.W	2(A4),D7		;66324: 4fac0002
-	ST	(A4)+			;66328: 50dc
-	ORI.B	#$02,D0			;6632a: 00000002
-	DC.W	$0000			;6632e
-	OR.B	D0,D4			;66330: 8800
-	ORI.B	#$02,D0			;66332: 00000002
-	CHK.W	2(A4),D7		;66336: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;6633a: 4fb40002
-	DC.W	$4fc4			;6633e
-	ORI.B	#$02,D0			;66340: 00000002
-	DC.W	$0000			;66344
-	OR.B	D0,D4			;66346: 8800
-	ORI.B	#$02,D0			;66348: 00000002
-	CHK.W	2(A4),D7		;6634c: 4fac0002
-	DC.W	$4fc4			;66350
-	DC.W	$0002			;66352
-	ST	(A4)+			;66354: 50dc
-	ORI.B	#$02,D0			;66356: 00000002
-	DC.W	$0000			;6635a
-	OR.B	D0,D4			;6635c: 8800
-	ORI.B	#$02,D0			;6635e: 00000002
-	CHK.W	-(A4),D7		;66362: 4fa4
-	DC.W	$0002			;66364
-	DC.W	$4fcc			;66366
-	DC.W	$0002			;66368
-	ST	(A4)			;6636a: 50d4
-	ORI.B	#$02,D0			;6636c: 00000002
-	DC.W	$0000			;66370
-	OR.B	D0,D4			;66372: 8800
-	ORI.B	#$02,D0			;66374: 00000002
-	CHK.W	-(A4),D7		;66378: 4fa4
-	DC.W	$0002			;6637a
-	CHK.W	#$0002,D7		;6637c: 4fbc0002
-	DC.W	$4fcc			;66380
-	ORI.B	#$02,D0			;66382: 00000002
-	AND.W	(A6),D5			;66386: ca56
-	SUB.L	0(A4),D2		;66388: 94ac0000
-	DC.W	$0002			;6638c
-	ADDQ.B	#8,D4			;6638e: 5004
-	DC.W	$0002			;66390
-	DC.W	$500c			;66392
-	DC.W	$0002			;66394
-	ADDQ.B	#8,(A4)+		;66396: 501c
-	ORI.B	#$0a,D0			;66398: 0000000a
-	AND.W	(A6),D5			;6639c: ca56
-	SUB.L	0(A4),D2		;6639e: 94ac0000
-	DC.W	$0002			;663a2
-	DC.W	$500c			;663a4
-	DC.W	$0002			;663a6
-	ADDQ.B	#8,(A4)			;663a8: 5014
-	DC.W	$0002			;663aa
-	ADDQ.B	#8,(A4)+		;663ac: 501c
-	ORI.B	#$0a,D0			;663ae: 0000000a
-	NBCD	D0			;663b2: 4800
-	DC.W	$a000			;663b4
-	ORI.B	#$02,D0			;663b6: 00000002
-	DC.W	$4f74			;663ba
-	DC.W	$0002			;663bc
-	CHK.W	2(A4,D0.W),D7		;663be: 4fb40002
-	CHK.W	#$0000,D7		;663c2: 4fbc0000
-	DC.W	$000a			;663c6
-	NBCD	D0			;663c8: 4800
-	DC.W	$a000			;663ca
-	ORI.B	#$02,D0			;663cc: 00000002
-	DC.W	$4f6c			;663d0
-	DC.W	$0002			;663d2
-	DC.W	$4f74			;663d4
-	DC.W	$0002			;663d6
-	CHK.W	#$0000,D7		;663d8: 4fbc0000
-	DC.W	$000a			;663dc
-	NBCD	D0			;663de: 4800
-	DC.W	$a000			;663e0
-	ORI.B	#$02,D0			;663e2: 00000002
-	DC.W	$4f6c			;663e6
-	DC.W	$0002			;663e8
-	CHK.W	#$0002,D7		;663ea: 4fbc0002
-	DC.W	$4fcc			;663ee
-	ORI.B	#$0a,D0			;663f0: 0000000a
-	NBCD	D0			;663f4: 4800
-	DC.W	$a000			;663f6
-	ORI.B	#$02,D0			;663f8: 00000002
-	DC.W	$4f6c			;663fc
-	DC.W	$0002			;663fe
-	CHK.W	2(A4,D0.W),D7		;66400: 4fb40002
-	DC.W	$4fc4			;66404
-	ORI.B	#$0a,D0			;66406: 0000000a
-	AND.W	(A6),D5			;6640a: ca56
-	SUB.L	0(A4),D2		;6640c: 94ac0000
-	DC.W	$0002			;66410
-	LEA	2(A4,D0.W),A7		;66412: 4ff40002
-	DC.W	$4ffc			;66416
-	DC.W	$0002			;66418
-	ADDQ.B	#8,D4			;6641a: 5004
-	ORI.B	#$12,D0			;6641c: 00000012
-	AND.W	(A6),D5			;66420: ca56
-	SUB.L	0(A4),D2		;66422: 94ac0000
-	DC.W	$0002			;66426
-	LEA	2(A4,D0.W),A7		;66428: 4ff40002
-	ADDQ.B	#8,D4			;6642c: 5004
-	DC.W	$0002			;6642e
-	DC.W	$500c			;66430
-	ORI.B	#$12,D0			;66432: 00000012
-	DC.W	$0000			;66436
-	DC.W	$a000			;66438
-	CMP.B	D0,D4			;6643a: b800
-	DC.W	$0002			;6643c
-	CHK.W	(A4)+,D7		;6643e: 4f9c
-	DC.W	$0002			;66440
-	LEA	2(A4,D0.W),A7		;66442: 4ff40002
-	DC.W	$500c			;66446
-	ORI.B	#$0a,D0			;66448: 0000000a
-	DC.W	$0000			;6644c
-	DC.W	$a000			;6644e
-	NBCD	D0			;66450: 4800
-	DC.W	$0002			;66452
-	CHK.W	(A4),D7			;66454: 4f94
-	DC.W	$0002			;66456
-	DC.W	$4ffc			;66458
-	DC.W	$0002			;6645a
-	ADDQ.B	#8,D4			;6645c: 5004
-	ORI.B	#$0a,D0			;6645e: 0000000a
-	ADDX.L	D5,D6			;66462: dd85
-	DC.W	$a40d			;66464
-	MOVE	2(A6,D0.W),CCR		;66466: 44f60002
-	CHK.W	(A4),D7			;6646a: 4f94
-	DC.W	$0002			;6646c
-	CHK.W	-(A4),D7		;6646e: 4fa4
-	DC.W	$0002			;66470
-	DC.W	$4ffc			;66472
-	ORI.B	#$0a,D0			;66474: 0000000a
-	DC.W	$c5cb			;66478
-	DC.W	$c5cb			;6647a
-	SUBQ.W	#3,(A0)			;6647c: 5750
-	DC.W	$0002			;6647e
-	CHK.W	-(A4),D7		;66480: 4fa4
-	DC.W	$0002			;66482
-	LEA	(A4),A7			;66484: 4fd4
-	DC.W	$0002			;66486
-	DC.W	$4ffc			;66488
-	ORI.B	#$0a,D0			;6648a: 0000000a
-	ADDX.L	D5,D6			;6648e: dd85
-	DC.W	$a40d			;66490
-	CMPM.B	(A2)+,(A5)+		;66492: bb0a
-	DC.W	$0002			;66494
-	CHK.W	(A4)+,D7		;66496: 4f9c
-	DC.W	$0002			;66498
-	CHK.W	2(A4),D7		;6649a: 4fac0002
-	LEA	0(A4,D0.W),A7		;6649e: 4ff40000
-	DC.W	$000a			;664a2
-	DC.W	$c5cb			;664a4
-	DC.W	$c5cb			;664a6
-	DC.W	$a8b0			;664a8
-	DC.W	$0002			;664aa
-	CHK.W	2(A4),D7		;664ac: 4fac0002
-	LEA	2(A4),A7		;664b0: 4fec0002
-	LEA	0(A4,D0.W),A7		;664b4: 4ff40000
-	DC.W	$000a			;664b8
-	DC.W	$0000			;664ba
-	DC.W	$bd70			;664bc
-	SUB.B	2(A0),D6		;664be: 9c280002
-lb_664c2:
-	CHK.W	2(A4),D7		;664c2: 4fac0002
-	DC.W	$4fe4			;664c6
-	DC.W	$0002			;664c8
-	LEA	0(A4),A7		;664ca: 4fec0000
-	ORI.B	#$00,(A2)		;664ce: 00120000
-	DC.W	$bd70			;664d2
-	SUB.B	2(A0),D6		;664d4: 9c280002
-lb_664d8:
-	CHK.W	2(A4),D7		;664d8: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;664dc: 4fb40002
-	DC.W	$4fe4			;664e0
-	ORI.B	#$12,D0			;664e2: 00000012
-	DC.W	$0000			;664e6
-	DC.W	$bd70			;664e8
-	BLS.S	lb_664c2+2		;664ea: 63d8
-	DC.W	$0002			;664ec
-	CHK.W	-(A4),D7		;664ee: 4fa4
-	DC.W	$0002			;664f0
-	LEA	(A4),A7			;664f2: 4fd4
-	DC.W	$0002			;664f4
-	DC.W	$4fdc			;664f6
-	ORI.B	#$12,D0			;664f8: 00000012
-	DC.W	$0000			;664fc
-	DC.W	$bd70			;664fe
-	BLS.S	lb_664d8+2		;66500: 63d8
-	DC.W	$0002			;66502
-	CHK.W	-(A4),D7		;66504: 4fa4
-	DC.W	$0002			;66506
-	CHK.W	#$0002,D7		;66508: 4fbc0002
-	DC.W	$4fdc			;6650c
-	ORI.B	#$12,D0			;6650e: 00000012
-	NBCD	D0			;66512: 4800
-	DC.W	$a000			;66514
-	ORI.B	#$02,D0			;66516: 00000002
-	CHK.W	#$0002,D7		;6651a: 4fbc0002
-	DC.W	$4fdc			;6651e
-	DC.W	$0002			;66520
-	DC.W	$4fe4			;66522
-	ORI.B	#$0a,D0			;66524: 0000000a
-	NBCD	D0			;66528: 4800
-	DC.W	$a000			;6652a
-	ORI.B	#$02,D0			;6652c: 00000002
-	CHK.W	2(A4,D0.W),D7		;66530: 4fb40002
-	CHK.W	#$0002,D7		;66534: 4fbc0002
-	DC.W	$4fe4			;66538
-	ORI.B	#$0a,D0			;6653a: 0000000a
-	dc.l  $0			;6653e: 00000000
-	ORI.B	#$02,D0			;66542: 00000002
-	LEA	(A4),A7			;66546: 4fd4
-	DC.W	$0002			;66548
-	LEA	2(A4),A7		;6654a: 4fec0002
-	LEA	0(A4,D0.W),A7		;6654e: 4ff40000
-	ORI.B	#$00,D2			;66552: 00020000
-	dc.l  $0			;66556: 00000000
-	DC.W	$0002			;6655a
-	LEA	(A4),A7			;6655c: 4fd4
-	DC.W	$0002			;6655e
-	LEA	2(A4,D0.W),A7		;66560: 4ff40002
-	DC.W	$4ffc			;66564
-	ORI.B	#$02,D0			;66566: 00000002
-	dc.l  $0			;6656a: 00000000
-	ORI.B	#$02,D0			;6656e: 00000002
-	LEA	(A4),A7			;66572: 4fd4
-	DC.W	$0002			;66574
-	DC.W	$4fdc			;66576
-	DC.W	$0002			;66578
-	LEA	0(A4),A7		;6657a: 4fec0000
-	ORI.B	#$00,D2			;6657e: 00020000
-	dc.l  $0			;66582: 00000000
-	DC.W	$0002			;66586
-	DC.W	$4fdc			;66588
-	DC.W	$0002			;6658a
-	DC.W	$4fe4			;6658c
-	DC.W	$0002			;6658e
-	LEA	0(A4),A7		;66590: 4fec0000
-	DC.W	$0002			;66594
-	BTST	D0,D0			;66596: 0100
-	DC.W	$000e			;66598
-	ORI.B	#$62,(A2)		;6659a: 00120062
-	dc.l  $0			;6659e: 00000000
-	DC.W	$0000			;665a2
-	DC.W	$ff90			;665a4
-	DC.W	$ffb0			;665a6
-	DC.W	$ffd0			;665a8
-	DC.W	$ff90			;665aa
-	DC.W	$ffb0			;665ac
-	DC.W	$0030			;665ae
-	DC.W	$0000			;665b0
-	DC.W	$ffa8			;665b2
-	ORI.W	#$0060,D0		;665b4: 00400060
-	DC.W	$ffb0			;665b8
-	DC.W	$0030			;665ba
-	ORI.W	#$ffb0,0(A0,D0.W)	;665bc: 0070ffb00000
-	ORI.W	#$ffb0,-(A0)		;665c2: 0060ffb0
-	DC.W	$ffd0			;665c6
-	DC.W	$0000			;665c8
-	DC.W	$ffa8			;665ca
-	DC.W	$ffc0			;665cc
-	DC.W	$ff80			;665ce
-	DC.W	$0000			;665d0
-	DC.W	$ffd0			;665d2
-	DC.W	$ff80			;665d4
-	ORI.B	#$30,D0			;665d6: 00000030
-	dc.l  $0			;665da: 00000000
-	ORI.W	#$0070,-(A0)		;665de: 00600070
-	ORI.B	#$50,D0			;665e2: 00000050
-lb_665e6:
-	ORI.L	#$00000000,D0		;665e6: 008000000000
-	DC.W	$0070			;665ec
-	DC.W	$0000			;665ee
-	DC.W	$ffb0			;665f0
-	dc.l  $0			;665f2: 00000000
-	DC.W	$ffa0			;665f6
-	DC.W	$7178			;665f8
-	ROR.B	D0,D3			;665fa: e03b
-	LSL.W	#4,D7			;665fc: e94f
-	DC.W	$0002			;665fe
-	DC.W	$4f8c			;66600
-	DC.W	$0002			;66602
-	CHK.W	#$0002,D7		;66604: 4fbc0002
-	DC.W	$4fc4			;66608
-	ORI.B	#$0a,D0			;6660a: 0000000a
-	BLE.S	lb_665e6+2		;6660e: 6fd8
-	ASL.L	D4,D2			;66610: e9a2
-	ADD.L	ext_00000002.W,D5		;66612: dab80002
-	CHK.W	D4,D7			;66616: 4f84
-	DC.W	$0002			;66618
-	DC.W	$4f8c			;6661a
-	DC.W	$0002			;6661c
-	CHK.W	#$0000,D7		;6661e: 4fbc0000
-	DC.W	$0012			;66622
-	ADDA.L	ext_fffff798.W,A2		;66624: d5f8f798
-	DIVS	2(A3),D7		;66628: 8feb0002
-	DC.W	$4f64			;6662c
-	DC.W	$0002			;6662e
-	CHK.W	(A4)+,D7		;66630: 4f9c
-	DC.W	$0002			;66632
-	DC.W	$4fcc			;66634
-	ORI.B	#$06,D0			;66636: 00000006
-	ROXL.B	D6,D2			;6663a: ed32
-	ADDX.L	D0,D3			;6663c: d780
-	SUB.L	(A7)+,D0		;6663e: 909f
-	DC.W	$0002			;66640
-	DC.W	$4f64			;66642
-	DC.W	$0002			;66644
-	CHK.W	(A4),D7			;66646: 4f94
-	DC.W	$0002			;66648
-	DC.W	$4fcc			;6664a
-	ORI.B	#$06,D0			;6664c: 00000006
-	DC.W	$15d7			;66650
-	ADD.L	D3,-28388(A6)		;66652: d7ae911c
-lb_66656:
-	DC.W	$0002			;66656
-	DC.W	$4f8c			;66658
-	DC.W	$0002			;6665a
-	CHK.W	(A4),D7			;6665c: 4f94
-	DC.W	$0002			;6665e
-	DC.W	$4fcc			;66660
-	ORI.B	#$06,D0			;66662: 00000006
-	BCLR	D7,(A7)+		;66666: 0f9f
-	ADD.B	D0,-(A2)		;66668: d122
-	SUB.L	-(A5),D1		;6666a: 92a5
-	DC.W	$0002			;6666c
-	DC.W	$4f8c			;6666e
-	DC.W	$0002			;66670
-	DC.W	$4fc4			;66672
-	DC.W	$0002			;66674
-	DC.W	$4fcc			;66676
-	ORI.B	#$06,D0			;66678: 00000006
-	BLE.S	lb_66656		;6667c: 6fd8
-	ASL.L	D4,D2			;6667e: e9a2
-	MOVE.L	A0,2(A2)		;66680: 25480002
-	DC.W	$4f7c			;66684
-	DC.W	$0002			;66686
-	CHK.W	D4,D7			;66688: 4f84
-	DC.W	$0002			;6668a
-	CHK.W	#$0000,D7		;6668c: 4fbc0000
-	DC.W	$0012			;66690
-	DC.W	$7178			;66692
-	ROR.B	D0,D3			;66694: e03b
-	MOVE.B	2(A1,D0.W),(A3)		;66696: 16b10002
-	DC.W	$4f7c			;6669a
-	DC.W	$0002			;6669c
-	CHK.W	2(A4,D0.W),D7		;6669e: 4fb40002
-	CHK.W	#$0000,D7		;666a2: 4fbc0000
-	DC.W	$000a			;666a6
-	BCLR	D7,(A7)+		;666a8: 0f9f
-	ADD.B	D0,-(A2)		;666aa: d122
-	DC.W	$6d5b			;666ac
-	DC.W	$0002			;666ae
-	DC.W	$4f7c			;666b0
-	DC.W	$0002			;666b2
-	CHK.W	2(A4),D7		;666b4: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;666b8: 4fb40000
-	DC.W	$0006			;666bc
-	DC.W	$15d7			;666be
-	ADD.L	D3,28388(A6)		;666c0: d7ae6ee4
-	DC.W	$0002			;666c4
-	DC.W	$4f74			;666c6
-	DC.W	$0002			;666c8
-	DC.W	$4f7c			;666ca
-	DC.W	$0002			;666cc
-	CHK.W	0(A4),D7		;666ce: 4fac0000
-	DC.W	$0006			;666d2
-	ROXL.B	D6,D2			;666d4: ed32
-	ADDX.L	D0,D3			;666d6: d780
-	DC.W	$6f61			;666d8
-	DC.W	$0002			;666da
-	DC.W	$4f6c			;666dc
-	DC.W	$0002			;666de
-	DC.W	$4f74			;666e0
-	DC.W	$0002			;666e2
-	CHK.W	0(A4),D7		;666e4: 4fac0000
-	DC.W	$000a			;666e8
-	ADDA.L	ext_fffff798.W,A2		;666ea: d5f8f798
-	MOVEQ	#21,D0			;666ee: 7015
-	DC.W	$0002			;666f0
-	DC.W	$4f6c			;666f2
-	DC.W	$0002			;666f4
-	CHK.W	-(A4),D7		;666f6: 4fa4
-	DC.W	$0002			;666f8
-	CHK.W	0(A4),D7		;666fa: 4fac0000
-	DC.W	$000a			;666fe
-	OR.W	(A5),D5			;66700: 8a55
-	ROR.W	D4,D0			;66702: e878
-	ORI.B	#$02,D0			;66704: 00000002
-	DC.W	$4f6c			;66708
-	DC.W	$0002			;6670a
-	CHK.W	(A4)+,D7		;6670c: 4f9c
-	DC.W	$0002			;6670e
-	CHK.W	-(A4),D7		;66710: 4fa4
-	ORI.B	#$12,D0			;66712: 00000012
-	OR.W	(A5),D5			;66716: 8a55
-	ROR.W	D4,D0			;66718: e878
-	ORI.B	#$02,D0			;6671a: 00000002
-	DC.W	$4f64			;6671e
-	DC.W	$0002			;66720
-	DC.W	$4f6c			;66722
-	DC.W	$0002			;66724
-	CHK.W	(A4)+,D7		;66726: 4f9c
-	ORI.B	#$12,D0			;66728: 00000012
-	DC.W	$f774			;6672c
-	DC.W	$884f			;6672e
-	ORI.B	#$02,D0			;66730: 00000002
-	DC.W	$4f64			;66734
-	DC.W	$0002			;66736
-	DC.W	$4f6c			;66738
-	DC.W	$0002			;6673a
-	CHK.W	(A4),D7			;6673c: 4f94
-	ORI.B	#$02,D0			;6673e: 00000002
-	DC.W	$f774			;66742
-	DC.W	$884f			;66744
-	ORI.B	#$02,D0			;66746: 00000002
-	DC.W	$4f6c			;6674a
-	DC.W	$0002			;6674c
-	DC.W	$4f74			;6674e
-	DC.W	$0002			;66750
-	CHK.W	(A4),D7			;66752: 4f94
-	ORI.B	#$02,D0			;66754: 00000002
-	BSET	D4,107(A7,A0.L)		;66758: 09f7886b
-	ORI.B	#$02,D0			;6675c: 00000002
-	DC.W	$4f74			;66760
-	DC.W	$0002			;66762
-	DC.W	$4f7c			;66764
-	DC.W	$0002			;66766
-	CHK.W	(A4),D7			;66768: 4f94
-	ORI.B	#$02,D0			;6676a: 00000002
-	BSET	D4,107(A7,A0.L)		;6676e: 09f7886b
-	ORI.B	#$02,D0			;66772: 00000002
-	DC.W	$4f7c			;66776
-	DC.W	$0002			;66778
-	DC.W	$4f8c			;6677a
-	DC.W	$0002			;6677c
-	CHK.W	(A4),D7			;6677e: 4f94
-	ORI.B	#$02,D0			;66780: 00000002
-	DC.W	$0000			;66784
-	OR.B	D0,D4			;66786: 8800
-	ORI.B	#$02,D0			;66788: 00000002
-	DC.W	$4f7c			;6678c
-	DC.W	$0002			;6678e
-	CHK.W	D4,D7			;66790: 4f84
-	DC.W	$0002			;66792
-	DC.W	$4f8c			;66794
-	ORI.B	#$12,D0			;66796: 00000012
-	BTST	D0,D0			;6679a: 0100
-	ORI.B	#$05,D6			;6679c: 00060005
-	ORI.B	#$00,0(A2,D0.W)		;667a0: 003200000000
-	DC.W	$0000			;667a6
-	DC.W	$fe70			;667a8
-	DC.W	$ffe0			;667aa
-	DC.W	$fff8			;667ac
-	DC.W	$ff88			;667ae
-	DC.W	$ffe0			;667b0
-	DC.W	$0008			;667b2
-	DC.W	$ff88			;667b4
-	DC.W	$ffe0			;667b6
-	DC.W	$fff8			;667b8
-	DC.W	$fe70			;667ba
-	DC.W	$fff0			;667bc
-	DC.W	$0000			;667be
-	DC.W	$ff88			;667c0
-	DC.W	$fff0			;667c2
-	DC.W	$0000			;667c4
-	DC.W	$fe70			;667c6
-	DC.W	$ffe0			;667c8
-	DC.W	$0008			;667ca
-	DC.W	$0000			;667cc
-	AND.W	(A6),D5			;667ce: ca56
-	BMI.S	lb_66826		;667d0: 6b54
-	DC.W	$0002			;667d2
-	DC.W	$4f64			;667d4
-	DC.W	$0002			;667d6
-	DC.W	$4f7c			;667d8
-	DC.W	$0002			;667da
-	CHK.W	D4,D7			;667dc: 4f84
-	ORI.B	#$0a,D0			;667de: 0000000a
-	DC.W	$0000			;667e2
-	AND.W	(A6),D5			;667e4: ca56
-	BMI.S	lb_6683c		;667e6: 6b54
-	DC.W	$0002			;667e8
-	DC.W	$4f64			;667ea
-	DC.W	$0002			;667ec
-	DC.W	$4f74			;667ee
-	DC.W	$0002			;667f0
-	CHK.W	D4,D7			;667f2: 4f84
-	ORI.B	#$0a,D0			;667f4: 0000000a
-	DC.W	$0000			;667f8
-	AND.W	(A6),D5			;667fa: ca56
-	SUB.L	2(A4),D2		;667fc: 94ac0002
-	DC.W	$4f8c			;66800
-	DC.W	$0002			;66802
-	DC.W	$4f6c			;66804
-	DC.W	$0002			;66806
-	CHK.W	D4,D7			;66808: 4f84
-	ORI.B	#$0a,D0			;6680a: 0000000a
-	DC.W	$0000			;6680e
-	AND.W	(A6),D5			;66810: ca56
-	SUB.L	2(A4),D2		;66812: 94ac0002
-	DC.W	$4f8c			;66816
-	DC.W	$0002			;66818
-	DC.W	$4f7c			;6681a
-	DC.W	$0002			;6681c
-	CHK.W	D4,D7			;6681e: 4f84
-	ORI.B	#$0a,D0			;66820: 0000000a
-	DC.W	$0000			;66824
-lb_66826:
-	OR.B	D0,D4			;66826: 8800
-	ORI.B	#$02,D0			;66828: 00000002
-	DC.W	$4f8c			;6682c
-	DC.W	$0002			;6682e
-	DC.W	$4f64			;66830
-	DC.W	$0002			;66832
-	DC.W	$4f6c			;66834
-	ORI.B	#$02,D0			;66836: 00000002
-	DC.W	$0000			;6683a
-lb_6683c:
-	OR.B	D0,D4			;6683c: 8800
-	ORI.B	#$02,D0			;6683e: 00000002
-	DC.W	$4f64			;66842
-	DC.W	$0002			;66844
-	DC.W	$4f6c			;66846
-	DC.W	$0002			;66848
-	DC.W	$4f74			;6684a
-	ORI.B	#$02,D0			;6684c: 00000002
+	dc.w	$0000	;635ca
+	dc.w	$0000	;635cc
+	dc.w	$7800	;635ce
+	dc.w	$0002	;635d0
+	dc.w	$4f6c	;635d2
+	dc.w	$0002	;635d4
+	dc.w	$4fe4	;635d6
+	dc.w	$0002	;635d8
+	dc.w	$5004	;635da
+	dc.w	$0000	;635dc
+	dc.w	$0006	;635de
+	dc.w	$54da	;635e0
+	dc.w	$0000	;635e2
+	dc.w	$54da	;635e4
+	dc.w	$0002	;635e6
+	dc.w	$4f6c	;635e8
+	dc.w	$0002	;635ea
+	dc.w	$4f74	;635ec
+	dc.w	$0002	;635ee
+	dc.w	$4fe4	;635f0
+	dc.w	$0000	;635f2
+	dc.w	$000a	;635f4
+	dc.w	$54da	;635f6
+	dc.w	$0000	;635f8
+	dc.w	$54da	;635fa
+	dc.w	$0002	;635fc
+	dc.w	$4f74	;635fe
+	dc.w	$0002	;63600
+	dc.w	$4fb4	;63602
+	dc.w	$0002	;63604
+	dc.w	$4fe4	;63606
+	dc.w	$0000	;63608
+	dc.w	$000a	;6360a
+	dc.w	$54da	;6360c
+	dc.w	$0000	;6360e
+	dc.w	$54da	;63610
+	dc.w	$0002	;63612
+	dc.w	$4fb4	;63614
+	dc.w	$0002	;63616
+	dc.w	$4fe4	;63618
+	dc.w	$0002	;6361a
+	dc.w	$4ff4	;6361c
+	dc.w	$0000	;6361e
+	dc.w	$000a	;63620
+	dc.w	$0000	;63622
+	dc.w	$0000	;63624
+	dc.w	$7800	;63626
+	dc.w	$0002	;63628
+	dc.w	$4fb4	;6362a
+	dc.w	$0002	;6362c
+	dc.w	$4fc4	;6362e
+	dc.w	$0002	;63630
+	dc.w	$4ff4	;63632
+	dc.w	$0000	;63634
+	dc.w	$0006	;63636
+	dc.w	$0000	;63638
+	dc.w	$0000	;6363a
+	dc.w	$7800	;6363c
+	dc.w	$0002	;6363e
+	dc.w	$4fc4	;63640
+	dc.w	$0002	;63642
+	dc.w	$4fdc	;63644
+	dc.w	$0002	;63646
+	dc.w	$4ff4	;63648
+	dc.w	$0000	;6364a
+	dc.w	$0006	;6364c
+	dc.w	$ab26	;6364e
+	dc.w	$ab26	;63650
+	dc.w	$0000	;63652
+	dc.w	$0002	;63654
+	dc.w	$4f94	;63656
+	dc.w	$0002	;63658
+	dc.w	$4f9c	;6365a
+	dc.w	$0002	;6365c
+	dc.w	$4fa4	;6365e
+	dc.w	$0000	;63660
+	dc.w	$0012	;63662
+	dc.w	$ab26	;63664
+	dc.w	$ab26	;63666
+	dc.w	$0000	;63668
+	dc.w	$0002	;6366a
+	dc.w	$4f94	;6366c
+	dc.w	$0002	;6366e
+	dc.w	$4fa4	;63670
+	dc.w	$0002	;63672
+	dc.w	$4fac	;63674
+	dc.w	$0000	;63676
+	dc.w	$0012	;63678
+	dc.w	$54da	;6367a
+	dc.w	$ab26	;6367c
+	dc.w	$0000	;6367e
+	dc.w	$0002	;63680
+	dc.w	$4f74	;63682
+	dc.w	$0002	;63684
+	dc.w	$4f7c	;63686
+	dc.w	$0002	;63688
+	dc.w	$4fb4	;6368a
+	dc.w	$0000	;6368c
+	dc.w	$0012	;6368e
+	dc.w	$54da	;63690
+	dc.w	$ab26	;63692
+	dc.w	$0000	;63694
+	dc.w	$0002	;63696
+	dc.w	$4f7c	;63698
+	dc.w	$0002	;6369a
+	dc.w	$4fb4	;6369c
+	dc.w	$0002	;6369e
+	dc.w	$4fbc	;636a0
+	dc.w	$0000	;636a2
+	dc.w	$0012	;636a4
+	dc.w	$0000	;636a6
+	dc.w	$8800	;636a8
+	dc.w	$0000	;636aa
+	dc.w	$0002	;636ac
+	dc.w	$4fb4	;636ae
+	dc.w	$0002	;636b0
+	dc.w	$4fbc	;636b2
+	dc.w	$0002	;636b4
+	dc.w	$4fc4	;636b6
+	dc.w	$0000	;636b8
+	dc.w	$000a	;636ba
+	dc.w	$0000	;636bc
+	dc.w	$8800	;636be
+	dc.w	$0000	;636c0
+	dc.w	$0002	;636c2
+	dc.w	$4fbc	;636c4
+	dc.w	$0002	;636c6
+	dc.w	$4fc4	;636c8
+	dc.w	$0002	;636ca
+	dc.w	$4fcc	;636cc
+	dc.w	$0000	;636ce
+	dc.w	$0002	;636d0
+	dc.w	$0000	;636d2
+	dc.w	$8800	;636d4
+	dc.w	$0000	;636d6
+	dc.w	$0002	;636d8
+	dc.w	$4f8c	;636da
+	dc.w	$0002	;636dc
+	dc.w	$4f94	;636de
+	dc.w	$0002	;636e0
+	dc.w	$4f9c	;636e2
+	dc.w	$0000	;636e4
+	dc.w	$0002	;636e6
+	dc.w	$0000	;636e8
+	dc.w	$8800	;636ea
+	dc.w	$0000	;636ec
+	dc.w	$0002	;636ee
+	dc.w	$4f64	;636f0
+	dc.w	$0002	;636f2
+	dc.w	$4f8c	;636f4
+	dc.w	$0002	;636f6
+	dc.w	$4f9c	;636f8
+	dc.w	$0000	;636fa
+	dc.w	$0002	;636fc
+	dc.w	$0000	;636fe
+	dc.w	$8800	;63700
+	dc.w	$0000	;63702
+	dc.w	$0002	;63704
+	dc.w	$4f64	;63706
+	dc.w	$0002	;63708
+	dc.w	$4f6c	;6370a
+	dc.w	$0002	;6370c
+	dc.w	$4f8c	;6370e
+	dc.w	$0000	;63710
+	dc.w	$0002	;63712
+	dc.w	$0000	;63714
+	dc.w	$8800	;63716
+	dc.w	$0000	;63718
+	dc.w	$0002	;6371a
+	dc.w	$4f6c	;6371c
+	dc.w	$0002	;6371e
+	dc.w	$4f74	;63720
+	dc.w	$0002	;63722
+	dc.w	$4f8c	;63724
+	dc.w	$0000	;63726
+	dc.w	$0002	;63728
+	dc.w	$0000	;6372a
+	dc.w	$8800	;6372c
+	dc.w	$0000	;6372e
+	dc.w	$0002	;63730
+	dc.w	$4f74	;63732
+	dc.w	$0002	;63734
+	dc.w	$4f7c	;63736
+	dc.w	$0002	;63738
+	dc.w	$4f8c	;6373a
+	dc.w	$0000	;6373c
+	dc.w	$0002	;6373e
+	dc.w	$0000	;63740
+	dc.w	$8800	;63742
+	dc.w	$0000	;63744
+	dc.w	$0002	;63746
+	dc.w	$4f7c	;63748
+	dc.w	$0002	;6374a
+	dc.w	$4f84	;6374c
+	dc.w	$0002	;6374e
+	dc.w	$4f8c	;63750
+	dc.w	$0000	;63752
+	dc.w	$0002	;63754
+	dc.w	$0100	;63756
+	dc.w	$0006	;63758
+	dc.w	$0005	;6375a
+	dc.w	$0032	;6375c
+	dc.w	$0000	;6375e
+	dc.w	$0000	;63760
+	dc.w	$0000	;63762
+	dc.w	$fe80	;63764
+	dc.w	$ffd0	;63766
+	dc.w	$fff8	;63768
+	dc.w	$ffa0	;6376a
+	dc.w	$ffd0	;6376c
+	dc.w	$0008	;6376e
+	dc.w	$ffa0	;63770
+	dc.w	$ffd0	;63772
+	dc.w	$fff8	;63774
+	dc.w	$fe80	;63776
+	dc.w	$ffe0	;63778
+	dc.w	$0000	;6377a
+	dc.w	$ffa0	;6377c
+	dc.w	$ffe0	;6377e
+	dc.w	$0000	;63780
+	dc.w	$fe80	;63782
+	dc.w	$ffd0	;63784
+	dc.w	$0008	;63786
+	dc.w	$0000	;63788
+	dc.w	$ca56	;6378a
+	dc.w	$6b54	;6378c
+	dc.w	$0002	;6378e
+	dc.w	$4f64	;63790
+	dc.w	$0002	;63792
+	dc.w	$4f7c	;63794
+	dc.w	$0002	;63796
+	dc.w	$4f84	;63798
+	dc.w	$0000	;6379a
+	dc.w	$000a	;6379c
+	dc.w	$0000	;6379e
+	dc.w	$ca56	;637a0
+	dc.w	$6b54	;637a2
+	dc.w	$0002	;637a4
+	dc.w	$4f64	;637a6
+	dc.w	$0002	;637a8
+	dc.w	$4f74	;637aa
+	dc.w	$0002	;637ac
+	dc.w	$4f84	;637ae
+	dc.w	$0000	;637b0
+	dc.w	$000a	;637b2
+	dc.w	$0000	;637b4
+	dc.w	$ca56	;637b6
+	dc.w	$94ac	;637b8
+	dc.w	$0002	;637ba
+	dc.w	$4f8c	;637bc
+	dc.w	$0002	;637be
+	dc.w	$4f6c	;637c0
+	dc.w	$0002	;637c2
+	dc.w	$4f84	;637c4
+	dc.w	$0000	;637c6
+	dc.w	$000a	;637c8
+	dc.w	$0000	;637ca
+	dc.w	$ca56	;637cc
+	dc.w	$94ac	;637ce
+	dc.w	$0002	;637d0
+	dc.w	$4f8c	;637d2
+	dc.w	$0002	;637d4
+	dc.w	$4f7c	;637d6
+	dc.w	$0002	;637d8
+	dc.w	$4f84	;637da
+	dc.w	$0000	;637dc
+	dc.w	$000a	;637de
+	dc.w	$0000	;637e0
+	dc.w	$8800	;637e2
+	dc.w	$0000	;637e4
+	dc.w	$0002	;637e6
+	dc.w	$4f8c	;637e8
+	dc.w	$0002	;637ea
+	dc.w	$4f64	;637ec
+	dc.w	$0002	;637ee
+	dc.w	$4f6c	;637f0
+	dc.w	$0000	;637f2
+	dc.w	$0002	;637f4
+	dc.w	$0000	;637f6
+	dc.w	$8800	;637f8
+	dc.w	$0000	;637fa
+	dc.w	$0002	;637fc
+	dc.w	$4f64	;637fe
+	dc.w	$0002	;63800
+	dc.w	$4f6c	;63802
+	dc.w	$0002	;63804
+	dc.w	$4f74	;63806
+	dc.w	$0000	;63808
+	dc.w	$0002	;6380a
+	dc.w	$0100	;6380c
+	dc.w	$0022	;6380e
+	dc.w	$0031	;63810
+	dc.w	$00da	;63812
+	dc.w	$0000	;63814
+	dc.w	$0000	;63816
+	dc.w	$0000	;63818
+	dc.w	$ff40	;6381a
+	dc.w	$0000	;6381c
+	dc.w	$0090	;6381e
+	dc.w	$0110	;63820
+	dc.w	$0000	;63822
+	dc.w	$0090	;63824
+	dc.w	$0110	;63826
+	dc.w	$0000	;63828
+	dc.w	$ff70	;6382a
+	dc.w	$ff40	;6382c
+	dc.w	$0000	;6382e
+	dc.w	$ff70	;63830
+	dc.w	$ff40	;63832
+	dc.w	$0020	;63834
+	dc.w	$0090	;63836
+	dc.w	$0110	;63838
+	dc.w	$0020	;6383a
+	dc.w	$0090	;6383c
+	dc.w	$0110	;6383e
+	dc.w	$0020	;63840
+	dc.w	$ff70	;63842
+	dc.w	$ff40	;63844
+	dc.w	$0020	;63846
+	dc.w	$ff70	;63848
+	dc.w	$ff00	;6384a
+	dc.w	$0030	;6384c
+	dc.w	$00a0	;6384e
+	dc.w	$0110	;63850
+	dc.w	$0020	;63852
+	dc.w	$00a0	;63854
+	dc.w	$0110	;63856
+	dc.w	$0020	;63858
+	dc.w	$ff60	;6385a
+	dc.w	$ff00	;6385c
+	dc.w	$0030	;6385e
+	dc.w	$ff60	;63860
+	dc.w	$ff40	;63862
+	dc.w	$0020	;63864
+	dc.w	$00a0	;63866
+	dc.w	$ff40	;63868
+	dc.w	$0020	;6386a
+	dc.w	$ff60	;6386c
+	dc.w	$ff00	;6386e
+	dc.w	$0030	;63870
+	dc.w	$0060	;63872
+	dc.w	$ff00	;63874
+	dc.w	$0030	;63876
+	dc.w	$ffa0	;63878
+	dc.w	$ff10	;6387a
+	dc.w	$0070	;6387c
+	dc.w	$00a0	;6387e
+	dc.w	$ff10	;63880
+	dc.w	$0070	;63882
+	dc.w	$ff60	;63884
+	dc.w	$ff10	;63886
+	dc.w	$0070	;63888
+	dc.w	$0060	;6388a
+	dc.w	$ff10	;6388c
+	dc.w	$0070	;6388e
+	dc.w	$ffa0	;63890
+	dc.w	$ff50	;63892
+	dc.w	$00a0	;63894
+	dc.w	$00a0	;63896
+	dc.w	$ff50	;63898
+	dc.w	$00a0	;6389a
+	dc.w	$ff60	;6389c
+	dc.w	$ff50	;6389e
+	dc.w	$00a0	;638a0
+	dc.w	$0060	;638a2
+	dc.w	$ff50	;638a4
+	dc.w	$00a0	;638a6
+	dc.w	$ffa0	;638a8
+	dc.w	$0100	;638aa
+	dc.w	$0070	;638ac
+	dc.w	$ff60	;638ae
+	dc.w	$0100	;638b0
+	dc.w	$0070	;638b2
+	dc.w	$00a0	;638b4
+	dc.w	$00d0	;638b6
+	dc.w	$00a0	;638b8
+	dc.w	$ff60	;638ba
+	dc.w	$00d0	;638bc
+	dc.w	$00a0	;638be
+	dc.w	$00a0	;638c0
+	dc.w	$00d0	;638c2
+	dc.w	$00a0	;638c4
+	dc.w	$ffa0	;638c6
+	dc.w	$00d0	;638c8
+	dc.w	$00a0	;638ca
+	dc.w	$0060	;638cc
+	dc.w	$0110	;638ce
+	dc.w	$0030	;638d0
+	dc.w	$ffa0	;638d2
+	dc.w	$0110	;638d4
+	dc.w	$0030	;638d6
+	dc.w	$0060	;638d8
+	dc.w	$0100	;638da
+	dc.w	$0070	;638dc
+	dc.w	$ffa0	;638de
+	dc.w	$0100	;638e0
+	dc.w	$0070	;638e2
+	dc.w	$0060	;638e4
+	dc.w	$b800	;638e6
+	dc.w	$6000	;638e8
+	dc.w	$0000	;638ea
+	dc.w	$0002	;638ec
+	dc.w	$4fe4	;638ee
+	dc.w	$0002	;638f0
+	dc.w	$5004	;638f2
+	dc.w	$0002	;638f4
+	dc.w	$5014	;638f6
+	dc.w	$0000	;638f8
+	dc.w	$0017	;638fa
+	dc.w	$b800	;638fc
+	dc.w	$6000	;638fe
+	dc.w	$0000	;63900
+	dc.w	$0002	;63902
+	dc.w	$4fe4	;63904
+	dc.w	$0002	;63906
+	dc.w	$4ff4	;63908
+	dc.w	$0002	;6390a
+	dc.w	$5014	;6390c
+	dc.w	$0000	;6390e
+	dc.w	$0017	;63910
+	dc.w	$b800	;63912
+	dc.w	$6000	;63914
+	dc.w	$0000	;63916
+	dc.w	$0002	;63918
+	dc.w	$4fec	;6391a
+	dc.w	$0002	;6391c
+	dc.w	$4ffc	;6391e
+	dc.w	$0002	;63920
+	dc.w	$501c	;63922
+	dc.w	$0000	;63924
+	dc.w	$0017	;63926
+	dc.w	$b800	;63928
+	dc.w	$6000	;6392a
+	dc.w	$0000	;6392c
+	dc.w	$0002	;6392e
+	dc.w	$4fec	;63930
+	dc.w	$0002	;63932
+	dc.w	$500c	;63934
+	dc.w	$0002	;63936
+	dc.w	$501c	;63938
+	dc.w	$0000	;6393a
+	dc.w	$0017	;6393c
+	dc.w	$54da	;6393e
+	dc.w	$54da	;63940
+	dc.w	$0000	;63942
+	dc.w	$0002	;63944
+	dc.w	$5024	;63946
+	dc.w	$0002	;63948
+	dc.w	$5034	;6394a
+	dc.w	$0002	;6394c
+	dc.w	$5064	;6394e
+	dc.w	$0000	;63950
+	dc.w	$0017	;63952
+	dc.w	$54da	;63954
+	dc.w	$54da	;63956
+	dc.w	$0000	;63958
+	dc.w	$0002	;6395a
+	dc.w	$5034	;6395c
+	dc.w	$0002	;6395e
+	dc.w	$5044	;63960
+	dc.w	$0002	;63962
+	dc.w	$5064	;63964
+	dc.w	$0000	;63966
+	dc.w	$0017	;63968
+	dc.w	$54da	;6396a
+	dc.w	$54da	;6396c
+	dc.w	$0000	;6396e
+	dc.w	$0002	;63970
+	dc.w	$503c	;63972
+	dc.w	$0002	;63974
+	dc.w	$504c	;63976
+	dc.w	$0002	;63978
+	dc.w	$506c	;6397a
+	dc.w	$0000	;6397c
+	dc.w	$0017	;6397e
+	dc.w	$54da	;63980
+	dc.w	$54da	;63982
+	dc.w	$0000	;63984
+	dc.w	$0002	;63986
+	dc.w	$502c	;63988
+	dc.w	$0002	;6398a
+	dc.w	$503c	;6398c
+	dc.w	$0002	;6398e
+	dc.w	$506c	;63990
+	dc.w	$0000	;63992
+	dc.w	$0017	;63994
+	dc.w	$7587	;63996
+	dc.w	$1781	;63998
+	dc.w	$fa20	;6399a
+	dc.w	$0002	;6399c
+	dc.w	$4fb4	;6399e
+	dc.w	$0002	;639a0
+	dc.w	$5024	;639a2
+	dc.w	$0002	;639a4
+	dc.w	$5054	;639a6
+	dc.w	$0000	;639a8
+	dc.w	$0017	;639aa
+	dc.w	$746a	;639ac
+	dc.w	$1d1a	;639ae
+	dc.w	$0000	;639b0
+	dc.w	$0002	;639b2
+	dc.w	$5024	;639b4
+	dc.w	$0002	;639b6
+	dc.w	$5054	;639b8
+	dc.w	$0002	;639ba
+	dc.w	$5064	;639bc
+	dc.w	$0000	;639be
+	dc.w	$0017	;639c0
+	dc.w	$746a	;639c2
+	dc.w	$1d1a	;639c4
+	dc.w	$0000	;639c6
+	dc.w	$0002	;639c8
+	dc.w	$502c	;639ca
+	dc.w	$0002	;639cc
+	dc.w	$505c	;639ce
+	dc.w	$0002	;639d0
+	dc.w	$506c	;639d2
+	dc.w	$0000	;639d4
+	dc.w	$0017	;639d6
+	dc.w	$7587	;639d8
+	dc.w	$1781	;639da
+	dc.w	$05e0	;639dc
+	dc.w	$0002	;639de
+	dc.w	$4fac	;639e0
+	dc.w	$0002	;639e2
+	dc.w	$502c	;639e4
+	dc.w	$0002	;639e6
+	dc.w	$505c	;639e8
+	dc.w	$0000	;639ea
+	dc.w	$0017	;639ec
+	dc.w	$8b96	;639ee
+	dc.w	$1d1a	;639f0
+	dc.w	$0000	;639f2
+	dc.w	$0002	;639f4
+	dc.w	$4fa4	;639f6
+	dc.w	$0002	;639f8
+	dc.w	$4fe4	;639fa
+	dc.w	$0002	;639fc
+	dc.w	$4ff4	;639fe
+	dc.w	$0000	;63a00
+	dc.w	$0017	;63a02
+	dc.w	$8b96	;63a04
+	dc.w	$1d1a	;63a06
+	dc.w	$0000	;63a08
+	dc.w	$0002	;63a0a
+	dc.w	$4fa4	;63a0c
+	dc.w	$0002	;63a0e
+	dc.w	$4fd4	;63a10
+	dc.w	$0002	;63a12
+	dc.w	$4ff4	;63a14
+	dc.w	$0000	;63a16
+	dc.w	$0017	;63a18
+	dc.w	$8b96	;63a1a
+	dc.w	$1d1a	;63a1c
+	dc.w	$0000	;63a1e
+	dc.w	$0002	;63a20
+	dc.w	$4fbc	;63a22
+	dc.w	$0002	;63a24
+	dc.w	$4fdc	;63a26
+	dc.w	$0002	;63a28
+	dc.w	$4ffc	;63a2a
+	dc.w	$0000	;63a2c
+	dc.w	$0017	;63a2e
+	dc.w	$8b96	;63a30
+	dc.w	$1d1a	;63a32
+	dc.w	$0000	;63a34
+	dc.w	$0002	;63a36
+	dc.w	$4fbc	;63a38
+	dc.w	$0002	;63a3a
+	dc.w	$4fec	;63a3c
+	dc.w	$0002	;63a3e
+	dc.w	$4ffc	;63a40
+	dc.w	$0000	;63a42
+	dc.w	$0017	;63a44
+	dc.w	$0000	;63a46
+	dc.w	$0000	;63a48
+	dc.w	$8800	;63a4a
+	dc.w	$0002	;63a4c
+	dc.w	$4fbc	;63a4e
+	dc.w	$0002	;63a50
+	dc.w	$4fcc	;63a52
+	dc.w	$0002	;63a54
+	dc.w	$4fec	;63a56
+	dc.w	$0000	;63a58
+	dc.w	$0011	;63a5a
+	dc.w	$0000	;63a5c
+	dc.w	$0000	;63a5e
+	dc.w	$8801	;63a60
+	dc.w	$0002	;63a62
+	dc.w	$4fcc	;63a64
+	dc.w	$0002	;63a66
+	dc.w	$4fec	;63a68
+	dc.w	$0002	;63a6a
+	dc.w	$500c	;63a6c
+	dc.w	$0000	;63a6e
+	dc.w	$0011	;63a70
+	dc.w	$0000	;63a72
+	dc.w	$0000	;63a74
+	dc.w	$8800	;63a76
+	dc.w	$0002	;63a78
+	dc.w	$4fcc	;63a7a
+	dc.w	$0002	;63a7c
+	dc.w	$500c	;63a7e
+	dc.w	$0002	;63a80
+	dc.w	$5034	;63a82
+	dc.w	$0000	;63a84
+	dc.w	$0011	;63a86
+	dc.w	$0000	;63a88
+	dc.w	$0000	;63a8a
+	dc.w	$8801	;63a8c
+	dc.w	$0002	;63a8e
+	dc.w	$4fb4	;63a90
+	dc.w	$0002	;63a92
+	dc.w	$4fcc	;63a94
+	dc.w	$0002	;63a96
+	dc.w	$5034	;63a98
+	dc.w	$0000	;63a9a
+	dc.w	$0011	;63a9c
+	dc.w	$0000	;63a9e
+	dc.w	$0000	;63aa0
+	dc.w	$8800	;63aa2
+	dc.w	$0002	;63aa4
+	dc.w	$4fb4	;63aa6
+	dc.w	$0002	;63aa8
+	dc.w	$5024	;63aaa
+	dc.w	$0002	;63aac
+	dc.w	$5034	;63aae
+	dc.w	$0000	;63ab0
+	dc.w	$0011	;63ab2
+	dc.w	$0000	;63ab4
+	dc.w	$0000	;63ab6
+	dc.w	$7800	;63ab8
+	dc.w	$0002	;63aba
+	dc.w	$4fa4	;63abc
+	dc.w	$0002	;63abe
+	dc.w	$4fc4	;63ac0
+	dc.w	$0002	;63ac2
+	dc.w	$4fe4	;63ac4
+	dc.w	$0000	;63ac6
+	dc.w	$0011	;63ac8
+	dc.w	$0000	;63aca
+	dc.w	$0000	;63acc
+	dc.w	$77ff	;63ace
+	dc.w	$0002	;63ad0
+	dc.w	$4fc4	;63ad2
+	dc.w	$0002	;63ad4
+	dc.w	$4fe4	;63ad6
+	dc.w	$0002	;63ad8
+	dc.w	$5004	;63ada
+	dc.w	$0000	;63adc
+	dc.w	$0011	;63ade
+	dc.w	$0000	;63ae0
+	dc.w	$0000	;63ae2
+	dc.w	$7800	;63ae4
+	dc.w	$0002	;63ae6
+	dc.w	$4fc4	;63ae8
+	dc.w	$0002	;63aea
+	dc.w	$5004	;63aec
+	dc.w	$0002	;63aee
+	dc.w	$503c	;63af0
+	dc.w	$0000	;63af2
+	dc.w	$0011	;63af4
+	dc.w	$0000	;63af6
+	dc.w	$0000	;63af8
+	dc.w	$77ff	;63afa
+	dc.w	$0002	;63afc
+	dc.w	$4fac	;63afe
+	dc.w	$0002	;63b00
+	dc.w	$4fc4	;63b02
+	dc.w	$0002	;63b04
+	dc.w	$503c	;63b06
+	dc.w	$0000	;63b08
+	dc.w	$0011	;63b0a
+	dc.w	$0000	;63b0c
+	dc.w	$0000	;63b0e
+	dc.w	$7800	;63b10
+	dc.w	$0002	;63b12
+	dc.w	$4fac	;63b14
+	dc.w	$0002	;63b16
+	dc.w	$502c	;63b18
+	dc.w	$0002	;63b1a
+	dc.w	$503c	;63b1c
+	dc.w	$0000	;63b1e
+	dc.w	$0011	;63b20
+	dc.w	$746a	;63b22
+	dc.w	$1d1a	;63b24
+	dc.w	$0000	;63b26
+	dc.w	$0002	;63b28
+	dc.w	$5054	;63b2a
+	dc.w	$0002	;63b2c
+	dc.w	$505c	;63b2e
+	dc.w	$0002	;63b30
+	dc.w	$5064	;63b32
+	dc.w	$0000	;63b34
+	dc.w	$0001	;63b36
+	dc.w	$746a	;63b38
+	dc.w	$1d1a	;63b3a
+	dc.w	$0000	;63b3c
+	dc.w	$0002	;63b3e
+	dc.w	$505c	;63b40
+	dc.w	$0002	;63b42
+	dc.w	$5064	;63b44
+	dc.w	$0002	;63b46
+	dc.w	$506c	;63b48
+	dc.w	$0000	;63b4a
+	dc.w	$0001	;63b4c
+	dc.w	$8b96	;63b4e
+	dc.w	$1d1a	;63b50
+	dc.w	$0000	;63b52
+	dc.w	$0002	;63b54
+	dc.w	$4fd4	;63b56
+	dc.w	$0002	;63b58
+	dc.w	$4ff4	;63b5a
+	dc.w	$0002	;63b5c
+	dc.w	$4ffc	;63b5e
+	dc.w	$0000	;63b60
+	dc.w	$0009	;63b62
+	dc.w	$8b96	;63b64
+	dc.w	$1d1a	;63b66
+	dc.w	$0000	;63b68
+	dc.w	$0002	;63b6a
+	dc.w	$4fd4	;63b6c
+	dc.w	$0002	;63b6e
+	dc.w	$4fdc	;63b70
+	dc.w	$0002	;63b72
+	dc.w	$4ffc	;63b74
+	dc.w	$0000	;63b76
+	dc.w	$0009	;63b78
+	dc.w	$e2e6	;63b7a
+	dc.w	$8b96	;63b7c
+	dc.w	$0000	;63b7e
+	dc.w	$0002	;63b80
+	dc.w	$4f84	;63b82
+	dc.w	$0002	;63b84
+	dc.w	$4fa4	;63b86
+	dc.w	$0002	;63b88
+	dc.w	$4fbc	;63b8a
+	dc.w	$0000	;63b8c
+	dc.w	$0004	;63b8e
+	dc.w	$e2e6	;63b90
+	dc.w	$8b96	;63b92
+	dc.w	$0000	;63b94
+	dc.w	$0002	;63b96
+	dc.w	$4f84	;63b98
+	dc.w	$0002	;63b9a
+	dc.w	$4f9c	;63b9c
+	dc.w	$0002	;63b9e
+	dc.w	$4fbc	;63ba0
+	dc.w	$0000	;63ba2
+	dc.w	$0004	;63ba4
+	dc.w	$e2e6	;63ba6
+	dc.w	$8b96	;63ba8
+	dc.w	$0000	;63baa
+	dc.w	$0002	;63bac
+	dc.w	$4f84	;63bae
+	dc.w	$0002	;63bb0
+	dc.w	$4fa4	;63bb2
+	dc.w	$0002	;63bb4
+	dc.w	$4fc4	;63bb6
+	dc.w	$0000	;63bb8
+	dc.w	$0004	;63bba
+	dc.w	$e2e6	;63bbc
+	dc.w	$8b96	;63bbe
+	dc.w	$0000	;63bc0
+	dc.w	$0002	;63bc2
+	dc.w	$4f9c	;63bc4
+	dc.w	$0002	;63bc6
+	dc.w	$4fbc	;63bc8
+	dc.w	$0002	;63bca
+	dc.w	$4fcc	;63bcc
+	dc.w	$0000	;63bce
+	dc.w	$0004	;63bd0
+	dc.w	$0000	;63bd2
+	dc.w	$8801	;63bd4
+	dc.w	$0000	;63bd6
+	dc.w	$0002	;63bd8
+	dc.w	$4f84	;63bda
+	dc.w	$0002	;63bdc
+	dc.w	$4f8c	;63bde
+	dc.w	$0002	;63be0
+	dc.w	$4fc4	;63be2
+	dc.w	$0000	;63be4
+	dc.w	$0004	;63be6
+	dc.w	$0000	;63be8
+	dc.w	$8801	;63bea
+	dc.w	$0000	;63bec
+	dc.w	$0002	;63bee
+	dc.w	$4f8c	;63bf0
+	dc.w	$0002	;63bf2
+	dc.w	$4fac	;63bf4
+	dc.w	$0002	;63bf6
+	dc.w	$4fc4	;63bf8
+	dc.w	$0000	;63bfa
+	dc.w	$0004	;63bfc
+	dc.w	$0000	;63bfe
+	dc.w	$8801	;63c00
+	dc.w	$0000	;63c02
+	dc.w	$0002	;63c04
+	dc.w	$4f94	;63c06
+	dc.w	$0002	;63c08
+	dc.w	$4f9c	;63c0a
+	dc.w	$0002	;63c0c
+	dc.w	$4fcc	;63c0e
+	dc.w	$0000	;63c10
+	dc.w	$0004	;63c12
+	dc.w	$0000	;63c14
+	dc.w	$8801	;63c16
+	dc.w	$0000	;63c18
+	dc.w	$0002	;63c1a
+	dc.w	$4f94	;63c1c
+	dc.w	$0002	;63c1e
+	dc.w	$4fb4	;63c20
+	dc.w	$0002	;63c22
+	dc.w	$4fcc	;63c24
+	dc.w	$0000	;63c26
+	dc.w	$0004	;63c28
+	dc.w	$7800	;63c2a
+	dc.w	$0000	;63c2c
+	dc.w	$0000	;63c2e
+	dc.w	$0002	;63c30
+	dc.w	$4f6c	;63c32
+	dc.w	$0002	;63c34
+	dc.w	$4f74	;63c36
+	dc.w	$0002	;63c38
+	dc.w	$5054	;63c3a
+	dc.w	$0000	;63c3c
+	dc.w	$0001	;63c3e
+	dc.w	$7800	;63c40
+	dc.w	$0000	;63c42
+	dc.w	$0000	;63c44
+	dc.w	$0002	;63c46
+	dc.w	$4f6c	;63c48
+	dc.w	$0002	;63c4a
+	dc.w	$5054	;63c4c
+	dc.w	$0002	;63c4e
+	dc.w	$505c	;63c50
+	dc.w	$0000	;63c52
+	dc.w	$0001	;63c54
+	dc.w	$7800	;63c56
+	dc.w	$0000	;63c58
+	dc.w	$0000	;63c5a
+	dc.w	$0002	;63c5c
+	dc.w	$4f74	;63c5e
+	dc.w	$0002	;63c60
+	dc.w	$4f94	;63c62
+	dc.w	$0002	;63c64
+	dc.w	$5054	;63c66
+	dc.w	$0000	;63c68
+	dc.w	$0001	;63c6a
+	dc.w	$7800	;63c6c
+	dc.w	$0000	;63c6e
+	dc.w	$0000	;63c70
+	dc.w	$0002	;63c72
+	dc.w	$4f6c	;63c74
+	dc.w	$0002	;63c76
+	dc.w	$4f8c	;63c78
+	dc.w	$0002	;63c7a
+	dc.w	$505c	;63c7c
+	dc.w	$0000	;63c7e
+	dc.w	$0001	;63c80
+	dc.w	$8800	;63c82
+	dc.w	$0000	;63c84
+	dc.w	$0000	;63c86
+	dc.w	$0002	;63c88
+	dc.w	$4f64	;63c8a
+	dc.w	$0002	;63c8c
+	dc.w	$4f7c	;63c8e
+	dc.w	$0002	;63c90
+	dc.w	$4f84	;63c92
+	dc.w	$0000	;63c94
+	dc.w	$0001	;63c96
+	dc.w	$8800	;63c98
+	dc.w	$0000	;63c9a
+	dc.w	$0000	;63c9c
+	dc.w	$0002	;63c9e
+	dc.w	$4f7c	;63ca0
+	dc.w	$0002	;63ca2
+	dc.w	$4f84	;63ca4
+	dc.w	$0002	;63ca6
+	dc.w	$4f9c	;63ca8
+	dc.w	$0000	;63caa
+	dc.w	$0001	;63cac
+	dc.w	$0000	;63cae
+	dc.w	$0000	;63cb0
+	dc.w	$8801	;63cb2
+	dc.w	$0002	;63cb4
+	dc.w	$4f74	;63cb6
+	dc.w	$0002	;63cb8
+	dc.w	$4f7c	;63cba
+	dc.w	$0002	;63cbc
+	dc.w	$4f9c	;63cbe
+	dc.w	$0000	;63cc0
+	dc.w	$0001	;63cc2
+	dc.w	$0000	;63cc4
+	dc.w	$0000	;63cc6
+	dc.w	$8801	;63cc8
+	dc.w	$0002	;63cca
+	dc.w	$4f74	;63ccc
+	dc.w	$0002	;63cce
+	dc.w	$4f94	;63cd0
+	dc.w	$0002	;63cd2
+	dc.w	$4f9c	;63cd4
+	dc.w	$0000	;63cd6
+	dc.w	$0001	;63cd8
+	dc.w	$0000	;63cda
+	dc.w	$0000	;63cdc
+	dc.w	$77ff	;63cde
+	dc.w	$0002	;63ce0
+	dc.w	$4f64	;63ce2
+	dc.w	$0002	;63ce4
+	dc.w	$4f6c	;63ce6
+	dc.w	$0002	;63ce8
+	dc.w	$4f84	;63cea
+	dc.w	$0000	;63cec
+	dc.w	$0001	;63cee
+	dc.w	$0000	;63cf0
+	dc.w	$0000	;63cf2
+	dc.w	$77ff	;63cf4
+	dc.w	$0002	;63cf6
+	dc.w	$4f6c	;63cf8
+	dc.w	$0002	;63cfa
+	dc.w	$4f84	;63cfc
+	dc.w	$0002	;63cfe
+	dc.w	$4f8c	;63d00
+	dc.w	$0000	;63d02
+	dc.w	$0001	;63d04
+	dc.w	$0000	;63d06
+	dc.w	$0000	;63d08
+	dc.w	$0000	;63d0a
+	dc.w	$0002	;63d0c
+	dc.w	$4f64	;63d0e
+	dc.w	$0002	;63d10
+	dc.w	$4f6c	;63d12
+	dc.w	$0002	;63d14
+	dc.w	$4f7c	;63d16
+	dc.w	$0000	;63d18
+	dc.w	$0004	;63d1a
+	dc.w	$0000	;63d1c
+	dc.w	$0000	;63d1e
+	dc.w	$0000	;63d20
+	dc.w	$0002	;63d22
+	dc.w	$4f6c	;63d24
+	dc.w	$0002	;63d26
+	dc.w	$4f74	;63d28
+	dc.w	$0002	;63d2a
+	dc.w	$4f7c	;63d2c
+	dc.w	$0000	;63d2e
+	dc.w	$0004	;63d30
+	dc.w	$0100	;63d32
+	dc.w	$000c	;63d34
+	dc.w	$000f	;63d36
+	dc.w	$0056	;63d38
+	dc.w	$0000	;63d3a
+	dc.w	$0000	;63d3c
+	dc.w	$0000	;63d3e
+	dc.w	$ff90	;63d40
+	dc.w	$ffc0	;63d42
+	dc.w	$0048	;63d44
+	dc.w	$0000	;63d46
+	dc.w	$ffc0	;63d48
+	dc.w	$0068	;63d4a
+	dc.w	$0060	;63d4c
+	dc.w	$ffc0	;63d4e
+	dc.w	$0028	;63d50
+	dc.w	$0060	;63d52
+	dc.w	$ffc0	;63d54
+	dc.w	$ffd8	;63d56
+	dc.w	$0000	;63d58
+	dc.w	$ffc0	;63d5a
+	dc.w	$ff98	;63d5c
+	dc.w	$ff90	;63d5e
+	dc.w	$ffc0	;63d60
+	dc.w	$ffb8	;63d62
+	dc.w	$ff90	;63d64
+	dc.w	$0000	;63d66
+	dc.w	$0048	;63d68
+	dc.w	$0000	;63d6a
+	dc.w	$0000	;63d6c
+	dc.w	$0068	;63d6e
+	dc.w	$0060	;63d70
+	dc.w	$0000	;63d72
+	dc.w	$0028	;63d74
+	dc.w	$0060	;63d76
+	dc.w	$0000	;63d78
+	dc.w	$ffd8	;63d7a
+	dc.w	$0000	;63d7c
+	dc.w	$0000	;63d7e
+	dc.w	$ff98	;63d80
+	dc.w	$ff90	;63d82
+	dc.w	$0000	;63d84
+	dc.w	$ffb8	;63d86
+	dc.w	$df09	;63d88
+	dc.w	$0000	;63d8a
+	dc.w	$8c9e	;63d8c
+	dc.w	$0002	;63d8e
+	dc.w	$4f84	;63d90
+	dc.w	$0002	;63d92
+	dc.w	$4f8c	;63d94
+	dc.w	$0002	;63d96
+	dc.w	$4fbc	;63d98
+	dc.w	$0000	;63d9a
+	dc.w	$0001	;63d9c
+	dc.w	$df09	;63d9e
+	dc.w	$0000	;63da0
+	dc.w	$8c9e	;63da2
+	dc.w	$0002	;63da4
+	dc.w	$4f84	;63da6
+	dc.w	$0002	;63da8
+	dc.w	$4fb4	;63daa
+	dc.w	$0002	;63dac
+	dc.w	$4fbc	;63dae
+	dc.w	$0000	;63db0
+	dc.w	$0001	;63db2
+	dc.w	$4290	;63db4
+	dc.w	$0000	;63db6
+	dc.w	$9c28	;63db8
+	dc.w	$0002	;63dba
+	dc.w	$4f84	;63dbc
+	dc.w	$0002	;63dbe
+	dc.w	$4fac	;63dc0
+	dc.w	$0002	;63dc2
+	dc.w	$4fb4	;63dc4
+	dc.w	$0000	;63dc6
+	dc.w	$000c	;63dc8
+	dc.w	$4290	;63dca
+	dc.w	$0000	;63dcc
+	dc.w	$9c28	;63dce
+	dc.w	$0002	;63dd0
+	dc.w	$4f7c	;63dd2
+	dc.w	$0002	;63dd4
+	dc.w	$4f84	;63dd6
+	dc.w	$0002	;63dd8
+	dc.w	$4fac	;63dda
+	dc.w	$0000	;63ddc
+	dc.w	$000c	;63dde
+	dc.w	$7800	;63de0
+	dc.w	$0000	;63de2
+	dc.w	$0000	;63de4
+	dc.w	$0002	;63de6
+	dc.w	$4f7c	;63de8
+	dc.w	$0002	;63dea
+	dc.w	$4fa4	;63dec
+	dc.w	$0002	;63dee
+	dc.w	$4fac	;63df0
+	dc.w	$0000	;63df2
+	dc.w	$0011	;63df4
+	dc.w	$7800	;63df6
+	dc.w	$0000	;63df8
+	dc.w	$0000	;63dfa
+	dc.w	$0002	;63dfc
+	dc.w	$4f74	;63dfe
+	dc.w	$0002	;63e00
+	dc.w	$4f7c	;63e02
+	dc.w	$0002	;63e04
+	dc.w	$4fa4	;63e06
+	dc.w	$0000	;63e08
+	dc.w	$0011	;63e0a
+	dc.w	$4290	;63e0c
+	dc.w	$0000	;63e0e
+	dc.w	$63d8	;63e10
+	dc.w	$0002	;63e12
+	dc.w	$4f6c	;63e14
+	dc.w	$0002	;63e16
+	dc.w	$4f74	;63e18
+	dc.w	$0002	;63e1a
+	dc.w	$4fa4	;63e1c
+	dc.w	$0000	;63e1e
+	dc.w	$000c	;63e20
+	dc.w	$4290	;63e22
+	dc.w	$0000	;63e24
+	dc.w	$63d8	;63e26
+	dc.w	$0002	;63e28
+	dc.w	$4f6c	;63e2a
+	dc.w	$0002	;63e2c
+	dc.w	$4f9c	;63e2e
+	dc.w	$0002	;63e30
+	dc.w	$4fa4	;63e32
+	dc.w	$0000	;63e34
+	dc.w	$000c	;63e36
+	dc.w	$df09	;63e38
+	dc.w	$0000	;63e3a
+	dc.w	$7362	;63e3c
+	dc.w	$0002	;63e3e
+	dc.w	$4f6c	;63e40
+	dc.w	$0002	;63e42
+	dc.w	$4f94	;63e44
+	dc.w	$0002	;63e46
+	dc.w	$4f9c	;63e48
+	dc.w	$0000	;63e4a
+	dc.w	$0001	;63e4c
+	dc.w	$df09	;63e4e
+	dc.w	$0000	;63e50
+	dc.w	$7362	;63e52
+	dc.w	$0002	;63e54
+	dc.w	$4f64	;63e56
+	dc.w	$0002	;63e58
+	dc.w	$4f6c	;63e5a
+	dc.w	$0002	;63e5c
+	dc.w	$4f94	;63e5e
+	dc.w	$0000	;63e60
+	dc.w	$0001	;63e62
+	dc.w	$8800	;63e64
+	dc.w	$0000	;63e66
+	dc.w	$0000	;63e68
+	dc.w	$0002	;63e6a
+	dc.w	$4f64	;63e6c
+	dc.w	$0002	;63e6e
+	dc.w	$4f8c	;63e70
+	dc.w	$0002	;63e72
+	dc.w	$4f94	;63e74
+	dc.w	$0000	;63e76
+	dc.w	$0011	;63e78
+	dc.w	$8800	;63e7a
+	dc.w	$0000	;63e7c
+	dc.w	$0000	;63e7e
+	dc.w	$0002	;63e80
+	dc.w	$4f8c	;63e82
+	dc.w	$0002	;63e84
+	dc.w	$4f94	;63e86
+	dc.w	$0002	;63e88
+	dc.w	$4fbc	;63e8a
+	dc.w	$0000	;63e8c
+	dc.w	$0011	;63e8e
+	dc.w	$0000	;63e90
+	dc.w	$8800	;63e92
+	dc.w	$0000	;63e94
+	dc.w	$0002	;63e96
+	dc.w	$4f64	;63e98
+	dc.w	$0002	;63e9a
+	dc.w	$4f6c	;63e9c
+	dc.w	$0002	;63e9e
+	dc.w	$4f8c	;63ea0
+	dc.w	$0000	;63ea2
+	dc.w	$0004	;63ea4
+	dc.w	$0000	;63ea6
+	dc.w	$8800	;63ea8
+	dc.w	$0000	;63eaa
+	dc.w	$0002	;63eac
+	dc.w	$4f6c	;63eae
+	dc.w	$0002	;63eb0
+	dc.w	$4f84	;63eb2
+	dc.w	$0002	;63eb4
+	dc.w	$4f8c	;63eb6
+	dc.w	$0000	;63eb8
+	dc.w	$0004	;63eba
+	dc.w	$0000	;63ebc
+	dc.w	$8800	;63ebe
+	dc.w	$0000	;63ec0
+	dc.w	$0002	;63ec2
+	dc.w	$4f6c	;63ec4
+	dc.w	$0002	;63ec6
+	dc.w	$4f7c	;63ec8
+	dc.w	$0002	;63eca
+	dc.w	$4f84	;63ecc
+	dc.w	$0000	;63ece
+	dc.w	$0004	;63ed0
+	dc.w	$0000	;63ed2
+	dc.w	$8800	;63ed4
+	dc.w	$0000	;63ed6
+	dc.w	$0002	;63ed8
+	dc.w	$4f6c	;63eda
+	dc.w	$0002	;63edc
+	dc.w	$4f74	;63ede
+	dc.w	$0002	;63ee0
+	dc.w	$4f7c	;63ee2
+	dc.w	$0000	;63ee4
+	dc.w	$0004	;63ee6
+	dc.w	$0100	;63ee8
+	dc.w	$0006	;63eea
+	dc.w	$0005	;63eec
+	dc.w	$0032	;63eee
+	dc.w	$0000	;63ef0
+	dc.w	$0000	;63ef2
+	dc.w	$0000	;63ef4
+	dc.w	$fe40	;63ef6
+	dc.w	$ffd0	;63ef8
+	dc.w	$fff8	;63efa
+	dc.w	$ff90	;63efc
+	dc.w	$ffd0	;63efe
+	dc.w	$0008	;63f00
+	dc.w	$ff90	;63f02
+	dc.w	$ffd0	;63f04
+	dc.w	$fff8	;63f06
+	dc.w	$fe40	;63f08
+	dc.w	$ffe0	;63f0a
+	dc.w	$0000	;63f0c
+	dc.w	$ff90	;63f0e
+	dc.w	$ffe0	;63f10
+	dc.w	$0000	;63f12
+	dc.w	$fe40	;63f14
+	dc.w	$ffd0	;63f16
+	dc.w	$0008	;63f18
+	dc.w	$0000	;63f1a
+	dc.w	$ca56	;63f1c
+	dc.w	$6b54	;63f1e
+	dc.w	$0002	;63f20
+	dc.w	$4f64	;63f22
+	dc.w	$0002	;63f24
+	dc.w	$4f7c	;63f26
+	dc.w	$0002	;63f28
+	dc.w	$4f84	;63f2a
+	dc.w	$0000	;63f2c
+	dc.w	$000c	;63f2e
+	dc.w	$0000	;63f30
+	dc.w	$ca56	;63f32
+	dc.w	$6b54	;63f34
+	dc.w	$0002	;63f36
+	dc.w	$4f64	;63f38
+	dc.w	$0002	;63f3a
+	dc.w	$4f74	;63f3c
+	dc.w	$0002	;63f3e
+	dc.w	$4f84	;63f40
+	dc.w	$0000	;63f42
+	dc.w	$000c	;63f44
+	dc.w	$0000	;63f46
+	dc.w	$ca56	;63f48
+	dc.w	$94ac	;63f4a
+	dc.w	$0002	;63f4c
+	dc.w	$4f8c	;63f4e
+	dc.w	$0002	;63f50
+	dc.w	$4f6c	;63f52
+	dc.w	$0002	;63f54
+	dc.w	$4f84	;63f56
+	dc.w	$0000	;63f58
+	dc.w	$000c	;63f5a
+	dc.w	$0000	;63f5c
+	dc.w	$ca56	;63f5e
+	dc.w	$94ac	;63f60
+	dc.w	$0002	;63f62
+	dc.w	$4f8c	;63f64
+	dc.w	$0002	;63f66
+	dc.w	$4f7c	;63f68
+	dc.w	$0002	;63f6a
+	dc.w	$4f84	;63f6c
+	dc.w	$0000	;63f6e
+	dc.w	$000c	;63f70
+	dc.w	$0000	;63f72
+	dc.w	$8800	;63f74
+	dc.w	$0000	;63f76
+	dc.w	$0002	;63f78
+	dc.w	$4f8c	;63f7a
+	dc.w	$0002	;63f7c
+	dc.w	$4f64	;63f7e
+	dc.w	$0002	;63f80
+	dc.w	$4f6c	;63f82
+	dc.w	$0000	;63f84
+	dc.w	$0004	;63f86
+	dc.w	$0000	;63f88
+	dc.w	$8800	;63f8a
+	dc.w	$0000	;63f8c
+	dc.w	$0002	;63f8e
+	dc.w	$4f64	;63f90
+	dc.w	$0002	;63f92
+	dc.w	$4f6c	;63f94
+	dc.w	$0002	;63f96
+	dc.w	$4f74	;63f98
+	dc.w	$0000	;63f9a
+	dc.w	$0004	;63f9c
+	dc.w	$0100	;63f9e
+	dc.w	$0026	;63fa0
+	dc.w	$0031	;63fa2
+	dc.w	$00f2	;63fa4
+	dc.w	$0000	;63fa6
+	dc.w	$0000	;63fa8
+	dc.w	$0000	;63faa
+	dc.w	$ff30	;63fac
+	dc.w	$0000	;63fae
+	dc.w	$0070	;63fb0
+	dc.w	$0130	;63fb2
+	dc.w	$0000	;63fb4
+	dc.w	$0070	;63fb6
+	dc.w	$0130	;63fb8
+	dc.w	$0000	;63fba
+	dc.w	$ff90	;63fbc
+	dc.w	$ff30	;63fbe
+	dc.w	$0000	;63fc0
+	dc.w	$ff90	;63fc2
+	dc.w	$fef0	;63fc4
+	dc.w	$0030	;63fc6
+	dc.w	$ff60	;63fc8
+	dc.w	$0100	;63fca
+	dc.w	$0060	;63fcc
+	dc.w	$ff60	;63fce
+	dc.w	$0100	;63fd0
+	dc.w	$0060	;63fd2
+	dc.w	$00a0	;63fd4
+	dc.w	$fef0	;63fd6
+	dc.w	$0030	;63fd8
+	dc.w	$00a0	;63fda
+	dc.w	$fec0	;63fdc
+	dc.w	$0040	;63fde
+	dc.w	$00a0	;63fe0
+	dc.w	$fec0	;63fe2
+	dc.w	$0040	;63fe4
+	dc.w	$ff60	;63fe6
+	dc.w	$fec0	;63fe8
+	dc.w	$0040	;63fea
+	dc.w	$ffa0	;63fec
+	dc.w	$fec0	;63fee
+	dc.w	$0040	;63ff0
+	dc.w	$0060	;63ff2
+	dc.w	$fed0	;63ff4
+	dc.w	$0050	;63ff6
+	dc.w	$0060	;63ff8
+	dc.w	$fed0	;63ffa
+	dc.w	$0050	;63ffc
+	dc.w	$ffa0	;63ffe
+	dc.w	$fef0	;64000
+	dc.w	$0030	;64002
+	dc.w	$ffa0	;64004
+	dc.w	$fef0	;64006
+	dc.w	$0030	;64008
+	dc.w	$0060	;6400a
+	dc.w	$fec0	;6400c
+	dc.w	$0070	;6400e
+	dc.w	$00a0	;64010
+	dc.w	$fec0	;64012
+	dc.w	$0070	;64014
+	dc.w	$ff60	;64016
+	dc.w	$fef0	;64018
+	dc.w	$0070	;6401a
+	dc.w	$0060	;6401c
+	dc.w	$fef0	;6401e
+	dc.w	$0070	;64020
+	dc.w	$ffa0	;64022
+	dc.w	$ff30	;64024
+	dc.w	$00b0	;64026
+	dc.w	$00a0	;64028
+	dc.w	$ff30	;6402a
+	dc.w	$00b0	;6402c
+	dc.w	$ff60	;6402e
+	dc.w	$ff30	;64030
+	dc.w	$00b0	;64032
+	dc.w	$0060	;64034
+	dc.w	$ff30	;64036
+	dc.w	$00b0	;64038
+	dc.w	$ffa0	;6403a
+	dc.w	$0100	;6403c
+	dc.w	$0080	;6403e
+	dc.w	$ff60	;64040
+	dc.w	$0100	;64042
+	dc.w	$0080	;64044
+	dc.w	$00a0	;64046
+	dc.w	$00c0	;64048
+	dc.w	$00b0	;6404a
+	dc.w	$ff60	;6404c
+	dc.w	$00c0	;6404e
+	dc.w	$00b0	;64050
+	dc.w	$00a0	;64052
+	dc.w	$00c0	;64054
+	dc.w	$00b0	;64056
+	dc.w	$ffa0	;64058
+	dc.w	$00c0	;6405a
+	dc.w	$00b0	;6405c
+	dc.w	$0060	;6405e
+	dc.w	$0100	;64060
+	dc.w	$0080	;64062
+	dc.w	$ffa0	;64064
+	dc.w	$0100	;64066
+	dc.w	$0080	;64068
+	dc.w	$0060	;6406a
+	dc.w	$00f0	;6406c
+	dc.w	$0070	;6406e
+	dc.w	$ffa0	;64070
+	dc.w	$00f0	;64072
+	dc.w	$0070	;64074
+	dc.w	$0060	;64076
+	dc.w	$0100	;64078
+	dc.w	$0060	;6407a
+	dc.w	$ffa0	;6407c
+	dc.w	$0100	;6407e
+	dc.w	$0060	;64080
+	dc.w	$0060	;64082
+	dc.w	$fec0	;64084
+	dc.w	$0070	;64086
+	dc.w	$ffa0	;64088
+	dc.w	$fec0	;6408a
+	dc.w	$0070	;6408c
+	dc.w	$0060	;6408e
+	dc.w	$ab26	;64090
+	dc.w	$54da	;64092
+	dc.w	$0000	;64094
+	dc.w	$0002	;64096
+	dc.w	$4fc4	;64098
+	dc.w	$0002	;6409a
+	dc.w	$4fcc	;6409c
+	dc.w	$0002	;6409e
+	dc.w	$4ff4	;640a0
+	dc.w	$0000	;640a2
+	dc.w	$0009	;640a4
+	dc.w	$ab26	;640a6
+	dc.w	$54da	;640a8
+	dc.w	$0000	;640aa
+	dc.w	$0002	;640ac
+	dc.w	$4fcc	;640ae
+	dc.w	$0002	;640b0
+	dc.w	$4ff4	;640b2
+	dc.w	$0002	;640b4
+	dc.w	$4ffc	;640b6
+	dc.w	$0000	;640b8
+	dc.w	$0009	;640ba
+	dc.w	$8800	;640bc
+	dc.w	$0000	;640be
+	dc.w	$0000	;640c0
+	dc.w	$0002	;640c2
+	dc.w	$4fa4	;640c4
+	dc.w	$0002	;640c6
+	dc.w	$4fbc	;640c8
+	dc.w	$0002	;640ca
+	dc.w	$4fe4	;640cc
+	dc.w	$0000	;640ce
+	dc.w	$0017	;640d0
+	dc.w	$8800	;640d2
+	dc.w	$0000	;640d4
+	dc.w	$0000	;640d6
+	dc.w	$0002	;640d8
+	dc.w	$4fbc	;640da
+	dc.w	$0002	;640dc
+	dc.w	$4fe4	;640de
+	dc.w	$0002	;640e0
+	dc.w	$508c	;640e2
+	dc.w	$0000	;640e4
+	dc.w	$0017	;640e6
+	dc.w	$8800	;640e8
+	dc.w	$0000	;640ea
+	dc.w	$0000	;640ec
+	dc.w	$0002	;640ee
+	dc.w	$4fb4	;640f0
+	dc.w	$0002	;640f2
+	dc.w	$4fec	;640f4
+	dc.w	$0002	;640f6
+	dc.w	$5084	;640f8
+	dc.w	$0000	;640fa
+	dc.w	$0017	;640fc
+	dc.w	$8800	;640fe
+	dc.w	$0000	;64100
+	dc.w	$0000	;64102
+	dc.w	$0002	;64104
+	dc.w	$4fac	;64106
+	dc.w	$0002	;64108
+	dc.w	$4fb4	;6410a
+	dc.w	$0002	;6410c
+	dc.w	$4fec	;6410e
+	dc.w	$0000	;64110
+	dc.w	$0017	;64112
+	dc.w	$c477	;64114
+	dc.w	$6830	;64116
+	dc.w	$0000	;64118
+	dc.w	$0002	;6411a
+	dc.w	$500c	;6411c
+	dc.w	$0002	;6411e
+	dc.w	$501c	;64120
+	dc.w	$0002	;64122
+	dc.w	$5084	;64124
+	dc.w	$0000	;64126
+	dc.w	$0017	;64128
+	dc.w	$c477	;6412a
+	dc.w	$6830	;6412c
+	dc.w	$0000	;6412e
+	dc.w	$0002	;64130
+	dc.w	$4fec	;64132
+	dc.w	$0002	;64134
+	dc.w	$500c	;64136
+	dc.w	$0002	;64138
+	dc.w	$5084	;6413a
+	dc.w	$0000	;6413c
+	dc.w	$0017	;6413e
+	dc.w	$c477	;64140
+	dc.w	$6830	;64142
+	dc.w	$0000	;64144
+	dc.w	$0002	;64146
+	dc.w	$4fe4	;64148
+	dc.w	$0002	;6414a
+	dc.w	$5004	;6414c
+	dc.w	$0002	;6414e
+	dc.w	$508c	;64150
+	dc.w	$0000	;64152
+	dc.w	$0017	;64154
+	dc.w	$c477	;64156
+	dc.w	$6830	;64158
+	dc.w	$0000	;6415a
+	dc.w	$0002	;6415c
+	dc.w	$5004	;6415e
+	dc.w	$0002	;64160
+	dc.w	$5014	;64162
+	dc.w	$0002	;64164
+	dc.w	$508c	;64166
+	dc.w	$0000	;64168
+	dc.w	$0017	;6416a
+	dc.w	$54da	;6416c
+	dc.w	$54da	;6416e
+	dc.w	$0000	;64170
+	dc.w	$0002	;64172
+	dc.w	$5064	;64174
+	dc.w	$0002	;64176
+	dc.w	$5074	;64178
+	dc.w	$0002	;6417a
+	dc.w	$507c	;6417c
+	dc.w	$0000	;6417e
+	dc.w	$0009	;64180
+	dc.w	$54da	;64182
+	dc.w	$54da	;64184
+	dc.w	$0000	;64186
+	dc.w	$0002	;64188
+	dc.w	$5064	;6418a
+	dc.w	$0002	;6418c
+	dc.w	$506c	;6418e
+	dc.w	$0002	;64190
+	dc.w	$507c	;64192
+	dc.w	$0000	;64194
+	dc.w	$0009	;64196
+	dc.w	$7800	;64198
+	dc.w	$0000	;6419a
+	dc.w	$0000	;6419c
+	dc.w	$0002	;6419e
+	dc.w	$4f8c	;641a0
+	dc.w	$0002	;641a2
+	dc.w	$5024	;641a4
+	dc.w	$0002	;641a6
+	dc.w	$5054	;641a8
+	dc.w	$0000	;641aa
+	dc.w	$0017	;641ac
+	dc.w	$7800	;641ae
+	dc.w	$0000	;641b0
+	dc.w	$0000	;641b2
+	dc.w	$0002	;641b4
+	dc.w	$4f8c	;641b6
+	dc.w	$0002	;641b8
+	dc.w	$5054	;641ba
+	dc.w	$0002	;641bc
+	dc.w	$5074	;641be
+	dc.w	$0000	;641c0
+	dc.w	$0017	;641c2
+	dc.w	$4800	;641c4
+	dc.w	$6000	;641c6
+	dc.w	$0000	;641c8
+	dc.w	$0002	;641ca
+	dc.w	$5024	;641cc
+	dc.w	$0002	;641ce
+	dc.w	$5034	;641d0
+	dc.w	$0002	;641d2
+	dc.w	$5044	;641d4
+	dc.w	$0000	;641d6
+	dc.w	$0017	;641d8
+	dc.w	$4800	;641da
+	dc.w	$6000	;641dc
+	dc.w	$0000	;641de
+	dc.w	$0002	;641e0
+	dc.w	$5024	;641e2
+	dc.w	$0002	;641e4
+	dc.w	$5044	;641e6
+	dc.w	$0002	;641e8
+	dc.w	$5054	;641ea
+	dc.w	$0000	;641ec
+	dc.w	$0017	;641ee
+	dc.w	$7800	;641f0
+	dc.w	$0000	;641f2
+	dc.w	$0000	;641f4
+	dc.w	$0002	;641f6
+	dc.w	$4f94	;641f8
+	dc.w	$0002	;641fa
+	dc.w	$505c	;641fc
+	dc.w	$0002	;641fe
+	dc.w	$507c	;64200
+	dc.w	$0000	;64202
+	dc.w	$0017	;64204
+	dc.w	$7800	;64206
+	dc.w	$0000	;64208
+	dc.w	$0000	;6420a
+	dc.w	$0002	;6420c
+	dc.w	$4f94	;6420e
+	dc.w	$0002	;64210
+	dc.w	$505c	;64212
+	dc.w	$0002	;64214
+	dc.w	$502c	;64216
+	dc.w	$0000	;64218
+	dc.w	$0017	;6421a
+	dc.w	$4800	;6421c
+	dc.w	$6000	;6421e
+	dc.w	$0000	;64220
+	dc.w	$0002	;64222
+	dc.w	$502c	;64224
+	dc.w	$0002	;64226
+	dc.w	$504c	;64228
+	dc.w	$0002	;6422a
+	dc.w	$505c	;6422c
+	dc.w	$0000	;6422e
+	dc.w	$0017	;64230
+	dc.w	$4800	;64232
+	dc.w	$6000	;64234
+	dc.w	$0000	;64236
+	dc.w	$0002	;64238
+	dc.w	$502c	;6423a
+	dc.w	$0002	;6423c
+	dc.w	$503c	;6423e
+	dc.w	$0002	;64240
+	dc.w	$504c	;64242
+	dc.w	$0000	;64244
+	dc.w	$0017	;64246
+	dc.w	$0000	;64248
+	dc.w	$0000	;6424a
+	dc.w	$8800	;6424c
+	dc.w	$0002	;6424e
+	dc.w	$4f84	;64250
+	dc.w	$0002	;64252
+	dc.w	$4fac	;64254
+	dc.w	$0002	;64256
+	dc.w	$4fec	;64258
+	dc.w	$0000	;6425a
+	dc.w	$0011	;6425c
+	dc.w	$0000	;6425e
+	dc.w	$0000	;64260
+	dc.w	$8800	;64262
+	dc.w	$0002	;64264
+	dc.w	$4f84	;64266
+	dc.w	$0002	;64268
+	dc.w	$4fec	;6426a
+	dc.w	$0002	;6426c
+	dc.w	$500c	;6426e
+	dc.w	$0000	;64270
+	dc.w	$0011	;64272
+	dc.w	$0000	;64274
+	dc.w	$0000	;64276
+	dc.w	$8800	;64278
+	dc.w	$0002	;6427a
+	dc.w	$4f84	;6427c
+	dc.w	$0002	;6427e
+	dc.w	$4f8c	;64280
+	dc.w	$0002	;64282
+	dc.w	$500c	;64284
+	dc.w	$0000	;64286
+	dc.w	$0011	;64288
+	dc.w	$0000	;6428a
+	dc.w	$0000	;6428c
+	dc.w	$8800	;6428e
+	dc.w	$0002	;64290
+	dc.w	$4f8c	;64292
+	dc.w	$0002	;64294
+	dc.w	$500c	;64296
+	dc.w	$0002	;64298
+	dc.w	$5034	;6429a
+	dc.w	$0000	;6429c
+	dc.w	$0011	;6429e
+	dc.w	$0000	;642a0
+	dc.w	$0000	;642a2
+	dc.w	$8800	;642a4
+	dc.w	$0002	;642a6
+	dc.w	$4f8c	;642a8
+	dc.w	$0002	;642aa
+	dc.w	$5034	;642ac
+	dc.w	$0002	;642ae
+	dc.w	$5024	;642b0
+	dc.w	$0000	;642b2
+	dc.w	$0011	;642b4
+	dc.w	$0000	;642b6
+	dc.w	$0000	;642b8
+	dc.w	$7800	;642ba
+	dc.w	$0002	;642bc
+	dc.w	$4f9c	;642be
+	dc.w	$0002	;642c0
+	dc.w	$4fa4	;642c2
+	dc.w	$0002	;642c4
+	dc.w	$4fe4	;642c6
+	dc.w	$0000	;642c8
+	dc.w	$0011	;642ca
+	dc.w	$0000	;642cc
+	dc.w	$0000	;642ce
+	dc.w	$7800	;642d0
+	dc.w	$0002	;642d2
+	dc.w	$4f9c	;642d4
+	dc.w	$0002	;642d6
+	dc.w	$5004	;642d8
+	dc.w	$0002	;642da
+	dc.w	$4fe4	;642dc
+	dc.w	$0000	;642de
+	dc.w	$0011	;642e0
+	dc.w	$0000	;642e2
+	dc.w	$0000	;642e4
+	dc.w	$7800	;642e6
+	dc.w	$0002	;642e8
+	dc.w	$4f94	;642ea
+	dc.w	$0002	;642ec
+	dc.w	$4f9c	;642ee
+	dc.w	$0002	;642f0
+	dc.w	$5004	;642f2
+	dc.w	$0000	;642f4
+	dc.w	$0011	;642f6
+	dc.w	$0000	;642f8
+	dc.w	$0000	;642fa
+	dc.w	$7800	;642fc
+	dc.w	$0002	;642fe
+	dc.w	$4f94	;64300
+	dc.w	$0002	;64302
+	dc.w	$503c	;64304
+	dc.w	$0002	;64306
+	dc.w	$5004	;64308
+	dc.w	$0000	;6430a
+	dc.w	$0011	;6430c
+	dc.w	$0000	;6430e
+	dc.w	$0000	;64310
+	dc.w	$7800	;64312
+	dc.w	$0002	;64314
+	dc.w	$4f94	;64316
+	dc.w	$0002	;64318
+	dc.w	$502c	;6431a
+	dc.w	$0002	;6431c
+	dc.w	$503c	;6431e
+	dc.w	$0000	;64320
+	dc.w	$0011	;64322
+	dc.w	$ab26	;64324
+	dc.w	$ab26	;64326
+	dc.w	$0000	;64328
+	dc.w	$0002	;6432a
+	dc.w	$4fc4	;6432c
+	dc.w	$0002	;6432e
+	dc.w	$4fd4	;64330
+	dc.w	$0002	;64332
+	dc.w	$4fdc	;64334
+	dc.w	$0000	;64336
+	dc.w	$0014	;64338
+	dc.w	$ab26	;6433a
+	dc.w	$ab26	;6433c
+	dc.w	$0000	;6433e
+	dc.w	$0002	;64340
+	dc.w	$4fc4	;64342
+	dc.w	$0002	;64344
+	dc.w	$4fcc	;64346
+	dc.w	$0002	;64348
+	dc.w	$4fd4	;6434a
+	dc.w	$0000	;6434c
+	dc.w	$0014	;6434e
+	dc.w	$da0e	;64350
+	dc.w	$8e29	;64352
+	dc.w	$0000	;64354
+	dc.w	$0002	;64356
+	dc.w	$4fa4	;64358
+	dc.w	$0002	;6435a
+	dc.w	$4fbc	;6435c
+	dc.w	$0002	;6435e
+	dc.w	$4fdc	;64360
+	dc.w	$0000	;64362
+	dc.w	$0017	;64364
+	dc.w	$da0e	;64366
+	dc.w	$8e29	;64368
+	dc.w	$0000	;6436a
+	dc.w	$0002	;6436c
+	dc.w	$4f9c	;6436e
+	dc.w	$0002	;64370
+	dc.w	$4fa4	;64372
+	dc.w	$0002	;64374
+	dc.w	$4fdc	;64376
+	dc.w	$0000	;64378
+	dc.w	$0017	;6437a
+	dc.w	$da0e	;6437c
+	dc.w	$8e29	;6437e
+	dc.w	$0000	;64380
+	dc.w	$0002	;64382
+	dc.w	$4fac	;64384
+	dc.w	$0002	;64386
+	dc.w	$4fb4	;64388
+	dc.w	$0002	;6438a
+	dc.w	$4fd4	;6438c
+	dc.w	$0000	;6438e
+	dc.w	$0017	;64390
+	dc.w	$da0e	;64392
+	dc.w	$8e29	;64394
+	dc.w	$0000	;64396
+	dc.w	$0002	;64398
+	dc.w	$4f84	;6439a
+	dc.w	$0002	;6439c
+	dc.w	$4fac	;6439e
+	dc.w	$0002	;643a0
+	dc.w	$4fd4	;643a2
+	dc.w	$0000	;643a4
+	dc.w	$0017	;643a6
+	dc.w	$6b54	;643a8
+	dc.w	$35aa	;643aa
+	dc.w	$0000	;643ac
+	dc.w	$0002	;643ae
+	dc.w	$4f6c	;643b0
+	dc.w	$0002	;643b2
+	dc.w	$4f74	;643b4
+	dc.w	$0002	;643b6
+	dc.w	$5074	;643b8
+	dc.w	$0000	;643ba
+	dc.w	$0009	;643bc
+	dc.w	$6b54	;643be
+	dc.w	$35aa	;643c0
+	dc.w	$0000	;643c2
+	dc.w	$0002	;643c4
+	dc.w	$4f6c	;643c6
+	dc.w	$0002	;643c8
+	dc.w	$5074	;643ca
+	dc.w	$0002	;643cc
+	dc.w	$507c	;643ce
+	dc.w	$0000	;643d0
+	dc.w	$0009	;643d2
+	dc.w	$6b54	;643d4
+	dc.w	$35aa	;643d6
+	dc.w	$0000	;643d8
+	dc.w	$0002	;643da
+	dc.w	$4f74	;643dc
+	dc.w	$0002	;643de
+	dc.w	$4f8c	;643e0
+	dc.w	$0002	;643e2
+	dc.w	$5074	;643e4
+	dc.w	$0000	;643e6
+	dc.w	$0009	;643e8
+	dc.w	$6b54	;643ea
+	dc.w	$35aa	;643ec
+	dc.w	$0000	;643ee
+	dc.w	$0002	;643f0
+	dc.w	$4f6c	;643f2
+	dc.w	$0002	;643f4
+	dc.w	$4f94	;643f6
+	dc.w	$0002	;643f8
+	dc.w	$507c	;643fa
+	dc.w	$0000	;643fc
+	dc.w	$0009	;643fe
+	dc.w	$073f	;64400
+	dc.w	$b046	;64402
+	dc.w	$a69c	;64404
+	dc.w	$0002	;64406
+	dc.w	$4f7c	;64408
+	dc.w	$0002	;6440a
+	dc.w	$4f84	;6440c
+	dc.w	$0002	;6440e
+	dc.w	$4f8c	;64410
+	dc.w	$0000	;64412
+	dc.w	$000c	;64414
+	dc.w	$0000	;64416
+	dc.w	$ca56	;64418
+	dc.w	$94ac	;6441a
+	dc.w	$0002	;6441c
+	dc.w	$4f74	;6441e
+	dc.w	$0002	;64420
+	dc.w	$4f7c	;64422
+	dc.w	$0002	;64424
+	dc.w	$4f8c	;64426
+	dc.w	$0000	;64428
+	dc.w	$000c	;6442a
+	dc.w	$0000	;6442c
+	dc.w	$ca56	;6442e
+	dc.w	$6b54	;64430
+	dc.w	$0002	;64432
+	dc.w	$4f64	;64434
+	dc.w	$0002	;64436
+	dc.w	$4f6c	;64438
+	dc.w	$0002	;6443a
+	dc.w	$4f94	;6443c
+	dc.w	$0000	;6443e
+	dc.w	$000c	;64440
+	dc.w	$073f	;64442
+	dc.w	$b046	;64444
+	dc.w	$5964	;64446
+	dc.w	$0002	;64448
+	dc.w	$4f64	;6444a
+	dc.w	$0002	;6444c
+	dc.w	$4f94	;6444e
+	dc.w	$0002	;64450
+	dc.w	$4f9c	;64452
+	dc.w	$0000	;64454
+	dc.w	$000c	;64456
+	dc.w	$b800	;64458
+	dc.w	$a000	;6445a
+	dc.w	$0000	;6445c
+	dc.w	$0002	;6445e
+	dc.w	$4f64	;64460
+	dc.w	$0002	;64462
+	dc.w	$4f7c	;64464
+	dc.w	$0002	;64466
+	dc.w	$4fdc	;64468
+	dc.w	$0000	;6446a
+	dc.w	$0014	;6446c
+	dc.w	$b800	;6446e
+	dc.w	$a000	;64470
+	dc.w	$0000	;64472
+	dc.w	$0002	;64474
+	dc.w	$4f7c	;64476
+	dc.w	$0002	;64478
+	dc.w	$4fd4	;6447a
+	dc.w	$0002	;6447c
+	dc.w	$4fdc	;6447e
+	dc.w	$0000	;64480
+	dc.w	$0014	;64482
+	dc.w	$b800	;64484
+	dc.w	$a000	;64486
+	dc.w	$0000	;64488
+	dc.w	$0002	;6448a
+	dc.w	$4f64	;6448c
+	dc.w	$0002	;6448e
+	dc.w	$4f9c	;64490
+	dc.w	$0002	;64492
+	dc.w	$4fdc	;64494
+	dc.w	$0000	;64496
+	dc.w	$0014	;64498
+	dc.w	$b800	;6449a
+	dc.w	$a000	;6449c
+	dc.w	$0000	;6449e
+	dc.w	$0002	;644a0
+	dc.w	$4f7c	;644a2
+	dc.w	$0002	;644a4
+	dc.w	$4f84	;644a6
+	dc.w	$0002	;644a8
+	dc.w	$4fd4	;644aa
+	dc.w	$0000	;644ac
+	dc.w	$0014	;644ae
+	dc.w	$0000	;644b0
+	dc.w	$0000	;644b2
+	dc.w	$0000	;644b4
+	dc.w	$0002	;644b6
+	dc.w	$4f64	;644b8
+	dc.w	$0002	;644ba
+	dc.w	$4f6c	;644bc
+	dc.w	$0002	;644be
+	dc.w	$4f7c	;644c0
+	dc.w	$0000	;644c2
+	dc.w	$0004	;644c4
+	dc.w	$0000	;644c6
+	dc.w	$0000	;644c8
+	dc.w	$0000	;644ca
+	dc.w	$0002	;644cc
+	dc.w	$4f6c	;644ce
+	dc.w	$0002	;644d0
+	dc.w	$4f74	;644d2
+	dc.w	$0002	;644d4
+	dc.w	$4f7c	;644d6
+	dc.w	$0000	;644d8
+	dc.w	$0004	;644da
+	dc.w	$0100	;644dc
+	dc.w	$000c	;644de
+	dc.w	$000f	;644e0
+	dc.w	$0056	;644e2
+	dc.w	$0000	;644e4
+	dc.w	$0000	;644e6
+	dc.w	$0000	;644e8
+	dc.w	$ff60	;644ea
+	dc.w	$ffc0	;644ec
+	dc.w	$0030	;644ee
+	dc.w	$0000	;644f0
+	dc.w	$ffa0	;644f2
+	dc.w	$0050	;644f4
+	dc.w	$0090	;644f6
+	dc.w	$ffc0	;644f8
+	dc.w	$0030	;644fa
+	dc.w	$0090	;644fc
+	dc.w	$ffc0	;644fe
+	dc.w	$ffd0	;64500
+	dc.w	$0000	;64502
+	dc.w	$ffa0	;64504
+	dc.w	$ffb0	;64506
+	dc.w	$ff60	;64508
+	dc.w	$ffc0	;6450a
+	dc.w	$ffd0	;6450c
+	dc.w	$ff60	;6450e
+	dc.w	$0000	;64510
+	dc.w	$0040	;64512
+	dc.w	$0000	;64514
+	dc.w	$0000	;64516
+	dc.w	$0070	;64518
+	dc.w	$00a0	;6451a
+	dc.w	$0000	;6451c
+	dc.w	$0040	;6451e
+	dc.w	$00a0	;64520
+	dc.w	$0000	;64522
+	dc.w	$ffc0	;64524
+	dc.w	$0000	;64526
+	dc.w	$0000	;64528
+	dc.w	$ff90	;6452a
+	dc.w	$ff60	;6452c
+	dc.w	$0000	;6452e
+	dc.w	$ffc0	;64530
+	dc.w	$746a	;64532
+	dc.w	$e2e6	;64534
+	dc.w	$0000	;64536
+	dc.w	$0002	;64538
+	dc.w	$4f74	;6453a
+	dc.w	$0002	;6453c
+	dc.w	$4f7c	;6453e
+	dc.w	$0002	;64540
+	dc.w	$4fac	;64542
+	dc.w	$0000	;64544
+	dc.w	$0001	;64546
+	dc.w	$746a	;64548
+	dc.w	$e2e6	;6454a
+	dc.w	$0000	;6454c
+	dc.w	$0002	;6454e
+	dc.w	$4f74	;64550
+	dc.w	$0002	;64552
+	dc.w	$4fa4	;64554
+	dc.w	$0002	;64556
+	dc.w	$4fac	;64558
+	dc.w	$0000	;6455a
+	dc.w	$0001	;6455c
+	dc.w	$8800	;6455e
+	dc.w	$0000	;64560
+	dc.w	$0000	;64562
+	dc.w	$0002	;64564
+	dc.w	$4f64	;64566
+	dc.w	$0002	;64568
+	dc.w	$4f8c	;6456a
+	dc.w	$0002	;6456c
+	dc.w	$4f94	;6456e
+	dc.w	$0000	;64570
+	dc.w	$0001	;64572
+	dc.w	$8800	;64574
+	dc.w	$0000	;64576
+	dc.w	$0000	;64578
+	dc.w	$0002	;6457a
+	dc.w	$4f8c	;6457c
+	dc.w	$0002	;6457e
+	dc.w	$4f94	;64580
+	dc.w	$0002	;64582
+	dc.w	$4fbc	;64584
+	dc.w	$0000	;64586
+	dc.w	$0001	;64588
+	dc.w	$e3b8	;6458a
+	dc.w	$e3b8	;6458c
+	dc.w	$7123	;6458e
+	dc.w	$0002	;64590
+	dc.w	$4f64	;64592
+	dc.w	$0002	;64594
+	dc.w	$4f6c	;64596
+	dc.w	$0002	;64598
+	dc.w	$4f94	;6459a
+	dc.w	$0000	;6459c
+	dc.w	$000c	;6459e
+	dc.w	$df27	;645a0
+	dc.w	$db81	;645a2
+	dc.w	$6d7e	;645a4
+	dc.w	$0002	;645a6
+	dc.w	$4f6c	;645a8
+	dc.w	$0002	;645aa
+	dc.w	$4f94	;645ac
+	dc.w	$0002	;645ae
+	dc.w	$4f9c	;645b0
+	dc.w	$0000	;645b2
+	dc.w	$000c	;645b4
+	dc.w	$e3b8	;645b6
+	dc.w	$e3b8	;645b8
+	dc.w	$8edd	;645ba
+	dc.w	$0002	;645bc
+	dc.w	$4f84	;645be
+	dc.w	$0002	;645c0
+	dc.w	$4f8c	;645c2
+	dc.w	$0002	;645c4
+	dc.w	$4fbc	;645c6
+	dc.w	$0000	;645c8
+	dc.w	$000c	;645ca
+	dc.w	$df27	;645cc
+	dc.w	$db81	;645ce
+	dc.w	$9282	;645d0
+	dc.w	$0002	;645d2
+	dc.w	$4f84	;645d4
+	dc.w	$0002	;645d6
+	dc.w	$4fb4	;645d8
+	dc.w	$0002	;645da
+	dc.w	$4fbc	;645dc
+	dc.w	$0000	;645de
+	dc.w	$000c	;645e0
+	dc.w	$20d9	;645e2
+	dc.w	$db81	;645e4
+	dc.w	$9282	;645e6
+	dc.w	$0002	;645e8
+	dc.w	$4f84	;645ea
+	dc.w	$0002	;645ec
+	dc.w	$4fac	;645ee
+	dc.w	$0002	;645f0
+	dc.w	$4fb4	;645f2
+	dc.w	$0000	;645f4
+	dc.w	$0014	;645f6
+	dc.w	$2056	;645f8
+	dc.w	$dc6e	;645fa
+	dc.w	$920d	;645fc
+	dc.w	$0002	;645fe
+	dc.w	$4f7c	;64600
+	dc.w	$0002	;64602
+	dc.w	$4f84	;64604
+	dc.w	$0002	;64606
+	dc.w	$4fac	;64608
+	dc.w	$0000	;6460a
+	dc.w	$0014	;6460c
+	dc.w	$2056	;6460e
+	dc.w	$dc6e	;64610
+	dc.w	$6df3	;64612
+	dc.w	$0002	;64614
+	dc.w	$4f6c	;64616
+	dc.w	$0002	;64618
+	dc.w	$4f74	;6461a
+	dc.w	$0002	;6461c
+	dc.w	$4fa4	;6461e
+	dc.w	$0000	;64620
+	dc.w	$0014	;64622
+	dc.w	$20d9	;64624
+	dc.w	$db81	;64626
+	dc.w	$6d7e	;64628
+	dc.w	$0002	;6462a
+	dc.w	$4f6c	;6462c
+	dc.w	$0002	;6462e
+	dc.w	$4f9c	;64630
+	dc.w	$0002	;64632
+	dc.w	$4fa4	;64634
+	dc.w	$0000	;64636
+	dc.w	$0014	;64638
+	dc.w	$e878	;6463a
+	dc.w	$8a55	;6463c
+	dc.w	$0000	;6463e
+	dc.w	$0002	;64640
+	dc.w	$4f64	;64642
+	dc.w	$0002	;64644
+	dc.w	$4f6c	;64646
+	dc.w	$0002	;64648
+	dc.w	$4f8c	;6464a
+	dc.w	$0000	;6464c
+	dc.w	$0004	;6464e
+	dc.w	$e878	;64650
+	dc.w	$8a55	;64652
+	dc.w	$0000	;64654
+	dc.w	$0002	;64656
+	dc.w	$4f6c	;64658
+	dc.w	$0002	;6465a
+	dc.w	$4f84	;6465c
+	dc.w	$0002	;6465e
+	dc.w	$4f8c	;64660
+	dc.w	$0000	;64662
+	dc.w	$0004	;64664
+	dc.w	$1a08	;64666
+	dc.w	$8adc	;64668
+	dc.w	$0000	;6466a
+	dc.w	$0002	;6466c
+	dc.w	$4f6c	;6466e
+	dc.w	$0002	;64670
+	dc.w	$4f7c	;64672
+	dc.w	$0002	;64674
+	dc.w	$4f84	;64676
+	dc.w	$0000	;64678
+	dc.w	$0004	;6467a
+	dc.w	$1a08	;6467c
+	dc.w	$8adc	;6467e
+	dc.w	$0000	;64680
+	dc.w	$0002	;64682
+	dc.w	$4f6c	;64684
+	dc.w	$0002	;64686
+	dc.w	$4f74	;64688
+	dc.w	$0002	;6468a
+	dc.w	$4f7c	;6468c
+	dc.w	$0000	;6468e
+	dc.w	$0004	;64690
+	dc.w	$0100	;64692
+	dc.w	$0006	;64694
+	dc.w	$0005	;64696
+	dc.w	$0032	;64698
+	dc.w	$0000	;6469a
+	dc.w	$0000	;6469c
+	dc.w	$0000	;6469e
+	dc.w	$fdb0	;646a0
+	dc.w	$ffd8	;646a2
+	dc.w	$fff8	;646a4
+	dc.w	$ff60	;646a6
+	dc.w	$ffd0	;646a8
+	dc.w	$0010	;646aa
+	dc.w	$ff60	;646ac
+	dc.w	$ffd0	;646ae
+	dc.w	$fff0	;646b0
+	dc.w	$fdb0	;646b2
+	dc.w	$ffe8	;646b4
+	dc.w	$0000	;646b6
+	dc.w	$ff60	;646b8
+	dc.w	$fff0	;646ba
+	dc.w	$0000	;646bc
+	dc.w	$fdb0	;646be
+	dc.w	$ffd8	;646c0
+	dc.w	$0008	;646c2
+	dc.w	$00fe	;646c4
+	dc.w	$ca57	;646c6
+	dc.w	$6b53	;646c8
+	dc.w	$0002	;646ca
+	dc.w	$4f64	;646cc
+	dc.w	$0002	;646ce
+	dc.w	$4f7c	;646d0
+	dc.w	$0002	;646d2
+	dc.w	$4f84	;646d4
+	dc.w	$0000	;646d6
+	dc.w	$000c	;646d8
+	dc.w	$00fe	;646da
+	dc.w	$ca57	;646dc
+	dc.w	$6b53	;646de
+	dc.w	$0002	;646e0
+	dc.w	$4f64	;646e2
+	dc.w	$0002	;646e4
+	dc.w	$4f74	;646e6
+	dc.w	$0002	;646e8
+	dc.w	$4f84	;646ea
+	dc.w	$0000	;646ec
+	dc.w	$000c	;646ee
+	dc.w	$00fe	;646f0
+	dc.w	$ca57	;646f2
+	dc.w	$94ad	;646f4
+	dc.w	$0002	;646f6
+	dc.w	$4f8c	;646f8
+	dc.w	$0002	;646fa
+	dc.w	$4f6c	;646fc
+	dc.w	$0002	;646fe
+	dc.w	$4f84	;64700
+	dc.w	$0000	;64702
+	dc.w	$000c	;64704
+	dc.w	$00fe	;64706
+	dc.w	$ca57	;64708
+	dc.w	$94ad	;6470a
+	dc.w	$0002	;6470c
+	dc.w	$4f8c	;6470e
+	dc.w	$0002	;64710
+	dc.w	$4f7c	;64712
+	dc.w	$0002	;64714
+	dc.w	$4f84	;64716
+	dc.w	$0000	;64718
+	dc.w	$000c	;6471a
+	dc.w	$fdc8	;6471c
+	dc.w	$8806	;6471e
+	dc.w	$0000	;64720
+	dc.w	$0002	;64722
+	dc.w	$4f8c	;64724
+	dc.w	$0002	;64726
+	dc.w	$4f64	;64728
+	dc.w	$0002	;6472a
+	dc.w	$4f6c	;6472c
+	dc.w	$0000	;6472e
+	dc.w	$0004	;64730
+	dc.w	$fdc8	;64732
+	dc.w	$8806	;64734
+	dc.w	$0000	;64736
+	dc.w	$0002	;64738
+	dc.w	$4f64	;6473a
+	dc.w	$0002	;6473c
+	dc.w	$4f6c	;6473e
+	dc.w	$0002	;64740
+	dc.w	$4f74	;64742
+	dc.w	$0000	;64744
+	dc.w	$0004	;64746
+	dc.w	$0100	;64748
+	dc.w	$0024	;6474a
+	dc.w	$002b	;6474c
+	dc.w	$00e6	;6474e
+	dc.w	$0000	;64750
+	dc.w	$0000	;64752
+	dc.w	$0000	;64754
+	dc.w	$ff90	;64756
+	dc.w	$0000	;64758
+	dc.w	$0058	;6475a
+	dc.w	$00d0	;6475c
+	dc.w	$0000	;6475e
+	dc.w	$0058	;64760
+	dc.w	$00d0	;64762
+	dc.w	$0000	;64764
+	dc.w	$ffa8	;64766
+	dc.w	$ff90	;64768
+	dc.w	$0000	;6476a
+	dc.w	$ffa8	;6476c
+	dc.w	$0130	;6476e
+	dc.w	$0010	;64770
+	dc.w	$0058	;64772
+	dc.w	$0130	;64774
+	dc.w	$0010	;64776
+	dc.w	$ffa8	;64778
+	dc.w	$ff50	;6477a
+	dc.w	$0040	;6477c
+	dc.w	$ffa8	;6477e
+	dc.w	$ff50	;64780
+	dc.w	$0040	;64782
+	dc.w	$0058	;64784
+	dc.w	$ff30	;64786
+	dc.w	$0020	;64788
+	dc.w	$0058	;6478a
+	dc.w	$ff30	;6478c
+	dc.w	$0020	;6478e
+	dc.w	$ffa8	;64790
+	dc.w	$ff30	;64792
+	dc.w	$0020	;64794
+	dc.w	$0088	;64796
+	dc.w	$ff30	;64798
+	dc.w	$0020	;6479a
+	dc.w	$ff78	;6479c
+	dc.w	$0130	;6479e
+	dc.w	$0020	;647a0
+	dc.w	$0088	;647a2
+	dc.w	$0130	;647a4
+	dc.w	$0020	;647a6
+	dc.w	$ff78	;647a8
+	dc.w	$0130	;647aa
+	dc.w	$0020	;647ac
+	dc.w	$ffa8	;647ae
+	dc.w	$0130	;647b0
+	dc.w	$0020	;647b2
+	dc.w	$0058	;647b4
+	dc.w	$0130	;647b6
+	dc.w	$0050	;647b8
+	dc.w	$ffa8	;647ba
+	dc.w	$0130	;647bc
+	dc.w	$0050	;647be
+	dc.w	$0058	;647c0
+	dc.w	$ff70	;647c2
+	dc.w	$0050	;647c4
+	dc.w	$0058	;647c6
+	dc.w	$ff70	;647c8
+	dc.w	$0050	;647ca
+	dc.w	$ffa8	;647cc
+	dc.w	$ff70	;647ce
+	dc.w	$0070	;647d0
+	dc.w	$0058	;647d2
+	dc.w	$ff70	;647d4
+	dc.w	$0070	;647d6
+	dc.w	$ffa8	;647d8
+	dc.w	$ff70	;647da
+	dc.w	$0070	;647dc
+	dc.w	$0088	;647de
+	dc.w	$ff70	;647e0
+	dc.w	$0070	;647e2
+	dc.w	$ff78	;647e4
+	dc.w	$ff30	;647e6
+	dc.w	$0040	;647e8
+	dc.w	$0088	;647ea
+	dc.w	$ff30	;647ec
+	dc.w	$0040	;647ee
+	dc.w	$ff78	;647f0
+	dc.w	$0100	;647f2
+	dc.w	$0070	;647f4
+	dc.w	$ffa8	;647f6
+	dc.w	$0100	;647f8
+	dc.w	$0070	;647fa
+	dc.w	$0058	;647fc
+	dc.w	$0100	;647fe
+	dc.w	$0070	;64800
+	dc.w	$ff78	;64802
+	dc.w	$0100	;64804
+	dc.w	$0070	;64806
+	dc.w	$0088	;64808
+	dc.w	$0130	;6480a
+	dc.w	$0050	;6480c
+	dc.w	$ff78	;6480e
+	dc.w	$0130	;64810
+	dc.w	$0050	;64812
+	dc.w	$0088	;64814
+	dc.w	$ff70	;64816
+	dc.w	$0020	;64818
+	dc.w	$ffa8	;6481a
+	dc.w	$ff70	;6481c
+	dc.w	$0020	;6481e
+	dc.w	$0058	;64820
+	dc.w	$ff30	;64822
+	dc.w	$0040	;64824
+	dc.w	$0058	;64826
+	dc.w	$ff30	;64828
+	dc.w	$0040	;6482a
+	dc.w	$ffa8	;6482c
+	dc.w	$ca56	;6482e
+	dc.w	$6b54	;64830
+	dc.w	$0000	;64832
+	dc.w	$0002	;64834
+	dc.w	$4f94	;64836
+	dc.w	$0002	;64838
+	dc.w	$4f9c	;6483a
+	dc.w	$0002	;6483c
+	dc.w	$4ff4	;6483e
+	dc.w	$0000	;64840
+	dc.w	$000e	;64842
+	dc.w	$ca56	;64844
+	dc.w	$6b54	;64846
+	dc.w	$0000	;64848
+	dc.w	$0002	;6484a
+	dc.w	$4f94	;6484c
+	dc.w	$0002	;6484e
+	dc.w	$4ff4	;64850
+	dc.w	$0002	;64852
+	dc.w	$4ffc	;64854
+	dc.w	$0000	;64856
+	dc.w	$000e	;64858
+	dc.w	$8800	;6485a
+	dc.w	$0000	;6485c
+	dc.w	$0000	;6485e
+	dc.w	$0002	;64860
+	dc.w	$5074	;64862
+	dc.w	$0002	;64864
+	dc.w	$4fb4	;64866
+	dc.w	$0002	;64868
+	dc.w	$5024	;6486a
+	dc.w	$0000	;6486c
+	dc.w	$0017	;6486e
+	dc.w	$8800	;64870
+	dc.w	$0000	;64872
+	dc.w	$0000	;64874
+	dc.w	$0002	;64876
+	dc.w	$5074	;64878
+	dc.w	$0002	;6487a
+	dc.w	$4fa4	;6487c
+	dc.w	$0002	;6487e
+	dc.w	$4fb4	;64880
+	dc.w	$0000	;64882
+	dc.w	$0017	;64884
+	dc.w	$b800	;64886
+	dc.w	$6000	;64888
+	dc.w	$0000	;6488a
+	dc.w	$0002	;6488c
+	dc.w	$5004	;6488e
+	dc.w	$0002	;64890
+	dc.w	$5014	;64892
+	dc.w	$0002	;64894
+	dc.w	$5024	;64896
+	dc.w	$0000	;64898
+	dc.w	$0017	;6489a
+	dc.w	$b800	;6489c
+	dc.w	$6000	;6489e
+	dc.w	$0000	;648a0
+	dc.w	$0002	;648a2
+	dc.w	$5074	;648a4
+	dc.w	$0002	;648a6
+	dc.w	$5004	;648a8
+	dc.w	$0002	;648aa
+	dc.w	$5024	;648ac
+	dc.w	$0000	;648ae
+	dc.w	$0017	;648b0
+	dc.w	$b800	;648b2
+	dc.w	$6000	;648b4
+	dc.w	$0000	;648b6
+	dc.w	$0002	;648b8
+	dc.w	$507c	;648ba
+	dc.w	$0002	;648bc
+	dc.w	$500c	;648be
+	dc.w	$0002	;648c0
+	dc.w	$502c	;648c2
+	dc.w	$0000	;648c4
+	dc.w	$0017	;648c6
+	dc.w	$b800	;648c8
+	dc.w	$6000	;648ca
+	dc.w	$0000	;648cc
+	dc.w	$0002	;648ce
+	dc.w	$500c	;648d0
+	dc.w	$0002	;648d2
+	dc.w	$501c	;648d4
+	dc.w	$0002	;648d6
+	dc.w	$502c	;648d8
+	dc.w	$0000	;648da
+	dc.w	$0017	;648dc
+	dc.w	$8800	;648de
+	dc.w	$0000	;648e0
+	dc.w	$0000	;648e2
+	dc.w	$0002	;648e4
+	dc.w	$507c	;648e6
+	dc.w	$0002	;648e8
+	dc.w	$4fac	;648ea
+	dc.w	$0002	;648ec
+	dc.w	$4fbc	;648ee
+	dc.w	$0000	;648f0
+	dc.w	$0017	;648f2
+	dc.w	$8800	;648f4
+	dc.w	$0000	;648f6
+	dc.w	$0000	;648f8
+	dc.w	$0002	;648fa
+	dc.w	$507c	;648fc
+	dc.w	$0002	;648fe
+	dc.w	$4fbc	;64900
+	dc.w	$0002	;64902
+	dc.w	$502c	;64904
+	dc.w	$0000	;64906
+	dc.w	$0017	;64908
+	dc.w	$7800	;6490a
+	dc.w	$0000	;6490c
+	dc.w	$0000	;6490e
+	dc.w	$0002	;64910
+	dc.w	$4fcc	;64912
+	dc.w	$0002	;64914
+	dc.w	$4fd4	;64916
+	dc.w	$0002	;64918
+	dc.w	$5054	;6491a
+	dc.w	$0000	;6491c
+	dc.w	$0017	;6491e
+	dc.w	$7800	;64920
+	dc.w	$0000	;64922
+	dc.w	$0000	;64924
+	dc.w	$0002	;64926
+	dc.w	$4fd4	;64928
+	dc.w	$0002	;6492a
+	dc.w	$4fe4	;6492c
+	dc.w	$0002	;6492e
+	dc.w	$5054	;64930
+	dc.w	$0000	;64932
+	dc.w	$0017	;64934
+	dc.w	$4290	;64936
+	dc.w	$63d8	;64938
+	dc.w	$0000	;6493a
+	dc.w	$0002	;6493c
+	dc.w	$4fe4	;6493e
+	dc.w	$0002	;64940
+	dc.w	$5044	;64942
+	dc.w	$0002	;64944
+	dc.w	$5054	;64946
+	dc.w	$0000	;64948
+	dc.w	$0017	;6494a
+	dc.w	$4290	;6494c
+	dc.w	$63d8	;6494e
+	dc.w	$0000	;64950
+	dc.w	$0002	;64952
+	dc.w	$4fe4	;64954
+	dc.w	$0002	;64956
+	dc.w	$5034	;64958
+	dc.w	$0002	;6495a
+	dc.w	$5044	;6495c
+	dc.w	$0000	;6495e
+	dc.w	$0017	;64960
+	dc.w	$4290	;64962
+	dc.w	$63d8	;64964
+	dc.w	$0000	;64966
+	dc.w	$0002	;64968
+	dc.w	$4fec	;6496a
+	dc.w	$0002	;6496c
+	dc.w	$503c	;6496e
+	dc.w	$0002	;64970
+	dc.w	$505c	;64972
+	dc.w	$0000	;64974
+	dc.w	$0017	;64976
+	dc.w	$4290	;64978
+	dc.w	$63d8	;6497a
+	dc.w	$0000	;6497c
+	dc.w	$0002	;6497e
+	dc.w	$503c	;64980
+	dc.w	$0002	;64982
+	dc.w	$504c	;64984
+	dc.w	$0002	;64986
+	dc.w	$505c	;64988
+	dc.w	$0000	;6498a
+	dc.w	$0017	;6498c
+	dc.w	$7800	;6498e
+	dc.w	$0000	;64990
+	dc.w	$0000	;64992
+	dc.w	$0002	;64994
+	dc.w	$4fc4	;64996
+	dc.w	$0002	;64998
+	dc.w	$4fdc	;6499a
+	dc.w	$0002	;6499c
+	dc.w	$4fec	;6499e
+	dc.w	$0000	;649a0
+	dc.w	$0017	;649a2
+	dc.w	$7800	;649a4
+	dc.w	$0000	;649a6
+	dc.w	$0000	;649a8
+	dc.w	$0002	;649aa
+	dc.w	$4fc4	;649ac
+	dc.w	$0002	;649ae
+	dc.w	$4fec	;649b0
+	dc.w	$0002	;649b2
+	dc.w	$505c	;649b4
+	dc.w	$0000	;649b6
+	dc.w	$0017	;649b8
+	dc.w	$0000	;649ba
+	dc.w	$0000	;649bc
+	dc.w	$8800	;649be
+	dc.w	$0002	;649c0
+	dc.w	$4fbc	;649c2
+	dc.w	$0002	;649c4
+	dc.w	$501c	;649c6
+	dc.w	$0002	;649c8
+	dc.w	$502c	;649ca
+	dc.w	$0000	;649cc
+	dc.w	$0016	;649ce
+	dc.w	$0000	;649d0
+	dc.w	$0000	;649d2
+	dc.w	$8800	;649d4
+	dc.w	$0002	;649d6
+	dc.w	$4fbc	;649d8
+	dc.w	$0002	;649da
+	dc.w	$501c	;649dc
+	dc.w	$0002	;649de
+	dc.w	$5044	;649e0
+	dc.w	$0000	;649e2
+	dc.w	$0016	;649e4
+	dc.w	$0000	;649e6
+	dc.w	$0000	;649e8
+	dc.w	$8800	;649ea
+	dc.w	$0002	;649ec
+	dc.w	$4fbc	;649ee
+	dc.w	$0002	;649f0
+	dc.w	$5044	;649f2
+	dc.w	$0002	;649f4
+	dc.w	$5054	;649f6
+	dc.w	$0000	;649f8
+	dc.w	$0016	;649fa
+	dc.w	$0000	;649fc
+	dc.w	$0000	;649fe
+	dc.w	$8800	;64a00
+	dc.w	$0002	;64a02
+	dc.w	$4fbc	;64a04
+	dc.w	$0002	;64a06
+	dc.w	$4fcc	;64a08
+	dc.w	$0002	;64a0a
+	dc.w	$5054	;64a0c
+	dc.w	$0000	;64a0e
+	dc.w	$0016	;64a10
+	dc.w	$0000	;64a12
+	dc.w	$0000	;64a14
+	dc.w	$7800	;64a16
+	dc.w	$0002	;64a18
+	dc.w	$4fb4	;64a1a
+	dc.w	$0002	;64a1c
+	dc.w	$5014	;64a1e
+	dc.w	$0002	;64a20
+	dc.w	$5024	;64a22
+	dc.w	$0000	;64a24
+	dc.w	$0016	;64a26
+	dc.w	$0000	;64a28
+	dc.w	$0000	;64a2a
+	dc.w	$7800	;64a2c
+	dc.w	$0002	;64a2e
+	dc.w	$4fb4	;64a30
+	dc.w	$0002	;64a32
+	dc.w	$5014	;64a34
+	dc.w	$0002	;64a36
+	dc.w	$504c	;64a38
+	dc.w	$0000	;64a3a
+	dc.w	$0016	;64a3c
+	dc.w	$0000	;64a3e
+	dc.w	$0000	;64a40
+	dc.w	$7800	;64a42
+	dc.w	$0002	;64a44
+	dc.w	$4fb4	;64a46
+	dc.w	$0002	;64a48
+	dc.w	$504c	;64a4a
+	dc.w	$0002	;64a4c
+	dc.w	$505c	;64a4e
+	dc.w	$0000	;64a50
+	dc.w	$0016	;64a52
+	dc.w	$0000	;64a54
+	dc.w	$0000	;64a56
+	dc.w	$7800	;64a58
+	dc.w	$0002	;64a5a
+	dc.w	$4fb4	;64a5c
+	dc.w	$0002	;64a5e
+	dc.w	$4fc4	;64a60
+	dc.w	$0002	;64a62
+	dc.w	$505c	;64a64
+	dc.w	$0000	;64a66
+	dc.w	$0016	;64a68
+	dc.w	$0000	;64a6a
+	dc.w	$8800	;64a6c
+	dc.w	$0000	;64a6e
+	dc.w	$0002	;64a70
+	dc.w	$4fa4	;64a72
+	dc.w	$0002	;64a74
+	dc.w	$4fb4	;64a76
+	dc.w	$0002	;64a78
+	dc.w	$4fc4	;64a7a
+	dc.w	$0000	;64a7c
+	dc.w	$0002	;64a7e
+	dc.w	$0000	;64a80
+	dc.w	$8800	;64a82
+	dc.w	$0000	;64a84
+	dc.w	$0002	;64a86
+	dc.w	$4fa4	;64a88
+	dc.w	$0002	;64a8a
+	dc.w	$4fc4	;64a8c
+	dc.w	$0002	;64a8e
+	dc.w	$4fdc	;64a90
+	dc.w	$0000	;64a92
+	dc.w	$0002	;64a94
+	dc.w	$0000	;64a96
+	dc.w	$8800	;64a98
+	dc.w	$0000	;64a9a
+	dc.w	$0002	;64a9c
+	dc.w	$4fac	;64a9e
+	dc.w	$0002	;64aa0
+	dc.w	$4fbc	;64aa2
+	dc.w	$0002	;64aa4
+	dc.w	$4fcc	;64aa6
+	dc.w	$0000	;64aa8
+	dc.w	$0002	;64aaa
+	dc.w	$0000	;64aac
+	dc.w	$8800	;64aae
+	dc.w	$0000	;64ab0
+	dc.w	$0002	;64ab2
+	dc.w	$4fac	;64ab4
+	dc.w	$0002	;64ab6
+	dc.w	$4fcc	;64ab8
+	dc.w	$0002	;64aba
+	dc.w	$4fd4	;64abc
+	dc.w	$0000	;64abe
+	dc.w	$0002	;64ac0
+	dc.w	$ab26	;64ac2
+	dc.w	$ab26	;64ac4
+	dc.w	$0000	;64ac6
+	dc.w	$0002	;64ac8
+	dc.w	$4f64	;64aca
+	dc.w	$0002	;64acc
+	dc.w	$4f94	;64ace
+	dc.w	$0002	;64ad0
+	dc.w	$4f9c	;64ad2
+	dc.w	$0000	;64ad4
+	dc.w	$0012	;64ad6
+	dc.w	$ab26	;64ad8
+	dc.w	$ab26	;64ada
+	dc.w	$0000	;64adc
+	dc.w	$0002	;64ade
+	dc.w	$4f64	;64ae0
+	dc.w	$0002	;64ae2
+	dc.w	$4f7c	;64ae4
+	dc.w	$0002	;64ae6
+	dc.w	$4f94	;64ae8
+	dc.w	$0000	;64aea
+	dc.w	$0012	;64aec
+	dc.w	$7800	;64aee
+	dc.w	$0000	;64af0
+	dc.w	$0000	;64af2
+	dc.w	$0002	;64af4
+	dc.w	$4f84	;64af6
+	dc.w	$0002	;64af8
+	dc.w	$4f8c	;64afa
+	dc.w	$0002	;64afc
+	dc.w	$4fe4	;64afe
+	dc.w	$0000	;64b00
+	dc.w	$0016	;64b02
+	dc.w	$7800	;64b04
+	dc.w	$0000	;64b06
+	dc.w	$0000	;64b08
+	dc.w	$0002	;64b0a
+	dc.w	$4f84	;64b0c
+	dc.w	$0002	;64b0e
+	dc.w	$4fe4	;64b10
+	dc.w	$0002	;64b12
+	dc.w	$4fec	;64b14
+	dc.w	$0000	;64b16
+	dc.w	$0016	;64b18
+	dc.w	$0000	;64b1a
+	dc.w	$0000	;64b1c
+	dc.w	$7800	;64b1e
+	dc.w	$0002	;64b20
+	dc.w	$4f64	;64b22
+	dc.w	$0002	;64b24
+	dc.w	$4f6c	;64b26
+	dc.w	$0002	;64b28
+	dc.w	$4f84	;64b2a
+	dc.w	$0000	;64b2c
+	dc.w	$0006	;64b2e
+	dc.w	$0000	;64b30
+	dc.w	$0000	;64b32
+	dc.w	$7800	;64b34
+	dc.w	$0002	;64b36
+	dc.w	$4f64	;64b38
+	dc.w	$0002	;64b3a
+	dc.w	$4fdc	;64b3c
+	dc.w	$0002	;64b3e
+	dc.w	$506c	;64b40
+	dc.w	$0000	;64b42
+	dc.w	$0006	;64b44
+	dc.w	$0000	;64b46
+	dc.w	$0000	;64b48
+	dc.w	$8800	;64b4a
+	dc.w	$0002	;64b4c
+	dc.w	$4f74	;64b4e
+	dc.w	$0002	;64b50
+	dc.w	$4f7c	;64b52
+	dc.w	$0002	;64b54
+	dc.w	$4f8c	;64b56
+	dc.w	$0000	;64b58
+	dc.w	$0006	;64b5a
+	dc.w	$0000	;64b5c
+	dc.w	$0000	;64b5e
+	dc.w	$8800	;64b60
+	dc.w	$0002	;64b62
+	dc.w	$4f7c	;64b64
+	dc.w	$0002	;64b66
+	dc.w	$4fd4	;64b68
+	dc.w	$0002	;64b6a
+	dc.w	$5064	;64b6c
+	dc.w	$0000	;64b6e
+	dc.w	$0006	;64b70
+	dc.w	$0000	;64b72
+	dc.w	$0000	;64b74
+	dc.w	$8800	;64b76
+	dc.w	$0002	;64b78
+	dc.w	$4f7c	;64b7a
+	dc.w	$0002	;64b7c
+	dc.w	$4f8c	;64b7e
+	dc.w	$0002	;64b80
+	dc.w	$4fd4	;64b82
+	dc.w	$0000	;64b84
+	dc.w	$0006	;64b86
+	dc.w	$0000	;64b88
+	dc.w	$0000	;64b8a
+	dc.w	$7800	;64b8c
+	dc.w	$0002	;64b8e
+	dc.w	$4f64	;64b90
+	dc.w	$0002	;64b92
+	dc.w	$4f84	;64b94
+	dc.w	$0002	;64b96
+	dc.w	$4fdc	;64b98
+	dc.w	$0000	;64b9a
+	dc.w	$0006	;64b9c
+	dc.w	$13ba	;64b9e
+	dc.w	$89a2	;64ba0
+	dc.w	$0000	;64ba2
+	dc.w	$0002	;64ba4
+	dc.w	$4f6c	;64ba6
+	dc.w	$0002	;64ba8
+	dc.w	$4f74	;64baa
+	dc.w	$0002	;64bac
+	dc.w	$4f84	;64bae
+	dc.w	$0000	;64bb0
+	dc.w	$0012	;64bb2
+	dc.w	$13ba	;64bb4
+	dc.w	$89a2	;64bb6
+	dc.w	$0000	;64bb8
+	dc.w	$0002	;64bba
+	dc.w	$4f74	;64bbc
+	dc.w	$0002	;64bbe
+	dc.w	$4f84	;64bc0
+	dc.w	$0002	;64bc2
+	dc.w	$4f8c	;64bc4
+	dc.w	$0000	;64bc6
+	dc.w	$0012	;64bc8
+	dc.w	$0000	;64bca
+	dc.w	$0000	;64bcc
+	dc.w	$0000	;64bce
+	dc.w	$0002	;64bd0
+	dc.w	$4f64	;64bd2
+	dc.w	$0002	;64bd4
+	dc.w	$4f6c	;64bd6
+	dc.w	$0002	;64bd8
+	dc.w	$4f7c	;64bda
+	dc.w	$0000	;64bdc
+	dc.w	$0002	;64bde
+	dc.w	$0000	;64be0
+	dc.w	$0000	;64be2
+	dc.w	$0000	;64be4
+	dc.w	$0002	;64be6
+	dc.w	$4f6c	;64be8
+	dc.w	$0002	;64bea
+	dc.w	$4f74	;64bec
+	dc.w	$0002	;64bee
+	dc.w	$4f7c	;64bf0
+	dc.w	$0000	;64bf2
+	dc.w	$0002	;64bf4
+	dc.w	$0100	;64bf6
+	dc.w	$000c	;64bf8
+	dc.w	$000f	;64bfa
+	dc.w	$0056	;64bfc
+	dc.w	$0000	;64bfe
+	dc.w	$0000	;64c00
+	dc.w	$0000	;64c02
+	dc.w	$ffb0	;64c04
+	dc.w	$ffb0	;64c06
+	dc.w	$0040	;64c08
+	dc.w	$0000	;64c0a
+	dc.w	$ffb0	;64c0c
+	dc.w	$0060	;64c0e
+	dc.w	$00a0	;64c10
+	dc.w	$ffb0	;64c12
+	dc.w	$0030	;64c14
+	dc.w	$00a0	;64c16
+	dc.w	$ffb0	;64c18
+	dc.w	$ffd0	;64c1a
+	dc.w	$0000	;64c1c
+	dc.w	$ffb0	;64c1e
+	dc.w	$ffa0	;64c20
+	dc.w	$ffb0	;64c22
+	dc.w	$ffb0	;64c24
+	dc.w	$ffc0	;64c26
+	dc.w	$ffa0	;64c28
+	dc.w	$0000	;64c2a
+	dc.w	$ffc0	;64c2c
+	dc.w	$ffa0	;64c2e
+	dc.w	$0000	;64c30
+	dc.w	$0040	;64c32
+	dc.w	$0000	;64c34
+	dc.w	$0000	;64c36
+	dc.w	$ffa0	;64c38
+	dc.w	$0000	;64c3a
+	dc.w	$0000	;64c3c
+	dc.w	$0060	;64c3e
+	dc.w	$00a0	;64c40
+	dc.w	$fff0	;64c42
+	dc.w	$ffd0	;64c44
+	dc.w	$00a0	;64c46
+	dc.w	$fff0	;64c48
+	dc.w	$0030	;64c4a
+	dc.w	$8a55	;64c4c
+	dc.w	$e878	;64c4e
+	dc.w	$0000	;64c50
+	dc.w	$0002	;64c52
+	dc.w	$4f64	;64c54
+	dc.w	$0002	;64c56
+	dc.w	$4f94	;64c58
+	dc.w	$0002	;64c5a
+	dc.w	$4f9c	;64c5c
+	dc.w	$0000	;64c5e
+	dc.w	$0012	;64c60
+	dc.w	$8a55	;64c62
+	dc.w	$e878	;64c64
+	dc.w	$0000	;64c66
+	dc.w	$0002	;64c68
+	dc.w	$4f64	;64c6a
+	dc.w	$0002	;64c6c
+	dc.w	$4f8c	;64c6e
+	dc.w	$0002	;64c70
+	dc.w	$4f94	;64c72
+	dc.w	$0000	;64c74
+	dc.w	$0012	;64c76
+	dc.w	$7800	;64c78
+	dc.w	$0000	;64c7a
+	dc.w	$0000	;64c7c
+	dc.w	$0002	;64c7e
+	dc.w	$4f74	;64c80
+	dc.w	$0002	;64c82
+	dc.w	$4f7c	;64c84
+	dc.w	$0002	;64c86
+	dc.w	$4fb4	;64c88
+	dc.w	$0000	;64c8a
+	dc.w	$0006	;64c8c
+	dc.w	$7800	;64c8e
+	dc.w	$0000	;64c90
+	dc.w	$0000	;64c92
+	dc.w	$0002	;64c94
+	dc.w	$4f74	;64c96
+	dc.w	$0002	;64c98
+	dc.w	$4fb4	;64c9a
+	dc.w	$0002	;64c9c
+	dc.w	$4fbc	;64c9e
+	dc.w	$0000	;64ca0
+	dc.w	$0006	;64ca2
+	dc.w	$227b	;64ca4
+	dc.w	$0000	;64ca6
+	dc.w	$8d10	;64ca8
+	dc.w	$0002	;64caa
+	dc.w	$4f7c	;64cac
+	dc.w	$0002	;64cae
+	dc.w	$4f84	;64cb0
+	dc.w	$0002	;64cb2
+	dc.w	$4fb4	;64cb4
+	dc.w	$0000	;64cb6
+	dc.w	$000a	;64cb8
+	dc.w	$227b	;64cba
+	dc.w	$0000	;64cbc
+	dc.w	$8d10	;64cbe
+	dc.w	$0002	;64cc0
+	dc.w	$4f84	;64cc2
+	dc.w	$0002	;64cc4
+	dc.w	$4fa4	;64cc6
+	dc.w	$0002	;64cc8
+	dc.w	$4fb4	;64cca
+	dc.w	$0000	;64ccc
+	dc.w	$000a	;64cce
+	dc.w	$227b	;64cd0
+	dc.w	$0000	;64cd2
+	dc.w	$72f0	;64cd4
+	dc.w	$0002	;64cd6
+	dc.w	$4f6c	;64cd8
+	dc.w	$0002	;64cda
+	dc.w	$4f74	;64cdc
+	dc.w	$0002	;64cde
+	dc.w	$4fbc	;64ce0
+	dc.w	$0000	;64ce2
+	dc.w	$000a	;64ce4
+	dc.w	$227b	;64ce6
+	dc.w	$0000	;64ce8
+	dc.w	$72f0	;64cea
+	dc.w	$0002	;64cec
+	dc.w	$4f6c	;64cee
+	dc.w	$0002	;64cf0
+	dc.w	$4fac	;64cf2
+	dc.w	$0002	;64cf4
+	dc.w	$4fbc	;64cf6
+	dc.w	$0000	;64cf8
+	dc.w	$000a	;64cfa
+	dc.w	$d38f	;64cfc
+	dc.w	$f71d	;64cfe
+	dc.w	$6f1c	;64d00
+	dc.w	$0002	;64d02
+	dc.w	$4f64	;64d04
+	dc.w	$0002	;64d06
+	dc.w	$4f6c	;64d08
+	dc.w	$0002	;64d0a
+	dc.w	$4f9c	;64d0c
+	dc.w	$0000	;64d0e
+	dc.w	$0006	;64d10
+	dc.w	$da0e	;64d12
+	dc.w	$0000	;64d14
+	dc.w	$71d7	;64d16
+	dc.w	$0002	;64d18
+	dc.w	$4f6c	;64d1a
+	dc.w	$0002	;64d1c
+	dc.w	$4f9c	;64d1e
+	dc.w	$0002	;64d20
+	dc.w	$4fac	;64d22
+	dc.w	$0000	;64d24
+	dc.w	$0006	;64d26
+	dc.w	$d38f	;64d28
+	dc.w	$f71d	;64d2a
+	dc.w	$90e4	;64d2c
+	dc.w	$0002	;64d2e
+	dc.w	$4f84	;64d30
+	dc.w	$0002	;64d32
+	dc.w	$4f8c	;64d34
+	dc.w	$0002	;64d36
+	dc.w	$4f94	;64d38
+	dc.w	$0000	;64d3a
+	dc.w	$0006	;64d3c
+	dc.w	$da0e	;64d3e
+	dc.w	$0000	;64d40
+	dc.w	$8e29	;64d42
+	dc.w	$0002	;64d44
+	dc.w	$4f84	;64d46
+	dc.w	$0002	;64d48
+	dc.w	$4f94	;64d4a
+	dc.w	$0002	;64d4c
+	dc.w	$4fa4	;64d4e
+	dc.w	$0000	;64d50
+	dc.w	$0006	;64d52
+	dc.w	$0000	;64d54
+	dc.w	$8800	;64d56
+	dc.w	$0000	;64d58
+	dc.w	$0002	;64d5a
+	dc.w	$4f64	;64d5c
+	dc.w	$0002	;64d5e
+	dc.w	$4f6c	;64d60
+	dc.w	$0002	;64d62
+	dc.w	$4f8c	;64d64
+	dc.w	$0000	;64d66
+	dc.w	$0002	;64d68
+	dc.w	$0000	;64d6a
+	dc.w	$8800	;64d6c
+	dc.w	$0000	;64d6e
+	dc.w	$0002	;64d70
+	dc.w	$4f6c	;64d72
+	dc.w	$0002	;64d74
+	dc.w	$4f84	;64d76
+	dc.w	$0002	;64d78
+	dc.w	$4f8c	;64d7a
+	dc.w	$0000	;64d7c
+	dc.w	$0002	;64d7e
+	dc.w	$0000	;64d80
+	dc.w	$8800	;64d82
+	dc.w	$0000	;64d84
+	dc.w	$0002	;64d86
+	dc.w	$4f6c	;64d88
+	dc.w	$0002	;64d8a
+	dc.w	$4f74	;64d8c
+	dc.w	$0002	;64d8e
+	dc.w	$4f84	;64d90
+	dc.w	$0000	;64d92
+	dc.w	$0002	;64d94
+	dc.w	$0000	;64d96
+	dc.w	$8800	;64d98
+	dc.w	$0000	;64d9a
+	dc.w	$0002	;64d9c
+	dc.w	$4f74	;64d9e
+	dc.w	$0002	;64da0
+	dc.w	$4f7c	;64da2
+	dc.w	$0002	;64da4
+	dc.w	$4f84	;64da6
+	dc.w	$0000	;64da8
+	dc.w	$0002	;64daa
+	dc.w	$0100	;64dac
+	dc.w	$0006	;64dae
+	dc.w	$0005	;64db0
+	dc.w	$0032	;64db2
+	dc.w	$0000	;64db4
+	dc.w	$0000	;64db6
+	dc.w	$0000	;64db8
+	dc.w	$fe70	;64dba
+	dc.w	$ffd0	;64dbc
+	dc.w	$fff8	;64dbe
+	dc.w	$ffb0	;64dc0
+	dc.w	$ffd0	;64dc2
+	dc.w	$0008	;64dc4
+	dc.w	$ffb0	;64dc6
+	dc.w	$ffd0	;64dc8
+	dc.w	$fff8	;64dca
+	dc.w	$fe70	;64dcc
+	dc.w	$ffe0	;64dce
+	dc.w	$0000	;64dd0
+	dc.w	$ffb0	;64dd2
+	dc.w	$ffe0	;64dd4
+	dc.w	$0000	;64dd6
+	dc.w	$fe70	;64dd8
+	dc.w	$ffd0	;64dda
+	dc.w	$0008	;64ddc
+	dc.w	$0000	;64dde
+	dc.w	$ca56	;64de0
+	dc.w	$6b54	;64de2
+	dc.w	$0002	;64de4
+	dc.w	$4f64	;64de6
+	dc.w	$0002	;64de8
+	dc.w	$4f7c	;64dea
+	dc.w	$0002	;64dec
+	dc.w	$4f84	;64dee
+	dc.w	$0000	;64df0
+	dc.w	$000a	;64df2
+	dc.w	$0000	;64df4
+	dc.w	$ca56	;64df6
+	dc.w	$6b54	;64df8
+	dc.w	$0002	;64dfa
+	dc.w	$4f64	;64dfc
+	dc.w	$0002	;64dfe
+	dc.w	$4f74	;64e00
+	dc.w	$0002	;64e02
+	dc.w	$4f84	;64e04
+	dc.w	$0000	;64e06
+	dc.w	$000a	;64e08
+	dc.w	$0000	;64e0a
+	dc.w	$ca56	;64e0c
+	dc.w	$94ac	;64e0e
+	dc.w	$0002	;64e10
+	dc.w	$4f8c	;64e12
+	dc.w	$0002	;64e14
+	dc.w	$4f6c	;64e16
+	dc.w	$0002	;64e18
+	dc.w	$4f84	;64e1a
+	dc.w	$0000	;64e1c
+	dc.w	$000a	;64e1e
+	dc.w	$0000	;64e20
+	dc.w	$ca56	;64e22
+	dc.w	$94ac	;64e24
+	dc.w	$0002	;64e26
+	dc.w	$4f8c	;64e28
+	dc.w	$0002	;64e2a
+	dc.w	$4f7c	;64e2c
+	dc.w	$0002	;64e2e
+	dc.w	$4f84	;64e30
+	dc.w	$0000	;64e32
+	dc.w	$000a	;64e34
+	dc.w	$0000	;64e36
+	dc.w	$8800	;64e38
+	dc.w	$0000	;64e3a
+	dc.w	$0002	;64e3c
+	dc.w	$4f8c	;64e3e
+	dc.w	$0002	;64e40
+	dc.w	$4f64	;64e42
+	dc.w	$0002	;64e44
+	dc.w	$4f6c	;64e46
+	dc.w	$0000	;64e48
+	dc.w	$0002	;64e4a
+	dc.w	$0000	;64e4c
+	dc.w	$8800	;64e4e
+	dc.w	$0000	;64e50
+	dc.w	$0002	;64e52
+	dc.w	$4f64	;64e54
+	dc.w	$0002	;64e56
+	dc.w	$4f6c	;64e58
+	dc.w	$0002	;64e5a
+	dc.w	$4f74	;64e5c
+	dc.w	$0000	;64e5e
+	dc.w	$0002	;64e60
+	dc.w	$0100	;64e62
+	dc.w	$002e	;64e64
+	dc.w	$003d	;64e66
+	dc.w	$0122	;64e68
+	dc.w	$0000	;64e6a
+	dc.w	$0000	;64e6c
+	dc.w	$0000	;64e6e
+	dc.w	$ff40	;64e70
+	dc.w	$0028	;64e72
+	dc.w	$0080	;64e74
+	dc.w	$0100	;64e76
+	dc.w	$0028	;64e78
+	dc.w	$0080	;64e7a
+	dc.w	$0100	;64e7c
+	dc.w	$0028	;64e7e
+	dc.w	$ff80	;64e80
+	dc.w	$ff40	;64e82
+	dc.w	$0028	;64e84
+	dc.w	$ff80	;64e86
+	dc.w	$ff40	;64e88
+	dc.w	$0028	;64e8a
+	dc.w	$0050	;64e8c
+	dc.w	$0120	;64e8e
+	dc.w	$0040	;64e90
+	dc.w	$0080	;64e92
+	dc.w	$0120	;64e94
+	dc.w	$0040	;64e96
+	dc.w	$ff80	;64e98
+	dc.w	$ff40	;64e9a
+	dc.w	$0028	;64e9c
+	dc.w	$ffb0	;64e9e
+	dc.w	$ff78	;64ea0
+	dc.w	$0028	;64ea2
+	dc.w	$0050	;64ea4
+	dc.w	$ff78	;64ea6
+	dc.w	$0028	;64ea8
+	dc.w	$ffb0	;64eaa
+	dc.w	$ffb0	;64eac
+	dc.w	$0000	;64eae
+	dc.w	$0050	;64eb0
+	dc.w	$ffb0	;64eb2
+	dc.w	$0000	;64eb4
+	dc.w	$ffb0	;64eb6
+	dc.w	$00d0	;64eb8
+	dc.w	$0000	;64eba
+	dc.w	$0050	;64ebc
+	dc.w	$00d0	;64ebe
+	dc.w	$0000	;64ec0
+	dc.w	$ffb0	;64ec2
+	dc.w	$ff40	;64ec4
+	dc.w	$0050	;64ec6
+	dc.w	$0050	;64ec8
+	dc.w	$ff40	;64eca
+	dc.w	$0050	;64ecc
+	dc.w	$ffb0	;64ece
+	dc.w	$0100	;64ed0
+	dc.w	$0028	;64ed2
+	dc.w	$0068	;64ed4
+	dc.w	$0100	;64ed6
+	dc.w	$0028	;64ed8
+	dc.w	$ff98	;64eda
+	dc.w	$ff30	;64edc
+	dc.w	$0060	;64ede
+	dc.w	$0080	;64ee0
+	dc.w	$ff30	;64ee2
+	dc.w	$0060	;64ee4
+	dc.w	$ff80	;64ee6
+	dc.w	$ff78	;64ee8
+	dc.w	$0028	;64eea
+	dc.w	$0068	;64eec
+	dc.w	$ff78	;64eee
+	dc.w	$0028	;64ef0
+	dc.w	$ff98	;64ef2
+	dc.w	$ffa0	;64ef4
+	dc.w	$0080	;64ef6
+	dc.w	$0080	;64ef8
+	dc.w	$ffa0	;64efa
+	dc.w	$0080	;64efc
+	dc.w	$ff80	;64efe
+	dc.w	$00d0	;64f00
+	dc.w	$0080	;64f02
+	dc.w	$0080	;64f04
+	dc.w	$00d0	;64f06
+	dc.w	$0080	;64f08
+	dc.w	$ff80	;64f0a
+	dc.w	$0120	;64f0c
+	dc.w	$0060	;64f0e
+	dc.w	$0080	;64f10
+	dc.w	$0120	;64f12
+	dc.w	$0060	;64f14
+	dc.w	$ff80	;64f16
+	dc.w	$0100	;64f18
+	dc.w	$0060	;64f1a
+	dc.w	$0050	;64f1c
+	dc.w	$0100	;64f1e
+	dc.w	$0060	;64f20
+	dc.w	$ffb0	;64f22
+	dc.w	$0120	;64f24
+	dc.w	$0060	;64f26
+	dc.w	$0050	;64f28
+	dc.w	$0120	;64f2a
+	dc.w	$0060	;64f2c
+	dc.w	$ffb0	;64f2e
+	dc.w	$00d0	;64f30
+	dc.w	$0080	;64f32
+	dc.w	$0050	;64f34
+	dc.w	$00d0	;64f36
+	dc.w	$0080	;64f38
+	dc.w	$ffb0	;64f3a
+	dc.w	$0120	;64f3c
+	dc.w	$0040	;64f3e
+	dc.w	$0050	;64f40
+	dc.w	$0120	;64f42
+	dc.w	$0040	;64f44
+	dc.w	$ffb0	;64f46
+	dc.w	$ff60	;64f48
+	dc.w	$0060	;64f4a
+	dc.w	$0050	;64f4c
+	dc.w	$ff60	;64f4e
+	dc.w	$0060	;64f50
+	dc.w	$ffb0	;64f52
+	dc.w	$ff30	;64f54
+	dc.w	$0060	;64f56
+	dc.w	$0050	;64f58
+	dc.w	$ff30	;64f5a
+	dc.w	$0060	;64f5c
+	dc.w	$ffb0	;64f5e
+	dc.w	$ffa0	;64f60
+	dc.w	$0080	;64f62
+	dc.w	$0050	;64f64
+	dc.w	$ffa0	;64f66
+	dc.w	$0080	;64f68
+	dc.w	$ffb0	;64f6a
+	dc.w	$ff30	;64f6c
+	dc.w	$0038	;64f6e
+	dc.w	$0080	;64f70
+	dc.w	$ff30	;64f72
+	dc.w	$0038	;64f74
+	dc.w	$0050	;64f76
+	dc.w	$ff30	;64f78
+	dc.w	$0038	;64f7a
+	dc.w	$ffb0	;64f7c
+	dc.w	$ff30	;64f7e
+	dc.w	$0038	;64f80
+	dc.w	$ff80	;64f82
+	dc.w	$df09	;64f84
+	dc.w	$7362	;64f86
+	dc.w	$0000	;64f88
+	dc.w	$0002	;64f8a
+	dc.w	$4ffc	;64f8c
+	dc.w	$0002	;64f8e
+	dc.w	$509c	;64f90
+	dc.w	$0002	;64f92
+	dc.w	$50ac	;64f94
+	dc.w	$0000	;64f96
+	dc.w	$0017	;64f98
+	dc.w	$df09	;64f9a
+	dc.w	$7362	;64f9c
+	dc.w	$0000	;64f9e
+	dc.w	$0002	;64fa0
+	dc.w	$4ffc	;64fa2
+	dc.w	$0002	;64fa4
+	dc.w	$501c	;64fa6
+	dc.w	$0002	;64fa8
+	dc.w	$50ac	;64faa
+	dc.w	$0000	;64fac
+	dc.w	$0017	;64fae
+	dc.w	$df09	;64fb0
+	dc.w	$7362	;64fb2
+	dc.w	$0000	;64fb4
+	dc.w	$0002	;64fb6
+	dc.w	$4ff4	;64fb8
+	dc.w	$0002	;64fba
+	dc.w	$5014	;64fbc
+	dc.w	$0002	;64fbe
+	dc.w	$5094	;64fc0
+	dc.w	$0000	;64fc2
+	dc.w	$0017	;64fc4
+	dc.w	$df09	;64fc6
+	dc.w	$7362	;64fc8
+	dc.w	$0000	;64fca
+	dc.w	$0002	;64fcc
+	dc.w	$5014	;64fce
+	dc.w	$0002	;64fd0
+	dc.w	$5094	;64fd2
+	dc.w	$0002	;64fd4
+	dc.w	$50a4	;64fd6
+	dc.w	$0000	;64fd8
+	dc.w	$0017	;64fda
+	dc.w	$2c91	;64fdc
+	dc.w	$6f6a	;64fde
+	dc.w	$0000	;64fe0
+	dc.w	$0002	;64fe2
+	dc.w	$5024	;64fe4
+	dc.w	$0002	;64fe6
+	dc.w	$5034	;64fe8
+	dc.w	$0002	;64fea
+	dc.w	$5064	;64fec
+	dc.w	$0000	;64fee
+	dc.w	$0017	;64ff0
+	dc.w	$2c91	;64ff2
+	dc.w	$6f6a	;64ff4
+	dc.w	$0000	;64ff6
+	dc.w	$0002	;64ff8
+	dc.w	$5034	;64ffa
+	dc.w	$0002	;64ffc
+	dc.w	$5054	;64ffe
+	dc.w	$0002	;65000
+	dc.w	$5064	;65002
+	dc.w	$0000	;65004
+	dc.w	$0017	;65006
+	dc.w	$2c91	;65008
+	dc.w	$6f6a	;6500a
+	dc.w	$0000	;6500c
+	dc.w	$0002	;6500e
+	dc.w	$502c	;65010
+	dc.w	$0002	;65012
+	dc.w	$505c	;65014
+	dc.w	$0002	;65016
+	dc.w	$506c	;65018
+	dc.w	$0000	;6501a
+	dc.w	$0017	;6501c
+	dc.w	$2c91	;6501e
+	dc.w	$6f6a	;65020
+	dc.w	$0000	;65022
+	dc.w	$0002	;65024
+	dc.w	$502c	;65026
+	dc.w	$0002	;65028
+	dc.w	$503c	;6502a
+	dc.w	$0002	;6502c
+	dc.w	$505c	;6502e
+	dc.w	$0000	;65030
+	dc.w	$0017	;65032
+	dc.w	$0000	;65034
+	dc.w	$0000	;65036
+	dc.w	$7800	;65038
+	dc.w	$0002	;6503a
+	dc.w	$4ff4	;6503c
+	dc.w	$0002	;6503e
+	dc.w	$5014	;65040
+	dc.w	$0002	;65042
+	dc.w	$5024	;65044
+	dc.w	$0000	;65046
+	dc.w	$0016	;65048
+	dc.w	$0000	;6504a
+	dc.w	$0000	;6504c
+	dc.w	$8800	;6504e
+	dc.w	$0002	;65050
+	dc.w	$4ffc	;65052
+	dc.w	$0002	;65054
+	dc.w	$501c	;65056
+	dc.w	$0002	;65058
+	dc.w	$502c	;6505a
+	dc.w	$0000	;6505c
+	dc.w	$0016	;6505e
+	dc.w	$0000	;65060
+	dc.w	$0000	;65062
+	dc.w	$7800	;65064
+	dc.w	$0002	;65066
+	dc.w	$4ff4	;65068
+	dc.w	$0002	;6506a
+	dc.w	$5024	;6506c
+	dc.w	$0002	;6506e
+	dc.w	$5034	;65070
+	dc.w	$0000	;65072
+	dc.w	$0016	;65074
+	dc.w	$0000	;65076
+	dc.w	$0000	;65078
+	dc.w	$8800	;6507a
+	dc.w	$0002	;6507c
+	dc.w	$4ffc	;6507e
+	dc.w	$0002	;65080
+	dc.w	$502c	;65082
+	dc.w	$0002	;65084
+	dc.w	$503c	;65086
+	dc.w	$0000	;65088
+	dc.w	$0016	;6508a
+	dc.w	$ca56	;6508c
+	dc.w	$6b54	;6508e
+	dc.w	$0000	;65090
+	dc.w	$0002	;65092
+	dc.w	$4fd4	;65094
+	dc.w	$0002	;65096
+	dc.w	$4fdc	;65098
+	dc.w	$0002	;6509a
+	dc.w	$5084	;6509c
+	dc.w	$0000	;6509e
+	dc.w	$000e	;650a0
+	dc.w	$ca56	;650a2
+	dc.w	$6b54	;650a4
+	dc.w	$0000	;650a6
+	dc.w	$0002	;650a8
+	dc.w	$4fdc	;650aa
+	dc.w	$0002	;650ac
+	dc.w	$5084	;650ae
+	dc.w	$0002	;650b0
+	dc.w	$508c	;650b2
+	dc.w	$0000	;650b4
+	dc.w	$000e	;650b6
+	dc.w	$ba41	;650b8
+	dc.w	$9e5b	;650ba
+	dc.w	$0000	;650bc
+	dc.w	$0002	;650be
+	dc.w	$4fac	;650c0
+	dc.w	$0002	;650c2
+	dc.w	$4fd4	;650c4
+	dc.w	$0002	;650c6
+	dc.w	$4fdc	;650c8
+	dc.w	$0000	;650ca
+	dc.w	$0012	;650cc
+	dc.w	$ba41	;650ce
+	dc.w	$9e5b	;650d0
+	dc.w	$0000	;650d2
+	dc.w	$0002	;650d4
+	dc.w	$4fa4	;650d6
+	dc.w	$0002	;650d8
+	dc.w	$4fac	;650da
+	dc.w	$0002	;650dc
+	dc.w	$4fd4	;650de
+	dc.w	$0000	;650e0
+	dc.w	$0012	;650e2
+	dc.w	$8800	;650e4
+	dc.w	$0000	;650e6
+	dc.w	$0000	;650e8
+	dc.w	$0002	;650ea
+	dc.w	$4ff4	;650ec
+	dc.w	$0002	;650ee
+	dc.w	$50b4	;650f0
+	dc.w	$0002	;650f2
+	dc.w	$50bc	;650f4
+	dc.w	$0000	;650f6
+	dc.w	$0017	;650f8
+	dc.w	$8800	;650fa
+	dc.w	$0000	;650fc
+	dc.w	$0000	;650fe
+	dc.w	$0002	;65100
+	dc.w	$4ff4	;65102
+	dc.w	$0002	;65104
+	dc.w	$5094	;65106
+	dc.w	$0002	;65108
+	dc.w	$50bc	;6510a
+	dc.w	$0000	;6510c
+	dc.w	$0017	;6510e
+	dc.w	$8800	;65110
+	dc.w	$0000	;65112
+	dc.w	$0000	;65114
+	dc.w	$0002	;65116
+	dc.w	$509c	;65118
+	dc.w	$0002	;6511a
+	dc.w	$50c4	;6511c
+	dc.w	$0002	;6511e
+	dc.w	$50cc	;65120
+	dc.w	$0000	;65122
+	dc.w	$0017	;65124
+	dc.w	$8800	;65126
+	dc.w	$0000	;65128
+	dc.w	$0000	;6512a
+	dc.w	$0002	;6512c
+	dc.w	$4ffc	;6512e
+	dc.w	$0002	;65130
+	dc.w	$509c	;65132
+	dc.w	$0002	;65134
+	dc.w	$50cc	;65136
+	dc.w	$0000	;65138
+	dc.w	$0017	;6513a
+	dc.w	$54da	;6513c
+	dc.w	$54da	;6513e
+	dc.w	$0000	;65140
+	dc.w	$0002	;65142
+	dc.w	$5044	;65144
+	dc.w	$0002	;65146
+	dc.w	$504c	;65148
+	dc.w	$0002	;6514a
+	dc.w	$5074	;6514c
+	dc.w	$0000	;6514e
+	dc.w	$000e	;65150
+	dc.w	$54da	;65152
+	dc.w	$54da	;65154
+	dc.w	$0000	;65156
+	dc.w	$0002	;65158
+	dc.w	$504c	;6515a
+	dc.w	$0002	;6515c
+	dc.w	$5074	;6515e
+	dc.w	$0002	;65160
+	dc.w	$507c	;65162
+	dc.w	$0000	;65164
+	dc.w	$000e	;65166
+	dc.w	$7800	;65168
+	dc.w	$0000	;6516a
+	dc.w	$0000	;6516c
+	dc.w	$0002	;6516e
+	dc.w	$4f8c	;65170
+	dc.w	$0002	;65172
+	dc.w	$5034	;65174
+	dc.w	$0002	;65176
+	dc.w	$5054	;65178
+	dc.w	$0000	;6517a
+	dc.w	$0017	;6517c
+	dc.w	$7800	;6517e
+	dc.w	$0000	;65180
+	dc.w	$0000	;65182
+	dc.w	$0002	;65184
+	dc.w	$4f8c	;65186
+	dc.w	$0002	;65188
+	dc.w	$5054	;6518a
+	dc.w	$0002	;6518c
+	dc.w	$5074	;6518e
+	dc.w	$0000	;65190
+	dc.w	$0017	;65192
+	dc.w	$7800	;65194
+	dc.w	$0000	;65196
+	dc.w	$0000	;65198
+	dc.w	$0002	;6519a
+	dc.w	$503c	;6519c
+	dc.w	$0002	;6519e
+	dc.w	$505c	;651a0
+	dc.w	$0002	;651a2
+	dc.w	$507c	;651a4
+	dc.w	$0000	;651a6
+	dc.w	$0017	;651a8
+	dc.w	$7800	;651aa
+	dc.w	$0000	;651ac
+	dc.w	$0000	;651ae
+	dc.w	$0002	;651b0
+	dc.w	$4f94	;651b2
+	dc.w	$0002	;651b4
+	dc.w	$503c	;651b6
+	dc.w	$0002	;651b8
+	dc.w	$507c	;651ba
+	dc.w	$0000	;651bc
+	dc.w	$0017	;651be
+	dc.w	$0000	;651c0
+	dc.w	$0000	;651c2
+	dc.w	$7800	;651c4
+	dc.w	$0002	;651c6
+	dc.w	$4f8c	;651c8
+	dc.w	$0002	;651ca
+	dc.w	$4ff4	;651cc
+	dc.w	$0002	;651ce
+	dc.w	$5034	;651d0
+	dc.w	$0000	;651d2
+	dc.w	$0016	;651d4
+	dc.w	$0000	;651d6
+	dc.w	$0000	;651d8
+	dc.w	$8800	;651da
+	dc.w	$0002	;651dc
+	dc.w	$4f94	;651de
+	dc.w	$0002	;651e0
+	dc.w	$4ffc	;651e2
+	dc.w	$0002	;651e4
+	dc.w	$503c	;651e6
+	dc.w	$0000	;651e8
+	dc.w	$0016	;651ea
+	dc.w	$0000	;651ec
+	dc.w	$0000	;651ee
+	dc.w	$7800	;651f0
+	dc.w	$0002	;651f2
+	dc.w	$4f64	;651f4
+	dc.w	$0002	;651f6
+	dc.w	$4f8c	;651f8
+	dc.w	$0002	;651fa
+	dc.w	$4ff4	;651fc
+	dc.w	$0000	;651fe
+	dc.w	$0016	;65200
+	dc.w	$0000	;65202
+	dc.w	$0000	;65204
+	dc.w	$8800	;65206
+	dc.w	$0002	;65208
+	dc.w	$4f7c	;6520a
+	dc.w	$0002	;6520c
+	dc.w	$4f94	;6520e
+	dc.w	$0002	;65210
+	dc.w	$4ffc	;65212
+	dc.w	$0000	;65214
+	dc.w	$0016	;65216
+	dc.w	$0000	;65218
+	dc.w	$0000	;6521a
+	dc.w	$7800	;6521c
+	dc.w	$0002	;6521e
+	dc.w	$4f64	;65220
+	dc.w	$0002	;65222
+	dc.w	$4f6c	;65224
+	dc.w	$0002	;65226
+	dc.w	$4f8c	;65228
+	dc.w	$0000	;6522a
+	dc.w	$0016	;6522c
+	dc.w	$0000	;6522e
+	dc.w	$0000	;65230
+	dc.w	$8800	;65232
+	dc.w	$0002	;65234
+	dc.w	$4f74	;65236
+	dc.w	$0002	;65238
+	dc.w	$4f7c	;6523a
+	dc.w	$0002	;6523c
+	dc.w	$4f94	;6523e
+	dc.w	$0000	;65240
+	dc.w	$0016	;65242
+	dc.w	$0000	;65244
+	dc.w	$0000	;65246
+	dc.w	$7800	;65248
+	dc.w	$0002	;6524a
+	dc.w	$4f64	;6524c
+	dc.w	$0002	;6524e
+	dc.w	$4ff4	;65250
+	dc.w	$0002	;65252
+	dc.w	$50b4	;65254
+	dc.w	$0000	;65256
+	dc.w	$0016	;65258
+	dc.w	$0000	;6525a
+	dc.w	$0000	;6525c
+	dc.w	$8800	;6525e
+	dc.w	$0002	;65260
+	dc.w	$4f7c	;65262
+	dc.w	$0002	;65264
+	dc.w	$4ffc	;65266
+	dc.w	$0002	;65268
+	dc.w	$50cc	;6526a
+	dc.w	$0000	;6526c
+	dc.w	$0016	;6526e
+	dc.w	$0000	;65270
+	dc.w	$8800	;65272
+	dc.w	$0000	;65274
+	dc.w	$0002	;65276
+	dc.w	$4f7c	;65278
+	dc.w	$0002	;6527a
+	dc.w	$4fec	;6527c
+	dc.w	$0002	;6527e
+	dc.w	$500c	;65280
+	dc.w	$0000	;65282
+	dc.w	$0012	;65284
+	dc.w	$0000	;65286
+	dc.w	$8800	;65288
+	dc.w	$0000	;6528a
+	dc.w	$0002	;6528c
+	dc.w	$4f74	;6528e
+	dc.w	$0002	;65290
+	dc.w	$4f7c	;65292
+	dc.w	$0002	;65294
+	dc.w	$4fec	;65296
+	dc.w	$0000	;65298
+	dc.w	$0012	;6529a
+	dc.w	$0000	;6529c
+	dc.w	$8800	;6529e
+	dc.w	$0000	;652a0
+	dc.w	$0002	;652a2
+	dc.w	$4f64	;652a4
+	dc.w	$0002	;652a6
+	dc.w	$4f6c	;652a8
+	dc.w	$0002	;652aa
+	dc.w	$5004	;652ac
+	dc.w	$0000	;652ae
+	dc.w	$0012	;652b0
+	dc.w	$0000	;652b2
+	dc.w	$8800	;652b4
+	dc.w	$0000	;652b6
+	dc.w	$0002	;652b8
+	dc.w	$4f6c	;652ba
+	dc.w	$0002	;652bc
+	dc.w	$4fe4	;652be
+	dc.w	$0002	;652c0
+	dc.w	$5004	;652c2
+	dc.w	$0000	;652c4
+	dc.w	$0012	;652c6
+	dc.w	$0000	;652c8
+	dc.w	$8800	;652ca
+	dc.w	$0000	;652cc
+	dc.w	$0002	;652ce
+	dc.w	$4f64	;652d0
+	dc.w	$0002	;652d2
+	dc.w	$4f84	;652d4
+	dc.w	$0002	;652d6
+	dc.w	$5004	;652d8
+	dc.w	$0000	;652da
+	dc.w	$0012	;652dc
+	dc.w	$0000	;652de
+	dc.w	$8800	;652e0
+	dc.w	$0000	;652e2
+	dc.w	$0002	;652e4
+	dc.w	$4f84	;652e6
+	dc.w	$0002	;652e8
+	dc.w	$4fa4	;652ea
+	dc.w	$0002	;652ec
+	dc.w	$5004	;652ee
+	dc.w	$0000	;652f0
+	dc.w	$0012	;652f2
+	dc.w	$0000	;652f4
+	dc.w	$8800	;652f6
+	dc.w	$0000	;652f8
+	dc.w	$0002	;652fa
+	dc.w	$4f7c	;652fc
+	dc.w	$0002	;652fe
+	dc.w	$4f9c	;65300
+	dc.w	$0002	;65302
+	dc.w	$4fac	;65304
+	dc.w	$0000	;65306
+	dc.w	$0012	;65308
+	dc.w	$0000	;6530a
+	dc.w	$8800	;6530c
+	dc.w	$0000	;6530e
+	dc.w	$0002	;65310
+	dc.w	$4f7c	;65312
+	dc.w	$0002	;65314
+	dc.w	$4fac	;65316
+	dc.w	$0002	;65318
+	dc.w	$500c	;6531a
+	dc.w	$0000	;6531c
+	dc.w	$0012	;6531e
+	dc.w	$ab26	;65320
+	dc.w	$ab26	;65322
+	dc.w	$0000	;65324
+	dc.w	$0002	;65326
+	dc.w	$4f64	;65328
+	dc.w	$0002	;6532a
+	dc.w	$4f84	;6532c
+	dc.w	$0002	;6532e
+	dc.w	$50b4	;65330
+	dc.w	$0000	;65332
+	dc.w	$000a	;65334
+	dc.w	$ab26	;65336
+	dc.w	$ab26	;65338
+	dc.w	$0000	;6533a
+	dc.w	$0002	;6533c
+	dc.w	$4f84	;6533e
+	dc.w	$0002	;65340
+	dc.w	$50b4	;65342
+	dc.w	$0002	;65344
+	dc.w	$50bc	;65346
+	dc.w	$0000	;65348
+	dc.w	$000a	;6534a
+	dc.w	$ab26	;6534c
+	dc.w	$ab26	;6534e
+	dc.w	$0000	;65350
+	dc.w	$0002	;65352
+	dc.w	$4f7c	;65354
+	dc.w	$0002	;65356
+	dc.w	$4f9c	;65358
+	dc.w	$0002	;6535a
+	dc.w	$50c4	;6535c
+	dc.w	$0000	;6535e
+	dc.w	$000a	;65360
+	dc.w	$ab26	;65362
+	dc.w	$ab26	;65364
+	dc.w	$0000	;65366
+	dc.w	$0002	;65368
+	dc.w	$4f7c	;6536a
+	dc.w	$0002	;6536c
+	dc.w	$50c4	;6536e
+	dc.w	$0002	;65370
+	dc.w	$50cc	;65372
+	dc.w	$0000	;65374
+	dc.w	$000a	;65376
+	dc.w	$4800	;65378
+	dc.w	$a000	;6537a
+	dc.w	$0000	;6537c
+	dc.w	$0002	;6537e
+	dc.w	$4f6c	;65380
+	dc.w	$0002	;65382
+	dc.w	$4f8c	;65384
+	dc.w	$0002	;65386
+	dc.w	$4fe4	;65388
+	dc.w	$0000	;6538a
+	dc.w	$0012	;6538c
+	dc.w	$4800	;6538e
+	dc.w	$a000	;65390
+	dc.w	$0000	;65392
+	dc.w	$0002	;65394
+	dc.w	$4f74	;65396
+	dc.w	$0002	;65398
+	dc.w	$4f94	;6539a
+	dc.w	$0002	;6539c
+	dc.w	$4fec	;6539e
+	dc.w	$0000	;653a0
+	dc.w	$0012	;653a2
+	dc.w	$4800	;653a4
+	dc.w	$a000	;653a6
+	dc.w	$0000	;653a8
+	dc.w	$0002	;653aa
+	dc.w	$4f8c	;653ac
+	dc.w	$0002	;653ae
+	dc.w	$4fe4	;653b0
+	dc.w	$0002	;653b2
+	dc.w	$4fec	;653b4
+	dc.w	$0000	;653b6
+	dc.w	$0012	;653b8
+	dc.w	$4800	;653ba
+	dc.w	$a000	;653bc
+	dc.w	$0000	;653be
+	dc.w	$0002	;653c0
+	dc.w	$4f8c	;653c2
+	dc.w	$0002	;653c4
+	dc.w	$4f94	;653c6
+	dc.w	$0002	;653c8
+	dc.w	$4fec	;653ca
+	dc.w	$0000	;653cc
+	dc.w	$0012	;653ce
+	dc.w	$ba41	;653d0
+	dc.w	$9e5b	;653d2
+	dc.w	$0000	;653d4
+	dc.w	$0002	;653d6
+	dc.w	$4fa4	;653d8
+	dc.w	$0002	;653da
+	dc.w	$4fac	;653dc
+	dc.w	$0002	;653de
+	dc.w	$4fbc	;653e0
+	dc.w	$0000	;653e2
+	dc.w	$0012	;653e4
+	dc.w	$ba41	;653e6
+	dc.w	$9e5b	;653e8
+	dc.w	$0000	;653ea
+	dc.w	$0002	;653ec
+	dc.w	$4fa4	;653ee
+	dc.w	$0002	;653f0
+	dc.w	$4fb4	;653f2
+	dc.w	$0002	;653f4
+	dc.w	$4fbc	;653f6
+	dc.w	$0000	;653f8
+	dc.w	$0012	;653fa
+	dc.w	$ba41	;653fc
+	dc.w	$9e5b	;653fe
+	dc.w	$0000	;65400
+	dc.w	$0002	;65402
+	dc.w	$4fa4	;65404
+	dc.w	$0002	;65406
+	dc.w	$4fb4	;65408
+	dc.w	$0002	;6540a
+	dc.w	$5004	;6540c
+	dc.w	$0000	;6540e
+	dc.w	$0012	;65410
+	dc.w	$ba41	;65412
+	dc.w	$9e5b	;65414
+	dc.w	$0000	;65416
+	dc.w	$0002	;65418
+	dc.w	$4fac	;6541a
+	dc.w	$0002	;6541c
+	dc.w	$4fbc	;6541e
+	dc.w	$0002	;65420
+	dc.w	$500c	;65422
+	dc.w	$0000	;65424
+	dc.w	$0012	;65426
+	dc.w	$4cd2	;65428
+	dc.w	$a3d1	;6542a
+	dc.w	$0000	;6542c
+	dc.w	$0002	;6542e
+	dc.w	$4fc4	;65430
+	dc.w	$0002	;65432
+	dc.w	$4fcc	;65434
+	dc.w	$0002	;65436
+	dc.w	$4fe4	;65438
+	dc.w	$0000	;6543a
+	dc.w	$0012	;6543c
+	dc.w	$4cd2	;6543e
+	dc.w	$a3d1	;65440
+	dc.w	$0000	;65442
+	dc.w	$0002	;65444
+	dc.w	$4fcc	;65446
+	dc.w	$0002	;65448
+	dc.w	$4fe4	;6544a
+	dc.w	$0002	;6544c
+	dc.w	$4fec	;6544e
+	dc.w	$0000	;65450
+	dc.w	$0012	;65452
+	dc.w	$0000	;65454
+	dc.w	$c243	;65456
+	dc.w	$66e6	;65458
+	dc.w	$0002	;6545a
+	dc.w	$5004	;6545c
+	dc.w	$0002	;6545e
+	dc.w	$4fb4	;65460
+	dc.w	$0002	;65462
+	dc.w	$4fe4	;65464
+	dc.w	$0000	;65466
+	dc.w	$000a	;65468
+	dc.w	$0000	;6546a
+	dc.w	$c243	;6546c
+	dc.w	$66e6	;6546e
+	dc.w	$0002	;65470
+	dc.w	$4fb4	;65472
+	dc.w	$0002	;65474
+	dc.w	$4fc4	;65476
+	dc.w	$0002	;65478
+	dc.w	$4fe4	;6547a
+	dc.w	$0000	;6547c
+	dc.w	$000a	;6547e
+	dc.w	$0000	;65480
+	dc.w	$c243	;65482
+	dc.w	$991a	;65484
+	dc.w	$0002	;65486
+	dc.w	$4fbc	;65488
+	dc.w	$0002	;6548a
+	dc.w	$4fec	;6548c
+	dc.w	$0002	;6548e
+	dc.w	$500c	;65490
+	dc.w	$0000	;65492
+	dc.w	$000a	;65494
+	dc.w	$0000	;65496
+	dc.w	$c243	;65498
+	dc.w	$991a	;6549a
+	dc.w	$0002	;6549c
+	dc.w	$4fbc	;6549e
+	dc.w	$0002	;654a0
+	dc.w	$4fcc	;654a2
+	dc.w	$0002	;654a4
+	dc.w	$4fec	;654a6
+	dc.w	$0000	;654a8
+	dc.w	$000a	;654aa
+	dc.w	$0000	;654ac
+	dc.w	$0000	;654ae
+	dc.w	$0000	;654b0
+	dc.w	$0002	;654b2
+	dc.w	$4fb4	;654b4
+	dc.w	$0002	;654b6
+	dc.w	$4fbc	;654b8
+	dc.w	$0002	;654ba
+	dc.w	$4fcc	;654bc
+	dc.w	$0000	;654be
+	dc.w	$0002	;654c0
+	dc.w	$0000	;654c2
+	dc.w	$0000	;654c4
+	dc.w	$0000	;654c6
+	dc.w	$0002	;654c8
+	dc.w	$4fb4	;654ca
+	dc.w	$0002	;654cc
+	dc.w	$4fc4	;654ce
+	dc.w	$0002	;654d0
+	dc.w	$4fcc	;654d2
+	dc.w	$0000	;654d4
+	dc.w	$0002	;654d6
+	dc.w	$0100	;654d8
+	dc.w	$000c	;654da
+	dc.w	$000f	;654dc
+	dc.w	$0056	;654de
+	dc.w	$0000	;654e0
+	dc.w	$0000	;654e2
+	dc.w	$0000	;654e4
+	dc.w	$ffb8	;654e6
+	dc.w	$ffd0	;654e8
+	dc.w	$ffe0	;654ea
+	dc.w	$ffb8	;654ec
+	dc.w	$ffd0	;654ee
+	dc.w	$0020	;654f0
+	dc.w	$0000	;654f2
+	dc.w	$ffd0	;654f4
+	dc.w	$0030	;654f6
+	dc.w	$0050	;654f8
+	dc.w	$ffd0	;654fa
+	dc.w	$0010	;654fc
+	dc.w	$0050	;654fe
+	dc.w	$ffd0	;65500
+	dc.w	$fff0	;65502
+	dc.w	$0000	;65504
+	dc.w	$ffd0	;65506
+	dc.w	$ffd0	;65508
+	dc.w	$ffb0	;6550a
+	dc.w	$0000	;6550c
+	dc.w	$ffd0	;6550e
+	dc.w	$ffb0	;65510
+	dc.w	$0000	;65512
+	dc.w	$0030	;65514
+	dc.w	$0000	;65516
+	dc.w	$0000	;65518
+	dc.w	$0048	;6551a
+	dc.w	$0060	;6551c
+	dc.w	$0000	;6551e
+	dc.w	$0028	;65520
+	dc.w	$0060	;65522
+	dc.w	$0000	;65524
+	dc.w	$ffd8	;65526
+	dc.w	$0000	;65528
+	dc.w	$0000	;6552a
+	dc.w	$ffb8	;6552c
+	dc.w	$2249	;6552e
+	dc.w	$cc93	;65530
+	dc.w	$66db	;65532
+	dc.w	$0002	;65534
+	dc.w	$4f74	;65536
+	dc.w	$0002	;65538
+	dc.w	$4fa4	;6553a
+	dc.w	$0002	;6553c
+	dc.w	$4fac	;6553e
+	dc.w	$0000	;65540
+	dc.w	$0006	;65542
+	dc.w	$266a	;65544
+	dc.w	$c32d	;65546
+	dc.w	$600a	;65548
+	dc.w	$0002	;6554a
+	dc.w	$4f74	;6554c
+	dc.w	$0002	;6554e
+	dc.w	$4f7c	;65550
+	dc.w	$0002	;65552
+	dc.w	$4fac	;65554
+	dc.w	$0000	;65556
+	dc.w	$0006	;65558
+	dc.w	$dfa2	;6555a
+	dc.w	$d6a4	;6555c
+	dc.w	$941b	;6555e
+	dc.w	$0002	;65560
+	dc.w	$4f64	;65562
+	dc.w	$0002	;65564
+	dc.w	$4f94	;65566
+	dc.w	$0002	;65568
+	dc.w	$4fbc	;6556a
+	dc.w	$0000	;6556c
+	dc.w	$000a	;6556e
+	dc.w	$e89c	;65570
+	dc.w	$cb5e	;65572
+	dc.w	$96bb	;65574
+	dc.w	$0002	;65576
+	dc.w	$4f64	;65578
+	dc.w	$0002	;6557a
+	dc.w	$4f8c	;6557c
+	dc.w	$0002	;6557e
+	dc.w	$4fbc	;65580
+	dc.w	$0000	;65582
+	dc.w	$000a	;65584
+	dc.w	$e785	;65586
+	dc.w	$d733	;65588
+	dc.w	$6e29	;6558a
+	dc.w	$0002	;6558c
+	dc.w	$4f6c	;6558e
+	dc.w	$0002	;65590
+	dc.w	$4f74	;65592
+	dc.w	$0002	;65594
+	dc.w	$4f9c	;65596
+	dc.w	$0000	;65598
+	dc.w	$000a	;6559a
+	dc.w	$e0e7	;6559c
+	dc.w	$cc2b	;6559e
+	dc.w	$67aa	;655a0
+	dc.w	$0002	;655a2
+	dc.w	$4f74	;655a4
+	dc.w	$0002	;655a6
+	dc.w	$4f9c	;655a8
+	dc.w	$0002	;655aa
+	dc.w	$4fa4	;655ac
+	dc.w	$0000	;655ae
+	dc.w	$000a	;655b0
+	dc.w	$286c	;655b2
+	dc.w	$cd79	;655b4
+	dc.w	$9af2	;655b6
+	dc.w	$0002	;655b8
+	dc.w	$4f84	;655ba
+	dc.w	$0002	;655bc
+	dc.w	$4f8c	;655be
+	dc.w	$0002	;655c0
+	dc.w	$4fbc	;655c2
+	dc.w	$0000	;655c4
+	dc.w	$0006	;655c6
+	dc.w	$20d4	;655c8
+	dc.w	$c3d1	;655ca
+	dc.w	$9d84	;655cc
+	dc.w	$0002	;655ce
+	dc.w	$4f84	;655d0
+	dc.w	$0002	;655d2
+	dc.w	$4fb4	;655d4
+	dc.w	$0002	;655d6
+	dc.w	$4fbc	;655d8
+	dc.w	$0000	;655da
+	dc.w	$0006	;655dc
+	dc.w	$71d7	;655de
+	dc.w	$da0e	;655e0
+	dc.w	$0000	;655e2
+	dc.w	$0002	;655e4
+	dc.w	$4f7c	;655e6
+	dc.w	$0002	;655e8
+	dc.w	$4f84	;655ea
+	dc.w	$0002	;655ec
+	dc.w	$4fb4	;655ee
+	dc.w	$0000	;655f0
+	dc.w	$0016	;655f2
+	dc.w	$71d7	;655f4
+	dc.w	$da0e	;655f6
+	dc.w	$0000	;655f8
+	dc.w	$0002	;655fa
+	dc.w	$4f7c	;655fc
+	dc.w	$0002	;655fe
+	dc.w	$4fac	;65600
+	dc.w	$0002	;65602
+	dc.w	$4fb4	;65604
+	dc.w	$0000	;65606
+	dc.w	$0016	;65608
+	dc.w	$89a2	;6560a
+	dc.w	$ec46	;6560c
+	dc.w	$0000	;6560e
+	dc.w	$0002	;65610
+	dc.w	$4f6c	;65612
+	dc.w	$0002	;65614
+	dc.w	$4f94	;65616
+	dc.w	$0002	;65618
+	dc.w	$4f9c	;6561a
+	dc.w	$0000	;6561c
+	dc.w	$0016	;6561e
+	dc.w	$89a2	;65620
+	dc.w	$ec46	;65622
+	dc.w	$0000	;65624
+	dc.w	$0002	;65626
+	dc.w	$4f64	;65628
+	dc.w	$0002	;6562a
+	dc.w	$4f6c	;6562c
+	dc.w	$0002	;6562e
+	dc.w	$4f94	;65630
+	dc.w	$0000	;65632
+	dc.w	$0016	;65634
+	dc.w	$0000	;65636
+	dc.w	$8800	;65638
+	dc.w	$0000	;6563a
+	dc.w	$0002	;6563c
+	dc.w	$4f64	;6563e
+	dc.w	$0002	;65640
+	dc.w	$4f6c	;65642
+	dc.w	$0002	;65644
+	dc.w	$4f8c	;65646
+	dc.w	$0000	;65648
+	dc.w	$0002	;6564a
+	dc.w	$0000	;6564c
+	dc.w	$8800	;6564e
+	dc.w	$0000	;65650
+	dc.w	$0002	;65652
+	dc.w	$4f6c	;65654
+	dc.w	$0002	;65656
+	dc.w	$4f74	;65658
+	dc.w	$0002	;6565a
+	dc.w	$4f8c	;6565c
+	dc.w	$0000	;6565e
+	dc.w	$0002	;65660
+	dc.w	$0000	;65662
+	dc.w	$8800	;65664
+	dc.w	$0000	;65666
+	dc.w	$0002	;65668
+	dc.w	$4f74	;6566a
+	dc.w	$0002	;6566c
+	dc.w	$4f84	;6566e
+	dc.w	$0002	;65670
+	dc.w	$4f8c	;65672
+	dc.w	$0000	;65674
+	dc.w	$0002	;65676
+	dc.w	$0000	;65678
+	dc.w	$8800	;6567a
+	dc.w	$0000	;6567c
+	dc.w	$0002	;6567e
+	dc.w	$4f74	;65680
+	dc.w	$0002	;65682
+	dc.w	$4f7c	;65684
+	dc.w	$0002	;65686
+	dc.w	$4f84	;65688
+	dc.w	$0000	;6568a
+	dc.w	$0002	;6568c
+	dc.w	$0100	;6568e
+	dc.w	$0006	;65690
+	dc.w	$0005	;65692
+	dc.w	$0032	;65694
+	dc.w	$0000	;65696
+	dc.w	$0000	;65698
+	dc.w	$0000	;6569a
+	dc.w	$ff10	;6569c
+	dc.w	$ffe0	;6569e
+	dc.w	$fff8	;656a0
+	dc.w	$ffb4	;656a2
+	dc.w	$ffe0	;656a4
+	dc.w	$0008	;656a6
+	dc.w	$ffb4	;656a8
+	dc.w	$ffe0	;656aa
+	dc.w	$fff8	;656ac
+	dc.w	$ff10	;656ae
+	dc.w	$fff0	;656b0
+	dc.w	$0000	;656b2
+	dc.w	$ffb4	;656b4
+	dc.w	$fff0	;656b6
+	dc.w	$0000	;656b8
+	dc.w	$ff10	;656ba
+	dc.w	$ffe0	;656bc
+	dc.w	$0008	;656be
+	dc.w	$0000	;656c0
+	dc.w	$ca56	;656c2
+	dc.w	$6b54	;656c4
+	dc.w	$0002	;656c6
+	dc.w	$4f64	;656c8
+	dc.w	$0002	;656ca
+	dc.w	$4f7c	;656cc
+	dc.w	$0002	;656ce
+	dc.w	$4f84	;656d0
+	dc.w	$0000	;656d2
+	dc.w	$000a	;656d4
+	dc.w	$0000	;656d6
+	dc.w	$ca56	;656d8
+	dc.w	$6b54	;656da
+	dc.w	$0002	;656dc
+	dc.w	$4f64	;656de
+	dc.w	$0002	;656e0
+	dc.w	$4f74	;656e2
+	dc.w	$0002	;656e4
+	dc.w	$4f84	;656e6
+	dc.w	$0000	;656e8
+	dc.w	$000a	;656ea
+	dc.w	$0000	;656ec
+	dc.w	$ca56	;656ee
+	dc.w	$94ac	;656f0
+	dc.w	$0002	;656f2
+	dc.w	$4f8c	;656f4
+	dc.w	$0002	;656f6
+	dc.w	$4f6c	;656f8
+	dc.w	$0002	;656fa
+	dc.w	$4f84	;656fc
+	dc.w	$0000	;656fe
+	dc.w	$000a	;65700
+	dc.w	$0000	;65702
+	dc.w	$ca56	;65704
+	dc.w	$94ac	;65706
+	dc.w	$0002	;65708
+	dc.w	$4f8c	;6570a
+	dc.w	$0002	;6570c
+	dc.w	$4f7c	;6570e
+	dc.w	$0002	;65710
+	dc.w	$4f84	;65712
+	dc.w	$0000	;65714
+	dc.w	$000a	;65716
+	dc.w	$0000	;65718
+	dc.w	$8800	;6571a
+	dc.w	$0000	;6571c
+	dc.w	$0002	;6571e
+	dc.w	$4f8c	;65720
+	dc.w	$0002	;65722
+	dc.w	$4f64	;65724
+	dc.w	$0002	;65726
+	dc.w	$4f6c	;65728
+	dc.w	$0000	;6572a
+	dc.w	$0002	;6572c
+	dc.w	$0000	;6572e
+	dc.w	$8800	;65730
+	dc.w	$0000	;65732
+	dc.w	$0002	;65734
+	dc.w	$4f64	;65736
+	dc.w	$0002	;65738
+	dc.w	$4f6c	;6573a
+	dc.w	$0002	;6573c
+	dc.w	$4f74	;6573e
+	dc.w	$0000	;65740
+	dc.w	$0002	;65742
+	dc.w	$0100	;65744
+	dc.w	$0024	;65746
+	dc.w	$002b	;65748
+	dc.w	$00e6	;6574a
+	dc.w	$0000	;6574c
+	dc.w	$0000	;6574e
+	dc.w	$0000	;65750
+	dc.w	$ff10	;65752
+	dc.w	$0020	;65754
+	dc.w	$0088	;65756
+	dc.w	$0140	;65758
+	dc.w	$0020	;6575a
+	dc.w	$0088	;6575c
+	dc.w	$0140	;6575e
+	dc.w	$0020	;65760
+	dc.w	$ff78	;65762
+	dc.w	$ff10	;65764
+	dc.w	$0020	;65766
+	dc.w	$ff78	;65768
+	dc.w	$ff10	;6576a
+	dc.w	$0020	;6576c
+	dc.w	$0050	;6576e
+	dc.w	$0140	;65770
+	dc.w	$0020	;65772
+	dc.w	$0050	;65774
+	dc.w	$0140	;65776
+	dc.w	$0020	;65778
+	dc.w	$ffb0	;6577a
+	dc.w	$ff10	;6577c
+	dc.w	$0020	;6577e
+	dc.w	$ffb0	;65780
+	dc.w	$ff60	;65782
+	dc.w	$0020	;65784
+	dc.w	$0050	;65786
+	dc.w	$ff60	;65788
+	dc.w	$0020	;6578a
+	dc.w	$ffb0	;6578c
+	dc.w	$ff78	;6578e
+	dc.w	$0000	;65790
+	dc.w	$0050	;65792
+	dc.w	$ff78	;65794
+	dc.w	$0000	;65796
+	dc.w	$ffb0	;65798
+	dc.w	$0130	;6579a
+	dc.w	$0000	;6579c
+	dc.w	$0050	;6579e
+	dc.w	$0130	;657a0
+	dc.w	$0000	;657a2
+	dc.w	$ffb0	;657a4
+	dc.w	$ff10	;657a6
+	dc.w	$0030	;657a8
+	dc.w	$0050	;657aa
+	dc.w	$ff10	;657ac
+	dc.w	$0030	;657ae
+	dc.w	$ffb0	;657b0
+	dc.w	$ff20	;657b2
+	dc.w	$0070	;657b4
+	dc.w	$0088	;657b6
+	dc.w	$ff20	;657b8
+	dc.w	$0070	;657ba
+	dc.w	$ff78	;657bc
+	dc.w	$ff70	;657be
+	dc.w	$0090	;657c0
+	dc.w	$0088	;657c2
+	dc.w	$ff70	;657c4
+	dc.w	$0090	;657c6
+	dc.w	$ff78	;657c8
+	dc.w	$00d0	;657ca
+	dc.w	$0090	;657cc
+	dc.w	$0088	;657ce
+	dc.w	$00d0	;657d0
+	dc.w	$0090	;657d2
+	dc.w	$ff78	;657d4
+	dc.w	$0130	;657d6
+	dc.w	$0070	;657d8
+	dc.w	$0088	;657da
+	dc.w	$0130	;657dc
+	dc.w	$0070	;657de
+	dc.w	$ff78	;657e0
+	dc.w	$ff30	;657e2
+	dc.w	$0070	;657e4
+	dc.w	$0050	;657e6
+	dc.w	$ff30	;657e8
+	dc.w	$0070	;657ea
+	dc.w	$ffb0	;657ec
+	dc.w	$ff20	;657ee
+	dc.w	$0070	;657f0
+	dc.w	$0050	;657f2
+	dc.w	$ff20	;657f4
+	dc.w	$0070	;657f6
+	dc.w	$ffb0	;657f8
+	dc.w	$ff70	;657fa
+	dc.w	$0090	;657fc
+	dc.w	$0050	;657fe
+	dc.w	$ff70	;65800
+	dc.w	$0090	;65802
+	dc.w	$ffb0	;65804
+	dc.w	$0130	;65806
+	dc.w	$0070	;65808
+	dc.w	$0050	;6580a
+	dc.w	$0130	;6580c
+	dc.w	$0070	;6580e
+	dc.w	$ffb0	;65810
+	dc.w	$00d0	;65812
+	dc.w	$0090	;65814
+	dc.w	$0050	;65816
+	dc.w	$00d0	;65818
+	dc.w	$0090	;6581a
+	dc.w	$ffb0	;6581c
+	dc.w	$0110	;6581e
+	dc.w	$0070	;65820
+	dc.w	$0050	;65822
+	dc.w	$0110	;65824
+	dc.w	$0070	;65826
+	dc.w	$ffb0	;65828
+	dc.w	$d36f	;6582a
+	dc.w	$6f6a	;6582c
+	dc.w	$0000	;6582e
+	dc.w	$0002	;65830
+	dc.w	$4fe4	;65832
+	dc.w	$0002	;65834
+	dc.w	$4ff4	;65836
+	dc.w	$0002	;65838
+	dc.w	$5044	;6583a
+	dc.w	$0000	;6583c
+	dc.w	$0017	;6583e
+	dc.w	$d36f	;65840
+	dc.w	$6f6a	;65842
+	dc.w	$0000	;65844
+	dc.w	$0002	;65846
+	dc.w	$4fe4	;65848
+	dc.w	$0002	;6584a
+	dc.w	$5034	;6584c
+	dc.w	$0002	;6584e
+	dc.w	$5044	;65850
+	dc.w	$0000	;65852
+	dc.w	$0017	;65854
+	dc.w	$d36f	;65856
+	dc.w	$6f6a	;65858
+	dc.w	$0000	;6585a
+	dc.w	$0002	;6585c
+	dc.w	$4fec	;6585e
+	dc.w	$0002	;65860
+	dc.w	$503c	;65862
+	dc.w	$0002	;65864
+	dc.w	$504c	;65866
+	dc.w	$0000	;65868
+	dc.w	$0017	;6586a
+	dc.w	$d36f	;6586c
+	dc.w	$6f6a	;6586e
+	dc.w	$0000	;65870
+	dc.w	$0002	;65872
+	dc.w	$4fec	;65874
+	dc.w	$0002	;65876
+	dc.w	$4ffc	;65878
+	dc.w	$0002	;6587a
+	dc.w	$504c	;6587c
+	dc.w	$0000	;6587e
+	dc.w	$0017	;65880
+	dc.w	$25f2	;65882
+	dc.w	$71d7	;65884
+	dc.w	$0000	;65886
+	dc.w	$0002	;65888
+	dc.w	$5004	;6588a
+	dc.w	$0002	;6588c
+	dc.w	$5014	;6588e
+	dc.w	$0002	;65890
+	dc.w	$5054	;65892
+	dc.w	$0000	;65894
+	dc.w	$0017	;65896
+	dc.w	$25f2	;65898
+	dc.w	$71d7	;6589a
+	dc.w	$0000	;6589c
+	dc.w	$0002	;6589e
+	dc.w	$5004	;658a0
+	dc.w	$0002	;658a2
+	dc.w	$5054	;658a4
+	dc.w	$0002	;658a6
+	dc.w	$5064	;658a8
+	dc.w	$0000	;658aa
+	dc.w	$0017	;658ac
+	dc.w	$25f2	;658ae
+	dc.w	$71d7	;658b0
+	dc.w	$0000	;658b2
+	dc.w	$0002	;658b4
+	dc.w	$500c	;658b6
+	dc.w	$0002	;658b8
+	dc.w	$505c	;658ba
+	dc.w	$0002	;658bc
+	dc.w	$506c	;658be
+	dc.w	$0000	;658c0
+	dc.w	$0017	;658c2
+	dc.w	$25f2	;658c4
+	dc.w	$71d7	;658c6
+	dc.w	$0000	;658c8
+	dc.w	$0002	;658ca
+	dc.w	$500c	;658cc
+	dc.w	$0002	;658ce
+	dc.w	$501c	;658d0
+	dc.w	$0002	;658d2
+	dc.w	$505c	;658d4
+	dc.w	$0000	;658d6
+	dc.w	$0017	;658d8
+	dc.w	$0000	;658da
+	dc.w	$0000	;658dc
+	dc.w	$7800	;658de
+	dc.w	$0002	;658e0
+	dc.w	$4fe4	;658e2
+	dc.w	$0002	;658e4
+	dc.w	$4ff4	;658e6
+	dc.w	$0002	;658e8
+	dc.w	$5004	;658ea
+	dc.w	$0000	;658ec
+	dc.w	$0016	;658ee
+	dc.w	$0000	;658f0
+	dc.w	$0000	;658f2
+	dc.w	$7800	;658f4
+	dc.w	$0002	;658f6
+	dc.w	$4fe4	;658f8
+	dc.w	$0002	;658fa
+	dc.w	$5004	;658fc
+	dc.w	$0002	;658fe
+	dc.w	$5014	;65900
+	dc.w	$0000	;65902
+	dc.w	$0016	;65904
+	dc.w	$0000	;65906
+	dc.w	$0000	;65908
+	dc.w	$8800	;6590a
+	dc.w	$0002	;6590c
+	dc.w	$4fec	;6590e
+	dc.w	$0002	;65910
+	dc.w	$4ffc	;65912
+	dc.w	$0002	;65914
+	dc.w	$500c	;65916
+	dc.w	$0000	;65918
+	dc.w	$0016	;6591a
+	dc.w	$0000	;6591c
+	dc.w	$0000	;6591e
+	dc.w	$8800	;65920
+	dc.w	$0002	;65922
+	dc.w	$4fec	;65924
+	dc.w	$0002	;65926
+	dc.w	$500c	;65928
+	dc.w	$0002	;6592a
+	dc.w	$501c	;6592c
+	dc.w	$0000	;6592e
+	dc.w	$0016	;65930
+	dc.w	$94ac	;65932
+	dc.w	$35aa	;65934
+	dc.w	$0000	;65936
+	dc.w	$0002	;65938
+	dc.w	$4fd4	;6593a
+	dc.w	$0002	;6593c
+	dc.w	$4fdc	;6593e
+	dc.w	$0002	;65940
+	dc.w	$5024	;65942
+	dc.w	$0000	;65944
+	dc.w	$000e	;65946
+	dc.w	$94ac	;65948
+	dc.w	$35aa	;6594a
+	dc.w	$0000	;6594c
+	dc.w	$0002	;6594e
+	dc.w	$4fdc	;65950
+	dc.w	$0002	;65952
+	dc.w	$5024	;65954
+	dc.w	$0002	;65956
+	dc.w	$502c	;65958
+	dc.w	$0000	;6595a
+	dc.w	$000e	;6595c
+	dc.w	$8a55	;6595e
+	dc.w	$1788	;65960
+	dc.w	$0000	;65962
+	dc.w	$0002	;65964
+	dc.w	$4f64	;65966
+	dc.w	$0002	;65968
+	dc.w	$4fe4	;6596a
+	dc.w	$0002	;6596c
+	dc.w	$5034	;6596e
+	dc.w	$0000	;65970
+	dc.w	$0017	;65972
+	dc.w	$8a55	;65974
+	dc.w	$1788	;65976
+	dc.w	$0000	;65978
+	dc.w	$0002	;6597a
+	dc.w	$4f64	;6597c
+	dc.w	$0002	;6597e
+	dc.w	$4f84	;65980
+	dc.w	$0002	;65982
+	dc.w	$5034	;65984
+	dc.w	$0000	;65986
+	dc.w	$0017	;65988
+	dc.w	$8a55	;6598a
+	dc.w	$1788	;6598c
+	dc.w	$0000	;6598e
+	dc.w	$0002	;65990
+	dc.w	$4f7c	;65992
+	dc.w	$0002	;65994
+	dc.w	$4f9c	;65996
+	dc.w	$0002	;65998
+	dc.w	$503c	;6599a
+	dc.w	$0000	;6599c
+	dc.w	$0017	;6599e
+	dc.w	$8a55	;659a0
+	dc.w	$1788	;659a2
+	dc.w	$0000	;659a4
+	dc.w	$0002	;659a6
+	dc.w	$4f7c	;659a8
+	dc.w	$0002	;659aa
+	dc.w	$4fec	;659ac
+	dc.w	$0002	;659ae
+	dc.w	$503c	;659b0
+	dc.w	$0000	;659b2
+	dc.w	$0017	;659b4
+	dc.w	$66e6	;659b6
+	dc.w	$3dbd	;659b8
+	dc.w	$0000	;659ba
+	dc.w	$0002	;659bc
+	dc.w	$4f94	;659be
+	dc.w	$0002	;659c0
+	dc.w	$5074	;659c2
+	dc.w	$0002	;659c4
+	dc.w	$507c	;659c6
+	dc.w	$0000	;659c8
+	dc.w	$0016	;659ca
+	dc.w	$66e6	;659cc
+	dc.w	$3dbd	;659ce
+	dc.w	$0000	;659d0
+	dc.w	$0002	;659d2
+	dc.w	$4f8c	;659d4
+	dc.w	$0002	;659d6
+	dc.w	$4f94	;659d8
+	dc.w	$0002	;659da
+	dc.w	$5074	;659dc
+	dc.w	$0000	;659de
+	dc.w	$0016	;659e0
+	dc.w	$75ab	;659e2
+	dc.w	$1788	;659e4
+	dc.w	$0000	;659e6
+	dc.w	$0002	;659e8
+	dc.w	$4f6c	;659ea
+	dc.w	$0002	;659ec
+	dc.w	$4f8c	;659ee
+	dc.w	$0002	;659f0
+	dc.w	$5014	;659f2
+	dc.w	$0000	;659f4
+	dc.w	$0017	;659f6
+	dc.w	$75ab	;659f8
+	dc.w	$1788	;659fa
+	dc.w	$0000	;659fc
+	dc.w	$0002	;659fe
+	dc.w	$4f8c	;65a00
+	dc.w	$0002	;65a02
+	dc.w	$5014	;65a04
+	dc.w	$0002	;65a06
+	dc.w	$5054	;65a08
+	dc.w	$0000	;65a0a
+	dc.w	$0017	;65a0c
+	dc.w	$75ab	;65a0e
+	dc.w	$1788	;65a10
+	dc.w	$0000	;65a12
+	dc.w	$0002	;65a14
+	dc.w	$4f74	;65a16
+	dc.w	$0002	;65a18
+	dc.w	$501c	;65a1a
+	dc.w	$0002	;65a1c
+	dc.w	$505c	;65a1e
+	dc.w	$0000	;65a20
+	dc.w	$0017	;65a22
+	dc.w	$75ab	;65a24
+	dc.w	$1788	;65a26
+	dc.w	$0000	;65a28
+	dc.w	$0002	;65a2a
+	dc.w	$4f74	;65a2c
+	dc.w	$0002	;65a2e
+	dc.w	$4f94	;65a30
+	dc.w	$0002	;65a32
+	dc.w	$505c	;65a34
+	dc.w	$0000	;65a36
+	dc.w	$0017	;65a38
+	dc.w	$0000	;65a3a
+	dc.w	$0000	;65a3c
+	dc.w	$7800	;65a3e
+	dc.w	$0002	;65a40
+	dc.w	$4f64	;65a42
+	dc.w	$0002	;65a44
+	dc.w	$4fe4	;65a46
+	dc.w	$0002	;65a48
+	dc.w	$5014	;65a4a
+	dc.w	$0000	;65a4c
+	dc.w	$0016	;65a4e
+	dc.w	$0000	;65a50
+	dc.w	$0000	;65a52
+	dc.w	$7800	;65a54
+	dc.w	$0002	;65a56
+	dc.w	$4f64	;65a58
+	dc.w	$0002	;65a5a
+	dc.w	$4f6c	;65a5c
+	dc.w	$0002	;65a5e
+	dc.w	$5014	;65a60
+	dc.w	$0000	;65a62
+	dc.w	$0016	;65a64
+	dc.w	$0000	;65a66
+	dc.w	$0000	;65a68
+	dc.w	$8800	;65a6a
+	dc.w	$0002	;65a6c
+	dc.w	$4f7c	;65a6e
+	dc.w	$0002	;65a70
+	dc.w	$4fec	;65a72
+	dc.w	$0002	;65a74
+	dc.w	$501c	;65a76
+	dc.w	$0000	;65a78
+	dc.w	$0016	;65a7a
+	dc.w	$0000	;65a7c
+	dc.w	$0000	;65a7e
+	dc.w	$8800	;65a80
+	dc.w	$0002	;65a82
+	dc.w	$4f74	;65a84
+	dc.w	$0002	;65a86
+	dc.w	$4f7c	;65a88
+	dc.w	$0002	;65a8a
+	dc.w	$501c	;65a8c
+	dc.w	$0000	;65a8e
+	dc.w	$0016	;65a90
+	dc.w	$0000	;65a92
+	dc.w	$8800	;65a94
+	dc.w	$0000	;65a96
+	dc.w	$0002	;65a98
+	dc.w	$4f74	;65a9a
+	dc.w	$0002	;65a9c
+	dc.w	$4f7c	;65a9e
+	dc.w	$0002	;65aa0
+	dc.w	$4f9c	;65aa2
+	dc.w	$0000	;65aa4
+	dc.w	$0002	;65aa6
+	dc.w	$0000	;65aa8
+	dc.w	$8800	;65aaa
+	dc.w	$0000	;65aac
+	dc.w	$0002	;65aae
+	dc.w	$4f74	;65ab0
+	dc.w	$0002	;65ab2
+	dc.w	$4f94	;65ab4
+	dc.w	$0002	;65ab6
+	dc.w	$4f9c	;65ab8
+	dc.w	$0000	;65aba
+	dc.w	$0002	;65abc
+	dc.w	$0000	;65abe
+	dc.w	$8800	;65ac0
+	dc.w	$0000	;65ac2
+	dc.w	$0002	;65ac4
+	dc.w	$4f64	;65ac6
+	dc.w	$0002	;65ac8
+	dc.w	$4f6c	;65aca
+	dc.w	$0002	;65acc
+	dc.w	$4f84	;65ace
+	dc.w	$0000	;65ad0
+	dc.w	$0002	;65ad2
+	dc.w	$0000	;65ad4
+	dc.w	$8800	;65ad6
+	dc.w	$0000	;65ad8
+	dc.w	$0002	;65ada
+	dc.w	$4f6c	;65adc
+	dc.w	$0002	;65ade
+	dc.w	$4f84	;65ae0
+	dc.w	$0002	;65ae2
+	dc.w	$4f8c	;65ae4
+	dc.w	$0000	;65ae6
+	dc.w	$0002	;65ae8
+	dc.w	$0000	;65aea
+	dc.w	$0000	;65aec
+	dc.w	$0000	;65aee
+	dc.w	$0002	;65af0
+	dc.w	$4fac	;65af2
+	dc.w	$0002	;65af4
+	dc.w	$4fd4	;65af6
+	dc.w	$0002	;65af8
+	dc.w	$4fdc	;65afa
+	dc.w	$0000	;65afc
+	dc.w	$0012	;65afe
+	dc.w	$0000	;65b00
+	dc.w	$0000	;65b02
+	dc.w	$0000	;65b04
+	dc.w	$0002	;65b06
+	dc.w	$4fa4	;65b08
+	dc.w	$0002	;65b0a
+	dc.w	$4fac	;65b0c
+	dc.w	$0002	;65b0e
+	dc.w	$4fd4	;65b10
+	dc.w	$0000	;65b12
+	dc.w	$0012	;65b14
+	dc.w	$a000	;65b16
+	dc.w	$b800	;65b18
+	dc.w	$0000	;65b1a
+	dc.w	$0002	;65b1c
+	dc.w	$4fa4	;65b1e
+	dc.w	$0002	;65b20
+	dc.w	$4fac	;65b22
+	dc.w	$0002	;65b24
+	dc.w	$4fbc	;65b26
+	dc.w	$0000	;65b28
+	dc.w	$0006	;65b2a
+	dc.w	$a000	;65b2c
+	dc.w	$b800	;65b2e
+	dc.w	$0000	;65b30
+	dc.w	$0002	;65b32
+	dc.w	$4fa4	;65b34
+	dc.w	$0002	;65b36
+	dc.w	$4fb4	;65b38
+	dc.w	$0002	;65b3a
+	dc.w	$4fbc	;65b3c
+	dc.w	$0000	;65b3e
+	dc.w	$0006	;65b40
+	dc.w	$6b54	;65b42
+	dc.w	$ca56	;65b44
+	dc.w	$0000	;65b46
+	dc.w	$0002	;65b48
+	dc.w	$4f94	;65b4a
+	dc.w	$0002	;65b4c
+	dc.w	$4fc4	;65b4e
+	dc.w	$0002	;65b50
+	dc.w	$4fcc	;65b52
+	dc.w	$0000	;65b54
+	dc.w	$0006	;65b56
+	dc.w	$6b54	;65b58
+	dc.w	$ca56	;65b5a
+	dc.w	$0000	;65b5c
+	dc.w	$0002	;65b5e
+	dc.w	$4f8c	;65b60
+	dc.w	$0002	;65b62
+	dc.w	$4f94	;65b64
+	dc.w	$0002	;65b66
+	dc.w	$4fc4	;65b68
+	dc.w	$0000	;65b6a
+	dc.w	$0006	;65b6c
+	dc.w	$0000	;65b6e
+	dc.w	$0000	;65b70
+	dc.w	$7800	;65b72
+	dc.w	$0002	;65b74
+	dc.w	$4f8c	;65b76
+	dc.w	$0002	;65b78
+	dc.w	$4fa4	;65b7a
+	dc.w	$0002	;65b7c
+	dc.w	$4fc4	;65b7e
+	dc.w	$0000	;65b80
+	dc.w	$0016	;65b82
+	dc.w	$0000	;65b84
+	dc.w	$0000	;65b86
+	dc.w	$7800	;65b88
+	dc.w	$0002	;65b8a
+	dc.w	$4fa4	;65b8c
+	dc.w	$0002	;65b8e
+	dc.w	$4fb4	;65b90
+	dc.w	$0002	;65b92
+	dc.w	$4fc4	;65b94
+	dc.w	$0000	;65b96
+	dc.w	$0016	;65b98
+	dc.w	$0000	;65b9a
+	dc.w	$0000	;65b9c
+	dc.w	$8800	;65b9e
+	dc.w	$0002	;65ba0
+	dc.w	$4f94	;65ba2
+	dc.w	$0002	;65ba4
+	dc.w	$4fac	;65ba6
+	dc.w	$0002	;65ba8
+	dc.w	$4fcc	;65baa
+	dc.w	$0000	;65bac
+	dc.w	$0016	;65bae
+	dc.w	$0000	;65bb0
+	dc.w	$0000	;65bb2
+	dc.w	$8800	;65bb4
+	dc.w	$0002	;65bb6
+	dc.w	$4fac	;65bb8
+	dc.w	$0002	;65bba
+	dc.w	$4fbc	;65bbc
+	dc.w	$0002	;65bbe
+	dc.w	$4fcc	;65bc0
+	dc.w	$0000	;65bc2
+	dc.w	$0016	;65bc4
+	dc.w	$0000	;65bc6
+	dc.w	$0000	;65bc8
+	dc.w	$0000	;65bca
+	dc.w	$0002	;65bcc
+	dc.w	$4fb4	;65bce
+	dc.w	$0002	;65bd0
+	dc.w	$4fbc	;65bd2
+	dc.w	$0002	;65bd4
+	dc.w	$4fcc	;65bd6
+	dc.w	$0000	;65bd8
+	dc.w	$0002	;65bda
+	dc.w	$0000	;65bdc
+	dc.w	$0000	;65bde
+	dc.w	$0000	;65be0
+	dc.w	$0002	;65be2
+	dc.w	$4fb4	;65be4
+	dc.w	$0002	;65be6
+	dc.w	$4fc4	;65be8
+	dc.w	$0002	;65bea
+	dc.w	$4fcc	;65bec
+	dc.w	$0000	;65bee
+	dc.w	$0002	;65bf0
+	dc.w	$0100	;65bf2
+	dc.w	$000c	;65bf4
+	dc.w	$000f	;65bf6
+	dc.w	$0056	;65bf8
+	dc.w	$0000	;65bfa
+	dc.w	$0000	;65bfc
+	dc.w	$0000	;65bfe
+	dc.w	$ffb0	;65c00
+	dc.w	$ffc0	;65c02
+	dc.w	$ffc8	;65c04
+	dc.w	$ffb0	;65c06
+	dc.w	$ffc0	;65c08
+	dc.w	$0038	;65c0a
+	dc.w	$0000	;65c0c
+	dc.w	$ffc0	;65c0e
+	dc.w	$0040	;65c10
+	dc.w	$0070	;65c12
+	dc.w	$ffc0	;65c14
+	dc.w	$0038	;65c16
+	dc.w	$0070	;65c18
+	dc.w	$ffc0	;65c1a
+	dc.w	$ffc8	;65c1c
+	dc.w	$0000	;65c1e
+	dc.w	$ffc0	;65c20
+	dc.w	$ffc0	;65c22
+	dc.w	$ffa0	;65c24
+	dc.w	$0000	;65c26
+	dc.w	$ffb8	;65c28
+	dc.w	$ffa0	;65c2a
+	dc.w	$0000	;65c2c
+	dc.w	$0048	;65c2e
+	dc.w	$0000	;65c30
+	dc.w	$0000	;65c32
+	dc.w	$0050	;65c34
+	dc.w	$0080	;65c36
+	dc.w	$0000	;65c38
+	dc.w	$0040	;65c3a
+	dc.w	$0080	;65c3c
+	dc.w	$0000	;65c3e
+	dc.w	$ffc0	;65c40
+	dc.w	$0000	;65c42
+	dc.w	$0000	;65c44
+	dc.w	$ffb0	;65c46
+	dc.w	$0e72	;65c48
+	dc.w	$e31c	;65c4a
+	dc.w	$7392	;65c4c
+	dc.w	$0002	;65c4e
+	dc.w	$4f74	;65c50
+	dc.w	$0002	;65c52
+	dc.w	$4fa4	;65c54
+	dc.w	$0002	;65c56
+	dc.w	$4fac	;65c58
+	dc.w	$0000	;65c5a
+	dc.w	$0006	;65c5c
+	dc.w	$0876	;65c5e
+	dc.w	$ef13	;65c60
+	dc.w	$767f	;65c62
+	dc.w	$0002	;65c64
+	dc.w	$4f74	;65c66
+	dc.w	$0002	;65c68
+	dc.w	$4f7c	;65c6a
+	dc.w	$0002	;65c6c
+	dc.w	$4fac	;65c6e
+	dc.w	$0000	;65c70
+	dc.w	$0006	;65c72
+	dc.w	$f661	;65c74
+	dc.w	$e0bc	;65c76
+	dc.w	$8c8c	;65c78
+	dc.w	$0002	;65c7a
+	dc.w	$4f64	;65c7c
+	dc.w	$0002	;65c7e
+	dc.w	$4f94	;65c80
+	dc.w	$0002	;65c82
+	dc.w	$4fbc	;65c84
+	dc.w	$0000	;65c86
+	dc.w	$000a	;65c88
+	dc.w	$f46a	;65c8a
+	dc.w	$e309	;65c8c
+	dc.w	$8c21	;65c8e
+	dc.w	$0002	;65c90
+	dc.w	$4f64	;65c92
+	dc.w	$0002	;65c94
+	dc.w	$4f8c	;65c96
+	dc.w	$0002	;65c98
+	dc.w	$4fbc	;65c9a
+	dc.w	$0000	;65c9c
+	dc.w	$000a	;65c9e
+	dc.w	$f47c	;65ca0
+	dc.w	$e054	;65ca2
+	dc.w	$732b	;65ca4
+	dc.w	$0002	;65ca6
+	dc.w	$4f6c	;65ca8
+	dc.w	$0002	;65caa
+	dc.w	$4f74	;65cac
+	dc.w	$0002	;65cae
+	dc.w	$4f9c	;65cb0
+	dc.w	$0000	;65cb2
+	dc.w	$000a	;65cb4
+	dc.w	$f655	;65cb6
+	dc.w	$e2fe	;65cb8
+	dc.w	$7409	;65cba
+	dc.w	$0002	;65cbc
+	dc.w	$4f74	;65cbe
+	dc.w	$0002	;65cc0
+	dc.w	$4f9c	;65cc2
+	dc.w	$0002	;65cc4
+	dc.w	$4fa4	;65cc6
+	dc.w	$0000	;65cc8
+	dc.w	$000a	;65cca
+	dc.w	$084b	;65ccc
+	dc.w	$e2f8	;65cce
+	dc.w	$8bdd	;65cd0
+	dc.w	$0002	;65cd2
+	dc.w	$4f84	;65cd4
+	dc.w	$0002	;65cd6
+	dc.w	$4f8c	;65cd8
+	dc.w	$0002	;65cda
+	dc.w	$4fbc	;65cdc
+	dc.w	$0000	;65cde
+	dc.w	$0006	;65ce0
+	dc.w	$0eb5	;65ce2
+	dc.w	$ed9e	;65ce4
+	dc.w	$8a56	;65ce6
+	dc.w	$0002	;65ce8
+	dc.w	$4f84	;65cea
+	dc.w	$0002	;65cec
+	dc.w	$4fb4	;65cee
+	dc.w	$0002	;65cf0
+	dc.w	$4fbc	;65cf2
+	dc.w	$0000	;65cf4
+	dc.w	$0006	;65cf6
+	dc.w	$746a	;65cf8
+	dc.w	$e2e6	;65cfa
+	dc.w	$0000	;65cfc
+	dc.w	$0002	;65cfe
+	dc.w	$4f7c	;65d00
+	dc.w	$0002	;65d02
+	dc.w	$4f84	;65d04
+	dc.w	$0002	;65d06
+	dc.w	$4fb4	;65d08
+	dc.w	$0000	;65d0a
+	dc.w	$0016	;65d0c
+	dc.w	$746a	;65d0e
+	dc.w	$e2e6	;65d10
+	dc.w	$0000	;65d12
+	dc.w	$0002	;65d14
+	dc.w	$4f7c	;65d16
+	dc.w	$0002	;65d18
+	dc.w	$4fac	;65d1a
+	dc.w	$0002	;65d1c
+	dc.w	$4fb4	;65d1e
+	dc.w	$0000	;65d20
+	dc.w	$0016	;65d22
+	dc.w	$8b96	;65d24
+	dc.w	$e2e6	;65d26
+	dc.w	$0000	;65d28
+	dc.w	$0002	;65d2a
+	dc.w	$4f6c	;65d2c
+	dc.w	$0002	;65d2e
+	dc.w	$4f94	;65d30
+	dc.w	$0002	;65d32
+	dc.w	$4f9c	;65d34
+	dc.w	$0000	;65d36
+	dc.w	$0016	;65d38
+	dc.w	$8b96	;65d3a
+	dc.w	$e2e6	;65d3c
+	dc.w	$0000	;65d3e
+	dc.w	$0002	;65d40
+	dc.w	$4f64	;65d42
+	dc.w	$0002	;65d44
+	dc.w	$4f6c	;65d46
+	dc.w	$0002	;65d48
+	dc.w	$4f94	;65d4a
+	dc.w	$0000	;65d4c
+	dc.w	$0016	;65d4e
+	dc.w	$0000	;65d50
+	dc.w	$8800	;65d52
+	dc.w	$0000	;65d54
+	dc.w	$0002	;65d56
+	dc.w	$4f64	;65d58
+	dc.w	$0002	;65d5a
+	dc.w	$4f6c	;65d5c
+	dc.w	$0002	;65d5e
+	dc.w	$4f8c	;65d60
+	dc.w	$0000	;65d62
+	dc.w	$0002	;65d64
+	dc.w	$0000	;65d66
+	dc.w	$8800	;65d68
+	dc.w	$0000	;65d6a
+	dc.w	$0002	;65d6c
+	dc.w	$4f6c	;65d6e
+	dc.w	$0002	;65d70
+	dc.w	$4f74	;65d72
+	dc.w	$0002	;65d74
+	dc.w	$4f8c	;65d76
+	dc.w	$0000	;65d78
+	dc.w	$0002	;65d7a
+	dc.w	$0000	;65d7c
+	dc.w	$8800	;65d7e
+	dc.w	$0000	;65d80
+	dc.w	$0002	;65d82
+	dc.w	$4f74	;65d84
+	dc.w	$0002	;65d86
+	dc.w	$4f84	;65d88
+	dc.w	$0002	;65d8a
+	dc.w	$4f8c	;65d8c
+	dc.w	$0000	;65d8e
+	dc.w	$0002	;65d90
+	dc.w	$0000	;65d92
+	dc.w	$8800	;65d94
+	dc.w	$0000	;65d96
+	dc.w	$0002	;65d98
+	dc.w	$4f74	;65d9a
+	dc.w	$0002	;65d9c
+	dc.w	$4f7c	;65d9e
+	dc.w	$0002	;65da0
+	dc.w	$4f84	;65da2
+	dc.w	$0000	;65da4
+	dc.w	$0002	;65da6
+	dc.w	$0100	;65da8
+	dc.w	$0006	;65daa
+	dc.w	$0005	;65dac
+	dc.w	$0032	;65dae
+	dc.w	$0000	;65db0
+	dc.w	$0000	;65db2
+	dc.w	$0000	;65db4
+	dc.w	$ff10	;65db6
+	dc.w	$ffe0	;65db8
+	dc.w	$fff8	;65dba
+	dc.w	$ffa8	;65dbc
+	dc.w	$ffe0	;65dbe
+	dc.w	$0008	;65dc0
+	dc.w	$ffa8	;65dc2
+	dc.w	$ffe0	;65dc4
+	dc.w	$fff8	;65dc6
+	dc.w	$ff10	;65dc8
+	dc.w	$fff0	;65dca
+	dc.w	$0000	;65dcc
+	dc.w	$ffa8	;65dce
+	dc.w	$fff0	;65dd0
+	dc.w	$0000	;65dd2
+	dc.w	$ff10	;65dd4
+	dc.w	$ffe0	;65dd6
+	dc.w	$0008	;65dd8
+	dc.w	$0000	;65dda
+	dc.w	$ca56	;65ddc
+	dc.w	$6b54	;65dde
+	dc.w	$0002	;65de0
+	dc.w	$4f64	;65de2
+	dc.w	$0002	;65de4
+	dc.w	$4f7c	;65de6
+	dc.w	$0002	;65de8
+	dc.w	$4f84	;65dea
+	dc.w	$0000	;65dec
+	dc.w	$000a	;65dee
+	dc.w	$0000	;65df0
+	dc.w	$ca56	;65df2
+	dc.w	$6b54	;65df4
+	dc.w	$0002	;65df6
+	dc.w	$4f64	;65df8
+	dc.w	$0002	;65dfa
+	dc.w	$4f74	;65dfc
+	dc.w	$0002	;65dfe
+	dc.w	$4f84	;65e00
+	dc.w	$0000	;65e02
+	dc.w	$000a	;65e04
+	dc.w	$0000	;65e06
+	dc.w	$ca56	;65e08
+	dc.w	$94ac	;65e0a
+	dc.w	$0002	;65e0c
+	dc.w	$4f8c	;65e0e
+	dc.w	$0002	;65e10
+	dc.w	$4f6c	;65e12
+	dc.w	$0002	;65e14
+	dc.w	$4f84	;65e16
+	dc.w	$0000	;65e18
+	dc.w	$000a	;65e1a
+	dc.w	$0000	;65e1c
+	dc.w	$ca56	;65e1e
+	dc.w	$94ac	;65e20
+	dc.w	$0002	;65e22
+	dc.w	$4f8c	;65e24
+	dc.w	$0002	;65e26
+	dc.w	$4f7c	;65e28
+	dc.w	$0002	;65e2a
+	dc.w	$4f84	;65e2c
+	dc.w	$0000	;65e2e
+	dc.w	$000a	;65e30
+	dc.w	$0000	;65e32
+	dc.w	$8800	;65e34
+	dc.w	$0000	;65e36
+	dc.w	$0002	;65e38
+	dc.w	$4f8c	;65e3a
+	dc.w	$0002	;65e3c
+	dc.w	$4f64	;65e3e
+	dc.w	$0002	;65e40
+	dc.w	$4f6c	;65e42
+	dc.w	$0000	;65e44
+	dc.w	$0002	;65e46
+	dc.w	$0000	;65e48
+	dc.w	$8800	;65e4a
+	dc.w	$0000	;65e4c
+	dc.w	$0002	;65e4e
+	dc.w	$4f64	;65e50
+	dc.w	$0002	;65e52
+	dc.w	$4f6c	;65e54
+	dc.w	$0002	;65e56
+	dc.w	$4f74	;65e58
+	dc.w	$0000	;65e5a
+	dc.w	$0002	;65e5c
+	dc.w	$0100	;65e5e
+	dc.w	$0006	;65e60
+	dc.w	$0005	;65e62
+	dc.w	$0032	;65e64
+	dc.w	$0000	;65e66
+	dc.w	$0000	;65e68
+	dc.w	$0000	;65e6a
+	dc.w	$fec0	;65e6c
+	dc.w	$ffe0	;65e6e
+	dc.w	$fff8	;65e70
+	dc.w	$ffa8	;65e72
+	dc.w	$ffe0	;65e74
+	dc.w	$0008	;65e76
+	dc.w	$ffa8	;65e78
+	dc.w	$ffe0	;65e7a
+	dc.w	$fff8	;65e7c
+	dc.w	$fec0	;65e7e
+	dc.w	$fff0	;65e80
+	dc.w	$0000	;65e82
+	dc.w	$ffa8	;65e84
+	dc.w	$fff0	;65e86
+	dc.w	$0000	;65e88
+	dc.w	$fec0	;65e8a
+	dc.w	$ffe0	;65e8c
+	dc.w	$0008	;65e8e
+	dc.w	$0000	;65e90
+	dc.w	$ca56	;65e92
+	dc.w	$6b54	;65e94
+	dc.w	$0002	;65e96
+	dc.w	$4f64	;65e98
+	dc.w	$0002	;65e9a
+	dc.w	$4f7c	;65e9c
+	dc.w	$0002	;65e9e
+	dc.w	$4f84	;65ea0
+	dc.w	$0000	;65ea2
+	dc.w	$000a	;65ea4
+	dc.w	$0000	;65ea6
+	dc.w	$ca56	;65ea8
+	dc.w	$6b54	;65eaa
+	dc.w	$0002	;65eac
+	dc.w	$4f64	;65eae
+	dc.w	$0002	;65eb0
+	dc.w	$4f74	;65eb2
+	dc.w	$0002	;65eb4
+	dc.w	$4f84	;65eb6
+	dc.w	$0000	;65eb8
+	dc.w	$000a	;65eba
+	dc.w	$0000	;65ebc
+	dc.w	$ca56	;65ebe
+	dc.w	$94ac	;65ec0
+	dc.w	$0002	;65ec2
+	dc.w	$4f8c	;65ec4
+	dc.w	$0002	;65ec6
+	dc.w	$4f6c	;65ec8
+	dc.w	$0002	;65eca
+	dc.w	$4f84	;65ecc
+	dc.w	$0000	;65ece
+	dc.w	$000a	;65ed0
+	dc.w	$0000	;65ed2
+	dc.w	$ca56	;65ed4
+	dc.w	$94ac	;65ed6
+	dc.w	$0002	;65ed8
+	dc.w	$4f8c	;65eda
+	dc.w	$0002	;65edc
+	dc.w	$4f7c	;65ede
+	dc.w	$0002	;65ee0
+	dc.w	$4f84	;65ee2
+	dc.w	$0000	;65ee4
+	dc.w	$000a	;65ee6
+	dc.w	$0000	;65ee8
+	dc.w	$8801	;65eea
+	dc.w	$0000	;65eec
+	dc.w	$0002	;65eee
+	dc.w	$4f8c	;65ef0
+	dc.w	$0002	;65ef2
+	dc.w	$4f64	;65ef4
+	dc.w	$0002	;65ef6
+	dc.w	$4f6c	;65ef8
+	dc.w	$0000	;65efa
+	dc.w	$0002	;65efc
+	dc.w	$0000	;65efe
+	dc.w	$8801	;65f00
+	dc.w	$0000	;65f02
+	dc.w	$0002	;65f04
+	dc.w	$4f64	;65f06
+	dc.w	$0002	;65f08
+	dc.w	$4f6c	;65f0a
+	dc.w	$0002	;65f0c
+	dc.w	$4f74	;65f0e
+	dc.w	$0000	;65f10
+	dc.w	$0002	;65f12
+	dc.w	$0100	;65f14
+	dc.w	$0030	;65f16
+	dc.w	$003d	;65f18
+	dc.w	$012e	;65f1a
+	dc.w	$0000	;65f1c
+	dc.w	$0000	;65f1e
+	dc.w	$0000	;65f20
+	dc.w	$ff10	;65f22
+	dc.w	$0018	;65f24
+	dc.w	$0080	;65f26
+	dc.w	$0150	;65f28
+	dc.w	$0030	;65f2a
+	dc.w	$0080	;65f2c
+	dc.w	$0150	;65f2e
+	dc.w	$0030	;65f30
+	dc.w	$ff80	;65f32
+	dc.w	$ff10	;65f34
+	dc.w	$0018	;65f36
+	dc.w	$ff80	;65f38
+	dc.w	$ff10	;65f3a
+	dc.w	$0018	;65f3c
+	dc.w	$0040	;65f3e
+	dc.w	$ff10	;65f40
+	dc.w	$0018	;65f42
+	dc.w	$ffc0	;65f44
+	dc.w	$ff70	;65f46
+	dc.w	$0018	;65f48
+	dc.w	$0040	;65f4a
+	dc.w	$ff70	;65f4c
+	dc.w	$0018	;65f4e
+	dc.w	$ffc0	;65f50
+	dc.w	$ffd0	;65f52
+	dc.w	$0018	;65f54
+	dc.w	$0070	;65f56
+	dc.w	$ffd0	;65f58
+	dc.w	$0018	;65f5a
+	dc.w	$ff90	;65f5c
+	dc.w	$0130	;65f5e
+	dc.w	$0018	;65f60
+	dc.w	$ff90	;65f62
+	dc.w	$0130	;65f64
+	dc.w	$0018	;65f66
+	dc.w	$0070	;65f68
+	dc.w	$0130	;65f6a
+	dc.w	$0018	;65f6c
+	dc.w	$ff80	;65f6e
+	dc.w	$0130	;65f70
+	dc.w	$0018	;65f72
+	dc.w	$0080	;65f74
+	dc.w	$ffd0	;65f76
+	dc.w	$0000	;65f78
+	dc.w	$0060	;65f7a
+	dc.w	$0110	;65f7c
+	dc.w	$0000	;65f7e
+	dc.w	$0060	;65f80
+	dc.w	$0110	;65f82
+	dc.w	$0000	;65f84
+	dc.w	$ffa0	;65f86
+	dc.w	$ffd0	;65f88
+	dc.w	$0000	;65f8a
+	dc.w	$ffa0	;65f8c
+	dc.w	$ff70	;65f8e
+	dc.w	$0000	;65f90
+	dc.w	$ffe0	;65f92
+	dc.w	$ff70	;65f94
+	dc.w	$0000	;65f96
+	dc.w	$0020	;65f98
+	dc.w	$ff40	;65f9a
+	dc.w	$0018	;65f9c
+	dc.w	$0040	;65f9e
+	dc.w	$ff40	;65fa0
+	dc.w	$0018	;65fa2
+	dc.w	$ffc0	;65fa4
+	dc.w	$ff20	;65fa6
+	dc.w	$0028	;65fa8
+	dc.w	$ffc0	;65faa
+	dc.w	$ff20	;65fac
+	dc.w	$0028	;65fae
+	dc.w	$0040	;65fb0
+	dc.w	$ff20	;65fb2
+	dc.w	$0028	;65fb4
+	dc.w	$0080	;65fb6
+	dc.w	$ff20	;65fb8
+	dc.w	$0028	;65fba
+	dc.w	$ff80	;65fbc
+	dc.w	$ff20	;65fbe
+	dc.w	$0050	;65fc0
+	dc.w	$0080	;65fc2
+	dc.w	$ff20	;65fc4
+	dc.w	$0050	;65fc6
+	dc.w	$ff80	;65fc8
+	dc.w	$ff70	;65fca
+	dc.w	$0070	;65fcc
+	dc.w	$0080	;65fce
+	dc.w	$ff70	;65fd0
+	dc.w	$0070	;65fd2
+	dc.w	$ff80	;65fd4
+	dc.w	$00f0	;65fd6
+	dc.w	$0070	;65fd8
+	dc.w	$0080	;65fda
+	dc.w	$00f0	;65fdc
+	dc.w	$0070	;65fde
+	dc.w	$ff80	;65fe0
+	dc.w	$0130	;65fe2
+	dc.w	$0050	;65fe4
+	dc.w	$0080	;65fe6
+	dc.w	$0130	;65fe8
+	dc.w	$0050	;65fea
+	dc.w	$ff80	;65fec
+	dc.w	$0130	;65fee
+	dc.w	$0050	;65ff0
+	dc.w	$0040	;65ff2
+	dc.w	$0130	;65ff4
+	dc.w	$0050	;65ff6
+	dc.w	$ffc0	;65ff8
+	dc.w	$ff40	;65ffa
+	dc.w	$0050	;65ffc
+	dc.w	$0040	;65ffe
+	dc.w	$ff40	;66000
+	dc.w	$0050	;66002
+	dc.w	$ffc0	;66004
+	dc.w	$ff20	;66006
+	dc.w	$0050	;66008
+	dc.w	$0040	;6600a
+	dc.w	$ff20	;6600c
+	dc.w	$0050	;6600e
+	dc.w	$ffc0	;66010
+	dc.w	$ff70	;66012
+	dc.w	$0070	;66014
+	dc.w	$0040	;66016
+	dc.w	$ff70	;66018
+	dc.w	$0070	;6601a
+	dc.w	$ffc0	;6601c
+	dc.w	$0150	;6601e
+	dc.w	$0030	;66020
+	dc.w	$ffc0	;66022
+	dc.w	$0150	;66024
+	dc.w	$0030	;66026
+	dc.w	$0040	;66028
+	dc.w	$0110	;6602a
+	dc.w	$0070	;6602c
+	dc.w	$ffc0	;6602e
+	dc.w	$0110	;66030
+	dc.w	$0070	;66032
+	dc.w	$0040	;66034
+	dc.w	$ffd0	;66036
+	dc.w	$0018	;66038
+	dc.w	$0080	;6603a
+	dc.w	$ffd0	;6603c
+	dc.w	$0018	;6603e
+	dc.w	$ff80	;66040
+	dc.w	$d36f	;66042
+	dc.w	$6f6a	;66044
+	dc.w	$0000	;66046
+	dc.w	$0002	;66048
+	dc.w	$5034	;6604a
+	dc.w	$0002	;6604c
+	dc.w	$5044	;6604e
+	dc.w	$0002	;66050
+	dc.w	$50a4	;66052
+	dc.w	$0000	;66054
+	dc.w	$0017	;66056
+	dc.w	$d36f	;66058
+	dc.w	$6f6a	;6605a
+	dc.w	$0000	;6605c
+	dc.w	$0002	;6605e
+	dc.w	$5034	;66060
+	dc.w	$0002	;66062
+	dc.w	$5094	;66064
+	dc.w	$0002	;66066
+	dc.w	$50a4	;66068
+	dc.w	$0000	;6606a
+	dc.w	$0017	;6606c
+	dc.w	$d36f	;6606e
+	dc.w	$6f6a	;66070
+	dc.w	$0000	;66072
+	dc.w	$0002	;66074
+	dc.w	$503c	;66076
+	dc.w	$0002	;66078
+	dc.w	$504c	;6607a
+	dc.w	$0002	;6607c
+	dc.w	$50ac	;6607e
+	dc.w	$0000	;66080
+	dc.w	$0017	;66082
+	dc.w	$d36f	;66084
+	dc.w	$6f6a	;66086
+	dc.w	$0000	;66088
+	dc.w	$0002	;6608a
+	dc.w	$503c	;6608c
+	dc.w	$0002	;6608e
+	dc.w	$509c	;66090
+	dc.w	$0002	;66092
+	dc.w	$50ac	;66094
+	dc.w	$0000	;66096
+	dc.w	$0017	;66098
+	dc.w	$35aa	;6609a
+	dc.w	$6b54	;6609c
+	dc.w	$0000	;6609e
+	dc.w	$0002	;660a0
+	dc.w	$505c	;660a2
+	dc.w	$0002	;660a4
+	dc.w	$506c	;660a6
+	dc.w	$0002	;660a8
+	dc.w	$507c	;660aa
+	dc.w	$0000	;660ac
+	dc.w	$0017	;660ae
+	dc.w	$5000	;660b0
+	dc.w	$5000	;660b2
+	dc.w	$d800	;660b4
+	dc.w	$0002	;660b6
+	dc.w	$505c	;660b8
+	dc.w	$0002	;660ba
+	dc.w	$507c	;660bc
+	dc.w	$0002	;660be
+	dc.w	$50c4	;660c0
+	dc.w	$0000	;660c2
+	dc.w	$0017	;660c4
+	dc.w	$35aa	;660c6
+	dc.w	$6b54	;660c8
+	dc.w	$0000	;660ca
+	dc.w	$0002	;660cc
+	dc.w	$5054	;660ce
+	dc.w	$0002	;660d0
+	dc.w	$5064	;660d2
+	dc.w	$0002	;660d4
+	dc.w	$5074	;660d6
+	dc.w	$0000	;660d8
+	dc.w	$0017	;660da
+	dc.w	$0000	;660dc
+	dc.w	$7800	;660de
+	dc.w	$0000	;660e0
+	dc.w	$0002	;660e2
+	dc.w	$5054	;660e4
+	dc.w	$0002	;660e6
+	dc.w	$50c4	;660e8
+	dc.w	$0002	;660ea
+	dc.w	$50cc	;660ec
+	dc.w	$0000	;660ee
+	dc.w	$0017	;660f0
+	dc.w	$0000	;660f2
+	dc.w	$0000	;660f4
+	dc.w	$7800	;660f6
+	dc.w	$0002	;660f8
+	dc.w	$5044	;660fa
+	dc.w	$0002	;660fc
+	dc.w	$5054	;660fe
+	dc.w	$0002	;66100
+	dc.w	$5064	;66102
+	dc.w	$0000	;66104
+	dc.w	$0016	;66106
+	dc.w	$0000	;66108
+	dc.w	$0000	;6610a
+	dc.w	$7800	;6610c
+	dc.w	$0002	;6610e
+	dc.w	$5034	;66110
+	dc.w	$0002	;66112
+	dc.w	$5044	;66114
+	dc.w	$0002	;66116
+	dc.w	$5064	;66118
+	dc.w	$0000	;6611a
+	dc.w	$0016	;6611c
+	dc.w	$0000	;6611e
+	dc.w	$0000	;66120
+	dc.w	$8800	;66122
+	dc.w	$0002	;66124
+	dc.w	$504c	;66126
+	dc.w	$0002	;66128
+	dc.w	$505c	;6612a
+	dc.w	$0002	;6612c
+	dc.w	$506c	;6612e
+	dc.w	$0000	;66130
+	dc.w	$0016	;66132
+	dc.w	$0000	;66134
+	dc.w	$0000	;66136
+	dc.w	$8800	;66138
+	dc.w	$0002	;6613a
+	dc.w	$503c	;6613c
+	dc.w	$0002	;6613e
+	dc.w	$504c	;66140
+	dc.w	$0002	;66142
+	dc.w	$506c	;66144
+	dc.w	$0000	;66146
+	dc.w	$0016	;66148
+	dc.w	$a24c	;6614a
+	dc.w	$4af6	;6614c
+	dc.w	$0000	;6614e
+	dc.w	$0002	;66150
+	dc.w	$5014	;66152
+	dc.w	$0002	;66154
+	dc.w	$501c	;66156
+	dc.w	$0002	;66158
+	dc.w	$5084	;6615a
+	dc.w	$0000	;6615c
+	dc.w	$000e	;6615e
+	dc.w	$a24c	;66160
+	dc.w	$4af6	;66162
+	dc.w	$0000	;66164
+	dc.w	$0002	;66166
+	dc.w	$5014	;66168
+	dc.w	$0002	;6616a
+	dc.w	$5084	;6616c
+	dc.w	$0002	;6616e
+	dc.w	$508c	;66170
+	dc.w	$0000	;66172
+	dc.w	$000e	;66174
+	dc.w	$8c9e	;66176
+	dc.w	$20f7	;66178
+	dc.w	$0000	;6617a
+	dc.w	$0002	;6617c
+	dc.w	$4f64	;6617e
+	dc.w	$0002	;66180
+	dc.w	$5034	;66182
+	dc.w	$0002	;66184
+	dc.w	$5094	;66186
+	dc.w	$0000	;66188
+	dc.w	$0017	;6618a
+	dc.w	$8c9e	;6618c
+	dc.w	$20f7	;6618e
+	dc.w	$0000	;66190
+	dc.w	$0002	;66192
+	dc.w	$4f64	;66194
+	dc.w	$0002	;66196
+	dc.w	$4f84	;66198
+	dc.w	$0002	;6619a
+	dc.w	$5094	;6619c
+	dc.w	$0000	;6619e
+	dc.w	$0017	;661a0
+	dc.w	$8c9e	;661a2
+	dc.w	$20f7	;661a4
+	dc.w	$0000	;661a6
+	dc.w	$0002	;661a8
+	dc.w	$4f8c	;661aa
+	dc.w	$0002	;661ac
+	dc.w	$503c	;661ae
+	dc.w	$0002	;661b0
+	dc.w	$509c	;661b2
+	dc.w	$0000	;661b4
+	dc.w	$0017	;661b6
+	dc.w	$8c9e	;661b8
+	dc.w	$20f7	;661ba
+	dc.w	$0000	;661bc
+	dc.w	$0002	;661be
+	dc.w	$4f7c	;661c0
+	dc.w	$0002	;661c2
+	dc.w	$4f8c	;661c4
+	dc.w	$0002	;661c6
+	dc.w	$503c	;661c8
+	dc.w	$0000	;661ca
+	dc.w	$0017	;661cc
+	dc.w	$54da	;661ce
+	dc.w	$54da	;661d0
+	dc.w	$0000	;661d2
+	dc.w	$0002	;661d4
+	dc.w	$507c	;661d6
+	dc.w	$0002	;661d8
+	dc.w	$50b4	;661da
+	dc.w	$0002	;661dc
+	dc.w	$50bc	;661de
+	dc.w	$0000	;661e0
+	dc.w	$0016	;661e2
+	dc.w	$54da	;661e4
+	dc.w	$54da	;661e6
+	dc.w	$0000	;661e8
+	dc.w	$0002	;661ea
+	dc.w	$5074	;661ec
+	dc.w	$0002	;661ee
+	dc.w	$507c	;661f0
+	dc.w	$0002	;661f2
+	dc.w	$50bc	;661f4
+	dc.w	$0000	;661f6
+	dc.w	$0016	;661f8
+	dc.w	$6b54	;661fa
+	dc.w	$0000	;661fc
+	dc.w	$ca56	;661fe
+	dc.w	$0002	;66200
+	dc.w	$4fc4	;66202
+	dc.w	$0002	;66204
+	dc.w	$50b4	;66206
+	dc.w	$0002	;66208
+	dc.w	$506c	;6620a
+	dc.w	$0000	;6620c
+	dc.w	$0017	;6620e
+	dc.w	$54da	;66210
+	dc.w	$54da	;66212
+	dc.w	$0000	;66214
+	dc.w	$0002	;66216
+	dc.w	$506c	;66218
+	dc.w	$0002	;6621a
+	dc.w	$507c	;6621c
+	dc.w	$0002	;6621e
+	dc.w	$50b4	;66220
+	dc.w	$0000	;66222
+	dc.w	$0017	;66224
+	dc.w	$6b54	;66226
+	dc.w	$0000	;66228
+	dc.w	$35aa	;6622a
+	dc.w	$0002	;6622c
+	dc.w	$4fcc	;6622e
+	dc.w	$0002	;66230
+	dc.w	$5064	;66232
+	dc.w	$0002	;66234
+	dc.w	$50bc	;66236
+	dc.w	$0000	;66238
+	dc.w	$0017	;6623a
+	dc.w	$54da	;6623c
+	dc.w	$54da	;6623e
+	dc.w	$0000	;66240
+	dc.w	$0002	;66242
+	dc.w	$5064	;66244
+	dc.w	$0002	;66246
+	dc.w	$5074	;66248
+	dc.w	$0002	;6624a
+	dc.w	$50bc	;6624c
+	dc.w	$0000	;6624e
+	dc.w	$0017	;66250
+	dc.w	$0000	;66252
+	dc.w	$0000	;66254
+	dc.w	$7800	;66256
+	dc.w	$0002	;66258
+	dc.w	$4fcc	;6625a
+	dc.w	$0002	;6625c
+	dc.w	$5034	;6625e
+	dc.w	$0002	;66260
+	dc.w	$5064	;66262
+	dc.w	$0000	;66264
+	dc.w	$0016	;66266
+	dc.w	$0000	;66268
+	dc.w	$0000	;6626a
+	dc.w	$7800	;6626c
+	dc.w	$0002	;6626e
+	dc.w	$4f64	;66270
+	dc.w	$0002	;66272
+	dc.w	$4fcc	;66274
+	dc.w	$0002	;66276
+	dc.w	$5034	;66278
+	dc.w	$0000	;6627a
+	dc.w	$0016	;6627c
+	dc.w	$0000	;6627e
+	dc.w	$0000	;66280
+	dc.w	$8800	;66282
+	dc.w	$0002	;66284
+	dc.w	$4fc4	;66286
+	dc.w	$0002	;66288
+	dc.w	$503c	;6628a
+	dc.w	$0002	;6628c
+	dc.w	$506c	;6628e
+	dc.w	$0000	;66290
+	dc.w	$0016	;66292
+	dc.w	$0000	;66294
+	dc.w	$0000	;66296
+	dc.w	$8800	;66298
+	dc.w	$0002	;6629a
+	dc.w	$4f7c	;6629c
+	dc.w	$0002	;6629e
+	dc.w	$4fc4	;662a0
+	dc.w	$0002	;662a2
+	dc.w	$503c	;662a4
+	dc.w	$0000	;662a6
+	dc.w	$0016	;662a8
+	dc.w	$0000	;662aa
+	dc.w	$8800	;662ac
+	dc.w	$0000	;662ae
+	dc.w	$0002	;662b0
+	dc.w	$4f7c	;662b2
+	dc.w	$0002	;662b4
+	dc.w	$4f8c	;662b6
+	dc.w	$0002	;662b8
+	dc.w	$4f9c	;662ba
+	dc.w	$0000	;662bc
+	dc.w	$0002	;662be
+	dc.w	$0000	;662c0
+	dc.w	$8800	;662c2
+	dc.w	$0000	;662c4
+	dc.w	$0002	;662c6
+	dc.w	$4f7c	;662c8
+	dc.w	$0002	;662ca
+	dc.w	$4f9c	;662cc
+	dc.w	$0002	;662ce
+	dc.w	$4fac	;662d0
+	dc.w	$0000	;662d2
+	dc.w	$0002	;662d4
+	dc.w	$0000	;662d6
+	dc.w	$8800	;662d8
+	dc.w	$0000	;662da
+	dc.w	$0002	;662dc
+	dc.w	$4f64	;662de
+	dc.w	$0002	;662e0
+	dc.w	$4f84	;662e2
+	dc.w	$0002	;662e4
+	dc.w	$4f94	;662e6
+	dc.w	$0000	;662e8
+	dc.w	$0002	;662ea
+	dc.w	$0000	;662ec
+	dc.w	$8800	;662ee
+	dc.w	$0000	;662f0
+	dc.w	$0002	;662f2
+	dc.w	$4f64	;662f4
+	dc.w	$0002	;662f6
+	dc.w	$4f94	;662f8
+	dc.w	$0002	;662fa
+	dc.w	$4fa4	;662fc
+	dc.w	$0000	;662fe
+	dc.w	$0002	;66300
+	dc.w	$0000	;66302
+	dc.w	$8800	;66304
+	dc.w	$0000	;66306
+	dc.w	$0002	;66308
+	dc.w	$4f64	;6630a
+	dc.w	$0002	;6630c
+	dc.w	$4fa4	;6630e
+	dc.w	$0002	;66310
+	dc.w	$50d4	;66312
+	dc.w	$0000	;66314
+	dc.w	$0002	;66316
+	dc.w	$0000	;66318
+	dc.w	$8800	;6631a
+	dc.w	$0000	;6631c
+	dc.w	$0002	;6631e
+	dc.w	$4f7c	;66320
+	dc.w	$0002	;66322
+	dc.w	$4fac	;66324
+	dc.w	$0002	;66326
+	dc.w	$50dc	;66328
+	dc.w	$0000	;6632a
+	dc.w	$0002	;6632c
+	dc.w	$0000	;6632e
+	dc.w	$8800	;66330
+	dc.w	$0000	;66332
+	dc.w	$0002	;66334
+	dc.w	$4fac	;66336
+	dc.w	$0002	;66338
+	dc.w	$4fb4	;6633a
+	dc.w	$0002	;6633c
+	dc.w	$4fc4	;6633e
+	dc.w	$0000	;66340
+	dc.w	$0002	;66342
+	dc.w	$0000	;66344
+	dc.w	$8800	;66346
+	dc.w	$0000	;66348
+	dc.w	$0002	;6634a
+	dc.w	$4fac	;6634c
+	dc.w	$0002	;6634e
+	dc.w	$4fc4	;66350
+	dc.w	$0002	;66352
+	dc.w	$50dc	;66354
+	dc.w	$0000	;66356
+	dc.w	$0002	;66358
+	dc.w	$0000	;6635a
+	dc.w	$8800	;6635c
+	dc.w	$0000	;6635e
+	dc.w	$0002	;66360
+	dc.w	$4fa4	;66362
+	dc.w	$0002	;66364
+	dc.w	$4fcc	;66366
+	dc.w	$0002	;66368
+	dc.w	$50d4	;6636a
+	dc.w	$0000	;6636c
+	dc.w	$0002	;6636e
+	dc.w	$0000	;66370
+	dc.w	$8800	;66372
+	dc.w	$0000	;66374
+	dc.w	$0002	;66376
+	dc.w	$4fa4	;66378
+	dc.w	$0002	;6637a
+	dc.w	$4fbc	;6637c
+	dc.w	$0002	;6637e
+	dc.w	$4fcc	;66380
+	dc.w	$0000	;66382
+	dc.w	$0002	;66384
+	dc.w	$ca56	;66386
+	dc.w	$94ac	;66388
+	dc.w	$0000	;6638a
+	dc.w	$0002	;6638c
+	dc.w	$5004	;6638e
+	dc.w	$0002	;66390
+	dc.w	$500c	;66392
+	dc.w	$0002	;66394
+	dc.w	$501c	;66396
+	dc.w	$0000	;66398
+	dc.w	$000a	;6639a
+	dc.w	$ca56	;6639c
+	dc.w	$94ac	;6639e
+	dc.w	$0000	;663a0
+	dc.w	$0002	;663a2
+	dc.w	$500c	;663a4
+	dc.w	$0002	;663a6
+	dc.w	$5014	;663a8
+	dc.w	$0002	;663aa
+	dc.w	$501c	;663ac
+	dc.w	$0000	;663ae
+	dc.w	$000a	;663b0
+	dc.w	$4800	;663b2
+	dc.w	$a000	;663b4
+	dc.w	$0000	;663b6
+	dc.w	$0002	;663b8
+	dc.w	$4f74	;663ba
+	dc.w	$0002	;663bc
+	dc.w	$4fb4	;663be
+	dc.w	$0002	;663c0
+	dc.w	$4fbc	;663c2
+	dc.w	$0000	;663c4
+	dc.w	$000a	;663c6
+	dc.w	$4800	;663c8
+	dc.w	$a000	;663ca
+	dc.w	$0000	;663cc
+	dc.w	$0002	;663ce
+	dc.w	$4f6c	;663d0
+	dc.w	$0002	;663d2
+	dc.w	$4f74	;663d4
+	dc.w	$0002	;663d6
+	dc.w	$4fbc	;663d8
+	dc.w	$0000	;663da
+	dc.w	$000a	;663dc
+	dc.w	$4800	;663de
+	dc.w	$a000	;663e0
+	dc.w	$0000	;663e2
+	dc.w	$0002	;663e4
+	dc.w	$4f6c	;663e6
+	dc.w	$0002	;663e8
+	dc.w	$4fbc	;663ea
+	dc.w	$0002	;663ec
+	dc.w	$4fcc	;663ee
+	dc.w	$0000	;663f0
+	dc.w	$000a	;663f2
+	dc.w	$4800	;663f4
+	dc.w	$a000	;663f6
+	dc.w	$0000	;663f8
+	dc.w	$0002	;663fa
+	dc.w	$4f6c	;663fc
+	dc.w	$0002	;663fe
+	dc.w	$4fb4	;66400
+	dc.w	$0002	;66402
+	dc.w	$4fc4	;66404
+	dc.w	$0000	;66406
+	dc.w	$000a	;66408
+	dc.w	$ca56	;6640a
+	dc.w	$94ac	;6640c
+	dc.w	$0000	;6640e
+	dc.w	$0002	;66410
+	dc.w	$4ff4	;66412
+	dc.w	$0002	;66414
+	dc.w	$4ffc	;66416
+	dc.w	$0002	;66418
+	dc.w	$5004	;6641a
+	dc.w	$0000	;6641c
+	dc.w	$0012	;6641e
+	dc.w	$ca56	;66420
+	dc.w	$94ac	;66422
+	dc.w	$0000	;66424
+	dc.w	$0002	;66426
+	dc.w	$4ff4	;66428
+	dc.w	$0002	;6642a
+	dc.w	$5004	;6642c
+	dc.w	$0002	;6642e
+	dc.w	$500c	;66430
+	dc.w	$0000	;66432
+	dc.w	$0012	;66434
+	dc.w	$0000	;66436
+	dc.w	$a000	;66438
+	dc.w	$b800	;6643a
+	dc.w	$0002	;6643c
+	dc.w	$4f9c	;6643e
+	dc.w	$0002	;66440
+	dc.w	$4ff4	;66442
+	dc.w	$0002	;66444
+	dc.w	$500c	;66446
+	dc.w	$0000	;66448
+	dc.w	$000a	;6644a
+	dc.w	$0000	;6644c
+	dc.w	$a000	;6644e
+	dc.w	$4800	;66450
+	dc.w	$0002	;66452
+	dc.w	$4f94	;66454
+	dc.w	$0002	;66456
+	dc.w	$4ffc	;66458
+	dc.w	$0002	;6645a
+	dc.w	$5004	;6645c
+	dc.w	$0000	;6645e
+	dc.w	$000a	;66460
+	dc.w	$dd85	;66462
+	dc.w	$a40d	;66464
+	dc.w	$44f6	;66466
+	dc.w	$0002	;66468
+	dc.w	$4f94	;6646a
+	dc.w	$0002	;6646c
+	dc.w	$4fa4	;6646e
+	dc.w	$0002	;66470
+	dc.w	$4ffc	;66472
+	dc.w	$0000	;66474
+	dc.w	$000a	;66476
+	dc.w	$c5cb	;66478
+	dc.w	$c5cb	;6647a
+	dc.w	$5750	;6647c
+	dc.w	$0002	;6647e
+	dc.w	$4fa4	;66480
+	dc.w	$0002	;66482
+	dc.w	$4fd4	;66484
+	dc.w	$0002	;66486
+	dc.w	$4ffc	;66488
+	dc.w	$0000	;6648a
+	dc.w	$000a	;6648c
+	dc.w	$dd85	;6648e
+	dc.w	$a40d	;66490
+	dc.w	$bb0a	;66492
+	dc.w	$0002	;66494
+	dc.w	$4f9c	;66496
+	dc.w	$0002	;66498
+	dc.w	$4fac	;6649a
+	dc.w	$0002	;6649c
+	dc.w	$4ff4	;6649e
+	dc.w	$0000	;664a0
+	dc.w	$000a	;664a2
+	dc.w	$c5cb	;664a4
+	dc.w	$c5cb	;664a6
+	dc.w	$a8b0	;664a8
+	dc.w	$0002	;664aa
+	dc.w	$4fac	;664ac
+	dc.w	$0002	;664ae
+	dc.w	$4fec	;664b0
+	dc.w	$0002	;664b2
+	dc.w	$4ff4	;664b4
+	dc.w	$0000	;664b6
+	dc.w	$000a	;664b8
+	dc.w	$0000	;664ba
+	dc.w	$bd70	;664bc
+	dc.w	$9c28	;664be
+	dc.w	$0002	;664c0
+	dc.w	$4fac	;664c2
+	dc.w	$0002	;664c4
+	dc.w	$4fe4	;664c6
+	dc.w	$0002	;664c8
+	dc.w	$4fec	;664ca
+	dc.w	$0000	;664cc
+	dc.w	$0012	;664ce
+	dc.w	$0000	;664d0
+	dc.w	$bd70	;664d2
+	dc.w	$9c28	;664d4
+	dc.w	$0002	;664d6
+	dc.w	$4fac	;664d8
+	dc.w	$0002	;664da
+	dc.w	$4fb4	;664dc
+	dc.w	$0002	;664de
+	dc.w	$4fe4	;664e0
+	dc.w	$0000	;664e2
+	dc.w	$0012	;664e4
+	dc.w	$0000	;664e6
+	dc.w	$bd70	;664e8
+	dc.w	$63d8	;664ea
+	dc.w	$0002	;664ec
+	dc.w	$4fa4	;664ee
+	dc.w	$0002	;664f0
+	dc.w	$4fd4	;664f2
+	dc.w	$0002	;664f4
+	dc.w	$4fdc	;664f6
+	dc.w	$0000	;664f8
+	dc.w	$0012	;664fa
+	dc.w	$0000	;664fc
+	dc.w	$bd70	;664fe
+	dc.w	$63d8	;66500
+	dc.w	$0002	;66502
+	dc.w	$4fa4	;66504
+	dc.w	$0002	;66506
+	dc.w	$4fbc	;66508
+	dc.w	$0002	;6650a
+	dc.w	$4fdc	;6650c
+	dc.w	$0000	;6650e
+	dc.w	$0012	;66510
+	dc.w	$4800	;66512
+	dc.w	$a000	;66514
+	dc.w	$0000	;66516
+	dc.w	$0002	;66518
+	dc.w	$4fbc	;6651a
+	dc.w	$0002	;6651c
+	dc.w	$4fdc	;6651e
+	dc.w	$0002	;66520
+	dc.w	$4fe4	;66522
+	dc.w	$0000	;66524
+	dc.w	$000a	;66526
+	dc.w	$4800	;66528
+	dc.w	$a000	;6652a
+	dc.w	$0000	;6652c
+	dc.w	$0002	;6652e
+	dc.w	$4fb4	;66530
+	dc.w	$0002	;66532
+	dc.w	$4fbc	;66534
+	dc.w	$0002	;66536
+	dc.w	$4fe4	;66538
+	dc.w	$0000	;6653a
+	dc.w	$000a	;6653c
+	dc.w	$0000	;6653e
+	dc.w	$0000	;66540
+	dc.w	$0000	;66542
+	dc.w	$0002	;66544
+	dc.w	$4fd4	;66546
+	dc.w	$0002	;66548
+	dc.w	$4fec	;6654a
+	dc.w	$0002	;6654c
+	dc.w	$4ff4	;6654e
+	dc.w	$0000	;66550
+	dc.w	$0002	;66552
+	dc.w	$0000	;66554
+	dc.w	$0000	;66556
+	dc.w	$0000	;66558
+	dc.w	$0002	;6655a
+	dc.w	$4fd4	;6655c
+	dc.w	$0002	;6655e
+	dc.w	$4ff4	;66560
+	dc.w	$0002	;66562
+	dc.w	$4ffc	;66564
+	dc.w	$0000	;66566
+	dc.w	$0002	;66568
+	dc.w	$0000	;6656a
+	dc.w	$0000	;6656c
+	dc.w	$0000	;6656e
+	dc.w	$0002	;66570
+	dc.w	$4fd4	;66572
+	dc.w	$0002	;66574
+	dc.w	$4fdc	;66576
+	dc.w	$0002	;66578
+	dc.w	$4fec	;6657a
+	dc.w	$0000	;6657c
+	dc.w	$0002	;6657e
+	dc.w	$0000	;66580
+	dc.w	$0000	;66582
+	dc.w	$0000	;66584
+	dc.w	$0002	;66586
+	dc.w	$4fdc	;66588
+	dc.w	$0002	;6658a
+	dc.w	$4fe4	;6658c
+	dc.w	$0002	;6658e
+	dc.w	$4fec	;66590
+	dc.w	$0000	;66592
+	dc.w	$0002	;66594
+	dc.w	$0100	;66596
+	dc.w	$000e	;66598
+	dc.w	$0012	;6659a
+	dc.w	$0062	;6659c
+	dc.w	$0000	;6659e
+	dc.w	$0000	;665a0
+	dc.w	$0000	;665a2
+	dc.w	$ff90	;665a4
+	dc.w	$ffb0	;665a6
+	dc.w	$ffd0	;665a8
+	dc.w	$ff90	;665aa
+	dc.w	$ffb0	;665ac
+	dc.w	$0030	;665ae
+	dc.w	$0000	;665b0
+	dc.w	$ffa8	;665b2
+	dc.w	$0040	;665b4
+	dc.w	$0060	;665b6
+	dc.w	$ffb0	;665b8
+	dc.w	$0030	;665ba
+	dc.w	$0070	;665bc
+	dc.w	$ffb0	;665be
+	dc.w	$0000	;665c0
+	dc.w	$0060	;665c2
+	dc.w	$ffb0	;665c4
+	dc.w	$ffd0	;665c6
+	dc.w	$0000	;665c8
+	dc.w	$ffa8	;665ca
+	dc.w	$ffc0	;665cc
+	dc.w	$ff80	;665ce
+	dc.w	$0000	;665d0
+	dc.w	$ffd0	;665d2
+	dc.w	$ff80	;665d4
+	dc.w	$0000	;665d6
+	dc.w	$0030	;665d8
+	dc.w	$0000	;665da
+	dc.w	$0000	;665dc
+	dc.w	$0060	;665de
+	dc.w	$0070	;665e0
+	dc.w	$0000	;665e2
+	dc.w	$0050	;665e4
+	dc.w	$0080	;665e6
+	dc.w	$0000	;665e8
+	dc.w	$0000	;665ea
+	dc.w	$0070	;665ec
+	dc.w	$0000	;665ee
+	dc.w	$ffb0	;665f0
+	dc.w	$0000	;665f2
+	dc.w	$0000	;665f4
+	dc.w	$ffa0	;665f6
+	dc.w	$7178	;665f8
+	dc.w	$e03b	;665fa
+	dc.w	$e94f	;665fc
+	dc.w	$0002	;665fe
+	dc.w	$4f8c	;66600
+	dc.w	$0002	;66602
+	dc.w	$4fbc	;66604
+	dc.w	$0002	;66606
+	dc.w	$4fc4	;66608
+	dc.w	$0000	;6660a
+	dc.w	$000a	;6660c
+	dc.w	$6fd8	;6660e
+	dc.w	$e9a2	;66610
+	dc.w	$dab8	;66612
+	dc.w	$0002	;66614
+	dc.w	$4f84	;66616
+	dc.w	$0002	;66618
+	dc.w	$4f8c	;6661a
+	dc.w	$0002	;6661c
+	dc.w	$4fbc	;6661e
+	dc.w	$0000	;66620
+	dc.w	$0012	;66622
+	dc.w	$d5f8	;66624
+	dc.w	$f798	;66626
+	dc.w	$8feb	;66628
+	dc.w	$0002	;6662a
+	dc.w	$4f64	;6662c
+	dc.w	$0002	;6662e
+	dc.w	$4f9c	;66630
+	dc.w	$0002	;66632
+	dc.w	$4fcc	;66634
+	dc.w	$0000	;66636
+	dc.w	$0006	;66638
+	dc.w	$ed32	;6663a
+	dc.w	$d780	;6663c
+	dc.w	$909f	;6663e
+	dc.w	$0002	;66640
+	dc.w	$4f64	;66642
+	dc.w	$0002	;66644
+	dc.w	$4f94	;66646
+	dc.w	$0002	;66648
+	dc.w	$4fcc	;6664a
+	dc.w	$0000	;6664c
+	dc.w	$0006	;6664e
+	dc.w	$15d7	;66650
+	dc.w	$d7ae	;66652
+	dc.w	$911c	;66654
+	dc.w	$0002	;66656
+	dc.w	$4f8c	;66658
+	dc.w	$0002	;6665a
+	dc.w	$4f94	;6665c
+	dc.w	$0002	;6665e
+	dc.w	$4fcc	;66660
+	dc.w	$0000	;66662
+	dc.w	$0006	;66664
+	dc.w	$0f9f	;66666
+	dc.w	$d122	;66668
+	dc.w	$92a5	;6666a
+	dc.w	$0002	;6666c
+	dc.w	$4f8c	;6666e
+	dc.w	$0002	;66670
+	dc.w	$4fc4	;66672
+	dc.w	$0002	;66674
+	dc.w	$4fcc	;66676
+	dc.w	$0000	;66678
+	dc.w	$0006	;6667a
+	dc.w	$6fd8	;6667c
+	dc.w	$e9a2	;6667e
+	dc.w	$2548	;66680
+	dc.w	$0002	;66682
+	dc.w	$4f7c	;66684
+	dc.w	$0002	;66686
+	dc.w	$4f84	;66688
+	dc.w	$0002	;6668a
+	dc.w	$4fbc	;6668c
+	dc.w	$0000	;6668e
+	dc.w	$0012	;66690
+	dc.w	$7178	;66692
+	dc.w	$e03b	;66694
+	dc.w	$16b1	;66696
+	dc.w	$0002	;66698
+	dc.w	$4f7c	;6669a
+	dc.w	$0002	;6669c
+	dc.w	$4fb4	;6669e
+	dc.w	$0002	;666a0
+	dc.w	$4fbc	;666a2
+	dc.w	$0000	;666a4
+	dc.w	$000a	;666a6
+	dc.w	$0f9f	;666a8
+	dc.w	$d122	;666aa
+	dc.w	$6d5b	;666ac
+	dc.w	$0002	;666ae
+	dc.w	$4f7c	;666b0
+	dc.w	$0002	;666b2
+	dc.w	$4fac	;666b4
+	dc.w	$0002	;666b6
+	dc.w	$4fb4	;666b8
+	dc.w	$0000	;666ba
+	dc.w	$0006	;666bc
+	dc.w	$15d7	;666be
+	dc.w	$d7ae	;666c0
+	dc.w	$6ee4	;666c2
+	dc.w	$0002	;666c4
+	dc.w	$4f74	;666c6
+	dc.w	$0002	;666c8
+	dc.w	$4f7c	;666ca
+	dc.w	$0002	;666cc
+	dc.w	$4fac	;666ce
+	dc.w	$0000	;666d0
+	dc.w	$0006	;666d2
+	dc.w	$ed32	;666d4
+	dc.w	$d780	;666d6
+	dc.w	$6f61	;666d8
+	dc.w	$0002	;666da
+	dc.w	$4f6c	;666dc
+	dc.w	$0002	;666de
+	dc.w	$4f74	;666e0
+	dc.w	$0002	;666e2
+	dc.w	$4fac	;666e4
+	dc.w	$0000	;666e6
+	dc.w	$000a	;666e8
+	dc.w	$d5f8	;666ea
+	dc.w	$f798	;666ec
+	dc.w	$7015	;666ee
+	dc.w	$0002	;666f0
+	dc.w	$4f6c	;666f2
+	dc.w	$0002	;666f4
+	dc.w	$4fa4	;666f6
+	dc.w	$0002	;666f8
+	dc.w	$4fac	;666fa
+	dc.w	$0000	;666fc
+	dc.w	$000a	;666fe
+	dc.w	$8a55	;66700
+	dc.w	$e878	;66702
+	dc.w	$0000	;66704
+	dc.w	$0002	;66706
+	dc.w	$4f6c	;66708
+	dc.w	$0002	;6670a
+	dc.w	$4f9c	;6670c
+	dc.w	$0002	;6670e
+	dc.w	$4fa4	;66710
+	dc.w	$0000	;66712
+	dc.w	$0012	;66714
+	dc.w	$8a55	;66716
+	dc.w	$e878	;66718
+	dc.w	$0000	;6671a
+	dc.w	$0002	;6671c
+	dc.w	$4f64	;6671e
+	dc.w	$0002	;66720
+	dc.w	$4f6c	;66722
+	dc.w	$0002	;66724
+	dc.w	$4f9c	;66726
+	dc.w	$0000	;66728
+	dc.w	$0012	;6672a
+	dc.w	$f774	;6672c
+	dc.w	$884f	;6672e
+	dc.w	$0000	;66730
+	dc.w	$0002	;66732
+	dc.w	$4f64	;66734
+	dc.w	$0002	;66736
+	dc.w	$4f6c	;66738
+	dc.w	$0002	;6673a
+	dc.w	$4f94	;6673c
+	dc.w	$0000	;6673e
+	dc.w	$0002	;66740
+	dc.w	$f774	;66742
+	dc.w	$884f	;66744
+	dc.w	$0000	;66746
+	dc.w	$0002	;66748
+	dc.w	$4f6c	;6674a
+	dc.w	$0002	;6674c
+	dc.w	$4f74	;6674e
+	dc.w	$0002	;66750
+	dc.w	$4f94	;66752
+	dc.w	$0000	;66754
+	dc.w	$0002	;66756
+	dc.w	$09f7	;66758
+	dc.w	$886b	;6675a
+	dc.w	$0000	;6675c
+	dc.w	$0002	;6675e
+	dc.w	$4f74	;66760
+	dc.w	$0002	;66762
+	dc.w	$4f7c	;66764
+	dc.w	$0002	;66766
+	dc.w	$4f94	;66768
+	dc.w	$0000	;6676a
+	dc.w	$0002	;6676c
+	dc.w	$09f7	;6676e
+	dc.w	$886b	;66770
+	dc.w	$0000	;66772
+	dc.w	$0002	;66774
+	dc.w	$4f7c	;66776
+	dc.w	$0002	;66778
+	dc.w	$4f8c	;6677a
+	dc.w	$0002	;6677c
+	dc.w	$4f94	;6677e
+	dc.w	$0000	;66780
+	dc.w	$0002	;66782
+	dc.w	$0000	;66784
+	dc.w	$8800	;66786
+	dc.w	$0000	;66788
+	dc.w	$0002	;6678a
+	dc.w	$4f7c	;6678c
+	dc.w	$0002	;6678e
+	dc.w	$4f84	;66790
+	dc.w	$0002	;66792
+	dc.w	$4f8c	;66794
+	dc.w	$0000	;66796
+	dc.w	$0012	;66798
+	dc.w	$0100	;6679a
+	dc.w	$0006	;6679c
+	dc.w	$0005	;6679e
+	dc.w	$0032	;667a0
+	dc.w	$0000	;667a2
+	dc.w	$0000	;667a4
+	dc.w	$0000	;667a6
+	dc.w	$fe70	;667a8
+	dc.w	$ffe0	;667aa
+	dc.w	$fff8	;667ac
+	dc.w	$ff88	;667ae
+	dc.w	$ffe0	;667b0
+	dc.w	$0008	;667b2
+	dc.w	$ff88	;667b4
+	dc.w	$ffe0	;667b6
+	dc.w	$fff8	;667b8
+	dc.w	$fe70	;667ba
+	dc.w	$fff0	;667bc
+	dc.w	$0000	;667be
+	dc.w	$ff88	;667c0
+	dc.w	$fff0	;667c2
+	dc.w	$0000	;667c4
+	dc.w	$fe70	;667c6
+	dc.w	$ffe0	;667c8
+	dc.w	$0008	;667ca
+	dc.w	$0000	;667cc
+	dc.w	$ca56	;667ce
+	dc.w	$6b54	;667d0
+	dc.w	$0002	;667d2
+	dc.w	$4f64	;667d4
+	dc.w	$0002	;667d6
+	dc.w	$4f7c	;667d8
+	dc.w	$0002	;667da
+	dc.w	$4f84	;667dc
+	dc.w	$0000	;667de
+	dc.w	$000a	;667e0
+	dc.w	$0000	;667e2
+	dc.w	$ca56	;667e4
+	dc.w	$6b54	;667e6
+	dc.w	$0002	;667e8
+	dc.w	$4f64	;667ea
+	dc.w	$0002	;667ec
+	dc.w	$4f74	;667ee
+	dc.w	$0002	;667f0
+	dc.w	$4f84	;667f2
+	dc.w	$0000	;667f4
+	dc.w	$000a	;667f6
+	dc.w	$0000	;667f8
+	dc.w	$ca56	;667fa
+	dc.w	$94ac	;667fc
+	dc.w	$0002	;667fe
+	dc.w	$4f8c	;66800
+	dc.w	$0002	;66802
+	dc.w	$4f6c	;66804
+	dc.w	$0002	;66806
+	dc.w	$4f84	;66808
+	dc.w	$0000	;6680a
+	dc.w	$000a	;6680c
+	dc.w	$0000	;6680e
+	dc.w	$ca56	;66810
+	dc.w	$94ac	;66812
+	dc.w	$0002	;66814
+	dc.w	$4f8c	;66816
+	dc.w	$0002	;66818
+	dc.w	$4f7c	;6681a
+	dc.w	$0002	;6681c
+	dc.w	$4f84	;6681e
+	dc.w	$0000	;66820
+	dc.w	$000a	;66822
+	dc.w	$0000	;66824
+	dc.w	$8800	;66826
+	dc.w	$0000	;66828
+	dc.w	$0002	;6682a
+	dc.w	$4f8c	;6682c
+	dc.w	$0002	;6682e
+	dc.w	$4f64	;66830
+	dc.w	$0002	;66832
+	dc.w	$4f6c	;66834
+	dc.w	$0000	;66836
+	dc.w	$0002	;66838
+	dc.w	$0000	;6683a
+	dc.w	$8800	;6683c
+	dc.w	$0000	;6683e
+	dc.w	$0002	;66840
+	dc.w	$4f64	;66842
+	dc.w	$0002	;66844
+	dc.w	$4f6c	;66846
+	dc.w	$0002	;66848
+	dc.w	$4f74	;6684a
+	dc.w	$0000	;6684c
+	dc.w	$0002	;6684e
 lb_66850:
-	BTST	D0,D0			;66850: 0100
-	ORI.B	#$05,D7			;66852: 00070005
-	ORI.B	#$00,ext_00000000.W		;66856: 003800000000
-	DC.W	$0000			;6685c
-	DC.W	$ffa0			;6685e
-	DC.W	$0000			;66860
-	DC.W	$ffc0			;66862
-	DC.W	$ffa0			;66864
-	ORI.B	#$40,D0			;66866: 00000040
-	dc.l  $0			;6686a: 00000000
-	ORI.W	#$0060,-(A0)		;6686e: 00600060
-	ORI.B	#$40,D0			;66872: 00000040
-	ORI.W	#$0000,-(A0)		;66876: 00600000
-	DC.W	$ffc0			;6687a
-	dc.l  $0			;6687c: 00000000
-	DC.W	$ffa0			;66880
-	ORI.B	#$50,D0			;66882: 00000050
-	DC.W	$0000			;66886
-	EOR.B	D1,23599(A6)		;66888: b32e5c2f
-	ORI.B	#$02,D0			;6688c: 00000002
-	CHK.W	(A4),D7			;66890: 4f94
-	DC.W	$0002			;66892
-	DC.W	$4f64			;66894
-	DC.W	$0002			;66896
-	DC.W	$4f6c			;66898
-	ORI.B	#$07,D0			;6689a: 00000007
-	DC.W	$e6f5			;6689e
-	ADDQ.B	#5,19233(A0)		;668a0: 5a284b21
-	DC.W	$0002			;668a4
-	CHK.W	(A4),D7			;668a6: 4f94
-	DC.W	$0002			;668a8
-	DC.W	$4f6c			;668aa
-	DC.W	$0002			;668ac
-	DC.W	$4f74			;668ae
-	ORI.B	#$07,D0			;668b0: 00000007
-	DC.W	$190b			;668b4
-	ADDQ.B	#5,19233(A0)		;668b6: 5a284b21
-	DC.W	$0002			;668ba
-	CHK.W	(A4),D7			;668bc: 4f94
-	DC.W	$0002			;668be
-	DC.W	$4f74			;668c0
-	DC.W	$0002			;668c2
-	DC.W	$4f7c			;668c4
-	ORI.B	#$07,D0			;668c6: 00000007
-	MOVEM.L	(A2),D0-D3/D5/A2-A4/A6	;668ca: 4cd25c2f
-	ORI.B	#$02,D0			;668ce: 00000002
-	CHK.W	(A4),D7			;668d2: 4f94
-	DC.W	$0002			;668d4
-	DC.W	$4f7c			;668d6
-	DC.W	$0002			;668d8
-	CHK.W	D4,D7			;668da: 4f84
-	ORI.B	#$07,D0			;668dc: 00000007
-	DC.W	$190b			;668e0
-	ADDQ.B	#5,-19233(A0)		;668e2: 5a28b4df
-	DC.W	$0002			;668e6
-	CHK.W	(A4),D7			;668e8: 4f94
-	DC.W	$0002			;668ea
-	CHK.W	D4,D7			;668ec: 4f84
-	DC.W	$0002			;668ee
-	DC.W	$4f8c			;668f0
-	ORI.B	#$07,D0			;668f2: 00000007
-	DC.W	$e6f5			;668f6
-	ADDQ.B	#5,-19233(A0)		;668f8: 5a28b4df
-	DC.W	$0002			;668fc
-	CHK.W	(A4),D7			;668fe: 4f94
-	DC.W	$0002			;66900
-	DC.W	$4f8c			;66902
-	DC.W	$0002			;66904
-	DC.W	$4f64			;66906
-	ORI.B	#$07,D0			;66908: 00000007
-	ANDI.B	#$0d,D0			;6690c: 0200000d
-	DC.W	$000f			;66910
-	ORI.W	#$0010,(A4)+		;66912: 005c0010
-	dc.l  $0			;66916: 00000000
-	DC.W	$ffe0			;6691a
-	DC.W	$fe50			;6691c
-	DC.W	$0000			;6691e
-	DC.W	$ff70			;66920
-	DC.W	$fec0			;66922
-	DC.W	$0030			;66924
-	DC.W	$ffc0			;66926
-	DC.W	$fef0			;66928
-	DC.W	$ffd0			;6692a
-	ORI.W	#$fed0,D0		;6692c: 0040fed0
-	DC.W	$ffc0			;66930
-	ORI.L	#$fe900040,D0		;66932: 0080fe900040
-	DC.W	$ff40			;66938
-	DC.W	$ff60			;6693a
-	ORI.B	#$10,D0			;6693c: 00000010
-	DC.W	$ff40			;66940
-	DC.W	$ffd0			;66942
-	DC.W	$00c0			;66944
-	DC.W	$ff20			;66946
-	DC.W	$0020			;66948
-	DC.W	$ffc0			;6694a
-	DC.W	$ff90			;6694c
-	DC.W	$fff0			;6694e
-	ORI.W	#$ff80,D0		;66950: 0040ff80
-	DC.W	$fff0			;66954
-	DC.W	$fff0			;66956
-	DC.W	$ffa0			;66958
-	ORI.B	#$10,D0			;6695a: 00000010
-	DC.W	$ffa0			;6695e
-	DC.W	$0000			;66960
-	DC.W	$fff0			;66962
-	dc.l  $0			;66964: 00000000
-	dc.l  $0			;66968: 00000000
-	ORI.B	#$02,D0			;6696c: 00000002
-	DC.W	$4f5c			;66970
-	DC.W	$0002			;66972
-	CHK.W	#$0002,D7		;66974: 4fbc0002
-	DC.W	$4fc4			;66978
-	ORI.B	#$13,D0			;6697a: 00000013
-	dc.l  $0			;6697e: 00000000
-	ORI.B	#$02,D0			;66982: 00000002
-	CHK.W	2(A4,D0.W),D7		;66986: 4fb40002
-	CHK.W	#$0002,D7		;6698a: 4fbc0002
-	DC.W	$4fc4			;6698e
-	ORI.B	#$13,D0			;66990: 00000013
-	DC.W	$0000			;66994
-	AND.W	(A6),D5			;66996: ca56
-	BMI.S	lb_669ee		;66998: 6b54
-	DC.W	$0002			;6699a
-	CHK.W	(A4),D7			;6699c: 4f94
-	DC.W	$0002			;6699e
-	CHK.W	2(A4,D0.W),D7		;669a0: 4fb40002
-	CHK.W	#$0000,D7		;669a4: 4fbc0000
-	DC.W	$0016			;669a8
-	DC.W	$f05d			;669aa
-	AND.L	26687(A2),D3		;669ac: c6aa683f
-	DC.W	$0002			;669b0
-	CHK.W	(A4),D7			;669b2: 4f94
-	DC.W	$0002			;669b4
-	CHK.W	-(A4),D7		;669b6: 4fa4
-	DC.W	$0002			;669b8
-	CHK.W	0(A4,D0.W),D7		;669ba: 4fb40000
-	ORI.B	#$00,D6			;669be: 00060000
-	AND.W	(A6),D5			;669c2: ca56
-	BMI.S	lb_66a1a		;669c4: 6b54
-	DC.W	$0002			;669c6
-	CHK.W	(A4),D7			;669c8: 4f94
-	DC.W	$0002			;669ca
-	CHK.W	2(A4),D7		;669cc: 4fac0002
-	CHK.W	#$0000,D7		;669d0: 4fbc0000
-	DC.W	$0006			;669d4
-	DC.W	$e8e8			;669d6
-	MOVE.B	(A0)+,-(A3)		;669d8: 1718
-	DC.W	$8c88			;669da
-	DC.W	$0002			;669dc
-	DC.W	$4f8c			;669de
-	DC.W	$0002			;669e0
-	CHK.W	(A4),D7			;669e2: 4f94
-	DC.W	$0002			;669e4
-	CHK.W	-(A4),D7		;669e6: 4fa4
-	ORI.B	#$0a,D0			;669e8: 0000000a
-	DC.W	$3384			;669ec
-lb_669ee:
-	BTST	D7,D6			;669ee: 0f06
-	SUB.L	2(A4),D2		;669f0: 94ac0002
-	CHK.W	(A4),D7			;669f4: 4f94
-	DC.W	$0002			;669f6
-	CHK.W	(A4)+,D7		;669f8: 4f9c
-	DC.W	$0002			;669fa
-	CHK.W	0(A4),D7		;669fc: 4fac0000
-	DC.W	$000a			;66a00
-	DC.W	$e8e8			;66a02
-	MOVE.B	(A0)+,-(A3)		;66a04: 1718
-	DC.W	$8c88			;66a06
-	DC.W	$0002			;66a08
-	DC.W	$4f74			;66a0a
-	DC.W	$0002			;66a0c
-	DC.W	$4f8c			;66a0e
-	DC.W	$0002			;66a10
-	CHK.W	(A4),D7			;66a12: 4f94
-	ORI.B	#$12,D0			;66a14: 00000012
-	EXG	D5,D2			;66a18: cb42
-lb_66a1a:
-	DC.W	$daf0			;66a1a
-	BCS.S	lb_66a54		;66a1c: 6536
-	DC.W	$0002			;66a1e
-	DC.W	$4f7c			;66a20
-	DC.W	$0002			;66a22
-	CHK.W	(A4),D7			;66a24: 4f94
-	DC.W	$0002			;66a26
-	CHK.W	(A4)+,D7		;66a28: 4f9c
-	ORI.B	#$12,D0			;66a2a: 00000012
-	DC.W	$b7bb			;66a2e
-	DC.W	$d13d			;66a30
-	DC.W	$ac65			;66a32
-	DC.W	$0002			;66a34
-	DC.W	$4f6c			;66a36
-	DC.W	$0002			;66a38
-	DC.W	$4f74			;66a3a
-	DC.W	$0002			;66a3c
-	DC.W	$4f8c			;66a3e
-	ORI.B	#$02,D0			;66a40: 00000002
-	DC.W	$53cb			;66a44
-	AND.L	D5,-(A1)		;66a46: cba1
-	CMPA.L	2(A3),A5		;66a48: bbeb0002
-	DC.W	$4f7c			;66a4c
-	DC.W	$0002			;66a4e
-	CHK.W	D4,D7			;66a50: 4f84
-	DC.W	$0002			;66a52
-lb_66a54:
-	CHK.W	(A4)+,D7		;66a54: 4f9c
-	ORI.B	#$02,D0			;66a56: 00000002
-	DC.W	$f41f			;66a5a
-	BSET	D5,-(A1)		;66a5c: 0be1
-	OR.B	D4,2(A7)		;66a5e: 892f0002
-	DC.W	$4f74			;66a62
-	DC.W	$0002			;66a64
-	DC.W	$4f7c			;66a66
-	DC.W	$0002			;66a68
-	CHK.W	(A4),D7			;66a6a: 4f94
-	ORI.B	#$0a,D0			;66a6c: 0000000a
-	LSL.W	#7,D6			;66a70: ef4e
-	DC.W	$c37a			;66a72
-	DC.W	$6643			;66a74
-	DC.W	$0002			;66a76
-	DC.W	$4f64			;66a78
-	DC.W	$0002			;66a7a
-	DC.W	$4f6c			;66a7c
-	DC.W	$0002			;66a7e
-	CHK.W	D4,D7			;66a80: 4f84
-	ORI.B	#$02,D0			;66a82: 00000002
-	CMPA.L	-(A5),A1		;66a86: b3e5
-	DC.W	$d7b6			;66a88
-	DC.W	$ac6f			;66a8a
-	DC.W	$0002			;66a8c
-	DC.W	$4f64			;66a8e
-	DC.W	$0002			;66a90
-	DC.W	$4f6c			;66a92
-	DC.W	$0002			;66a94
-	DC.W	$4f74			;66a96
-	ORI.B	#$12,D0			;66a98: 00000012
-	LSR.L	#4,D7			;66a9c: e88f
-	ADDA.L	-28506(A0),A4		;66a9e: d9e890a6
-	DC.W	$0002			;66aa2
-	DC.W	$4f64			;66aa4
-	DC.W	$0002			;66aa6
-	DC.W	$4f74			;66aa8
-	DC.W	$0002			;66aaa
-	DC.W	$4f7c			;66aac
-	ORI.B	#$12,D0			;66aae: 00000012
-	MOVE.W	#$b15b,(A5)+		;66ab2: 3afcb15b
-	EOR.B	D5,2(A0,D0.W)		;66ab6: bb300002
-	DC.W	$4f64			;66aba
-	DC.W	$0002			;66abc
-	DC.W	$4f7c			;66abe
-	DC.W	$0002			;66ac0
-	CHK.W	D4,D7			;66ac2: 4f84
-	ORI.B	#$12,D0			;66ac4: 00000012
-	ANDI.B	#$0b,D0			;66ac8: 0200000b
-	DC.W	$000d			;66acc
-	ORI.W	#$0000,(A0)		;66ace: 00500000
-	DC.W	$fe70			;66ad2
-	DC.W	$0000			;66ad4
-	DC.W	$ffb0			;66ad6
-	DC.W	$fed0			;66ad8
-	ORI.B	#$00,-(A0)		;66ada: 00200000
-	DC.W	$fef0			;66ade
-	DC.W	$ffd0			;66ae0
-	ORI.W	#$fef0,D0		;66ae2: 0040fef0
-	DC.W	$0030			;66ae6
-	DC.W	$ff80			;66ae8
-	DC.W	$ff50			;66aea
-	DC.W	$fff0			;66aec
-	DC.W	$ffd0			;66aee
-	DC.W	$ff50			;66af0
-	DC.W	$ffc0			;66af2
-	DC.W	$0020			;66af4
-	DC.W	$ff60			;66af6
-	DC.W	$ffb0			;66af8
-	ORI.W	#$ff60,(A0)		;66afa: 0050ff60
-	DC.W	$0000			;66afe
-	DC.W	$fff0			;66b00
-	DC.W	$ffa0			;66b02
-	ORI.B	#$10,D0			;66b04: 00000010
-	DC.W	$ffa0			;66b08
-	DC.W	$0000			;66b0a
-	DC.W	$fff0			;66b0c
-	dc.l  $0			;66b0e: 00000000
-	ORI.B	#$00,(A0)		;66b12: 00100000
-	dc.l  $0			;66b16: 00000000
-	dc.l  $0			;66b1a: 00000000
-	DC.W	$0002			;66b1e
-	CHK.W	(A4)+,D7		;66b20: 4f9c
-	DC.W	$0002			;66b22
-	CHK.W	-(A4),D7		;66b24: 4fa4
-	DC.W	$0002			;66b26
-	CHK.W	0(A4,D0.W),D7		;66b28: 4fb40000
-	ORI.B	#$00,(A3)		;66b2c: 00130000
-	dc.l  $0			;66b30: 00000000
-	DC.W	$0002			;66b34
-	CHK.W	(A4)+,D7		;66b36: 4f9c
-	DC.W	$0002			;66b38
-	CHK.W	2(A4),D7		;66b3a: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;66b3e: 4fb40000
-	ORI.B	#$00,(A3)		;66b42: 00130000
-	DC.W	$a24c			;66b46
-	TAS	2(A6,D0.W)		;66b48: 4af60002
-	DC.W	$4f8c			;66b4c
-	DC.W	$0002			;66b4e
-	CHK.W	(A4)+,D7		;66b50: 4f9c
-	DC.W	$0002			;66b52
-	CHK.W	-(A4),D7		;66b54: 4fa4
-	ORI.B	#$0e,D0			;66b56: 0000000e
-	MOVE.L	-(A7),(A0)		;66b5a: 20a7
-	CMP.B	21361(A7),D0		;66b5c: b02f5371
-	DC.W	$0002			;66b60
-	CHK.W	D4,D7			;66b62: 4f84
-	DC.W	$0002			;66b64
-	DC.W	$4f8c			;66b66
-	DC.W	$0002			;66b68
-	CHK.W	(A4)+,D7		;66b6a: 4f9c
-	ORI.B	#$0e,D0			;66b6c: 0000000e
-	CMPA.L	-(A3),A0		;66b70: b1e3
-	CMPA.L	-(A3),A0		;66b72: b1e3
-	MOVE.L	(A6)+,(A7)+		;66b74: 2ede
-	DC.W	$0002			;66b76
-	DC.W	$4f8c			;66b78
-	DC.W	$0002			;66b7a
-	CHK.W	(A4),D7			;66b7c: 4f94
-	DC.W	$0002			;66b7e
-	CHK.W	-(A4),D7		;66b80: 4fa4
-	ORI.B	#$06,D0			;66b82: 00000006
-	MOVE.L	(A4),D7			;66b86: 2e14
-	CMP.B	-(A2),D0		;66b88: b022
-	DC.W	$4ccc			;66b8a
-	DC.W	$0002			;66b8c
-	DC.W	$4f7c			;66b8e
-	DC.W	$0002			;66b90
-	CHK.W	D4,D7			;66b92: 4f84
-	DC.W	$0002			;66b94
-	CHK.W	(A4)+,D7		;66b96: 4f9c
-	ORI.B	#$06,D0			;66b98: 00000006
-	AND.B	D4,(A2)+		;66b9c: c91a
-	AND.B	D4,(A2)+		;66b9e: c91a
-	DC.W	$a481			;66ba0
-	DC.W	$0002			;66ba2
-	DC.W	$4f64			;66ba4
-	DC.W	$0002			;66ba6
-	DC.W	$4f7c			;66ba8
-	DC.W	$0002			;66baa
-	CHK.W	D4,D7			;66bac: 4f84
-	ORI.B	#$0a,D0			;66bae: 0000000a
-	CMP.L	A0,D6			;66bb2: bc88
-	DC.W	$cfcf			;66bb4
-	DC.W	$a941			;66bb6
-	DC.W	$0002			;66bb8
-	DC.W	$4f64			;66bba
-	DC.W	$0002			;66bbc
-	DC.W	$4f6c			;66bbe
-	DC.W	$0002			;66bc0
-	CHK.W	D4,D7			;66bc2: 4f84
-	ORI.B	#$06,D0			;66bc4: 00000006
-	ASR.L	#7,D5			;66bc8: ee85
-	LSR.B	#2,D0			;66bca: e408
-	OR.L	-(A0),D6		;66bcc: 8ca0
-	DC.W	$0002			;66bce
-	DC.W	$4f6c			;66bd0
-	DC.W	$0002			;66bd2
-	CHK.W	D4,D7			;66bd4: 4f84
-	DC.W	$0002			;66bd6
-	DC.W	$4f8c			;66bd8
-	ORI.B	#$16,D0			;66bda: 00000016
-	DC.W	$5fcd			;66bde
-	DC.W	$d435			;66be0
-	AND.L	D5,D3			;66be2: c685
-	DC.W	$0002			;66be4
-	DC.W	$4f6c			;66be6
-	DC.W	$0002			;66be8
-	DC.W	$4f8c			;66bea
-	DC.W	$0002			;66bec
-	CHK.W	(A4),D7			;66bee: 4f94
-	ORI.B	#$06,D0			;66bf0: 00000006
-	DC.W	$5e0b			;66bf4
-	DC.W	$d7b2			;66bf6
-lb_66bf8:
-	EXG	A0,A6			;66bf8: c14e
-	DC.W	$0002			;66bfa
-	DC.W	$4f6c			;66bfc
-	DC.W	$0002			;66bfe
-	DC.W	$4f74			;66c00
-	DC.W	$0002			;66c02
-	CHK.W	(A4),D7			;66c04: 4f94
-	ORI.B	#$0a,D0			;66c06: 0000000a
-	DC.W	$fc79			;66c0a
-	ADD.W	D3,-31(A0,D7.W)		;66c0c: d77070e1
-	DC.W	$0002			;66c10
-	DC.W	$4f5c			;66c12
-	DC.W	$0002			;66c14
-	DC.W	$4f64			;66c16
-	DC.W	$0002			;66c18
-	DC.W	$4f74			;66c1a
-	ORI.B	#$16,D0			;66c1c: 00000016
-	EOR.W	D2,D6			;66c20: b546
-	ADDX.B	-(A1),-(A7)		;66c22: df09
-	DC.W	$a816			;66c24
-	DC.W	$0002			;66c26
-	DC.W	$4f5c			;66c28
-	DC.W	$0002			;66c2a
-	DC.W	$4f64			;66c2c
-	DC.W	$0002			;66c2e
-	DC.W	$4f6c			;66c30
-	ORI.B	#$06,D0			;66c32: 00000006
-	BSR.S	lb_66bf8		;66c36: 61c0
-	ROXL.L	#3,D0			;66c38: e790
-	CMPA.W	(A5),A7			;66c3a: bed5
-	DC.W	$0002			;66c3c
-	DC.W	$4f5c			;66c3e
-	DC.W	$0002			;66c40
-	DC.W	$4f6c			;66c42
-	DC.W	$0002			;66c44
-	DC.W	$4f74			;66c46
-	ORI.B	#$16,D0			;66c48: 00000016
-	ANDI.B	#$0e,D0			;66c4c: 0200000e
-	ORI.B	#$62,(A1)		;66c50: 00110062
-	DC.W	$0020			;66c54
-	DC.W	$fe20			;66c56
-	DC.W	$0000			;66c58
-	DC.W	$ffc0			;66c5a
-	DC.W	$fe70			;66c5c
-	ORI.B	#$00,-(A0)		;66c5e: 00200000
-	DC.W	$fec0			;66c62
-	DC.W	$ffc0			;66c64
-	ORI.W	#$fe90,64(A0,D0.W)	;66c66: 0070fe900040
-	DC.W	$ff80			;66c6c
-	DC.W	$ff10			;66c6e
-	DC.W	$fff0			;66c70
-	DC.W	$ffe0			;66c72
-	DC.W	$ff30			;66c74
-	DC.W	$ffb0			;66c76
-	ORI.W	#$ff10,(A0)		;66c78: 0050ff10
-	DC.W	$ffb0			;66c7c
-	DC.W	$00b0			;66c7e
-	DC.W	$ff30			;66c80
-	DC.W	$0010			;66c82
-	DC.W	$ff60			;66c84
-	DC.W	$ffa0			;66c86
-lb_66c88:
-	DC.W	$ffd0			;66c88
-	DC.W	$ffe0			;66c8a
-	DC.W	$ffb0			;66c8c
-lb_66c8e:
-	ORI.B	#$50,D0			;66c8e: 00000050
-	DC.W	$ff70			;66c92
-	DC.W	$ffd0			;66c94
-	ORI.L	#$ffc0fff0,(A0)		;66c96: 0090ffc0fff0
-	DC.W	$0030			;66c9c
-	DC.W	$ffb0			;66c9e
-	DC.W	$0000			;66ca0
-	DC.W	$fff0			;66ca2
-	dc.l  $0			;66ca4: 00000000
-	ORI.B	#$00,(A0)		;66ca8: 00100000
-	dc.l  $0			;66cac: 00000000
-	dc.l  $0			;66cb0: 00000000
-	DC.W	$0002			;66cb4
-	CHK.W	-(A4),D7		;66cb6: 4fa4
-	DC.W	$0002			;66cb8
-	DC.W	$4fc4			;66cba
-	DC.W	$0002			;66cbc
-	DC.W	$4fcc			;66cbe
-	ORI.B	#$13,D0			;66cc0: 00000013
-	dc.l  $0			;66cc4: 00000000
-	ORI.B	#$02,D0			;66cc8: 00000002
-	CHK.W	-(A4),D7		;66ccc: 4fa4
-	DC.W	$0002			;66cce
-	CHK.W	#$0002,D7		;66cd0: 4fbc0002
-	DC.W	$4fcc			;66cd4
-	ORI.B	#$13,D0			;66cd6: 00000013
-	ROXR.L	D1,D5			;66cda: e2b5
-	AND.W	(A4),D1			;66cdc: c254
-	BHI.S	lb_66c8e		;66cde: 62ae
-	DC.W	$0002			;66ce0
-	CHK.W	D4,D7			;66ce2: 4f84
-	DC.W	$0002			;66ce4
-	CHK.W	(A4)+,D7		;66ce6: 4f9c
-	DC.W	$0002			;66ce8
-	CHK.W	-(A4),D7		;66cea: 4fa4
-	ORI.B	#$16,D0			;66cec: 00000016
-	BCHG	D3,D1			;66cf0: 0741
-	AND.L	D5,D0			;66cf2: c085
-	BCS.S	lb_66c88		;66cf4: 6592
-	DC.W	$0002			;66cf6
-	CHK.W	D4,D7			;66cf8: 4f84
-	DC.W	$0002			;66cfa
-	CHK.W	-(A4),D7		;66cfc: 4fa4
-	DC.W	$0002			;66cfe
-	CHK.W	0(A4),D7		;66d00: 4fac0000
-	ORI.B	#$00,D6			;66d04: 00060000
-	CMP.B	D0,D4			;66d08: b800
-	BRA.W	lb_66d0e		;66d0a: 60000002
-lb_66d0e:
-	CHK.W	-(A4),D7		;66d0e: 4fa4
-	DC.W	$0002			;66d10
-	CHK.W	2(A4),D7		;66d12: 4fac0002
-	CHK.W	#$0000,D7		;66d16: 4fbc0000
-	DC.W	$0016			;66d1a
-	MOVE.B	(A1),(A5)+		;66d1c: 1ad1
-	DC.W	$c2b3			;66d1e
-	DC.W	$639d			;66d20
-	DC.W	$0002			;66d22
-	CHK.W	2(A4),D7		;66d24: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;66d28: 4fb40002
-	CHK.W	#$0000,D7		;66d2c: 4fbc0000
-	DC.W	$0006			;66d30
-	DC.W	$3e38			;66d32
-	DC.W	$f71d			;66d34
-	SUBA.L	A0,A4			;66d36: 99c8
-	DC.W	$0002			;66d38
-	CHK.W	(A4),D7			;66d3a: 4f94
-	DC.W	$0002			;66d3c
-	CHK.W	2(A4),D7		;66d3e: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;66d42: 4fb40000
-	DC.W	$000a			;66d46
-	AND.L	D2,D4			;66d48: c882
-	ADD.W	D6,(A1)			;66d4a: dd51
-	SUB.W	D5,2(A3)		;66d4c: 9b6b0002
-	DC.W	$4f7c			;66d50
-	DC.W	$0002			;66d52
-	CHK.W	D4,D7			;66d54: 4f84
-	DC.W	$0002			;66d56
-	CHK.W	(A4)+,D7		;66d58: 4f9c
-	ORI.B	#$06,D0			;66d5a: 00000006
-	DC.W	$0acc			;66d5e
-	DC.W	$25cb			;66d60
-	OR.L	(A7)+,D7		;66d62: 8e9f
-	DC.W	$0002			;66d64
-	CHK.W	D4,D7			;66d66: 4f84
-	DC.W	$0002			;66d68
-	DC.W	$4f8c			;66d6a
-	DC.W	$0002			;66d6c
-	CHK.W	0(A4),D7		;66d6e: 4fac0000
-	DC.W	$000a			;66d72
-	DC.W	$4d5b			;66d74
-	MOVE.B	D2,-(A6)		;66d76: 1d02
-	DC.W	$a8f9			;66d78
-	DC.W	$0002			;66d7a
-	DC.W	$4f8c			;66d7c
-	DC.W	$0002			;66d7e
-	CHK.W	(A4),D7			;66d80: 4f94
-	DC.W	$0002			;66d82
-	CHK.W	0(A4),D7		;66d84: 4fac0000
-	DC.W	$0006			;66d88
-	MULU	-7867(A5),D3		;66d8a: c6ede145
-	SUBX.B	D5,D5			;66d8e: 9b05
-	DC.W	$0002			;66d90
-	DC.W	$4f6c			;66d92
-	DC.W	$0002			;66d94
-	DC.W	$4f7c			;66d96
-	DC.W	$0002			;66d98
-	CHK.W	D4,D7			;66d9a: 4f84
-	ORI.B	#$0a,D0			;66d9c: 0000000a
-	DC.W	$fabd			;66da0
-	ROXL.L	#6,D3			;66da2: ed93
-	DC.W	$898b			;66da4
-	DC.W	$0002			;66da6
-	DC.W	$4f6c			;66da8
-	DC.W	$0002			;66daa
-	CHK.W	D4,D7			;66dac: 4f84
-	DC.W	$0002			;66dae
-	DC.W	$4f8c			;66db0
-	ORI.B	#$12,D0			;66db2: 00000012
-	ADDQ.W	#2,(A0)			;66db6: 5450
-	AND.W	(A1)+,D5		;66db8: ca59
-	EOR.L	D6,(A3)			;66dba: bd93
-	DC.W	$0002			;66dbc
-	DC.W	$4f74			;66dbe
-	DC.W	$0002			;66dc0
-	DC.W	$4f8c			;66dc2
-	DC.W	$0002			;66dc4
-	CHK.W	(A4),D7			;66dc6: 4f94
-	ORI.B	#$0a,D0			;66dc8: 0000000a
-	EOR.B	D7,(A0)+		;66dcc: bf18
-	AND.B	(A3),D6			;66dce: cc13
-	DC.W	$a975			;66dd0
-	DC.W	$0002			;66dd2
-	DC.W	$4f64			;66dd4
-	DC.W	$0002			;66dd6
-	DC.W	$4f6c			;66dd8
-	DC.W	$0002			;66dda
-	DC.W	$4f7c			;66ddc
-	ORI.B	#$12,D0			;66dde: 00000012
-	DC.W	$38f3			;66de2
-	EOR.L	D3,-19702(A1)		;66de4: b7a9b30a
-	DC.W	$0002			;66de8
-	DC.W	$4f6c			;66dea
-	DC.W	$0002			;66dec
-	DC.W	$4f74			;66dee
-	DC.W	$0002			;66df0
-	DC.W	$4f8c			;66df2
-	ORI.B	#$06,D0			;66df4: 00000006
-	DC.W	$f673			;66df8
-	MULS	(A7)+,D4		;66dfa: c9df
-	DC.W	$6aab			;66dfc
-	DC.W	$0002			;66dfe
-	DC.W	$4f5c			;66e00
-	DC.W	$0002			;66e02
-	DC.W	$4f64			;66e04
-	DC.W	$0002			;66e06
-	DC.W	$4f74			;66e08
-	ORI.B	#$0a,D0			;66e0a: 0000000a
-	EOR.W	D5,(A1)			;66e0e: bb51
-	MULS	-21978(A4),D7		;66e10: cfecaa26
-	DC.W	$0002			;66e14
-	DC.W	$4f5c			;66e16
-	DC.W	$0002			;66e18
-	DC.W	$4f64			;66e1a
-	DC.W	$0002			;66e1c
-	DC.W	$4f6c			;66e1e
-	ORI.B	#$0a,D0			;66e20: 0000000a
-	ADDQ.L	#3,-3915(A3)		;66e24: 56abf0b5
-	DC.W	$ae6e			;66e28
-	DC.W	$0002			;66e2a
-	DC.W	$4f5c			;66e2c
-	DC.W	$0002			;66e2e
-	DC.W	$4f6c			;66e30
-	DC.W	$0002			;66e32
-	DC.W	$4f74			;66e34
-	ORI.B	#$02,D0			;66e36: 00000002
-	ANDI.B	#$08,D0			;66e3a: 02000008
-	ORI.B	#$3e,D4			;66e3e: 0004003e
-	DC.W	$0000			;66e42
-	DC.W	$fe90			;66e44
-	DC.W	$0000			;66e46
-	DC.W	$ffa0			;66e48
-	DC.W	$ffa0			;66e4a
-	DC.W	$ffd0			;66e4c
-	DC.W	$fff0			;66e4e
-	DC.W	$ffb0			;66e50
-	DC.W	$ffc0			;66e52
-	DC.W	$0010			;66e54
-	DC.W	$ffb0			;66e56
-	DC.W	$ffc0			;66e58
-	DC.W	$0070			;66e5a
-	DC.W	$ff90			;66e5c
-	DC.W	$ffe0			;66e5e
-	DC.W	$fff0			;66e60
-	DC.W	$ffb0			;66e62
-	ORI.B	#$10,D0			;66e64: 00000010
-	DC.W	$ffb0			;66e68
-	DC.W	$0000			;66e6a
-	DC.W	$fff0			;66e6c
-	dc.l  $0			;66e6e: 00000000
-	ORI.B	#$00,(A0)		;66e72: 00100000
-	dc.l  $0			;66e76: 00000000
-	dc.l  $0			;66e7a: 00000000
-	DC.W	$0002			;66e7e
-	CHK.W	D4,D7			;66e80: 4f84
-	DC.W	$0002			;66e82
-	CHK.W	(A4),D7			;66e84: 4f94
-	DC.W	$0002			;66e86
-	CHK.W	(A4)+,D7		;66e88: 4f9c
-	ORI.B	#$13,D0			;66e8a: 00000013
-	dc.l  $0			;66e8e: 00000000
-	ORI.B	#$02,D0			;66e92: 00000002
-	CHK.W	D4,D7			;66e96: 4f84
-	DC.W	$0002			;66e98
-	DC.W	$4f8c			;66e9a
-	DC.W	$0002			;66e9c
-	CHK.W	(A4)+,D7		;66e9e: 4f9c
-	ORI.B	#$13,D0			;66ea0: 00000013
-	ROXR.B	D7,D6			;66ea4: ee36
-	ROXL.W	#2,D1			;66ea6: e551
-	OR.W	(A6)+,D6		;66ea8: 8c5e
-	DC.W	$0002			;66eaa
-	DC.W	$4f5c			;66eac
-	DC.W	$0002			;66eae
-	DC.W	$4f64			;66eb0
-	DC.W	$0002			;66eb2
-	DC.W	$4f6c			;66eb4
-	ORI.B	#$16,D0			;66eb6: 00000016
-	DC.W	$0000			;66eba
-	ROXL	ext_ffff8adc.W		;66ebc: e5f88adc
-	DC.W	$0002			;66ec0
-	DC.W	$4f5c			;66ec2
-	DC.W	$0002			;66ec4
-	DC.W	$4f6c			;66ec6
-	DC.W	$0002			;66ec8
-	DC.W	$4f74			;66eca
-	ORI.B	#$06,D0			;66ecc: 00000006
-	MOVE.B	(A2)+,(A6)+		;66ed0: 1cda
-	ROXL.B	D2,D5			;66ed2: e535
-	OR.L	-(A5),D7		;66ed4: 8ea5
-	DC.W	$0002			;66ed6
-	DC.W	$4f5c			;66ed8
-	DC.W	$0002			;66eda
-	DC.W	$4f74			;66edc
-	DC.W	$0002			;66ede
-	DC.W	$4f7c			;66ee0
-	ORI.B	#$16,D0			;66ee2: 00000016
-	ANDI.B	#$09,D0			;66ee6: 02000009
-	DC.W	$0009			;66eea
-	ORI.W	#$0010,D4		;66eec: 00440010
-	DC.W	$fd80			;66ef0
-	DC.W	$0000			;66ef2
-	DC.W	$ffd0			;66ef4
-	DC.W	$fe00			;66ef6
-	DC.W	$0030			;66ef8
-	ORI.W	#$fe00,(A0)		;66efa: 0050fe00
-	ORI.B	#$10,-(A0)		;66efe: 00200010
-	DC.W	$fe70			;66f02
-	DC.W	$ffe0			;66f04
-	DC.W	$ffc0			;66f06
-	DC.W	$ff60			;66f08
-	DC.W	$ffc0			;66f0a
-	ORI.W	#$ff60,-(A0)		;66f0c: 0060ff60
-	DC.W	$ffd0			;66f10
-	DC.W	$fff0			;66f12
-	DC.W	$ffb0			;66f14
-	ORI.B	#$10,D0			;66f16: 00000010
-	DC.W	$ffb0			;66f1a
-	DC.W	$0000			;66f1c
-	DC.W	$fff0			;66f1e
-	dc.l  $0			;66f20: 00000000
-	ORI.B	#$00,(A0)		;66f24: 00100000
-	dc.l  $0			;66f28: 00000000
-	dc.l  $0			;66f2c: 00000000
-	DC.W	$0002			;66f30
-	DC.W	$4f8c			;66f32
-	DC.W	$0002			;66f34
-	CHK.W	(A4)+,D7		;66f36: 4f9c
-	DC.W	$0002			;66f38
-	CHK.W	-(A4),D7		;66f3a: 4fa4
-	ORI.B	#$13,D0			;66f3c: 00000013
-	dc.l  $0			;66f40: 00000000
-	ORI.B	#$02,D0			;66f44: 00000002
-	DC.W	$4f8c			;66f48
-	DC.W	$0002			;66f4a
-	CHK.W	(A4),D7			;66f4c: 4f94
-	DC.W	$0002			;66f4e
-	CHK.W	-(A4),D7		;66f50: 4fa4
-	ORI.B	#$13,D0			;66f52: 00000013
-	DC.W	$abfc			;66f56
-	ROXL.B	D7,D3			;66f58: ef33
-	ADDQ.B	#2,D4			;66f5a: 5404
-	DC.W	$0002			;66f5c
-	DC.W	$4f74			;66f5e
-	DC.W	$0002			;66f60
-	DC.W	$4f7c			;66f62
-	DC.W	$0002			;66f64
-	DC.W	$4f8c			;66f66
-	ORI.B	#$16,D0			;66f68: 00000016
-	DC.W	$0000			;66f6c
-	DC.W	$f410			;66f6e
-	DC.W	$7767			;66f70
-	DC.W	$0002			;66f72
-	DC.W	$4f74			;66f74
-	DC.W	$0002			;66f76
-	DC.W	$4f8c			;66f78
-	DC.W	$0002			;66f7a
-	CHK.W	(A4),D7			;66f7c: 4f94
-	ORI.B	#$06,D0			;66f7e: 00000006
-	DC.W	$3573			;66f82
-	DC.W	$f550			;66f84
-	DC.W	$6ae7			;66f86
-	DC.W	$0002			;66f88
-	DC.W	$4f74			;66f8a
-	DC.W	$0002			;66f8c
-	CHK.W	D4,D7			;66f8e: 4f84
-	DC.W	$0002			;66f90
-	CHK.W	(A4),D7			;66f92: 4f94
-	ORI.B	#$16,D0			;66f94: 00000016
-	MULS	D5,D0			;66f98: c1c5
-	ADD.W	(A6),D7			;66f9a: de56
-	SUB.B	D7,(A5)			;66f9c: 9f15
-	DC.W	$0002			;66f9e
-	DC.W	$4f64			;66fa0
-	DC.W	$0002			;66fa2
-	DC.W	$4f74			;66fa4
-	DC.W	$0002			;66fa6
-	DC.W	$4f7c			;66fa8
-	ORI.B	#$06,D0			;66faa: 00000006
-	MOVE.W	(A7),-(A4)		;66fae: 3917
-	ASR.B	D3,D6			;66fb0: e626
-	SUB.L	D4,2(A3)		;66fb2: 99ab0002
-	DC.W	$4f6c			;66fb6
-	DC.W	$0002			;66fb8
-	DC.W	$4f74			;66fba
-	DC.W	$0002			;66fbc
-	CHK.W	D4,D7			;66fbe: 4f84
-	ORI.B	#$06,D0			;66fc0: 00000006
-	DC.W	$0e37			;66fc4
-	DC.W	$dc76			;66fc6
-	DC.W	$71bb			;66fc8
-	DC.W	$0002			;66fca
-	DC.W	$4f5c			;66fcc
-	DC.W	$0002			;66fce
-	DC.W	$4f64			;66fd0
-	DC.W	$0002			;66fd2
-	DC.W	$4f6c			;66fd4
-	ORI.B	#$0a,D0			;66fd6: 0000000a
-	DC.W	$aad3			;66fda
-	DC.W	$f4d5			;66fdc
-	DC.W	$ac38			;66fde
-	DC.W	$0002			;66fe0
-	DC.W	$4f5c			;66fe2
-	DC.W	$0002			;66fe4
-	DC.W	$4f64			;66fe6
-	DC.W	$0002			;66fe8
-	DC.W	$4f74			;66fea
-	ORI.B	#$0a,D0			;66fec: 0000000a
-	DC.W	$489b			;66ff0
-	DC.W	$f360			;66ff2
-	DC.W	$a14c			;66ff4
-	DC.W	$0002			;66ff6
-	DC.W	$4f5c			;66ff8
-	DC.W	$0002			;66ffa
-	DC.W	$4f6c			;66ffc
-	DC.W	$0002			;66ffe
-	DC.W	$4f74			;67000
-	ORI.B	#$0a,D0			;67002: 0000000a
-	ORI.B	#$19,D0			;67006: 00000019
-	ORI.B	#$a4,(A3)		;6700a: 001300a4
-	DC.W	$ff20			;6700e
-	DC.W	$0000			;67010
-	DC.W	$fff0			;67012
-	DC.W	$ffc0			;67014
-	DC.W	$fef0			;67016
-	ORI.B	#$40,D0			;67018: 00000040
-	DC.W	$fef0			;6701c
-	DC.W	$0000			;6701e
-	DC.W	$ff20			;67020
-	DC.W	$ff50			;67022
-	ORI.L	#$00e0ff50,D0		;67024: 008000e0ff50
-	ORI.L	#$ff20ff50,D0		;6702a: 0080ff20ff50
-	DC.W	$ff80			;67030
-	DC.W	$00e0			;67032
-	DC.W	$ff50			;67034
-	DC.W	$ff80			;67036
-	DC.W	$ff20			;67038
-	ORI.B	#$80,D0			;6703a: 00000080
-	DC.W	$00e0			;6703e
-	ORI.B	#$80,D0			;67040: 00000080
-	DC.W	$ff20			;67044
-	DC.W	$0000			;67046
-	DC.W	$ff80			;67048
-	DC.W	$00e0			;6704a
-	DC.W	$0000			;6704c
-	DC.W	$ff80			;6704e
-	DC.W	$ff50			;67050
-	DC.W	$ffd0			;67052
-	DC.W	$ff80			;67054
-	DC.W	$ff50			;67056
-	DC.W	$ff90			;67058
-	DC.W	$ff80			;6705a
-	DC.W	$ff90			;6705c
-	DC.W	$ff90			;6705e
-	DC.W	$ff80			;67060
-	DC.W	$ff90			;67062
-	DC.W	$ffd0			;67064
-	DC.W	$ff80			;67066
-	DC.W	$ffc0			;67068
-	DC.W	$0000			;6706a
-	DC.W	$ff80			;6706c
-	DC.W	$ffc0			;6706e
-	DC.W	$ff90			;67070
-	DC.W	$ff80			;67072
-	DC.W	$0000			;67074
-	DC.W	$ff90			;67076
-	DC.W	$ff80			;67078
-	dc.l  $0			;6707a: 00000000
-	DC.W	$ff80			;6707e
-	ORI.W	#$ffd0,D0		;67080: 0040ffd0
-	DC.W	$ff80			;67084
-	ORI.W	#$ff90,D0		;67086: 0040ff90
-	DC.W	$ff80			;6708a
-	ORI.L	#$ff90ff80,-80(A0,D0.W)	;6708c: 00b0ff90ff8000b0
-	DC.W	$ffd0			;67094
-	DC.W	$ff80			;67096
-	DC.W	$ff20			;67098
-	ORI.B	#$30,D0			;6709a: 00000030
-	DC.W	$ff20			;6709e
-	DC.W	$ff90			;670a0
-	DC.W	$0030			;670a2
-	DC.W	$ff20			;670a4
-	DC.W	$ff90			;670a6
-	DC.W	$fff0			;670a8
-	OR.B	D0,D4			;670aa: 8800
-	dc.l  $0			;670ac: 00000000
-	DC.W	$0002			;670b0
-	DC.W	$4f74			;670b2
-	DC.W	$0002			;670b4
-	CHK.W	D4,D7			;670b6: 4f84
-	DC.W	$0002			;670b8
-	CHK.W	(A4),D7			;670ba: 4f94
-	ORI.B	#$0f,D0			;670bc: 0000000f
-	OR.B	D0,D4			;670c0: 8800
-	dc.l  $0			;670c2: 00000000
-	DC.W	$0002			;670c6
-	CHK.W	D4,D7			;670c8: 4f84
-	DC.W	$0002			;670ca
-	CHK.W	(A4),D7			;670cc: 4f94
-	DC.W	$0002			;670ce
-	CHK.W	-(A4),D7		;670d0: 4fa4
-	ORI.B	#$0f,D0			;670d2: 0000000f
-	MOVEQ	#0,D4			;670d6: 7800
-	dc.l  $0			;670d8: 00000000
-	DC.W	$0002			;670dc
-	DC.W	$4f7c			;670de
-	DC.W	$0002			;670e0
-	DC.W	$4f8c			;670e2
-	DC.W	$0002			;670e4
-	CHK.W	0(A4),D7		;670e6: 4fac0000
-	DC.W	$000f			;670ea
-	MOVEQ	#0,D4			;670ec: 7800
-	dc.l  $0			;670ee: 00000000
-	DC.W	$0002			;670f2
-	DC.W	$4f7c			;670f4
-	DC.W	$0002			;670f6
-	CHK.W	(A4)+,D7		;670f8: 4f9c
-	DC.W	$0002			;670fa
-	CHK.W	0(A4),D7		;670fc: 4fac0000
-	DC.W	$000f			;67100
-	OR.B	D0,D4			;67102: 8800
-	dc.l  $0			;67104: 00000000
-	DC.W	$0002			;67108
-	ADDQ.B	#8,(A4)			;6710a: 5014
-	DC.W	$0002			;6710c
-	ADDQ.B	#8,(A4)+		;6710e: 501c
-	DC.W	$0002			;67110
-	ADDQ.B	#8,-(A4)		;67112: 5024
-	ORI.B	#$03,D0			;67114: 00000003
-	OR.B	D0,D4			;67118: 8800
-	dc.l  $0			;6711a: 00000000
-	DC.W	$0002			;6711e
-	ADDQ.B	#8,(A4)			;67120: 5014
-	DC.W	$0002			;67122
-	ADDQ.B	#8,-(A4)		;67124: 5024
-	DC.W	$0002			;67126
-	DC.W	$4f5c			;67128
-	ORI.B	#$03,D0			;6712a: 00000003
-	dc.l  $0			;6712e: 00000000
-	OR.B	D0,D4			;67132: 8800
-	DC.W	$0002			;67134
-	CHK.W	D4,D7			;67136: 4f84
-	DC.W	$0002			;67138
-	DC.W	$4f8c			;6713a
-	DC.W	$0002			;6713c
-	CHK.W	-(A4),D7		;6713e: 4fa4
-	ORI.B	#$0f,D0			;67140: 0000000f
-	dc.l  $0			;67144: 00000000
-	OR.B	D0,D4			;67148: 8800
-	DC.W	$0002			;6714a
-	DC.W	$4f8c			;6714c
-	DC.W	$0002			;6714e
-	CHK.W	-(A4),D7		;67150: 4fa4
-	DC.W	$0002			;67152
-	CHK.W	0(A4),D7		;67154: 4fac0000
-	DC.W	$000f			;67158
-	dc.l  $0			;6715a: 00000000
-	OR.B	D0,D4			;6715e: 8800
-	DC.W	$0002			;67160
-	CHK.W	2(A4,D0.W),D7		;67162: 4fb40002
-	CHK.W	#$0002,D7		;67166: 4fbc0002
-	DC.W	$4fc4			;6716a
-	ORI.B	#$05,D0			;6716c: 00000005
-	dc.l  $0			;67170: 00000000
-	OR.B	D0,D4			;67174: 8800
-	DC.W	$0002			;67176
-	CHK.W	2(A4,D0.W),D7		;67178: 4fb40002
-	DC.W	$4fc4			;6717c
-	DC.W	$0002			;6717e
-	DC.W	$4fcc			;67180
-	ORI.B	#$05,D0			;67182: 00000005
-	dc.l  $0			;67186: 00000000
-	OR.B	D0,D4			;6718a: 8800
-	DC.W	$0002			;6718c
-	LEA	(A4),A7			;6718e: 4fd4
-	DC.W	$0002			;67190
-	DC.W	$4fdc			;67192
-	DC.W	$0002			;67194
-	DC.W	$4fe4			;67196
-	ORI.B	#$03,D0			;67198: 00000003
-	dc.l  $0			;6719c: 00000000
-	OR.B	D0,D4			;671a0: 8800
-	DC.W	$0002			;671a2
-	LEA	(A4),A7			;671a4: 4fd4
-	DC.W	$0002			;671a6
-	DC.W	$4fe4			;671a8
-	DC.W	$0002			;671aa
-	LEA	0(A4),A7		;671ac: 4fec0000
-	ORI.B	#$00,D3			;671b0: 00030000
-	DC.W	$0000			;671b4
-	OR.B	D0,D4			;671b6: 8800
-	DC.W	$0002			;671b8
-	LEA	2(A4,D0.W),A7		;671ba: 4ff40002
-	DC.W	$4ffc			;671be
-	DC.W	$0002			;671c0
-	ADDQ.B	#8,D4			;671c2: 5004
-	ORI.B	#$05,D0			;671c4: 00000005
-	dc.l  $0			;671c8: 00000000
-	OR.B	D0,D4			;671cc: 8800
-	DC.W	$0002			;671ce
-	LEA	2(A4,D0.W),A7		;671d0: 4ff40002
-	ADDQ.B	#8,D4			;671d4: 5004
-	DC.W	$0002			;671d6
-	DC.W	$500c			;671d8
-	ORI.B	#$05,D0			;671da: 00000005
-	DC.W	$0000			;671de
-	DC.W	$a000			;671e0
-	NBCD	D0			;671e2: 4800
-	DC.W	$0002			;671e4
-	DC.W	$4f64			;671e6
-	DC.W	$0002			;671e8
-	DC.W	$4f6c			;671ea
-	DC.W	$0002			;671ec
-	DC.W	$4f74			;671ee
-	ORI.B	#$13,D0			;671f0: 00000013
-	DC.W	$0000			;671f4
-	DC.W	$a000			;671f6
-	NBCD	D0			;671f8: 4800
-	DC.W	$0002			;671fa
-	DC.W	$4f6c			;671fc
-	DC.W	$0002			;671fe
-	DC.W	$4f74			;67200
-	DC.W	$0002			;67202
-	DC.W	$4f7c			;67204
-	ORI.B	#$13,D0			;67206: 00000013
-	AND.W	D3,D1			;6720a: c243
-	SUB.B	D4,(A2)+		;6720c: 991a
-	ORI.B	#$02,D0			;6720e: 00000002
-	DC.W	$4f64			;67212
-	DC.W	$0002			;67214
-	DC.W	$4f74			;67216
-	DC.W	$0002			;67218
-	CHK.W	D4,D7			;6721a: 4f84
-	ORI.B	#$13,D0			;6721c: 00000013
-	DC.W	$3dbd			;67220
-	SUB.B	D4,(A2)+		;67222: 991a
-	ORI.B	#$02,D0			;67224: 00000002
-	DC.W	$4f6c			;67228
-	DC.W	$0002			;6722a
-	DC.W	$4f7c			;6722c
-	DC.W	$0002			;6722e
-	DC.W	$4f8c			;67230
-	ORI.B	#$13,D0			;67232: 00000013
-	DC.W	$0000			;67236
-	DC.W	$a000			;67238
-	CMP.B	D0,D4			;6723a: b800
-	DC.W	$0002			;6723c
-	DC.W	$4f64			;6723e
-	DC.W	$0002			;67240
-	DC.W	$4f6c			;67242
-	DC.W	$0002			;67244
-	CHK.W	D4,D7			;67246: 4f84
-	ORI.B	#$0b,D0			;67248: 0000000b
-	DC.W	$0000			;6724c
-	DC.W	$a000			;6724e
-	CMP.B	D0,D4			;67250: b800
-	DC.W	$0002			;67252
-	DC.W	$4f6c			;67254
-	DC.W	$0002			;67256
-	CHK.W	D4,D7			;67258: 4f84
-	DC.W	$0002			;6725a
-	DC.W	$4f8c			;6725c
-	ORI.B	#$0b,D0			;6725e: 0000000b
-	ORI.B	#$29,D0			;67262: 00000029
-	DC.W	$001b			;67266
-	BTST	D0,D4			;67268: 0104
-	DC.W	$00e0			;6726a
-	DC.W	$ff20			;6726c
-	DC.W	$fff0			;6726e
-	DC.W	$ffa0			;67270
-	DC.W	$fe60			;67272
-	ORI.B	#$60,D0			;67274: 00000060
-	DC.W	$fe60			;67278
-	DC.W	$0000			;6727a
-	DC.W	$ff20			;6727c
-	DC.W	$fee0			;6727e
-	ORI.L	#$00e0fee0,D0		;67280: 008000e0fee0
-	ORI.L	#$ff20fee0,D0		;67286: 0080ff20fee0
-	DC.W	$ff80			;6728c
-	DC.W	$00e0			;6728e
-	DC.W	$fee0			;67290
-	DC.W	$ff80			;67292
-	DC.W	$ff20			;67294
-	ORI.B	#$80,D0			;67296: 00000080
-	DC.W	$00e0			;6729a
-	ORI.B	#$80,D0			;6729c: 00000080
-	DC.W	$ff20			;672a0
-	DC.W	$0000			;672a2
-	DC.W	$ff80			;672a4
-	DC.W	$00e0			;672a6
-	DC.W	$0000			;672a8
-	DC.W	$ff80			;672aa
-	DC.W	$ff40			;672ac
-	DC.W	$ffd0			;672ae
-	DC.W	$ff80			;672b0
-	DC.W	$ff40			;672b2
-	DC.W	$ff90			;672b4
-	DC.W	$ff80			;672b6
-	DC.W	$ffa0			;672b8
-	DC.W	$ff90			;672ba
-	DC.W	$ff80			;672bc
-	DC.W	$ffa0			;672be
-	DC.W	$ffd0			;672c0
-	DC.W	$ff80			;672c2
-	DC.W	$ffe0			;672c4
-	DC.W	$0000			;672c6
-	DC.W	$ff80			;672c8
-	DC.W	$ffe0			;672ca
-	DC.W	$ff90			;672cc
-	DC.W	$ff80			;672ce
-	DC.W	$0020			;672d0
-	DC.W	$ff90			;672d2
-	DC.W	$ff80			;672d4
-	ORI.B	#$00,-(A0)		;672d6: 00200000
-	DC.W	$ff80			;672da
-	ORI.W	#$ffd0,-(A0)		;672dc: 0060ffd0
-	DC.W	$ff80			;672e0
-	ORI.W	#$ff90,-(A0)		;672e2: 0060ff90
-	DC.W	$ff80			;672e6
-	ORI.L	#$ff90ff80,-80(A0,D0.W)	;672e8: 00b0ff90ff8000b0
-	DC.W	$ffd0			;672f0
-	DC.W	$ff80			;672f2
-	DC.W	$ff40			;672f4
-	DC.W	$ff30			;672f6
-	DC.W	$ff80			;672f8
-	DC.W	$ff40			;672fa
-	DC.W	$fef0			;672fc
-	DC.W	$ff80			;672fe
-	DC.W	$ff90			;67300
-	DC.W	$fef0			;67302
-	DC.W	$ff80			;67304
-	DC.W	$ff90			;67306
-	DC.W	$ff30			;67308
-	DC.W	$ff80			;6730a
-	DC.W	$0030			;6730c
-	DC.W	$ff30			;6730e
-	DC.W	$ff80			;67310
-	DC.W	$0030			;67312
-	DC.W	$fef0			;67314
-	DC.W	$ff80			;67316
-	ORI.L	#$fef0ff80,(A0)		;67318: 0090fef0ff80
-	ORI.L	#$ff30ff80,(A0)		;6731e: 0090ff30ff80
-	DC.W	$ff20			;67324
-	DC.W	$ffc0			;67326
-	ORI.W	#$ff20,(A0)		;67328: 0050ff20
-	DC.W	$ff90			;6732c
-	ORI.W	#$ff20,(A0)		;6732e: 0050ff20
-	DC.W	$ff90			;67332
-	DC.W	$0020			;67334
-	DC.W	$ff20			;67336
-	DC.W	$ffc0			;67338
-	DC.W	$0020			;6733a
-	DC.W	$ff20			;6733c
-	DC.W	$0000			;6733e
-	DC.W	$ffe0			;67340
-	DC.W	$ff20			;67342
-	DC.W	$ff90			;67344
-	DC.W	$ffe0			;67346
-	DC.W	$ff20			;67348
-	DC.W	$ff90			;6734a
-	DC.W	$ffa0			;6734c
-	DC.W	$ff20			;6734e
-	DC.W	$0000			;67350
-	DC.W	$ffa0			;67352
-	DC.W	$00e0			;67354
-	DC.W	$ff20			;67356
-	DC.W	$0030			;67358
-	DC.W	$00e0			;6735a
-	DC.W	$fef0			;6735c
-	DC.W	$0030			;6735e
-	DC.W	$00e0			;67360
-	DC.W	$fef0			;67362
-	DC.W	$fff0			;67364
-	OR.B	D0,D4			;67366: 8800
-	dc.l  $0			;67368: 00000000
-	DC.W	$0002			;6736c
-	DC.W	$4f74			;6736e
-	DC.W	$0002			;67370
-	CHK.W	(A4),D7			;67372: 4f94
-	DC.W	$0002			;67374
-	CHK.W	-(A4),D7		;67376: 4fa4
-	ORI.B	#$0f,D0			;67378: 0000000f
-	OR.B	D0,D4			;6737c: 8800
-	dc.l  $0			;6737e: 00000000
-	DC.W	$0002			;67382
-	DC.W	$4f74			;67384
-	DC.W	$0002			;67386
-	CHK.W	D4,D7			;67388: 4f84
-	DC.W	$0002			;6738a
-	CHK.W	-(A4),D7		;6738c: 4fa4
-	ORI.B	#$0f,D0			;6738e: 0000000f
-	MOVEQ	#0,D4			;67392: 7800
-	dc.l  $0			;67394: 00000000
-	DC.W	$0002			;67398
-	DC.W	$4f7c			;6739a
-	DC.W	$0002			;6739c
-	DC.W	$4f8c			;6739e
-	DC.W	$0002			;673a0
-	CHK.W	0(A4),D7		;673a2: 4fac0000
-	DC.W	$000f			;673a6
-	MOVEQ	#0,D4			;673a8: 7800
-	dc.l  $0			;673aa: 00000000
-	DC.W	$0002			;673ae
-	DC.W	$4f7c			;673b0
-	DC.W	$0002			;673b2
-	CHK.W	(A4)+,D7		;673b4: 4f9c
-	DC.W	$0002			;673b6
-	CHK.W	0(A4),D7		;673b8: 4fac0000
-	DC.W	$000f			;673bc
-	OR.B	D0,D4			;673be: 8800
-	dc.l  $0			;673c0: 00000000
-	DC.W	$0002			;673c4
-	ADDQ.W	#8,(A4)			;673c6: 5054
-	DC.W	$0002			;673c8
-	ADDQ.W	#8,(A4)+		;673ca: 505c
-	DC.W	$0002			;673cc
-	ADDQ.W	#8,-(A4)		;673ce: 5064
-	ORI.B	#$05,D0			;673d0: 00000005
-	OR.B	D0,D4			;673d4: 8800
-	dc.l  $0			;673d6: 00000000
-	DC.W	$0002			;673da
-	ADDQ.W	#8,(A4)			;673dc: 5054
-	DC.W	$0002			;673de
-	ADDQ.W	#8,-(A4)		;673e0: 5064
-	DC.W	$0002			;673e2
-	ADDQ.W	#8,0(A4)		;673e4: 506c0000
-	DC.W	$0005			;673e8
-	OR.B	D0,D4			;673ea: 8800
-	dc.l  $0			;673ec: 00000000
-	DC.W	$0002			;673f0
-	ADDQ.W	#8,2(A4,D0.W)		;673f2: 50740002
-	DC.W	$507c			;673f6
-	DC.W	$0002			;673f8
-	ADDQ.L	#8,D4			;673fa: 5084
-	ORI.B	#$05,D0			;673fc: 00000005
-	OR.B	D0,D4			;67400: 8800
-	dc.l  $0			;67402: 00000000
-	DC.W	$0002			;67406
-	ADDQ.W	#8,2(A4,D0.W)		;67408: 50740002
-	ADDQ.L	#8,D4			;6740c: 5084
-	DC.W	$0002			;6740e
-	ADDQ.L	#8,A4			;67410: 508c
-	ORI.B	#$05,D0			;67412: 00000005
-	MOVEQ	#0,D4			;67416: 7800
-	dc.l  $0			;67418: 00000000
-	DC.W	$0002			;6741c
-	ADDQ.L	#8,(A4)			;6741e: 5094
-	DC.W	$0002			;67420
-	ADDQ.L	#8,(A4)+		;67422: 509c
-	DC.W	$0002			;67424
-	ADDQ.L	#8,-(A4)		;67426: 50a4
-	ORI.B	#$05,D0			;67428: 00000005
-	MOVEQ	#0,D4			;6742c: 7800
-	dc.l  $0			;6742e: 00000000
-	DC.W	$0002			;67432
-	ADDQ.L	#8,(A4)			;67434: 5094
-	DC.W	$0002			;67436
-	ADDQ.L	#8,-(A4)		;67438: 50a4
-	DC.W	$0002			;6743a
-	DC.W	$4f5c			;6743c
-	ORI.B	#$05,D0			;6743e: 00000005
-	dc.l  $0			;67442: 00000000
-	OR.B	D0,D4			;67446: 8800
-	DC.W	$0002			;67448
-	CHK.W	D4,D7			;6744a: 4f84
-	DC.W	$0002			;6744c
-	DC.W	$4f8c			;6744e
-	DC.W	$0002			;67450
-	CHK.W	-(A4),D7		;67452: 4fa4
-	ORI.B	#$0f,D0			;67454: 0000000f
-	dc.l  $0			;67458: 00000000
-	OR.B	D0,D4			;6745c: 8800
-	DC.W	$0002			;6745e
-	DC.W	$4f8c			;67460
-	DC.W	$0002			;67462
-	CHK.W	-(A4),D7		;67464: 4fa4
-	DC.W	$0002			;67466
-	CHK.W	0(A4),D7		;67468: 4fac0000
-	DC.W	$000f			;6746c
-	dc.l  $0			;6746e: 00000000
-	OR.B	D0,D4			;67472: 8800
-	DC.W	$0002			;67474
-	ADDQ.B	#8,(A4)			;67476: 5014
-	DC.W	$0002			;67478
-	ADDQ.B	#8,(A4)+		;6747a: 501c
-	DC.W	$0002			;6747c
-	ADDQ.B	#8,-(A4)		;6747e: 5024
-	ORI.B	#$05,D0			;67480: 00000005
-	dc.l  $0			;67484: 00000000
-	OR.B	D0,D4			;67488: 8800
-	DC.W	$0002			;6748a
-	ADDQ.B	#8,(A4)			;6748c: 5014
-	DC.W	$0002			;6748e
-	ADDQ.B	#8,-(A4)		;67490: 5024
-	DC.W	$0002			;67492
-	ADDQ.B	#8,0(A4)		;67494: 502c0000
-	ORI.B	#$00,D5			;67498: 00050000
-	DC.W	$0000			;6749c
-	OR.B	D0,D4			;6749e: 8800
-	DC.W	$0002			;674a0
-	ADDQ.B	#8,2(A4,D0.W)		;674a2: 50340002
-	DC.W	$503c			;674a6
-	DC.W	$0002			;674a8
-	ADDQ.W	#8,D4			;674aa: 5044
-	ORI.B	#$05,D0			;674ac: 00000005
-	dc.l  $0			;674b0: 00000000
-	OR.B	D0,D4			;674b4: 8800
-	DC.W	$0002			;674b6
-	ADDQ.B	#8,2(A4,D0.W)		;674b8: 50340002
-	ADDQ.W	#8,D4			;674bc: 5044
-	DC.W	$0002			;674be
-	ADDQ.W	#8,A4			;674c0: 504c
-	ORI.B	#$05,D0			;674c2: 00000005
-	dc.l  $0			;674c6: 00000000
-	OR.B	D0,D4			;674ca: 8800
-	DC.W	$0002			;674cc
-	CHK.W	2(A4,D0.W),D7		;674ce: 4fb40002
-	CHK.W	#$0002,D7		;674d2: 4fbc0002
-	DC.W	$4fc4			;674d6
-	ORI.B	#$05,D0			;674d8: 00000005
-	dc.l  $0			;674dc: 00000000
-	OR.B	D0,D4			;674e0: 8800
-	DC.W	$0002			;674e2
-	CHK.W	2(A4,D0.W),D7		;674e4: 4fb40002
-	DC.W	$4fc4			;674e8
-	DC.W	$0002			;674ea
-	DC.W	$4fcc			;674ec
-	ORI.B	#$05,D0			;674ee: 00000005
-	dc.l  $0			;674f2: 00000000
-	OR.B	D0,D4			;674f6: 8800
-	DC.W	$0002			;674f8
-	LEA	(A4),A7			;674fa: 4fd4
-	DC.W	$0002			;674fc
-	DC.W	$4fdc			;674fe
-	DC.W	$0002			;67500
-	DC.W	$4fe4			;67502
-	ORI.B	#$0d,D0			;67504: 0000000d
-	dc.l  $0			;67508: 00000000
-	OR.B	D0,D4			;6750c: 8800
-	DC.W	$0002			;6750e
-	LEA	(A4),A7			;67510: 4fd4
-	DC.W	$0002			;67512
-	DC.W	$4fe4			;67514
-	DC.W	$0002			;67516
-	LEA	0(A4),A7		;67518: 4fec0000
-	DC.W	$000d			;6751c
-	dc.l  $0			;6751e: 00000000
-	OR.B	D0,D4			;67522: 8800
-	DC.W	$0002			;67524
-	LEA	2(A4,D0.W),A7		;67526: 4ff40002
-	DC.W	$4ffc			;6752a
-	DC.W	$0002			;6752c
-	ADDQ.B	#8,D4			;6752e: 5004
-	ORI.B	#$05,D0			;67530: 00000005
-	dc.l  $0			;67534: 00000000
-	OR.B	D0,D4			;67538: 8800
-	DC.W	$0002			;6753a
-	LEA	2(A4,D0.W),A7		;6753c: 4ff40002
-	ADDQ.B	#8,D4			;67540: 5004
-	DC.W	$0002			;67542
-	DC.W	$500c			;67544
-	ORI.B	#$05,D0			;67546: 00000005
-	DC.W	$0000			;6754a
-	DC.W	$ab26			;6754c
-	SCC	(A2)+			;6754e: 54da
-	DC.W	$0002			;67550
-	DC.W	$4f64			;67552
-	DC.W	$0002			;67554
-	DC.W	$4f6c			;67556
-	DC.W	$0002			;67558
-	DC.W	$4f74			;6755a
-	ORI.B	#$13,D0			;6755c: 00000013
-	DC.W	$0000			;67560
-	DC.W	$ab26			;67562
-	SCC	(A2)+			;67564: 54da
-	DC.W	$0002			;67566
-	DC.W	$4f6c			;67568
-	DC.W	$0002			;6756a
-	DC.W	$4f74			;6756c
-	DC.W	$0002			;6756e
-	DC.W	$4f7c			;67570
-	ORI.B	#$13,D0			;67572: 00000013
-	DC.W	$ab26			;67576
-	DC.W	$ab26			;67578
-	ORI.B	#$02,D0			;6757a: 00000002
-	DC.W	$4f64			;6757e
-	DC.W	$0002			;67580
-	DC.W	$4f74			;67582
-	DC.W	$0002			;67584
-	CHK.W	D4,D7			;67586: 4f84
-	ORI.B	#$13,D0			;67588: 00000013
-	SCC	(A2)+			;6758c: 54da
-	DC.W	$ab26			;6758e
-	ORI.B	#$02,D0			;67590: 00000002
-	DC.W	$4f6c			;67594
-	DC.W	$0002			;67596
-	DC.W	$4f7c			;67598
-	DC.W	$0002			;6759a
-	DC.W	$4f8c			;6759c
-	ORI.B	#$13,D0			;6759e: 00000013
-	DC.W	$0000			;675a2
-	DC.W	$ab26			;675a4
-	DC.W	$ab26			;675a6
-	DC.W	$0002			;675a8
-	DC.W	$4f64			;675aa
-	DC.W	$0002			;675ac
-	DC.W	$4f6c			;675ae
-	DC.W	$0002			;675b0
-	CHK.W	D4,D7			;675b2: 4f84
-	ORI.B	#$0b,D0			;675b4: 0000000b
-	DC.W	$0000			;675b8
-	DC.W	$ab26			;675ba
-	DC.W	$ab26			;675bc
-	DC.W	$0002			;675be
-	DC.W	$4f6c			;675c0
-	DC.W	$0002			;675c2
-	CHK.W	D4,D7			;675c4: 4f84
-	DC.W	$0002			;675c6
-	DC.W	$4f8c			;675c8
-	ORI.B	#$0b,D0			;675ca: 0000000b
-	ORI.B	#$26,D0			;675ce: 00000026
-	ORI.B	#$f2,(A2)+		;675d2: 001a00f2
-	DC.W	$0000			;675d6
-	DC.W	$fe70			;675d8
-	DC.W	$0000			;675da
-	DC.W	$ff20			;675dc
-	DC.W	$fe70			;675de
-	ORI.B	#$e0,D0			;675e0: 000000e0
-	DC.W	$fe70			;675e4
-	dc.l  $0			;675e6: 00000000
-	DC.W	$fe70			;675ea
-	DC.W	$ff80			;675ec
-	DC.W	$ff90			;675ee
-	DC.W	$ff10			;675f0
-	DC.W	$ff80			;675f2
-	DC.W	$0070			;675f4
-	DC.W	$ff10			;675f6
-	DC.W	$ff80			;675f8
-	DC.W	$ff20			;675fa
-	DC.W	$ff10			;675fc
-	ORI.L	#$ff20ff10,D0		;675fe: 0080ff20ff10
-	DC.W	$ff80			;67604
-	DC.W	$00e0			;67606
-	DC.W	$ff10			;67608
-	ORI.L	#$00e0ff10,D0		;6760a: 008000e0ff10
-	DC.W	$ff80			;67610
-	DC.W	$ff20			;67612
-	ORI.B	#$80,D0			;67614: 00000080
-	DC.W	$ff20			;67618
-	DC.W	$0000			;6761a
-	DC.W	$ff80			;6761c
-	dc.l  $0			;6761e: 00000000
-	ORI.B	#$e0,D0			;67622: 000000e0
-	DC.W	$0000			;67626
-	DC.W	$ff80			;67628
-	DC.W	$00e0			;6762a
-	ORI.B	#$80,D0			;6762c: 00000080
-	DC.W	$ff50			;67630
-	DC.W	$ffd0			;67632
-	DC.W	$ff80			;67634
-	DC.W	$ff50			;67636
-	DC.W	$ff90			;67638
-	DC.W	$ff80			;6763a
-	DC.W	$ff90			;6763c
-	DC.W	$ff90			;6763e
-	DC.W	$ff80			;67640
-	DC.W	$ff90			;67642
-	DC.W	$ffd0			;67644
-	DC.W	$ff80			;67646
-	DC.W	$ffc0			;67648
-	DC.W	$ff60			;6764a
-	DC.W	$ff80			;6764c
-	DC.W	$ffc0			;6764e
-	DC.W	$ff20			;67650
-	DC.W	$ff80			;67652
-	ORI.W	#$ff20,D0		;67654: 0040ff20
-	DC.W	$ff80			;67658
-	ORI.W	#$ff60,D0		;6765a: 0040ff60
-	DC.W	$ff80			;6765e
-	ORI.W	#$ffd0,-(A0)		;67660: 0060ffd0
-	DC.W	$ff80			;67664
-	ORI.W	#$ff90,-(A0)		;67666: 0060ff90
-	DC.W	$ff80			;6766a
-	ORI.L	#$ff90ff80,-80(A0,D0.W)	;6766c: 00b0ff90ff8000b0
-	DC.W	$ffd0			;67674
-	DC.W	$ff80			;67676
-	DC.W	$ffe0			;67678
-	DC.W	$0000			;6767a
-	DC.W	$ff80			;6767c
-	DC.W	$ffe0			;6767e
-	DC.W	$ff90			;67680
-	DC.W	$ff80			;67682
-	DC.W	$0020			;67684
-	DC.W	$ff90			;67686
-	DC.W	$ff80			;67688
-	ORI.B	#$00,-(A0)		;6768a: 00200000
-	DC.W	$ff80			;6768e
-	DC.W	$ff20			;67690
-	DC.W	$ff60			;67692
-	DC.W	$ffd0			;67694
-	DC.W	$ff20			;67696
-	DC.W	$ff20			;67698
-	DC.W	$ffd0			;6769a
-	DC.W	$ff20			;6769c
-	DC.W	$ff20			;6769e
-	DC.W	$0020			;676a0
-	DC.W	$ff20			;676a2
-	DC.W	$ff60			;676a4
-	ORI.B	#$e0,-(A0)		;676a6: 002000e0
-	DC.W	$0000			;676aa
-	DC.W	$ffd0			;676ac
-	DC.W	$00e0			;676ae
-	DC.W	$ff90			;676b0
-	DC.W	$ffd0			;676b2
-	DC.W	$00e0			;676b4
-	DC.W	$ff90			;676b6
-	ORI.B	#$e0,(A0)		;676b8: 001000e0
-	ORI.B	#$10,D0			;676bc: 00000010
-	OR.B	D0,D4			;676c0: 8800
-	dc.l  $0			;676c2: 00000000
-	DC.W	$0002			;676c6
-	DC.W	$4f8c			;676c8
-	DC.W	$0002			;676ca
-	CHK.W	(A4),D7			;676cc: 4f94
-	DC.W	$0002			;676ce
-	CHK.W	0(A4),D7		;676d0: 4fac0000
-	DC.W	$000f			;676d4
-	OR.B	D0,D4			;676d6: 8800
-	dc.l  $0			;676d8: 00000000
-	DC.W	$0002			;676dc
-	CHK.W	(A4),D7			;676de: 4f94
-	DC.W	$0002			;676e0
-	CHK.W	2(A4),D7		;676e2: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;676e6: 4fb40000
-	DC.W	$000f			;676ea
-	MOVEQ	#0,D4			;676ec: 7800
-	dc.l  $0			;676ee: 00000000
-	DC.W	$0002			;676f2
-	CHK.W	-(A4),D7		;676f4: 4fa4
-	DC.W	$0002			;676f6
-	DC.W	$4fc4			;676f8
-	DC.W	$0002			;676fa
-	DC.W	$4fcc			;676fc
-	ORI.B	#$0f,D0			;676fe: 0000000f
-	MOVEQ	#0,D4			;67702: 7800
-	dc.l  $0			;67704: 00000000
-	DC.W	$0002			;67708
-	CHK.W	(A4)+,D7		;6770a: 4f9c
-	DC.W	$0002			;6770c
-	CHK.W	-(A4),D7		;6770e: 4fa4
-	DC.W	$0002			;67710
-	DC.W	$4fcc			;67712
-	ORI.B	#$0f,D0			;67714: 0000000f
-	OR.B	D0,D4			;67718: 8800
-	dc.l  $0			;6771a: 00000000
-	DC.W	$0002			;6771e
-	ADDQ.W	#8,(A4)			;67720: 5054
-	DC.W	$0002			;67722
-	ADDQ.W	#8,(A4)+		;67724: 505c
-	DC.W	$0002			;67726
-	ADDQ.W	#8,0(A4)		;67728: 506c0000
-	DC.W	$0005			;6772c
-	OR.B	D0,D4			;6772e: 8800
-	dc.l  $0			;67730: 00000000
-	DC.W	$0002			;67734
-	ADDQ.W	#8,(A4)+		;67736: 505c
-	DC.W	$0002			;67738
-	ADDQ.W	#8,-(A4)		;6773a: 5064
-	DC.W	$0002			;6773c
-	ADDQ.W	#8,0(A4)		;6773e: 506c0000
-	DC.W	$0005			;67742
-	MOVEQ	#0,D4			;67744: 7800
-	dc.l  $0			;67746: 00000000
-	DC.W	$0002			;6774a
-	ADDQ.W	#8,2(A4,D0.W)		;6774c: 50740002
-	DC.W	$507c			;67750
-	DC.W	$0002			;67752
-	ADDQ.L	#8,A4			;67754: 508c
-	ORI.B	#$02,D0			;67756: 00000002
-	MOVEQ	#0,D4			;6775a: 7800
-	dc.l  $0			;6775c: 00000000
-	DC.W	$0002			;67760
-	DC.W	$507c			;67762
-	DC.W	$0002			;67764
-	ADDQ.L	#8,D4			;67766: 5084
-	DC.W	$0002			;67768
-	ADDQ.L	#8,A4			;6776a: 508c
-	ORI.B	#$02,D0			;6776c: 00000002
-	dc.l  $0			;67770: 00000000
-	OR.B	D0,D4			;67774: 8800
-	DC.W	$0002			;67776
-	CHK.W	(A4),D7			;67778: 4f94
-	DC.W	$0002			;6777a
-	CHK.W	2(A4,D0.W),D7		;6777c: 4fb40002
-	DC.W	$4fc4			;67780
-	ORI.B	#$0f,D0			;67782: 0000000f
-	dc.l  $0			;67786: 00000000
-	OR.B	D0,D4			;6778a: 8800
-	DC.W	$0002			;6778c
-	CHK.W	(A4),D7			;6778e: 4f94
-	DC.W	$0002			;67790
-	CHK.W	-(A4),D7		;67792: 4fa4
-	DC.W	$0002			;67794
-	DC.W	$4fc4			;67796
-	ORI.B	#$0f,D0			;67798: 0000000f
-	dc.l  $0			;6779c: 00000000
-	OR.B	D0,D4			;677a0: 8800
-	DC.W	$0002			;677a2
-	LEA	(A4),A7			;677a4: 4fd4
-	DC.W	$0002			;677a6
-	DC.W	$4fdc			;677a8
-	DC.W	$0002			;677aa
-	LEA	0(A4),A7		;677ac: 4fec0000
-	ORI.B	#$00,D5			;677b0: 00050000
-	DC.W	$0000			;677b4
-	OR.B	D0,D4			;677b6: 8800
-	DC.W	$0002			;677b8
-	DC.W	$4fdc			;677ba
-	DC.W	$0002			;677bc
-	DC.W	$4fe4			;677be
-	DC.W	$0002			;677c0
-	LEA	0(A4),A7		;677c2: 4fec0000
-	ORI.B	#$00,D5			;677c6: 00050000
-	DC.W	$0000			;677ca
-	OR.B	D0,D4			;677cc: 8800
-	DC.W	$0002			;677ce
-	LEA	2(A4,D0.W),A7		;677d0: 4ff40002
-	DC.W	$4ffc			;677d4
-	DC.W	$0002			;677d6
-	DC.W	$500c			;677d8
-	ORI.B	#$05,D0			;677da: 00000005
-	dc.l  $0			;677de: 00000000
-	OR.B	D0,D4			;677e2: 8800
-	DC.W	$0002			;677e4
-	DC.W	$4ffc			;677e6
-	DC.W	$0002			;677e8
-	ADDQ.B	#8,D4			;677ea: 5004
-	DC.W	$0002			;677ec
-	DC.W	$500c			;677ee
-	ORI.B	#$05,D0			;677f0: 00000005
-	dc.l  $0			;677f4: 00000000
-	OR.B	D0,D4			;677f8: 8800
-	DC.W	$0002			;677fa
-	ADDQ.B	#8,(A4)			;677fc: 5014
-	DC.W	$0002			;677fe
-	ADDQ.B	#8,(A4)+		;67800: 501c
-	DC.W	$0002			;67802
-	ADDQ.B	#8,0(A4)		;67804: 502c0000
-	ORI.B	#$00,D5			;67808: 00050000
-	DC.W	$0000			;6780c
-	OR.B	D0,D4			;6780e: 8800
-	DC.W	$0002			;67810
-	ADDQ.B	#8,(A4)+		;67812: 501c
-	DC.W	$0002			;67814
-	ADDQ.B	#8,-(A4)		;67816: 5024
-	DC.W	$0002			;67818
-	ADDQ.B	#8,0(A4)		;6781a: 502c0000
-	ORI.B	#$00,D5			;6781e: 00050000
-	DC.W	$0000			;67822
-	OR.B	D0,D4			;67824: 8800
-	DC.W	$0002			;67826
-	ADDQ.B	#8,2(A4,D0.W)		;67828: 50340002
-	DC.W	$503c			;6782c
-	DC.W	$0002			;6782e
-	ADDQ.W	#8,A4			;67830: 504c
-	ORI.B	#$02,D0			;67832: 00000002
-	dc.l  $0			;67836: 00000000
-	OR.B	D0,D4			;6783a: 8800
-	DC.W	$0002			;6783c
-	DC.W	$503c			;6783e
-	DC.W	$0002			;67840
-	ADDQ.W	#8,D4			;67842: 5044
-	DC.W	$0002			;67844
-	ADDQ.W	#8,A4			;67846: 504c
-	ORI.B	#$02,D0			;67848: 00000002
-	DC.W	$0000			;6784c
-	CMPM.B	(A2)+,(A2)+		;6784e: b50a
-	SUBQ.L	#6,2(A4,D0.W)		;67850: 5db40002
-	DC.W	$4f64			;67854
-	DC.W	$0002			;67856
-	DC.W	$4f8c			;67858
-	DC.W	$0002			;6785a
-	CHK.W	(A4)+,D7		;6785c: 4f9c
-	ORI.B	#$13,D0			;6785e: 00000013
-	DC.W	$0000			;67862
-	CMPM.B	(A2)+,(A2)+		;67864: b50a
-	SUBQ.L	#6,2(A4,D0.W)		;67866: 5db40002
-	DC.W	$4f64			;6786a
-	DC.W	$0002			;6786c
-	DC.W	$4f6c			;6786e
-	DC.W	$0002			;67870
-	CHK.W	(A4)+,D7		;67872: 4f9c
-	ORI.B	#$13,D0			;67874: 00000013
-	OR.B	D0,D4			;67878: 8800
-	dc.l  $0			;6787a: 00000000
-	DC.W	$0002			;6787e
-	DC.W	$4f64			;67880
-	DC.W	$0002			;67882
-	DC.W	$4f8c			;67884
-	DC.W	$0002			;67886
-	CHK.W	(A4),D7			;67888: 4f94
-	ORI.B	#$13,D0			;6788a: 00000013
-	MOVEQ	#0,D4			;6788e: 7800
-	dc.l  $0			;67890: 00000000
-	DC.W	$0002			;67894
-	DC.W	$4f6c			;67896
-	DC.W	$0002			;67898
-	CHK.W	(A4)+,D7		;6789a: 4f9c
-	DC.W	$0002			;6789c
-	CHK.W	-(A4),D7		;6789e: 4fa4
-	ORI.B	#$13,D0			;678a0: 00000013
-	DC.W	$0000			;678a4
-	CMPM.B	(A2)+,(A2)+		;678a6: b50a
-	DC.W	$a24c			;678a8
-	DC.W	$0002			;678aa
-	DC.W	$4f64			;678ac
-	DC.W	$0002			;678ae
-	CHK.W	(A4),D7			;678b0: 4f94
-	DC.W	$0002			;678b2
-	CHK.W	-(A4),D7		;678b4: 4fa4
-	ORI.B	#$0b,D0			;678b6: 0000000b
-	DC.W	$0000			;678ba
-	CMPM.B	(A2)+,(A2)+		;678bc: b50a
-	DC.W	$a24c			;678be
-	DC.W	$0002			;678c0
-	DC.W	$4f64			;678c2
-	DC.W	$0002			;678c4
-	DC.W	$4f6c			;678c6
-	DC.W	$0002			;678c8
-	CHK.W	-(A4),D7		;678ca: 4fa4
-	ORI.B	#$0b,D0			;678cc: 0000000b
-	DC.W	$9db2			;678d0
-	EOR.B	D5,0(A0,D0.W)		;678d2: bb300000
-	DC.W	$0002			;678d6
-	DC.W	$4f5c			;678d8
-	DC.W	$0002			;678da
-	DC.W	$4f74			;678dc
-	DC.W	$0002			;678de
-	DC.W	$4f7c			;678e0
-	ORI.B	#$13,D0			;678e2: 00000013
-	BHI.S	lb_67936		;678e6: 624e
-	EOR.B	D5,0(A0,D0.W)		;678e8: bb300000
-	DC.W	$0002			;678ec
-	DC.W	$4f5c			;678ee
-	DC.W	$0002			;678f0
-	DC.W	$4f74			;678f2
-	DC.W	$0002			;678f4
-	CHK.W	D4,D7			;678f6: 4f84
-	ORI.B	#$13,D0			;678f8: 00000013
-	dc.l  $0			;678fc: 00000000
-	OR.B	D0,D4			;67900: 8800
-	DC.W	$0002			;67902
-	DC.W	$4f74			;67904
-	DC.W	$0002			;67906
-	DC.W	$4f7c			;67908
-	DC.W	$0002			;6790a
-	CHK.W	D4,D7			;6790c: 4f84
-	ORI.B	#$0f,D0			;6790e: 0000000f
-	ORI.B	#$27,D0			;67912: 00000027
-	ORI.B	#$f8,-(A1)		;67916: 002100f8
-	DC.W	$ff70			;6791a
-	DC.W	$ff10			;6791c
-	DC.W	$0000			;6791e
-	DC.W	$ff48			;67920
-	DC.W	$fd80			;67922
-	DC.W	$ffa8			;67924
-	DC.W	$ff20			;67926
-	DC.W	$fec0			;67928
-	DC.W	$ffd0			;6792a
-	DC.W	$ff70			;6792c
-	DC.W	$fec0			;6792e
-	DC.W	$ffd0			;67930
-	DC.W	$ff20			;67932
-	DC.W	$fec0			;67934
-lb_67936:
-	DC.W	$ff80			;67936
-	DC.W	$ff70			;67938
-	DC.W	$fec0			;6793a
-	DC.W	$ff80			;6793c
-	DC.W	$ff20			;6793e
-	DC.W	$ff10			;67940
-	ORI.B	#$e0,D0			;67942: 000000e0
-	DC.W	$ff10			;67946
-	DC.W	$0000			;67948
-	DC.W	$ff20			;6794a
-	DC.W	$ff60			;6794c
-	ORI.L	#$00e0ff60,D0		;6794e: 008000e0ff60
-	ORI.L	#$ff70ff60,D0		;67954: 0080ff70ff60
-	DC.W	$ff80			;6795a
-	DC.W	$00e0			;6795c
-	DC.W	$ff60			;6795e
-	DC.W	$ff80			;67960
-	DC.W	$ff20			;67962
-	DC.W	$ff60			;67964
-	DC.W	$ffd0			;67966
-	DC.W	$ff70			;67968
-	DC.W	$ff30			;6796a
-	DC.W	$ffd0			;6796c
-	DC.W	$ff20			;6796e
-	DC.W	$ff60			;67970
-	DC.W	$ff80			;67972
-	DC.W	$ff20			;67974
-	DC.W	$ff30			;67976
-	DC.W	$ffd0			;67978
-	DC.W	$ff20			;6797a
-	ORI.B	#$80,D0			;6797c: 00000080
-	DC.W	$00e0			;67980
-	ORI.B	#$80,D0			;67982: 00000080
-	DC.W	$ff20			;67986
-	DC.W	$0000			;67988
-	DC.W	$ff80			;6798a
-	DC.W	$00e0			;6798c
-	DC.W	$0000			;6798e
-	DC.W	$ff80			;67990
-	DC.W	$ff20			;67992
-	ORI.B	#$30,D0			;67994: 00000030
-	DC.W	$ff20			;67998
-	DC.W	$ffb0			;6799a
-	DC.W	$0030			;6799c
-	DC.W	$ff20			;6799e
-	DC.W	$ff90			;679a0
-	DC.W	$0008			;679a2
-	DC.W	$ff20			;679a4
-	DC.W	$ffb0			;679a6
-	DC.W	$ffe0			;679a8
-	DC.W	$ff20			;679aa
-	DC.W	$0000			;679ac
-	DC.W	$ffe0			;679ae
-	DC.W	$00e0			;679b0
-	DC.W	$ffe0			;679b2
-	DC.W	$ffe0			;679b4
-	DC.W	$00e0			;679b6
-	DC.W	$ffa0			;679b8
-	DC.W	$ffe0			;679ba
-	DC.W	$00e0			;679bc
-	DC.W	$ff80			;679be
-	ORI.B	#$e0,D0			;679c0: 000000e0
-	DC.W	$ffa0			;679c4
-	ORI.B	#$e0,-(A0)		;679c6: 002000e0
-	DC.W	$ffe0			;679ca
-	DC.W	$0020			;679cc
-	DC.W	$ffa0			;679ce
-	DC.W	$ffb0			;679d0
-	DC.W	$ff80			;679d2
-	DC.W	$ffa0			;679d4
-	DC.W	$ff90			;679d6
-	DC.W	$ff80			;679d8
-	DC.W	$ffc0			;679da
-	DC.W	$ff70			;679dc
-	DC.W	$ff80			;679de
-	DC.W	$ffe0			;679e0
-	DC.W	$ff90			;679e2
-	DC.W	$ff80			;679e4
-	DC.W	$ffe0			;679e6
-	DC.W	$ffb0			;679e8
-	DC.W	$ff80			;679ea
-	ORI.W	#$ffb0,D0		;679ec: 0040ffb0
-	DC.W	$ff80			;679f0
-	ORI.W	#$ff90,D0		;679f2: 0040ff90
-	DC.W	$ff80			;679f6
-	ORI.W	#$ff70,-(A0)		;679f8: 0060ff70
-	DC.W	$ff80			;679fc
-	ORI.L	#$ff90ff80,D0		;679fe: 0080ff90ff80
-	ORI.L	#$ffb0ff80,D0		;67a04: 0080ffb0ff80
-	OR.B	D0,D4			;67a0a: 8800
-	dc.l  $0			;67a0c: 00000000
-	DC.W	$0002			;67a10
-	CHK.W	(A4)+,D7		;67a12: 4f9c
-	DC.W	$0002			;67a14
-	DC.W	$4fcc			;67a16
-	DC.W	$0002			;67a18
-	DC.W	$4fdc			;67a1a
-	ORI.B	#$0b,D0			;67a1c: 0000000b
-	OR.B	D0,D4			;67a20: 8800
-	dc.l  $0			;67a22: 00000000
-	DC.W	$0002			;67a26
-	DC.W	$4fcc			;67a28
-	DC.W	$0002			;67a2a
-	DC.W	$4fdc			;67a2c
-	DC.W	$0002			;67a2e
-	LEA	0(A4),A7		;67a30: 4fec0000
-	DC.W	$000b			;67a34
-	MOVEQ	#0,D4			;67a36: 7800
-	dc.l  $0			;67a38: 00000000
-	DC.W	$0002			;67a3c
-	CHK.W	-(A4),D7		;67a3e: 4fa4
-	DC.W	$0002			;67a40
-	CHK.W	2(A4,D0.W),D7		;67a42: 4fb40002
-	LEA	0(A4,D0.W),A7		;67a46: 4ff40000
-	DC.W	$000b			;67a4a
-	MOVEQ	#0,D4			;67a4c: 7800
-	dc.l  $0			;67a4e: 00000000
-	DC.W	$0002			;67a52
-	CHK.W	-(A4),D7		;67a54: 4fa4
-	DC.W	$0002			;67a56
-	DC.W	$4fe4			;67a58
-	DC.W	$0002			;67a5a
-	LEA	0(A4,D0.W),A7		;67a5c: 4ff40000
-	DC.W	$000b			;67a60
-	OR.B	D0,D4			;67a62: 8800
-	dc.l  $0			;67a64: 00000000
-	DC.W	$0002			;67a68
-	DC.W	$4ffc			;67a6a
-	DC.W	$0002			;67a6c
-	ADDQ.B	#8,D4			;67a6e: 5004
-	DC.W	$0002			;67a70
-	DC.W	$500c			;67a72
-	ORI.B	#$09,D0			;67a74: 00000009
-	OR.B	D0,D4			;67a78: 8800
-	dc.l  $0			;67a7a: 00000000
-	DC.W	$0002			;67a7e
-	DC.W	$4ffc			;67a80
-	DC.W	$0002			;67a82
-	DC.W	$500c			;67a84
-	DC.W	$0002			;67a86
-	ADDQ.B	#8,(A4)			;67a88: 5014
-	ORI.B	#$09,D0			;67a8a: 00000009
-	OR.B	D0,D4			;67a8e: 8800
-	dc.l  $0			;67a90: 00000000
-	DC.W	$0002			;67a94
-	DC.W	$4ffc			;67a96
-	DC.W	$0002			;67a98
-	ADDQ.B	#8,(A4)			;67a9a: 5014
-	DC.W	$0002			;67a9c
-	ADDQ.B	#8,(A4)+		;67a9e: 501c
-	ORI.B	#$09,D0			;67aa0: 00000009
-	MOVEQ	#0,D4			;67aa4: 7800
-	dc.l  $0			;67aa6: 00000000
-	DC.W	$0002			;67aaa
-	ADDQ.B	#8,-(A4)		;67aac: 5024
-	DC.W	$0002			;67aae
-	ADDQ.B	#8,2(A4)		;67ab0: 502c0002
-	ADDQ.B	#8,0(A4,D0.W)		;67ab4: 50340000
-	DC.W	$0017			;67ab8
-	MOVEQ	#0,D4			;67aba: 7800
-	dc.l  $0			;67abc: 00000000
-	DC.W	$0002			;67ac0
-	ADDQ.B	#8,-(A4)		;67ac2: 5024
-	DC.W	$0002			;67ac4
-	ADDQ.B	#8,2(A4,D0.W)		;67ac6: 50340002
-	DC.W	$503c			;67aca
-	ORI.B	#$17,D0			;67acc: 00000017
-	MOVEQ	#0,D4			;67ad0: 7800
-	dc.l  $0			;67ad2: 00000000
-	DC.W	$0002			;67ad6
-	ADDQ.B	#8,-(A4)		;67ad8: 5024
-	DC.W	$0002			;67ada
-	DC.W	$503c			;67adc
-	DC.W	$0002			;67ade
-	ADDQ.W	#8,D4			;67ae0: 5044
-	ORI.B	#$17,D0			;67ae2: 00000017
-	dc.l  $0			;67ae6: 00000000
-	OR.B	D0,D4			;67aea: 8800
-	DC.W	$0002			;67aec
-	CHK.W	2(A4,D0.W),D7		;67aee: 4fb40002
-	DC.W	$4fcc			;67af2
-	DC.W	$0002			;67af4
-	LEA	0(A4),A7		;67af6: 4fec0000
-	DC.W	$000b			;67afa
-	dc.l  $0			;67afc: 00000000
-	OR.B	D0,D4			;67b00: 8800
-	DC.W	$0002			;67b02
-	CHK.W	2(A4,D0.W),D7		;67b04: 4fb40002
-	LEA	2(A4),A7		;67b08: 4fec0002
-	LEA	0(A4,D0.W),A7		;67b0c: 4ff40000
-	DC.W	$000b			;67b10
-	dc.l  $0			;67b12: 00000000
-	OR.B	D0,D4			;67b16: 8800
-	DC.W	$0002			;67b18
-	ADDQ.W	#8,A4			;67b1a: 504c
-	DC.W	$0002			;67b1c
-	ADDQ.W	#8,(A4)			;67b1e: 5054
-	DC.W	$0002			;67b20
-	ADDQ.W	#8,(A4)+		;67b22: 505c
-	ORI.B	#$17,D0			;67b24: 00000017
-	dc.l  $0			;67b28: 00000000
-	OR.B	D0,D4			;67b2c: 8800
-	DC.W	$0002			;67b2e
-	ADDQ.W	#8,A4			;67b30: 504c
-	DC.W	$0002			;67b32
-	ADDQ.W	#8,(A4)+		;67b34: 505c
-	DC.W	$0002			;67b36
-	ADDQ.W	#8,-(A4)		;67b38: 5064
-	ORI.B	#$17,D0			;67b3a: 00000017
-	dc.l  $0			;67b3e: 00000000
-	OR.B	D0,D4			;67b42: 8800
-	DC.W	$0002			;67b44
-	ADDQ.W	#8,A4			;67b46: 504c
-	DC.W	$0002			;67b48
-	ADDQ.W	#8,-(A4)		;67b4a: 5064
-	DC.W	$0002			;67b4c
-	ADDQ.W	#8,0(A4)		;67b4e: 506c0000
-	ORI.B	#$00,(A7)		;67b52: 00170000
-	DC.W	$0000			;67b56
-	OR.B	D0,D4			;67b58: 8800
-	DC.W	$0002			;67b5a
-	ADDQ.W	#8,2(A4,D0.W)		;67b5c: 50740002
-	DC.W	$507c			;67b60
-	DC.W	$0002			;67b62
-	ADDQ.L	#8,D4			;67b64: 5084
-	ORI.B	#$17,D0			;67b66: 00000017
-	dc.l  $0			;67b6a: 00000000
-	OR.B	D0,D4			;67b6e: 8800
-	DC.W	$0002			;67b70
-	ADDQ.W	#8,2(A4,D0.W)		;67b72: 50740002
-	ADDQ.L	#8,D4			;67b76: 5084
-	DC.W	$0002			;67b78
-	ADDQ.L	#8,A4			;67b7a: 508c
-	ORI.B	#$17,D0			;67b7c: 00000017
-	dc.l  $0			;67b80: 00000000
-	OR.B	D0,D4			;67b84: 8800
-	DC.W	$0002			;67b86
-	ADDQ.W	#8,2(A4,D0.W)		;67b88: 50740002
-	ADDQ.L	#8,A4			;67b8c: 508c
-	DC.W	$0002			;67b8e
-	ADDQ.L	#8,(A4)			;67b90: 5094
-	ORI.B	#$17,D0			;67b92: 00000017
-	MOVEQ	#0,D4			;67b96: 7800
-	dc.l  $0			;67b98: 00000000
-	DC.W	$0002			;67b9c
-	DC.W	$4f8c			;67b9e
-	DC.W	$0002			;67ba0
-	CHK.W	(A4)+,D7		;67ba2: 4f9c
-	DC.W	$0002			;67ba4
-	CHK.W	#$0000,D7		;67ba6: 4fbc0000
-	DC.W	$0013			;67baa
-	MOVEQ	#0,D4			;67bac: 7800
-	dc.l  $0			;67bae: 00000000
-	DC.W	$0002			;67bb2
-	DC.W	$4f8c			;67bb4
-	DC.W	$0002			;67bb6
-	CHK.W	#$0002,D7		;67bb8: 4fbc0002
-	LEA	(A4),A7			;67bbc: 4fd4
-	ORI.B	#$13,D0			;67bbe: 00000013
-	OR.B	D0,D4			;67bc2: 8800
-	dc.l  $0			;67bc4: 00000000
-	DC.W	$0002			;67bc8
-	CHK.W	(A4),D7			;67bca: 4f94
-	DC.W	$0002			;67bcc
-	CHK.W	-(A4),D7		;67bce: 4fa4
-	DC.W	$0002			;67bd0
-	CHK.W	0(A4,D0.W),D7		;67bd2: 4fb40000
-	ORI.B	#$00,(A3)		;67bd6: 00130000
-	SUB.B	-17040(A0),D6		;67bda: 9c28bd70
-	DC.W	$0002			;67bde
-	DC.W	$4f5c			;67be0
-	DC.W	$0002			;67be2
-	DC.W	$4f8c			;67be4
-	DC.W	$0002			;67be6
-	LEA	(A4),A7			;67be8: 4fd4
-	ORI.B	#$07,D0			;67bea: 00000007
-	DC.W	$0000			;67bee
-	SUB.B	-17040(A0),D6		;67bf0: 9c28bd70
-	DC.W	$0002			;67bf4
-	DC.W	$4f5c			;67bf6
-	DC.W	$0002			;67bf8
-	DC.W	$4fc4			;67bfa
-	DC.W	$0002			;67bfc
-	LEA	(A4),A7			;67bfe: 4fd4
-	ORI.B	#$07,D0			;67c00: 00000007
-	DC.W	$0000			;67c04
-	DC.W	$9a3e			;67c06
-	AND.W	-(A7),D0		;67c08: c067
-	DC.W	$0002			;67c0a
-	DC.W	$4f5c			;67c0c
-	DC.W	$0002			;67c0e
-	CHK.W	(A4),D7			;67c10: 4f94
-	DC.W	$0002			;67c12
-	CHK.W	0(A4),D7		;67c14: 4fac0000
-	ORI.B	#$00,(A7)		;67c18: 00170000
-	DC.W	$9a3e			;67c1c
-	AND.W	-(A7),D0		;67c1e: c067
-	DC.W	$0002			;67c20
-	CHK.W	(A4),D7			;67c22: 4f94
-	DC.W	$0002			;67c24
-	CHK.W	2(A4),D7		;67c26: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;67c2a: 4fb40000
-	DC.W	$0017			;67c2e
-	OR.B	D0,D4			;67c30: 8800
-	dc.l  $0			;67c32: 00000000
-	DC.W	$0002			;67c36
-	DC.W	$4f6c			;67c38
-	DC.W	$0002			;67c3a
-	DC.W	$4f7c			;67c3c
-	DC.W	$0002			;67c3e
-	CHK.W	#$0000,D7		;67c40: 4fbc0000
-	DC.W	$000b			;67c44
-	OR.B	D0,D4			;67c46: 8800
-	dc.l  $0			;67c48: 00000000
-	DC.W	$0002			;67c4c
-	DC.W	$4f7c			;67c4e
-	DC.W	$0002			;67c50
-	CHK.W	#$0002,D7		;67c52: 4fbc0002
-	DC.W	$4fcc			;67c56
-	ORI.B	#$0b,D0			;67c58: 0000000b
-	OR.B	D0,D4			;67c5c: 8800
-	dc.l  $0			;67c5e: 00000000
-	DC.W	$0002			;67c62
-	DC.W	$4f74			;67c64
-	DC.W	$0002			;67c66
-	CHK.W	D4,D7			;67c68: 4f84
-	DC.W	$0002			;67c6a
-	CHK.W	0(A4),D7		;67c6c: 4fac0000
-	DC.W	$000b			;67c70
-	OR.B	D0,D4			;67c72: 8800
-	dc.l  $0			;67c74: 00000000
-	DC.W	$0002			;67c78
-	DC.W	$4f74			;67c7a
-	DC.W	$0002			;67c7c
-	CHK.W	2(A4),D7		;67c7e: 4fac0002
-	DC.W	$4fc4			;67c82
-	ORI.B	#$0b,D0			;67c84: 0000000b
-	dc.l  $0			;67c88: 00000000
-	OR.B	D0,D4			;67c8c: 8800
-	DC.W	$0002			;67c8e
-	DC.W	$4f7c			;67c90
-	DC.W	$0002			;67c92
-	CHK.W	D4,D7			;67c94: 4f84
-	DC.W	$0002			;67c96
-lb_67c98:
-	DC.W	$4fcc			;67c98
-	ORI.B	#$0b,D0			;67c9a: 0000000b
-	dc.l  $0			;67c9e: 00000000
-	OR.B	D0,D4			;67ca2: 8800
-	DC.W	$0002			;67ca4
-	CHK.W	D4,D7			;67ca6: 4f84
-	DC.W	$0002			;67ca8
-	CHK.W	2(A4),D7		;67caa: 4fac0002
-	DC.W	$4fcc			;67cae
-	ORI.B	#$0b,D0			;67cb0: 0000000b
-	DIVU	-3810(A6),D4		;67cb4: 88eef11e
-	ORI.B	#$02,D0			;67cb8: 00000002
-	DC.W	$4f64			;67cbc
-	DC.W	$0002			;67cbe
-	DC.W	$4f6c			;67cc0
-	DC.W	$0002			;67cc2
-	DC.W	$4f7c			;67cc4
-	ORI.B	#$17,D0			;67cc6: 00000017
-	DIVU	3810(A6),D4		;67cca: 88ee0ee2
-	ORI.B	#$02,D0			;67cce: 00000002
-	DC.W	$4f64			;67cd2
-	DC.W	$0002			;67cd4
-	DC.W	$4f74			;67cd6
-	DC.W	$0002			;67cd8
-	CHK.W	D4,D7			;67cda: 4f84
-	ORI.B	#$17,D0			;67cdc: 00000017
-	DC.W	$0000			;67ce0
-	DC.W	$f11e			;67ce2
-	DIVU	2(A6),D4		;67ce4: 88ee0002
-	DC.W	$4f64			;67ce8
-	DC.W	$0002			;67cea
-	DC.W	$4f7c			;67cec
-	DC.W	$0002			;67cee
-	CHK.W	D4,D7			;67cf0: 4f84
-	ORI.B	#$0f,D0			;67cf2: 0000000f
-	ORI.B	#$06,D0			;67cf6: 00000006
-	ORI.B	#$32,D2			;67cfa: 00020032
-	DC.W	$ffd0			;67cfe
-	DC.W	$ff30			;67d00
-	DC.W	$ffe0			;67d02
-	DC.W	$0000			;67d04
-	DC.W	$ff90			;67d06
-	dc.l  $0			;67d08: 00000000
-	DC.W	$ff80			;67d0c
-	dc.l  $0			;67d0e: 00000000
-	DC.W	$ffa0			;67d12
-	ORI.B	#$60,D0			;67d14: 00000060
-	DC.W	$ff70			;67d18
-	DC.W	$ffd0			;67d1a
+	dc.w	$0100	;66850
+	dc.w	$0007	;66852
+	dc.w	$0005	;66854
+	dc.w	$0038	;66856
+	dc.w	$0000	;66858
+	dc.w	$0000	;6685a
+	dc.w	$0000	;6685c
+	dc.w	$ffa0	;6685e
+	dc.w	$0000	;66860
+	dc.w	$ffc0	;66862
+	dc.w	$ffa0	;66864
+	dc.w	$0000	;66866
+	dc.w	$0040	;66868
+	dc.w	$0000	;6686a
+	dc.w	$0000	;6686c
+	dc.w	$0060	;6686e
+	dc.w	$0060	;66870
+	dc.w	$0000	;66872
+	dc.w	$0040	;66874
+	dc.w	$0060	;66876
+	dc.w	$0000	;66878
+	dc.w	$ffc0	;6687a
+	dc.w	$0000	;6687c
+	dc.w	$0000	;6687e
+	dc.w	$ffa0	;66880
+	dc.w	$0000	;66882
+	dc.w	$0050	;66884
+	dc.w	$0000	;66886
+	dc.w	$b32e	;66888
+	dc.w	$5c2f	;6688a
+	dc.w	$0000	;6688c
+	dc.w	$0002	;6688e
+	dc.w	$4f94	;66890
+	dc.w	$0002	;66892
+	dc.w	$4f64	;66894
+	dc.w	$0002	;66896
+	dc.w	$4f6c	;66898
+	dc.w	$0000	;6689a
+	dc.w	$0007	;6689c
+	dc.w	$e6f5	;6689e
+	dc.w	$5a28	;668a0
+	dc.w	$4b21	;668a2
+	dc.w	$0002	;668a4
+	dc.w	$4f94	;668a6
+	dc.w	$0002	;668a8
+	dc.w	$4f6c	;668aa
+	dc.w	$0002	;668ac
+	dc.w	$4f74	;668ae
+	dc.w	$0000	;668b0
+	dc.w	$0007	;668b2
+	dc.w	$190b	;668b4
+	dc.w	$5a28	;668b6
+	dc.w	$4b21	;668b8
+	dc.w	$0002	;668ba
+	dc.w	$4f94	;668bc
+	dc.w	$0002	;668be
+	dc.w	$4f74	;668c0
+	dc.w	$0002	;668c2
+	dc.w	$4f7c	;668c4
+	dc.w	$0000	;668c6
+	dc.w	$0007	;668c8
+	dc.w	$4cd2	;668ca
+	dc.w	$5c2f	;668cc
+	dc.w	$0000	;668ce
+	dc.w	$0002	;668d0
+	dc.w	$4f94	;668d2
+	dc.w	$0002	;668d4
+	dc.w	$4f7c	;668d6
+	dc.w	$0002	;668d8
+	dc.w	$4f84	;668da
+	dc.w	$0000	;668dc
+	dc.w	$0007	;668de
+	dc.w	$190b	;668e0
+	dc.w	$5a28	;668e2
+	dc.w	$b4df	;668e4
+	dc.w	$0002	;668e6
+	dc.w	$4f94	;668e8
+	dc.w	$0002	;668ea
+	dc.w	$4f84	;668ec
+	dc.w	$0002	;668ee
+	dc.w	$4f8c	;668f0
+	dc.w	$0000	;668f2
+	dc.w	$0007	;668f4
+	dc.w	$e6f5	;668f6
+	dc.w	$5a28	;668f8
+	dc.w	$b4df	;668fa
+	dc.w	$0002	;668fc
+	dc.w	$4f94	;668fe
+	dc.w	$0002	;66900
+	dc.w	$4f8c	;66902
+	dc.w	$0002	;66904
+	dc.w	$4f64	;66906
+	dc.w	$0000	;66908
+	dc.w	$0007	;6690a
+	dc.w	$0200	;6690c
+	dc.w	$000d	;6690e
+	dc.w	$000f	;66910
+	dc.w	$005c	;66912
+lb_66914:
+	dc.w	$0010	;66914
+	dc.w	$0000	;66916
+	dc.w	$0000	;66918
+	dc.w	$ffe0	;6691a
+	dc.w	$fe50	;6691c
+	dc.w	$0000	;6691e
+	dc.w	$ff70	;66920
+	dc.w	$fec0	;66922
+	dc.w	$0030	;66924
+	dc.w	$ffc0	;66926
+	dc.w	$fef0	;66928
+	dc.w	$ffd0	;6692a
+	dc.w	$0040	;6692c
+	dc.w	$fed0	;6692e
+	dc.w	$ffc0	;66930
+	dc.w	$0080	;66932
+	dc.w	$fe90	;66934
+	dc.w	$0040	;66936
+	dc.w	$ff40	;66938
+	dc.w	$ff60	;6693a
+	dc.w	$0000	;6693c
+	dc.w	$0010	;6693e
+	dc.w	$ff40	;66940
+	dc.w	$ffd0	;66942
+	dc.w	$00c0	;66944
+	dc.w	$ff20	;66946
+	dc.w	$0020	;66948
+	dc.w	$ffc0	;6694a
+	dc.w	$ff90	;6694c
+	dc.w	$fff0	;6694e
+	dc.w	$0040	;66950
+	dc.w	$ff80	;66952
+	dc.w	$fff0	;66954
+	dc.w	$fff0	;66956
+	dc.w	$ffa0	;66958
+	dc.w	$0000	;6695a
+	dc.w	$0010	;6695c
+	dc.w	$ffa0	;6695e
+	dc.w	$0000	;66960
+lb_66962:
+	dc.w	$fff0	;66962
+	dc.w	$0000	;66964
+	dc.w	$0000	;66966
+	dc.w	$0000	;66968
+	dc.w	$0000	;6696a
+	dc.w	$0000	;6696c
+	dc.w	$0002	;6696e
+	dc.w	$4f5c	;66970
+	dc.w	$0002	;66972
+	dc.w	$4fbc	;66974
+	dc.w	$0002	;66976
+	dc.w	$4fc4	;66978
+	dc.w	$0000	;6697a
+	dc.w	$0013	;6697c
+	dc.w	$0000	;6697e
+	dc.w	$0000	;66980
+	dc.w	$0000	;66982
+	dc.w	$0002	;66984
+	dc.w	$4fb4	;66986
+	dc.w	$0002	;66988
+	dc.w	$4fbc	;6698a
+	dc.w	$0002	;6698c
+	dc.w	$4fc4	;6698e
+	dc.w	$0000	;66990
+	dc.w	$0013	;66992
+	dc.w	$0000	;66994
+	dc.w	$ca56	;66996
+	dc.w	$6b54	;66998
+	dc.w	$0002	;6699a
+	dc.w	$4f94	;6699c
+	dc.w	$0002	;6699e
+	dc.w	$4fb4	;669a0
+	dc.w	$0002	;669a2
+	dc.w	$4fbc	;669a4
+	dc.w	$0000	;669a6
+	dc.w	$0016	;669a8
+	dc.w	$f05d	;669aa
+	dc.w	$c6aa	;669ac
+	dc.w	$683f	;669ae
+	dc.w	$0002	;669b0
+	dc.w	$4f94	;669b2
+	dc.w	$0002	;669b4
+	dc.w	$4fa4	;669b6
+	dc.w	$0002	;669b8
+	dc.w	$4fb4	;669ba
+	dc.w	$0000	;669bc
+	dc.w	$0006	;669be
+	dc.w	$0000	;669c0
+	dc.w	$ca56	;669c2
+	dc.w	$6b54	;669c4
+	dc.w	$0002	;669c6
+	dc.w	$4f94	;669c8
+	dc.w	$0002	;669ca
+	dc.w	$4fac	;669cc
+	dc.w	$0002	;669ce
+	dc.w	$4fbc	;669d0
+	dc.w	$0000	;669d2
+	dc.w	$0006	;669d4
+	dc.w	$e8e8	;669d6
+	dc.w	$1718	;669d8
+	dc.w	$8c88	;669da
+	dc.w	$0002	;669dc
+	dc.w	$4f8c	;669de
+	dc.w	$0002	;669e0
+	dc.w	$4f94	;669e2
+	dc.w	$0002	;669e4
+	dc.w	$4fa4	;669e6
+	dc.w	$0000	;669e8
+	dc.w	$000a	;669ea
+	dc.w	$3384	;669ec
+	dc.w	$0f06	;669ee
+	dc.w	$94ac	;669f0
+	dc.w	$0002	;669f2
+	dc.w	$4f94	;669f4
+	dc.w	$0002	;669f6
+	dc.w	$4f9c	;669f8
+	dc.w	$0002	;669fa
+	dc.w	$4fac	;669fc
+	dc.w	$0000	;669fe
+	dc.w	$000a	;66a00
+	dc.w	$e8e8	;66a02
+	dc.w	$1718	;66a04
+	dc.w	$8c88	;66a06
+	dc.w	$0002	;66a08
+	dc.w	$4f74	;66a0a
+	dc.w	$0002	;66a0c
+	dc.w	$4f8c	;66a0e
+	dc.w	$0002	;66a10
+	dc.w	$4f94	;66a12
+	dc.w	$0000	;66a14
+	dc.w	$0012	;66a16
+	dc.w	$cb42	;66a18
+	dc.w	$daf0	;66a1a
+	dc.w	$6536	;66a1c
+	dc.w	$0002	;66a1e
+	dc.w	$4f7c	;66a20
+	dc.w	$0002	;66a22
+	dc.w	$4f94	;66a24
+	dc.w	$0002	;66a26
+	dc.w	$4f9c	;66a28
+	dc.w	$0000	;66a2a
+	dc.w	$0012	;66a2c
+	dc.w	$b7bb	;66a2e
+	dc.w	$d13d	;66a30
+	dc.w	$ac65	;66a32
+	dc.w	$0002	;66a34
+	dc.w	$4f6c	;66a36
+	dc.w	$0002	;66a38
+	dc.w	$4f74	;66a3a
+	dc.w	$0002	;66a3c
+	dc.w	$4f8c	;66a3e
+	dc.w	$0000	;66a40
+	dc.w	$0002	;66a42
+	dc.w	$53cb	;66a44
+	dc.w	$cba1	;66a46
+	dc.w	$bbeb	;66a48
+	dc.w	$0002	;66a4a
+	dc.w	$4f7c	;66a4c
+	dc.w	$0002	;66a4e
+	dc.w	$4f84	;66a50
+	dc.w	$0002	;66a52
+	dc.w	$4f9c	;66a54
+	dc.w	$0000	;66a56
+	dc.w	$0002	;66a58
+	dc.w	$f41f	;66a5a
+	dc.w	$0be1	;66a5c
+	dc.w	$892f	;66a5e
+	dc.w	$0002	;66a60
+	dc.w	$4f74	;66a62
+	dc.w	$0002	;66a64
+	dc.w	$4f7c	;66a66
+	dc.w	$0002	;66a68
+	dc.w	$4f94	;66a6a
+	dc.w	$0000	;66a6c
+	dc.w	$000a	;66a6e
+	dc.w	$ef4e	;66a70
+	dc.w	$c37a	;66a72
+	dc.w	$6643	;66a74
+	dc.w	$0002	;66a76
+	dc.w	$4f64	;66a78
+	dc.w	$0002	;66a7a
+	dc.w	$4f6c	;66a7c
+	dc.w	$0002	;66a7e
+	dc.w	$4f84	;66a80
+	dc.w	$0000	;66a82
+	dc.w	$0002	;66a84
+	dc.w	$b3e5	;66a86
+	dc.w	$d7b6	;66a88
+	dc.w	$ac6f	;66a8a
+	dc.w	$0002	;66a8c
+	dc.w	$4f64	;66a8e
+	dc.w	$0002	;66a90
+	dc.w	$4f6c	;66a92
+	dc.w	$0002	;66a94
+	dc.w	$4f74	;66a96
+	dc.w	$0000	;66a98
+	dc.w	$0012	;66a9a
+	dc.w	$e88f	;66a9c
+	dc.w	$d9e8	;66a9e
+	dc.w	$90a6	;66aa0
+	dc.w	$0002	;66aa2
+	dc.w	$4f64	;66aa4
+	dc.w	$0002	;66aa6
+	dc.w	$4f74	;66aa8
+	dc.w	$0002	;66aaa
+	dc.w	$4f7c	;66aac
+	dc.w	$0000	;66aae
+	dc.w	$0012	;66ab0
+	dc.w	$3afc	;66ab2
+	dc.w	$b15b	;66ab4
+	dc.w	$bb30	;66ab6
+	dc.w	$0002	;66ab8
+	dc.w	$4f64	;66aba
+	dc.w	$0002	;66abc
+	dc.w	$4f7c	;66abe
+	dc.w	$0002	;66ac0
+	dc.w	$4f84	;66ac2
+	dc.w	$0000	;66ac4
+	dc.w	$0012	;66ac6
+	dc.w	$0200	;66ac8
+	dc.w	$000b	;66aca
+	dc.w	$000d	;66acc
+	dc.w	$0050	;66ace
+	dc.w	$0000	;66ad0
+	dc.w	$fe70	;66ad2
+	dc.w	$0000	;66ad4
+	dc.w	$ffb0	;66ad6
+	dc.w	$fed0	;66ad8
+	dc.w	$0020	;66ada
+	dc.w	$0000	;66adc
+	dc.w	$fef0	;66ade
+	dc.w	$ffd0	;66ae0
+	dc.w	$0040	;66ae2
+	dc.w	$fef0	;66ae4
+	dc.w	$0030	;66ae6
+	dc.w	$ff80	;66ae8
+	dc.w	$ff50	;66aea
+	dc.w	$fff0	;66aec
+	dc.w	$ffd0	;66aee
+	dc.w	$ff50	;66af0
+	dc.w	$ffc0	;66af2
+	dc.w	$0020	;66af4
+	dc.w	$ff60	;66af6
+	dc.w	$ffb0	;66af8
+	dc.w	$0050	;66afa
+	dc.w	$ff60	;66afc
+	dc.w	$0000	;66afe
+	dc.w	$fff0	;66b00
+	dc.w	$ffa0	;66b02
+	dc.w	$0000	;66b04
+	dc.w	$0010	;66b06
+	dc.w	$ffa0	;66b08
+	dc.w	$0000	;66b0a
+	dc.w	$fff0	;66b0c
+	dc.w	$0000	;66b0e
+	dc.w	$0000	;66b10
+	dc.w	$0010	;66b12
+	dc.w	$0000	;66b14
+	dc.w	$0000	;66b16
+	dc.w	$0000	;66b18
+	dc.w	$0000	;66b1a
+	dc.w	$0000	;66b1c
+	dc.w	$0002	;66b1e
+	dc.w	$4f9c	;66b20
+	dc.w	$0002	;66b22
+	dc.w	$4fa4	;66b24
+	dc.w	$0002	;66b26
+	dc.w	$4fb4	;66b28
+	dc.w	$0000	;66b2a
+	dc.w	$0013	;66b2c
+	dc.w	$0000	;66b2e
+	dc.w	$0000	;66b30
+	dc.w	$0000	;66b32
+	dc.w	$0002	;66b34
+	dc.w	$4f9c	;66b36
+	dc.w	$0002	;66b38
+	dc.w	$4fac	;66b3a
+	dc.w	$0002	;66b3c
+	dc.w	$4fb4	;66b3e
+	dc.w	$0000	;66b40
+	dc.w	$0013	;66b42
+	dc.w	$0000	;66b44
+	dc.w	$a24c	;66b46
+	dc.w	$4af6	;66b48
+	dc.w	$0002	;66b4a
+	dc.w	$4f8c	;66b4c
+	dc.w	$0002	;66b4e
+	dc.w	$4f9c	;66b50
+	dc.w	$0002	;66b52
+	dc.w	$4fa4	;66b54
+	dc.w	$0000	;66b56
+	dc.w	$000e	;66b58
+	dc.w	$20a7	;66b5a
+	dc.w	$b02f	;66b5c
+	dc.w	$5371	;66b5e
+	dc.w	$0002	;66b60
+	dc.w	$4f84	;66b62
+	dc.w	$0002	;66b64
+	dc.w	$4f8c	;66b66
+	dc.w	$0002	;66b68
+	dc.w	$4f9c	;66b6a
+	dc.w	$0000	;66b6c
+	dc.w	$000e	;66b6e
+	dc.w	$b1e3	;66b70
+	dc.w	$b1e3	;66b72
+	dc.w	$2ede	;66b74
+	dc.w	$0002	;66b76
+	dc.w	$4f8c	;66b78
+	dc.w	$0002	;66b7a
+	dc.w	$4f94	;66b7c
+	dc.w	$0002	;66b7e
+	dc.w	$4fa4	;66b80
+	dc.w	$0000	;66b82
+	dc.w	$0006	;66b84
+	dc.w	$2e14	;66b86
+	dc.w	$b022	;66b88
+	dc.w	$4ccc	;66b8a
+	dc.w	$0002	;66b8c
+	dc.w	$4f7c	;66b8e
+	dc.w	$0002	;66b90
+	dc.w	$4f84	;66b92
+	dc.w	$0002	;66b94
+	dc.w	$4f9c	;66b96
+	dc.w	$0000	;66b98
+	dc.w	$0006	;66b9a
+	dc.w	$c91a	;66b9c
+	dc.w	$c91a	;66b9e
+	dc.w	$a481	;66ba0
+	dc.w	$0002	;66ba2
+	dc.w	$4f64	;66ba4
+	dc.w	$0002	;66ba6
+	dc.w	$4f7c	;66ba8
+	dc.w	$0002	;66baa
+	dc.w	$4f84	;66bac
+	dc.w	$0000	;66bae
+	dc.w	$000a	;66bb0
+	dc.w	$bc88	;66bb2
+	dc.w	$cfcf	;66bb4
+	dc.w	$a941	;66bb6
+	dc.w	$0002	;66bb8
+	dc.w	$4f64	;66bba
+	dc.w	$0002	;66bbc
+	dc.w	$4f6c	;66bbe
+	dc.w	$0002	;66bc0
+	dc.w	$4f84	;66bc2
+	dc.w	$0000	;66bc4
+	dc.w	$0006	;66bc6
+	dc.w	$ee85	;66bc8
+	dc.w	$e408	;66bca
+	dc.w	$8ca0	;66bcc
+	dc.w	$0002	;66bce
+	dc.w	$4f6c	;66bd0
+	dc.w	$0002	;66bd2
+	dc.w	$4f84	;66bd4
+	dc.w	$0002	;66bd6
+	dc.w	$4f8c	;66bd8
+	dc.w	$0000	;66bda
+	dc.w	$0016	;66bdc
+	dc.w	$5fcd	;66bde
+	dc.w	$d435	;66be0
+	dc.w	$c685	;66be2
+	dc.w	$0002	;66be4
+	dc.w	$4f6c	;66be6
+	dc.w	$0002	;66be8
+	dc.w	$4f8c	;66bea
+	dc.w	$0002	;66bec
+	dc.w	$4f94	;66bee
+	dc.w	$0000	;66bf0
+	dc.w	$0006	;66bf2
+	dc.w	$5e0b	;66bf4
+	dc.w	$d7b2	;66bf6
+	dc.w	$c14e	;66bf8
+	dc.w	$0002	;66bfa
+	dc.w	$4f6c	;66bfc
+	dc.w	$0002	;66bfe
+	dc.w	$4f74	;66c00
+	dc.w	$0002	;66c02
+	dc.w	$4f94	;66c04
+	dc.w	$0000	;66c06
+	dc.w	$000a	;66c08
+	dc.w	$fc79	;66c0a
+	dc.w	$d770	;66c0c
+	dc.w	$70e1	;66c0e
+	dc.w	$0002	;66c10
+	dc.w	$4f5c	;66c12
+	dc.w	$0002	;66c14
+	dc.w	$4f64	;66c16
+	dc.w	$0002	;66c18
+	dc.w	$4f74	;66c1a
+	dc.w	$0000	;66c1c
+	dc.w	$0016	;66c1e
+	dc.w	$b546	;66c20
+	dc.w	$df09	;66c22
+	dc.w	$a816	;66c24
+	dc.w	$0002	;66c26
+	dc.w	$4f5c	;66c28
+	dc.w	$0002	;66c2a
+	dc.w	$4f64	;66c2c
+	dc.w	$0002	;66c2e
+	dc.w	$4f6c	;66c30
+	dc.w	$0000	;66c32
+	dc.w	$0006	;66c34
+	dc.w	$61c0	;66c36
+	dc.w	$e790	;66c38
+	dc.w	$bed5	;66c3a
+	dc.w	$0002	;66c3c
+	dc.w	$4f5c	;66c3e
+	dc.w	$0002	;66c40
+	dc.w	$4f6c	;66c42
+	dc.w	$0002	;66c44
+	dc.w	$4f74	;66c46
+	dc.w	$0000	;66c48
+	dc.w	$0016	;66c4a
+	dc.w	$0200	;66c4c
+	dc.w	$000e	;66c4e
+	dc.w	$0011	;66c50
+	dc.w	$0062	;66c52
+	dc.w	$0020	;66c54
+	dc.w	$fe20	;66c56
+	dc.w	$0000	;66c58
+	dc.w	$ffc0	;66c5a
+	dc.w	$fe70	;66c5c
+	dc.w	$0020	;66c5e
+	dc.w	$0000	;66c60
+	dc.w	$fec0	;66c62
+	dc.w	$ffc0	;66c64
+	dc.w	$0070	;66c66
+	dc.w	$fe90	;66c68
+	dc.w	$0040	;66c6a
+	dc.w	$ff80	;66c6c
+	dc.w	$ff10	;66c6e
+	dc.w	$fff0	;66c70
+	dc.w	$ffe0	;66c72
+	dc.w	$ff30	;66c74
+	dc.w	$ffb0	;66c76
+	dc.w	$0050	;66c78
+	dc.w	$ff10	;66c7a
+	dc.w	$ffb0	;66c7c
+	dc.w	$00b0	;66c7e
+	dc.w	$ff30	;66c80
+	dc.w	$0010	;66c82
+	dc.w	$ff60	;66c84
+	dc.w	$ffa0	;66c86
+	dc.w	$ffd0	;66c88
+	dc.w	$ffe0	;66c8a
+	dc.w	$ffb0	;66c8c
+	dc.w	$0000	;66c8e
+	dc.w	$0050	;66c90
+	dc.w	$ff70	;66c92
+	dc.w	$ffd0	;66c94
+	dc.w	$0090	;66c96
+	dc.w	$ffc0	;66c98
+	dc.w	$fff0	;66c9a
+	dc.w	$0030	;66c9c
+	dc.w	$ffb0	;66c9e
+	dc.w	$0000	;66ca0
+	dc.w	$fff0	;66ca2
+	dc.w	$0000	;66ca4
+	dc.w	$0000	;66ca6
+	dc.w	$0010	;66ca8
+	dc.w	$0000	;66caa
+	dc.w	$0000	;66cac
+	dc.w	$0000	;66cae
+	dc.w	$0000	;66cb0
+	dc.w	$0000	;66cb2
+	dc.w	$0002	;66cb4
+	dc.w	$4fa4	;66cb6
+	dc.w	$0002	;66cb8
+	dc.w	$4fc4	;66cba
+	dc.w	$0002	;66cbc
+	dc.w	$4fcc	;66cbe
+	dc.w	$0000	;66cc0
+	dc.w	$0013	;66cc2
+	dc.w	$0000	;66cc4
+	dc.w	$0000	;66cc6
+	dc.w	$0000	;66cc8
+	dc.w	$0002	;66cca
+	dc.w	$4fa4	;66ccc
+	dc.w	$0002	;66cce
+	dc.w	$4fbc	;66cd0
+	dc.w	$0002	;66cd2
+	dc.w	$4fcc	;66cd4
+	dc.w	$0000	;66cd6
+	dc.w	$0013	;66cd8
+	dc.w	$e2b5	;66cda
+	dc.w	$c254	;66cdc
+	dc.w	$62ae	;66cde
+	dc.w	$0002	;66ce0
+	dc.w	$4f84	;66ce2
+	dc.w	$0002	;66ce4
+	dc.w	$4f9c	;66ce6
+	dc.w	$0002	;66ce8
+	dc.w	$4fa4	;66cea
+	dc.w	$0000	;66cec
+	dc.w	$0016	;66cee
+	dc.w	$0741	;66cf0
+	dc.w	$c085	;66cf2
+	dc.w	$6592	;66cf4
+	dc.w	$0002	;66cf6
+	dc.w	$4f84	;66cf8
+	dc.w	$0002	;66cfa
+	dc.w	$4fa4	;66cfc
+	dc.w	$0002	;66cfe
+	dc.w	$4fac	;66d00
+	dc.w	$0000	;66d02
+	dc.w	$0006	;66d04
+	dc.w	$0000	;66d06
+	dc.w	$b800	;66d08
+	dc.w	$6000	;66d0a
+	dc.w	$0002	;66d0c
+	dc.w	$4fa4	;66d0e
+	dc.w	$0002	;66d10
+	dc.w	$4fac	;66d12
+	dc.w	$0002	;66d14
+	dc.w	$4fbc	;66d16
+	dc.w	$0000	;66d18
+	dc.w	$0016	;66d1a
+	dc.w	$1ad1	;66d1c
+	dc.w	$c2b3	;66d1e
+	dc.w	$639d	;66d20
+	dc.w	$0002	;66d22
+	dc.w	$4fac	;66d24
+	dc.w	$0002	;66d26
+	dc.w	$4fb4	;66d28
+	dc.w	$0002	;66d2a
+	dc.w	$4fbc	;66d2c
+	dc.w	$0000	;66d2e
+	dc.w	$0006	;66d30
+	dc.w	$3e38	;66d32
+	dc.w	$f71d	;66d34
+	dc.w	$99c8	;66d36
+	dc.w	$0002	;66d38
+	dc.w	$4f94	;66d3a
+	dc.w	$0002	;66d3c
+	dc.w	$4fac	;66d3e
+	dc.w	$0002	;66d40
+	dc.w	$4fb4	;66d42
+	dc.w	$0000	;66d44
+	dc.w	$000a	;66d46
+	dc.w	$c882	;66d48
+	dc.w	$dd51	;66d4a
+	dc.w	$9b6b	;66d4c
+	dc.w	$0002	;66d4e
+	dc.w	$4f7c	;66d50
+	dc.w	$0002	;66d52
+	dc.w	$4f84	;66d54
+	dc.w	$0002	;66d56
+	dc.w	$4f9c	;66d58
+	dc.w	$0000	;66d5a
+	dc.w	$0006	;66d5c
+	dc.w	$0acc	;66d5e
+	dc.w	$25cb	;66d60
+	dc.w	$8e9f	;66d62
+	dc.w	$0002	;66d64
+	dc.w	$4f84	;66d66
+	dc.w	$0002	;66d68
+	dc.w	$4f8c	;66d6a
+	dc.w	$0002	;66d6c
+	dc.w	$4fac	;66d6e
+	dc.w	$0000	;66d70
+	dc.w	$000a	;66d72
+	dc.w	$4d5b	;66d74
+	dc.w	$1d02	;66d76
+	dc.w	$a8f9	;66d78
+	dc.w	$0002	;66d7a
+	dc.w	$4f8c	;66d7c
+	dc.w	$0002	;66d7e
+	dc.w	$4f94	;66d80
+	dc.w	$0002	;66d82
+	dc.w	$4fac	;66d84
+	dc.w	$0000	;66d86
+	dc.w	$0006	;66d88
+	dc.w	$c6ed	;66d8a
+	dc.w	$e145	;66d8c
+	dc.w	$9b05	;66d8e
+	dc.w	$0002	;66d90
+	dc.w	$4f6c	;66d92
+	dc.w	$0002	;66d94
+	dc.w	$4f7c	;66d96
+	dc.w	$0002	;66d98
+	dc.w	$4f84	;66d9a
+	dc.w	$0000	;66d9c
+	dc.w	$000a	;66d9e
+	dc.w	$fabd	;66da0
+	dc.w	$ed93	;66da2
+	dc.w	$898b	;66da4
+	dc.w	$0002	;66da6
+	dc.w	$4f6c	;66da8
+	dc.w	$0002	;66daa
+	dc.w	$4f84	;66dac
+	dc.w	$0002	;66dae
+	dc.w	$4f8c	;66db0
+	dc.w	$0000	;66db2
+	dc.w	$0012	;66db4
+	dc.w	$5450	;66db6
+	dc.w	$ca59	;66db8
+	dc.w	$bd93	;66dba
+	dc.w	$0002	;66dbc
+	dc.w	$4f74	;66dbe
+	dc.w	$0002	;66dc0
+	dc.w	$4f8c	;66dc2
+	dc.w	$0002	;66dc4
+	dc.w	$4f94	;66dc6
+	dc.w	$0000	;66dc8
+	dc.w	$000a	;66dca
+	dc.w	$bf18	;66dcc
+	dc.w	$cc13	;66dce
+	dc.w	$a975	;66dd0
+	dc.w	$0002	;66dd2
+	dc.w	$4f64	;66dd4
+	dc.w	$0002	;66dd6
+	dc.w	$4f6c	;66dd8
+	dc.w	$0002	;66dda
+	dc.w	$4f7c	;66ddc
+	dc.w	$0000	;66dde
+	dc.w	$0012	;66de0
+	dc.w	$38f3	;66de2
+	dc.w	$b7a9	;66de4
+	dc.w	$b30a	;66de6
+	dc.w	$0002	;66de8
+	dc.w	$4f6c	;66dea
+	dc.w	$0002	;66dec
+	dc.w	$4f74	;66dee
+	dc.w	$0002	;66df0
+	dc.w	$4f8c	;66df2
+	dc.w	$0000	;66df4
+	dc.w	$0006	;66df6
+	dc.w	$f673	;66df8
+	dc.w	$c9df	;66dfa
+	dc.w	$6aab	;66dfc
+	dc.w	$0002	;66dfe
+	dc.w	$4f5c	;66e00
+	dc.w	$0002	;66e02
+	dc.w	$4f64	;66e04
+	dc.w	$0002	;66e06
+	dc.w	$4f74	;66e08
+	dc.w	$0000	;66e0a
+	dc.w	$000a	;66e0c
+	dc.w	$bb51	;66e0e
+	dc.w	$cfec	;66e10
+	dc.w	$aa26	;66e12
+	dc.w	$0002	;66e14
+	dc.w	$4f5c	;66e16
+	dc.w	$0002	;66e18
+	dc.w	$4f64	;66e1a
+	dc.w	$0002	;66e1c
+	dc.w	$4f6c	;66e1e
+	dc.w	$0000	;66e20
+	dc.w	$000a	;66e22
+	dc.w	$56ab	;66e24
+	dc.w	$f0b5	;66e26
+	dc.w	$ae6e	;66e28
+	dc.w	$0002	;66e2a
+	dc.w	$4f5c	;66e2c
+	dc.w	$0002	;66e2e
+	dc.w	$4f6c	;66e30
+	dc.w	$0002	;66e32
+	dc.w	$4f74	;66e34
+	dc.w	$0000	;66e36
+	dc.w	$0002	;66e38
+	dc.w	$0200	;66e3a
+	dc.w	$0008	;66e3c
+	dc.w	$0004	;66e3e
+	dc.w	$003e	;66e40
+	dc.w	$0000	;66e42
+	dc.w	$fe90	;66e44
+	dc.w	$0000	;66e46
+	dc.w	$ffa0	;66e48
+	dc.w	$ffa0	;66e4a
+	dc.w	$ffd0	;66e4c
+	dc.w	$fff0	;66e4e
+	dc.w	$ffb0	;66e50
+	dc.w	$ffc0	;66e52
+	dc.w	$0010	;66e54
+	dc.w	$ffb0	;66e56
+	dc.w	$ffc0	;66e58
+	dc.w	$0070	;66e5a
+	dc.w	$ff90	;66e5c
+	dc.w	$ffe0	;66e5e
+	dc.w	$fff0	;66e60
+	dc.w	$ffb0	;66e62
+	dc.w	$0000	;66e64
+	dc.w	$0010	;66e66
+	dc.w	$ffb0	;66e68
+	dc.w	$0000	;66e6a
+	dc.w	$fff0	;66e6c
+	dc.w	$0000	;66e6e
+	dc.w	$0000	;66e70
+	dc.w	$0010	;66e72
+	dc.w	$0000	;66e74
+	dc.w	$0000	;66e76
+	dc.w	$0000	;66e78
+	dc.w	$0000	;66e7a
+	dc.w	$0000	;66e7c
+	dc.w	$0002	;66e7e
+	dc.w	$4f84	;66e80
+	dc.w	$0002	;66e82
+	dc.w	$4f94	;66e84
+	dc.w	$0002	;66e86
+	dc.w	$4f9c	;66e88
+	dc.w	$0000	;66e8a
+	dc.w	$0013	;66e8c
+	dc.w	$0000	;66e8e
+	dc.w	$0000	;66e90
+	dc.w	$0000	;66e92
+	dc.w	$0002	;66e94
+	dc.w	$4f84	;66e96
+	dc.w	$0002	;66e98
+	dc.w	$4f8c	;66e9a
+	dc.w	$0002	;66e9c
+	dc.w	$4f9c	;66e9e
+	dc.w	$0000	;66ea0
+	dc.w	$0013	;66ea2
+	dc.w	$ee36	;66ea4
+	dc.w	$e551	;66ea6
+	dc.w	$8c5e	;66ea8
+	dc.w	$0002	;66eaa
+	dc.w	$4f5c	;66eac
+	dc.w	$0002	;66eae
+	dc.w	$4f64	;66eb0
+	dc.w	$0002	;66eb2
+	dc.w	$4f6c	;66eb4
+	dc.w	$0000	;66eb6
+	dc.w	$0016	;66eb8
+	dc.w	$0000	;66eba
+	dc.w	$e5f8	;66ebc
+	dc.w	$8adc	;66ebe
+	dc.w	$0002	;66ec0
+	dc.w	$4f5c	;66ec2
+	dc.w	$0002	;66ec4
+	dc.w	$4f6c	;66ec6
+	dc.w	$0002	;66ec8
+	dc.w	$4f74	;66eca
+	dc.w	$0000	;66ecc
+	dc.w	$0006	;66ece
+	dc.w	$1cda	;66ed0
+	dc.w	$e535	;66ed2
+	dc.w	$8ea5	;66ed4
+	dc.w	$0002	;66ed6
+	dc.w	$4f5c	;66ed8
+	dc.w	$0002	;66eda
+	dc.w	$4f74	;66edc
+	dc.w	$0002	;66ede
+	dc.w	$4f7c	;66ee0
+	dc.w	$0000	;66ee2
+	dc.w	$0016	;66ee4
+	dc.w	$0200	;66ee6
+	dc.w	$0009	;66ee8
+	dc.w	$0009	;66eea
+	dc.w	$0044	;66eec
+	dc.w	$0010	;66eee
+	dc.w	$fd80	;66ef0
+	dc.w	$0000	;66ef2
+	dc.w	$ffd0	;66ef4
+	dc.w	$fe00	;66ef6
+	dc.w	$0030	;66ef8
+	dc.w	$0050	;66efa
+	dc.w	$fe00	;66efc
+	dc.w	$0020	;66efe
+	dc.w	$0010	;66f00
+	dc.w	$fe70	;66f02
+	dc.w	$ffe0	;66f04
+	dc.w	$ffc0	;66f06
+	dc.w	$ff60	;66f08
+	dc.w	$ffc0	;66f0a
+	dc.w	$0060	;66f0c
+	dc.w	$ff60	;66f0e
+	dc.w	$ffd0	;66f10
+	dc.w	$fff0	;66f12
+	dc.w	$ffb0	;66f14
+	dc.w	$0000	;66f16
+	dc.w	$0010	;66f18
+	dc.w	$ffb0	;66f1a
+	dc.w	$0000	;66f1c
+	dc.w	$fff0	;66f1e
+	dc.w	$0000	;66f20
+	dc.w	$0000	;66f22
+	dc.w	$0010	;66f24
+	dc.w	$0000	;66f26
+	dc.w	$0000	;66f28
+	dc.w	$0000	;66f2a
+	dc.w	$0000	;66f2c
+	dc.w	$0000	;66f2e
+	dc.w	$0002	;66f30
+	dc.w	$4f8c	;66f32
+	dc.w	$0002	;66f34
+	dc.w	$4f9c	;66f36
+	dc.w	$0002	;66f38
+	dc.w	$4fa4	;66f3a
+	dc.w	$0000	;66f3c
+	dc.w	$0013	;66f3e
+	dc.w	$0000	;66f40
+	dc.w	$0000	;66f42
+	dc.w	$0000	;66f44
+	dc.w	$0002	;66f46
+	dc.w	$4f8c	;66f48
+	dc.w	$0002	;66f4a
+	dc.w	$4f94	;66f4c
+	dc.w	$0002	;66f4e
+	dc.w	$4fa4	;66f50
+	dc.w	$0000	;66f52
+	dc.w	$0013	;66f54
+	dc.w	$abfc	;66f56
+	dc.w	$ef33	;66f58
+	dc.w	$5404	;66f5a
+	dc.w	$0002	;66f5c
+	dc.w	$4f74	;66f5e
+	dc.w	$0002	;66f60
+	dc.w	$4f7c	;66f62
+	dc.w	$0002	;66f64
+	dc.w	$4f8c	;66f66
+	dc.w	$0000	;66f68
+	dc.w	$0016	;66f6a
+	dc.w	$0000	;66f6c
+	dc.w	$f410	;66f6e
+	dc.w	$7767	;66f70
+	dc.w	$0002	;66f72
+	dc.w	$4f74	;66f74
+	dc.w	$0002	;66f76
+	dc.w	$4f8c	;66f78
+	dc.w	$0002	;66f7a
+	dc.w	$4f94	;66f7c
+	dc.w	$0000	;66f7e
+	dc.w	$0006	;66f80
+	dc.w	$3573	;66f82
+	dc.w	$f550	;66f84
+	dc.w	$6ae7	;66f86
+	dc.w	$0002	;66f88
+	dc.w	$4f74	;66f8a
+	dc.w	$0002	;66f8c
+	dc.w	$4f84	;66f8e
+	dc.w	$0002	;66f90
+	dc.w	$4f94	;66f92
+	dc.w	$0000	;66f94
+	dc.w	$0016	;66f96
+	dc.w	$c1c5	;66f98
+	dc.w	$de56	;66f9a
+	dc.w	$9f15	;66f9c
+	dc.w	$0002	;66f9e
+	dc.w	$4f64	;66fa0
+	dc.w	$0002	;66fa2
+	dc.w	$4f74	;66fa4
+	dc.w	$0002	;66fa6
+	dc.w	$4f7c	;66fa8
+	dc.w	$0000	;66faa
+	dc.w	$0006	;66fac
+	dc.w	$3917	;66fae
+	dc.w	$e626	;66fb0
+	dc.w	$99ab	;66fb2
+	dc.w	$0002	;66fb4
+	dc.w	$4f6c	;66fb6
+	dc.w	$0002	;66fb8
+	dc.w	$4f74	;66fba
+	dc.w	$0002	;66fbc
+	dc.w	$4f84	;66fbe
+	dc.w	$0000	;66fc0
+	dc.w	$0006	;66fc2
+	dc.w	$0e37	;66fc4
+	dc.w	$dc76	;66fc6
+	dc.w	$71bb	;66fc8
+	dc.w	$0002	;66fca
+	dc.w	$4f5c	;66fcc
+	dc.w	$0002	;66fce
+	dc.w	$4f64	;66fd0
+	dc.w	$0002	;66fd2
+	dc.w	$4f6c	;66fd4
+	dc.w	$0000	;66fd6
+	dc.w	$000a	;66fd8
+	dc.w	$aad3	;66fda
+	dc.w	$f4d5	;66fdc
+	dc.w	$ac38	;66fde
+	dc.w	$0002	;66fe0
+	dc.w	$4f5c	;66fe2
+	dc.w	$0002	;66fe4
+	dc.w	$4f64	;66fe6
+	dc.w	$0002	;66fe8
+	dc.w	$4f74	;66fea
+	dc.w	$0000	;66fec
+	dc.w	$000a	;66fee
+	dc.w	$489b	;66ff0
+	dc.w	$f360	;66ff2
+	dc.w	$a14c	;66ff4
+	dc.w	$0002	;66ff6
+	dc.w	$4f5c	;66ff8
+	dc.w	$0002	;66ffa
+	dc.w	$4f6c	;66ffc
+	dc.w	$0002	;66ffe
+	dc.w	$4f74	;67000
+	dc.w	$0000	;67002
+	dc.w	$000a	;67004
+	dc.w	$0000	;67006
+	dc.w	$0019	;67008
+	dc.w	$0013	;6700a
+	dc.w	$00a4	;6700c
+	dc.w	$ff20	;6700e
+	dc.w	$0000	;67010
+	dc.w	$fff0	;67012
+	dc.w	$ffc0	;67014
+	dc.w	$fef0	;67016
+	dc.w	$0000	;67018
+	dc.w	$0040	;6701a
+	dc.w	$fef0	;6701c
+	dc.w	$0000	;6701e
+	dc.w	$ff20	;67020
+	dc.w	$ff50	;67022
+	dc.w	$0080	;67024
+	dc.w	$00e0	;67026
+	dc.w	$ff50	;67028
+	dc.w	$0080	;6702a
+	dc.w	$ff20	;6702c
+	dc.w	$ff50	;6702e
+	dc.w	$ff80	;67030
+	dc.w	$00e0	;67032
+	dc.w	$ff50	;67034
+	dc.w	$ff80	;67036
+lb_67038:
+	dc.w	$ff20	;67038
+	dc.w	$0000	;6703a
+	dc.w	$0080	;6703c
+lb_6703e:
+	dc.w	$00e0	;6703e
+	dc.w	$0000	;67040
+	dc.w	$0080	;67042
+lb_67044:
+	dc.w	$ff20	;67044
+	dc.w	$0000	;67046
+	dc.w	$ff80	;67048
+lb_6704a:
+	dc.w	$00e0	;6704a
+	dc.w	$0000	;6704c
+	dc.w	$ff80	;6704e
+	dc.w	$ff50	;67050
+	dc.w	$ffd0	;67052
+	dc.w	$ff80	;67054
+	dc.w	$ff50	;67056
+	dc.w	$ff90	;67058
+	dc.w	$ff80	;6705a
+	dc.w	$ff90	;6705c
+	dc.w	$ff90	;6705e
+	dc.w	$ff80	;67060
+	dc.w	$ff90	;67062
+	dc.w	$ffd0	;67064
+	dc.w	$ff80	;67066
+	dc.w	$ffc0	;67068
+	dc.w	$0000	;6706a
+	dc.w	$ff80	;6706c
+	dc.w	$ffc0	;6706e
+	dc.w	$ff90	;67070
+	dc.w	$ff80	;67072
+	dc.w	$0000	;67074
+	dc.w	$ff90	;67076
+	dc.w	$ff80	;67078
+	dc.w	$0000	;6707a
+	dc.w	$0000	;6707c
+	dc.w	$ff80	;6707e
+	dc.w	$0040	;67080
+	dc.w	$ffd0	;67082
+	dc.w	$ff80	;67084
+	dc.w	$0040	;67086
+	dc.w	$ff90	;67088
+	dc.w	$ff80	;6708a
+	dc.w	$00b0	;6708c
+	dc.w	$ff90	;6708e
+	dc.w	$ff80	;67090
+	dc.w	$00b0	;67092
+	dc.w	$ffd0	;67094
+	dc.w	$ff80	;67096
+	dc.w	$ff20	;67098
+	dc.w	$0000	;6709a
+	dc.w	$0030	;6709c
+	dc.w	$ff20	;6709e
+	dc.w	$ff90	;670a0
+	dc.w	$0030	;670a2
+	dc.w	$ff20	;670a4
+	dc.w	$ff90	;670a6
+	dc.w	$fff0	;670a8
+	dc.w	$8800	;670aa
+	dc.w	$0000	;670ac
+	dc.w	$0000	;670ae
+	dc.w	$0002	;670b0
+	dc.w	$4f74	;670b2
+	dc.w	$0002	;670b4
+	dc.w	$4f84	;670b6
+	dc.w	$0002	;670b8
+	dc.w	$4f94	;670ba
+	dc.w	$0000	;670bc
+	dc.w	$000f	;670be
+	dc.w	$8800	;670c0
+	dc.w	$0000	;670c2
+	dc.w	$0000	;670c4
+	dc.w	$0002	;670c6
+	dc.w	$4f84	;670c8
+	dc.w	$0002	;670ca
+	dc.w	$4f94	;670cc
+	dc.w	$0002	;670ce
+	dc.w	$4fa4	;670d0
+	dc.w	$0000	;670d2
+	dc.w	$000f	;670d4
+	dc.w	$7800	;670d6
+	dc.w	$0000	;670d8
+	dc.w	$0000	;670da
+	dc.w	$0002	;670dc
+	dc.w	$4f7c	;670de
+	dc.w	$0002	;670e0
+	dc.w	$4f8c	;670e2
+	dc.w	$0002	;670e4
+	dc.w	$4fac	;670e6
+	dc.w	$0000	;670e8
+	dc.w	$000f	;670ea
+	dc.w	$7800	;670ec
+	dc.w	$0000	;670ee
+	dc.w	$0000	;670f0
+	dc.w	$0002	;670f2
+	dc.w	$4f7c	;670f4
+	dc.w	$0002	;670f6
+	dc.w	$4f9c	;670f8
+	dc.w	$0002	;670fa
+	dc.w	$4fac	;670fc
+	dc.w	$0000	;670fe
+	dc.w	$000f	;67100
+	dc.w	$8800	;67102
+	dc.w	$0000	;67104
+	dc.w	$0000	;67106
+	dc.w	$0002	;67108
+	dc.w	$5014	;6710a
+	dc.w	$0002	;6710c
+	dc.w	$501c	;6710e
+	dc.w	$0002	;67110
+	dc.w	$5024	;67112
+	dc.w	$0000	;67114
+	dc.w	$0003	;67116
+	dc.w	$8800	;67118
+	dc.w	$0000	;6711a
+	dc.w	$0000	;6711c
+	dc.w	$0002	;6711e
+	dc.w	$5014	;67120
+	dc.w	$0002	;67122
+	dc.w	$5024	;67124
+	dc.w	$0002	;67126
+	dc.w	$4f5c	;67128
+	dc.w	$0000	;6712a
+	dc.w	$0003	;6712c
+	dc.w	$0000	;6712e
+	dc.w	$0000	;67130
+	dc.w	$8800	;67132
+	dc.w	$0002	;67134
+	dc.w	$4f84	;67136
+	dc.w	$0002	;67138
+	dc.w	$4f8c	;6713a
+	dc.w	$0002	;6713c
+	dc.w	$4fa4	;6713e
+	dc.w	$0000	;67140
+	dc.w	$000f	;67142
+	dc.w	$0000	;67144
+	dc.w	$0000	;67146
+	dc.w	$8800	;67148
+	dc.w	$0002	;6714a
+	dc.w	$4f8c	;6714c
+	dc.w	$0002	;6714e
+	dc.w	$4fa4	;67150
+	dc.w	$0002	;67152
+	dc.w	$4fac	;67154
+	dc.w	$0000	;67156
+	dc.w	$000f	;67158
+	dc.w	$0000	;6715a
+	dc.w	$0000	;6715c
+	dc.w	$8800	;6715e
+	dc.w	$0002	;67160
+	dc.w	$4fb4	;67162
+	dc.w	$0002	;67164
+	dc.w	$4fbc	;67166
+	dc.w	$0002	;67168
+	dc.w	$4fc4	;6716a
+	dc.w	$0000	;6716c
+	dc.w	$0005	;6716e
+	dc.w	$0000	;67170
+	dc.w	$0000	;67172
+	dc.w	$8800	;67174
+	dc.w	$0002	;67176
+	dc.w	$4fb4	;67178
+	dc.w	$0002	;6717a
+	dc.w	$4fc4	;6717c
+	dc.w	$0002	;6717e
+	dc.w	$4fcc	;67180
+	dc.w	$0000	;67182
+	dc.w	$0005	;67184
+	dc.w	$0000	;67186
+	dc.w	$0000	;67188
+	dc.w	$8800	;6718a
+	dc.w	$0002	;6718c
+	dc.w	$4fd4	;6718e
+	dc.w	$0002	;67190
+	dc.w	$4fdc	;67192
+	dc.w	$0002	;67194
+	dc.w	$4fe4	;67196
+	dc.w	$0000	;67198
+	dc.w	$0003	;6719a
+	dc.w	$0000	;6719c
+	dc.w	$0000	;6719e
+	dc.w	$8800	;671a0
+	dc.w	$0002	;671a2
+	dc.w	$4fd4	;671a4
+	dc.w	$0002	;671a6
+	dc.w	$4fe4	;671a8
+	dc.w	$0002	;671aa
+	dc.w	$4fec	;671ac
+	dc.w	$0000	;671ae
+	dc.w	$0003	;671b0
+	dc.w	$0000	;671b2
+	dc.w	$0000	;671b4
+	dc.w	$8800	;671b6
+	dc.w	$0002	;671b8
+	dc.w	$4ff4	;671ba
+	dc.w	$0002	;671bc
+	dc.w	$4ffc	;671be
+	dc.w	$0002	;671c0
+	dc.w	$5004	;671c2
+	dc.w	$0000	;671c4
+	dc.w	$0005	;671c6
+	dc.w	$0000	;671c8
+	dc.w	$0000	;671ca
+	dc.w	$8800	;671cc
+	dc.w	$0002	;671ce
+	dc.w	$4ff4	;671d0
+	dc.w	$0002	;671d2
+	dc.w	$5004	;671d4
+	dc.w	$0002	;671d6
+	dc.w	$500c	;671d8
+	dc.w	$0000	;671da
+	dc.w	$0005	;671dc
+	dc.w	$0000	;671de
+	dc.w	$a000	;671e0
+	dc.w	$4800	;671e2
+	dc.w	$0002	;671e4
+	dc.w	$4f64	;671e6
+	dc.w	$0002	;671e8
+	dc.w	$4f6c	;671ea
+	dc.w	$0002	;671ec
+	dc.w	$4f74	;671ee
+	dc.w	$0000	;671f0
+	dc.w	$0013	;671f2
+	dc.w	$0000	;671f4
+	dc.w	$a000	;671f6
+	dc.w	$4800	;671f8
+	dc.w	$0002	;671fa
+	dc.w	$4f6c	;671fc
+	dc.w	$0002	;671fe
+	dc.w	$4f74	;67200
+	dc.w	$0002	;67202
+	dc.w	$4f7c	;67204
+	dc.w	$0000	;67206
+	dc.w	$0013	;67208
+	dc.w	$c243	;6720a
+	dc.w	$991a	;6720c
+	dc.w	$0000	;6720e
+	dc.w	$0002	;67210
+	dc.w	$4f64	;67212
+	dc.w	$0002	;67214
+	dc.w	$4f74	;67216
+	dc.w	$0002	;67218
+	dc.w	$4f84	;6721a
+	dc.w	$0000	;6721c
+	dc.w	$0013	;6721e
+	dc.w	$3dbd	;67220
+	dc.w	$991a	;67222
+	dc.w	$0000	;67224
+	dc.w	$0002	;67226
+	dc.w	$4f6c	;67228
+	dc.w	$0002	;6722a
+	dc.w	$4f7c	;6722c
+	dc.w	$0002	;6722e
+	dc.w	$4f8c	;67230
+	dc.w	$0000	;67232
+	dc.w	$0013	;67234
+	dc.w	$0000	;67236
+	dc.w	$a000	;67238
+	dc.w	$b800	;6723a
+	dc.w	$0002	;6723c
+	dc.w	$4f64	;6723e
+	dc.w	$0002	;67240
+	dc.w	$4f6c	;67242
+	dc.w	$0002	;67244
+	dc.w	$4f84	;67246
+	dc.w	$0000	;67248
+	dc.w	$000b	;6724a
+	dc.w	$0000	;6724c
+	dc.w	$a000	;6724e
+	dc.w	$b800	;67250
+	dc.w	$0002	;67252
+	dc.w	$4f6c	;67254
+	dc.w	$0002	;67256
+	dc.w	$4f84	;67258
+	dc.w	$0002	;6725a
+	dc.w	$4f8c	;6725c
+	dc.w	$0000	;6725e
+	dc.w	$000b	;67260
+	dc.w	$0000	;67262
+	dc.w	$0029	;67264
+	dc.w	$001b	;67266
+	dc.w	$0104	;67268
+	dc.w	$00e0	;6726a
+	dc.w	$ff20	;6726c
+	dc.w	$fff0	;6726e
+	dc.w	$ffa0	;67270
+	dc.w	$fe60	;67272
+	dc.w	$0000	;67274
+	dc.w	$0060	;67276
+	dc.w	$fe60	;67278
+	dc.w	$0000	;6727a
+	dc.w	$ff20	;6727c
+	dc.w	$fee0	;6727e
+	dc.w	$0080	;67280
+	dc.w	$00e0	;67282
+	dc.w	$fee0	;67284
+	dc.w	$0080	;67286
+	dc.w	$ff20	;67288
+	dc.w	$fee0	;6728a
+	dc.w	$ff80	;6728c
+	dc.w	$00e0	;6728e
+	dc.w	$fee0	;67290
+	dc.w	$ff80	;67292
+	dc.w	$ff20	;67294
+	dc.w	$0000	;67296
+	dc.w	$0080	;67298
+	dc.w	$00e0	;6729a
+	dc.w	$0000	;6729c
+	dc.w	$0080	;6729e
+	dc.w	$ff20	;672a0
+	dc.w	$0000	;672a2
+	dc.w	$ff80	;672a4
+	dc.w	$00e0	;672a6
+	dc.w	$0000	;672a8
+	dc.w	$ff80	;672aa
+	dc.w	$ff40	;672ac
+	dc.w	$ffd0	;672ae
+	dc.w	$ff80	;672b0
+	dc.w	$ff40	;672b2
+	dc.w	$ff90	;672b4
+	dc.w	$ff80	;672b6
+	dc.w	$ffa0	;672b8
+	dc.w	$ff90	;672ba
+	dc.w	$ff80	;672bc
+	dc.w	$ffa0	;672be
+	dc.w	$ffd0	;672c0
+	dc.w	$ff80	;672c2
+	dc.w	$ffe0	;672c4
+	dc.w	$0000	;672c6
+	dc.w	$ff80	;672c8
+	dc.w	$ffe0	;672ca
+	dc.w	$ff90	;672cc
+	dc.w	$ff80	;672ce
+	dc.w	$0020	;672d0
+	dc.w	$ff90	;672d2
+	dc.w	$ff80	;672d4
+	dc.w	$0020	;672d6
+	dc.w	$0000	;672d8
+	dc.w	$ff80	;672da
+	dc.w	$0060	;672dc
+	dc.w	$ffd0	;672de
+	dc.w	$ff80	;672e0
+	dc.w	$0060	;672e2
+	dc.w	$ff90	;672e4
+	dc.w	$ff80	;672e6
+	dc.w	$00b0	;672e8
+	dc.w	$ff90	;672ea
+	dc.w	$ff80	;672ec
+	dc.w	$00b0	;672ee
+	dc.w	$ffd0	;672f0
+	dc.w	$ff80	;672f2
+	dc.w	$ff40	;672f4
+	dc.w	$ff30	;672f6
+	dc.w	$ff80	;672f8
+	dc.w	$ff40	;672fa
+	dc.w	$fef0	;672fc
+	dc.w	$ff80	;672fe
+	dc.w	$ff90	;67300
+	dc.w	$fef0	;67302
+	dc.w	$ff80	;67304
+	dc.w	$ff90	;67306
+	dc.w	$ff30	;67308
+	dc.w	$ff80	;6730a
+	dc.w	$0030	;6730c
+	dc.w	$ff30	;6730e
+	dc.w	$ff80	;67310
+	dc.w	$0030	;67312
+	dc.w	$fef0	;67314
+	dc.w	$ff80	;67316
+	dc.w	$0090	;67318
+	dc.w	$fef0	;6731a
+	dc.w	$ff80	;6731c
+	dc.w	$0090	;6731e
+	dc.w	$ff30	;67320
+	dc.w	$ff80	;67322
+	dc.w	$ff20	;67324
+	dc.w	$ffc0	;67326
+	dc.w	$0050	;67328
+	dc.w	$ff20	;6732a
+	dc.w	$ff90	;6732c
+	dc.w	$0050	;6732e
+	dc.w	$ff20	;67330
+	dc.w	$ff90	;67332
+	dc.w	$0020	;67334
+	dc.w	$ff20	;67336
+	dc.w	$ffc0	;67338
+	dc.w	$0020	;6733a
+	dc.w	$ff20	;6733c
+	dc.w	$0000	;6733e
+	dc.w	$ffe0	;67340
+	dc.w	$ff20	;67342
+	dc.w	$ff90	;67344
+	dc.w	$ffe0	;67346
+	dc.w	$ff20	;67348
+	dc.w	$ff90	;6734a
+	dc.w	$ffa0	;6734c
+	dc.w	$ff20	;6734e
+	dc.w	$0000	;67350
+	dc.w	$ffa0	;67352
+	dc.w	$00e0	;67354
+	dc.w	$ff20	;67356
+	dc.w	$0030	;67358
+	dc.w	$00e0	;6735a
+	dc.w	$fef0	;6735c
+	dc.w	$0030	;6735e
+	dc.w	$00e0	;67360
+	dc.w	$fef0	;67362
+	dc.w	$fff0	;67364
+	dc.w	$8800	;67366
+	dc.w	$0000	;67368
+	dc.w	$0000	;6736a
+	dc.w	$0002	;6736c
+	dc.w	$4f74	;6736e
+	dc.w	$0002	;67370
+	dc.w	$4f94	;67372
+	dc.w	$0002	;67374
+	dc.w	$4fa4	;67376
+	dc.w	$0000	;67378
+	dc.w	$000f	;6737a
+	dc.w	$8800	;6737c
+	dc.w	$0000	;6737e
+	dc.w	$0000	;67380
+	dc.w	$0002	;67382
+	dc.w	$4f74	;67384
+	dc.w	$0002	;67386
+	dc.w	$4f84	;67388
+	dc.w	$0002	;6738a
+	dc.w	$4fa4	;6738c
+	dc.w	$0000	;6738e
+	dc.w	$000f	;67390
+	dc.w	$7800	;67392
+	dc.w	$0000	;67394
+	dc.w	$0000	;67396
+	dc.w	$0002	;67398
+	dc.w	$4f7c	;6739a
+	dc.w	$0002	;6739c
+	dc.w	$4f8c	;6739e
+	dc.w	$0002	;673a0
+	dc.w	$4fac	;673a2
+	dc.w	$0000	;673a4
+	dc.w	$000f	;673a6
+	dc.w	$7800	;673a8
+	dc.w	$0000	;673aa
+	dc.w	$0000	;673ac
+	dc.w	$0002	;673ae
+	dc.w	$4f7c	;673b0
+	dc.w	$0002	;673b2
+	dc.w	$4f9c	;673b4
+	dc.w	$0002	;673b6
+	dc.w	$4fac	;673b8
+	dc.w	$0000	;673ba
+	dc.w	$000f	;673bc
+	dc.w	$8800	;673be
+	dc.w	$0000	;673c0
+	dc.w	$0000	;673c2
+	dc.w	$0002	;673c4
+	dc.w	$5054	;673c6
+	dc.w	$0002	;673c8
+	dc.w	$505c	;673ca
+	dc.w	$0002	;673cc
+	dc.w	$5064	;673ce
+	dc.w	$0000	;673d0
+	dc.w	$0005	;673d2
+	dc.w	$8800	;673d4
+	dc.w	$0000	;673d6
+	dc.w	$0000	;673d8
+	dc.w	$0002	;673da
+	dc.w	$5054	;673dc
+	dc.w	$0002	;673de
+	dc.w	$5064	;673e0
+	dc.w	$0002	;673e2
+	dc.w	$506c	;673e4
+	dc.w	$0000	;673e6
+	dc.w	$0005	;673e8
+	dc.w	$8800	;673ea
+	dc.w	$0000	;673ec
+	dc.w	$0000	;673ee
+	dc.w	$0002	;673f0
+	dc.w	$5074	;673f2
+	dc.w	$0002	;673f4
+	dc.w	$507c	;673f6
+	dc.w	$0002	;673f8
+	dc.w	$5084	;673fa
+	dc.w	$0000	;673fc
+	dc.w	$0005	;673fe
+	dc.w	$8800	;67400
+	dc.w	$0000	;67402
+	dc.w	$0000	;67404
+	dc.w	$0002	;67406
+	dc.w	$5074	;67408
+	dc.w	$0002	;6740a
+	dc.w	$5084	;6740c
+	dc.w	$0002	;6740e
+	dc.w	$508c	;67410
+	dc.w	$0000	;67412
+	dc.w	$0005	;67414
+	dc.w	$7800	;67416
+	dc.w	$0000	;67418
+	dc.w	$0000	;6741a
+	dc.w	$0002	;6741c
+	dc.w	$5094	;6741e
+	dc.w	$0002	;67420
+	dc.w	$509c	;67422
+	dc.w	$0002	;67424
+	dc.w	$50a4	;67426
+	dc.w	$0000	;67428
+	dc.w	$0005	;6742a
+	dc.w	$7800	;6742c
+	dc.w	$0000	;6742e
+	dc.w	$0000	;67430
+	dc.w	$0002	;67432
+	dc.w	$5094	;67434
+	dc.w	$0002	;67436
+	dc.w	$50a4	;67438
+	dc.w	$0002	;6743a
+	dc.w	$4f5c	;6743c
+	dc.w	$0000	;6743e
+	dc.w	$0005	;67440
+	dc.w	$0000	;67442
+	dc.w	$0000	;67444
+	dc.w	$8800	;67446
+	dc.w	$0002	;67448
+	dc.w	$4f84	;6744a
+	dc.w	$0002	;6744c
+	dc.w	$4f8c	;6744e
+	dc.w	$0002	;67450
+	dc.w	$4fa4	;67452
+	dc.w	$0000	;67454
+	dc.w	$000f	;67456
+	dc.w	$0000	;67458
+	dc.w	$0000	;6745a
+	dc.w	$8800	;6745c
+	dc.w	$0002	;6745e
+	dc.w	$4f8c	;67460
+	dc.w	$0002	;67462
+	dc.w	$4fa4	;67464
+	dc.w	$0002	;67466
+	dc.w	$4fac	;67468
+	dc.w	$0000	;6746a
+	dc.w	$000f	;6746c
+	dc.w	$0000	;6746e
+	dc.w	$0000	;67470
+	dc.w	$8800	;67472
+	dc.w	$0002	;67474
+	dc.w	$5014	;67476
+	dc.w	$0002	;67478
+	dc.w	$501c	;6747a
+	dc.w	$0002	;6747c
+	dc.w	$5024	;6747e
+	dc.w	$0000	;67480
+	dc.w	$0005	;67482
+	dc.w	$0000	;67484
+	dc.w	$0000	;67486
+	dc.w	$8800	;67488
+	dc.w	$0002	;6748a
+	dc.w	$5014	;6748c
+	dc.w	$0002	;6748e
+	dc.w	$5024	;67490
+	dc.w	$0002	;67492
+	dc.w	$502c	;67494
+	dc.w	$0000	;67496
+	dc.w	$0005	;67498
+	dc.w	$0000	;6749a
+	dc.w	$0000	;6749c
+	dc.w	$8800	;6749e
+	dc.w	$0002	;674a0
+	dc.w	$5034	;674a2
+	dc.w	$0002	;674a4
+	dc.w	$503c	;674a6
+	dc.w	$0002	;674a8
+	dc.w	$5044	;674aa
+	dc.w	$0000	;674ac
+	dc.w	$0005	;674ae
+	dc.w	$0000	;674b0
+	dc.w	$0000	;674b2
+	dc.w	$8800	;674b4
+	dc.w	$0002	;674b6
+	dc.w	$5034	;674b8
+	dc.w	$0002	;674ba
+	dc.w	$5044	;674bc
+	dc.w	$0002	;674be
+	dc.w	$504c	;674c0
+	dc.w	$0000	;674c2
+	dc.w	$0005	;674c4
+	dc.w	$0000	;674c6
+	dc.w	$0000	;674c8
+	dc.w	$8800	;674ca
+	dc.w	$0002	;674cc
+	dc.w	$4fb4	;674ce
+	dc.w	$0002	;674d0
+	dc.w	$4fbc	;674d2
+	dc.w	$0002	;674d4
+	dc.w	$4fc4	;674d6
+	dc.w	$0000	;674d8
+	dc.w	$0005	;674da
+	dc.w	$0000	;674dc
+	dc.w	$0000	;674de
+	dc.w	$8800	;674e0
+	dc.w	$0002	;674e2
+	dc.w	$4fb4	;674e4
+	dc.w	$0002	;674e6
+	dc.w	$4fc4	;674e8
+	dc.w	$0002	;674ea
+	dc.w	$4fcc	;674ec
+	dc.w	$0000	;674ee
+	dc.w	$0005	;674f0
+	dc.w	$0000	;674f2
+	dc.w	$0000	;674f4
+	dc.w	$8800	;674f6
+	dc.w	$0002	;674f8
+	dc.w	$4fd4	;674fa
+	dc.w	$0002	;674fc
+	dc.w	$4fdc	;674fe
+	dc.w	$0002	;67500
+	dc.w	$4fe4	;67502
+	dc.w	$0000	;67504
+	dc.w	$000d	;67506
+	dc.w	$0000	;67508
+	dc.w	$0000	;6750a
+	dc.w	$8800	;6750c
+	dc.w	$0002	;6750e
+	dc.w	$4fd4	;67510
+	dc.w	$0002	;67512
+	dc.w	$4fe4	;67514
+	dc.w	$0002	;67516
+	dc.w	$4fec	;67518
+	dc.w	$0000	;6751a
+	dc.w	$000d	;6751c
+	dc.w	$0000	;6751e
+	dc.w	$0000	;67520
+	dc.w	$8800	;67522
+	dc.w	$0002	;67524
+	dc.w	$4ff4	;67526
+	dc.w	$0002	;67528
+	dc.w	$4ffc	;6752a
+	dc.w	$0002	;6752c
+	dc.w	$5004	;6752e
+	dc.w	$0000	;67530
+	dc.w	$0005	;67532
+	dc.w	$0000	;67534
+	dc.w	$0000	;67536
+	dc.w	$8800	;67538
+	dc.w	$0002	;6753a
+	dc.w	$4ff4	;6753c
+	dc.w	$0002	;6753e
+	dc.w	$5004	;67540
+	dc.w	$0002	;67542
+	dc.w	$500c	;67544
+	dc.w	$0000	;67546
+	dc.w	$0005	;67548
+	dc.w	$0000	;6754a
+	dc.w	$ab26	;6754c
+	dc.w	$54da	;6754e
+	dc.w	$0002	;67550
+	dc.w	$4f64	;67552
+	dc.w	$0002	;67554
+	dc.w	$4f6c	;67556
+	dc.w	$0002	;67558
+	dc.w	$4f74	;6755a
+	dc.w	$0000	;6755c
+	dc.w	$0013	;6755e
+	dc.w	$0000	;67560
+	dc.w	$ab26	;67562
+	dc.w	$54da	;67564
+	dc.w	$0002	;67566
+	dc.w	$4f6c	;67568
+	dc.w	$0002	;6756a
+	dc.w	$4f74	;6756c
+	dc.w	$0002	;6756e
+	dc.w	$4f7c	;67570
+	dc.w	$0000	;67572
+	dc.w	$0013	;67574
+	dc.w	$ab26	;67576
+	dc.w	$ab26	;67578
+	dc.w	$0000	;6757a
+	dc.w	$0002	;6757c
+	dc.w	$4f64	;6757e
+	dc.w	$0002	;67580
+	dc.w	$4f74	;67582
+	dc.w	$0002	;67584
+	dc.w	$4f84	;67586
+	dc.w	$0000	;67588
+	dc.w	$0013	;6758a
+	dc.w	$54da	;6758c
+	dc.w	$ab26	;6758e
+	dc.w	$0000	;67590
+	dc.w	$0002	;67592
+	dc.w	$4f6c	;67594
+	dc.w	$0002	;67596
+	dc.w	$4f7c	;67598
+	dc.w	$0002	;6759a
+	dc.w	$4f8c	;6759c
+	dc.w	$0000	;6759e
+	dc.w	$0013	;675a0
+	dc.w	$0000	;675a2
+	dc.w	$ab26	;675a4
+	dc.w	$ab26	;675a6
+	dc.w	$0002	;675a8
+	dc.w	$4f64	;675aa
+	dc.w	$0002	;675ac
+	dc.w	$4f6c	;675ae
+	dc.w	$0002	;675b0
+	dc.w	$4f84	;675b2
+	dc.w	$0000	;675b4
+	dc.w	$000b	;675b6
+	dc.w	$0000	;675b8
+	dc.w	$ab26	;675ba
+	dc.w	$ab26	;675bc
+	dc.w	$0002	;675be
+	dc.w	$4f6c	;675c0
+	dc.w	$0002	;675c2
+	dc.w	$4f84	;675c4
+	dc.w	$0002	;675c6
+	dc.w	$4f8c	;675c8
+	dc.w	$0000	;675ca
+	dc.w	$000b	;675cc
+	dc.w	$0000	;675ce
+	dc.w	$0026	;675d0
+	dc.w	$001a	;675d2
+	dc.w	$00f2	;675d4
+	dc.w	$0000	;675d6
+	dc.w	$fe70	;675d8
+	dc.w	$0000	;675da
+	dc.w	$ff20	;675dc
+	dc.w	$fe70	;675de
+	dc.w	$0000	;675e0
+	dc.w	$00e0	;675e2
+	dc.w	$fe70	;675e4
+	dc.w	$0000	;675e6
+	dc.w	$0000	;675e8
+	dc.w	$fe70	;675ea
+	dc.w	$ff80	;675ec
+	dc.w	$ff90	;675ee
+	dc.w	$ff10	;675f0
+	dc.w	$ff80	;675f2
+	dc.w	$0070	;675f4
+	dc.w	$ff10	;675f6
+	dc.w	$ff80	;675f8
+	dc.w	$ff20	;675fa
+	dc.w	$ff10	;675fc
+	dc.w	$0080	;675fe
+	dc.w	$ff20	;67600
+	dc.w	$ff10	;67602
+	dc.w	$ff80	;67604
+	dc.w	$00e0	;67606
+	dc.w	$ff10	;67608
+	dc.w	$0080	;6760a
+	dc.w	$00e0	;6760c
+	dc.w	$ff10	;6760e
+	dc.w	$ff80	;67610
+	dc.w	$ff20	;67612
+	dc.w	$0000	;67614
+	dc.w	$0080	;67616
+	dc.w	$ff20	;67618
+	dc.w	$0000	;6761a
+	dc.w	$ff80	;6761c
+	dc.w	$0000	;6761e
+	dc.w	$0000	;67620
+	dc.w	$0000	;67622
+	dc.w	$00e0	;67624
+	dc.w	$0000	;67626
+	dc.w	$ff80	;67628
+	dc.w	$00e0	;6762a
+	dc.w	$0000	;6762c
+	dc.w	$0080	;6762e
+	dc.w	$ff50	;67630
+	dc.w	$ffd0	;67632
+	dc.w	$ff80	;67634
+	dc.w	$ff50	;67636
+	dc.w	$ff90	;67638
+	dc.w	$ff80	;6763a
+	dc.w	$ff90	;6763c
+	dc.w	$ff90	;6763e
+	dc.w	$ff80	;67640
+	dc.w	$ff90	;67642
+	dc.w	$ffd0	;67644
+	dc.w	$ff80	;67646
+	dc.w	$ffc0	;67648
+	dc.w	$ff60	;6764a
+	dc.w	$ff80	;6764c
+	dc.w	$ffc0	;6764e
+	dc.w	$ff20	;67650
+	dc.w	$ff80	;67652
+	dc.w	$0040	;67654
+	dc.w	$ff20	;67656
+	dc.w	$ff80	;67658
+	dc.w	$0040	;6765a
+	dc.w	$ff60	;6765c
+	dc.w	$ff80	;6765e
+	dc.w	$0060	;67660
+	dc.w	$ffd0	;67662
+	dc.w	$ff80	;67664
+	dc.w	$0060	;67666
+	dc.w	$ff90	;67668
+	dc.w	$ff80	;6766a
+	dc.w	$00b0	;6766c
+	dc.w	$ff90	;6766e
+	dc.w	$ff80	;67670
+	dc.w	$00b0	;67672
+	dc.w	$ffd0	;67674
+	dc.w	$ff80	;67676
+	dc.w	$ffe0	;67678
+	dc.w	$0000	;6767a
+	dc.w	$ff80	;6767c
+	dc.w	$ffe0	;6767e
+	dc.w	$ff90	;67680
+	dc.w	$ff80	;67682
+	dc.w	$0020	;67684
+	dc.w	$ff90	;67686
+	dc.w	$ff80	;67688
+	dc.w	$0020	;6768a
+	dc.w	$0000	;6768c
+	dc.w	$ff80	;6768e
+	dc.w	$ff20	;67690
+	dc.w	$ff60	;67692
+	dc.w	$ffd0	;67694
+	dc.w	$ff20	;67696
+	dc.w	$ff20	;67698
+	dc.w	$ffd0	;6769a
+	dc.w	$ff20	;6769c
+	dc.w	$ff20	;6769e
+	dc.w	$0020	;676a0
+	dc.w	$ff20	;676a2
+	dc.w	$ff60	;676a4
+	dc.w	$0020	;676a6
+	dc.w	$00e0	;676a8
+	dc.w	$0000	;676aa
+	dc.w	$ffd0	;676ac
+	dc.w	$00e0	;676ae
+	dc.w	$ff90	;676b0
+	dc.w	$ffd0	;676b2
+	dc.w	$00e0	;676b4
+	dc.w	$ff90	;676b6
+	dc.w	$0010	;676b8
+	dc.w	$00e0	;676ba
+	dc.w	$0000	;676bc
+	dc.w	$0010	;676be
+	dc.w	$8800	;676c0
+	dc.w	$0000	;676c2
+	dc.w	$0000	;676c4
+	dc.w	$0002	;676c6
+	dc.w	$4f8c	;676c8
+	dc.w	$0002	;676ca
+	dc.w	$4f94	;676cc
+	dc.w	$0002	;676ce
+	dc.w	$4fac	;676d0
+	dc.w	$0000	;676d2
+	dc.w	$000f	;676d4
+	dc.w	$8800	;676d6
+	dc.w	$0000	;676d8
+	dc.w	$0000	;676da
+	dc.w	$0002	;676dc
+	dc.w	$4f94	;676de
+	dc.w	$0002	;676e0
+	dc.w	$4fac	;676e2
+	dc.w	$0002	;676e4
+	dc.w	$4fb4	;676e6
+	dc.w	$0000	;676e8
+	dc.w	$000f	;676ea
+	dc.w	$7800	;676ec
+	dc.w	$0000	;676ee
+	dc.w	$0000	;676f0
+	dc.w	$0002	;676f2
+	dc.w	$4fa4	;676f4
+	dc.w	$0002	;676f6
+	dc.w	$4fc4	;676f8
+	dc.w	$0002	;676fa
+	dc.w	$4fcc	;676fc
+	dc.w	$0000	;676fe
+	dc.w	$000f	;67700
+	dc.w	$7800	;67702
+	dc.w	$0000	;67704
+	dc.w	$0000	;67706
+	dc.w	$0002	;67708
+	dc.w	$4f9c	;6770a
+	dc.w	$0002	;6770c
+	dc.w	$4fa4	;6770e
+	dc.w	$0002	;67710
+	dc.w	$4fcc	;67712
+	dc.w	$0000	;67714
+	dc.w	$000f	;67716
+	dc.w	$8800	;67718
+	dc.w	$0000	;6771a
+	dc.w	$0000	;6771c
+	dc.w	$0002	;6771e
+	dc.w	$5054	;67720
+	dc.w	$0002	;67722
+	dc.w	$505c	;67724
+	dc.w	$0002	;67726
+	dc.w	$506c	;67728
+	dc.w	$0000	;6772a
+	dc.w	$0005	;6772c
+	dc.w	$8800	;6772e
+	dc.w	$0000	;67730
+	dc.w	$0000	;67732
+	dc.w	$0002	;67734
+	dc.w	$505c	;67736
+	dc.w	$0002	;67738
+	dc.w	$5064	;6773a
+	dc.w	$0002	;6773c
+	dc.w	$506c	;6773e
+	dc.w	$0000	;67740
+	dc.w	$0005	;67742
+	dc.w	$7800	;67744
+	dc.w	$0000	;67746
+	dc.w	$0000	;67748
+	dc.w	$0002	;6774a
+	dc.w	$5074	;6774c
+	dc.w	$0002	;6774e
+	dc.w	$507c	;67750
+	dc.w	$0002	;67752
+	dc.w	$508c	;67754
+	dc.w	$0000	;67756
+	dc.w	$0002	;67758
+	dc.w	$7800	;6775a
+	dc.w	$0000	;6775c
+	dc.w	$0000	;6775e
+	dc.w	$0002	;67760
+	dc.w	$507c	;67762
+	dc.w	$0002	;67764
+	dc.w	$5084	;67766
+	dc.w	$0002	;67768
+	dc.w	$508c	;6776a
+	dc.w	$0000	;6776c
+	dc.w	$0002	;6776e
+	dc.w	$0000	;67770
+	dc.w	$0000	;67772
+	dc.w	$8800	;67774
+	dc.w	$0002	;67776
+	dc.w	$4f94	;67778
+	dc.w	$0002	;6777a
+	dc.w	$4fb4	;6777c
+	dc.w	$0002	;6777e
+	dc.w	$4fc4	;67780
+	dc.w	$0000	;67782
+	dc.w	$000f	;67784
+	dc.w	$0000	;67786
+	dc.w	$0000	;67788
+	dc.w	$8800	;6778a
+	dc.w	$0002	;6778c
+	dc.w	$4f94	;6778e
+	dc.w	$0002	;67790
+	dc.w	$4fa4	;67792
+	dc.w	$0002	;67794
+	dc.w	$4fc4	;67796
+	dc.w	$0000	;67798
+	dc.w	$000f	;6779a
+	dc.w	$0000	;6779c
+	dc.w	$0000	;6779e
+	dc.w	$8800	;677a0
+	dc.w	$0002	;677a2
+	dc.w	$4fd4	;677a4
+	dc.w	$0002	;677a6
+	dc.w	$4fdc	;677a8
+	dc.w	$0002	;677aa
+	dc.w	$4fec	;677ac
+	dc.w	$0000	;677ae
+	dc.w	$0005	;677b0
+	dc.w	$0000	;677b2
+	dc.w	$0000	;677b4
+	dc.w	$8800	;677b6
+	dc.w	$0002	;677b8
+	dc.w	$4fdc	;677ba
+	dc.w	$0002	;677bc
+	dc.w	$4fe4	;677be
+	dc.w	$0002	;677c0
+	dc.w	$4fec	;677c2
+	dc.w	$0000	;677c4
+	dc.w	$0005	;677c6
+	dc.w	$0000	;677c8
+	dc.w	$0000	;677ca
+	dc.w	$8800	;677cc
+	dc.w	$0002	;677ce
+	dc.w	$4ff4	;677d0
+	dc.w	$0002	;677d2
+	dc.w	$4ffc	;677d4
+	dc.w	$0002	;677d6
+	dc.w	$500c	;677d8
+	dc.w	$0000	;677da
+	dc.w	$0005	;677dc
+	dc.w	$0000	;677de
+	dc.w	$0000	;677e0
+	dc.w	$8800	;677e2
+	dc.w	$0002	;677e4
+	dc.w	$4ffc	;677e6
+	dc.w	$0002	;677e8
+	dc.w	$5004	;677ea
+	dc.w	$0002	;677ec
+	dc.w	$500c	;677ee
+	dc.w	$0000	;677f0
+	dc.w	$0005	;677f2
+	dc.w	$0000	;677f4
+	dc.w	$0000	;677f6
+	dc.w	$8800	;677f8
+	dc.w	$0002	;677fa
+	dc.w	$5014	;677fc
+	dc.w	$0002	;677fe
+	dc.w	$501c	;67800
+	dc.w	$0002	;67802
+	dc.w	$502c	;67804
+	dc.w	$0000	;67806
+	dc.w	$0005	;67808
+	dc.w	$0000	;6780a
+	dc.w	$0000	;6780c
+	dc.w	$8800	;6780e
+	dc.w	$0002	;67810
+	dc.w	$501c	;67812
+	dc.w	$0002	;67814
+	dc.w	$5024	;67816
+	dc.w	$0002	;67818
+	dc.w	$502c	;6781a
+	dc.w	$0000	;6781c
+	dc.w	$0005	;6781e
+	dc.w	$0000	;67820
+	dc.w	$0000	;67822
+	dc.w	$8800	;67824
+	dc.w	$0002	;67826
+	dc.w	$5034	;67828
+	dc.w	$0002	;6782a
+	dc.w	$503c	;6782c
+	dc.w	$0002	;6782e
+	dc.w	$504c	;67830
+	dc.w	$0000	;67832
+	dc.w	$0002	;67834
+	dc.w	$0000	;67836
+	dc.w	$0000	;67838
+	dc.w	$8800	;6783a
+	dc.w	$0002	;6783c
+	dc.w	$503c	;6783e
+	dc.w	$0002	;67840
+	dc.w	$5044	;67842
+	dc.w	$0002	;67844
+	dc.w	$504c	;67846
+	dc.w	$0000	;67848
+	dc.w	$0002	;6784a
+	dc.w	$0000	;6784c
+	dc.w	$b50a	;6784e
+	dc.w	$5db4	;67850
+	dc.w	$0002	;67852
+	dc.w	$4f64	;67854
+	dc.w	$0002	;67856
+	dc.w	$4f8c	;67858
+	dc.w	$0002	;6785a
+	dc.w	$4f9c	;6785c
+	dc.w	$0000	;6785e
+	dc.w	$0013	;67860
+	dc.w	$0000	;67862
+	dc.w	$b50a	;67864
+	dc.w	$5db4	;67866
+	dc.w	$0002	;67868
+	dc.w	$4f64	;6786a
+	dc.w	$0002	;6786c
+	dc.w	$4f6c	;6786e
+	dc.w	$0002	;67870
+	dc.w	$4f9c	;67872
+	dc.w	$0000	;67874
+	dc.w	$0013	;67876
+	dc.w	$8800	;67878
+	dc.w	$0000	;6787a
+	dc.w	$0000	;6787c
+	dc.w	$0002	;6787e
+	dc.w	$4f64	;67880
+	dc.w	$0002	;67882
+	dc.w	$4f8c	;67884
+	dc.w	$0002	;67886
+	dc.w	$4f94	;67888
+	dc.w	$0000	;6788a
+	dc.w	$0013	;6788c
+	dc.w	$7800	;6788e
+	dc.w	$0000	;67890
+	dc.w	$0000	;67892
+	dc.w	$0002	;67894
+	dc.w	$4f6c	;67896
+	dc.w	$0002	;67898
+	dc.w	$4f9c	;6789a
+	dc.w	$0002	;6789c
+	dc.w	$4fa4	;6789e
+	dc.w	$0000	;678a0
+	dc.w	$0013	;678a2
+	dc.w	$0000	;678a4
+	dc.w	$b50a	;678a6
+	dc.w	$a24c	;678a8
+	dc.w	$0002	;678aa
+	dc.w	$4f64	;678ac
+	dc.w	$0002	;678ae
+	dc.w	$4f94	;678b0
+	dc.w	$0002	;678b2
+	dc.w	$4fa4	;678b4
+	dc.w	$0000	;678b6
+	dc.w	$000b	;678b8
+	dc.w	$0000	;678ba
+	dc.w	$b50a	;678bc
+	dc.w	$a24c	;678be
+	dc.w	$0002	;678c0
+	dc.w	$4f64	;678c2
+	dc.w	$0002	;678c4
+	dc.w	$4f6c	;678c6
+	dc.w	$0002	;678c8
+	dc.w	$4fa4	;678ca
+	dc.w	$0000	;678cc
+	dc.w	$000b	;678ce
+	dc.w	$9db2	;678d0
+	dc.w	$bb30	;678d2
+	dc.w	$0000	;678d4
+	dc.w	$0002	;678d6
+	dc.w	$4f5c	;678d8
+	dc.w	$0002	;678da
+	dc.w	$4f74	;678dc
+	dc.w	$0002	;678de
+	dc.w	$4f7c	;678e0
+	dc.w	$0000	;678e2
+	dc.w	$0013	;678e4
+	dc.w	$624e	;678e6
+	dc.w	$bb30	;678e8
+	dc.w	$0000	;678ea
+	dc.w	$0002	;678ec
+	dc.w	$4f5c	;678ee
+	dc.w	$0002	;678f0
+	dc.w	$4f74	;678f2
+	dc.w	$0002	;678f4
+	dc.w	$4f84	;678f6
+	dc.w	$0000	;678f8
+	dc.w	$0013	;678fa
+	dc.w	$0000	;678fc
+	dc.w	$0000	;678fe
+	dc.w	$8800	;67900
+	dc.w	$0002	;67902
+	dc.w	$4f74	;67904
+	dc.w	$0002	;67906
+	dc.w	$4f7c	;67908
+	dc.w	$0002	;6790a
+	dc.w	$4f84	;6790c
+	dc.w	$0000	;6790e
+	dc.w	$000f	;67910
+	dc.w	$0000	;67912
+	dc.w	$0027	;67914
+	dc.w	$0021	;67916
+	dc.w	$00f8	;67918
+	dc.w	$ff70	;6791a
+	dc.w	$ff10	;6791c
+	dc.w	$0000	;6791e
+	dc.w	$ff48	;67920
+	dc.w	$fd80	;67922
+	dc.w	$ffa8	;67924
+	dc.w	$ff20	;67926
+	dc.w	$fec0	;67928
+	dc.w	$ffd0	;6792a
+	dc.w	$ff70	;6792c
+	dc.w	$fec0	;6792e
+	dc.w	$ffd0	;67930
+	dc.w	$ff20	;67932
+	dc.w	$fec0	;67934
+	dc.w	$ff80	;67936
+	dc.w	$ff70	;67938
+	dc.w	$fec0	;6793a
+	dc.w	$ff80	;6793c
+	dc.w	$ff20	;6793e
+	dc.w	$ff10	;67940
+	dc.w	$0000	;67942
+	dc.w	$00e0	;67944
+	dc.w	$ff10	;67946
+	dc.w	$0000	;67948
+	dc.w	$ff20	;6794a
+	dc.w	$ff60	;6794c
+	dc.w	$0080	;6794e
+	dc.w	$00e0	;67950
+	dc.w	$ff60	;67952
+	dc.w	$0080	;67954
+	dc.w	$ff70	;67956
+	dc.w	$ff60	;67958
+	dc.w	$ff80	;6795a
+	dc.w	$00e0	;6795c
+	dc.w	$ff60	;6795e
+	dc.w	$ff80	;67960
+	dc.w	$ff20	;67962
+	dc.w	$ff60	;67964
+	dc.w	$ffd0	;67966
+	dc.w	$ff70	;67968
+	dc.w	$ff30	;6796a
+	dc.w	$ffd0	;6796c
+	dc.w	$ff20	;6796e
+	dc.w	$ff60	;67970
+	dc.w	$ff80	;67972
+	dc.w	$ff20	;67974
+	dc.w	$ff30	;67976
+	dc.w	$ffd0	;67978
+	dc.w	$ff20	;6797a
+	dc.w	$0000	;6797c
+	dc.w	$0080	;6797e
+	dc.w	$00e0	;67980
+	dc.w	$0000	;67982
+	dc.w	$0080	;67984
+	dc.w	$ff20	;67986
+	dc.w	$0000	;67988
+	dc.w	$ff80	;6798a
+	dc.w	$00e0	;6798c
+	dc.w	$0000	;6798e
+	dc.w	$ff80	;67990
+	dc.w	$ff20	;67992
+	dc.w	$0000	;67994
+	dc.w	$0030	;67996
+	dc.w	$ff20	;67998
+	dc.w	$ffb0	;6799a
+	dc.w	$0030	;6799c
+	dc.w	$ff20	;6799e
+	dc.w	$ff90	;679a0
+	dc.w	$0008	;679a2
+	dc.w	$ff20	;679a4
+	dc.w	$ffb0	;679a6
+	dc.w	$ffe0	;679a8
+	dc.w	$ff20	;679aa
+	dc.w	$0000	;679ac
+	dc.w	$ffe0	;679ae
+	dc.w	$00e0	;679b0
+	dc.w	$ffe0	;679b2
+	dc.w	$ffe0	;679b4
+	dc.w	$00e0	;679b6
+	dc.w	$ffa0	;679b8
+	dc.w	$ffe0	;679ba
+	dc.w	$00e0	;679bc
+	dc.w	$ff80	;679be
+	dc.w	$0000	;679c0
+	dc.w	$00e0	;679c2
+	dc.w	$ffa0	;679c4
+	dc.w	$0020	;679c6
+	dc.w	$00e0	;679c8
+	dc.w	$ffe0	;679ca
+	dc.w	$0020	;679cc
+	dc.w	$ffa0	;679ce
+	dc.w	$ffb0	;679d0
+	dc.w	$ff80	;679d2
+	dc.w	$ffa0	;679d4
+	dc.w	$ff90	;679d6
+	dc.w	$ff80	;679d8
+	dc.w	$ffc0	;679da
+	dc.w	$ff70	;679dc
+	dc.w	$ff80	;679de
+	dc.w	$ffe0	;679e0
+	dc.w	$ff90	;679e2
+	dc.w	$ff80	;679e4
+	dc.w	$ffe0	;679e6
+	dc.w	$ffb0	;679e8
+	dc.w	$ff80	;679ea
+	dc.w	$0040	;679ec
+	dc.w	$ffb0	;679ee
+	dc.w	$ff80	;679f0
+	dc.w	$0040	;679f2
+	dc.w	$ff90	;679f4
+	dc.w	$ff80	;679f6
+	dc.w	$0060	;679f8
+	dc.w	$ff70	;679fa
+	dc.w	$ff80	;679fc
+	dc.w	$0080	;679fe
+	dc.w	$ff90	;67a00
+	dc.w	$ff80	;67a02
+	dc.w	$0080	;67a04
+	dc.w	$ffb0	;67a06
+	dc.w	$ff80	;67a08
+	dc.w	$8800	;67a0a
+	dc.w	$0000	;67a0c
+	dc.w	$0000	;67a0e
+	dc.w	$0002	;67a10
+	dc.w	$4f9c	;67a12
+	dc.w	$0002	;67a14
+	dc.w	$4fcc	;67a16
+	dc.w	$0002	;67a18
+	dc.w	$4fdc	;67a1a
+	dc.w	$0000	;67a1c
+	dc.w	$000b	;67a1e
+	dc.w	$8800	;67a20
+	dc.w	$0000	;67a22
+	dc.w	$0000	;67a24
+	dc.w	$0002	;67a26
+	dc.w	$4fcc	;67a28
+	dc.w	$0002	;67a2a
+	dc.w	$4fdc	;67a2c
+	dc.w	$0002	;67a2e
+	dc.w	$4fec	;67a30
+	dc.w	$0000	;67a32
+	dc.w	$000b	;67a34
+	dc.w	$7800	;67a36
+	dc.w	$0000	;67a38
+	dc.w	$0000	;67a3a
+	dc.w	$0002	;67a3c
+	dc.w	$4fa4	;67a3e
+	dc.w	$0002	;67a40
+	dc.w	$4fb4	;67a42
+	dc.w	$0002	;67a44
+	dc.w	$4ff4	;67a46
+	dc.w	$0000	;67a48
+	dc.w	$000b	;67a4a
+	dc.w	$7800	;67a4c
+	dc.w	$0000	;67a4e
+	dc.w	$0000	;67a50
+	dc.w	$0002	;67a52
+	dc.w	$4fa4	;67a54
+	dc.w	$0002	;67a56
+	dc.w	$4fe4	;67a58
+	dc.w	$0002	;67a5a
+	dc.w	$4ff4	;67a5c
+	dc.w	$0000	;67a5e
+	dc.w	$000b	;67a60
+	dc.w	$8800	;67a62
+	dc.w	$0000	;67a64
+	dc.w	$0000	;67a66
+	dc.w	$0002	;67a68
+	dc.w	$4ffc	;67a6a
+	dc.w	$0002	;67a6c
+	dc.w	$5004	;67a6e
+	dc.w	$0002	;67a70
+	dc.w	$500c	;67a72
+	dc.w	$0000	;67a74
+	dc.w	$0009	;67a76
+	dc.w	$8800	;67a78
+	dc.w	$0000	;67a7a
+	dc.w	$0000	;67a7c
+	dc.w	$0002	;67a7e
+	dc.w	$4ffc	;67a80
+	dc.w	$0002	;67a82
+	dc.w	$500c	;67a84
+	dc.w	$0002	;67a86
+	dc.w	$5014	;67a88
+	dc.w	$0000	;67a8a
+	dc.w	$0009	;67a8c
+	dc.w	$8800	;67a8e
+	dc.w	$0000	;67a90
+	dc.w	$0000	;67a92
+	dc.w	$0002	;67a94
+	dc.w	$4ffc	;67a96
+	dc.w	$0002	;67a98
+	dc.w	$5014	;67a9a
+	dc.w	$0002	;67a9c
+	dc.w	$501c	;67a9e
+	dc.w	$0000	;67aa0
+	dc.w	$0009	;67aa2
+	dc.w	$7800	;67aa4
+	dc.w	$0000	;67aa6
+	dc.w	$0000	;67aa8
+	dc.w	$0002	;67aaa
+	dc.w	$5024	;67aac
+	dc.w	$0002	;67aae
+	dc.w	$502c	;67ab0
+	dc.w	$0002	;67ab2
+	dc.w	$5034	;67ab4
+	dc.w	$0000	;67ab6
+	dc.w	$0017	;67ab8
+	dc.w	$7800	;67aba
+	dc.w	$0000	;67abc
+	dc.w	$0000	;67abe
+	dc.w	$0002	;67ac0
+	dc.w	$5024	;67ac2
+	dc.w	$0002	;67ac4
+	dc.w	$5034	;67ac6
+	dc.w	$0002	;67ac8
+	dc.w	$503c	;67aca
+	dc.w	$0000	;67acc
+	dc.w	$0017	;67ace
+	dc.w	$7800	;67ad0
+	dc.w	$0000	;67ad2
+	dc.w	$0000	;67ad4
+	dc.w	$0002	;67ad6
+	dc.w	$5024	;67ad8
+	dc.w	$0002	;67ada
+	dc.w	$503c	;67adc
+	dc.w	$0002	;67ade
+	dc.w	$5044	;67ae0
+	dc.w	$0000	;67ae2
+	dc.w	$0017	;67ae4
+	dc.w	$0000	;67ae6
+	dc.w	$0000	;67ae8
+	dc.w	$8800	;67aea
+	dc.w	$0002	;67aec
+	dc.w	$4fb4	;67aee
+	dc.w	$0002	;67af0
+	dc.w	$4fcc	;67af2
+	dc.w	$0002	;67af4
+	dc.w	$4fec	;67af6
+	dc.w	$0000	;67af8
+	dc.w	$000b	;67afa
+	dc.w	$0000	;67afc
+	dc.w	$0000	;67afe
+	dc.w	$8800	;67b00
+	dc.w	$0002	;67b02
+	dc.w	$4fb4	;67b04
+	dc.w	$0002	;67b06
+	dc.w	$4fec	;67b08
+	dc.w	$0002	;67b0a
+	dc.w	$4ff4	;67b0c
+	dc.w	$0000	;67b0e
+	dc.w	$000b	;67b10
+	dc.w	$0000	;67b12
+	dc.w	$0000	;67b14
+	dc.w	$8800	;67b16
+	dc.w	$0002	;67b18
+	dc.w	$504c	;67b1a
+	dc.w	$0002	;67b1c
+	dc.w	$5054	;67b1e
+	dc.w	$0002	;67b20
+	dc.w	$505c	;67b22
+	dc.w	$0000	;67b24
+	dc.w	$0017	;67b26
+	dc.w	$0000	;67b28
+	dc.w	$0000	;67b2a
+	dc.w	$8800	;67b2c
+	dc.w	$0002	;67b2e
+	dc.w	$504c	;67b30
+	dc.w	$0002	;67b32
+	dc.w	$505c	;67b34
+	dc.w	$0002	;67b36
+	dc.w	$5064	;67b38
+	dc.w	$0000	;67b3a
+	dc.w	$0017	;67b3c
+	dc.w	$0000	;67b3e
+	dc.w	$0000	;67b40
+	dc.w	$8800	;67b42
+	dc.w	$0002	;67b44
+	dc.w	$504c	;67b46
+	dc.w	$0002	;67b48
+	dc.w	$5064	;67b4a
+	dc.w	$0002	;67b4c
+	dc.w	$506c	;67b4e
+	dc.w	$0000	;67b50
+	dc.w	$0017	;67b52
+	dc.w	$0000	;67b54
+	dc.w	$0000	;67b56
+	dc.w	$8800	;67b58
+	dc.w	$0002	;67b5a
+	dc.w	$5074	;67b5c
+	dc.w	$0002	;67b5e
+	dc.w	$507c	;67b60
+	dc.w	$0002	;67b62
+	dc.w	$5084	;67b64
+	dc.w	$0000	;67b66
+	dc.w	$0017	;67b68
+	dc.w	$0000	;67b6a
+	dc.w	$0000	;67b6c
+	dc.w	$8800	;67b6e
+	dc.w	$0002	;67b70
+	dc.w	$5074	;67b72
+	dc.w	$0002	;67b74
+	dc.w	$5084	;67b76
+	dc.w	$0002	;67b78
+	dc.w	$508c	;67b7a
+	dc.w	$0000	;67b7c
+	dc.w	$0017	;67b7e
+	dc.w	$0000	;67b80
+	dc.w	$0000	;67b82
+	dc.w	$8800	;67b84
+	dc.w	$0002	;67b86
+	dc.w	$5074	;67b88
+	dc.w	$0002	;67b8a
+	dc.w	$508c	;67b8c
+	dc.w	$0002	;67b8e
+	dc.w	$5094	;67b90
+	dc.w	$0000	;67b92
+	dc.w	$0017	;67b94
+	dc.w	$7800	;67b96
+	dc.w	$0000	;67b98
+	dc.w	$0000	;67b9a
+	dc.w	$0002	;67b9c
+	dc.w	$4f8c	;67b9e
+	dc.w	$0002	;67ba0
+	dc.w	$4f9c	;67ba2
+	dc.w	$0002	;67ba4
+	dc.w	$4fbc	;67ba6
+	dc.w	$0000	;67ba8
+	dc.w	$0013	;67baa
+	dc.w	$7800	;67bac
+	dc.w	$0000	;67bae
+	dc.w	$0000	;67bb0
+	dc.w	$0002	;67bb2
+	dc.w	$4f8c	;67bb4
+	dc.w	$0002	;67bb6
+	dc.w	$4fbc	;67bb8
+	dc.w	$0002	;67bba
+	dc.w	$4fd4	;67bbc
+	dc.w	$0000	;67bbe
+	dc.w	$0013	;67bc0
+	dc.w	$8800	;67bc2
+	dc.w	$0000	;67bc4
+	dc.w	$0000	;67bc6
+	dc.w	$0002	;67bc8
+	dc.w	$4f94	;67bca
+	dc.w	$0002	;67bcc
+	dc.w	$4fa4	;67bce
+	dc.w	$0002	;67bd0
+	dc.w	$4fb4	;67bd2
+	dc.w	$0000	;67bd4
+	dc.w	$0013	;67bd6
+	dc.w	$0000	;67bd8
+	dc.w	$9c28	;67bda
+	dc.w	$bd70	;67bdc
+	dc.w	$0002	;67bde
+	dc.w	$4f5c	;67be0
+	dc.w	$0002	;67be2
+	dc.w	$4f8c	;67be4
+	dc.w	$0002	;67be6
+	dc.w	$4fd4	;67be8
+	dc.w	$0000	;67bea
+	dc.w	$0007	;67bec
+	dc.w	$0000	;67bee
+	dc.w	$9c28	;67bf0
+	dc.w	$bd70	;67bf2
+	dc.w	$0002	;67bf4
+	dc.w	$4f5c	;67bf6
+	dc.w	$0002	;67bf8
+	dc.w	$4fc4	;67bfa
+	dc.w	$0002	;67bfc
+	dc.w	$4fd4	;67bfe
+	dc.w	$0000	;67c00
+	dc.w	$0007	;67c02
+	dc.w	$0000	;67c04
+	dc.w	$9a3e	;67c06
+	dc.w	$c067	;67c08
+	dc.w	$0002	;67c0a
+	dc.w	$4f5c	;67c0c
+	dc.w	$0002	;67c0e
+	dc.w	$4f94	;67c10
+	dc.w	$0002	;67c12
+	dc.w	$4fac	;67c14
+	dc.w	$0000	;67c16
+	dc.w	$0017	;67c18
+	dc.w	$0000	;67c1a
+	dc.w	$9a3e	;67c1c
+	dc.w	$c067	;67c1e
+	dc.w	$0002	;67c20
+	dc.w	$4f94	;67c22
+	dc.w	$0002	;67c24
+	dc.w	$4fac	;67c26
+	dc.w	$0002	;67c28
+	dc.w	$4fb4	;67c2a
+	dc.w	$0000	;67c2c
+	dc.w	$0017	;67c2e
+	dc.w	$8800	;67c30
+	dc.w	$0000	;67c32
+	dc.w	$0000	;67c34
+	dc.w	$0002	;67c36
+	dc.w	$4f6c	;67c38
+	dc.w	$0002	;67c3a
+	dc.w	$4f7c	;67c3c
+	dc.w	$0002	;67c3e
+	dc.w	$4fbc	;67c40
+	dc.w	$0000	;67c42
+	dc.w	$000b	;67c44
+	dc.w	$8800	;67c46
+	dc.w	$0000	;67c48
+	dc.w	$0000	;67c4a
+	dc.w	$0002	;67c4c
+	dc.w	$4f7c	;67c4e
+	dc.w	$0002	;67c50
+	dc.w	$4fbc	;67c52
+	dc.w	$0002	;67c54
+	dc.w	$4fcc	;67c56
+	dc.w	$0000	;67c58
+	dc.w	$000b	;67c5a
+	dc.w	$8800	;67c5c
+	dc.w	$0000	;67c5e
+	dc.w	$0000	;67c60
+	dc.w	$0002	;67c62
+	dc.w	$4f74	;67c64
+	dc.w	$0002	;67c66
+	dc.w	$4f84	;67c68
+	dc.w	$0002	;67c6a
+	dc.w	$4fac	;67c6c
+	dc.w	$0000	;67c6e
+	dc.w	$000b	;67c70
+	dc.w	$8800	;67c72
+	dc.w	$0000	;67c74
+	dc.w	$0000	;67c76
+	dc.w	$0002	;67c78
+	dc.w	$4f74	;67c7a
+	dc.w	$0002	;67c7c
+	dc.w	$4fac	;67c7e
+	dc.w	$0002	;67c80
+	dc.w	$4fc4	;67c82
+	dc.w	$0000	;67c84
+	dc.w	$000b	;67c86
+	dc.w	$0000	;67c88
+	dc.w	$0000	;67c8a
+	dc.w	$8800	;67c8c
+	dc.w	$0002	;67c8e
+	dc.w	$4f7c	;67c90
+	dc.w	$0002	;67c92
+	dc.w	$4f84	;67c94
+	dc.w	$0002	;67c96
+	dc.w	$4fcc	;67c98
+	dc.w	$0000	;67c9a
+	dc.w	$000b	;67c9c
+	dc.w	$0000	;67c9e
+	dc.w	$0000	;67ca0
+	dc.w	$8800	;67ca2
+	dc.w	$0002	;67ca4
+	dc.w	$4f84	;67ca6
+	dc.w	$0002	;67ca8
+	dc.w	$4fac	;67caa
+	dc.w	$0002	;67cac
+	dc.w	$4fcc	;67cae
+	dc.w	$0000	;67cb0
+	dc.w	$000b	;67cb2
+	dc.w	$88ee	;67cb4
+	dc.w	$f11e	;67cb6
+	dc.w	$0000	;67cb8
+	dc.w	$0002	;67cba
+	dc.w	$4f64	;67cbc
+	dc.w	$0002	;67cbe
+	dc.w	$4f6c	;67cc0
+	dc.w	$0002	;67cc2
+	dc.w	$4f7c	;67cc4
+	dc.w	$0000	;67cc6
+	dc.w	$0017	;67cc8
+	dc.w	$88ee	;67cca
+	dc.w	$0ee2	;67ccc
+	dc.w	$0000	;67cce
+	dc.w	$0002	;67cd0
+	dc.w	$4f64	;67cd2
+	dc.w	$0002	;67cd4
+	dc.w	$4f74	;67cd6
+	dc.w	$0002	;67cd8
+	dc.w	$4f84	;67cda
+	dc.w	$0000	;67cdc
+	dc.w	$0017	;67cde
+	dc.w	$0000	;67ce0
+	dc.w	$f11e	;67ce2
+	dc.w	$88ee	;67ce4
+	dc.w	$0002	;67ce6
+	dc.w	$4f64	;67ce8
+	dc.w	$0002	;67cea
+	dc.w	$4f7c	;67cec
+	dc.w	$0002	;67cee
+	dc.w	$4f84	;67cf0
+	dc.w	$0000	;67cf2
+	dc.w	$000f	;67cf4
+	dc.w	$0000	;67cf6
+	dc.w	$0006	;67cf8
+	dc.w	$0002	;67cfa
+	dc.w	$0032	;67cfc
+	dc.w	$ffd0	;67cfe
+	dc.w	$ff30	;67d00
+	dc.w	$ffe0	;67d02
+	dc.w	$0000	;67d04
+	dc.w	$ff90	;67d06
+	dc.w	$0000	;67d08
+	dc.w	$0000	;67d0a
+	dc.w	$ff80	;67d0c
+	dc.w	$0000	;67d0e
+	dc.w	$0000	;67d10
+	dc.w	$ffa0	;67d12
+	dc.w	$0000	;67d14
+	dc.w	$0060	;67d16
+	dc.w	$ff70	;67d18
+	dc.w	$ffd0	;67d1a
 lb_67d1c:
-	ORI.B	#$00,(A0)		;67d1c: 00100000
-	DC.W	$0000			;67d20
-	DC.W	$fff0			;67d22
-	dc.l  $0			;67d24: 00000000
-	dc.l  $0			;67d28: 00000000
-	ORI.B	#$02,D0			;67d2c: 00000002
-	DC.W	$4f6c			;67d30
-	DC.W	$0002			;67d32
-	CHK.W	D4,D7			;67d34: 4f84
-	DC.W	$0002			;67d36
-	DC.W	$4f8c			;67d38
-	ORI.B	#$09,D0			;67d3a: 00000009
-lb_67d3e:
-	dc.l  $0			;67d3e: 00000000
-	ORI.B	#$02,D0			;67d42: 00000002
-	DC.W	$4f6c			;67d46
-	DC.W	$0002			;67d48
-	DC.W	$4f74			;67d4a
-	DC.W	$0002			;67d4c
-	DC.W	$4f7c			;67d4e
-	ORI.B	#$09,D0			;67d50: 00000009
-	dc.l  $0			;67d54: 00000000
-	ORI.B	#$02,D0			;67d58: 00000002
-	DC.W	$4f5c			;67d5c
-	DC.W	$0002			;67d5e
-	DC.W	$4f64			;67d60
-	DC.W	$0002			;67d62
-	DC.W	$4f6c			;67d64
-	ORI.B	#$09,D0			;67d66: 00000009
-	ORI.B	#$08,D0			;67d6a: 00000008
-	ORI.B	#$3e,D4			;67d6e: 0004003e
-	DC.W	$ffa0			;67d72
-	DC.W	$ff70			;67d74
-	DC.W	$0020			;67d76
-	DC.W	$fff0			;67d78
-	DC.W	$ff60			;67d7a
-	DC.W	$ffc0			;67d7c
-	ORI.W	#$ff70,(A0)		;67d7e: 0050ff70
-	ORI.W	#$ffe0,D0		;67d82: 0040ffe0
-	DC.W	$ffb0			;67d86
-	ORI.B	#$10,D0			;67d88: 00000010
-	DC.W	$ffb0			;67d8c
-	ORI.B	#$20,D0			;67d8e: 00000020
-	DC.W	$ffb0			;67d92
-	ORI.B	#$30,D0			;67d94: 00000030
-	DC.W	$ffb0			;67d98
-	DC.W	$0000			;67d9a
-	DC.W	$fff0			;67d9c
-	dc.l  $0			;67d9e: 00000000
-	ORI.B	#$00,(A0)		;67da2: 00100000
-	dc.l  $0			;67da6: 00000000
-	dc.l  $0			;67daa: 00000000
-	DC.W	$0002			;67dae
-	DC.W	$4f74			;67db0
-	DC.W	$0002			;67db2
-	DC.W	$4f8c			;67db4
-	DC.W	$0002			;67db6
-	CHK.W	(A4),D7			;67db8: 4f94
-	ORI.B	#$09,D0			;67dba: 00000009
-	dc.l  $0			;67dbe: 00000000
-	ORI.B	#$02,D0			;67dc2: 00000002
-	DC.W	$4f8c			;67dc6
-	DC.W	$0002			;67dc8
-	CHK.W	(A4),D7			;67dca: 4f94
-	DC.W	$0002			;67dcc
-	CHK.W	(A4)+,D7		;67dce: 4f9c
-	ORI.B	#$09,D0			;67dd0: 00000009
-	DC.W	$0000			;67dd4
-	AND.W	(A6),D5			;67dd6: ca56
-	SUB.L	2(A4),D2		;67dd8: 94ac0002
-	DC.W	$4f5c			;67ddc
-	DC.W	$0002			;67dde
-	DC.W	$4f74			;67de0
-	DC.W	$0002			;67de2
-	DC.W	$4f7c			;67de4
-	ORI.B	#$09,D0			;67de6: 00000009
-	DC.W	$0000			;67dea
-	CMPM.B	(A2)+,(A2)+		;67dec: b50a
-	SUBQ.L	#6,2(A4,D0.W)		;67dee: 5db40002
-	DC.W	$4f64			;67df2
-	DC.W	$0002			;67df4
-	DC.W	$4f7c			;67df6
-	DC.W	$0002			;67df8
-	CHK.W	D4,D7			;67dfa: 4f84
-	ORI.B	#$09,D0			;67dfc: 00000009
-	DC.W	$0000			;67e00
-	DC.W	$ab26			;67e02
-	DC.W	$ab26			;67e04
-	DC.W	$0002			;67e06
-	DC.W	$4f6c			;67e08
-	DC.W	$0002			;67e0a
-	CHK.W	D4,D7			;67e0c: 4f84
-	DC.W	$0002			;67e0e
-	DC.W	$4f8c			;67e10
-	ORI.B	#$09,D0			;67e12: 00000009
-	ORI.B	#$06,D0			;67e16: 00000006
-	ORI.B	#$32,D3			;67e1a: 00030032
-	DC.W	$0000			;67e1e
-	DC.W	$ff00			;67e20
-	DC.W	$0030			;67e22
-	DC.W	$0030			;67e24
-	DC.W	$ff20			;67e26
-	DC.W	$ffe0			;67e28
-	DC.W	$fff0			;67e2a
-	DC.W	$ffb0			;67e2c
-	dc.l  $0			;67e2e: 00000000
-	DC.W	$ffb0			;67e32
-	ORI.B	#$10,D0			;67e34: 00000010
-	DC.W	$ffb0			;67e38
-	DC.W	$0000			;67e3a
-	DC.W	$fff0			;67e3c
-	dc.l  $0			;67e3e: 00000000
-	ORI.B	#$00,(A0)		;67e42: 00100000
-	dc.l  $0			;67e46: 00000000
-	dc.l  $0			;67e4a: 00000000
-	DC.W	$0002			;67e4e
-	DC.W	$4f6c			;67e50
-	DC.W	$0002			;67e52
-	DC.W	$4f7c			;67e54
-	DC.W	$0002			;67e56
-	CHK.W	D4,D7			;67e58: 4f84
-	ORI.B	#$09,D0			;67e5a: 00000009
-	dc.l  $0			;67e5e: 00000000
-	ORI.B	#$02,D0			;67e62: 00000002
-	DC.W	$4f7c			;67e66
-	DC.W	$0002			;67e68
-	CHK.W	D4,D7			;67e6a: 4f84
-	DC.W	$0002			;67e6c
-	DC.W	$4f8c			;67e6e
-	ORI.B	#$09,D0			;67e70: 00000009
-	DC.W	$0000			;67e74
-	LSR.W	D0,D6			;67e76: e06e
-	OR.B	lb_67e7c(PC,D0.W),D6	;67e78: 8c3b0002
-lb_67e7c:
-	DC.W	$4f5c			;67e7c
-	DC.W	$0002			;67e7e
-	DC.W	$4f6c			;67e80
-	DC.W	$0002			;67e82
-	DC.W	$4f74			;67e84
-	ORI.B	#$09,D0			;67e86: 00000009
-	DC.W	$0000			;67e8a
-	ROXL	ext_00007524.W		;67e8c: e5f87524
-	DC.W	$0002			;67e90
-	DC.W	$4f64			;67e92
-	DC.W	$0002			;67e94
-	DC.W	$4f74			;67e96
-	DC.W	$0002			;67e98
-	DC.W	$4f7c			;67e9a
-	ORI.B	#$09,D0			;67e9c: 00000009
-	ORI.B	#$20,D0			;67ea0: 00000020
-	ORI.B	#$ce,(A6)+		;67ea4: 001e00ce
-	DC.W	$ffa0			;67ea8
-	dc.l  $0			;67eaa: 00000000
-	DC.W	$ff20			;67eae
-	ORI.B	#$80,D0			;67eb0: 00000080
-	DC.W	$00e0			;67eb4
-	ORI.B	#$80,D0			;67eb6: 00000080
-	DC.W	$ff20			;67eba
-	DC.W	$0000			;67ebc
-	DC.W	$ff80			;67ebe
-	DC.W	$00e0			;67ec0
-	DC.W	$0000			;67ec2
-	DC.W	$ff80			;67ec4
-	DC.W	$ff20			;67ec6
-	DC.W	$ffb0			;67ec8
-	ORI.L	#$00e0ffd0,D0		;67eca: 008000e0ffd0
-	ORI.L	#$ff20ff60,D0		;67ed0: 0080ff20ff60
-	DC.W	$ff80			;67ed6
-	DC.W	$00e0			;67ed8
-	DC.W	$ffc0			;67eda
-	DC.W	$ff80			;67edc
-	DC.W	$00e0			;67ede
-	DC.W	$ffe0			;67ee0
-	DC.W	$ffe0			;67ee2
-	DC.W	$00e0			;67ee4
-	DC.W	$ffa0			;67ee6
-	ORI.W	#$ff20,D0		;67ee8: 0040ff20
-	DC.W	$ff60			;67eec
-	DC.W	$ffe0			;67eee
-	DC.W	$ff70			;67ef0
-	DC.W	$ffb0			;67ef2
-	DC.W	$ff80			;67ef4
-	DC.W	$ffc0			;67ef6
-	DC.W	$ff90			;67ef8
-	DC.W	$ff80			;67efa
-	DC.W	$fff0			;67efc
-	DC.W	$ffe0			;67efe
-	DC.W	$ff80			;67f00
-	ORI.W	#$ffb0,(A0)		;67f02: 0050ffb0
-	DC.W	$ff80			;67f06
-	DC.W	$00b0			;67f08
-	DC.W	$ffd0			;67f0a
-	DC.W	$ff80			;67f0c
-	DC.W	$ff90			;67f0e
-	DC.W	$ff80			;67f10
-	ORI.L	#$0020ffc0,D0		;67f12: 00800020ffc0
-	ORI.L	#$0050ffa0,D0		;67f18: 00800050ffa0
-	ORI.L	#$00d0ffe0,D0		;67f1e: 008000d0ffe0
-	ORI.L	#$ffa00000,D0		;67f24: 0080ffa00000
-	DC.W	$ffd0			;67f2a
-	DC.W	$ffc0			;67f2c
-	DC.W	$0000			;67f2e
-	DC.W	$ffc0			;67f30
-	ORI.B	#$00,-(A0)		;67f32: 00200000
-	DC.W	$ffd0			;67f36
-	DC.W	$0070			;67f38
-	DC.W	$0000			;67f3a
-	DC.W	$ffc0			;67f3c
-	ORI.L	#$0000ffd0,(A0)		;67f3e: 00900000ffd0
-	ORI.L	#$00000020,D0		;67f44: 008000000020
-	ORI.L	#$00000050,-128(A0,D0.W) ;67f4a: 00b0000000500080
-	ORI.B	#$30,D0			;67f52: 00000030
-	ORI.W	#$0000,(A0)		;67f56: 00500000
-	DC.W	$0030			;67f5a
-	DC.W	$ffe0			;67f5c
-	ORI.B	#$10,D0			;67f5e: 00000010
-	DC.W	$ff70			;67f62
-	ORI.B	#$50,D0			;67f64: 00000050
-	DC.W	$ffa0			;67f68
-	ORI.B	#$20,D0			;67f6a: 00000020
-	dc.l  $0			;67f6e: 00000000
-	ORI.B	#$02,D0			;67f72: 00000002
-	DC.W	$4f64			;67f76
-	DC.W	$0002			;67f78
-	DC.W	$4f6c			;67f7a
-	DC.W	$0002			;67f7c
-	DC.W	$4f74			;67f7e
-	ORI.B	#$07,D0			;67f80: 00000007
-	dc.l  $0			;67f84: 00000000
-	ORI.B	#$02,D0			;67f88: 00000002
-	DC.W	$4f6c			;67f8c
-	DC.W	$0002			;67f8e
-	DC.W	$4f74			;67f90
-	DC.W	$0002			;67f92
-	DC.W	$4f7c			;67f94
-	ORI.B	#$07,D0			;67f96: 00000007
-	DC.W	$a24c			;67f9a
-	TAS	0(A6,D0.W)		;67f9c: 4af60000
-	DC.W	$0002			;67fa0
-	CHK.W	(A4),D7			;67fa2: 4f94
-	DC.W	$0002			;67fa4
-	CHK.W	2(A4,D0.W),D7		;67fa6: 4fb40002
-	DC.W	$4f5c			;67faa
-	ORI.B	#$07,D0			;67fac: 00000007
-	DC.W	$ac72			;67fb0
-	SUBQ.L	#1,A6			;67fb2: 538e
-	ROL.B	#5,D5			;67fb4: eb1d
-	DC.W	$0002			;67fb6
-	CHK.W	(A4),D7			;67fb8: 4f94
-	DC.W	$0002			;67fba
-	CHK.W	#$0002,D7		;67fbc: 4fbc0002
-	DC.W	$4f5c			;67fc0
-	ORI.B	#$07,D0			;67fc2: 00000007
-	MOVE.B	ext_490fa568,-(A6)		;67fc6: 1d39490fa568
-	DC.W	$0002			;67fcc
-	CHK.W	#$0002,D7		;67fce: 4fbc0002
-	DC.W	$4fc4			;67fd2
-	DC.W	$0002			;67fd4
-	ADDQ.B	#8,D4			;67fd6: 5004
-	ORI.B	#$07,D0			;67fd8: 00000007
-	CMPM.L	(A0)+,(A1)+		;67fdc: b388
-	DC.W	$2de1			;67fde
-	DC.W	$afb5			;67fe0
-	DC.W	$0002			;67fe2
-	DC.W	$4fc4			;67fe4
-	DC.W	$0002			;67fe6
-	DC.W	$4fcc			;67fe8
-	DC.W	$0002			;67fea
-	DC.W	$500c			;67fec
-	ORI.B	#$07,D0			;67fee: 00000007
-	MOVE.L	#$5af8c052,2(A6)	;67ff2: 2d7c5af8c0520002
-	DC.W	$4fcc			;67ffa
-	DC.W	$0002			;67ffc
-	LEA	(A4),A7			;67ffe: 4fd4
-	DC.W	$0002			;68000
-	ADDQ.B	#8,(A4)			;68002: 5014
-	ORI.B	#$07,D0			;68004: 00000007
-	LSL.L	#2,D2			;68008: e58a
-	DC.W	$4f63			;6800a
-	DC.W	$a9ff			;6800c
-	DC.W	$0002			;6800e
-	LEA	(A4),A7			;68010: 4fd4
-	DC.W	$0002			;68012
-	DC.W	$4fdc			;68014
-	DC.W	$0002			;68016
-	ADDQ.B	#8,(A4)+		;68018: 501c
-	ORI.B	#$07,D0			;6801a: 00000007
-	MOVE.L	24(A2,D6.L),(A1)	;6801e: 22b26818
-	AND.W	D7,2(A4)		;68022: cf6c0002
-	CHK.W	(A4)+,D7		;68026: 4f9c
-	DC.W	$0002			;68028
-	DC.W	$4fdc			;6802a
-	DC.W	$0002			;6802c
-	ADDQ.B	#8,-(A4)		;6802e: 5024
-	ORI.B	#$07,D0			;68030: 00000007
-	MOVE.W	(A4),(A0)		;68034: 3094
-	BVC.S	lb_68050		;68036: 6818
-	ADDX.W	-(A6),-(A6)		;68038: dd4e
-	DC.W	$0002			;6803a
-	CHK.W	(A4)+,D7		;6803c: 4f9c
-	DC.W	$0002			;6803e
-	CHK.W	-(A4),D7		;68040: 4fa4
-	DC.W	$0002			;68042
-	ADDQ.B	#8,-(A4)		;68044: 5024
-	ORI.B	#$07,D0			;68046: 00000007
-	DC.W	$4132			;6804a
-	SLS	(A3)			;6804c: 53d3
-	DC.W	$37e2			;6804e
-lb_68050:
-	DC.W	$0002			;68050
-	CHK.W	-(A4),D7		;68052: 4fa4
-	DC.W	$0002			;68054
-	CHK.W	2(A4),D7		;68056: 4fac0002
-	ADDQ.B	#8,0(A4)		;6805a: 502c0000
-	DC.W	$0007			;6805e
-	DC.W	$61a5			;68060
-	DC.W	$37cc			;68062
-	ADD.B	-(A7),D3		;68064: d627
-	DC.W	$0002			;68066
-	DC.W	$4f8c			;68068
-	DC.W	$0002			;6806a
-	CHK.W	2(A4),D7		;6806c: 4fac0002
-	ADDQ.B	#8,0(A4,D0.W)		;68070: 50340000
-	DC.W	$0007			;68074
-	DC.W	$29cd			;68076
-	DC.W	$ac65			;68078
-	CMPA.W	D1,A2			;6807a: b4c1
-	DC.W	$0002			;6807c
-	LEA	2(A4,D0.W),A7		;6807e: 4ff40002
-	DC.W	$4ffc			;68082
-	DC.W	$0002			;68084
-	DC.W	$503c			;68086
-	ORI.B	#$07,D0			;68088: 00000007
-	MOVE.L	(A2)+,-(A7)		;6808c: 2f1a
-	NOT.L	-(A7)			;6808e: 46a7
-	DBCC	D1,lb_68094		;68090: 54c90002
-lb_68094:
-	LEA	2(A4),A7		;68094: 4fec0002
-	LEA	2(A4,D0.W),A7		;68098: 4ff40002
-	ADDQ.W	#8,D4			;6809c: 5044
-	ORI.B	#$07,D0			;6809e: 00000007
-	ADD.B	D4,(A0)+		;680a2: d918
-	SUBQ.L	#3,A3			;680a4: 578b
-	SWAP	D2			;680a6: 4842
-	DC.W	$0002			;680a8
-	DC.W	$4fe4			;680aa
-	DC.W	$0002			;680ac
-	LEA	2(A4),A7		;680ae: 4fec0002
-	ADDQ.W	#8,A4			;680b2: 504c
-	ORI.B	#$07,D0			;680b4: 00000007
-	DC.W	$13a5			;680b8
-	DC.W	$2dd7			;680ba
-	DC.W	$6d25			;680bc
-	DC.W	$0002			;680be
-	CHK.W	D4,D7			;680c0: 4f84
-	DC.W	$0002			;680c2
-	DC.W	$4fe4			;680c4
-	DC.W	$0002			;680c6
-	ADDQ.W	#8,(A4)			;680c8: 5054
-	ORI.B	#$07,D0			;680ca: 00000007
-	CMP.B	D0,D0			;680ce: b000
-	ADDQ.B	#8,D0			;680d0: 5000
-	ADD.B	D0,D4			;680d2: d800
-	DC.W	$0002			;680d4
-	CHK.W	D4,D7			;680d6: 4f84
-	DC.W	$0002			;680d8
-	CHK.W	2(A4,D0.W),D7		;680da: 4fb40002
-	ADDQ.W	#8,(A4)+		;680de: 505c
-	ORI.B	#$07,D0			;680e0: 00000007
-	OR.B	D0,D4			;680e4: 8800
-	dc.l  $0			;680e6: 00000000
-	DC.W	$0002			;680ea
-	DC.W	$4f64			;680ec
-	DC.W	$0002			;680ee
-	CHK.W	D4,D7			;680f0: 4f84
-	DC.W	$0002			;680f2
-	CHK.W	0(A4,D0.W),D7		;680f4: 4fb40000
-	DC.W	$0007			;680f8
-	OR.B	D0,D4			;680fa: 8800
-	dc.l  $0			;680fc: 00000000
-	DC.W	$0002			;68100
-	DC.W	$4f64			;68102
-	DC.W	$0002			;68104
-	CHK.W	(A4),D7			;68106: 4f94
-	DC.W	$0002			;68108
-	CHK.W	0(A4,D0.W),D7		;6810a: 4fb40000
-	DC.W	$0007			;6810e
-	OR.B	D0,D4			;68110: 8800
-	dc.l  $0			;68112: 00000000
-	DC.W	$0002			;68116
-	DC.W	$4f64			;68118
-	DC.W	$0002			;6811a
-	DC.W	$4f74			;6811c
-	DC.W	$0002			;6811e
-	CHK.W	(A4),D7			;68120: 4f94
-	ORI.B	#$07,D0			;68122: 00000007
-	MOVEQ	#0,D4			;68126: 7800
-	dc.l  $0			;68128: 00000000
-	DC.W	$0002			;6812c
-	DC.W	$4f7c			;6812e
-	DC.W	$0002			;68130
-	CHK.W	(A4)+,D7		;68132: 4f9c
-	DC.W	$0002			;68134
-	CHK.W	-(A4),D7		;68136: 4fa4
-	ORI.B	#$07,D0			;68138: 00000007
-	MOVEQ	#0,D4			;6813c: 7800
-	dc.l  $0			;6813e: 00000000
-	DC.W	$0002			;68142
-	DC.W	$4f6c			;68144
-	DC.W	$0002			;68146
-	DC.W	$4f7c			;68148
-	DC.W	$0002			;6814a
-	CHK.W	-(A4),D7		;6814c: 4fa4
-	ORI.B	#$07,D0			;6814e: 00000007
-	MOVEQ	#0,D4			;68152: 7800
-	dc.l  $0			;68154: 00000000
-	DC.W	$0002			;68158
-	DC.W	$4f6c			;6815a
-	DC.W	$0002			;6815c
-	CHK.W	-(A4),D7		;6815e: 4fa4
-	DC.W	$0002			;68160
-	CHK.W	0(A4),D7		;68162: 4fac0000
-	DC.W	$0007			;68166
-	MOVEQ	#0,D4			;68168: 7800
-	dc.l  $0			;6816a: 00000000
-	DC.W	$0002			;6816e
-	DC.W	$4f6c			;68170
-	DC.W	$0002			;68172
-	DC.W	$4f8c			;68174
-	DC.W	$0002			;68176
-	CHK.W	0(A4),D7		;68178: 4fac0000
-	ORI.B	#$00,D7			;6817c: 00070000
-	DC.W	$0000			;68180
-	MOVEQ	#0,D4			;68182: 7800
-	DC.W	$0002			;68184
-	DC.W	$4f74			;68186
-	DC.W	$0002			;68188
-	CHK.W	(A4),D7			;6818a: 4f94
-	DC.W	$0002			;6818c
-	CHK.W	#$0000,D7		;6818e: 4fbc0000
-	ORI.B	#$00,D7			;68192: 00070000
-	DC.W	$0000			;68196
-	MOVEQ	#0,D4			;68198: 7800
-	DC.W	$0002			;6819a
-	DC.W	$4f74			;6819c
-	DC.W	$0002			;6819e
-	CHK.W	#$0002,D7		;681a0: 4fbc0002
-	DC.W	$4fc4			;681a4
-	ORI.B	#$07,D0			;681a6: 00000007
-	dc.l  $0			;681aa: 00000000
-	MOVEQ	#0,D4			;681ae: 7800
-	DC.W	$0002			;681b0
-	DC.W	$4f74			;681b2
-	DC.W	$0002			;681b4
-	DC.W	$4fc4			;681b6
-	DC.W	$0002			;681b8
-	DC.W	$4fcc			;681ba
-	ORI.B	#$07,D0			;681bc: 00000007
-	dc.l  $0			;681c0: 00000000
-	MOVEQ	#0,D4			;681c4: 7800
-	DC.W	$0002			;681c6
-	DC.W	$4f74			;681c8
-	DC.W	$0002			;681ca
-	DC.W	$4f7c			;681cc
-	DC.W	$0002			;681ce
-	DC.W	$4fcc			;681d0
-	ORI.B	#$07,D0			;681d2: 00000007
-	dc.l  $0			;681d6: 00000000
-	MOVEQ	#0,D4			;681da: 7800
-	DC.W	$0002			;681dc
-	DC.W	$4f7c			;681de
-	DC.W	$0002			;681e0
-	DC.W	$4fcc			;681e2
-	DC.W	$0002			;681e4
-	LEA	(A4),A7			;681e6: 4fd4
-	ORI.B	#$07,D0			;681e8: 00000007
-	dc.l  $0			;681ec: 00000000
-	MOVEQ	#0,D4			;681f0: 7800
-	DC.W	$0002			;681f2
-	DC.W	$4f7c			;681f4
-	DC.W	$0002			;681f6
-	LEA	(A4),A7			;681f8: 4fd4
-	DC.W	$0002			;681fa
-	DC.W	$4fdc			;681fc
-	ORI.B	#$07,D0			;681fe: 00000007
-	dc.l  $0			;68202: 00000000
-	MOVEQ	#0,D4			;68206: 7800
-	DC.W	$0002			;68208
-	DC.W	$4f7c			;6820a
-	DC.W	$0002			;6820c
-	CHK.W	(A4)+,D7		;6820e: 4f9c
-	DC.W	$0002			;68210
-	DC.W	$4fdc			;68212
-	ORI.B	#$07,D0			;68214: 00000007
-	ORI.B	#$1c,D0			;68218: 0000001c
-	ORI.B	#$b6,(A5)+		;6821c: 001d00b6
-	DC.W	$ffa0			;68220
-	DC.W	$0000			;68222
-	DC.W	$ffc0			;68224
-	DC.W	$ff20			;68226
-	ORI.B	#$80,D0			;68228: 00000080
-	DC.W	$00e0			;6822c
-	ORI.B	#$80,D0			;6822e: 00000080
-	DC.W	$ff20			;68232
-	DC.W	$0000			;68234
-	DC.W	$ff80			;68236
-	DC.W	$00e0			;68238
-	DC.W	$0000			;6823a
-	DC.W	$ff80			;6823c
-	DC.W	$ff20			;6823e
-	DC.W	$ffc0			;68240
-	ORI.L	#$00e0ffc0,D0		;68242: 008000e0ffc0
-	ORI.L	#$ff20ffe0,D0		;68248: 0080ff20ffe0
-	DC.W	$ff80			;6824e
-	DC.W	$00e0			;68250
-	DC.W	$ff40			;68252
-	DC.W	$ff80			;68254
-	DC.W	$00e0			;68256
-	DC.W	$ff40			;68258
-	DC.W	$ffd0			;6825a
-	DC.W	$00e0			;6825c
-	DC.W	$ffa0			;6825e
-	DC.W	$fff0			;68260
-	DC.W	$ff20			;68262
-	DC.W	$ffb0			;68264
-	DC.W	$ffe0			;68266
-	DC.W	$ffd0			;68268
-	DC.W	$ffa0			;6826a
-	ORI.L	#$0050ffd0,D0		;6826c: 00800050ffd0
-	ORI.L	#$ff80ffb0,D0		;68272: 0080ff80ffb0
-	DC.W	$ff80			;68278
-	DC.W	$fff0			;6827a
-	DC.W	$ff90			;6827c
-	DC.W	$ff80			;6827e
-	ORI.W	#$ffc0,-(A0)		;68280: 0060ffc0
-	DC.W	$ff80			;68284
-	ORI.L	#$ff90ff80,D0		;68286: 0080ff90ff80
-	DC.W	$00d0			;6828c
-	DC.W	$ff90			;6828e
-	DC.W	$ff80			;68290
-	DC.W	$ff80			;68292
-	DC.W	$0000			;68294
-	DC.W	$ffa0			;68296
-	DC.W	$ffd0			;68298
-	DC.W	$0000			;6829a
-	DC.W	$ffe0			;6829c
-	ORI.W	#$0000,(A0)		;6829e: 00500000
-	DC.W	$fff0			;682a2
-	ORI.L	#$0000ffd0,D0		;682a4: 00800000ffd0
-	ORI.L	#$0000ffd0,-64(A0,D0.W)	;682aa: 00b00000ffd000c0
-	DC.W	$0000			;682b2
-	DC.W	$ffd0			;682b4
-	ORI.L	#$0000fff0,(A0)		;682b6: 00900000fff0
-	ORI.W	#$0000,-(A0)		;682bc: 00600000
-	DC.W	$0010			;682c0
-	DC.W	$ffd0			;682c2
-	ORI.B	#$30,D0			;682c4: 00000030
-	DC.W	$ff90			;682c8
-	DC.W	$0000			;682ca
-	DC.W	$ffe0			;682cc
-	dc.l  $0			;682ce: 00000000
-	ORI.B	#$02,D0			;682d2: 00000002
-	DC.W	$4f64			;682d6
-	DC.W	$0002			;682d8
-	DC.W	$4f6c			;682da
-	DC.W	$0002			;682dc
-	DC.W	$4f74			;682de
-	ORI.B	#$07,D0			;682e0: 00000007
-	dc.l  $0			;682e4: 00000000
-	ORI.B	#$02,D0			;682e8: 00000002
-	DC.W	$4f6c			;682ec
-	DC.W	$0002			;682ee
-	DC.W	$4f74			;682f0
-	DC.W	$0002			;682f2
-	DC.W	$4f7c			;682f4
-	ORI.B	#$07,D0			;682f6: 00000007
-	DC.W	$15e8			;682fa
-	DC.W	$2bd1			;682fc
-	SUB.W	2(A5,D0.W),D1		;682fe: 92750002
-	CHK.W	(A4),D7			;68302: 4f94
-	DC.W	$0002			;68304
-	DC.W	$4fcc			;68306
-	DC.W	$0002			;68308
-	LEA	0(A4,D0.W),A7		;6830a: 4ff40000
-	DC.W	$0007			;6830e
-	MOVE.B	93(A6,D5.W),(A3)+	;68310: 16f6505d
-	DC.W	$a9e5			;68314
-	DC.W	$0002			;68316
-	DC.W	$4fcc			;68318
-	DC.W	$0002			;6831a
-	LEA	(A4),A7			;6831c: 4fd4
-	DC.W	$0002			;6831e
-	DC.W	$4ffc			;68320
-	ORI.B	#$07,D0			;68322: 00000007
-	MOVE.L	(A5)+,(A4)+		;68326: 28dd
-	DC.W	$a0a7			;68328
-	MOVEA.W	(A2),A6			;6832a: 3c52
-	DC.W	$0002			;6832c
-	LEA	(A4),A7			;6832e: 4fd4
-	DC.W	$0002			;68330
-	DC.W	$4fdc			;68332
-	DC.W	$0002			;68334
-	ADDQ.B	#8,D4			;68336: 5004
-	ORI.B	#$07,D0			;68338: 00000007
-	DC.W	$4edc			;6833c
-	MOVE.W	(A2),(A2)		;6833e: 3492
-	CMP.W	-(A6),D3		;68340: b666
-	DC.W	$0002			;68342
-	DC.W	$4fdc			;68344
-	DC.W	$0002			;68346
-	DC.W	$4fe4			;68348
-	DC.W	$0002			;6834a
-	DC.W	$500c			;6834c
-	ORI.B	#$07,D0			;6834e: 00000007
-	DC.W	$0000			;68352
-	DC.W	$45bf			;68354
-	SUB.W	(A3)+,D7		;68356: 9e5b
-	DC.W	$0002			;68358
-	DC.W	$4fe4			;6835a
-	DC.W	$0002			;6835c
-	LEA	2(A4),A7		;6835e: 4fec0002
-	ADDQ.B	#8,(A4)			;68362: 5014
-	ORI.B	#$07,D0			;68364: 00000007
-	DC.W	$754f			;68368
-	DC.W	$1776			;6836a
-	DC.W	$f69e			;6836c
-	DC.W	$0002			;6836e
-	CHK.W	(A4)+,D7		;68370: 4f9c
-	DC.W	$0002			;68372
-	LEA	2(A4),A7		;68374: 4fec0002
-	ADDQ.B	#8,(A4)+		;68378: 501c
-	ORI.B	#$07,D0			;6837a: 00000007
-	MOVEQ	#94,D3			;6837e: 765e
-lb_68380:
-	MOVE.B	lb_68380+2(PC),2(A1,D0.W) ;68380: 13ba00000002
-	CHK.W	(A4)+,D7		;68386: 4f9c
-	DC.W	$0002			;68388
-	CHK.W	-(A4),D7		;6838a: 4fa4
-	DC.W	$0002			;6838c
-	ADDQ.B	#8,(A4)+		;6838e: 501c
-	ORI.B	#$07,D0			;68390: 00000007
-	MOVE.L	(A3),(A5)		;68394: 2a93
-	DC.W	$237a			;68396
-	SUB.L	D2,(A1)			;68398: 9591
-	DC.W	$0002			;6839a
-	CHK.W	-(A4),D7		;6839c: 4fa4
-	DC.W	$0002			;6839e
-	CHK.W	2(A4),D7		;683a0: 4fac0002
-lb_683a4:
-	ADDQ.B	#8,-(A4)		;683a4: 5024
-	ORI.B	#$07,D0			;683a6: 00000007
-	DC.W	$4355			;683aa
-	BRA.S	lb_683a4		;683ac: 60f6
-	ROXR.W	D5,D4			;683ae: ea74
-	DC.W	$0002			;683b0
-	DC.W	$4f8c			;683b2
-	DC.W	$0002			;683b4
-	CHK.W	2(A4),D7		;683b6: 4fac0002
-	ADDQ.B	#8,0(A4)		;683ba: 502c0000
-	DC.W	$0007			;683be
-	DC.W	$0c1f			;683c0
-	BLT.S	lb_683dc		;683c2: 6d18
-	MOVEA.W	#$0002,A0		;683c4: 307c0002
-	DC.W	$4f8c			;683c8
-	DC.W	$0002			;683ca
-	DC.W	$4fc4			;683cc
-	DC.W	$0002			;683ce
-	ADDQ.B	#8,0(A4)		;683d0: 502c0000
-	DC.W	$0007			;683d4
-	DC.W	$e3fd			;683d6
-	DC.W	$4ab3			;683d8
-	SUBQ.L	#4,-(A3)		;683da: 59a3
-lb_683dc:
-	DC.W	$0002			;683dc
-	CHK.W	#$0002,D7		;683de: 4fbc0002
-	DC.W	$4fc4			;683e2
-	DC.W	$0002			;683e4
-	ADDQ.B	#8,0(A4,D0.W)		;683e6: 50340000
-	DC.W	$0007			;683ea
-	DC.W	$ecf2			;683ec
-	SUB.B	D3,-66(A3,A4.L)		;683ee: 9733c8be
-	DC.W	$0002			;683f2
-	CHK.W	D4,D7			;683f4: 4f84
-	DC.W	$0002			;683f6
-	CHK.W	#$0002,D7		;683f8: 4fbc0002
-	DC.W	$503c			;683fc
-	ORI.B	#$07,D0			;683fe: 00000007
-	CMP.W	#$6153,D5		;68402: ba7c6153
-	DC.W	$f645			;68406
-	DC.W	$0002			;68408
-	CHK.W	D4,D7			;6840a: 4f84
-	DC.W	$0002			;6840c
-	CHK.W	2(A4,D0.W),D7		;6840e: 4fb40002
-	DC.W	$503c			;68412
-lb_68414:
-	ORI.B	#$07,D0			;68414: 00000007
-	ABCD	D3,D7			;68418: cf03
-	BSR.S	lb_68414+2		;6841a: 61fa
-	DC.W	$30fd			;6841c
-	DC.W	$0002			;6841e
-	CHK.W	(A4),D7			;68420: 4f94
-	DC.W	$0002			;68422
-	CHK.W	2(A4,D0.W),D7		;68424: 4fb40002
-	DC.W	$4f5c			;68428
-	ORI.B	#$07,D0			;6842a: 00000007
-	OR.B	D0,D4			;6842e: 8800
-	dc.l  $0			;68430: 00000000
-	DC.W	$0002			;68434
-	DC.W	$4f64			;68436
-	DC.W	$0002			;68438
-	CHK.W	D4,D7			;6843a: 4f84
-	DC.W	$0002			;6843c
-	CHK.W	0(A4,D0.W),D7		;6843e: 4fb40000
-	DC.W	$0007			;68442
-	OR.B	D0,D4			;68444: 8800
-	dc.l  $0			;68446: 00000000
-	DC.W	$0002			;6844a
-	DC.W	$4f64			;6844c
-	DC.W	$0002			;6844e
-	DC.W	$4f74			;68450
-	DC.W	$0002			;68452
-	CHK.W	0(A4,D0.W),D7		;68454: 4fb40000
-	DC.W	$0007			;68458
-	OR.B	D0,D4			;6845a: 8800
-	dc.l  $0			;6845c: 00000000
-	DC.W	$0002			;68460
-	DC.W	$4f74			;68462
-	DC.W	$0002			;68464
-	CHK.W	(A4),D7			;68466: 4f94
-	DC.W	$0002			;68468
-	CHK.W	0(A4,D0.W),D7		;6846a: 4fb40000
-	DC.W	$0007			;6846e
-	MOVEQ	#0,D4			;68470: 7800
-	dc.l  $0			;68472: 00000000
-	DC.W	$0002			;68476
-	DC.W	$4f7c			;68478
-	DC.W	$0002			;6847a
-	CHK.W	(A4)+,D7		;6847c: 4f9c
-	DC.W	$0002			;6847e
-	CHK.W	-(A4),D7		;68480: 4fa4
-	ORI.B	#$07,D0			;68482: 00000007
-	MOVEQ	#0,D4			;68486: 7800
-	dc.l  $0			;68488: 00000000
-	DC.W	$0002			;6848c
-	DC.W	$4f7c			;6848e
-	DC.W	$0002			;68490
-	CHK.W	-(A4),D7		;68492: 4fa4
-	DC.W	$0002			;68494
-	CHK.W	0(A4),D7		;68496: 4fac0000
-	DC.W	$0007			;6849a
-	MOVEQ	#0,D4			;6849c: 7800
-	dc.l  $0			;6849e: 00000000
-	DC.W	$0002			;684a2
-	DC.W	$4f6c			;684a4
-	DC.W	$0002			;684a6
-	DC.W	$4f7c			;684a8
-	DC.W	$0002			;684aa
-	CHK.W	0(A4),D7		;684ac: 4fac0000
-	DC.W	$0007			;684b0
-	MOVEQ	#0,D4			;684b2: 7800
-	dc.l  $0			;684b4: 00000000
-	DC.W	$0002			;684b8
-	DC.W	$4f6c			;684ba
-	DC.W	$0002			;684bc
-	DC.W	$4f8c			;684be
-	DC.W	$0002			;684c0
-	CHK.W	0(A4),D7		;684c2: 4fac0000
-	ORI.B	#$00,D7			;684c6: 00070000
-	DC.W	$0000			;684ca
-	MOVEQ	#0,D4			;684cc: 7800
-	DC.W	$0002			;684ce
-	DC.W	$4f74			;684d0
-	DC.W	$0002			;684d2
-	CHK.W	(A4),D7			;684d4: 4f94
-	DC.W	$0002			;684d6
-	DC.W	$4fcc			;684d8
-	ORI.B	#$07,D0			;684da: 00000007
-	dc.l  $0			;684de: 00000000
-	MOVEQ	#0,D4			;684e2: 7800
-	DC.W	$0002			;684e4
-	DC.W	$4f74			;684e6
-	DC.W	$0002			;684e8
-	DC.W	$4fcc			;684ea
-	DC.W	$0002			;684ec
-	LEA	(A4),A7			;684ee: 4fd4
-	ORI.B	#$07,D0			;684f0: 00000007
-	dc.l  $0			;684f4: 00000000
-	MOVEQ	#0,D4			;684f8: 7800
-	DC.W	$0002			;684fa
-	DC.W	$4f74			;684fc
-	DC.W	$0002			;684fe
-	LEA	(A4),A7			;68500: 4fd4
-	DC.W	$0002			;68502
-	DC.W	$4fdc			;68504
-	ORI.B	#$07,D0			;68506: 00000007
-	dc.l  $0			;6850a: 00000000
-	MOVEQ	#0,D4			;6850e: 7800
-	DC.W	$0002			;68510
-	DC.W	$4f74			;68512
-	DC.W	$0002			;68514
-	DC.W	$4f7c			;68516
-	DC.W	$0002			;68518
-	DC.W	$4fdc			;6851a
-	ORI.B	#$07,D0			;6851c: 00000007
-	dc.l  $0			;68520: 00000000
-	MOVEQ	#0,D4			;68524: 7800
-	DC.W	$0002			;68526
-	DC.W	$4f7c			;68528
-	DC.W	$0002			;6852a
-	DC.W	$4fdc			;6852c
-	DC.W	$0002			;6852e
-	DC.W	$4fe4			;68530
-	ORI.B	#$07,D0			;68532: 00000007
-	dc.l  $0			;68536: 00000000
-	MOVEQ	#0,D4			;6853a: 7800
-	DC.W	$0002			;6853c
-	DC.W	$4f7c			;6853e
-	DC.W	$0002			;68540
-	DC.W	$4fe4			;68542
-	DC.W	$0002			;68544
-	LEA	0(A4),A7		;68546: 4fec0000
-	ORI.B	#$00,D7			;6854a: 00070000
-	DC.W	$0000			;6854e
-	MOVEQ	#0,D4			;68550: 7800
-	DC.W	$0002			;68552
-	DC.W	$4f7c			;68554
-	DC.W	$0002			;68556
-	CHK.W	(A4)+,D7		;68558: 4f9c
-	DC.W	$0002			;6855a
-	LEA	0(A4),A7		;6855c: 4fec0000
-	DC.W	$0007			;68560
-	BTST	D0,D0			;68562: 0100
-	ORI.B	#$03,D6			;68564: 00060003
-	DC.W	$0032			;68568
-	DC.W	$ffa0			;6856a
-	DC.W	$ff90			;6856c
-	DC.W	$0000			;6856e
-	DC.W	$ffe0			;68570
-	DC.W	$ffc0			;68572
-	DC.W	$fff0			;68574
-	DC.W	$ffe0			;68576
-	DC.W	$ffc0			;68578
-	ORI.B	#$00,(A0)		;6857a: 00100000
-	dc.l  $0			;6857e: 00000000
-	DC.W	$0020			;68582
-	DC.W	$ffc0			;68584
-	ORI.B	#$20,(A0)		;68586: 00100020
-	DC.W	$ffc0			;6858a
-	DC.W	$fff0			;6858c
-	ORI.W	#$ff90,-(A0)		;6858e: 0060ff90
-	DC.W	$0000			;68592
-	NBCD	D0			;68594: 4800
-	DC.W	$a000			;68596
-	ORI.B	#$02,D0			;68598: 00000002
-	DC.W	$4f5c			;6859c
-	DC.W	$0002			;6859e
-	DC.W	$4f64			;685a0
-	DC.W	$0002			;685a2
-	DC.W	$4f6c			;685a4
-	ORI.B	#$0f,D0			;685a6: 0000000f
-	dc.l  $0			;685aa: 00000000
-	ORI.B	#$02,D0			;685ae: 00000002
-	DC.W	$4f64			;685b2
-	DC.W	$0002			;685b4
-	DC.W	$4f6c			;685b6
-	DC.W	$0002			;685b8
-	DC.W	$4f74			;685ba
-	ORI.B	#$0f,D0			;685bc: 0000000f
-	dc.l  $0			;685c0: 00000000
-	ORI.B	#$02,D0			;685c4: 00000002
-	DC.W	$4f74			;685c8
-	DC.W	$0002			;685ca
-	DC.W	$4f7c			;685cc
-	DC.W	$0002			;685ce
-	CHK.W	D4,D7			;685d0: 4f84
-	ORI.B	#$0f,D0			;685d2: 0000000f
-	CMP.B	D0,D4			;685d6: b800
-	DC.W	$a000			;685d8
-	ORI.B	#$02,D0			;685da: 00000002
-	DC.W	$4f7c			;685de
-	DC.W	$0002			;685e0
-	CHK.W	D4,D7			;685e2: 4f84
-	DC.W	$0002			;685e4
-	DC.W	$4f8c			;685e6
-	ORI.B	#$0f,D0			;685e8: 0000000f
-	BTST	D0,D0			;685ec: 0100
-	ORI.B	#$03,D6			;685ee: 00060003
-	DC.W	$0032			;685f2
-	DC.W	$ff88			;685f4
-	DC.W	$ffb0			;685f6
-	DC.W	$0000			;685f8
-	DC.W	$ffd8			;685fa
-	DC.W	$ffd0			;685fc
-	DC.W	$fff0			;685fe
-	DC.W	$ffd8			;68600
-	DC.W	$ffd0			;68602
-	ORI.B	#$00,(A0)		;68604: 00100000
-	dc.l  $0			;68608: 00000000
-	DC.W	$0028			;6860c
-	DC.W	$ffd0			;6860e
-	ORI.B	#$28,(A0)		;68610: 00100028
-	DC.W	$ffd0			;68614
-	DC.W	$fff0			;68616
-	ORI.W	#$ffb0,ext_00000000.W	;68618: 0078ffb00000
-	MOVE.L	(A1),(A6)		;6861e: 2c91
-	SUB.L	(A6),D0			;68620: 9096
-	ORI.B	#$02,D0			;68622: 00000002
-	DC.W	$4f5c			;68626
-	DC.W	$0002			;68628
-	DC.W	$4f64			;6862a
-	DC.W	$0002			;6862c
-	DC.W	$4f6c			;6862e
-	ORI.B	#$0f,D0			;68630: 0000000f
-	dc.l  $0			;68634: 00000000
-	ORI.B	#$02,D0			;68638: 00000002
-	DC.W	$4f64			;6863c
-	DC.W	$0002			;6863e
-	DC.W	$4f6c			;68640
-	DC.W	$0002			;68642
-	DC.W	$4f74			;68644
-	ORI.B	#$0f,D0			;68646: 0000000f
-	dc.l  $0			;6864a: 00000000
-	ORI.B	#$02,D0			;6864e: 00000002
-	DC.W	$4f74			;68652
-	DC.W	$0002			;68654
-	DC.W	$4f7c			;68656
-	DC.W	$0002			;68658
-	CHK.W	D4,D7			;6865a: 4f84
-	ORI.B	#$0f,D0			;6865c: 0000000f
-	ADD.W	D1,-28522(A7)		;68660: d36f9096
-	ORI.B	#$02,D0			;68664: 00000002
-	DC.W	$4f7c			;68668
-	DC.W	$0002			;6866a
-	CHK.W	D4,D7			;6866c: 4f84
-	DC.W	$0002			;6866e
-	DC.W	$4f8c			;68670
-	ORI.B	#$0f,D0			;68672: 0000000f
-	BTST	D0,D0			;68676: 0100
-	ORI.B	#$03,D6			;68678: 00060003
-	DC.W	$0032			;6867c
-	DC.W	$ff80			;6867e
-	DC.W	$ffe0			;68680
-	DC.W	$0000			;68682
-	DC.W	$ffd0			;68684
-	DC.W	$ffd0			;68686
-	DC.W	$fff0			;68688
-	DC.W	$ffd0			;6868a
-	DC.W	$ffd0			;6868c
-	ORI.B	#$00,(A0)		;6868e: 00100000
-	dc.l  $0			;68692: 00000000
-	DC.W	$0030			;68696
-	DC.W	$ffd0			;68698
-	ORI.B	#$30,(A0)		;6869a: 00100030
-	DC.W	$ffd0			;6869e
-	DC.W	$fff0			;686a0
-	ORI.L	#$ffe00000,D0		;686a2: 0080ffe00000
-	ROR.W	D4,D0			;686a8: e878
-	OR.W	(A5),D5			;686aa: 8a55
-	ORI.B	#$02,D0			;686ac: 00000002
-	DC.W	$4f5c			;686b0
-	DC.W	$0002			;686b2
-	DC.W	$4f64			;686b4
-	DC.W	$0002			;686b6
-	DC.W	$4f6c			;686b8
-	ORI.B	#$0f,D0			;686ba: 0000000f
-	dc.l  $0			;686be: 00000000
-	ORI.B	#$02,D0			;686c2: 00000002
-	DC.W	$4f64			;686c6
-	DC.W	$0002			;686c8
-	DC.W	$4f6c			;686ca
-	DC.W	$0002			;686cc
-	DC.W	$4f74			;686ce
-	ORI.B	#$0f,D0			;686d0: 0000000f
-	dc.l  $0			;686d4: 00000000
-	ORI.B	#$02,D0			;686d8: 00000002
-	DC.W	$4f74			;686dc
-	DC.W	$0002			;686de
-	DC.W	$4f7c			;686e0
-	DC.W	$0002			;686e2
-	CHK.W	D4,D7			;686e4: 4f84
-	ORI.B	#$0f,D0			;686e6: 0000000f
-	DC.W	$1788			;686ea
-	OR.W	(A5),D5			;686ec: 8a55
-	ORI.B	#$02,D0			;686ee: 00000002
-	DC.W	$4f7c			;686f2
-	DC.W	$0002			;686f4
-	CHK.W	D4,D7			;686f6: 4f84
-	DC.W	$0002			;686f8
-	DC.W	$4f8c			;686fa
-	ORI.B	#$0f,D0			;686fc: 0000000f
-	BTST	D0,D0			;68700: 0100
-	ORI.B	#$03,D6			;68702: 00060003
-	DC.W	$0032			;68706
-	DC.W	$ff70			;68708
-	ORI.B	#$00,(A0)		;6870a: 00100000
-	DC.W	$ffc0			;6870e
-	DC.W	$fff0			;68710
-	DC.W	$fff0			;68712
-	DC.W	$ffc0			;68714
-	DC.W	$fff0			;68716
-	ORI.B	#$00,(A0)		;68718: 00100000
-	dc.l  $0			;6871c: 00000000
-	ORI.W	#$fff0,D0		;68720: 0040fff0
-	ORI.B	#$40,(A0)		;68724: 00100040
-	DC.W	$fff0			;68728
-	DC.W	$fff0			;6872a
-	ORI.L	#$00100000,(A0)		;6872c: 009000100000
-	ADD.W	D1,-28522(A7)		;68732: d36f9096
-	ORI.B	#$02,D0			;68736: 00000002
-	DC.W	$4f5c			;6873a
-	DC.W	$0002			;6873c
-	DC.W	$4f64			;6873e
-	DC.W	$0002			;68740
-	DC.W	$4f6c			;68742
-	ORI.B	#$0f,D0			;68744: 0000000f
-	dc.l  $0			;68748: 00000000
-	ORI.B	#$02,D0			;6874c: 00000002
-	DC.W	$4f64			;68750
-	DC.W	$0002			;68752
-	DC.W	$4f6c			;68754
-	DC.W	$0002			;68756
-	DC.W	$4f74			;68758
-	ORI.B	#$0f,D0			;6875a: 0000000f
-	dc.l  $0			;6875e: 00000000
-	ORI.B	#$02,D0			;68762: 00000002
-	DC.W	$4f74			;68766
-	DC.W	$0002			;68768
-	DC.W	$4f7c			;6876a
-	DC.W	$0002			;6876c
-	CHK.W	D4,D7			;6876e: 4f84
-	ORI.B	#$0f,D0			;68770: 0000000f
-	MOVE.L	(A1),(A6)		;68774: 2c91
-	SUB.L	(A6),D0			;68776: 9096
-	ORI.B	#$02,D0			;68778: 00000002
-	DC.W	$4f7c			;6877c
-	DC.W	$0002			;6877e
-	CHK.W	D4,D7			;68780: 4f84
-	DC.W	$0002			;68782
-	DC.W	$4f8c			;68784
-	ORI.B	#$0f,D0			;68786: 0000000f
+	dc.w	$0010	;67d1c
+	dc.w	$0000	;67d1e
+	dc.w	$0000	;67d20
+lb_67d22:
+	dc.w	$fff0	;67d22
+	dc.w	$0000	;67d24
+	dc.w	$0000	;67d26
+	dc.w	$0000	;67d28
+	dc.w	$0000	;67d2a
+	dc.w	$0000	;67d2c
+	dc.w	$0002	;67d2e
+	dc.w	$4f6c	;67d30
+	dc.w	$0002	;67d32
+	dc.w	$4f84	;67d34
+	dc.w	$0002	;67d36
+	dc.w	$4f8c	;67d38
+	dc.w	$0000	;67d3a
+	dc.w	$0009	;67d3c
+	dc.w	$0000	;67d3e
+	dc.w	$0000	;67d40
+	dc.w	$0000	;67d42
+	dc.w	$0002	;67d44
+	dc.w	$4f6c	;67d46
+	dc.w	$0002	;67d48
+	dc.w	$4f74	;67d4a
+	dc.w	$0002	;67d4c
+	dc.w	$4f7c	;67d4e
+	dc.w	$0000	;67d50
+	dc.w	$0009	;67d52
+	dc.w	$0000	;67d54
+	dc.w	$0000	;67d56
+	dc.w	$0000	;67d58
+	dc.w	$0002	;67d5a
+	dc.w	$4f5c	;67d5c
+	dc.w	$0002	;67d5e
+	dc.w	$4f64	;67d60
+	dc.w	$0002	;67d62
+	dc.w	$4f6c	;67d64
+	dc.w	$0000	;67d66
+	dc.w	$0009	;67d68
+	dc.w	$0000	;67d6a
+	dc.w	$0008	;67d6c
+	dc.w	$0004	;67d6e
+	dc.w	$003e	;67d70
+	dc.w	$ffa0	;67d72
+	dc.w	$ff70	;67d74
+	dc.w	$0020	;67d76
+	dc.w	$fff0	;67d78
+	dc.w	$ff60	;67d7a
+	dc.w	$ffc0	;67d7c
+	dc.w	$0050	;67d7e
+	dc.w	$ff70	;67d80
+	dc.w	$0040	;67d82
+	dc.w	$ffe0	;67d84
+	dc.w	$ffb0	;67d86
+	dc.w	$0000	;67d88
+	dc.w	$0010	;67d8a
+	dc.w	$ffb0	;67d8c
+	dc.w	$0000	;67d8e
+	dc.w	$0020	;67d90
+	dc.w	$ffb0	;67d92
+	dc.w	$0000	;67d94
+	dc.w	$0030	;67d96
+	dc.w	$ffb0	;67d98
+	dc.w	$0000	;67d9a
+	dc.w	$fff0	;67d9c
+	dc.w	$0000	;67d9e
+	dc.w	$0000	;67da0
+	dc.w	$0010	;67da2
+	dc.w	$0000	;67da4
+	dc.w	$0000	;67da6
+	dc.w	$0000	;67da8
+	dc.w	$0000	;67daa
+	dc.w	$0000	;67dac
+	dc.w	$0002	;67dae
+	dc.w	$4f74	;67db0
+	dc.w	$0002	;67db2
+	dc.w	$4f8c	;67db4
+	dc.w	$0002	;67db6
+	dc.w	$4f94	;67db8
+	dc.w	$0000	;67dba
+	dc.w	$0009	;67dbc
+	dc.w	$0000	;67dbe
+	dc.w	$0000	;67dc0
+	dc.w	$0000	;67dc2
+	dc.w	$0002	;67dc4
+	dc.w	$4f8c	;67dc6
+	dc.w	$0002	;67dc8
+	dc.w	$4f94	;67dca
+	dc.w	$0002	;67dcc
+	dc.w	$4f9c	;67dce
+	dc.w	$0000	;67dd0
+	dc.w	$0009	;67dd2
+	dc.w	$0000	;67dd4
+	dc.w	$ca56	;67dd6
+	dc.w	$94ac	;67dd8
+	dc.w	$0002	;67dda
+	dc.w	$4f5c	;67ddc
+	dc.w	$0002	;67dde
+	dc.w	$4f74	;67de0
+	dc.w	$0002	;67de2
+	dc.w	$4f7c	;67de4
+	dc.w	$0000	;67de6
+	dc.w	$0009	;67de8
+	dc.w	$0000	;67dea
+	dc.w	$b50a	;67dec
+	dc.w	$5db4	;67dee
+	dc.w	$0002	;67df0
+	dc.w	$4f64	;67df2
+	dc.w	$0002	;67df4
+	dc.w	$4f7c	;67df6
+	dc.w	$0002	;67df8
+	dc.w	$4f84	;67dfa
+	dc.w	$0000	;67dfc
+	dc.w	$0009	;67dfe
+	dc.w	$0000	;67e00
+	dc.w	$ab26	;67e02
+	dc.w	$ab26	;67e04
+	dc.w	$0002	;67e06
+	dc.w	$4f6c	;67e08
+	dc.w	$0002	;67e0a
+	dc.w	$4f84	;67e0c
+	dc.w	$0002	;67e0e
+	dc.w	$4f8c	;67e10
+	dc.w	$0000	;67e12
+	dc.w	$0009	;67e14
+	dc.w	$0000	;67e16
+	dc.w	$0006	;67e18
+	dc.w	$0003	;67e1a
+	dc.w	$0032	;67e1c
+	dc.w	$0000	;67e1e
+	dc.w	$ff00	;67e20
+	dc.w	$0030	;67e22
+	dc.w	$0030	;67e24
+	dc.w	$ff20	;67e26
+	dc.w	$ffe0	;67e28
+	dc.w	$fff0	;67e2a
+	dc.w	$ffb0	;67e2c
+	dc.w	$0000	;67e2e
+	dc.w	$0000	;67e30
+	dc.w	$ffb0	;67e32
+	dc.w	$0000	;67e34
+	dc.w	$0010	;67e36
+	dc.w	$ffb0	;67e38
+	dc.w	$0000	;67e3a
+	dc.w	$fff0	;67e3c
+	dc.w	$0000	;67e3e
+	dc.w	$0000	;67e40
+	dc.w	$0010	;67e42
+	dc.w	$0000	;67e44
+	dc.w	$0000	;67e46
+	dc.w	$0000	;67e48
+	dc.w	$0000	;67e4a
+	dc.w	$0000	;67e4c
+	dc.w	$0002	;67e4e
+	dc.w	$4f6c	;67e50
+	dc.w	$0002	;67e52
+	dc.w	$4f7c	;67e54
+	dc.w	$0002	;67e56
+	dc.w	$4f84	;67e58
+	dc.w	$0000	;67e5a
+	dc.w	$0009	;67e5c
+	dc.w	$0000	;67e5e
+	dc.w	$0000	;67e60
+	dc.w	$0000	;67e62
+	dc.w	$0002	;67e64
+	dc.w	$4f7c	;67e66
+	dc.w	$0002	;67e68
+	dc.w	$4f84	;67e6a
+	dc.w	$0002	;67e6c
+	dc.w	$4f8c	;67e6e
+	dc.w	$0000	;67e70
+	dc.w	$0009	;67e72
+	dc.w	$0000	;67e74
+	dc.w	$e06e	;67e76
+	dc.w	$8c3b	;67e78
+	dc.w	$0002	;67e7a
+	dc.w	$4f5c	;67e7c
+	dc.w	$0002	;67e7e
+	dc.w	$4f6c	;67e80
+	dc.w	$0002	;67e82
+	dc.w	$4f74	;67e84
+	dc.w	$0000	;67e86
+	dc.w	$0009	;67e88
+	dc.w	$0000	;67e8a
+	dc.w	$e5f8	;67e8c
+	dc.w	$7524	;67e8e
+	dc.w	$0002	;67e90
+	dc.w	$4f64	;67e92
+	dc.w	$0002	;67e94
+	dc.w	$4f74	;67e96
+	dc.w	$0002	;67e98
+	dc.w	$4f7c	;67e9a
+	dc.w	$0000	;67e9c
+	dc.w	$0009	;67e9e
+	dc.w	$0000	;67ea0
+	dc.w	$0020	;67ea2
+	dc.w	$001e	;67ea4
+	dc.w	$00ce	;67ea6
+	dc.w	$ffa0	;67ea8
+	dc.w	$0000	;67eaa
+	dc.w	$0000	;67eac
+lb_67eae:
+	dc.w	$ff20	;67eae
+	dc.w	$0000	;67eb0
+	dc.w	$0080	;67eb2
+lb_67eb4:
+	dc.w	$00e0	;67eb4
+	dc.w	$0000	;67eb6
+	dc.w	$0080	;67eb8
+lb_67eba:
+	dc.w	$ff20	;67eba
+	dc.w	$0000	;67ebc
+	dc.w	$ff80	;67ebe
+lb_67ec0:
+	dc.w	$00e0	;67ec0
+	dc.w	$0000	;67ec2
+	dc.w	$ff80	;67ec4
+	dc.w	$ff20	;67ec6
+	dc.w	$ffb0	;67ec8
+	dc.w	$0080	;67eca
+	dc.w	$00e0	;67ecc
+	dc.w	$ffd0	;67ece
+	dc.w	$0080	;67ed0
+	dc.w	$ff20	;67ed2
+	dc.w	$ff60	;67ed4
+	dc.w	$ff80	;67ed6
+	dc.w	$00e0	;67ed8
+	dc.w	$ffc0	;67eda
+	dc.w	$ff80	;67edc
+	dc.w	$00e0	;67ede
+	dc.w	$ffe0	;67ee0
+	dc.w	$ffe0	;67ee2
+	dc.w	$00e0	;67ee4
+	dc.w	$ffa0	;67ee6
+	dc.w	$0040	;67ee8
+	dc.w	$ff20	;67eea
+	dc.w	$ff60	;67eec
+	dc.w	$ffe0	;67eee
+	dc.w	$ff70	;67ef0
+	dc.w	$ffb0	;67ef2
+	dc.w	$ff80	;67ef4
+	dc.w	$ffc0	;67ef6
+	dc.w	$ff90	;67ef8
+	dc.w	$ff80	;67efa
+	dc.w	$fff0	;67efc
+	dc.w	$ffe0	;67efe
+	dc.w	$ff80	;67f00
+	dc.w	$0050	;67f02
+	dc.w	$ffb0	;67f04
+	dc.w	$ff80	;67f06
+	dc.w	$00b0	;67f08
+	dc.w	$ffd0	;67f0a
+	dc.w	$ff80	;67f0c
+	dc.w	$ff90	;67f0e
+	dc.w	$ff80	;67f10
+	dc.w	$0080	;67f12
+	dc.w	$0020	;67f14
+	dc.w	$ffc0	;67f16
+	dc.w	$0080	;67f18
+	dc.w	$0050	;67f1a
+	dc.w	$ffa0	;67f1c
+	dc.w	$0080	;67f1e
+	dc.w	$00d0	;67f20
+	dc.w	$ffe0	;67f22
+	dc.w	$0080	;67f24
+	dc.w	$ffa0	;67f26
+	dc.w	$0000	;67f28
+	dc.w	$ffd0	;67f2a
+	dc.w	$ffc0	;67f2c
+	dc.w	$0000	;67f2e
+	dc.w	$ffc0	;67f30
+	dc.w	$0020	;67f32
+	dc.w	$0000	;67f34
+	dc.w	$ffd0	;67f36
+	dc.w	$0070	;67f38
+	dc.w	$0000	;67f3a
+	dc.w	$ffc0	;67f3c
+	dc.w	$0090	;67f3e
+	dc.w	$0000	;67f40
+	dc.w	$ffd0	;67f42
+	dc.w	$0080	;67f44
+	dc.w	$0000	;67f46
+	dc.w	$0020	;67f48
+	dc.w	$00b0	;67f4a
+	dc.w	$0000	;67f4c
+	dc.w	$0050	;67f4e
+	dc.w	$0080	;67f50
+	dc.w	$0000	;67f52
+	dc.w	$0030	;67f54
+	dc.w	$0050	;67f56
+	dc.w	$0000	;67f58
+	dc.w	$0030	;67f5a
+	dc.w	$ffe0	;67f5c
+	dc.w	$0000	;67f5e
+	dc.w	$0010	;67f60
+	dc.w	$ff70	;67f62
+	dc.w	$0000	;67f64
+	dc.w	$0050	;67f66
+	dc.w	$ffa0	;67f68
+	dc.w	$0000	;67f6a
+	dc.w	$0020	;67f6c
+	dc.w	$0000	;67f6e
+	dc.w	$0000	;67f70
+	dc.w	$0000	;67f72
+	dc.w	$0002	;67f74
+	dc.w	$4f64	;67f76
+	dc.w	$0002	;67f78
+	dc.w	$4f6c	;67f7a
+	dc.w	$0002	;67f7c
+	dc.w	$4f74	;67f7e
+	dc.w	$0000	;67f80
+	dc.w	$0007	;67f82
+	dc.w	$0000	;67f84
+	dc.w	$0000	;67f86
+	dc.w	$0000	;67f88
+	dc.w	$0002	;67f8a
+	dc.w	$4f6c	;67f8c
+	dc.w	$0002	;67f8e
+	dc.w	$4f74	;67f90
+	dc.w	$0002	;67f92
+	dc.w	$4f7c	;67f94
+	dc.w	$0000	;67f96
+	dc.w	$0007	;67f98
+	dc.w	$a24c	;67f9a
+	dc.w	$4af6	;67f9c
+	dc.w	$0000	;67f9e
+	dc.w	$0002	;67fa0
+	dc.w	$4f94	;67fa2
+	dc.w	$0002	;67fa4
+	dc.w	$4fb4	;67fa6
+	dc.w	$0002	;67fa8
+	dc.w	$4f5c	;67faa
+	dc.w	$0000	;67fac
+	dc.w	$0007	;67fae
+	dc.w	$ac72	;67fb0
+	dc.w	$538e	;67fb2
+	dc.w	$eb1d	;67fb4
+	dc.w	$0002	;67fb6
+	dc.w	$4f94	;67fb8
+	dc.w	$0002	;67fba
+	dc.w	$4fbc	;67fbc
+	dc.w	$0002	;67fbe
+	dc.w	$4f5c	;67fc0
+	dc.w	$0000	;67fc2
+	dc.w	$0007	;67fc4
+	dc.w	$1d39	;67fc6
+	dc.w	$490f	;67fc8
+	dc.w	$a568	;67fca
+	dc.w	$0002	;67fcc
+	dc.w	$4fbc	;67fce
+	dc.w	$0002	;67fd0
+	dc.w	$4fc4	;67fd2
+	dc.w	$0002	;67fd4
+	dc.w	$5004	;67fd6
+	dc.w	$0000	;67fd8
+	dc.w	$0007	;67fda
+	dc.w	$b388	;67fdc
+	dc.w	$2de1	;67fde
+	dc.w	$afb5	;67fe0
+	dc.w	$0002	;67fe2
+	dc.w	$4fc4	;67fe4
+	dc.w	$0002	;67fe6
+	dc.w	$4fcc	;67fe8
+	dc.w	$0002	;67fea
+	dc.w	$500c	;67fec
+	dc.w	$0000	;67fee
+	dc.w	$0007	;67ff0
+	dc.w	$2d7c	;67ff2
+	dc.w	$5af8	;67ff4
+	dc.w	$c052	;67ff6
+	dc.w	$0002	;67ff8
+	dc.w	$4fcc	;67ffa
+	dc.w	$0002	;67ffc
+	dc.w	$4fd4	;67ffe
+	dc.w	$0002	;68000
+	dc.w	$5014	;68002
+	dc.w	$0000	;68004
+	dc.w	$0007	;68006
+	dc.w	$e58a	;68008
+	dc.w	$4f63	;6800a
+	dc.w	$a9ff	;6800c
+	dc.w	$0002	;6800e
+	dc.w	$4fd4	;68010
+	dc.w	$0002	;68012
+	dc.w	$4fdc	;68014
+	dc.w	$0002	;68016
+	dc.w	$501c	;68018
+	dc.w	$0000	;6801a
+	dc.w	$0007	;6801c
+	dc.w	$22b2	;6801e
+	dc.w	$6818	;68020
+	dc.w	$cf6c	;68022
+	dc.w	$0002	;68024
+	dc.w	$4f9c	;68026
+	dc.w	$0002	;68028
+	dc.w	$4fdc	;6802a
+	dc.w	$0002	;6802c
+	dc.w	$5024	;6802e
+	dc.w	$0000	;68030
+	dc.w	$0007	;68032
+	dc.w	$3094	;68034
+	dc.w	$6818	;68036
+	dc.w	$dd4e	;68038
+	dc.w	$0002	;6803a
+	dc.w	$4f9c	;6803c
+	dc.w	$0002	;6803e
+	dc.w	$4fa4	;68040
+	dc.w	$0002	;68042
+	dc.w	$5024	;68044
+	dc.w	$0000	;68046
+	dc.w	$0007	;68048
+	dc.w	$4132	;6804a
+	dc.w	$53d3	;6804c
+	dc.w	$37e2	;6804e
+	dc.w	$0002	;68050
+	dc.w	$4fa4	;68052
+	dc.w	$0002	;68054
+	dc.w	$4fac	;68056
+	dc.w	$0002	;68058
+	dc.w	$502c	;6805a
+	dc.w	$0000	;6805c
+	dc.w	$0007	;6805e
+	dc.w	$61a5	;68060
+	dc.w	$37cc	;68062
+	dc.w	$d627	;68064
+	dc.w	$0002	;68066
+	dc.w	$4f8c	;68068
+	dc.w	$0002	;6806a
+	dc.w	$4fac	;6806c
+	dc.w	$0002	;6806e
+	dc.w	$5034	;68070
+	dc.w	$0000	;68072
+	dc.w	$0007	;68074
+	dc.w	$29cd	;68076
+	dc.w	$ac65	;68078
+	dc.w	$b4c1	;6807a
+	dc.w	$0002	;6807c
+	dc.w	$4ff4	;6807e
+	dc.w	$0002	;68080
+	dc.w	$4ffc	;68082
+	dc.w	$0002	;68084
+	dc.w	$503c	;68086
+	dc.w	$0000	;68088
+	dc.w	$0007	;6808a
+	dc.w	$2f1a	;6808c
+	dc.w	$46a7	;6808e
+	dc.w	$54c9	;68090
+	dc.w	$0002	;68092
+	dc.w	$4fec	;68094
+	dc.w	$0002	;68096
+	dc.w	$4ff4	;68098
+	dc.w	$0002	;6809a
+	dc.w	$5044	;6809c
+	dc.w	$0000	;6809e
+	dc.w	$0007	;680a0
+	dc.w	$d918	;680a2
+	dc.w	$578b	;680a4
+	dc.w	$4842	;680a6
+	dc.w	$0002	;680a8
+	dc.w	$4fe4	;680aa
+	dc.w	$0002	;680ac
+	dc.w	$4fec	;680ae
+	dc.w	$0002	;680b0
+	dc.w	$504c	;680b2
+	dc.w	$0000	;680b4
+	dc.w	$0007	;680b6
+	dc.w	$13a5	;680b8
+	dc.w	$2dd7	;680ba
+	dc.w	$6d25	;680bc
+	dc.w	$0002	;680be
+	dc.w	$4f84	;680c0
+	dc.w	$0002	;680c2
+	dc.w	$4fe4	;680c4
+	dc.w	$0002	;680c6
+	dc.w	$5054	;680c8
+	dc.w	$0000	;680ca
+	dc.w	$0007	;680cc
+	dc.w	$b000	;680ce
+	dc.w	$5000	;680d0
+	dc.w	$d800	;680d2
+	dc.w	$0002	;680d4
+	dc.w	$4f84	;680d6
+	dc.w	$0002	;680d8
+	dc.w	$4fb4	;680da
+	dc.w	$0002	;680dc
+	dc.w	$505c	;680de
+	dc.w	$0000	;680e0
+	dc.w	$0007	;680e2
+	dc.w	$8800	;680e4
+	dc.w	$0000	;680e6
+	dc.w	$0000	;680e8
+	dc.w	$0002	;680ea
+	dc.w	$4f64	;680ec
+	dc.w	$0002	;680ee
+	dc.w	$4f84	;680f0
+	dc.w	$0002	;680f2
+	dc.w	$4fb4	;680f4
+	dc.w	$0000	;680f6
+	dc.w	$0007	;680f8
+	dc.w	$8800	;680fa
+	dc.w	$0000	;680fc
+	dc.w	$0000	;680fe
+	dc.w	$0002	;68100
+	dc.w	$4f64	;68102
+	dc.w	$0002	;68104
+	dc.w	$4f94	;68106
+	dc.w	$0002	;68108
+	dc.w	$4fb4	;6810a
+	dc.w	$0000	;6810c
+	dc.w	$0007	;6810e
+	dc.w	$8800	;68110
+	dc.w	$0000	;68112
+	dc.w	$0000	;68114
+	dc.w	$0002	;68116
+	dc.w	$4f64	;68118
+	dc.w	$0002	;6811a
+	dc.w	$4f74	;6811c
+	dc.w	$0002	;6811e
+	dc.w	$4f94	;68120
+	dc.w	$0000	;68122
+	dc.w	$0007	;68124
+	dc.w	$7800	;68126
+	dc.w	$0000	;68128
+	dc.w	$0000	;6812a
+	dc.w	$0002	;6812c
+	dc.w	$4f7c	;6812e
+	dc.w	$0002	;68130
+	dc.w	$4f9c	;68132
+	dc.w	$0002	;68134
+	dc.w	$4fa4	;68136
+	dc.w	$0000	;68138
+	dc.w	$0007	;6813a
+	dc.w	$7800	;6813c
+	dc.w	$0000	;6813e
+	dc.w	$0000	;68140
+	dc.w	$0002	;68142
+	dc.w	$4f6c	;68144
+	dc.w	$0002	;68146
+	dc.w	$4f7c	;68148
+	dc.w	$0002	;6814a
+	dc.w	$4fa4	;6814c
+	dc.w	$0000	;6814e
+	dc.w	$0007	;68150
+	dc.w	$7800	;68152
+	dc.w	$0000	;68154
+	dc.w	$0000	;68156
+	dc.w	$0002	;68158
+	dc.w	$4f6c	;6815a
+	dc.w	$0002	;6815c
+	dc.w	$4fa4	;6815e
+	dc.w	$0002	;68160
+	dc.w	$4fac	;68162
+	dc.w	$0000	;68164
+	dc.w	$0007	;68166
+	dc.w	$7800	;68168
+	dc.w	$0000	;6816a
+	dc.w	$0000	;6816c
+	dc.w	$0002	;6816e
+	dc.w	$4f6c	;68170
+	dc.w	$0002	;68172
+	dc.w	$4f8c	;68174
+	dc.w	$0002	;68176
+	dc.w	$4fac	;68178
+	dc.w	$0000	;6817a
+	dc.w	$0007	;6817c
+	dc.w	$0000	;6817e
+	dc.w	$0000	;68180
+	dc.w	$7800	;68182
+	dc.w	$0002	;68184
+	dc.w	$4f74	;68186
+	dc.w	$0002	;68188
+	dc.w	$4f94	;6818a
+	dc.w	$0002	;6818c
+	dc.w	$4fbc	;6818e
+	dc.w	$0000	;68190
+	dc.w	$0007	;68192
+	dc.w	$0000	;68194
+	dc.w	$0000	;68196
+	dc.w	$7800	;68198
+	dc.w	$0002	;6819a
+	dc.w	$4f74	;6819c
+	dc.w	$0002	;6819e
+	dc.w	$4fbc	;681a0
+	dc.w	$0002	;681a2
+	dc.w	$4fc4	;681a4
+	dc.w	$0000	;681a6
+	dc.w	$0007	;681a8
+	dc.w	$0000	;681aa
+	dc.w	$0000	;681ac
+	dc.w	$7800	;681ae
+	dc.w	$0002	;681b0
+	dc.w	$4f74	;681b2
+	dc.w	$0002	;681b4
+	dc.w	$4fc4	;681b6
+	dc.w	$0002	;681b8
+	dc.w	$4fcc	;681ba
+	dc.w	$0000	;681bc
+	dc.w	$0007	;681be
+	dc.w	$0000	;681c0
+	dc.w	$0000	;681c2
+	dc.w	$7800	;681c4
+	dc.w	$0002	;681c6
+	dc.w	$4f74	;681c8
+	dc.w	$0002	;681ca
+	dc.w	$4f7c	;681cc
+	dc.w	$0002	;681ce
+	dc.w	$4fcc	;681d0
+	dc.w	$0000	;681d2
+	dc.w	$0007	;681d4
+	dc.w	$0000	;681d6
+	dc.w	$0000	;681d8
+	dc.w	$7800	;681da
+	dc.w	$0002	;681dc
+	dc.w	$4f7c	;681de
+	dc.w	$0002	;681e0
+	dc.w	$4fcc	;681e2
+	dc.w	$0002	;681e4
+	dc.w	$4fd4	;681e6
+	dc.w	$0000	;681e8
+	dc.w	$0007	;681ea
+	dc.w	$0000	;681ec
+	dc.w	$0000	;681ee
+	dc.w	$7800	;681f0
+	dc.w	$0002	;681f2
+	dc.w	$4f7c	;681f4
+	dc.w	$0002	;681f6
+	dc.w	$4fd4	;681f8
+	dc.w	$0002	;681fa
+	dc.w	$4fdc	;681fc
+	dc.w	$0000	;681fe
+	dc.w	$0007	;68200
+	dc.w	$0000	;68202
+	dc.w	$0000	;68204
+	dc.w	$7800	;68206
+	dc.w	$0002	;68208
+	dc.w	$4f7c	;6820a
+	dc.w	$0002	;6820c
+	dc.w	$4f9c	;6820e
+	dc.w	$0002	;68210
+	dc.w	$4fdc	;68212
+	dc.w	$0000	;68214
+	dc.w	$0007	;68216
+	dc.w	$0000	;68218
+	dc.w	$001c	;6821a
+	dc.w	$001d	;6821c
+	dc.w	$00b6	;6821e
+	dc.w	$ffa0	;68220
+	dc.w	$0000	;68222
+	dc.w	$ffc0	;68224
+	dc.w	$ff20	;68226
+	dc.w	$0000	;68228
+	dc.w	$0080	;6822a
+	dc.w	$00e0	;6822c
+	dc.w	$0000	;6822e
+	dc.w	$0080	;68230
+	dc.w	$ff20	;68232
+	dc.w	$0000	;68234
+	dc.w	$ff80	;68236
+	dc.w	$00e0	;68238
+	dc.w	$0000	;6823a
+	dc.w	$ff80	;6823c
+	dc.w	$ff20	;6823e
+	dc.w	$ffc0	;68240
+	dc.w	$0080	;68242
+	dc.w	$00e0	;68244
+	dc.w	$ffc0	;68246
+	dc.w	$0080	;68248
+	dc.w	$ff20	;6824a
+	dc.w	$ffe0	;6824c
+	dc.w	$ff80	;6824e
+	dc.w	$00e0	;68250
+	dc.w	$ff40	;68252
+	dc.w	$ff80	;68254
+	dc.w	$00e0	;68256
+	dc.w	$ff40	;68258
+	dc.w	$ffd0	;6825a
+	dc.w	$00e0	;6825c
+	dc.w	$ffa0	;6825e
+	dc.w	$fff0	;68260
+	dc.w	$ff20	;68262
+	dc.w	$ffb0	;68264
+	dc.w	$ffe0	;68266
+	dc.w	$ffd0	;68268
+	dc.w	$ffa0	;6826a
+	dc.w	$0080	;6826c
+	dc.w	$0050	;6826e
+	dc.w	$ffd0	;68270
+	dc.w	$0080	;68272
+	dc.w	$ff80	;68274
+	dc.w	$ffb0	;68276
+	dc.w	$ff80	;68278
+	dc.w	$fff0	;6827a
+	dc.w	$ff90	;6827c
+	dc.w	$ff80	;6827e
+	dc.w	$0060	;68280
+	dc.w	$ffc0	;68282
+	dc.w	$ff80	;68284
+	dc.w	$0080	;68286
+	dc.w	$ff90	;68288
+	dc.w	$ff80	;6828a
+	dc.w	$00d0	;6828c
+	dc.w	$ff90	;6828e
+	dc.w	$ff80	;68290
+	dc.w	$ff80	;68292
+	dc.w	$0000	;68294
+	dc.w	$ffa0	;68296
+	dc.w	$ffd0	;68298
+	dc.w	$0000	;6829a
+	dc.w	$ffe0	;6829c
+	dc.w	$0050	;6829e
+	dc.w	$0000	;682a0
+	dc.w	$fff0	;682a2
+	dc.w	$0080	;682a4
+	dc.w	$0000	;682a6
+	dc.w	$ffd0	;682a8
+	dc.w	$00b0	;682aa
+	dc.w	$0000	;682ac
+	dc.w	$ffd0	;682ae
+	dc.w	$00c0	;682b0
+	dc.w	$0000	;682b2
+	dc.w	$ffd0	;682b4
+	dc.w	$0090	;682b6
+	dc.w	$0000	;682b8
+	dc.w	$fff0	;682ba
+	dc.w	$0060	;682bc
+	dc.w	$0000	;682be
+	dc.w	$0010	;682c0
+	dc.w	$ffd0	;682c2
+	dc.w	$0000	;682c4
+	dc.w	$0030	;682c6
+	dc.w	$ff90	;682c8
+	dc.w	$0000	;682ca
+	dc.w	$ffe0	;682cc
+	dc.w	$0000	;682ce
+	dc.w	$0000	;682d0
+	dc.w	$0000	;682d2
+	dc.w	$0002	;682d4
+	dc.w	$4f64	;682d6
+	dc.w	$0002	;682d8
+	dc.w	$4f6c	;682da
+	dc.w	$0002	;682dc
+	dc.w	$4f74	;682de
+	dc.w	$0000	;682e0
+	dc.w	$0007	;682e2
+	dc.w	$0000	;682e4
+	dc.w	$0000	;682e6
+	dc.w	$0000	;682e8
+	dc.w	$0002	;682ea
+	dc.w	$4f6c	;682ec
+	dc.w	$0002	;682ee
+	dc.w	$4f74	;682f0
+	dc.w	$0002	;682f2
+	dc.w	$4f7c	;682f4
+	dc.w	$0000	;682f6
+	dc.w	$0007	;682f8
+	dc.w	$15e8	;682fa
+	dc.w	$2bd1	;682fc
+	dc.w	$9275	;682fe
+	dc.w	$0002	;68300
+	dc.w	$4f94	;68302
+	dc.w	$0002	;68304
+	dc.w	$4fcc	;68306
+	dc.w	$0002	;68308
+	dc.w	$4ff4	;6830a
+	dc.w	$0000	;6830c
+	dc.w	$0007	;6830e
+	dc.w	$16f6	;68310
+	dc.w	$505d	;68312
+	dc.w	$a9e5	;68314
+	dc.w	$0002	;68316
+	dc.w	$4fcc	;68318
+	dc.w	$0002	;6831a
+	dc.w	$4fd4	;6831c
+	dc.w	$0002	;6831e
+	dc.w	$4ffc	;68320
+	dc.w	$0000	;68322
+	dc.w	$0007	;68324
+	dc.w	$28dd	;68326
+	dc.w	$a0a7	;68328
+	dc.w	$3c52	;6832a
+	dc.w	$0002	;6832c
+	dc.w	$4fd4	;6832e
+	dc.w	$0002	;68330
+	dc.w	$4fdc	;68332
+	dc.w	$0002	;68334
+	dc.w	$5004	;68336
+	dc.w	$0000	;68338
+	dc.w	$0007	;6833a
+	dc.w	$4edc	;6833c
+	dc.w	$3492	;6833e
+	dc.w	$b666	;68340
+	dc.w	$0002	;68342
+	dc.w	$4fdc	;68344
+	dc.w	$0002	;68346
+	dc.w	$4fe4	;68348
+	dc.w	$0002	;6834a
+	dc.w	$500c	;6834c
+	dc.w	$0000	;6834e
+	dc.w	$0007	;68350
+	dc.w	$0000	;68352
+	dc.w	$45bf	;68354
+	dc.w	$9e5b	;68356
+	dc.w	$0002	;68358
+	dc.w	$4fe4	;6835a
+	dc.w	$0002	;6835c
+	dc.w	$4fec	;6835e
+	dc.w	$0002	;68360
+	dc.w	$5014	;68362
+	dc.w	$0000	;68364
+	dc.w	$0007	;68366
+	dc.w	$754f	;68368
+	dc.w	$1776	;6836a
+	dc.w	$f69e	;6836c
+	dc.w	$0002	;6836e
+	dc.w	$4f9c	;68370
+	dc.w	$0002	;68372
+	dc.w	$4fec	;68374
+	dc.w	$0002	;68376
+	dc.w	$501c	;68378
+	dc.w	$0000	;6837a
+	dc.w	$0007	;6837c
+	dc.w	$765e	;6837e
+	dc.w	$13ba	;68380
+	dc.w	$0000	;68382
+	dc.w	$0002	;68384
+	dc.w	$4f9c	;68386
+	dc.w	$0002	;68388
+	dc.w	$4fa4	;6838a
+	dc.w	$0002	;6838c
+	dc.w	$501c	;6838e
+	dc.w	$0000	;68390
+	dc.w	$0007	;68392
+	dc.w	$2a93	;68394
+	dc.w	$237a	;68396
+	dc.w	$9591	;68398
+	dc.w	$0002	;6839a
+	dc.w	$4fa4	;6839c
+	dc.w	$0002	;6839e
+	dc.w	$4fac	;683a0
+	dc.w	$0002	;683a2
+	dc.w	$5024	;683a4
+	dc.w	$0000	;683a6
+	dc.w	$0007	;683a8
+	dc.w	$4355	;683aa
+	dc.w	$60f6	;683ac
+	dc.w	$ea74	;683ae
+	dc.w	$0002	;683b0
+	dc.w	$4f8c	;683b2
+	dc.w	$0002	;683b4
+	dc.w	$4fac	;683b6
+	dc.w	$0002	;683b8
+	dc.w	$502c	;683ba
+	dc.w	$0000	;683bc
+	dc.w	$0007	;683be
+	dc.w	$0c1f	;683c0
+	dc.w	$6d18	;683c2
+	dc.w	$307c	;683c4
+	dc.w	$0002	;683c6
+	dc.w	$4f8c	;683c8
+	dc.w	$0002	;683ca
+	dc.w	$4fc4	;683cc
+	dc.w	$0002	;683ce
+	dc.w	$502c	;683d0
+	dc.w	$0000	;683d2
+	dc.w	$0007	;683d4
+	dc.w	$e3fd	;683d6
+	dc.w	$4ab3	;683d8
+	dc.w	$59a3	;683da
+	dc.w	$0002	;683dc
+	dc.w	$4fbc	;683de
+	dc.w	$0002	;683e0
+	dc.w	$4fc4	;683e2
+	dc.w	$0002	;683e4
+	dc.w	$5034	;683e6
+	dc.w	$0000	;683e8
+	dc.w	$0007	;683ea
+	dc.w	$ecf2	;683ec
+	dc.w	$9733	;683ee
+	dc.w	$c8be	;683f0
+	dc.w	$0002	;683f2
+	dc.w	$4f84	;683f4
+	dc.w	$0002	;683f6
+	dc.w	$4fbc	;683f8
+	dc.w	$0002	;683fa
+	dc.w	$503c	;683fc
+	dc.w	$0000	;683fe
+	dc.w	$0007	;68400
+	dc.w	$ba7c	;68402
+	dc.w	$6153	;68404
+	dc.w	$f645	;68406
+	dc.w	$0002	;68408
+	dc.w	$4f84	;6840a
+	dc.w	$0002	;6840c
+	dc.w	$4fb4	;6840e
+	dc.w	$0002	;68410
+	dc.w	$503c	;68412
+	dc.w	$0000	;68414
+	dc.w	$0007	;68416
+	dc.w	$cf03	;68418
+	dc.w	$61fa	;6841a
+	dc.w	$30fd	;6841c
+	dc.w	$0002	;6841e
+	dc.w	$4f94	;68420
+	dc.w	$0002	;68422
+	dc.w	$4fb4	;68424
+	dc.w	$0002	;68426
+	dc.w	$4f5c	;68428
+	dc.w	$0000	;6842a
+	dc.w	$0007	;6842c
+	dc.w	$8800	;6842e
+	dc.w	$0000	;68430
+	dc.w	$0000	;68432
+	dc.w	$0002	;68434
+	dc.w	$4f64	;68436
+	dc.w	$0002	;68438
+	dc.w	$4f84	;6843a
+	dc.w	$0002	;6843c
+	dc.w	$4fb4	;6843e
+	dc.w	$0000	;68440
+	dc.w	$0007	;68442
+	dc.w	$8800	;68444
+	dc.w	$0000	;68446
+	dc.w	$0000	;68448
+	dc.w	$0002	;6844a
+	dc.w	$4f64	;6844c
+	dc.w	$0002	;6844e
+	dc.w	$4f74	;68450
+	dc.w	$0002	;68452
+	dc.w	$4fb4	;68454
+	dc.w	$0000	;68456
+	dc.w	$0007	;68458
+	dc.w	$8800	;6845a
+	dc.w	$0000	;6845c
+	dc.w	$0000	;6845e
+	dc.w	$0002	;68460
+	dc.w	$4f74	;68462
+	dc.w	$0002	;68464
+	dc.w	$4f94	;68466
+	dc.w	$0002	;68468
+	dc.w	$4fb4	;6846a
+	dc.w	$0000	;6846c
+	dc.w	$0007	;6846e
+	dc.w	$7800	;68470
+	dc.w	$0000	;68472
+	dc.w	$0000	;68474
+	dc.w	$0002	;68476
+	dc.w	$4f7c	;68478
+	dc.w	$0002	;6847a
+	dc.w	$4f9c	;6847c
+	dc.w	$0002	;6847e
+	dc.w	$4fa4	;68480
+	dc.w	$0000	;68482
+	dc.w	$0007	;68484
+	dc.w	$7800	;68486
+	dc.w	$0000	;68488
+	dc.w	$0000	;6848a
+	dc.w	$0002	;6848c
+	dc.w	$4f7c	;6848e
+	dc.w	$0002	;68490
+	dc.w	$4fa4	;68492
+	dc.w	$0002	;68494
+	dc.w	$4fac	;68496
+	dc.w	$0000	;68498
+	dc.w	$0007	;6849a
+	dc.w	$7800	;6849c
+	dc.w	$0000	;6849e
+	dc.w	$0000	;684a0
+	dc.w	$0002	;684a2
+	dc.w	$4f6c	;684a4
+	dc.w	$0002	;684a6
+	dc.w	$4f7c	;684a8
+	dc.w	$0002	;684aa
+	dc.w	$4fac	;684ac
+	dc.w	$0000	;684ae
+	dc.w	$0007	;684b0
+	dc.w	$7800	;684b2
+	dc.w	$0000	;684b4
+	dc.w	$0000	;684b6
+	dc.w	$0002	;684b8
+	dc.w	$4f6c	;684ba
+	dc.w	$0002	;684bc
+	dc.w	$4f8c	;684be
+	dc.w	$0002	;684c0
+	dc.w	$4fac	;684c2
+	dc.w	$0000	;684c4
+	dc.w	$0007	;684c6
+	dc.w	$0000	;684c8
+	dc.w	$0000	;684ca
+	dc.w	$7800	;684cc
+	dc.w	$0002	;684ce
+	dc.w	$4f74	;684d0
+	dc.w	$0002	;684d2
+	dc.w	$4f94	;684d4
+	dc.w	$0002	;684d6
+	dc.w	$4fcc	;684d8
+	dc.w	$0000	;684da
+	dc.w	$0007	;684dc
+	dc.w	$0000	;684de
+	dc.w	$0000	;684e0
+	dc.w	$7800	;684e2
+	dc.w	$0002	;684e4
+	dc.w	$4f74	;684e6
+	dc.w	$0002	;684e8
+	dc.w	$4fcc	;684ea
+	dc.w	$0002	;684ec
+	dc.w	$4fd4	;684ee
+	dc.w	$0000	;684f0
+	dc.w	$0007	;684f2
+	dc.w	$0000	;684f4
+	dc.w	$0000	;684f6
+	dc.w	$7800	;684f8
+	dc.w	$0002	;684fa
+	dc.w	$4f74	;684fc
+	dc.w	$0002	;684fe
+	dc.w	$4fd4	;68500
+	dc.w	$0002	;68502
+	dc.w	$4fdc	;68504
+	dc.w	$0000	;68506
+	dc.w	$0007	;68508
+	dc.w	$0000	;6850a
+	dc.w	$0000	;6850c
+	dc.w	$7800	;6850e
+	dc.w	$0002	;68510
+	dc.w	$4f74	;68512
+	dc.w	$0002	;68514
+	dc.w	$4f7c	;68516
+	dc.w	$0002	;68518
+	dc.w	$4fdc	;6851a
+	dc.w	$0000	;6851c
+	dc.w	$0007	;6851e
+	dc.w	$0000	;68520
+	dc.w	$0000	;68522
+	dc.w	$7800	;68524
+	dc.w	$0002	;68526
+	dc.w	$4f7c	;68528
+	dc.w	$0002	;6852a
+	dc.w	$4fdc	;6852c
+	dc.w	$0002	;6852e
+	dc.w	$4fe4	;68530
+	dc.w	$0000	;68532
+	dc.w	$0007	;68534
+	dc.w	$0000	;68536
+	dc.w	$0000	;68538
+	dc.w	$7800	;6853a
+	dc.w	$0002	;6853c
+	dc.w	$4f7c	;6853e
+	dc.w	$0002	;68540
+	dc.w	$4fe4	;68542
+	dc.w	$0002	;68544
+	dc.w	$4fec	;68546
+	dc.w	$0000	;68548
+	dc.w	$0007	;6854a
+	dc.w	$0000	;6854c
+	dc.w	$0000	;6854e
+	dc.w	$7800	;68550
+	dc.w	$0002	;68552
+	dc.w	$4f7c	;68554
+	dc.w	$0002	;68556
+	dc.w	$4f9c	;68558
+	dc.w	$0002	;6855a
+	dc.w	$4fec	;6855c
+	dc.w	$0000	;6855e
+	dc.w	$0007	;68560
+	dc.w	$0100	;68562
+	dc.w	$0006	;68564
+	dc.w	$0003	;68566
+	dc.w	$0032	;68568
+	dc.w	$ffa0	;6856a
+	dc.w	$ff90	;6856c
+	dc.w	$0000	;6856e
+	dc.w	$ffe0	;68570
+	dc.w	$ffc0	;68572
+	dc.w	$fff0	;68574
+	dc.w	$ffe0	;68576
+	dc.w	$ffc0	;68578
+	dc.w	$0010	;6857a
+	dc.w	$0000	;6857c
+	dc.w	$0000	;6857e
+	dc.w	$0000	;68580
+	dc.w	$0020	;68582
+	dc.w	$ffc0	;68584
+	dc.w	$0010	;68586
+	dc.w	$0020	;68588
+	dc.w	$ffc0	;6858a
+	dc.w	$fff0	;6858c
+	dc.w	$0060	;6858e
+	dc.w	$ff90	;68590
+	dc.w	$0000	;68592
+	dc.w	$4800	;68594
+	dc.w	$a000	;68596
+	dc.w	$0000	;68598
+	dc.w	$0002	;6859a
+	dc.w	$4f5c	;6859c
+	dc.w	$0002	;6859e
+	dc.w	$4f64	;685a0
+	dc.w	$0002	;685a2
+	dc.w	$4f6c	;685a4
+	dc.w	$0000	;685a6
+	dc.w	$000f	;685a8
+	dc.w	$0000	;685aa
+	dc.w	$0000	;685ac
+	dc.w	$0000	;685ae
+	dc.w	$0002	;685b0
+	dc.w	$4f64	;685b2
+	dc.w	$0002	;685b4
+	dc.w	$4f6c	;685b6
+	dc.w	$0002	;685b8
+	dc.w	$4f74	;685ba
+	dc.w	$0000	;685bc
+	dc.w	$000f	;685be
+	dc.w	$0000	;685c0
+	dc.w	$0000	;685c2
+	dc.w	$0000	;685c4
+	dc.w	$0002	;685c6
+	dc.w	$4f74	;685c8
+	dc.w	$0002	;685ca
+	dc.w	$4f7c	;685cc
+	dc.w	$0002	;685ce
+	dc.w	$4f84	;685d0
+	dc.w	$0000	;685d2
+	dc.w	$000f	;685d4
+	dc.w	$b800	;685d6
+	dc.w	$a000	;685d8
+	dc.w	$0000	;685da
+	dc.w	$0002	;685dc
+	dc.w	$4f7c	;685de
+	dc.w	$0002	;685e0
+	dc.w	$4f84	;685e2
+	dc.w	$0002	;685e4
+	dc.w	$4f8c	;685e6
+	dc.w	$0000	;685e8
+	dc.w	$000f	;685ea
+	dc.w	$0100	;685ec
+	dc.w	$0006	;685ee
+	dc.w	$0003	;685f0
+	dc.w	$0032	;685f2
+	dc.w	$ff88	;685f4
+	dc.w	$ffb0	;685f6
+	dc.w	$0000	;685f8
+	dc.w	$ffd8	;685fa
+	dc.w	$ffd0	;685fc
+	dc.w	$fff0	;685fe
+	dc.w	$ffd8	;68600
+	dc.w	$ffd0	;68602
+	dc.w	$0010	;68604
+	dc.w	$0000	;68606
+	dc.w	$0000	;68608
+	dc.w	$0000	;6860a
+	dc.w	$0028	;6860c
+	dc.w	$ffd0	;6860e
+	dc.w	$0010	;68610
+	dc.w	$0028	;68612
+	dc.w	$ffd0	;68614
+	dc.w	$fff0	;68616
+	dc.w	$0078	;68618
+	dc.w	$ffb0	;6861a
+	dc.w	$0000	;6861c
+	dc.w	$2c91	;6861e
+	dc.w	$9096	;68620
+	dc.w	$0000	;68622
+	dc.w	$0002	;68624
+	dc.w	$4f5c	;68626
+	dc.w	$0002	;68628
+	dc.w	$4f64	;6862a
+	dc.w	$0002	;6862c
+	dc.w	$4f6c	;6862e
+	dc.w	$0000	;68630
+	dc.w	$000f	;68632
+	dc.w	$0000	;68634
+	dc.w	$0000	;68636
+	dc.w	$0000	;68638
+	dc.w	$0002	;6863a
+	dc.w	$4f64	;6863c
+	dc.w	$0002	;6863e
+	dc.w	$4f6c	;68640
+	dc.w	$0002	;68642
+	dc.w	$4f74	;68644
+	dc.w	$0000	;68646
+	dc.w	$000f	;68648
+	dc.w	$0000	;6864a
+	dc.w	$0000	;6864c
+	dc.w	$0000	;6864e
+	dc.w	$0002	;68650
+	dc.w	$4f74	;68652
+	dc.w	$0002	;68654
+	dc.w	$4f7c	;68656
+	dc.w	$0002	;68658
+	dc.w	$4f84	;6865a
+	dc.w	$0000	;6865c
+	dc.w	$000f	;6865e
+	dc.w	$d36f	;68660
+	dc.w	$9096	;68662
+	dc.w	$0000	;68664
+	dc.w	$0002	;68666
+	dc.w	$4f7c	;68668
+	dc.w	$0002	;6866a
+	dc.w	$4f84	;6866c
+	dc.w	$0002	;6866e
+	dc.w	$4f8c	;68670
+	dc.w	$0000	;68672
+	dc.w	$000f	;68674
+	dc.w	$0100	;68676
+	dc.w	$0006	;68678
+	dc.w	$0003	;6867a
+	dc.w	$0032	;6867c
+	dc.w	$ff80	;6867e
+	dc.w	$ffe0	;68680
+	dc.w	$0000	;68682
+	dc.w	$ffd0	;68684
+	dc.w	$ffd0	;68686
+	dc.w	$fff0	;68688
+	dc.w	$ffd0	;6868a
+	dc.w	$ffd0	;6868c
+	dc.w	$0010	;6868e
+	dc.w	$0000	;68690
+	dc.w	$0000	;68692
+	dc.w	$0000	;68694
+	dc.w	$0030	;68696
+	dc.w	$ffd0	;68698
+	dc.w	$0010	;6869a
+	dc.w	$0030	;6869c
+	dc.w	$ffd0	;6869e
+	dc.w	$fff0	;686a0
+	dc.w	$0080	;686a2
+	dc.w	$ffe0	;686a4
+	dc.w	$0000	;686a6
+	dc.w	$e878	;686a8
+	dc.w	$8a55	;686aa
+	dc.w	$0000	;686ac
+	dc.w	$0002	;686ae
+	dc.w	$4f5c	;686b0
+	dc.w	$0002	;686b2
+	dc.w	$4f64	;686b4
+	dc.w	$0002	;686b6
+	dc.w	$4f6c	;686b8
+	dc.w	$0000	;686ba
+	dc.w	$000f	;686bc
+	dc.w	$0000	;686be
+	dc.w	$0000	;686c0
+	dc.w	$0000	;686c2
+	dc.w	$0002	;686c4
+	dc.w	$4f64	;686c6
+	dc.w	$0002	;686c8
+	dc.w	$4f6c	;686ca
+	dc.w	$0002	;686cc
+	dc.w	$4f74	;686ce
+	dc.w	$0000	;686d0
+	dc.w	$000f	;686d2
+	dc.w	$0000	;686d4
+	dc.w	$0000	;686d6
+	dc.w	$0000	;686d8
+	dc.w	$0002	;686da
+	dc.w	$4f74	;686dc
+	dc.w	$0002	;686de
+	dc.w	$4f7c	;686e0
+	dc.w	$0002	;686e2
+	dc.w	$4f84	;686e4
+	dc.w	$0000	;686e6
+	dc.w	$000f	;686e8
+	dc.w	$1788	;686ea
+	dc.w	$8a55	;686ec
+	dc.w	$0000	;686ee
+	dc.w	$0002	;686f0
+	dc.w	$4f7c	;686f2
+	dc.w	$0002	;686f4
+	dc.w	$4f84	;686f6
+	dc.w	$0002	;686f8
+	dc.w	$4f8c	;686fa
+	dc.w	$0000	;686fc
+	dc.w	$000f	;686fe
+	dc.w	$0100	;68700
+	dc.w	$0006	;68702
+	dc.w	$0003	;68704
+	dc.w	$0032	;68706
+	dc.w	$ff70	;68708
+	dc.w	$0010	;6870a
+	dc.w	$0000	;6870c
+	dc.w	$ffc0	;6870e
+	dc.w	$fff0	;68710
+	dc.w	$fff0	;68712
+	dc.w	$ffc0	;68714
+	dc.w	$fff0	;68716
+	dc.w	$0010	;68718
+	dc.w	$0000	;6871a
+	dc.w	$0000	;6871c
+	dc.w	$0000	;6871e
+	dc.w	$0040	;68720
+	dc.w	$fff0	;68722
+	dc.w	$0010	;68724
+	dc.w	$0040	;68726
+	dc.w	$fff0	;68728
+	dc.w	$fff0	;6872a
+	dc.w	$0090	;6872c
+	dc.w	$0010	;6872e
+	dc.w	$0000	;68730
+	dc.w	$d36f	;68732
+	dc.w	$9096	;68734
+	dc.w	$0000	;68736
+	dc.w	$0002	;68738
+	dc.w	$4f5c	;6873a
+	dc.w	$0002	;6873c
+	dc.w	$4f64	;6873e
+	dc.w	$0002	;68740
+	dc.w	$4f6c	;68742
+	dc.w	$0000	;68744
+	dc.w	$000f	;68746
+	dc.w	$0000	;68748
+	dc.w	$0000	;6874a
+	dc.w	$0000	;6874c
+	dc.w	$0002	;6874e
+	dc.w	$4f64	;68750
+	dc.w	$0002	;68752
+	dc.w	$4f6c	;68754
+	dc.w	$0002	;68756
+	dc.w	$4f74	;68758
+	dc.w	$0000	;6875a
+	dc.w	$000f	;6875c
+	dc.w	$0000	;6875e
+	dc.w	$0000	;68760
+	dc.w	$0000	;68762
+	dc.w	$0002	;68764
+	dc.w	$4f74	;68766
+	dc.w	$0002	;68768
+	dc.w	$4f7c	;6876a
+	dc.w	$0002	;6876c
+	dc.w	$4f84	;6876e
+	dc.w	$0000	;68770
+	dc.w	$000f	;68772
+	dc.w	$2c91	;68774
+	dc.w	$9096	;68776
+	dc.w	$0000	;68778
+	dc.w	$0002	;6877a
+	dc.w	$4f7c	;6877c
+	dc.w	$0002	;6877e
+	dc.w	$4f84	;68780
+	dc.w	$0002	;68782
+	dc.w	$4f8c	;68784
+	dc.w	$0000	;68786
+	dc.w	$000f	;68788
 lb_6878a:
-	BTST	D0,D0			;6878a: 0100
-	DC.W	$00ca			;6878c
-	ORI.L	#$04ca0000,-(A5)	;6878e: 00a504ca0000
-	dc.l  $0			;68794: 00000000
-	DC.W	$fec8			;68798
-	ORI.B	#$a8,D0			;6879a: 000000a8
-	BCLR	D0,D0			;6879e: 0180
-	ORI.B	#$a8,D0			;687a0: 000000a8
-	BCLR	D0,D0			;687a4: 0180
-	DC.W	$0000			;687a6
-	DC.W	$ff58			;687a8
-	DC.W	$fec8			;687aa
-	DC.W	$0000			;687ac
-	DC.W	$ff58			;687ae
-	DC.W	$fe68			;687b0
-	DC.W	$0048			;687b2
-	DC.W	$ff28			;687b4
-	BTST	D0,TRAP_05.W		;687b6: 01380090
-	DC.W	$ff28			;687ba
-	BTST	D0,TRAP_05.W		;687bc: 01380090
-	DC.W	$00d8			;687c0
-	DC.W	$fe68			;687c2
-	DC.W	$0048			;687c4
-	DC.W	$00d8			;687c6
-	DC.W	$fe20			;687c8
-	ORI.W	#$00d8,-(A0)		;687ca: 006000d8
-	DC.W	$fe20			;687ce
-	ORI.W	#$ff28,-(A0)		;687d0: 0060ff28
-	DC.W	$fe20			;687d4
-	ORI.W	#$ff70,-(A0)		;687d6: 0060ff70
-	DC.W	$fe20			;687da
-	ORI.W	#$0090,-(A0)		;687dc: 00600090
-	DC.W	$fe38			;687e0
-	ORI.W	#$0090,ext_fffffe38.W	;687e2: 00780090fe38
-	ORI.W	#$ff70,ext_fffffe68.W	;687e8: 0078ff70fe68
-	DC.W	$0048			;687ee
-	DC.W	$ff70			;687f0
-	DC.W	$fe68			;687f2
-	DC.W	$0048			;687f4
-	ORI.L	#$fe2000a8,(A0)		;687f6: 0090fe2000a8
-	DC.W	$00d8			;687fc
-	DC.W	$fe20			;687fe
-	ORI.L	#$ff28fe68,168(A0)	;68800: 00a8ff28fe6800a8
-	ORI.L	#$fe6800a8,(A0)		;68808: 0090fe6800a8
-	DC.W	$ff70			;6880e
-	DC.W	$fec8			;68810
-	DC.W	$00f0			;68812
-	DC.W	$00d8			;68814
-	DC.W	$fec8			;68816
-	DC.W	$00f0			;68818
-	DC.W	$ff28			;6881a
-	DC.W	$fec8			;6881c
-	DC.W	$00f0			;6881e
-	ORI.L	#$fec800f0,(A0)		;68820: 0090fec800f0
-	DC.W	$ff70			;68826
-	BTST	D0,ext_000000c0.W		;68828: 013800c0
-	DC.W	$ff28			;6882c
-	BTST	D0,ext_000000c0.W		;6882e: 013800c0
-	DC.W	$00d8			;68832
-	DC.W	$00d8			;68834
-	DC.W	$00f0			;68836
-	DC.W	$ff28			;68838
-	DC.W	$00d8			;6883a
-	DC.W	$00f0			;6883c
-	DC.W	$00d8			;6883e
-	DC.W	$00d8			;68840
-	DC.W	$00f0			;68842
-	DC.W	$ff70			;68844
-	DC.W	$00d8			;68846
-	DC.W	$00f0			;68848
-	ORI.L	#$013800c0,(A0)		;6884a: 0090013800c0
-	DC.W	$ff70			;68850
-	BTST	D0,ext_000000c0.W		;68852: 013800c0
-	ORI.L	#$012000a8,(A0)		;68856: 0090012000a8
-	DC.W	$ff70			;6885c
-	BTST	D0,-(A0)		;6885e: 0120
-	ORI.L	#$00900138,144(A0)	;68860: 00a8009001380090
-	DC.W	$ff70			;68868
-	BTST	D0,TRAP_05.W		;6886a: 01380090
-	ORI.L	#$fe2000a8,(A0)		;6886e: 0090fe2000a8
-	DC.W	$ff70			;68874
-	DC.W	$fe20			;68876
-	ORI.L	#$0090fe5c,86(A0)	;68878: 00a80090fe5c0056
-	DC.W	$00d8			;68880
-	DC.W	$fe98			;68882
-	ORI.W	#$00d8,-(A0)		;68884: 006000d8
-	DC.W	$fe98			;68888
-	ORI.L	#$00d8fe5c,182(A0)	;6888a: 00a800d8fe5c00b6
-	DC.W	$00d8			;68892
-	DC.W	$fec8			;68894
-	ORI.L	#$00d8fef8,(A0)		;68896: 009000d8fef8
-	ORI.L	#$00d8fef8,216(A0)	;6889c: 00a800d8fef800d8
-	DC.W	$00d8			;688a4
-	DC.W	$fec8			;688a6
-	DC.W	$00f0			;688a8
-	DC.W	$00d8			;688aa
-	DC.W	$fe98			;688ac
-	DC.W	$00d8			;688ae
-	DC.W	$00d8			;688b0
-	DC.W	$fe98			;688b2
-	ORI.L	#$00d8ff10,144(A0)	;688b4: 00a800d8ff100090
-	DC.W	$00d8			;688bc
-	DC.W	$ff40			;688be
-	ORI.L	#$00d8ff40,216(A0)	;688c0: 00a800d8ff4000d8
-	DC.W	$00d8			;688c8
-	DC.W	$ff10			;688ca
-	DC.W	$00f0			;688cc
-	DC.W	$00d8			;688ce
-	DC.W	$fee0			;688d0
-	DC.W	$00d8			;688d2
-	DC.W	$00d8			;688d4
-	DC.W	$fee0			;688d6
-	ORI.L	#$00d8ff58,144(A0)	;688d8: 00a800d8ff580090
-	DC.W	$00d8			;688e0
-	DC.W	$ff88			;688e2
-	ORI.L	#$00d8ff88,216(A0)	;688e4: 00a800d8ff8800d8
-	DC.W	$00d8			;688ec
-	DC.W	$ff58			;688ee
-	DC.W	$00f0			;688f0
-	DC.W	$00d8			;688f2
-	DC.W	$ff28			;688f4
-	DC.W	$00d8			;688f6
-	DC.W	$00d8			;688f8
-	DC.W	$ff28			;688fa
-	ORI.L	#$00d8ffa0,144(A0)	;688fc: 00a800d8ffa00090
-	DC.W	$00d8			;68904
-	DC.W	$ffd0			;68906
-	ORI.L	#$00d8ffd0,216(A0)	;68908: 00a800d8ffd000d8
-	DC.W	$00d8			;68910
-	DC.W	$ffa0			;68912
-	DC.W	$00f0			;68914
-	DC.W	$00d8			;68916
-	DC.W	$ff70			;68918
-	DC.W	$00d8			;6891a
-	DC.W	$00d8			;6891c
-	DC.W	$ff70			;6891e
-	ORI.L	#$00d8ffe8,144(A0)	;68920: 00a800d8ffe80090
-	DC.W	$00d8			;68928
-	ORI.B	#$a8,(A0)+		;6892a: 001800a8
-	DC.W	$00d8			;6892e
-	ORI.B	#$d8,(A0)+		;68930: 001800d8
-	DC.W	$00d8			;68934
-	DC.W	$ffe8			;68936
-	DC.W	$00f0			;68938
-	DC.W	$00d8			;6893a
-	DC.W	$ffb8			;6893c
-	DC.W	$00d8			;6893e
-	DC.W	$00d8			;68940
-	DC.W	$ffb8			;68942
-	ORI.L	#$00d80030,144(A0)	;68944: 00a800d800300090
-	DC.W	$00d8			;6894c
-	ORI.W	#$00a8,-(A0)		;6894e: 006000a8
-	DC.W	$00d8			;68952
-	ORI.W	#$00d8,-(A0)		;68954: 006000d8
-	DC.W	$00d8			;68958
-	ORI.B	#$f0,-40(A0,D0.W)	;6895a: 003000f000d8
-	ORI.B	#$d8,D0			;68960: 000000d8
-	DC.W	$00d8			;68964
-	ORI.B	#$a8,D0			;68966: 000000a8
-	DC.W	$00d8			;6896a
-	ORI.W	#$0090,ext_000000d8.W	;6896c: 0078009000d8
-	ORI.L	#$00a800d8,168(A0)	;68972: 00a800a800d800a8
-	DC.W	$00d8			;6897a
-	DC.W	$00d8			;6897c
-	ORI.W	#$00f0,ext_000000d8.W	;6897e: 007800f000d8
-	DC.W	$0048			;68984
-	DC.W	$00d8			;68986
-	DC.W	$00d8			;68988
-	DC.W	$0048			;6898a
-	ORI.L	#$00d800c0,144(A0)	;6898c: 00a800d800c00090
-	DC.W	$00d8			;68994
-	DC.W	$00f0			;68996
-	ORI.L	#$00d800f0,216(A0)	;68998: 00a800d800f000d8
-	DC.W	$00d8			;689a0
-	DC.W	$00c0			;689a2
-	DC.W	$00f0			;689a4
-	DC.W	$00d8			;689a6
-	ORI.L	#$00d800d8,(A0)		;689a8: 009000d800d8
-	ORI.L	#$00a800d8,(A0)		;689ae: 009000a800d8
-	BTST	D0,(A4)			;689b4: 0114
-	DC.W	$0088			;689b6
-	DC.W	$00d8			;689b8
-	BTST	D0,(A4)			;689ba: 0114
-	DC.W	$00d8			;689bc
-	DC.W	$00d8			;689be
-	DC.W	$00f0			;689c0
-	DC.W	$00c0			;689c2
-	DC.W	$00d8			;689c4
-	DC.W	$00f0			;689c6
-	ORI.L	#$00d8fe5c,(A7)		;689c8: 009700d8fe5c
-	ORI.W	#$ff28,(A6)		;689ce: 0056ff28
-	DC.W	$fe98			;689d2
-	ORI.W	#$ff28,-(A0)		;689d4: 0060ff28
-	DC.W	$fe98			;689d8
-	ORI.L	#$ff28fe5c,182(A0)	;689da: 00a8ff28fe5c00b6
-	DC.W	$ff28			;689e2
-	DC.W	$fec8			;689e4
-	ORI.L	#$ff28fef8,(A0)		;689e6: 0090ff28fef8
-	ORI.L	#$ff28fef8,216(A0)	;689ec: 00a8ff28fef800d8
-	DC.W	$ff28			;689f4
-	DC.W	$fec8			;689f6
-	DC.W	$00f0			;689f8
-	DC.W	$ff28			;689fa
-	DC.W	$fe98			;689fc
-	DC.W	$00d8			;689fe
-	DC.W	$ff28			;68a00
-	DC.W	$fe98			;68a02
-	ORI.L	#$ff28ff10,144(A0)	;68a04: 00a8ff28ff100090
-	DC.W	$ff28			;68a0c
-	DC.W	$ff40			;68a0e
-	ORI.L	#$ff28ff40,216(A0)	;68a10: 00a8ff28ff4000d8
-	DC.W	$ff28			;68a18
-	DC.W	$ff10			;68a1a
-	DC.W	$00f0			;68a1c
-	DC.W	$ff28			;68a1e
-	DC.W	$fee0			;68a20
-	DC.W	$00d8			;68a22
-	DC.W	$ff28			;68a24
-	DC.W	$fee0			;68a26
-	ORI.L	#$ff28ff58,144(A0)	;68a28: 00a8ff28ff580090
-	DC.W	$ff28			;68a30
-	DC.W	$ff88			;68a32
-	ORI.L	#$ff28ff88,216(A0)	;68a34: 00a8ff28ff8800d8
-	DC.W	$ff28			;68a3c
-	DC.W	$ff58			;68a3e
-	DC.W	$00f0			;68a40
-	DC.W	$ff28			;68a42
-	DC.W	$ff28			;68a44
-	DC.W	$00d8			;68a46
-	DC.W	$ff28			;68a48
-	DC.W	$ff28			;68a4a
-	ORI.L	#$ff28ffa0,144(A0)	;68a4c: 00a8ff28ffa00090
-	DC.W	$ff28			;68a54
-	DC.W	$ffd0			;68a56
-	ORI.L	#$ff28ffd0,216(A0)	;68a58: 00a8ff28ffd000d8
-	DC.W	$ff28			;68a60
-	DC.W	$ffa0			;68a62
-	DC.W	$00f0			;68a64
-	DC.W	$ff28			;68a66
-	DC.W	$ff70			;68a68
-	DC.W	$00d8			;68a6a
-	DC.W	$ff28			;68a6c
-	DC.W	$ff70			;68a6e
-	ORI.L	#$ff28ffe8,144(A0)	;68a70: 00a8ff28ffe80090
-	DC.W	$ff28			;68a78
-	ORI.B	#$a8,(A0)+		;68a7a: 001800a8
-	DC.W	$ff28			;68a7e
-	ORI.B	#$d8,(A0)+		;68a80: 001800d8
-	DC.W	$ff28			;68a84
-	DC.W	$ffe8			;68a86
-	DC.W	$00f0			;68a88
-	DC.W	$ff28			;68a8a
-	DC.W	$ffb8			;68a8c
-	DC.W	$00d8			;68a8e
-	DC.W	$ff28			;68a90
-	DC.W	$ffb8			;68a92
-	ORI.L	#$ff280030,144(A0)	;68a94: 00a8ff2800300090
-	DC.W	$ff28			;68a9c
-	ORI.W	#$00a8,-(A0)		;68a9e: 006000a8
-	DC.W	$ff28			;68aa2
-	ORI.W	#$00d8,-(A0)		;68aa4: 006000d8
-	DC.W	$ff28			;68aa8
-	DC.W	$0030			;68aaa
-	DC.W	$00f0			;68aac
-	DC.W	$ff28			;68aae
-	ORI.B	#$d8,D0			;68ab0: 000000d8
-	DC.W	$ff28			;68ab4
-	ORI.B	#$a8,D0			;68ab6: 000000a8
-	DC.W	$ff28			;68aba
-	ORI.W	#$0090,ext_ffffff28.W	;68abc: 00780090ff28
-	ORI.L	#$00a8ff28,168(A0)	;68ac2: 00a800a8ff2800a8
-	DC.W	$00d8			;68aca
-	DC.W	$ff28			;68acc
-	ORI.W	#$00f0,ext_ffffff28.W	;68ace: 007800f0ff28
-	DC.W	$0048			;68ad4
-	DC.W	$00d8			;68ad6
-	DC.W	$ff28			;68ad8
-	DC.W	$0048			;68ada
-	ORI.L	#$ff2800c0,144(A0)	;68adc: 00a8ff2800c00090
-	DC.W	$ff28			;68ae4
-	DC.W	$00f0			;68ae6
-	ORI.L	#$ff2800f0,216(A0)	;68ae8: 00a8ff2800f000d8
-	DC.W	$ff28			;68af0
-	DC.W	$00c0			;68af2
-	DC.W	$00f0			;68af4
-	DC.W	$ff28			;68af6
-	ORI.L	#$00d8ff28,(A0)		;68af8: 009000d8ff28
-	ORI.L	#$00a8ff28,(A0)		;68afe: 009000a8ff28
-	BTST	D0,(A4)			;68b04: 0114
-	DC.W	$0088			;68b06
-	DC.W	$ff28			;68b08
-	BTST	D0,(A4)			;68b0a: 0114
-	DC.W	$00d8			;68b0c
-	DC.W	$ff28			;68b0e
-	DC.W	$00f0			;68b10
-	DC.W	$00c0			;68b12
-	DC.W	$ff28			;68b14
-	DC.W	$00f0			;68b16
-	ORI.L	#$ff28fea9,(A7)		;68b18: 0097ff28fea9
-	ORI.B	#$6c,(A0)+		;68b1e: 0018006c
-	DC.W	$fea9			;68b22
-	ORI.B	#$54,(A0)+		;68b24: 00180054
-	DC.W	$fe88			;68b28
-	DC.W	$0030			;68b2a
-	DC.W	$003c			;68b2c
-	DC.W	$fe68			;68b2e
-	DC.W	$0048			;68b30
-	ORI.W	#$fe68,(A4)		;68b32: 0054fe68
-	DC.W	$0048			;68b36
-	ORI.W	#$fe88,48(A4)		;68b38: 006cfe880030
-	ORI.L	#$fe800018,D4		;68b3e: 0084fe800018
-	ORI.W	#$fe80,24(A4)		;68b44: 006cfe800018
-	ORI.W	#$ff28,(A4)		;68b4a: 0054ff28
-	ORI.B	#$78,D0			;68b4e: 00000078
-	DC.W	$ff28			;68b52
-	ORI.B	#$30,D0			;68b54: 00000030
-	DC.W	$fef8			;68b58
-	ORI.B	#$30,D0			;68b5a: 00000030
-	DC.W	$fef8			;68b5e
-	ORI.B	#$78,D0			;68b60: 00000078
-	DC.W	$ff28			;68b64
-	DC.W	$0000			;68b66
-	DC.W	$ffd0			;68b68
-	DC.W	$ff28			;68b6a
-	DC.W	$0000			;68b6c
-	DC.W	$ff88			;68b6e
-	DC.W	$fef8			;68b70
-	DC.W	$0000			;68b72
-	DC.W	$ff88			;68b74
-	DC.W	$fef8			;68b76
-	DC.W	$0000			;68b78
-	DC.W	$ffd0			;68b7a
-	DC.W	$00d8			;68b7c
-	ORI.B	#$90,D0			;68b7e: 00000090
-	DC.W	$00d8			;68b82
-	ORI.B	#$48,D0			;68b84: 00000048
-	ORI.L	#$00000048,168(A0)	;68b88: 00a80000004800a8
-	ORI.B	#$90,D0			;68b90: 00000090
-	DC.W	$00d8			;68b94
-	DC.W	$0000			;68b96
-	DC.W	$ffb8			;68b98
-	DC.W	$00d8			;68b9a
-	DC.W	$0000			;68b9c
-	DC.W	$ff70			;68b9e
-	ORI.L	#$0000ff70,168(A0)	;68ba0: 00a80000ff7000a8
-	DC.W	$0000			;68ba8
-	DC.W	$ffb8			;68baa
-	BCLR	D0,D0			;68bac: 0180
-	ORI.B	#$90,D0			;68bae: 00000090
-	BCLR	D0,D0			;68bb2: 0180
-	ORI.B	#$48,D0			;68bb4: 00000048
-	BCHG	D0,(A0)			;68bb8: 0150
-	ORI.B	#$48,D0			;68bba: 00000048
-	BCHG	D0,(A0)			;68bbe: 0150
-	ORI.B	#$90,D0			;68bc0: 00000090
-	BCLR	D0,D0			;68bc4: 0180
-	DC.W	$0000			;68bc6
-	DC.W	$ffb8			;68bc8
-	BCLR	D0,D0			;68bca: 0180
-	DC.W	$0000			;68bcc
-	DC.W	$ff70			;68bce
-	BCHG	D0,(A0)			;68bd0: 0150
-	DC.W	$0000			;68bd2
-	DC.W	$ff70			;68bd4
-	BCHG	D0,(A0)			;68bd6: 0150
-	DC.W	$0000			;68bd8
-	DC.W	$ffb8			;68bda
-	BTST	D0,-(A0)		;68bdc: 0120
-	ORI.B	#$90,D0			;68bde: 00000090
-	BTST	D0,ext_00000000.W		;68be2: 01380000
-	ORI.W	#$0120,0(A4)		;68be6: 006c01200000
-	DC.W	$0048			;68bec
-	MOVEP.W	0(A0),D0		;68bee: 01080000
-	DC.W	$0048			;68bf2
-	DC.W	$00f0			;68bf4
-	ORI.B	#$6c,D0			;68bf6: 0000006c
-	MOVEP.W	0(A0),D0		;68bfa: 01080000
-	ORI.L	#$01200000,(A0)		;68bfe: 009001200000
-	DC.W	$ffb8			;68c04
-	BTST	D0,ext_00000000.W		;68c06: 01380000
-	DC.W	$ff94			;68c0a
-	BTST	D0,-(A0)		;68c0c: 0120
-	DC.W	$0000			;68c0e
-	DC.W	$ff70			;68c10
-	MOVEP.W	0(A0),D0		;68c12: 01080000
-	DC.W	$ff70			;68c16
-	DC.W	$00f0			;68c18
-	DC.W	$0000			;68c1a
-	DC.W	$ff94			;68c1c
-	MOVEP.W	0(A0),D0		;68c1e: 01080000
-	DC.W	$ffb8			;68c22
-	DC.W	$ffb8			;68c24
-	DC.W	$0018			;68c26
-	DC.W	$ff48			;68c28
-	DC.W	$ffb8			;68c2a
-	DC.W	$0018			;68c2c
-	DC.W	$ff28			;68c2e
-	ORI.L	#$0018ff28,168(A0)	;68c30: 00a80018ff2800a8
-	DC.W	$0018			;68c38
-	DC.W	$ff48			;68c3a
-	DC.W	$ffb8			;68c3c
-	DC.W	$0030			;68c3e
-	DC.W	$ff28			;68c40
-	ORI.L	#$0030ff28,-72(A0)	;68c42: 00a80030ff28ffb8
-	DC.W	$0030			;68c4a
-	DC.W	$ff39			;68c4c
-	ORI.L	#$0030ff39,-21722(A0)	;68c4e: 00a80030ff39ab26
-	SCC	(A2)+			;68c56: 54da
-	ORI.B	#$02,D0			;68c58: 00000002
-	DC.W	$4fc4			;68c5c
-	DC.W	$0002			;68c5e
-	DC.W	$4fcc			;68c60
-	DC.W	$0002			;68c62
-	LEA	0(A4,D0.W),A7		;68c64: 4ff40000
-	DC.W	$0009			;68c68
-	DC.W	$ab26			;68c6a
-	SCC	(A2)+			;68c6c: 54da
-	ORI.B	#$02,D0			;68c6e: 00000002
-	DC.W	$4fcc			;68c72
-	DC.W	$0002			;68c74
-	LEA	2(A4,D0.W),A7		;68c76: 4ff40002
-	DC.W	$4ffc			;68c7a
-	ORI.B	#$09,D0			;68c7c: 00000009
-	OR.B	D0,D4			;68c80: 8800
-	dc.l  $0			;68c82: 00000000
-	DC.W	$0002			;68c86
-	CHK.W	-(A4),D7		;68c88: 4fa4
-	DC.W	$0002			;68c8a
-	CHK.W	#$0002,D7		;68c8c: 4fbc0002
-	DC.W	$4fe4			;68c90
-	ORI.B	#$17,D0			;68c92: 00000017
-	OR.B	D0,D4			;68c96: 8800
-	dc.l  $0			;68c98: 00000000
-	DC.W	$0002			;68c9c
-	CHK.W	#$0002,D7		;68c9e: 4fbc0002
-	DC.W	$4fe4			;68ca2
-	DC.W	$0002			;68ca4
-	ADDQ.L	#8,A4			;68ca6: 508c
-	ORI.B	#$17,D0			;68ca8: 00000017
-	OR.B	D0,D4			;68cac: 8800
-	dc.l  $0			;68cae: 00000000
-	DC.W	$0002			;68cb2
-	CHK.W	2(A4,D0.W),D7		;68cb4: 4fb40002
-	LEA	2(A4),A7		;68cb8: 4fec0002
-	ADDQ.L	#8,D4			;68cbc: 5084
-	ORI.B	#$17,D0			;68cbe: 00000017
-	OR.B	D0,D4			;68cc2: 8800
-	dc.l  $0			;68cc4: 00000000
-	DC.W	$0002			;68cc8
-	CHK.W	2(A4),D7		;68cca: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;68cce: 4fb40002
-	LEA	0(A4),A7		;68cd2: 4fec0000
-	DC.W	$0017			;68cd6
-	DC.W	$d0bb			;68cd8
-	BGT.S	lb_68d28		;68cda: 6e4c
-	ORI.B	#$02,D0			;68cdc: 00000002
-	DC.W	$500c			;68ce0
-	DC.W	$0002			;68ce2
-	ADDQ.B	#8,(A4)+		;68ce4: 501c
-	DC.W	$0002			;68ce6
-	ADDQ.L	#8,D4			;68ce8: 5084
-	ORI.B	#$17,D0			;68cea: 00000017
-	DC.W	$d0bb			;68cee
-	BGT.S	lb_68d3c+2		;68cf0: 6e4c
-	ORI.B	#$02,D0			;68cf2: 00000002
-	LEA	2(A4),A7		;68cf6: 4fec0002
-	DC.W	$500c			;68cfa
-	DC.W	$0002			;68cfc
-	ADDQ.L	#8,D4			;68cfe: 5084
-	ORI.B	#$17,D0			;68d00: 00000017
-	DC.W	$d0bb			;68d04
-	BGT.S	lb_68d52+2		;68d06: 6e4c
-	ORI.B	#$02,D0			;68d08: 00000002
-	DC.W	$4fe4			;68d0c
-	DC.W	$0002			;68d0e
-	ADDQ.B	#8,D4			;68d10: 5004
-	DC.W	$0002			;68d12
-	ADDQ.L	#8,A4			;68d14: 508c
-	ORI.B	#$17,D0			;68d16: 00000017
-	DC.W	$d0bb			;68d1a
-	BGT.S	lb_68d6a		;68d1c: 6e4c
-	ORI.B	#$02,D0			;68d1e: 00000002
-	ADDQ.B	#8,D4			;68d22: 5004
-	DC.W	$0002			;68d24
-	ADDQ.B	#8,(A4)			;68d26: 5014
-lb_68d28:
-	DC.W	$0002			;68d28
-	ADDQ.L	#8,A4			;68d2a: 508c
-	ORI.B	#$17,D0			;68d2c: 00000017
-	SCC	(A2)+			;68d30: 54da
-	SCC	(A2)+			;68d32: 54da
-	ORI.B	#$02,D0			;68d34: 00000002
-	ADDQ.W	#8,-(A4)		;68d38: 5064
-	DC.W	$0002			;68d3a
-lb_68d3c:
-	ADDQ.W	#8,2(A4,D0.W)		;68d3c: 50740002
-	DC.W	$507c			;68d40
-	ORI.B	#$09,D0			;68d42: 00000009
-	SCC	(A2)+			;68d46: 54da
-	SCC	(A2)+			;68d48: 54da
-	ORI.B	#$02,D0			;68d4a: 00000002
-	ADDQ.W	#8,-(A4)		;68d4e: 5064
-	DC.W	$0002			;68d50
-lb_68d52:
-	ADDQ.W	#8,2(A4)		;68d52: 506c0002
-	DC.W	$507c			;68d56
-	ORI.B	#$09,D0			;68d58: 00000009
-	MOVEQ	#0,D4			;68d5c: 7800
-	dc.l  $0			;68d5e: 00000000
-	DC.W	$0002			;68d62
-	DC.W	$4f8c			;68d64
-	DC.W	$0002			;68d66
-	ADDQ.B	#8,-(A4)		;68d68: 5024
-lb_68d6a:
-	DC.W	$0002			;68d6a
-	ADDQ.W	#8,(A4)			;68d6c: 5054
-	ORI.B	#$17,D0			;68d6e: 00000017
-	MOVEQ	#0,D4			;68d72: 7800
-	dc.l  $0			;68d74: 00000000
-	DC.W	$0002			;68d78
-	DC.W	$4f8c			;68d7a
-	DC.W	$0002			;68d7c
-	ADDQ.W	#8,(A4)			;68d7e: 5054
-	DC.W	$0002			;68d80
-	ADDQ.W	#8,0(A4,D0.W)		;68d82: 50740000
-	DC.W	$0017			;68d86
-	MOVE.W	27476(A2),0(A2,D0.W)	;68d88: 35aa6b540000
-	DC.W	$0002			;68d8e
-	ADDQ.B	#8,-(A4)		;68d90: 5024
-	DC.W	$0002			;68d92
-	ADDQ.B	#8,2(A4,D0.W)		;68d94: 50340002
-	ADDQ.W	#8,D4			;68d98: 5044
-	ORI.B	#$17,D0			;68d9a: 00000017
-	MOVE.W	27476(A2),0(A2,D0.W)	;68d9e: 35aa6b540000
-	DC.W	$0002			;68da4
-	ADDQ.B	#8,-(A4)		;68da6: 5024
-	DC.W	$0002			;68da8
-	ADDQ.W	#8,D4			;68daa: 5044
-	DC.W	$0002			;68dac
-	ADDQ.W	#8,(A4)			;68dae: 5054
-	ORI.B	#$17,D0			;68db0: 00000017
-	MOVEQ	#0,D4			;68db4: 7800
-	dc.l  $0			;68db6: 00000000
-	DC.W	$0002			;68dba
-	CHK.W	(A4),D7			;68dbc: 4f94
-	DC.W	$0002			;68dbe
-	ADDQ.W	#8,(A4)+		;68dc0: 505c
-	DC.W	$0002			;68dc2
-	DC.W	$507c			;68dc4
-	ORI.B	#$17,D0			;68dc6: 00000017
-	MOVEQ	#0,D4			;68dca: 7800
-	dc.l  $0			;68dcc: 00000000
-	DC.W	$0002			;68dd0
-	CHK.W	(A4),D7			;68dd2: 4f94
-	DC.W	$0002			;68dd4
-	ADDQ.W	#8,(A4)+		;68dd6: 505c
-	DC.W	$0002			;68dd8
-	ADDQ.B	#8,0(A4)		;68dda: 502c0000
-	DC.W	$0017			;68dde
-	MOVE.W	27476(A2),0(A2,D0.W)	;68de0: 35aa6b540000
-	DC.W	$0002			;68de6
-	ADDQ.B	#8,2(A4)		;68de8: 502c0002
-	ADDQ.W	#8,A4			;68dec: 504c
-	DC.W	$0002			;68dee
-	ADDQ.W	#8,(A4)+		;68df0: 505c
-	ORI.B	#$17,D0			;68df2: 00000017
-	MOVE.W	27476(A2),0(A2,D0.W)	;68df6: 35aa6b540000
-	DC.W	$0002			;68dfc
-	ADDQ.B	#8,2(A4)		;68dfe: 502c0002
-	DC.W	$503c			;68e02
-	DC.W	$0002			;68e04
-	ADDQ.W	#8,A4			;68e06: 504c
-	ORI.B	#$17,D0			;68e08: 00000017
-	dc.l  $0			;68e0c: 00000000
-	OR.B	D0,D4			;68e10: 8800
-	DC.W	$0002			;68e12
-	CHK.W	D4,D7			;68e14: 4f84
-	DC.W	$0002			;68e16
-	CHK.W	2(A4),D7		;68e18: 4fac0002
-	LEA	0(A4),A7		;68e1c: 4fec0000
-	DC.W	$0009			;68e20
-	dc.l  $0			;68e22: 00000000
-	OR.B	D0,D4			;68e26: 8800
-	DC.W	$0002			;68e28
-	CHK.W	D4,D7			;68e2a: 4f84
-	DC.W	$0002			;68e2c
-	LEA	2(A4),A7		;68e2e: 4fec0002
-	DC.W	$500c			;68e32
-	ORI.B	#$09,D0			;68e34: 00000009
-	dc.l  $0			;68e38: 00000000
-	OR.B	D1,D4			;68e3c: 8801
-	DC.W	$0002			;68e3e
-	CHK.W	D4,D7			;68e40: 4f84
-	DC.W	$0002			;68e42
-	DC.W	$4f8c			;68e44
-	DC.W	$0002			;68e46
-	DC.W	$500c			;68e48
-	ORI.B	#$09,D0			;68e4a: 00000009
-	dc.l  $0			;68e4e: 00000000
-	OR.B	D1,D4			;68e52: 8801
-	DC.W	$0002			;68e54
-	DC.W	$4f8c			;68e56
-	DC.W	$0002			;68e58
-	DC.W	$500c			;68e5a
-	DC.W	$0002			;68e5c
-	ADDQ.B	#8,0(A4,D0.W)		;68e5e: 50340000
-	DC.W	$0009			;68e62
-	dc.l  $0			;68e64: 00000000
-	OR.B	D0,D4			;68e68: 8800
-	DC.W	$0002			;68e6a
-	DC.W	$4f8c			;68e6c
-	DC.W	$0002			;68e6e
-	ADDQ.B	#8,2(A4,D0.W)		;68e70: 50340002
-	ADDQ.B	#8,-(A4)		;68e74: 5024
-	ORI.B	#$09,D0			;68e76: 00000009
-	dc.l  $0			;68e7a: 00000000
-	OR.B	D0,D4			;68e7e: 8800
-	DC.W	$0002			;68e80
-	ADDQ.W	#1,2(A4,D0.W)		;68e82: 52740002
-	DC.W	$527c			;68e86
-	DC.W	$0002			;68e88
-	ADDQ.L	#1,D4			;68e8a: 5284
-	ORI.B	#$01,D0			;68e8c: 00000001
-	dc.l  $0			;68e90: 00000000
-	OR.B	D0,D4			;68e94: 8800
-	DC.W	$0002			;68e96
-	ADDQ.W	#1,2(A4,D0.W)		;68e98: 52740002
-	ADDQ.L	#1,D4			;68e9c: 5284
-	DC.W	$0002			;68e9e
-	ADDQ.L	#1,A4			;68ea0: 528c
-	ORI.B	#$01,D0			;68ea2: 00000001
-	dc.l  $0			;68ea6: 00000000
-	OR.B	D0,D4			;68eaa: 8800
-	DC.W	$0002			;68eac
-	ADDQ.W	#1,2(A4,D0.W)		;68eae: 52740002
-	ADDQ.L	#1,A4			;68eb2: 528c
-	DC.W	$0002			;68eb4
-	ADDQ.L	#1,(A4)			;68eb6: 5294
-	ORI.B	#$01,D0			;68eb8: 00000001
-	dc.l  $0			;68ebc: 00000000
-	OR.B	D0,D4			;68ec0: 8800
-	DC.W	$0002			;68ec2
-	ADDQ.W	#1,2(A4,D0.W)		;68ec4: 52740002
-	ADDQ.L	#1,(A4)			;68ec8: 5294
-	DC.W	$0002			;68eca
-	ADDQ.L	#1,(A4)+		;68ecc: 529c
-	ORI.B	#$01,D0			;68ece: 00000001
-	dc.l  $0			;68ed2: 00000000
-	OR.B	D0,D4			;68ed6: 8800
-	DC.W	$0002			;68ed8
-	SHI	(A4)			;68eda: 52d4
-	DC.W	$0002			;68edc
-	SHI	(A4)+			;68ede: 52dc
-	DC.W	$0002			;68ee0
-	SHI	-(A4)			;68ee2: 52e4
-	ORI.B	#$01,D0			;68ee4: 00000001
-	dc.l  $0			;68ee8: 00000000
-	OR.B	D0,D4			;68eec: 8800
-	DC.W	$0002			;68eee
-	SHI	(A4)			;68ef0: 52d4
-	DC.W	$0002			;68ef2
-	SHI	-(A4)			;68ef4: 52e4
-	DC.W	$0002			;68ef6
-	SHI	0(A4)			;68ef8: 52ec0000
-	ORI.B	#$00,D1			;68efc: 00010000
-	DC.W	$0000			;68f00
-	OR.B	D0,D4			;68f02: 8800
-	DC.W	$0002			;68f04
-	SHI	(A4)			;68f06: 52d4
-	DC.W	$0002			;68f08
-	SHI	2(A4)			;68f0a: 52ec0002
-	SHI	0(A4,D0.W)		;68f0e: 52f40000
-	ORI.B	#$00,D1			;68f12: 00010000
-	DC.W	$0000			;68f16
-	OR.B	D0,D4			;68f18: 8800
-	DC.W	$0002			;68f1a
-	SHI	(A4)			;68f1c: 52d4
-	DC.W	$0002			;68f1e
-	SHI	2(A4,D0.W)		;68f20: 52f40002
-	DC.W	$52fc			;68f24
-	ORI.B	#$01,D0			;68f26: 00000001
-	dc.l  $0			;68f2a: 00000000
-	OR.B	D0,D4			;68f2e: 8800
-	DC.W	$0002			;68f30
-	SUBQ.B	#1,2(A4,D0.W)		;68f32: 53340002
-	DC.W	$533c			;68f36
-	DC.W	$0002			;68f38
-	SUBQ.W	#1,D4			;68f3a: 5344
-	ORI.B	#$01,D0			;68f3c: 00000001
-	dc.l  $0			;68f40: 00000000
-	OR.B	D0,D4			;68f44: 8800
-	DC.W	$0002			;68f46
-	SUBQ.B	#1,2(A4,D0.W)		;68f48: 53340002
-	SUBQ.W	#1,D4			;68f4c: 5344
-	DC.W	$0002			;68f4e
-	SUBQ.W	#1,A4			;68f50: 534c
-	ORI.B	#$01,D0			;68f52: 00000001
-	dc.l  $0			;68f56: 00000000
-	OR.B	D0,D4			;68f5a: 8800
-	DC.W	$0002			;68f5c
-	SUBQ.B	#1,2(A4,D0.W)		;68f5e: 53340002
-	SUBQ.W	#1,A4			;68f62: 534c
-	DC.W	$0002			;68f64
-	SUBQ.W	#1,(A4)			;68f66: 5354
-	ORI.B	#$01,D0			;68f68: 00000001
-	dc.l  $0			;68f6c: 00000000
-	OR.B	D0,D4			;68f70: 8800
-	DC.W	$0002			;68f72
-	SUBQ.B	#1,2(A4,D0.W)		;68f74: 53340002
-	SUBQ.W	#1,(A4)			;68f78: 5354
-	DC.W	$0002			;68f7a
-	SUBQ.W	#1,(A4)+		;68f7c: 535c
-	ORI.B	#$01,D0			;68f7e: 00000001
-	dc.l  $0			;68f82: 00000000
-	OR.B	D0,D4			;68f86: 8800
-	DC.W	$0002			;68f88
-	SUBQ.L	#1,(A4)			;68f8a: 5394
-	DC.W	$0002			;68f8c
-	SUBQ.L	#1,(A4)+		;68f8e: 539c
-	DC.W	$0002			;68f90
-	SUBQ.L	#1,-(A4)		;68f92: 53a4
-	ORI.B	#$01,D0			;68f94: 00000001
-	dc.l  $0			;68f98: 00000000
-	OR.B	D0,D4			;68f9c: 8800
-	DC.W	$0002			;68f9e
-	SUBQ.L	#1,(A4)			;68fa0: 5394
-	DC.W	$0002			;68fa2
-	SUBQ.L	#1,-(A4)		;68fa4: 53a4
-	DC.W	$0002			;68fa6
-	SUBQ.L	#1,0(A4)		;68fa8: 53ac0000
-	ORI.B	#$00,D1			;68fac: 00010000
-	DC.W	$0000			;68fb0
-	OR.B	D0,D4			;68fb2: 8800
-	DC.W	$0002			;68fb4
-	SUBQ.L	#1,(A4)			;68fb6: 5394
-	DC.W	$0002			;68fb8
-	SUBQ.L	#1,2(A4)		;68fba: 53ac0002
-	SUBQ.L	#1,0(A4,D0.W)		;68fbe: 53b40000
-	ORI.B	#$00,D1			;68fc2: 00010000
-	DC.W	$0000			;68fc6
-	OR.B	D0,D4			;68fc8: 8800
-	DC.W	$0002			;68fca
-	SUBQ.L	#1,(A4)			;68fcc: 5394
-	DC.W	$0002			;68fce
-	SUBQ.L	#1,2(A4,D0.W)		;68fd0: 53b40002
-	DC.W	$53bc			;68fd4
-	ORI.B	#$01,D0			;68fd6: 00000001
-	dc.l  $0			;68fda: 00000000
-	OR.B	D0,D4			;68fde: 8800
-	DC.W	$0002			;68fe0
-	DC.W	$4f8c			;68fe2
-	DC.W	$0002			;68fe4
-	ADDQ.B	#8,-(A4)		;68fe6: 5024
-	DC.W	$0002			;68fe8
-	SLS	0(A4,D0.W)		;68fea: 53f40000
-	ORI.B	#$00,D1			;68fee: 00010000
-	DC.W	$0000			;68ff2
-	OR.B	D0,D4			;68ff4: 8800
-	DC.W	$0002			;68ff6
-	ADDQ.B	#8,-(A4)		;68ff8: 5024
-	DC.W	$0002			;68ffa
-	SLS	2(A4,D0.W)		;68ffc: 53f40002
-	DC.W	$53fc			;69000
-	ORI.B	#$01,D0			;69002: 00000001
-	dc.l  $0			;69006: 00000000
-	OR.B	D0,D4			;6900a: 8800
-	DC.W	$0002			;6900c
-	SLS	2(A4,D0.W)		;6900e: 53f40002
-	DC.W	$53fc			;69012
-	DC.W	$0002			;69014
-	ADDQ.B	#2,D4			;69016: 5404
-	ORI.B	#$01,D0			;69018: 00000001
-	dc.l  $0			;6901c: 00000000
-	OR.B	D0,D4			;69020: 8800
-	DC.W	$0002			;69022
-	SLS	2(A4,D0.W)		;69024: 53f40002
-	ADDQ.B	#2,D4			;69028: 5404
-	DC.W	$0002			;6902a
-	DC.W	$540c			;6902c
-	ORI.B	#$01,D0			;6902e: 00000001
-	dc.l  $0			;69032: 00000000
-	OR.B	D0,D4			;69036: 8800
-	DC.W	$0002			;69038
-	CHK.W	2(A4),D7		;6903a: 4fac0002
-	LEA	2(A4),A7		;6903e: 4fec0002
-	ADDQ.W	#1,(A4)			;69042: 5254
-	ORI.B	#$0c,D0			;69044: 0000000c
-	dc.l  $0			;69048: 00000000
-	OR.B	D0,D4			;6904c: 8800
-	DC.W	$0002			;6904e
-	LEA	2(A4),A7		;69050: 4fec0002
-	ADDQ.W	#1,(A4)			;69054: 5254
-	DC.W	$0002			;69056
-	ADDQ.W	#1,0(A4)		;69058: 526c0000
-	DC.W	$000c			;6905c
-	dc.l  $0			;6905e: 00000000
-	OR.B	D0,D4			;69062: 8800
-	DC.W	$0002			;69064
-	ADDQ.W	#1,(A4)			;69066: 5254
-	DC.W	$0002			;69068
-	ADDQ.W	#1,-(A4)		;6906a: 5264
-	DC.W	$0002			;6906c
-	ADDQ.W	#1,0(A4)		;6906e: 526c0000
-	DC.W	$000c			;69072
-	dc.l  $0			;69074: 00000000
-	OR.B	D0,D4			;69078: 8800
-	DC.W	$0002			;6907a
-	ADDQ.W	#1,(A4)			;6907c: 5254
-	DC.W	$0002			;6907e
-	ADDQ.W	#1,(A4)+		;69080: 525c
-	DC.W	$0002			;69082
-	ADDQ.W	#1,-(A4)		;69084: 5264
-	ORI.B	#$0c,D0			;69086: 0000000c
-	dc.l  $0			;6908a: 00000000
-	OR.B	D0,D4			;6908e: 8800
-	DC.W	$0002			;69090
-	ADDQ.L	#1,-(A4)		;69092: 52a4
-	DC.W	$0002			;69094
-	ADDQ.L	#1,2(A4)		;69096: 52ac0002
-	ADDQ.L	#1,0(A4,D0.W)		;6909a: 52b40000
-	DC.W	$000c			;6909e
-	dc.l  $0			;690a0: 00000000
-	OR.B	D0,D4			;690a4: 8800
-	DC.W	$0002			;690a6
-	ADDQ.L	#1,-(A4)		;690a8: 52a4
-	DC.W	$0002			;690aa
-	ADDQ.L	#1,2(A4,D0.W)		;690ac: 52b40002
-	DC.W	$52bc			;690b0
-	ORI.B	#$0c,D0			;690b2: 0000000c
-	dc.l  $0			;690b6: 00000000
-	OR.B	D0,D4			;690ba: 8800
-	DC.W	$0002			;690bc
-	ADDQ.L	#1,-(A4)		;690be: 52a4
-	DC.W	$0002			;690c0
-	DC.W	$52bc			;690c2
-	DC.W	$0002			;690c4
-	SHI	D4			;690c6: 52c4
-	ORI.B	#$0c,D0			;690c8: 0000000c
-	dc.l  $0			;690cc: 00000000
-	OR.B	D0,D4			;690d0: 8800
-	DC.W	$0002			;690d2
-	ADDQ.L	#1,-(A4)		;690d4: 52a4
-	DC.W	$0002			;690d6
-	SHI	D4			;690d8: 52c4
-	DC.W	$0002			;690da
-	DC.W	$52cc			;690dc
-	ORI.B	#$0c,D0			;690de: 0000000c
-	dc.l  $0			;690e2: 00000000
-	OR.B	D0,D4			;690e6: 8800
-	DC.W	$0002			;690e8
-	SUBQ.B	#1,D4			;690ea: 5304
-	DC.W	$0002			;690ec
-	DC.W	$530c			;690ee
-	DC.W	$0002			;690f0
-	SUBQ.B	#1,(A4)			;690f2: 5314
-	ORI.B	#$0c,D0			;690f4: 0000000c
-	dc.l  $0			;690f8: 00000000
-	OR.B	D0,D4			;690fc: 8800
-	DC.W	$0002			;690fe
-	SUBQ.B	#1,D4			;69100: 5304
-	DC.W	$0002			;69102
-	SUBQ.B	#1,(A4)			;69104: 5314
-	DC.W	$0002			;69106
-	SUBQ.B	#1,(A4)+		;69108: 531c
-	ORI.B	#$0c,D0			;6910a: 0000000c
-	dc.l  $0			;6910e: 00000000
-	OR.B	D0,D4			;69112: 8800
-	DC.W	$0002			;69114
-	SUBQ.B	#1,D4			;69116: 5304
-	DC.W	$0002			;69118
-	SUBQ.B	#1,(A4)+		;6911a: 531c
-	DC.W	$0002			;6911c
-	SUBQ.B	#1,-(A4)		;6911e: 5324
-	ORI.B	#$0c,D0			;69120: 0000000c
-	dc.l  $0			;69124: 00000000
-	OR.B	D0,D4			;69128: 8800
-	DC.W	$0002			;6912a
-	SUBQ.B	#1,D4			;6912c: 5304
-	DC.W	$0002			;6912e
-	SUBQ.B	#1,-(A4)		;69130: 5324
-	DC.W	$0002			;69132
-	SUBQ.B	#1,0(A4)		;69134: 532c0000
-	DC.W	$000c			;69138
-	dc.l  $0			;6913a: 00000000
-	OR.B	D0,D4			;6913e: 8800
-	DC.W	$0002			;69140
-	SUBQ.W	#1,-(A4)		;69142: 5364
-	DC.W	$0002			;69144
-	SUBQ.W	#1,2(A4)		;69146: 536c0002
-	SUBQ.W	#1,0(A4,D0.W)		;6914a: 53740000
-	DC.W	$000c			;6914e
-	dc.l  $0			;69150: 00000000
-	OR.B	D0,D4			;69154: 8800
-	DC.W	$0002			;69156
-	SUBQ.W	#1,-(A4)		;69158: 5364
-	DC.W	$0002			;6915a
-	SUBQ.W	#1,2(A4,D0.W)		;6915c: 53740002
-	DC.W	$537c			;69160
-	ORI.B	#$0c,D0			;69162: 0000000c
-	dc.l  $0			;69166: 00000000
-	OR.B	D0,D4			;6916a: 8800
-	DC.W	$0002			;6916c
-	SUBQ.W	#1,-(A4)		;6916e: 5364
-	DC.W	$0002			;69170
-	DC.W	$537c			;69172
-	DC.W	$0002			;69174
-	SUBQ.L	#1,D4			;69176: 5384
-	ORI.B	#$0c,D0			;69178: 0000000c
-	dc.l  $0			;6917c: 00000000
-	OR.B	D0,D4			;69180: 8800
-	DC.W	$0002			;69182
-	SUBQ.W	#1,-(A4)		;69184: 5364
-	DC.W	$0002			;69186
-	SUBQ.L	#1,D4			;69188: 5384
-	DC.W	$0002			;6918a
-	SUBQ.L	#1,A4			;6918c: 538c
-	ORI.B	#$0c,D0			;6918e: 0000000c
-	dc.l  $0			;69192: 00000000
-	OR.B	D0,D4			;69196: 8800
-	DC.W	$0002			;69198
-	SLS	D4			;6919a: 53c4
-	DC.W	$0002			;6919c
-	DBLS	D4,lb_691a2		;6919e: 53cc0002
-lb_691a2:
-	SLS	(A4)			;691a2: 53d4
-	ORI.B	#$0c,D0			;691a4: 0000000c
-	dc.l  $0			;691a8: 00000000
-	OR.B	D0,D4			;691ac: 8800
-	DC.W	$0002			;691ae
-	SLS	D4			;691b0: 53c4
-	DC.W	$0002			;691b2
-	SLS	(A4)			;691b4: 53d4
-	DC.W	$0002			;691b6
-	SLS	(A4)+			;691b8: 53dc
-	ORI.B	#$0c,D0			;691ba: 0000000c
-	dc.l  $0			;691be: 00000000
-	OR.B	D0,D4			;691c2: 8800
-	DC.W	$0002			;691c4
-	SLS	D4			;691c6: 53c4
-	DC.W	$0002			;691c8
-	SLS	(A4)+			;691ca: 53dc
-	DC.W	$0002			;691cc
-	SLS	-(A4)			;691ce: 53e4
-	ORI.B	#$0c,D0			;691d0: 0000000c
-	dc.l  $0			;691d4: 00000000
-	OR.B	D0,D4			;691d8: 8800
-	DC.W	$0002			;691da
-	SLS	D4			;691dc: 53c4
-	DC.W	$0002			;691de
-	SLS	-(A4)			;691e0: 53e4
-	DC.W	$0002			;691e2
-	SLS	0(A4)			;691e4: 53ec0000
-	DC.W	$000c			;691e8
-	dc.l  $0			;691ea: 00000000
-	MOVEQ	#0,D4			;691ee: 7800
-	DC.W	$0002			;691f0
-	CHK.W	(A4)+,D7		;691f2: 4f9c
-	DC.W	$0002			;691f4
-	CHK.W	-(A4),D7		;691f6: 4fa4
-	DC.W	$0002			;691f8
-	DC.W	$4fe4			;691fa
-	ORI.B	#$09,D0			;691fc: 00000009
-	dc.l  $0			;69200: 00000000
-	MOVEQ	#0,D4			;69204: 7800
-	DC.W	$0002			;69206
-	CHK.W	(A4)+,D7		;69208: 4f9c
-	DC.W	$0002			;6920a
-	ADDQ.B	#8,D4			;6920c: 5004
-	DC.W	$0002			;6920e
-	DC.W	$4fe4			;69210
-	ORI.B	#$09,D0			;69212: 00000009
-	dc.l  $0			;69216: 00000000
-	DC.W	$77ff			;6921a
-	DC.W	$0002			;6921c
-	CHK.W	(A4),D7			;6921e: 4f94
-	DC.W	$0002			;69220
-	CHK.W	(A4)+,D7		;69222: 4f9c
-	DC.W	$0002			;69224
-	ADDQ.B	#8,D4			;69226: 5004
-	ORI.B	#$09,D0			;69228: 00000009
-	dc.l  $0			;6922c: 00000000
-	DC.W	$77ff			;69230
-	DC.W	$0002			;69232
-	CHK.W	(A4),D7			;69234: 4f94
-	DC.W	$0002			;69236
-	DC.W	$503c			;69238
-	DC.W	$0002			;6923a
-	ADDQ.B	#8,D4			;6923c: 5004
-	ORI.B	#$09,D0			;6923e: 00000009
-	dc.l  $0			;69242: 00000000
-	MOVEQ	#0,D4			;69246: 7800
-	DC.W	$0002			;69248
-	CHK.W	(A4),D7			;6924a: 4f94
-	DC.W	$0002			;6924c
-	ADDQ.B	#8,2(A4)		;6924e: 502c0002
-	DC.W	$503c			;69252
-	ORI.B	#$09,D0			;69254: 00000009
-	dc.l  $0			;69258: 00000000
-	MOVEQ	#0,D4			;6925c: 7800
-	DC.W	$0002			;6925e
-	ADDQ.L	#8,2(A4,D0.W)		;69260: 50b40002
-	DC.W	$50bc			;69264
-	DC.W	$0002			;69266
-	ST	D4			;69268: 50c4
-	ORI.B	#$01,D0			;6926a: 00000001
-	dc.l  $0			;6926e: 00000000
-	MOVEQ	#0,D4			;69272: 7800
-	DC.W	$0002			;69274
-	ADDQ.L	#8,2(A4,D0.W)		;69276: 50b40002
-	ST	D4			;6927a: 50c4
-	DC.W	$0002			;6927c
-	DC.W	$50cc			;6927e
-	ORI.B	#$01,D0			;69280: 00000001
-	dc.l  $0			;69284: 00000000
-	MOVEQ	#0,D4			;69288: 7800
-	DC.W	$0002			;6928a
-	ADDQ.L	#8,2(A4,D0.W)		;6928c: 50b40002
-	DBT	D4,lb_69294		;69290: 50cc0002
-lb_69294:
-	ST	(A4)			;69294: 50d4
-	ORI.B	#$01,D0			;69296: 00000001
-	dc.l  $0			;6929a: 00000000
-	MOVEQ	#0,D4			;6929e: 7800
-	DC.W	$0002			;692a0
-	ADDQ.L	#8,2(A4,D0.W)		;692a2: 50b40002
-	ST	(A4)			;692a6: 50d4
-	DC.W	$0002			;692a8
-	ST	(A4)+			;692aa: 50dc
-	ORI.B	#$01,D0			;692ac: 00000001
-	dc.l  $0			;692b0: 00000000
-	MOVEQ	#0,D4			;692b4: 7800
-	DC.W	$0002			;692b6
-	SUBQ.B	#8,(A4)			;692b8: 5114
-	DC.W	$0002			;692ba
-	SUBQ.B	#8,(A4)+		;692bc: 511c
-	DC.W	$0002			;692be
-	SUBQ.B	#8,-(A4)		;692c0: 5124
-	ORI.B	#$01,D0			;692c2: 00000001
-	dc.l  $0			;692c6: 00000000
-	MOVEQ	#0,D4			;692ca: 7800
-	DC.W	$0002			;692cc
-	SUBQ.B	#8,(A4)			;692ce: 5114
-	DC.W	$0002			;692d0
-	SUBQ.B	#8,-(A4)		;692d2: 5124
-	DC.W	$0002			;692d4
-	SUBQ.B	#8,0(A4)		;692d6: 512c0000
-	ORI.B	#$00,D1			;692da: 00010000
-	DC.W	$0000			;692de
-	MOVEQ	#0,D4			;692e0: 7800
-	DC.W	$0002			;692e2
-	SUBQ.B	#8,(A4)			;692e4: 5114
-	DC.W	$0002			;692e6
-	SUBQ.B	#8,2(A4)		;692e8: 512c0002
-	SUBQ.B	#8,0(A4,D0.W)		;692ec: 51340000
-	ORI.B	#$00,D1			;692f0: 00010000
-	DC.W	$0000			;692f4
-	MOVEQ	#0,D4			;692f6: 7800
-	DC.W	$0002			;692f8
-	SUBQ.B	#8,(A4)			;692fa: 5114
-	DC.W	$0002			;692fc
-	SUBQ.B	#8,2(A4,D0.W)		;692fe: 51340002
-	DC.W	$513c			;69302
-	ORI.B	#$01,D0			;69304: 00000001
-	dc.l  $0			;69308: 00000000
-	MOVEQ	#0,D4			;6930c: 7800
-	DC.W	$0002			;6930e
-	SUBQ.W	#8,2(A4,D0.W)		;69310: 51740002
-	DC.W	$517c			;69314
-	DC.W	$0002			;69316
-	SUBQ.L	#8,D4			;69318: 5184
-	ORI.B	#$01,D0			;6931a: 00000001
-	dc.l  $0			;6931e: 00000000
-	MOVEQ	#0,D4			;69322: 7800
-	DC.W	$0002			;69324
-	SUBQ.W	#8,2(A4,D0.W)		;69326: 51740002
-	SUBQ.L	#8,D4			;6932a: 5184
-	DC.W	$0002			;6932c
-	SUBQ.L	#8,A4			;6932e: 518c
-	ORI.B	#$01,D0			;69330: 00000001
-	dc.l  $0			;69334: 00000000
-	MOVEQ	#0,D4			;69338: 7800
-	DC.W	$0002			;6933a
-	SUBQ.W	#8,2(A4,D0.W)		;6933c: 51740002
-	SUBQ.L	#8,A4			;69340: 518c
-	DC.W	$0002			;69342
-	SUBQ.L	#8,(A4)			;69344: 5194
-	ORI.B	#$01,D0			;69346: 00000001
-	dc.l  $0			;6934a: 00000000
-	MOVEQ	#0,D4			;6934e: 7800
-	DC.W	$0002			;69350
-	SUBQ.W	#8,2(A4,D0.W)		;69352: 51740002
-	SUBQ.L	#8,(A4)			;69356: 5194
-	DC.W	$0002			;69358
-	SUBQ.L	#8,(A4)+		;6935a: 519c
-	ORI.B	#$01,D0			;6935c: 00000001
-	dc.l  $0			;69360: 00000000
-	MOVEQ	#0,D4			;69364: 7800
-	DC.W	$0002			;69366
-	SF	(A4)			;69368: 51d4
-	DC.W	$0002			;6936a
-	SF	(A4)+			;6936c: 51dc
-	DC.W	$0002			;6936e
-	SF	-(A4)			;69370: 51e4
-	ORI.B	#$01,D0			;69372: 00000001
-	dc.l  $0			;69376: 00000000
-	MOVEQ	#0,D4			;6937a: 7800
-	DC.W	$0002			;6937c
-	SF	(A4)			;6937e: 51d4
-	DC.W	$0002			;69380
-	SF	-(A4)			;69382: 51e4
-	DC.W	$0002			;69384
-	SF	0(A4)			;69386: 51ec0000
-	ORI.B	#$00,D1			;6938a: 00010000
-	DC.W	$0000			;6938e
-	MOVEQ	#0,D4			;69390: 7800
-	DC.W	$0002			;69392
-	SF	(A4)			;69394: 51d4
-	DC.W	$0002			;69396
-	SF	2(A4)			;69398: 51ec0002
-	SF	0(A4,D0.W)		;6939c: 51f40000
-	ORI.B	#$00,D1			;693a0: 00010000
-	DC.W	$0000			;693a4
-	MOVEQ	#0,D4			;693a6: 7800
-	DC.W	$0002			;693a8
-	SF	(A4)			;693aa: 51d4
-	DC.W	$0002			;693ac
-	SF	2(A4,D0.W)		;693ae: 51f40002
-	DC.W	$51fc			;693b2
-	ORI.B	#$01,D0			;693b4: 00000001
-	dc.l  $0			;693b8: 00000000
-	MOVEQ	#0,D4			;693bc: 7800
-	DC.W	$0002			;693be
-	CHK.W	(A4),D7			;693c0: 4f94
-	DC.W	$0002			;693c2
-	ADDQ.B	#8,2(A4)		;693c4: 502c0002
-	ADDQ.B	#1,0(A4,D0.W)		;693c8: 52340000
-	ORI.B	#$00,D1			;693cc: 00010000
-	DC.W	$0000			;693d0
-	MOVEQ	#0,D4			;693d2: 7800
-	DC.W	$0002			;693d4
-	ADDQ.B	#8,2(A4)		;693d6: 502c0002
-	ADDQ.B	#1,2(A4,D0.W)		;693da: 52340002
-	DC.W	$523c			;693de
-	ORI.B	#$01,D0			;693e0: 00000001
-	dc.l  $0			;693e4: 00000000
-	MOVEQ	#0,D4			;693e8: 7800
-	DC.W	$0002			;693ea
-	ADDQ.B	#1,2(A4,D0.W)		;693ec: 52340002
-	DC.W	$523c			;693f0
-	DC.W	$0002			;693f2
-	ADDQ.W	#1,D4			;693f4: 5244
-	ORI.B	#$01,D0			;693f6: 00000001
-	dc.l  $0			;693fa: 00000000
-	MOVEQ	#0,D4			;693fe: 7800
-	DC.W	$0002			;69400
-	ADDQ.B	#1,2(A4,D0.W)		;69402: 52340002
-	ADDQ.W	#1,D4			;69406: 5244
-	DC.W	$0002			;69408
-	ADDQ.W	#1,A4			;6940a: 524c
-	ORI.B	#$01,D0			;6940c: 00000001
-	dc.l  $0			;69410: 00000000
-	MOVEQ	#0,D4			;69414: 7800
-	DC.W	$0002			;69416
-	CHK.W	-(A4),D7		;69418: 4fa4
-	DC.W	$0002			;6941a
-	DC.W	$4fe4			;6941c
-	DC.W	$0002			;6941e
-	ADDQ.L	#8,(A4)			;69420: 5094
-	ORI.B	#$0c,D0			;69422: 0000000c
-	dc.l  $0			;69426: 00000000
-	MOVEQ	#0,D4			;6942a: 7800
-	DC.W	$0002			;6942c
-	DC.W	$4fe4			;6942e
-	DC.W	$0002			;69430
-	ADDQ.L	#8,(A4)			;69432: 5094
-	DC.W	$0002			;69434
-	ADDQ.L	#8,0(A4)		;69436: 50ac0000
-	DC.W	$000c			;6943a
-	dc.l  $0			;6943c: 00000000
-	MOVEQ	#0,D4			;69440: 7800
-	DC.W	$0002			;69442
-	ADDQ.L	#8,(A4)			;69444: 5094
-	DC.W	$0002			;69446
-	ADDQ.L	#8,-(A4)		;69448: 50a4
-	DC.W	$0002			;6944a
-	ADDQ.L	#8,0(A4)		;6944c: 50ac0000
-	DC.W	$000c			;69450
-	dc.l  $0			;69452: 00000000
-	MOVEQ	#0,D4			;69456: 7800
-	DC.W	$0002			;69458
-	ADDQ.L	#8,(A4)			;6945a: 5094
-	DC.W	$0002			;6945c
-	ADDQ.L	#8,(A4)+		;6945e: 509c
-	DC.W	$0002			;69460
-	ADDQ.L	#8,-(A4)		;69462: 50a4
-	ORI.B	#$0c,D0			;69464: 0000000c
-	dc.l  $0			;69468: 00000000
-	MOVEQ	#0,D4			;6946c: 7800
-	DC.W	$0002			;6946e
-	ST	-(A4)			;69470: 50e4
-	DC.W	$0002			;69472
-	ST	2(A4)			;69474: 50ec0002
-	ST	0(A4,D0.W)		;69478: 50f40000
-	DC.W	$000c			;6947c
-	dc.l  $0			;6947e: 00000000
-	MOVEQ	#0,D4			;69482: 7800
-	DC.W	$0002			;69484
-	ST	-(A4)			;69486: 50e4
-	DC.W	$0002			;69488
-	ST	2(A4,D0.W)		;6948a: 50f40002
-	DC.W	$50fc			;6948e
-	ORI.B	#$0c,D0			;69490: 0000000c
-	dc.l  $0			;69494: 00000000
-	MOVEQ	#0,D4			;69498: 7800
-	DC.W	$0002			;6949a
-	ST	-(A4)			;6949c: 50e4
-	DC.W	$0002			;6949e
-	DC.W	$50fc			;694a0
-	DC.W	$0002			;694a2
-	SUBQ.B	#8,D4			;694a4: 5104
-	ORI.B	#$0c,D0			;694a6: 0000000c
-	dc.l  $0			;694aa: 00000000
-	MOVEQ	#0,D4			;694ae: 7800
-	DC.W	$0002			;694b0
-	ST	-(A4)			;694b2: 50e4
-	DC.W	$0002			;694b4
-	SUBQ.B	#8,D4			;694b6: 5104
-	DC.W	$0002			;694b8
-	DC.W	$510c			;694ba
-	ORI.B	#$0c,D0			;694bc: 0000000c
-	dc.l  $0			;694c0: 00000000
-	MOVEQ	#0,D4			;694c4: 7800
-	DC.W	$0002			;694c6
-	SUBQ.W	#8,D4			;694c8: 5144
-	DC.W	$0002			;694ca
-	SUBQ.W	#8,A4			;694cc: 514c
-	DC.W	$0002			;694ce
-	SUBQ.W	#8,(A4)			;694d0: 5154
-	ORI.B	#$0c,D0			;694d2: 0000000c
-	dc.l  $0			;694d6: 00000000
-	MOVEQ	#0,D4			;694da: 7800
-	DC.W	$0002			;694dc
-	SUBQ.W	#8,D4			;694de: 5144
-	DC.W	$0002			;694e0
-	SUBQ.W	#8,(A4)			;694e2: 5154
-	DC.W	$0002			;694e4
-	SUBQ.W	#8,(A4)+		;694e6: 515c
-	ORI.B	#$0c,D0			;694e8: 0000000c
-	dc.l  $0			;694ec: 00000000
-	MOVEQ	#0,D4			;694f0: 7800
-	DC.W	$0002			;694f2
-	SUBQ.W	#8,D4			;694f4: 5144
-	DC.W	$0002			;694f6
-	SUBQ.W	#8,(A4)+		;694f8: 515c
-	DC.W	$0002			;694fa
-	SUBQ.W	#8,-(A4)		;694fc: 5164
-	ORI.B	#$0c,D0			;694fe: 0000000c
-	dc.l  $0			;69502: 00000000
-	MOVEQ	#0,D4			;69506: 7800
-	DC.W	$0002			;69508
-	SUBQ.W	#8,D4			;6950a: 5144
-	DC.W	$0002			;6950c
-	SUBQ.W	#8,-(A4)		;6950e: 5164
-	DC.W	$0002			;69510
-	SUBQ.W	#8,0(A4)		;69512: 516c0000
-	DC.W	$000c			;69516
-	dc.l  $0			;69518: 00000000
-	MOVEQ	#0,D4			;6951c: 7800
-	DC.W	$0002			;6951e
-	SUBQ.L	#8,-(A4)		;69520: 51a4
-	DC.W	$0002			;69522
-	SUBQ.L	#8,2(A4)		;69524: 51ac0002
-	SUBQ.L	#8,0(A4,D0.W)		;69528: 51b40000
-	DC.W	$000c			;6952c
-	dc.l  $0			;6952e: 00000000
-	MOVEQ	#0,D4			;69532: 7800
-	DC.W	$0002			;69534
-	SUBQ.L	#8,-(A4)		;69536: 51a4
-	DC.W	$0002			;69538
-	SUBQ.L	#8,2(A4,D0.W)		;6953a: 51b40002
-	DC.W	$51bc			;6953e
-	ORI.B	#$0c,D0			;69540: 0000000c
-	dc.l  $0			;69544: 00000000
-	MOVEQ	#0,D4			;69548: 7800
-	DC.W	$0002			;6954a
-	SUBQ.L	#8,-(A4)		;6954c: 51a4
-	DC.W	$0002			;6954e
-	DC.W	$51bc			;69550
-	DC.W	$0002			;69552
-	SF	D4			;69554: 51c4
-	ORI.B	#$0c,D0			;69556: 0000000c
-	dc.l  $0			;6955a: 00000000
-	MOVEQ	#0,D4			;6955e: 7800
-	DC.W	$0002			;69560
-	SUBQ.L	#8,-(A4)		;69562: 51a4
-	DC.W	$0002			;69564
-	SF	D4			;69566: 51c4
-	DC.W	$0002			;69568
-	DC.W	$51cc			;6956a
-	ORI.B	#$0c,D0			;6956c: 0000000c
-	dc.l  $0			;69570: 00000000
-	MOVEQ	#0,D4			;69574: 7800
-	DC.W	$0002			;69576
-	ADDQ.B	#1,D4			;69578: 5204
-	DC.W	$0002			;6957a
-	DC.W	$520c			;6957c
-	DC.W	$0002			;6957e
-	ADDQ.B	#1,(A4)			;69580: 5214
-	ORI.B	#$0c,D0			;69582: 0000000c
-	dc.l  $0			;69586: 00000000
-	MOVEQ	#0,D4			;6958a: 7800
-	DC.W	$0002			;6958c
-	ADDQ.B	#1,D4			;6958e: 5204
-	DC.W	$0002			;69590
-	ADDQ.B	#1,(A4)			;69592: 5214
-	DC.W	$0002			;69594
-	ADDQ.B	#1,(A4)+		;69596: 521c
-	ORI.B	#$0c,D0			;69598: 0000000c
-	dc.l  $0			;6959c: 00000000
-	MOVEQ	#0,D4			;695a0: 7800
-	DC.W	$0002			;695a2
-	ADDQ.B	#1,D4			;695a4: 5204
-	DC.W	$0002			;695a6
-	ADDQ.B	#1,(A4)+		;695a8: 521c
-	DC.W	$0002			;695aa
-	ADDQ.B	#1,-(A4)		;695ac: 5224
-	ORI.B	#$0c,D0			;695ae: 0000000c
-	dc.l  $0			;695b2: 00000000
-	MOVEQ	#0,D4			;695b6: 7800
-	DC.W	$0002			;695b8
-	ADDQ.B	#1,D4			;695ba: 5204
-	DC.W	$0002			;695bc
-	ADDQ.B	#1,-(A4)		;695be: 5224
-	DC.W	$0002			;695c0
-	ADDQ.B	#1,0(A4)		;695c2: 522c0000
-	DC.W	$000c			;695c6
-	DC.W	$ab26			;695c8
-	DC.W	$ab26			;695ca
-	ORI.B	#$02,D0			;695cc: 00000002
-	DC.W	$4fc4			;695d0
-	DC.W	$0002			;695d2
-	LEA	(A4),A7			;695d4: 4fd4
-	DC.W	$0002			;695d6
-	DC.W	$4fdc			;695d8
-	ORI.B	#$14,D0			;695da: 00000014
-	DC.W	$ab26			;695de
-	DC.W	$ab26			;695e0
-	ORI.B	#$02,D0			;695e2: 00000002
-	DC.W	$4fc4			;695e6
-	DC.W	$0002			;695e8
-	DC.W	$4fcc			;695ea
-	DC.W	$0002			;695ec
-	LEA	(A4),A7			;695ee: 4fd4
-	ORI.B	#$14,D0			;695f0: 00000014
-	DC.W	$da0e			;695f4
-	OR.B	0(A1),D7		;695f6: 8e290000
-	DC.W	$0002			;695fa
-	CHK.W	-(A4),D7		;695fc: 4fa4
-	DC.W	$0002			;695fe
-	CHK.W	#$0002,D7		;69600: 4fbc0002
-	DC.W	$4fdc			;69604
-	ORI.B	#$17,D0			;69606: 00000017
-	DC.W	$da0e			;6960a
-	OR.B	0(A1),D7		;6960c: 8e290000
-	DC.W	$0002			;69610
-	CHK.W	(A4)+,D7		;69612: 4f9c
-	DC.W	$0002			;69614
-	CHK.W	-(A4),D7		;69616: 4fa4
-	DC.W	$0002			;69618
-	DC.W	$4fdc			;6961a
-	ORI.B	#$17,D0			;6961c: 00000017
-	DC.W	$da0e			;69620
-	OR.B	0(A1),D7		;69622: 8e290000
-	DC.W	$0002			;69626
-	CHK.W	2(A4),D7		;69628: 4fac0002
-	CHK.W	2(A4,D0.W),D7		;6962c: 4fb40002
-	LEA	(A4),A7			;69630: 4fd4
-	ORI.B	#$17,D0			;69632: 00000017
-	DC.W	$da0e			;69636
-	OR.B	0(A1),D7		;69638: 8e290000
-	DC.W	$0002			;6963c
-	CHK.W	D4,D7			;6963e: 4f84
-	DC.W	$0002			;69640
-	CHK.W	2(A4),D7		;69642: 4fac0002
-	LEA	(A4),A7			;69646: 4fd4
-	ORI.B	#$17,D0			;69648: 00000017
-	BMI.S	lb_696a0+2		;6964c: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;6964e: 35aa00000002
-	DC.W	$4f6c			;69654
-	DC.W	$0002			;69656
-	DC.W	$4f74			;69658
-	DC.W	$0002			;6965a
-	ADDQ.W	#8,0(A4,D0.W)		;6965c: 50740000
-	DC.W	$0009			;69660
-	BMI.S	lb_696b6+2		;69662: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;69664: 35aa00000002
-	DC.W	$4f6c			;6966a
-	DC.W	$0002			;6966c
-	ADDQ.W	#8,2(A4,D0.W)		;6966e: 50740002
-	DC.W	$507c			;69672
-	ORI.B	#$09,D0			;69674: 00000009
-	BMI.S	lb_696cc+2		;69678: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;6967a: 35aa00000002
-	DC.W	$4f74			;69680
-	DC.W	$0002			;69682
-	DC.W	$4f8c			;69684
-	DC.W	$0002			;69686
-	ADDQ.W	#8,0(A4,D0.W)		;69688: 50740000
-	DC.W	$0009			;6968c
-	BMI.S	lb_696e2+2		;6968e: 6b54
-	MOVE.W	0(A2),2(A2,D0.W)	;69690: 35aa00000002
-	DC.W	$4f6c			;69696
-	DC.W	$0002			;69698
-	CHK.W	(A4),D7			;6969a: 4f94
-	DC.W	$0002			;6969c
-	DC.W	$507c			;6969e
-lb_696a0:
-	ORI.B	#$09,D0			;696a0: 00000009
-	DC.W	$0613			;696a4
-	DC.W	$c33d			;696a6
-	SUB.L	2(A4,D0.W),D4		;696a8: 98b40002
-	DC.W	$4f7c			;696ac
-	DC.W	$0002			;696ae
-	CHK.W	D4,D7			;696b0: 4f84
-	DC.W	$0002			;696b2
-	DC.W	$4f8c			;696b4
-lb_696b6:
-	ORI.B	#$0c,D0			;696b6: 0000000c
-	DC.W	$0000			;696ba
-	DC.W	$da0e			;696bc
-	OR.B	2(A1),D7		;696be: 8e290002
-	DC.W	$4f74			;696c2
-	DC.W	$0002			;696c4
-	DC.W	$4f7c			;696c6
-	DC.W	$0002			;696c8
-	DC.W	$4f8c			;696ca
-lb_696cc:
-	ORI.B	#$0c,D0			;696cc: 0000000c
-	OR.B	D0,D4			;696d0: 8800
-	dc.l  $0			;696d2: 00000000
-	DC.W	$0002			;696d6
-	SUBQ.W	#2,2(A4,D0.W)		;696d8: 55740002
-	DC.W	$557c			;696dc
-	DC.W	$0002			;696de
-	SUBQ.L	#2,-(A4)		;696e0: 55a4
-lb_696e2:
-	ORI.B	#$01,D0			;696e2: 00000001
-	OR.B	D0,D4			;696e6: 8800
-	dc.l  $0			;696e8: 00000000
-	DC.W	$0002			;696ec
-	DC.W	$557c			;696ee
-	DC.W	$0002			;696f0
-	SUBQ.L	#2,(A4)			;696f2: 5594
-	DC.W	$0002			;696f4
-	SUBQ.L	#2,-(A4)		;696f6: 55a4
-	ORI.B	#$01,D0			;696f8: 00000001
-	MOVEQ	#0,D4			;696fc: 7800
-	dc.l  $0			;696fe: 00000000
-	DC.W	$0002			;69702
-	SUBQ.L	#2,D4			;69704: 5584
-	DC.W	$0002			;69706
-	SUBQ.L	#2,A4			;69708: 558c
-	DC.W	$0002			;6970a
-	SUBQ.L	#2,0(A4)		;6970c: 55ac0000
-	DC.W	$0001			;69710
-	MOVEQ	#0,D4			;69712: 7800
-	dc.l  $0			;69714: 00000000
-	DC.W	$0002			;69718
-	SUBQ.L	#2,D4			;6971a: 5584
-	DC.W	$0002			;6971c
-	SUBQ.L	#2,(A4)+		;6971e: 559c
-	DC.W	$0002			;69720
-	SUBQ.L	#2,0(A4)		;69722: 55ac0000
-	ORI.B	#$00,D1			;69726: 00010000
-	DC.W	$0000			;6972a
-	OR.B	D0,D4			;6972c: 8800
-	DC.W	$0002			;6972e
-	DC.W	$557c			;69730
-	DC.W	$0002			;69732
-	SUBQ.L	#2,D4			;69734: 5584
-	DC.W	$0002			;69736
-	SUBQ.L	#2,(A4)			;69738: 5594
-	ORI.B	#$14,D0			;6973a: 00000014
-	dc.l  $0			;6973e: 00000000
-	OR.B	D0,D4			;69742: 8800
-	DC.W	$0002			;69744
-	SUBQ.L	#2,D4			;69746: 5584
-	DC.W	$0002			;69748
-	SUBQ.L	#2,(A4)			;6974a: 5594
-	DC.W	$0002			;6974c
-	SUBQ.L	#2,(A4)+		;6974e: 559c
-	ORI.B	#$14,D0			;69750: 00000014
-	DC.W	$0000			;69754
-	OR.B	D0,D4			;69756: 8800
-	ORI.B	#$02,D0			;69758: 00000002
-	SUBQ.W	#2,2(A4,D0.W)		;6975c: 55740002
-	DC.W	$557c			;69760
-	DC.W	$0002			;69762
-	SUBQ.L	#2,A4			;69764: 558c
-	ORI.B	#$04,D0			;69766: 00000004
-	DC.W	$0000			;6976a
-	OR.B	D0,D4			;6976c: 8800
-	ORI.B	#$02,D0			;6976e: 00000002
-	DC.W	$557c			;69772
-	DC.W	$0002			;69774
-	SUBQ.L	#2,D4			;69776: 5584
-	DC.W	$0002			;69778
-	SUBQ.L	#2,A4			;6977a: 558c
-	ORI.B	#$04,D0			;6977c: 00000004
-	DC.W	$0000			;69780
-	DC.W	$da0e			;69782
-	DC.W	$71d7			;69784
-	DC.W	$0002			;69786
-	DC.W	$4f64			;69788
-	DC.W	$0002			;6978a
-	DC.W	$4f6c			;6978c
-	DC.W	$0002			;6978e
-	CHK.W	(A4),D7			;69790: 4f94
-	ORI.B	#$0c,D0			;69792: 0000000c
-	DC.W	$0613			;69796
-	DC.W	$c33d			;69798
-	BEQ.S	lb_697e8		;6979a: 674c
-	DC.W	$0002			;6979c
-	DC.W	$4f64			;6979e
-	DC.W	$0002			;697a0
-	CHK.W	(A4),D7			;697a2: 4f94
-	DC.W	$0002			;697a4
-	CHK.W	(A4)+,D7		;697a6: 4f9c
-	ORI.B	#$0c,D0			;697a8: 0000000c
-	CMP.B	D0,D4			;697ac: b800
-	DC.W	$a000			;697ae
-	ORI.B	#$02,D0			;697b0: 00000002
-	DC.W	$4f64			;697b4
-	DC.W	$0002			;697b6
-	DC.W	$4f7c			;697b8
-	DC.W	$0002			;697ba
-	DC.W	$4fdc			;697bc
-	ORI.B	#$14,D0			;697be: 00000014
-	CMP.B	D0,D4			;697c2: b800
-	DC.W	$a000			;697c4
-	ORI.B	#$02,D0			;697c6: 00000002
-	DC.W	$4f7c			;697ca
-	DC.W	$0002			;697cc
-	LEA	(A4),A7			;697ce: 4fd4
-	DC.W	$0002			;697d0
-	DC.W	$4fdc			;697d2
-	ORI.B	#$14,D0			;697d4: 00000014
-	CMP.B	D0,D4			;697d8: b800
-	DC.W	$a000			;697da
-	ORI.B	#$02,D0			;697dc: 00000002
-	DC.W	$4f64			;697e0
-	DC.W	$0002			;697e2
-	CHK.W	(A4)+,D7		;697e4: 4f9c
-	DC.W	$0002			;697e6
-lb_697e8:
-	DC.W	$4fdc			;697e8
-	ORI.B	#$14,D0			;697ea: 00000014
-	CMP.B	D0,D4			;697ee: b800
-	DC.W	$a000			;697f0
-	ORI.B	#$02,D0			;697f2: 00000002
-	DC.W	$4f7c			;697f6
-	DC.W	$0002			;697f8
-	CHK.W	D4,D7			;697fa: 4f84
-	DC.W	$0002			;697fc
-	LEA	(A4),A7			;697fe: 4fd4
-	ORI.B	#$14,D0			;69800: 00000014
-	DC.W	$a9f2			;69804
-	ADDA.W	ext_47b60002,A2		;69806: d4f947b60002
-	ADDQ.B	#2,2(A4,D0.W)		;6980c: 54340002
-	DC.W	$543c			;69810
-	DC.W	$0002			;69812
-	ADDQ.W	#2,D4			;69814: 5444
-	ORI.B	#$01,D0			;69816: 00000001
-	DC.W	$560e			;6981a
-	MOVE.L	D7,-(A5)		;6981c: 2b07
-	CHK.W	2(A6,D0.W),D3		;6981e: 47b60002
-	ADDQ.B	#2,-(A4)		;69822: 5424
-	DC.W	$0002			;69824
-	ADDQ.B	#2,2(A4)		;69826: 542c0002
-	ADDQ.W	#2,A4			;6982a: 544c
-	ORI.B	#$01,D0			;6982c: 00000001
-	SUB.L	-13738(A4),D2		;69830: 94acca56
-	ORI.B	#$02,D0			;69834: 00000002
-	ADDQ.B	#2,2(A4)		;69838: 542c0002
-	ADDQ.B	#2,2(A4,D0.W)		;6983c: 54340002
-	ADDQ.W	#2,A4			;69840: 544c
-	ORI.B	#$11,D0			;69842: 00000011
-	SUB.L	-13738(A4),D2		;69846: 94acca56
-	ORI.B	#$02,D0			;6984a: 00000002
-	ADDQ.B	#2,2(A4,D0.W)		;6984e: 54340002
-	ADDQ.W	#2,D4			;69852: 5444
-	DC.W	$0002			;69854
-	ADDQ.W	#2,A4			;69856: 544c
-	ORI.B	#$11,D0			;69858: 00000011
-	DC.W	$0000			;6985c
-	DC.W	$ab26			;6985e
-	SCC	(A2)+			;69860: 54da
-	DC.W	$0002			;69862
-	ADDQ.B	#2,(A4)			;69864: 5414
-	DC.W	$0002			;69866
-	DC.W	$543c			;69868
-	DC.W	$0002			;6986a
-	ADDQ.W	#2,D4			;6986c: 5444
-	ORI.B	#$0c,D0			;6986e: 0000000c
-	DC.W	$0000			;69872
-	DC.W	$ab26			;69874
-	DC.W	$ab26			;69876
-	DC.W	$0002			;69878
-	ADDQ.B	#2,(A4)+		;6987a: 541c
-	DC.W	$0002			;6987c
-	ADDQ.B	#2,-(A4)		;6987e: 5424
-	DC.W	$0002			;69880
-	ADDQ.W	#2,A4			;69882: 544c
-	ORI.B	#$0c,D0			;69884: 0000000c
-	DC.W	$0000			;69888
-	OR.B	D0,D4			;6988a: 8800
-	ORI.B	#$02,D0			;6988c: 00000002
-	ADDQ.B	#2,(A4)			;69890: 5414
-	DC.W	$0002			;69892
-	ADDQ.W	#2,D4			;69894: 5444
-	DC.W	$0002			;69896
-	ADDQ.W	#2,A4			;69898: 544c
-	ORI.B	#$04,D0			;6989a: 00000004
-	DC.W	$0000			;6989e
-	OR.B	D0,D4			;698a0: 8800
-	ORI.B	#$02,D0			;698a2: 00000002
-	ADDQ.B	#2,(A4)			;698a6: 5414
-	DC.W	$0002			;698a8
-	ADDQ.B	#2,(A4)+		;698aa: 541c
-	DC.W	$0002			;698ac
-	ADDQ.W	#2,A4			;698ae: 544c
-	ORI.B	#$04,D0			;698b0: 00000004
-	dc.l  $0			;698b4: 00000000
-	ORI.B	#$02,D0			;698b8: 00000002
-	DC.W	$4f64			;698bc
-	DC.W	$0002			;698be
-	DC.W	$4f6c			;698c0
-	DC.W	$0002			;698c2
-	DC.W	$4f7c			;698c4
-	ORI.B	#$04,D0			;698c6: 00000004
-	dc.l  $0			;698ca: 00000000
-	ORI.B	#$02,D0			;698ce: 00000002
-	DC.W	$4f6c			;698d2
-	DC.W	$0002			;698d4
-	DC.W	$4f74			;698d6
-	DC.W	$0002			;698d8
-	DC.W	$4f7c			;698da
-	ORI.B	#$04,D0			;698dc: 00000004
-	dc.l  $0			;698e0: 00000000
-	ORI.B	#$02,D0			;698e4: 00000002
-	ADDQ.W	#2,(A4)			;698e8: 5454
-	DC.W	$0002			;698ea
-	ADDQ.W	#2,(A4)+		;698ec: 545c
-	DC.W	$0002			;698ee
-	ADDQ.W	#2,-(A4)		;698f0: 5464
-	ORI.B	#$0c,D0			;698f2: 0000000c
-	dc.l  $0			;698f6: 00000000
-	ORI.B	#$02,D0			;698fa: 00000002
-	ADDQ.W	#2,(A4)			;698fe: 5454
-	DC.W	$0002			;69900
-	ADDQ.W	#2,-(A4)		;69902: 5464
-	DC.W	$0002			;69904
-	ADDQ.W	#2,0(A4)		;69906: 546c0000
-	DC.W	$000c			;6990a
-	dc.l  $0			;6990c: 00000000
-	ORI.B	#$02,D0			;69910: 00000002
-	ADDQ.W	#2,2(A4,D0.W)		;69914: 54740002
-	DC.W	$547c			;69918
-	DC.W	$0002			;6991a
-	ADDQ.L	#2,D4			;6991c: 5484
-	ORI.B	#$0c,D0			;6991e: 0000000c
-	dc.l  $0			;69922: 00000000
-	ORI.B	#$02,D0			;69926: 00000002
-	ADDQ.W	#2,2(A4,D0.W)		;6992a: 54740002
-	ADDQ.L	#2,D4			;6992e: 5484
-	DC.W	$0002			;69930
-	ADDQ.L	#2,A4			;69932: 548c
-	ORI.B	#$0c,D0			;69934: 0000000c
-	dc.l  $0			;69938: 00000000
-	ORI.B	#$02,D0			;6993c: 00000002
-	ADDQ.L	#2,(A4)			;69940: 5494
-	DC.W	$0002			;69942
-	ADDQ.L	#2,(A4)+		;69944: 549c
-	DC.W	$0002			;69946
-	ADDQ.L	#2,-(A4)		;69948: 54a4
-	ORI.B	#$09,D0			;6994a: 00000009
-	dc.l  $0			;6994e: 00000000
-	ORI.B	#$02,D0			;69952: 00000002
-	ADDQ.L	#2,(A4)			;69956: 5494
-	DC.W	$0002			;69958
-	ADDQ.L	#2,-(A4)		;6995a: 54a4
-	DC.W	$0002			;6995c
-	ADDQ.L	#2,0(A4)		;6995e: 54ac0000
-	DC.W	$0009			;69962
-	dc.l  $0			;69964: 00000000
-	ORI.B	#$02,D0			;69968: 00000002
-	ADDQ.L	#2,2(A4,D0.W)		;6996c: 54b40002
-	DC.W	$54bc			;69970
-	DC.W	$0002			;69972
-	SCC	D4			;69974: 54c4
-	ORI.B	#$09,D0			;69976: 00000009
-	dc.l  $0			;6997a: 00000000
-	ORI.B	#$02,D0			;6997e: 00000002
-	ADDQ.L	#2,2(A4,D0.W)		;69982: 54b40002
-	SCC	D4			;69986: 54c4
-	DC.W	$0002			;69988
-	DC.W	$54cc			;6998a
-	ORI.B	#$09,D0			;6998c: 00000009
-	dc.l  $0			;69990: 00000000
-	ORI.B	#$02,D0			;69994: 00000002
-	SCC	(A4)			;69998: 54d4
-	DC.W	$0002			;6999a
-	SCC	(A4)+			;6999c: 54dc
-	DC.W	$0002			;6999e
-	SCC	-(A4)			;699a0: 54e4
-	ORI.B	#$09,D0			;699a2: 00000009
-	dc.l  $0			;699a6: 00000000
-	ORI.B	#$02,D0			;699aa: 00000002
-	SCC	(A4)			;699ae: 54d4
-	DC.W	$0002			;699b0
-	SCC	-(A4)			;699b2: 54e4
-	DC.W	$0002			;699b4
-	SCC	0(A4)			;699b6: 54ec0000
-	DC.W	$0009			;699ba
-	dc.l  $0			;699bc: 00000000
-	ORI.B	#$02,D0			;699c0: 00000002
-	SCC	2(A4,D0.W)		;699c4: 54f40002
-	DC.W	$54fc			;699c8
-	DC.W	$0002			;699ca
-	SUBQ.B	#2,D4			;699cc: 5504
-	ORI.B	#$09,D0			;699ce: 00000009
-	dc.l  $0			;699d2: 00000000
-	ORI.B	#$02,D0			;699d6: 00000002
-	SCC	2(A4,D0.W)		;699da: 54f40002
-	SUBQ.B	#2,D4			;699de: 5504
-	DC.W	$0002			;699e0
-	DC.W	$550c			;699e2
-	ORI.B	#$09,D0			;699e4: 00000009
-	dc.l  $0			;699e8: 00000000
-	ORI.B	#$02,D0			;699ec: 00000002
-	SUBQ.B	#2,(A4)			;699f0: 5514
-	DC.W	$0002			;699f2
-	SUBQ.B	#2,(A4)+		;699f4: 551c
-	DC.W	$0002			;699f6
-	SUBQ.B	#2,-(A4)		;699f8: 5524
-	ORI.B	#$09,D0			;699fa: 00000009
-	dc.l  $0			;699fe: 00000000
-	ORI.B	#$02,D0			;69a02: 00000002
-	SUBQ.B	#2,(A4)			;69a06: 5514
-	DC.W	$0002			;69a08
-	SUBQ.B	#2,-(A4)		;69a0a: 5524
-	DC.W	$0002			;69a0c
-	SUBQ.B	#2,0(A4)		;69a0e: 552c0000
-	DC.W	$0009			;69a12
-	dc.l  $0			;69a14: 00000000
-	ORI.B	#$02,D0			;69a18: 00000002
-	SUBQ.B	#2,(A4)			;69a1c: 5514
-	DC.W	$0002			;69a1e
-	SUBQ.B	#2,2(A4)		;69a20: 552c0002
-	SUBQ.B	#2,0(A4,D0.W)		;69a24: 55340000
-	DC.W	$0009			;69a28
-	dc.l  $0			;69a2a: 00000000
-	ORI.B	#$02,D0			;69a2e: 00000002
-	SUBQ.B	#2,(A4)			;69a32: 5514
-	DC.W	$0002			;69a34
-	SUBQ.B	#2,2(A4,D0.W)		;69a36: 55340002
-	DC.W	$553c			;69a3a
-	ORI.B	#$09,D0			;69a3c: 00000009
-	dc.l  $0			;69a40: 00000000
-	ORI.B	#$02,D0			;69a44: 00000002
-	SUBQ.W	#2,D4			;69a48: 5544
-	DC.W	$0002			;69a4a
-	SUBQ.W	#2,A4			;69a4c: 554c
-	DC.W	$0002			;69a4e
-	SUBQ.W	#2,(A4)			;69a50: 5554
-	ORI.B	#$09,D0			;69a52: 00000009
-	dc.l  $0			;69a56: 00000000
-	ORI.B	#$02,D0			;69a5a: 00000002
-	SUBQ.W	#2,D4			;69a5e: 5544
-	DC.W	$0002			;69a60
-	SUBQ.W	#2,(A4)			;69a62: 5554
-	DC.W	$0002			;69a64
-	SUBQ.W	#2,(A4)+		;69a66: 555c
-	ORI.B	#$09,D0			;69a68: 00000009
-	dc.l  $0			;69a6c: 00000000
-	ORI.B	#$02,D0			;69a70: 00000002
-	SUBQ.W	#2,D4			;69a74: 5544
-	DC.W	$0002			;69a76
-	SUBQ.W	#2,(A4)+		;69a78: 555c
-	DC.W	$0002			;69a7a
-	SUBQ.W	#2,-(A4)		;69a7c: 5564
-	ORI.B	#$09,D0			;69a7e: 00000009
-	dc.l  $0			;69a82: 00000000
-	ORI.B	#$02,D0			;69a86: 00000002
-	SUBQ.W	#2,D4			;69a8a: 5544
-	DC.W	$0002			;69a8c
-	SUBQ.W	#2,-(A4)		;69a8e: 5564
-	DC.W	$0002			;69a90
-	SUBQ.W	#2,0(A4)		;69a92: 556c0000
-	DC.W	$0009			;69a96
+	dc.w	$0100	;6878a
+	dc.w	$00ca	;6878c
+	dc.w	$00a5	;6878e
+	dc.w	$04ca	;68790
+	dc.w	$0000	;68792
+	dc.w	$0000	;68794
+	dc.w	$0000	;68796
+	dc.w	$fec8	;68798
+	dc.w	$0000	;6879a
+	dc.w	$00a8	;6879c
+	dc.w	$0180	;6879e
+	dc.w	$0000	;687a0
+	dc.w	$00a8	;687a2
+	dc.w	$0180	;687a4
+	dc.w	$0000	;687a6
+	dc.w	$ff58	;687a8
+	dc.w	$fec8	;687aa
+	dc.w	$0000	;687ac
+	dc.w	$ff58	;687ae
+	dc.w	$fe68	;687b0
+	dc.w	$0048	;687b2
+	dc.w	$ff28	;687b4
+	dc.w	$0138	;687b6
+	dc.w	$0090	;687b8
+	dc.w	$ff28	;687ba
+	dc.w	$0138	;687bc
+	dc.w	$0090	;687be
+	dc.w	$00d8	;687c0
+	dc.w	$fe68	;687c2
+	dc.w	$0048	;687c4
+	dc.w	$00d8	;687c6
+	dc.w	$fe20	;687c8
+	dc.w	$0060	;687ca
+	dc.w	$00d8	;687cc
+	dc.w	$fe20	;687ce
+	dc.w	$0060	;687d0
+	dc.w	$ff28	;687d2
+	dc.w	$fe20	;687d4
+	dc.w	$0060	;687d6
+	dc.w	$ff70	;687d8
+	dc.w	$fe20	;687da
+	dc.w	$0060	;687dc
+	dc.w	$0090	;687de
+	dc.w	$fe38	;687e0
+	dc.w	$0078	;687e2
+	dc.w	$0090	;687e4
+	dc.w	$fe38	;687e6
+	dc.w	$0078	;687e8
+	dc.w	$ff70	;687ea
+	dc.w	$fe68	;687ec
+	dc.w	$0048	;687ee
+	dc.w	$ff70	;687f0
+	dc.w	$fe68	;687f2
+	dc.w	$0048	;687f4
+	dc.w	$0090	;687f6
+	dc.w	$fe20	;687f8
+	dc.w	$00a8	;687fa
+	dc.w	$00d8	;687fc
+	dc.w	$fe20	;687fe
+	dc.w	$00a8	;68800
+	dc.w	$ff28	;68802
+	dc.w	$fe68	;68804
+	dc.w	$00a8	;68806
+	dc.w	$0090	;68808
+	dc.w	$fe68	;6880a
+	dc.w	$00a8	;6880c
+	dc.w	$ff70	;6880e
+	dc.w	$fec8	;68810
+	dc.w	$00f0	;68812
+	dc.w	$00d8	;68814
+	dc.w	$fec8	;68816
+	dc.w	$00f0	;68818
+	dc.w	$ff28	;6881a
+	dc.w	$fec8	;6881c
+	dc.w	$00f0	;6881e
+	dc.w	$0090	;68820
+	dc.w	$fec8	;68822
+	dc.w	$00f0	;68824
+	dc.w	$ff70	;68826
+	dc.w	$0138	;68828
+	dc.w	$00c0	;6882a
+	dc.w	$ff28	;6882c
+	dc.w	$0138	;6882e
+	dc.w	$00c0	;68830
+	dc.w	$00d8	;68832
+	dc.w	$00d8	;68834
+	dc.w	$00f0	;68836
+	dc.w	$ff28	;68838
+	dc.w	$00d8	;6883a
+	dc.w	$00f0	;6883c
+	dc.w	$00d8	;6883e
+	dc.w	$00d8	;68840
+	dc.w	$00f0	;68842
+	dc.w	$ff70	;68844
+	dc.w	$00d8	;68846
+	dc.w	$00f0	;68848
+	dc.w	$0090	;6884a
+	dc.w	$0138	;6884c
+	dc.w	$00c0	;6884e
+	dc.w	$ff70	;68850
+	dc.w	$0138	;68852
+	dc.w	$00c0	;68854
+	dc.w	$0090	;68856
+	dc.w	$0120	;68858
+	dc.w	$00a8	;6885a
+	dc.w	$ff70	;6885c
+	dc.w	$0120	;6885e
+	dc.w	$00a8	;68860
+	dc.w	$0090	;68862
+	dc.w	$0138	;68864
+	dc.w	$0090	;68866
+	dc.w	$ff70	;68868
+	dc.w	$0138	;6886a
+	dc.w	$0090	;6886c
+	dc.w	$0090	;6886e
+	dc.w	$fe20	;68870
+	dc.w	$00a8	;68872
+	dc.w	$ff70	;68874
+	dc.w	$fe20	;68876
+	dc.w	$00a8	;68878
+	dc.w	$0090	;6887a
+	dc.w	$fe5c	;6887c
+	dc.w	$0056	;6887e
+	dc.w	$00d8	;68880
+	dc.w	$fe98	;68882
+	dc.w	$0060	;68884
+	dc.w	$00d8	;68886
+	dc.w	$fe98	;68888
+	dc.w	$00a8	;6888a
+	dc.w	$00d8	;6888c
+	dc.w	$fe5c	;6888e
+	dc.w	$00b6	;68890
+	dc.w	$00d8	;68892
+	dc.w	$fec8	;68894
+	dc.w	$0090	;68896
+	dc.w	$00d8	;68898
+	dc.w	$fef8	;6889a
+	dc.w	$00a8	;6889c
+	dc.w	$00d8	;6889e
+	dc.w	$fef8	;688a0
+	dc.w	$00d8	;688a2
+	dc.w	$00d8	;688a4
+	dc.w	$fec8	;688a6
+	dc.w	$00f0	;688a8
+	dc.w	$00d8	;688aa
+	dc.w	$fe98	;688ac
+	dc.w	$00d8	;688ae
+	dc.w	$00d8	;688b0
+	dc.w	$fe98	;688b2
+	dc.w	$00a8	;688b4
+	dc.w	$00d8	;688b6
+	dc.w	$ff10	;688b8
+	dc.w	$0090	;688ba
+	dc.w	$00d8	;688bc
+	dc.w	$ff40	;688be
+	dc.w	$00a8	;688c0
+	dc.w	$00d8	;688c2
+	dc.w	$ff40	;688c4
+	dc.w	$00d8	;688c6
+	dc.w	$00d8	;688c8
+	dc.w	$ff10	;688ca
+	dc.w	$00f0	;688cc
+	dc.w	$00d8	;688ce
+	dc.w	$fee0	;688d0
+	dc.w	$00d8	;688d2
+	dc.w	$00d8	;688d4
+	dc.w	$fee0	;688d6
+	dc.w	$00a8	;688d8
+	dc.w	$00d8	;688da
+	dc.w	$ff58	;688dc
+	dc.w	$0090	;688de
+	dc.w	$00d8	;688e0
+	dc.w	$ff88	;688e2
+	dc.w	$00a8	;688e4
+	dc.w	$00d8	;688e6
+	dc.w	$ff88	;688e8
+	dc.w	$00d8	;688ea
+	dc.w	$00d8	;688ec
+	dc.w	$ff58	;688ee
+	dc.w	$00f0	;688f0
+	dc.w	$00d8	;688f2
+	dc.w	$ff28	;688f4
+	dc.w	$00d8	;688f6
+	dc.w	$00d8	;688f8
+	dc.w	$ff28	;688fa
+	dc.w	$00a8	;688fc
+	dc.w	$00d8	;688fe
+	dc.w	$ffa0	;68900
+	dc.w	$0090	;68902
+	dc.w	$00d8	;68904
+	dc.w	$ffd0	;68906
+	dc.w	$00a8	;68908
+	dc.w	$00d8	;6890a
+	dc.w	$ffd0	;6890c
+	dc.w	$00d8	;6890e
+	dc.w	$00d8	;68910
+	dc.w	$ffa0	;68912
+	dc.w	$00f0	;68914
+	dc.w	$00d8	;68916
+	dc.w	$ff70	;68918
+	dc.w	$00d8	;6891a
+	dc.w	$00d8	;6891c
+	dc.w	$ff70	;6891e
+	dc.w	$00a8	;68920
+	dc.w	$00d8	;68922
+	dc.w	$ffe8	;68924
+	dc.w	$0090	;68926
+	dc.w	$00d8	;68928
+	dc.w	$0018	;6892a
+	dc.w	$00a8	;6892c
+	dc.w	$00d8	;6892e
+	dc.w	$0018	;68930
+	dc.w	$00d8	;68932
+	dc.w	$00d8	;68934
+	dc.w	$ffe8	;68936
+	dc.w	$00f0	;68938
+	dc.w	$00d8	;6893a
+	dc.w	$ffb8	;6893c
+	dc.w	$00d8	;6893e
+	dc.w	$00d8	;68940
+	dc.w	$ffb8	;68942
+	dc.w	$00a8	;68944
+	dc.w	$00d8	;68946
+	dc.w	$0030	;68948
+	dc.w	$0090	;6894a
+	dc.w	$00d8	;6894c
+	dc.w	$0060	;6894e
+	dc.w	$00a8	;68950
+	dc.w	$00d8	;68952
+	dc.w	$0060	;68954
+	dc.w	$00d8	;68956
+	dc.w	$00d8	;68958
+	dc.w	$0030	;6895a
+	dc.w	$00f0	;6895c
+	dc.w	$00d8	;6895e
+	dc.w	$0000	;68960
+	dc.w	$00d8	;68962
+	dc.w	$00d8	;68964
+	dc.w	$0000	;68966
+	dc.w	$00a8	;68968
+	dc.w	$00d8	;6896a
+	dc.w	$0078	;6896c
+	dc.w	$0090	;6896e
+	dc.w	$00d8	;68970
+	dc.w	$00a8	;68972
+	dc.w	$00a8	;68974
+	dc.w	$00d8	;68976
+	dc.w	$00a8	;68978
+	dc.w	$00d8	;6897a
+	dc.w	$00d8	;6897c
+	dc.w	$0078	;6897e
+	dc.w	$00f0	;68980
+	dc.w	$00d8	;68982
+	dc.w	$0048	;68984
+	dc.w	$00d8	;68986
+	dc.w	$00d8	;68988
+	dc.w	$0048	;6898a
+	dc.w	$00a8	;6898c
+	dc.w	$00d8	;6898e
+	dc.w	$00c0	;68990
+	dc.w	$0090	;68992
+	dc.w	$00d8	;68994
+	dc.w	$00f0	;68996
+	dc.w	$00a8	;68998
+	dc.w	$00d8	;6899a
+	dc.w	$00f0	;6899c
+	dc.w	$00d8	;6899e
+	dc.w	$00d8	;689a0
+	dc.w	$00c0	;689a2
+	dc.w	$00f0	;689a4
+	dc.w	$00d8	;689a6
+	dc.w	$0090	;689a8
+	dc.w	$00d8	;689aa
+	dc.w	$00d8	;689ac
+	dc.w	$0090	;689ae
+	dc.w	$00a8	;689b0
+	dc.w	$00d8	;689b2
+	dc.w	$0114	;689b4
+	dc.w	$0088	;689b6
+	dc.w	$00d8	;689b8
+	dc.w	$0114	;689ba
+	dc.w	$00d8	;689bc
+	dc.w	$00d8	;689be
+	dc.w	$00f0	;689c0
+	dc.w	$00c0	;689c2
+	dc.w	$00d8	;689c4
+	dc.w	$00f0	;689c6
+	dc.w	$0097	;689c8
+	dc.w	$00d8	;689ca
+	dc.w	$fe5c	;689cc
+	dc.w	$0056	;689ce
+	dc.w	$ff28	;689d0
+	dc.w	$fe98	;689d2
+	dc.w	$0060	;689d4
+	dc.w	$ff28	;689d6
+	dc.w	$fe98	;689d8
+	dc.w	$00a8	;689da
+	dc.w	$ff28	;689dc
+	dc.w	$fe5c	;689de
+	dc.w	$00b6	;689e0
+	dc.w	$ff28	;689e2
+	dc.w	$fec8	;689e4
+	dc.w	$0090	;689e6
+	dc.w	$ff28	;689e8
+	dc.w	$fef8	;689ea
+	dc.w	$00a8	;689ec
+	dc.w	$ff28	;689ee
+	dc.w	$fef8	;689f0
+	dc.w	$00d8	;689f2
+	dc.w	$ff28	;689f4
+	dc.w	$fec8	;689f6
+	dc.w	$00f0	;689f8
+	dc.w	$ff28	;689fa
+	dc.w	$fe98	;689fc
+	dc.w	$00d8	;689fe
+	dc.w	$ff28	;68a00
+	dc.w	$fe98	;68a02
+	dc.w	$00a8	;68a04
+	dc.w	$ff28	;68a06
+	dc.w	$ff10	;68a08
+	dc.w	$0090	;68a0a
+	dc.w	$ff28	;68a0c
+	dc.w	$ff40	;68a0e
+	dc.w	$00a8	;68a10
+	dc.w	$ff28	;68a12
+	dc.w	$ff40	;68a14
+	dc.w	$00d8	;68a16
+	dc.w	$ff28	;68a18
+	dc.w	$ff10	;68a1a
+	dc.w	$00f0	;68a1c
+	dc.w	$ff28	;68a1e
+	dc.w	$fee0	;68a20
+	dc.w	$00d8	;68a22
+	dc.w	$ff28	;68a24
+	dc.w	$fee0	;68a26
+	dc.w	$00a8	;68a28
+	dc.w	$ff28	;68a2a
+	dc.w	$ff58	;68a2c
+	dc.w	$0090	;68a2e
+	dc.w	$ff28	;68a30
+	dc.w	$ff88	;68a32
+	dc.w	$00a8	;68a34
+	dc.w	$ff28	;68a36
+	dc.w	$ff88	;68a38
+	dc.w	$00d8	;68a3a
+	dc.w	$ff28	;68a3c
+	dc.w	$ff58	;68a3e
+	dc.w	$00f0	;68a40
+	dc.w	$ff28	;68a42
+	dc.w	$ff28	;68a44
+	dc.w	$00d8	;68a46
+	dc.w	$ff28	;68a48
+	dc.w	$ff28	;68a4a
+	dc.w	$00a8	;68a4c
+	dc.w	$ff28	;68a4e
+	dc.w	$ffa0	;68a50
+	dc.w	$0090	;68a52
+	dc.w	$ff28	;68a54
+	dc.w	$ffd0	;68a56
+	dc.w	$00a8	;68a58
+	dc.w	$ff28	;68a5a
+	dc.w	$ffd0	;68a5c
+	dc.w	$00d8	;68a5e
+	dc.w	$ff28	;68a60
+	dc.w	$ffa0	;68a62
+	dc.w	$00f0	;68a64
+	dc.w	$ff28	;68a66
+	dc.w	$ff70	;68a68
+	dc.w	$00d8	;68a6a
+	dc.w	$ff28	;68a6c
+	dc.w	$ff70	;68a6e
+	dc.w	$00a8	;68a70
+	dc.w	$ff28	;68a72
+	dc.w	$ffe8	;68a74
+	dc.w	$0090	;68a76
+	dc.w	$ff28	;68a78
+	dc.w	$0018	;68a7a
+	dc.w	$00a8	;68a7c
+	dc.w	$ff28	;68a7e
+	dc.w	$0018	;68a80
+	dc.w	$00d8	;68a82
+	dc.w	$ff28	;68a84
+	dc.w	$ffe8	;68a86
+	dc.w	$00f0	;68a88
+	dc.w	$ff28	;68a8a
+	dc.w	$ffb8	;68a8c
+	dc.w	$00d8	;68a8e
+	dc.w	$ff28	;68a90
+	dc.w	$ffb8	;68a92
+	dc.w	$00a8	;68a94
+	dc.w	$ff28	;68a96
+	dc.w	$0030	;68a98
+	dc.w	$0090	;68a9a
+	dc.w	$ff28	;68a9c
+	dc.w	$0060	;68a9e
+	dc.w	$00a8	;68aa0
+	dc.w	$ff28	;68aa2
+	dc.w	$0060	;68aa4
+	dc.w	$00d8	;68aa6
+	dc.w	$ff28	;68aa8
+	dc.w	$0030	;68aaa
+	dc.w	$00f0	;68aac
+	dc.w	$ff28	;68aae
+	dc.w	$0000	;68ab0
+	dc.w	$00d8	;68ab2
+	dc.w	$ff28	;68ab4
+	dc.w	$0000	;68ab6
+	dc.w	$00a8	;68ab8
+	dc.w	$ff28	;68aba
+	dc.w	$0078	;68abc
+	dc.w	$0090	;68abe
+	dc.w	$ff28	;68ac0
+	dc.w	$00a8	;68ac2
+	dc.w	$00a8	;68ac4
+	dc.w	$ff28	;68ac6
+	dc.w	$00a8	;68ac8
+	dc.w	$00d8	;68aca
+	dc.w	$ff28	;68acc
+	dc.w	$0078	;68ace
+	dc.w	$00f0	;68ad0
+	dc.w	$ff28	;68ad2
+	dc.w	$0048	;68ad4
+	dc.w	$00d8	;68ad6
+	dc.w	$ff28	;68ad8
+	dc.w	$0048	;68ada
+	dc.w	$00a8	;68adc
+	dc.w	$ff28	;68ade
+	dc.w	$00c0	;68ae0
+	dc.w	$0090	;68ae2
+	dc.w	$ff28	;68ae4
+	dc.w	$00f0	;68ae6
+	dc.w	$00a8	;68ae8
+	dc.w	$ff28	;68aea
+	dc.w	$00f0	;68aec
+	dc.w	$00d8	;68aee
+	dc.w	$ff28	;68af0
+	dc.w	$00c0	;68af2
+	dc.w	$00f0	;68af4
+	dc.w	$ff28	;68af6
+	dc.w	$0090	;68af8
+	dc.w	$00d8	;68afa
+	dc.w	$ff28	;68afc
+	dc.w	$0090	;68afe
+	dc.w	$00a8	;68b00
+	dc.w	$ff28	;68b02
+	dc.w	$0114	;68b04
+	dc.w	$0088	;68b06
+	dc.w	$ff28	;68b08
+	dc.w	$0114	;68b0a
+	dc.w	$00d8	;68b0c
+	dc.w	$ff28	;68b0e
+	dc.w	$00f0	;68b10
+	dc.w	$00c0	;68b12
+	dc.w	$ff28	;68b14
+	dc.w	$00f0	;68b16
+	dc.w	$0097	;68b18
+	dc.w	$ff28	;68b1a
+	dc.w	$fea9	;68b1c
+	dc.w	$0018	;68b1e
+	dc.w	$006c	;68b20
+	dc.w	$fea9	;68b22
+	dc.w	$0018	;68b24
+	dc.w	$0054	;68b26
+	dc.w	$fe88	;68b28
+	dc.w	$0030	;68b2a
+	dc.w	$003c	;68b2c
+	dc.w	$fe68	;68b2e
+	dc.w	$0048	;68b30
+	dc.w	$0054	;68b32
+	dc.w	$fe68	;68b34
+	dc.w	$0048	;68b36
+	dc.w	$006c	;68b38
+	dc.w	$fe88	;68b3a
+	dc.w	$0030	;68b3c
+	dc.w	$0084	;68b3e
+	dc.w	$fe80	;68b40
+	dc.w	$0018	;68b42
+	dc.w	$006c	;68b44
+	dc.w	$fe80	;68b46
+	dc.w	$0018	;68b48
+	dc.w	$0054	;68b4a
+	dc.w	$ff28	;68b4c
+	dc.w	$0000	;68b4e
+	dc.w	$0078	;68b50
+	dc.w	$ff28	;68b52
+	dc.w	$0000	;68b54
+	dc.w	$0030	;68b56
+	dc.w	$fef8	;68b58
+	dc.w	$0000	;68b5a
+	dc.w	$0030	;68b5c
+	dc.w	$fef8	;68b5e
+	dc.w	$0000	;68b60
+	dc.w	$0078	;68b62
+	dc.w	$ff28	;68b64
+	dc.w	$0000	;68b66
+	dc.w	$ffd0	;68b68
+	dc.w	$ff28	;68b6a
+	dc.w	$0000	;68b6c
+	dc.w	$ff88	;68b6e
+	dc.w	$fef8	;68b70
+	dc.w	$0000	;68b72
+	dc.w	$ff88	;68b74
+	dc.w	$fef8	;68b76
+	dc.w	$0000	;68b78
+	dc.w	$ffd0	;68b7a
+	dc.w	$00d8	;68b7c
+	dc.w	$0000	;68b7e
+	dc.w	$0090	;68b80
+	dc.w	$00d8	;68b82
+	dc.w	$0000	;68b84
+	dc.w	$0048	;68b86
+	dc.w	$00a8	;68b88
+	dc.w	$0000	;68b8a
+	dc.w	$0048	;68b8c
+	dc.w	$00a8	;68b8e
+	dc.w	$0000	;68b90
+	dc.w	$0090	;68b92
+	dc.w	$00d8	;68b94
+	dc.w	$0000	;68b96
+	dc.w	$ffb8	;68b98
+	dc.w	$00d8	;68b9a
+	dc.w	$0000	;68b9c
+	dc.w	$ff70	;68b9e
+	dc.w	$00a8	;68ba0
+	dc.w	$0000	;68ba2
+	dc.w	$ff70	;68ba4
+	dc.w	$00a8	;68ba6
+	dc.w	$0000	;68ba8
+	dc.w	$ffb8	;68baa
+	dc.w	$0180	;68bac
+	dc.w	$0000	;68bae
+	dc.w	$0090	;68bb0
+	dc.w	$0180	;68bb2
+	dc.w	$0000	;68bb4
+	dc.w	$0048	;68bb6
+	dc.w	$0150	;68bb8
+	dc.w	$0000	;68bba
+	dc.w	$0048	;68bbc
+	dc.w	$0150	;68bbe
+	dc.w	$0000	;68bc0
+	dc.w	$0090	;68bc2
+	dc.w	$0180	;68bc4
+	dc.w	$0000	;68bc6
+	dc.w	$ffb8	;68bc8
+	dc.w	$0180	;68bca
+	dc.w	$0000	;68bcc
+	dc.w	$ff70	;68bce
+	dc.w	$0150	;68bd0
+	dc.w	$0000	;68bd2
+	dc.w	$ff70	;68bd4
+	dc.w	$0150	;68bd6
+	dc.w	$0000	;68bd8
+	dc.w	$ffb8	;68bda
+	dc.w	$0120	;68bdc
+	dc.w	$0000	;68bde
+	dc.w	$0090	;68be0
+	dc.w	$0138	;68be2
+	dc.w	$0000	;68be4
+	dc.w	$006c	;68be6
+	dc.w	$0120	;68be8
+	dc.w	$0000	;68bea
+	dc.w	$0048	;68bec
+	dc.w	$0108	;68bee
+	dc.w	$0000	;68bf0
+	dc.w	$0048	;68bf2
+	dc.w	$00f0	;68bf4
+	dc.w	$0000	;68bf6
+	dc.w	$006c	;68bf8
+	dc.w	$0108	;68bfa
+	dc.w	$0000	;68bfc
+	dc.w	$0090	;68bfe
+	dc.w	$0120	;68c00
+	dc.w	$0000	;68c02
+	dc.w	$ffb8	;68c04
+	dc.w	$0138	;68c06
+	dc.w	$0000	;68c08
+	dc.w	$ff94	;68c0a
+	dc.w	$0120	;68c0c
+	dc.w	$0000	;68c0e
+	dc.w	$ff70	;68c10
+	dc.w	$0108	;68c12
+	dc.w	$0000	;68c14
+	dc.w	$ff70	;68c16
+	dc.w	$00f0	;68c18
+	dc.w	$0000	;68c1a
+	dc.w	$ff94	;68c1c
+	dc.w	$0108	;68c1e
+	dc.w	$0000	;68c20
+	dc.w	$ffb8	;68c22
+	dc.w	$ffb8	;68c24
+	dc.w	$0018	;68c26
+	dc.w	$ff48	;68c28
+	dc.w	$ffb8	;68c2a
+	dc.w	$0018	;68c2c
+	dc.w	$ff28	;68c2e
+	dc.w	$00a8	;68c30
+	dc.w	$0018	;68c32
+	dc.w	$ff28	;68c34
+	dc.w	$00a8	;68c36
+	dc.w	$0018	;68c38
+	dc.w	$ff48	;68c3a
+	dc.w	$ffb8	;68c3c
+	dc.w	$0030	;68c3e
+	dc.w	$ff28	;68c40
+	dc.w	$00a8	;68c42
+	dc.w	$0030	;68c44
+	dc.w	$ff28	;68c46
+	dc.w	$ffb8	;68c48
+	dc.w	$0030	;68c4a
+	dc.w	$ff39	;68c4c
+	dc.w	$00a8	;68c4e
+	dc.w	$0030	;68c50
+	dc.w	$ff39	;68c52
+	dc.w	$ab26	;68c54
+	dc.w	$54da	;68c56
+	dc.w	$0000	;68c58
+	dc.w	$0002	;68c5a
+	dc.w	$4fc4	;68c5c
+	dc.w	$0002	;68c5e
+	dc.w	$4fcc	;68c60
+	dc.w	$0002	;68c62
+	dc.w	$4ff4	;68c64
+	dc.w	$0000	;68c66
+	dc.w	$0009	;68c68
+	dc.w	$ab26	;68c6a
+	dc.w	$54da	;68c6c
+	dc.w	$0000	;68c6e
+	dc.w	$0002	;68c70
+	dc.w	$4fcc	;68c72
+	dc.w	$0002	;68c74
+	dc.w	$4ff4	;68c76
+	dc.w	$0002	;68c78
+	dc.w	$4ffc	;68c7a
+	dc.w	$0000	;68c7c
+	dc.w	$0009	;68c7e
+	dc.w	$8800	;68c80
+	dc.w	$0000	;68c82
+	dc.w	$0000	;68c84
+	dc.w	$0002	;68c86
+	dc.w	$4fa4	;68c88
+	dc.w	$0002	;68c8a
+	dc.w	$4fbc	;68c8c
+	dc.w	$0002	;68c8e
+	dc.w	$4fe4	;68c90
+	dc.w	$0000	;68c92
+	dc.w	$0017	;68c94
+	dc.w	$8800	;68c96
+	dc.w	$0000	;68c98
+	dc.w	$0000	;68c9a
+	dc.w	$0002	;68c9c
+	dc.w	$4fbc	;68c9e
+	dc.w	$0002	;68ca0
+	dc.w	$4fe4	;68ca2
+	dc.w	$0002	;68ca4
+	dc.w	$508c	;68ca6
+	dc.w	$0000	;68ca8
+	dc.w	$0017	;68caa
+	dc.w	$8800	;68cac
+	dc.w	$0000	;68cae
+	dc.w	$0000	;68cb0
+	dc.w	$0002	;68cb2
+	dc.w	$4fb4	;68cb4
+	dc.w	$0002	;68cb6
+	dc.w	$4fec	;68cb8
+	dc.w	$0002	;68cba
+	dc.w	$5084	;68cbc
+	dc.w	$0000	;68cbe
+	dc.w	$0017	;68cc0
+	dc.w	$8800	;68cc2
+	dc.w	$0000	;68cc4
+	dc.w	$0000	;68cc6
+	dc.w	$0002	;68cc8
+	dc.w	$4fac	;68cca
+	dc.w	$0002	;68ccc
+	dc.w	$4fb4	;68cce
+	dc.w	$0002	;68cd0
+	dc.w	$4fec	;68cd2
+	dc.w	$0000	;68cd4
+	dc.w	$0017	;68cd6
+	dc.w	$d0bb	;68cd8
+	dc.w	$6e4c	;68cda
+	dc.w	$0000	;68cdc
+	dc.w	$0002	;68cde
+	dc.w	$500c	;68ce0
+	dc.w	$0002	;68ce2
+	dc.w	$501c	;68ce4
+	dc.w	$0002	;68ce6
+	dc.w	$5084	;68ce8
+	dc.w	$0000	;68cea
+	dc.w	$0017	;68cec
+	dc.w	$d0bb	;68cee
+	dc.w	$6e4c	;68cf0
+	dc.w	$0000	;68cf2
+	dc.w	$0002	;68cf4
+	dc.w	$4fec	;68cf6
+	dc.w	$0002	;68cf8
+	dc.w	$500c	;68cfa
+	dc.w	$0002	;68cfc
+	dc.w	$5084	;68cfe
+	dc.w	$0000	;68d00
+	dc.w	$0017	;68d02
+	dc.w	$d0bb	;68d04
+	dc.w	$6e4c	;68d06
+	dc.w	$0000	;68d08
+	dc.w	$0002	;68d0a
+	dc.w	$4fe4	;68d0c
+	dc.w	$0002	;68d0e
+	dc.w	$5004	;68d10
+	dc.w	$0002	;68d12
+	dc.w	$508c	;68d14
+	dc.w	$0000	;68d16
+	dc.w	$0017	;68d18
+	dc.w	$d0bb	;68d1a
+	dc.w	$6e4c	;68d1c
+	dc.w	$0000	;68d1e
+	dc.w	$0002	;68d20
+	dc.w	$5004	;68d22
+	dc.w	$0002	;68d24
+	dc.w	$5014	;68d26
+	dc.w	$0002	;68d28
+	dc.w	$508c	;68d2a
+	dc.w	$0000	;68d2c
+	dc.w	$0017	;68d2e
+	dc.w	$54da	;68d30
+	dc.w	$54da	;68d32
+	dc.w	$0000	;68d34
+	dc.w	$0002	;68d36
+	dc.w	$5064	;68d38
+	dc.w	$0002	;68d3a
+	dc.w	$5074	;68d3c
+	dc.w	$0002	;68d3e
+	dc.w	$507c	;68d40
+	dc.w	$0000	;68d42
+	dc.w	$0009	;68d44
+	dc.w	$54da	;68d46
+	dc.w	$54da	;68d48
+	dc.w	$0000	;68d4a
+	dc.w	$0002	;68d4c
+	dc.w	$5064	;68d4e
+	dc.w	$0002	;68d50
+	dc.w	$506c	;68d52
+	dc.w	$0002	;68d54
+	dc.w	$507c	;68d56
+	dc.w	$0000	;68d58
+	dc.w	$0009	;68d5a
+	dc.w	$7800	;68d5c
+	dc.w	$0000	;68d5e
+	dc.w	$0000	;68d60
+	dc.w	$0002	;68d62
+	dc.w	$4f8c	;68d64
+	dc.w	$0002	;68d66
+	dc.w	$5024	;68d68
+	dc.w	$0002	;68d6a
+	dc.w	$5054	;68d6c
+	dc.w	$0000	;68d6e
+	dc.w	$0017	;68d70
+	dc.w	$7800	;68d72
+	dc.w	$0000	;68d74
+	dc.w	$0000	;68d76
+	dc.w	$0002	;68d78
+	dc.w	$4f8c	;68d7a
+	dc.w	$0002	;68d7c
+	dc.w	$5054	;68d7e
+	dc.w	$0002	;68d80
+	dc.w	$5074	;68d82
+	dc.w	$0000	;68d84
+	dc.w	$0017	;68d86
+	dc.w	$35aa	;68d88
+	dc.w	$6b54	;68d8a
+	dc.w	$0000	;68d8c
+	dc.w	$0002	;68d8e
+	dc.w	$5024	;68d90
+	dc.w	$0002	;68d92
+	dc.w	$5034	;68d94
+	dc.w	$0002	;68d96
+	dc.w	$5044	;68d98
+	dc.w	$0000	;68d9a
+	dc.w	$0017	;68d9c
+	dc.w	$35aa	;68d9e
+	dc.w	$6b54	;68da0
+	dc.w	$0000	;68da2
+	dc.w	$0002	;68da4
+	dc.w	$5024	;68da6
+	dc.w	$0002	;68da8
+	dc.w	$5044	;68daa
+	dc.w	$0002	;68dac
+	dc.w	$5054	;68dae
+	dc.w	$0000	;68db0
+	dc.w	$0017	;68db2
+	dc.w	$7800	;68db4
+	dc.w	$0000	;68db6
+	dc.w	$0000	;68db8
+	dc.w	$0002	;68dba
+	dc.w	$4f94	;68dbc
+	dc.w	$0002	;68dbe
+	dc.w	$505c	;68dc0
+	dc.w	$0002	;68dc2
+	dc.w	$507c	;68dc4
+	dc.w	$0000	;68dc6
+	dc.w	$0017	;68dc8
+	dc.w	$7800	;68dca
+	dc.w	$0000	;68dcc
+	dc.w	$0000	;68dce
+	dc.w	$0002	;68dd0
+	dc.w	$4f94	;68dd2
+	dc.w	$0002	;68dd4
+	dc.w	$505c	;68dd6
+	dc.w	$0002	;68dd8
+	dc.w	$502c	;68dda
+	dc.w	$0000	;68ddc
+	dc.w	$0017	;68dde
+	dc.w	$35aa	;68de0
+	dc.w	$6b54	;68de2
+	dc.w	$0000	;68de4
+	dc.w	$0002	;68de6
+	dc.w	$502c	;68de8
+	dc.w	$0002	;68dea
+	dc.w	$504c	;68dec
+	dc.w	$0002	;68dee
+	dc.w	$505c	;68df0
+	dc.w	$0000	;68df2
+	dc.w	$0017	;68df4
+	dc.w	$35aa	;68df6
+	dc.w	$6b54	;68df8
+	dc.w	$0000	;68dfa
+	dc.w	$0002	;68dfc
+	dc.w	$502c	;68dfe
+	dc.w	$0002	;68e00
+	dc.w	$503c	;68e02
+	dc.w	$0002	;68e04
+	dc.w	$504c	;68e06
+	dc.w	$0000	;68e08
+	dc.w	$0017	;68e0a
+	dc.w	$0000	;68e0c
+	dc.w	$0000	;68e0e
+	dc.w	$8800	;68e10
+	dc.w	$0002	;68e12
+	dc.w	$4f84	;68e14
+	dc.w	$0002	;68e16
+	dc.w	$4fac	;68e18
+	dc.w	$0002	;68e1a
+	dc.w	$4fec	;68e1c
+	dc.w	$0000	;68e1e
+	dc.w	$0009	;68e20
+	dc.w	$0000	;68e22
+	dc.w	$0000	;68e24
+	dc.w	$8800	;68e26
+	dc.w	$0002	;68e28
+	dc.w	$4f84	;68e2a
+	dc.w	$0002	;68e2c
+	dc.w	$4fec	;68e2e
+	dc.w	$0002	;68e30
+	dc.w	$500c	;68e32
+	dc.w	$0000	;68e34
+	dc.w	$0009	;68e36
+	dc.w	$0000	;68e38
+	dc.w	$0000	;68e3a
+	dc.w	$8801	;68e3c
+	dc.w	$0002	;68e3e
+	dc.w	$4f84	;68e40
+	dc.w	$0002	;68e42
+	dc.w	$4f8c	;68e44
+	dc.w	$0002	;68e46
+	dc.w	$500c	;68e48
+	dc.w	$0000	;68e4a
+	dc.w	$0009	;68e4c
+	dc.w	$0000	;68e4e
+	dc.w	$0000	;68e50
+	dc.w	$8801	;68e52
+	dc.w	$0002	;68e54
+	dc.w	$4f8c	;68e56
+	dc.w	$0002	;68e58
+	dc.w	$500c	;68e5a
+	dc.w	$0002	;68e5c
+	dc.w	$5034	;68e5e
+	dc.w	$0000	;68e60
+	dc.w	$0009	;68e62
+	dc.w	$0000	;68e64
+	dc.w	$0000	;68e66
+	dc.w	$8800	;68e68
+	dc.w	$0002	;68e6a
+	dc.w	$4f8c	;68e6c
+	dc.w	$0002	;68e6e
+	dc.w	$5034	;68e70
+	dc.w	$0002	;68e72
+	dc.w	$5024	;68e74
+	dc.w	$0000	;68e76
+	dc.w	$0009	;68e78
+	dc.w	$0000	;68e7a
+	dc.w	$0000	;68e7c
+	dc.w	$8800	;68e7e
+	dc.w	$0002	;68e80
+	dc.w	$5274	;68e82
+	dc.w	$0002	;68e84
+	dc.w	$527c	;68e86
+	dc.w	$0002	;68e88
+	dc.w	$5284	;68e8a
+	dc.w	$0000	;68e8c
+	dc.w	$0001	;68e8e
+	dc.w	$0000	;68e90
+	dc.w	$0000	;68e92
+	dc.w	$8800	;68e94
+	dc.w	$0002	;68e96
+	dc.w	$5274	;68e98
+	dc.w	$0002	;68e9a
+	dc.w	$5284	;68e9c
+	dc.w	$0002	;68e9e
+	dc.w	$528c	;68ea0
+	dc.w	$0000	;68ea2
+	dc.w	$0001	;68ea4
+	dc.w	$0000	;68ea6
+	dc.w	$0000	;68ea8
+	dc.w	$8800	;68eaa
+	dc.w	$0002	;68eac
+	dc.w	$5274	;68eae
+	dc.w	$0002	;68eb0
+	dc.w	$528c	;68eb2
+	dc.w	$0002	;68eb4
+	dc.w	$5294	;68eb6
+	dc.w	$0000	;68eb8
+	dc.w	$0001	;68eba
+	dc.w	$0000	;68ebc
+	dc.w	$0000	;68ebe
+	dc.w	$8800	;68ec0
+	dc.w	$0002	;68ec2
+	dc.w	$5274	;68ec4
+	dc.w	$0002	;68ec6
+	dc.w	$5294	;68ec8
+	dc.w	$0002	;68eca
+	dc.w	$529c	;68ecc
+	dc.w	$0000	;68ece
+	dc.w	$0001	;68ed0
+	dc.w	$0000	;68ed2
+	dc.w	$0000	;68ed4
+	dc.w	$8800	;68ed6
+	dc.w	$0002	;68ed8
+	dc.w	$52d4	;68eda
+	dc.w	$0002	;68edc
+	dc.w	$52dc	;68ede
+	dc.w	$0002	;68ee0
+	dc.w	$52e4	;68ee2
+	dc.w	$0000	;68ee4
+	dc.w	$0001	;68ee6
+	dc.w	$0000	;68ee8
+	dc.w	$0000	;68eea
+	dc.w	$8800	;68eec
+	dc.w	$0002	;68eee
+	dc.w	$52d4	;68ef0
+	dc.w	$0002	;68ef2
+	dc.w	$52e4	;68ef4
+	dc.w	$0002	;68ef6
+	dc.w	$52ec	;68ef8
+	dc.w	$0000	;68efa
+	dc.w	$0001	;68efc
+	dc.w	$0000	;68efe
+	dc.w	$0000	;68f00
+	dc.w	$8800	;68f02
+	dc.w	$0002	;68f04
+	dc.w	$52d4	;68f06
+	dc.w	$0002	;68f08
+	dc.w	$52ec	;68f0a
+	dc.w	$0002	;68f0c
+	dc.w	$52f4	;68f0e
+	dc.w	$0000	;68f10
+	dc.w	$0001	;68f12
+	dc.w	$0000	;68f14
+	dc.w	$0000	;68f16
+	dc.w	$8800	;68f18
+	dc.w	$0002	;68f1a
+	dc.w	$52d4	;68f1c
+	dc.w	$0002	;68f1e
+	dc.w	$52f4	;68f20
+	dc.w	$0002	;68f22
+	dc.w	$52fc	;68f24
+	dc.w	$0000	;68f26
+	dc.w	$0001	;68f28
+	dc.w	$0000	;68f2a
+	dc.w	$0000	;68f2c
+	dc.w	$8800	;68f2e
+	dc.w	$0002	;68f30
+	dc.w	$5334	;68f32
+	dc.w	$0002	;68f34
+	dc.w	$533c	;68f36
+	dc.w	$0002	;68f38
+	dc.w	$5344	;68f3a
+	dc.w	$0000	;68f3c
+	dc.w	$0001	;68f3e
+	dc.w	$0000	;68f40
+	dc.w	$0000	;68f42
+	dc.w	$8800	;68f44
+	dc.w	$0002	;68f46
+	dc.w	$5334	;68f48
+	dc.w	$0002	;68f4a
+	dc.w	$5344	;68f4c
+	dc.w	$0002	;68f4e
+	dc.w	$534c	;68f50
+	dc.w	$0000	;68f52
+	dc.w	$0001	;68f54
+	dc.w	$0000	;68f56
+	dc.w	$0000	;68f58
+	dc.w	$8800	;68f5a
+	dc.w	$0002	;68f5c
+	dc.w	$5334	;68f5e
+	dc.w	$0002	;68f60
+	dc.w	$534c	;68f62
+	dc.w	$0002	;68f64
+	dc.w	$5354	;68f66
+	dc.w	$0000	;68f68
+	dc.w	$0001	;68f6a
+	dc.w	$0000	;68f6c
+	dc.w	$0000	;68f6e
+	dc.w	$8800	;68f70
+	dc.w	$0002	;68f72
+	dc.w	$5334	;68f74
+	dc.w	$0002	;68f76
+	dc.w	$5354	;68f78
+	dc.w	$0002	;68f7a
+	dc.w	$535c	;68f7c
+	dc.w	$0000	;68f7e
+	dc.w	$0001	;68f80
+	dc.w	$0000	;68f82
+	dc.w	$0000	;68f84
+	dc.w	$8800	;68f86
+	dc.w	$0002	;68f88
+	dc.w	$5394	;68f8a
+	dc.w	$0002	;68f8c
+	dc.w	$539c	;68f8e
+	dc.w	$0002	;68f90
+	dc.w	$53a4	;68f92
+	dc.w	$0000	;68f94
+	dc.w	$0001	;68f96
+	dc.w	$0000	;68f98
+	dc.w	$0000	;68f9a
+	dc.w	$8800	;68f9c
+	dc.w	$0002	;68f9e
+	dc.w	$5394	;68fa0
+	dc.w	$0002	;68fa2
+	dc.w	$53a4	;68fa4
+	dc.w	$0002	;68fa6
+	dc.w	$53ac	;68fa8
+	dc.w	$0000	;68faa
+	dc.w	$0001	;68fac
+	dc.w	$0000	;68fae
+	dc.w	$0000	;68fb0
+	dc.w	$8800	;68fb2
+	dc.w	$0002	;68fb4
+	dc.w	$5394	;68fb6
+	dc.w	$0002	;68fb8
+	dc.w	$53ac	;68fba
+	dc.w	$0002	;68fbc
+	dc.w	$53b4	;68fbe
+	dc.w	$0000	;68fc0
+	dc.w	$0001	;68fc2
+	dc.w	$0000	;68fc4
+	dc.w	$0000	;68fc6
+	dc.w	$8800	;68fc8
+	dc.w	$0002	;68fca
+	dc.w	$5394	;68fcc
+	dc.w	$0002	;68fce
+	dc.w	$53b4	;68fd0
+	dc.w	$0002	;68fd2
+	dc.w	$53bc	;68fd4
+	dc.w	$0000	;68fd6
+	dc.w	$0001	;68fd8
+	dc.w	$0000	;68fda
+	dc.w	$0000	;68fdc
+	dc.w	$8800	;68fde
+	dc.w	$0002	;68fe0
+	dc.w	$4f8c	;68fe2
+	dc.w	$0002	;68fe4
+	dc.w	$5024	;68fe6
+	dc.w	$0002	;68fe8
+	dc.w	$53f4	;68fea
+	dc.w	$0000	;68fec
+	dc.w	$0001	;68fee
+	dc.w	$0000	;68ff0
+	dc.w	$0000	;68ff2
+	dc.w	$8800	;68ff4
+	dc.w	$0002	;68ff6
+	dc.w	$5024	;68ff8
+	dc.w	$0002	;68ffa
+	dc.w	$53f4	;68ffc
+	dc.w	$0002	;68ffe
+	dc.w	$53fc	;69000
+	dc.w	$0000	;69002
+	dc.w	$0001	;69004
+	dc.w	$0000	;69006
+	dc.w	$0000	;69008
+	dc.w	$8800	;6900a
+	dc.w	$0002	;6900c
+	dc.w	$53f4	;6900e
+	dc.w	$0002	;69010
+	dc.w	$53fc	;69012
+	dc.w	$0002	;69014
+	dc.w	$5404	;69016
+	dc.w	$0000	;69018
+	dc.w	$0001	;6901a
+	dc.w	$0000	;6901c
+	dc.w	$0000	;6901e
+	dc.w	$8800	;69020
+	dc.w	$0002	;69022
+	dc.w	$53f4	;69024
+	dc.w	$0002	;69026
+	dc.w	$5404	;69028
+	dc.w	$0002	;6902a
+	dc.w	$540c	;6902c
+	dc.w	$0000	;6902e
+	dc.w	$0001	;69030
+	dc.w	$0000	;69032
+	dc.w	$0000	;69034
+	dc.w	$8800	;69036
+	dc.w	$0002	;69038
+	dc.w	$4fac	;6903a
+	dc.w	$0002	;6903c
+	dc.w	$4fec	;6903e
+	dc.w	$0002	;69040
+	dc.w	$5254	;69042
+	dc.w	$0000	;69044
+	dc.w	$000c	;69046
+	dc.w	$0000	;69048
+	dc.w	$0000	;6904a
+	dc.w	$8800	;6904c
+	dc.w	$0002	;6904e
+	dc.w	$4fec	;69050
+	dc.w	$0002	;69052
+	dc.w	$5254	;69054
+	dc.w	$0002	;69056
+	dc.w	$526c	;69058
+	dc.w	$0000	;6905a
+	dc.w	$000c	;6905c
+	dc.w	$0000	;6905e
+	dc.w	$0000	;69060
+	dc.w	$8800	;69062
+	dc.w	$0002	;69064
+	dc.w	$5254	;69066
+	dc.w	$0002	;69068
+	dc.w	$5264	;6906a
+	dc.w	$0002	;6906c
+	dc.w	$526c	;6906e
+	dc.w	$0000	;69070
+	dc.w	$000c	;69072
+	dc.w	$0000	;69074
+	dc.w	$0000	;69076
+	dc.w	$8800	;69078
+	dc.w	$0002	;6907a
+	dc.w	$5254	;6907c
+	dc.w	$0002	;6907e
+	dc.w	$525c	;69080
+	dc.w	$0002	;69082
+	dc.w	$5264	;69084
+	dc.w	$0000	;69086
+	dc.w	$000c	;69088
+	dc.w	$0000	;6908a
+	dc.w	$0000	;6908c
+	dc.w	$8800	;6908e
+	dc.w	$0002	;69090
+	dc.w	$52a4	;69092
+	dc.w	$0002	;69094
+	dc.w	$52ac	;69096
+	dc.w	$0002	;69098
+	dc.w	$52b4	;6909a
+	dc.w	$0000	;6909c
+	dc.w	$000c	;6909e
+	dc.w	$0000	;690a0
+	dc.w	$0000	;690a2
+	dc.w	$8800	;690a4
+	dc.w	$0002	;690a6
+	dc.w	$52a4	;690a8
+	dc.w	$0002	;690aa
+	dc.w	$52b4	;690ac
+	dc.w	$0002	;690ae
+	dc.w	$52bc	;690b0
+	dc.w	$0000	;690b2
+	dc.w	$000c	;690b4
+	dc.w	$0000	;690b6
+	dc.w	$0000	;690b8
+	dc.w	$8800	;690ba
+	dc.w	$0002	;690bc
+	dc.w	$52a4	;690be
+	dc.w	$0002	;690c0
+	dc.w	$52bc	;690c2
+	dc.w	$0002	;690c4
+	dc.w	$52c4	;690c6
+	dc.w	$0000	;690c8
+	dc.w	$000c	;690ca
+	dc.w	$0000	;690cc
+	dc.w	$0000	;690ce
+	dc.w	$8800	;690d0
+	dc.w	$0002	;690d2
+	dc.w	$52a4	;690d4
+	dc.w	$0002	;690d6
+	dc.w	$52c4	;690d8
+	dc.w	$0002	;690da
+	dc.w	$52cc	;690dc
+	dc.w	$0000	;690de
+	dc.w	$000c	;690e0
+	dc.w	$0000	;690e2
+	dc.w	$0000	;690e4
+	dc.w	$8800	;690e6
+	dc.w	$0002	;690e8
+	dc.w	$5304	;690ea
+	dc.w	$0002	;690ec
+	dc.w	$530c	;690ee
+	dc.w	$0002	;690f0
+	dc.w	$5314	;690f2
+	dc.w	$0000	;690f4
+	dc.w	$000c	;690f6
+	dc.w	$0000	;690f8
+	dc.w	$0000	;690fa
+	dc.w	$8800	;690fc
+	dc.w	$0002	;690fe
+	dc.w	$5304	;69100
+	dc.w	$0002	;69102
+	dc.w	$5314	;69104
+	dc.w	$0002	;69106
+	dc.w	$531c	;69108
+	dc.w	$0000	;6910a
+	dc.w	$000c	;6910c
+	dc.w	$0000	;6910e
+	dc.w	$0000	;69110
+	dc.w	$8800	;69112
+	dc.w	$0002	;69114
+	dc.w	$5304	;69116
+	dc.w	$0002	;69118
+	dc.w	$531c	;6911a
+	dc.w	$0002	;6911c
+	dc.w	$5324	;6911e
+	dc.w	$0000	;69120
+	dc.w	$000c	;69122
+	dc.w	$0000	;69124
+	dc.w	$0000	;69126
+	dc.w	$8800	;69128
+	dc.w	$0002	;6912a
+	dc.w	$5304	;6912c
+	dc.w	$0002	;6912e
+	dc.w	$5324	;69130
+	dc.w	$0002	;69132
+	dc.w	$532c	;69134
+	dc.w	$0000	;69136
+	dc.w	$000c	;69138
+	dc.w	$0000	;6913a
+	dc.w	$0000	;6913c
+	dc.w	$8800	;6913e
+	dc.w	$0002	;69140
+	dc.w	$5364	;69142
+	dc.w	$0002	;69144
+	dc.w	$536c	;69146
+	dc.w	$0002	;69148
+	dc.w	$5374	;6914a
+	dc.w	$0000	;6914c
+	dc.w	$000c	;6914e
+	dc.w	$0000	;69150
+	dc.w	$0000	;69152
+	dc.w	$8800	;69154
+	dc.w	$0002	;69156
+	dc.w	$5364	;69158
+	dc.w	$0002	;6915a
+	dc.w	$5374	;6915c
+	dc.w	$0002	;6915e
+	dc.w	$537c	;69160
+	dc.w	$0000	;69162
+	dc.w	$000c	;69164
+	dc.w	$0000	;69166
+	dc.w	$0000	;69168
+	dc.w	$8800	;6916a
+	dc.w	$0002	;6916c
+	dc.w	$5364	;6916e
+	dc.w	$0002	;69170
+	dc.w	$537c	;69172
+	dc.w	$0002	;69174
+	dc.w	$5384	;69176
+	dc.w	$0000	;69178
+	dc.w	$000c	;6917a
+	dc.w	$0000	;6917c
+	dc.w	$0000	;6917e
+	dc.w	$8800	;69180
+	dc.w	$0002	;69182
+	dc.w	$5364	;69184
+	dc.w	$0002	;69186
+	dc.w	$5384	;69188
+	dc.w	$0002	;6918a
+	dc.w	$538c	;6918c
+	dc.w	$0000	;6918e
+	dc.w	$000c	;69190
+	dc.w	$0000	;69192
+	dc.w	$0000	;69194
+	dc.w	$8800	;69196
+	dc.w	$0002	;69198
+	dc.w	$53c4	;6919a
+	dc.w	$0002	;6919c
+	dc.w	$53cc	;6919e
+	dc.w	$0002	;691a0
+	dc.w	$53d4	;691a2
+	dc.w	$0000	;691a4
+	dc.w	$000c	;691a6
+	dc.w	$0000	;691a8
+	dc.w	$0000	;691aa
+	dc.w	$8800	;691ac
+	dc.w	$0002	;691ae
+	dc.w	$53c4	;691b0
+	dc.w	$0002	;691b2
+	dc.w	$53d4	;691b4
+	dc.w	$0002	;691b6
+	dc.w	$53dc	;691b8
+	dc.w	$0000	;691ba
+	dc.w	$000c	;691bc
+	dc.w	$0000	;691be
+	dc.w	$0000	;691c0
+	dc.w	$8800	;691c2
+	dc.w	$0002	;691c4
+	dc.w	$53c4	;691c6
+	dc.w	$0002	;691c8
+	dc.w	$53dc	;691ca
+	dc.w	$0002	;691cc
+	dc.w	$53e4	;691ce
+	dc.w	$0000	;691d0
+	dc.w	$000c	;691d2
+	dc.w	$0000	;691d4
+	dc.w	$0000	;691d6
+	dc.w	$8800	;691d8
+	dc.w	$0002	;691da
+	dc.w	$53c4	;691dc
+	dc.w	$0002	;691de
+	dc.w	$53e4	;691e0
+	dc.w	$0002	;691e2
+	dc.w	$53ec	;691e4
+	dc.w	$0000	;691e6
+	dc.w	$000c	;691e8
+	dc.w	$0000	;691ea
+	dc.w	$0000	;691ec
+	dc.w	$7800	;691ee
+	dc.w	$0002	;691f0
+	dc.w	$4f9c	;691f2
+	dc.w	$0002	;691f4
+	dc.w	$4fa4	;691f6
+	dc.w	$0002	;691f8
+	dc.w	$4fe4	;691fa
+	dc.w	$0000	;691fc
+	dc.w	$0009	;691fe
+	dc.w	$0000	;69200
+	dc.w	$0000	;69202
+	dc.w	$7800	;69204
+	dc.w	$0002	;69206
+	dc.w	$4f9c	;69208
+	dc.w	$0002	;6920a
+	dc.w	$5004	;6920c
+	dc.w	$0002	;6920e
+	dc.w	$4fe4	;69210
+	dc.w	$0000	;69212
+	dc.w	$0009	;69214
+	dc.w	$0000	;69216
+	dc.w	$0000	;69218
+	dc.w	$77ff	;6921a
+	dc.w	$0002	;6921c
+	dc.w	$4f94	;6921e
+	dc.w	$0002	;69220
+	dc.w	$4f9c	;69222
+	dc.w	$0002	;69224
+	dc.w	$5004	;69226
+	dc.w	$0000	;69228
+	dc.w	$0009	;6922a
+	dc.w	$0000	;6922c
+	dc.w	$0000	;6922e
+	dc.w	$77ff	;69230
+	dc.w	$0002	;69232
+	dc.w	$4f94	;69234
+	dc.w	$0002	;69236
+	dc.w	$503c	;69238
+	dc.w	$0002	;6923a
+	dc.w	$5004	;6923c
+	dc.w	$0000	;6923e
+	dc.w	$0009	;69240
+	dc.w	$0000	;69242
+	dc.w	$0000	;69244
+	dc.w	$7800	;69246
+	dc.w	$0002	;69248
+	dc.w	$4f94	;6924a
+	dc.w	$0002	;6924c
+	dc.w	$502c	;6924e
+	dc.w	$0002	;69250
+	dc.w	$503c	;69252
+	dc.w	$0000	;69254
+	dc.w	$0009	;69256
+	dc.w	$0000	;69258
+	dc.w	$0000	;6925a
+	dc.w	$7800	;6925c
+	dc.w	$0002	;6925e
+	dc.w	$50b4	;69260
+	dc.w	$0002	;69262
+	dc.w	$50bc	;69264
+	dc.w	$0002	;69266
+	dc.w	$50c4	;69268
+	dc.w	$0000	;6926a
+	dc.w	$0001	;6926c
+	dc.w	$0000	;6926e
+	dc.w	$0000	;69270
+	dc.w	$7800	;69272
+	dc.w	$0002	;69274
+	dc.w	$50b4	;69276
+	dc.w	$0002	;69278
+	dc.w	$50c4	;6927a
+	dc.w	$0002	;6927c
+	dc.w	$50cc	;6927e
+	dc.w	$0000	;69280
+	dc.w	$0001	;69282
+	dc.w	$0000	;69284
+	dc.w	$0000	;69286
+	dc.w	$7800	;69288
+	dc.w	$0002	;6928a
+	dc.w	$50b4	;6928c
+	dc.w	$0002	;6928e
+	dc.w	$50cc	;69290
+	dc.w	$0002	;69292
+	dc.w	$50d4	;69294
+	dc.w	$0000	;69296
+	dc.w	$0001	;69298
+	dc.w	$0000	;6929a
+	dc.w	$0000	;6929c
+	dc.w	$7800	;6929e
+	dc.w	$0002	;692a0
+	dc.w	$50b4	;692a2
+	dc.w	$0002	;692a4
+	dc.w	$50d4	;692a6
+	dc.w	$0002	;692a8
+	dc.w	$50dc	;692aa
+	dc.w	$0000	;692ac
+	dc.w	$0001	;692ae
+	dc.w	$0000	;692b0
+	dc.w	$0000	;692b2
+	dc.w	$7800	;692b4
+	dc.w	$0002	;692b6
+	dc.w	$5114	;692b8
+	dc.w	$0002	;692ba
+	dc.w	$511c	;692bc
+	dc.w	$0002	;692be
+	dc.w	$5124	;692c0
+	dc.w	$0000	;692c2
+	dc.w	$0001	;692c4
+	dc.w	$0000	;692c6
+	dc.w	$0000	;692c8
+	dc.w	$7800	;692ca
+	dc.w	$0002	;692cc
+	dc.w	$5114	;692ce
+	dc.w	$0002	;692d0
+	dc.w	$5124	;692d2
+	dc.w	$0002	;692d4
+	dc.w	$512c	;692d6
+	dc.w	$0000	;692d8
+	dc.w	$0001	;692da
+	dc.w	$0000	;692dc
+	dc.w	$0000	;692de
+	dc.w	$7800	;692e0
+	dc.w	$0002	;692e2
+	dc.w	$5114	;692e4
+	dc.w	$0002	;692e6
+	dc.w	$512c	;692e8
+	dc.w	$0002	;692ea
+	dc.w	$5134	;692ec
+	dc.w	$0000	;692ee
+	dc.w	$0001	;692f0
+	dc.w	$0000	;692f2
+	dc.w	$0000	;692f4
+	dc.w	$7800	;692f6
+	dc.w	$0002	;692f8
+	dc.w	$5114	;692fa
+	dc.w	$0002	;692fc
+	dc.w	$5134	;692fe
+	dc.w	$0002	;69300
+	dc.w	$513c	;69302
+	dc.w	$0000	;69304
+	dc.w	$0001	;69306
+	dc.w	$0000	;69308
+	dc.w	$0000	;6930a
+	dc.w	$7800	;6930c
+	dc.w	$0002	;6930e
+	dc.w	$5174	;69310
+	dc.w	$0002	;69312
+	dc.w	$517c	;69314
+	dc.w	$0002	;69316
+	dc.w	$5184	;69318
+	dc.w	$0000	;6931a
+	dc.w	$0001	;6931c
+	dc.w	$0000	;6931e
+	dc.w	$0000	;69320
+	dc.w	$7800	;69322
+	dc.w	$0002	;69324
+	dc.w	$5174	;69326
+	dc.w	$0002	;69328
+	dc.w	$5184	;6932a
+	dc.w	$0002	;6932c
+	dc.w	$518c	;6932e
+	dc.w	$0000	;69330
+	dc.w	$0001	;69332
+	dc.w	$0000	;69334
+	dc.w	$0000	;69336
+	dc.w	$7800	;69338
+	dc.w	$0002	;6933a
+	dc.w	$5174	;6933c
+	dc.w	$0002	;6933e
+	dc.w	$518c	;69340
+	dc.w	$0002	;69342
+	dc.w	$5194	;69344
+	dc.w	$0000	;69346
+	dc.w	$0001	;69348
+	dc.w	$0000	;6934a
+	dc.w	$0000	;6934c
+	dc.w	$7800	;6934e
+	dc.w	$0002	;69350
+	dc.w	$5174	;69352
+	dc.w	$0002	;69354
+	dc.w	$5194	;69356
+	dc.w	$0002	;69358
+	dc.w	$519c	;6935a
+	dc.w	$0000	;6935c
+	dc.w	$0001	;6935e
+	dc.w	$0000	;69360
+	dc.w	$0000	;69362
+	dc.w	$7800	;69364
+	dc.w	$0002	;69366
+	dc.w	$51d4	;69368
+	dc.w	$0002	;6936a
+	dc.w	$51dc	;6936c
+	dc.w	$0002	;6936e
+	dc.w	$51e4	;69370
+	dc.w	$0000	;69372
+	dc.w	$0001	;69374
+	dc.w	$0000	;69376
+	dc.w	$0000	;69378
+	dc.w	$7800	;6937a
+	dc.w	$0002	;6937c
+	dc.w	$51d4	;6937e
+	dc.w	$0002	;69380
+	dc.w	$51e4	;69382
+	dc.w	$0002	;69384
+	dc.w	$51ec	;69386
+	dc.w	$0000	;69388
+	dc.w	$0001	;6938a
+	dc.w	$0000	;6938c
+	dc.w	$0000	;6938e
+	dc.w	$7800	;69390
+	dc.w	$0002	;69392
+	dc.w	$51d4	;69394
+	dc.w	$0002	;69396
+	dc.w	$51ec	;69398
+	dc.w	$0002	;6939a
+	dc.w	$51f4	;6939c
+	dc.w	$0000	;6939e
+	dc.w	$0001	;693a0
+	dc.w	$0000	;693a2
+	dc.w	$0000	;693a4
+	dc.w	$7800	;693a6
+	dc.w	$0002	;693a8
+	dc.w	$51d4	;693aa
+	dc.w	$0002	;693ac
+	dc.w	$51f4	;693ae
+	dc.w	$0002	;693b0
+	dc.w	$51fc	;693b2
+	dc.w	$0000	;693b4
+	dc.w	$0001	;693b6
+	dc.w	$0000	;693b8
+	dc.w	$0000	;693ba
+	dc.w	$7800	;693bc
+	dc.w	$0002	;693be
+	dc.w	$4f94	;693c0
+	dc.w	$0002	;693c2
+	dc.w	$502c	;693c4
+	dc.w	$0002	;693c6
+	dc.w	$5234	;693c8
+	dc.w	$0000	;693ca
+	dc.w	$0001	;693cc
+	dc.w	$0000	;693ce
+	dc.w	$0000	;693d0
+	dc.w	$7800	;693d2
+	dc.w	$0002	;693d4
+	dc.w	$502c	;693d6
+	dc.w	$0002	;693d8
+	dc.w	$5234	;693da
+	dc.w	$0002	;693dc
+	dc.w	$523c	;693de
+	dc.w	$0000	;693e0
+	dc.w	$0001	;693e2
+	dc.w	$0000	;693e4
+	dc.w	$0000	;693e6
+	dc.w	$7800	;693e8
+	dc.w	$0002	;693ea
+	dc.w	$5234	;693ec
+	dc.w	$0002	;693ee
+	dc.w	$523c	;693f0
+	dc.w	$0002	;693f2
+	dc.w	$5244	;693f4
+	dc.w	$0000	;693f6
+	dc.w	$0001	;693f8
+	dc.w	$0000	;693fa
+	dc.w	$0000	;693fc
+	dc.w	$7800	;693fe
+	dc.w	$0002	;69400
+	dc.w	$5234	;69402
+	dc.w	$0002	;69404
+	dc.w	$5244	;69406
+	dc.w	$0002	;69408
+	dc.w	$524c	;6940a
+	dc.w	$0000	;6940c
+	dc.w	$0001	;6940e
+	dc.w	$0000	;69410
+	dc.w	$0000	;69412
+	dc.w	$7800	;69414
+	dc.w	$0002	;69416
+	dc.w	$4fa4	;69418
+	dc.w	$0002	;6941a
+	dc.w	$4fe4	;6941c
+	dc.w	$0002	;6941e
+	dc.w	$5094	;69420
+	dc.w	$0000	;69422
+	dc.w	$000c	;69424
+	dc.w	$0000	;69426
+	dc.w	$0000	;69428
+	dc.w	$7800	;6942a
+	dc.w	$0002	;6942c
+	dc.w	$4fe4	;6942e
+	dc.w	$0002	;69430
+	dc.w	$5094	;69432
+	dc.w	$0002	;69434
+	dc.w	$50ac	;69436
+	dc.w	$0000	;69438
+	dc.w	$000c	;6943a
+	dc.w	$0000	;6943c
+	dc.w	$0000	;6943e
+	dc.w	$7800	;69440
+	dc.w	$0002	;69442
+	dc.w	$5094	;69444
+	dc.w	$0002	;69446
+	dc.w	$50a4	;69448
+	dc.w	$0002	;6944a
+	dc.w	$50ac	;6944c
+	dc.w	$0000	;6944e
+	dc.w	$000c	;69450
+	dc.w	$0000	;69452
+	dc.w	$0000	;69454
+	dc.w	$7800	;69456
+	dc.w	$0002	;69458
+	dc.w	$5094	;6945a
+	dc.w	$0002	;6945c
+	dc.w	$509c	;6945e
+	dc.w	$0002	;69460
+	dc.w	$50a4	;69462
+	dc.w	$0000	;69464
+	dc.w	$000c	;69466
+	dc.w	$0000	;69468
+	dc.w	$0000	;6946a
+	dc.w	$7800	;6946c
+	dc.w	$0002	;6946e
+	dc.w	$50e4	;69470
+	dc.w	$0002	;69472
+	dc.w	$50ec	;69474
+	dc.w	$0002	;69476
+	dc.w	$50f4	;69478
+	dc.w	$0000	;6947a
+	dc.w	$000c	;6947c
+	dc.w	$0000	;6947e
+	dc.w	$0000	;69480
+	dc.w	$7800	;69482
+	dc.w	$0002	;69484
+	dc.w	$50e4	;69486
+	dc.w	$0002	;69488
+	dc.w	$50f4	;6948a
+	dc.w	$0002	;6948c
+	dc.w	$50fc	;6948e
+	dc.w	$0000	;69490
+	dc.w	$000c	;69492
+	dc.w	$0000	;69494
+	dc.w	$0000	;69496
+	dc.w	$7800	;69498
+	dc.w	$0002	;6949a
+	dc.w	$50e4	;6949c
+	dc.w	$0002	;6949e
+	dc.w	$50fc	;694a0
+	dc.w	$0002	;694a2
+	dc.w	$5104	;694a4
+	dc.w	$0000	;694a6
+	dc.w	$000c	;694a8
+	dc.w	$0000	;694aa
+	dc.w	$0000	;694ac
+	dc.w	$7800	;694ae
+	dc.w	$0002	;694b0
+	dc.w	$50e4	;694b2
+	dc.w	$0002	;694b4
+	dc.w	$5104	;694b6
+	dc.w	$0002	;694b8
+	dc.w	$510c	;694ba
+	dc.w	$0000	;694bc
+	dc.w	$000c	;694be
+	dc.w	$0000	;694c0
+	dc.w	$0000	;694c2
+	dc.w	$7800	;694c4
+	dc.w	$0002	;694c6
+	dc.w	$5144	;694c8
+	dc.w	$0002	;694ca
+	dc.w	$514c	;694cc
+	dc.w	$0002	;694ce
+	dc.w	$5154	;694d0
+	dc.w	$0000	;694d2
+	dc.w	$000c	;694d4
+	dc.w	$0000	;694d6
+	dc.w	$0000	;694d8
+	dc.w	$7800	;694da
+	dc.w	$0002	;694dc
+	dc.w	$5144	;694de
+	dc.w	$0002	;694e0
+	dc.w	$5154	;694e2
+	dc.w	$0002	;694e4
+	dc.w	$515c	;694e6
+	dc.w	$0000	;694e8
+	dc.w	$000c	;694ea
+	dc.w	$0000	;694ec
+	dc.w	$0000	;694ee
+	dc.w	$7800	;694f0
+	dc.w	$0002	;694f2
+	dc.w	$5144	;694f4
+	dc.w	$0002	;694f6
+	dc.w	$515c	;694f8
+	dc.w	$0002	;694fa
+	dc.w	$5164	;694fc
+	dc.w	$0000	;694fe
+	dc.w	$000c	;69500
+	dc.w	$0000	;69502
+	dc.w	$0000	;69504
+	dc.w	$7800	;69506
+	dc.w	$0002	;69508
+	dc.w	$5144	;6950a
+	dc.w	$0002	;6950c
+	dc.w	$5164	;6950e
+	dc.w	$0002	;69510
+	dc.w	$516c	;69512
+	dc.w	$0000	;69514
+	dc.w	$000c	;69516
+	dc.w	$0000	;69518
+	dc.w	$0000	;6951a
+	dc.w	$7800	;6951c
+	dc.w	$0002	;6951e
+	dc.w	$51a4	;69520
+	dc.w	$0002	;69522
+	dc.w	$51ac	;69524
+	dc.w	$0002	;69526
+	dc.w	$51b4	;69528
+	dc.w	$0000	;6952a
+	dc.w	$000c	;6952c
+	dc.w	$0000	;6952e
+	dc.w	$0000	;69530
+	dc.w	$7800	;69532
+	dc.w	$0002	;69534
+	dc.w	$51a4	;69536
+	dc.w	$0002	;69538
+	dc.w	$51b4	;6953a
+	dc.w	$0002	;6953c
+	dc.w	$51bc	;6953e
+	dc.w	$0000	;69540
+	dc.w	$000c	;69542
+	dc.w	$0000	;69544
+	dc.w	$0000	;69546
+	dc.w	$7800	;69548
+	dc.w	$0002	;6954a
+	dc.w	$51a4	;6954c
+	dc.w	$0002	;6954e
+	dc.w	$51bc	;69550
+	dc.w	$0002	;69552
+	dc.w	$51c4	;69554
+	dc.w	$0000	;69556
+	dc.w	$000c	;69558
+	dc.w	$0000	;6955a
+	dc.w	$0000	;6955c
+	dc.w	$7800	;6955e
+	dc.w	$0002	;69560
+	dc.w	$51a4	;69562
+	dc.w	$0002	;69564
+	dc.w	$51c4	;69566
+	dc.w	$0002	;69568
+	dc.w	$51cc	;6956a
+	dc.w	$0000	;6956c
+	dc.w	$000c	;6956e
+	dc.w	$0000	;69570
+	dc.w	$0000	;69572
+	dc.w	$7800	;69574
+	dc.w	$0002	;69576
+	dc.w	$5204	;69578
+	dc.w	$0002	;6957a
+	dc.w	$520c	;6957c
+	dc.w	$0002	;6957e
+	dc.w	$5214	;69580
+	dc.w	$0000	;69582
+	dc.w	$000c	;69584
+	dc.w	$0000	;69586
+	dc.w	$0000	;69588
+	dc.w	$7800	;6958a
+	dc.w	$0002	;6958c
+	dc.w	$5204	;6958e
+	dc.w	$0002	;69590
+	dc.w	$5214	;69592
+	dc.w	$0002	;69594
+	dc.w	$521c	;69596
+	dc.w	$0000	;69598
+	dc.w	$000c	;6959a
+	dc.w	$0000	;6959c
+	dc.w	$0000	;6959e
+	dc.w	$7800	;695a0
+	dc.w	$0002	;695a2
+	dc.w	$5204	;695a4
+	dc.w	$0002	;695a6
+	dc.w	$521c	;695a8
+	dc.w	$0002	;695aa
+	dc.w	$5224	;695ac
+	dc.w	$0000	;695ae
+	dc.w	$000c	;695b0
+	dc.w	$0000	;695b2
+	dc.w	$0000	;695b4
+	dc.w	$7800	;695b6
+	dc.w	$0002	;695b8
+	dc.w	$5204	;695ba
+	dc.w	$0002	;695bc
+	dc.w	$5224	;695be
+	dc.w	$0002	;695c0
+	dc.w	$522c	;695c2
+	dc.w	$0000	;695c4
+	dc.w	$000c	;695c6
+	dc.w	$ab26	;695c8
+	dc.w	$ab26	;695ca
+	dc.w	$0000	;695cc
+	dc.w	$0002	;695ce
+	dc.w	$4fc4	;695d0
+	dc.w	$0002	;695d2
+	dc.w	$4fd4	;695d4
+	dc.w	$0002	;695d6
+	dc.w	$4fdc	;695d8
+	dc.w	$0000	;695da
+	dc.w	$0014	;695dc
+	dc.w	$ab26	;695de
+	dc.w	$ab26	;695e0
+	dc.w	$0000	;695e2
+	dc.w	$0002	;695e4
+	dc.w	$4fc4	;695e6
+	dc.w	$0002	;695e8
+	dc.w	$4fcc	;695ea
+	dc.w	$0002	;695ec
+	dc.w	$4fd4	;695ee
+	dc.w	$0000	;695f0
+	dc.w	$0014	;695f2
+	dc.w	$da0e	;695f4
+	dc.w	$8e29	;695f6
+	dc.w	$0000	;695f8
+	dc.w	$0002	;695fa
+	dc.w	$4fa4	;695fc
+	dc.w	$0002	;695fe
+	dc.w	$4fbc	;69600
+	dc.w	$0002	;69602
+	dc.w	$4fdc	;69604
+	dc.w	$0000	;69606
+	dc.w	$0017	;69608
+	dc.w	$da0e	;6960a
+	dc.w	$8e29	;6960c
+	dc.w	$0000	;6960e
+	dc.w	$0002	;69610
+	dc.w	$4f9c	;69612
+	dc.w	$0002	;69614
+	dc.w	$4fa4	;69616
+	dc.w	$0002	;69618
+	dc.w	$4fdc	;6961a
+	dc.w	$0000	;6961c
+	dc.w	$0017	;6961e
+	dc.w	$da0e	;69620
+	dc.w	$8e29	;69622
+	dc.w	$0000	;69624
+	dc.w	$0002	;69626
+	dc.w	$4fac	;69628
+	dc.w	$0002	;6962a
+	dc.w	$4fb4	;6962c
+	dc.w	$0002	;6962e
+	dc.w	$4fd4	;69630
+	dc.w	$0000	;69632
+	dc.w	$0017	;69634
+	dc.w	$da0e	;69636
+	dc.w	$8e29	;69638
+	dc.w	$0000	;6963a
+	dc.w	$0002	;6963c
+	dc.w	$4f84	;6963e
+	dc.w	$0002	;69640
+	dc.w	$4fac	;69642
+	dc.w	$0002	;69644
+	dc.w	$4fd4	;69646
+	dc.w	$0000	;69648
+	dc.w	$0017	;6964a
+	dc.w	$6b54	;6964c
+	dc.w	$35aa	;6964e
+	dc.w	$0000	;69650
+	dc.w	$0002	;69652
+	dc.w	$4f6c	;69654
+	dc.w	$0002	;69656
+	dc.w	$4f74	;69658
+	dc.w	$0002	;6965a
+	dc.w	$5074	;6965c
+	dc.w	$0000	;6965e
+	dc.w	$0009	;69660
+	dc.w	$6b54	;69662
+	dc.w	$35aa	;69664
+	dc.w	$0000	;69666
+	dc.w	$0002	;69668
+	dc.w	$4f6c	;6966a
+	dc.w	$0002	;6966c
+	dc.w	$5074	;6966e
+	dc.w	$0002	;69670
+	dc.w	$507c	;69672
+	dc.w	$0000	;69674
+	dc.w	$0009	;69676
+	dc.w	$6b54	;69678
+	dc.w	$35aa	;6967a
+	dc.w	$0000	;6967c
+	dc.w	$0002	;6967e
+	dc.w	$4f74	;69680
+	dc.w	$0002	;69682
+	dc.w	$4f8c	;69684
+	dc.w	$0002	;69686
+	dc.w	$5074	;69688
+	dc.w	$0000	;6968a
+	dc.w	$0009	;6968c
+	dc.w	$6b54	;6968e
+	dc.w	$35aa	;69690
+	dc.w	$0000	;69692
+	dc.w	$0002	;69694
+	dc.w	$4f6c	;69696
+	dc.w	$0002	;69698
+	dc.w	$4f94	;6969a
+	dc.w	$0002	;6969c
+	dc.w	$507c	;6969e
+	dc.w	$0000	;696a0
+	dc.w	$0009	;696a2
+	dc.w	$0613	;696a4
+	dc.w	$c33d	;696a6
+	dc.w	$98b4	;696a8
+	dc.w	$0002	;696aa
+	dc.w	$4f7c	;696ac
+	dc.w	$0002	;696ae
+	dc.w	$4f84	;696b0
+	dc.w	$0002	;696b2
+	dc.w	$4f8c	;696b4
+	dc.w	$0000	;696b6
+	dc.w	$000c	;696b8
+	dc.w	$0000	;696ba
+	dc.w	$da0e	;696bc
+	dc.w	$8e29	;696be
+	dc.w	$0002	;696c0
+	dc.w	$4f74	;696c2
+	dc.w	$0002	;696c4
+	dc.w	$4f7c	;696c6
+	dc.w	$0002	;696c8
+	dc.w	$4f8c	;696ca
+	dc.w	$0000	;696cc
+	dc.w	$000c	;696ce
+	dc.w	$8800	;696d0
+	dc.w	$0000	;696d2
+	dc.w	$0000	;696d4
+	dc.w	$0002	;696d6
+	dc.w	$5574	;696d8
+	dc.w	$0002	;696da
+	dc.w	$557c	;696dc
+	dc.w	$0002	;696de
+	dc.w	$55a4	;696e0
+	dc.w	$0000	;696e2
+	dc.w	$0001	;696e4
+	dc.w	$8800	;696e6
+	dc.w	$0000	;696e8
+	dc.w	$0000	;696ea
+	dc.w	$0002	;696ec
+	dc.w	$557c	;696ee
+	dc.w	$0002	;696f0
+	dc.w	$5594	;696f2
+	dc.w	$0002	;696f4
+	dc.w	$55a4	;696f6
+	dc.w	$0000	;696f8
+	dc.w	$0001	;696fa
+	dc.w	$7800	;696fc
+	dc.w	$0000	;696fe
+	dc.w	$0000	;69700
+	dc.w	$0002	;69702
+	dc.w	$5584	;69704
+	dc.w	$0002	;69706
+	dc.w	$558c	;69708
+	dc.w	$0002	;6970a
+	dc.w	$55ac	;6970c
+	dc.w	$0000	;6970e
+	dc.w	$0001	;69710
+	dc.w	$7800	;69712
+	dc.w	$0000	;69714
+	dc.w	$0000	;69716
+	dc.w	$0002	;69718
+	dc.w	$5584	;6971a
+	dc.w	$0002	;6971c
+	dc.w	$559c	;6971e
+	dc.w	$0002	;69720
+	dc.w	$55ac	;69722
+	dc.w	$0000	;69724
+	dc.w	$0001	;69726
+	dc.w	$0000	;69728
+	dc.w	$0000	;6972a
+	dc.w	$8800	;6972c
+	dc.w	$0002	;6972e
+	dc.w	$557c	;69730
+	dc.w	$0002	;69732
+	dc.w	$5584	;69734
+	dc.w	$0002	;69736
+	dc.w	$5594	;69738
+	dc.w	$0000	;6973a
+	dc.w	$0014	;6973c
+	dc.w	$0000	;6973e
+	dc.w	$0000	;69740
+	dc.w	$8800	;69742
+	dc.w	$0002	;69744
+	dc.w	$5584	;69746
+	dc.w	$0002	;69748
+	dc.w	$5594	;6974a
+	dc.w	$0002	;6974c
+	dc.w	$559c	;6974e
+	dc.w	$0000	;69750
+	dc.w	$0014	;69752
+	dc.w	$0000	;69754
+	dc.w	$8800	;69756
+	dc.w	$0000	;69758
+	dc.w	$0002	;6975a
+	dc.w	$5574	;6975c
+	dc.w	$0002	;6975e
+	dc.w	$557c	;69760
+	dc.w	$0002	;69762
+	dc.w	$558c	;69764
+	dc.w	$0000	;69766
+	dc.w	$0004	;69768
+	dc.w	$0000	;6976a
+	dc.w	$8800	;6976c
+	dc.w	$0000	;6976e
+	dc.w	$0002	;69770
+	dc.w	$557c	;69772
+	dc.w	$0002	;69774
+	dc.w	$5584	;69776
+	dc.w	$0002	;69778
+	dc.w	$558c	;6977a
+	dc.w	$0000	;6977c
+	dc.w	$0004	;6977e
+	dc.w	$0000	;69780
+	dc.w	$da0e	;69782
+	dc.w	$71d7	;69784
+	dc.w	$0002	;69786
+	dc.w	$4f64	;69788
+	dc.w	$0002	;6978a
+	dc.w	$4f6c	;6978c
+	dc.w	$0002	;6978e
+	dc.w	$4f94	;69790
+	dc.w	$0000	;69792
+	dc.w	$000c	;69794
+	dc.w	$0613	;69796
+	dc.w	$c33d	;69798
+	dc.w	$674c	;6979a
+	dc.w	$0002	;6979c
+	dc.w	$4f64	;6979e
+	dc.w	$0002	;697a0
+	dc.w	$4f94	;697a2
+	dc.w	$0002	;697a4
+	dc.w	$4f9c	;697a6
+	dc.w	$0000	;697a8
+	dc.w	$000c	;697aa
+	dc.w	$b800	;697ac
+	dc.w	$a000	;697ae
+	dc.w	$0000	;697b0
+	dc.w	$0002	;697b2
+	dc.w	$4f64	;697b4
+	dc.w	$0002	;697b6
+	dc.w	$4f7c	;697b8
+	dc.w	$0002	;697ba
+	dc.w	$4fdc	;697bc
+	dc.w	$0000	;697be
+	dc.w	$0014	;697c0
+	dc.w	$b800	;697c2
+	dc.w	$a000	;697c4
+	dc.w	$0000	;697c6
+	dc.w	$0002	;697c8
+	dc.w	$4f7c	;697ca
+	dc.w	$0002	;697cc
+	dc.w	$4fd4	;697ce
+	dc.w	$0002	;697d0
+	dc.w	$4fdc	;697d2
+	dc.w	$0000	;697d4
+	dc.w	$0014	;697d6
+	dc.w	$b800	;697d8
+	dc.w	$a000	;697da
+	dc.w	$0000	;697dc
+	dc.w	$0002	;697de
+	dc.w	$4f64	;697e0
+	dc.w	$0002	;697e2
+	dc.w	$4f9c	;697e4
+	dc.w	$0002	;697e6
+	dc.w	$4fdc	;697e8
+	dc.w	$0000	;697ea
+	dc.w	$0014	;697ec
+	dc.w	$b800	;697ee
+	dc.w	$a000	;697f0
+	dc.w	$0000	;697f2
+	dc.w	$0002	;697f4
+	dc.w	$4f7c	;697f6
+	dc.w	$0002	;697f8
+	dc.w	$4f84	;697fa
+	dc.w	$0002	;697fc
+	dc.w	$4fd4	;697fe
+	dc.w	$0000	;69800
+	dc.w	$0014	;69802
+	dc.w	$a9f2	;69804
+	dc.w	$d4f9	;69806
+	dc.w	$47b6	;69808
+	dc.w	$0002	;6980a
+	dc.w	$5434	;6980c
+	dc.w	$0002	;6980e
+	dc.w	$543c	;69810
+	dc.w	$0002	;69812
+	dc.w	$5444	;69814
+	dc.w	$0000	;69816
+	dc.w	$0001	;69818
+	dc.w	$560e	;6981a
+	dc.w	$2b07	;6981c
+	dc.w	$47b6	;6981e
+	dc.w	$0002	;69820
+	dc.w	$5424	;69822
+	dc.w	$0002	;69824
+	dc.w	$542c	;69826
+	dc.w	$0002	;69828
+	dc.w	$544c	;6982a
+	dc.w	$0000	;6982c
+	dc.w	$0001	;6982e
+	dc.w	$94ac	;69830
+	dc.w	$ca56	;69832
+	dc.w	$0000	;69834
+	dc.w	$0002	;69836
+	dc.w	$542c	;69838
+	dc.w	$0002	;6983a
+	dc.w	$5434	;6983c
+	dc.w	$0002	;6983e
+	dc.w	$544c	;69840
+	dc.w	$0000	;69842
+	dc.w	$0011	;69844
+	dc.w	$94ac	;69846
+	dc.w	$ca56	;69848
+	dc.w	$0000	;6984a
+	dc.w	$0002	;6984c
+	dc.w	$5434	;6984e
+	dc.w	$0002	;69850
+	dc.w	$5444	;69852
+	dc.w	$0002	;69854
+	dc.w	$544c	;69856
+	dc.w	$0000	;69858
+	dc.w	$0011	;6985a
+	dc.w	$0000	;6985c
+	dc.w	$ab26	;6985e
+	dc.w	$54da	;69860
+	dc.w	$0002	;69862
+	dc.w	$5414	;69864
+	dc.w	$0002	;69866
+	dc.w	$543c	;69868
+	dc.w	$0002	;6986a
+	dc.w	$5444	;6986c
+	dc.w	$0000	;6986e
+	dc.w	$000c	;69870
+	dc.w	$0000	;69872
+	dc.w	$ab26	;69874
+	dc.w	$ab26	;69876
+	dc.w	$0002	;69878
+	dc.w	$541c	;6987a
+	dc.w	$0002	;6987c
+	dc.w	$5424	;6987e
+	dc.w	$0002	;69880
+	dc.w	$544c	;69882
+	dc.w	$0000	;69884
+	dc.w	$000c	;69886
+	dc.w	$0000	;69888
+	dc.w	$8800	;6988a
+	dc.w	$0000	;6988c
+	dc.w	$0002	;6988e
+	dc.w	$5414	;69890
+	dc.w	$0002	;69892
+	dc.w	$5444	;69894
+	dc.w	$0002	;69896
+	dc.w	$544c	;69898
+	dc.w	$0000	;6989a
+	dc.w	$0004	;6989c
+	dc.w	$0000	;6989e
+	dc.w	$8800	;698a0
+	dc.w	$0000	;698a2
+	dc.w	$0002	;698a4
+	dc.w	$5414	;698a6
+	dc.w	$0002	;698a8
+	dc.w	$541c	;698aa
+	dc.w	$0002	;698ac
+	dc.w	$544c	;698ae
+	dc.w	$0000	;698b0
+	dc.w	$0004	;698b2
+	dc.w	$0000	;698b4
+	dc.w	$0000	;698b6
+	dc.w	$0000	;698b8
+	dc.w	$0002	;698ba
+	dc.w	$4f64	;698bc
+	dc.w	$0002	;698be
+	dc.w	$4f6c	;698c0
+	dc.w	$0002	;698c2
+	dc.w	$4f7c	;698c4
+	dc.w	$0000	;698c6
+	dc.w	$0004	;698c8
+	dc.w	$0000	;698ca
+	dc.w	$0000	;698cc
+	dc.w	$0000	;698ce
+	dc.w	$0002	;698d0
+	dc.w	$4f6c	;698d2
+	dc.w	$0002	;698d4
+	dc.w	$4f74	;698d6
+	dc.w	$0002	;698d8
+	dc.w	$4f7c	;698da
+	dc.w	$0000	;698dc
+	dc.w	$0004	;698de
+	dc.w	$0000	;698e0
+	dc.w	$0000	;698e2
+	dc.w	$0000	;698e4
+	dc.w	$0002	;698e6
+	dc.w	$5454	;698e8
+	dc.w	$0002	;698ea
+	dc.w	$545c	;698ec
+	dc.w	$0002	;698ee
+	dc.w	$5464	;698f0
+	dc.w	$0000	;698f2
+	dc.w	$000c	;698f4
+	dc.w	$0000	;698f6
+	dc.w	$0000	;698f8
+	dc.w	$0000	;698fa
+	dc.w	$0002	;698fc
+	dc.w	$5454	;698fe
+	dc.w	$0002	;69900
+	dc.w	$5464	;69902
+	dc.w	$0002	;69904
+	dc.w	$546c	;69906
+	dc.w	$0000	;69908
+	dc.w	$000c	;6990a
+	dc.w	$0000	;6990c
+	dc.w	$0000	;6990e
+	dc.w	$0000	;69910
+	dc.w	$0002	;69912
+	dc.w	$5474	;69914
+	dc.w	$0002	;69916
+	dc.w	$547c	;69918
+	dc.w	$0002	;6991a
+	dc.w	$5484	;6991c
+	dc.w	$0000	;6991e
+	dc.w	$000c	;69920
+	dc.w	$0000	;69922
+	dc.w	$0000	;69924
+	dc.w	$0000	;69926
+	dc.w	$0002	;69928
+	dc.w	$5474	;6992a
+	dc.w	$0002	;6992c
+	dc.w	$5484	;6992e
+	dc.w	$0002	;69930
+	dc.w	$548c	;69932
+	dc.w	$0000	;69934
+	dc.w	$000c	;69936
+	dc.w	$0000	;69938
+	dc.w	$0000	;6993a
+	dc.w	$0000	;6993c
+	dc.w	$0002	;6993e
+	dc.w	$5494	;69940
+	dc.w	$0002	;69942
+	dc.w	$549c	;69944
+	dc.w	$0002	;69946
+	dc.w	$54a4	;69948
+	dc.w	$0000	;6994a
+	dc.w	$0009	;6994c
+	dc.w	$0000	;6994e
+	dc.w	$0000	;69950
+	dc.w	$0000	;69952
+	dc.w	$0002	;69954
+	dc.w	$5494	;69956
+	dc.w	$0002	;69958
+	dc.w	$54a4	;6995a
+	dc.w	$0002	;6995c
+	dc.w	$54ac	;6995e
+	dc.w	$0000	;69960
+	dc.w	$0009	;69962
+	dc.w	$0000	;69964
+	dc.w	$0000	;69966
+	dc.w	$0000	;69968
+	dc.w	$0002	;6996a
+	dc.w	$54b4	;6996c
+	dc.w	$0002	;6996e
+	dc.w	$54bc	;69970
+	dc.w	$0002	;69972
+	dc.w	$54c4	;69974
+	dc.w	$0000	;69976
+	dc.w	$0009	;69978
+	dc.w	$0000	;6997a
+	dc.w	$0000	;6997c
+	dc.w	$0000	;6997e
+	dc.w	$0002	;69980
+	dc.w	$54b4	;69982
+	dc.w	$0002	;69984
+	dc.w	$54c4	;69986
+	dc.w	$0002	;69988
+	dc.w	$54cc	;6998a
+	dc.w	$0000	;6998c
+	dc.w	$0009	;6998e
+	dc.w	$0000	;69990
+	dc.w	$0000	;69992
+	dc.w	$0000	;69994
+	dc.w	$0002	;69996
+	dc.w	$54d4	;69998
+	dc.w	$0002	;6999a
+	dc.w	$54dc	;6999c
+	dc.w	$0002	;6999e
+	dc.w	$54e4	;699a0
+	dc.w	$0000	;699a2
+	dc.w	$0009	;699a4
+	dc.w	$0000	;699a6
+	dc.w	$0000	;699a8
+	dc.w	$0000	;699aa
+	dc.w	$0002	;699ac
+	dc.w	$54d4	;699ae
+	dc.w	$0002	;699b0
+	dc.w	$54e4	;699b2
+	dc.w	$0002	;699b4
+	dc.w	$54ec	;699b6
+	dc.w	$0000	;699b8
+	dc.w	$0009	;699ba
+	dc.w	$0000	;699bc
+	dc.w	$0000	;699be
+	dc.w	$0000	;699c0
+	dc.w	$0002	;699c2
+	dc.w	$54f4	;699c4
+	dc.w	$0002	;699c6
+	dc.w	$54fc	;699c8
+	dc.w	$0002	;699ca
+	dc.w	$5504	;699cc
+	dc.w	$0000	;699ce
+	dc.w	$0009	;699d0
+	dc.w	$0000	;699d2
+	dc.w	$0000	;699d4
+	dc.w	$0000	;699d6
+	dc.w	$0002	;699d8
+	dc.w	$54f4	;699da
+	dc.w	$0002	;699dc
+	dc.w	$5504	;699de
+	dc.w	$0002	;699e0
+	dc.w	$550c	;699e2
+	dc.w	$0000	;699e4
+	dc.w	$0009	;699e6
+	dc.w	$0000	;699e8
+	dc.w	$0000	;699ea
+	dc.w	$0000	;699ec
+	dc.w	$0002	;699ee
+	dc.w	$5514	;699f0
+	dc.w	$0002	;699f2
+	dc.w	$551c	;699f4
+	dc.w	$0002	;699f6
+	dc.w	$5524	;699f8
+	dc.w	$0000	;699fa
+	dc.w	$0009	;699fc
+	dc.w	$0000	;699fe
+	dc.w	$0000	;69a00
+	dc.w	$0000	;69a02
+	dc.w	$0002	;69a04
+	dc.w	$5514	;69a06
+	dc.w	$0002	;69a08
+	dc.w	$5524	;69a0a
+	dc.w	$0002	;69a0c
+	dc.w	$552c	;69a0e
+	dc.w	$0000	;69a10
+	dc.w	$0009	;69a12
+	dc.w	$0000	;69a14
+	dc.w	$0000	;69a16
+	dc.w	$0000	;69a18
+	dc.w	$0002	;69a1a
+	dc.w	$5514	;69a1c
+	dc.w	$0002	;69a1e
+	dc.w	$552c	;69a20
+	dc.w	$0002	;69a22
+	dc.w	$5534	;69a24
+	dc.w	$0000	;69a26
+	dc.w	$0009	;69a28
+	dc.w	$0000	;69a2a
+	dc.w	$0000	;69a2c
+	dc.w	$0000	;69a2e
+	dc.w	$0002	;69a30
+	dc.w	$5514	;69a32
+	dc.w	$0002	;69a34
+	dc.w	$5534	;69a36
+	dc.w	$0002	;69a38
+	dc.w	$553c	;69a3a
+	dc.w	$0000	;69a3c
+	dc.w	$0009	;69a3e
+	dc.w	$0000	;69a40
+	dc.w	$0000	;69a42
+	dc.w	$0000	;69a44
+	dc.w	$0002	;69a46
+	dc.w	$5544	;69a48
+	dc.w	$0002	;69a4a
+	dc.w	$554c	;69a4c
+	dc.w	$0002	;69a4e
+	dc.w	$5554	;69a50
+	dc.w	$0000	;69a52
+	dc.w	$0009	;69a54
+	dc.w	$0000	;69a56
+	dc.w	$0000	;69a58
+	dc.w	$0000	;69a5a
+	dc.w	$0002	;69a5c
+	dc.w	$5544	;69a5e
+	dc.w	$0002	;69a60
+	dc.w	$5554	;69a62
+	dc.w	$0002	;69a64
+	dc.w	$555c	;69a66
+	dc.w	$0000	;69a68
+	dc.w	$0009	;69a6a
+	dc.w	$0000	;69a6c
+	dc.w	$0000	;69a6e
+	dc.w	$0000	;69a70
+	dc.w	$0002	;69a72
+	dc.w	$5544	;69a74
+	dc.w	$0002	;69a76
+	dc.w	$555c	;69a78
+	dc.w	$0002	;69a7a
+	dc.w	$5564	;69a7c
+	dc.w	$0000	;69a7e
+	dc.w	$0009	;69a80
+	dc.w	$0000	;69a82
+	dc.w	$0000	;69a84
+	dc.w	$0000	;69a86
+	dc.w	$0002	;69a88
+	dc.w	$5544	;69a8a
+	dc.w	$0002	;69a8c
+	dc.w	$5564	;69a8e
+	dc.w	$0002	;69a90
+	dc.w	$556c	;69a92
+	dc.w	$0000	;69a94
+	dc.w	$0009	;69a96
 lb_69a98:
-	BTST	D0,D0			;69a98: 0100
-	DC.W	$004a			;69a9a
-	ORI.W	#$01ca,(A5)		;69a9c: 005501ca
-	dc.l  $0			;69aa0: 00000000
-	DC.W	$0000			;69aa4
-	DC.W	$ff70			;69aa6
-	DC.W	$ff88			;69aa8
-	ORI.W	#$0048,(A4)		;69aaa: 00540048
-	DC.W	$ff88			;69aae
-	ORI.W	#$0078,-120(A4)		;69ab0: 006c0078ff88
-	ORI.W	#$0078,(A4)		;69ab6: 00540078
-	DC.W	$ff88			;69aba
-	DC.W	$ffac			;69abc
-	DC.W	$0048			;69abe
-	DC.W	$ff88			;69ac0
-	DC.W	$ff94			;69ac2
-	DC.W	$ff70			;69ac4
-	DC.W	$ff88			;69ac6
-	DC.W	$ffac			;69ac8
-	DC.W	$ff70			;69aca
-	DC.W	$0000			;69acc
-	DC.W	$ff7c			;69ace
-	DC.W	$0048			;69ad0
-	DC.W	$0000			;69ad2
-	DC.W	$ff64			;69ad4
-	ORI.L	#$0000ff94,168(A0)	;69ad6: 00a80000ff9400a8
-	ORI.B	#$6c,D0			;69ade: 0000006c
-	DC.W	$0048			;69ae2
-	ORI.B	#$9c,D0			;69ae4: 0000009c
-	DC.W	$ff70			;69ae8
-	ORI.B	#$84,D0			;69aea: 00000084
-	DC.W	$ff40			;69aee
-	DC.W	$ffb8			;69af0
-	ORI.W	#$ff40,(A4)		;69af2: 0054ff40
-	DC.W	$ffb8			;69af6
-	DC.W	$ffac			;69af8
-	DC.W	$ff70			;69afa
-	DC.W	$ffe8			;69afc
-	ORI.W	#$ff70,(A4)		;69afe: 0054ff70
-	DC.W	$ffe8			;69b02
-	DC.W	$ffac			;69b04
-	DC.W	$0000			;69b06
-	DC.W	$ff88			;69b08
-	DC.W	$ffe8			;69b0a
-	DC.W	$0000			;69b0c
-	DC.W	$ff88			;69b0e
-	DC.W	$ffb8			;69b10
-	DC.W	$003c			;69b12
-	DC.W	$ff88			;69b14
-	DC.W	$ff94			;69b16
-	ORI.W	#$ff88,ext_ffffffb8.W	;69b18: 0078ff88ffb8
-	ORI.W	#$ff88,ext_ffffffe8.W	;69b1e: 0078ff88ffe8
-	DC.W	$003c			;69b24
-	DC.W	$ff88			;69b26
-	DC.W	$000c			;69b28
-	DC.W	$000c			;69b2a
-	DC.W	$ff58			;69b2c
-	DC.W	$ffdc			;69b2e
-	DC.W	$000c			;69b30
-	DC.W	$ff58			;69b32
-	DC.W	$ffc4			;69b34
-	DC.W	$003c			;69b36
-	DC.W	$ff58			;69b38
-	DC.W	$ffa0			;69b3a
-	ORI.W	#$ff58,-60(A4)		;69b3c: 006cff58ffc4
-	ORI.W	#$ff58,-36(A4)		;69b42: 006cff58ffdc
-	DC.W	$003c			;69b48
-	DC.W	$ff58			;69b4a
-	DC.W	$0000			;69b4c
-	DC.W	$ffa0			;69b4e
-	DC.W	$ff88			;69b50
-	DC.W	$0048			;69b52
-	DC.W	$ffa0			;69b54
-	DC.W	$ff88			;69b56
-	DC.W	$0018			;69b58
-	DC.W	$ffb8			;69b5a
-	DC.W	$ff88			;69b5c
-	DC.W	$0000			;69b5e
-	DC.W	$ffd0			;69b60
-	DC.W	$ff88			;69b62
-	DC.W	$0018			;69b64
-	DC.W	$ffd0			;69b66
-	DC.W	$ff88			;69b68
-	DC.W	$0048			;69b6a
-	DC.W	$ffb8			;69b6c
-	DC.W	$ff88			;69b6e
-	ORI.W	#$0081,-(A0)		;69b70: 00600081
-	DC.W	$ffa0			;69b74
-	ORI.B	#$90,(A0)+		;69b76: 00180090
-	DC.W	$ffc4			;69b7a
-	ORI.B	#$9e,D0			;69b7c: 0000009e
-	DC.W	$ffe8			;69b80
-	ORI.B	#$9e,(A0)+		;69b82: 0018009e
-	DC.W	$ffe8			;69b86
-	DC.W	$0030			;69b88
-	ORI.L	#$ffc40048,(A0)		;69b8a: 0090ffc40048
-	ORI.L	#$ffa00030,D1		;69b90: 0081ffa00030
-	DC.W	$0030			;69b96
-	DC.W	$fed4			;69b98
-	DC.W	$ffdc			;69b9a
-	ORI.W	#$fed4,(A4)		;69b9c: 0054fed4
-	DC.W	$ffdc			;69ba0
-	DC.W	$0030			;69ba2
-	DC.W	$fed4			;69ba4
-	DC.W	$ffc4			;69ba6
-	ORI.W	#$fed4,(A4)		;69ba8: 0054fed4
-	DC.W	$ffc4			;69bac
-	DC.W	$0028			;69bae
-	DC.W	$fee0			;69bb0
-	DC.W	$ffe4			;69bb2
-	DC.W	$0028			;69bb4
-	DC.W	$fee0			;69bb6
-	DC.W	$ffbd			;69bb8
-	DC.W	$0024			;69bba
-	DC.W	$ff04			;69bbc
-	DC.W	$ffe8			;69bbe
-	DC.W	$0024			;69bc0
-	DC.W	$ff04			;69bc2
-	DC.W	$ffb8			;69bc4
-	ORI.W	#$ff04,(A4)		;69bc6: 0054ff04
-	DC.W	$ffe8			;69bca
-	ORI.W	#$ff04,(A4)		;69bcc: 0054ff04
-	DC.W	$ffb8			;69bd0
-	DC.W	$0048			;69bd2
-	DC.W	$ff10			;69bd4
-	DC.W	$ffdc			;69bd6
-	DC.W	$0030			;69bd8
-	DC.W	$ff10			;69bda
-	DC.W	$ffc4			;69bdc
-	DC.W	$0030			;69bde
-	DC.W	$ff10			;69be0
-	DC.W	$ffdc			;69be2
-	DC.W	$0048			;69be4
-	DC.W	$ff10			;69be6
-	DC.W	$ffc4			;69be8
-	DC.W	$0030			;69bea
-	DC.W	$ff10			;69bec
-	DC.W	$fff4			;69bee
-	DC.W	$0030			;69bf0
-	DC.W	$ff10			;69bf2
-	DC.W	$ffac			;69bf4
-	ORI.W	#$ff10,(A4)		;69bf6: 0054ff10
-	DC.W	$ffac			;69bfa
-	ORI.W	#$ff10,(A4)		;69bfc: 0054ff10
-	DC.W	$fff4			;69c00
-	DC.W	$0024			;69c02
-	DC.W	$ff58			;69c04
-	DC.W	$fff4			;69c06
-	DC.W	$0024			;69c08
-	DC.W	$ff58			;69c0a
-	DC.W	$ffac			;69c0c
-	ORI.W	#$ff58,(A4)		;69c0e: 0054ff58
-	DC.W	$ffac			;69c12
-	ORI.W	#$ff58,(A4)		;69c14: 0054ff58
-	DC.W	$fff4			;69c18
-	ORI.W	#$ff10,D0		;69c1a: 0040ff10
-	DC.W	$fff4			;69c1e
-	ORI.W	#$ff10,D0		;69c20: 0040ff10
-	DC.W	$ffac			;69c24
-	ORI.W	#$ff4c,D0		;69c26: 0040ff4c
-	DC.W	$000c			;69c2a
-	ORI.W	#$ff4c,D0		;69c2c: 0040ff4c
-	DC.W	$ff94			;69c30
-	DC.W	$0030			;69c32
-	DC.W	$ff4c			;69c34
-	DC.W	$fff4			;69c36
-	DC.W	$0030			;69c38
-	DC.W	$ff4c			;69c3a
-	DC.W	$ffac			;69c3c
-	ORI.W	#$ff4c,(A4)		;69c3e: 0054ff4c
-	DC.W	$fff4			;69c42
-	ORI.W	#$ff4c,(A4)		;69c44: 0054ff4c
-	DC.W	$ffac			;69c48
-	DC.W	$003e			;69c4a
-	DC.W	$ff40			;69c4c
-	ORI.B	#$3e,D0			;69c4e: 0000003e
-	DC.W	$ff40			;69c52
-	DC.W	$ffa0			;69c54
-	DC.W	$0000			;69c56
-	DC.W	$ff58			;69c58
-	ORI.B	#$00,(A0)+		;69c5a: 00180000
-	DC.W	$ff58			;69c5e
-	DC.W	$ff88			;69c60
-	OR.B	D0,D4			;69c62: 8800
-	dc.l  $0			;69c64: 00000000
-	DC.W	$0002			;69c68
-	DC.W	$4f64			;69c6a
-	DC.W	$0002			;69c6c
-	DC.W	$4f8c			;69c6e
-	DC.W	$0002			;69c70
-	CHK.W	#$0000,D7		;69c72: 4fbc0000
-	DC.W	$0011			;69c76
-	OR.B	D0,D4			;69c78: 8800
-	dc.l  $0			;69c7a: 00000000
-	DC.W	$0002			;69c7e
-	DC.W	$4f8c			;69c80
-	DC.W	$0002			;69c82
-	CHK.W	(A4),D7			;69c84: 4f94
-	DC.W	$0002			;69c86
-	CHK.W	#$0000,D7		;69c88: 4fbc0000
-	ORI.B	#$00,(A1)		;69c8c: 00110000
-	DC.W	$0000			;69c90
-	OR.B	D0,D4			;69c92: 8800
-	DC.W	$0002			;69c94
-	DC.W	$4f8c			;69c96
-	DC.W	$0002			;69c98
-	DC.W	$4fcc			;69c9a
-	DC.W	$0002			;69c9c
-	DC.W	$4fdc			;69c9e
-	ORI.B	#$0c,D0			;69ca0: 0000000c
-	dc.l  $0			;69ca4: 00000000
-	MOVEQ	#0,D4			;69ca8: 7800
-	DC.W	$0002			;69caa
-	DC.W	$4f64			;69cac
-	DC.W	$0002			;69cae
-	DC.W	$4fc4			;69cb0
-	DC.W	$0002			;69cb2
-	LEA	(A4),A7			;69cb4: 4fd4
-	ORI.B	#$0c,D0			;69cb6: 0000000c
-	DC.W	$ab26			;69cba
-	SCC	(A2)+			;69cbc: 54da
-	ORI.B	#$02,D0			;69cbe: 00000002
-	DC.W	$4fc4			;69cc2
-	DC.W	$0002			;69cc4
-	LEA	(A4),A7			;69cc6: 4fd4
-	DC.W	$0002			;69cc8
-	DC.W	$4fdc			;69cca
-	ORI.B	#$01,D0			;69ccc: 00000001
-	DC.W	$ab26			;69cd0
-	SCC	(A2)+			;69cd2: 54da
-	ORI.B	#$02,D0			;69cd4: 00000002
-	DC.W	$4fc4			;69cd8
-	DC.W	$0002			;69cda
-	DC.W	$4fcc			;69cdc
-	DC.W	$0002			;69cde
-	DC.W	$4fdc			;69ce0
-	ORI.B	#$01,D0			;69ce2: 00000001
-	DC.W	$f3b0			;69ce6
-	ADD.L	D1,28372(A4)		;69ce8: d3ac6ed4
-	DC.W	$0002			;69cec
-	DC.W	$4f64			;69cee
-	DC.W	$0002			;69cf0
-	CHK.W	2(A4,D0.W),D7		;69cf2: 4fb40002
-	CHK.W	#$0000,D7		;69cf6: 4fbc0000
-	DC.W	$000c			;69cfa
-	DC.W	$f3b0			;69cfc
-	ADD.L	D1,28372(A4)		;69cfe: d3ac6ed4
-	DC.W	$0002			;69d02
-	DC.W	$4f64			;69d04
-	DC.W	$0002			;69d06
-	DC.W	$4f6c			;69d08
-	DC.W	$0002			;69d0a
-	CHK.W	0(A4,D0.W),D7		;69d0c: 4fb40000
-	DC.W	$000c			;69d10
-	DC.W	$f3b0			;69d12
-	ADD.L	D1,-28372(A4)		;69d14: d3ac912c
-	DC.W	$0002			;69d18
-	DC.W	$4f8c			;69d1a
-	DC.W	$0002			;69d1c
-	CHK.W	(A4),D7			;69d1e: 4f94
-	DC.W	$0002			;69d20
-	CHK.W	(A4)+,D7		;69d22: 4f9c
-	ORI.B	#$0c,D0			;69d24: 0000000c
-	DC.W	$f3b0			;69d28
-	ADD.L	D1,-28372(A4)		;69d2a: d3ac912c
-	DC.W	$0002			;69d2e
-	CHK.W	D4,D7			;69d30: 4f84
-	DC.W	$0002			;69d32
-	DC.W	$4f8c			;69d34
-	DC.W	$0002			;69d36
-	CHK.W	(A4)+,D7		;69d38: 4f9c
-	ORI.B	#$0c,D0			;69d3a: 0000000c
-	MOVE.W	D7,(A1)			;69d3e: 3287
-	ADD.L	D3,(A4)			;69d40: d794
-	BCS.S	lb_69d52		;69d42: 650e
-	DC.W	$0002			;69d44
-	DC.W	$4f6c			;69d46
-	DC.W	$0002			;69d48
-	CHK.W	2(A4),D7		;69d4a: 4fac0002
-	CHK.W	0(A4,D0.W),D7		;69d4e: 4fb40000
-lb_69d52:
-	DC.W	$0014			;69d52
-	MOVE.W	D7,(A1)			;69d54: 3287
-	ADD.L	D3,(A4)			;69d56: d794
-	BCS.S	lb_69d68		;69d58: 650e
-	DC.W	$0002			;69d5a
-	DC.W	$4f6c			;69d5c
-	DC.W	$0002			;69d5e
-	DC.W	$4f74			;69d60
-	DC.W	$0002			;69d62
-	CHK.W	0(A4),D7		;69d64: 4fac0000
-lb_69d68:
-	DC.W	$0014			;69d68
-	MOVE.W	D7,(A1)			;69d6a: 3287
-	ADD.L	D3,(A4)			;69d6c: d794
-	SUBA.W	2(A2,D0.W),A5		;69d6e: 9af20002
-	CHK.W	D4,D7			;69d72: 4f84
-	DC.W	$0002			;69d74
-	CHK.W	(A4)+,D7		;69d76: 4f9c
-	DC.W	$0002			;69d78
-	CHK.W	-(A4),D7		;69d7a: 4fa4
-	ORI.B	#$14,D0			;69d7c: 00000014
-	MOVE.W	D7,(A1)			;69d80: 3287
-	ADD.L	D3,(A4)			;69d82: d794
-	SUBA.W	2(A2,D0.W),A5		;69d84: 9af20002
-lb_69d88:
-	DC.W	$4f7c			;69d88
-	DC.W	$0002			;69d8a
-	CHK.W	D4,D7			;69d8c: 4f84
-	DC.W	$0002			;69d8e
-	CHK.W	-(A4),D7		;69d90: 4fa4
-	ORI.B	#$14,D0			;69d92: 00000014
-	BLE.S	lb_69e00+2		;69d96: 6f6a
-	ADD.W	D1,0(A7)		;69d98: d36f0000
-	DC.W	$0002			;69d9c
-lb_69d9e:
-	DC.W	$4f74			;69d9e
-	DC.W	$0002			;69da0
-	DC.W	$4f7c			;69da2
-	DC.W	$0002			;69da4
-	CHK.W	0(A4),D7		;69da6: 4fac0000
-	DC.W	$000c			;69daa
-	BLE.S	lb_69e16+2		;69dac: 6f6a
-	ADD.W	D1,0(A7)		;69dae: d36f0000
-	DC.W	$0002			;69db2
-	DC.W	$4f7c			;69db4
-	DC.W	$0002			;69db6
-	CHK.W	-(A4),D7		;69db8: 4fa4
-	DC.W	$0002			;69dba
-	CHK.W	0(A4),D7		;69dbc: 4fac0000
-	DC.W	$000c			;69dc0
-	BGT.S	lb_69d88		;69dc2: 6ec4
-	ADDA.L	(A1)+,A0		;69dc4: d1d9
-	ORI.B	#$02,D0			;69dc6: 00000002
-	ADDQ.W	#8,2(A4,D0.W)		;69dca: 50740002
-	DC.W	$507c			;69dce
-	DC.W	$0002			;69dd0
-	ADDQ.L	#8,(A4)+		;69dd2: 509c
-	ORI.B	#$01,D0			;69dd4: 00000001
-	BGT.S	lb_69d9e		;69dd8: 6ec4
-	ADDA.L	(A1)+,A0		;69dda: d1d9
-	ORI.B	#$02,D0			;69ddc: 00000002
-	DC.W	$507c			;69de0
-	DC.W	$0002			;69de2
-	ADDQ.L	#8,(A4)			;69de4: 5094
-	DC.W	$0002			;69de6
-	ADDQ.L	#8,(A4)+		;69de8: 509c
-	ORI.B	#$01,D0			;69dea: 00000001
-	DC.W	$6fd7			;69dee
-	ADD.L	D2,D2			;69df0: d482
-	ORI.B	#$02,D0			;69df2: 00000002
-	DC.W	$507c			;69df6
-	DC.W	$0002			;69df8
-	ADDQ.L	#8,A4			;69dfa: 508c
-	DC.W	$0002			;69dfc
-	ADDQ.L	#8,(A4)			;69dfe: 5094
-lb_69e00:
-	ORI.B	#$01,D0			;69e00: 00000001
-	DC.W	$6fd7			;69e04
-	ADD.L	D2,D2			;69e06: d482
-	ORI.B	#$02,D0			;69e08: 00000002
-	DC.W	$507c			;69e0c
-	DC.W	$0002			;69e0e
-	ADDQ.L	#8,D4			;69e10: 5084
-	DC.W	$0002			;69e12
-	ADDQ.L	#8,A4			;69e14: 508c
-lb_69e16:
-	ORI.B	#$01,D0			;69e16: 00000001
-	DC.W	$ab26			;69e1a
-	DC.W	$ab26			;69e1c
-	ORI.B	#$02,D0			;69e1e: 00000002
-	DC.W	$4f64			;69e22
-	DC.W	$0002			;69e24
-	DC.W	$4fc4			;69e26
-	DC.W	$0002			;69e28
-	DC.W	$4fcc			;69e2a
-	ORI.B	#$14,D0			;69e2c: 00000014
-	DC.W	$ab26			;69e30
-	DC.W	$ab26			;69e32
-	ORI.B	#$02,D0			;69e34: 00000002
-	DC.W	$4f64			;69e38
-	DC.W	$0002			;69e3a
-	DC.W	$4f8c			;69e3c
-	DC.W	$0002			;69e3e
-	DC.W	$4fcc			;69e40
-	ORI.B	#$14,D0			;69e42: 00000014
-	DC.W	$0000			;69e46
-	OR.B	D0,D4			;69e48: 8800
-	ORI.B	#$02,D0			;69e4a: 00000002
-	DC.W	$4f64			;69e4e
-	DC.W	$0002			;69e50
-	DC.W	$4f6c			;69e52
-	DC.W	$0002			;69e54
-	DC.W	$4f8c			;69e56
-	ORI.B	#$04,D0			;69e58: 00000004
-	DC.W	$0000			;69e5c
-	OR.B	D0,D4			;69e5e: 8800
-	ORI.B	#$02,D0			;69e60: 00000002
-	DC.W	$4f6c			;69e64
-	DC.W	$0002			;69e66
-	DC.W	$4f74			;69e68
-	DC.W	$0002			;69e6a
-	DC.W	$4f8c			;69e6c
-	ORI.B	#$04,D0			;69e6e: 00000004
-	DC.W	$0000			;69e72
-	OR.B	D0,D4			;69e74: 8800
-	ORI.B	#$02,D0			;69e76: 00000002
-	DC.W	$4f74			;69e7a
-	DC.W	$0002			;69e7c
-	DC.W	$4f7c			;69e7e
-	DC.W	$0002			;69e80
-	DC.W	$4f8c			;69e82
-	ORI.B	#$04,D0			;69e84: 00000004
-	DC.W	$0000			;69e88
-	OR.B	D1,D4			;69e8a: 8801
-	ORI.B	#$02,D0			;69e8c: 00000002
-	DC.W	$4f7c			;69e90
-	DC.W	$0002			;69e92
-	CHK.W	D4,D7			;69e94: 4f84
-	DC.W	$0002			;69e96
-	DC.W	$4f8c			;69e98
-	ORI.B	#$04,D0			;69e9a: 00000004
-	DC.W	$0000			;69e9e
-	OR.B	D0,D4			;69ea0: 8800
-	ORI.B	#$02,D0			;69ea2: 00000002
-	ADDQ.W	#8,D4			;69ea6: 5044
-	DC.W	$0002			;69ea8
-	ADDQ.W	#8,A4			;69eaa: 504c
-	DC.W	$0002			;69eac
-	ADDQ.W	#8,0(A4)		;69eae: 506c0000
-	DC.W	$000c			;69eb2
-	DC.W	$0000			;69eb4
-	OR.B	D0,D4			;69eb6: 8800
-	ORI.B	#$02,D0			;69eb8: 00000002
-	ADDQ.W	#8,A4			;69ebc: 504c
-	DC.W	$0002			;69ebe
-	ADDQ.W	#8,(A4)			;69ec0: 5054
-	DC.W	$0002			;69ec2
-	ADDQ.W	#8,0(A4)		;69ec4: 506c0000
-	DC.W	$000c			;69ec8
-	DC.W	$0000			;69eca
-	OR.B	D0,D4			;69ecc: 8800
-	ORI.B	#$02,D0			;69ece: 00000002
-	ADDQ.W	#8,(A4)			;69ed2: 5054
-	DC.W	$0002			;69ed4
-	ADDQ.W	#8,(A4)+		;69ed6: 505c
-	DC.W	$0002			;69ed8
-	ADDQ.W	#8,0(A4)		;69eda: 506c0000
-	DC.W	$000c			;69ede
-	DC.W	$0000			;69ee0
-	OR.B	D0,D4			;69ee2: 8800
-	ORI.B	#$02,D0			;69ee4: 00000002
-	ADDQ.W	#8,(A4)+		;69ee8: 505c
-	DC.W	$0002			;69eea
-	ADDQ.W	#8,-(A4)		;69eec: 5064
-	DC.W	$0002			;69eee
-	ADDQ.W	#8,0(A4)		;69ef0: 506c0000
-	DC.W	$000c			;69ef4
-	OR.L	D5,(A6)			;69ef6: 8b96
-	LSR	-(A6)			;69ef8: e2e6
-	ORI.B	#$02,D0			;69efa: 00000002
-	DC.W	$4fe4			;69efe
-	DC.W	$0002			;69f00
-	ADDQ.B	#8,(A4)			;69f02: 5014
-	DC.W	$0002			;69f04
-	ADDQ.B	#8,(A4)+		;69f06: 501c
-	ORI.B	#$0c,D0			;69f08: 0000000c
-	OR.L	D5,(A6)			;69f0c: 8b96
-	LSR	-(A6)			;69f0e: e2e6
-	ORI.B	#$02,D0			;69f10: 00000002
-	DC.W	$4fe4			;69f14
-	DC.W	$0002			;69f16
-	LEA	2(A4),A7		;69f18: 4fec0002
-	ADDQ.B	#8,(A4)+		;69f1c: 501c
-	ORI.B	#$0c,D0			;69f1e: 0000000c
-	DC.W	$bc0b			;69f22
-	ADD.W	(A4)+,D4		;69f24: d85c
-	DC.W	$a564			;69f26
-	DC.W	$0002			;69f28
-	LEA	2(A4),A7		;69f2a: 4fec0002
-	ADDQ.B	#8,(A4)+		;69f2e: 501c
-	DC.W	$0002			;69f30
-	ADDQ.B	#8,-(A4)		;69f32: 5024
-	ORI.B	#$01,D0			;69f34: 00000001
-	AND.L	D1,-(A2)		;69f38: c3a2
-	ROR	(A1)+			;69f3a: e6d9
-	SUB.W	D5,-(A4)		;69f3c: 9b64
-	DC.W	$0002			;69f3e
-	LEA	2(A4),A7		;69f40: 4fec0002
-	LEA	2(A4,D0.W),A7		;69f44: 4ff40002
-	ADDQ.B	#8,-(A4)		;69f48: 5024
-	ORI.B	#$01,D0			;69f4a: 00000001
-	NOT.L	(A2)+			;69f4e: 469a
-	ROR.W	D4,D0			;69f50: e878
-	DC.W	$a1de			;69f52
-	DC.W	$0002			;69f54
-	LEA	2(A4,D0.W),A7		;69f56: 4ff40002
-	ADDQ.B	#8,-(A4)		;69f5a: 5024
-	DC.W	$0002			;69f5c
-lb_69f5e:
-	ADDQ.B	#8,0(A4)		;69f5e: 502c0000
-	DC.W	$000c			;69f62
-	MOVEA.W	-(A6),A5		;69f64: 3a66
-	ADD.B	D4,(A2)			;69f66: d912
-	SUB.L	2(A3),D7		;69f68: 9eab0002
-	LEA	2(A4,D0.W),A7		;69f6c: 4ff40002
-	DC.W	$4ffc			;69f70
-	DC.W	$0002			;69f72
-	ADDQ.B	#8,0(A4)		;69f74: 502c0000
-	DC.W	$000c			;69f78
-	MOVEQ	#106,D2			;69f7a: 746a
-	LSR	-(A6)			;69f7c: e2e6
-	ORI.B	#$02,D0			;69f7e: 00000002
-	DC.W	$4ffc			;69f82
-	DC.W	$0002			;69f84
-	ADDQ.B	#8,2(A4)		;69f86: 502c0002
-	ADDQ.B	#8,0(A4,D0.W)		;69f8a: 50340000
-	DC.W	$0001			;69f8e
-	MOVEQ	#106,D2			;69f90: 746a
-	LSR	-(A6)			;69f92: e2e6
-	ORI.B	#$02,D0			;69f94: 00000002
-	DC.W	$4ffc			;69f98
-	DC.W	$0002			;69f9a
-	ADDQ.B	#8,D4			;69f9c: 5004
-	DC.W	$0002			;69f9e
-	ADDQ.B	#8,0(A4,D0.W)		;69fa0: 50340000
-	DC.W	$0001			;69fa4
-	LEA	92(A5,A5.L),A1		;69fa6: 43f5d85c
-	ADDQ.L	#5,(A4)+		;69faa: 5a9c
-	DC.W	$0002			;69fac
-	ADDQ.B	#8,D4			;69fae: 5004
-	DC.W	$0002			;69fb0
-	ADDQ.B	#8,2(A4,D0.W)		;69fb2: 50340002
-	DC.W	$503c			;69fb6
-	ORI.B	#$0c,D0			;69fb8: 0000000c
-	MOVEA.W	(A6)+,A6		;69fbc: 3c5e
-	ROR	(A1)+			;69fbe: e6d9
-	BCC.S	lb_69f5e		;69fc0: 649c
-	DC.W	$0002			;69fc2
-	ADDQ.B	#8,D4			;69fc4: 5004
-	DC.W	$0002			;69fc6
-	DC.W	$500c			;69fc8
-	DC.W	$0002			;69fca
-	DC.W	$503c			;69fcc
-	ORI.B	#$0c,D0			;69fce: 0000000c
-	EOR.W	D4,-(A6)		;69fd2: b966
-	ROR.W	D4,D0			;69fd4: e878
-	ADDQ.B	#7,-(A2)		;69fd6: 5e22
-	DC.W	$0002			;69fd8
-	DC.W	$500c			;69fda
-	DC.W	$0002			;69fdc
-	ADDQ.B	#8,(A4)			;69fde: 5014
-	DC.W	$0002			;69fe0
-	DC.W	$503c			;69fe2
-	ORI.B	#$01,D0			;69fe4: 00000001
-	AND.L	D2,(A2)+		;69fe8: c59a
-	ADD.B	D4,(A2)			;69fea: d912
-	DC.W	$6155			;69fec
-	DC.W	$0002			;69fee
-	DC.W	$4fe4			;69ff0
-	DC.W	$0002			;69ff2
-	DC.W	$500c			;69ff4
-	DC.W	$0002			;69ff6
-	ADDQ.B	#8,(A4)			;69ff8: 5014
-	ORI.B	#$01,D0			;69ffa: 00000001
-	DC.W	$0000			;69ffe
-	OR.B	D0,D4			;6a000: 8800
-	ORI.B	#$02,D0			;6a002: 00000002
-	ADDQ.B	#8,(A4)			;6a006: 5014
-	DC.W	$0002			;6a008
-	ADDQ.B	#8,(A4)+		;6a00a: 501c
-	DC.W	$0002			;6a00c
-	ADDQ.B	#8,-(A4)		;6a00e: 5024
-	ORI.B	#$04,D0			;6a010: 00000004
-	DC.W	$0000			;6a014
-	OR.B	D0,D4			;6a016: 8800
-	ORI.B	#$02,D0			;6a018: 00000002
-	ADDQ.B	#8,(A4)			;6a01c: 5014
-	DC.W	$0002			;6a01e
-	ADDQ.B	#8,-(A4)		;6a020: 5024
-	DC.W	$0002			;6a022
-	DC.W	$503c			;6a024
-	ORI.B	#$04,D0			;6a026: 00000004
-	DC.W	$0000			;6a02a
-	OR.B	D0,D4			;6a02c: 8800
-	ORI.B	#$02,D0			;6a02e: 00000002
-	ADDQ.B	#8,-(A4)		;6a032: 5024
-	DC.W	$0002			;6a034
-	ADDQ.B	#8,2(A4,D0.W)		;6a036: 50340002
-	DC.W	$503c			;6a03a
-	ORI.B	#$04,D0			;6a03c: 00000004
-	DC.W	$0000			;6a040
-	OR.B	D0,D4			;6a042: 8800
-	ORI.B	#$02,D0			;6a044: 00000002
-	ADDQ.B	#8,-(A4)		;6a048: 5024
-	DC.W	$0002			;6a04a
-	ADDQ.B	#8,2(A4)		;6a04c: 502c0002
-	ADDQ.B	#8,0(A4,D0.W)		;6a050: 50340000
-	ORI.B	#$00,D4			;6a054: 00040000
-	DC.W	$0000			;6a058
-	OR.B	D0,D4			;6a05a: 8800
-	DC.W	$0002			;6a05c
-	SUBQ.B	#8,(A4)+		;6a05e: 511c
-	DC.W	$0002			;6a060
-	SUBQ.B	#8,-(A4)		;6a062: 5124
-	DC.W	$0002			;6a064
-	DC.W	$513c			;6a066
-	ORI.B	#$07,D0			;6a068: 00000007
-	dc.l  $0			;6a06c: 00000000
-	OR.B	D0,D4			;6a070: 8800
-	DC.W	$0002			;6a072
-	SUBQ.B	#8,-(A4)		;6a074: 5124
-	DC.W	$0002			;6a076
-	DC.W	$513c			;6a078
-	DC.W	$0002			;6a07a
-	SUBQ.W	#8,D4			;6a07c: 5144
-	ORI.B	#$07,D0			;6a07e: 00000007
-	OR.L	D4,-(A2)		;6a082: 89a2
-	ASR.W	#6,D6			;6a084: ec46
-	ORI.B	#$02,D0			;6a086: 00000002
-	SUBQ.B	#8,(A4)			;6a08a: 5114
-	DC.W	$0002			;6a08c
-	SUBQ.B	#8,(A4)+		;6a08e: 511c
-	DC.W	$0002			;6a090
-	SUBQ.B	#8,0(A4,D0.W)		;6a092: 51340000
-	DC.W	$000e			;6a096
-	OR.L	D4,-(A2)		;6a098: 89a2
-	ASR.W	#6,D6			;6a09a: ec46
-	ORI.B	#$02,D0			;6a09c: 00000002
-	SUBQ.B	#8,(A4)+		;6a0a0: 511c
-	DC.W	$0002			;6a0a2
-	SUBQ.B	#8,2(A4,D0.W)		;6a0a4: 51340002
-	DC.W	$513c			;6a0a8
-	ORI.B	#$0e,D0			;6a0aa: 0000000e
-	dc.l  $0			;6a0ae: 00000000
-	MOVEQ	#0,D4			;6a0b2: 7800
-	DC.W	$0002			;6a0b4
-	SUBQ.B	#8,(A4)			;6a0b6: 5114
-	DC.W	$0002			;6a0b8
-	SUBQ.B	#8,2(A4)		;6a0ba: 512c0002
-	SUBQ.B	#8,0(A4,D0.W)		;6a0be: 51340000
-	ORI.B	#$00,D7			;6a0c2: 00070000
-	DC.W	$0000			;6a0c6
-	MOVEQ	#0,D4			;6a0c8: 7800
-	DC.W	$0002			;6a0ca
-	SUBQ.B	#8,(A4)			;6a0cc: 5114
-	DC.W	$0002			;6a0ce
-	SUBQ.B	#8,2(A4,D0.W)		;6a0d0: 51340002
-	SUBQ.W	#8,A4			;6a0d4: 514c
-	ORI.B	#$07,D0			;6a0d6: 00000007
-	MOVEQ	#0,D4			;6a0da: 7800
-	dc.l  $0			;6a0dc: 00000000
-	DC.W	$0002			;6a0e0
-	SUBQ.B	#8,-(A4)		;6a0e2: 5124
-	DC.W	$0002			;6a0e4
-	SUBQ.B	#8,2(A4)		;6a0e6: 512c0002
-	SUBQ.W	#8,D4			;6a0ea: 5144
-	ORI.B	#$0e,D0			;6a0ec: 0000000e
-	MOVEQ	#0,D4			;6a0f0: 7800
-	dc.l  $0			;6a0f2: 00000000
-	DC.W	$0002			;6a0f6
-	SUBQ.B	#8,2(A4)		;6a0f8: 512c0002
-	SUBQ.W	#8,D4			;6a0fc: 5144
-	DC.W	$0002			;6a0fe
-	SUBQ.W	#8,A4			;6a100: 514c
-	ORI.B	#$0e,D0			;6a102: 0000000e
-	DC.W	$0000			;6a106
-	OR.B	D0,D4			;6a108: 8800
-	ORI.B	#$02,D0			;6a10a: 00000002
-	SUBQ.B	#8,(A4)			;6a10e: 5114
-	DC.W	$0002			;6a110
-	SUBQ.B	#8,(A4)+		;6a112: 511c
-	DC.W	$0002			;6a114
-	SUBQ.B	#8,0(A4)		;6a116: 512c0000
-	DC.W	$000e			;6a11a
-	DC.W	$0000			;6a11c
-	OR.B	D0,D4			;6a11e: 8800
-	ORI.B	#$02,D0			;6a120: 00000002
-	SUBQ.B	#8,(A4)+		;6a124: 511c
-	DC.W	$0002			;6a126
-	SUBQ.B	#8,-(A4)		;6a128: 5124
-	DC.W	$0002			;6a12a
-	SUBQ.B	#8,0(A4)		;6a12c: 512c0000
-	DC.W	$000e			;6a130
-	SUB.L	D7,D7			;6a132: 9e87
-	ASR.B	#3,D2			;6a134: e602
-	EOR.B	D7,D5			;6a136: bf05
-	DC.W	$0002			;6a138
-	SUBQ.W	#8,(A4)+		;6a13a: 515c
-	DC.W	$0002			;6a13c
-	SUBQ.W	#8,2(A4)		;6a13e: 516c0002
-	DC.W	$517c			;6a142
-	ORI.B	#$07,D0			;6a144: 00000007
-	SUBQ.W	#4,A6			;6a148: 594e
-	ROR.B	D1,D4			;6a14a: e23c
-	EOR.L	D2,(A5)			;6a14c: b595
-	DC.W	$0002			;6a14e
-	SUBQ.W	#8,(A4)+		;6a150: 515c
-	DC.W	$0002			;6a152
-	SUBQ.W	#8,2(A4)		;6a154: 516c0002
-	SUBQ.L	#8,A4			;6a158: 518c
-	ORI.B	#$07,D0			;6a15a: 00000007
-	AND.W	-25714(A6),D5		;6a15e: ca6e9b8e
-	DC.W	$25f2			;6a162
-	DC.W	$0002			;6a164
-	DC.W	$517c			;6a166
-	DC.W	$0002			;6a168
-	SUBQ.L	#8,(A4)+		;6a16a: 519c
-	DC.W	$0002			;6a16c
-	SUBQ.L	#8,0(A4)		;6a16e: 51ac0000
-	DC.W	$000e			;6a172
-	DC.W	$0000			;6a174
-	DC.W	$ab26			;6a176
-	DC.W	$ab26			;6a178
-	DC.W	$0002			;6a17a
-	SUBQ.W	#8,2(A4)		;6a17c: 516c0002
-	SUBQ.L	#8,(A4)+		;6a180: 519c
-	DC.W	$0002			;6a182
-	SUBQ.L	#8,0(A4)		;6a184: 51ac0000
-	DC.W	$000e			;6a188
-	SUB.L	D7,D7			;6a18a: 9e87
-	ASR.B	#3,D2			;6a18c: e602
-	DC.W	$40fb			;6a18e
-	DC.W	$0002			;6a190
-	SUBQ.W	#8,(A4)			;6a192: 5154
-	DC.W	$0002			;6a194
-	SUBQ.W	#8,-(A4)		;6a196: 5164
-	DC.W	$0002			;6a198
-	SUBQ.W	#8,0(A4,D0.W)		;6a19a: 51740000
-	DC.W	$0007			;6a19e
-	SUBQ.W	#4,A6			;6a1a0: 594e
-	ROR.B	D1,D4			;6a1a2: e23c
-	TST.W	2(A3)			;6a1a4: 4a6b0002
-	SUBQ.W	#8,(A4)			;6a1a8: 5154
-	DC.W	$0002			;6a1aa
-	SUBQ.W	#8,-(A4)		;6a1ac: 5164
-	DC.W	$0002			;6a1ae
-	SUBQ.L	#8,D4			;6a1b0: 5184
-	ORI.B	#$07,D0			;6a1b2: 00000007
-	AND.W	-25714(A6),D5		;6a1b6: ca6e9b8e
-	DC.W	$da0e			;6a1ba
-	DC.W	$0002			;6a1bc
-	SUBQ.W	#8,2(A4,D0.W)		;6a1be: 51740002
-	SUBQ.L	#8,(A4)			;6a1c2: 5194
-	DC.W	$0002			;6a1c4
-	SUBQ.L	#8,-(A4)		;6a1c6: 51a4
-	ORI.B	#$0e,D0			;6a1c8: 0000000e
-	DC.W	$0000			;6a1cc
-	DC.W	$ab26			;6a1ce
-	SCC	(A2)+			;6a1d0: 54da
-	DC.W	$0002			;6a1d2
-	SUBQ.W	#8,-(A4)		;6a1d4: 5164
-	DC.W	$0002			;6a1d6
-	SUBQ.L	#8,(A4)			;6a1d8: 5194
-	DC.W	$0002			;6a1da
-	SUBQ.L	#8,-(A4)		;6a1dc: 51a4
-	ORI.B	#$0e,D0			;6a1de: 0000000e
-	SCC	(A2)+			;6a1e2: 54da
-	SCC	(A2)+			;6a1e4: 54da
-	ORI.B	#$02,D0			;6a1e6: 00000002
-	ST	-(A4)			;6a1ea: 50e4
-	DC.W	$0002			;6a1ec
-	ST	2(A4)			;6a1ee: 50ec0002
-	ST	0(A4,D0.W)		;6a1f2: 50f40000
-	DC.W	$0006			;6a1f6
-	SCC	(A2)+			;6a1f8: 54da
-	SCC	(A2)+			;6a1fa: 54da
-	ORI.B	#$02,D0			;6a1fc: 00000002
-	ST	2(A4)			;6a200: 50ec0002
-	ST	2(A4,D0.W)		;6a204: 50f40002
-	DC.W	$510c			;6a208
-	ORI.B	#$06,D0			;6a20a: 00000006
-	DC.W	$0000			;6a20e
-	SCC	(A2)+			;6a210: 54da
-	DC.W	$ab26			;6a212
-	DC.W	$0002			;6a214
-	ST	(A4)+			;6a216: 50dc
-	DC.W	$0002			;6a218
-	ST	2(A4)			;6a21a: 50ec0002
-	DC.W	$510c			;6a21e
-	ORI.B	#$06,D0			;6a220: 00000006
-	DC.W	$0000			;6a224
-	SCC	(A2)+			;6a226: 54da
-	DC.W	$ab26			;6a228
-	DC.W	$0002			;6a22a
-	ST	(A4)+			;6a22c: 50dc
-	DC.W	$0002			;6a22e
-	DC.W	$50fc			;6a230
-	DC.W	$0002			;6a232
-	DC.W	$510c			;6a234
-	ORI.B	#$06,D0			;6a236: 00000006
-	DC.W	$ab26			;6a23a
-	SCC	(A2)+			;6a23c: 54da
-	ORI.B	#$02,D0			;6a23e: 00000002
-	ST	(A4)			;6a242: 50d4
-	DC.W	$0002			;6a244
-	ST	(A4)+			;6a246: 50dc
-	DC.W	$0002			;6a248
-	DC.W	$50fc			;6a24a
-	ORI.B	#$06,D0			;6a24c: 00000006
-	DC.W	$ab26			;6a250
-	SCC	(A2)+			;6a252: 54da
-	ORI.B	#$02,D0			;6a254: 00000002
-	ST	(A4)			;6a258: 50d4
-	DC.W	$0002			;6a25a
-	DC.W	$50fc			;6a25c
-	DC.W	$0002			;6a25e
-	SUBQ.B	#8,D4			;6a260: 5104
-	ORI.B	#$06,D0			;6a262: 00000006
-	DC.W	$0000			;6a266
-	SCC	(A2)+			;6a268: 54da
-	SCC	(A2)+			;6a26a: 54da
-	DC.W	$0002			;6a26c
-	ST	(A4)			;6a26e: 50d4
-	DC.W	$0002			;6a270
-	ST	-(A4)			;6a272: 50e4
-	DC.W	$0002			;6a274
-	ST	0(A4,D0.W)		;6a276: 50f40000
-	ORI.B	#$00,D6			;6a27a: 00060000
-	SCC	(A2)+			;6a27e: 54da
-	SCC	(A2)+			;6a280: 54da
-	DC.W	$0002			;6a282
-	ST	(A4)			;6a284: 50d4
-	DC.W	$0002			;6a286
-	ST	2(A4,D0.W)		;6a288: 50f40002
-	SUBQ.B	#8,D4			;6a28c: 5104
-	ORI.B	#$06,D0			;6a28e: 00000006
-	DC.W	$0000			;6a292
-	DC.W	$f2c0			;6a294
-	DC.W	$7744			;6a296
-	DC.W	$0002			;6a298
-	ST	D4			;6a29a: 50c4
-	DC.W	$0002			;6a29c
-	ST	(A4)			;6a29e: 50d4
-	DC.W	$0002			;6a2a0
-	ST	-(A4)			;6a2a2: 50e4
-	ORI.B	#$06,D0			;6a2a4: 00000006
-	MOVE.B	(A4)+,(A7)+		;6a2a8: 1edc
-	AND.L	-(A0),D7		;6a2aa: cea0
-	DC.W	$68ed			;6a2ac
-	DC.W	$0002			;6a2ae
-	ADDQ.L	#8,-(A4)		;6a2b0: 50a4
-	DC.W	$0002			;6a2b2
-	ST	D4			;6a2b4: 50c4
-	DC.W	$0002			;6a2b6
-	ST	-(A4)			;6a2b8: 50e4
-	ORI.B	#$07,D0			;6a2ba: 00000007
-	DC.W	$0000			;6a2be
-	LSR	-(A6)			;6a2c0: e2e6
-	MOVEQ	#106,D2			;6a2c2: 746a
-	DC.W	$0002			;6a2c4
-	ADDQ.L	#8,-(A4)		;6a2c6: 50a4
-	DC.W	$0002			;6a2c8
-	ADDQ.L	#8,2(A4)		;6a2ca: 50ac0002
-	ST	-(A4)			;6a2ce: 50e4
-	ORI.B	#$07,D0			;6a2d0: 00000007
-	DC.W	$0000			;6a2d4
-	ROL.W	D7,D6			;6a2d6: ef7e
-	OR.B	D4,-(A5)		;6a2d8: 8925
-	DC.W	$0002			;6a2da
-	DBT	D4,lb_6a2e0		;6a2dc: 50cc0002
-lb_6a2e0:
-	ST	(A4)+			;6a2e0: 50dc
-	DC.W	$0002			;6a2e2
-	ST	0(A4)			;6a2e4: 50ec0000
-	DC.W	$0006			;6a2e8
-	MOVE.B	-(A2),-11778(A4)	;6a2ea: 1962d1fe
-	SUB.B	(A6)+,D2		;6a2ee: 941e
-	DC.W	$0002			;6a2f0
-	ADDQ.L	#8,2(A4,D0.W)		;6a2f2: 50b40002
-	DBT	D4,lb_6a2fa		;6a2f6: 50cc0002
-lb_6a2fa:
-	ST	0(A4)			;6a2fa: 50ec0000
-	ORI.B	#$00,D7			;6a2fe: 00070000
-	LSR	-(A6)			;6a302: e2e6
-	OR.L	D5,(A6)			;6a304: 8b96
-	DC.W	$0002			;6a306
-	ADDQ.L	#8,2(A4,D0.W)		;6a308: 50b40002
-	DC.W	$50bc			;6a30c
-	DC.W	$0002			;6a30e
-	ST	0(A4)			;6a310: 50ec0000
-	DC.W	$0007			;6a314
-	OR.L	#$f2c00000,D4		;6a316: 88bcf2c00000
-	DC.W	$0002			;6a31c
-	ST	D4			;6a31e: 50c4
-	DC.W	$0002			;6a320
-	DBT	D4,lb_6a326		;6a322: 50cc0002
-lb_6a326:
-	ST	(A4)			;6a326: 50d4
-	ORI.B	#$05,D0			;6a328: 00000005
-	OR.L	#$f2c00000,D4		;6a32c: 88bcf2c00000
-	DC.W	$0002			;6a332
-	DBT	D4,lb_6a338		;6a334: 50cc0002
-lb_6a338:
-	ST	(A4)			;6a338: 50d4
-	DC.W	$0002			;6a33a
-	ST	(A4)+			;6a33c: 50dc
-	ORI.B	#$05,D0			;6a33e: 00000005
-	SUB.B	-17040(A0),D6		;6a342: 9c28bd70
-	ORI.B	#$02,D0			;6a346: 00000002
-	ADDQ.L	#8,-(A4)		;6a34a: 50a4
-	DC.W	$0002			;6a34c
-	ADDQ.L	#8,2(A4,D0.W)		;6a34e: 50b40002
-	ST	D4			;6a352: 50c4
-	ORI.B	#$0e,D0			;6a354: 0000000e
-	SUB.B	-17040(A0),D6		;6a358: 9c28bd70
-	ORI.B	#$02,D0			;6a35c: 00000002
-	ADDQ.L	#8,2(A4,D0.W)		;6a360: 50b40002
-	ST	D4			;6a364: 50c4
-	DC.W	$0002			;6a366
-	DC.W	$50cc			;6a368
-	ORI.B	#$0e,D0			;6a36a: 0000000e
-	MOVEQ	#0,D4			;6a36e: 7800
-	dc.l  $0			;6a370: 00000000
-	DC.W	$0002			;6a374
-	ADDQ.L	#8,2(A4)		;6a376: 50ac0002
-	DC.W	$50bc			;6a37a
-	DC.W	$0002			;6a37c
-	ST	0(A4)			;6a37e: 50ec0000
-	DC.W	$0007			;6a382
-	MOVEQ	#0,D4			;6a384: 7800
-	dc.l  $0			;6a386: 00000000
-	DC.W	$0002			;6a38a
-	ADDQ.L	#8,2(A4)		;6a38c: 50ac0002
-	ST	-(A4)			;6a390: 50e4
-	DC.W	$0002			;6a392
-	ST	0(A4)			;6a394: 50ec0000
-	ORI.B	#$00,D7			;6a398: 00070000
-	OR.B	D0,D4			;6a39c: 8800
-	ORI.B	#$02,D0			;6a39e: 00000002
-	ADDQ.L	#8,-(A4)		;6a3a2: 50a4
-	DC.W	$0002			;6a3a4
-	ADDQ.L	#8,2(A4)		;6a3a6: 50ac0002
-	ADDQ.L	#8,0(A4,D0.W)		;6a3aa: 50b40000
-	DC.W	$000e			;6a3ae
-	DC.W	$0000			;6a3b0
-	OR.B	D0,D4			;6a3b2: 8800
-	ORI.B	#$02,D0			;6a3b4: 00000002
-	ADDQ.L	#8,2(A4)		;6a3b8: 50ac0002
-	ADDQ.L	#8,2(A4,D0.W)		;6a3bc: 50b40002
-	DC.W	$50bc			;6a3c0
-	ORI.B	#$0e,D0			;6a3c2: 0000000e
+	dc.w	$0100	;69a98
+	dc.w	$004a	;69a9a
+	dc.w	$0055	;69a9c
+	dc.w	$01ca	;69a9e
+	dc.w	$0000	;69aa0
+	dc.w	$0000	;69aa2
+	dc.w	$0000	;69aa4
+	dc.w	$ff70	;69aa6
+	dc.w	$ff88	;69aa8
+	dc.w	$0054	;69aaa
+	dc.w	$0048	;69aac
+	dc.w	$ff88	;69aae
+	dc.w	$006c	;69ab0
+	dc.w	$0078	;69ab2
+	dc.w	$ff88	;69ab4
+	dc.w	$0054	;69ab6
+	dc.w	$0078	;69ab8
+	dc.w	$ff88	;69aba
+	dc.w	$ffac	;69abc
+	dc.w	$0048	;69abe
+	dc.w	$ff88	;69ac0
+	dc.w	$ff94	;69ac2
+	dc.w	$ff70	;69ac4
+	dc.w	$ff88	;69ac6
+	dc.w	$ffac	;69ac8
+	dc.w	$ff70	;69aca
+	dc.w	$0000	;69acc
+	dc.w	$ff7c	;69ace
+	dc.w	$0048	;69ad0
+	dc.w	$0000	;69ad2
+	dc.w	$ff64	;69ad4
+	dc.w	$00a8	;69ad6
+	dc.w	$0000	;69ad8
+	dc.w	$ff94	;69ada
+	dc.w	$00a8	;69adc
+	dc.w	$0000	;69ade
+	dc.w	$006c	;69ae0
+	dc.w	$0048	;69ae2
+	dc.w	$0000	;69ae4
+	dc.w	$009c	;69ae6
+	dc.w	$ff70	;69ae8
+	dc.w	$0000	;69aea
+	dc.w	$0084	;69aec
+	dc.w	$ff40	;69aee
+	dc.w	$ffb8	;69af0
+	dc.w	$0054	;69af2
+	dc.w	$ff40	;69af4
+	dc.w	$ffb8	;69af6
+	dc.w	$ffac	;69af8
+	dc.w	$ff70	;69afa
+	dc.w	$ffe8	;69afc
+	dc.w	$0054	;69afe
+	dc.w	$ff70	;69b00
+	dc.w	$ffe8	;69b02
+	dc.w	$ffac	;69b04
+	dc.w	$0000	;69b06
+	dc.w	$ff88	;69b08
+	dc.w	$ffe8	;69b0a
+	dc.w	$0000	;69b0c
+	dc.w	$ff88	;69b0e
+	dc.w	$ffb8	;69b10
+	dc.w	$003c	;69b12
+	dc.w	$ff88	;69b14
+	dc.w	$ff94	;69b16
+	dc.w	$0078	;69b18
+	dc.w	$ff88	;69b1a
+	dc.w	$ffb8	;69b1c
+	dc.w	$0078	;69b1e
+	dc.w	$ff88	;69b20
+	dc.w	$ffe8	;69b22
+	dc.w	$003c	;69b24
+	dc.w	$ff88	;69b26
+	dc.w	$000c	;69b28
+	dc.w	$000c	;69b2a
+	dc.w	$ff58	;69b2c
+	dc.w	$ffdc	;69b2e
+	dc.w	$000c	;69b30
+	dc.w	$ff58	;69b32
+	dc.w	$ffc4	;69b34
+	dc.w	$003c	;69b36
+	dc.w	$ff58	;69b38
+	dc.w	$ffa0	;69b3a
+	dc.w	$006c	;69b3c
+	dc.w	$ff58	;69b3e
+	dc.w	$ffc4	;69b40
+	dc.w	$006c	;69b42
+	dc.w	$ff58	;69b44
+	dc.w	$ffdc	;69b46
+	dc.w	$003c	;69b48
+	dc.w	$ff58	;69b4a
+	dc.w	$0000	;69b4c
+	dc.w	$ffa0	;69b4e
+	dc.w	$ff88	;69b50
+	dc.w	$0048	;69b52
+	dc.w	$ffa0	;69b54
+	dc.w	$ff88	;69b56
+	dc.w	$0018	;69b58
+	dc.w	$ffb8	;69b5a
+	dc.w	$ff88	;69b5c
+	dc.w	$0000	;69b5e
+	dc.w	$ffd0	;69b60
+	dc.w	$ff88	;69b62
+	dc.w	$0018	;69b64
+	dc.w	$ffd0	;69b66
+	dc.w	$ff88	;69b68
+	dc.w	$0048	;69b6a
+	dc.w	$ffb8	;69b6c
+	dc.w	$ff88	;69b6e
+	dc.w	$0060	;69b70
+	dc.w	$0081	;69b72
+	dc.w	$ffa0	;69b74
+	dc.w	$0018	;69b76
+	dc.w	$0090	;69b78
+	dc.w	$ffc4	;69b7a
+	dc.w	$0000	;69b7c
+	dc.w	$009e	;69b7e
+	dc.w	$ffe8	;69b80
+	dc.w	$0018	;69b82
+	dc.w	$009e	;69b84
+	dc.w	$ffe8	;69b86
+	dc.w	$0030	;69b88
+	dc.w	$0090	;69b8a
+	dc.w	$ffc4	;69b8c
+	dc.w	$0048	;69b8e
+	dc.w	$0081	;69b90
+	dc.w	$ffa0	;69b92
+	dc.w	$0030	;69b94
+	dc.w	$0030	;69b96
+	dc.w	$fed4	;69b98
+	dc.w	$ffdc	;69b9a
+	dc.w	$0054	;69b9c
+	dc.w	$fed4	;69b9e
+	dc.w	$ffdc	;69ba0
+	dc.w	$0030	;69ba2
+	dc.w	$fed4	;69ba4
+	dc.w	$ffc4	;69ba6
+	dc.w	$0054	;69ba8
+	dc.w	$fed4	;69baa
+	dc.w	$ffc4	;69bac
+	dc.w	$0028	;69bae
+	dc.w	$fee0	;69bb0
+	dc.w	$ffe4	;69bb2
+	dc.w	$0028	;69bb4
+	dc.w	$fee0	;69bb6
+	dc.w	$ffbd	;69bb8
+	dc.w	$0024	;69bba
+	dc.w	$ff04	;69bbc
+	dc.w	$ffe8	;69bbe
+	dc.w	$0024	;69bc0
+	dc.w	$ff04	;69bc2
+	dc.w	$ffb8	;69bc4
+	dc.w	$0054	;69bc6
+	dc.w	$ff04	;69bc8
+	dc.w	$ffe8	;69bca
+	dc.w	$0054	;69bcc
+	dc.w	$ff04	;69bce
+	dc.w	$ffb8	;69bd0
+	dc.w	$0048	;69bd2
+	dc.w	$ff10	;69bd4
+	dc.w	$ffdc	;69bd6
+	dc.w	$0030	;69bd8
+	dc.w	$ff10	;69bda
+	dc.w	$ffc4	;69bdc
+	dc.w	$0030	;69bde
+	dc.w	$ff10	;69be0
+	dc.w	$ffdc	;69be2
+	dc.w	$0048	;69be4
+	dc.w	$ff10	;69be6
+	dc.w	$ffc4	;69be8
+	dc.w	$0030	;69bea
+	dc.w	$ff10	;69bec
+	dc.w	$fff4	;69bee
+	dc.w	$0030	;69bf0
+	dc.w	$ff10	;69bf2
+	dc.w	$ffac	;69bf4
+	dc.w	$0054	;69bf6
+	dc.w	$ff10	;69bf8
+	dc.w	$ffac	;69bfa
+	dc.w	$0054	;69bfc
+	dc.w	$ff10	;69bfe
+	dc.w	$fff4	;69c00
+	dc.w	$0024	;69c02
+	dc.w	$ff58	;69c04
+	dc.w	$fff4	;69c06
+	dc.w	$0024	;69c08
+	dc.w	$ff58	;69c0a
+	dc.w	$ffac	;69c0c
+	dc.w	$0054	;69c0e
+	dc.w	$ff58	;69c10
+	dc.w	$ffac	;69c12
+	dc.w	$0054	;69c14
+	dc.w	$ff58	;69c16
+	dc.w	$fff4	;69c18
+	dc.w	$0040	;69c1a
+	dc.w	$ff10	;69c1c
+	dc.w	$fff4	;69c1e
+	dc.w	$0040	;69c20
+	dc.w	$ff10	;69c22
+	dc.w	$ffac	;69c24
+	dc.w	$0040	;69c26
+	dc.w	$ff4c	;69c28
+	dc.w	$000c	;69c2a
+	dc.w	$0040	;69c2c
+	dc.w	$ff4c	;69c2e
+	dc.w	$ff94	;69c30
+	dc.w	$0030	;69c32
+	dc.w	$ff4c	;69c34
+	dc.w	$fff4	;69c36
+	dc.w	$0030	;69c38
+	dc.w	$ff4c	;69c3a
+	dc.w	$ffac	;69c3c
+	dc.w	$0054	;69c3e
+	dc.w	$ff4c	;69c40
+	dc.w	$fff4	;69c42
+	dc.w	$0054	;69c44
+	dc.w	$ff4c	;69c46
+	dc.w	$ffac	;69c48
+	dc.w	$003e	;69c4a
+	dc.w	$ff40	;69c4c
+	dc.w	$0000	;69c4e
+	dc.w	$003e	;69c50
+	dc.w	$ff40	;69c52
+	dc.w	$ffa0	;69c54
+	dc.w	$0000	;69c56
+	dc.w	$ff58	;69c58
+	dc.w	$0018	;69c5a
+	dc.w	$0000	;69c5c
+	dc.w	$ff58	;69c5e
+	dc.w	$ff88	;69c60
+	dc.w	$8800	;69c62
+	dc.w	$0000	;69c64
+	dc.w	$0000	;69c66
+	dc.w	$0002	;69c68
+	dc.w	$4f64	;69c6a
+	dc.w	$0002	;69c6c
+	dc.w	$4f8c	;69c6e
+	dc.w	$0002	;69c70
+	dc.w	$4fbc	;69c72
+	dc.w	$0000	;69c74
+	dc.w	$0011	;69c76
+	dc.w	$8800	;69c78
+	dc.w	$0000	;69c7a
+	dc.w	$0000	;69c7c
+	dc.w	$0002	;69c7e
+	dc.w	$4f8c	;69c80
+	dc.w	$0002	;69c82
+	dc.w	$4f94	;69c84
+	dc.w	$0002	;69c86
+	dc.w	$4fbc	;69c88
+	dc.w	$0000	;69c8a
+	dc.w	$0011	;69c8c
+	dc.w	$0000	;69c8e
+	dc.w	$0000	;69c90
+	dc.w	$8800	;69c92
+	dc.w	$0002	;69c94
+	dc.w	$4f8c	;69c96
+	dc.w	$0002	;69c98
+	dc.w	$4fcc	;69c9a
+	dc.w	$0002	;69c9c
+	dc.w	$4fdc	;69c9e
+	dc.w	$0000	;69ca0
+	dc.w	$000c	;69ca2
+	dc.w	$0000	;69ca4
+	dc.w	$0000	;69ca6
+	dc.w	$7800	;69ca8
+	dc.w	$0002	;69caa
+	dc.w	$4f64	;69cac
+	dc.w	$0002	;69cae
+	dc.w	$4fc4	;69cb0
+	dc.w	$0002	;69cb2
+	dc.w	$4fd4	;69cb4
+	dc.w	$0000	;69cb6
+	dc.w	$000c	;69cb8
+	dc.w	$ab26	;69cba
+	dc.w	$54da	;69cbc
+	dc.w	$0000	;69cbe
+	dc.w	$0002	;69cc0
+	dc.w	$4fc4	;69cc2
+	dc.w	$0002	;69cc4
+	dc.w	$4fd4	;69cc6
+	dc.w	$0002	;69cc8
+	dc.w	$4fdc	;69cca
+	dc.w	$0000	;69ccc
+	dc.w	$0001	;69cce
+	dc.w	$ab26	;69cd0
+	dc.w	$54da	;69cd2
+	dc.w	$0000	;69cd4
+	dc.w	$0002	;69cd6
+	dc.w	$4fc4	;69cd8
+	dc.w	$0002	;69cda
+	dc.w	$4fcc	;69cdc
+	dc.w	$0002	;69cde
+	dc.w	$4fdc	;69ce0
+	dc.w	$0000	;69ce2
+	dc.w	$0001	;69ce4
+	dc.w	$f3b0	;69ce6
+	dc.w	$d3ac	;69ce8
+	dc.w	$6ed4	;69cea
+	dc.w	$0002	;69cec
+	dc.w	$4f64	;69cee
+	dc.w	$0002	;69cf0
+	dc.w	$4fb4	;69cf2
+	dc.w	$0002	;69cf4
+	dc.w	$4fbc	;69cf6
+	dc.w	$0000	;69cf8
+	dc.w	$000c	;69cfa
+	dc.w	$f3b0	;69cfc
+	dc.w	$d3ac	;69cfe
+	dc.w	$6ed4	;69d00
+	dc.w	$0002	;69d02
+	dc.w	$4f64	;69d04
+	dc.w	$0002	;69d06
+	dc.w	$4f6c	;69d08
+	dc.w	$0002	;69d0a
+	dc.w	$4fb4	;69d0c
+	dc.w	$0000	;69d0e
+	dc.w	$000c	;69d10
+	dc.w	$f3b0	;69d12
+	dc.w	$d3ac	;69d14
+	dc.w	$912c	;69d16
+	dc.w	$0002	;69d18
+	dc.w	$4f8c	;69d1a
+	dc.w	$0002	;69d1c
+	dc.w	$4f94	;69d1e
+	dc.w	$0002	;69d20
+	dc.w	$4f9c	;69d22
+	dc.w	$0000	;69d24
+	dc.w	$000c	;69d26
+	dc.w	$f3b0	;69d28
+	dc.w	$d3ac	;69d2a
+	dc.w	$912c	;69d2c
+	dc.w	$0002	;69d2e
+	dc.w	$4f84	;69d30
+	dc.w	$0002	;69d32
+	dc.w	$4f8c	;69d34
+	dc.w	$0002	;69d36
+	dc.w	$4f9c	;69d38
+	dc.w	$0000	;69d3a
+	dc.w	$000c	;69d3c
+	dc.w	$3287	;69d3e
+	dc.w	$d794	;69d40
+	dc.w	$650e	;69d42
+	dc.w	$0002	;69d44
+	dc.w	$4f6c	;69d46
+	dc.w	$0002	;69d48
+	dc.w	$4fac	;69d4a
+	dc.w	$0002	;69d4c
+	dc.w	$4fb4	;69d4e
+	dc.w	$0000	;69d50
+	dc.w	$0014	;69d52
+	dc.w	$3287	;69d54
+	dc.w	$d794	;69d56
+	dc.w	$650e	;69d58
+	dc.w	$0002	;69d5a
+	dc.w	$4f6c	;69d5c
+	dc.w	$0002	;69d5e
+	dc.w	$4f74	;69d60
+	dc.w	$0002	;69d62
+	dc.w	$4fac	;69d64
+	dc.w	$0000	;69d66
+	dc.w	$0014	;69d68
+	dc.w	$3287	;69d6a
+	dc.w	$d794	;69d6c
+	dc.w	$9af2	;69d6e
+	dc.w	$0002	;69d70
+	dc.w	$4f84	;69d72
+	dc.w	$0002	;69d74
+	dc.w	$4f9c	;69d76
+	dc.w	$0002	;69d78
+	dc.w	$4fa4	;69d7a
+	dc.w	$0000	;69d7c
+	dc.w	$0014	;69d7e
+	dc.w	$3287	;69d80
+	dc.w	$d794	;69d82
+	dc.w	$9af2	;69d84
+	dc.w	$0002	;69d86
+	dc.w	$4f7c	;69d88
+	dc.w	$0002	;69d8a
+	dc.w	$4f84	;69d8c
+	dc.w	$0002	;69d8e
+	dc.w	$4fa4	;69d90
+	dc.w	$0000	;69d92
+	dc.w	$0014	;69d94
+	dc.w	$6f6a	;69d96
+	dc.w	$d36f	;69d98
+	dc.w	$0000	;69d9a
+	dc.w	$0002	;69d9c
+	dc.w	$4f74	;69d9e
+	dc.w	$0002	;69da0
+	dc.w	$4f7c	;69da2
+	dc.w	$0002	;69da4
+	dc.w	$4fac	;69da6
+	dc.w	$0000	;69da8
+	dc.w	$000c	;69daa
+	dc.w	$6f6a	;69dac
+	dc.w	$d36f	;69dae
+	dc.w	$0000	;69db0
+	dc.l	lb_24f7c	;69db2
+	dc.l	lb_24fa4	;69db6
+	dc.l	lb_24fac	;69dba
+	dc.w	$0000	;69dbe
+	dc.w	$000c	;69dc0
+	dc.w	$6ec4	;69dc2
+	dc.w	$d1d9	;69dc4
+	dc.w	$0000	;69dc6
+	dc.l	lb_25074	;69dc8
+	dc.l	lb_2507c	;69dcc
+	dc.l	lb_2509c	;69dd0
+	dc.w	$0000	;69dd4
+	dc.w	$0001	;69dd6
+	dc.w	$6ec4	;69dd8
+	dc.w	$d1d9	;69dda
+	dc.w	$0000	;69ddc
+	dc.l	lb_2507c	;69dde
+	dc.l	lb_25094	;69de2
+	dc.l	lb_2509c	;69de6
+	dc.w	$0000	;69dea
+	dc.w	$0001	;69dec
+	dc.w	$6fd7	;69dee
+	dc.w	$d482	;69df0
+	dc.w	$0000	;69df2
+	dc.l	lb_2507c	;69df4
+	dc.l	lb_2508c	;69df8
+	dc.l	lb_25094	;69dfc
+	dc.w	$0000	;69e00
+	dc.w	$0001	;69e02
+	dc.w	$6fd7	;69e04
+	dc.w	$d482	;69e06
+	dc.w	$0000	;69e08
+	dc.l	lb_2507c	;69e0a
+	dc.l	lb_25084	;69e0e
+	dc.l	lb_2508c	;69e12
+	dc.w	$0000	;69e16
+	dc.w	$0001	;69e18
+	dc.w	$ab26	;69e1a
+	dc.w	$ab26	;69e1c
+	dc.w	$0000	;69e1e
+	dc.l	lb_24f64	;69e20
+	dc.l	lb_24fc4	;69e24
+	dc.l	lb_24fcc	;69e28
+	dc.w	$0000	;69e2c
+	dc.w	$0014	;69e2e
+	dc.w	$ab26	;69e30
+	dc.w	$ab26	;69e32
+	dc.w	$0000	;69e34
+	dc.l	lb_24f64	;69e36
+	dc.l	lb_24f8c	;69e3a
+	dc.l	lb_24fcc	;69e3e
+	dc.w	$0000	;69e42
+	dc.w	$0014	;69e44
+	dc.w	$0000	;69e46
+	dc.w	$8800	;69e48
+	dc.w	$0000	;69e4a
+	dc.l	lb_24f64	;69e4c
+	dc.l	lb_24f6c	;69e50
+	dc.l	lb_24f8c	;69e54
+	dc.w	$0000	;69e58
+	dc.w	$0004	;69e5a
+	dc.w	$0000	;69e5c
+	dc.w	$8800	;69e5e
+	dc.w	$0000	;69e60
+	dc.l	lb_24f6c	;69e62
+	dc.l	lb_24f74	;69e66
+	dc.l	lb_24f8c	;69e6a
+	dc.w	$0000	;69e6e
+	dc.w	$0004	;69e70
+	dc.w	$0000	;69e72
+	dc.w	$8800	;69e74
+	dc.w	$0000	;69e76
+	dc.l	lb_24f74	;69e78
+	dc.l	lb_24f7c	;69e7c
+	dc.l	lb_24f8c	;69e80
+	dc.w	$0000	;69e84
+	dc.w	$0004	;69e86
+	dc.w	$0000	;69e88
+	dc.w	$8801	;69e8a
+	dc.w	$0000	;69e8c
+	dc.l	lb_24f7c	;69e8e
+	dc.l	lb_24f84	;69e92
+	dc.l	lb_24f8c	;69e96
+	dc.w	$0000	;69e9a
+	dc.w	$0004	;69e9c
+	dc.w	$0000	;69e9e
+	dc.w	$8800	;69ea0
+	dc.w	$0000	;69ea2
+	dc.l	lb_25044	;69ea4
+	dc.l	lb_2504c	;69ea8
+	dc.l	lb_2506c	;69eac
+	dc.w	$0000	;69eb0
+	dc.w	$000c	;69eb2
+	dc.w	$0000	;69eb4
+	dc.w	$8800	;69eb6
+	dc.w	$0000	;69eb8
+	dc.l	lb_2504c	;69eba
+	dc.l	lb_25054	;69ebe
+	dc.l	lb_2506c	;69ec2
+	dc.w	$0000	;69ec6
+	dc.w	$000c	;69ec8
+	dc.w	$0000	;69eca
+	dc.w	$8800	;69ecc
+	dc.w	$0000	;69ece
+	dc.l	lb_25054	;69ed0
+	dc.l	lb_2505c	;69ed4
+	dc.l	lb_2506c	;69ed8
+	dc.w	$0000	;69edc
+	dc.w	$000c	;69ede
+	dc.w	$0000	;69ee0
+	dc.w	$8800	;69ee2
+	dc.w	$0000	;69ee4
+	dc.l	lb_2505c	;69ee6
+	dc.l	lb_25064	;69eea
+	dc.l	lb_2506c	;69eee
+	dc.w	$0000	;69ef2
+	dc.w	$000c	;69ef4
+	dc.w	$8b96	;69ef6
+	dc.w	$e2e6	;69ef8
+	dc.w	$0000	;69efa
+	dc.l	lb_24fe4	;69efc
+	dc.l	lb_25014	;69f00
+	dc.l	lb_2501c	;69f04
+	dc.w	$0000	;69f08
+	dc.w	$000c	;69f0a
+	dc.w	$8b96	;69f0c
+	dc.w	$e2e6	;69f0e
+	dc.w	$0000	;69f10
+	dc.l	lb_24fe4	;69f12
+	dc.l	lb_24fec	;69f16
+	dc.l	lb_2501c	;69f1a
+	dc.w	$0000	;69f1e
+	dc.w	$000c	;69f20
+	dc.w	$bc0b	;69f22
+	dc.w	$d85c	;69f24
+	dc.w	$a564	;69f26
+	dc.l	lb_24fec	;69f28
+	dc.l	lb_2501c	;69f2c
+	dc.l	lb_25024	;69f30
+	dc.w	$0000	;69f34
+	dc.w	$0001	;69f36
+	dc.w	$c3a2	;69f38
+	dc.w	$e6d9	;69f3a
+	dc.w	$9b64	;69f3c
+	dc.l	lb_24fec	;69f3e
+	dc.l	lb_24ff4	;69f42
+	dc.l	lb_25024	;69f46
+	dc.w	$0000	;69f4a
+	dc.w	$0001	;69f4c
+	dc.w	$469a	;69f4e
+	dc.w	$e878	;69f50
+	dc.w	$a1de	;69f52
+	dc.l	lb_24ff4	;69f54
+	dc.l	lb_25024	;69f58
+	dc.l	lb_2502c	;69f5c
+	dc.w	$0000	;69f60
+	dc.w	$000c	;69f62
+	dc.w	$3a66	;69f64
+	dc.w	$d912	;69f66
+	dc.w	$9eab	;69f68
+	dc.l	lb_24ff4	;69f6a
+	dc.l	lb_24ffc	;69f6e
+	dc.l	lb_2502c	;69f72
+	dc.w	$0000	;69f76
+	dc.w	$000c	;69f78
+	dc.w	$746a	;69f7a
+	dc.w	$e2e6	;69f7c
+	dc.w	$0000	;69f7e
+	dc.l	lb_24ffc	;69f80
+	dc.l	lb_2502c	;69f84
+	dc.l	lb_25034	;69f88
+	dc.w	$0000	;69f8c
+	dc.w	$0001	;69f8e
+	dc.w	$746a	;69f90
+	dc.w	$e2e6	;69f92
+	dc.w	$0000	;69f94
+	dc.l	lb_24ffc	;69f96
+	dc.l	lb_25004	;69f9a
+	dc.l	lb_25034	;69f9e
+	dc.w	$0000	;69fa2
+	dc.w	$0001	;69fa4
+	dc.w	$43f5	;69fa6
+	dc.w	$d85c	;69fa8
+	dc.w	$5a9c	;69faa
+	dc.l	lb_25004	;69fac
+	dc.l	lb_25034	;69fb0
+	dc.l	lb_2503c	;69fb4
+	dc.w	$0000	;69fb8
+	dc.w	$000c	;69fba
+	dc.w	$3c5e	;69fbc
+	dc.w	$e6d9	;69fbe
+	dc.w	$649c	;69fc0
+	dc.l	lb_25004	;69fc2
+	dc.l	lb_2500c	;69fc6
+	dc.l	lb_2503c	;69fca
+	dc.w	$0000	;69fce
+	dc.w	$000c	;69fd0
+	dc.w	$b966	;69fd2
+	dc.w	$e878	;69fd4
+	dc.w	$5e22	;69fd6
+	dc.l	lb_2500c	;69fd8
+	dc.l	lb_25014	;69fdc
+	dc.l	lb_2503c	;69fe0
+	dc.w	$0000	;69fe4
+	dc.w	$0001	;69fe6
+	dc.w	$c59a	;69fe8
+	dc.w	$d912	;69fea
+	dc.w	$6155	;69fec
+	dc.l	lb_24fe4	;69fee
+	dc.l	lb_2500c	;69ff2
+	dc.l	lb_25014	;69ff6
+	dc.w	$0000	;69ffa
+	dc.w	$0001	;69ffc
+	dc.w	$0000	;69ffe
+	dc.w	$8800	;6a000
+	dc.w	$0000	;6a002
+	dc.l	lb_25014	;6a004
+	dc.l	lb_2501c	;6a008
+	dc.l	lb_25024	;6a00c
+	dc.w	$0000	;6a010
+	dc.w	$0004	;6a012
+	dc.w	$0000	;6a014
+	dc.w	$8800	;6a016
+	dc.w	$0000	;6a018
+	dc.l	lb_25014	;6a01a
+	dc.l	lb_25024	;6a01e
+	dc.l	lb_2503c	;6a022
+	dc.w	$0000	;6a026
+	dc.w	$0004	;6a028
+	dc.w	$0000	;6a02a
+	dc.w	$8800	;6a02c
+	dc.w	$0000	;6a02e
+	dc.l	lb_25024	;6a030
+	dc.l	lb_25034	;6a034
+	dc.l	lb_2503c	;6a038
+	dc.w	$0000	;6a03c
+	dc.w	$0004	;6a03e
+	dc.w	$0000	;6a040
+	dc.w	$8800	;6a042
+	dc.w	$0000	;6a044
+	dc.l	lb_25024	;6a046
+	dc.l	lb_2502c	;6a04a
+	dc.l	lb_25034	;6a04e
+	dc.w	$0000	;6a052
+	dc.w	$0004	;6a054
+	dc.w	$0000	;6a056
+	dc.w	$0000	;6a058
+	dc.w	$8800	;6a05a
+	dc.l	lb_2511c	;6a05c
+	dc.l	lb_25124	;6a060
+	dc.l	lb_2513c	;6a064
+	dc.w	$0000	;6a068
+	dc.w	$0007	;6a06a
+	dc.w	$0000	;6a06c
+	dc.w	$0000	;6a06e
+	dc.w	$8800	;6a070
+	dc.l	lb_25124	;6a072
+	dc.l	lb_2513c	;6a076
+	dc.l	lb_25144	;6a07a
+	dc.w	$0000	;6a07e
+	dc.w	$0007	;6a080
+	dc.w	$89a2	;6a082
+	dc.w	$ec46	;6a084
+	dc.w	$0000	;6a086
+	dc.l	lb_25114	;6a088
+	dc.l	lb_2511c	;6a08c
+	dc.l	lb_25134	;6a090
+	dc.w	$0000	;6a094
+	dc.w	$000e	;6a096
+	dc.w	$89a2	;6a098
+	dc.w	$ec46	;6a09a
+	dc.w	$0000	;6a09c
+	dc.l	lb_2511c	;6a09e
+	dc.l	lb_25134	;6a0a2
+	dc.l	lb_2513c	;6a0a6
+	dc.w	$0000	;6a0aa
+	dc.w	$000e	;6a0ac
+	dc.w	$0000	;6a0ae
+	dc.w	$0000	;6a0b0
+	dc.w	$7800	;6a0b2
+	dc.l	lb_25114	;6a0b4
+	dc.l	lb_2512c	;6a0b8
+	dc.l	lb_25134	;6a0bc
+	dc.w	$0000	;6a0c0
+	dc.w	$0007	;6a0c2
+	dc.w	$0000	;6a0c4
+	dc.w	$0000	;6a0c6
+	dc.w	$7800	;6a0c8
+	dc.l	lb_25114	;6a0ca
+	dc.l	lb_25134	;6a0ce
+	dc.l	lb_2514c	;6a0d2
+	dc.w	$0000	;6a0d6
+	dc.w	$0007	;6a0d8
+	dc.w	$7800	;6a0da
+	dc.w	$0000	;6a0dc
+	dc.w	$0000	;6a0de
+	dc.l	lb_25124	;6a0e0
+	dc.l	lb_2512c	;6a0e4
+	dc.l	lb_25144	;6a0e8
+	dc.w	$0000	;6a0ec
+	dc.w	$000e	;6a0ee
+	dc.w	$7800	;6a0f0
+	dc.w	$0000	;6a0f2
+	dc.w	$0000	;6a0f4
+	dc.l	lb_2512c	;6a0f6
+	dc.l	lb_25144	;6a0fa
+	dc.l	lb_2514c	;6a0fe
+	dc.w	$0000	;6a102
+	dc.w	$000e	;6a104
+	dc.w	$0000	;6a106
+	dc.w	$8800	;6a108
+	dc.w	$0000	;6a10a
+	dc.l	lb_25114	;6a10c
+	dc.l	lb_2511c	;6a110
+	dc.l	lb_2512c	;6a114
+	dc.w	$0000	;6a118
+	dc.w	$000e	;6a11a
+	dc.w	$0000	;6a11c
+	dc.w	$8800	;6a11e
+	dc.w	$0000	;6a120
+	dc.l	lb_2511c	;6a122
+	dc.l	lb_25124	;6a126
+	dc.l	lb_2512c	;6a12a
+	dc.w	$0000	;6a12e
+	dc.w	$000e	;6a130
+	dc.w	$9e87	;6a132
+	dc.w	$e602	;6a134
+	dc.w	$bf05	;6a136
+	dc.l	lb_2515c	;6a138
+	dc.l	lb_2516c	;6a13c
+	dc.l	lb_2517c	;6a140
+	dc.w	$0000	;6a144
+	dc.w	$0007	;6a146
+	dc.w	$594e	;6a148
+	dc.w	$e23c	;6a14a
+	dc.w	$b595	;6a14c
+	dc.l	lb_2515c	;6a14e
+	dc.l	lb_2516c	;6a152
+	dc.l	lb_2518c	;6a156
+	dc.w	$0000	;6a15a
+	dc.w	$0007	;6a15c
+	dc.w	$ca6e	;6a15e
+	dc.w	$9b8e	;6a160
+	dc.w	$25f2	;6a162
+	dc.l	lb_2517c	;6a164
+	dc.l	lb_2519c	;6a168
+	dc.l	lb_251ac	;6a16c
+	dc.w	$0000	;6a170
+	dc.w	$000e	;6a172
+	dc.w	$0000	;6a174
+	dc.w	$ab26	;6a176
+	dc.w	$ab26	;6a178
+	dc.l	lb_2516c	;6a17a
+	dc.l	lb_2519c	;6a17e
+	dc.l	lb_251ac	;6a182
+	dc.w	$0000	;6a186
+	dc.w	$000e	;6a188
+	dc.w	$9e87	;6a18a
+	dc.w	$e602	;6a18c
+	dc.w	$40fb	;6a18e
+	dc.l	lb_25154	;6a190
+	dc.l	lb_25164	;6a194
+	dc.l	lb_25174	;6a198
+	dc.w	$0000	;6a19c
+	dc.w	$0007	;6a19e
+	dc.w	$594e	;6a1a0
+	dc.w	$e23c	;6a1a2
+	dc.w	$4a6b	;6a1a4
+	dc.l	lb_25154	;6a1a6
+	dc.l	lb_25164	;6a1aa
+	dc.l	lb_25184	;6a1ae
+	dc.w	$0000	;6a1b2
+	dc.w	$0007	;6a1b4
+	dc.w	$ca6e	;6a1b6
+	dc.w	$9b8e	;6a1b8
+	dc.w	$da0e	;6a1ba
+	dc.l	lb_25174	;6a1bc
+	dc.l	lb_25194	;6a1c0
+	dc.l	lb_251a4	;6a1c4
+	dc.w	$0000	;6a1c8
+	dc.w	$000e	;6a1ca
+	dc.w	$0000	;6a1cc
+	dc.w	$ab26	;6a1ce
+	dc.w	$54da	;6a1d0
+	dc.l	lb_25164	;6a1d2
+	dc.l	lb_25194	;6a1d6
+	dc.l	lb_251a4	;6a1da
+	dc.w	$0000	;6a1de
+	dc.w	$000e	;6a1e0
+	dc.w	$54da	;6a1e2
+	dc.w	$54da	;6a1e4
+	dc.w	$0000	;6a1e6
+	dc.l	lb_250e4	;6a1e8
+	dc.l	lb_250ec	;6a1ec
+	dc.l	lb_250f4	;6a1f0
+	dc.w	$0000	;6a1f4
+	dc.w	$0006	;6a1f6
+	dc.w	$54da	;6a1f8
+	dc.w	$54da	;6a1fa
+	dc.w	$0000	;6a1fc
+	dc.l	lb_250ec	;6a1fe
+	dc.l	lb_250f4	;6a202
+	dc.l	lb_2510c	;6a206
+	dc.w	$0000	;6a20a
+	dc.w	$0006	;6a20c
+	dc.w	$0000	;6a20e
+	dc.w	$54da	;6a210
+	dc.w	$ab26	;6a212
+	dc.l	lb_250dc	;6a214
+	dc.l	lb_250ec	;6a218
+	dc.l	lb_2510c	;6a21c
+	dc.w	$0000	;6a220
+	dc.w	$0006	;6a222
+	dc.w	$0000	;6a224
+	dc.w	$54da	;6a226
+	dc.w	$ab26	;6a228
+	dc.l	lb_250dc	;6a22a
+	dc.l	lb_250fc	;6a22e
+	dc.l	lb_2510c	;6a232
+	dc.w	$0000	;6a236
+	dc.w	$0006	;6a238
+	dc.w	$ab26	;6a23a
+	dc.w	$54da	;6a23c
+	dc.w	$0000	;6a23e
+	dc.l	lb_250d4	;6a240
+	dc.l	lb_250dc	;6a244
+	dc.l	lb_250fc	;6a248
+	dc.w	$0000	;6a24c
+	dc.w	$0006	;6a24e
+	dc.w	$ab26	;6a250
+	dc.w	$54da	;6a252
+	dc.w	$0000	;6a254
+	dc.l	lb_250d4	;6a256
+	dc.l	lb_250fc	;6a25a
+	dc.l	lb_25104	;6a25e
+	dc.w	$0000	;6a262
+	dc.w	$0006	;6a264
+	dc.w	$0000	;6a266
+	dc.w	$54da	;6a268
+	dc.w	$54da	;6a26a
+	dc.l	lb_250d4	;6a26c
+	dc.l	lb_250e4	;6a270
+	dc.l	lb_250f4	;6a274
+	dc.w	$0000	;6a278
+	dc.w	$0006	;6a27a
+	dc.w	$0000	;6a27c
+	dc.w	$54da	;6a27e
+	dc.w	$54da	;6a280
+	dc.l	lb_250d4	;6a282
+	dc.l	lb_250f4	;6a286
+	dc.l	lb_25104	;6a28a
+	dc.w	$0000	;6a28e
+	dc.w	$0006	;6a290
+	dc.w	$0000	;6a292
+	dc.w	$f2c0	;6a294
+	dc.w	$7744	;6a296
+	dc.l	lb_250c4	;6a298
+	dc.l	lb_250d4	;6a29c
+	dc.l	lb_250e4	;6a2a0
+	dc.w	$0000	;6a2a4
+	dc.w	$0006	;6a2a6
+	dc.w	$1edc	;6a2a8
+	dc.w	$cea0	;6a2aa
+	dc.w	$68ed	;6a2ac
+	dc.l	lb_250a4	;6a2ae
+	dc.l	lb_250c4	;6a2b2
+	dc.l	lb_250e4	;6a2b6
+	dc.w	$0000	;6a2ba
+	dc.w	$0007	;6a2bc
+	dc.w	$0000	;6a2be
+	dc.w	$e2e6	;6a2c0
+	dc.w	$746a	;6a2c2
+	dc.l	lb_250a4	;6a2c4
+	dc.l	lb_250ac	;6a2c8
+	dc.l	lb_250e4	;6a2cc
+	dc.w	$0000	;6a2d0
+	dc.w	$0007	;6a2d2
+	dc.w	$0000	;6a2d4
+	dc.w	$ef7e	;6a2d6
+	dc.w	$8925	;6a2d8
+	dc.l	lb_250cc	;6a2da
+	dc.l	lb_250dc	;6a2de
+	dc.l	lb_250ec	;6a2e2
+	dc.w	$0000	;6a2e6
+	dc.w	$0006	;6a2e8
+	dc.w	$1962	;6a2ea
+	dc.w	$d1fe	;6a2ec
+	dc.w	$941e	;6a2ee
+	dc.l	lb_250b4	;6a2f0
+	dc.l	lb_250cc	;6a2f4
+	dc.l	lb_250ec	;6a2f8
+	dc.w	$0000	;6a2fc
+	dc.w	$0007	;6a2fe
+	dc.w	$0000	;6a300
+	dc.w	$e2e6	;6a302
+	dc.w	$8b96	;6a304
+	dc.l	lb_250b4	;6a306
+	dc.l	lb_250bc	;6a30a
+	dc.l	lb_250ec	;6a30e
+	dc.w	$0000	;6a312
+	dc.w	$0007	;6a314
+	dc.w	$88bc	;6a316
+	dc.w	$f2c0	;6a318
+	dc.w	$0000	;6a31a
+	dc.l	lb_250c4	;6a31c
+	dc.l	lb_250cc	;6a320
+	dc.l	lb_250d4	;6a324
+	dc.w	$0000	;6a328
+	dc.w	$0005	;6a32a
+	dc.w	$88bc	;6a32c
+	dc.w	$f2c0	;6a32e
+	dc.w	$0000	;6a330
+	dc.l	lb_250cc	;6a332
+	dc.l	lb_250d4	;6a336
+	dc.l	lb_250dc	;6a33a
+	dc.w	$0000	;6a33e
+	dc.w	$0005	;6a340
+	dc.w	$9c28	;6a342
+	dc.w	$bd70	;6a344
+	dc.w	$0000	;6a346
+	dc.l	lb_250a4	;6a348
+	dc.l	lb_250b4	;6a34c
+	dc.l	lb_250c4	;6a350
+	dc.w	$0000	;6a354
+	dc.w	$000e	;6a356
+	dc.w	$9c28	;6a358
+	dc.w	$bd70	;6a35a
+	dc.w	$0000	;6a35c
+	dc.l	lb_250b4	;6a35e
+	dc.l	lb_250c4	;6a362
+	dc.l	lb_250cc	;6a366
+	dc.w	$0000	;6a36a
+	dc.w	$000e	;6a36c
+	dc.w	$7800	;6a36e
+	dc.w	$0000	;6a370
+	dc.w	$0000	;6a372
+	dc.l	lb_250ac	;6a374
+	dc.l	lb_250bc	;6a378
+	dc.l	lb_250ec	;6a37c
+	dc.w	$0000	;6a380
+	dc.w	$0007	;6a382
+	dc.w	$7800	;6a384
+	dc.w	$0000	;6a386
+	dc.w	$0000	;6a388
+	dc.l	lb_250ac	;6a38a
+	dc.l	lb_250e4	;6a38e
+	dc.l	lb_250ec	;6a392
+	dc.w	$0000	;6a396
+	dc.w	$0007	;6a398
+	dc.w	$0000	;6a39a
+	dc.w	$8800	;6a39c
+	dc.w	$0000	;6a39e
+	dc.l	lb_250a4	;6a3a0
+	dc.l	lb_250ac	;6a3a4
+	dc.l	lb_250b4	;6a3a8
+	dc.w	$0000	;6a3ac
+	dc.w	$000e	;6a3ae
+	dc.w	$0000	;6a3b0
+	dc.w	$8800	;6a3b2
+	dc.w	$0000	;6a3b4
+	dc.l	lb_250ac	;6a3b6
+	dc.l	lb_250b4	;6a3ba
+	dc.l	lb_250bc	;6a3be
+	dc.w	$0000	;6a3c2
+	dc.w	$000e	;6a3c4
 lb_6a3c6:
-	BTST	D0,D0			;6a3c6: 0100
-	DC.W	$000c			;6a3c8
-	DC.W	$000d			;6a3ca
-	ORI.W	#$0000,(A6)		;6a3cc: 00560000
-	dc.l  $0			;6a3d0: 00000000
-	DC.W	$fd18			;6a3d4
-	DC.W	$ffac			;6a3d6
-	DC.W	$fff9			;6a3d8
-	DC.W	$ff58			;6a3da
-	DC.W	$ffac			;6a3dc
-	DC.W	$fff9			;6a3de
-	DC.W	$fd18			;6a3e0
-	DC.W	$ffac			;6a3e2
-	DC.W	$0007			;6a3e4
-	DC.W	$ff58			;6a3e6
-	DC.W	$ffac			;6a3e8
-	DC.W	$0007			;6a3ea
-	DC.W	$fd18			;6a3ec
-	DC.W	$ffb8			;6a3ee
-	DC.W	$fff2			;6a3f0
-	DC.W	$ff58			;6a3f2
-	DC.W	$ffb8			;6a3f4
-	DC.W	$fff2			;6a3f6
-	DC.W	$fd18			;6a3f8
-	DC.W	$ffb8			;6a3fa
-	DC.W	$000e			;6a3fc
-	DC.W	$ff58			;6a3fe
-	DC.W	$ffb8			;6a400
-	DC.W	$000e			;6a402
-	DC.W	$fd18			;6a404
-	DC.W	$ffc4			;6a406
-	DC.W	$fff9			;6a408
-	DC.W	$ff58			;6a40a
-	DC.W	$ffc4			;6a40c
-	DC.W	$fff9			;6a40e
-	DC.W	$fd18			;6a410
-	DC.W	$ffc4			;6a412
-	DC.W	$0007			;6a414
-	DC.W	$ff58			;6a416
-	DC.W	$ffc4			;6a418
-	ORI.B	#$00,D7			;6a41a: 00070000
-	DC.W	$3c76			;6a41e
-	DC.W	$67a7			;6a420
-	DC.W	$0002			;6a422
-	CHK.W	(A4),D7			;6a424: 4f94
-	DC.W	$0002			;6a426
-	CHK.W	(A4)+,D7		;6a428: 4f9c
-	DC.W	$0002			;6a42a
-	CHK.W	#$0000,D7		;6a42c: 4fbc0000
-	ORI.B	#$00,D1			;6a430: 00010000
-	DC.W	$3c76			;6a434
-	DC.W	$67a7			;6a436
-	DC.W	$0002			;6a438
-	CHK.W	(A4),D7			;6a43a: 4f94
-	DC.W	$0002			;6a43c
-	CHK.W	2(A4,D0.W),D7		;6a43e: 4fb40002
-	CHK.W	#$0000,D7		;6a442: 4fbc0000
-	ORI.B	#$00,D1			;6a446: 00010000
-	MOVEA.W	89(A6,A1.L),A6		;6a44a: 3c769859
-	DC.W	$0002			;6a44e
-	CHK.W	D4,D7			;6a450: 4f84
-	DC.W	$0002			;6a452
-	DC.W	$4f8c			;6a454
-	DC.W	$0002			;6a456
-	CHK.W	0(A4),D7		;6a458: 4fac0000
-	ORI.B	#$00,D1			;6a45c: 00010000
-	MOVEA.W	89(A6,A1.L),A6		;6a460: 3c769859
-	DC.W	$0002			;6a464
-	CHK.W	D4,D7			;6a466: 4f84
-	DC.W	$0002			;6a468
-	CHK.W	-(A4),D7		;6a46a: 4fa4
-	DC.W	$0002			;6a46c
-	CHK.W	0(A4),D7		;6a46e: 4fac0000
-	ORI.B	#$00,D1			;6a472: 00010000
-	EXG	D1,A2			;6a476: c38a
-	DC.W	$67a7			;6a478
-	DC.W	$0002			;6a47a
-	DC.W	$4f74			;6a47c
-	DC.W	$0002			;6a47e
-	DC.W	$4f7c			;6a480
-	DC.W	$0002			;6a482
-	CHK.W	(A4)+,D7		;6a484: 4f9c
-	ORI.B	#$0c,D0			;6a486: 0000000c
-	DC.W	$0000			;6a48a
-	EXG	D1,A2			;6a48c: c38a
-	DC.W	$67a7			;6a48e
-	DC.W	$0002			;6a490
-	DC.W	$4f74			;6a492
-	DC.W	$0002			;6a494
-	CHK.W	(A4),D7			;6a496: 4f94
-	DC.W	$0002			;6a498
-	CHK.W	(A4)+,D7		;6a49a: 4f9c
-	ORI.B	#$0c,D0			;6a49c: 0000000c
-	DC.W	$0000			;6a4a0
-	EXG	D1,A2			;6a4a2: c38a
-	SUB.W	(A1)+,D4		;6a4a4: 9859
-	DC.W	$0002			;6a4a6
-	DC.W	$4f64			;6a4a8
-	DC.W	$0002			;6a4aa
-	DC.W	$4f6c			;6a4ac
-	DC.W	$0002			;6a4ae
-	DC.W	$4f8c			;6a4b0
-	ORI.B	#$0c,D0			;6a4b2: 0000000c
-	DC.W	$0000			;6a4b6
-	EXG	D1,A2			;6a4b8: c38a
-	SUB.W	(A1)+,D4		;6a4ba: 9859
-	DC.W	$0002			;6a4bc
-	DC.W	$4f64			;6a4be
-	DC.W	$0002			;6a4c0
-	CHK.W	D4,D7			;6a4c2: 4f84
-	DC.W	$0002			;6a4c4
-	DC.W	$4f8c			;6a4c6
-	ORI.B	#$0c,D0			;6a4c8: 0000000c
-	DC.W	$0000			;6a4cc
-	OR.B	D0,D4			;6a4ce: 8800
-	ORI.B	#$02,D0			;6a4d0: 00000002
-	DC.W	$4f64			;6a4d4
-	DC.W	$0002			;6a4d6
-	DC.W	$4f6c			;6a4d8
-	DC.W	$0002			;6a4da
-	DC.W	$4f7c			;6a4dc
-	ORI.B	#$04,D0			;6a4de: 00000004
-	DC.W	$0000			;6a4e2
-	OR.B	D0,D4			;6a4e4: 8800
-	ORI.B	#$02,D0			;6a4e6: 00000002
-	DC.W	$4f64			;6a4ea
-	DC.W	$0002			;6a4ec
-	DC.W	$4f74			;6a4ee
-	DC.W	$0002			;6a4f0
-	DC.W	$4f7c			;6a4f2
-	ORI.B	#$04,D0			;6a4f4: 00000004
-	OR.B	D0,D4			;6a4f8: 8800
-	dc.l  $0			;6a4fa: 00000000
-	DC.W	$0002			;6a4fe
-	DC.W	$4f64			;6a500
-	DC.W	$0002			;6a502
-	DC.W	$4f74			;6a504
-	DC.W	$0002			;6a506
-	CHK.W	D4,D7			;6a508: 4f84
-	dc.l  $0			;6a50a: 00000000
-	OR.B	D0,D4			;6a50e: 8800
-	dc.l  $0			;6a510: 00000000
-	DC.W	$0002			;6a514
-	DC.W	$4f74			;6a516
-	DC.W	$0002			;6a518
-	CHK.W	D4,D7			;6a51a: 4f84
-	DC.W	$0002			;6a51c
-	CHK.W	(A4),D7			;6a51e: 4f94
-	dc.l  $0			;6a520: 00000000
-	OR.B	D0,D4			;6a524: 8800
-	dc.l  $0			;6a526: 00000000
-	DC.W	$0002			;6a52a
-	CHK.W	D4,D7			;6a52c: 4f84
-	DC.W	$0002			;6a52e
-	CHK.W	(A4),D7			;6a530: 4f94
-	DC.W	$0002			;6a532
-	CHK.W	0(A4,D0.W),D7		;6a534: 4fb40000
-	DC.W	$0000			;6a538
-	OR.B	D0,D4			;6a53a: 8800
-	dc.l  $0			;6a53c: 00000000
-	DC.W	$0002			;6a540
-	CHK.W	D4,D7			;6a542: 4f84
-	DC.W	$0002			;6a544
-	CHK.W	-(A4),D7		;6a546: 4fa4
-	DC.W	$0002			;6a548
-	CHK.W	0(A4,D0.W),D7		;6a54a: 4fb40000
-	DC.W	$0000			;6a54e
-	END
+	dc.w	$0100	;6a3c6
+	dc.w	$000c	;6a3c8
+	dc.w	$000d	;6a3ca
+	dc.w	$0056	;6a3cc
+	dc.w	$0000	;6a3ce
+	dc.w	$0000	;6a3d0
+	dc.w	$0000	;6a3d2
+	dc.w	$fd18	;6a3d4
+	dc.w	$ffac	;6a3d6
+	dc.w	$fff9	;6a3d8
+	dc.w	$ff58	;6a3da
+	dc.w	$ffac	;6a3dc
+	dc.w	$fff9	;6a3de
+	dc.w	$fd18	;6a3e0
+	dc.w	$ffac	;6a3e2
+	dc.w	$0007	;6a3e4
+	dc.w	$ff58	;6a3e6
+	dc.w	$ffac	;6a3e8
+	dc.w	$0007	;6a3ea
+	dc.w	$fd18	;6a3ec
+	dc.w	$ffb8	;6a3ee
+	dc.w	$fff2	;6a3f0
+	dc.w	$ff58	;6a3f2
+	dc.w	$ffb8	;6a3f4
+	dc.w	$fff2	;6a3f6
+	dc.w	$fd18	;6a3f8
+	dc.w	$ffb8	;6a3fa
+	dc.w	$000e	;6a3fc
+	dc.w	$ff58	;6a3fe
+	dc.w	$ffb8	;6a400
+	dc.w	$000e	;6a402
+	dc.w	$fd18	;6a404
+	dc.w	$ffc4	;6a406
+	dc.w	$fff9	;6a408
+	dc.w	$ff58	;6a40a
+	dc.w	$ffc4	;6a40c
+	dc.w	$fff9	;6a40e
+	dc.w	$fd18	;6a410
+	dc.w	$ffc4	;6a412
+	dc.w	$0007	;6a414
+	dc.w	$ff58	;6a416
+	dc.w	$ffc4	;6a418
+	dc.w	$0007	;6a41a
+	dc.w	$0000	;6a41c
+	dc.w	$3c76	;6a41e
+	dc.w	$67a7	;6a420
+	dc.l	lb_24f94	;6a422
+	dc.l	lb_24f9c	;6a426
+	dc.l	lb_24fbc	;6a42a
+	dc.w	$0000	;6a42e
+	dc.w	$0001	;6a430
+	dc.w	$0000	;6a432
+	dc.w	$3c76	;6a434
+	dc.w	$67a7	;6a436
+	dc.l	lb_24f94	;6a438
+	dc.l	lb_24fb4	;6a43c
+	dc.l	lb_24fbc	;6a440
+	dc.w	$0000	;6a444
+	dc.w	$0001	;6a446
+	dc.w	$0000	;6a448
+	dc.w	$3c76	;6a44a
+	dc.w	$9859	;6a44c
+	dc.l	lb_24f84	;6a44e
+	dc.l	lb_24f8c	;6a452
+	dc.l	lb_24fac	;6a456
+	dc.w	$0000	;6a45a
+	dc.w	$0001	;6a45c
+	dc.w	$0000	;6a45e
+	dc.w	$3c76	;6a460
+	dc.w	$9859	;6a462
+	dc.l	lb_24f84	;6a464
+	dc.l	lb_24fa4	;6a468
+	dc.l	lb_24fac	;6a46c
+	dc.w	$0000	;6a470
+	dc.w	$0001	;6a472
+	dc.w	$0000	;6a474
+	dc.w	$c38a	;6a476
+	dc.w	$67a7	;6a478
+	dc.l	lb_24f74	;6a47a
+	dc.l	lb_24f7c	;6a47e
+	dc.l	lb_24f9c	;6a482
+	dc.w	$0000	;6a486
+	dc.w	$000c	;6a488
+	dc.w	$0000	;6a48a
+	dc.w	$c38a	;6a48c
+	dc.w	$67a7	;6a48e
+	dc.l	lb_24f74	;6a490
+	dc.l	lb_24f94	;6a494
+	dc.l	lb_24f9c	;6a498
+	dc.w	$0000	;6a49c
+	dc.w	$000c	;6a49e
+	dc.w	$0000	;6a4a0
+	dc.w	$c38a	;6a4a2
+	dc.w	$9859	;6a4a4
+	dc.l	lb_24f64	;6a4a6
+	dc.l	lb_24f6c	;6a4aa
+	dc.l	lb_24f8c	;6a4ae
+	dc.w	$0000	;6a4b2
+	dc.w	$000c	;6a4b4
+	dc.w	$0000	;6a4b6
+	dc.w	$c38a	;6a4b8
+	dc.w	$9859	;6a4ba
+	dc.l	lb_24f64	;6a4bc
+	dc.l	lb_24f84	;6a4c0
+	dc.l	lb_24f8c	;6a4c4
+	dc.w	$0000	;6a4c8
+	dc.w	$000c	;6a4ca
+	dc.w	$0000	;6a4cc
+	dc.w	$8800	;6a4ce
+	dc.w	$0000	;6a4d0
+	dc.l	lb_24f64	;6a4d2
+	dc.l	lb_24f6c	;6a4d6
+	dc.l	lb_24f7c	;6a4da
+	dc.w	$0000	;6a4de
+	dc.w	$0004	;6a4e0
+	dc.w	$0000	;6a4e2
+	dc.w	$8800	;6a4e4
+	dc.w	$0000	;6a4e6
+	dc.l	lb_24f64	;6a4e8
+	dc.l	lb_24f74	;6a4ec
+	dc.l	lb_24f7c	;6a4f0
+	dc.w	$0000	;6a4f4
+	dc.w	$0004	;6a4f6
+	dc.w	$8800	;6a4f8
+	dc.w	$0000	;6a4fa
+	dc.w	$0000	;6a4fc
+	dc.l	lb_24f64	;6a4fe
+	dc.l	lb_24f74	;6a502
+	dc.l	lb_24f84	;6a506
+	dc.w	$0000	;6a50a
+	dc.w	$0000	;6a50c
+	dc.w	$8800	;6a50e
+	dc.w	$0000	;6a510
+	dc.w	$0000	;6a512
+	dc.l	lb_24f74	;6a514
+	dc.l	lb_24f84	;6a518
+	dc.l	lb_24f94	;6a51c
+	dc.w	$0000	;6a520
+	dc.w	$0000	;6a522
+	dc.w	$8800	;6a524
+	dc.w	$0000	;6a526
+	dc.w	$0000	;6a528
+	dc.l	lb_24f84	;6a52a
+	dc.l	lb_24f94	;6a52e
+	dc.l	lb_24fb4	;6a532
+	dc.w	$0000	;6a536
+	dc.w	$0000	;6a538
+	dc.w	$8800	;6a53a
+	dc.w	$0000	;6a53c
+	dc.w	$0000	;6a53e
+	dc.l	lb_24f84	;6a540
+	dc.l	lb_24fa4	;6a544
+	dc.l	lb_24fb4	;6a548
+	dc.w	$0000	;6a54c
+	DC.W	$0000	;6a54e
+
