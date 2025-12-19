@@ -251,7 +251,9 @@ def dump_reloc_file(reloc_offsets,binary_file,extension,pack_file,asm_as_mit=Fal
         for s in reloc_offsets:
             f.write(f"\t{long_decl}\t{hex_prefix}{s:x}\n")
 
-def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=False,asm_as_mit=False):
+def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),filter_labels=set(),pack_file=False,asm_as_mit=False):
+    if filter_labels:
+        pack_file = False # debug mode, avoid pack failure
     with open(defines.binary_file,"rb") as f:
         binary_contents = f.read()
 
@@ -297,7 +299,16 @@ def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=
             else:
                 data = f.read(hunk_size)
 
-        reloc_offsets = sorted(reloc_offsets)
+
+
+        reloc_labels = {r:get_long(binary_contents,r) for r in reloc_offsets}
+
+        if filter_labels:
+            # debug: don't relocate (allows dichotomic search of wrong relocs)
+            reloc_offsets = sorted([r for r in reloc_offsets if get_long(binary_contents,r) not in filter_labels])
+
+
+        reloc_offsets.sort()
         reloc_offsets.append(0)  # end with 0
 
         dump_reloc_file(reloc_offsets,defines.binary_file,".reloc",pack_file=pack_file,asm_as_mit=asm_as_mit)
@@ -317,7 +328,7 @@ def extract_relocs(defines,derog_labels=set(),chip_derog_labels=set(),pack_file=
 
             dump_reloc_file(unreloc_offsets,defines.binary_file,".chip_unreloc",pack_file=pack_file,asm_as_mit=asm_as_mit)
 
-
+        return reloc_labels
 
 def find_entrypoints(defines,forbidden=set()):
     """ defines: the module/structure defining the main project

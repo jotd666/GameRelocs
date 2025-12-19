@@ -55,13 +55,28 @@ for label,occs in sorted(labels.items()):
             else:
                 next_line = af.lines[line].lower()
                 if any(x in next_line for x in ["dc.l","movem.","move.","movea","lea","rts","jsr","jmp","cmpi","bsr.w"]):
-                    # valid, references another dc.l
+                    # valid, references another dc.l, probably a table
                     pass
                 elif "00\t" in previous_line and ascii_dc(next_line):
                     # valid dc.w combo
                     pass
                 else:
-                    # others
+                    in_table = False
+                    near = False
+                    # others, compute distance between label and dc.l
+                    for occ in occs:
+                        occ_line = af.address_lines.get(occ)
+                        if "dc.l" in af.lines[occ_line+1] or "dc.l" in af.lines[occ_line-1]:
+                            # contained in a table: probably ok
+                            in_table = True
+                            break
+
+                        if abs(occ-label) < 0x400:
+                            # label declaration near label reference, probably OK
+                            near = True
+                            break
+
+                    if not in_table and not near and len(occs)==1:
                         suspicious.append("{:05x}".format(label))
                         print("*"*40)
                         for i in range(line-2,line+3):
@@ -75,5 +90,9 @@ for label,occs in sorted(labels.items()):
     else:
         print(label,"not found")
 
+print("nb_dcl_labels = {}".format(len(labels)))
 print("nb_suspicious = {}".format(len(suspicious)))
 
+##with open("labels.txt","w") as f:
+##    for k in sorted(labels):
+##        f.write(f"0x{k:06x}\n")

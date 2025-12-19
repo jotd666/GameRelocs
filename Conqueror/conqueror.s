@@ -1,6 +1,8 @@
 ; IRA V2.10 (Jun  1 2022) (c)1993-1995 Tim Ruehsen
 ; (c)2009-2015 Frank Wille, (c)2014-2019 Nicolas Bastien
 
+; originally called "conqmain", and packed by Bytekiller, 21000 jmp 57b8a
+
 ext_00000000	EQU	$0
 ext_00000002	EQU	$2
 ABSEXECBASE	EQU	$4
