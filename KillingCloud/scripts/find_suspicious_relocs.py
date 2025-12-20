@@ -2,17 +2,19 @@ import ira_asm_tools
 import defines,os,re,codecs
 import collections
 
-# TODO: show where the dc.l is declared, if too far from reference, then maybe suspicious
 # M: machine gun (or cannon), => crash when firing
 
 labels = collections.defaultdict(list)
+
+# show where the dc.l is declared, if too far from reference, then maybe suspicious
+label_distance = 0x100
 
 infile = "../{}.s".format(defines.project)
 af = ira_asm_tools.AsmFile(infile)
 count=0
 for i,line in enumerate(af.lines):
     m = re.search("lb_(.....)\s+;(\w+)",line)
-    if m and "dc.l" in line:
+    if m and "dc.l" in line.lower():
         h = m.group(1)
         hv = int(h,16)
         if hv < 0x8100:
@@ -83,7 +85,7 @@ for label,occs in sorted(labels.items()):
                             in_table = True
                             break
 
-                        if abs(occ-label) < 0x100:
+                        if abs(occ-label) < label_distance:
                             # label declaration near label reference, probably OK
                             near = True
                             break
@@ -102,7 +104,7 @@ for label,occs in sorted(labels.items()):
     else:
         print(label,"not found")
 
-print("nb_dcl_labels = {}".format(len(labels)))
+print("nb_dcl_anon_labels (lb_xxxx) = {}".format(len(labels)))
 print("nb_suspicious = {}".format(len(suspicious)))
 
 with open("entrypoints.txt","w") as f:
