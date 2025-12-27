@@ -1,0 +1,1743 @@
+STRUCT Shape
+0000 WORD shape_x0
+0002 WORD shape_y0
+0004 WORD shape_x1
+0006 WORD shape_y1
+0008 WORD shape_unknown8
+000A WORD shape_unknownA
+000C WORD shape_unknownC
+000E WORD shape_unknownE
+0010 BYTE shape_rectflag
+0011 BYTE shape_nodrawflag
+0012 WORD* shape_startxl
+0016 WORD* shape_stopxl
+ESTRUCT
+
+STRUCT Initializer
+0000 CODE* init_Func
+0004 WORD init_OffsetNext
+0006 LONG* init_InitNext
+ESTRUCT
+
+STRUCT Transform
+0000 WORD[6] transform_Unknown1 #Translation? Probably pointers?
+000C WORD[9] transform_Matrix1
+001E WORD[9] transform_Matrix2
+0030 WORD[6] transform_Unknown2 #translation? Points?
+003C WORD transform_SavedAngle #?
+003E WORD transform_Unknown3 #?
+0040 BYTE transform_Flags # bit0/1=type [0=None,1=X,2=Z,3=Y], bit2: negate angle, bit7=Use Matrix2
+ESTRUCT
+
+STRUCT ViewInfo
+0000 LONG view_PtrToScreenBufPtr
+0004 COPPER* view_CopperList1
+0008 COPPER* view_CopperList2
+000C CODE* view_Func
+ESTRUCT
+
+STRUCT BitmapStruct
+0000 WORD* bitmap_Data
+0004 WORD bitmap_Width
+0006 WORD bitmap_Height
+0008 WORD bitmap_Depth
+000A WORD bitmap_RowBytes
+000C WORD bitmap_RowDeltaBytes # Depth*RowBytes
+000E COPPER* bitmap_CopperList
+ESTRUCT
+
+STRUCT PaletteInfo
+0000 WORD* pal_Data
+0004 WORD pal_NumColors
+0006 COPPER* pal_CopperPal
+ESTRUCT
+
+STRUCT IntHandler
+0000 WORD* ih_Succ
+0004 WORD* ih_Pred
+0008 BYTE ih_Priority
+0009 BYTE ih_Pad
+000A CODE* ih_Handler
+ESTRUCT
+
+
+STRUCT SectorBuffer
+0000 BYTE sb_0000
+0001 BYTE sb_0001
+0002 BYTE sb_0002
+0003 BYTE sb_0003
+0004 BYTE sb_Cylinder
+0005 BYTE sb_Info5
+0006 BYTE sb_Info6
+0007 BYTE sb_0007
+0008 BYTE sb_HdrCrcHi
+0009 BYTE sb_HdrCrcLo
+000a BYTE sb_000a
+000b BYTE sb_000b
+000c BYTE sb_000c
+000d BYTE sb_000d
+000e BYTE[512] sb_data
+020e BYTE sb_DataCrcHi
+020f BYTE sb_DataCrcLo
+0210 BYTE sb_0210
+0211 BYTE sb_CrcFailure
+ESTRUCT
+
+STRUCT FileStruct
+0000 LONG fs_SizeInBytes
+0004 LONG fs_Offset
+0008 WORD fs_StartCluster
+000A WORD fs_RootDirOffset
+000C BYTE[12] fs_VolumeName
+0018 BYTE[8] fs_FileName
+0020 BYTE[3] fs_Extension
+0023 BYTE fs_UsedFlag
+ESTRUCT
+
+STRUCT IndexStruct
+0000 LONG is_Offset # MSB is file index (from offset $0C)
+0004 CHAR[4] is_FileSize # MSB is compression method (?) (from offset $0D)
+0008 LONG is_MemSize # MSB is format
+000C LONG is_Ptr
+ESTRUCT
+
+STRUCT FixedIndexStruct
+0000 LONG fis_Unknown0
+0004 CHAR[4] fis_ID # First byte replaced with format later on
+0008 LONG fis_Unknown8
+000C LONG fis_UnknownC
+ESTRUCT
+
+STRUCT FileFormatHandler
+0000 CHAR[4] ffh_Id
+0004 CODE* ffh_Handler
+ESTRUCT
+
+# Actual size is probably 17 ($11)
+STRUCT TextStruct
+0000 WORD* ts_Text
+0004 WORD ts_Unknown04
+0006 WORD ts_Unknown06
+0008 BYTE ts_Unknown08
+0009 BYTE ts_Unknown09
+000A BYTE ts_Unknown0A
+000B BYTE ts_Unknown0B
+000C BYTE ts_Unknown0C
+000D BYTE ts_Unknown0D
+000E BYTE ts_UnknownFlag0E
+000F BYTE ts_UnknownFlag0F
+0010 BYTE ts_UnknownFlag10
+0011 BYTE ts_Unknown11
+0012 BYTE ts_Unknown12
+0013 BYTE ts_Unknown13
+ESTRUCT
+
+STRUCT ArmoryRect
+0000 WORD ar_X0
+0002 WORD ar_X0
+0004 WORD ar_X1
+0006 WORD ar_Y1
+0008 CODE* ar_Func
+ESTRUCT
+
+STRUCT KeyboardFuncStruct
+0000 BYTE kbf_KeyCode
+0001 BYTE kbf_WasPressed
+0002 CODE* kbf_Func
+ESTRUCT
+
+STRUCT TimedEvent
+0000 WORD te_ExpireTime # In seconds
+0002 CODE* te_Func
+ESTRUCT
+
+STRUCT RecordFile
+0000 WORD rf_FileIndex
+0002 LONG rf_Buffer
+0006 WORD rf_NumEntries
+ESTRUCT
+
+# example from index file:
+# Format       Name                               Of0           FileSize      MemSize (LE)
+#[00 01 02 03] 04 05 06 07 08 09 0A 0B [0C] [0D] [0E 0F 10 11] [12 13 14 15] [16 17 18 19]
+#[73 68 70 65] 61 6c 63 62 75 69 6c 64 [01] [02] [00 00 00 00] [74 01 00 00] [aa 01 00 00]  shpealcbuild......t.......
+
+00200000 Shape FakeShape
+002000FA TimedEvent FakeTimedEvent
+00200100 Transform FakeTransform
+00200200 SectorBuffer FakeSectorBuffer
+00201000 IndexStruct FakeIndexStruct
+
+00001000 CODE Entry
+00001006 LONG EndOfProgram
+0000100a LONG EndOfMemory
+0000100e LONG UserStack
+00001012 BYTE PalFlag
+00001014 WORD RefreshRate_1014
+00001016 WORD MsPerFrame_1016 # 20 for PAL, 16 for NTSC (so only approximate)
+00001018 LONG RandomSeed
+00001020 WORD Trap1VecOffset
+00001022 CODE* Trap1VecValue
+00001026 WORD DestEndMarker
+00001028 BYTE CiaAIntMask
+00001029 BYTE CiaASavedIntFlags
+0000102a BYTE CiaBIntMask
+0000102b BYTE CiaBSavedIntFlags
+00001034 CODE* CiaBFlgHandler
+00001038 CODE* CiaBSpHandler
+0000103C CODE* CiaBAlarmHandler
+00001040 CODE* CiaBTimerBHandler
+00001044 CODE* CiaBTimerAHandler
+00001048 CODE* DskSyncHandler
+0000104c CODE* RBFHandler
+00001050 CODE* Aud0Handler
+00001054 CODE* Aud1Handler
+00001058 CODE* Aud2Handler
+0000105C CODE* Aud3Handler
+00001060 CODE* BlitDoneHandler
+00001064 CODE* VertbHandler
+00001068 CODE* CopIntHandler
+00001070 CODE* CiaAFlgHandler
+00001074 CODE* CiaASpHandler
+00001078 CODE* CiaAAlarmHandler
+0000107c CODE* CiaATimerBHandler
+00001080 CODE* CiaATimerAHandler
+00001084 CODE* SoftIntHandler
+00001088 CODE* DskBlkHandler
+0000108c CODE* TBEHandler
+00001090 CODE*[7] InterruptHandlers
+000010ac COPPER[8] DetectPalCopperList
+00001134 LONG CurrentTimeMs
+00001138 LONG LastTimeMs
+0000113c WORD TimerPausedFlag
+0000113e WORD FPS_Int
+00001140 WORD FPS_Frac
+00001142 WORD ScaledDT_Alt_1
+00001144 WORD ScaledDT_Alt_32
+00001146 WORD ScaledDT_Alt_32767
+00001148 WORD ScaledDT_1
+0000114a WORD ScaledDT_32
+0000114c WORD ScaledDT_32767
+0000114e MinList VertBIntHandlerList
+0000115a WORD NumVBlanks
+0000115e BYTE VBlankHandled
+00001160 MinList CopIntHanderList
+0000116c BYTE CopperIntHandlerRan
+0000116e COPPER* NextCopperList
+00001172 COPPER[6] EmptyCopperList
+0000117e ViewInfo* FrontView
+00001182 ViewInfo* BackView
+00001186 ViewInfo View1
+00001196 ViewInfo View2
+000011a6 WORD ColorBlendFactor
+000011a8 WORD FadeSpeed
+000011aa WORD BlendColor
+000011be WORD** FrontBufPtrPtr
+000011c2 WORD** BackBufPtrPtr
+000011c6 WORD* FrontBufPtr
+000011ca WORD* BackBufPtr
+000011ce BYTE NeedViewSwap
+000011d0 BYTE LastKeyCode1
+000011d2 BYTE MouseButtonState
+000011d4 WORD MouseXMovement
+000011d6 WORD MouseYMovement
+000011d8 WORD JoystickX
+000011da WORD JoystickY
+000011dc WORD JoystickButtonState
+000011de WORD Joy0Function #? 0 = Disabled? 1 = As mouse? 2 = Joystick
+000011e0 WORD Joy1Function
+000011e2 WORD LastJoy0Dat
+000011e4 WORD LastJoy1Dat
+000011ea BYTE[6] ModifierKeyTable # Left alt (5), Capslock (4), Right alt (3), Ctrl (2), Left shift (1), Right shift (0)
+000011f0 WORD CurKeyState # MSB: See ModifierKeyTable (5->3), LSB: current pressed key
+000011f2 WORD WaitingKeyState
+000011f4 BYTE KeyRepeatEnabled
+000011f6 WORD KeyRepeatCount
+000011f8 WORD KeyRepeatDelay
+000011fa WORD KeyRepeatDelay2 # After initial delay
+000011fc BYTE[128] KeyState # $48/$49 used as LMB/RMB
+0000128a BYTE* Buffer0 # 512 bytes
+0000128e BYTE* FatBuffer # 6*512 ($c00) bytes
+00001292 BYTE* RootDirBuffer # 7*512 ($e00) bytes
+00001296 BYTE* FileSectorsBuf # 8*512 ($1000) bytes
+0000129a BYTE* Buffer4 # 512 bytes
+0000129e WORD* SectorBufferEnd
+000012a2 WORD bpp_DiskPerLogicalSector
+000012a4 WORD bpp_LogicalSectorsPerCluster
+000012a6 WORD bpp_NumReservedSectors
+000012a8 WORD bpp_NumFATs
+000012aa WORD bpp_NumRootDirEntries
+000012ac WORD bpp_TotalLogicalSectors
+000012ae WORD bpp_MediaDescriptor
+000012b0 WORD bpp_LogicalSectorsPerFAT
+000012b2 WORD bpp_PhysicalSectorsPerTrack
+000012b4 WORD bpp_NumberOfHeads
+000012b6 WORD bpp_NumHiddenSectors
+000012b8 WORD bpp_NumClusters
+000012ba WORD RMS_InputStartSector2
+000012bc WORD RMS_InputStartCount2
+000012be WORD Fat1Sector
+000012c0 WORD Fat1SectorCount
+000012c2 WORD Fat2Sector
+000012c4 WORD Fat2SectorCount
+000012c6 WORD RootDirSector
+000012c8 WORD RootDirSectors
+000012ca BYTE* FileDestinationPtr
+000012ce LONG FileBytesToRead #?
+000012d2 WORD NumClusters
+000012d4 WORD ClusterNum
+000012d6 CHAR[8] VolumeLabel
+000012e2 LONG FileStructIndex
+000012e6 WORD RMS_InputDriveNum # 0/1/-1
+000012e8 WORD DoubleSidedFlag
+000012ea CODE* SetDiskFuncPtr
+000012f0 BYTE DiskChar # 'A' or 'B'
+000012f8 Shape* MainShape
+000012fc LONG MainShapeEnd
+00001300 Shape* MainShapePos
+00001304 Shape* ScreenRect
+00001532 WORD MouseCursorX
+00001534 WORD MouseCursorY
+0000153e WORD MouseCursorFileIndex # Zero => No sprites
+00001540 WORD MouseCursorEanbledSemaphore # Negative => No sprites
+00001542 BYTE SpriteDMAEnabled
+00001543 BYTE NeedSpriteUpdate
+00001554 WORD*[8] SpritePointers
+00001574 WORD MouseCursorWidthDiv16
+00001576 WORD MouseCursorHeight
+00001578 WORD* MouseCursorDataPtr
+0000157c LONG MouseCursorNumAllocatedBytes
+00001580 WORD MouseCursorXoffset
+00001582 WORD MouseCursorYoffset
+00001584 WORD[2] NullSprite
+000015b8 WORD[200] InvYTable
+00001748 WORD[16] LeftMasks
+00001768 WORD[16] RightMasks
+000018e8 WORD[16] ColoredRowOffsets
+00001908 WORD[80] ColoredRow00
+000019a8 WORD[80] ColoredRow01
+00001a48 WORD[80] ColoredRow02
+00001ae8 WORD[80] ColoredRow03
+00001b88 WORD[80] ColoredRow04
+00001c28 WORD[80] ColoredRow05
+00001cc8 WORD[80] ColoredRow06
+00001d68 WORD[80] ColoredRow07
+00001e08 WORD[80] ColoredRow08
+00001ea8 WORD[80] ColoredRow09
+00001f48 WORD[80] ColoredRow10
+00001fe8 WORD[80] ColoredRow11
+00002088 WORD[80] ColoredRow12
+00002128 WORD[80] ColoredRow13
+000021c8 WORD[80] ColoredRow14
+00002268 WORD[80] ColoredRow15
+0000230a RecordFile RecordFile0
+00002312 RecordFile[7] RecordFileArray
+0000234a CHAR[7] text__Index
+00002351 CHAR[6] text__Data
+00002357 CHAR[65] FileNameBuffer
+0000239a LONG[5] IndexFileHeader
+000023ae WORD FilenamesFromIndexOffset # ?
+000023b0 WORD NumFilenamesFromIndex
+000023b2 CHAR** FilenamesFromIndexStorage
+000023b6 CHAR*[5] FilenamesFromIndex
+000023f6 WORD IndexOffset # Scaled by $10
+000023f8 WORD IndexCount # Scaled by $10
+000023fa WORD IndexMax
+000023fc IndexStruct* Index
+000023fc=FakeIndexStruct
+00002408 WORD[512] HuffTable0 # Offset 2 = Char, Offset = 0 frequency. Later 0 = Codebits/Offset of moveq inst+1, 3 = NumBits
+00002808 WORD NumHuffSymbols
+0000280a WORD M2_DecrunchedSize
+0000280c BYTE[256] HuffNbitsTable
+0000290c BYTE[256] HuffSymTable
+#00002a0c WORD[] HuffCodeBuf
+000035c2 TextStruct TextStruct_35c2
+000035d6 TextStruct TextStruct_35d6
+00004000 BYTE[300] ?
+00004132 Shape* SavedRect
+00004136 Shape* SavedShape
+00004720 MinList IntHandlerList_4720
+000047b2 WORD DetailLevel_A
+00005420 BitmapStruct Bitmap1
+00005432 BitmapStruct Bitmap2
+00005444 STR text_KCFont
+00005451 STR text_KCFont1
+0000545f STR text_KCFont2
+0000546e STR AIndexFileName
+000054bc CODE FrameFunc_SetPal1_1e6e2
+000054dc CODE FrameFunc_SetPal2_1e6e2
+000054fc CODE FrameFunc_SetPal1_1e6b8
+0000551c CODE FrameFunc_SetPal2_1e6b8
+0000553c CODE FrameFunc_SetPal1_1e70c
+0000555c CODE FrameFunc_SetPal2_1e70c
+0000557c CODE FrameFunc_SetPal1_1e760
+0000559c CODE FrameFunc_SetPal2_1e760
+000055bc CODE FrameFunc_SetPal1_1e7de
+000055dc CODE FrameFunc_SetPal2_1e7de
+000055fc CODE FrameFunc_SetPal1_1e808
+0000561c CODE FrameFunc_SetPal2_1e808
+0000563c CODE FrameFunc_SetPal1_1e78a
+0000565c CODE FrameFunc_SetPal2_1e78a
+0000567c CODE FrameFunc_SetPal1_1e832
+0000569e CODE FrameFunc_SetPal2_1e832
+000056f2 WORD[9] ArmoryItemWeightTable
+00005704 WORD ArmoryItemWeight
+00005706 WORD ArmoryRemainingWieightCapacity
+00005708 WORD ArmorySelectionIndex
+0000570a WORD SkipPlaneIntro
+0000570e WORD ArmoryCurItemWeight
+00005710 BYTE ArmoryCurItemAvailability
+00005711 BYTE Armory_CurItemSelected
+00005712 BYTE ArmoryBackgroundNeedsUpdate
+00005713 BYTE Armory_NeedItemUpdate
+00005714 BYTE ArmoryDone
+00005715 BYTE ArmoryLightRotationDir
+00005716 BYTE[9] SelectedInArmory
+00005732 BYTE[9] ArmoryStatus # 0 = Out of stock
+0000573c WORD[25] ArmoryFileList
+0000576e BYTE[25] TextStruct_0576e
+00005788 WORD NeedConsoleRedraw
+0000581e WORD CannonRounds
+00005820 WORD MGRounds
+00005822 WORD LifeSupportFlag
+00005824 WORD ReserveFuelTankFlag
+00005834 CODE FrameFunc_SetPal1_1e68e
+00005856 CODE FrameFunc_SetPal2_1e68e
+000058a8 Shape* ViewShapePtr
+000058a8=FakeShape
+000058b4 BYTE RunFunc17e6a_Flag
+000058b6 BYTE FogEnabled
+000058b8 WORD DetailLevel_B
+000058ba BYTE CountourEnabled_B
+000058bc WORD CurrentViewIndex
+000058c2 WORD LastViewIndex
+000058fa BYTE* MapStartPointer
+000058fe BYTE* MapDataPointer2 #
+00005902 BYTE* MapDataPointer3
+00005906 BYTE CountourEnabled_A
+00005908 WORD MapRelatedWord_05908 # Maybe number of objects?
+0000590a BYTE* MapRelatedBuffer_1300B_0590a
+0000681c LONG MissionTime #?
+00006820 TimedEvent* TimedEvents
+00006820=FakeTimedEvent
+00006c12 FileStruct FileStruct_6c12
+00006c36 FileStruct[15] FileStructs_6c36
+00007756 WORD[80] TempRowBuffer
+00007ff6 Initializer Initializer01
+00008000 Initializer Initializer02
+0000800a Initializer Initializer03
+00008014 Initializer Initializer04
+00008022 Initializer Initializer05
+00008030 Initializer Initializer06
+0000803a Initializer Initializer07
+00008048 Initializer Initializer08
+00008052 Initializer Initializer09
+0000805c Initializer* Init09_Dep2
+00008060 Initializer* Init09_Dep3
+00008064 Initializer* Init09_Dep4
+0000806c Initializer Initializer10
+0000807a Initializer Initializer11
+00008088 LONG InitializerEndMarker
+0000808c FileFormatHandler[5] FileFormats_808c
+000080b8 FixedIndexStruct FixedIndexStruct_80b8
+000080c8 FixedIndexStruct[13] FixedIndexStruct_80c8
+0000819c CODE Start
+000081c2 CODE .ClearPalette
+000081e4 CODE .WaitFrame
+0000821c CODE .HasSize
+00008268 CODE RunInitializers
+0000826e CODE .InitLoop
+0000827a CODE RunInitializer
+00008286 CODE .L1
+0000828e CODE .L2
+0000829c CODE .Done
+0000829e CODE InitMemory
+000082cc CODE .ClearMem
+000082e2 CODE AllocMemory1 # D0=NumBytes, $101c.w used for D2
+000082fa CODE .AllocOk
+00008300 CODE AllocMemory2 # D0=NumBytes, $101e.w used for D2
+00008318 CODE .AllocOk
+0000831e CODE CallFree
+0000832c CODE SetupTrap1Handler
+0000833c CODE Trap1Handler
+0000834a CODE SetupUpIntHandlers
+00008380 CODE CheckCiaAInt
+000083c8 CODE Level7Handler
+000083ca CODE Level6Handler
+000083f2 CODE .CheckSp
+000083f6 CODE .CheckAlarm
+000083fa CODE .CheckTimerB
+000083fe CODE .CheckTimerA
+00008402 CODE .Level6Done
+00008408 CODE .HandleFlg
+00008410 CODE .HandleSp
+00008418 CODE .HandleAlarm
+00008420 CODE .HandleTimerB
+00008428 CODE .HandleTimerA
+00008430 CODE Level5Handler
+00008450 CODE .CheckRBF
+00008454 CODE .Level5Done
+0000845a CODE .HandleDskSync
+00008462 CODE .HandleRBF
+0000846a CODE Level4Handler
+0000848a CODE .CheckAud2
+0000848e CODE .CheckAud1
+00008492 CODE .CheckAud0
+00008496 CODE .Level4Done
+0000849c CODE .HandleAud3
+000084a4 CODE .HandleAud2
+000084ac CODE .HandleAud1
+000084b4 CODE .HandleAud0
+000084bc CODE Level3Handler
+000084da CODE .CheckVertb
+000084de CODE .CheckCopInt
+000084e2 CODE .Level3Done
+000084e8 CODE .HandleBlitDone
+000084f0 CODE .HandleVertb
+000084f8 CODE .HandleCopInt
+00008500 CODE Level2Handler
+00008528 CODE .CheckSp
+0000852c CODE .CheckAlarm
+00008530 CODE .CheckTimerB
+00008534 CODE .CheckTimerA
+00008538 CODE .Level6Done
+0000853e CODE .HandleFlg
+00008546 CODE .HandleSp
+0000854e CODE .HandleAlarm
+00008556 CODE .HandleTimerB
+0000855e CODE .HandleTimerA
+00008566 CODE Level1Handler
+00008584 CODE .CheckDskBlk
+00008588 CODE .CheckTBE
+0000858c CODE .Level1Done
+00008592 CODE .HandleSoftInt
+0000859a CODE .HandleDskBlk
+000085a2 CODE .HandleTBE
+000085aa CODE NoOpHandler
+000085ac CODE InstallIntHandler #A0 = NewHandler, A0+8 = Priority, A1= Pointer to pointer
+000085b4 CODE .CheckPriority
+000085bc CODE .Next
+000085c0 CODE .Insert
+000085d4 CODE CallIntHandlerList
+000085f0 CODE SetRandomSeed
+00008600 CODE SeedRandom
+0000860c CODE GetRandom
+000086aa CODE FreeMemory
+000086f2 CODE DoAlloc #When called from AllocMemory, D0=NumBytes, D1=4, A0=0,D2=From 101e.W
+00008734 CODE IndirectAlloc #? Realloc maybe?
+0000875c CODE ClearSomeAllocFlag #?
+000088ec CODE InitialCIABTimerA
+0000893c CODE CIA_TimerB_Update_125Hz
+00008942 CODE TimerUpdate
+00008a22 CODE VertBFunc
+00008a3c CODE InstallVertBHandler
+00008a56 CODE RemoveVertBHandler
+00008ac0 CODE HandleCopperInt
+00008ade CODE InstallCopIntHandler
+00008af8 CODE RemoveCopIntHandler
+00008b1e CODE WaitCopperInt
+00008b22 CODE .Wait
+00008b2a WORD[10] EndCopperList
+00008b3e WORD[18] BitplaneCopperList
+00008b64 CODE ScreenSetup
+00008bc8 CODE InitView
+00008c2c IntHandler IntHandler_8c2c
+00008c5a CODE SwapViews #?
+00008c84 CODE HandleTwoFrames
+00008c8c CODE .Frame2
+00008c94 CODE FadeIn
+00008ca8 CODE FadeOut
+00008cbe CODE FadeScreen # D2=Fade, D3=Fadestep
+00008cc0 CODE .FadeLoop
+00008cc6 CODE .WaitLoop
+00008cca CODE .WaitIter
+00008ce6 CODE .HasFrameFunc
+00008d00 CODE .HasFrameFunc2
+00008d02 CODE CopyBackToFront
+00008d1c CODE .Loop
+00008d24 CODE DoFrame #? A0=View func
+00008d28 CODE .WaitView
+00008d56 CODE UpdateJumps
+00008d8c CODE .0
+00008d92 CODE .Out
+00008d94 CODE SetPaletteToView
+00008da4 CODE SetBitmapToView
+00008dae CODE InitBitmap
+00008df8 CODE .AllocOk
+00008e04 CODE .CopyTemplate
+00008e12 CODE .SetPlanePtrs
+00008e2a CODE .Out
+00008e58 CODE AllocCopperPalette
+00008e70 CODE .NumColorsOk
+00008e7e CODE .AllocFailed
+00008e82 CODE .AllocOk
+00008e94 CODE .CopPalLoop
+00008ea4 CODE .LoopStart
+00008eae CODE .AlreadyAllocated
+00008eba CODE DoSomePaletteStuff
+00008f88 CODE UpdateCopperPalFaded
+00008f98 CODE .NumColorsOk
+00008fa8 CODE .FadeLoop
+00008fba CODE .FadeIter
+00008fc4 CODE MixColors # Colors=D0/D1, D2=Mix factor
+00008fe0 CODE ScaleColor # Color=D0, Scale=D2
+0000900e BYTE[128] KeycodeRemapTable
+0000908e CHAR[128] LowercaseAsciiTable
+0000910e CHAR[128] UppercaseAsciiTable
+0000918e CHAR[128] AltGrAsciiTable
+00009210 CODE InstallInputHandler
+00009242 CODE KeyboardHandler
+00009298 CODE .CheckModifierKey
+000092aa CODE .NotLeftAlt
+000092b6 CODE .ModifierKeyReleased
+000092ca CODE .RightShift
+000092de CODE .ShiftReleased
+000092e4 CODE .ModifierCommon
+000092f0 CODE .ModifierReleased
+000092fc CODE .NotModifierKey
+0000931c CODE .KeyReleased
+00009334 CODE .KeyboardAck
+0000934c IntHandler InputIntHandler
+0000935a CODE InputHandler
+00009392 CODE .NoKeyboardRepeat
+000093a8 CODE .NoJoy1Btn0
+000093b0 CODE .NoJoy1Btn1
+000093ba CODE .NoJoy0Btn0
+000093c2 CODE .NoJoy0Btn1
+000093e6 CODE .MouseStuff
+000093ea CODE .CheckJoy1
+00009404 CODE .Out
+00009406 CODE HandleMouseMovent
+00009440 CODE .L1
+00009446 CODE .L2
+0000944a CODE .L3
+00009458 CODE .L4
+0000945e CODE .Out
+00009460 CODE HandleJoystickMovement
+0000947c WORD[32] JoystickMovementTable
+000094bc CODE KeyStateToAscii
+000094e0 CODE .HasTranslationTable
+000094f6 CODE .NotCtrl
+00009510 CODE .NotRightAlt
+00009528 CODE .ClearAscii
+0000952a CODE .Out
+0000952c CODE SetKeyRepeat
+00009534 CODE GetKeyState
+00009548 CODE ClearKeyStateBit1
+0000955c CODE ClearKeyStateBit2
+0000959a CODE ResetKeyStateBit2
+000095a2 CODE .ClearLoop
+000095dc CODE CiaDelay #D7=TimerVal uses CIAA timer B
+000095f6 CODE .Wait
+00009606 CODE ReadMultipleSectors # A2=Dest, D2=DriveNumber, D3=0/-1 D4=Start sector, D5=Sector count
+00009628 CODE .GotDrive
+00009664 CODE .SectorLoop
+0000968a CODE .FailedPop
+0000968e CODE .Failed
+0000969e CODE InitTrackLoader
+000096f6 CODE ResetDiskVars
+00009720 CODE AllocDiskBuffers
+00009748 CODE FreeDiskBuffers
+00009762 CODE SetDiskState9eec # Set 00009eec=1
+000097a8 CODE WaitDriveReady
+000097c6 CODE MotorOn #?
+00009804 CODE .Out
+0000980c CODE MotorOff #?
+0000982a CODE ResetDiskRetryState #?
+00009858 IntHandler IntHandler_09858
+000098bc CODE SetMotorState #? D0=
+00009908 CODE .WaitDiskReady
+00009926 CODE .Out
+00009966 CODE DriveStep
+0000998c CODE .StepIn
+00009990 CODE .DoStep
+000099b2 CODE .Done
+000099ba CODE SeekTrack0
+000099cc CODE .AtTrack0
+000099d4 CODE SeekCyl
+000099ec CODE .lab099ec
+000099ec CODE .KnowsPosition
+00009a06 CODE .StepOutLoop
+00009a18 CODE .DoStepIn
+00009a26 CODE .StepInLoop
+00009a3e CODE .Done
+00009a46 CODE .InvalidSeek
+00009a56 CODE ReadTrack
+00009a9e CODE .WaitReadStart
+00009aac CODE .WaitDiksBlock
+00009ad4 CODE .Done
+00009ade CODE DiskIndexHandler
+00009b00 CODE .Out
+00009b02 WORD PendingDskLenWrite
+00009b04 BYTE WaitingToWriteDskLen
+00009b06 CODE ReadSector #A0=Dest, D0=Sector
+00009b40 CODE .DoubleSided
+00009b6a CODE .CheckStoredTrack
+00009b82 CODE .ReadTrack
+00009b88 CODE .WaitReady
+00009b92 CODE .DiskReady
+00009b94 CODE .Retry
+00009be2 CODE .RightCyl
+00009bfa CODE .HasTrack
+00009c10 A1=FakeSectorBuffer
+00009c20 CODE .SectorOk
+00009c28 CODE .CopyLoop
+00009c2e CODE .Done
+00009c38 CODE .Err3038
+00009c46 CODE MfmDecodeBuffer # A5=Dest,A4=Src,D0=Num bytes
+00009c5a CODE .Loop
+00009c74 CODE MfmDecodeByte
+00009c9a CODE InitCrcTable
+00009cc2 CODE InitDecodeTab
+00009cc8 CODE .Loop
+00009ce8 BYTE[32] NibbleTable
+00009d08 CODE DecodeTrack
+00009d28 CODE .SectorLoop
+00009d5c CODE .SearchSync
+00009d68 CODE .FoundSync
+00009db6 CODE .SearchSync2
+00009dc0 CODE .FoundSync2
+00009e02 CODE .GenericErr
+00009e0a CODE .Err3038
+00009e16 CODE VerifyTrackCrc # Seems buggy [ seems to accept EITHER Hi or Lo byte as valid! ]
+00009e22 CODE .SectorLoop
+00009e3e CODE .CheckData
+00009e5a CODE .NextSector
+00009ea8 CODE CalcCrc #A0=Buffer,D0=Num bytes CRC16-CCITT
+00009ec2 CODE .Loop
+00009ede WORD DriveBit #?
+00009ee0 WORD StoredTrackNumber
+00009ee2 WORD TrackNumber
+00009ee4 WORD StoredSectorNumber
+00009ee6 WORD SectorNumer # 0..8
+00009ee8 WORD CurrentCyl
+00009eea WORD TargetCyl
+00009eec WORD DiskState9eec # 1=Initialized (?)
+00009eee WORD Disk_CurrentDrive #?
+00009ef2 WORD DiskState_9ef2
+00009ef4 WORD DiskState_9ef4
+00009ef8 WORD DiskState_9ef8
+00009efa WORD DiskState_9efa
+00009efc WORD DoubleSidedFlag2
+00009efe BYTE[4] DriveState_9efe # Retry count?
+00009f02 BYTE[4] DriveState_9f02 # Flag?
+00009f07 BYTE DiskSide
+00009f08 BYTE DiskRetryFlag
+00009f09 BYTE StepDir
+00009f0a BYTE CurrentStepDir
+00009f0c BYTE CiaBPrbVal
+00009f0e WORD DiskErrorMask #? Bit0: Invalid seek, Bit1: Track read file
+00009f10 WORD* TrackBufferPtr # $4000 bytes
+00009f14 SectorBuffer* SectorDataPtr # $12a2 bytes (9*$212), ofs $211 = error)b), $4 = cylinder (b), $e-$20e (b) data
+00009f14=FakeSectorBuffer
+00009f18 BYTE[256] DecodeTable #Used by MfmDecodeByte, Initialized by InitDecodeTab
+0000a018 BYTE[512] CrcTable
+0000a228 CODE SetSetDiskFunction
+0000a230 CODE AllocFileSysBuffers
+0000a2ae CODE FreeFileSysBuffers
+0000a2b8 CODE FileOpen # A0=Filename; Output -> D0=File struct index, D1=FileSize
+0000a2c6 CODE .Loop
+0000a2f6 CODE .DiskCorrect
+0000a302 CODE .FileFound
+0000a308 CODE .PopAndFree
+0000a30c CODE .AllocFailed
+0000a318 CODE .NoFree
+0000a31a CODE .CheckRetval
+0000a340 CODE .Out
+0000a346 CHAR* .SavedFileName
+0000a34a CODE FileClose
+0000a358 CODE FileRead #D0=File index,A0=Dest,D1=Length
+0000a364 CODE .Retry
+0000a380 CODE .GotDisk
+0000a380 A6=FileStruct_6c12
+0000a398 CODE .CheckReturnVal
+0000a3c2 CODE .Out
+0000a3c8 LONG[3] .SavedRegs
+0000a3d4 CODE FileSeek # D0=Origin? D1=Method (0/1/2=set/cur/end), D2=FileStructIndex
+0000a3e2 A6=FileStruct_6c12
+0000a3fc CODE*[3] .MethodTab
+0000a408 CODE .SeekSet
+0000a410 CODE .M0Done
+0000a414 CODE .SeekCur
+0000a41c CODE .M1Done
+0000a41e CODE .SeekEnd
+0000a426 CODE .M2Done
+0000a544 CODE AllocFileStruct
+0000a578 CODE FreeFileStruct
+0000a588 CODE SplitFileName
+0000a5a0 CODE .ClearName
+0000a5b2 CODE .DrivePart
+0000a5c2 CODE .Colon
+0000a5c4 CODE .NamePart
+0000a5d6 CODE .Dot
+0000a5d8 CODE .ExtensionPart
+0000a5e4 CODE .Done
+0000a5ea CODE ToUpperCase
+0000a5f4 CODE .Out
+0000a5f6 CODE CheckCorrectDisk
+0000a672 CODE ReadDiskMetaData
+0000a694 CODE .Out
+0000a69a CODE ReadDiskParameters #From boot sector
+0000a6d8 CODE .Error
+0000a6dc CODE .Ok
+0000a6e2 CODE .Out
+0000a6e8 CODE ParseBiosParams
+0000a794 CODE GetLEU16 # From A2, Advanced, returned in D0
+0000a7a2 CODE ReadFAT
+0000a7c6 CODE .ReadFat1
+0000a7f0 CODE .ReadFat2
+0000a7fe CODE .Ok
+0000a800 CODE .Out
+0000a806 CODE ReadRootDirectory
+0000a82a CODE .Ok
+0000a82c CODE .Out
+0000a832 CODE ReadVolumeLabel
+0000a840 CODE .Loop
+0000a85a CODE .Found
+0000a85c CODE .CopyLoop
+0000a862 CODE .NotDone
+0000a868 CODE .Out
+0000a86a CODE CheckVolumeLabel # A0=ToMatch against
+0000a870 CODE .CompareLoop
+0000a87c CODE .Match
+0000a880 CODE FindFileInRootDir
+0000a890 CODE .CheckEntry
+0000a898 CODE .CompareFilename
+0000a8b2 CODE .Found
+0000a8ce CODE .Out
+0000a8d4 CODE GetFatEntry # D5=Cluster -> D6=Cluster
+0000a912 CODE GetFileSectors # A6=FileStruct*
+0000a912 A6=FileStruct_6c12
+0000a936 CODE .Loop
+0000a95c CODE .OneSector
+0000a962 CODE .NextCluster
+0000a968 CODE .Done
+0000a972 CODE ReadFileSectors # A6=File struct
+0000a972 A6=FileStruct_6c12
+0000a98a CODE .NotBeyondEnd
+0000a9c0 CODE .FullSectorLoop
+0000a9de CODE .FinalBytes
+0000a9f6 CODE .Done
+0000a9f8 CODE .Out
+0000a9fa CODE ReadBytes # D1=Sector,D2=Offset,D3=Numbytes,A5=Dest
+0000aa3c CODE AllocMainShape
+0000aa5a CODE AllocShapeClipped # A6=Bounding Rect/Parent, D0-D3 = X0/Y0/X1/Y1
+0000aa6e CODE .AllocOk
+0000aa6e A0=FakeShape
+0000aaa0 CODE .Out
+0000ab7c A0=FakeShape
+0000ab7c A6=FakeShape
+0000ae60 CODE GetMainShapePosToA0
+0000ae66 CODE SetMainShapePosFromA0
+0000b0ec CODE AllocRectShape #?
+0000bcba IntHandler IntHandler_0bcba
+0000bd2a CODE ShowMouseCursor
+0000bd34 CODE .Hidden
+0000bd36 CODE HideMouseCursor
+0000bd70 CODE SetMouseCursorFromFileIndex
+0000bd76 CODE .WaitSpriteDMAOff
+0000bdd2 CODE .Alloc
+0000bde4 CODE .HasMem
+0000bdee CODE .Out
+0000bdf8 CODE UpdateMouseSpriteData # A0 = Sprite, A2 = Src
+0000be2c CODE .XLoop
+0000be40 CODE .YLoop
+0000be6e CODE UpdateMouseSprites
+0000be7e CODE .SpriteDMADisabled
+0000be9a CODE .Out
+0000bea0 CODE UpdateMouseCursor
+0000bee4 CODE .NoSV8
+0000beee CODE .NoEV8
+0000bef8 CODE .NoSH0
+0000befa CODE .UpdatePairs
+0000bf20 CODE .Done
+0000bf48 CODE DisableSpriteDMA
+0000c052 CODE ReadFont # A0=FileName
+0000d1c8 CODE DrawRectShape
+0000d1c8 A0=FakeShape
+0000d204 CODE .WaitBlit0
+0000d22e CODE .RowLoop
+0000d260 CODE .WaitBlit1
+0000d290 CODE .NextRow
+0000d29c CODE .IsRect
+0000d2de CODE .RectRowLoop
+0000d2e4 CODE .WaitBlit2
+0000d304 CODE .Out
+0000daa0 CODE HandleSPRT
+0000db02 CODE .PalConvLoop
+0000db08 CODE .PalConvIter
+0000db0c CODE .PaletteDone
+0000db2a CODE .C2P4_Loop
+0000db2c CODE .C2P4_16Pixels
+0000db5a CODE .C2P4_Iter
+0000db5e CODE .Not4Bpl
+0000db82 CODE .YLoop
+0000db8c CODE .WordCopyLoop
+0000db8e CODE .WordCopyIter
+0000db9c CODE .PlaneCopyLoop
+0000dba4 CODE .RowCopyLoop
+0000dba8 CODE .RowCopyIter
+0000dbae CODE .PlaneCopyIter
+0000dbb2 CODE .YIter
+0000dc1a CODE CopySpriteFromFileData
+0000dc5a CODE .lab_dc5a
+0000dc74 CODE .lab_dc74
+0000dca6 CODE .lab_dca6
+0000dcb4 CODE .lab_dcb4
+0000dce8 CODE .WaitBlit1
+0000dd00 CODE .lab_dd00
+0000dd08 CODE .lab_dd08
+0000dd6a CODE .PlaneLoop
+0000dd70 CODE .WaitBlit2
+0000dd98 CODE .WaitBlit3
+0000dda0 CODE .Out
+0000e544 CODE ReadNamedFile # A1 = FileName, A0 = Buffer
+0000e56c CODE .Err
+0000e574 CODE ReadFile # A0=Dest (0=alloc) D0=Len (0=Whole file) D1=Offset, D2=FileIndex
+0000e592 CODE .HasSize
+0000e59c CODE .NoAlloc
+0000e5bc CODE .OutFree
+0000e5c6 CODE .NoFree
+0000e5c8 CODE .Out
+0000e5d2 CODE OpenRecordFile # A0=Drive A1=Extension
+0000e5e4 CODE .FindOpenSlot
+0000e5f4 CODE .HasSlot
+0000e618 CODE .EndiaSwapLoop
+0000e634 CODE .EndianSwapIter
+0000e650 CODE .OutFreeBuf
+0000e658 CODE .OutClearFileIdx
+0000e65c CODE .OutErrInD3
+0000e65e CODE .Out
+0000e664 CODE ConstructFileName # Copy A0+A1+'.'+A2 -> A3
+0000e668 CODE .Drive
+0000e66e CODE .Filename
+0000e678 CODE .Extension
+0000e682 CODE CloseBufferedFile # D0=Index into array at 230a
+0000e6b2 CODE .Err
+0000e6b4 CODE .Out
+0000e710 CODE GetFileRecord #A0 = filename
+0000e73a CODE .RecordSearchLoop
+0000e742 CODE .FilenameCompareLoop
+0000e754 CODE .NotLowerCase
+0000e786 CODE .NotFormat3
+0000e7ec CODE .Err9
+0000e7f0 CODE .Err8
+0000e7f4 CODE .Err10
+0000e7f8 CODE .OutErrCallFree
+0000e7fe CODE .OutErrInD5
+0000e800 CODE .Out
+0000e806 JTABW[5] RF_Format_JumpTab
+0000e810 CODE RF_Format2
+0000e83a CODE RF_Format1
+0000e870 CODE RF_Format4
+0000e8bc CODE InitFixedIndex
+0000e8c4 CODE .Init
+0000e8d8 CODE .Iter
+0000e8de CODE ReadIndex # $496e6478 = 'Indx'
+0000e968 CODE .ArrayInitLoop
+0000e96e CODE .ArrayInitIter
+0000e9ca CODE .IndexLoop
+0000e9d6 CODE .FormatLoop
+0000e9e0 CODE .FormatIter
+0000e9e6 CODE .FormatFound
+0000ea28 CODE .IndexIter
+0000ea52 CODE .Halt
+0000ea54 CODE .Out
+0000ea58 CODE GetFileIndexPtr
+0000ea70 CODE .Fixed
+0000ea7c CODE ReadFileFromIndex # D0=Index (Negative from read index)
+0000eaba CODE .Halt
+0000eade CODE .Crunched
+0000eb16 CODE .Method2
+0000eb22 CODE .Method3
+0000eb2e CODE .Decrunched
+0000eb36 CODE .GotFile
+0000eb52 CODE .FormatHandled
+0000eb64 CODE .Out
+0000eb6a CODE FreeIndexMem
+0000eb82 CODE .Fixed
+0000eb94 CODE .Out
+0000ec50 CODE FindFileFormatHandler # Input: D0=Id, Output: D0=Index into FileFormats_808c
+0000ec60 CODE .Search
+0000ec6a CODE .Next
+0000ec70 CODE .Found
+0000ec76 CODE UnRLE # D4 = Size
+0000ec8e CODE .DecrunchLoop
+0000ecac CODE .LitCopyLoop
+0000ecae CODE .LitCopyIter
+0000ecb6 CODE .Start
+0000ecbc CODE .LitCopyLong
+0000ecd0 CODE .LitCopy2
+0000ecde CODE .RLE
+0000ecf0 CODE .RLELoop1
+0000ecfc CODE .RLELong
+0000ed0e CODE .RLELoop2
+0000ed18 CODE .Out
+0000ed20 CODE DecrunchMethod2 # Some kind of huffman coding most likely # D7 = NBits, D0=BitBuf
+0000ed62 CODE .Refill1
+0000ed72 CODE .NoRefill1
+0000ed82 CODE .Start
+0000ed8e CODE .TreeWalk
+0000edae CODE .NoRefill2
+0000edb6 CODE .ReturnFromTreeWalk
+0000edc2 CODE .Done
+0000edca CODE M2_ReadSymbolFreqs # D5 = (Frequency?) bits per symbol -> HuffTable0
+0000edfa CODE .SymLoop0 # 256 symbols read
+0000ee0e CODE .NextSym0
+0000ee18 CODE .NotType0
+0000ee2e CODE .SymLoop1 # Number of symbols is read from file
+0000ee48 CODE .SymIter1
+0000ee4e CODE .Type2    # Reads 16x16 bits and fills table (bitmask) uses that to deterime if symbol is present
+0000ee54 CODE .OuterLoop
+0000ee5c CODE .InnerLoop
+0000ee7c CODE .SymLoop2
+0000ee92 CODE .NextSym2
+0000ee9c CODE .Out
+0000eea2 CODE M2_AssignCodes
+0000eec0 CODE M2_AssignCodesRec # D1 = Code, D2 = NumBits, D4 = TotalFreq
+0000eee0 CODE .CodeGenTerminalNode # moveq #nbits-8,d1 / moveq #sym, d2 / jmp(a3) ("sym" filled later)
+0000eefa CODE .NotFinal
+0000eefe CODE .CombineNodes # Combines nodes until they make up half the probability space (?)
+0000ef2a CODE .CodeGen # add.b d2,d2 / bcs.w xxxx
+0000ef4a CODE .LessThan9Bits
+0000ef5c CODE .AfterRec
+0000ef5e CODE .Out
+0000ef60 CODE M2_MakeTables
+0000ef6e CODE .Loop
+0000ef8e CODE .PlaceSymLoop
+0000ef92 CODE .PlaceSymIter
+0000ef98 CODE .TreeNode # Modifies moveq instruction!
+0000ef9e CODE .NextSym
+0000efa2 CODE .Iter
+0000efa8 CODE M2_SortByFreq # Sort symbols in order of descending frequency
+0000efb4 CODE .SymbolLoop
+0000efba CODE .InnerLoop
+0000efd0 CODE .Swap
+0000efe4 CODE .Next
+0000eff2 CODE .Out
+0000eff4 CODE M2_SortByCodeLen
+0000f000 CODE .SymLoop
+0000f006 CODE .InnerLoop
+0000f026 CODE .Next
+0000f034 CODE .Out
+0000f036 CODE M2_WordAlignStream
+0000f048 CODE .Aligned
+0000f04a CODE M2_GetBits # D1=Numbits, D0=Bitbuf/result
+0000f052 CODE .Refill
+0000f06a CODE ReadFileFromIndex2
+0000f07a CODE FreeIndexMem2
+0000f080 CODE GetPaletteFromFile
+0000f22c CODE ShowTextStruct_35c2 # A0 = Pointer
+0000f6a6 JTABW[51] JumpTable_f6a6
+#0000f6a6 CODE Script_Func8C
+0000f70c JTABW[20] JumpTable_f70c
+0000f74a IntHandler ?
+0000f74a IntHandler IntHandler_0f74a
+0000f776 CODE RunScript # A0=ByteCode A6=&ScreenRect
+0000f7ae CODE Script_Func14
+0000f7c6 CODE Script_Expr
+0000f7cc CODE Script_ArrayRef
+0000f7de CODE Script_GetRect #?
+0000f862 CODE Script_Func00
+0000f86c CODE Script_Func02
+0000f874 CODE Script_Func04
+0000f890 JTABW[5] JumpTab_f890
+0000f89a CODE Script_Func04_00
+0000f8a2 CODE Script_Func04_03
+0000f8aa CODE Script_Func04_04
+0000f8b2 CODE Script_Func04_02
+0000f8c0 CODE Script_Func04_01
+0000f8ce CODE Script_Func06
+0000f8da CODE Script_Func08
+0000f908 CODE Script_Func0A
+0000f936 CODE Script_Func0C
+0000f93e CODE Script_Func0E
+0000f94c CODE Script_Func10
+0000f954 CODE Script_Func12
+0000f966 CODE Script_Func16
+0000f974 CODE Script_Func18
+0000f982 CODE Script_Func1A
+0000f990 CODE Script_Func1C
+0000f99e CODE Script_Func1E
+0000f9b8 CODE Script_Func20
+0000f9ca CODE Script_Func22
+0000fa24 CODE Script_Compare
+0000fa34 CODE Script_Func24
+0000fa3c CODE Script_Func26
+0000fa44 CODE Script_Func28
+0000fa4c CODE Script_Func2A
+0000fa54 CODE Script_Func2C
+0000fa5c CODE Script_Func2E
+0000fa64 CODE Script_Func30
+0000fa7a CODE Script_Func32
+0000fa92 CODE Script_Func34
+0000fa9e CODE Script_Func36
+0000fada CODE Script_Func38
+0000faec CODE Script_Func3A
+0000fafc CODE Script_Func3C
+0000fb06 CODE Script_Func3E
+0000fb20 CODE Script_Func40
+0000fb2a CODE Script_Func42
+0000fb44 CODE Script_Func48
+0000fb66 CODE Script_Func4C
+0000fb80 CODE Script_Func4E
+0000fbb6 CODE Script_Func44
+0000fbfc CODE Script_Func46
+0000fc42 CODE Script_Func50
+0000fc98 CODE Script_Func4A
+0000fcb2 CODE Script_Func52
+0000fcb8 CODE Script_Func54
+0000fcbe CODE Script_Func56
+0000fcd4 CODE Script_Func58
+0000fce8 CODE Script_Func5A
+#0000fcee CODE Script_Func66
+0000fcf2 CODE Script_Func5C
+#0000fcf2 CODE Script_Func68
+0000fcf8 CODE Script_Func5E
+#0000fcfa CODE Script_Func6A
+0000fd04 CODE Script_Func64
+#0000fd18 CODE Script_Func6E
+#0000fd22 CODE Script_Func70
+0000fd28 CODE Script_Func60
+#0000fd28 CODE Script_Func72
+#0000fd2e CODE Script_Func74
+0000fd32 CODE Script_Func62
+#0000fd38 CODE Script_Func76
+0000fd3c CODE Script_DoExpr
+#0000fd44 CODE Script_Func78
+#0000fd4e CODE Script_Func7A
+0000fd54 CODE Script_Expr00
+0000fd58 CODE Script_Expr02
+#0000fd5c CODE JTab_f6a6_Func7C
+0000fd60 CODE Script_Expr04
+#0000fd70 CODE Script_Func7E
+#0000fd7e CODE Script_Func80
+0000fd7e CODE Script_Expr08
+0000fd88 CODE Script_Expr0A
+#0000fd8c CODE Script_Func82
+0000fd8e CODE Script_Expr0C
+0000fd94 CODE Script_Expr0E
+#0000fd9a CODE Script_Func84
+0000fd9e CODE Script_Expr10
+#0000fdaa CODE Script_Func86
+0000fdaa CODE Script_Expr12
+0000fdb4 CODE Script_Expr14
+#0000fdba CODE Script_Func88
+0000fdc2 CODE Script_Expr16
+#0000fdca CODE Script_Func8A
+0000fdd6 CODE Script_Expr18
+#0000fdda CODE Script_Func6C
+0000fde4 CODE Script_Expr1A
+0000fdf2 CODE Script_Expr1C
+0000fe00 CODE Script_Expr1E
+0000fe10 CODE Script_Expr20
+0000fe20 CODE Script_Expr22
+0000fe30 CODE Script_Expr24
+0000fe40 CODE Script_Expr06
+0000ffd8 CODE MakeXRotMatrix #A0=3x3 matrix
+0000fffa CODE MakeZRotMatrix
+0001001a CODE MakeYRotMatrix
+00010b50 CODE Mul32x16 # D0.L * D1.W -> D0.W:D1.L
+0001115e CODE IntSqrt16 # D0 = Input, D3 = Output
+0001119c CODE IntSqrt32
+000111e0 CODE SinCos
+0001124c CODE ?
+0001124c CODE Sin
+0001127c CODE ?
+0001127c CODE Cos
+000112b0 WORD[4097] SinTable #$4000 (1<<14) is max
+00013d46 CODE ?
+00014278 CODE ?
+0001429e CODE ?
+000142bc CODE ?
+000142dc CODE ?
+000142fa CODE ?
+00014328 CODE ?
+0001434c CODE ?
+00014368 CODE ?
+00014466 CODE UpdateTransform # A3=Transform, D0=Angle
+00014466 A3=FakeTransform
+00014486 CODE .Transform1
+0001448e CODE .NoNeg
+000144a0 CODE .Z
+000144a6 CODE .X
+000144aa CODE .Out
+000144b0 CODE ?
+00016498 CODE HandleTPPR
+00016ccc CODE DoCallViewFunc # A0 = ViewFunc
+00017118 CODE StartGame
+00017136 CODE GameEntryPoint
+0001713a CODE .SpinLoop
+0001715c CODE .Ntsc
+0001720a CODE .RestartGame
+0001724e CODE .MissionLoop
+00017288 CODE .L2
+000172d8 CODE .GenericMissionFailure
+000172e0 CODE .MissionFailed
+00017310 CODE .MissionCompleted
+0001736c CODE .MissionSuccess
+00017380 CODE .GameCompleted
+000173a8 CODE ClearBackBuffer
+000173e6 CODE InitStuffWithKeyboardBit2Cleared # A0 = Array
+00017414 WORD RefreshRate
+0001741e CODE ReadMouseCursors
+0001743e CODE SetMouseCursor_cc60_pointer  #File $cc60
+0001744a CODE SetMouseCursor_cca0_intmouse #File $cca0
+00017456 CODE SetMouseCursor_cc40_smtmouse #File $cc40
+00017808 CHAR[4] text_BColon
+0001780c CHAR[4] text_TXT
+00017810 LONG RecordFileIndex_TXT
+00017814 CODE ReadFileList # A2 = File (index) list
+00017818 CODE .Loop
+00017824 CODE .Done
+0001782a CODE FreeFileList # A3 = Filelist
+0001782e CODE .Loop
+0001783a CODE .Done
+00017840 CODE OpenRecordFile_TXT
+00017856 CODE CloseRecordFile_TXT
+00017868 CODE OpenRecordFile_MSN
+00017882 CODE CloseRecordFile_MSN
+00017896 CODE ReadPakCodeFile # A0=Filename
+0001792c CODE FreePakFileCode
+00017940 CODE HaltWithIllegal_17940
+00017942 CHAR* CurrentCodePakFile
+00017946 LONG RPKCF_FileIndex
+00017952 CODE* PakCodePtr
+00017956 LONG PakDecrunchDataPtr
+00017972 CODE SetDisk
+00017ac0 CODE DecrunchPak # Powerpacker variant
+00017ad0 CODE .DecrunchLoop
+00017ad8 CODE .HasBits1
+00017ae4 CODE .HasBits2
+00017aea CODE .LiteralRun
+00017af0 CODE .LiteralLoop
+00017af2 CODE .GetLitBitsLoop
+00017af8 CODE .HasBits3
+00017b06 CODE .LongLitRun
+00017b0c CODE .Bit0Set
+00017b28 CODE .ShortMatch
+00017b32 CODE .ReadOffset
+00017b34 CODE .CopyMatch
+00017b3c CODE .ChecIfkDone
+00017b48 CODE .Error
+00017b4c CODE .Refill
+00017b58 CODE .ReadBits # D1=Numbits,D2=Result
+00017b5c CODE .ReadBitsLoop
+00017b6a CODE .HasBits7
+00017b72 STR text_TitlePak
+00017b7e STR text_GameCodePak
+00017b8d STR text_QuizCodePak
+00017b9c STR text_DeadMusPak
+00017baa STR text_EndsPak
+00017bb6 CODE ReadTitlePak
+00017bc2 CODE ReadGameCodePak
+00017bce CODE ReadQuizCodePak
+00017bda CODE ReadDoDeadMusPak
+00017be6 CODE ReadEndsPak
+00017bf2 CODE LoadPakCodeFile # PakCode related
+00017bfe CODE* PakCode
+00017c02 CODE InstallVBHandler_17c26_2 # PakCode related
+00017c06 CODE CallPakFunc0
+00017c0e CODE CallPackFunc1c
+00017c18 CODE CallPackFunc54
+00017c22 CODE RemoveVBHandler2_17c26 # PakCode related
+00017c26 IntHandler IntHandler_17c26
+00017c34 CODE InstallVBHandler_17c26 # PakCode related
+00017c7e CODE CallPakFunc46_MaybePauseRelated
+00017cb8 CODE RemoveVBHandler_17c26 # PakCode related
+00017fbe CODE FrameFunc_SetPal18e85c_1
+00017fde CODE FrameFunc_SetPal18e85c_2
+00017ffe CODE ShowLogos # $c7e0=vektlog, $cce0=imagelog $ccc0=impress
+0001800e CODE .ClearPalette
+0001805c CODE .CopyPal1
+00018076 CODE .Wait1
+000180a8 CODE .CopyPal2
+000180dc CODE FadeLogoIn
+00018108 CODE CopyLogos_cce0_ccc0
+00018132 CODE CopyLogo_c7e0
+0001814e BYTE ManualProtectionFinished
+00018150 CODE LanguageSelectionAndManualCheck
+000181a8 CODE .AlreadyDone
+000181aa WORD MissionNumber
+000181ac CODE CopyMissionNumberToBackup
+000181b6 CODE ResetViewAndKeyboard
+000181c8 CODE .WasteTime
+000181f8 CODE NoOpFunc_181f8
+000181fa CODE IntroAndReadMissionCode
+00018242 CODE .ResetCodeEntry
+00018256 CODE .CheckIf8CharsEntered
+0001826e CODE .DelayLoop
+00018282 CODE .ReadNextKey
+00018292 CODE .SpacePressed
+000182b0 CODE .NotLMB
+000182d4 CODE .NotBackspace
+000182f6 CODE .MissionCodeCorrect
+00018314 CODE .Mission10Plus
+00018326 CODE .ShowCorrectMissionCodeScreen
+0001834a CODE ClearCodeEntryText # Set code entry text ($18a56 to all '-')
+00018352 CODE .ResetLoop
+0001835c CODE GetUppercaseLetterOrNumber
+0001838a CODE .CheckIfLetter
+0001839a CODE .UpperCase
+000183a6 CODE .NoKeyOut
+000183a8 CODE .Out
+000183aa CODE CheckMissionCode # D0 >= 0 -> OK
+000183ea CODE .Out
+000183ec CODE ComputeAndGetMissionCode
+00018414 CODE ShowMissionResultScreen
+00018458 CODE ShowQuizTextScreen
+000184aa CODE ShowGameCompletedScreen
+000184e0 CODE .WasteTime
+000184fc CODE AdvanceToNextMission
+00018564 CODE ShowRect_cc80_logosfpd
+0001856a CODE ShowRect_c1e0_logosfbb
+00018586 CODE ShowRect_c200_logoba
+000185a2 CODE ShowMissionSuccessTextStruct
+000185aa CODE ShowGameCompletedTextStruct
+000185b2 CODE ShowQuestionHimTextStruct
+000185ba CODE ShowMissionResultText # Indexed from $00018ce4
+000185ce CODE ShowEnterMissionTextStruct
+000185d6 CODE ShowCorrectMissionTextStruct
+000185dc CODE GoShowTextStruct_35c2
+000185ec CODE ShowCodeEntryText
+0001862a CODE ShowTitleCredits
+00018a02 WORD NumCodeEntryCharsEntered
+00018a04 CHAR[63] textInfo_EnterMission
+00018a43 CHAR[19] textInfo_CodeEntryText
+00018a56 CHAR[9] CodeEntryText
+00018a5f CHAR[77] textInfo_CorrectMission
+00018aac CHAR[116] textInfo_QuestionHim
+00018b20 CHAR[99] textInfo_MissionSuccess
+00018b83 CHAR[124] textInfo_GameCompleted
+00018bff CHAR[37] MissionCodeConversionTable
+00018c24 BYTE[8] MissionCode
+00018c2c CODE CalcMissionCode
+00018c7c CODE .CheckSumLoop
+00018cb8 CODE .L2
+00018cc8 CODE .Error
+00018cca CODE .Out
+00018ccc CODE ConvertCharToMissionCodeIndex # D7 = In/Out
+00018cd2 CODE .SearchLoop
+00018cdc CODE .Found
+00018ce4 WORD MissionResult
+00018ce6 LONG MissionTimer #?
+00018cea BYTE*[23] TextStructArray_18cea
+00018d46 CHAR[79] TextStruct_00_18d46
+00018d95 CHAR[51] TextStruct_01_18d95
+00018dc8 CHAR[143] TextStruct_02_18dc8
+00018e57 CHAR[131] TextStruct_03_18e57
+00018eda CHAR[139] TextStruct_04_18eda
+00018f65 CHAR[148] TextStruct_05_18f65
+00018ff9 CHAR[163] TextStruct_06_18ff9
+0001909c CHAR[120] TextStruct_07_1909c
+00019114 CHAR[99] TextStruct_08_19114
+00019177 CHAR[100] TextStruct_09_19177
+000191db CHAR[128] TextStruct_0A_191db
+0001925b CHAR[1] TextStruct_0b_Empty
+0001925c CHAR[108] TextStruct_0C_MissionFailedSuspended
+000192c8 CHAR[206] TextStruct_0D_MissionFailed2Suspended
+00019396 CHAR[53] TextStruct_0E_19396
+000193cb CHAR[76] TextStruct_0F_193cb
+00019417 CHAR[79] TextStruct_10_19417
+00019466 CHAR[172] TextStruct_11_19466
+00019512 CHAR[194] TextStruct_12_19512
+000195d4 CHAR[167] TextStruct_13_195d4
+0001967b CHAR[154] TextStruct_14_1967b
+00019715 CHAR[191] TextStruct_15_19715
+000197d4 CHAR[178] TextStruct_16_197d4
+00019904 WORD[16] FileList_Twinkle #$c9c0->$c800 twinkle1..twinklef
+00019936 CODE ReadFileListTwinkle
+0001993e CODE FreeFileListTwinkle
+00019a16 CODE DoArmory
+00019a74 CODE SetDefaultArmory
+00019a98 CODE ExpandMissionCodeArmory
+00019acc CODE CompressMissionCodeArmory
+00019af6 LONG[21] MissionCodeArmoryConversionTable # MSW=Byte offset, Byte 2: Bit offset, Byte 3: Armory bit offset
+00019b4a CODE ArmoryInit
+00019b6a CODE .ClearLoop
+00019bc6 CODE ArmoryScreen
+00019bdc CODE .CheckNextRect
+00019bfa CODE .NoLMB
+00019c1a CODE .Out
+00019c26 ArmoryRect ArmoryRect_19c26
+00019c32 ArmoryRect ArmoryRect_19c32
+00019c3e ArmoryRect ArmoryRect_19c3e
+00019c4a ArmoryRect ArmoryRect_19c4a
+00019c56 ArmoryRect ArmoryRect_19c56
+00019c64 CODE ArmoryPrevSelection
+00019c72 CODE .NoWrap
+00019c94 CODE ArmoryNextSelection
+00019ca4 CODE .NoWrap
+00019cc6 CODE ArmoryItemSelection
+00019d0a CODE .NotMG1
+00019d18 CODE .NotMG2
+00019d26 CODE .NotMG3
+00019d36 CODE .NotMG
+00019d4a CODE .NotCannon1
+00019d58 CODE .NotCannon2
+00019d66 CODE .ItemCommon
+00019d7c CODE .Out
+00019d7e CODE .DeselectItem
+00019dac CODE ArmoryChangeLightRotationDirection
+00019db4 CODE SetInventoryFromArmorySelection
+00019e34 CODE LaunchMission
+00019e68 CODE UpdateArmoryScreen
+00019e80 CODE UpdateArmoryBackground
+00019ea2 CODE UpdateArmoryItemSprite
+00019f2a WORD[9] ArmoryItemSpriteTable
+00019f3c CODE UpdateArmoryLightAnimation
+00019f94 CODE UpdateArmoryWeightDisplay
+00019fbc CODE ArmoryCalcItemWeight
+00019fee CODE UpdateArmoryItemStats
+0001a01a CODE DoQuiz
+0001a028 CODE CheckForQuiz
+0001a036 BYTE[12] MissionHasQuiz
+0001a042 CODE GetQuizTableOffset
+0001a054 BYTE[12] QuizTableOffsets
+0001a060 CODE QuizInit
+0001a174 CODE QuizCleanup
+0001a1a6 CODE LoadQuizFiles
+0001a1d6 CODE FreeQuizFiles
+0001a206 CODE QuizMainFunction
+0001a658 CODE CheckInsideRect # Rect: (D0,D1) (D2,D3) Coord: (D4,D5)
+0001a66c CODE .OutSide
+0001a85a IntHandler IntHandler_1a85a
+0001a8fc CODE GetQuizRecord
+0001a95c CODE FreeQuizRecord
+0001ad54 CODE QuizOutOfTime
+0001ad62 CODE QuizSucessful
+0001ad72 CODE QuizFailedLetHimGo
+0001ad7e CODE DoQuizResultText
+0001afbe CHAR[111] TextStruct_1afbe_LetPrisonerGo
+0001b02d CHAR[65] TextStruct_1b02d_OutOfTime
+0001b06e CHAR[76] TextStruct_1b06e_SuspectConfesses
+0001b0ba CHAR[75] TextStruct_1b0ba_SelectAQuestion
+0001b105 CHAR[75] TextStruct_1b105_YouAskTheSuspect
+0001b150 CODE FrameFunc1b150
+0001b170 CODE FrameFunc1b170
+0001b190 WORD[42] QuizFileTable
+0001b1e4 WORD QuizFile5
+0001b1e6 WORD QuizFile6
+0001b1e8 WORD QuizFile7
+0001b1ea WORD QuizFile1
+0001b1ec WORD QuizFile2
+0001b1ee WORD QuizFile3
+0001b1f0 WORD QuizFile4
+0001b1fe WORD QuizSuccessFlag
+0001b208 WORD CurrentMissionBackup
+0001b20a BYTE* QuizData1
+0001b20e LONG RecordFileIndex_MSN
+0001b212 WORD QuizVar5
+0001b24c BYTE* QuizData2
+0001b250 BYTE* QuizData3
+0001b254 BYTE* QuizData4
+0001b258 CHAR[14] text_Missionx
+0001b266 CHAR[4] text_BColon_2
+0001b26a CHAR[4] text_MSN
+0001b27a WORD QuizVar1
+0001b27c WORD QuizVar2
+0001b27e WORD QuizVar3
+0001b280 WORD QuizVar4
+0001b282 WORD[35] QuizFileList2
+0001b45e WORD[7] ?
+0001c320 WORD[7] SpriteFileList_1c320
+0001c330 CODE LoadShipSprites
+0001c342 CODE FreeShipSprites
+0001c35a CODE RedrawConsole
+0001c376 CODE .Clear
+0001c38c CODE .Out
+0001c38e CODE DrawShipConsole
+0001c8ac CODE UpdateDetailLevel
+0001cad6 CODE FrameFunc_SetPal1_1e7b4
+0001caf8 CODE FrameFunc_SetPal2_1e7b4
+0001cb6a CODE FrameFunc1cb6a
+0001cb8c CODE FrameFunc1cb8c
+0001cca4 CODE ShowEndScreen
+0001cd06 CODE DoMission
+0001cd0a CODE .MissionLoop
+0001cd2e CODE InitMission
+0001cd92 CODE FreeMissionData
+0001cdd0 CODE IngameFunc
+0001ce04 CODE .WaitFrame
+0001ce36 CODE .L1
+0001ce42 CODE .L2
+0001ce5e CODE .L3
+0001ce82 CODE .Out
+0001ce84 CODE CheckPauseQuit
+0001ce98 CODE .GamePausedLoop
+0001ceaa CODE .NotEsc
+0001ceb2 CODE .GameAborted
+0001cec2 CODE .NotPKey
+0001cecc BYTE GamePausedFlag
+0001cece CODE AllocSomeGameBuffers
+0001cf1e CODE PreparePalettesAndClearScreen
+0001cfea CODE LoadMap
+0001d00c CODE FreeMap
+0001d02e WORD[111] IngameShapeFileList
+0001d242 KeyboardFuncStruct KeyboardFuncStruct_1d242
+0001d248 KeyboardFuncStruct KeyboardFuncStruct_1d248
+0001d24e KeyboardFuncStruct KeyboardFuncStruct_1d24e
+0001d254 KeyboardFuncStruct KeyboardFuncStruct_1d254
+0001d25a KeyboardFuncStruct KeyboardFuncStruct_1d25a
+0001d262 CODE CheckDetailChange
+0001d26c CODE SetTouristView # Fog/On off only level 1
+0001d28a CODE SetLowDetail
+0001d2a0 CODE SetMediumDetail
+0001d2b6 CODE SetHighDetail
+0001d2cc CODE ToggleCountours
+0001d7c6 BYTE*[16] ?
+0001d806 CHAR[29] TextStruct_TrackingView
+0001d823 CHAR[29] TextStruct_ExternalView
+0001d840 CHAR[25] TextStruct_RearView
+0001d859 CHAR[25] TextStruct_LeftView
+0001d872 CHAR[26] TextStruct_RightView
+0001d88c CODE CallViewFunc
+0001d8e2 CODE ShowViewText
+0001d90a CODE ViewFunc10
+0001d916 CODE ViewFunc08
+0001d958 CODE ViewFunc18_Rear
+0001d97c CODE ViewFunc20_Left
+0001d9bc CODE ViewFunc28_Right
+0001d9fc CODE ViewFunc30_External
+0001dac6 CODE ViewFunc00_Tracking
+0001db28 CODE ViewFunc38
+0001dbd0 IntHandler ?
+0001dfe8 CODE ?
+0001e122 CODE PrepBuffer_1dfe2
+0001e2ea CODE SwapBuffers_1dfde_1dfe2
+0001e370 CODE ?
+0001e3da CODE ?
+0001e3dc CODE ?
+0001e46a CODE AllocSomeAreana #? 0001e4a0 arena initialization
+0001e4a0 BYTE* SomeArena #?
+0001e4a4 CODE AllocFromSomeArena # 0001e4a0  allocation?
+0001e594 CODE NoOpFunc_1e594
+0001e5da PaletteInfo*[15] Palettes
+0001e616 LONG PalettesDoneMarker
+0001e866 WORD[16] PaletteData_1e866
+0001e8b0 CODE AllocPalettes
+0001e8b6 CODE .DoAlloc
+0001e8be CODE .Next
+0001e8c4 CODE HandleTRRN
+0001e8ee CODE .Loop
+0001e904 CODE .L2
+0001e908 CODE .Iter
+0001e912 CODE SwapWords # Swap D1 words in A1
+0001e914 CODE .Loop
+0001e91c CODE .Iter
+0001e922 CODE Swap6Words
+0001e964 CODE .Out
+0001e96a CODE LoadMapObjects #? $d340 trrn sfedit
+000208ee CODE CheckTimedEvents
+00024218 IntHandler IntHandler_24218
+00024fb6 IntHandler IntHandler_24fb6
+00027a5a WORD[16] paldata_27a5a
+00027a7a PaletteInfo pal_27a7a
+00027d42 CODE ? # Called from protection screen script
+00028144 WORD[6] ManualCodeWord
+00028150 WORD ManualCheckResult
+00028154 WORD LanguageSelection # Set from manul selection script
+00028156 BYTE*[3] WordLists
+00028162 LONG[3] WordsPerLanguage
+0002816e BYTE[216] WordListEnglish
+00028246 BYTE[228] WordListGerman
+0002832a BYTE[216] WordListFrench
+00028402 CODE GetManualWord # Called from protection screen script
+0002841c CODE .Loop
+00028424 CODE .InRange
+00028474 WORD NumNets
+00028476 WORD NumPups
+00028478 CODE InitFadeIn_0284a8
+00028482 CODE AdvanceFadeIn_284a8
+00028498 CODE .Done
+000284a8 WORD FadeInCnt_284a8
+000284a8 WORD FadeVar_284a8
+0002910c CODE ProtectionOK # Called from protection screen script
+0002931c CODE ClearArray_294b8
+00029340 CODE DoMissionInfoScreen
+00029404 CODE GetMissionText
+00029420 CODE .Mission1to9
+00029424 CODE .HasMissionNumber
+0002944c CODE .L3
+0002945c CODE FreeMissionText
+0002948a CHAR[10] text_MissTxtx
+00029496 WORD NumMissionTextLines
+00029498 CHAR* MissionTextPtr
+0002949c CHAR*[6] MissionTextLines
+00029bd6 WORD[49] FileList_29bd6
+0002a49e CODE ShowPlaneIntroSequence
+0002b434 CODE ShowBarScene
+0002c458 CODE ? # Called from protection screen script
+0002c46c CODE ? # Called from protection screen script
+0002c57e CODE ChangeKeyboardLayout # Called from protection screen script
+0002c58e CODE .English
+0002c590 CODE .German
+0002c5b6 CODE .French
+0002e8ee CODE .L1
+0000eb9a CODE ReadAllFilesWithFormat # D0 = FormatId
+0000ebb6 CODE .Loop
+0000ebc2 CODE .Next
+0000ebca CODE .Iter
+0000ebd4 CODE FreeAllFilesWithFormat # D0 = FormatId
+0000ebf0 CODE .Loop
+0000ebfc CODE .Next
+0000ec04 CODE .Iter
+0000127c CHAR[14] ?
+0001711a CHAR[28] ?
+00016d0e WORD[512] Mul24Tab
+000152e0 CODE ?
+000152e4 CODE ?
+00014b54 CODE ?
+00014b6e CODE ?
+00014b88 CODE ?
+00014c72 CODE ?
+000083a4 CODE ?
+000086d2 CODE ?
+00008754 CODE ?
+000089d2 CODE ?
+000089f0 CODE ?
+00008a7c CODE ?
+00008e30 CODE ?
+00008f28 CODE ?
+00009570 CODE ?
+000095aa CODE ?
+0000976c CODE ?
+000097b0 CODE ?
+00009e6a CODE ?
+0000a428 CODE ?
+0000a454 CODE ?
+0000adc8 CODE ?
+0000ae6c CODE ?
+0000b7f2 CODE ?
+0000bd3c CODE ?
+0000bd54 CODE ?
+0000bd64 CODE ?
+0000bd6a CODE ?
+0000bf52 CODE ?
+0000c3e6 CODE ?
+0000c71a CODE ?
+0000c72c CODE ?
+0000c74c CODE ?
+0000c76c CODE ?
+0000c78c CODE ?
+0000c7ac CODE ?
+0000c7cc CODE ?
+0000c7ec CODE ?
+0000c80c CODE ?
+0000c82c CODE ?
+0000c84c CODE ?
+0000c86c CODE ?
+0000c88c CODE ?
+0000c8ac CODE ?
+0000c8cc CODE ?
+0000c8ec CODE ?
+0000d416 CODE ?
+0000d38a CODE ?
+0000d44c CODE ?
+0000e31c CODE ?
+0000e38e CODE ?
+0000e6ba CODE ?
+0000f072 CODE ?
+0000f114 CODE ?
+0000f20e CODE ?
+0000f2ec JTABW[15] JumpTab_f2ec
+
+000058f8 WORD MapFileIdx
+0000ea7a CODE NoOp_ea7a
+00005b8c LONG MapInitY
+00005b88 LONG MapInitX
+0001e9c0 CODE .Yloop
+0001e9ce CODE .Xloop
+0001e9e4 CODE .OnlyOne
+0001e9e8 CODE .Next
+0000590e MinList MapList_590e
+0001ea22 CODE LoadOneMapObject
+00005b90 WORD[3] MapInitObjCoords #? XYZ presumably
+
+00015398 CODE Alloc_Buf4760
+00004760 BYTE* Buf4760
+0000476c BYTE* Buf4760_Backup
+000153cc CODE Free_Buf4760
+000153e2 CODE .NotAllocated
+
+0000476a WORD Buf4760_X
+00004768 WORD Buf4760_Y
+00004764 LONG Buf4760_X_Times24
+
+00005ba2 WORD InitStruct_5ba2 # Word = Number of points to 22 byte data
+00005ba4 WORD*[4] ? # 22 bytes earch
+00005bb4 WORD[11] ?
+00005bca WORD[11] ?
+00005be0 WORD[11] ?
+00005bf6 WORD[11] ?
+00005008 WORD[255] Mul22Table
+
+# AllocSomeGameBuffers
+# MOVE.W	#$0100,D0
+# MOVE.W	#$0002,D1
+# JSR	func_00015398
+
+
+#### UnknownStruct is probably game object
+
+#STRUCT UnknownStruct
+#0000 BYTE[22] us_0
+#0016 BYTE us_Flags # Bit0=Valid, Bit3/Bit4=Skip in some contexts
+#0017 BYTE us_Index
+#0018 CODE* us_Func
+#001c BYTE* us_FuncArg # In A3
+#0020 CODE* us_Func2
+#004c LONG us_004C
+#0052 LONG us_0052
+#0058 LONG us_0058
+#0068 LONG us_0068
+#006c WORD us_006C
+#006e WORD us_006E
+#0070 WORD us_0070
+#008e WORD us_008E
+#0096 LONG us_0096
+#009a LONG us_009A
+#009e LONG us_009E
+#00b2 WORD us_00B2
+#00b4 LONG us_00B4
+#00b8 WORD us_00B8
+#00ba LONG us_00BA
+#00be WORD us_00BE
+#00c0 WORD us_00C0
+#00c2 WORD us_00C2
+#00c6 LONG us_00C6
+#00ca WORD us_00CA
+#00cc WORD us_00CC
+#00ce WORD us_00CE
+#00d0 WORD us_00D0
+#00d2 WORD us_00D2
+#00d4 WORD us_00D4
+#00d6 WORD us_00D6
+#00d8 LONG us_00D8
+#00dc WORD us_00DC
+#00de LONG us_00DE
+#00e2 WORD us_00E2
+#00e4 WORD us_00E4
+#00e6 WORD us_00E6
+#00e8 WORD us_00E8
+#00ea WORD us_00EA
+#00ec WORD us_00EC
+#00ee WORD us_00EE
+#00ee WORD us_00EE
+#00f0 LONG us_00F0
+#00f4 WORD us_00F4
+#ESTRUCT
+#00202000 UnknownStruct FakeUnknownStruct
+#
+#0000470e UnknownStruct* UnknownStruct_470e
+#0000472c UnknownStruct* UnknownStruct_ComplementaryBuffer
+#0000471c UnknownStruct* FirstUnknownStruct #?
+#0000470e=FakeUnknownStruct
+#0000472c=FakeUnknownStruct
+#0000471c=FakeUnknownStruct
+#00004712 WORD UnknownStruct_NumEntries # From input d0
+#00004716 WORD UnknownStruct_Y
+#00004714 WORD UnknownStruct_Stride
+#0001455e CODE AllocUnknownStruct # D0 = Count, D1=Size(?)
+#00014960 CODE InitUnknownStructsIngame
+#000149e0 CODE CallUnknownStructsFunc2
