@@ -43885,8 +43885,8 @@ lb_1b2fe:
 	DC.W	$8585			;1b304
 	DC.W	$8989			;1b306
 lb_1b308:
-	dc.w	$0006	;1b308
-	dc.w	$8690	;1b30a
+	dc.w	$0006	;1b308   this data section had a lot of
+	dc.w	$8690	;1b30a   values I took for relocs but weren't
 	dc.w	$0003	;1b30c
 	dc.w	$92a8	;1b30e
 	dc.w	$0007	;1b310
@@ -43950,7 +43950,8 @@ lb_1b308:
 	dc.w	$0150	;1b384
 	dc.w	$0006	;1b386
 	dc.w	$6ab8	;1b388
-	dc.l	lb_20ca0	;1b38a   suspicious!!
+	dc.w	$0002	;1b38a
+	dc.w	$0ca0	;1b38c
 	dc.w	$0006	;1b38e
 	dc.w	$f6a0	;1b390
 	dc.w	$0003	;1b392
@@ -43958,14 +43959,17 @@ lb_1b308:
 	dc.w	$0120	;1b396
 	dc.w	$0007	;1b398
 	dc.w	$274b	;1b39a
-	dc.l	lb_2833c+1	;1b39c   suspicious!!
+	dc.w	$0002	;1b39c
+	dc.w	$833d	;1b39e
 	dc.w	$0007	;1b3a0
 	dc.w	$474b	;1b3a2
-	dc.l	lb_2a33c+1	;1b3a4   suspicious!!
+	dc.w	$0002	;1b3a4
+	dc.w	$a33d	;1b3a6
 	dc.w	$01e0	;1b3a8
 	dc.w	$0006	;1b3aa
 	dc.w	$f6a0	;1b3ac
-	dc.l	lb_20ca0	;1b3ae   suspicious!!
+	dc.w	$0002	;1b3ae
+	dc.w	$0ca0	;1b3b0
 	dc.w	$0007	;1b3b2
 	dc.w	$82a8	;1b3b4
 	dc.w	$0003	;1b3b6
@@ -43982,7 +43986,8 @@ lb_1b308:
 	dc.w	$0228	;1b3cc
 	dc.w	$0007	;1b3ce
 	dc.w	$e930	;1b3d0
-	dc.l	$2b7d4+1	;1b3d2	; middle of table
+	dc.w	$0002	;1b3d2
+	dc.w	$b7d5	;1b3d4
 	dc.w	$0008	;1b3d6
 	dc.w	$0930	;1b3d8
 	dc.w	$0002	;1b3da
@@ -43990,7 +43995,8 @@ lb_1b308:
 	dc.w	$0198	;1b3de
 	dc.w	$0007	;1b3e0
 	dc.w	$82a8	;1b3e2
-	dc.l	lb_20ca0	;1b3e4   suspicious!!
+	dc.w	$0002	;1b3e4
+	dc.w	$0ca0	;1b3e6
 	dc.w	$0008	;1b3e8
 	dc.w	$0e68	;1b3ea
 	dc.w	$0003	;1b3ec
@@ -43998,7 +44004,8 @@ lb_1b308:
 	dc.w	$0090	;1b3f0
 	dc.w	$0008	;1b3f2
 	dc.w	$0e68	;1b3f4
-	dc.l	lb_20ca0	;1b3f6   suspicious!!
+	dc.w	$0002	;1b3f6
+	dc.w	$0ca0	;1b3f8
 	dc.w	$0008	;1b3fa
 	dc.w	$9e68	;1b3fc
 	dc.w	$0003	;1b3fe
@@ -44015,10 +44022,12 @@ lb_1b308:
 	dc.w	$0168	;1b414
 	dc.w	$0008	;1b416
 	dc.w	$9e2e	;1b418
-	dc.l	lb_1e098+1	;1b41a
+	dc.w	$0001	;1b41a
+	dc.w	$e099	;1b41c
 	dc.w	$0009	;1b41e
 	dc.w	$1e2e	;1b420
-	dc.l	$26099	;1b422		; wrong reloc
+	dc.w	$0002	;1b422
+	dc.w	$6099	;1b424
 	dc.w	$01b0	;1b426
 	dc.w	$0002	;1b428
 	dc.w	$f5e3	;1b42a
@@ -44041,12 +44050,13 @@ lb_1b308:
 	dc.w	$8000	;1b44c
 	dc.w	$0001	;1b44e
 	dc.w	$8000	;1b450
-	dc.l	lb_17ffe+1	;1b452
+	dc.w	$0001	;1b452
+	dc.w	$7fff	;1b454
 	dc.w	$ffff	;1b456
 	dc.w	$7fff	;1b458
 	dc.w	$ffff	;1b45a
 lb_1b45c:
-	dc.w	$0030	;1b45c
+	dc.w	$0030	;1b45c		; this list of structs has pointers on text
 	dc.w	$0000	;1b45e
 	dc.w	$0000	;1b460
 	dc.w	$0000	;1b462
@@ -44557,7 +44567,7 @@ lb_1b45c:
 	dc.w	$0000	;1b8b0
 	dc.w	$0000	;1b8b2
 	dc.w	$0000	;1b8b4
-	dc.l	lb_1be7a+1	;1b8b6
+	dc.l	lb_1be7a+1	;1b8b6   machine guns message
 	dc.w	$01f4	;1b8ba
 	dc.w	$0028	;1b8bc
 	dc.w	$0300	;1b8be
